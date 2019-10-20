@@ -1,4 +1,14 @@
 Actions:
+  - Name: iot:DeleteThingShadow
+  - Name: iot:DescribeJobExecution
+  - Name: iot:GetPendingJobExecutions
+  - Name: iot:GetThingShadow
+  - Name: iot:Publish
+  - Name: iot:StartNextPendingJobExecution
+  - Name: iot:UpdateJobExecution
+  - Name: iot:UpdateThingShadow
+
+  # actions with no corresponding API
   - Name: iot:AcceptCertificateTransfer
   - Name: iot:AddThingToBillingGroup
   - Name: iot:AddThingToThingGroup
@@ -48,7 +58,6 @@ Actions:
   - Name: iot:DeleteStream
   - Name: iot:DeleteThing
   - Name: iot:DeleteThingGroup
-  - Name: iot:DeleteThingShadow
   - Name: iot:DeleteThingType
   - Name: iot:DeleteTopicRule
   - Name: iot:DeleteV2LoggingLevel
@@ -64,7 +73,6 @@ Actions:
   - Name: iot:DescribeEventConfigurations
   - Name: iot:DescribeIndex
   - Name: iot:DescribeJob
-  - Name: iot:DescribeJobExecution
   - Name: iot:DescribeRoleAlias
   - Name: iot:DescribeScheduledAudit
   - Name: iot:DescribeSecurityProfile
@@ -84,12 +92,10 @@ Actions:
   - Name: iot:GetJobDocument
   - Name: iot:GetLoggingOptions
   - Name: iot:GetOTAUpdate
-  - Name: iot:GetPendingJobExecutions
   - Name: iot:GetPolicy
   - Name: iot:GetPolicyVersion
   - Name: iot:GetRegistrationCode
   - Name: iot:GetStatistics
-  - Name: iot:GetThingShadow
   - Name: iot:GetTopicRule
   - Name: iot:GetV2LoggingOptions
   - Name: iot:ListActiveViolations
@@ -132,7 +138,6 @@ Actions:
   - Name: iot:ListTopicRules
   - Name: iot:ListV2LoggingLevels
   - Name: iot:ListViolationEvents
-  - Name: iot:Publish
   - Name: iot:Receive
   - Name: iot:RegisterCACertificate
   - Name: iot:RegisterCertificate
@@ -147,7 +152,6 @@ Actions:
   - Name: iot:SetLoggingOptions
   - Name: iot:SetV2LoggingLevel
   - Name: iot:SetV2LoggingOptions
-  - Name: iot:StartNextPendingJobExecution
   - Name: iot:StartOnDemandAuditTask
   - Name: iot:StartThingRegistrationTask
   - Name: iot:StopThingRegistrationTask
@@ -166,7 +170,6 @@ Actions:
   - Name: iot:UpdateEventConfigurations
   - Name: iot:UpdateIndexingConfiguration
   - Name: iot:UpdateJob
-  - Name: iot:UpdateJobExecution
   - Name: iot:UpdateRoleAlias
   - Name: iot:UpdateScheduledAudit
   - Name: iot:UpdateSecurityProfile
@@ -174,5 +177,4 @@ Actions:
   - Name: iot:UpdateThing
   - Name: iot:UpdateThingGroup
   - Name: iot:UpdateThingGroupsForThing
-  - Name: iot:UpdateThingShadow
   - Name: iot:ValidateSecurityProfileBehaviors

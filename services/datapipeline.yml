@@ -7,11 +7,9 @@ Actions:
   - Name: datapipeline:DescribeObjects
   - Name: datapipeline:DescribePipelines
   - Name: datapipeline:EvaluateExpression
-  - Name: datapipeline:GetAccountLimits
   - Name: datapipeline:GetPipelineDefinition
   - Name: datapipeline:ListPipelines
   - Name: datapipeline:PollForTask
-  - Name: datapipeline:PutAccountLimits
   - Name: datapipeline:PutPipelineDefinition
   - Name: datapipeline:QueryObjects
   - Name: datapipeline:RemoveTags
@@ -20,3 +18,7 @@ Actions:
   - Name: datapipeline:SetStatus
   - Name: datapipeline:SetTaskStatus
   - Name: datapipeline:ValidatePipelineDefinition
+
+  # actions with no corresponding API
+  - Name: datapipeline:GetAccountLimits
+  - Name: datapipeline:PutAccountLimits

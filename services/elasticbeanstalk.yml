@@ -1,6 +1,5 @@
 Actions:
   - Name: elasticbeanstalk:AbortEnvironmentUpdate
-  - Name: elasticbeanstalk:AddTags
   - Name: elasticbeanstalk:ApplyEnvironmentManagedAction
   - Name: elasticbeanstalk:CheckDNSAvailability
   - Name: elasticbeanstalk:ComposeEnvironments
@@ -32,7 +31,6 @@ Actions:
   - Name: elasticbeanstalk:ListPlatformVersions
   - Name: elasticbeanstalk:ListTagsForResource
   - Name: elasticbeanstalk:RebuildEnvironment
-  - Name: elasticbeanstalk:RemoveTags
   - Name: elasticbeanstalk:RequestEnvironmentInfo
   - Name: elasticbeanstalk:RestartAppServer
   - Name: elasticbeanstalk:RetrieveEnvironmentInfo
@@ -44,3 +42,10 @@ Actions:
   - Name: elasticbeanstalk:UpdateConfigurationTemplate
   - Name: elasticbeanstalk:UpdateEnvironment
   - Name: elasticbeanstalk:ValidateConfigurationSettings
+
+  # actions with no corresponding API
+  - Name: elasticbeanstalk:AddTags
+  - Name: elasticbeanstalk:RemoveTags
+
+  # APIs without an IAM action
+  - Name: elasticbeanstalk:UpdateTagsForResource

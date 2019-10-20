@@ -4,8 +4,6 @@ Actions:
   - Name: redshift:AuthorizeSnapshotAccess
   - Name: redshift:BatchDeleteClusterSnapshots
   - Name: redshift:BatchModifyClusterSnapshots
-  - Name: redshift:CancelQuery
-  - Name: redshift:CancelQuerySession
   - Name: redshift:CancelResize
   - Name: redshift:CopyClusterSnapshot
   - Name: redshift:CreateCluster
@@ -13,11 +11,9 @@ Actions:
   - Name: redshift:CreateClusterSecurityGroup
   - Name: redshift:CreateClusterSnapshot
   - Name: redshift:CreateClusterSubnetGroup
-  - Name: redshift:CreateClusterUser
   - Name: redshift:CreateEventSubscription
   - Name: redshift:CreateHsmClientCertificate
   - Name: redshift:CreateHsmConfiguration
-  - Name: redshift:CreateSavedQuery
   - Name: redshift:CreateSnapshotCopyGrant
   - Name: redshift:CreateSnapshotSchedule
   - Name: redshift:CreateTags
@@ -29,7 +25,6 @@ Actions:
   - Name: redshift:DeleteEventSubscription
   - Name: redshift:DeleteHsmClientCertificate
   - Name: redshift:DeleteHsmConfiguration
-  - Name: redshift:DeleteSavedQueries
   - Name: redshift:DeleteSnapshotCopyGrant
   - Name: redshift:DeleteSnapshotSchedule
   - Name: redshift:DeleteTags
@@ -52,29 +47,20 @@ Actions:
   - Name: redshift:DescribeLoggingStatus
   - Name: redshift:DescribeNodeConfigurationOptions
   - Name: redshift:DescribeOrderableClusterOptions
-  - Name: redshift:DescribeQuery
   - Name: redshift:DescribeReservedNodeOfferings
   - Name: redshift:DescribeReservedNodes
   - Name: redshift:DescribeResize
   - Name: redshift:DescribeSnapshotCopyGrants
   - Name: redshift:DescribeSnapshotSchedules
   - Name: redshift:DescribeStorage
-  - Name: redshift:DescribeTable
   - Name: redshift:DescribeTableRestoreStatus
   - Name: redshift:DescribeTags
   - Name: redshift:DisableLogging
   - Name: redshift:DisableSnapshotCopy
   - Name: redshift:EnableLogging
   - Name: redshift:EnableSnapshotCopy
-  - Name: redshift:ExecuteQuery
-  - Name: redshift:FetchResults
   - Name: redshift:GetClusterCredentials
   - Name: redshift:GetReservedNodeExchangeOfferings
-  - Name: redshift:JoinGroup
-  - Name: redshift:ListDatabases
-  - Name: redshift:ListSavedQueries
-  - Name: redshift:ListSchemas
-  - Name: redshift:ListTables
   - Name: redshift:ModifyCluster
   - Name: redshift:ModifyClusterDbRevision
   - Name: redshift:ModifyClusterIamRoles
@@ -84,7 +70,6 @@ Actions:
   - Name: redshift:ModifyClusterSnapshotSchedule
   - Name: redshift:ModifyClusterSubnetGroup
   - Name: redshift:ModifyEventSubscription
-  - Name: redshift:ModifySavedQuery
   - Name: redshift:ModifySnapshotCopyRetentionPeriod
   - Name: redshift:ModifySnapshotSchedule
   - Name: redshift:PurchaseReservedNodeOffering
@@ -96,5 +81,22 @@ Actions:
   - Name: redshift:RevokeClusterSecurityGroupIngress
   - Name: redshift:RevokeSnapshotAccess
   - Name: redshift:RotateEncryptionKey
+
+  # actions with no corresponding API
+  - Name: redshift:CancelQuery
+  - Name: redshift:CancelQuerySession
+  - Name: redshift:CreateClusterUser
+  - Name: redshift:CreateSavedQuery
+  - Name: redshift:DeleteSavedQueries
+  - Name: redshift:DescribeQuery
+  - Name: redshift:DescribeTable
+  - Name: redshift:ExecuteQuery
+  - Name: redshift:FetchResults
+  - Name: redshift:JoinGroup
+  - Name: redshift:ListDatabases
+  - Name: redshift:ListSavedQueries
+  - Name: redshift:ListSchemas
+  - Name: redshift:ListTables
+  - Name: redshift:ModifySavedQuery
   - Name: redshift:ViewQueriesFromConsole
   - Name: redshift:ViewQueriesInConsole

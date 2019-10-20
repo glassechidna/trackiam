@@ -1,8 +1,4 @@
 Actions:
-  - Name: swf:CancelTimer
-  - Name: swf:CancelWorkflowExecution
-  - Name: swf:CompleteWorkflowExecution
-  - Name: swf:ContinueAsNewWorkflowExecution
   - Name: swf:CountClosedWorkflowExecutions
   - Name: swf:CountOpenWorkflowExecutions
   - Name: swf:CountPendingActivityTasks
@@ -14,7 +10,6 @@ Actions:
   - Name: swf:DescribeDomain
   - Name: swf:DescribeWorkflowExecution
   - Name: swf:DescribeWorkflowType
-  - Name: swf:FailWorkflowExecution
   - Name: swf:GetWorkflowExecutionHistory
   - Name: swf:ListActivityTypes
   - Name: swf:ListClosedWorkflowExecutions
@@ -25,23 +20,35 @@ Actions:
   - Name: swf:PollForActivityTask
   - Name: swf:PollForDecisionTask
   - Name: swf:RecordActivityTaskHeartbeat
-  - Name: swf:RecordMarker
   - Name: swf:RegisterActivityType
   - Name: swf:RegisterDomain
   - Name: swf:RegisterWorkflowType
-  - Name: swf:RequestCancelActivityTask
-  - Name: swf:RequestCancelExternalWorkflowExecution
   - Name: swf:RequestCancelWorkflowExecution
   - Name: swf:RespondActivityTaskCanceled
   - Name: swf:RespondActivityTaskCompleted
   - Name: swf:RespondActivityTaskFailed
   - Name: swf:RespondDecisionTaskCompleted
-  - Name: swf:ScheduleActivityTask
-  - Name: swf:SignalExternalWorkflowExecution
   - Name: swf:SignalWorkflowExecution
-  - Name: swf:StartChildWorkflowExecution
-  - Name: swf:StartTimer
   - Name: swf:StartWorkflowExecution
   - Name: swf:TagResource
   - Name: swf:TerminateWorkflowExecution
   - Name: swf:UntagResource
+
+  # actions with no corresponding API
+  - Name: swf:CancelTimer
+  - Name: swf:CancelWorkflowExecution
+  - Name: swf:CompleteWorkflowExecution
+  - Name: swf:ContinueAsNewWorkflowExecution
+  - Name: swf:FailWorkflowExecution
+  - Name: swf:RecordMarker
+  - Name: swf:RequestCancelActivityTask
+  - Name: swf:RequestCancelExternalWorkflowExecution
+  - Name: swf:ScheduleActivityTask
+  - Name: swf:SignalExternalWorkflowExecution
+  - Name: swf:StartChildWorkflowExecution
+  - Name: swf:StartTimer
+
+  # APIs without an IAM action
+  - Name: swf:UndeprecateActivityType
+  - Name: swf:UndeprecateDomain
+  - Name: swf:UndeprecateWorkflowType

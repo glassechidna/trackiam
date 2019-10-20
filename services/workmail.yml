@@ -1,46 +1,63 @@
 Actions:
-  - Name: workmail:AddMembersToGroup
   - Name: workmail:AssociateDelegateToResource
   - Name: workmail:AssociateMemberToGroup
   - Name: workmail:CreateAlias
   - Name: workmail:CreateGroup
+  - Name: workmail:CreateResource
+  - Name: workmail:CreateUser
+  - Name: workmail:DeleteAlias
+  - Name: workmail:DeleteGroup
+  - Name: workmail:DeleteMailboxPermissions
+  - Name: workmail:DeleteResource
+  - Name: workmail:DeleteUser
+  - Name: workmail:DeregisterFromWorkMail
+  - Name: workmail:DescribeGroup
+  - Name: workmail:DescribeOrganization
+  - Name: workmail:DescribeResource
+  - Name: workmail:DescribeUser
+  - Name: workmail:DisassociateDelegateFromResource
+  - Name: workmail:DisassociateMemberFromGroup
+  - Name: workmail:GetMailboxDetails
+  - Name: workmail:ListAliases
+  - Name: workmail:ListGroupMembers
+  - Name: workmail:ListGroups
+  - Name: workmail:ListMailboxPermissions
+  - Name: workmail:ListOrganizations
+  - Name: workmail:ListResourceDelegates
+  - Name: workmail:ListResources
+  - Name: workmail:ListUsers
+  - Name: workmail:PutMailboxPermissions
+  - Name: workmail:RegisterToWorkMail
+  - Name: workmail:ResetPassword
+  - Name: workmail:UpdateMailboxQuota
+  - Name: workmail:UpdatePrimaryEmailAddress
+  - Name: workmail:UpdateResource
+
+  # actions with no corresponding API
+  - Name: workmail:AddMembersToGroup
   - Name: workmail:CreateInboundMailFlowRule
   - Name: workmail:CreateMailDomain
   - Name: workmail:CreateMailUser
   - Name: workmail:CreateOrganization
   - Name: workmail:CreateOutboundMailFlowRule
-  - Name: workmail:CreateResource
   - Name: workmail:CreateSmtpGateway
-  - Name: workmail:CreateUser
-  - Name: workmail:DeleteAlias
-  - Name: workmail:DeleteGroup
   - Name: workmail:DeleteInboundMailFlowRule
   - Name: workmail:DeleteMailDomain
-  - Name: workmail:DeleteMailboxPermissions
   - Name: workmail:DeleteMobileDevice
   - Name: workmail:DeleteOrganization
   - Name: workmail:DeleteOutboundMailFlowRule
-  - Name: workmail:DeleteResource
   - Name: workmail:DeleteSmtpGateway
-  - Name: workmail:DeleteUser
-  - Name: workmail:DeregisterFromWorkMail
   - Name: workmail:DescribeDirectories
-  - Name: workmail:DescribeGroup
   - Name: workmail:DescribeInboundMailFlowRule
   - Name: workmail:DescribeKmsKeys
   - Name: workmail:DescribeMailDomains
   - Name: workmail:DescribeMailGroups
   - Name: workmail:DescribeMailUsers
-  - Name: workmail:DescribeOrganization
   - Name: workmail:DescribeOrganizations
   - Name: workmail:DescribeOutboundMailFlowRule
-  - Name: workmail:DescribeResource
   - Name: workmail:DescribeSmtpGateway
-  - Name: workmail:DescribeUser
   - Name: workmail:DisableMailGroups
   - Name: workmail:DisableMailUsers
-  - Name: workmail:DisassociateDelegateFromResource
-  - Name: workmail:DisassociateMemberFromGroup
   - Name: workmail:EnableMailDomain
   - Name: workmail:EnableMailGroups
   - Name: workmail:EnableMailUsers
@@ -48,26 +65,14 @@ Actions:
   - Name: workmail:GetMailDomainDetails
   - Name: workmail:GetMailGroupDetails
   - Name: workmail:GetMailUserDetails
-  - Name: workmail:GetMailboxDetails
   - Name: workmail:GetMobileDeviceDetails
   - Name: workmail:GetMobileDevicesForUser
   - Name: workmail:GetMobilePolicyDetails
-  - Name: workmail:ListAliases
-  - Name: workmail:ListGroupMembers
-  - Name: workmail:ListGroups
   - Name: workmail:ListInboundMailFlowRules
-  - Name: workmail:ListMailboxPermissions
   - Name: workmail:ListMembersInMailGroup
-  - Name: workmail:ListOrganizations
   - Name: workmail:ListOutboundMailFlowRules
-  - Name: workmail:ListResourceDelegates
-  - Name: workmail:ListResources
   - Name: workmail:ListSmtpGateways
-  - Name: workmail:ListUsers
-  - Name: workmail:PutMailboxPermissions
-  - Name: workmail:RegisterToWorkMail
   - Name: workmail:RemoveMembersFromGroup
-  - Name: workmail:ResetPassword
   - Name: workmail:ResetUserPassword
   - Name: workmail:SearchMembers
   - Name: workmail:SetAdmin
@@ -79,9 +84,6 @@ Actions:
   - Name: workmail:TestInboundMailFlowRules
   - Name: workmail:TestOutboundMailFlowRules
   - Name: workmail:UpdateInboundMailFlowRule
-  - Name: workmail:UpdateMailboxQuota
   - Name: workmail:UpdateOutboundMailFlowRule
-  - Name: workmail:UpdatePrimaryEmailAddress
-  - Name: workmail:UpdateResource
   - Name: workmail:UpdateSmtpGateway
   - Name: workmail:WipeMobileDevice

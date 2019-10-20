@@ -13,7 +13,6 @@ Actions:
   - Name: sms:GetAppLaunchConfiguration
   - Name: sms:GetAppReplicationConfiguration
   - Name: sms:GetConnectors
-  - Name: sms:GetMessages
   - Name: sms:GetReplicationJobs
   - Name: sms:GetReplicationRuns
   - Name: sms:GetServers
@@ -22,10 +21,13 @@ Actions:
   - Name: sms:ListApps
   - Name: sms:PutAppLaunchConfiguration
   - Name: sms:PutAppReplicationConfiguration
-  - Name: sms:SendMessage
   - Name: sms:StartAppReplication
   - Name: sms:StartOnDemandReplicationRun
   - Name: sms:StopAppReplication
   - Name: sms:TerminateApp
   - Name: sms:UpdateApp
   - Name: sms:UpdateReplicationJob
+
+  # actions with no corresponding API
+  - Name: sms:GetMessages
+  - Name: sms:SendMessage

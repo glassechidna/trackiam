@@ -1,7 +1,6 @@
 Actions:
   - Name: dynamodb:BatchGetItem
   - Name: dynamodb:BatchWriteItem
-  - Name: dynamodb:ConditionCheckItem
   - Name: dynamodb:CreateBackup
   - Name: dynamodb:CreateGlobalTable
   - Name: dynamodb:CreateTable
@@ -13,8 +12,6 @@ Actions:
   - Name: dynamodb:DescribeGlobalTable
   - Name: dynamodb:DescribeGlobalTableSettings
   - Name: dynamodb:DescribeLimits
-  - Name: dynamodb:DescribeReservedCapacity
-  - Name: dynamodb:DescribeReservedCapacityOfferings
   - Name: dynamodb:DescribeStream
   - Name: dynamodb:DescribeTable
   - Name: dynamodb:DescribeTimeToLive
@@ -26,7 +23,6 @@ Actions:
   - Name: dynamodb:ListStreams
   - Name: dynamodb:ListTables
   - Name: dynamodb:ListTagsOfResource
-  - Name: dynamodb:PurchaseReservedCapacityOfferings
   - Name: dynamodb:PutItem
   - Name: dynamodb:Query
   - Name: dynamodb:RestoreTableFromBackup
@@ -40,3 +36,14 @@ Actions:
   - Name: dynamodb:UpdateItem
   - Name: dynamodb:UpdateTable
   - Name: dynamodb:UpdateTimeToLive
+
+  # actions with no corresponding API
+  - Name: dynamodb:ConditionCheckItem
+  - Name: dynamodb:DescribeReservedCapacity
+  - Name: dynamodb:DescribeReservedCapacityOfferings
+  - Name: dynamodb:PurchaseReservedCapacityOfferings
+
+  # APIs without an IAM action
+  - Name: dynamodb:DescribeEndpoints
+  - Name: dynamodb:TransactGetItems
+  - Name: dynamodb:TransactWriteItems

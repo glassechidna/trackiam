@@ -1,5 +1,4 @@
 Actions:
-  - Name: cloudsearch:AddTags
   - Name: cloudsearch:BuildSuggesters
   - Name: cloudsearch:CreateDomain
   - Name: cloudsearch:DefineAnalysisScheme
@@ -21,11 +20,17 @@ Actions:
   - Name: cloudsearch:DescribeSuggesters
   - Name: cloudsearch:IndexDocuments
   - Name: cloudsearch:ListDomainNames
-  - Name: cloudsearch:ListTags
-  - Name: cloudsearch:RemoveTags
   - Name: cloudsearch:UpdateAvailabilityOptions
   - Name: cloudsearch:UpdateScalingParameters
   - Name: cloudsearch:UpdateServiceAccessPolicies
-  - Name: cloudsearch:document
   - Name: cloudsearch:search
   - Name: cloudsearch:suggest
+
+  # actions with no corresponding API
+  - Name: cloudsearch:AddTags
+  - Name: cloudsearch:ListTags
+  - Name: cloudsearch:RemoveTags
+  - Name: cloudsearch:document
+
+  # APIs without an IAM action
+  - Name: cloudsearch:UploadDocuments

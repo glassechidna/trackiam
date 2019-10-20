@@ -2,11 +2,9 @@ Actions:
   - Name: logs:AssociateKmsKey
   - Name: logs:CancelExportTask
   - Name: logs:CreateExportTask
-  - Name: logs:CreateLogDelivery
   - Name: logs:CreateLogGroup
   - Name: logs:CreateLogStream
   - Name: logs:DeleteDestination
-  - Name: logs:DeleteLogDelivery
   - Name: logs:DeleteLogGroup
   - Name: logs:DeleteLogStream
   - Name: logs:DeleteMetricFilter
@@ -23,12 +21,10 @@ Actions:
   - Name: logs:DescribeSubscriptionFilters
   - Name: logs:DisassociateKmsKey
   - Name: logs:FilterLogEvents
-  - Name: logs:GetLogDelivery
   - Name: logs:GetLogEvents
   - Name: logs:GetLogGroupFields
   - Name: logs:GetLogRecord
   - Name: logs:GetQueryResults
-  - Name: logs:ListLogDeliveries
   - Name: logs:ListTagsLogGroup
   - Name: logs:PutDestination
   - Name: logs:PutDestinationPolicy
@@ -42,4 +38,10 @@ Actions:
   - Name: logs:TagLogGroup
   - Name: logs:TestMetricFilter
   - Name: logs:UntagLogGroup
+
+  # actions with no corresponding API
+  - Name: logs:CreateLogDelivery
+  - Name: logs:DeleteLogDelivery
+  - Name: logs:GetLogDelivery
+  - Name: logs:ListLogDeliveries
   - Name: logs:UpdateLogDelivery

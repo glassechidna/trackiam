@@ -25,7 +25,6 @@ Actions:
   - Name: ecs:ListTaskDefinitionFamilies
   - Name: ecs:ListTaskDefinitions
   - Name: ecs:ListTasks
-  - Name: ecs:Poll
   - Name: ecs:PutAccountSetting
   - Name: ecs:PutAccountSettingDefault
   - Name: ecs:PutAttributes
@@ -33,7 +32,6 @@ Actions:
   - Name: ecs:RegisterTaskDefinition
   - Name: ecs:RunTask
   - Name: ecs:StartTask
-  - Name: ecs:StartTelemetrySession
   - Name: ecs:StopTask
   - Name: ecs:SubmitAttachmentStateChanges
   - Name: ecs:SubmitContainerStateChange
@@ -45,3 +43,10 @@ Actions:
   - Name: ecs:UpdateService
   - Name: ecs:UpdateServicePrimaryTaskSet
   - Name: ecs:UpdateTaskSet
+
+  # actions with no corresponding API
+  - Name: ecs:Poll
+  - Name: ecs:StartTelemetrySession
+
+  # APIs without an IAM action
+  - Name: ecs:UpdateClusterSettings

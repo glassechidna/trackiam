@@ -1,9 +1,7 @@
 Actions:
   - Name: codecommit:BatchDescribeMergeConflicts
   - Name: codecommit:BatchGetCommits
-  - Name: codecommit:BatchGetPullRequests
   - Name: codecommit:BatchGetRepositories
-  - Name: codecommit:CancelUploadArchive
   - Name: codecommit:CreateBranch
   - Name: codecommit:CreateCommit
   - Name: codecommit:CreatePullRequest
@@ -21,23 +19,15 @@ Actions:
   - Name: codecommit:GetCommentsForComparedCommit
   - Name: codecommit:GetCommentsForPullRequest
   - Name: codecommit:GetCommit
-  - Name: codecommit:GetCommitHistory
-  - Name: codecommit:GetCommitsFromMergeBase
   - Name: codecommit:GetDifferences
   - Name: codecommit:GetFile
   - Name: codecommit:GetFolder
   - Name: codecommit:GetMergeCommit
   - Name: codecommit:GetMergeConflicts
   - Name: codecommit:GetMergeOptions
-  - Name: codecommit:GetObjectIdentifier
   - Name: codecommit:GetPullRequest
-  - Name: codecommit:GetReferences
   - Name: codecommit:GetRepository
   - Name: codecommit:GetRepositoryTriggers
-  - Name: codecommit:GetTree
-  - Name: codecommit:GetUploadArchiveStatus
-  - Name: codecommit:GitPull
-  - Name: codecommit:GitPush
   - Name: codecommit:ListBranches
   - Name: codecommit:ListPullRequests
   - Name: codecommit:ListRepositories
@@ -63,4 +53,16 @@ Actions:
   - Name: codecommit:UpdatePullRequestTitle
   - Name: codecommit:UpdateRepositoryDescription
   - Name: codecommit:UpdateRepositoryName
+
+  # actions with no corresponding API
+  - Name: codecommit:BatchGetPullRequests
+  - Name: codecommit:CancelUploadArchive
+  - Name: codecommit:GetCommitHistory
+  - Name: codecommit:GetCommitsFromMergeBase
+  - Name: codecommit:GetObjectIdentifier
+  - Name: codecommit:GetReferences
+  - Name: codecommit:GetTree
+  - Name: codecommit:GetUploadArchiveStatus
+  - Name: codecommit:GitPull
+  - Name: codecommit:GitPush
   - Name: codecommit:UploadArchive

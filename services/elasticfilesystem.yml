@@ -1,5 +1,4 @@
 Actions:
-  - Name: elasticfilesystem:Backup
   - Name: elasticfilesystem:CreateFileSystem
   - Name: elasticfilesystem:CreateMountTarget
   - Name: elasticfilesystem:CreateTags
@@ -13,5 +12,8 @@ Actions:
   - Name: elasticfilesystem:DescribeTags
   - Name: elasticfilesystem:ModifyMountTargetSecurityGroups
   - Name: elasticfilesystem:PutLifecycleConfiguration
-  - Name: elasticfilesystem:Restore
   - Name: elasticfilesystem:UpdateFileSystem
+
+  # actions with no corresponding API
+  - Name: elasticfilesystem:Backup
+  - Name: elasticfilesystem:Restore

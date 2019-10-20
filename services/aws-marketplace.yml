@@ -1,6 +1,12 @@
 Actions:
-  - Name: aws-marketplace:AssociateProductsWithPrivateMarketplace
   - Name: aws-marketplace:BatchMeterUsage
+  - Name: aws-marketplace:GetEntitlements
+  - Name: aws-marketplace:MeterUsage
+  - Name: aws-marketplace:RegisterUsage
+  - Name: aws-marketplace:ResolveCustomer
+
+  # actions with no corresponding API
+  - Name: aws-marketplace:AssociateProductsWithPrivateMarketplace
   - Name: aws-marketplace:CancelChangeSet
   - Name: aws-marketplace:CreatePrivateMarketplace
   - Name: aws-marketplace:CreatePrivateMarketplaceProfile
@@ -12,15 +18,11 @@ Actions:
   - Name: aws-marketplace:DescribePrivateMarketplaceStatus
   - Name: aws-marketplace:DescribeProcurementSystemConfiguration
   - Name: aws-marketplace:DisassociateProductsFromPrivateMarketplace
-  - Name: aws-marketplace:GetEntitlements
   - Name: aws-marketplace:ListBuilds
   - Name: aws-marketplace:ListChangeSets
   - Name: aws-marketplace:ListEntities
   - Name: aws-marketplace:ListPrivateMarketplaceProducts
-  - Name: aws-marketplace:MeterUsage
   - Name: aws-marketplace:PutProcurementSystemConfiguration
-  - Name: aws-marketplace:RegisterUsage
-  - Name: aws-marketplace:ResolveCustomer
   - Name: aws-marketplace:StartBuild
   - Name: aws-marketplace:StartChangeSet
   - Name: aws-marketplace:StartPrivateMarketplace

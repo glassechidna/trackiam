@@ -2,12 +2,9 @@ Actions:
   - Name: workdocs:AbortDocumentVersionUpload
   - Name: workdocs:ActivateUser
   - Name: workdocs:AddResourcePermissions
-  - Name: workdocs:AddUserToGroup
-  - Name: workdocs:CheckAlias
   - Name: workdocs:CreateComment
   - Name: workdocs:CreateCustomMetadata
   - Name: workdocs:CreateFolder
-  - Name: workdocs:CreateInstance
   - Name: workdocs:CreateLabels
   - Name: workdocs:CreateNotificationSubscription
   - Name: workdocs:CreateUser
@@ -17,23 +14,18 @@ Actions:
   - Name: workdocs:DeleteDocument
   - Name: workdocs:DeleteFolder
   - Name: workdocs:DeleteFolderContents
-  - Name: workdocs:DeleteInstance
   - Name: workdocs:DeleteLabels
   - Name: workdocs:DeleteNotificationSubscription
   - Name: workdocs:DeleteUser
-  - Name: workdocs:DeregisterDirectory
   - Name: workdocs:DescribeActivities
-  - Name: workdocs:DescribeAvailableDirectories
   - Name: workdocs:DescribeComments
   - Name: workdocs:DescribeDocumentVersions
   - Name: workdocs:DescribeFolderContents
   - Name: workdocs:DescribeGroups
-  - Name: workdocs:DescribeInstances
   - Name: workdocs:DescribeNotificationSubscriptions
   - Name: workdocs:DescribeResourcePermissions
   - Name: workdocs:DescribeRootFolders
   - Name: workdocs:DescribeUsers
-  - Name: workdocs:DownloadDocumentVersion
   - Name: workdocs:GetCurrentUser
   - Name: workdocs:GetDocument
   - Name: workdocs:GetDocumentPath
@@ -42,11 +34,21 @@ Actions:
   - Name: workdocs:GetFolderPath
   - Name: workdocs:GetResources
   - Name: workdocs:InitiateDocumentVersionUpload
-  - Name: workdocs:RegisterDirectory
   - Name: workdocs:RemoveAllResourcePermissions
   - Name: workdocs:RemoveResourcePermission
   - Name: workdocs:UpdateDocument
   - Name: workdocs:UpdateDocumentVersion
   - Name: workdocs:UpdateFolder
-  - Name: workdocs:UpdateInstanceAlias
   - Name: workdocs:UpdateUser
+
+  # actions with no corresponding API
+  - Name: workdocs:AddUserToGroup
+  - Name: workdocs:CheckAlias
+  - Name: workdocs:CreateInstance
+  - Name: workdocs:DeleteInstance
+  - Name: workdocs:DeregisterDirectory
+  - Name: workdocs:DescribeAvailableDirectories
+  - Name: workdocs:DescribeInstances
+  - Name: workdocs:DownloadDocumentVersion
+  - Name: workdocs:RegisterDirectory
+  - Name: workdocs:UpdateInstanceAlias

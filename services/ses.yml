@@ -1,8 +1,6 @@
 Actions:
   - Name: ses:CloneReceiptRuleSet
   - Name: ses:CreateConfigurationSet
-  - Name: ses:CreateConfigurationSet
-  - Name: ses:CreateConfigurationSetEventDestination
   - Name: ses:CreateConfigurationSetEventDestination
   - Name: ses:CreateConfigurationSetTrackingOptions
   - Name: ses:CreateCustomVerificationEmailTemplate
@@ -14,8 +12,6 @@ Actions:
   - Name: ses:CreateReceiptRuleSet
   - Name: ses:CreateTemplate
   - Name: ses:DeleteConfigurationSet
-  - Name: ses:DeleteConfigurationSet
-  - Name: ses:DeleteConfigurationSetEventDestination
   - Name: ses:DeleteConfigurationSetEventDestination
   - Name: ses:DeleteConfigurationSetTrackingOptions
   - Name: ses:DeleteCustomVerificationEmailTemplate
@@ -53,7 +49,6 @@ Actions:
   - Name: ses:GetSendStatistics
   - Name: ses:GetTemplate
   - Name: ses:ListConfigurationSets
-  - Name: ses:ListConfigurationSets
   - Name: ses:ListCustomVerificationEmailTemplates
   - Name: ses:ListDedicatedIpPools
   - Name: ses:ListDeliverabilityTestReports
@@ -83,7 +78,6 @@ Actions:
   - Name: ses:SendBulkTemplatedEmail
   - Name: ses:SendCustomVerificationEmail
   - Name: ses:SendEmail
-  - Name: ses:SendEmail
   - Name: ses:SendRawEmail
   - Name: ses:SendTemplatedEmail
   - Name: ses:SetActiveReceiptRuleSet
@@ -98,7 +92,6 @@ Actions:
   - Name: ses:UntagResource
   - Name: ses:UpdateAccountSendingEnabled
   - Name: ses:UpdateConfigurationSetEventDestination
-  - Name: ses:UpdateConfigurationSetEventDestination
   - Name: ses:UpdateConfigurationSetReputationMetricsEnabled
   - Name: ses:UpdateConfigurationSetSendingEnabled
   - Name: ses:UpdateConfigurationSetTrackingOptions
@@ -109,3 +102,16 @@ Actions:
   - Name: ses:VerifyDomainIdentity
   - Name: ses:VerifyEmailAddress
   - Name: ses:VerifyEmailIdentity
+
+  # actions with no corresponding API
+  - Name: ses:CreateConfigurationSet
+  - Name: ses:CreateConfigurationSetEventDestination
+  - Name: ses:DeleteConfigurationSet
+  - Name: ses:DeleteConfigurationSetEventDestination
+  - Name: ses:ListConfigurationSets
+  - Name: ses:SendEmail
+  - Name: ses:UpdateConfigurationSetEventDestination
+
+  # APIs without an IAM action
+  - Name: ses:GetDomainDeliverabilityCampaign
+  - Name: ses:ListDomainDeliverabilityCampaigns

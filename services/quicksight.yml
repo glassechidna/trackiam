@@ -1,9 +1,6 @@
 Actions:
-  - Name: quicksight:CreateAdmin
   - Name: quicksight:CreateGroup
   - Name: quicksight:CreateGroupMembership
-  - Name: quicksight:CreateReader
-  - Name: quicksight:CreateUser
   - Name: quicksight:DeleteGroup
   - Name: quicksight:DeleteGroupMembership
   - Name: quicksight:DeleteUser
@@ -11,15 +8,20 @@ Actions:
   - Name: quicksight:DescribeGroup
   - Name: quicksight:DescribeUser
   - Name: quicksight:GetDashboardEmbedUrl
-  - Name: quicksight:GetGroupMapping
   - Name: quicksight:ListGroupMemberships
   - Name: quicksight:ListGroups
   - Name: quicksight:ListUserGroups
   - Name: quicksight:ListUsers
   - Name: quicksight:RegisterUser
+  - Name: quicksight:UpdateGroup
+  - Name: quicksight:UpdateUser
+
+  # actions with no corresponding API
+  - Name: quicksight:CreateAdmin
+  - Name: quicksight:CreateReader
+  - Name: quicksight:CreateUser
+  - Name: quicksight:GetGroupMapping
   - Name: quicksight:SearchDirectoryGroups
   - Name: quicksight:SetGroupMapping
   - Name: quicksight:Subscribe
   - Name: quicksight:Unsubscribe
-  - Name: quicksight:UpdateGroup
-  - Name: quicksight:UpdateUser

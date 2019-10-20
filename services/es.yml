@@ -9,11 +9,6 @@ Actions:
   - Name: es:DescribeElasticsearchInstanceTypeLimits
   - Name: es:DescribeReservedElasticsearchInstanceOfferings
   - Name: es:DescribeReservedElasticsearchInstances
-  - Name: es:ESHttpDelete
-  - Name: es:ESHttpGet
-  - Name: es:ESHttpHead
-  - Name: es:ESHttpPost
-  - Name: es:ESHttpPut
   - Name: es:GetCompatibleElasticsearchVersions
   - Name: es:GetUpgradeHistory
   - Name: es:GetUpgradeStatus
@@ -25,3 +20,14 @@ Actions:
   - Name: es:RemoveTags
   - Name: es:UpdateElasticsearchDomainConfig
   - Name: es:UpgradeElasticsearchDomain
+
+  # actions with no corresponding API
+  - Name: es:ESHttpDelete
+  - Name: es:ESHttpGet
+  - Name: es:ESHttpHead
+  - Name: es:ESHttpPost
+  - Name: es:ESHttpPut
+
+  # APIs without an IAM action
+  - Name: es:CancelElasticsearchServiceSoftwareUpdate
+  - Name: es:StartElasticsearchServiceSoftwareUpdate

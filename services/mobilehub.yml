@@ -1,12 +1,17 @@
 Actions:
   - Name: mobilehub:CreateProject
-  - Name: mobilehub:CreateServiceRole
   - Name: mobilehub:DeleteProject
-  - Name: mobilehub:DeleteProjectSnapshot
-  - Name: mobilehub:DeployToStage
   - Name: mobilehub:DescribeBundle
   - Name: mobilehub:ExportBundle
   - Name: mobilehub:ExportProject
+  - Name: mobilehub:ListBundles
+  - Name: mobilehub:ListProjects
+  - Name: mobilehub:UpdateProject
+
+  # actions with no corresponding API
+  - Name: mobilehub:CreateServiceRole
+  - Name: mobilehub:DeleteProjectSnapshot
+  - Name: mobilehub:DeployToStage
   - Name: mobilehub:GenerateProjectParameters
   - Name: mobilehub:GetProject
   - Name: mobilehub:GetProjectSnapshot
@@ -15,10 +20,10 @@ Actions:
   - Name: mobilehub:ListAvailableConnectors
   - Name: mobilehub:ListAvailableFeatures
   - Name: mobilehub:ListAvailableRegions
-  - Name: mobilehub:ListBundles
   - Name: mobilehub:ListProjectSnapshots
-  - Name: mobilehub:ListProjects
   - Name: mobilehub:SynchronizeProject
-  - Name: mobilehub:UpdateProject
   - Name: mobilehub:ValidateProject
   - Name: mobilehub:VerifyServiceRole
+
+  # APIs without an IAM action
+  - Name: mobilehub:DescribeProject

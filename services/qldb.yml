@@ -3,18 +3,20 @@ Actions:
   - Name: qldb:DeleteLedger
   - Name: qldb:DescribeJournalS3Export
   - Name: qldb:DescribeLedger
-  - Name: qldb:ExecuteStatement
   - Name: qldb:ExportJournalToS3
   - Name: qldb:GetBlock
   - Name: qldb:GetDigest
   - Name: qldb:GetRevision
-  - Name: qldb:InsertSampleData
   - Name: qldb:ListJournalS3Exports
   - Name: qldb:ListJournalS3ExportsForLedger
   - Name: qldb:ListLedgers
   - Name: qldb:ListTagsForResource
   - Name: qldb:SendCommand
-  - Name: qldb:ShowCatalog
   - Name: qldb:TagResource
   - Name: qldb:UntagResource
   - Name: qldb:UpdateLedger
+
+  # actions with no corresponding API
+  - Name: qldb:ExecuteStatement
+  - Name: qldb:InsertSampleData
+  - Name: qldb:ShowCatalog

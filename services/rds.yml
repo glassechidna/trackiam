@@ -70,7 +70,6 @@ Actions:
   - Name: rds:DescribeReservedDBInstancesOfferings
   - Name: rds:DescribeSourceRegions
   - Name: rds:DescribeValidDBInstanceModifications
-  - Name: rds:DownloadCompleteDBLogFile
   - Name: rds:DownloadDBLogFilePortion
   - Name: rds:FailoverDBCluster
   - Name: rds:ListTagsForResource
@@ -111,3 +110,14 @@ Actions:
   - Name: rds:StopActivityStream
   - Name: rds:StopDBCluster
   - Name: rds:StopDBInstance
+
+  # actions with no corresponding API
+  - Name: rds:DownloadCompleteDBLogFile
+
+  # APIs without an IAM action
+  - Name: rds:CreateCustomAvailabilityZone
+  - Name: rds:DeleteCustomAvailabilityZone
+  - Name: rds:DeleteInstallationMedia
+  - Name: rds:DescribeCustomAvailabilityZones
+  - Name: rds:DescribeInstallationMedia
+  - Name: rds:ImportInstallationMedia

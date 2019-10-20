@@ -9,7 +9,6 @@ Actions:
   - Name: lambda:DeleteFunction
   - Name: lambda:DeleteFunctionConcurrency
   - Name: lambda:DeleteLayerVersion
-  - Name: lambda:EnableReplication
   - Name: lambda:GetAccountSettings
   - Name: lambda:GetAlias
   - Name: lambda:GetEventSourceMapping
@@ -19,7 +18,6 @@ Actions:
   - Name: lambda:GetLayerVersionPolicy
   - Name: lambda:GetPolicy
   - Name: lambda:InvokeAsync
-  - Name: lambda:InvokeFunction
   - Name: lambda:ListAliases
   - Name: lambda:ListEventSourceMappings
   - Name: lambda:ListFunctions
@@ -38,3 +36,11 @@ Actions:
   - Name: lambda:UpdateEventSourceMapping
   - Name: lambda:UpdateFunctionCode
   - Name: lambda:UpdateFunctionConfiguration
+
+  # actions with no corresponding API
+  - Name: lambda:EnableReplication
+  - Name: lambda:InvokeFunction
+
+  # APIs without an IAM action
+  - Name: lambda:GetLayerVersionByArn
+  - Name: lambda:Invoke

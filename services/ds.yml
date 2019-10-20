@@ -2,14 +2,12 @@ Actions:
   - Name: ds:AcceptSharedDirectory
   - Name: ds:AddIpRoutes
   - Name: ds:AddTagsToResource
-  - Name: ds:AuthorizeApplication
   - Name: ds:CancelSchemaExtension
   - Name: ds:ConnectDirectory
   - Name: ds:CreateAlias
   - Name: ds:CreateComputer
   - Name: ds:CreateConditionalForwarder
   - Name: ds:CreateDirectory
-  - Name: ds:CreateIdentityPoolDirectory
   - Name: ds:CreateLogSubscription
   - Name: ds:CreateMicrosoftAD
   - Name: ds:CreateSnapshot
@@ -31,10 +29,8 @@ Actions:
   - Name: ds:DisableSso
   - Name: ds:EnableRadius
   - Name: ds:EnableSso
-  - Name: ds:GetAuthorizedApplicationDetails
   - Name: ds:GetDirectoryLimits
   - Name: ds:GetSnapshotLimits
-  - Name: ds:ListAuthorizedApplications
   - Name: ds:ListIpRoutes
   - Name: ds:ListLogSubscriptions
   - Name: ds:ListSchemaExtensions
@@ -47,9 +43,18 @@ Actions:
   - Name: ds:RestoreFromSnapshot
   - Name: ds:ShareDirectory
   - Name: ds:StartSchemaExtension
-  - Name: ds:UnauthorizeApplication
   - Name: ds:UnshareDirectory
   - Name: ds:UpdateConditionalForwarder
   - Name: ds:UpdateNumberOfDomainControllers
   - Name: ds:UpdateRadius
   - Name: ds:VerifyTrust
+
+  # actions with no corresponding API
+  - Name: ds:AuthorizeApplication
+  - Name: ds:CreateIdentityPoolDirectory
+  - Name: ds:GetAuthorizedApplicationDetails
+  - Name: ds:ListAuthorizedApplications
+  - Name: ds:UnauthorizeApplication
+
+  # APIs without an IAM action
+  - Name: ds:UpdateTrust

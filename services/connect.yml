@@ -1,12 +1,32 @@
 Actions:
+  - Name: connect:GetCurrentMetricData
+  - Name: connect:GetFederationToken
+  - Name: connect:GetMetricData
+  - Name: connect:StartOutboundVoiceContact
+  - Name: connect:StopContact
+
+  # actions with no corresponding API
   - Name: connect:CreateInstance
   - Name: connect:DescribeInstance
   - Name: connect:DestroyInstance
-  - Name: connect:GetCurrentMetricData
-  - Name: connect:GetFederationToken
   - Name: connect:GetFederationTokens
-  - Name: connect:GetMetricData
   - Name: connect:ListInstances
   - Name: connect:ModifyInstance
-  - Name: connect:StartOutboundVoiceContact
-  - Name: connect:StopContact
+
+  # APIs without an IAM action
+  - Name: connect:CreateUser
+  - Name: connect:DeleteUser
+  - Name: connect:DescribeUser
+  - Name: connect:DescribeUserHierarchyGroup
+  - Name: connect:DescribeUserHierarchyStructure
+  - Name: connect:GetContactAttributes
+  - Name: connect:ListRoutingProfiles
+  - Name: connect:ListSecurityProfiles
+  - Name: connect:ListUserHierarchyGroups
+  - Name: connect:ListUsers
+  - Name: connect:UpdateContactAttributes
+  - Name: connect:UpdateUserHierarchy
+  - Name: connect:UpdateUserIdentityInfo
+  - Name: connect:UpdateUserPhoneConfig
+  - Name: connect:UpdateUserRoutingProfile
+  - Name: connect:UpdateUserSecurityProfiles

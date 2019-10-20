@@ -4,7 +4,6 @@ Actions:
   - Name: codebuild:BatchGetProjects
   - Name: codebuild:CreateProject
   - Name: codebuild:CreateWebhook
-  - Name: codebuild:DeleteOAuthToken
   - Name: codebuild:DeleteProject
   - Name: codebuild:DeleteSourceCredentials
   - Name: codebuild:DeleteWebhook
@@ -12,13 +11,16 @@ Actions:
   - Name: codebuild:InvalidateProjectCache
   - Name: codebuild:ListBuilds
   - Name: codebuild:ListBuildsForProject
-  - Name: codebuild:ListConnectedOAuthAccounts
   - Name: codebuild:ListCuratedEnvironmentImages
   - Name: codebuild:ListProjects
-  - Name: codebuild:ListRepositories
   - Name: codebuild:ListSourceCredentials
-  - Name: codebuild:PersistOAuthToken
   - Name: codebuild:StartBuild
   - Name: codebuild:StopBuild
   - Name: codebuild:UpdateProject
   - Name: codebuild:UpdateWebhook
+
+  # actions with no corresponding API
+  - Name: codebuild:DeleteOAuthToken
+  - Name: codebuild:ListConnectedOAuthAccounts
+  - Name: codebuild:ListRepositories
+  - Name: codebuild:PersistOAuthToken

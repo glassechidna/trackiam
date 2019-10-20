@@ -33,8 +33,6 @@ Actions:
   - Name: appstream:DisassociateFleet
   - Name: appstream:EnableUser
   - Name: appstream:ExpireSession
-  - Name: appstream:GetImageBuilders
-  - Name: appstream:GetParametersForThemeAssetUpload
   - Name: appstream:ListAssociatedFleets
   - Name: appstream:ListAssociatedStacks
   - Name: appstream:ListTagsForResource
@@ -42,10 +40,14 @@ Actions:
   - Name: appstream:StartImageBuilder
   - Name: appstream:StopFleet
   - Name: appstream:StopImageBuilder
-  - Name: appstream:Stream
   - Name: appstream:TagResource
   - Name: appstream:UntagResource
   - Name: appstream:UpdateDirectoryConfig
   - Name: appstream:UpdateFleet
   - Name: appstream:UpdateImagePermissions
   - Name: appstream:UpdateStack
+
+  # actions with no corresponding API
+  - Name: appstream:GetImageBuilders
+  - Name: appstream:GetParametersForThemeAssetUpload
+  - Name: appstream:Stream

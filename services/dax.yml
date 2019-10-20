@@ -1,13 +1,9 @@
 Actions:
-  - Name: dax:BatchGetItem
-  - Name: dax:BatchWriteItem
-  - Name: dax:ConditionCheckItem
   - Name: dax:CreateCluster
   - Name: dax:CreateParameterGroup
   - Name: dax:CreateSubnetGroup
   - Name: dax:DecreaseReplicationFactor
   - Name: dax:DeleteCluster
-  - Name: dax:DeleteItem
   - Name: dax:DeleteParameterGroup
   - Name: dax:DeleteSubnetGroup
   - Name: dax:DescribeClusters
@@ -16,16 +12,22 @@ Actions:
   - Name: dax:DescribeParameterGroups
   - Name: dax:DescribeParameters
   - Name: dax:DescribeSubnetGroups
-  - Name: dax:GetItem
   - Name: dax:IncreaseReplicationFactor
   - Name: dax:ListTags
-  - Name: dax:PutItem
-  - Name: dax:Query
   - Name: dax:RebootNode
-  - Name: dax:Scan
   - Name: dax:TagResource
   - Name: dax:UntagResource
   - Name: dax:UpdateCluster
-  - Name: dax:UpdateItem
   - Name: dax:UpdateParameterGroup
   - Name: dax:UpdateSubnetGroup
+
+  # actions with no corresponding API
+  - Name: dax:BatchGetItem
+  - Name: dax:BatchWriteItem
+  - Name: dax:ConditionCheckItem
+  - Name: dax:DeleteItem
+  - Name: dax:GetItem
+  - Name: dax:PutItem
+  - Name: dax:Query
+  - Name: dax:Scan
+  - Name: dax:UpdateItem
