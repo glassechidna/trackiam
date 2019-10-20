@@ -1,4 +1,4 @@
-module trackiam
+module github.com/glassechidna/trackiam
 
 go 1.13
 
