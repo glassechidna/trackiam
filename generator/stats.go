@@ -26,7 +26,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 {{- range .Services }}
-| {{ $.Backtick }}{{ .IamPrefix }}{{ $.Backtick }} | {{ .ActionApiPairs }} | {{ .ActionlessApis }} | {{ .ApilessActions }} |
+| [{{ $.Backtick }}{{ .IamPrefix }}{{ $.Backtick }}](services/{{ .IamPrefix }}.yml) | {{ .ActionApiPairs }} | {{ .ActionlessApis }} | {{ .ApilessActions }} |
 {{- end }}
 
 Most common action prefixes:
