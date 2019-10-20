@@ -95,7 +95,14 @@ func (s byCount) Swap(i, j int) {
 	s[i], s[j] = s[j], s[i]
 }
 func (s byCount) Less(i, j int) bool {
-	return s[i].Count < s[j].Count
+	ic := s[i].Count
+	jc := s[j].Count
+
+	if ic == jc {
+		return s[i].Prefix < s[j].Prefix
+	} else {
+		return ic < jc
+	}
 }
 
 func prefixStats(input map[string]serviceDocument) ([]stat, []stat, int) {
