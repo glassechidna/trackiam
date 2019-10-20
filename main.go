@@ -7,6 +7,7 @@ import (
 	"github.com/fatih/camelcase"
 	"github.com/pkg/errors"
 	"io/ioutil"
+	"net/http"
 	"sort"
 	"strings"
 	"text/template"
@@ -22,15 +23,13 @@ type serviceDocument struct {
 }
 
 func policiesJs() ([]byte, error) {
-	//url := "https://awspolicygen.s3.amazonaws.com/js/policies.js"
-	//resp, err := http.Get(url)
-	//if err != nil {
-	//	return nil, errors.WithStack(err)
-	//}
-	//
-	//bytes, err := ioutil.ReadAll(resp.Body)
+	url := "https://awspolicygen.s3.amazonaws.com/js/policies.js"
+	resp, err := http.Get(url)
+	if err != nil {
+		return nil, errors.WithStack(err)
+	}
 
-	bytes, err := ioutil.ReadFile("/Users/aidan.steele/Desktop/policies.js")
+	bytes, err := ioutil.ReadAll(resp.Body)
 	return bytes, errors.WithStack(err)
 }
 
