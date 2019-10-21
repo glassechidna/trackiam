@@ -42,11 +42,13 @@ func policiesDocToActions(doc *policiesDoc) actions {
 
 	for _, service := range doc.ServiceMap {
 		for _, name := range service.Actions {
-			a = append(a, &action{
-				IamPrefix: service.StringPrefix,
-				Name:      name,
-				HasAction: true,
-			})
+			if a.get(service.StringPrefix, name) == nil {
+				a = append(a, &action{
+					IamPrefix: service.StringPrefix,
+					Name:      name,
+					HasAction: true,
+				})
+			}
 		}
 	}
 

@@ -1,7 +1,7 @@
 # AWS IAM by the numbers
 
 * Unique services: 190
-* Unique actions: 6850
+* Unique actions: 6819
 
 The following table summarises the AWS APIs. 
 
@@ -18,7 +18,7 @@ The following table summarises the AWS APIs.
 | [`glue`](services/glue.yml) | 123 | 0 | 1 |
 | [`ssm`](services/ssm.yml) | 116 | 4 | 7 |
 | [`rds`](services/rds.yml) | 111 | 6 | 1 |
-| [`ses`](services/ses.yml) | 103 | 2 | 7 |
+| [`ses`](services/ses.yml) | 103 | 2 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 4 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
@@ -38,6 +38,7 @@ The following table summarises the AWS APIs.
 | [`config`](services/config.yml) | 56 | 8 | 2 |
 | [`route53`](services/route53.yml) | 56 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 54 | 0 | 11 |
+| [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`autoscaling`](services/autoscaling.yml) | 54 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 53 | 0 | 0 |
 | [`ds`](services/ds.yml) | 49 | 1 | 5 |
@@ -68,7 +69,6 @@ The following table summarises the AWS APIs.
 | [`lex`](services/lex.yml) | 35 | 6 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
-| [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 34 | 0 | 29 |
 | [`rekognition`](services/rekognition.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 33 | 1 | 0 |
 | [`workmail`](services/workmail.yml) | 33 | 0 | 53 |
@@ -94,7 +94,7 @@ The following table summarises the AWS APIs.
 | [`mediaconvert`](services/mediaconvert.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
-| [`kinesisanalytics`](services/kinesisanalytics.yml) | 24 | 0 | 16 |
+| [`kinesisanalytics`](services/kinesisanalytics.yml) | 24 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 23 | 1 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 23 | 0 | 0 |
 | [`states`](services/states.yml) | 22 | 0 | 0 |
@@ -209,12 +209,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `Get` | 912 |
-| `List` | 900 |
-| `Describe` | 875 |
-| `Delete` | 807 |
-| `Create` | 733 |
-| `Update` | 541 |
+| `List` | 897 |
+| `Describe` | 871 |
+| `Delete` | 801 |
+| `Create` | 729 |
+| `Update` | 539 |
 | `Put` | 186 |
-| `Start` | 113 |
-| `Modify` | 94 |
-| `Untag` | 79 |
+| `Start` | 112 |
+| `Modify` | 93 |
+| `Untag` | 78 |

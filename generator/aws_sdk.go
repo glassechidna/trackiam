@@ -11,8 +11,8 @@ import (
 	"regexp"
 )
 
-func apiDocs() (map[string]*apiDoc, error) {
-	output := map[string]*apiDoc{}
+func apiDocs() ([]*apiDoc, error) {
+	output := []*apiDoc{}
 
 	resp, err := http.Get("https://github.com/aws/aws-sdk-go/archive/master.zip")
 	if err != nil {
@@ -59,17 +59,18 @@ func apiDocs() (map[string]*apiDoc, error) {
 		if guess == "" {
 			guess = doc.Metadata.EndpointPrefix
 		}
-		fmt.Println(guess)
+		//fmt.Println(guess)
 
-		output[doc.Metadata.ServiceFullName] = &doc
+		output = append(output, &doc)
 	}
 
 	return output, nil
 }
 
-func apis(apiDocs map[string]*apiDoc, acts *actions) error {
+func apis(apiDocs []*apiDoc, acts *actions) error {
 	for _, api := range apiDocs {
 		iamPrefix := api.iamPrefix()
+		fmt.Println(iamPrefix)
 		for name, _ := range api.Operations {
 			act := acts.get(iamPrefix, name)
 			if act == nil {
