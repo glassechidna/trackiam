@@ -18,7 +18,7 @@ type serviceDocument struct {
 }
 
 func policiesJs() ([]byte, error) {
-	url := "https://awspolicygen.s3.amazonaws.com/js/policies.js"
+	url := "https://awspolicygen.s3.dualstack.us-east-1.amazonaws.com/js/policies.js"
 	resp, err := http.Get(url)
 	if err != nil {
 		return nil, errors.WithStack(err)
