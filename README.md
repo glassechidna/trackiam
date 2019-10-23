@@ -148,6 +148,7 @@ The following table summarises the AWS APIs.
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`cloud9`](services/cloud9.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
+| [`connect`](services/connect.yml) | 9 | 16 | 6 |
 | [`transcribe`](services/transcribe.yml) | 9 | 0 | 1 |
 | [`signer`](services/signer.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
@@ -162,7 +163,6 @@ The following table summarises the AWS APIs.
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
 | [`health`](services/health.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
-| [`connect`](services/connect.yml) | 5 | 20 | 6 |
 | [`rds-data`](services/rds-data.yml) | 5 | 1 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 5 | 0 | 25 |
 | [`translate`](services/translate.yml) | 5 | 0 | 0 |
