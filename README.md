@@ -1,7 +1,7 @@
 # AWS IAM by the numbers
 
 * Unique services: 190
-* Unique actions: 6819
+* Unique actions: 6823
 
 The following table summarises the AWS APIs. 
 
@@ -162,7 +162,7 @@ The following table summarises the AWS APIs.
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
 | [`health`](services/health.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
-| [`connect`](services/connect.yml) | 5 | 16 | 6 |
+| [`connect`](services/connect.yml) | 5 | 20 | 6 |
 | [`rds-data`](services/rds-data.yml) | 5 | 1 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 5 | 0 | 25 |
 | [`translate`](services/translate.yml) | 5 | 0 | 0 |
@@ -209,7 +209,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `Get` | 912 |
-| `List` | 897 |
+| `List` | 901 |
 | `Describe` | 871 |
 | `Delete` | 801 |
 | `Create` | 729 |
