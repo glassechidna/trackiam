@@ -36,6 +36,9 @@ Most common action prefixes:
 {{- range .Prefixes }}
 | {{ $.Backtick }}{{ .Prefix }}{{ $.Backtick }} | {{ .Count }} |
 {{- end }}
+
+Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
+having this idea and being gracious about me shamelessly ripping it off.
 `)
 	if err != nil {
 		return nil, errors.WithStack(err)
