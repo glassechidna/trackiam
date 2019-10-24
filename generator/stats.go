@@ -19,11 +19,12 @@ func printStats(acts actions, policies []*policyFile) ([]byte, error) {
 
 Most common managed policy name prefixes:
 
-| Prefix | Count |
+| Policy ARN | Count |
 | ------ | ----- |
 {{- range .PolicyPrefixes }}
 | {{ $.Backtick }}arn:aws:iam::aws:policy/{{ .Prefix }}*{{ $.Backtick }} | {{ .Count }} |
 {{- end }}
+| Other | {{ .OtherPolicyPrefixCount }} |
 
 The following table summarises the AWS APIs. 
 
@@ -54,7 +55,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 		return nil, errors.WithStack(err)
 	}
 
-	policyPrefixes := policyPrefixStats(policies)
+	policyPrefixes, otherPolicyPrefixCount := policyPrefixStats(policies)
 
 	byIamPrefix := acts.groupBy(func(act *action) string {
 		return act.IamPrefix
@@ -95,13 +96,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 	buf := &bytes.Buffer{}
 	err = tmpl.Execute(buf, map[string]interface{}{
-		"ServiceCount":   len(stats),
-		"ActionCount":    len(acts),
-		"PolicyCount":    len(policies),
-		"Prefixes":       wordStats,
-		"PolicyPrefixes": policyPrefixes,
-		"Services":       stats,
-		"Backtick":       "`",
+		"ServiceCount":           len(stats),
+		"ActionCount":            len(acts),
+		"PolicyCount":            len(policies),
+		"Prefixes":               wordStats,
+		"PolicyPrefixes":         policyPrefixes,
+		"OtherPolicyPrefixCount": otherPolicyPrefixCount,
+		"Services":               stats,
+		"Backtick":               "`",
 	})
 	if err != nil {
 		return nil, errors.WithStack(err)
@@ -110,7 +112,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 	return buf.Bytes(), nil
 }
 
-func policyPrefixStats(files []*policyFile) []stat {
+func policyPrefixStats(files []*policyFile) ([]stat, int) {
 	prefixes := []string{
 		"AWS",
 		"Amazon",
@@ -120,15 +122,20 @@ func policyPrefixStats(files []*policyFile) []stat {
 	}
 
 	countMap := map[string]int{}
+	other := 0
 
+OUTER:
 	for _, file := range files {
 		bits := strings.Split(file.Arn, ":")
 		resource := strings.TrimPrefix(bits[len(bits)-1], "policy/")
 		for _, prefix := range prefixes {
 			if strings.HasPrefix(resource, prefix) {
 				countMap[prefix] += 1
+				continue OUTER
 			}
 		}
+
+		other++
 	}
 
 	stats := []stat{}
@@ -137,7 +144,7 @@ func policyPrefixStats(files []*policyFile) []stat {
 	}
 	sort.Sort(sort.Reverse(statsByCount(stats)))
 
-	return stats
+	return stats, other
 }
 
 type stat struct {

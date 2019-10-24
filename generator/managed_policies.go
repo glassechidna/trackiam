@@ -10,7 +10,9 @@ import (
 	"github.com/pkg/errors"
 	"io/ioutil"
 	"net/url"
+	"os"
 	"os/exec"
+	"path/filepath"
 	"strings"
 	"time"
 )
@@ -30,6 +32,18 @@ func generateManagedPolicies(ctx context.Context) ([]*policyFile, error) {
 	}
 
 	files := []*policyFile{}
+
+	glob, err := filepath.Glob("policies/*.json")
+	if err != nil {
+		return nil, errors.WithStack(err)
+	}
+
+	for _, path := range glob {
+		err = os.Remove(path)
+		if err != nil {
+			return nil, errors.WithStack(err)
+		}
+	}
 
 	for idx, policy := range policies {
 		if !strings.HasPrefix(*policy.Arn, "arn:aws:iam::aws:policy/") {
@@ -75,15 +89,19 @@ func generateManagedPolicies(ctx context.Context) ([]*policyFile, error) {
 			return nil, errors.WithStack(err)
 		}
 
+		stdout := &bytes.Buffer{}
 		jq := exec.CommandContext(ctx, "jq", "-S", `walk( if type == "array" then sort else . end )`)
 		jq.Stdin = bytes.NewReader(totalJson)
+		jq.Stderr = os.Stderr
+		jq.Stdout = stdout
 
-		pretty, err := jq.CombinedOutput()
+		err = jq.Run()
 		if err != nil {
 			return nil, errors.WithStack(err)
 		}
 
-		err = ioutil.WriteFile(fmt.Sprintf("policies/%s.json", *policy.PolicyName), pretty, 0644)
+		filename := fmt.Sprintf("policies/%s.json", *policy.PolicyName)
+		err = ioutil.WriteFile(filename, stdout.Bytes(), 0644)
 		if err != nil {
 			return nil, errors.WithStack(err)
 		}

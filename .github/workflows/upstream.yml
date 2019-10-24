@@ -19,6 +19,12 @@ jobs:
       - name: Check out code into the Go module directory
         uses: actions/checkout@v1
 
+      - name: update jq
+        run: |
+          sudo curl -L -o /usr/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
+          sudo chmod +x /usr/bin/jq
+          jq -V
+
       - name: Run it
         run: go run main.go
 

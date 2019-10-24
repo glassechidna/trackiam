@@ -6,13 +6,14 @@
 
 Most common managed policy name prefixes:
 
-| Prefix | Count |
+| Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 160 |
 | `arn:aws:iam::aws:policy/Amazon*` | 147 |
 | `arn:aws:iam::aws:policy/service-role/*` | 97 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 95 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
+| Other | 57 |
 
 The following table summarises the AWS APIs. 
 
