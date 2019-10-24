@@ -2,7 +2,7 @@
 
 * Unique services: 190
 * Unique actions: 6823
-* Managed policies: 563
+* Managed policies: 562
 
 Most common managed policy name prefixes:
 
@@ -11,7 +11,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 160 |
 | `arn:aws:iam::aws:policy/Amazon*` | 147 |
 | `arn:aws:iam::aws:policy/service-role/*` | 97 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 95 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 94 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 57 |
 
