@@ -1,0 +1,31 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSFMAdminFullAccess",
+  "CreateDate": "2018-05-09T18:06:18Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJLAGM5X6WSNPF4EAQ",
+  "PolicyName": "AWSFMAdminFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-05-09T18:06:18Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "elasticloadbalancing:SetWebACL",
+            "fms:*",
+            "organizations:DescribeOrganization",
+            "waf-regional:*",
+            "waf:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-05-09T18:06:18Z"
+}

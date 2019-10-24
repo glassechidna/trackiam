@@ -1,0 +1,50 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AlexaForBusinessGatewayExecution",
+  "CreateDate": "2017-11-30T16:47:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAI3LZ7YP7KHLG4DT2Q",
+  "PolicyName": "AlexaForBusinessGatewayExecution",
+  "PolicyVersion": {
+    "CreateDate": "2017-11-30T16:47:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "a4b:Get*",
+            "a4b:Send*"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:a4b:*:*:gateway/*"
+        },
+        {
+          "Action": [
+            "a4b:List*",
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogGroups",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sqs:DeleteMessage",
+            "sqs:ReceiveMessage"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sqs:*:*:dd-*",
+            "arn:aws:sqs:*:*:sd-*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2017-11-30T16:47:19Z"
+}

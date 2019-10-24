@@ -1,0 +1,130 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole",
+  "CreateDate": "2016-12-06T19:36:24Z",
+  "DefaultVersionId": "v10",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAIUETIXPCKASQJURFE",
+  "PolicyName": "AWSBatchServiceRole",
+  "PolicyVersion": {
+    "CreateDate": "2019-10-08T19:31:12Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "autoscaling.amazonaws.com",
+                "ecs.amazonaws.com",
+                "spot.amazonaws.com",
+                "spotfleet.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "ec2.amazonaws.com",
+                "ec2.amazonaws.com.cn",
+                "ecs-tasks.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": "RunInstances"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "autoscaling:CreateAutoScalingGroup",
+            "autoscaling:CreateLaunchConfiguration",
+            "autoscaling:CreateOrUpdateTags",
+            "autoscaling:DeleteAutoScalingGroup",
+            "autoscaling:DeleteLaunchConfiguration",
+            "autoscaling:DescribeAccountLimits",
+            "autoscaling:DescribeAutoScalingGroups",
+            "autoscaling:DescribeAutoScalingInstances",
+            "autoscaling:DescribeLaunchConfigurations",
+            "autoscaling:PutNotificationConfiguration",
+            "autoscaling:SetDesiredCapacity",
+            "autoscaling:SuspendProcesses",
+            "autoscaling:TerminateInstanceInAutoScalingGroup",
+            "autoscaling:UpdateAutoScalingGroup",
+            "ec2:CancelSpotFleetRequests",
+            "ec2:CreateLaunchTemplate",
+            "ec2:DeleteLaunchTemplate",
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeImageAttribute",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstanceAttribute",
+            "ec2:DescribeInstances",
+            "ec2:DescribeKeyPairs",
+            "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSpotFleetInstances",
+            "ec2:DescribeSpotFleetRequests",
+            "ec2:DescribeSpotInstanceRequests",
+            "ec2:DescribeSpotPriceHistory",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcClassicLink",
+            "ec2:ModifySpotFleetRequest",
+            "ec2:RequestSpotFleet",
+            "ec2:RunInstances",
+            "ec2:TerminateInstances",
+            "ecs:CreateCluster",
+            "ecs:DeleteCluster",
+            "ecs:DeregisterContainerInstance",
+            "ecs:DeregisterTaskDefinition",
+            "ecs:DescribeClusters",
+            "ecs:DescribeContainerInstances",
+            "ecs:DescribeTaskDefinition",
+            "ecs:DescribeTasks",
+            "ecs:ListClusters",
+            "ecs:ListContainerInstances",
+            "ecs:ListTaskDefinitionFamilies",
+            "ecs:ListTaskDefinitions",
+            "ecs:ListTasks",
+            "ecs:RegisterTaskDefinition",
+            "ecs:RunTask",
+            "ecs:StartTask",
+            "ecs:StopTask",
+            "ecs:UpdateContainerAgent",
+            "iam:GetInstanceProfile",
+            "iam:GetRole",
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogGroups",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v10"
+  },
+  "UpdateDate": "2019-10-08T19:31:12Z"
+}

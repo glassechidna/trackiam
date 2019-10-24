@@ -1,0 +1,77 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSCloud9ServiceRolePolicy",
+  "CreateDate": "2017-11-30T13:44:08Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJFXGCBXQIZATFZ4YG",
+  "PolicyName": "AWSCloud9ServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2018-02-27T10:20:24Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/Name": "aws-cloud9-*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*"
+        },
+        {
+          "Action": [
+            "ec2:StartInstances",
+            "ec2:StopInstances"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/aws:cloudformation:stack-name": "aws-cloud9-*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudformation:CreateStack",
+            "cloudformation:DescribeStackEvents",
+            "cloudformation:DescribeStackResources",
+            "cloudformation:DescribeStacks",
+            "ec2:CreateSecurityGroup",
+            "ec2:DescribeInstances",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "ec2:RunInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudformation:DeleteStack"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/aws-cloud9-*"
+        },
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:DeleteSecurityGroup",
+            "ec2:TerminateInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2018-02-27T10:20:24Z"
+}

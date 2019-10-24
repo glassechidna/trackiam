@@ -1,0 +1,45 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCloud9EnvironmentMember",
+  "CreateDate": "2017-11-30T16:18:28Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAI54ULAIPVT5HFTYGK",
+  "PolicyName": "AWSCloud9EnvironmentMember",
+  "PolicyVersion": {
+    "CreateDate": "2017-11-30T16:18:28Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloud9:DescribeEnvironmentMemberships"
+          ],
+          "Condition": {
+            "Null": {
+              "cloud9:EnvironmentId": "true",
+              "cloud9:UserArn": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "cloud9:GetUserSettings",
+            "cloud9:UpdateUserSettings",
+            "iam:GetUser",
+            "iam:ListUsers"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2017-11-30T16:18:28Z"
+}

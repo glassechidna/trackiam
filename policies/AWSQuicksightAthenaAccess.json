@@ -1,0 +1,99 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSQuicksightAthenaAccess",
+  "CreateDate": "2016-12-09T02:31:03Z",
+  "DefaultVersionId": "v6",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAI4JB77JXFQXDWNRPM",
+  "PolicyName": "AWSQuicksightAthenaAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-09-10T17:59:46Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "athena:BatchGetQueryExecution",
+            "athena:CancelQueryExecution",
+            "athena:GetCatalogs",
+            "athena:GetExecutionEngine",
+            "athena:GetExecutionEngines",
+            "athena:GetNamespace",
+            "athena:GetNamespaces",
+            "athena:GetQueryExecution",
+            "athena:GetQueryExecutions",
+            "athena:GetQueryResults",
+            "athena:GetQueryResultsStream",
+            "athena:GetTable",
+            "athena:GetTables",
+            "athena:GetWorkGroup",
+            "athena:ListQueryExecutions",
+            "athena:ListWorkGroups",
+            "athena:RunQuery",
+            "athena:StartQueryExecution",
+            "athena:StopQueryExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "glue:BatchCreatePartition",
+            "glue:BatchDeletePartition",
+            "glue:BatchDeleteTable",
+            "glue:BatchGetPartition",
+            "glue:CreateDatabase",
+            "glue:CreatePartition",
+            "glue:CreateTable",
+            "glue:DeleteDatabase",
+            "glue:DeletePartition",
+            "glue:DeleteTable",
+            "glue:GetDatabase",
+            "glue:GetDatabases",
+            "glue:GetPartition",
+            "glue:GetPartitions",
+            "glue:GetTable",
+            "glue:GetTables",
+            "glue:UpdateDatabase",
+            "glue:UpdatePartition",
+            "glue:UpdateTable"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "lakeformation:GetDataAccess"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:AbortMultipartUpload",
+            "s3:CreateBucket",
+            "s3:GetBucketLocation",
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:ListBucketMultipartUploads",
+            "s3:ListMultipartUploadParts",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-athena-query-results-*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v6"
+  },
+  "UpdateDate": "2019-09-10T17:59:46Z"
+}

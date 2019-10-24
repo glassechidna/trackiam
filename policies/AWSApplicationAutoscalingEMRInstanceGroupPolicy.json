@@ -1,0 +1,31 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSApplicationAutoscalingEMRInstanceGroupPolicy",
+  "CreateDate": "2017-10-26T00:57:39Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAIQ6M5Z7LQY2YSG2JS",
+  "PolicyName": "AWSApplicationAutoscalingEMRInstanceGroupPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2017-10-26T00:57:39Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:PutMetricAlarm",
+            "elasticmapreduce:ListInstanceGroups",
+            "elasticmapreduce:ModifyInstanceGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2017-10-26T00:57:39Z"
+}

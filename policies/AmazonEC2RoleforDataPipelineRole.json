@@ -1,0 +1,43 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforDataPipelineRole",
+  "CreateDate": "2015-02-06T18:41:25Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJ3Z5I2WAJE5DN2J36",
+  "PolicyName": "AmazonEC2RoleforDataPipelineRole",
+  "PolicyVersion": {
+    "CreateDate": "2016-02-22T17:24:05Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:*",
+            "datapipeline:*",
+            "dynamodb:*",
+            "ec2:Describe*",
+            "elasticmapreduce:AddJobFlowSteps",
+            "elasticmapreduce:Describe*",
+            "elasticmapreduce:ListInstance*",
+            "elasticmapreduce:ModifyInstanceGroups",
+            "rds:Describe*",
+            "redshift:DescribeClusterSecurityGroups",
+            "redshift:DescribeClusters",
+            "s3:*",
+            "sdb:*",
+            "sns:*",
+            "sqs:*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2016-02-22T17:24:05Z"
+}

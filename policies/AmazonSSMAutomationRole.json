@@ -1,0 +1,73 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonSSMAutomationRole",
+  "CreateDate": "2016-12-05T22:09:55Z",
+  "DefaultVersionId": "v5",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJIBQCTBCXD2XRNB6W",
+  "PolicyName": "AmazonSSMAutomationRole",
+  "PolicyVersion": {
+    "CreateDate": "2017-07-24T23:29:12Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudformation:CreateStack",
+            "cloudformation:DeleteStack",
+            "cloudformation:DescribeStackEvents",
+            "cloudformation:DescribeStacks",
+            "cloudformation:UpdateStack",
+            "ec2:CopyImage",
+            "ec2:CreateImage",
+            "ec2:CreateTags",
+            "ec2:DeleteSnapshot",
+            "ec2:DeleteTags",
+            "ec2:DeregisterImage",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeTags",
+            "ec2:RunInstances",
+            "ec2:StartInstances",
+            "ec2:StopInstances",
+            "ec2:TerminateInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "lambda:InvokeFunction"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:Automation*"
+          ]
+        },
+        {
+          "Action": [
+            "sns:Publish"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sns:*:*:Automation*"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v5"
+  },
+  "UpdateDate": "2017-07-24T23:29:12Z"
+}

@@ -1,0 +1,52 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCodePipelineReadOnlyAccess",
+  "CreateDate": "2015-07-09T16:43:57Z",
+  "DefaultVersionId": "v7",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAILFKZXIBOTNC5TO2Q",
+  "PolicyName": "AWSCodePipelineReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-08-13T22:18:42Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "codecommit:ListBranches",
+            "codecommit:ListRepositories",
+            "codedeploy:GetApplication",
+            "codedeploy:GetDeploymentGroup",
+            "codedeploy:ListApplications",
+            "codedeploy:ListDeploymentGroups",
+            "codepipeline:GetPipeline",
+            "codepipeline:GetPipelineExecution",
+            "codepipeline:GetPipelineState",
+            "codepipeline:ListActionExecutions",
+            "codepipeline:ListActionTypes",
+            "codepipeline:ListPipelineExecutions",
+            "codepipeline:ListPipelines",
+            "codepipeline:ListTagsForResource",
+            "elasticbeanstalk:DescribeApplications",
+            "elasticbeanstalk:DescribeEnvironments",
+            "iam:ListRoles",
+            "lambda:GetFunctionConfiguration",
+            "lambda:ListFunctions",
+            "opsworks:DescribeApps",
+            "opsworks:DescribeLayers",
+            "opsworks:DescribeStacks",
+            "s3:GetBucketPolicy",
+            "s3:GetObject",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v7"
+  },
+  "UpdateDate": "2019-08-13T22:18:42Z"
+}

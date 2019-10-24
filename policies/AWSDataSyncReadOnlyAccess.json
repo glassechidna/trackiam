@@ -1,0 +1,37 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSDataSyncReadOnlyAccess",
+  "CreateDate": "2019-01-18T19:18:44Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJRYVEZEDR7ZEAGYLY",
+  "PolicyName": "AWSDataSyncReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-01-18T19:18:44Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "datasync:Describe*",
+            "datasync:List*",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "elasticfilesystem:DescribeFileSystems",
+            "elasticfilesystem:DescribeMountTargets",
+            "iam:GetRole",
+            "iam:ListRoles",
+            "logs:DescribeLogGroups",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-01-18T19:18:44Z"
+}

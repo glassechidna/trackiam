@@ -1,0 +1,46 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonRoute53FullAccess",
+  "CreateDate": "2015-02-06T18:40:54Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJWVDLG5RPST6PHQ3A",
+  "PolicyName": "AmazonRoute53FullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-12-20T21:42:00Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "apigateway:GET",
+          "Effect": "Allow",
+          "Resource": "arn:aws:apigateway:*::/domainnames"
+        },
+        {
+          "Action": [
+            "cloudfront:ListDistributions",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:GetMetricStatistics",
+            "ec2:DescribeRegions",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs",
+            "elasticbeanstalk:DescribeEnvironments",
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "route53:*",
+            "route53domains:*",
+            "s3:GetBucketLocation",
+            "s3:GetBucketWebsite",
+            "s3:ListBucket",
+            "sns:ListSubscriptionsByTopic",
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2018-12-20T21:42:00Z"
+}

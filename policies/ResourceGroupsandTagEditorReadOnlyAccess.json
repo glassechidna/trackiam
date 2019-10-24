@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/ResourceGroupsandTagEditorReadOnlyAccess",
+  "CreateDate": "2015-02-06T18:39:54Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJHXQTPI5I5JKAIU74",
+  "PolicyName": "ResourceGroupsandTagEditorReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-03-07T19:43:17Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudformation:DescribeStacks",
+            "cloudformation:ListStackResources",
+            "resource-groups:Get*",
+            "resource-groups:List*",
+            "resource-groups:Search*",
+            "tag:getResources",
+            "tag:getTagKeys",
+            "tag:getTagValues"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-03-07T19:43:17Z"
+}

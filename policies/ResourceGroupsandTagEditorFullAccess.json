@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/ResourceGroupsandTagEditorFullAccess",
+  "CreateDate": "2015-02-06T18:39:53Z",
+  "DefaultVersionId": "v5",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJNOS54ZFXN4T2Y34A",
+  "PolicyName": "ResourceGroupsandTagEditorFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-10-02T23:57:57Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudformation:DescribeStacks",
+            "cloudformation:ListStackResources",
+            "resource-groups:*",
+            "tag:TagResources",
+            "tag:UntagResources",
+            "tag:getResources",
+            "tag:getTagKeys",
+            "tag:getTagValues"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v5"
+  },
+  "UpdateDate": "2019-10-02T23:57:57Z"
+}

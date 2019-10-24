@@ -1,0 +1,41 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudTrailServiceRolePolicy",
+  "CreateDate": "2018-10-24T21:21:44Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJXQJ45EGU6U7NQBW4",
+  "PolicyName": "CloudTrailServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2018-10-24T21:21:44Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudtrail:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudTrailFullAccess"
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AwsOrgsAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-10-24T21:21:44Z"
+}

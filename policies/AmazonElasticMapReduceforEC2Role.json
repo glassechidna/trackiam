@@ -1,0 +1,72 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role",
+  "CreateDate": "2015-02-06T18:41:21Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAIGALS5RCDLZLB3PGS",
+  "PolicyName": "AmazonElasticMapReduceforEC2Role",
+  "PolicyVersion": {
+    "CreateDate": "2017-08-11T23:57:30Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:*",
+            "dynamodb:*",
+            "ec2:Describe*",
+            "elasticmapreduce:Describe*",
+            "elasticmapreduce:ListBootstrapActions",
+            "elasticmapreduce:ListClusters",
+            "elasticmapreduce:ListInstanceGroups",
+            "elasticmapreduce:ListInstances",
+            "elasticmapreduce:ListSteps",
+            "glue:BatchCreatePartition",
+            "glue:BatchDeletePartition",
+            "glue:BatchGetPartition",
+            "glue:CreateDatabase",
+            "glue:CreatePartition",
+            "glue:CreateTable",
+            "glue:CreateUserDefinedFunction",
+            "glue:DeleteDatabase",
+            "glue:DeletePartition",
+            "glue:DeleteTable",
+            "glue:DeleteUserDefinedFunction",
+            "glue:GetDatabase",
+            "glue:GetDatabases",
+            "glue:GetPartition",
+            "glue:GetPartitions",
+            "glue:GetTable",
+            "glue:GetTableVersions",
+            "glue:GetTables",
+            "glue:GetUserDefinedFunction",
+            "glue:GetUserDefinedFunctions",
+            "glue:UpdateDatabase",
+            "glue:UpdatePartition",
+            "glue:UpdateTable",
+            "glue:UpdateUserDefinedFunction",
+            "kinesis:CreateStream",
+            "kinesis:DeleteStream",
+            "kinesis:DescribeStream",
+            "kinesis:GetRecords",
+            "kinesis:GetShardIterator",
+            "kinesis:MergeShards",
+            "kinesis:PutRecord",
+            "kinesis:SplitShard",
+            "rds:Describe*",
+            "s3:*",
+            "sdb:*",
+            "sns:*",
+            "sqs:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2017-08-11T23:57:30Z"
+}

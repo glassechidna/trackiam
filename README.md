@@ -2,6 +2,17 @@
 
 * Unique services: 190
 * Unique actions: 6823
+* Managed policies: 563
+
+Most common managed policy name prefixes:
+
+| Prefix | Count |
+| ------ | ----- |
+| `arn:aws:iam::aws:policy/AWS*` | 160 |
+| `arn:aws:iam::aws:policy/Amazon*` | 147 |
+| `arn:aws:iam::aws:policy/service-role/*` | 97 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 95 |
+| `arn:aws:iam::aws:policy/job-function/*` | 7 |
 
 The following table summarises the AWS APIs. 
 

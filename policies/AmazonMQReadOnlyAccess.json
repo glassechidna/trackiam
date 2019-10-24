@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonMQReadOnlyAccess",
+  "CreateDate": "2017-11-28T15:30:32Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJFH3NKGULDUU66D5C",
+  "PolicyName": "AmazonMQReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2017-11-28T19:02:03Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "mq:Describe*",
+            "mq:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2017-11-28T19:02:03Z"
+}

@@ -1,0 +1,30 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSSSODirectoryReadOnly",
+  "CreateDate": "2018-10-31T23:49:32Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJDPMQELJXZD2NC6JG",
+  "PolicyName": "AWSSSODirectoryReadOnly",
+  "PolicyVersion": {
+    "CreateDate": "2018-10-31T23:49:32Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "sso-directory:Describe*",
+            "sso-directory:List*",
+            "sso-directory:Search*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSSSODirectoryReadOnly"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-10-31T23:49:32Z"
+}

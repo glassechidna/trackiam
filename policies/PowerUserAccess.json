@@ -1,0 +1,40 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/PowerUserAccess",
+  "CreateDate": "2015-02-06T18:39:47Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJYRXTHIB4FOVS3ZXS",
+  "PolicyName": "PowerUserAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-03-20T22:19:03Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "account:ListRegions",
+            "iam:CreateServiceLinkedRole",
+            "iam:DeleteServiceLinkedRole",
+            "iam:ListRoles",
+            "organizations:DescribeOrganization"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Effect": "Allow",
+          "NotAction": [
+            "account:*",
+            "iam:*",
+            "organizations:*"
+          ],
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2019-03-20T22:19:03Z"
+}

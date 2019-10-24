@@ -1,0 +1,35 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonElasticFileSystemReadOnlyAccess",
+  "CreateDate": "2015-05-27T16:25:25Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIPN5S4NE5JJOKVC4Y",
+  "PolicyName": "AmazonElasticFileSystemReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2017-08-14T10:09:49Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeNetworkInterfaceAttribute",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeVpcs",
+            "elasticfilesystem:Describe*",
+            "kms:ListAliases"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2017-08-14T10:09:49Z"
+}

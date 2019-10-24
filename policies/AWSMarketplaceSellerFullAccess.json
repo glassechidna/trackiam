@@ -1,0 +1,41 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerFullAccess",
+  "CreateDate": "2019-07-02T20:40:09Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4JF7OFUANW",
+  "PolicyName": "AWSMarketplaceSellerFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-07-02T20:40:09Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aws-marketplace-management:uploadFiles",
+            "aws-marketplace-management:viewMarketing",
+            "aws-marketplace-management:viewReports",
+            "aws-marketplace-management:viewSettings",
+            "aws-marketplace-management:viewSupport",
+            "aws-marketplace:CancelChangeSet",
+            "aws-marketplace:DescribeChangeSet",
+            "aws-marketplace:DescribeEntity",
+            "aws-marketplace:ListChangeSets",
+            "aws-marketplace:ListEntities",
+            "aws-marketplace:StartChangeSet",
+            "ec2:DescribeImages",
+            "ec2:DescribeSnapshots",
+            "ec2:ModifyImageAttribute",
+            "ec2:ModifySnapshotAttribute"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-07-02T20:40:09Z"
+}

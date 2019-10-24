@@ -1,0 +1,69 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AlexaForBusinessFullAccess",
+  "CreateDate": "2017-11-30T16:47:09Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAILUT3JGG7WRIMVNH2",
+  "PolicyName": "AlexaForBusinessFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-05-20T21:32:33Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "secretsmanager:CreateSecret",
+          "Condition": {
+            "StringLike": {
+              "secretsmanager:Name": "A4BNetworkProfile*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": [
+                "*a4b.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "a4b:*",
+            "kms:DescribeKey"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:DeleteServiceLinkedRole",
+            "iam:GetServiceLinkedRoleDeletionStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/*a4b.amazonaws.com/AWSServiceRoleForAlexaForBusiness*"
+        },
+        {
+          "Action": [
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:UpdateSecret"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:A4BNetworkProfile*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2019-05-20T21:32:33Z"
+}

@@ -1,0 +1,38 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSKeyManagementServicePowerUser",
+  "CreateDate": "2015-02-06T18:40:40Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJNPP7PPPPMJRV2SA4",
+  "PolicyName": "AWSKeyManagementServicePowerUser",
+  "PolicyVersion": {
+    "CreateDate": "2017-03-07T00:55:11Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:ListGroups",
+            "iam:ListRoles",
+            "iam:ListUsers",
+            "kms:CreateAlias",
+            "kms:CreateKey",
+            "kms:DeleteAlias",
+            "kms:Describe*",
+            "kms:GenerateRandom",
+            "kms:Get*",
+            "kms:List*",
+            "kms:TagResource",
+            "kms:UntagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2017-03-07T00:55:11Z"
+}

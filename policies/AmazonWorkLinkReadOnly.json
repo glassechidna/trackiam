@@ -1,0 +1,29 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonWorkLinkReadOnly",
+  "CreateDate": "2019-01-23T19:07:10Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIANQMFGU4EUUZKFQ4",
+  "PolicyName": "AmazonWorkLinkReadOnly",
+  "PolicyVersion": {
+    "CreateDate": "2019-09-23T18:37:21Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "worklink:Describe*",
+            "worklink:List*",
+            "worklink:Search*"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:worklink:*:*:*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2019-09-23T18:37:21Z"
+}

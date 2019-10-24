@@ -1,0 +1,41 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSIQFullAccess",
+  "CreateDate": "2019-04-04T23:13:42Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4P4TAHETXT",
+  "PolicyName": "AWSIQFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-09-25T20:22:34Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "contract.iq.amazonaws.com",
+                "permission.iq.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iq-permission:*",
+            "iq:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-09-25T20:22:34Z"
+}

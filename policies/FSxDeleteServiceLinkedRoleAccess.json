@@ -1,0 +1,29 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/FSxDeleteServiceLinkedRoleAccess",
+  "CreateDate": "2018-11-28T10:40:24Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJ6IRP2YV2YPKWPPNQ",
+  "PolicyName": "FSxDeleteServiceLinkedRoleAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-11-28T10:40:24Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:DeleteServiceLinkedRole",
+            "iam:GetRole",
+            "iam:GetServiceLinkedRoleDeletionStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:*:iam::*:role/aws-service-role/s3.data-source.lustre.fsx.amazonaws.com/AWSServiceRoleForFSxS3Access_*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-11-28T10:40:24Z"
+}

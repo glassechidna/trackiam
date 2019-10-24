@@ -1,0 +1,43 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonQLDBFullAccess",
+  "CreateDate": "2019-09-05T18:23:32Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4HHBBWGE2J",
+  "PolicyName": "AmazonQLDBFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-09-05T18:23:32Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "qldb:CreateLedger",
+            "qldb:DeleteLedger",
+            "qldb:DescribeJournalS3Export",
+            "qldb:DescribeLedger",
+            "qldb:ExportJournalToS3",
+            "qldb:GetBlock",
+            "qldb:GetBlock",
+            "qldb:GetDigest",
+            "qldb:GetRevision",
+            "qldb:ListJournalS3Exports",
+            "qldb:ListJournalS3ExportsForLedger",
+            "qldb:ListLedgers",
+            "qldb:ListTagsForResource",
+            "qldb:SendCommand",
+            "qldb:TagResource",
+            "qldb:UntagResource",
+            "qldb:UpdateLedger"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-09-05T18:23:32Z"
+}

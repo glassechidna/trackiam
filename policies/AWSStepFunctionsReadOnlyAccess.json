@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSStepFunctionsReadOnlyAccess",
+  "CreateDate": "2017-01-11T21:46:19Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJONHB2TJQDJPFW5TM",
+  "PolicyName": "AWSStepFunctionsReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2017-11-10T22:03:49Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "states:DescribeActivity",
+            "states:DescribeExecution",
+            "states:DescribeStateMachine",
+            "states:DescribeStateMachineForExecution",
+            "states:GetExecutionHistory",
+            "states:ListActivities",
+            "states:ListExecutions",
+            "states:ListStateMachines"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2017-11-10T22:03:49Z"
+}

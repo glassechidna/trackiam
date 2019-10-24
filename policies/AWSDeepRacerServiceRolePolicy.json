@@ -1,0 +1,146 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSDeepRacerServiceRolePolicy",
+  "CreateDate": "2019-02-28T21:58:09Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJTUAQLIAVBJ7LZ32S",
+  "PolicyName": "AWSDeepRacerServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-06-12T20:55:34Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "robomaker.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Condition": {
+            "StringEqualsIgnoreCase": {
+              "s3:ExistingObjectTag/DeepRacer": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudformation:CreateStack",
+            "cloudformation:DeleteStack",
+            "cloudformation:DescribeStackDriftDetectionStatus",
+            "cloudformation:DescribeStackEvents",
+            "cloudformation:DescribeStackResource",
+            "cloudformation:DescribeStackResourceDrifts",
+            "cloudformation:DescribeStackResources",
+            "cloudformation:DescribeStacks",
+            "cloudformation:DetectStackDrift",
+            "cloudformation:ListStackResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:GetMetricData",
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:GetLogEvents",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "deepracer:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AWSDeepRacer*",
+            "arn:aws:iam::*:role/service-role/AWSDeepRacer*"
+          ]
+        },
+        {
+          "Action": [
+            "kinesisvideo:CreateStream",
+            "kinesisvideo:DeleteStream",
+            "kinesisvideo:DescribeStream",
+            "kinesisvideo:GetDataEndpoint",
+            "kinesisvideo:GetHLSStreamingSessionURL",
+            "kinesisvideo:GetMedia",
+            "kinesisvideo:PutMedia",
+            "kinesisvideo:TagStream"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:kinesisvideo:*:*:stream/dr-*"
+          ]
+        },
+        {
+          "Action": [
+            "lambda:CreateFunction",
+            "lambda:DeleteFunction",
+            "lambda:GetFunction",
+            "lambda:InvokeFunction",
+            "lambda:UpdateFunctionCode"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:*DeepRacer*",
+            "arn:aws:lambda:*:*:function:*Deepracer*",
+            "arn:aws:lambda:*:*:function:*deepracer*",
+            "arn:aws:lambda:*:*:function:*dr-*"
+          ]
+        },
+        {
+          "Action": [
+            "robomaker:*",
+            "s3:ListAllMyBuckets",
+            "sagemaker:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:DeleteObject",
+            "s3:GetBucketAcl",
+            "s3:GetBucketLocation",
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutBucketPolicy",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*DeepRacer*",
+            "arn:aws:s3:::*Deepracer*",
+            "arn:aws:s3:::*deepracer*",
+            "arn:aws:s3:::dr-*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2019-06-12T20:55:34Z"
+}

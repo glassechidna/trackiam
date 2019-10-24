@@ -1,0 +1,83 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSAgentlessDiscoveryService",
+  "CreateDate": "2016-08-02T01:35:11Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIA3DIL7BYQ35ISM4K",
+  "PolicyName": "AWSAgentlessDiscoveryService",
+  "PolicyVersion": {
+    "CreateDate": "2016-08-02T01:35:11Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:GetUser",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "SNS:Publish"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sns:*:*:metrics-sns-topic-for-*"
+        },
+        {
+          "Action": [
+            "awsconnector:GetConnectorHealth",
+            "awsconnector:RegisterConnector"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::connector-platform-release-notes",
+            "arn:aws:s3:::connector-platform-release-notes/*",
+            "arn:aws:s3:::connector-platform-upgrade-bundles",
+            "arn:aws:s3:::connector-platform-upgrade-bundles/*",
+            "arn:aws:s3:::connector-platform-upgrade-info",
+            "arn:aws:s3:::connector-platform-upgrade-info/*",
+            "arn:aws:s3:::prod.agentless.discovery.connector.upgrade",
+            "arn:aws:s3:::prod.agentless.discovery.connector.upgrade/*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:PutObject",
+            "s3:PutObjectAcl"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::import-to-ec2-connector-debug-logs/*"
+          ]
+        },
+        {
+          "Action": [
+            "Discovery:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Discovery"
+        },
+        {
+          "Action": [
+            "arsenal:RegisterOnPremisesAgent"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "arsenal"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2016-08-02T01:35:11Z"
+}

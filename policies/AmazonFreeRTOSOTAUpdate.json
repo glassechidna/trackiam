@@ -1,0 +1,71 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonFreeRTOSOTAUpdate",
+  "CreateDate": "2018-08-27T22:43:07Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAINC2TXHAYDOK3SWMU",
+  "PolicyName": "AmazonFreeRTOSOTAUpdate",
+  "PolicyVersion": {
+    "CreateDate": "2019-10-07T20:11:30Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iot:CreateJob",
+            "iot:CreateStream"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iot:DeleteJob"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iot:*:*:job/AFR_OTA*"
+        },
+        {
+          "Action": [
+            "iot:DeleteStream"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iot:*:*:stream/AFR_OTA*"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket",
+            "s3:ListBucketVersions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:GetObjectVersion",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::afr-ota*"
+        },
+        {
+          "Action": [
+            "signer:DescribeSigningJob",
+            "signer:GetSigningProfile",
+            "signer:PutSigningProfile",
+            "signer:StartSigningJob"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-10-07T20:11:30Z"
+}

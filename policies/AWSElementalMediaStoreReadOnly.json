@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSElementalMediaStoreReadOnly",
+  "CreateDate": "2018-03-08T19:48:22Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAI4EFXRATQYOFTAEFM",
+  "PolicyName": "AWSElementalMediaStoreReadOnly",
+  "PolicyVersion": {
+    "CreateDate": "2018-03-08T19:48:22Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "mediastore:Describe*",
+            "mediastore:Get*",
+            "mediastore:List*"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:SecureTransport": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-03-08T19:48:22Z"
+}

@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSApplicationAutoscalingEC2SpotFleetRequestPolicy",
+  "CreateDate": "2017-10-25T18:23:27Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJNRH3VE3WW4Q4RDTU",
+  "PolicyName": "AWSApplicationAutoscalingEC2SpotFleetRequestPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2017-10-25T18:23:27Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:PutMetricAlarm",
+            "ec2:DescribeSpotFleetRequests",
+            "ec2:ModifySpotFleetRequest"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2017-10-25T18:23:27Z"
+}

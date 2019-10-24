@@ -1,0 +1,65 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSShieldDRTAccessPolicy",
+  "CreateDate": "2018-06-05T22:29:39Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJWNCSZ4PARLO37VVY",
+  "PolicyName": "AWSShieldDRTAccessPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-02-11T17:08:57Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudfront:Describe*",
+            "cloudfront:GetDistribution*",
+            "cloudfront:List*",
+            "cloudwatch:Describe*",
+            "cloudwatch:Get*",
+            "cloudwatch:List*",
+            "elasticloadbalancing:Describe*",
+            "elasticloadbalancing:List*",
+            "globalaccelerator:DescribeAccelerator",
+            "globalaccelerator:ListAccelerators",
+            "route53:Describe*",
+            "route53:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudfront::*:*",
+            "arn:aws:cloudwatch:*:*:*:*",
+            "arn:aws:elasticloadbalancing:*:*:*",
+            "arn:aws:globalaccelerator::*:*",
+            "arn:aws:route53:::hostedzone/*"
+          ],
+          "Sid": "DRTAccessProtectedResources"
+        },
+        {
+          "Action": [
+            "shield:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DRTManageProtections"
+        },
+        {
+          "Action": [
+            "waf-regional:*",
+            "waf:*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:waf-regional:*",
+            "arn:aws:waf:*"
+          ],
+          "Sid": "DRTManageMitigations"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2019-02-11T17:08:57Z"
+}

@@ -1,0 +1,43 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSElementalMediaConvertFullAccess",
+  "CreateDate": "2018-06-25T19:25:35Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIXDREOCL6LV7RBJWC",
+  "PolicyName": "AWSElementalMediaConvertFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-06-10T22:52:25Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": [
+                "mediaconvert.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "mediaconvert:*",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-06-10T22:52:25Z"
+}

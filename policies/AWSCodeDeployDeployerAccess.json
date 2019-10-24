@@ -1,0 +1,31 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCodeDeployDeployerAccess",
+  "CreateDate": "2015-05-19T18:18:43Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJUWEPOMGLMVXJAPUI",
+  "PolicyName": "AWSCodeDeployDeployerAccess",
+  "PolicyVersion": {
+    "CreateDate": "2015-05-19T18:18:43Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "codedeploy:Batch*",
+            "codedeploy:CreateDeployment",
+            "codedeploy:Get*",
+            "codedeploy:List*",
+            "codedeploy:RegisterApplicationRevision"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2015-05-19T18:18:43Z"
+}

@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+  "CreateDate": "2018-05-27T21:09:01Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIBVMOY52IPQ6HD3PO",
+  "PolicyName": "AmazonEKSWorkerNodePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2018-05-27T21:09:01Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeInstances",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVolumes",
+            "ec2:DescribeVolumesModifications",
+            "ec2:DescribeVpcs",
+            "eks:DescribeCluster"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-05-27T21:09:01Z"
+}

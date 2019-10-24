@@ -1,0 +1,35 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonCognitoIdpEmailServiceRolePolicy",
+  "CreateDate": "2019-03-21T21:32:25Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAIX7PW362PLAQFKBHM",
+  "PolicyName": "AmazonCognitoIdpEmailServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-03-21T21:32:25Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ses:List*"
+          ],
+          "Effect": "Deny",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ses:SendEmail",
+            "ses:SendRawEmail"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-03-21T21:32:25Z"
+}

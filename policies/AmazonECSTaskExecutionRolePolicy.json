@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy",
+  "CreateDate": "2017-11-16T18:48:22Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJG4T4G4PV56DE72PY",
+  "PolicyName": "AmazonECSTaskExecutionRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2017-11-16T18:48:22Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ecr:BatchCheckLayerAvailability",
+            "ecr:BatchGetImage",
+            "ecr:GetAuthorizationToken",
+            "ecr:GetDownloadUrlForLayer",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2017-11-16T18:48:22Z"
+}

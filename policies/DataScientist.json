@@ -1,0 +1,131 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/job-function/DataScientist",
+  "CreateDate": "2016-11-10T17:28:48Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/job-function/",
+  "PolicyId": "ANPAJ5YHI2BQW7EQFYDXS",
+  "PolicyName": "DataScientist",
+  "PolicyVersion": {
+    "CreateDate": "2019-08-21T23:13:03Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "sagemaker.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "autoscaling:*",
+            "cloudformation:CreateStack",
+            "cloudformation:DescribeStackEvents",
+            "cloudwatch:*",
+            "datapipeline:Describe*",
+            "datapipeline:GetPipelineDefinition",
+            "datapipeline:ListPipelines",
+            "datapipeline:QueryObjects",
+            "dynamodb:*",
+            "ec2:CancelSpotFleetRequests",
+            "ec2:CancelSpotInstanceRequests",
+            "ec2:CreateTags",
+            "ec2:DeleteTags",
+            "ec2:Describe*",
+            "ec2:ModifyImageAttribute",
+            "ec2:ModifyInstanceAttribute",
+            "ec2:ModifySpotFleetRequest",
+            "ec2:RequestSpotFleet",
+            "ec2:RequestSpotInstances",
+            "elasticfilesystem:*",
+            "elasticmapreduce:*",
+            "es:*",
+            "firehose:*",
+            "fsx:DescribeFileSystems",
+            "iam:GetInstanceProfile",
+            "iam:GetPolicy",
+            "iam:GetPolicyVersion",
+            "iam:GetRole",
+            "iam:ListRoles",
+            "kinesis:*",
+            "kms:List*",
+            "lambda:Create*",
+            "lambda:Delete*",
+            "lambda:Get*",
+            "lambda:InvokeFunction",
+            "lambda:List*",
+            "lambda:PublishVersion",
+            "lambda:Update*",
+            "logs:DescribeLogStreams",
+            "logs:GetLogEvents",
+            "machinelearning:*",
+            "rds:*",
+            "redshift:*",
+            "s3:CreateBucket",
+            "sagemaker:*",
+            "sdb:*",
+            "sns:CreateTopic",
+            "sns:Get*",
+            "sns:List*",
+            "sns:ListSubscriptions",
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:RunInstances",
+            "ec2:TerminateInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/DataPipelineDefaultResourceRole",
+            "arn:aws:iam::*:role/DataPipelineDefaultRole",
+            "arn:aws:iam::*:role/EMR_DefaultRole",
+            "arn:aws:iam::*:role/EMR_EC2_DefaultRole",
+            "arn:aws:iam::*:role/kinesis-*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:Abort*",
+            "s3:DeleteObject",
+            "s3:Get*",
+            "s3:List*",
+            "s3:PutAccelerateConfiguration",
+            "s3:PutBucketLogging",
+            "s3:PutBucketNotification",
+            "s3:PutBucketTagging",
+            "s3:PutObject",
+            "s3:Replicate*",
+            "s3:RestoreObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2019-08-21T23:13:03Z"
+}

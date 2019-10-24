@@ -1,0 +1,136 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSDeepRacerCloudFormationAccessPolicy",
+  "CreateDate": "2019-02-28T21:59:49Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJYG7FM75UF5CW5ICS",
+  "PolicyName": "AWSDeepRacerCloudFormationAccessPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-06-14T17:02:04Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLikeIfExists": {
+              "iam:PassedToService": "lambda.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/service-role/AWSDeepRacerLambdaAccessRole"
+        },
+        {
+          "Action": [
+            "cloudformation:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:AllocateAddress",
+            "ec2:AssociateRouteTable",
+            "ec2:AttachInternetGateway",
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CreateInternetGateway",
+            "ec2:CreateNatGateway",
+            "ec2:CreateNetworkAcl",
+            "ec2:CreateNetworkAclEntry",
+            "ec2:CreateRoute",
+            "ec2:CreateRouteTable",
+            "ec2:CreateSecurityGroup",
+            "ec2:CreateSubnet",
+            "ec2:CreateTags",
+            "ec2:CreateVpc",
+            "ec2:CreateVpcEndpoint",
+            "ec2:DeleteInternetGateway",
+            "ec2:DeleteNatGateway",
+            "ec2:DeleteNetworkAcl",
+            "ec2:DeleteNetworkAclEntry",
+            "ec2:DeleteRoute",
+            "ec2:DeleteRouteTable",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DeleteSubnet",
+            "ec2:DeleteTags",
+            "ec2:DeleteVpc",
+            "ec2:DeleteVpcEndpoints",
+            "ec2:DescribeAddresses",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeNatGateways",
+            "ec2:DescribeNetworkAcls",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeTags",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs",
+            "ec2:DetachInternetGateway",
+            "ec2:DisassociateRouteTable",
+            "ec2:ModifySubnetAttribute",
+            "ec2:ModifyVpcAttribute",
+            "ec2:ReleaseAddress",
+            "ec2:ReplaceNetworkAclAssociation",
+            "ec2:RevokeSecurityGroupEgress",
+            "ec2:RevokeSecurityGroupIngress"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "lambda:CreateFunction",
+            "lambda:DeleteFunction",
+            "lambda:GetFunction",
+            "lambda:TagResource",
+            "lambda:UpdateFunctionCode"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:*DeepRacer*",
+            "arn:aws:lambda:*:*:function:*Deepracer*",
+            "arn:aws:lambda:*:*:function:*deepracer*"
+          ]
+        },
+        {
+          "Action": [
+            "robomaker:CreateSimulationApplication",
+            "robomaker:CreateSimulationApplicationVersion",
+            "robomaker:DeleteSimulationApplication",
+            "robomaker:DescribeSimulationApplication",
+            "robomaker:ListSimulationApplications",
+            "robomaker:TagResource",
+            "robomaker:UpdateSimulationApplication"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:robomaker:*:*:/createSimulationApplication",
+            "arn:aws:robomaker:*:*:simulation-application/deepracer*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:DeleteBucket",
+            "s3:GetBucketAcl",
+            "s3:ListBucket",
+            "s3:PutBucketPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*DeepRacer*",
+            "arn:aws:s3:::*Deepracer*",
+            "arn:aws:s3:::*deepracer*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-06-14T17:02:04Z"
+}

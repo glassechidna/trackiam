@@ -1,0 +1,64 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess",
+  "CreateDate": "2016-12-01T19:04:44Z",
+  "DefaultVersionId": "v6",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJQJGIOIE3CD2TQXDS",
+  "PolicyName": "AWSCodeBuildAdminAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-11-15T21:21:56Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:GetMetricStatistics",
+            "codebuild:*",
+            "codecommit:GetBranch",
+            "codecommit:GetCommit",
+            "codecommit:GetRepository",
+            "codecommit:ListBranches",
+            "codecommit:ListRepositories",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "ecr:DescribeRepositories",
+            "ecr:ListImages",
+            "events:DeleteRule",
+            "events:DescribeRule",
+            "events:DisableRule",
+            "events:EnableRule",
+            "events:ListRuleNamesByTarget",
+            "events:ListTargetsByRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets",
+            "logs:GetLogEvents",
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:DeleteLogGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/codebuild/*:log-stream:*"
+        },
+        {
+          "Action": [
+            "ssm:PutParameter"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:parameter/CodeBuild/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v6"
+  },
+  "UpdateDate": "2018-11-15T21:21:56Z"
+}

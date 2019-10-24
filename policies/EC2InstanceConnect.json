@@ -1,0 +1,29 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/EC2InstanceConnect",
+  "CreateDate": "2019-06-27T18:53:34Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4PBRCMEYY5",
+  "PolicyName": "EC2InstanceConnect",
+  "PolicyVersion": {
+    "CreateDate": "2019-06-27T18:53:34Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2-instance-connect:SendSSHPublicKey",
+            "ec2:DescribeInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2InstanceConnect"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-06-27T18:53:34Z"
+}

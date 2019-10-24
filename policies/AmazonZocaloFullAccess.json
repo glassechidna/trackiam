@@ -1,0 +1,43 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonZocaloFullAccess",
+  "CreateDate": "2015-02-06T18:41:13Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJLCDXYRINDMUXEVL6",
+  "PolicyName": "AmazonZocaloFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2015-02-06T18:41:13Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ds:*",
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateSecurityGroup",
+            "ec2:CreateSubnet",
+            "ec2:CreateTags",
+            "ec2:CreateVpc",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "ec2:RevokeSecurityGroupEgress",
+            "ec2:RevokeSecurityGroupIngress",
+            "zocalo:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2015-02-06T18:41:13Z"
+}

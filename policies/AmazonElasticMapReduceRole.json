@@ -1,0 +1,99 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole",
+  "CreateDate": "2015-02-06T18:41:20Z",
+  "DefaultVersionId": "v9",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAIDI2BQT2LKXZG36TW",
+  "PolicyName": "AmazonElasticMapReduceRole",
+  "PolicyVersion": {
+    "CreateDate": "2017-12-12T00:47:45Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "spot.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/spot.amazonaws.com/AWSServiceRoleForEC2Spot*"
+        },
+        {
+          "Action": [
+            "application-autoscaling:DeleteScalingPolicy",
+            "application-autoscaling:DeregisterScalableTarget",
+            "application-autoscaling:Describe*",
+            "application-autoscaling:PutScalingPolicy",
+            "application-autoscaling:RegisterScalableTarget",
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:PutMetricAlarm",
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CancelSpotInstanceRequests",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateSecurityGroup",
+            "ec2:CreateTags",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DeleteTags",
+            "ec2:DeleteVolume",
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeDhcpOptions",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstances",
+            "ec2:DescribeKeyPairs",
+            "ec2:DescribeNetworkAcls",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribePrefixLists",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSpotInstanceRequests",
+            "ec2:DescribeSpotPriceHistory",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeTags",
+            "ec2:DescribeVolumeStatus",
+            "ec2:DescribeVolumes",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeVpcEndpointServices",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs",
+            "ec2:DetachNetworkInterface",
+            "ec2:DetachVolume",
+            "ec2:ModifyImageAttribute",
+            "ec2:ModifyInstanceAttribute",
+            "ec2:RequestSpotInstances",
+            "ec2:RevokeSecurityGroupEgress",
+            "ec2:RunInstances",
+            "ec2:TerminateInstances",
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:ListInstanceProfiles",
+            "iam:ListRolePolicies",
+            "iam:PassRole",
+            "s3:CreateBucket",
+            "s3:Get*",
+            "s3:List*",
+            "sdb:BatchPutAttributes",
+            "sdb:Select",
+            "sqs:CreateQueue",
+            "sqs:Delete*",
+            "sqs:GetQueue*",
+            "sqs:PurgeQueue",
+            "sqs:ReceiveMessage"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v9"
+  },
+  "UpdateDate": "2017-12-12T00:47:45Z"
+}

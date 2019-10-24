@@ -1,0 +1,92 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AutoScalingServiceRolePolicy",
+  "CreateDate": "2018-01-08T23:10:55Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAIC5D2V7MRWBMHGD7G",
+  "PolicyName": "AutoScalingServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2018-10-31T18:19:10Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "spot.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2SpotManagement"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": "ec2.amazonaws.com*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2InstanceProfileManagement"
+        },
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:PutMetricAlarm"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CWManagement"
+        },
+        {
+          "Action": [
+            "ec2:AttachClassicLinkVpc",
+            "ec2:CancelSpotInstanceRequests",
+            "ec2:CreateFleet",
+            "ec2:CreateTags",
+            "ec2:DeleteTags",
+            "ec2:Describe*",
+            "ec2:DetachClassicLinkVpc",
+            "ec2:ModifyInstanceAttribute",
+            "ec2:RequestSpotInstances",
+            "ec2:RunInstances",
+            "ec2:TerminateInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2InstanceManagement"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:Deregister*",
+            "elasticloadbalancing:Describe*",
+            "elasticloadbalancing:Register*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ELBManagement"
+        },
+        {
+          "Action": [
+            "sns:Publish"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SNSManagement"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2018-10-31T18:19:10Z"
+}

@@ -1,0 +1,66 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AutoScalingFullAccess",
+  "CreateDate": "2017-01-12T19:31:58Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIAWRCSJDDXDXGPCFU",
+  "PolicyName": "AutoScalingFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-02-06T21:59:13Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "autoscaling.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "autoscaling:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "cloudwatch:PutMetricAlarm",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstanceAttribute",
+            "ec2:DescribeInstances",
+            "ec2:DescribeKeyPairs",
+            "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribePlacementGroups",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSpotInstanceRequests",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcClassicLink"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "elasticloadbalancing:DescribeTargetGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2018-02-06T21:59:13Z"
+}

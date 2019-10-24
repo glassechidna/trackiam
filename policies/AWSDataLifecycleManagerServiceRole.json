@@ -1,0 +1,39 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSDataLifecycleManagerServiceRole",
+  "CreateDate": "2018-07-06T19:34:16Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAIZRLOKFUFE7YXQOJS",
+  "PolicyName": "AWSDataLifecycleManagerServiceRole",
+  "PolicyVersion": {
+    "CreateDate": "2019-05-29T16:44:12Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateSnapshot",
+            "ec2:CreateSnapshots",
+            "ec2:DeleteSnapshot",
+            "ec2:DescribeInstances",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeVolumes"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::snapshot/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-05-29T16:44:12Z"
+}

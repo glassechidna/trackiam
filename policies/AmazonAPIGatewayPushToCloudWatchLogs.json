@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs",
+  "CreateDate": "2015-11-11T23:41:46Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAIK4GFO7HLKYN64ASK",
+  "PolicyName": "AmazonAPIGatewayPushToCloudWatchLogs",
+  "PolicyVersion": {
+    "CreateDate": "2015-11-11T23:41:46Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogGroups",
+            "logs:DescribeLogStreams",
+            "logs:FilterLogEvents",
+            "logs:GetLogEvents",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2015-11-11T23:41:46Z"
+}

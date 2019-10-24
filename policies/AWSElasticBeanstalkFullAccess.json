@@ -1,0 +1,123 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSElasticBeanstalkFullAccess",
+  "CreateDate": "2015-02-06T18:40:18Z",
+  "DefaultVersionId": "v8",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIZYX2YLLBW2LJVUFW",
+  "PolicyName": "AWSElasticBeanstalkFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-07-10T19:27:59Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:AttachRolePolicy"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PolicyArn": [
+                "arn:aws:iam::aws:policy/AWSElasticBeanstalk*",
+                "arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalk*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-elasticbeanstalk*"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "autoscaling.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "elasticbeanstalk.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/elasticbeanstalk.amazonaws.com/AWSServiceRoleForElasticBeanstalk*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "elasticloadbalancing.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/elasticloadbalancing.amazonaws.com/AWSServiceRoleForElasticLoadBalancing*"
+          ]
+        },
+        {
+          "Action": [
+            "acm:DescribeCertificate",
+            "acm:ListCertificates",
+            "autoscaling:*",
+            "cloudformation:*",
+            "cloudwatch:*",
+            "codebuild:BatchGetBuilds",
+            "codebuild:CreateProject",
+            "codebuild:DeleteProject",
+            "codebuild:StartBuild",
+            "dynamodb:*",
+            "ec2:*",
+            "ecr:*",
+            "ecs:*",
+            "elasticbeanstalk:*",
+            "elasticloadbalancing:*",
+            "iam:GetPolicyVersion",
+            "iam:GetRole",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListInstanceProfiles",
+            "iam:ListRolePolicies",
+            "iam:ListRoles",
+            "iam:ListServerCertificates",
+            "iam:PassRole",
+            "logs:*",
+            "rds:*",
+            "s3:*",
+            "sns:*",
+            "sqs:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:AddRoleToInstanceProfile",
+            "iam:CreateInstanceProfile",
+            "iam:CreateRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:instance-profile/aws-elasticbeanstalk*",
+            "arn:aws:iam::*:role/aws-elasticbeanstalk*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v8"
+  },
+  "UpdateDate": "2019-07-10T19:27:59Z"
+}

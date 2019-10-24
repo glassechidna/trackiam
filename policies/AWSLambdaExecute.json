@@ -1,0 +1,35 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSLambdaExecute",
+  "CreateDate": "2015-02-06T18:40:46Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJE5FX7FQZSU5XAKGO",
+  "PolicyName": "AWSLambdaExecute",
+  "PolicyVersion": {
+    "CreateDate": "2015-02-06T18:40:46Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:*"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2015-02-06T18:40:46Z"
+}

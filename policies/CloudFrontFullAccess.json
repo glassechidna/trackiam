@@ -1,0 +1,38 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CloudFrontFullAccess",
+  "CreateDate": "2015-02-06T18:39:50Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIPRV52SH6HDCCFY6U",
+  "PolicyName": "CloudFrontFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2016-01-21T17:03:57Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "acm:ListCertificates",
+            "cloudfront:*",
+            "iam:ListServerCertificates",
+            "waf:GetWebACL",
+            "waf:ListWebACLs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2016-01-21T17:03:57Z"
+}

@@ -1,0 +1,44 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonElasticTranscoderRole",
+  "CreateDate": "2015-02-06T18:41:26Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJNW3WMKVXFJ2KPIQ2",
+  "PolicyName": "AmazonElasticTranscoderRole",
+  "PolicyVersion": {
+    "CreateDate": "2019-06-13T22:48:22Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "s3:*MultipartUpload*",
+            "s3:Get*",
+            "s3:ListBucket",
+            "s3:PutObject",
+            "s3:PutObjectAcl"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "1"
+        },
+        {
+          "Action": [
+            "sns:Publish"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "2"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-06-13T22:48:22Z"
+}

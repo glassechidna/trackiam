@@ -1,0 +1,40 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonRoute53AutoNamingFullAccess",
+  "CreateDate": "2018-01-18T18:40:41Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJCNJBBLMJN2ZMV62Y",
+  "PolicyName": "AmazonRoute53AutoNamingFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-01-18T18:40:41Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeRegions",
+            "ec2:DescribeVpcs",
+            "route53:ChangeResourceRecordSets",
+            "route53:CreateHealthCheck",
+            "route53:CreateHostedZone",
+            "route53:DeleteHealthCheck",
+            "route53:DeleteHostedZone",
+            "route53:GetHealthCheck",
+            "route53:GetHostedZone",
+            "route53:ListHostedZonesByName",
+            "route53:UpdateHealthCheck",
+            "servicediscovery:*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-01-18T18:40:41Z"
+}

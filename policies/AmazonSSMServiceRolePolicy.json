@@ -1,0 +1,99 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonSSMServiceRolePolicy",
+  "CreateDate": "2017-11-13T19:20:08Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAIXJ26NUGBA3TCV7EC",
+  "PolicyName": "AmazonSSMServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2018-07-25T22:14:20Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "ssm.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstanceAttribute",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "lambda:InvokeFunction"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:*:SSM*",
+            "arn:aws:lambda:*:*:function:SSM*"
+          ]
+        },
+        {
+          "Action": [
+            "resource-groups:ListGroupResources",
+            "resource-groups:ListGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:CancelCommand",
+            "ssm:GetAutomationExecution",
+            "ssm:GetCommandInvocation",
+            "ssm:GetParameters",
+            "ssm:ListCommandInvocations",
+            "ssm:ListCommands",
+            "ssm:SendCommand",
+            "ssm:StartAutomationExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "states:DescribeExecution",
+            "states:StartExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:states:*:*:execution:SSM*",
+            "arn:aws:states:*:*:stateMachine:SSM*"
+          ]
+        },
+        {
+          "Action": [
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2018-07-25T22:14:20Z"
+}

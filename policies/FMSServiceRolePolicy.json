@@ -1,0 +1,198 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/FMSServiceRolePolicy",
+  "CreateDate": "2018-03-28T23:01:12Z",
+  "DefaultVersionId": "v8",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAI62NTGYJB446ACUEA",
+  "PolicyName": "FMSServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-08-14T21:35:01Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "apigateway:SetWebACL",
+            "elasticloadbalancing:SetWebACL",
+            "waf-regional:AssociateWebACL",
+            "waf-regional:DeleteWebACL",
+            "waf-regional:DisassociateWebACL",
+            "waf-regional:GetRuleGroup",
+            "waf-regional:GetWebACL",
+            "waf-regional:ListResourcesForWebACL",
+            "waf-regional:ListSubscribedRuleGroups",
+            "waf-regional:UpdateWebACL",
+            "waf:DeleteWebACL",
+            "waf:GetRuleGroup",
+            "waf:GetWebACL",
+            "waf:ListSubscribedRuleGroups",
+            "waf:UpdateWebACL"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:apigateway:*::/restapis/*/stages/*",
+            "arn:aws:elasticloadbalancing:*:*:loadbalancer/app/*",
+            "arn:aws:waf-regional:*:*:rulegroup/*",
+            "arn:aws:waf-regional:*:*:webacl/*",
+            "arn:aws:waf:*:*:rulegroup/*",
+            "arn:aws:waf:*:*:webacl/*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudfront:GetDistribution",
+            "cloudfront:ListDistributionsByWebACLId",
+            "cloudfront:UpdateDistribution"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "config:DeleteConfigRule",
+            "config:DescribeComplianceByConfigRule",
+            "config:DescribeConfigRuleEvaluationStatus",
+            "config:DescribeConfigRules",
+            "config:GetComplianceDetailsByConfigRule",
+            "config:PutConfigRule",
+            "config:StartConfigRulesEvaluation"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:config:*:*:config-rule/aws-service-rule/fms.amazonaws.com/*"
+        },
+        {
+          "Action": [
+            "config:DescribeConfigurationRecorderStatus",
+            "config:DescribeConfigurationRecorders",
+            "config:DescribeDeliveryChannelStatus",
+            "config:DescribeDeliveryChannels",
+            "config:GetComplianceSummaryByConfigRule",
+            "config:GetDiscoveredResourceCounts",
+            "config:PutConfigurationRecorder",
+            "config:PutDeliveryChannel",
+            "config:PutEvaluations",
+            "config:SelectResourceConfig",
+            "config:StartConfigurationRecorder"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DescribeNetworkInterfaceAttribute",
+            "ec2:RevokeSecurityGroupEgress",
+            "ec2:RevokeSecurityGroupIngress",
+            "ec2:UpdateSecurityGroupRuleDescriptionsEgress",
+            "ec2:UpdateSecurityGroupRuleDescriptionsIngress"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:security-group/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroupReferences",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeStaleSecurityGroups",
+            "ec2:DescribeVpcs",
+            "ec2:ModifyNetworkInterfaceAttribute"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:DescribeAddresses",
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "shield:CreateProtection",
+            "shield:CreateSubscription",
+            "shield:DeleteProtection",
+            "shield:DescribeDRTAccess",
+            "shield:DescribeEmergencyContactSettings",
+            "shield:DescribeProtection",
+            "shield:DescribeSubscription",
+            "shield:GetSubscriptionState",
+            "shield:ListAttacks",
+            "shield:ListProtections",
+            "shield:UpdateEmergencyContactSettings"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:DeleteServiceLinkedRole",
+            "iam:GetServiceLinkedRoleDeletionStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/fms.amazonaws.com/AWSServiceRoleForFMS"
+          ]
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAccounts"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "waf-regional:CreateWebACL",
+            "waf-regional:GetChangeToken",
+            "waf:CreateWebACL",
+            "waf:GetChangeToken"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:waf-regional:*",
+            "arn:aws:waf:*"
+          ]
+        },
+        {
+          "Action": [
+            "waf-regional:DeletePermissionPolicy",
+            "waf-regional:GetPermissionPolicy",
+            "waf-regional:PutPermissionPolicy",
+            "waf:DeletePermissionPolicy",
+            "waf:GetPermissionPolicy",
+            "waf:PutPermissionPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:waf-regional:*:*:rulegroup/*",
+            "arn:aws:waf-regional:*:*:webacl/*",
+            "arn:aws:waf:*:*:rulegroup/*",
+            "arn:aws:waf:*:*:webacl/*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v8"
+  },
+  "UpdateDate": "2019-08-14T21:35:01Z"
+}

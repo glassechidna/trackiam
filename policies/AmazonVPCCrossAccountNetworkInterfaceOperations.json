@@ -1,0 +1,61 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonVPCCrossAccountNetworkInterfaceOperations",
+  "CreateDate": "2017-07-18T20:47:16Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJ53Y4ZY5OHP4CNRJC",
+  "PolicyName": "AmazonVPCCrossAccountNetworkInterfaceOperations",
+  "PolicyVersion": {
+    "CreateDate": "2019-01-07T19:16:23Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:AssignPrivateIpAddresses",
+            "ec2:UnassignPrivateIpAddresses"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeNetworkInterfaceAttribute",
+            "ec2:DescribeNetworkInterfacePermissions",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "ec2:ModifyNetworkInterfaceAttribute"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateRoute",
+            "ec2:DeleteRoute",
+            "ec2:DescribeRouteTables",
+            "ec2:ReplaceRoute"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2019-01-07T19:16:23Z"
+}

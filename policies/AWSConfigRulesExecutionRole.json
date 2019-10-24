@@ -1,0 +1,39 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSConfigRulesExecutionRole",
+  "CreateDate": "2016-03-25T17:59:36Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJUB3KIKTA4PU4OYAA",
+  "PolicyName": "AWSConfigRulesExecutionRole",
+  "PolicyVersion": {
+    "CreateDate": "2019-05-13T21:33:30Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "config:BatchGet*",
+            "config:Describe*",
+            "config:Get*",
+            "config:List*",
+            "config:Put*",
+            "config:Select*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*/AWSLogs/*/Config/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2019-05-13T21:33:30Z"
+}

@@ -1,0 +1,45 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerReadOnly",
+  "CreateDate": "2017-11-29T13:07:09Z",
+  "DefaultVersionId": "v6",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJTZ2FTFCQ6CFLQA2O",
+  "PolicyName": "AmazonSageMakerReadOnly",
+  "PolicyVersion": {
+    "CreateDate": "2019-06-10T20:38:21Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingActivities",
+            "application-autoscaling:DescribeScalingPolicies",
+            "application-autoscaling:DescribeScheduledActions",
+            "aws-marketplace:ViewSubscriptions",
+            "cloudwatch:DescribeAlarms",
+            "cognito-idp:DescribeUserPool",
+            "cognito-idp:DescribeUserPoolClient",
+            "cognito-idp:ListGroups",
+            "cognito-idp:ListIdentityProviders",
+            "cognito-idp:ListUserPoolClients",
+            "cognito-idp:ListUserPools",
+            "cognito-idp:ListUsers",
+            "cognito-idp:ListUsersInGroup",
+            "ecr:Describe*",
+            "sagemaker:Describe*",
+            "sagemaker:GetSearchSuggestions",
+            "sagemaker:List*",
+            "sagemaker:Search"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v6"
+  },
+  "UpdateDate": "2019-06-10T20:38:21Z"
+}

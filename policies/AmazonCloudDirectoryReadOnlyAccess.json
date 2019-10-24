@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonCloudDirectoryReadOnlyAccess",
+  "CreateDate": "2017-02-28T23:42:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAICMSZQGR3O62KMD6M",
+  "PolicyName": "AmazonCloudDirectoryReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2017-02-28T23:42:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "clouddirectory:BatchRead",
+            "clouddirectory:Get*",
+            "clouddirectory:List*",
+            "clouddirectory:LookupPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2017-02-28T23:42:06Z"
+}

@@ -1,0 +1,74 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/ServerMigrationConnector",
+  "CreateDate": "2016-10-24T21:45:56Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJKZRWXIPK5HSG3QDQ",
+  "PolicyName": "ServerMigrationConnector",
+  "PolicyVersion": {
+    "CreateDate": "2016-10-24T21:45:56Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "awsconnector:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "iam:GetUser",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "SNS:Publish"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sns:*:*:metrics-sns-topic-for-*"
+        },
+        {
+          "Action": [
+            "s3:AbortMultipartUpload",
+            "s3:CreateBucket",
+            "s3:DeleteBucket",
+            "s3:DeleteObject",
+            "s3:GetBucketLocation",
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:ListBucketMultipartUploads",
+            "s3:ListMultipartUploadParts",
+            "s3:PutLifecycleConfiguration",
+            "s3:PutObject",
+            "s3:PutObjectAcl"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::connector-platform-release-notes",
+            "arn:aws:s3:::connector-platform-release-notes/*",
+            "arn:aws:s3:::connector-platform-upgrade-bundles",
+            "arn:aws:s3:::connector-platform-upgrade-bundles/*",
+            "arn:aws:s3:::connector-platform-upgrade-info",
+            "arn:aws:s3:::connector-platform-upgrade-info/*",
+            "arn:aws:s3:::import-to-ec2-*",
+            "arn:aws:s3:::server-migration-service-upgrade",
+            "arn:aws:s3:::server-migration-service-upgrade/*",
+            "arn:aws:s3:::sms-b-*"
+          ]
+        },
+        {
+          "Action": [
+            "sms:GetMessages",
+            "sms:SendMessage"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2016-10-24T21:45:56Z"
+}

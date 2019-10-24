@@ -1,0 +1,67 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetTaggingRole",
+  "CreateDate": "2017-06-29T18:19:29Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJ5U6UMLCEYLX5OLC4",
+  "PolicyName": "AmazonEC2SpotFleetTaggingRole",
+  "PolicyVersion": {
+    "CreateDate": "2017-11-17T22:51:17Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "ec2.amazonaws.com",
+                "ec2.amazonaws.com.cn"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateTags",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeSubnets",
+            "ec2:RequestSpotInstances",
+            "ec2:TerminateInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:RegisterInstancesWithLoadBalancer"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticloadbalancing:*:*:loadbalancer/*"
+          ]
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:RegisterTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2017-11-17T22:51:17Z"
+}

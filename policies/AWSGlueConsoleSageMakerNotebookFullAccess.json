@@ -1,0 +1,234 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSGlueConsoleSageMakerNotebookFullAccess",
+  "CreateDate": "2018-10-05T17:52:35Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJELFOHJC42QS3ZSYY",
+  "PolicyName": "AWSGlueConsoleSageMakerNotebookFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-09-26T17:14:11Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateTags",
+            "ec2:DeleteTags",
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/aws:cloudformation:logical-id": "ZeppelinInstance"
+            },
+            "StringLike": {
+              "ec2:ResourceTag/aws:cloudformation:stack-id": "arn:aws:cloudformation:*:*:stack/aws-glue-*/*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": [
+                "ec2.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AWSGlueServiceNotebookRole*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": [
+                "glue.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AWSGlueServiceRole*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": [
+                "glue.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/service-role/AWSGlueServiceRole*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": [
+                "sagemaker.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AWSGlueServiceSageMakerNotebookRole*"
+        },
+        {
+          "Action": [
+            "tag:GetResources"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:TagKeys": "aws-glue-*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudformation:CreateStack",
+            "cloudformation:DeleteStack"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/aws-glue*/*"
+        },
+        {
+          "Action": [
+            "cloudformation:DescribeStacks",
+            "cloudformation:GetTemplateSummary",
+            "cloudformation:ListStacks",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:ListDashboards",
+            "dynamodb:ListTables",
+            "ec2:AttachNetworkInterface",
+            "ec2:CreateNetworkInterface",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstances",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeKeyPairs",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs",
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "glue:*",
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListRolePolicies",
+            "iam:ListRoles",
+            "kms:DescribeKey",
+            "kms:ListAliases",
+            "rds:DescribeDBInstances",
+            "redshift:DescribeClusterSubnetGroups",
+            "redshift:DescribeClusters",
+            "s3:GetBucketAcl",
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket",
+            "sagemaker:ListNotebookInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:RunInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:image/*",
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:key-pair/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ]
+        },
+        {
+          "Action": [
+            "logs:GetLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:/aws-glue/*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:CreateBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-glue-*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*/*aws-glue-*/*",
+            "arn:aws:s3:::aws-glue-*",
+            "arn:aws:s3:::aws-glue-*/*"
+          ]
+        },
+        {
+          "Action": [
+            "sagemaker:CreateNotebookInstance",
+            "sagemaker:CreatePresignedNotebookInstanceUrl",
+            "sagemaker:DeleteNotebookInstance",
+            "sagemaker:DescribeNotebookInstance",
+            "sagemaker:ListTags",
+            "sagemaker:StartNotebookInstance",
+            "sagemaker:StopNotebookInstance",
+            "sagemaker:UpdateNotebookInstance"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:notebook-instance/aws-glue-*"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateNotebookInstanceLifecycleConfig",
+            "sagemaker:DeleteNotebookInstanceLifecycleConfig",
+            "sagemaker:DescribeNotebookInstanceLifecycleConfig",
+            "sagemaker:ListNotebookInstanceLifecycleConfigs"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:notebook-instance-lifecycle-config/aws-glue-*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-09-26T17:14:11Z"
+}

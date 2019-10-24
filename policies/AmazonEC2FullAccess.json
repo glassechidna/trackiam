@@ -1,0 +1,57 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonEC2FullAccess",
+  "CreateDate": "2015-02-06T18:40:15Z",
+  "DefaultVersionId": "v5",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAI3VAJF5ZCRZ7MCQE6",
+  "PolicyName": "AmazonEC2FullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-11-27T02:16:56Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "autoscaling.amazonaws.com",
+                "ec2scheduled.amazonaws.com",
+                "elasticloadbalancing.amazonaws.com",
+                "spot.amazonaws.com",
+                "spotfleet.amazonaws.com",
+                "transitgateway.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "autoscaling:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "cloudwatch:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "ec2:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "elasticloadbalancing:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v5"
+  },
+  "UpdateDate": "2018-11-27T02:16:56Z"
+}

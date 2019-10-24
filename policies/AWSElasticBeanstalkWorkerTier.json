@@ -1,0 +1,92 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSElasticBeanstalkWorkerTier",
+  "CreateDate": "2016-02-08T23:12:02Z",
+  "DefaultVersionId": "v5",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJQDLBRSJVKVF4JMSK",
+  "PolicyName": "AWSElasticBeanstalkWorkerTier",
+  "PolicyVersion": {
+    "CreateDate": "2019-03-01T00:07:00Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MetricsAccess"
+        },
+        {
+          "Action": [
+            "dynamodb:BatchGetItem",
+            "dynamodb:BatchWriteItem",
+            "dynamodb:DeleteItem",
+            "dynamodb:GetItem",
+            "dynamodb:PutItem",
+            "dynamodb:Query",
+            "dynamodb:Scan",
+            "dynamodb:UpdateItem"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:dynamodb:*:*:table/*-stack-AWSEBWorkerCronLeaderRegistry*"
+          ],
+          "Sid": "DynamoPeriodicTasks"
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/elasticbeanstalk*"
+          ],
+          "Sid": "CloudWatchLogsAccess"
+        },
+        {
+          "Action": [
+            "s3:Get*",
+            "s3:List*",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::elasticbeanstalk-*",
+            "arn:aws:s3:::elasticbeanstalk-*/*"
+          ],
+          "Sid": "BucketAccess"
+        },
+        {
+          "Action": [
+            "sqs:ChangeMessageVisibility",
+            "sqs:DeleteMessage",
+            "sqs:ReceiveMessage",
+            "sqs:SendMessage"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "QueueAccess"
+        },
+        {
+          "Action": [
+            "xray:GetSamplingRules",
+            "xray:GetSamplingStatisticSummaries",
+            "xray:GetSamplingTargets",
+            "xray:PutTelemetryRecords",
+            "xray:PutTraceSegments"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "XRayAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v5"
+  },
+  "UpdateDate": "2019-03-01T00:07:00Z"
+}

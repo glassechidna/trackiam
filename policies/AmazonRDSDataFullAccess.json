@@ -1,0 +1,60 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonRDSDataFullAccess",
+  "CreateDate": "2018-11-20T21:29:36Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJ5HUMNZCSW4IC74T6",
+  "PolicyName": "AmazonRDSDataFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-05-30T17:11:26Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "dbqms:CreateFavoriteQuery",
+            "dbqms:CreateQueryHistory",
+            "dbqms:DeleteFavoriteQueries",
+            "dbqms:DeleteQueryHistory",
+            "dbqms:DescribeFavoriteQueries",
+            "dbqms:DescribeQueryHistory",
+            "dbqms:DescribeQueryHistory",
+            "dbqms:GetQueryString",
+            "dbqms:UpdateFavoriteQuery",
+            "dbqms:UpdateQueryHistory",
+            "rds-data:BatchExecuteStatement",
+            "rds-data:BeginTransaction",
+            "rds-data:CommitTransaction",
+            "rds-data:ExecuteSql",
+            "rds-data:ExecuteStatement",
+            "rds-data:RollbackTransaction",
+            "secretsmanager:CreateSecret",
+            "secretsmanager:GetRandomPassword",
+            "secretsmanager:ListSecrets",
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RDSDataServiceAccess"
+        },
+        {
+          "Action": [
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:PutResourcePolicy",
+            "secretsmanager:PutSecretValue",
+            "secretsmanager:TagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:rds-db-credentials/*",
+          "Sid": "SecretsManagerDbCredentialsAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-05-30T17:11:26Z"
+}

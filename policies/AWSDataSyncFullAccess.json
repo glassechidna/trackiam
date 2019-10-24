@@ -1,0 +1,56 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSDataSyncFullAccess",
+  "CreateDate": "2019-01-18T19:40:36Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJGOHCDUQULZJKDGT4",
+  "PolicyName": "AWSDataSyncFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-01-18T19:40:36Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "datasync.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "datasync:*",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "elasticfilesystem:DescribeFileSystems",
+            "elasticfilesystem:DescribeMountTargets",
+            "iam:GetRole",
+            "iam:ListRoles",
+            "logs:CreateLogGroup",
+            "logs:DescribeLogGroups",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-01-18T19:40:36Z"
+}

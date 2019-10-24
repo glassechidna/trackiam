@@ -1,0 +1,37 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/IAMFullAccess",
+  "CreateDate": "2015-02-06T18:40:38Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAI7XKCFMBPM3QQRRVQ",
+  "PolicyName": "IAMFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-06-21T19:40:00Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:*",
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:DescribePolicy",
+            "organizations:ListChildren",
+            "organizations:ListParents",
+            "organizations:ListPolicies",
+            "organizations:ListPoliciesForTarget",
+            "organizations:ListRoots",
+            "organizations:ListTargetsForPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-06-21T19:40:00Z"
+}

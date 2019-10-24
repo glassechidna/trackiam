@@ -1,0 +1,31 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonRoute53ReadOnlyAccess",
+  "CreateDate": "2015-02-06T18:40:55Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAITOYK2ZAOQFXV2JNC",
+  "PolicyName": "AmazonRoute53ReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2016-11-15T21:15:16Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "route53:Get*",
+            "route53:List*",
+            "route53:TestDNSAnswer"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2016-11-15T21:15:16Z"
+}

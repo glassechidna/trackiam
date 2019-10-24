@@ -1,0 +1,186 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSGlueConsoleFullAccess",
+  "CreateDate": "2017-08-14T13:37:39Z",
+  "DefaultVersionId": "v12",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJNZGDEOD7MISOVSVI",
+  "PolicyName": "AWSGlueConsoleFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-02-11T19:49:01Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateTags",
+            "ec2:DeleteTags",
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/aws:cloudformation:logical-id": "ZeppelinInstance"
+            },
+            "StringLike": {
+              "ec2:ResourceTag/aws:cloudformation:stack-id": "arn:aws:cloudformation:*:*:stack/aws-glue-*/*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": [
+                "ec2.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AWSGlueServiceNotebookRole*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": [
+                "glue.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AWSGlueServiceRole*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": [
+                "glue.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/service-role/AWSGlueServiceRole*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudformation:CreateStack",
+            "cloudformation:DeleteStack"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/aws-glue*/*"
+        },
+        {
+          "Action": [
+            "cloudformation:DescribeStacks",
+            "cloudformation:GetTemplateSummary",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:ListDashboards",
+            "dynamodb:ListTables",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstances",
+            "ec2:DescribeKeyPairs",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs",
+            "glue:*",
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListGroups",
+            "iam:ListRolePolicies",
+            "iam:ListRoles",
+            "iam:ListUsers",
+            "kms:DescribeKey",
+            "kms:ListAliases",
+            "rds:DescribeDBClusters",
+            "rds:DescribeDBInstances",
+            "rds:DescribeDBSubnetGroups",
+            "redshift:DescribeClusterSubnetGroups",
+            "redshift:DescribeClusters",
+            "s3:GetBucketAcl",
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:RunInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:image/*",
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:key-pair/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ]
+        },
+        {
+          "Action": [
+            "logs:GetLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:/aws-glue/*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:CreateBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-glue-*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*/*aws-glue-*/*",
+            "arn:aws:s3:::aws-glue-*",
+            "arn:aws:s3:::aws-glue-*/*"
+          ]
+        },
+        {
+          "Action": [
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v12"
+  },
+  "UpdateDate": "2019-02-11T19:49:01Z"
+}

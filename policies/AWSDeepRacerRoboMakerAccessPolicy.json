@@ -1,0 +1,94 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSDeepRacerRoboMakerAccessPolicy",
+  "CreateDate": "2019-02-28T21:59:58Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIUKGYRTDCUFOMRGAM",
+  "PolicyName": "AWSDeepRacerRoboMakerAccessPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-02-28T21:59:58Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Condition": {
+            "StringEqualsIgnoreCase": {
+              "s3:ExistingObjectTag/DeepRacer": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:PutMetricData",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "kinesisvideo:CreateStream",
+            "kinesisvideo:DescribeStream",
+            "kinesisvideo:GetDataEndpoint",
+            "kinesisvideo:PutMedia",
+            "kinesisvideo:TagStream"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:kinesisvideo:*:*:stream/dr-*"
+          ]
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/robomaker/SimulationJobs",
+            "arn:aws:logs:*:*:log-group:/aws/robomaker/SimulationJobs:log-stream:*"
+          ]
+        },
+        {
+          "Action": [
+            "robomaker:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:GetObject",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*DeepRacer*",
+            "arn:aws:s3:::*Deepracer*",
+            "arn:aws:s3:::*deepracer*",
+            "arn:aws:s3:::dr-*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-02-28T21:59:58Z"
+}

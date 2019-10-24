@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCodeBuildReadOnlyAccess",
+  "CreateDate": "2016-12-01T19:03:41Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJIZZWN6557F5HVP2K",
+  "PolicyName": "AWSCodeBuildReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-10-08T20:26:25Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:GetMetricStatistics",
+            "codebuild:BatchGet*",
+            "codebuild:List*",
+            "codecommit:GetBranch",
+            "codecommit:GetCommit",
+            "codecommit:GetRepository",
+            "events:DescribeRule",
+            "events:ListRuleNamesByTarget",
+            "events:ListTargetsByRule",
+            "logs:GetLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2019-10-08T20:26:25Z"
+}

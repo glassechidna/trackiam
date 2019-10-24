@@ -1,0 +1,174 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudwatchApplicationInsightsServiceLinkedRolePolicy",
+  "CreateDate": "2018-12-01T16:22:12Z",
+  "DefaultVersionId": "v5",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJH3SHQERZRQMQOQ44",
+  "PolicyName": "CloudwatchApplicationInsightsServiceLinkedRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-06-24T18:54:53Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "autoscaling:DescribeAutoScalingGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudFormation:CreateStack",
+            "cloudFormation:DeleteStack",
+            "cloudFormation:UpdateStack"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/ApplicationInsights-*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudFormation:DescribeStacks",
+            "cloudFormation:ListStackResources"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarmHistory",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:ListMetrics",
+            "cloudwatch:PutMetricAlarm"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "elasticloadbalancing:DescribeTargetGroups",
+            "elasticloadbalancing:DescribeTargetHealth"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "events:DescribeRule"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "logs:DescribeLogGroups",
+            "logs:DescribeLogStreams",
+            "logs:GetLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "rds:DescribeDBInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "resource-groups:GetGroup",
+            "resource-groups:GetGroupQuery",
+            "resource-groups:ListGroupResources"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:AddTagsToResource",
+            "ssm:DeleteParameter",
+            "ssm:GetParameters",
+            "ssm:PutParameter",
+            "ssm:RemoveTagsFromResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:parameter/AmazonCloudWatch-ApplicationInsights-*"
+        },
+        {
+          "Action": [
+            "ssm:CreateAssociation",
+            "ssm:DeleteAssociation",
+            "ssm:DescribeAssociation",
+            "ssm:UpdateAssociation"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ssm:*:*:association/*",
+            "arn:aws:ssm:*:*:document/AWS-ConfigureAWSPackage",
+            "arn:aws:ssm:*:*:document/AWSEC2-ApplicationInsightsCloudwatchAgentInstallAndConfigure",
+            "arn:aws:ssm:*:*:document/AmazonCloudWatch-ManageAgent",
+            "arn:aws:ssm:*:*:managed-instance/*"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:CreateOpsItem",
+            "ssm:DescribeInstanceInformation",
+            "ssm:DescribeOpsItems",
+            "ssm:GetOpsItem",
+            "ssm:UpdateOpsItem"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v5"
+  },
+  "UpdateDate": "2019-06-24T18:54:53Z"
+}

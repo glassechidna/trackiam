@@ -1,0 +1,73 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonSSMMaintenanceWindowRole",
+  "CreateDate": "2016-12-01T15:57:54Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJV3JNYSTZ47VOXYME",
+  "PolicyName": "AmazonSSMMaintenanceWindowRole",
+  "PolicyVersion": {
+    "CreateDate": "2019-07-27T00:16:05Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "lambda:InvokeFunction"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:*:SSM*",
+            "arn:aws:lambda:*:*:function:SSM*"
+          ]
+        },
+        {
+          "Action": [
+            "resource-groups:ListGroupResources",
+            "resource-groups:ListGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:GetAutomationExecution",
+            "ssm:GetParameters",
+            "ssm:ListCommands",
+            "ssm:SendCommand",
+            "ssm:StartAutomationExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "states:DescribeExecution",
+            "states:StartExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:states:*:*:execution:SSM*",
+            "arn:aws:states:*:*:stateMachine:SSM*"
+          ]
+        },
+        {
+          "Action": [
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2019-07-27T00:16:05Z"
+}

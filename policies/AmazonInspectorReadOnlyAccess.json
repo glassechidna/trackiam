@@ -1,0 +1,35 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonInspectorReadOnlyAccess",
+  "CreateDate": "2015-10-07T17:08:01Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJXQNTHTEJ2JFRN2SE",
+  "PolicyName": "AmazonInspectorReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-10-01T15:17:54Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeInstances",
+            "ec2:DescribeTags",
+            "events:DescribeRule",
+            "events:ListRuleNamesByTarget",
+            "inspector:Describe*",
+            "inspector:Get*",
+            "inspector:List*",
+            "inspector:Preview*",
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2019-10-01T15:17:54Z"
+}

@@ -1,0 +1,41 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role",
+  "CreateDate": "2015-03-19T18:45:18Z",
+  "DefaultVersionId": "v6",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJLYJCVHC7TQHCSQDS",
+  "PolicyName": "AmazonEC2ContainerServiceforEC2Role",
+  "PolicyVersion": {
+    "CreateDate": "2019-06-13T19:11:37Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeTags",
+            "ecr:BatchCheckLayerAvailability",
+            "ecr:BatchGetImage",
+            "ecr:GetAuthorizationToken",
+            "ecr:GetDownloadUrlForLayer",
+            "ecs:CreateCluster",
+            "ecs:DeregisterContainerInstance",
+            "ecs:DiscoverPollEndpoint",
+            "ecs:Poll",
+            "ecs:RegisterContainerInstance",
+            "ecs:StartTelemetrySession",
+            "ecs:Submit*",
+            "ecs:UpdateContainerInstancesState",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v6"
+  },
+  "UpdateDate": "2019-06-13T19:11:37Z"
+}

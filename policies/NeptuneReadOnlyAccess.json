@@ -1,0 +1,88 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/NeptuneReadOnlyAccess",
+  "CreateDate": "2018-05-30T19:16:37Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJS5OQ5RXULC66WTGQ",
+  "PolicyName": "NeptuneReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-05-30T19:16:37Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "kms:ListAliases",
+            "kms:ListKeyPolicies",
+            "kms:ListKeys",
+            "kms:ListRetirableGrants"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogStreams",
+            "logs:GetLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/neptune/*:log-stream:*",
+            "arn:aws:logs:*:*:log-group:/aws/rds/*:log-stream:*"
+          ]
+        },
+        {
+          "Action": [
+            "rds:DescribeAccountAttributes",
+            "rds:DescribeCertificates",
+            "rds:DescribeDBClusterParameterGroups",
+            "rds:DescribeDBClusterParameters",
+            "rds:DescribeDBClusterSnapshotAttributes",
+            "rds:DescribeDBClusterSnapshots",
+            "rds:DescribeDBClusters",
+            "rds:DescribeDBEngineVersions",
+            "rds:DescribeDBInstances",
+            "rds:DescribeDBLogFiles",
+            "rds:DescribeDBParameterGroups",
+            "rds:DescribeDBParameters",
+            "rds:DescribeDBSubnetGroups",
+            "rds:DescribeEventCategories",
+            "rds:DescribeEventSubscriptions",
+            "rds:DescribeEvents",
+            "rds:DescribeOrderableDBInstanceOptions",
+            "rds:DescribePendingMaintenanceActions",
+            "rds:DownloadDBLogFilePortion",
+            "rds:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-05-30T19:16:37Z"
+}

@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonWorkMailReadOnlyAccess",
+  "CreateDate": "2015-02-06T18:40:42Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJHF7J65E2QFKCWAJM",
+  "PolicyName": "AmazonWorkMailReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-07-25T08:24:50Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:GetMetricData",
+            "iam:ListRoles",
+            "lambda:ListFunctions",
+            "logs:DescribeLogGroups",
+            "ses:Describe*",
+            "ses:Get*",
+            "workmail:Describe*",
+            "workmail:Get*",
+            "workmail:List*",
+            "workmail:Search*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2019-07-25T08:24:50Z"
+}

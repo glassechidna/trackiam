@@ -1,0 +1,31 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSOpsWorksInstanceRegistration",
+  "CreateDate": "2016-06-03T14:23:15Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJG3LCPVNI4WDZCIMU",
+  "PolicyName": "AWSOpsWorksInstanceRegistration",
+  "PolicyVersion": {
+    "CreateDate": "2016-06-03T14:23:15Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "opsworks:DescribeStackProvisioningParameters",
+            "opsworks:DescribeStacks",
+            "opsworks:RegisterInstance"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2016-06-03T14:23:15Z"
+}

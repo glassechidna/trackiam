@@ -1,0 +1,57 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSSSOReadOnly",
+  "CreateDate": "2018-06-27T20:24:34Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJBSMEEZXFDMKMY43I",
+  "PolicyName": "AWSSSOReadOnly",
+  "PolicyVersion": {
+    "CreateDate": "2018-12-19T20:17:58Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ds:DescribeDirectories",
+            "ds:DescribeTrusts",
+            "iam:ListPolicies",
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListAccountsForParent",
+            "organizations:ListChildren",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListParents",
+            "organizations:ListRoots",
+            "sso-directory:DescribeDirectory",
+            "sso:DescribePermissionsPolicies",
+            "sso:GetApplicationInstance",
+            "sso:GetApplicationTemplate",
+            "sso:GetPermissionSet",
+            "sso:GetPermissionsPolicy",
+            "sso:GetProfile",
+            "sso:GetSSOConfiguration",
+            "sso:GetSSOStatus",
+            "sso:GetTrust",
+            "sso:ListApplicationInstanceCertificates",
+            "sso:ListApplicationInstances",
+            "sso:ListApplicationTemplates",
+            "sso:ListApplications",
+            "sso:ListDirectoryAssociations",
+            "sso:ListPermissionSets",
+            "sso:ListProfileAssociations",
+            "sso:ListProfiles",
+            "sso:Search*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSSSOReadOnly"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2018-12-19T20:17:58Z"
+}

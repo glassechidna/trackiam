@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSLambdaSQSQueueExecutionRole",
+  "CreateDate": "2018-06-14T21:50:45Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJFWJZI6JNND4TSELK",
+  "PolicyName": "AWSLambdaSQSQueueExecutionRole",
+  "PolicyVersion": {
+    "CreateDate": "2018-06-14T21:50:45Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents",
+            "sqs:DeleteMessage",
+            "sqs:GetQueueAttributes",
+            "sqs:ReceiveMessage"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-06-14T21:50:45Z"
+}

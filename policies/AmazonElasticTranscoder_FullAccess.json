@@ -1,0 +1,45 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonElasticTranscoder_FullAccess",
+  "CreateDate": "2018-04-27T18:59:35Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAICFT6XVF3RSR4E7JG",
+  "PolicyName": "AmazonElasticTranscoder_FullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-06-10T22:51:51Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": [
+                "elastictranscoder.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "elastictranscoder:*",
+            "iam:ListRoles",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket",
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-06-10T22:51:51Z"
+}

@@ -1,0 +1,37 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSElasticBeanstalkMulticontainerDocker",
+  "CreateDate": "2016-02-08T23:15:29Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJ45SBYG72SD6SHJEY",
+  "PolicyName": "AWSElasticBeanstalkMulticontainerDocker",
+  "PolicyVersion": {
+    "CreateDate": "2016-06-06T23:45:37Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ecs:DeregisterContainerInstance",
+            "ecs:DescribeContainerInstances",
+            "ecs:DescribeTasks",
+            "ecs:DiscoverPollEndpoint",
+            "ecs:Poll",
+            "ecs:RegisterContainerInstance",
+            "ecs:StartTask",
+            "ecs:StartTelemetrySession",
+            "ecs:StopTask",
+            "ecs:Submit*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ECSAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2016-06-06T23:45:37Z"
+}

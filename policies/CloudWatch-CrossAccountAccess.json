@@ -1,0 +1,29 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudWatch-CrossAccountAccess",
+  "CreateDate": "2019-07-23T09:59:27Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4OV6AFDA5J",
+  "PolicyName": "CloudWatch-CrossAccountAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-07-23T09:59:27Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "sts:AssumeRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/CloudWatch-CrossAccountSharing*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-07-23T09:59:27Z"
+}

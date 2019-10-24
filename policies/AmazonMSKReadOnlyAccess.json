@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonMSKReadOnlyAccess",
+  "CreateDate": "2019-01-14T22:28:45Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJGMUI3DP2EVP3VGYO",
+  "PolicyName": "AmazonMSKReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-01-14T22:28:45Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "kafka:Describe*",
+            "kafka:Get*",
+            "kafka:List*",
+            "kms:DescribeKey"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-01-14T22:28:45Z"
+}

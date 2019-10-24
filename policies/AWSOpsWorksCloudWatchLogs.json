@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSOpsWorksCloudWatchLogs",
+  "CreateDate": "2017-03-30T17:47:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJXFIK7WABAY5CPXM4",
+  "PolicyName": "AWSOpsWorksCloudWatchLogs",
+  "PolicyVersion": {
+    "CreateDate": "2017-03-30T17:47:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2017-03-30T17:47:19Z"
+}

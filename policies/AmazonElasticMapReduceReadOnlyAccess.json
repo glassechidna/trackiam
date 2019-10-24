@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonElasticMapReduceReadOnlyAccess",
+  "CreateDate": "2015-02-06T18:40:23Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIHP6NH2S6GYFCOINC",
+  "PolicyName": "AmazonElasticMapReduceReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2017-05-22T23:00:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:GetMetricStatistics",
+            "elasticmapreduce:Describe*",
+            "elasticmapreduce:List*",
+            "elasticmapreduce:ViewEventsFromAllClustersInConsole",
+            "s3:GetObject",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket",
+            "sdb:Select"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2017-05-22T23:00:19Z"
+}

@@ -1,0 +1,94 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCloudTrailFullAccess",
+  "CreateDate": "2015-02-06T18:39:58Z",
+  "DefaultVersionId": "v8",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIQNUJTQYDRJPC3BNK",
+  "PolicyName": "AWSCloudTrailFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-09-12T23:08:46Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "cloudtrail.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "cloudtrail:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:GetRolePolicy",
+            "iam:GetUser",
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "kms:ListAliases",
+            "kms:ListKeys"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "lambda:ListFunctions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:DeleteBucket",
+            "s3:GetBucketLocation",
+            "s3:GetBucketPolicy",
+            "s3:GetObject",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket",
+            "s3:PutBucketPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sns:AddPermission",
+            "sns:CreateTopic",
+            "sns:DeleteTopic",
+            "sns:GetTopicAttributes",
+            "sns:ListTopics",
+            "sns:SetTopicAttributes"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v8"
+  },
+  "UpdateDate": "2019-09-12T23:08:46Z"
+}

@@ -1,0 +1,61 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonRedshiftFullAccess",
+  "CreateDate": "2015-02-06T18:40:50Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAISEKCHH4YDB46B5ZO",
+  "PolicyName": "AmazonRedshiftFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-08-06T00:05:05Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "redshift.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/redshift.amazonaws.com/AWSServiceRoleForRedshift"
+        },
+        {
+          "Action": [
+            "cloudwatch:Describe*",
+            "cloudwatch:DisableAlarmActions",
+            "cloudwatch:EnableAlarmActions",
+            "cloudwatch:Get*",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricWidgetImage",
+            "cloudwatch:List*",
+            "cloudwatch:ListMetrics",
+            "cloudwatch:PutMetricAlarm",
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAddresses",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "redshift:*",
+            "sns:CreateTopic",
+            "sns:Get*",
+            "sns:List*",
+            "tag:GetResources",
+            "tag:GetTagKeys",
+            "tag:GetTagValues",
+            "tag:TagResources",
+            "tag:UntagResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2019-08-06T00:05:05Z"
+}

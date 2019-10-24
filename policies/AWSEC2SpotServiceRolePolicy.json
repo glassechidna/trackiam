@@ -1,0 +1,75 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSEC2SpotServiceRolePolicy",
+  "CreateDate": "2017-09-18T18:51:54Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAIZJJBQNXQYVKTEXGM",
+  "PolicyName": "AWSEC2SpotServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2018-12-12T00:13:51Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": "RunInstances"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "StringNotEquals": {
+              "ec2:InstanceMarketType": "spot"
+            }
+          },
+          "Effect": "Deny",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "ec2.amazonaws.com",
+                "ec2.amazonaws.com.cn"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstances",
+            "ec2:RunInstances",
+            "ec2:StartInstances",
+            "ec2:StopInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2018-12-12T00:13:51Z"
+}

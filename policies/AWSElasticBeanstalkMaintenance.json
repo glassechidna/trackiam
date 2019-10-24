@@ -1,0 +1,42 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSElasticBeanstalkMaintenance",
+  "CreateDate": "2019-01-11T23:22:52Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJQPH22XGBH2VV2LSW",
+  "PolicyName": "AWSElasticBeanstalkMaintenance",
+  "PolicyVersion": {
+    "CreateDate": "2019-06-04T17:48:27Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "elasticloadbalancing:DescribeLoadBalancers",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowElasticBeanstalkStacksUpdateExecuteSuccessfully"
+        },
+        {
+          "Action": [
+            "cloudformation:CreateChangeSet",
+            "cloudformation:DeleteChangeSet",
+            "cloudformation:DescribeChangeSet",
+            "cloudformation:DescribeStacks",
+            "cloudformation:ExecuteChangeSet",
+            "cloudformation:ListChangeSets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/awseb-*",
+            "arn:aws:cloudformation:*:*:stack/eb-*"
+          ],
+          "Sid": "AllowCloudformationChangeSetOperationsOnElasticBeanstalkStacks"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-06-04T17:48:27Z"
+}

@@ -1,0 +1,78 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonECSServiceRolePolicy",
+  "CreateDate": "2017-10-14T01:18:58Z",
+  "DefaultVersionId": "v6",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAIVUWKCAI7URU4WUEI",
+  "PolicyName": "AmazonECSServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-06-24T23:16:41Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:AttachNetworkInterface",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission",
+            "ec2:Describe*",
+            "ec2:DetachNetworkInterface",
+            "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
+            "elasticloadbalancing:DeregisterTargets",
+            "elasticloadbalancing:Describe*",
+            "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
+            "elasticloadbalancing:RegisterTargets",
+            "route53:ChangeResourceRecordSets",
+            "route53:CreateHealthCheck",
+            "route53:DeleteHealthCheck",
+            "route53:Get*",
+            "route53:List*",
+            "route53:UpdateHealthCheck",
+            "servicediscovery:DeregisterInstance",
+            "servicediscovery:Get*",
+            "servicediscovery:List*",
+            "servicediscovery:RegisterInstance",
+            "servicediscovery:UpdateInstanceCustomHealthStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ECSTaskManagement"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "ECSTagging"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:DescribeLogGroups",
+            "logs:PutRetentionPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/ecs/*",
+          "Sid": "CWLogGroupManagement"
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/ecs/*:log-stream:*",
+          "Sid": "CWLogStreamManagement"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v6"
+  },
+  "UpdateDate": "2019-06-24T23:16:41Z"
+}

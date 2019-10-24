@@ -1,0 +1,124 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
+  "CreateDate": "2019-01-10T21:01:28Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAIOOYZSLZZXWFJJ5N2",
+  "PolicyName": "AWSBackupServiceRolePolicyForBackup",
+  "PolicyVersion": {
+    "CreateDate": "2019-06-25T20:26:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "kms:CreateGrant",
+          "Condition": {
+            "Bool": {
+              "kms:GrantIsForAWSResource": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "kms:DescribeKey",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "dynamodb:CreateBackup",
+            "dynamodb:DescribeTable"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:dynamodb:*:*:table/*"
+        },
+        {
+          "Action": [
+            "dynamodb:DeleteBackup",
+            "dynamodb:DescribeBackup"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:dynamodb:*:*:table/*/backup/*"
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshot",
+            "ec2:DeleteSnapshot",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeVolumes"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:volume/*",
+            "arn:aws:ec2:*::snapshot/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateTags",
+            "ec2:DeleteSnapshot"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::snapshot/*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeTags"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "elasticfilesystem:Backup",
+            "elasticfilesystem:DescribeTags"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticfilesystem:*:*:file-system/*"
+        },
+        {
+          "Action": [
+            "rds:AddTagsToResource",
+            "rds:CopyDBSnapshot",
+            "rds:CreateDBSnapshot",
+            "rds:DescribeDBInstances",
+            "rds:DescribeDBSnapshots",
+            "rds:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "rds:DeleteDBSnapshot"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:rds:*:*:snapshot:awsbackup:*"
+          ]
+        },
+        {
+          "Action": [
+            "storagegateway:CreateSnapshot",
+            "storagegateway:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:storagegateway:*:*:gateway/*/volume/*"
+        },
+        {
+          "Action": [
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2019-06-25T20:26:08Z"
+}

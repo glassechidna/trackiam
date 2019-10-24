@@ -1,0 +1,99 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSDataPipelineRole",
+  "CreateDate": "2015-02-06T18:41:24Z",
+  "DefaultVersionId": "v6",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAIKCP6XS3ESGF4GLO2",
+  "PolicyName": "AWSDataPipelineRole",
+  "PolicyVersion": {
+    "CreateDate": "2017-12-22T23:43:28Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": [
+                "elasticmapreduce.amazonaws.com",
+                "spot.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:*",
+            "datapipeline:DescribeObjects",
+            "datapipeline:EvaluateExpression",
+            "dynamodb:BatchGetItem",
+            "dynamodb:DescribeTable",
+            "dynamodb:GetItem",
+            "dynamodb:Query",
+            "dynamodb:Scan",
+            "dynamodb:UpdateTable",
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CancelSpotInstanceRequests",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateSecurityGroup",
+            "ec2:CreateTags",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DeleteTags",
+            "ec2:Describe*",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DetachNetworkInterface",
+            "ec2:ModifyImageAttribute",
+            "ec2:ModifyInstanceAttribute",
+            "ec2:RequestSpotInstances",
+            "ec2:RevokeSecurityGroupEgress",
+            "ec2:RunInstances",
+            "ec2:StartInstances",
+            "ec2:StopInstances",
+            "ec2:TerminateInstances",
+            "elasticmapreduce:*",
+            "iam:GetInstanceProfile",
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListInstanceProfiles",
+            "iam:ListRolePolicies",
+            "iam:PassRole",
+            "rds:DescribeDBInstances",
+            "rds:DescribeDBSecurityGroups",
+            "redshift:DescribeClusterSecurityGroups",
+            "redshift:DescribeClusters",
+            "s3:CreateBucket",
+            "s3:DeleteObject",
+            "s3:Get*",
+            "s3:List*",
+            "s3:Put*",
+            "sdb:BatchPutAttributes",
+            "sdb:Select*",
+            "sns:GetTopicAttributes",
+            "sns:ListTopics",
+            "sns:Publish",
+            "sns:Subscribe",
+            "sns:Unsubscribe",
+            "sqs:CreateQueue",
+            "sqs:Delete*",
+            "sqs:GetQueue*",
+            "sqs:PurgeQueue",
+            "sqs:ReceiveMessage"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v6"
+  },
+  "UpdateDate": "2017-12-22T23:43:28Z"
+}

@@ -1,0 +1,40 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSStepFunctionsConsoleFullAccess",
+  "CreateDate": "2017-01-11T21:54:31Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJIYC52YWRX6OSMJWK",
+  "PolicyName": "AWSStepFunctionsConsoleFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2017-01-12T00:19:34Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:ListRoles",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/service-role/StatesExecutionRole*"
+        },
+        {
+          "Action": "lambda:ListFunctions",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "states:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2017-01-12T00:19:34Z"
+}

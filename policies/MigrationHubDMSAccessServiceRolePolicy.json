@@ -1,0 +1,51 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/MigrationHubDMSAccessServiceRolePolicy",
+  "CreateDate": "2019-06-12T17:50:39Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4IV7DIZ555",
+  "PolicyName": "MigrationHubDMSAccessServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-10-07T17:57:44Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "mgh:CreateProgressUpdateStream",
+          "Effect": "Allow",
+          "Resource": "arn:aws:mgh:*:*:progressUpdateStream/DMS"
+        },
+        {
+          "Action": [
+            "mgh:AssociateCreatedArtifact",
+            "mgh:AssociateDiscoveredResource",
+            "mgh:DescribeMigrationTask",
+            "mgh:DisassociateCreatedArtifact",
+            "mgh:DisassociateDiscoveredResource",
+            "mgh:ImportMigrationTask",
+            "mgh:ListCreatedArtifacts",
+            "mgh:ListDiscoveredResources",
+            "mgh:NotifyMigrationTaskState",
+            "mgh:PutResourceAttributes"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:mgh:*:*:progressUpdateStream/DMS/migrationTask/*"
+        },
+        {
+          "Action": [
+            "mgh:DescribeApplicationState",
+            "mgh:GetHomeRegion",
+            "mgh:ListMigrationTasks",
+            "mgh:NotifyApplicationState"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-10-07T17:57:44Z"
+}

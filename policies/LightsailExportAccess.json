@@ -1,0 +1,38 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/LightsailExportAccess",
+  "CreateDate": "2018-09-28T16:35:54Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJ4LZGPQLZWMVR4WMQ",
+  "PolicyName": "LightsailExportAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-09-28T16:35:54Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CopyImage",
+            "ec2:CopySnapshot",
+            "ec2:DescribeImages",
+            "ec2:DescribeSnapshots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:DeleteServiceLinkedRole",
+            "iam:GetServiceLinkedRoleDeletionStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/lightsail.amazonaws.com/AWSServiceRoleForLightsail*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-09-28T16:35:54Z"
+}

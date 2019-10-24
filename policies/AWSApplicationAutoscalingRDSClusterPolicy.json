@@ -1,0 +1,47 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSApplicationAutoscalingRDSClusterPolicy",
+  "CreateDate": "2017-10-17T17:46:56Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJ7XS52I27Q2JVKALU",
+  "PolicyName": "AWSApplicationAutoscalingRDSClusterPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2018-08-07T19:14:24Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": "rds.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:PutMetricAlarm",
+            "rds:AddTagsToResource",
+            "rds:CreateDBInstance",
+            "rds:DeleteDBInstance",
+            "rds:DescribeDBClusters",
+            "rds:DescribeDBInstances",
+            "rds:ModifyDBCluster"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2018-08-07T19:14:24Z"
+}

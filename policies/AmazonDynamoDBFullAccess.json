@@ -1,0 +1,109 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess",
+  "CreateDate": "2015-02-06T18:40:11Z",
+  "DefaultVersionId": "v9",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAINUGF2JSOSUY76KYA",
+  "PolicyName": "AmazonDynamoDBFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-05-08T21:20:48Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "dax.amazonaws.com",
+                "dynamodb.application-autoscaling.amazonaws.com",
+                "replication.dynamodb.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": [
+                "application-autoscaling.amazonaws.com",
+                "dax.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "application-autoscaling:DeleteScalingPolicy",
+            "application-autoscaling:DeregisterScalableTarget",
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingActivities",
+            "application-autoscaling:DescribeScalingPolicies",
+            "application-autoscaling:PutScalingPolicy",
+            "application-autoscaling:RegisterScalableTarget",
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarmHistory",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:DescribeAlarmsForMetric",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics",
+            "cloudwatch:PutMetricAlarm",
+            "datapipeline:ActivatePipeline",
+            "datapipeline:CreatePipeline",
+            "datapipeline:DeletePipeline",
+            "datapipeline:DescribeObjects",
+            "datapipeline:DescribePipelines",
+            "datapipeline:GetPipelineDefinition",
+            "datapipeline:ListPipelines",
+            "datapipeline:PutPipelineDefinition",
+            "datapipeline:QueryObjects",
+            "dax:*",
+            "dynamodb:*",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "iam:GetRole",
+            "iam:ListRoles",
+            "lambda:CreateEventSourceMapping",
+            "lambda:CreateFunction",
+            "lambda:DeleteEventSourceMapping",
+            "lambda:DeleteFunction",
+            "lambda:GetFunctionConfiguration",
+            "lambda:ListEventSourceMappings",
+            "lambda:ListFunctions",
+            "resource-groups:CreateGroup",
+            "resource-groups:DeleteGroup",
+            "resource-groups:GetGroup",
+            "resource-groups:GetGroupQuery",
+            "resource-groups:ListGroupResources",
+            "resource-groups:ListGroups",
+            "sns:CreateTopic",
+            "sns:DeleteTopic",
+            "sns:ListSubscriptions",
+            "sns:ListSubscriptionsByTopic",
+            "sns:ListTopics",
+            "sns:SetTopicAttributes",
+            "sns:Subscribe",
+            "sns:Unsubscribe",
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v9"
+  },
+  "UpdateDate": "2019-05-08T21:20:48Z"
+}

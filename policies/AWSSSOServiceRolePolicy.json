@@ -1,0 +1,105 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSSOServiceRolePolicy",
+  "CreateDate": "2017-12-05T18:36:15Z",
+  "DefaultVersionId": "v7",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAIJ52KSWOD4GI54XP2",
+  "PolicyName": "AWSSSOServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-08-30T19:55:59Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:AttachRolePolicy",
+            "iam:CreateRole",
+            "iam:DeleteRole",
+            "iam:DeleteRolePolicy",
+            "iam:DetachRolePolicy",
+            "iam:GetRole",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListRolePolicies",
+            "iam:PutRolePolicy",
+            "iam:UpdateRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-reserved/sso.amazonaws.com/*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:CreateSAMLProvider",
+            "iam:DeleteSAMLProvider",
+            "iam:GetSAMLProvider",
+            "iam:UpdateSAMLProvider"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:saml-provider/AWSSSO_*"
+          ]
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAccounts"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ds:DescribeDirectories",
+            "ds:DescribeTrusts"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowDescribeForDirectory"
+        },
+        {
+          "Action": [
+            "ds:UnauthorizeApplication"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowUnauthAppForDirectory"
+        },
+        {
+          "Action": [
+            "iam:DeleteRole",
+            "iam:DeleteServiceLinkedRole",
+            "iam:GetRole",
+            "iam:GetServiceLinkedRoleDeletionStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/sso.amazonaws.com/AWSServiceRoleForSSO"
+          ],
+          "Sid": "AllowDeletionOfServiceLinkedRoleForSSO"
+        },
+        {
+          "Action": [
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "ListRolesInTheAccount"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v7"
+  },
+  "UpdateDate": "2019-08-30T19:55:59Z"
+}

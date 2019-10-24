@@ -1,0 +1,70 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSBetaServiceRolePolicy",
+  "CreateDate": "2018-05-02T19:41:04Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJ36CJAE6OYAR4YEK4",
+  "PolicyName": "AmazonRDSBetaServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2018-07-05T18:29:48Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateSecurityGroup",
+            "ec2:CreateVpcEndpoint",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DeleteVpcEndpoints",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs",
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "ec2:ModifyVpcEndpoint",
+            "ec2:RevokeSecurityGroupIngress"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/rds/*"
+          ]
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/rds/*:log-stream:*"
+          ]
+        },
+        {
+          "Action": [
+            "sns:Publish"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2018-07-05T18:29:48Z"
+}

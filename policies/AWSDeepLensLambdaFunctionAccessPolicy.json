@@ -1,0 +1,66 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSDeepLensLambdaFunctionAccessPolicy",
+  "CreateDate": "2017-11-29T15:47:18Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIKIEE4PRM54V4G3ZG",
+  "PolicyName": "AWSDeepLensLambdaFunctionAccessPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-06-11T23:11:55Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "deeplens:*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "DeepLensAccess"
+        },
+        {
+          "Action": [
+            "kinesisvideo:CreateStream",
+            "kinesisvideo:DescribeStream",
+            "kinesisvideo:GetDataEndpoint",
+            "kinesisvideo:PutMedia"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "DeepLensKinesisVideoAccess"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/greengrass/*",
+          "Sid": "DeepLensGreenGrassCloudWatchAccess"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::deeplens*",
+            "arn:aws:s3:::deeplens*/*"
+          ],
+          "Sid": "DeepLensS3ObjectAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2019-06-11T23:11:55Z"
+}

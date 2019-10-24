@@ -1,0 +1,57 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AutoScalingConsoleReadOnlyAccess",
+  "CreateDate": "2017-01-12T19:48:53Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAI3A7GDXOYQV3VUQMK",
+  "PolicyName": "AutoScalingConsoleReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2017-01-12T19:48:53Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "autoscaling:Describe*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "elasticloadbalancing:Describe*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:Describe*",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcClassicLink",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sns:ListSubscriptions",
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2017-01-12T19:48:53Z"
+}

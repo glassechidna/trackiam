@@ -1,0 +1,80 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonSageMakerNotebooksServiceRolePolicy",
+  "CreateDate": "2019-10-18T20:27:37Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4MYB7OEJED",
+  "PolicyName": "AmazonSageMakerNotebooksServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-10-18T20:27:37Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "elasticfilesystem:CreateFileSystem",
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/ManagedByAmazonSageMakerResource": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:RevokeSecurityGroupEgress"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/ManagedByAmazonSageMakerResource": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "elasticfilesystem:CreateMountTarget",
+            "elasticfilesystem:DescribeFileSystems",
+            "elasticfilesystem:DescribeMountTargets"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/ManagedByAmazonSageMakerResource": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:security-group/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateSecurityGroup",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:ModifyNetworkInterfaceAttribute"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-10-18T20:27:37Z"
+}

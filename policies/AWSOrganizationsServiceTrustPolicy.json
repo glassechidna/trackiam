@@ -1,0 +1,38 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSOrganizationsServiceTrustPolicy",
+  "CreateDate": "2017-10-10T23:04:07Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAIQH6ROMVVECFVRJPK",
+  "PolicyName": "AWSOrganizationsServiceTrustPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2017-11-01T06:01:18Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowCreationOfServiceLinkedRoles"
+        },
+        {
+          "Action": [
+            "iam:DeleteRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/organizations.amazonaws.com/*"
+          ],
+          "Sid": "AllowDeletionOfServiceLinkedRoleForOrganizations"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2017-11-01T06:01:18Z"
+}

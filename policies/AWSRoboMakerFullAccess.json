@@ -1,0 +1,39 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSRoboMakerFullAccess",
+  "CreateDate": "2018-11-26T05:28:10Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIG7WQVUX3AGSKGBAO",
+  "PolicyName": "AWSRoboMakerFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-11-26T05:28:10Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "robomaker.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "robomaker:*",
+            "s3:GetObject"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "VisualEditor0"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-11-26T05:28:10Z"
+}

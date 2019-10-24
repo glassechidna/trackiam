@@ -1,0 +1,51 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonMQFullAccess",
+  "CreateDate": "2017-11-28T15:28:29Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJLKBROJNQYDDXOOGG",
+  "PolicyName": "AmazonMQFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-12-18T20:33:17Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudformation:CreateStack",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:CreateSecurityGroup",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeNetworkInterfacePermissions",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "ec2:DetachNetworkInterface",
+            "mq:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/amazonmq/*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2018-12-18T20:33:17Z"
+}

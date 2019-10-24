@@ -1,0 +1,86 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCodeDeployRoleForECSLimited",
+  "CreateDate": "2018-11-27T20:42:42Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJ6Z7L2IOXEFFOGD2M",
+  "PolicyName": "AWSCodeDeployRoleForECSLimited",
+  "PolicyVersion": {
+    "CreateDate": "2019-09-23T22:10:29Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": [
+                "ecs-tasks.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/ECSTaskExecution*",
+            "arn:aws:iam::*:role/ecsTaskExecutionRole"
+          ]
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:GetObjectVersion"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "s3:ExistingObjectTag/UseWithCodeDeploy": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms",
+            "ecs:CreateTaskSet",
+            "ecs:DeleteTaskSet",
+            "ecs:DescribeServices",
+            "ecs:UpdateServicePrimaryTaskSet"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:DescribeListeners",
+            "elasticloadbalancing:DescribeRules",
+            "elasticloadbalancing:DescribeTargetGroups",
+            "elasticloadbalancing:ModifyListener",
+            "elasticloadbalancing:ModifyRule"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "lambda:InvokeFunction"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:function:CodeDeployHook_*"
+        },
+        {
+          "Action": [
+            "sns:Publish"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sns:*:*:CodeDeployTopic_*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2019-09-23T22:10:29Z"
+}

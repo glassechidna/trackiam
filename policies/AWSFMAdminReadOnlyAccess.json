@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSFMAdminReadOnlyAccess",
+  "CreateDate": "2018-05-09T20:07:39Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJA3UKVVBN62QFIKLW",
+  "PolicyName": "AWSFMAdminReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-05-09T20:07:39Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "fms:Get*",
+            "fms:List*",
+            "organizations:DescribeOrganization",
+            "waf-regional:Get*",
+            "waf-regional:List*",
+            "waf:Get*",
+            "waf:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-05-09T20:07:39Z"
+}

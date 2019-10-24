@@ -1,0 +1,35 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSIoTLogging",
+  "CreateDate": "2015-10-08T15:17:25Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAI6R6Z2FHHGS454W7W",
+  "PolicyName": "AWSIoTLogging",
+  "PolicyVersion": {
+    "CreateDate": "2015-10-08T15:17:25Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DeleteLogStream",
+            "logs:GetLogEvents",
+            "logs:PutLogEvents",
+            "logs:PutMetricFilter",
+            "logs:PutRetentionPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2015-10-08T15:17:25Z"
+}

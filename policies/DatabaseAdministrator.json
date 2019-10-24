@@ -1,0 +1,114 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/job-function/DatabaseAdministrator",
+  "CreateDate": "2016-11-10T17:25:43Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/job-function/",
+  "PolicyId": "ANPAIGBMAW4VUQKOQNVT6",
+  "PolicyName": "DatabaseAdministrator",
+  "PolicyVersion": {
+    "CreateDate": "2019-01-08T00:48:02Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:Describe*",
+            "cloudwatch:DisableAlarmActions",
+            "cloudwatch:EnableAlarmActions",
+            "cloudwatch:Get*",
+            "cloudwatch:List*",
+            "cloudwatch:PutMetricAlarm",
+            "datapipeline:ActivatePipeline",
+            "datapipeline:CreatePipeline",
+            "datapipeline:DeletePipeline",
+            "datapipeline:DescribeObjects",
+            "datapipeline:DescribePipelines",
+            "datapipeline:GetPipelineDefinition",
+            "datapipeline:ListPipelines",
+            "datapipeline:PutPipelineDefinition",
+            "datapipeline:QueryObjects",
+            "dynamodb:*",
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAddresses",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "elasticache:*",
+            "iam:GetRole",
+            "iam:ListRoles",
+            "kms:ListKeys",
+            "lambda:CreateEventSourceMapping",
+            "lambda:CreateFunction",
+            "lambda:DeleteEventSourceMapping",
+            "lambda:DeleteFunction",
+            "lambda:GetFunctionConfiguration",
+            "lambda:ListEventSourceMappings",
+            "lambda:ListFunctions",
+            "logs:Create*",
+            "logs:DescribeLogGroups",
+            "logs:DescribeLogStreams",
+            "logs:FilterLogEvents",
+            "logs:GetLogEvents",
+            "logs:PutLogEvents",
+            "logs:PutMetricFilter",
+            "rds:*",
+            "redshift:*",
+            "s3:CreateBucket",
+            "sns:CreateTopic",
+            "sns:DeleteTopic",
+            "sns:Get*",
+            "sns:List*",
+            "sns:SetTopicAttributes",
+            "sns:Subscribe",
+            "sns:Unsubscribe"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/DataPipelineDefaultResourceRole",
+            "arn:aws:iam::*:role/DataPipelineDefaultRole",
+            "arn:aws:iam::*:role/lambda-dynamodb-*",
+            "arn:aws:iam::*:role/lambda-vpc-execution-role",
+            "arn:aws:iam::*:role/lambda_exec_role",
+            "arn:aws:iam::*:role/rdbms-lambda-access",
+            "arn:aws:iam::*:role/rds-monitoring-role"
+          ]
+        },
+        {
+          "Action": [
+            "s3:AbortMultipartUpload",
+            "s3:DeleteObject*",
+            "s3:Get*",
+            "s3:List*",
+            "s3:PutAccelerateConfiguration",
+            "s3:PutBucketTagging",
+            "s3:PutBucketVersioning",
+            "s3:PutBucketWebsite",
+            "s3:PutLifecycleConfiguration",
+            "s3:PutObject*",
+            "s3:PutReplicationConfiguration",
+            "s3:Replicate*",
+            "s3:RestoreObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-01-08T00:48:02Z"
+}

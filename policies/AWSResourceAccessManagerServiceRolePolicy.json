@@ -1,0 +1,45 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSResourceAccessManagerServiceRolePolicy",
+  "CreateDate": "2018-11-14T19:28:28Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJU667A3V5UAXC4YNE",
+  "PolicyName": "AWSResourceAccessManagerServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2018-11-14T19:28:28Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:ListAccounts",
+            "organizations:ListAccountsForParent",
+            "organizations:ListChildren",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListParents",
+            "organizations:ListRoots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:DeleteRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/ram.amazonaws.com/*"
+          ],
+          "Sid": "AllowDeletionOfServiceLinkedRoleForResourceAccessManager"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-11-14T19:28:28Z"
+}

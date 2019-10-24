@@ -1,0 +1,41 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSDirectoryServiceReadOnlyAccess",
+  "CreateDate": "2015-02-06T18:41:12Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIHWYO6WSDNCG64M2W",
+  "PolicyName": "AWSDirectoryServiceReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-09-25T21:54:01Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ds:Check*",
+            "ds:Describe*",
+            "ds:Get*",
+            "ds:List*",
+            "ds:Verify*",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "sns:GetTopicAttributes",
+            "sns:ListSubscriptions",
+            "sns:ListSubscriptionsByTopic",
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2018-09-25T21:54:01Z"
+}

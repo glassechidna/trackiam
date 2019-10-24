@@ -1,0 +1,53 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSMigrationHubSMSAccess",
+  "CreateDate": "2017-08-14T13:57:54Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAIWQYYT6TSVIRJO4TY",
+  "PolicyName": "AWSMigrationHubSMSAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-10-07T18:01:22Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "mgh:AssociateCreatedArtifact",
+            "mgh:AssociateDiscoveredResource",
+            "mgh:DescribeApplicationState",
+            "mgh:DescribeMigrationTask",
+            "mgh:DisassociateCreatedArtifact",
+            "mgh:DisassociateDiscoveredResource",
+            "mgh:ImportMigrationTask",
+            "mgh:ListCreatedArtifacts",
+            "mgh:ListDiscoveredResources",
+            "mgh:NotifyApplicationState",
+            "mgh:NotifyMigrationTaskState",
+            "mgh:PutResourceAttributes"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:mgh:*:*:progressUpdateStream/SMS/*"
+        },
+        {
+          "Action": [
+            "mgh:CreateProgressUpdateStream"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:mgh:*:*:progressUpdateStream/SMS"
+        },
+        {
+          "Action": [
+            "mgh:GetHomeRegion",
+            "mgh:ListMigrationTasks"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-10-07T18:01:22Z"
+}

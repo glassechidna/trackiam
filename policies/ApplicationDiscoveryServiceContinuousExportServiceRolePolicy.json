@@ -1,0 +1,92 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/ApplicationDiscoveryServiceContinuousExportServiceRolePolicy",
+  "CreateDate": "2018-08-09T20:22:01Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJMGMY3P6OEWOELRFE",
+  "PolicyName": "ApplicationDiscoveryServiceContinuousExportServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2018-08-13T22:31:21Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": "firehose.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AWSApplicationDiscoveryServiceFirehose"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": "firehose.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/service-role/AWSApplicationDiscoveryServiceFirehose"
+        },
+        {
+          "Action": [
+            "firehose:CreateDeliveryStream",
+            "firehose:DescribeDeliveryStream",
+            "glue:CreateDatabase",
+            "glue:CreateTable",
+            "glue:UpdateDatabase",
+            "glue:UpdateTable",
+            "logs:CreateLogGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "firehose:DeleteDeliveryStream",
+            "firehose:PutRecord",
+            "firehose:PutRecordBatch",
+            "firehose:UpdateDestination"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:firehose:*:*:deliverystream/aws-application-discovery-service*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:PutRetentionPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/application-discovery-service/firehose*"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:ListBucket",
+            "s3:PutBucketLogging",
+            "s3:PutEncryptionConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::aws-application-discovery-service*"
+        },
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::aws-application-discovery-service*/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2018-08-13T22:31:21Z"
+}

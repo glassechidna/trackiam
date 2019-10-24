@@ -1,0 +1,293 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerFullAccess",
+  "CreateDate": "2017-11-29T13:07:59Z",
+  "DefaultVersionId": "v12",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJZ5IWYMXO5QDB4QOG",
+  "PolicyName": "AmazonSageMakerFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-08-21T22:56:23Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "robomaker.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "sagemaker.application-autoscaling.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/sagemaker.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_SageMakerEndpoint"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "glue.amazonaws.com",
+                "robomaker.amazonaws.com",
+                "sagemaker.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Condition": {
+            "StringEqualsIgnoreCase": {
+              "s3:ExistingObjectTag/SageMaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "secretsmanager:ResourceTag/SageMaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "application-autoscaling:DeleteScalingPolicy",
+            "application-autoscaling:DeleteScheduledAction",
+            "application-autoscaling:DeregisterScalableTarget",
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingActivities",
+            "application-autoscaling:DescribeScalingPolicies",
+            "application-autoscaling:DescribeScheduledActions",
+            "application-autoscaling:PutScalingPolicy",
+            "application-autoscaling:PutScheduledAction",
+            "application-autoscaling:RegisterScalableTarget",
+            "aws-marketplace:ViewSubscriptions",
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics",
+            "cloudwatch:PutMetricAlarm",
+            "cloudwatch:PutMetricData",
+            "codecommit:BatchGetRepositories",
+            "codecommit:CreateRepository",
+            "codecommit:GetRepository",
+            "codecommit:ListBranches",
+            "codecommit:ListRepositories",
+            "cognito-idp:AdminAddUserToGroup",
+            "cognito-idp:AdminCreateUser",
+            "cognito-idp:AdminDeleteUser",
+            "cognito-idp:AdminDisableUser",
+            "cognito-idp:AdminEnableUser",
+            "cognito-idp:AdminRemoveUserFromGroup",
+            "cognito-idp:CreateGroup",
+            "cognito-idp:CreateUserPool",
+            "cognito-idp:CreateUserPoolClient",
+            "cognito-idp:CreateUserPoolDomain",
+            "cognito-idp:DescribeUserPool",
+            "cognito-idp:DescribeUserPoolClient",
+            "cognito-idp:ListGroups",
+            "cognito-idp:ListIdentityProviders",
+            "cognito-idp:ListUserPoolClients",
+            "cognito-idp:ListUserPools",
+            "cognito-idp:ListUsers",
+            "cognito-idp:ListUsersInGroup",
+            "cognito-idp:UpdateUserPool",
+            "cognito-idp:UpdateUserPoolClient",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:CreateVpcEndpoint",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission",
+            "ec2:DescribeDhcpOptions",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs",
+            "ecr:BatchCheckLayerAvailability",
+            "ecr:BatchGetImage",
+            "ecr:CreateRepository",
+            "ecr:Describe*",
+            "ecr:GetAuthorizationToken",
+            "ecr:GetDownloadUrlForLayer",
+            "elastic-inference:Connect",
+            "elasticfilesystem:DescribeFileSystems",
+            "elasticfilesystem:DescribeMountTargets",
+            "fsx:DescribeFileSystems",
+            "glue:CreateJob",
+            "glue:DeleteJob",
+            "glue:GetJob",
+            "glue:GetJobRun",
+            "glue:GetJobRuns",
+            "glue:GetJobs",
+            "glue:ResetJobBookmark",
+            "glue:StartJobRun",
+            "glue:UpdateJob",
+            "groundtruthlabeling:*",
+            "iam:ListRoles",
+            "kms:DescribeKey",
+            "kms:ListAliases",
+            "lambda:ListFunctions",
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:GetLogEvents",
+            "logs:PutLogEvents",
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "codecommit:GitPull",
+            "codecommit:GitPush"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:codecommit:*:*:*SageMaker*",
+            "arn:aws:codecommit:*:*:*Sagemaker*",
+            "arn:aws:codecommit:*:*:*sagemaker*"
+          ]
+        },
+        {
+          "Action": [
+            "ecr:BatchDeleteImage",
+            "ecr:CompleteLayerUpload",
+            "ecr:DeleteRepository",
+            "ecr:DeleteRepositoryPolicy",
+            "ecr:InitiateLayerUpload",
+            "ecr:PutImage",
+            "ecr:SetRepositoryPolicy",
+            "ecr:UploadLayerPart"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecr:*:*:repository/*sagemaker*"
+        },
+        {
+          "Action": [
+            "lambda:InvokeFunction"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:*LabelingFunction*",
+            "arn:aws:lambda:*:*:function:*SageMaker*",
+            "arn:aws:lambda:*:*:function:*Sagemaker*",
+            "arn:aws:lambda:*:*:function:*sagemaker*"
+          ]
+        },
+        {
+          "Action": [
+            "robomaker:CancelSimulationJob",
+            "robomaker:CreateSimulationJob",
+            "robomaker:DescribeSimulationJob"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "robomaker:CreateSimulationApplication",
+            "robomaker:DeleteSimulationApplication",
+            "robomaker:DescribeSimulationApplication"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:DeleteObject",
+            "s3:GetObject",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*SageMaker*",
+            "arn:aws:s3:::*Sagemaker*",
+            "arn:aws:s3:::*aws-glue*",
+            "arn:aws:s3:::*sagemaker*"
+          ]
+        },
+        {
+          "Action": [
+            "sagemaker:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:secretsmanager:*:*:secret:AmazonSageMaker-*"
+          ]
+        },
+        {
+          "Action": [
+            "secretsmanager:ListSecrets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sns:CreateTopic",
+            "sns:Subscribe"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sns:*:*:*SageMaker*",
+            "arn:aws:sns:*:*:*Sagemaker*",
+            "arn:aws:sns:*:*:*sagemaker*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v12"
+  },
+  "UpdateDate": "2019-08-21T22:56:23Z"
+}

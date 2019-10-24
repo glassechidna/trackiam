@@ -1,0 +1,64 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSGlobalAcceleratorSLRPolicy",
+  "CreateDate": "2019-04-05T19:39:13Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4EJ5ZEQR2C",
+  "PolicyName": "AWSGlobalAcceleratorSLRPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-10-14T21:05:22Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:DeleteSecurityGroup",
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/AWSServiceName": "GlobalAccelerator"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:security-group/*"
+          ]
+        },
+        {
+          "Action": "elasticloadbalancing:DescribeLoadBalancers",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DescribeInstances",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSubnets",
+            "ec2:ModifyNetworkInterfaceAttribute"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup",
+            "ec2:DescribeSecurityGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2019-10-14T21:05:22Z"
+}

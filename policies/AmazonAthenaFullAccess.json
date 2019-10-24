@@ -1,0 +1,123 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonAthenaFullAccess",
+  "CreateDate": "2016-11-30T16:46:01Z",
+  "DefaultVersionId": "v6",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIPJMLMD4C7RYZ6XCK",
+  "PolicyName": "AmazonAthenaFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-08-08T17:52:27Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "athena:*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:PutMetricAlarm"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "glue:BatchCreatePartition",
+            "glue:BatchDeletePartition",
+            "glue:BatchDeleteTable",
+            "glue:BatchGetPartition",
+            "glue:CreateDatabase",
+            "glue:CreatePartition",
+            "glue:CreateTable",
+            "glue:DeleteDatabase",
+            "glue:DeletePartition",
+            "glue:DeleteTable",
+            "glue:GetDatabase",
+            "glue:GetDatabases",
+            "glue:GetPartition",
+            "glue:GetPartitions",
+            "glue:GetTable",
+            "glue:GetTables",
+            "glue:UpdateDatabase",
+            "glue:UpdatePartition",
+            "glue:UpdateTable"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "lakeformation:GetDataAccess"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:AbortMultipartUpload",
+            "s3:CreateBucket",
+            "s3:GetBucketLocation",
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:ListBucketMultipartUploads",
+            "s3:ListMultipartUploadParts",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-athena-query-results-*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::athena-examples*"
+          ]
+        },
+        {
+          "Action": [
+            "sns:GetTopicAttributes",
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v6"
+  },
+  "UpdateDate": "2019-08-08T17:52:27Z"
+}

@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSApplicationAutoscalingLambdaConcurrencyPolicy",
+  "CreateDate": "2019-10-21T20:04:17Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4KIR2KPJCU",
+  "PolicyName": "AWSApplicationAutoscalingLambdaConcurrencyPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-10-21T20:04:17Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:PutMetricAlarm",
+            "lambda:DeleteProvisionedConcurrencyConfig",
+            "lambda:GetProvisionedConcurrencyConfig",
+            "lambda:PutProvisionedConcurrencyConfig"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-10-21T20:04:17Z"
+}

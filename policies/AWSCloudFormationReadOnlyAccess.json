@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess",
+  "CreateDate": "2015-02-06T18:39:49Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJWVBEE4I2POWLODLW",
+  "PolicyName": "AWSCloudFormationReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-02-06T22:16:02Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudformation:Describe*",
+            "cloudformation:DetectStackDrift",
+            "cloudformation:DetectStackResourceDrift",
+            "cloudformation:EstimateTemplateCost",
+            "cloudformation:Get*",
+            "cloudformation:List*",
+            "cloudformation:ValidateTemplate"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2019-02-06T22:16:02Z"
+}

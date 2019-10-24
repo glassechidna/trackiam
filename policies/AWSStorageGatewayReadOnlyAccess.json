@@ -1,0 +1,35 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSStorageGatewayReadOnlyAccess",
+  "CreateDate": "2015-02-06T18:41:10Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIFKCTUVOPD5NICXJK",
+  "PolicyName": "AWSStorageGatewayReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2015-02-06T18:41:10Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeSnapshots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "storagegateway:Describe*",
+            "storagegateway:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2015-02-06T18:41:10Z"
+}

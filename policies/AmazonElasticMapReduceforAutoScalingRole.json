@@ -1,0 +1,29 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforAutoScalingRole",
+  "CreateDate": "2016-11-18T01:09:10Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJSVXG6QHPE6VHDZ4Q",
+  "PolicyName": "AmazonElasticMapReduceforAutoScalingRole",
+  "PolicyVersion": {
+    "CreateDate": "2016-11-18T01:09:10Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms",
+            "elasticmapreduce:ListInstanceGroups",
+            "elasticmapreduce:ModifyInstanceGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2016-11-18T01:09:10Z"
+}

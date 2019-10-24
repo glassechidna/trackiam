@@ -1,0 +1,143 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForRestores",
+  "CreateDate": "2019-01-12T00:23:54Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJZCCL6F2WPVOUXZKI",
+  "PolicyName": "AWSBackupServiceRolePolicyForRestores",
+  "PolicyVersion": {
+    "CreateDate": "2019-10-03T19:10:42Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "kms:CreateGrant",
+          "Condition": {
+            "Bool": {
+              "kms:GrantIsForAWSResource": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:Encrypt",
+            "kms:GenerateDataKey",
+            "kms:ReEncryptFrom",
+            "kms:ReEncryptTo"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": [
+                "dynamodb.*.amazonaws.com",
+                "ec2.*.amazonaws.com",
+                "elasticfilesystem.*.amazonaws.com",
+                "rds.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "kms:DescribeKey",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "dynamodb:BatchWriteItem",
+            "dynamodb:DeleteItem",
+            "dynamodb:DescribeTable",
+            "dynamodb:GetItem",
+            "dynamodb:PutItem",
+            "dynamodb:Query",
+            "dynamodb:Scan",
+            "dynamodb:UpdateItem"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:dynamodb:*:*:table/*"
+        },
+        {
+          "Action": [
+            "dynamodb:RestoreTableFromBackup"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:dynamodb:*:*:table/*/backup/*"
+        },
+        {
+          "Action": [
+            "ec2:CreateVolume",
+            "ec2:DeleteVolume"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:volume/*",
+            "arn:aws:ec2:*::snapshot/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeVolumes"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "elasticfilesystem:CreateFilesystem",
+            "elasticfilesystem:DeleteFilesystem",
+            "elasticfilesystem:DescribeFilesystems",
+            "elasticfilesystem:Restore"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticfilesystem:*:*:file-system/*"
+        },
+        {
+          "Action": [
+            "rds:AddTagsToResource",
+            "rds:DeleteDBInstance",
+            "rds:DescribeDBInstances",
+            "rds:DescribeDBSnapshots",
+            "rds:ListTagsForResource",
+            "rds:RestoreDBInstanceFromDBSnapshot"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "storagegateway:CreateCachediSCSIVolume",
+            "storagegateway:CreateStorediSCSIVolume",
+            "storagegateway:DescribeGatewayInformation"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:storagegateway:*:*:gateway/*"
+        },
+        {
+          "Action": [
+            "storagegateway:DeleteVolume",
+            "storagegateway:DescribeCachediSCSIVolumes",
+            "storagegateway:DescribeStorediSCSIVolumes"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:storagegateway:*:*:gateway/*/volume/*"
+        },
+        {
+          "Action": [
+            "storagegateway:ListVolumes"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:storagegateway:*:*:*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2019-10-03T19:10:42Z"
+}

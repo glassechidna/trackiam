@@ -1,0 +1,42 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonDMSRedshiftS3Role",
+  "CreateDate": "2016-04-20T17:05:56Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAI3CCUQ4U5WNC5F6B6",
+  "PolicyName": "AmazonDMSRedshiftS3Role",
+  "PolicyVersion": {
+    "CreateDate": "2019-07-08T18:19:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:DeleteBucket",
+            "s3:DeleteBucketPolicy",
+            "s3:DeleteObject",
+            "s3:GetBucketAcl",
+            "s3:GetBucketLocation",
+            "s3:GetBucketPolicy",
+            "s3:GetBucketVersioning",
+            "s3:GetLifecycleConfiguration",
+            "s3:GetObject",
+            "s3:GetObjectVersion",
+            "s3:ListBucket",
+            "s3:PutBucketPolicy",
+            "s3:PutBucketVersioning",
+            "s3:PutLifecycleConfiguration",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::dms-*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2019-07-08T18:19:14Z"
+}

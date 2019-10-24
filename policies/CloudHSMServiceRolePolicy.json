@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudHSMServiceRolePolicy",
+  "CreateDate": "2017-11-06T19:12:46Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJILYY7JP6JLMQG56I",
+  "PolicyName": "CloudHSMServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2017-11-06T19:12:46Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2017-11-06T19:12:46Z"
+}

@@ -1,0 +1,101 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSServiceCatalogEndUserFullAccess",
+  "CreateDate": "2018-02-15T17:22:32Z",
+  "DefaultVersionId": "v7",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJTLLC4DGDMTZB54M4",
+  "PolicyName": "AWSServiceCatalogEndUserFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-07-10T20:30:52Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "servicecatalog:CreateProvisionedProductPlan",
+            "servicecatalog:DeleteProvisionedProductPlan",
+            "servicecatalog:DescribeProvisionedProduct",
+            "servicecatalog:DescribeProvisionedProductPlan",
+            "servicecatalog:DescribeRecord",
+            "servicecatalog:DescribeServiceActionExecutionParameters",
+            "servicecatalog:ExecuteProvisionedProductPlan",
+            "servicecatalog:ExecuteProvisionedProductServiceAction",
+            "servicecatalog:ListProvisionedProductPlans",
+            "servicecatalog:ListRecordHistory",
+            "servicecatalog:ListServiceActionsForProvisioningArtifact",
+            "servicecatalog:ListStackInstancesForProvisionedProduct",
+            "servicecatalog:ScanProvisionedProducts",
+            "servicecatalog:SearchProvisionedProducts",
+            "servicecatalog:TerminateProvisionedProduct",
+            "servicecatalog:UpdateProvisionedProduct"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "servicecatalog:userLevel": "self"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudformation:CreateChangeSet",
+            "cloudformation:CreateStack",
+            "cloudformation:CreateStackInstances",
+            "cloudformation:CreateStackSet",
+            "cloudformation:DeleteChangeSet",
+            "cloudformation:DeleteStack",
+            "cloudformation:DeleteStackInstances",
+            "cloudformation:DeleteStackSet",
+            "cloudformation:DescribeChangeSet",
+            "cloudformation:DescribeStackEvents",
+            "cloudformation:DescribeStackInstance",
+            "cloudformation:DescribeStackSet",
+            "cloudformation:DescribeStackSetOperation",
+            "cloudformation:DescribeStacks",
+            "cloudformation:ExecuteChangeSet",
+            "cloudformation:ListChangeSets",
+            "cloudformation:ListStackInstances",
+            "cloudformation:ListStackResources",
+            "cloudformation:ListStackSetOperationResults",
+            "cloudformation:ListStackSetOperations",
+            "cloudformation:SetStackPolicy",
+            "cloudformation:TagResource",
+            "cloudformation:UpdateStack",
+            "cloudformation:UpdateStackInstances",
+            "cloudformation:UpdateStackSet",
+            "cloudformation:ValidateTemplate"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:changeSet/SC-*",
+            "arn:aws:cloudformation:*:*:stack/SC-*",
+            "arn:aws:cloudformation:*:*:stack/StackSet-SC-*",
+            "arn:aws:cloudformation:*:*:stackset/SC-*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudformation:GetTemplateSummary",
+            "config:DescribeConfigurationRecorderStatus",
+            "config:DescribeConfigurationRecorders",
+            "servicecatalog:DescribeProduct",
+            "servicecatalog:DescribeProductView",
+            "servicecatalog:DescribeProvisioningParameters",
+            "servicecatalog:ListLaunchPaths",
+            "servicecatalog:ProvisionProduct",
+            "servicecatalog:SearchProducts",
+            "ssm:DescribeDocument",
+            "ssm:GetAutomationExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v7"
+  },
+  "UpdateDate": "2019-07-10T20:30:52Z"
+}

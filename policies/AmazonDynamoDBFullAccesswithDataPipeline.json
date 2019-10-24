@@ -1,0 +1,100 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccesswithDataPipeline",
+  "CreateDate": "2015-02-06T18:40:14Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJ3ORT7KDISSXGHJXA",
+  "PolicyName": "AmazonDynamoDBFullAccesswithDataPipeline",
+  "PolicyVersion": {
+    "CreateDate": "2015-11-12T02:17:42Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarmHistory",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:DescribeAlarmsForMetric",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics",
+            "cloudwatch:PutMetricAlarm",
+            "dynamodb:*",
+            "sns:CreateTopic",
+            "sns:DeleteTopic",
+            "sns:ListSubscriptions",
+            "sns:ListSubscriptionsByTopic",
+            "sns:ListTopics",
+            "sns:SetTopicAttributes",
+            "sns:Subscribe",
+            "sns:Unsubscribe"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DDBConsole"
+        },
+        {
+          "Action": [
+            "datapipeline:*",
+            "ec2:CreateTags",
+            "ec2:DescribeInstances",
+            "ec2:RunInstances",
+            "ec2:StartInstances",
+            "ec2:StopInstances",
+            "ec2:TerminateInstances",
+            "elasticmapreduce:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EMR"
+        },
+        {
+          "Action": [
+            "datapipeline:*",
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DDBConsoleImportExport"
+        },
+        {
+          "Action": [
+            "iam:GetRolePolicy",
+            "iam:PassRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "IAMEDPRoles"
+        },
+        {
+          "Action": [
+            "iam:ListRoles",
+            "lambda:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DDBConsoleTriggers"
+        },
+        {
+          "Action": [
+            "s3:DeleteObject",
+            "s3:Get*",
+            "s3:List*",
+            "s3:Put*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "S3"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2015-11-12T02:17:42Z"
+}

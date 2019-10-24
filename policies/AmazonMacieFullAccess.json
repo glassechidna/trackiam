@@ -1,0 +1,37 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonMacieFullAccess",
+  "CreateDate": "2017-08-14T14:54:30Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJJF2N5FR6S5TZN5OA",
+  "PolicyName": "AmazonMacieFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-06-28T15:54:57Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "macie.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "macie:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2018-06-28T15:54:57Z"
+}

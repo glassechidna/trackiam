@@ -1,0 +1,87 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AlexaForBusinessPolyDelegatedAccessPolicy",
+  "CreateDate": "2019-10-16T19:48:45Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4FIHC2UP5Z",
+  "PolicyName": "AlexaForBusinessPolyDelegatedAccessPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-10-16T19:48:45Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "a4b:RegisterAVSDevice"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "a4b:amazonId": [
+                "A1FUZ1SC53VJXD",
+                "A238TWV36W3S92"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "a4b:AssociateDeviceWithRoom"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:a4b:us-east-1:*:device/*/*:A1FUZ1SC53VJXD",
+            "arn:aws:a4b:us-east-1:*:device/*/*:A238TWV36W3S92",
+            "arn:aws:a4b:us-east-1:*:room/*"
+          ]
+        },
+        {
+          "Action": [
+            "a4b:AssociateSkillGroupWithRoom",
+            "a4b:CreateRoom",
+            "a4b:DisassociateSkillGroupFromRoom",
+            "a4b:GetAddressBook",
+            "a4b:GetProfile",
+            "a4b:GetRoom",
+            "a4b:GetSkillGroup",
+            "a4b:SearchProfiles",
+            "a4b:SearchRooms",
+            "a4b:SearchSkillGroups",
+            "a4b:UpdateRoom"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "a4b:DeleteDevice",
+            "a4b:DisassociateDeviceFromRoom",
+            "a4b:GetDevice",
+            "a4b:UpdateDevice"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:a4b:us-east-1:*:device/*/*:A1FUZ1SC53VJXD",
+            "arn:aws:a4b:us-east-1:*:device/*/*:A238TWV36W3S92"
+          ]
+        },
+        {
+          "Action": [
+            "a4b:SearchDevices"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-10-16T19:48:45Z"
+}

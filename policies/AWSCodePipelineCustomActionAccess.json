@@ -1,0 +1,31 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCodePipelineCustomActionAccess",
+  "CreateDate": "2015-07-09T17:02:54Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJFW5Z32BTVF76VCYC",
+  "PolicyName": "AWSCodePipelineCustomActionAccess",
+  "PolicyVersion": {
+    "CreateDate": "2015-07-09T17:02:54Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "codepipeline:AcknowledgeJob",
+            "codepipeline:GetJobDetails",
+            "codepipeline:PollForJobs",
+            "codepipeline:PutJobFailureResult",
+            "codepipeline:PutJobSuccessResult"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2015-07-09T17:02:54Z"
+}

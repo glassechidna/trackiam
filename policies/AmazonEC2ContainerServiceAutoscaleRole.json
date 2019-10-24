@@ -1,0 +1,40 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceAutoscaleRole",
+  "CreateDate": "2016-05-12T23:25:44Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAIUAP3EGGGXXCPDQKK",
+  "PolicyName": "AmazonEC2ContainerServiceAutoscaleRole",
+  "PolicyVersion": {
+    "CreateDate": "2018-02-05T19:15:15Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:PutMetricAlarm"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ecs:DescribeServices",
+            "ecs:UpdateService"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2018-02-05T19:15:15Z"
+}

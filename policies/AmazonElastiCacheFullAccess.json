@@ -1,0 +1,35 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonElastiCacheFullAccess",
+  "CreateDate": "2015-02-06T18:40:20Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIA2V44CPHAUAAECKG",
+  "PolicyName": "AmazonElastiCacheFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2017-12-07T17:48:26Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "elasticache.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/elasticache.amazonaws.com/AWSServiceRoleForElastiCache"
+        },
+        {
+          "Action": "elasticache:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2017-12-07T17:48:26Z"
+}

@@ -1,0 +1,30 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSTransferLoggingAccess",
+  "CreateDate": "2019-01-14T15:32:50Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAISIP5WGJX7VKXRQZO",
+  "PolicyName": "AWSTransferLoggingAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-01-14T15:32:50Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-01-14T15:32:50Z"
+}

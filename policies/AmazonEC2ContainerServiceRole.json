@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceRole",
+  "CreateDate": "2015-04-09T16:14:19Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJO53W2XHNACG7V77Q",
+  "PolicyName": "AmazonEC2ContainerServiceRole",
+  "PolicyVersion": {
+    "CreateDate": "2016-08-11T13:08:01Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:Describe*",
+            "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
+            "elasticloadbalancing:DeregisterTargets",
+            "elasticloadbalancing:Describe*",
+            "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
+            "elasticloadbalancing:RegisterTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2016-08-11T13:08:01Z"
+}

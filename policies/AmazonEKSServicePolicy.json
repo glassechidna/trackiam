@@ -1,0 +1,71 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonEKSServicePolicy",
+  "CreateDate": "2018-05-27T21:08:21Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJFCNXU6HPGCIVXYDI",
+  "PolicyName": "AmazonEKSServicePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-08-21T16:17:56Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "logs:CreateLogGroup",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "logs:PutLogEvents",
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/eks/*:*:*"
+        },
+        {
+          "Action": "route53:AssociateVPCWithHostedZone",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DescribeInstances",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "eks:UpdateClusterVersion",
+            "iam:ListAttachedRolePolicies"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags",
+            "ec2:DeleteTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ]
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/eks/*:*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2019-08-21T16:17:56Z"
+}

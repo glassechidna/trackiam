@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/IAMReadOnlyAccess",
+  "CreateDate": "2015-02-06T18:40:39Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJKSO7NDY4T57MWDSQ",
+  "PolicyName": "IAMReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-01-25T19:11:27Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:GenerateCredentialReport",
+            "iam:GenerateServiceLastAccessedDetails",
+            "iam:Get*",
+            "iam:List*",
+            "iam:SimulateCustomPolicy",
+            "iam:SimulatePrincipalPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2018-01-25T19:11:27Z"
+}

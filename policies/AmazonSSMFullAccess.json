@@ -1,0 +1,51 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSSMFullAccess",
+  "CreateDate": "2015-05-29T17:39:47Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJA7V6HI4ISQFMDYAG",
+  "PolicyName": "AmazonSSMFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-07-23T22:53:18Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "ssm.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/ssm.amazonaws.com/AWSServiceRoleForAmazonSSM*"
+        },
+        {
+          "Action": [
+            "cloudwatch:PutMetricData",
+            "ds:CreateComputer",
+            "ds:DescribeDirectories",
+            "ec2:DescribeInstanceStatus",
+            "ec2messages:*",
+            "logs:*",
+            "ssm:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:DeleteServiceLinkedRole",
+            "iam:GetServiceLinkedRoleDeletionStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/ssm.amazonaws.com/AWSServiceRoleForAmazonSSM*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2018-07-23T22:53:18Z"
+}

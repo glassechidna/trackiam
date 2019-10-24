@@ -1,0 +1,68 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonRDSFullAccess",
+  "CreateDate": "2015-02-06T18:40:52Z",
+  "DefaultVersionId": "v6",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAI3R4QMOG6Q5A4VWVG",
+  "PolicyName": "AmazonRDSFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-04-09T17:42:48Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": [
+                "rds.amazonaws.com",
+                "rds.application-autoscaling.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "pi:*",
+          "Effect": "Allow",
+          "Resource": "arn:aws:pi:*:*:metrics/rds/*"
+        },
+        {
+          "Action": [
+            "application-autoscaling:DeleteScalingPolicy",
+            "application-autoscaling:DeregisterScalableTarget",
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingActivities",
+            "application-autoscaling:DescribeScalingPolicies",
+            "application-autoscaling:PutScalingPolicy",
+            "application-autoscaling:RegisterScalableTarget",
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:PutMetricAlarm",
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeVpcs",
+            "logs:DescribeLogStreams",
+            "logs:GetLogEvents",
+            "rds:*",
+            "sns:ListSubscriptions",
+            "sns:ListTopics",
+            "sns:Publish"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v6"
+  },
+  "UpdateDate": "2018-04-09T17:42:48Z"
+}

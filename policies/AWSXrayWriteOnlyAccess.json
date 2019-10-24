@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSXrayWriteOnlyAccess",
+  "CreateDate": "2016-12-01T18:19:53Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIAACM4LMYSRGBCTM6",
+  "PolicyName": "AWSXrayWriteOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-08-28T23:03:04Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "xray:GetSamplingRules",
+            "xray:GetSamplingStatisticSummaries",
+            "xray:GetSamplingTargets",
+            "xray:PutTelemetryRecords",
+            "xray:PutTraceSegments"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2018-08-28T23:03:04Z"
+}

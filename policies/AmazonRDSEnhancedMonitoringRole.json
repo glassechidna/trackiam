@@ -1,0 +1,44 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonRDSEnhancedMonitoringRole",
+  "CreateDate": "2015-11-11T19:58:29Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJV7BS425S4PTSSVGK",
+  "PolicyName": "AmazonRDSEnhancedMonitoringRole",
+  "PolicyVersion": {
+    "CreateDate": "2015-11-11T19:58:29Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:PutRetentionPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:RDS*"
+          ],
+          "Sid": "EnableCreationAndManagementOfRDSCloudwatchLogGroups"
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:GetLogEvents",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:RDS*:log-stream:*"
+          ],
+          "Sid": "EnableCreationAndManagementOfRDSCloudwatchLogStreams"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2015-11-11T19:58:29Z"
+}

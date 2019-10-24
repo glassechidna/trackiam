@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/TranslateReadOnly",
+  "CreateDate": "2017-11-29T18:22:00Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJYAMZMTQNWUDJKY2E",
+  "PolicyName": "TranslateReadOnly",
+  "PolicyVersion": {
+    "CreateDate": "2018-11-27T23:29:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics",
+            "comprehend:DetectDominantLanguage",
+            "translate:GetTerminology",
+            "translate:ListTerminologies",
+            "translate:TranslateText"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2018-11-27T23:29:08Z"
+}

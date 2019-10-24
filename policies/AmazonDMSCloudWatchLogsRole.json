@@ -1,0 +1,70 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonDMSCloudWatchLogsRole",
+  "CreateDate": "2016-01-07T23:44:53Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJBG7UXZZXUJD3TDJE",
+  "PolicyName": "AmazonDMSCloudWatchLogsRole",
+  "PolicyVersion": {
+    "CreateDate": "2016-01-07T23:44:53Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:dms-tasks-*"
+          ],
+          "Sid": "AllowCreationOfDmsTasksLogGroups"
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:dms-tasks-*:log-stream:dms-task-*"
+          ],
+          "Sid": "AllowCreationOfDmsTaskLogStream"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowDescribeOnAllLogGroups"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogStreams"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:dms-tasks-*"
+          ],
+          "Sid": "AllowDescribeOfAllLogStreamsOnDmsTasksLogGroup"
+        },
+        {
+          "Action": [
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:dms-tasks-*:log-stream:dms-task-*"
+          ],
+          "Sid": "AllowUploadOfLogEventsToDmsTaskLogStream"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2016-01-07T23:44:53Z"
+}

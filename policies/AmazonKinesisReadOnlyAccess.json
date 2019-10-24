@@ -1,0 +1,29 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonKinesisReadOnlyAccess",
+  "CreateDate": "2015-02-06T18:40:30Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIOCMTDT5RLKZ2CAJO",
+  "PolicyName": "AmazonKinesisReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2015-02-06T18:40:30Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "kinesis:Describe*",
+            "kinesis:Get*",
+            "kinesis:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2015-02-06T18:40:30Z"
+}

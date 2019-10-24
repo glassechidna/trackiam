@@ -1,0 +1,66 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonKinesisAnalyticsReadOnly",
+  "CreateDate": "2016-09-21T18:16:43Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIJIEXZAFUK43U7ARK",
+  "PolicyName": "AmazonKinesisAnalyticsReadOnly",
+  "PolicyVersion": {
+    "CreateDate": "2016-09-21T18:16:43Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "logs:GetLogEvents",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "firehose:DescribeDeliveryStream",
+            "firehose:ListDeliveryStreams"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:ListPolicyVersions",
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "kinesis:DescribeStream",
+            "kinesis:ListStreams"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "kinesisanalytics:Describe*",
+            "kinesisanalytics:Get*",
+            "kinesisanalytics:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2016-09-21T18:16:43Z"
+}

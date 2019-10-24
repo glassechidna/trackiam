@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSApplicationAutoScalingCustomResourcePolicy",
+  "CreateDate": "2018-06-04T23:22:44Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJYTKXPX6DO32Z4XXA",
+  "PolicyName": "AWSApplicationAutoScalingCustomResourcePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2018-06-04T23:22:44Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:PutMetricAlarm",
+            "execute-api:Invoke"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-06-04T23:22:44Z"
+}

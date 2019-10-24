@@ -1,0 +1,66 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonDynamoDBReadOnlyAccess",
+  "CreateDate": "2015-02-06T18:40:12Z",
+  "DefaultVersionId": "v8",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIY2XFNA232XJ6J7X2",
+  "PolicyName": "AmazonDynamoDBReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-05-08T21:15:48Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingActivities",
+            "application-autoscaling:DescribeScalingPolicies",
+            "cloudwatch:DescribeAlarmHistory",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:DescribeAlarmsForMetric",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics",
+            "datapipeline:DescribeObjects",
+            "datapipeline:DescribePipelines",
+            "datapipeline:GetPipelineDefinition",
+            "datapipeline:ListPipelines",
+            "datapipeline:QueryObjects",
+            "dax:BatchGetItem",
+            "dax:Describe*",
+            "dax:GetItem",
+            "dax:List*",
+            "dax:Query",
+            "dax:Scan",
+            "dynamodb:BatchGetItem",
+            "dynamodb:Describe*",
+            "dynamodb:GetItem",
+            "dynamodb:List*",
+            "dynamodb:Query",
+            "dynamodb:Scan",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "iam:GetRole",
+            "iam:ListRoles",
+            "lambda:GetFunctionConfiguration",
+            "lambda:ListEventSourceMappings",
+            "lambda:ListFunctions",
+            "resource-groups:GetGroup",
+            "resource-groups:GetGroupQuery",
+            "resource-groups:ListGroupResources",
+            "resource-groups:ListGroups",
+            "sns:ListSubscriptionsByTopic",
+            "sns:ListTopics",
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v8"
+  },
+  "UpdateDate": "2019-05-08T21:15:48Z"
+}

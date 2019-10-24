@@ -1,0 +1,48 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForEC2ScheduledInstances",
+  "CreateDate": "2017-10-12T18:31:55Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJ7Y4TT63D6QBKCY4O",
+  "PolicyName": "AWSServiceRoleForEC2ScheduledInstances",
+  "PolicyVersion": {
+    "CreateDate": "2017-10-12T18:31:55Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "aws:ec2sri:scheduledInstanceId"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/aws:ec2sri:scheduledInstanceId": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2017-10-12T18:31:55Z"
+}

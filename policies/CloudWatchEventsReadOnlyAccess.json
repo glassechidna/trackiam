@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CloudWatchEventsReadOnlyAccess",
+  "CreateDate": "2016-01-14T18:27:18Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIILJPXXA6F7GYLYBS",
+  "PolicyName": "CloudWatchEventsReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2017-08-10T17:25:34Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "events:DescribeEventBus",
+            "events:DescribeRule",
+            "events:ListRuleNamesByTarget",
+            "events:ListRules",
+            "events:ListTargetsByRule",
+            "events:TestEventPattern"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchEventsReadOnlyAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2017-08-10T17:25:34Z"
+}

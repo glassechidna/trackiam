@@ -1,0 +1,48 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCodeBuildDeveloperAccess",
+  "CreateDate": "2016-12-01T19:02:32Z",
+  "DefaultVersionId": "v5",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIMKTMR34XSBQW45HS",
+  "PolicyName": "AWSCodeBuildDeveloperAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-10-08T20:23:39Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:GetMetricStatistics",
+            "codebuild:BatchGet*",
+            "codebuild:List*",
+            "codebuild:StartBuild",
+            "codebuild:StopBuild",
+            "codecommit:GetBranch",
+            "codecommit:GetCommit",
+            "codecommit:GetRepository",
+            "codecommit:ListBranches",
+            "events:DescribeRule",
+            "events:ListRuleNamesByTarget",
+            "events:ListTargetsByRule",
+            "logs:GetLogEvents",
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ssm:PutParameter"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:parameter/CodeBuild/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v5"
+  },
+  "UpdateDate": "2019-10-08T20:23:39Z"
+}

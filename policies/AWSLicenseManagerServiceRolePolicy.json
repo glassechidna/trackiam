@@ -1,0 +1,106 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSLicenseManagerServiceRolePolicy",
+  "CreateDate": "2018-11-26T19:02:53Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAIM7JPETWHTYNBQSZE",
+  "PolicyName": "AWSLicenseManagerServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2018-11-26T19:02:53Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeHosts",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "EC2Permissions"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "OrganizationPermissions"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-license-manager-service-*"
+          ],
+          "Sid": "S3BucketPermissions1"
+        },
+        {
+          "Action": [
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "S3BucketPermissions2"
+        },
+        {
+          "Action": [
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-license-manager-service-*"
+          ],
+          "Sid": "S3ObjectPermissions"
+        },
+        {
+          "Action": [
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "SNSTopicPermissions"
+        },
+        {
+          "Action": [
+            "sns:Publish"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sns:*:*:aws-license-manager-service-*"
+          ],
+          "Sid": "SNSAccountPermissions"
+        },
+        {
+          "Action": [
+            "ssm:CreateAssociation",
+            "ssm:GetInventory",
+            "ssm:ListInventoryEntries"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "SSMPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-11-26T19:02:53Z"
+}

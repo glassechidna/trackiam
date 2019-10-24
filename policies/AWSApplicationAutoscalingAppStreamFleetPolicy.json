@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSApplicationAutoscalingAppStreamFleetPolicy",
+  "CreateDate": "2017-10-20T19:04:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAIRI724OWKP56ZG62M",
+  "PolicyName": "AWSApplicationAutoscalingAppStreamFleetPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2017-10-20T19:04:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "appstream:DescribeFleets",
+            "appstream:UpdateFleet",
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:PutMetricAlarm"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2017-10-20T19:04:06Z"
+}

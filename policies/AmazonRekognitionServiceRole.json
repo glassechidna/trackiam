@@ -1,0 +1,43 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonRekognitionServiceRole",
+  "CreateDate": "2017-11-29T16:52:13Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJI6Q3CUQAVBJ2CTE2",
+  "PolicyName": "AmazonRekognitionServiceRole",
+  "PolicyVersion": {
+    "CreateDate": "2017-11-29T16:52:13Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "kinesis:PutRecord",
+            "kinesis:PutRecords"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:kinesis:*:*:stream/AmazonRekognition*"
+        },
+        {
+          "Action": [
+            "kinesisvideo:GetDataEndpoint",
+            "kinesisvideo:GetMedia"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sns:Publish"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sns:*:*:AmazonRekognition*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2017-11-29T16:52:13Z"
+}

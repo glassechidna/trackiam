@@ -1,0 +1,112 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceFullAccess",
+  "CreateDate": "2015-02-11T17:21:45Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAI2DV5ULJSO2FYVPYG",
+  "PolicyName": "AWSMarketplaceFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-08-08T21:13:02Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": [
+                "ec2.amazonaws.com",
+                "ssm.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "aws-marketplace:*",
+            "cloudformation:CreateStack",
+            "cloudformation:DescribeStackResource",
+            "cloudformation:DescribeStackResources",
+            "cloudformation:DescribeStacks",
+            "cloudformation:List*",
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CreateSecurityGroup",
+            "ec2:CreateTags",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAddresses",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstances",
+            "ec2:DescribeKeyPairs",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeTags",
+            "ec2:DescribeVpcs",
+            "ec2:RunInstances",
+            "ec2:StartInstances",
+            "ec2:StopInstances",
+            "ec2:TerminateInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CopyImage",
+            "ec2:CreateImage",
+            "ec2:DeleteSnapshot",
+            "ec2:DeregisterImage",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeSnapshots",
+            "iam:GetInstanceProfile",
+            "iam:GetRole",
+            "iam:ListInstanceProfiles",
+            "iam:ListRoles",
+            "sns:CreateTopic",
+            "sns:GetTopicAttributes",
+            "sns:ListTopics",
+            "ssm:CreateDocument",
+            "ssm:DescribeDocument",
+            "ssm:GetAutomationExecution",
+            "ssm:ListDocuments",
+            "ssm:StartAutomationExecution",
+            "ssm:UpdateDocument",
+            "ssm:UpdateDocumentDefaultVersion"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*image-build*"
+          ]
+        },
+        {
+          "Action": [
+            "sns:Publish",
+            "sns:setTopicAttributes"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sns:*:*:*image-build*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2018-08-08T21:13:02Z"
+}

@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonRoute53ResolverReadOnlyAccess",
+  "CreateDate": "2019-05-30T18:11:31Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CARVKYCWY",
+  "PolicyName": "AmazonRoute53ResolverReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-09-27T16:37:48Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "route53resolver:Get*",
+            "route53resolver:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-09-27T16:37:48Z"
+}

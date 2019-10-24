@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudWatchEventsServiceRolePolicy",
+  "CreateDate": "2017-11-17T00:42:04Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJNVASSNSIDZIP4X7I",
+  "PolicyName": "CloudWatchEventsServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2017-11-17T00:42:04Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms",
+            "ec2:CreateSnapshot",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstances",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeVolumeStatus",
+            "ec2:DescribeVolumes",
+            "ec2:RebootInstances",
+            "ec2:StopInstances",
+            "ec2:TerminateInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2017-11-17T00:42:04Z"
+}

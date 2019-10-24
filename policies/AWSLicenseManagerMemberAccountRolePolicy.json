@@ -1,0 +1,57 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSLicenseManagerMemberAccountRolePolicy",
+  "CreateDate": "2018-11-26T19:04:32Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJZTYEY2LEGBYAVUY4",
+  "PolicyName": "AWSLicenseManagerMemberAccountRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2018-11-26T19:04:32Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "license-manager:UpdateLicenseSpecificationsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "LicenseManagerPermissions"
+        },
+        {
+          "Action": [
+            "ram:AcceptResourceShareInvitation",
+            "ram:GetResourceShareInvitations"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "RAMPermissions"
+        },
+        {
+          "Action": [
+            "ssm:CreateAssociation",
+            "ssm:CreateResourceDataSync",
+            "ssm:DeleteResourceDataSync",
+            "ssm:GetInventory",
+            "ssm:ListAssociations",
+            "ssm:ListInventoryEntries",
+            "ssm:ListResourceDataSync"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "SSMPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-11-26T19:04:32Z"
+}

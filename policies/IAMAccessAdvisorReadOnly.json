@@ -1,0 +1,49 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/IAMAccessAdvisorReadOnly",
+  "CreateDate": "2019-06-21T19:33:45Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4FNDX5PG6Z",
+  "PolicyName": "IAMAccessAdvisorReadOnly",
+  "PolicyVersion": {
+    "CreateDate": "2019-06-21T19:33:45Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:GenerateCredentialReport",
+            "iam:GenerateOrganizationsAccessReport",
+            "iam:GenerateServiceLastAccessedDetails",
+            "iam:GetOrganizationsAccessReport",
+            "iam:GetPolicy",
+            "iam:GetRole",
+            "iam:GetServiceLastAccessedDetails",
+            "iam:GetServiceLastAccessedDetailsWithEntities",
+            "iam:ListGroups",
+            "iam:ListPolicies",
+            "iam:ListPoliciesGrantingServiceAccess",
+            "iam:ListRoles",
+            "iam:ListUsers",
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:DescribePolicy",
+            "organizations:ListChildren",
+            "organizations:ListParents",
+            "organizations:ListPolicies",
+            "organizations:ListPoliciesForTarget",
+            "organizations:ListRoots",
+            "organizations:ListTargetsForPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-06-21T19:33:45Z"
+}

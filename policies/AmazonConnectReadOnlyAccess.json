@@ -1,0 +1,35 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonConnectReadOnlyAccess",
+  "CreateDate": "2018-10-17T21:00:44Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIVZMH7VU6YYKRY6ZU",
+  "PolicyName": "AmazonConnectReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-10-17T21:00:44Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "connect:GetFederationTokens",
+          "Effect": "Deny",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "connect:Describe*",
+            "connect:Get*",
+            "connect:List*",
+            "ds:DescribeDirectories"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-10-17T21:00:44Z"
+}

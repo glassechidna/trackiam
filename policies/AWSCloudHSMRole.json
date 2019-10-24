@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSCloudHSMRole",
+  "CreateDate": "2015-02-06T18:41:23Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAI7QIUU4GC66SF26WE",
+  "PolicyName": "AWSCloudHSMRole",
+  "PolicyVersion": {
+    "CreateDate": "2015-02-06T18:41:23Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateTags",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DescribeNetworkInterfaceAttribute",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "ec2:DetachNetworkInterface"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2015-02-06T18:41:23Z"
+}

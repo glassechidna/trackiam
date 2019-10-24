@@ -1,0 +1,29 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess",
+  "CreateDate": "2015-05-29T17:44:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJODSKQGGJTHRYZ5FC",
+  "PolicyName": "AmazonSSMReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2015-05-29T17:44:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ssm:Describe*",
+            "ssm:Get*",
+            "ssm:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2015-05-29T17:44:19Z"
+}

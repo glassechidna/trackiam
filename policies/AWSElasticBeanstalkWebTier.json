@@ -1,0 +1,58 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier",
+  "CreateDate": "2016-02-08T23:08:54Z",
+  "DefaultVersionId": "v6",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIUF4325SJYOREKW3A",
+  "PolicyName": "AWSElasticBeanstalkWebTier",
+  "PolicyVersion": {
+    "CreateDate": "2019-03-01T00:04:49Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:DescribeLogGroups",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/elasticbeanstalk*"
+          ],
+          "Sid": "CloudWatchLogsAccess"
+        },
+        {
+          "Action": [
+            "s3:Get*",
+            "s3:List*",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::elasticbeanstalk-*",
+            "arn:aws:s3:::elasticbeanstalk-*/*"
+          ],
+          "Sid": "BucketAccess"
+        },
+        {
+          "Action": [
+            "xray:GetSamplingRules",
+            "xray:GetSamplingStatisticSummaries",
+            "xray:GetSamplingTargets",
+            "xray:PutTelemetryRecords",
+            "xray:PutTraceSegments"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "XRayAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v6"
+  },
+  "UpdateDate": "2019-03-01T00:04:49Z"
+}

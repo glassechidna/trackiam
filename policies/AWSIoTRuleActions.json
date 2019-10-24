@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSIoTRuleActions",
+  "CreateDate": "2015-10-08T15:14:51Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJEZ6FS7BUZVUHMOKY",
+  "PolicyName": "AWSIoTRuleActions",
+  "PolicyVersion": {
+    "CreateDate": "2018-01-16T19:28:19Z",
+    "Document": {
+      "Statement": {
+        "Action": [
+          "cloudwatch:PutMetricData",
+          "cloudwatch:SetAlarmState",
+          "dynamodb:PutItem",
+          "es:ESHttpPut",
+          "firehose:PutRecord",
+          "iot:Publish",
+          "kinesis:PutRecord",
+          "s3:PutObject",
+          "sns:Publish",
+          "sqs:SendMessage*"
+        ],
+        "Effect": "Allow",
+        "Resource": "*"
+      },
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2018-01-16T19:28:19Z"
+}

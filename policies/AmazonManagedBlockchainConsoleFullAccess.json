@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonManagedBlockchainConsoleFullAccess",
+  "CreateDate": "2019-04-29T21:23:25Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4ONVQBFILL",
+  "PolicyName": "AmazonManagedBlockchainConsoleFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-04-29T21:23:25Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateVpcEndpoint",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "kms:DescribeKey",
+            "kms:ListAliases",
+            "managedblockchain:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-04-29T21:23:25Z"
+}

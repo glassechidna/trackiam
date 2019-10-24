@@ -1,0 +1,49 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/TagPoliciesServiceRolePolicy",
+  "CreateDate": "2018-10-26T20:02:52Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJGGCZXCABSYJA7UBI",
+  "PolicyName": "TagPoliciesServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-05-10T21:38:33Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "organizations:DisableAWSServiceAccess"
+          ],
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "organizations:ServicePrincipal": [
+                "tagpolicies.tag.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListAccountsForParent",
+            "organizations:ListChildren",
+            "organizations:ListParents",
+            "organizations:ListRoots"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-05-10T21:38:33Z"
+}

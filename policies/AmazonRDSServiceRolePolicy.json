@@ -1,0 +1,92 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSServiceRolePolicy",
+  "CreateDate": "2018-01-08T18:17:46Z",
+  "DefaultVersionId": "v6",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAIPEU5ZOBJWKWHUIBA",
+  "PolicyName": "AmazonRDSServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-04-16T20:12:27Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:AssignPrivateIpAddresses",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateSecurityGroup",
+            "ec2:CreateVpcEndpoint",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DeleteVpcEndpoints",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs",
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "ec2:ModifyVpcEndpoint",
+            "ec2:RevokeSecurityGroupIngress",
+            "ec2:UnassignPrivateIpAddresses"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "kinesis:CreateStream",
+            "kinesis:DeleteStream",
+            "kinesis:DescribeStream",
+            "kinesis:MergeShards",
+            "kinesis:PutRecord",
+            "kinesis:PutRecords",
+            "kinesis:SplitShard",
+            "kinesis:UpdateShardCount"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:kinesis:*:*:stream/aws-rds-das-*"
+          ]
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/docdb/*",
+            "arn:aws:logs:*:*:log-group:/aws/neptune/*",
+            "arn:aws:logs:*:*:log-group:/aws/rds/*"
+          ]
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/docdb/*:log-stream:*",
+            "arn:aws:logs:*:*:log-group:/aws/neptune/*:log-stream:*",
+            "arn:aws:logs:*:*:log-group:/aws/rds/*:log-stream:*"
+          ]
+        },
+        {
+          "Action": [
+            "sns:Publish"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v6"
+  },
+  "UpdateDate": "2019-04-16T20:12:27Z"
+}

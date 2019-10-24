@@ -1,0 +1,51 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/ServiceQuotasReadOnlyAccess",
+  "CreateDate": "2019-06-24T15:31:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4ITU2HGGUJ",
+  "PolicyName": "ServiceQuotasReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-06-24T15:31:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "autoscaling:DescribeAccountLimits",
+            "cloudformation:DescribeAccountLimits",
+            "cloudwatch:DescribeAlarmsForMetric",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics",
+            "dynamodb:DescribeLimits",
+            "elasticloadbalancing:DescribeAccountLimits",
+            "iam:GetAccountSummary",
+            "kinesis:DescribeLimits",
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "rds:DescribeAccountAttributes",
+            "route53:GetAccountLimit",
+            "servicequotas:GetAWSDefaultServiceQuota",
+            "servicequotas:GetAssociationForServiceQuotaTemplate",
+            "servicequotas:GetRequestedServiceQuotaChange",
+            "servicequotas:GetServiceQuota",
+            "servicequotas:GetServiceQuotaIncreaseRequestFromTemplate",
+            "servicequotas:ListAWSDefaultServiceQuotas",
+            "servicequotas:ListRequestedServiceQuotaChangeHistory",
+            "servicequotas:ListRequestedServiceQuotaChangeHistoryByQuota",
+            "servicequotas:ListServiceQuotaIncreaseRequestsInTemplate",
+            "servicequotas:ListServiceQuotas",
+            "servicequotas:ListServices"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-06-24T15:31:06Z"
+}

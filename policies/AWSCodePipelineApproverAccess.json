@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCodePipelineApproverAccess",
+  "CreateDate": "2016-07-28T18:59:17Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAICXNWK42SQ6LMDXM2",
+  "PolicyName": "AWSCodePipelineApproverAccess",
+  "PolicyVersion": {
+    "CreateDate": "2017-08-02T17:24:58Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "codepipeline:GetPipeline",
+            "codepipeline:GetPipelineExecution",
+            "codepipeline:GetPipelineState",
+            "codepipeline:ListPipelineExecutions",
+            "codepipeline:ListPipelines",
+            "codepipeline:PutApprovalResult"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2017-08-02T17:24:58Z"
+}

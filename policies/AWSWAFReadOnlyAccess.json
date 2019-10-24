@@ -1,0 +1,30 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSWAFReadOnlyAccess",
+  "CreateDate": "2015-10-06T20:43:45Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAINZVDMX2SBF7EU2OC",
+  "PolicyName": "AWSWAFReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2016-12-07T21:30:54Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "waf-regional:Get*",
+            "waf-regional:List*",
+            "waf:Get*",
+            "waf:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2016-12-07T21:30:54Z"
+}

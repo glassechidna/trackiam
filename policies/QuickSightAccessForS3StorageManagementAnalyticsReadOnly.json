@@ -1,0 +1,38 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/QuickSightAccessForS3StorageManagementAnalyticsReadOnly",
+  "CreateDate": "2017-06-12T18:18:38Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAIFWG3L3WDMR4I7ZJW",
+  "PolicyName": "QuickSightAccessForS3StorageManagementAnalyticsReadOnly",
+  "PolicyVersion": {
+    "CreateDate": "2019-10-08T23:53:11Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "s3:GetAnalyticsConfiguration",
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::s3-analytics-export-shared-*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2019-10-08T23:53:11Z"
+}

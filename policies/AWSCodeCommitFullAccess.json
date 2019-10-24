@@ -1,0 +1,113 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCodeCommitFullAccess",
+  "CreateDate": "2015-07-09T17:02:19Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAI4VCZ3XPIZLQ5NZV2",
+  "PolicyName": "AWSCodeCommitFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-06-12T21:27:53Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "codecommit:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:DescribeRule",
+            "events:DisableRule",
+            "events:EnableRule",
+            "events:ListTargetsByRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/codecommit*",
+          "Sid": "CloudWatchEventsCodeCommitRulesAccess"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceSpecificCredential",
+            "iam:DeleteServiceSpecificCredential",
+            "iam:ResetServiceSpecificCredential",
+            "iam:UpdateServiceSpecificCredential"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:user/${aws:username}",
+          "Sid": "IAMSelfManageServiceSpecificCredentials"
+        },
+        {
+          "Action": [
+            "iam:DeleteSSHPublicKey",
+            "iam:GetSSHPublicKey",
+            "iam:ListSSHPublicKeys",
+            "iam:UpdateSSHPublicKey",
+            "iam:UploadSSHPublicKey"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:user/${aws:username}",
+          "Sid": "IAMUserSSHKeys"
+        },
+        {
+          "Action": [
+            "iam:ListAccessKeys",
+            "iam:ListSSHPublicKeys",
+            "iam:ListServiceSpecificCredentials"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:user/${aws:username}",
+          "Sid": "IAMReadOnlyConsoleAccess"
+        },
+        {
+          "Action": [
+            "iam:ListUsers"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IAMReadOnlyListAccess"
+        },
+        {
+          "Action": [
+            "lambda:ListFunctions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LambdaReadOnlyListAccess"
+        },
+        {
+          "Action": [
+            "sns:CreateTopic",
+            "sns:DeleteTopic",
+            "sns:SetTopicAttributes",
+            "sns:Subscribe",
+            "sns:Unsubscribe"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sns:*:*:codecommit*",
+          "Sid": "SNSTopicAndSubscriptionAccess"
+        },
+        {
+          "Action": [
+            "sns:GetTopicAttributes",
+            "sns:ListSubscriptionsByTopic",
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SNSTopicAndSubscriptionReadAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2019-06-12T21:27:53Z"
+}

@@ -1,0 +1,29 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSAppSyncPushToCloudWatchLogs",
+  "CreateDate": "2018-04-09T19:38:55Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAIWN7WNO34HLMJPUQS",
+  "PolicyName": "AWSAppSyncPushToCloudWatchLogs",
+  "PolicyVersion": {
+    "CreateDate": "2018-04-09T19:38:55Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-04-09T19:38:55Z"
+}

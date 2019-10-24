@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/KafkaServiceRolePolicy",
+  "CreateDate": "2018-11-15T23:31:48Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJUXPRZ76MAP2EVQJU",
+  "PolicyName": "KafkaServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-05-23T19:58:58Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "acm-pca:GetCertificateAuthorityCertificate",
+            "ec2:AttachNetworkInterface",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DetachNetworkInterface"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-05-23T19:58:58Z"
+}

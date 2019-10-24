@@ -1,0 +1,68 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSRoboMakerServicePolicy",
+  "CreateDate": "2018-11-26T06:30:08Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJYLVVUUQMAEEZ3ZNY",
+  "PolicyName": "AWSRoboMakerServicePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-04-04T22:15:35Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEqualsIfExists": {
+              "iam:PassedToService": "lambda.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "greengrass:CreateDeployment",
+            "greengrass:CreateFunctionDefinition",
+            "greengrass:CreateFunctionDefinitionVersion",
+            "greengrass:CreateGroupVersion",
+            "greengrass:GetAssociatedRole",
+            "greengrass:GetCoreDefinitionVersion",
+            "greengrass:GetDeploymentStatus",
+            "greengrass:GetFunctionDefinitionVersion",
+            "greengrass:GetGroup",
+            "greengrass:GetGroupVersion",
+            "lambda:CreateFunction"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "lambda:CreateAlias",
+            "lambda:DeleteAlias",
+            "lambda:DeleteFunction",
+            "lambda:GetAlias",
+            "lambda:GetFunction",
+            "lambda:ListVersionsByFunction",
+            "lambda:UpdateAlias",
+            "lambda:UpdateFunctionCode",
+            "lambda:UpdateFunctionConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:function:aws-robomaker-*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-04-04T22:15:35Z"
+}

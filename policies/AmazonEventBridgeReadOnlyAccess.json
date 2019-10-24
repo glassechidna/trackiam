@@ -1,0 +1,35 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonEventBridgeReadOnlyAccess",
+  "CreateDate": "2019-07-11T13:59:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4BDMP3LZME",
+  "PolicyName": "AmazonEventBridgeReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-07-11T13:59:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "events:DescribeEventBus",
+            "events:DescribeEventSource",
+            "events:DescribeRule",
+            "events:ListEventBuses",
+            "events:ListEventSources",
+            "events:ListRuleNamesByTarget",
+            "events:ListRules",
+            "events:ListTargetsByRule",
+            "events:TestEventPattern"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-07-11T13:59:07Z"
+}

@@ -1,0 +1,59 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSBatchFullAccess",
+  "CreateDate": "2016-12-06T19:35:42Z",
+  "DefaultVersionId": "v5",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJ7K2KIWB3HZVK3CUO",
+  "PolicyName": "AWSBatchFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-11-05T21:09:23Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "batch:*",
+            "cloudwatch:GetMetricStatistics",
+            "ec2:DescribeImages",
+            "ec2:DescribeKeyPairs",
+            "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribeLaunchTemplates",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "ecs:Describe*",
+            "ecs:DescribeClusters",
+            "ecs:List*",
+            "iam:ListInstanceProfiles",
+            "iam:ListRoles",
+            "logs:Describe*",
+            "logs:FilterLogEvents",
+            "logs:Get*",
+            "logs:TestMetricFilter"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:instance-profile/ecsInstanceRole",
+            "arn:aws:iam::*:role/AWSBatchJobRole*",
+            "arn:aws:iam::*:role/AWSBatchServiceRole",
+            "arn:aws:iam::*:role/aws-ec2-spot-fleet-role",
+            "arn:aws:iam::*:role/ecsInstanceRole",
+            "arn:aws:iam::*:role/iaws-ec2-spot-fleet-role",
+            "arn:aws:iam::*:role/service-role/AWSBatchServiceRole"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v5"
+  },
+  "UpdateDate": "2018-11-05T21:09:23Z"
+}

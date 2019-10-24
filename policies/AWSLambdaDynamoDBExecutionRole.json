@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSLambdaDynamoDBExecutionRole",
+  "CreateDate": "2015-04-09T15:09:29Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAIP7WNAGMIPYNW4WQG",
+  "PolicyName": "AWSLambdaDynamoDBExecutionRole",
+  "PolicyVersion": {
+    "CreateDate": "2015-04-09T15:09:29Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "dynamodb:DescribeStream",
+            "dynamodb:GetRecords",
+            "dynamodb:GetShardIterator",
+            "dynamodb:ListStreams",
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2015-04-09T15:09:29Z"
+}

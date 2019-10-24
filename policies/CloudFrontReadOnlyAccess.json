@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess",
+  "CreateDate": "2015-02-06T18:39:55Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJJZMNYOTZCNQP36LG",
+  "PolicyName": "CloudFrontReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2016-01-21T17:03:28Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "acm:ListCertificates",
+            "cloudfront:Get*",
+            "cloudfront:List*",
+            "iam:ListServerCertificates",
+            "route53:List*",
+            "waf:GetWebACL",
+            "waf:ListWebACLs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2016-01-21T17:03:28Z"
+}

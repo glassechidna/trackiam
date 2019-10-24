@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCertificateManagerPrivateCAReadOnly",
+  "CreateDate": "2018-10-23T16:57:04Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJQAQT3WIXOXY7TD4A",
+  "PolicyName": "AWSCertificateManagerPrivateCAReadOnly",
+  "PolicyVersion": {
+    "CreateDate": "2019-03-14T17:17:21Z",
+    "Document": {
+      "Statement": {
+        "Action": [
+          "acm-pca:DescribeCertificateAuthority",
+          "acm-pca:DescribeCertificateAuthorityAuditReport",
+          "acm-pca:GetCertificate",
+          "acm-pca:GetCertificateAuthorityCertificate",
+          "acm-pca:GetCertificateAuthorityCsr",
+          "acm-pca:ListCertificateAuthorities",
+          "acm-pca:ListPermissions",
+          "acm-pca:ListTags"
+        ],
+        "Effect": "Allow",
+        "Resource": "*"
+      },
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-03-14T17:17:21Z"
+}

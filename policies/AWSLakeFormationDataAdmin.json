@@ -1,0 +1,66 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSLakeFormationDataAdmin",
+  "CreateDate": "2019-08-08T17:33:44Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4OWCH3ENIA",
+  "PolicyName": "AWSLakeFormationDataAdmin",
+  "PolicyVersion": {
+    "CreateDate": "2019-08-08T17:33:44Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudtrail:DescribeTrails",
+            "cloudtrail:LookupEvents",
+            "glue:BatchGetWorkflows",
+            "glue:CreateDatabase",
+            "glue:CreateTable",
+            "glue:DeleteDatabase",
+            "glue:DeleteTable",
+            "glue:DeleteWorkflow",
+            "glue:GetConnections",
+            "glue:GetDatabase",
+            "glue:GetDatabases",
+            "glue:GetPartitions",
+            "glue:GetTable",
+            "glue:GetTableVersions",
+            "glue:GetTables",
+            "glue:GetWorkflow",
+            "glue:GetWorkflow",
+            "glue:GetWorkflowRuns",
+            "glue:ListWorkflows",
+            "glue:SearchTables",
+            "glue:StartWorkflowRun",
+            "glue:UpdateDatabase",
+            "glue:UpdateTable",
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:ListRoles",
+            "iam:ListUsers",
+            "lakeformation:*",
+            "s3:GetBucketAcl",
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket",
+            "s3:ListObjects"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "lakeformation:PutDataLakeSettings"
+          ],
+          "Effect": "Deny",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-08-08T17:33:44Z"
+}

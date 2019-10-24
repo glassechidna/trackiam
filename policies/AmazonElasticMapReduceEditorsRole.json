@@ -1,0 +1,55 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceEditorsRole",
+  "CreateDate": "2018-11-16T21:55:25Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAIBI5CIE6OHUIGLYVG",
+  "PolicyName": "AmazonElasticMapReduceEditorsRole",
+  "PolicyVersion": {
+    "CreateDate": "2018-11-16T21:55:25Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "aws:elasticmapreduce:editor-id",
+                "aws:elasticmapreduce:job-flow-id"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*"
+        },
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:CreateSecurityGroup",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission",
+            "ec2:DescribeInstances",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeTags",
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "ec2:RevokeSecurityGroupEgress",
+            "elasticmapreduce:DescribeCluster",
+            "elasticmapreduce:ListInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-11-16T21:55:25Z"
+}

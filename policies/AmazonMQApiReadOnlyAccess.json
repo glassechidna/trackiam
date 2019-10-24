@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonMQApiReadOnlyAccess",
+  "CreateDate": "2018-12-18T20:31:13Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIKI5JRHKAFHXQJKMO",
+  "PolicyName": "AmazonMQApiReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-12-18T20:31:13Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "mq:Describe*",
+            "mq:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-12-18T20:31:13Z"
+}

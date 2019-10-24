@@ -1,0 +1,206 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSLicenseManagerMasterAccountRolePolicy",
+  "CreateDate": "2018-11-26T19:03:51Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAIJE2NOZW2BDEHYUH2",
+  "PolicyName": "AWSLicenseManagerMasterAccountRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-08-29T22:56:41Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "cloudformation.amazonaws.com",
+                "glue.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/LicenseManagerServiceResourceDataSyncRole*"
+          ],
+          "Sid": "IAMPassRoles"
+        },
+        {
+          "Action": [
+            "ram:AssociateResourceShare",
+            "ram:DeleteResourceShare",
+            "ram:DisassociateResourceShare",
+            "ram:UpdateResourceShare"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ram:ResourceTag/Service": "LicenseManager"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "RAMPermissions3"
+        },
+        {
+          "Action": [
+            "ram:CreateResourceShare"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/Service": "LicenseManager"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "RAMPermissions2"
+        },
+        {
+          "Action": [
+            "athena:GetQueryExecution",
+            "athena:GetQueryResults",
+            "athena:StartQueryExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AthenaPermissions"
+        },
+        {
+          "Action": [
+            "cloudformation:CreateStack",
+            "cloudformation:DeleteStack",
+            "cloudformation:DescribeStacks",
+            "cloudformation:UpdateStack"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/LicenseManagerCrossAccountCloudDiscoveryStack/*"
+          ],
+          "Sid": "CloudformationPermission"
+        },
+        {
+          "Action": [
+            "glue:CreateTable",
+            "glue:DeleteTable",
+            "glue:UpdateCrawler",
+            "glue:UpdateJob",
+            "glue:UpdateTable"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:catalog",
+            "arn:aws:glue:*:*:crawler/LicenseManagerResourceSynDataCrawler",
+            "arn:aws:glue:*:*:database/license_manager_resource_inventory_db",
+            "arn:aws:glue:*:*:database/license_manager_resource_sync",
+            "arn:aws:glue:*:*:job/LicenseManagerResourceSynDataProcessJob",
+            "arn:aws:glue:*:*:table/license_manager_resource_inventory_db/*",
+            "arn:aws:glue:*:*:table/license_manager_resource_sync/*"
+          ],
+          "Sid": "GlueUpdatePermissions"
+        },
+        {
+          "Action": [
+            "glue:GetPartition",
+            "glue:GetPartitions",
+            "glue:GetTable"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "GluePermissions"
+        },
+        {
+          "Action": [
+            "iam:GetRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "IAMGetRoles"
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListAccountsForParent",
+            "organizations:ListChildren",
+            "organizations:ListParents",
+            "organizations:ListRoots"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "OrganizationPermissions"
+        },
+        {
+          "Action": [
+            "ram:GetResourceShareAssociations",
+            "ram:GetResourceShares",
+            "ram:TagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "RAMPermissions1"
+        },
+        {
+          "Action": [
+            "s3:AbortMultipartUpload",
+            "s3:GetObject",
+            "s3:ListBucketMultipartUploads",
+            "s3:ListMultipartUploadParts",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-license-manager-service-*"
+          ],
+          "Sid": "S3ObjectPermissions1"
+        },
+        {
+          "Action": [
+            "s3:DeleteObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-license-manager-service-*/resource_sync/*"
+          ],
+          "Sid": "S3ObjectPermissions2"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:GetBucketPolicy",
+            "s3:GetLifecycleConfiguration",
+            "s3:ListBucket",
+            "s3:PutBucketPolicy",
+            "s3:PutLifecycleConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-license-manager-service-*"
+          ],
+          "Sid": "S3BucketPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2019-08-29T22:56:41Z"
+}

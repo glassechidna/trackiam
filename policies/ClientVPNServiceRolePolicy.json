@@ -1,0 +1,46 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/ClientVPNServiceRolePolicy",
+  "CreateDate": "2018-12-10T21:20:25Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAI2SV25KUCYQYS5N74",
+  "PolicyName": "ClientVPNServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-01-16T22:22:28Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "acm:DescribeCertificate",
+            "acm:GetCertificate",
+            "ds:AuthorizeApplication",
+            "ds:DescribeDirectories",
+            "ds:GetDirectoryLimits",
+            "ds:ListAuthorizedApplications",
+            "ds:UnauthorizeApplication",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "logs:CreateLogStream",
+            "logs:DescribeLogGroups",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-01-16T22:22:28Z"
+}

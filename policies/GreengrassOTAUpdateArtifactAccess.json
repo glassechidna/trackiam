@@ -1,0 +1,30 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/GreengrassOTAUpdateArtifactAccess",
+  "CreateDate": "2017-11-29T18:11:47Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAIFGE66SKIK3GW5UC2",
+  "PolicyName": "GreengrassOTAUpdateArtifactAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-12-18T00:59:43Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*-greengrass-updates/*"
+          ],
+          "Sid": "AllowsIotToAccessGreengrassOTAUpdateArtifacts"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2018-12-18T00:59:43Z"
+}

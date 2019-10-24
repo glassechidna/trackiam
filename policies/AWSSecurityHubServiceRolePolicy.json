@@ -1,0 +1,46 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSecurityHubServiceRolePolicy",
+  "CreateDate": "2018-11-27T23:47:51Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJQPCESDDYDLLSOGYO",
+  "PolicyName": "AWSSecurityHubServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-07-12T21:11:13Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudtrail:DescribeTrails",
+            "cloudtrail:GetEventSelectors",
+            "cloudtrail:GetTrailStatus",
+            "cloudwatch:DescribeAlarms",
+            "config:BatchGetResourceConfig",
+            "config:DescribeConfigRules",
+            "config:DescribeConfigurationRecorderStatus",
+            "config:DescribeConfigurationRecorders",
+            "config:SelectResourceConfig",
+            "logs:DescribeMetricFilters",
+            "sns:ListSubscriptionsByTopic"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "config:DeleteConfigRule",
+            "config:GetComplianceDetailsByConfigRule",
+            "config:PutConfigRule"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:config:*:*:config-rule/aws-service-rule/*securityhub*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-07-12T21:11:13Z"
+}

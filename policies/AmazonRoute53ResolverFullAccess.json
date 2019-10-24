@@ -1,0 +1,37 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonRoute53ResolverFullAccess",
+  "CreateDate": "2019-05-30T18:10:50Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4MZN2MQCY3",
+  "PolicyName": "AmazonRoute53ResolverFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-05-30T18:10:50Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "route53resolver:*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-05-30T18:10:50Z"
+}

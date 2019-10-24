@@ -1,0 +1,50 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonCognitoPowerUser",
+  "CreateDate": "2015-03-24T17:14:56Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJKW5H2HNCPGCYGR6Y",
+  "PolicyName": "AmazonCognitoPowerUser",
+  "PolicyVersion": {
+    "CreateDate": "2019-03-29T22:06:46Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "email.cognito-idp.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cognito-identity:*",
+            "cognito-idp:*",
+            "cognito-sync:*",
+            "iam:ListOpenIdConnectProviders",
+            "iam:ListRoles",
+            "sns:ListPlatformApplications"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:DeleteServiceLinkedRole",
+            "iam:GetServiceLinkedRoleDeletionStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/email.cognito-idp.amazonaws.com/AWSServiceRoleForAmazonCognitoIdpEmail*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2019-03-29T22:06:46Z"
+}

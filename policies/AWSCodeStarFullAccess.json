@@ -1,0 +1,44 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCodeStarFullAccess",
+  "CreateDate": "2017-04-19T16:23:19Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIXI233TFUGLZOJBEC",
+  "PolicyName": "AWSCodeStarFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-01-10T21:54:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloud9:DescribeEnvironment*",
+            "cloud9:ValidateEnvironmentName",
+            "codestar:*",
+            "ec2:DescribeKeyPairs",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarEC2"
+        },
+        {
+          "Action": [
+            "cloudformation:DescribeStack*",
+            "cloudformation:GetTemplateSummary"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/awscodestar-*"
+          ],
+          "Sid": "CodeStarCF"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2018-01-10T21:54:06Z"
+}

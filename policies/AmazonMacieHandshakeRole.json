@@ -1,0 +1,30 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonMacieHandshakeRole",
+  "CreateDate": "2018-06-28T15:46:10Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJ7CVEIVL347MLOVKI",
+  "PolicyName": "AmazonMacieHandshakeRole",
+  "PolicyVersion": {
+    "CreateDate": "2018-06-28T15:46:10Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "iam:AWSServiceName": "macie.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-06-28T15:46:10Z"
+}

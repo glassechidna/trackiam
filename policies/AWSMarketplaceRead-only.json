@@ -1,0 +1,47 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceRead-only",
+  "CreateDate": "2015-02-06T18:40:31Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJOOM6LETKURTJ3XZ2",
+  "PolicyName": "AWSMarketplaceRead-only",
+  "PolicyVersion": {
+    "CreateDate": "2018-07-31T23:24:24Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aws-marketplace:DescribeBuilds",
+            "aws-marketplace:ListBuilds",
+            "iam:ListInstanceProfiles",
+            "iam:ListRoles",
+            "sns:GetTopicAttributes",
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "aws-marketplace:ViewSubscriptions",
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAddresses",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstances",
+            "ec2:DescribeKeyPairs",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2018-07-31T23:24:24Z"
+}

@@ -1,0 +1,49 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSDataPipeline_FullAccess",
+  "CreateDate": "2017-01-19T23:14:54Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIXOFIG7RSBMRPHXJ4",
+  "PolicyName": "AWSDataPipeline_FullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2017-08-17T18:48:39Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/DataPipelineDefaultResourceRole",
+            "arn:aws:iam::*:role/DataPipelineDefaultRole"
+          ]
+        },
+        {
+          "Action": [
+            "datapipeline:*",
+            "dynamodb:DescribeTable",
+            "iam:GetInstanceProfile",
+            "iam:GetRolePolicy",
+            "iam:ListInstanceProfiles",
+            "iam:ListRoles",
+            "rds:DescribeDBInstances",
+            "rds:DescribeDBSecurityGroups",
+            "redshift:DescribeClusterSecurityGroups",
+            "redshift:DescribeClusters",
+            "s3:List*",
+            "sns:ListTopics",
+            "sns:Subscribe"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2017-08-17T18:48:39Z"
+}

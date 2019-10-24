@@ -1,0 +1,37 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess",
+  "CreateDate": "2015-02-06T18:40:01Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJN23PDQP7SZQAE3QE",
+  "PolicyName": "CloudWatchReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-05-10T21:40:42Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "autoscaling:Describe*",
+            "cloudwatch:Describe*",
+            "cloudwatch:Get*",
+            "cloudwatch:List*",
+            "logs:Describe*",
+            "logs:FilterLogEvents",
+            "logs:Get*",
+            "logs:List*",
+            "logs:TestMetricFilter",
+            "sns:Get*",
+            "sns:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2018-05-10T21:40:42Z"
+}

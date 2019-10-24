@@ -1,0 +1,46 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess",
+  "CreateDate": "2015-04-24T16:54:35Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJALOYVTPDZEMIACSM",
+  "PolicyName": "AmazonEC2ContainerServiceFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2017-06-08T00:18:56Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "autoscaling:Describe*",
+            "autoscaling:UpdateAutoScalingGroup",
+            "cloudformation:CreateStack",
+            "cloudformation:DeleteStack",
+            "cloudformation:DescribeStack*",
+            "cloudformation:UpdateStack",
+            "cloudwatch:GetMetricStatistics",
+            "ec2:Describe*",
+            "ecs:*",
+            "elasticloadbalancing:*",
+            "events:DeleteRule",
+            "events:DescribeRule",
+            "events:ListRuleNamesByTarget",
+            "events:ListTargetsByRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets",
+            "iam:ListInstanceProfiles",
+            "iam:ListRoles",
+            "iam:PassRole"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2017-06-08T00:18:56Z"
+}

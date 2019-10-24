@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/ElasticLoadBalancingReadOnly",
+  "CreateDate": "2018-09-20T20:17:09Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJMO7B7SNFLQ6HH736",
+  "PolicyName": "ElasticLoadBalancingReadOnly",
+  "PolicyVersion": {
+    "CreateDate": "2018-09-20T20:17:09Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "elasticloadbalancing:Describe*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeClassicLinkInstances",
+            "ec2:DescribeInstances",
+            "ec2:DescribeSecurityGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-09-20T20:17:09Z"
+}

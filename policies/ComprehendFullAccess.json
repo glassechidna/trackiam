@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/ComprehendFullAccess",
+  "CreateDate": "2017-11-29T18:08:43Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAITBM2PMWNG2P7RZEQ",
+  "PolicyName": "ComprehendFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2017-12-05T01:36:24Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "comprehend:*",
+            "iam:GetRole",
+            "iam:ListRoles",
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2017-12-05T01:36:24Z"
+}

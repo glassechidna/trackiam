@@ -1,0 +1,53 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkEnhancedHealth",
+  "CreateDate": "2016-02-08T23:17:27Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAIH5EFJNMOGUUTKLFE",
+  "PolicyName": "AWSElasticBeanstalkEnhancedHealth",
+  "PolicyVersion": {
+    "CreateDate": "2018-04-09T22:12:53Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "autoscaling:DescribeAutoScalingGroups",
+            "autoscaling:DescribeAutoScalingInstances",
+            "autoscaling:DescribeNotificationConfigurations",
+            "autoscaling:DescribeScalingActivities",
+            "ec2:AssociateAddress",
+            "ec2:DescribeAddresses",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstances",
+            "ec2:DescribeSecurityGroups",
+            "ec2:GetConsoleOutput",
+            "elasticloadbalancing:DescribeInstanceHealth",
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "elasticloadbalancing:DescribeTargetHealth",
+            "sns:Publish",
+            "sqs:GetQueueAttributes",
+            "sqs:GetQueueUrl"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/elasticbeanstalk/*:log-stream:*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2018-04-09T22:12:53Z"
+}

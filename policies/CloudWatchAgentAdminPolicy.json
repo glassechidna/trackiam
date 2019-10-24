@@ -1,0 +1,41 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CloudWatchAgentAdminPolicy",
+  "CreateDate": "2018-03-07T00:52:31Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAICMXPKT7EBAF6KR3O",
+  "PolicyName": "CloudWatchAgentAdminPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2018-03-07T00:52:31Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData",
+            "ec2:DescribeTags",
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogGroups",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ssm:GetParameter",
+            "ssm:PutParameter"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:parameter/AmazonCloudWatch-*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-03-07T00:52:31Z"
+}

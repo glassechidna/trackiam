@@ -1,0 +1,67 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CloudWatchAutomaticDashboardsAccess",
+  "CreateDate": "2019-07-23T10:01:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4JFCXGSE2Q",
+  "PolicyName": "CloudWatchAutomaticDashboardsAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-07-23T10:01:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "apigateway:GET"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:apigateway:us-east-1::/restapis/*"
+          ]
+        },
+        {
+          "Action": [
+            "autoscaling:DescribeAutoScalingGroups",
+            "cloudfront:GetDistribution",
+            "cloudfront:ListDistributions",
+            "dynamodb:DescribeTable",
+            "dynamodb:ListTables",
+            "ec2:DescribeInstances",
+            "ec2:DescribeVolumes",
+            "ecs:DescribeClusters",
+            "ecs:DescribeContainerInstances",
+            "ecs:ListClusters",
+            "ecs:ListContainerInstances",
+            "ecs:ListServices",
+            "elasticache:DescribeCacheClusters",
+            "elasticbeanstalk:DescribeEnvironments",
+            "elasticfilesystem:DescribeFileSystems",
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "kinesis:DescribeStream",
+            "kinesis:ListStreams",
+            "lambda:GetFunction",
+            "lambda:ListFunctions",
+            "rds:DescribeDBClusters",
+            "rds:DescribeDBInstances",
+            "resource-groups:ListGroupResources",
+            "resource-groups:ListGroups",
+            "route53:GetHealthCheck",
+            "route53:ListHealthChecks",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket",
+            "sns:ListTopics",
+            "sqs:GetQueueAttributes",
+            "sqs:GetQueueUrl",
+            "sqs:ListQueues"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-07-23T10:01:08Z"
+}

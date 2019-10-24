@@ -1,0 +1,39 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/ElastiCacheServiceRolePolicy",
+  "CreateDate": "2017-12-07T17:50:04Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAIML5LIBUZBVCSF7PI",
+  "PolicyName": "ElastiCacheServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-09-25T23:09:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateSecurityGroup",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "ec2:RevokeSecurityGroupIngress"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-09-25T23:09:07Z"
+}

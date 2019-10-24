@@ -1,0 +1,88 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSServiceCatalogAdminFullAccess",
+  "CreateDate": "2018-02-15T17:19:40Z",
+  "DefaultVersionId": "v5",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJWLJU4BZ7AQUJSBVM",
+  "PolicyName": "AWSServiceCatalogAdminFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-02-06T01:57:54Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "servicecatalog.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudformation:CreateChangeSet",
+            "cloudformation:CreateStack",
+            "cloudformation:CreateStackInstances",
+            "cloudformation:CreateStackSet",
+            "cloudformation:DeleteChangeSet",
+            "cloudformation:DeleteStack",
+            "cloudformation:DeleteStackInstances",
+            "cloudformation:DeleteStackSet",
+            "cloudformation:DescribeChangeSet",
+            "cloudformation:DescribeStackEvents",
+            "cloudformation:DescribeStackInstance",
+            "cloudformation:DescribeStackSet",
+            "cloudformation:DescribeStackSetOperation",
+            "cloudformation:DescribeStacks",
+            "cloudformation:ExecuteChangeSet",
+            "cloudformation:ListChangeSets",
+            "cloudformation:ListStackInstances",
+            "cloudformation:ListStackResources",
+            "cloudformation:ListStackSetOperationResults",
+            "cloudformation:ListStackSetOperations",
+            "cloudformation:SetStackPolicy",
+            "cloudformation:TagResource",
+            "cloudformation:UpdateStack",
+            "cloudformation:UpdateStackInstances",
+            "cloudformation:UpdateStackSet"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:changeSet/SC-*",
+            "arn:aws:cloudformation:*:*:stack/SC-*",
+            "arn:aws:cloudformation:*:*:stack/StackSet-SC-*",
+            "arn:aws:cloudformation:*:*:stackset/SC-*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudformation:CreateUploadBucket",
+            "cloudformation:GetTemplateSummary",
+            "cloudformation:ValidateTemplate",
+            "config:DescribeConfigurationRecorderStatus",
+            "config:DescribeConfigurationRecorders",
+            "iam:GetGroup",
+            "iam:GetRole",
+            "iam:GetUser",
+            "iam:ListGroups",
+            "iam:ListRoles",
+            "iam:ListUsers",
+            "servicecatalog:*",
+            "ssm:DescribeDocument",
+            "ssm:GetAutomationExecution",
+            "ssm:ListDocumentVersions",
+            "ssm:ListDocuments"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v5"
+  },
+  "UpdateDate": "2019-02-06T01:57:54Z"
+}

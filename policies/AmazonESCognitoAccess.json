@@ -1,0 +1,47 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonESCognitoAccess",
+  "CreateDate": "2018-02-28T22:29:18Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJL2FUMODIGNDPTZHO",
+  "PolicyName": "AmazonESCognitoAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-02-28T22:29:18Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": "cognito-identity.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cognito-identity:DescribeIdentityPool",
+            "cognito-identity:GetIdentityPoolRoles",
+            "cognito-identity:SetIdentityPoolRoles",
+            "cognito-identity:UpdateIdentityPool",
+            "cognito-idp:AdminInitiateAuth",
+            "cognito-idp:AdminUserGlobalSignOut",
+            "cognito-idp:CreateUserPoolClient",
+            "cognito-idp:DeleteUserPoolClient",
+            "cognito-idp:DescribeUserPool",
+            "cognito-idp:DescribeUserPoolClient",
+            "cognito-idp:ListUserPoolClients"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-02-28T22:29:18Z"
+}

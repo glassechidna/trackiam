@@ -1,0 +1,44 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess",
+  "CreateDate": "2015-02-06T18:40:53Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJKTTTYV2IIHKLZ346",
+  "PolicyName": "AmazonRDSReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2017-08-28T21:36:32Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:GetMetricStatistics",
+            "logs:DescribeLogStreams",
+            "logs:GetLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeVpcs",
+            "rds:Describe*",
+            "rds:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2017-08-28T21:36:32Z"
+}

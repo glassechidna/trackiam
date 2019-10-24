@@ -1,0 +1,39 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonElasticFileSystemFullAccess",
+  "CreateDate": "2015-05-27T16:22:28Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJKXTMNVQGIDNCKPBC",
+  "PolicyName": "AmazonElasticFileSystemFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2017-08-14T10:18:34Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeNetworkInterfaceAttribute",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeVpcs",
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "elasticfilesystem:*",
+            "kms:DescribeKey",
+            "kms:ListAliases"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2017-08-14T10:18:34Z"
+}

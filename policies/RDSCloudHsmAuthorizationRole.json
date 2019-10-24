@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/RDSCloudHsmAuthorizationRole",
+  "CreateDate": "2015-02-06T18:41:29Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAIWKFXRLQG2ROKKXLE",
+  "PolicyName": "RDSCloudHsmAuthorizationRole",
+  "PolicyVersion": {
+    "CreateDate": "2019-09-26T22:14:29Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudhsm:CreateLunaClient",
+            "cloudhsm:DeleteLunaClient",
+            "cloudhsm:DescribeHapg",
+            "cloudhsm:DescribeLunaClient",
+            "cloudhsm:GetConfig",
+            "cloudhsm:ModifyHapg",
+            "cloudhsm:ModifyLunaClient"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-09-26T22:14:29Z"
+}

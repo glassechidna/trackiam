@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
+  "CreateDate": "2018-09-07T00:21:43Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
+  "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2018-09-25T21:29:18Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "connect:*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:DeleteRole"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/connect.amazonaws.com/AWSServiceRoleForAmazonConnect_*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2018-09-25T21:29:18Z"
+}

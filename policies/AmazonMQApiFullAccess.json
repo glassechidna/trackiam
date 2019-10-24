@@ -1,0 +1,48 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonMQApiFullAccess",
+  "CreateDate": "2018-12-18T20:31:31Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAI4CMO533EBV3L2GW4",
+  "PolicyName": "AmazonMQApiFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-12-18T20:31:31Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeNetworkInterfacePermissions",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "ec2:DetachNetworkInterface",
+            "mq:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/amazonmq/*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-12-18T20:31:31Z"
+}

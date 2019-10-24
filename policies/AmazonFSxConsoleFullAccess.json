@@ -1,0 +1,59 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonFSxConsoleFullAccess",
+  "CreateDate": "2018-11-28T16:36:05Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAITDDJ23Y5UZ2WCZRQ",
+  "PolicyName": "AmazonFSxConsoleFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-09-10T13:11:13Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": [
+                "fsx.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": [
+                "s3.data-source.lustre.fsx.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms",
+            "ds:DescribeDirectories",
+            "ec2:DescribeNetworkInterfaceAttribute",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "fsx:*",
+            "kms:ListAliases",
+            "s3:HeadBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2019-09-10T13:11:13Z"
+}

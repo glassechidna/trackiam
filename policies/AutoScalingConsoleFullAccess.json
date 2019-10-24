@@ -1,0 +1,86 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AutoScalingConsoleFullAccess",
+  "CreateDate": "2017-01-12T19:43:16Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIYEN6FJGYYWJFFCZW",
+  "PolicyName": "AutoScalingConsoleFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-02-06T23:15:36Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "autoscaling.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "autoscaling:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "elasticloadbalancing:Describe*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "iam:ListRoles",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:Describe*",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics",
+            "cloudwatch:PutMetricAlarm"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CreateKeyPair",
+            "ec2:CreateSecurityGroup",
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstanceAttribute",
+            "ec2:DescribeInstances",
+            "ec2:DescribeKeyPairs",
+            "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribePlacementGroups",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSpotInstanceRequests",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcClassicLink",
+            "ec2:DescribeVpcs",
+            "ec2:ImportKeyPair"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sns:ListSubscriptions",
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2018-02-06T23:15:36Z"
+}

@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CloudWatchEventsFullAccess",
+  "CreateDate": "2016-01-14T18:37:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJZLOYLNHESMYOJAFU",
+  "PolicyName": "CloudWatchEventsFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2016-01-14T18:37:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "events:*",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchEventsFullAccess"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AWS_Events_Invoke_Targets",
+          "Sid": "IAMPassRoleForCloudWatchEvents"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2016-01-14T18:37:08Z"
+}

@@ -1,0 +1,110 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceImageBuildFullAccess",
+  "CreateDate": "2018-07-31T23:29:49Z",
+  "DefaultVersionId": "v2",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAI4QBMJWC3BNHBHN6I",
+  "PolicyName": "AWSMarketplaceImageBuildFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-08-08T21:11:59Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:TerminateInstances",
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/marketplace-image-build:build-id": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "ec2.amazonaws.com",
+                "ssm.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/*Automation*",
+            "arn:aws:iam::*:role/*Instance*"
+          ]
+        },
+        {
+          "Action": [
+            "aws-marketplace:DescribeBuilds",
+            "aws-marketplace:ListBuilds",
+            "aws-marketplace:StartBuild"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CopyImage",
+            "ec2:CreateImage",
+            "ec2:DeleteSnapshot",
+            "ec2:DeregisterImage",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeSubnets",
+            "ec2:RunInstances",
+            "iam:GetInstanceProfile",
+            "iam:GetRole",
+            "sns:GetTopicAttributes",
+            "ssm:CreateDocument",
+            "ssm:DescribeDocument",
+            "ssm:GetAutomationExecution",
+            "ssm:ListDocuments",
+            "ssm:StartAutomationExecution",
+            "ssm:UpdateDocument",
+            "ssm:UpdateDocumentDefaultVersion"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*::image/*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*image-build*"
+          ]
+        },
+        {
+          "Action": [
+            "sns:Publish"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sns:*:*:*image-build*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
+  },
+  "UpdateDate": "2018-08-08T21:11:59Z"
+}

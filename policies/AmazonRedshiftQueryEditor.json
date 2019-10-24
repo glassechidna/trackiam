@@ -1,0 +1,41 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor",
+  "CreateDate": "2018-10-04T22:50:32Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAINVFHHP7CWVHTGBGM",
+  "PolicyName": "AmazonRedshiftQueryEditor",
+  "PolicyVersion": {
+    "CreateDate": "2018-10-04T22:50:32Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "redshift:CancelQuery",
+            "redshift:CreateSavedQuery",
+            "redshift:DeleteSavedQueries",
+            "redshift:DescribeClusters",
+            "redshift:DescribeQuery",
+            "redshift:DescribeSavedQueries",
+            "redshift:DescribeTable",
+            "redshift:ExecuteQuery",
+            "redshift:FetchResults",
+            "redshift:GetClusterCredentials",
+            "redshift:ListDatabases",
+            "redshift:ListSchemas",
+            "redshift:ListTables",
+            "redshift:ModifySavedQuery",
+            "redshift:ViewQueriesFromConsole"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-10-04T22:50:32Z"
+}

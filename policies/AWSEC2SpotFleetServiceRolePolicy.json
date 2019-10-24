@@ -1,0 +1,72 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSEC2SpotFleetServiceRolePolicy",
+  "CreateDate": "2017-10-23T19:13:06Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAILWCVTZD57EMYWMBO",
+  "PolicyName": "AWSEC2SpotFleetServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2018-03-28T19:04:33Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/aws:ec2spot:fleet-request-id": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "ec2.amazonaws.com",
+                "ec2.amazonaws.com.cn"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:spot-instances-request/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:DescribeImages",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeSubnets",
+            "ec2:RequestSpotInstances",
+            "ec2:RunInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2018-03-28T19:04:33Z"
+}

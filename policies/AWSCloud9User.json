@@ -1,0 +1,85 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCloud9User",
+  "CreateDate": "2017-11-30T16:16:17Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJPFGFWQF67QVARP6U",
+  "PolicyName": "AWSCloud9User",
+  "PolicyVersion": {
+    "CreateDate": "2018-07-02T08:46:37Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloud9:CreateEnvironmentEC2",
+            "cloud9:CreateEnvironmentSSH"
+          ],
+          "Condition": {
+            "Null": {
+              "cloud9:OwnerArn": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloud9:DescribeEnvironmentMemberships"
+          ],
+          "Condition": {
+            "Null": {
+              "cloud9:EnvironmentId": "true",
+              "cloud9:UserArn": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "cloud9:GetUserPublicKey"
+          ],
+          "Condition": {
+            "Null": {
+              "cloud9:UserArn": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "cloud9.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloud9:GetUserSettings",
+            "cloud9:UpdateUserSettings",
+            "cloud9:ValidateEnvironmentName",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "iam:GetUser",
+            "iam:ListUsers"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2018-07-02T08:46:37Z"
+}

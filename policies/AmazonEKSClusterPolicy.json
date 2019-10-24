@@ -1,0 +1,91 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy",
+  "CreateDate": "2018-05-27T21:06:14Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIBTLDQMIC6UOIGFWA",
+  "PolicyName": "AmazonEKSClusterPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-05-22T22:04:46Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "elasticloadbalancing.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "autoscaling:DescribeAutoScalingGroups",
+            "autoscaling:UpdateAutoScalingGroup",
+            "ec2:AttachVolume",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CreateRoute",
+            "ec2:CreateSecurityGroup",
+            "ec2:CreateTags",
+            "ec2:CreateVolume",
+            "ec2:DeleteRoute",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DeleteVolume",
+            "ec2:DescribeDhcpOptions",
+            "ec2:DescribeInstances",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVolumes",
+            "ec2:DescribeVolumesModifications",
+            "ec2:DescribeVpcs",
+            "ec2:DetachVolume",
+            "ec2:ModifyInstanceAttribute",
+            "ec2:ModifyVolume",
+            "ec2:RevokeSecurityGroupIngress",
+            "elasticloadbalancing:AddTags",
+            "elasticloadbalancing:ApplySecurityGroupsToLoadBalancer",
+            "elasticloadbalancing:AttachLoadBalancerToSubnets",
+            "elasticloadbalancing:ConfigureHealthCheck",
+            "elasticloadbalancing:CreateListener",
+            "elasticloadbalancing:CreateLoadBalancer",
+            "elasticloadbalancing:CreateLoadBalancerListeners",
+            "elasticloadbalancing:CreateLoadBalancerPolicy",
+            "elasticloadbalancing:CreateTargetGroup",
+            "elasticloadbalancing:DeleteListener",
+            "elasticloadbalancing:DeleteLoadBalancer",
+            "elasticloadbalancing:DeleteLoadBalancerListeners",
+            "elasticloadbalancing:DeleteTargetGroup",
+            "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
+            "elasticloadbalancing:DeregisterTargets",
+            "elasticloadbalancing:DescribeListeners",
+            "elasticloadbalancing:DescribeLoadBalancerAttributes",
+            "elasticloadbalancing:DescribeLoadBalancerPolicies",
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "elasticloadbalancing:DescribeTargetGroupAttributes",
+            "elasticloadbalancing:DescribeTargetGroups",
+            "elasticloadbalancing:DescribeTargetHealth",
+            "elasticloadbalancing:DetachLoadBalancerFromSubnets",
+            "elasticloadbalancing:ModifyListener",
+            "elasticloadbalancing:ModifyLoadBalancerAttributes",
+            "elasticloadbalancing:ModifyTargetGroup",
+            "elasticloadbalancing:ModifyTargetGroupAttributes",
+            "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
+            "elasticloadbalancing:RegisterTargets",
+            "elasticloadbalancing:SetLoadBalancerPoliciesForBackendServer",
+            "elasticloadbalancing:SetLoadBalancerPoliciesOfListener",
+            "kms:DescribeKey"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2019-05-22T22:04:46Z"
+}

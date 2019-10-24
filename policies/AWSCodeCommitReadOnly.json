@@ -1,0 +1,79 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCodeCommitReadOnly",
+  "CreateDate": "2015-07-09T17:05:06Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJACNSXR7Z2VLJW3D6",
+  "PolicyName": "AWSCodeCommitReadOnly",
+  "PolicyVersion": {
+    "CreateDate": "2019-05-15T17:26:42Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "codecommit:BatchDescribe*",
+            "codecommit:BatchGet*",
+            "codecommit:Describe*",
+            "codecommit:Get*",
+            "codecommit:GitPull",
+            "codecommit:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "events:DescribeRule",
+            "events:ListTargetsByRule"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/codecommit*",
+          "Sid": "CloudWatchEventsCodeCommitRulesReadOnlyAccess"
+        },
+        {
+          "Action": [
+            "iam:GetSSHPublicKey",
+            "iam:ListAccessKeys",
+            "iam:ListAccessKeys",
+            "iam:ListSSHPublicKeys",
+            "iam:ListServiceSpecificCredentials"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:user/${aws:username}",
+          "Sid": "IAMReadOnlyConsoleAccess"
+        },
+        {
+          "Action": [
+            "iam:ListUsers"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IAMReadOnlyListAccess"
+        },
+        {
+          "Action": [
+            "lambda:ListFunctions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LambdaReadOnlyListAccess"
+        },
+        {
+          "Action": [
+            "sns:GetTopicAttributes",
+            "sns:ListSubscriptionsByTopic",
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SNSSubscriptionAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2019-05-15T17:26:42Z"
+}

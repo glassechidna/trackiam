@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSConfigUserAccess",
+  "CreateDate": "2015-02-18T19:38:41Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAIWTTSFJ7KKJE3MWGA",
+  "PolicyName": "AWSConfigUserAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-03-18T20:27:47Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudtrail:DescribeTrails",
+            "cloudtrail:GetTrailStatus",
+            "cloudtrail:LookupEvents",
+            "config:Deliver*",
+            "config:Describe*",
+            "config:Get*",
+            "config:List*",
+            "config:Select*",
+            "tag:GetResources",
+            "tag:GetTagKeys"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2019-03-18T20:27:47Z"
+}

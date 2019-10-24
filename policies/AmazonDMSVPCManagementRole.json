@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonDMSVPCManagementRole",
+  "CreateDate": "2015-11-18T16:33:19Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAJHKIGMBQI4AEFFSYO",
+  "PolicyName": "AmazonDMSVPCManagementRole",
+  "PolicyVersion": {
+    "CreateDate": "2016-05-23T16:29:57Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "ec2:ModifyNetworkInterfaceAttribute"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2016-05-23T16:29:57Z"
+}

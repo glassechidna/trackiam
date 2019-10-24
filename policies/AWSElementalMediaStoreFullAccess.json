@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSElementalMediaStoreFullAccess",
+  "CreateDate": "2018-03-05T23:15:31Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAJZFYFW2QXSNK7OH6Y",
+  "PolicyName": "AWSElementalMediaStoreFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2018-03-05T23:15:31Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "mediastore:*"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:SecureTransport": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2018-03-05T23:15:31Z"
+}

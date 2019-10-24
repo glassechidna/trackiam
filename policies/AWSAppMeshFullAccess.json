@@ -1,0 +1,59 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSAppMeshFullAccess",
+  "CreateDate": "2019-04-16T17:50:40Z",
+  "DefaultVersionId": "v4",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4ILVZ5BWFU",
+  "PolicyName": "AWSAppMeshFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-10-03T22:28:34Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": [
+                "appmesh.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/appmesh.amazonaws.com/AWSServiceRoleForAppMesh"
+        },
+        {
+          "Action": [
+            "acm:DescribeCertificate",
+            "acm:ListCertificates"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "appmesh:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudformation:CreateStack",
+            "cloudformation:DeleteStack",
+            "cloudformation:DescribeStack*",
+            "cloudformation:UpdateStack"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/AWSAppMesh-GettingStarted-*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
+  },
+  "UpdateDate": "2019-10-03T22:28:34Z"
+}
