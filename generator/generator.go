@@ -2,6 +2,7 @@ package generator
 
 import (
 	"bytes"
+	"context"
 	"fmt"
 	"github.com/pkg/errors"
 	"io/ioutil"
@@ -73,7 +74,12 @@ func Generate() {
 		}
 	}
 
-	printed, err := printStats(acts)
+	files, err := generateManagedPolicies(context.Background())
+	if err != nil {
+		die(err)
+	}
+
+	printed, err := printStats(acts, files)
 	if err != nil {
 		die(errors.WithStack(err))
 	}

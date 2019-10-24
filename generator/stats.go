@@ -6,14 +6,24 @@ import (
 	"github.com/fatih/camelcase"
 	"github.com/pkg/errors"
 	"sort"
+	"strings"
 	"text/template"
 )
 
-func printStats(acts actions) ([]byte, error) {
+func printStats(acts actions, policies []*policyFile) ([]byte, error) {
 	tmpl, err := template.New("").Parse(`# AWS IAM by the numbers
 
 * Unique services: {{ .ServiceCount }}
 * Unique actions: {{ .ActionCount }}
+* Managed policies: {{ .PolicyCount }}
+
+Most common managed policy name prefixes:
+
+| Prefix | Count |
+| ------ | ----- |
+{{- range .PolicyPrefixes }}
+| {{ $.Backtick }}arn:aws:iam::aws:policy/{{ .Prefix }}*{{ $.Backtick }} | {{ .Count }} |
+{{- end }}
 
 The following table summarises the AWS APIs. 
 
@@ -43,6 +53,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	if err != nil {
 		return nil, errors.WithStack(err)
 	}
+
+	policyPrefixes := policyPrefixStats(policies)
 
 	byIamPrefix := acts.groupBy(func(act *action) string {
 		return act.IamPrefix
@@ -83,17 +95,49 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 	buf := &bytes.Buffer{}
 	err = tmpl.Execute(buf, map[string]interface{}{
-		"ServiceCount": len(stats),
-		"ActionCount":  len(acts),
-		"Prefixes":     wordStats,
-		"Services":     stats,
-		"Backtick":     "`",
+		"ServiceCount":   len(stats),
+		"ActionCount":    len(acts),
+		"PolicyCount":    len(policies),
+		"Prefixes":       wordStats,
+		"PolicyPrefixes": policyPrefixes,
+		"Services":       stats,
+		"Backtick":       "`",
 	})
 	if err != nil {
 		return nil, errors.WithStack(err)
 	}
 
 	return buf.Bytes(), nil
+}
+
+func policyPrefixStats(files []*policyFile) []stat {
+	prefixes := []string{
+		"AWS",
+		"Amazon",
+		"aws-service-role/",
+		"job-function/",
+		"service-role/",
+	}
+
+	countMap := map[string]int{}
+
+	for _, file := range files {
+		bits := strings.Split(file.Arn, ":")
+		resource := strings.TrimPrefix(bits[len(bits)-1], "policy/")
+		for _, prefix := range prefixes {
+			if strings.HasPrefix(resource, prefix) {
+				countMap[prefix] += 1
+			}
+		}
+	}
+
+	stats := []stat{}
+	for prefix, count := range countMap {
+		stats = append(stats, stat{Prefix: prefix, Count: count})
+	}
+	sort.Sort(sort.Reverse(statsByCount(stats)))
+
+	return stats
 }
 
 type stat struct {
