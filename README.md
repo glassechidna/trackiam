@@ -1,8 +1,8 @@
 # AWS IAM by the numbers
 
 * Unique services: 190
-* Unique actions: 6823
-* Managed policies: 562
+* Unique actions: 6843
+* Managed policies: 563
 
 Most common managed policy name prefixes:
 
@@ -11,7 +11,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 160 |
 | `arn:aws:iam::aws:policy/Amazon*` | 147 |
 | `arn:aws:iam::aws:policy/service-role/*` | 97 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 94 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 95 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 57 |
 
@@ -46,7 +46,7 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 71 | 2 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 67 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
-| [`chime`](services/chime.yml) | 58 | 0 | 49 |
+| [`chime`](services/chime.yml) | 58 | 0 | 63 |
 | [`config`](services/config.yml) | 56 | 8 | 2 |
 | [`route53`](services/route53.yml) | 56 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 54 | 0 | 11 |
@@ -192,11 +192,11 @@ The following table summarises the AWS APIs.
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`support`](services/support.yml) | 0 | 14 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
-| [`sso`](services/sso.yml) | 0 | 0 | 65 |
+| [`sso`](services/sso.yml) | 0 | 0 | 67 |
 | [`iotsitewise`](services/iotsitewise.yml) | 0 | 0 | 46 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
+| [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 24 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
-| [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 20 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 12 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
@@ -220,14 +220,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `Get` | 912 |
-| `List` | 901 |
+| `Get` | 917 |
+| `List` | 903 |
 | `Describe` | 871 |
-| `Delete` | 801 |
-| `Create` | 729 |
-| `Update` | 539 |
-| `Put` | 186 |
-| `Start` | 112 |
+| `Delete` | 804 |
+| `Create` | 730 |
+| `Update` | 541 |
+| `Put` | 189 |
+| `Start` | 113 |
 | `Modify` | 93 |
 | `Untag` | 78 |
 
