@@ -1,5 +1,8 @@
 # AWS IAM by the numbers
 
+Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications, etc)
+are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
+
 * Unique services: 190
 * Unique actions: 6843
 * Managed policies: 563
@@ -43,10 +46,10 @@ The following table summarises the AWS APIs.
 | [`a4b`](services/a4b.yml) | 75 | 18 | 0 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`gamelift`](services/gamelift.yml) | 73 | 0 | 0 |
+| [`chime`](services/chime.yml) | 72 | 0 | 49 |
 | [`storagegateway`](services/storagegateway.yml) | 71 | 2 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 67 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
-| [`chime`](services/chime.yml) | 58 | 0 | 63 |
 | [`config`](services/config.yml) | 56 | 8 | 2 |
 | [`route53`](services/route53.yml) | 56 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 54 | 0 | 11 |

@@ -1,6 +1,7 @@
 Actions:
   - Name: chime:AssociatePhoneNumberWithUser
   - Name: chime:AssociatePhoneNumbersWithVoiceConnector
+  - Name: chime:AssociatePhoneNumbersWithVoiceConnectorGroup
   - Name: chime:BatchDeletePhoneNumber
   - Name: chime:BatchSuspendUser
   - Name: chime:BatchUnsuspendUser
@@ -10,15 +11,19 @@ Actions:
   - Name: chime:CreateBot
   - Name: chime:CreatePhoneNumberOrder
   - Name: chime:CreateVoiceConnector
+  - Name: chime:CreateVoiceConnectorGroup
   - Name: chime:DeleteAccount
   - Name: chime:DeleteEventsConfiguration
   - Name: chime:DeletePhoneNumber
   - Name: chime:DeleteVoiceConnector
+  - Name: chime:DeleteVoiceConnectorGroup
   - Name: chime:DeleteVoiceConnectorOrigination
+  - Name: chime:DeleteVoiceConnectorStreamingConfiguration
   - Name: chime:DeleteVoiceConnectorTermination
   - Name: chime:DeleteVoiceConnectorTerminationCredentials
   - Name: chime:DisassociatePhoneNumberFromUser
   - Name: chime:DisassociatePhoneNumbersFromVoiceConnector
+  - Name: chime:DisassociatePhoneNumbersFromVoiceConnectorGroup
   - Name: chime:GetAccount
   - Name: chime:GetAccountSettings
   - Name: chime:GetBot
@@ -26,10 +31,14 @@ Actions:
   - Name: chime:GetGlobalSettings
   - Name: chime:GetPhoneNumber
   - Name: chime:GetPhoneNumberOrder
+  - Name: chime:GetPhoneNumberSettings
   - Name: chime:GetUser
   - Name: chime:GetUserSettings
   - Name: chime:GetVoiceConnector
+  - Name: chime:GetVoiceConnectorGroup
+  - Name: chime:GetVoiceConnectorLoggingConfiguration
   - Name: chime:GetVoiceConnectorOrigination
+  - Name: chime:GetVoiceConnectorStreamingConfiguration
   - Name: chime:GetVoiceConnectorTermination
   - Name: chime:GetVoiceConnectorTerminationHealth
   - Name: chime:InviteUsers
@@ -38,11 +47,14 @@ Actions:
   - Name: chime:ListPhoneNumberOrders
   - Name: chime:ListPhoneNumbers
   - Name: chime:ListUsers
+  - Name: chime:ListVoiceConnectorGroups
   - Name: chime:ListVoiceConnectorTerminationCredentials
   - Name: chime:ListVoiceConnectors
   - Name: chime:LogoutUser
   - Name: chime:PutEventsConfiguration
+  - Name: chime:PutVoiceConnectorLoggingConfiguration
   - Name: chime:PutVoiceConnectorOrigination
+  - Name: chime:PutVoiceConnectorStreamingConfiguration
   - Name: chime:PutVoiceConnectorTermination
   - Name: chime:PutVoiceConnectorTerminationCredentials
   - Name: chime:RegenerateSecurityToken
@@ -54,44 +66,37 @@ Actions:
   - Name: chime:UpdateBot
   - Name: chime:UpdateGlobalSettings
   - Name: chime:UpdatePhoneNumber
+  - Name: chime:UpdatePhoneNumberSettings
   - Name: chime:UpdateUser
   - Name: chime:UpdateUserSettings
   - Name: chime:UpdateVoiceConnector
+  - Name: chime:UpdateVoiceConnectorGroup
 
   # actions with no corresponding API
   - Name: chime:AcceptDelegate
   - Name: chime:ActivateUsers
   - Name: chime:AddDomain
   - Name: chime:AddOrUpdateGroups
-  - Name: chime:AssociatePhoneNumbersWithVoiceConnectorGroup
   - Name: chime:AuthorizeDirectory
   - Name: chime:ConnectDirectory
   - Name: chime:CreateApiKey
   - Name: chime:CreateBotMembership
   - Name: chime:CreateCDRBucket
-  - Name: chime:CreateVoiceConnectorGroup
   - Name: chime:DeleteAccountOpenIdConfig
   - Name: chime:DeleteApiKey
   - Name: chime:DeleteCDRBucket
   - Name: chime:DeleteDelegate
   - Name: chime:DeleteDomain
   - Name: chime:DeleteGroups
-  - Name: chime:DeleteVoiceConnectorGroup
-  - Name: chime:DeleteVoiceConnectorStreamingConfiguration
-  - Name: chime:DisassociatePhoneNumbersFromVoiceConnectorGroup
   - Name: chime:DisconnectDirectory
   - Name: chime:GetAccountResource
   - Name: chime:GetAccountWithOpenIdConfig
   - Name: chime:GetCDRBucket
   - Name: chime:GetDomain
   - Name: chime:GetMeetingDetail
-  - Name: chime:GetPhoneNumberSettings
   - Name: chime:GetTelephonyLimits
   - Name: chime:GetUserActivityReportData
   - Name: chime:GetUserByEmail
-  - Name: chime:GetVoiceConnectorGroup
-  - Name: chime:GetVoiceConnectorLoggingConfiguration
-  - Name: chime:GetVoiceConnectorStreamingConfiguration
   - Name: chime:InviteDelegate
   - Name: chime:ListAccountUsageReportData
   - Name: chime:ListApiKeys
@@ -103,9 +108,6 @@ Actions:
   - Name: chime:ListGroups
   - Name: chime:ListMeetingEvents
   - Name: chime:ListMeetingsReportData
-  - Name: chime:ListVoiceConnectorGroups
-  - Name: chime:PutVoiceConnectorLoggingConfiguration
-  - Name: chime:PutVoiceConnectorStreamingConfiguration
   - Name: chime:RenameAccount
   - Name: chime:RenewDelegate
   - Name: chime:ResetAccountResource
@@ -117,8 +119,6 @@ Actions:
   - Name: chime:UpdateAccountOpenIdConfig
   - Name: chime:UpdateAccountResource
   - Name: chime:UpdateCDRSettings
-  - Name: chime:UpdatePhoneNumberSettings
   - Name: chime:UpdateSupportedLicenses
   - Name: chime:UpdateUserLicenses
-  - Name: chime:UpdateVoiceConnectorGroup
   - Name: chime:ValidateAccountResource

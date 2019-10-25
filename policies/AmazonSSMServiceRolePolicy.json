@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonSSMServiceRolePolicy",
   "CreateDate": "2017-11-13T19:20:08Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIXJ26NUGBA3TCV7EC",
   "PolicyName": "AmazonSSMServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2018-07-25T22:14:20Z",
+    "CreateDate": "2019-10-24T23:36:39Z",
     "Document": {
       "Statement": [
         {
@@ -21,6 +21,15 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "config:SelectResourceConfig"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
         },
         {
           "Action": [
@@ -61,6 +70,7 @@
             "ssm:GetParameters",
             "ssm:ListCommandInvocations",
             "ssm:ListCommands",
+            "ssm:ListTagsForResource",
             "ssm:SendCommand",
             "ssm:StartAutomationExecution"
           ],
@@ -93,7 +103,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2018-07-25T22:14:20Z"
+  "UpdateDate": "2019-10-24T23:36:39Z"
 }
