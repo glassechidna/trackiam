@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerFullAccess",
   "CreateDate": "2017-11-29T13:07:59Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJZ5IWYMXO5QDB4QOG",
   "PolicyName": "AmazonSageMakerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-08-21T22:56:23Z",
+    "CreateDate": "2019-10-25T21:00:08Z",
     "Document": {
       "Statement": [
         {
@@ -44,7 +44,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "arn:aws:iam::*:role/*"
         },
         {
           "Action": [
@@ -154,6 +154,7 @@
             "lambda:ListFunctions",
             "logs:CreateLogGroup",
             "logs:CreateLogStream",
+            "logs:DescribeLogGroups",
             "logs:DescribeLogStreams",
             "logs:GetLogEvents",
             "logs:PutLogEvents",
@@ -199,6 +200,19 @@
             "arn:aws:lambda:*:*:function:*Sagemaker*",
             "arn:aws:lambda:*:*:function:*sagemaker*"
           ]
+        },
+        {
+          "Action": [
+            "logs:CreateLogDelivery",
+            "logs:DeleteLogDelivery",
+            "logs:DescribeResourcePolicies",
+            "logs:GetLogDelivery",
+            "logs:ListLogDeliveries",
+            "logs:PutResourcePolicy",
+            "logs:UpdateLogDelivery"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": [
@@ -287,7 +301,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2019-08-21T22:56:23Z"
+  "UpdateDate": "2019-10-25T21:00:08Z"
 }

@@ -5,13 +5,13 @@ are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackia
 
 * Unique services: 190
 * Unique actions: 6843
-* Managed policies: 563
+* Managed policies: 565
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 160 |
+| `arn:aws:iam::aws:policy/AWS*` | 162 |
 | `arn:aws:iam::aws:policy/Amazon*` | 147 |
 | `arn:aws:iam::aws:policy/service-role/*` | 97 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 95 |

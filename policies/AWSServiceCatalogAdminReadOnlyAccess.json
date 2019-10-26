@@ -1,0 +1,66 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSServiceCatalogAdminReadOnlyAccess",
+  "CreateDate": "2019-10-25T18:53:38Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4MC6ZR7YFX",
+  "PolicyName": "AWSServiceCatalogAdminReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-10-25T18:53:38Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudformation:DescribeChangeSet",
+            "cloudformation:DescribeStackEvents",
+            "cloudformation:DescribeStackInstance",
+            "cloudformation:DescribeStackSet",
+            "cloudformation:DescribeStackSetOperation",
+            "cloudformation:DescribeStacks",
+            "cloudformation:ListChangeSets",
+            "cloudformation:ListStackInstances",
+            "cloudformation:ListStackResources",
+            "cloudformation:ListStackSetOperationResults",
+            "cloudformation:ListStackSetOperations"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:changeSet/SC-*",
+            "arn:aws:cloudformation:*:*:stack/SC-*",
+            "arn:aws:cloudformation:*:*:stack/StackSet-SC-*",
+            "arn:aws:cloudformation:*:*:stackset/SC-*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudformation:GetTemplateSummary",
+            "config:DescribeConfigurationRecorderStatus",
+            "config:DescribeConfigurationRecorders",
+            "iam:GetGroup",
+            "iam:GetRole",
+            "iam:GetUser",
+            "iam:ListGroups",
+            "iam:ListRoles",
+            "iam:ListUsers",
+            "servicecatalog:Describe*",
+            "servicecatalog:Get*",
+            "servicecatalog:List*",
+            "servicecatalog:ScanProvisionedProducts",
+            "servicecatalog:Search*",
+            "ssm:DescribeDocument",
+            "ssm:GetAutomationExecution",
+            "ssm:ListDocumentVersions",
+            "ssm:ListDocuments"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-10-25T18:53:38Z"
+}
