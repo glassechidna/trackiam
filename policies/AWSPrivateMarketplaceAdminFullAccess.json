@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPrivateMarketplaceAdminFullAccess",
   "CreateDate": "2018-11-27T16:32:32Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ6VRZDDCYDOVCOCEI",
   "PolicyName": "AWSPrivateMarketplaceAdminFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2018-11-27T16:32:32Z",
+    "CreateDate": "2019-10-28T21:48:03Z",
     "Document": {
       "Statement": [
         {
@@ -17,12 +17,16 @@
             "aws-marketplace:CreatePrivateMarketplaceProfile",
             "aws-marketplace:DescribePrivateMarketplaceProducts",
             "aws-marketplace:DescribePrivateMarketplaceProfile",
+            "aws-marketplace:DescribePrivateMarketplaceRequests",
+            "aws-marketplace:DescribePrivateMarketplaceSettings",
             "aws-marketplace:DescribePrivateMarketplaceStatus",
             "aws-marketplace:DisassociateProductsFromPrivateMarketplace",
             "aws-marketplace:ListPrivateMarketplaceProducts",
+            "aws-marketplace:ListPrivateMarketplaceRequests",
             "aws-marketplace:StartPrivateMarketplace",
             "aws-marketplace:StopPrivateMarketplace",
-            "aws-marketplace:UpdatePrivateMarketplaceProfile"
+            "aws-marketplace:UpdatePrivateMarketplaceProfile",
+            "aws-marketplace:UpdatePrivateMarketplaceSettings"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -33,7 +37,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2018-11-27T16:32:32Z"
+  "UpdateDate": "2019-10-28T21:48:03Z"
 }

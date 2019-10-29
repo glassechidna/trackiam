@@ -3,15 +3,15 @@
 Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications, etc)
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
-* Unique services: 190
-* Unique actions: 6843
-* Managed policies: 565
+* Unique services: 191
+* Unique actions: 6856
+* Managed policies: 566
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 162 |
+| `arn:aws:iam::aws:policy/AWS*` | 163 |
 | `arn:aws:iam::aws:policy/Amazon*` | 147 |
 | `arn:aws:iam::aws:policy/service-role/*` | 97 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 95 |
@@ -40,10 +40,10 @@ The following table summarises the AWS APIs.
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 82 | 0 | 17 |
 | [`waf-regional`](services/waf-regional.yml) | 80 | 0 | 0 |
+| [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 77 | 15 | 0 |
 | [`waf`](services/waf.yml) | 76 | 0 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 76 | 0 | 0 |
-| [`a4b`](services/a4b.yml) | 75 | 18 | 0 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`gamelift`](services/gamelift.yml) | 73 | 0 | 0 |
 | [`chime`](services/chime.yml) | 72 | 0 | 49 |
@@ -68,7 +68,7 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 44 | 1 | 2 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 43 | 1 | 2 |
 | [`backup`](services/backup.yml) | 43 | 0 | 0 |
-| [`elasticache`](services/elasticache.yml) | 42 | 4 | 0 |
+| [`elasticache`](services/elasticache.yml) | 42 | 6 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`kms`](services/kms.yml) | 40 | 1 | 2 |
 | [`logs`](services/logs.yml) | 39 | 0 | 5 |
@@ -95,6 +95,7 @@ The following table summarises the AWS APIs.
 | [`medialive`](services/medialive.yml) | 30 | 1 | 0 |
 | [`worklink`](services/worklink.yml) | 30 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 29 | 4 | 0 |
+| [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 28 | 3 | 0 |
 | [`sms`](services/sms.yml) | 28 | 0 | 2 |
 | [`appmesh`](services/appmesh.yml) | 28 | 0 | 1 |
@@ -105,7 +106,6 @@ The following table summarises the AWS APIs.
 | [`kinesis`](services/kinesis.yml) | 26 | 2 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 26 | 1 | 4 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
-| [`ecr`](services/ecr.yml) | 26 | 0 | 0 |
 | [`mediaconvert`](services/mediaconvert.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
@@ -179,7 +179,7 @@ The following table summarises the AWS APIs.
 | [`health`](services/health.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`rds-data`](services/rds-data.yml) | 5 | 1 | 0 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 5 | 0 | 25 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 5 | 0 | 29 |
 | [`translate`](services/translate.yml) | 5 | 0 | 0 |
 | [`tag`](services/tag.yml) | 5 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 5 | 0 | 0 |
@@ -215,6 +215,7 @@ The following table summarises the AWS APIs.
 | [`account`](services/account.yml) | 0 | 0 | 3 |
 | [`sumerian`](services/sumerian.yml) | 0 | 0 | 2 |
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
+| [`rds-db`](services/rds-db.yml) | 0 | 0 | 1 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 1 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 0 | 1 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 1 |
@@ -224,13 +225,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `Get` | 917 |
-| `List` | 903 |
-| `Describe` | 871 |
+| `List` | 904 |
+| `Describe` | 873 |
 | `Delete` | 804 |
-| `Create` | 730 |
-| `Update` | 541 |
-| `Put` | 189 |
-| `Start` | 113 |
+| `Create` | 731 |
+| `Update` | 542 |
+| `Put` | 191 |
+| `Start` | 115 |
 | `Modify` | 93 |
 | `Untag` | 78 |
 

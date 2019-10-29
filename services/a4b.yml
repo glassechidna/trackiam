@@ -35,6 +35,7 @@ Actions:
   - Name: a4b:GetConferenceProvider
   - Name: a4b:GetContact
   - Name: a4b:GetDevice
+  - Name: a4b:GetNetworkProfile
   - Name: a4b:GetProfile
   - Name: a4b:GetRoom
   - Name: a4b:GetRoomSkillParameter
@@ -57,6 +58,7 @@ Actions:
   - Name: a4b:SearchAddressBooks
   - Name: a4b:SearchContacts
   - Name: a4b:SearchDevices
+  - Name: a4b:SearchNetworkProfiles
   - Name: a4b:SearchProfiles
   - Name: a4b:SearchRooms
   - Name: a4b:SearchSkillGroups
@@ -75,6 +77,11 @@ Actions:
   - Name: a4b:UpdateRoom
   - Name: a4b:UpdateSkillGroup
 
+  # actions with no corresponding API
+  - Name: a4b:CompleteRegistration
+  - Name: a4b:PutDeviceSetupEvents
+  - Name: a4b:RegisterDevice
+
   # APIs without an IAM action
   - Name: a4b:AssociateDeviceWithNetworkProfile
   - Name: a4b:CreateGatewayGroup
@@ -85,11 +92,9 @@ Actions:
   - Name: a4b:GetGateway
   - Name: a4b:GetGatewayGroup
   - Name: a4b:GetInvitationConfiguration
-  - Name: a4b:GetNetworkProfile
   - Name: a4b:ListGatewayGroups
   - Name: a4b:ListGateways
   - Name: a4b:PutInvitationConfiguration
-  - Name: a4b:SearchNetworkProfiles
   - Name: a4b:SendAnnouncement
   - Name: a4b:UpdateGateway
   - Name: a4b:UpdateGatewayGroup
