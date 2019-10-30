@@ -1,0 +1,88 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSForWordPressPluginPolicy",
+  "CreateDate": "2019-10-30T00:27:46Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4KEKYXDWNJ",
+  "PolicyName": "AWSForWordPressPluginPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-10-30T00:27:46Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "acm:AddTagsToCertificate",
+            "acm:DescribeCertificate",
+            "acm:RequestCertificate",
+            "cloudformation:CreateStack",
+            "cloudfront:ListDistributions"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "us-east-1"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Permissions3"
+        },
+        {
+          "Action": [
+            "cloudformation:DeleteStack",
+            "cloudformation:DescribeStackEvents",
+            "cloudformation:DescribeStackResources",
+            "cloudformation:UpdateStack",
+            "cloudfront:CreateDistribution",
+            "cloudfront:CreateInvalidation",
+            "cloudfront:DeleteDistribution",
+            "cloudfront:GetDistribution",
+            "cloudfront:GetInvalidation",
+            "cloudfront:TagResource",
+            "cloudfront:UpdateDistribution"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/createdBy": "AWSForWordPressPlugin"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Permissions4"
+        },
+        {
+          "Action": [
+            "polly:DescribeVoices",
+            "polly:SynthesizeSpeech",
+            "s3:HeadBucket",
+            "translate:TranslateText"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Permissions1"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:DeleteObject",
+            "s3:GetBucketAcl",
+            "s3:GetBucketPolicy",
+            "s3:ListBucket",
+            "s3:PutObject",
+            "s3:PutObjectAcl"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::audio-for-wordpress*",
+            "arn:aws:s3:::audio_for_wordpress*"
+          ],
+          "Sid": "Permissions2"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-10-30T00:27:46Z"
+}
