@@ -53,6 +53,7 @@ Actions:
   - Name: ssm:DescribePatchBaselines
   - Name: ssm:DescribePatchGroupState
   - Name: ssm:DescribePatchGroups
+  - Name: ssm:DescribePatchProperties
   - Name: ssm:DescribeSessions
   - Name: ssm:GetAutomationExecution
   - Name: ssm:GetCommandInvocation
@@ -75,6 +76,7 @@ Actions:
   - Name: ssm:GetParametersByPath
   - Name: ssm:GetPatchBaseline
   - Name: ssm:GetPatchBaselineForPatchGroup
+  - Name: ssm:GetServiceSetting
   - Name: ssm:LabelParameterVersion
   - Name: ssm:ListAssociationVersions
   - Name: ssm:ListAssociations
@@ -97,6 +99,7 @@ Actions:
   - Name: ssm:RegisterTargetWithMaintenanceWindow
   - Name: ssm:RegisterTaskWithMaintenanceWindow
   - Name: ssm:RemoveTagsFromResource
+  - Name: ssm:ResetServiceSetting
   - Name: ssm:ResumeSession
   - Name: ssm:SendAutomationSignal
   - Name: ssm:SendCommand
@@ -115,6 +118,7 @@ Actions:
   - Name: ssm:UpdateManagedInstanceRole
   - Name: ssm:UpdateOpsItem
   - Name: ssm:UpdatePatchBaseline
+  - Name: ssm:UpdateServiceSetting
 
   # actions with no corresponding API
   - Name: ssm:DescribeDocumentParameters
@@ -124,9 +128,4 @@ Actions:
   - Name: ssm:PutConfigurePackageResult
   - Name: ssm:UpdateInstanceAssociationStatus
   - Name: ssm:UpdateInstanceInformation
-
-  # APIs without an IAM action
-  - Name: ssm:DescribePatchProperties
-  - Name: ssm:GetServiceSetting
-  - Name: ssm:ResetServiceSetting
-  - Name: ssm:UpdateServiceSetting
+  - Name: ssm:UpdateResourceDataSync
