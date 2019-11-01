@@ -1,15 +1,23 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "CreateDate": "2018-12-01T16:22:12Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJH3SHQERZRQMQOQ44",
   "PolicyName": "CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-06-24T18:54:53Z",
+    "CreateDate": "2019-11-01T01:06:25Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ssm:SendCommand",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ssm:*:*:document/AWSEC2-CheckPerformanceCounterSets"
+          ]
+        },
         {
           "Action": [
             "autoscaling:DescribeAutoScalingGroups"
@@ -157,6 +165,15 @@
         },
         {
           "Action": [
+            "ssm:ListCommandInvocations"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
             "tag:GetResources"
           ],
           "Effect": "Allow",
@@ -168,7 +185,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2019-06-24T18:54:53Z"
+  "UpdateDate": "2019-11-01T01:06:25Z"
 }
