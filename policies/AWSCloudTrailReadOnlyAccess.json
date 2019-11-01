@@ -1,22 +1,24 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCloudTrailReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:59Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJDU7KJADWBSEQ3E7S",
   "PolicyName": "AWSCloudTrailReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2017-12-11T19:51:37Z",
+    "CreateDate": "2019-10-31T22:42:54Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "cloudtrail:DescribeTrails",
             "cloudtrail:GetEventSelectors",
+            "cloudtrail:GetTrail",
             "cloudtrail:GetTrailStatus",
             "cloudtrail:ListPublicKeys",
             "cloudtrail:ListTags",
+            "cloudtrail:ListTrails",
             "cloudtrail:LookupEvents",
             "kms:ListAliases",
             "lambda:ListFunctions",
@@ -37,7 +39,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2017-12-11T19:51:37Z"
+  "UpdateDate": "2019-10-31T22:42:54Z"
 }

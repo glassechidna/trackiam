@@ -4,7 +4,7 @@ Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
 * Unique services: 191
-* Unique actions: 6858
+* Unique actions: 6861
 * Managed policies: 566
 
 Most common managed policy name prefixes:
@@ -38,7 +38,7 @@ The following table summarises the AWS APIs.
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
-| [`redshift`](services/redshift.yml) | 82 | 0 | 17 |
+| [`redshift`](services/redshift.yml) | 82 | 0 | 18 |
 | [`waf-regional`](services/waf-regional.yml) | 80 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 77 | 15 | 0 |
@@ -150,8 +150,8 @@ The following table summarises the AWS APIs.
 | [`mediapackage`](services/mediapackage.yml) | 14 | 4 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 3 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 14 | 0 | 2 |
+| [`cloudtrail`](services/cloudtrail.yml) | 14 | 0 | 2 |
 | [`fms`](services/fms.yml) | 14 | 0 | 0 |
-| [`cloudtrail`](services/cloudtrail.yml) | 14 | 0 | 0 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 13 | 0 | 1 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
 | [`acm`](services/acm.yml) | 13 | 0 | 0 |
@@ -224,9 +224,9 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `Get` | 917 |
-| `List` | 904 |
-| `Describe` | 873 |
+| `Get` | 918 |
+| `List` | 905 |
+| `Describe` | 874 |
 | `Delete` | 804 |
 | `Create` | 731 |
 | `Update` | 543 |
