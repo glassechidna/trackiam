@@ -4,7 +4,7 @@ Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
 * Unique services: 191
-* Unique actions: 6861
+* Unique actions: 6870
 * Managed policies: 566
 
 Most common managed policy name prefixes:
@@ -37,11 +37,11 @@ The following table summarises the AWS APIs.
 | [`lightsail`](services/lightsail.yml) | 101 | 4 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
+| [`mobiletargeting`](services/mobiletargeting.yml) | 83 | 18 | 0 |
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 82 | 0 | 18 |
 | [`waf-regional`](services/waf-regional.yml) | 80 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
-| [`mobiletargeting`](services/mobiletargeting.yml) | 77 | 15 | 0 |
 | [`waf`](services/waf.yml) | 76 | 0 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 76 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
@@ -143,6 +143,7 @@ The following table summarises the AWS APIs.
 | [`qldb`](services/qldb.yml) | 16 | 0 | 3 |
 | [`mgh`](services/mgh.yml) | 16 | 0 | 1 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
+| [`cloudtrail`](services/cloudtrail.yml) | 16 | 0 | 0 |
 | [`batch`](services/batch.yml) | 16 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 15 | 1 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 15 | 0 | 1 |
@@ -150,7 +151,6 @@ The following table summarises the AWS APIs.
 | [`mediapackage`](services/mediapackage.yml) | 14 | 4 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 3 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 14 | 0 | 2 |
-| [`cloudtrail`](services/cloudtrail.yml) | 14 | 0 | 2 |
 | [`fms`](services/fms.yml) | 14 | 0 | 0 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 13 | 0 | 1 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
@@ -224,12 +224,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `Get` | 918 |
-| `List` | 905 |
+| `Get` | 922 |
+| `List` | 906 |
 | `Describe` | 874 |
-| `Delete` | 804 |
-| `Create` | 731 |
-| `Update` | 543 |
+| `Delete` | 805 |
+| `Create` | 732 |
+| `Update` | 545 |
 | `Put` | 191 |
 | `Start` | 115 |
 | `Modify` | 93 |
