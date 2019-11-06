@@ -1,15 +1,32 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeCommitPowerUser",
   "CreateDate": "2015-07-09T17:06:49Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAI4UIINUVGB5SEC57G",
   "PolicyName": "AWSCodeCommitPowerUser",
   "PolicyVersion": {
-    "CreateDate": "2019-06-12T22:47:04Z",
+    "CreateDate": "2019-11-05T22:52:28Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "codestar-notifications:CreateNotificationRule",
+            "codestar-notifications:DescribeNotificationRule",
+            "codestar-notifications:Subscribe",
+            "codestar-notifications:Unsubscribe",
+            "codestar-notifications:UpdateNotificationRule"
+          ],
+          "Condition": {
+            "StringLike": {
+              "codestar-notifications:NotificationsForResource": "arn:aws:codecommit:*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsReadWriteAccess"
+        },
         {
           "Action": [
             "codecommit:BatchDescribe*",
@@ -32,6 +49,17 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "codestar-notifications:ListEventTypes",
+            "codestar-notifications:ListNotificationRules",
+            "codestar-notifications:ListTagsforResource",
+            "codestar-notifications:ListTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsListAccess"
         },
         {
           "Action": [
@@ -120,7 +148,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2019-06-12T22:47:04Z"
+  "UpdateDate": "2019-11-05T22:52:28Z"
 }

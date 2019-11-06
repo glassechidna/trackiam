@@ -1,15 +1,28 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeCommitReadOnly",
   "CreateDate": "2015-07-09T17:05:06Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJACNSXR7Z2VLJW3D6",
   "PolicyName": "AWSCodeCommitReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2019-05-15T17:26:42Z",
+    "CreateDate": "2019-11-05T22:56:54Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "codestar-notifications:DescribeNotificationRule"
+          ],
+          "Condition": {
+            "StringLike": {
+              "codestar-notifications:NotificationsForResource": "arn:aws:codecommit:*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsReadOnlyAccess"
+        },
         {
           "Action": [
             "codecommit:BatchDescribe*",
@@ -21,6 +34,15 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "codestar-notifications:ListEventTypes",
+            "codestar-notifications:ListNotificationRules"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsListAccess"
         },
         {
           "Action": [
@@ -73,7 +95,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2019-05-15T17:26:42Z"
+  "UpdateDate": "2019-11-05T22:56:54Z"
 }

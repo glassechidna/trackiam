@@ -3,9 +3,9 @@
 Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications, etc)
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
-* Unique services: 191
-* Unique actions: 6870
-* Managed policies: 566
+* Unique services: 192
+* Unique actions: 6883
+* Managed policies: 568
 
 Most common managed policy name prefixes:
 
@@ -13,8 +13,8 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 164 |
 | `arn:aws:iam::aws:policy/Amazon*` | 147 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 97 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 95 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 57 |
 
@@ -154,6 +154,7 @@ The following table summarises the AWS APIs.
 | [`fms`](services/fms.yml) | 14 | 0 | 0 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 13 | 0 | 1 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
+| [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`acm`](services/acm.yml) | 13 | 0 | 0 |
 | [`resource-groups`](services/resource-groups.yml) | 12 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 0 | 0 |
@@ -170,8 +171,8 @@ The following table summarises the AWS APIs.
 | [`ce`](services/ce.yml) | 9 | 0 | 0 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
 | [`iot`](services/iot.yml) | 8 | 0 | 169 |
+| [`sts`](services/sts.yml) | 8 | 0 | 0 |
 | [`sms-voice`](services/sms-voice.yml) | 8 | 0 | 0 |
-| [`sts`](services/sts.yml) | 7 | 1 | 0 |
 | [`mediatailor`](services/mediatailor.yml) | 7 | 0 | 0 |
 | [`macie`](services/macie.yml) | 7 | 0 | 0 |
 | [`textract`](services/textract.yml) | 6 | 0 | 0 |
@@ -225,15 +226,15 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `Get` | 922 |
-| `List` | 906 |
-| `Describe` | 874 |
-| `Delete` | 805 |
-| `Create` | 732 |
-| `Update` | 545 |
+| `List` | 910 |
+| `Describe` | 875 |
+| `Delete` | 807 |
+| `Create` | 733 |
+| `Update` | 546 |
 | `Put` | 191 |
 | `Start` | 115 |
 | `Modify` | 93 |
-| `Untag` | 78 |
+| `Untag` | 79 |
 
 Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
 having this idea and being gracious about me shamelessly ripping it off.

@@ -1,15 +1,33 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess",
   "CreateDate": "2016-12-01T19:04:44Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJQJGIOIE3CD2TQXDS",
   "PolicyName": "AWSCodeBuildAdminAccess",
   "PolicyVersion": {
-    "CreateDate": "2018-11-15T21:21:56Z",
+    "CreateDate": "2019-11-05T22:12:30Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "codestar-notifications:CreateNotificationRule",
+            "codestar-notifications:DeleteNotificationRule",
+            "codestar-notifications:DescribeNotificationRule",
+            "codestar-notifications:Subscribe",
+            "codestar-notifications:Unsubscribe",
+            "codestar-notifications:UpdateNotificationRule"
+          ],
+          "Condition": {
+            "StringLike": {
+              "codestar-notifications:NotificationsForResource": "arn:aws:codebuild:*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsReadWriteAccess"
+        },
         {
           "Action": [
             "cloudwatch:GetMetricStatistics",
@@ -53,12 +71,41 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:ssm:*:*:parameter/CodeBuild/*"
+        },
+        {
+          "Action": [
+            "codestar-notifications:ListEventTypes",
+            "codestar-notifications:ListNotificationRules",
+            "codestar-notifications:ListTagsforResource",
+            "codestar-notifications:ListTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsListAccess"
+        },
+        {
+          "Action": [
+            "sns:CreateTopic",
+            "sns:SetTopicAttributes"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sns:*:*:codestar-notifications*",
+          "Sid": "CodeStarNotificationsSNSTopicCreateAccess"
+        },
+        {
+          "Action": [
+            "sns:GetTopicAttributes",
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SNSTopicListAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2018-11-15T21:21:56Z"
+  "UpdateDate": "2019-11-05T22:12:30Z"
 }

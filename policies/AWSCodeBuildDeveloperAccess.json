@@ -1,15 +1,32 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeBuildDeveloperAccess",
   "CreateDate": "2016-12-01T19:02:32Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIMKTMR34XSBQW45HS",
   "PolicyName": "AWSCodeBuildDeveloperAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-10-08T20:23:39Z",
+    "CreateDate": "2019-11-05T22:12:45Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "codestar-notifications:CreateNotificationRule",
+            "codestar-notifications:DescribeNotificationRule",
+            "codestar-notifications:Subscribe",
+            "codestar-notifications:Unsubscribe",
+            "codestar-notifications:UpdateNotificationRule"
+          ],
+          "Condition": {
+            "StringLike": {
+              "codestar-notifications:NotificationsForResource": "arn:aws:codebuild:*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsReadWriteAccess"
+        },
         {
           "Action": [
             "cloudwatch:GetMetricStatistics",
@@ -37,12 +54,32 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:ssm:*:*:parameter/CodeBuild/*"
+        },
+        {
+          "Action": [
+            "codestar-notifications:ListEventTypes",
+            "codestar-notifications:ListNotificationRules",
+            "codestar-notifications:ListTagsforResource",
+            "codestar-notifications:ListTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsListAccess"
+        },
+        {
+          "Action": [
+            "sns:GetTopicAttributes",
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SNSTopicListAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2019-10-08T20:23:39Z"
+  "UpdateDate": "2019-11-05T22:12:45Z"
 }

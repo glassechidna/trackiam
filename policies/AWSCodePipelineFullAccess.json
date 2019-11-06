@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodePipelineFullAccess",
   "CreateDate": "2015-07-09T16:58:07Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJP5LH77KSAT2KHQGG",
   "PolicyName": "AWSCodePipelineFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-08-13T19:41:05Z",
+    "CreateDate": "2019-11-05T23:04:28Z",
     "Document": {
       "Statement": [
         {
@@ -42,6 +42,24 @@
         },
         {
           "Action": [
+            "codestar-notifications:CreateNotificationRule",
+            "codestar-notifications:DeleteNotificationRule",
+            "codestar-notifications:DescribeNotificationRule",
+            "codestar-notifications:Subscribe",
+            "codestar-notifications:Unsubscribe",
+            "codestar-notifications:UpdateNotificationRule"
+          ],
+          "Condition": {
+            "StringLike": {
+              "codestar-notifications:NotificationsForResource": "arn:aws:codepipeline:*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsReadWriteAccess"
+        },
+        {
+          "Action": [
             "cloudformation:DescribeStacks",
             "cloudformation:ListChangeSets",
             "cloudtrail:CreateTrail",
@@ -66,6 +84,10 @@
             "codedeploy:ListApplications",
             "codedeploy:ListDeploymentGroups",
             "codepipeline:*",
+            "codestar-notifications:ListEventTypes",
+            "codestar-notifications:ListNotificationRules",
+            "codestar-notifications:ListTagsforResource",
+            "codestar-notifications:ListTargets",
             "devicefarm:GetDevicePool",
             "devicefarm:GetProject",
             "devicefarm:ListDevicePools",
@@ -120,12 +142,21 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:s3::*:codepipeline-*"
+        },
+        {
+          "Action": [
+            "sns:CreateTopic",
+            "sns:SetTopicAttributes"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sns:*:*:codestar-notifications*",
+          "Sid": "CodeStarNotificationsSNSTopicCreateAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2019-08-13T19:41:05Z"
+  "UpdateDate": "2019-11-05T23:04:28Z"
 }

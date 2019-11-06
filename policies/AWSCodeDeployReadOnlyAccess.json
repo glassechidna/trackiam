@@ -1,15 +1,28 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeDeployReadOnlyAccess",
   "CreateDate": "2015-05-19T18:21:32Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILZHHKCKB4NE7XOIQ",
   "PolicyName": "AWSCodeDeployReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2015-05-19T18:21:32Z",
+    "CreateDate": "2019-11-05T23:01:32Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "codestar-notifications:DescribeNotificationRule"
+          ],
+          "Condition": {
+            "StringLike": {
+              "codestar-notifications:NotificationsForResource": "arn:aws:codedeploy:*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsPowerUserAccess"
+        },
         {
           "Action": [
             "codedeploy:Batch*",
@@ -18,12 +31,21 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "codestar-notifications:ListEventTypes",
+            "codestar-notifications:ListNotificationRules"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsListAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2015-05-19T18:21:32Z"
+  "UpdateDate": "2019-11-05T23:01:32Z"
 }

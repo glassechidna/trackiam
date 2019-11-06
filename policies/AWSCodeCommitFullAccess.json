@@ -1,21 +1,50 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeCommitFullAccess",
   "CreateDate": "2015-07-09T17:02:19Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAI4VCZ3XPIZLQ5NZV2",
   "PolicyName": "AWSCodeCommitFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-06-12T21:27:53Z",
+    "CreateDate": "2019-11-05T23:00:26Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "codestar-notifications:CreateNotificationRule",
+            "codestar-notifications:DeleteNotificationRule",
+            "codestar-notifications:DescribeNotificationRule",
+            "codestar-notifications:Subscribe",
+            "codestar-notifications:Unsubscribe",
+            "codestar-notifications:UpdateNotificationRule"
+          ],
+          "Condition": {
+            "StringLike": {
+              "codestar-notifications:NotificationsForResource": "arn:aws:codecommit:*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsReadWriteAccess"
+        },
         {
           "Action": [
             "codecommit:*"
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "codestar-notifications:ListEventTypes",
+            "codestar-notifications:ListNotificationRules",
+            "codestar-notifications:ListTagsforResource",
+            "codestar-notifications:ListTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsListAccess"
         },
         {
           "Action": [
@@ -95,6 +124,15 @@
         },
         {
           "Action": [
+            "sns:CreateTopic",
+            "sns:SetTopicAttributes"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sns:*:*:codestar-notifications*",
+          "Sid": "CodeStarNotificationsSNSTopicCreateAccess"
+        },
+        {
+          "Action": [
             "sns:GetTopicAttributes",
             "sns:ListSubscriptionsByTopic",
             "sns:ListTopics"
@@ -107,7 +145,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2019-06-12T21:27:53Z"
+  "UpdateDate": "2019-11-05T23:00:26Z"
 }

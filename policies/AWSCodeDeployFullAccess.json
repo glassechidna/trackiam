@@ -1,25 +1,71 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeDeployFullAccess",
   "CreateDate": "2015-05-19T18:13:23Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIONKN3TJZUKXCHXWC",
   "PolicyName": "AWSCodeDeployFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2015-05-19T18:13:23Z",
+    "CreateDate": "2019-11-05T22:57:28Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "codestar-notifications:CreateNotificationRule",
+            "codestar-notifications:DeleteNotificationRule",
+            "codestar-notifications:DescribeNotificationRule",
+            "codestar-notifications:Subscribe",
+            "codestar-notifications:Unsubscribe",
+            "codestar-notifications:UpdateNotificationRule"
+          ],
+          "Condition": {
+            "StringLike": {
+              "codestar-notifications:NotificationsForResource": "arn:aws:codedeploy:*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsReadWriteAccess"
+        },
         {
           "Action": "codedeploy:*",
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "codestar-notifications:ListEventTypes",
+            "codestar-notifications:ListNotificationRules",
+            "codestar-notifications:ListTagsforResource",
+            "codestar-notifications:ListTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsListAccess"
+        },
+        {
+          "Action": [
+            "sns:CreateTopic",
+            "sns:SetTopicAttributes"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sns:*:*:codestar-notifications*",
+          "Sid": "CodeStarNotificationsSNSTopicCreateAccess"
+        },
+        {
+          "Action": [
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SNSTopicListAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2015-05-19T18:13:23Z"
+  "UpdateDate": "2019-11-05T22:57:28Z"
 }

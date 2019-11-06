@@ -1,15 +1,28 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodePipelineReadOnlyAccess",
   "CreateDate": "2015-07-09T16:43:57Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILFKZXIBOTNC5TO2Q",
   "PolicyName": "AWSCodePipelineReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-08-13T22:18:42Z",
+    "CreateDate": "2019-11-05T23:01:50Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "codestar-notifications:DescribeNotificationRule"
+          ],
+          "Condition": {
+            "StringLike": {
+              "codestar-notifications:NotificationsForResource": "arn:aws:codepipeline:*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsPowerUserAccess"
+        },
         {
           "Action": [
             "codecommit:ListBranches",
@@ -26,6 +39,8 @@
             "codepipeline:ListPipelineExecutions",
             "codepipeline:ListPipelines",
             "codepipeline:ListTagsForResource",
+            "codestar-notifications:ListEventTypes",
+            "codestar-notifications:ListNotificationRules",
             "elasticbeanstalk:DescribeApplications",
             "elasticbeanstalk:DescribeEnvironments",
             "iam:ListRoles",
@@ -46,7 +61,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2019-08-13T22:18:42Z"
+  "UpdateDate": "2019-11-05T23:01:50Z"
 }

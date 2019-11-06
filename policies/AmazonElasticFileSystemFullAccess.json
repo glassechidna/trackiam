@@ -1,15 +1,27 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonElasticFileSystemFullAccess",
   "CreateDate": "2015-05-27T16:22:28Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJKXTMNVQGIDNCKPBC",
   "PolicyName": "AmazonElasticFileSystemFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2017-08-14T10:18:34Z",
+    "CreateDate": "2019-11-05T17:10:26Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": [
+                "elasticfilesystem.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "ec2:CreateNetworkInterface",
@@ -33,7 +45,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2017-08-14T10:18:34Z"
+  "UpdateDate": "2019-11-05T17:10:26Z"
 }
