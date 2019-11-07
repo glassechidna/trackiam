@@ -3,15 +3,15 @@
 Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications, etc)
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
-* Unique services: 192
-* Unique actions: 6883
-* Managed policies: 568
+* Unique services: 193
+* Unique actions: 6898
+* Managed policies: 570
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 164 |
+| `arn:aws:iam::aws:policy/AWS*` | 166 |
 | `arn:aws:iam::aws:policy/Amazon*` | 147 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 97 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
@@ -165,14 +165,15 @@ The following table summarises the AWS APIs.
 | [`cloud9`](services/cloud9.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`connect`](services/connect.yml) | 9 | 16 | 6 |
+| [`ce`](services/ce.yml) | 9 | 4 | 0 |
+| [`signer`](services/signer.yml) | 9 | 3 | 0 |
 | [`transcribe`](services/transcribe.yml) | 9 | 0 | 1 |
-| [`signer`](services/signer.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
-| [`ce`](services/ce.yml) | 9 | 0 | 0 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
 | [`iot`](services/iot.yml) | 8 | 0 | 169 |
 | [`sts`](services/sts.yml) | 8 | 0 | 0 |
 | [`sms-voice`](services/sms-voice.yml) | 8 | 0 | 0 |
+| [`savingsplans`](services/savingsplans.yml) | 8 | 0 | 0 |
 | [`mediatailor`](services/mediatailor.yml) | 7 | 0 | 0 |
 | [`macie`](services/macie.yml) | 7 | 0 | 0 |
 | [`textract`](services/textract.yml) | 6 | 0 | 0 |
@@ -225,16 +226,16 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `Get` | 922 |
-| `List` | 910 |
-| `Describe` | 875 |
+| `Get` | 926 |
+| `List` | 912 |
+| `Describe` | 879 |
 | `Delete` | 807 |
-| `Create` | 733 |
+| `Create` | 734 |
 | `Update` | 546 |
 | `Put` | 191 |
 | `Start` | 115 |
 | `Modify` | 93 |
-| `Untag` | 79 |
+| `Untag` | 81 |
 
 Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
 having this idea and being gracious about me shamelessly ripping it off.

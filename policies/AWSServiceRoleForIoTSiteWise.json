@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForIoTSiteWise",
   "CreateDate": "2018-11-14T19:19:17Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJGQU4DZIQP6HLYQPE",
   "PolicyName": "AWSServiceRoleForIoTSiteWise",
   "PolicyVersion": {
-    "CreateDate": "2019-02-11T20:49:09Z",
+    "CreateDate": "2019-11-06T21:34:32Z",
     "Document": {
       "Statement": [
         {
@@ -77,12 +77,29 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:lambda:*:*:function:AWSIoTSiteWise*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:DescribeLogGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/iotsitewise*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/iotsitewise*:log-stream:*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2019-02-11T20:49:09Z"
+  "UpdateDate": "2019-11-06T21:34:32Z"
 }
