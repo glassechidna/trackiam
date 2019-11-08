@@ -3,8 +3,8 @@
 Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications, etc)
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
-* Unique services: 193
-* Unique actions: 6898
+* Unique services: 195
+* Unique actions: 6905
 * Managed policies: 572
 
 Most common managed policy name prefixes:
@@ -155,6 +155,7 @@ The following table summarises the AWS APIs.
 | [`serverlessrepo`](services/serverlessrepo.yml) | 13 | 0 | 1 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
+| [`ce`](services/ce.yml) | 13 | 0 | 0 |
 | [`acm`](services/acm.yml) | 13 | 0 | 0 |
 | [`resource-groups`](services/resource-groups.yml) | 12 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 0 | 0 |
@@ -165,7 +166,6 @@ The following table summarises the AWS APIs.
 | [`cloud9`](services/cloud9.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`connect`](services/connect.yml) | 9 | 16 | 6 |
-| [`ce`](services/ce.yml) | 9 | 4 | 0 |
 | [`signer`](services/signer.yml) | 9 | 3 | 0 |
 | [`transcribe`](services/transcribe.yml) | 9 | 0 | 1 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
@@ -196,6 +196,8 @@ The following table summarises the AWS APIs.
 | [`apigateway`](services/apigateway.yml) | 0 | 144 | 7 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`support`](services/support.yml) | 0 | 14 | 0 |
+| [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
+| [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
 | [`sso`](services/sso.yml) | 0 | 0 | 67 |
 | [`iotsitewise`](services/iotsitewise.yml) | 0 | 0 | 46 |
@@ -226,14 +228,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `Get` | 926 |
-| `List` | 912 |
+| `Get` | 927 |
+| `List` | 914 |
 | `Describe` | 879 |
 | `Delete` | 807 |
-| `Create` | 734 |
+| `Create` | 735 |
 | `Update` | 546 |
 | `Put` | 191 |
-| `Start` | 115 |
+| `Start` | 116 |
 | `Modify` | 93 |
 | `Untag` | 81 |
 
