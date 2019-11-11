@@ -4,7 +4,7 @@ Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
 * Unique services: 195
-* Unique actions: 6905
+* Unique actions: 6906
 * Managed policies: 572
 
 Most common managed policy name prefixes:
@@ -152,10 +152,10 @@ The following table summarises the AWS APIs.
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 3 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 14 | 0 | 2 |
 | [`fms`](services/fms.yml) | 14 | 0 | 0 |
+| [`ce`](services/ce.yml) | 13 | 1 | 0 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 13 | 0 | 1 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
-| [`ce`](services/ce.yml) | 13 | 0 | 0 |
 | [`acm`](services/acm.yml) | 13 | 0 | 0 |
 | [`resource-groups`](services/resource-groups.yml) | 12 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 0 | 0 |
@@ -228,7 +228,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `Get` | 927 |
+| `Get` | 928 |
 | `List` | 914 |
 | `Describe` | 879 |
 | `Delete` | 807 |
