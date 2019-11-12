@@ -3,8 +3,8 @@
 Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications, etc)
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
-* Unique services: 195
-* Unique actions: 6906
+* Unique services: 194
+* Unique actions: 6899
 * Managed policies: 572
 
 Most common managed policy name prefixes:
@@ -209,7 +209,6 @@ The following table summarises the AWS APIs.
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 9 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
-| [`aesop`](services/aesop.yml) | 0 | 0 | 7 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 5 |
 | [`wellarchitected`](services/wellarchitected.yml) | 0 | 0 | 4 |
@@ -228,16 +227,16 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `Get` | 928 |
-| `List` | 914 |
+| `Get` | 927 |
+| `List` | 912 |
 | `Describe` | 879 |
 | `Delete` | 807 |
-| `Create` | 735 |
-| `Update` | 546 |
+| `Create` | 734 |
+| `Update` | 545 |
 | `Put` | 191 |
 | `Start` | 116 |
 | `Modify` | 93 |
-| `Untag` | 81 |
+| `Untag` | 80 |
 
 Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
 having this idea and being gracious about me shamelessly ripping it off.
