@@ -160,6 +160,7 @@ The following table summarises the AWS APIs.
 | [`resource-groups`](services/resource-groups.yml) | 12 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 23 |
 | [`fsx`](services/fsx.yml) | 11 | 0 | 0 |
 | [`eks`](services/eks.yml) | 11 | 0 | 0 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
@@ -181,7 +182,6 @@ The following table summarises the AWS APIs.
 | [`health`](services/health.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`rds-data`](services/rds-data.yml) | 5 | 1 | 0 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 5 | 0 | 29 |
 | [`translate`](services/translate.yml) | 5 | 0 | 0 |
 | [`tag`](services/tag.yml) | 5 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 5 | 0 | 0 |
