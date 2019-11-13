@@ -157,6 +157,7 @@ The following table summarises the AWS APIs.
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`acm`](services/acm.yml) | 13 | 0 | 0 |
+| [`signer`](services/signer.yml) | 12 | 0 | 0 |
 | [`resource-groups`](services/resource-groups.yml) | 12 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
@@ -167,7 +168,6 @@ The following table summarises the AWS APIs.
 | [`cloud9`](services/cloud9.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`connect`](services/connect.yml) | 9 | 16 | 6 |
-| [`signer`](services/signer.yml) | 9 | 3 | 0 |
 | [`transcribe`](services/transcribe.yml) | 9 | 0 | 1 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |

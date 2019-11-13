@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/ConfigConformsServiceRolePolicy",
   "CreateDate": "2019-07-25T21:38:05Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4BCH3IIJPN",
   "PolicyName": "ConfigConformsServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-10-17T22:16:14Z",
+    "CreateDate": "2019-11-13T18:29:21Z",
     "Document": {
       "Statement": [
         {
@@ -82,6 +82,7 @@
         },
         {
           "Action": [
+            "s3:GetBucketAcl",
             "s3:GetObject",
             "s3:PutObject",
             "s3:PutObjectAcl"
@@ -101,7 +102,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2019-10-17T22:16:14Z"
+  "UpdateDate": "2019-11-13T18:29:21Z"
 }
