@@ -1,0 +1,70 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonEC2RolePolicyForLaunchWizard",
+  "CreateDate": "2019-11-13T08:05:53Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CBGI56NFS",
+  "PolicyName": "AmazonEC2RolePolicyForLaunchWizard",
+  "PolicyVersion": {
+    "CreateDate": "2019-11-13T08:05:53Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "LaunchWizardResourceGroupID"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:AttachVolume",
+            "ec2:CreateVolume",
+            "ec2:DescribeInstances",
+            "ec2:DescribeVolumes",
+            "ec2:ModifyVolume"
+          ],
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": "LaunchWizardResourceGroupID"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "logs:Create*",
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:*"
+        },
+        {
+          "Action": [
+            "ec2:AssociateAddress",
+            "ec2:DescribeAddresses"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:PutLogEvents",
+            "s3:GetObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:*",
+            "arn:aws:s3:::launchwizard*/*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-11-13T08:05:53Z"
+}
