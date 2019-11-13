@@ -1,0 +1,43 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSDataExchangeReadOnly",
+  "CreateDate": "2019-11-13T19:27:37Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4DQNFEZURI",
+  "PolicyName": "AWSDataExchangeReadOnly",
+  "PolicyVersion": {
+    "CreateDate": "2019-11-13T19:27:37Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aws-marketplace:DescribeChangeSet",
+            "aws-marketplace:DescribeEntity",
+            "aws-marketplace:GetAgreementApprovalRequest",
+            "aws-marketplace:GetAgreementRequest",
+            "aws-marketplace:ListAgreementApprovalRequests",
+            "aws-marketplace:ListAgreementRequests",
+            "aws-marketplace:ListChangeSets",
+            "aws-marketplace:ListEntities",
+            "aws-marketplace:ViewSubscriptions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "dataexchange:Get*",
+            "dataexchange:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-11-13T19:27:37Z"
+}

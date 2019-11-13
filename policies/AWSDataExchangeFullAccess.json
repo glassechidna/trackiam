@@ -1,0 +1,88 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSDataExchangeFullAccess",
+  "CreateDate": "2019-11-13T19:27:59Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4MPDTDB3FH",
+  "PolicyName": "AWSDataExchangeFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-11-13T19:27:59Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "s3:GetObject",
+          "Condition": {
+            "StringEqualsIgnoreCase": {
+              "s3:ExistingObjectTag/AWSDataExchange": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "s3:GetObject",
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*aws-data-exchange*"
+        },
+        {
+          "Action": [
+            "aws-marketplace:AcceptAgreementApprovalRequest",
+            "aws-marketplace:CancelChangeSet",
+            "aws-marketplace:DescribeChangeSet",
+            "aws-marketplace:DescribeEntity",
+            "aws-marketplace:GetAgreementApprovalRequest",
+            "aws-marketplace:ListAgreementApprovalRequests",
+            "aws-marketplace:ListChangeSets",
+            "aws-marketplace:ListEntities",
+            "aws-marketplace:RejectAgreementApprovalRequest",
+            "aws-marketplace:StartChangeSet",
+            "aws-marketplace:UpdateAgreementApprovalRequest"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "aws-marketplace:CancelAgreementRequest",
+            "aws-marketplace:GetAgreementRequest",
+            "aws-marketplace:ListAgreementRequests",
+            "aws-marketplace:Subscribe",
+            "aws-marketplace:Unsubscribe",
+            "aws-marketplace:ViewSubscriptions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "dataexchange:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:PutObject",
+            "s3:PutObjectAcl"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*aws-data-exchange*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-11-13T19:27:59Z"
+}

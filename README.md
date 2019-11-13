@@ -3,15 +3,15 @@
 Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications, etc)
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
-* Unique services: 194
-* Unique actions: 6904
-* Managed policies: 574
+* Unique services: 196
+* Unique actions: 6944
+* Managed policies: 578
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 166 |
+| `arn:aws:iam::aws:policy/AWS*` | 170 |
 | `arn:aws:iam::aws:policy/Amazon*` | 149 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 99 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
@@ -97,6 +97,7 @@ The following table summarises the AWS APIs.
 | [`amplify`](services/amplify.yml) | 29 | 4 | 0 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 28 | 3 | 0 |
+| [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`sms`](services/sms.yml) | 28 | 0 | 2 |
 | [`appmesh`](services/appmesh.yml) | 28 | 0 | 1 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
@@ -104,7 +105,6 @@ The following table summarises the AWS APIs.
 | [`forecast`](services/forecast.yml) | 27 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 27 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 26 | 2 | 0 |
-| [`cloudsearch`](services/cloudsearch.yml) | 26 | 1 | 6 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`mediaconvert`](services/mediaconvert.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
@@ -116,6 +116,7 @@ The following table summarises the AWS APIs.
 | [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`es`](services/es.yml) | 21 | 2 | 5 |
+| [`dataexchange`](services/dataexchange.yml) | 21 | 1 | 1 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`cognito-identity`](services/cognito-identity.yml) | 21 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 20 | 3 | 0 |
@@ -161,7 +162,7 @@ The following table summarises the AWS APIs.
 | [`resource-groups`](services/resource-groups.yml) | 12 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 23 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 30 |
 | [`fsx`](services/fsx.yml) | 11 | 0 | 0 |
 | [`eks`](services/eks.yml) | 11 | 0 | 0 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
@@ -175,6 +176,7 @@ The following table summarises the AWS APIs.
 | [`sts`](services/sts.yml) | 8 | 0 | 0 |
 | [`sms-voice`](services/sms-voice.yml) | 8 | 0 | 0 |
 | [`savingsplans`](services/savingsplans.yml) | 8 | 0 | 0 |
+| [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
 | [`mediatailor`](services/mediatailor.yml) | 7 | 0 | 0 |
 | [`macie`](services/macie.yml) | 7 | 0 | 0 |
 | [`textract`](services/textract.yml) | 6 | 0 | 0 |
@@ -182,7 +184,6 @@ The following table summarises the AWS APIs.
 | [`health`](services/health.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`rds-data`](services/rds-data.yml) | 5 | 1 | 0 |
-| [`dlm`](services/dlm.yml) | 5 | 0 | 3 |
 | [`translate`](services/translate.yml) | 5 | 0 | 0 |
 | [`tag`](services/tag.yml) | 5 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
@@ -192,7 +193,7 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
-| [`execute-api`](services/execute-api.yml) | 0 | 181 | 3 |
+| [`execute-api`](services/execute-api.yml) | 0 | 183 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 144 | 7 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`support`](services/support.yml) | 0 | 14 | 0 |
@@ -208,6 +209,7 @@ The following table summarises the AWS APIs.
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 9 |
+| [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 5 |
@@ -227,16 +229,16 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `Get` | 927 |
-| `List` | 913 |
-| `Describe` | 880 |
-| `Delete` | 807 |
-| `Create` | 734 |
-| `Update` | 546 |
+| `Get` | 937 |
+| `List` | 922 |
+| `Describe` | 882 |
+| `Delete` | 811 |
+| `Create` | 737 |
+| `Update` | 550 |
 | `Put` | 191 |
-| `Start` | 116 |
+| `Start` | 118 |
 | `Modify` | 93 |
-| `Untag` | 81 |
+| `Untag` | 82 |
 
 Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
 having this idea and being gracious about me shamelessly ripping it off.

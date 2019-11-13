@@ -1,0 +1,71 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSDataExchangeSubscriberFullAccess",
+  "CreateDate": "2019-11-13T19:27:52Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4MAWRW4GF7",
+  "PolicyName": "AWSDataExchangeSubscriberFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-11-13T19:27:52Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "dataexchange:CancelJob",
+            "dataexchange:CreateJob",
+            "dataexchange:StartJob"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "dataexchange:JobType": [
+                "EXPORT_ASSETS_TO_S3",
+                "EXPORT_ASSET_TO_SIGNED_URL"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "s3:GetObject",
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*aws-data-exchange*"
+        },
+        {
+          "Action": [
+            "aws-marketplace:CancelAgreementRequest",
+            "aws-marketplace:GetAgreementRequest",
+            "aws-marketplace:ListAgreementRequests",
+            "aws-marketplace:Subscribe",
+            "aws-marketplace:Unsubscribe",
+            "aws-marketplace:ViewSubscriptions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "dataexchange:Get*",
+            "dataexchange:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-11-13T19:27:52Z"
+}
