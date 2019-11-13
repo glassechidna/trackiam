@@ -4,7 +4,7 @@ Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
 * Unique services: 196
-* Unique actions: 6944
+* Unique actions: 6950
 * Managed policies: 578
 
 Most common managed policy name prefixes:
@@ -163,8 +163,8 @@ The following table summarises the AWS APIs.
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 30 |
+| [`eks`](services/eks.yml) | 11 | 0 | 6 |
 | [`fsx`](services/fsx.yml) | 11 | 0 | 0 |
-| [`eks`](services/eks.yml) | 11 | 0 | 0 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`cloud9`](services/cloud9.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
@@ -230,11 +230,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `Get` | 937 |
-| `List` | 922 |
-| `Describe` | 882 |
-| `Delete` | 811 |
-| `Create` | 737 |
-| `Update` | 550 |
+| `List` | 923 |
+| `Describe` | 883 |
+| `Delete` | 812 |
+| `Create` | 738 |
+| `Update` | 552 |
 | `Put` | 191 |
 | `Start` | 118 |
 | `Modify` | 93 |
