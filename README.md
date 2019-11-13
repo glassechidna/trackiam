@@ -4,15 +4,15 @@ Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
 * Unique services: 194
-* Unique actions: 6901
-* Managed policies: 573
+* Unique actions: 6904
+* Managed policies: 574
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 166 |
-| `arn:aws:iam::aws:policy/Amazon*` | 148 |
+| `arn:aws:iam::aws:policy/Amazon*` | 149 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 99 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -182,9 +182,9 @@ The following table summarises the AWS APIs.
 | [`health`](services/health.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`rds-data`](services/rds-data.yml) | 5 | 1 | 0 |
+| [`dlm`](services/dlm.yml) | 5 | 0 | 3 |
 | [`translate`](services/translate.yml) | 5 | 0 | 0 |
 | [`tag`](services/tag.yml) | 5 | 0 | 0 |
-| [`dlm`](services/dlm.yml) | 5 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 2 | 9 | 0 |
@@ -228,7 +228,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `Get` | 927 |
-| `List` | 912 |
+| `List` | 913 |
 | `Describe` | 880 |
 | `Delete` | 807 |
 | `Create` | 734 |
@@ -236,7 +236,7 @@ Most common action prefixes:
 | `Put` | 191 |
 | `Start` | 116 |
 | `Modify` | 93 |
-| `Untag` | 80 |
+| `Untag` | 81 |
 
 Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
 having this idea and being gracious about me shamelessly ripping it off.

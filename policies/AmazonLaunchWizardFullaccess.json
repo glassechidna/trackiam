@@ -1,0 +1,275 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonLaunchWizardFullaccess",
+  "CreateDate": "2019-11-13T17:08:13Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4E27VRMEE5",
+  "PolicyName": "AmazonLaunchWizardFullaccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-11-13T17:08:13Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudformation:CreateStack",
+            "cloudformation:DeleteStack",
+            "cloudformation:DescribeStack*",
+            "cloudformation:Get*",
+            "cloudformation:ListStacks",
+            "cloudformation:SignalResource",
+            "ec2:AllocateAddress",
+            "ec2:AllocateHosts",
+            "ec2:AssignPrivateIpAddresses",
+            "ec2:AssociateAddress",
+            "ec2:AssociateDhcpOptions",
+            "ec2:AssociateSubnetCidrBlock",
+            "ec2:AttachInternetGateway",
+            "ec2:AttachNetworkInterface",
+            "ec2:AttachVolume",
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CreateDhcpOptions",
+            "ec2:CreateEgressOnlyInternetGateway",
+            "ec2:CreateInternetGateway",
+            "ec2:CreateNatGateway",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateSecurityGroup",
+            "ec2:CreateVolume",
+            "ec2:CreateVpc",
+            "ec2:CreateVpcEndpoint",
+            "ec2:DeleteDhcpOptions",
+            "ec2:DeleteInternetGateway",
+            "ec2:DeleteKeyPair",
+            "ec2:DeleteNatGateway",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DeleteSnapshot",
+            "ec2:DeleteVolume",
+            "ec2:DeleteVpc",
+            "ec2:DetachInternetGateway",
+            "ec2:DetachVolume",
+            "ec2:DisassociateIamInstanceProfile",
+            "ec2:DisassociateRouteTable",
+            "ec2:DisassociateSubnetCidrBlock",
+            "ec2:GetConsoleOutput",
+            "ec2:GetPasswordData",
+            "ec2:ModifyInstanceAttribute",
+            "ec2:ModifySubnetAttribute",
+            "ec2:ModifyVolumeAttribute",
+            "ec2:ModifyVpcAttribute",
+            "ec2:ReleaseAddress",
+            "ec2:ReplaceRoute",
+            "ec2:ReplaceRouteTableAssociation",
+            "ec2:RevokeSecurityGroupEgress",
+            "ec2:RevokeSecurityGroupIngress",
+            "ec2:RunInstances",
+            "ec2:StartInstances",
+            "ec2:StopInstances",
+            "ec2:TerminateInstances",
+            "ssm:SendCommand"
+          ],
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": "LaunchWizardResourceGroupID"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "launchwizard:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "logs:GetLog*",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:*:*:*",
+            "arn:aws:logs:::log-group:LaunchWizard*"
+          ]
+        },
+        {
+          "Action": [
+            "autoscaling:AttachInstances",
+            "autoscaling:CreateAutoScalingGroup",
+            "autoscaling:CreateLaunchConfiguration",
+            "autoscaling:DeleteAutoScalingGroup",
+            "autoscaling:DeleteLaunchConfiguration",
+            "autoscaling:UpdateAutoScalingGroup",
+            "logs:CreateLogStream",
+            "logs:DeleteLogGroup",
+            "logs:DeleteLogStream",
+            "logs:DescribeLog*",
+            "logs:PutLogEvents",
+            "resource-groups:CreateGroup",
+            "resource-groups:DeleteGroup",
+            "sns:ListSubscriptionsByTopic",
+            "sns:Publish",
+            "ssm:DeleteDocument",
+            "ssm:DeleteParameter*",
+            "ssm:DescribeDocument*",
+            "ssm:GetDocument",
+            "ssm:PutParameter"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:autoscaling:*:*:autoScalingGroup:*:autoScalingGroupName/LaunchWizard*",
+            "arn:aws:autoscaling:*:*:launchConfiguration:*:launchConfigurationName/LaunchWizard*",
+            "arn:aws:logs:*:*:log-group:*:*:*",
+            "arn:aws:logs:::log-group:LaunchWizard*",
+            "arn:aws:resource-groups:*:*:group/LaunchWizard*",
+            "arn:aws:sns:*:*:*",
+            "arn:aws:ssm:*:*:document/LaunchWizard*",
+            "arn:aws:ssm:*:*:parameter/LaunchWizard*"
+          ]
+        },
+        {
+          "Action": [
+            "autoscaling:DescribeAutoScaling*",
+            "autoscaling:DescribeLaunchConfigurations",
+            "autoscaling:DescribeNotificationConfigurations",
+            "autoscaling:DescribePolicies",
+            "autoscaling:DescribeScaling*",
+            "autoscaling:DescribeScheduledActions",
+            "cloudformation:DescribeAccountLimits",
+            "cloudformation:DescribeStackDriftDetectionStatus",
+            "cloudformation:List*",
+            "ds:AddIpRoutes",
+            "ds:CreateComputer",
+            "ds:CreateMicrosoftAD",
+            "ds:DeleteDirectory",
+            "ds:Describe*",
+            "ds:ListAuthorizedApplications",
+            "ec2:AssociateRouteTable",
+            "ec2:AssociateVpcCidrBlock",
+            "ec2:CreateInternetGateway",
+            "ec2:CreateKeyPair",
+            "ec2:CreateNatGateway",
+            "ec2:CreateRoute",
+            "ec2:CreateRouteTable",
+            "ec2:CreateSubnet",
+            "ec2:CreateTags",
+            "ec2:DeleteNetworkAcl",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission",
+            "ec2:DeleteRoute",
+            "ec2:DeleteRouteTable",
+            "ec2:DeleteSubnet",
+            "ec2:DeleteTags",
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAddresses",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeDhcpOptions",
+            "ec2:DescribeEgressOnlyInternetGateways",
+            "ec2:DescribeImage*",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstances",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeKeyPairs",
+            "ec2:DescribeNatGateways",
+            "ec2:DescribeNetwork*",
+            "ec2:DescribeRegions",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSnapshot*",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeTags",
+            "ec2:DescribeVolume*",
+            "ec2:DescribeVpc*",
+            "ec2:DetachNetworkInterface",
+            "ec2:DisassociateAddress",
+            "ec2:DisassociateVpcCidrBlock",
+            "ec2:GetLaunchTemplateData",
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "ec2:ModifyVolume",
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:List*",
+            "logs:CreateLogGroup",
+            "logs:GetLogDelivery",
+            "logs:GetLogRecord",
+            "logs:ListLogDeliveries",
+            "resource-groups:Get*",
+            "resource-groups:List*",
+            "servicequotas:GetServiceQuota",
+            "servicequotas:ListServiceQuotas",
+            "sns:ListSubscriptions",
+            "sns:ListTopics",
+            "ssm:CreateDocument",
+            "ssm:DescribeAutomation*",
+            "ssm:DescribeInstanceInformation",
+            "ssm:DescribeParameters",
+            "ssm:GetAutomationExecution",
+            "ssm:GetCommandInvocation",
+            "ssm:GetParameter*",
+            "ssm:ListCommand*",
+            "ssm:ListDocument*",
+            "ssm:ListInstanceAssociations",
+            "ssm:SendAutomationSignal",
+            "ssm:StartAutomationExecution",
+            "ssm:StopAutomationExecution",
+            "tag:Get*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudformation:Describe*",
+            "cloudformation:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:::stack/LaunchWizard*/"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling*"
+          ]
+        },
+        {
+          "Action": [
+            "logs:DeleteLogStream",
+            "logs:GetLogEvents",
+            "logs:PutLogEvents",
+            "ssm:AddTagsToResource",
+            "ssm:DescribeDocument",
+            "ssm:GetDocument",
+            "ssm:ListTagsForResource",
+            "ssm:RemoveTagsFromResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:*:*:*",
+            "arn:aws:logs:::log-group:LaunchWizard*",
+            "arn:aws:ssm:*:*:document/LaunchWizard*",
+            "arn:aws:ssm:*:*:parameter/LaunchWizard*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:AddRoleToInstanceProfile",
+            "iam:CreateInstanceProfile",
+            "iam:DeleteInstanceProfile",
+            "iam:PassRole",
+            "iam:RemoveRoleFromInstanceProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:instance-profile/LaunchWizard*",
+            "arn:aws:iam::*:role/service-role/AmazonEC2RoleForLaunchWizard*"
+          ],
+          "Sid": "VisualEditor0"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-11-13T17:08:13Z"
+}
