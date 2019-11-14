@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonSageMakerNotebooksServiceRolePolicy",
   "CreateDate": "2019-10-18T20:27:37Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4MYB7OEJED",
   "PolicyName": "AmazonSageMakerNotebooksServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-10-18T20:27:37Z",
+    "CreateDate": "2019-11-14T22:43:23Z",
     "Document": {
       "Statement": [
         {
@@ -25,7 +25,9 @@
             "ec2:AuthorizeSecurityGroupEgress",
             "ec2:AuthorizeSecurityGroupIngress",
             "ec2:CreateNetworkInterfacePermission",
-            "ec2:RevokeSecurityGroupEgress"
+            "ec2:DeleteSecurityGroup",
+            "ec2:RevokeSecurityGroupEgress",
+            "ec2:RevokeSecurityGroupIngress"
           ],
           "Condition": {
             "StringLike": {
@@ -38,8 +40,8 @@
         {
           "Action": [
             "elasticfilesystem:CreateMountTarget",
-            "elasticfilesystem:DescribeFileSystems",
-            "elasticfilesystem:DescribeMountTargets"
+            "elasticfilesystem:DeleteFileSystem",
+            "elasticfilesystem:DeleteMountTarget"
           ],
           "Condition": {
             "StringLike": {
@@ -69,12 +71,20 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "elasticfilesystem:DescribeFileSystems",
+            "elasticfilesystem:DescribeMountTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-10-18T20:27:37Z"
+  "UpdateDate": "2019-11-14T22:43:23Z"
 }
