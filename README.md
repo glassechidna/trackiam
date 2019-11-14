@@ -4,7 +4,7 @@ Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
 * Unique services: 196
-* Unique actions: 6950
+* Unique actions: 6956
 * Managed policies: 580
 
 Most common managed policy name prefixes:
@@ -71,8 +71,8 @@ The following table summarises the AWS APIs.
 | [`elasticache`](services/elasticache.yml) | 42 | 6 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`kms`](services/kms.yml) | 40 | 1 | 2 |
+| [`personalize`](services/personalize.yml) | 39 | 3 | 0 |
 | [`logs`](services/logs.yml) | 39 | 0 | 5 |
-| [`personalize`](services/personalize.yml) | 39 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 38 | 0 | 0 |
 | [`codedeploy`](services/codedeploy.yml) | 37 | 9 | 0 |
@@ -168,7 +168,7 @@ The following table summarises the AWS APIs.
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`cloud9`](services/cloud9.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
-| [`connect`](services/connect.yml) | 9 | 16 | 6 |
+| [`connect`](services/connect.yml) | 9 | 19 | 6 |
 | [`transcribe`](services/transcribe.yml) | 9 | 0 | 1 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
@@ -230,15 +230,15 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `Get` | 937 |
-| `List` | 923 |
-| `Describe` | 883 |
+| `List` | 925 |
+| `Describe` | 884 |
 | `Delete` | 812 |
-| `Create` | 738 |
+| `Create` | 739 |
 | `Update` | 552 |
 | `Put` | 191 |
 | `Start` | 118 |
 | `Modify` | 93 |
-| `Untag` | 82 |
+| `Untag` | 83 |
 
 Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
 having this idea and being gracious about me shamelessly ripping it off.
