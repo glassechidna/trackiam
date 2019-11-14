@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSApplicationAutoscalingComprehendEndpointPolicy",
+  "CreateDate": "2019-11-14T18:39:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4HD4ODS6K6",
+  "PolicyName": "AWSApplicationAutoscalingComprehendEndpointPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-11-14T18:39:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:PutMetricAlarm",
+            "comprehend:DescribeEndpoint",
+            "comprehend:UpdateEndpoint"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-11-14T18:39:07Z"
+}

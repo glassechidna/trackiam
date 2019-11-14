@@ -5,7 +5,7 @@ are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackia
 
 * Unique services: 196
 * Unique actions: 6950
-* Managed policies: 579
+* Managed policies: 580
 
 Most common managed policy name prefixes:
 
@@ -13,7 +13,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 170 |
 | `arn:aws:iam::aws:policy/Amazon*` | 149 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 100 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 101 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 57 |
