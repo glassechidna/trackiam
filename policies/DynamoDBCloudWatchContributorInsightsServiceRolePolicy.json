@@ -1,0 +1,35 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/DynamoDBCloudWatchContributorInsightsServiceRolePolicy",
+  "CreateDate": "2019-11-15T21:13:58Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4G4VWJTRGV",
+  "PolicyName": "DynamoDBCloudWatchContributorInsightsServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-11-15T21:13:58Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:DeleteInsightRules",
+            "cloudwatch:PutInsightRule"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch:*:*:insight-rule/DynamoDBContributorInsights*"
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeInsightRules"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-11-15T21:13:58Z"
+}
