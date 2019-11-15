@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess",
   "CreateDate": "2015-02-06T18:40:11Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAINUGF2JSOSUY76KYA",
   "PolicyName": "AmazonDynamoDBFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-05-08T21:20:48Z",
+    "CreateDate": "2019-11-15T18:20:39Z",
     "Document": {
       "Statement": [
         {
@@ -17,6 +17,7 @@
           "Condition": {
             "StringEquals": {
               "iam:AWSServiceName": [
+                "contributorinsights.dynamodb.amazonaws.com",
                 "dax.amazonaws.com",
                 "dynamodb.application-autoscaling.amazonaws.com",
                 "replication.dynamodb.amazonaws.com"
@@ -103,7 +104,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2019-05-08T21:20:48Z"
+  "UpdateDate": "2019-11-15T18:20:39Z"
 }
