@@ -3,8 +3,8 @@
 Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications, etc)
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
-* Unique services: 196
-* Unique actions: 6956
+* Unique services: 197
+* Unique actions: 6982
 * Managed policies: 582
 
 Most common managed policy name prefixes:
@@ -203,6 +203,7 @@ The following table summarises the AWS APIs.
 | [`sso`](services/sso.yml) | 0 | 0 | 67 |
 | [`iotsitewise`](services/iotsitewise.yml) | 0 | 0 | 46 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
+| [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 26 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 24 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 12 |
@@ -230,11 +231,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `Get` | 937 |
-| `List` | 925 |
-| `Describe` | 884 |
-| `Delete` | 812 |
-| `Create` | 739 |
-| `Update` | 552 |
+| `List` | 930 |
+| `Describe` | 889 |
+| `Delete` | 817 |
+| `Create` | 744 |
+| `Update` | 557 |
 | `Put` | 191 |
 | `Start` | 118 |
 | `Modify` | 93 |
