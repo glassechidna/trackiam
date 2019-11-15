@@ -4,7 +4,7 @@ Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
 * Unique services: 197
-* Unique actions: 6982
+* Unique actions: 7002
 * Managed policies: 581
 
 Most common managed policy name prefixes:
@@ -46,7 +46,7 @@ The following table summarises the AWS APIs.
 | [`sagemaker`](services/sagemaker.yml) | 76 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`gamelift`](services/gamelift.yml) | 73 | 0 | 0 |
-| [`chime`](services/chime.yml) | 72 | 0 | 49 |
+| [`chime`](services/chime.yml) | 72 | 10 | 49 |
 | [`storagegateway`](services/storagegateway.yml) | 71 | 2 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 67 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
@@ -60,9 +60,9 @@ The following table summarises the AWS APIs.
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`organizations`](services/organizations.yml) | 46 | 0 | 0 |
 | [`s3`](services/s3.yml) | 45 | 48 | 39 |
+| [`guardduty`](services/guardduty.yml) | 45 | 5 | 0 |
 | [`dms`](services/dms.yml) | 45 | 2 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 45 | 0 | 3 |
-| [`guardduty`](services/guardduty.yml) | 45 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 45 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 45 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 44 | 1 | 2 |
@@ -89,8 +89,8 @@ The following table summarises the AWS APIs.
 | [`workmail`](services/workmail.yml) | 33 | 0 | 53 |
 | [`sns`](services/sns.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
+| [`workspaces`](services/workspaces.yml) | 32 | 8 | 0 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
-| [`workspaces`](services/workspaces.yml) | 32 | 3 | 0 |
 | [`events`](services/events.yml) | 31 | 0 | 0 |
 | [`medialive`](services/medialive.yml) | 30 | 1 | 0 |
 | [`worklink`](services/worklink.yml) | 30 | 0 | 0 |
@@ -140,6 +140,7 @@ The following table summarises the AWS APIs.
 | [`ram`](services/ram.yml) | 17 | 0 | 0 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
+| [`eks`](services/eks.yml) | 17 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 17 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 16 | 0 | 8 |
 | [`qldb`](services/qldb.yml) | 16 | 0 | 3 |
@@ -164,7 +165,6 @@ The following table summarises the AWS APIs.
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 30 |
-| [`eks`](services/eks.yml) | 11 | 0 | 6 |
 | [`fsx`](services/fsx.yml) | 11 | 0 | 0 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`cloud9`](services/cloud9.yml) | 10 | 0 | 0 |
@@ -230,15 +230,15 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `Get` | 937 |
-| `List` | 930 |
-| `Describe` | 889 |
-| `Delete` | 817 |
-| `Create` | 744 |
-| `Update` | 557 |
+| `Get` | 938 |
+| `List` | 933 |
+| `Describe` | 890 |
+| `Delete` | 820 |
+| `Create` | 747 |
+| `Update` | 560 |
 | `Put` | 191 |
 | `Start` | 118 |
-| `Modify` | 93 |
+| `Modify` | 96 |
 | `Untag` | 83 |
 
 Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
