@@ -1,4 +1,10 @@
 Actions:
+  - Name: connect:CreateUser
+  - Name: connect:DeleteUser
+  - Name: connect:DescribeUser
+  - Name: connect:DescribeUserHierarchyGroup
+  - Name: connect:DescribeUserHierarchyStructure
+  - Name: connect:GetContactAttributes
   - Name: connect:GetCurrentMetricData
   - Name: connect:GetFederationToken
   - Name: connect:GetMetricData
@@ -6,29 +12,13 @@ Actions:
   - Name: connect:ListHoursOfOperations
   - Name: connect:ListPhoneNumbers
   - Name: connect:ListQueues
-  - Name: connect:StartOutboundVoiceContact
-  - Name: connect:StopContact
-
-  # actions with no corresponding API
-  - Name: connect:CreateInstance
-  - Name: connect:DescribeInstance
-  - Name: connect:DestroyInstance
-  - Name: connect:GetFederationTokens
-  - Name: connect:ListInstances
-  - Name: connect:ModifyInstance
-
-  # APIs without an IAM action
-  - Name: connect:CreateUser
-  - Name: connect:DeleteUser
-  - Name: connect:DescribeUser
-  - Name: connect:DescribeUserHierarchyGroup
-  - Name: connect:DescribeUserHierarchyStructure
-  - Name: connect:GetContactAttributes
   - Name: connect:ListRoutingProfiles
   - Name: connect:ListSecurityProfiles
   - Name: connect:ListTagsForResource
   - Name: connect:ListUserHierarchyGroups
   - Name: connect:ListUsers
+  - Name: connect:StartOutboundVoiceContact
+  - Name: connect:StopContact
   - Name: connect:TagResource
   - Name: connect:UntagResource
   - Name: connect:UpdateContactAttributes
@@ -37,3 +27,11 @@ Actions:
   - Name: connect:UpdateUserPhoneConfig
   - Name: connect:UpdateUserRoutingProfile
   - Name: connect:UpdateUserSecurityProfiles
+
+  # actions with no corresponding API
+  - Name: connect:CreateInstance
+  - Name: connect:DescribeInstance
+  - Name: connect:DestroyInstance
+  - Name: connect:GetFederationTokens
+  - Name: connect:ListInstances
+  - Name: connect:ModifyInstance
