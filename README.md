@@ -155,7 +155,7 @@ The following table summarises the AWS APIs.
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 3 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 14 | 0 | 2 |
 | [`fms`](services/fms.yml) | 14 | 0 | 0 |
-| [`ce`](services/ce.yml) | 13 | 1 | 0 |
+| [`ce`](services/ce.yml) | 14 | 0 | 0 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 13 | 0 | 1 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
