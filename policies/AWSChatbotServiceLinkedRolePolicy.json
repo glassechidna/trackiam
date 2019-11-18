@@ -1,0 +1,42 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSChatbotServiceLinkedRolePolicy",
+  "CreateDate": "2019-11-18T16:39:50Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4ID4WRYKST",
+  "PolicyName": "AWSChatbotServiceLinkedRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-11-18T16:39:50Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogGroups",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/chatbot/*"
+        },
+        {
+          "Action": [
+            "sns:ListSubscriptions",
+            "sns:ListSubscriptionsByTopic",
+            "sns:ListTopics",
+            "sns:Subscribe",
+            "sns:Unsubscribe"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-11-18T16:39:50Z"
+}
