@@ -1,55 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonChimeReadOnly",
   "CreateDate": "2017-11-01T22:04:17Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJLBFZZFABRXVWRTCI",
   "PolicyName": "AmazonChimeReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2019-10-24T16:36:23Z",
+    "CreateDate": "2019-11-18T18:49:37Z",
     "Document": {
       "Statement": [
         {
           "Action": [
-            "chime:GetAccount",
-            "chime:GetAccountResource",
-            "chime:GetAccountSettings",
-            "chime:GetBot",
-            "chime:GetCDRBucket",
-            "chime:GetDomain",
-            "chime:GetEventsConfiguration",
-            "chime:GetGlobalSettings",
-            "chime:GetPhoneNumber",
-            "chime:GetPhoneNumberOrder",
-            "chime:GetPhoneNumberSettings",
-            "chime:GetTelephonyLimits",
-            "chime:GetUser",
-            "chime:GetUserActivityReportData",
-            "chime:GetUserByEmail",
-            "chime:GetUserSettings",
-            "chime:GetVoiceConnector",
-            "chime:GetVoiceConnectorGroup",
-            "chime:GetVoiceConnectorLoggingConfiguration",
-            "chime:GetVoiceConnectorOrigination",
-            "chime:GetVoiceConnectorStreamingConfiguration",
-            "chime:GetVoiceConnectorTermination",
-            "chime:GetVoiceConnectorTerminationHealth",
-            "chime:ListAccountUsageReportData",
-            "chime:ListAccounts",
-            "chime:ListBots",
-            "chime:ListCDRBucket",
-            "chime:ListCallingRegions",
-            "chime:ListDelegates",
-            "chime:ListDirectories",
-            "chime:ListDomains",
-            "chime:ListGroups",
-            "chime:ListPhoneNumberOrders",
-            "chime:ListPhoneNumbers",
-            "chime:ListUsers",
-            "chime:ListVoiceConnectorGroups",
-            "chime:ListVoiceConnectorTerminationCredentials",
-            "chime:ListVoiceConnectors",
+            "chime:Get*",
+            "chime:List*",
             "chime:SearchAvailablePhoneNumbers"
           ],
           "Effect": "Allow",
@@ -59,7 +23,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2019-10-24T16:36:23Z"
+  "UpdateDate": "2019-11-18T18:49:37Z"
 }
