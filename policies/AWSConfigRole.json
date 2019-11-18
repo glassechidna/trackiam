@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSConfigRole",
   "CreateDate": "2015-04-02T17:36:23Z",
-  "DefaultVersionId": "v31",
+  "DefaultVersionId": "v32",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIQRXRDRGJUA33ELIO",
   "PolicyName": "AWSConfigRole",
   "PolicyVersion": {
-    "CreateDate": "2019-10-21T21:58:25Z",
+    "CreateDate": "2019-11-18T22:42:07Z",
     "Document": {
       "Statement": [
         {
@@ -23,6 +23,8 @@
             "autoscaling:DescribePolicies",
             "autoscaling:DescribeScheduledActions",
             "autoscaling:DescribeTags",
+            "cloudformation:describeType",
+            "cloudformation:listTypes",
             "cloudfront:ListTagsForResource",
             "cloudtrail:DescribeTrails",
             "cloudtrail:GetEventSelectors",
@@ -171,7 +173,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v31"
+    "VersionId": "v32"
   },
-  "UpdateDate": "2019-10-21T21:58:25Z"
+  "UpdateDate": "2019-11-18T22:42:07Z"
 }

@@ -1,0 +1,145 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSBackupFullAccess",
+  "CreateDate": "2019-11-18T22:21:52Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4LL52EIPJX",
+  "PolicyName": "AWSBackupFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-11-18T22:21:52Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": "backup.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/*AWSBackup*",
+            "arn:aws:iam::*:role/*AwsBackup*"
+          ]
+        },
+        {
+          "Action": [
+            "kms:CreateGrant",
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "kms:EncryptionContextKeys": "aws:backup:backup-vault"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "backup-storage:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "backup:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "dynamodb:ListBackups",
+            "dynamodb:ListTables"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeVolumes",
+            "ec2:describeAvailabilityZones"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "elasticfilesystem:DescribeFilesystems"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticfilesystem:*:*:file-system/*"
+        },
+        {
+          "Action": [
+            "iam:GetRole",
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey",
+            "kms:GenerateDataKey",
+            "kms:ListAliases",
+            "kms:ListKeys"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "rds:DescribeDBInstances",
+            "rds:DescribeDBSnapshots",
+            "rds:ListTagsForResource",
+            "rds:describeDBEngineVersions",
+            "rds:describeDBSnapshots",
+            "rds:describeDBSubnetGroups",
+            "rds:describeOptionGroups",
+            "rds:describeOrderableDBInstanceOptions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "storagegateway:DescribeCachediSCSIVolumes",
+            "storagegateway:DescribeStorediSCSIVolumes"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:storagegateway:*:*:gateway/*/volume/*"
+        },
+        {
+          "Action": [
+            "storagegateway:DescribeGatewayInformation",
+            "storagegateway:ListLocalDisks",
+            "storagegateway:ListVolumes"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:storagegateway:*:*:gateway/*"
+        },
+        {
+          "Action": [
+            "storagegateway:ListGateways"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:storagegateway:*:*:*"
+        },
+        {
+          "Action": [
+            "tag:GetResources",
+            "tag:GetTagKeys",
+            "tag:GetTagValues"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-11-18T22:21:52Z"
+}
