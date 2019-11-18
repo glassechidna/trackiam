@@ -4,7 +4,7 @@ Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
 * Unique services: 197
-* Unique actions: 7002
+* Unique actions: 7015
 * Managed policies: 582
 
 Most common managed policy name prefixes:
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | [`lightsail`](services/lightsail.yml) | 101 | 4 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
-| [`mobiletargeting`](services/mobiletargeting.yml) | 83 | 18 | 0 |
+| [`mobiletargeting`](services/mobiletargeting.yml) | 83 | 22 | 0 |
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 82 | 0 | 18 |
 | [`waf-regional`](services/waf-regional.yml) | 80 | 0 | 0 |
@@ -60,9 +60,9 @@ The following table summarises the AWS APIs.
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`organizations`](services/organizations.yml) | 46 | 0 | 0 |
 | [`s3`](services/s3.yml) | 45 | 48 | 39 |
+| [`cloudformation`](services/cloudformation.yml) | 45 | 9 | 3 |
 | [`guardduty`](services/guardduty.yml) | 45 | 5 | 0 |
 | [`dms`](services/dms.yml) | 45 | 2 | 0 |
-| [`cloudformation`](services/cloudformation.yml) | 45 | 0 | 3 |
 | [`comprehend`](services/comprehend.yml) | 45 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 45 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 44 | 1 | 2 |
@@ -230,12 +230,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `Get` | 938 |
-| `List` | 933 |
-| `Describe` | 890 |
-| `Delete` | 820 |
-| `Create` | 747 |
-| `Update` | 560 |
+| `Get` | 939 |
+| `List` | 936 |
+| `Describe` | 892 |
+| `Delete` | 821 |
+| `Create` | 748 |
+| `Update` | 561 |
 | `Put` | 191 |
 | `Start` | 118 |
 | `Modify` | 96 |
