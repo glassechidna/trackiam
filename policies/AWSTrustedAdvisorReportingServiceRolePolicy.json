@@ -1,0 +1,31 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSTrustedAdvisorReportingServiceRolePolicy",
+  "CreateDate": "2019-11-19T17:41:13Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4NCBYW5OGK",
+  "PolicyName": "AWSTrustedAdvisorReportingServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-11-19T17:41:13Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListAccountsForParent",
+            "organizations:ListOrganizationalUnitsForParent"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-11-19T17:41:13Z"
+}
