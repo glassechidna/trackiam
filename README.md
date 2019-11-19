@@ -4,7 +4,7 @@ Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
 * Unique services: 197
-* Unique actions: 7023
+* Unique actions: 7043
 * Managed policies: 585
 
 Most common managed policy name prefixes:
@@ -28,7 +28,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 354 | 5 | 0 |
+| [`ec2`](services/ec2.yml) | 354 | 6 | 0 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`glue`](services/glue.yml) | 123 | 0 | 1 |
 | [`ssm`](services/ssm.yml) | 120 | 0 | 8 |
@@ -50,7 +50,7 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 71 | 2 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 67 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
-| [`config`](services/config.yml) | 56 | 8 | 2 |
+| [`config`](services/config.yml) | 56 | 20 | 2 |
 | [`route53`](services/route53.yml) | 56 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 54 | 0 | 11 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
@@ -60,7 +60,7 @@ The following table summarises the AWS APIs.
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`organizations`](services/organizations.yml) | 46 | 0 | 0 |
 | [`s3`](services/s3.yml) | 45 | 48 | 39 |
-| [`cloudformation`](services/cloudformation.yml) | 45 | 9 | 3 |
+| [`cloudformation`](services/cloudformation.yml) | 45 | 10 | 3 |
 | [`guardduty`](services/guardduty.yml) | 45 | 5 | 0 |
 | [`dms`](services/dms.yml) | 45 | 2 | 0 |
 | [`comprehend`](services/comprehend.yml) | 45 | 0 | 0 |
@@ -194,7 +194,7 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
-| [`execute-api`](services/execute-api.yml) | 0 | 183 | 3 |
+| [`execute-api`](services/execute-api.yml) | 0 | 189 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 144 | 7 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
@@ -230,15 +230,15 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `Get` | 939 |
-| `List` | 936 |
-| `Describe` | 895 |
-| `Delete` | 821 |
-| `Create` | 748 |
-| `Update` | 561 |
-| `Put` | 192 |
+| `Get` | 943 |
+| `List` | 937 |
+| `Describe` | 900 |
+| `Delete` | 824 |
+| `Create` | 749 |
+| `Update` | 562 |
+| `Put` | 194 |
 | `Start` | 118 |
-| `Modify` | 96 |
+| `Modify` | 97 |
 | `Untag` | 83 |
 
 Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
