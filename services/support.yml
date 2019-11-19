@@ -1,6 +1,4 @@
 Actions:
-
-  # APIs without an IAM action
   - Name: support:AddAttachmentsToSet
   - Name: support:AddCommunicationToCase
   - Name: support:CreateCase
@@ -15,3 +13,13 @@ Actions:
   - Name: support:DescribeTrustedAdvisorChecks
   - Name: support:RefreshTrustedAdvisorCheck
   - Name: support:ResolveCase
+
+  # actions with no corresponding API
+  - Name: support:DescribeCaseAttributes
+  - Name: support:DescribeIssueTypes
+  - Name: support:DescribeSupportLevel
+  - Name: support:InitiateCallForCase
+  - Name: support:InitiateChatForCase
+  - Name: support:PutCaseAttributes
+  - Name: support:RateCaseCommunication
+  - Name: support:SearchForCases

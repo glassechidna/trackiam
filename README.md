@@ -4,7 +4,7 @@ Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
 * Unique services: 197
-* Unique actions: 7015
+* Unique actions: 7023
 * Managed policies: 584
 
 Most common managed policy name prefixes:
@@ -153,6 +153,7 @@ The following table summarises the AWS APIs.
 | [`license-manager`](services/license-manager.yml) | 15 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 14 | 4 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 3 | 0 |
+| [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 14 | 0 | 2 |
 | [`fms`](services/fms.yml) | 14 | 0 | 0 |
 | [`ce`](services/ce.yml) | 14 | 0 | 0 |
@@ -196,7 +197,6 @@ The following table summarises the AWS APIs.
 | [`execute-api`](services/execute-api.yml) | 0 | 183 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 144 | 7 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
-| [`support`](services/support.yml) | 0 | 14 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
@@ -232,11 +232,11 @@ Most common action prefixes:
 | ------ | ----- |
 | `Get` | 939 |
 | `List` | 936 |
-| `Describe` | 892 |
+| `Describe` | 895 |
 | `Delete` | 821 |
 | `Create` | 748 |
 | `Update` | 561 |
-| `Put` | 191 |
+| `Put` | 192 |
 | `Start` | 118 |
 | `Modify` | 96 |
 | `Untag` | 83 |
