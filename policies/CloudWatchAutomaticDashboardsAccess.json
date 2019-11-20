@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchAutomaticDashboardsAccess",
   "CreateDate": "2019-07-23T10:01:08Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JFCXGSE2Q",
   "PolicyName": "CloudWatchAutomaticDashboardsAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-07-23T10:01:08Z",
+    "CreateDate": "2019-11-20T12:58:09Z",
     "Document": {
       "Statement": [
         {
@@ -52,7 +52,8 @@
             "sns:ListTopics",
             "sqs:GetQueueAttributes",
             "sqs:GetQueueUrl",
-            "sqs:ListQueues"
+            "sqs:ListQueues",
+            "tag:GetResources"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -61,7 +62,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-07-23T10:01:08Z"
+  "UpdateDate": "2019-11-20T12:58:09Z"
 }
