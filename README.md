@@ -133,6 +133,7 @@ The following table summarises the AWS APIs.
 | [`transfer`](services/transfer.yml) | 18 | 0 | 0 |
 | [`secretsmanager`](services/secretsmanager.yml) | 18 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 18 | 0 | 0 |
+| [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
 | [`mgh`](services/mgh.yml) | 17 | 2 | 0 |
 | [`kafka`](services/kafka.yml) | 17 | 2 | 0 |
@@ -144,7 +145,6 @@ The following table summarises the AWS APIs.
 | [`eks`](services/eks.yml) | 17 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 17 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 16 | 49 | 8 |
-| [`cloudtrail`](services/cloudtrail.yml) | 16 | 2 | 0 |
 | [`qldb`](services/qldb.yml) | 16 | 0 | 3 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
 | [`batch`](services/batch.yml) | 16 | 0 | 0 |
