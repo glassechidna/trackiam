@@ -2,19 +2,29 @@ Actions:
   - Name: chime:AssociatePhoneNumberWithUser
   - Name: chime:AssociatePhoneNumbersWithVoiceConnector
   - Name: chime:AssociatePhoneNumbersWithVoiceConnectorGroup
+  - Name: chime:BatchCreateAttendee
+  - Name: chime:BatchCreateRoomMembership
   - Name: chime:BatchDeletePhoneNumber
   - Name: chime:BatchSuspendUser
   - Name: chime:BatchUnsuspendUser
   - Name: chime:BatchUpdatePhoneNumber
   - Name: chime:BatchUpdateUser
   - Name: chime:CreateAccount
+  - Name: chime:CreateAttendee
   - Name: chime:CreateBot
+  - Name: chime:CreateMeeting
   - Name: chime:CreatePhoneNumberOrder
+  - Name: chime:CreateRoom
+  - Name: chime:CreateRoomMembership
   - Name: chime:CreateVoiceConnector
   - Name: chime:CreateVoiceConnectorGroup
   - Name: chime:DeleteAccount
+  - Name: chime:DeleteAttendee
   - Name: chime:DeleteEventsConfiguration
+  - Name: chime:DeleteMeeting
   - Name: chime:DeletePhoneNumber
+  - Name: chime:DeleteRoom
+  - Name: chime:DeleteRoomMembership
   - Name: chime:DeleteVoiceConnector
   - Name: chime:DeleteVoiceConnectorGroup
   - Name: chime:DeleteVoiceConnectorOrigination
@@ -26,12 +36,15 @@ Actions:
   - Name: chime:DisassociatePhoneNumbersFromVoiceConnectorGroup
   - Name: chime:GetAccount
   - Name: chime:GetAccountSettings
+  - Name: chime:GetAttendee
   - Name: chime:GetBot
   - Name: chime:GetEventsConfiguration
   - Name: chime:GetGlobalSettings
+  - Name: chime:GetMeeting
   - Name: chime:GetPhoneNumber
   - Name: chime:GetPhoneNumberOrder
   - Name: chime:GetPhoneNumberSettings
+  - Name: chime:GetRoom
   - Name: chime:GetUser
   - Name: chime:GetUserSettings
   - Name: chime:GetVoiceConnector
@@ -43,9 +56,13 @@ Actions:
   - Name: chime:GetVoiceConnectorTerminationHealth
   - Name: chime:InviteUsers
   - Name: chime:ListAccounts
+  - Name: chime:ListAttendees
   - Name: chime:ListBots
+  - Name: chime:ListMeetings
   - Name: chime:ListPhoneNumberOrders
   - Name: chime:ListPhoneNumbers
+  - Name: chime:ListRoomMemberships
+  - Name: chime:ListRooms
   - Name: chime:ListUsers
   - Name: chime:ListVoiceConnectorGroups
   - Name: chime:ListVoiceConnectorTerminationCredentials
@@ -67,6 +84,8 @@ Actions:
   - Name: chime:UpdateGlobalSettings
   - Name: chime:UpdatePhoneNumber
   - Name: chime:UpdatePhoneNumberSettings
+  - Name: chime:UpdateRoom
+  - Name: chime:UpdateRoomMembership
   - Name: chime:UpdateUser
   - Name: chime:UpdateUserSettings
   - Name: chime:UpdateVoiceConnector
@@ -122,24 +141,3 @@ Actions:
   - Name: chime:UpdateSupportedLicenses
   - Name: chime:UpdateUserLicenses
   - Name: chime:ValidateAccountResource
-
-  # APIs without an IAM action
-  - Name: chime:BatchCreateAttendee
-  - Name: chime:BatchCreateRoomMembership
-  - Name: chime:CreateAttendee
-  - Name: chime:CreateMeeting
-  - Name: chime:CreateRoom
-  - Name: chime:CreateRoomMembership
-  - Name: chime:DeleteAttendee
-  - Name: chime:DeleteMeeting
-  - Name: chime:DeleteRoom
-  - Name: chime:DeleteRoomMembership
-  - Name: chime:GetAttendee
-  - Name: chime:GetMeeting
-  - Name: chime:GetRoom
-  - Name: chime:ListAttendees
-  - Name: chime:ListMeetings
-  - Name: chime:ListRoomMemberships
-  - Name: chime:ListRooms
-  - Name: chime:UpdateRoom
-  - Name: chime:UpdateRoomMembership

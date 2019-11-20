@@ -5,6 +5,7 @@ Actions:
   - Name: guardduty:CreateFilter
   - Name: guardduty:CreateIPSet
   - Name: guardduty:CreateMembers
+  - Name: guardduty:CreatePublishingDestination
   - Name: guardduty:CreateSampleFindings
   - Name: guardduty:CreateThreatIntelSet
   - Name: guardduty:DeclineInvitations
@@ -13,7 +14,9 @@ Actions:
   - Name: guardduty:DeleteIPSet
   - Name: guardduty:DeleteInvitations
   - Name: guardduty:DeleteMembers
+  - Name: guardduty:DeletePublishingDestination
   - Name: guardduty:DeleteThreatIntelSet
+  - Name: guardduty:DescribePublishingDestination
   - Name: guardduty:DisassociateFromMasterAccount
   - Name: guardduty:DisassociateMembers
   - Name: guardduty:GetDetector
@@ -29,9 +32,9 @@ Actions:
   - Name: guardduty:ListDetectors
   - Name: guardduty:ListFilters
   - Name: guardduty:ListFindings
-  - Name: guardduty:ListIPSets
   - Name: guardduty:ListInvitations
   - Name: guardduty:ListMembers
+  - Name: guardduty:ListPublishingDestinations
   - Name: guardduty:ListTagsForResource
   - Name: guardduty:ListThreatIntelSets
   - Name: guardduty:StartMonitoringMembers
@@ -43,11 +46,8 @@ Actions:
   - Name: guardduty:UpdateFilter
   - Name: guardduty:UpdateFindingsFeedback
   - Name: guardduty:UpdateIPSet
+  - Name: guardduty:UpdatePublishingDestination
   - Name: guardduty:UpdateThreatIntelSet
 
   # APIs without an IAM action
-  - Name: guardduty:CreatePublishingDestination
-  - Name: guardduty:DeletePublishingDestination
-  - Name: guardduty:DescribePublishingDestination
-  - Name: guardduty:ListPublishingDestinations
-  - Name: guardduty:UpdatePublishingDestination
+  - Name: guardduty:ListIPSets

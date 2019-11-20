@@ -36,6 +36,7 @@ The following table summarises the AWS APIs.
 | [`ses`](services/ses.yml) | 103 | 2 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 4 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
+| [`chime`](services/chime.yml) | 91 | 0 | 49 |
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 83 | 22 | 0 |
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
@@ -47,7 +48,6 @@ The following table summarises the AWS APIs.
 | [`codecommit`](services/codecommit.yml) | 75 | 0 | 11 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`gamelift`](services/gamelift.yml) | 73 | 0 | 0 |
-| [`chime`](services/chime.yml) | 72 | 19 | 49 |
 | [`storagegateway`](services/storagegateway.yml) | 71 | 4 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 67 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
@@ -57,11 +57,11 @@ The following table summarises the AWS APIs.
 | [`autoscaling`](services/autoscaling.yml) | 54 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 53 | 0 | 0 |
 | [`ds`](services/ds.yml) | 49 | 1 | 6 |
+| [`guardduty`](services/guardduty.yml) | 49 | 1 | 0 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`organizations`](services/organizations.yml) | 46 | 0 | 0 |
 | [`s3`](services/s3.yml) | 45 | 48 | 39 |
 | [`cloudformation`](services/cloudformation.yml) | 45 | 10 | 3 |
-| [`guardduty`](services/guardduty.yml) | 45 | 5 | 0 |
 | [`dms`](services/dms.yml) | 45 | 2 | 0 |
 | [`comprehend`](services/comprehend.yml) | 45 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 45 | 0 | 0 |
