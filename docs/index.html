@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Track IAM Actions</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Compare</label>
+                        <select class="custom-select" id="from_commit_select">
+                            <option selected>Select from commit</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">to</label>
+                        <select class="custom-select" id="to_commit_select">
+                            <option selected value="master">now</option>
+                        </select>
+                    </div>
+
+
+                </form>
+                <button onclick="compare_click()" class="btn btn-primary">Compare</button>
+            </div>
+            <div class="col-sm">
+                <h2>Policies changed</h2>
+                <ul class="list-group" id="policies_list">
+                    <li class="list-group-item">Please select commits to compare</li>
+                </ul>
+            </div>
+            <div class="col-sm">
+                <h2>Services changed</h2>
+                <ul class="list-group" id="services_list">
+                    <li class="list-group-item">Please select commits to compare</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        var do_compare = function (from, to) {
+            $.get("https://api.github.com/repos/glassechidna/trackiam/compare/" + from + "..." + to, function (data) {
+                var policies_list = $("#policies_list");
+                policies_list.empty();
+                var services_list = $("#services_list");
+                services_list.empty();
+
+                data.files.forEach(function (value) {
+                    if (value.filename.startsWith("policies")) {
+                        var name = value.filename.split("/").reverse()[0].split('.')[0];
+                        policies_list.append(
+                            `<li class="list-group-item">${name}</li>`
+                        )
+                    }
+                })
+                data.files.forEach(function (value) {
+                    if (value.filename.startsWith("services")) {
+                        var name = value.filename.split("/").reverse()[0].split('.')[0];
+                        services_list.append(
+                            `<li class="list-group-item">${name}</li>`
+                        )
+                    }
+                })
+            })
+        }
+
+        var get_commits = function () {
+            $.get("https://api.github.com/repos/glassechidna/trackiam/commits", function (data) {
+                var from = $("#from_commit_select")
+                var to = $("#to_commit_select")
+                data.forEach(function (commit) {
+
+                    var el = `<option value="${commit.sha}">
+                                ${commit.commit.author.date}</option>`
+                    from.append(el)
+                    to.append(el)
+                });
+            });
+        }
+        get_commits()
+
+        var compare_click = function (e) {
+            console.log(e)
+
+            var from = $("#from_commit_select")
+            var to = $("#to_commit_select")
+            do_compare(from.val(), to.val())
+        }
+    </script>
+</body>
+
+</html>
