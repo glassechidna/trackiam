@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSDataLifecycleManagerServiceRole",
   "CreateDate": "2018-07-06T19:34:16Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIZRLOKFUFE7YXQOJS",
   "PolicyName": "AWSDataLifecycleManagerServiceRole",
   "PolicyVersion": {
-    "CreateDate": "2019-05-29T16:44:12Z",
+    "CreateDate": "2019-11-20T19:27:44Z",
     "Document": {
       "Statement": [
         {
@@ -15,9 +15,12 @@
             "ec2:CreateSnapshot",
             "ec2:CreateSnapshots",
             "ec2:DeleteSnapshot",
+            "ec2:DescribeFastSnapshotRestores",
             "ec2:DescribeInstances",
             "ec2:DescribeSnapshots",
-            "ec2:DescribeVolumes"
+            "ec2:DescribeVolumes",
+            "ec2:DisableFastSnapshotRestores",
+            "ec2:EnableFastSnapshotRestores"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -33,7 +36,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-05-29T16:44:12Z"
+  "UpdateDate": "2019-11-20T19:27:44Z"
 }

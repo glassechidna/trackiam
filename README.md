@@ -4,7 +4,7 @@ Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
 * Unique services: 197
-* Unique actions: 7065
+* Unique actions: 7132
 * Managed policies: 585
 
 Most common managed policy name prefixes:
@@ -28,7 +28,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 356 | 4 | 0 |
+| [`ec2`](services/ec2.yml) | 356 | 7 | 0 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`glue`](services/glue.yml) | 123 | 0 | 1 |
 | [`ssm`](services/ssm.yml) | 120 | 0 | 8 |
@@ -44,15 +44,15 @@ The following table summarises the AWS APIs.
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
 | [`waf`](services/waf.yml) | 76 | 0 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 76 | 0 | 0 |
+| [`codecommit`](services/codecommit.yml) | 75 | 0 | 11 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`gamelift`](services/gamelift.yml) | 73 | 0 | 0 |
-| [`chime`](services/chime.yml) | 72 | 10 | 49 |
-| [`storagegateway`](services/storagegateway.yml) | 71 | 2 | 0 |
+| [`chime`](services/chime.yml) | 72 | 19 | 49 |
+| [`storagegateway`](services/storagegateway.yml) | 71 | 4 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 67 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
 | [`config`](services/config.yml) | 56 | 20 | 2 |
 | [`route53`](services/route53.yml) | 56 | 0 | 0 |
-| [`codecommit`](services/codecommit.yml) | 54 | 0 | 32 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`autoscaling`](services/autoscaling.yml) | 54 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 53 | 0 | 0 |
@@ -134,6 +134,7 @@ The following table summarises the AWS APIs.
 | [`secretsmanager`](services/secretsmanager.yml) | 18 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 18 | 0 | 0 |
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
+| [`mgh`](services/mgh.yml) | 17 | 2 | 0 |
 | [`kafka`](services/kafka.yml) | 17 | 2 | 0 |
 | [`shield`](services/shield.yml) | 17 | 1 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
@@ -142,11 +143,10 @@ The following table summarises the AWS APIs.
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`eks`](services/eks.yml) | 17 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 17 | 0 | 0 |
-| [`quicksight`](services/quicksight.yml) | 16 | 0 | 8 |
+| [`quicksight`](services/quicksight.yml) | 16 | 49 | 8 |
+| [`cloudtrail`](services/cloudtrail.yml) | 16 | 2 | 0 |
 | [`qldb`](services/qldb.yml) | 16 | 0 | 3 |
-| [`mgh`](services/mgh.yml) | 16 | 0 | 1 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
-| [`cloudtrail`](services/cloudtrail.yml) | 16 | 0 | 0 |
 | [`batch`](services/batch.yml) | 16 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 15 | 1 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 15 | 0 | 1 |
@@ -230,16 +230,16 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `Get` | 947 |
-| `List` | 940 |
-| `Describe` | 900 |
-| `Delete` | 826 |
-| `Create` | 751 |
-| `Update` | 567 |
-| `Put` | 194 |
-| `Start` | 118 |
+| `List` | 953 |
+| `Get` | 950 |
+| `Describe` | 914 |
+| `Delete` | 834 |
+| `Create` | 761 |
+| `Update` | 578 |
+| `Put` | 195 |
+| `Start` | 119 |
 | `Modify` | 97 |
-| `Untag` | 83 |
+| `Untag` | 84 |
 
 Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
 having this idea and being gracious about me shamelessly ripping it off.

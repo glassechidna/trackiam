@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSSMFullAccess",
   "CreateDate": "2015-05-29T17:39:47Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJA7V6HI4ISQFMDYAG",
   "PolicyName": "AmazonSSMFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2018-07-23T22:53:18Z",
+    "CreateDate": "2019-11-20T20:08:56Z",
     "Document": {
       "Statement": [
         {
@@ -40,12 +40,22 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/ssm.amazonaws.com/AWSServiceRoleForAmazonSSM*"
+        },
+        {
+          "Action": [
+            "ssmmessages:CreateControlChannel",
+            "ssmmessages:CreateDataChannel",
+            "ssmmessages:OpenControlChannel",
+            "ssmmessages:OpenDataChannel"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2018-07-23T22:53:18Z"
+  "UpdateDate": "2019-11-20T20:08:56Z"
 }

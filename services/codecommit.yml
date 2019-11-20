@@ -1,18 +1,28 @@
 Actions:
+  - Name: codecommit:AssociateApprovalRuleTemplateWithRepository
+  - Name: codecommit:BatchAssociateApprovalRuleTemplateWithRepositories
   - Name: codecommit:BatchDescribeMergeConflicts
+  - Name: codecommit:BatchDisassociateApprovalRuleTemplateFromRepositories
   - Name: codecommit:BatchGetCommits
   - Name: codecommit:BatchGetRepositories
+  - Name: codecommit:CreateApprovalRuleTemplate
   - Name: codecommit:CreateBranch
   - Name: codecommit:CreateCommit
   - Name: codecommit:CreatePullRequest
+  - Name: codecommit:CreatePullRequestApprovalRule
   - Name: codecommit:CreateRepository
   - Name: codecommit:CreateUnreferencedMergeCommit
+  - Name: codecommit:DeleteApprovalRuleTemplate
   - Name: codecommit:DeleteBranch
   - Name: codecommit:DeleteCommentContent
   - Name: codecommit:DeleteFile
+  - Name: codecommit:DeletePullRequestApprovalRule
   - Name: codecommit:DeleteRepository
   - Name: codecommit:DescribeMergeConflicts
   - Name: codecommit:DescribePullRequestEvents
+  - Name: codecommit:DisassociateApprovalRuleTemplateFromRepository
+  - Name: codecommit:EvaluatePullRequestApprovalRules
+  - Name: codecommit:GetApprovalRuleTemplate
   - Name: codecommit:GetBlob
   - Name: codecommit:GetBranch
   - Name: codecommit:GetComment
@@ -26,11 +36,16 @@ Actions:
   - Name: codecommit:GetMergeConflicts
   - Name: codecommit:GetMergeOptions
   - Name: codecommit:GetPullRequest
+  - Name: codecommit:GetPullRequestApprovalStates
+  - Name: codecommit:GetPullRequestOverrideState
   - Name: codecommit:GetRepository
   - Name: codecommit:GetRepositoryTriggers
+  - Name: codecommit:ListApprovalRuleTemplates
+  - Name: codecommit:ListAssociatedApprovalRuleTemplatesForRepository
   - Name: codecommit:ListBranches
   - Name: codecommit:ListPullRequests
   - Name: codecommit:ListRepositories
+  - Name: codecommit:ListRepositoriesForApprovalRuleTemplate
   - Name: codecommit:ListTagsForResource
   - Name: codecommit:MergeBranchesByFastForward
   - Name: codecommit:MergeBranchesBySquash
@@ -38,6 +53,7 @@ Actions:
   - Name: codecommit:MergePullRequestByFastForward
   - Name: codecommit:MergePullRequestBySquash
   - Name: codecommit:MergePullRequestByThreeWay
+  - Name: codecommit:OverridePullRequestApprovalRules
   - Name: codecommit:PostCommentForComparedCommit
   - Name: codecommit:PostCommentForPullRequest
   - Name: codecommit:PostCommentReply
@@ -46,8 +62,13 @@ Actions:
   - Name: codecommit:TagResource
   - Name: codecommit:TestRepositoryTriggers
   - Name: codecommit:UntagResource
+  - Name: codecommit:UpdateApprovalRuleTemplateContent
+  - Name: codecommit:UpdateApprovalRuleTemplateDescription
+  - Name: codecommit:UpdateApprovalRuleTemplateName
   - Name: codecommit:UpdateComment
   - Name: codecommit:UpdateDefaultBranch
+  - Name: codecommit:UpdatePullRequestApprovalRuleContent
+  - Name: codecommit:UpdatePullRequestApprovalState
   - Name: codecommit:UpdatePullRequestDescription
   - Name: codecommit:UpdatePullRequestStatus
   - Name: codecommit:UpdatePullRequestTitle
@@ -55,35 +76,14 @@ Actions:
   - Name: codecommit:UpdateRepositoryName
 
   # actions with no corresponding API
-  - Name: codecommit:AssociateApprovalRuleTemplateWithRepository
-  - Name: codecommit:BatchAssociateApprovalRuleTemplateWithRepositories
-  - Name: codecommit:BatchDisassociateApprovalRuleTemplateFromRepositories
   - Name: codecommit:BatchGetPullRequests
   - Name: codecommit:CancelUploadArchive
-  - Name: codecommit:CreateApprovalRuleTemplate
-  - Name: codecommit:CreatePullRequestApprovalRule
-  - Name: codecommit:DeleteApprovalRuleTemplate
-  - Name: codecommit:DeletePullRequestApprovalRule
-  - Name: codecommit:DisassociateApprovalRuleTemplateFromRepository
-  - Name: codecommit:EvaluatePullRequestApprovalRules
-  - Name: codecommit:GetApprovalRuleTemplate
   - Name: codecommit:GetCommitHistory
   - Name: codecommit:GetCommitsFromMergeBase
   - Name: codecommit:GetObjectIdentifier
-  - Name: codecommit:GetPullRequestApprovalStates
-  - Name: codecommit:GetPullRequestOverrideState
   - Name: codecommit:GetReferences
   - Name: codecommit:GetTree
   - Name: codecommit:GetUploadArchiveStatus
   - Name: codecommit:GitPull
   - Name: codecommit:GitPush
-  - Name: codecommit:ListApprovalRuleTemplates
-  - Name: codecommit:ListAssociatedApprovalRuleTemplatesForRepository
-  - Name: codecommit:ListRepositoriesForApprovalRuleTemplate
-  - Name: codecommit:OverridePullRequestApprovalRules
-  - Name: codecommit:UpdateApprovalRuleTemplateContent
-  - Name: codecommit:UpdateApprovalRuleTemplateDescription
-  - Name: codecommit:UpdateApprovalRuleTemplateName
-  - Name: codecommit:UpdatePullRequestApprovalRuleContent
-  - Name: codecommit:UpdatePullRequestApprovalState
   - Name: codecommit:UploadArchive

@@ -7,6 +7,7 @@ Actions:
   - Name: mgh:DescribeMigrationTask
   - Name: mgh:DisassociateCreatedArtifact
   - Name: mgh:DisassociateDiscoveredResource
+  - Name: mgh:GetHomeRegion
   - Name: mgh:ImportMigrationTask
   - Name: mgh:ListCreatedArtifacts
   - Name: mgh:ListDiscoveredResources
@@ -16,5 +17,6 @@ Actions:
   - Name: mgh:NotifyMigrationTaskState
   - Name: mgh:PutResourceAttributes
 
-  # actions with no corresponding API
-  - Name: mgh:GetHomeRegion
+  # APIs without an IAM action
+  - Name: mgh:CreateHomeRegionControl
+  - Name: mgh:DescribeHomeRegionControls
