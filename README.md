@@ -4,7 +4,7 @@ Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
 * Unique services: 197
-* Unique actions: 7044
+* Unique actions: 7065
 * Managed policies: 585
 
 Most common managed policy name prefixes:
@@ -52,7 +52,7 @@ The following table summarises the AWS APIs.
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
 | [`config`](services/config.yml) | 56 | 20 | 2 |
 | [`route53`](services/route53.yml) | 56 | 0 | 0 |
-| [`codecommit`](services/codecommit.yml) | 54 | 0 | 11 |
+| [`codecommit`](services/codecommit.yml) | 54 | 0 | 32 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`autoscaling`](services/autoscaling.yml) | 54 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 53 | 0 | 0 |
@@ -230,12 +230,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `Get` | 944 |
-| `List` | 937 |
+| `Get` | 947 |
+| `List` | 940 |
 | `Describe` | 900 |
-| `Delete` | 824 |
-| `Create` | 749 |
-| `Update` | 562 |
+| `Delete` | 826 |
+| `Create` | 751 |
+| `Update` | 567 |
 | `Put` | 194 |
 | `Start` | 118 |
 | `Modify` | 97 |

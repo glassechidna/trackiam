@@ -55,14 +55,35 @@ Actions:
   - Name: codecommit:UpdateRepositoryName
 
   # actions with no corresponding API
+  - Name: codecommit:AssociateApprovalRuleTemplateWithRepository
+  - Name: codecommit:BatchAssociateApprovalRuleTemplateWithRepositories
+  - Name: codecommit:BatchDisassociateApprovalRuleTemplateFromRepositories
   - Name: codecommit:BatchGetPullRequests
   - Name: codecommit:CancelUploadArchive
+  - Name: codecommit:CreateApprovalRuleTemplate
+  - Name: codecommit:CreatePullRequestApprovalRule
+  - Name: codecommit:DeleteApprovalRuleTemplate
+  - Name: codecommit:DeletePullRequestApprovalRule
+  - Name: codecommit:DisassociateApprovalRuleTemplateFromRepository
+  - Name: codecommit:EvaluatePullRequestApprovalRules
+  - Name: codecommit:GetApprovalRuleTemplate
   - Name: codecommit:GetCommitHistory
   - Name: codecommit:GetCommitsFromMergeBase
   - Name: codecommit:GetObjectIdentifier
+  - Name: codecommit:GetPullRequestApprovalStates
+  - Name: codecommit:GetPullRequestOverrideState
   - Name: codecommit:GetReferences
   - Name: codecommit:GetTree
   - Name: codecommit:GetUploadArchiveStatus
   - Name: codecommit:GitPull
   - Name: codecommit:GitPush
+  - Name: codecommit:ListApprovalRuleTemplates
+  - Name: codecommit:ListAssociatedApprovalRuleTemplatesForRepository
+  - Name: codecommit:ListRepositoriesForApprovalRuleTemplate
+  - Name: codecommit:OverridePullRequestApprovalRules
+  - Name: codecommit:UpdateApprovalRuleTemplateContent
+  - Name: codecommit:UpdateApprovalRuleTemplateDescription
+  - Name: codecommit:UpdateApprovalRuleTemplateName
+  - Name: codecommit:UpdatePullRequestApprovalRuleContent
+  - Name: codecommit:UpdatePullRequestApprovalState
   - Name: codecommit:UploadArchive

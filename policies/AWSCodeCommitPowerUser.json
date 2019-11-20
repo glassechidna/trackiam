@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeCommitPowerUser",
   "CreateDate": "2015-07-09T17:06:49Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAI4UIINUVGB5SEC57G",
   "PolicyName": "AWSCodeCommitPowerUser",
   "PolicyVersion": {
-    "CreateDate": "2019-11-05T22:52:28Z",
+    "CreateDate": "2019-11-20T17:12:55Z",
     "Document": {
       "Statement": [
         {
@@ -29,17 +29,23 @@
         },
         {
           "Action": [
+            "codecommit:AssociateApprovalRuleTemplateWithRepository",
+            "codecommit:BatchAssociateApprovalRuleTemplateWithRepositories",
             "codecommit:BatchDescribe*",
+            "codecommit:BatchDisassociateApprovalRuleTemplateFromRepositories",
             "codecommit:BatchGet*",
             "codecommit:Create*",
             "codecommit:DeleteBranch",
             "codecommit:DeleteFile",
             "codecommit:Describe*",
+            "codecommit:DisassociateApprovalRuleTemplateFromRepository",
+            "codecommit:EvaluatePullRequestApprovalRules",
             "codecommit:Get*",
             "codecommit:GitPull",
             "codecommit:GitPush",
             "codecommit:List*",
             "codecommit:Merge*",
+            "codecommit:OverridePullRequestApprovalRules",
             "codecommit:Post*",
             "codecommit:Put*",
             "codecommit:TagResource",
@@ -148,7 +154,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2019-11-05T22:52:28Z"
+  "UpdateDate": "2019-11-20T17:12:55Z"
 }
