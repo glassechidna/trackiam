@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess",
   "CreateDate": "2015-02-06T18:40:11Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAINUGF2JSOSUY76KYA",
   "PolicyName": "AmazonDynamoDBFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-11-15T18:20:39Z",
+    "CreateDate": "2019-11-20T01:24:05Z",
     "Document": {
       "Statement": [
         {
@@ -41,6 +41,11 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": "cloudwatch:GetInsightRuleReport",
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch:*:*:insight-rule/DynamoDBContributorInsights*"
         },
         {
           "Action": [
@@ -104,7 +109,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2019-11-15T18:20:39Z"
+  "UpdateDate": "2019-11-20T01:24:05Z"
 }
