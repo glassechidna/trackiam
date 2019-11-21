@@ -1,13 +1,27 @@
-const gitOwner = 'glassechidna';
-const gitRepo = 'trackiam';
-
 var currentDiff = [];
+
+function convertURLtoProxy(url) {
+  url = url.replace("https://api.github.com/repos/glassechidna/trackiam/", "https://trackiam.geapp.io/");
+  url = url.replace("https://github.com/glassechidna/trackiam/", "https://trackiam.geapp.io/");
+  return url;
+}
+
+function convertDiffToChanges(diff) {
+  console.log(diff.chunks.map(x => x.changes).flat())
+  return diff.chunks.map(x => x.changes).flat().map(x => {
+    if (x.type === 'add') return '+'
+    if (x.type === 'del') return '-'
+    if (x.type === 'normal') return '+-' 
+  });
+}
 
 function generateListItemDetails(name, type, data, i) {
   const exists = currentDiff.find(x => x.to === data.files[i].filename);
-  const isNew = exists.from == "/dev/null"
+  const isNew = exists.from == "/dev/null";
+  const fileDiff = currentDiff.find(x => x.to === data.files[i].filename);
+  const fileChanges = convertDiffToChanges(fileDiff);
   if (exists) {
-    return `${data.files[i].patch}`;
+    return fileChanges;
   }
   // else {
   //   return `
@@ -43,7 +57,6 @@ function processListData(data) {
   var diff_url = data.url.replace("https://github.com", "https://api.github.com/repos");
   $.get({ url: diff_url, headers: { Accept: "application/vnd.github.v3.diff" } }, (diff) => {
     currentDiff = diffparser(diff);
-    console.log(currentDiff);
     var policies_list = $("#policies_list");
     policies_list.empty();
 
@@ -66,7 +79,7 @@ function processListData(data) {
 
 function doCompare(from, to) {
   currentDiff = [];
-  $.get(`https://api.github.com/repos/${gitOwner}/${gitRepo}/compare/${from}...${to}`, processListData);
+  $.get(`https://trackiam.geapp.io/compare/${from}...${to}`, processListData);
 }
 
 function compareClick(ev) {
@@ -120,7 +133,7 @@ function getLocation() {
 
 function main() {
   // githubAuth()
-  $.get(`https://api.github.com/repos/${gitOwner}/${gitRepo}/commits`, data => {
+  $.get(`https://trackiam.geapp.io/commits`, data => {
     var from = $("#from_commit_select")
     var to = $("#to_commit_select")
     data.forEach((commit) => {
