@@ -74,25 +74,26 @@
 
 
     <script>
+        function add_link_to_list(list, link, title){
+
+        }
+
         var do_compare = function (from, to) {
             $.get("https://api.github.com/repos/glassechidna/trackiam/compare/" + from + "..." + to, function (data) {
                 var policies_list = $("#policies_list");
                 policies_list.empty();
+                
                 var services_list = $("#services_list");
                 services_list.empty();
 
                 data.files.forEach(function (value, i) {
+                    var name = value.filename.split("/").reverse()[0].split('.')[0];
+                    var element = `<a href="${data.html_url+"#diff-"+i}" target="_blank" class="list-group-item list-group-item-action">${name}</a>`;
                     if (value.filename.startsWith("policies")) {
-                        var name = value.filename.split("/").reverse()[0].split('.')[0];
-                        policies_list.append(
-                            `<a href="${data.html_url+"#diff-"+i}" class="list-group-item list-group-item-action">${name}</a>`
-                        )
+                        policies_list.append(element)
                     }
                     if (value.filename.startsWith("services")) {
-                        var name = value.filename.split("/").reverse()[0].split('.')[0];
-                        services_list.append(
-                            `<a href="${data.html_url+"#diff-"+i}" class="list-group-item list-group-item-action">${name}</a>`
-                        )
+                        services_list.append(element)
                     }
                 })
             })
