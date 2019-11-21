@@ -1,15 +1,59 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonECSServiceRolePolicy",
   "CreateDate": "2017-10-14T01:18:58Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIVUWKCAI7URU4WUEI",
   "PolicyName": "AmazonECSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-06-24T23:16:41Z",
+    "CreateDate": "2019-11-21T19:49:23Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "autoscaling:DeletePolicy",
+            "autoscaling:PutScalingPolicy",
+            "autoscaling:SetInstanceProtection",
+            "autoscaling:UpdateAutoScalingGroup"
+          ],
+          "Condition": {
+            "Null": {
+              "autoscaling:ResourceTag/AmazonECSManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AutoScalingManagement"
+        },
+        {
+          "Action": [
+            "autoscaling-plans:CreateScalingPlan",
+            "autoscaling-plans:DeleteScalingPlan",
+            "autoscaling-plans:DescribeScalingPlans"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AutoScalingPlanManagement"
+        },
+        {
+          "Action": [
+            "autoscaling:Describe*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AutoScaling"
+        },
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:PutMetricAlarm"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch:*:*:alarm:*",
+          "Sid": "CWAlarmManagement"
+        },
         {
           "Action": [
             "ec2:AttachNetworkInterface",
@@ -72,7 +116,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2019-06-24T23:16:41Z"
+  "UpdateDate": "2019-11-21T19:49:23Z"
 }

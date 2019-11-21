@@ -4,7 +4,7 @@ Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
 * Unique services: 197
-* Unique actions: 7132
+* Unique actions: 7136
 * Managed policies: 586
 
 Most common managed policy name prefixes:
@@ -76,7 +76,7 @@ The following table summarises the AWS APIs.
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 38 | 0 | 0 |
 | [`codedeploy`](services/codedeploy.yml) | 37 | 9 | 0 |
-| [`dynamodb`](services/dynamodb.yml) | 37 | 3 | 4 |
+| [`dynamodb`](services/dynamodb.yml) | 37 | 3 | 8 |
 | [`lambda`](services/lambda.yml) | 37 | 2 | 2 |
 | [`appsync`](services/appsync.yml) | 36 | 0 | 1 |
 | [`robomaker`](services/robomaker.yml) | 36 | 0 | 0 |
@@ -232,10 +232,10 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 953 |
 | `Get` | 950 |
-| `Describe` | 914 |
-| `Delete` | 834 |
-| `Create` | 761 |
-| `Update` | 578 |
+| `Describe` | 915 |
+| `Delete` | 835 |
+| `Create` | 762 |
+| `Update` | 579 |
 | `Put` | 195 |
 | `Start` | 119 |
 | `Modify` | 97 |
