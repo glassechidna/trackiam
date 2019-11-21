@@ -14,6 +14,7 @@ Actions:
   - Name: dynamodb:DescribeLimits
   - Name: dynamodb:DescribeStream
   - Name: dynamodb:DescribeTable
+  - Name: dynamodb:DescribeTableReplicaAutoScaling
   - Name: dynamodb:DescribeTimeToLive
   - Name: dynamodb:GetItem
   - Name: dynamodb:GetRecords
@@ -35,6 +36,7 @@ Actions:
   - Name: dynamodb:UpdateGlobalTableSettings
   - Name: dynamodb:UpdateItem
   - Name: dynamodb:UpdateTable
+  - Name: dynamodb:UpdateTableReplicaAutoScaling
   - Name: dynamodb:UpdateTimeToLive
 
   # actions with no corresponding API
@@ -43,9 +45,7 @@ Actions:
   - Name: dynamodb:DeleteTableReplica
   - Name: dynamodb:DescribeReservedCapacity
   - Name: dynamodb:DescribeReservedCapacityOfferings
-  - Name: dynamodb:DescribeTableReplicaAutoScaling
   - Name: dynamodb:PurchaseReservedCapacityOfferings
-  - Name: dynamodb:UpdateTableReplicaAutoScaling
 
   # APIs without an IAM action
   - Name: dynamodb:DescribeEndpoints
