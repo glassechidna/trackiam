@@ -10,16 +10,23 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>IAM Actions Tracker</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Track IAM Actions</a>
+        <a class="navbar-brand" href="#">IAM Actions Tracker</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/glassechidna/trackiam">GitHub</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <div class="container">
@@ -74,7 +81,7 @@
 
 
     <script>
-        function add_link_to_list(list, link, title){
+        function add_link_to_list(list, link, title) {
 
         }
 
@@ -82,13 +89,13 @@
             $.get("https://api.github.com/repos/glassechidna/trackiam/compare/" + from + "..." + to, function (data) {
                 var policies_list = $("#policies_list");
                 policies_list.empty();
-                
+
                 var services_list = $("#services_list");
                 services_list.empty();
 
                 data.files.forEach(function (value, i) {
                     var name = value.filename.split("/").reverse()[0].split('.')[0];
-                    var element = `<a href="${data.html_url+"#diff-"+i}" target="_blank" class="list-group-item list-group-item-action">${name}</a>`;
+                    var element = `<a href="${data.html_url + "#diff-" + i}" target="_blank" class="list-group-item list-group-item-action">${name}</a>`;
                     if (value.filename.startsWith("policies")) {
                         policies_list.append(element)
                     }
