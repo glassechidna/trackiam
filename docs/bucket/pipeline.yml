@@ -1,0 +1,191 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Example Pipeline for deploying AWS Events-driven Lambda
+
+Parameters:
+
+  GithubOwner:
+    Type: String
+    Description: Name of the owner (Organization or person) in Github that owns the repo
+    Default: glassechidna
+
+  GithubRepo:
+    Type: String
+    Description: Name of the repo in Github
+    Default: trackiam
+
+  GithubBranch:
+    Type: String
+    Description: Name of the branch to use from the git repo
+    Default: master
+
+  GithubSecretName:
+    Type: String
+    Description: Name of the Secret containing Github creds in Secrets Manager
+
+  GithubOauthTokenKey:
+    Type: String
+    Description: Name of the Key in the Secret that contains the OAuth token
+
+  IAMPrefix:
+    Type: String
+    Description: A namespace for the Roles and Policies for this workload
+
+Resources:
+
+  PipelineS3Bucket:
+    Type: AWS::S3::Bucket
+
+  CodeBucket:
+    Type: AWS::S3::Bucket
+
+  CodeBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref CodeBucket
+      PolicyDocument:
+        Statement:
+          - Action: s3:GetObject
+            Effect: Allow
+            Resource: !Sub arn:aws:s3:::${CodeBucket}/*
+            Principal: '*'
+            Condition:
+              StringLike:
+                aws:Referer:
+                  - "https://glassechidna.github.io/trackiam/*"
+                  - "http://localhost:8080/*"
+
+  Pipeline:
+    DependsOn:
+      - CodeBucket
+    Type: AWS::CodePipeline::Pipeline
+    Properties:
+      Name: !Ref AWS::StackName
+      RoleArn: !GetAtt AutomationRole.Arn
+      RestartExecutionOnUpdate: true
+      ArtifactStore:
+        Type:     S3
+        Location: !Ref PipelineS3Bucket
+      Stages:
+        - Name: Source
+          Actions:
+            - Name: Github
+              ActionTypeId:
+                Category: Source
+                Owner: ThirdParty
+                Version: 1
+                Provider: GitHub
+              OutputArtifacts:
+                - Name: source
+              Configuration:
+                Branch: !Ref GithubBranch
+                OAuthToken: !Sub '{{resolve:secretsmanager:${GithubSecretName}:SecretString:${GithubOauthTokenKey}}}}'
+                Owner: !Ref GithubOwner
+                Repo: !Ref GithubRepo
+              RunOrder: 1
+        - Name: Update
+          Actions:
+            - Name: Pipeline
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: '1'
+              RunOrder: 1
+              InputArtifacts:
+                - Name: source
+              Configuration:
+                ActionMode: REPLACE_ON_FAILURE
+                Capabilities: CAPABILITY_NAMED_IAM
+                RoleArn: !GetAtt AutomationRole.Arn
+                StackName: !Ref AWS::StackName
+                TemplatePath: source::docs/bucket/pipeline.yml
+                TemplateConfiguration: source::docs/bucket/config.json
+        - Name: Sync
+          Actions:
+            - Name: Bucket
+              ActionTypeId:
+                Category: Build
+                Owner:    AWS
+                Provider: CodeBuild
+                Version: '1'
+              RunOrder:   1
+              InputArtifacts:
+                - Name: source
+              OutputArtifacts:
+                - Name: output
+              Configuration:
+                ProjectName: !Ref SyncBucket
+
+  SyncBucket:
+    Type: AWS::CodeBuild::Project
+    Properties:
+      Name: !Ref AWS::StackName
+      ServiceRole: !GetAtt AutomationRole.Arn
+      TimeoutInMinutes: 5
+      Artifacts:
+        Type: NO_ARTIFACTS
+      Environment:
+        Type: LINUX_CONTAINER
+        ComputeType: BUILD_GENERAL1_SMALL
+        Image: aws/codebuild/standard:2.0
+      Source:
+        Type: CODEPIPELINE
+        BuildSpec:
+          !Sub |
+            version: 0.2
+            phases:
+              install:
+                runtime-versions:
+                  python: 3.7
+              post_build:
+                commands:
+                  - du -hs *
+                  - aws s3 sync ./policies s3://${CodeBucket}/policies --delete
+                  - aws s3 sync ./services s3://${CodeBucket}/services --delete
+
+  AutomationRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Ref AWS::StackName
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - codepipeline.amazonaws.com
+                - codebuild.amazonaws.com
+                - cloudformation.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Policies:
+        - PolicyName: !Ref AWS::StackName
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action: codepipeline:*
+                Resource: '*'
+              - Effect: Allow
+                Action: codebuild:*
+                Resource: '*'
+              - Effect: Allow
+                Action: secretsmanager:GetSecretValue
+                Resource: !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:${GithubSecretName}-??????
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: arn:aws:logs:*:*:*
+              - Effect: Allow
+                Action: events:*
+                Resource: '*'
+              - Effect: Allow
+                Action: s3:*
+                Resource: '*'
+              - Effect: Allow
+                Action: iam:*
+                Resource:
+                  - !Sub arn:aws:iam::${AWS::AccountId}:policy/${IAMPrefix}*
+                  - !Sub arn:aws:iam::${AWS::AccountId}:role/${IAMPrefix}*
