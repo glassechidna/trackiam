@@ -123,7 +123,7 @@ Resources:
       ServiceRole: !GetAtt AutomationRole.Arn
       TimeoutInMinutes: 5
       Artifacts:
-        Type: NO_ARTIFACTS
+        Type: CODEPIPELINE
       Environment:
         Type: LINUX_CONTAINER
         ComputeType: BUILD_GENERAL1_SMALL
