@@ -45,12 +45,14 @@
             </div>
             <div class="col-sm">
                 <h2>Policies changed</h2>
+                <h5>Click an item to see the diff</h5>
                 <ul class="list-group" id="policies_list">
                     <li class="list-group-item">Please select commits to compare</li>
                 </ul>
             </div>
             <div class="col-sm">
                 <h2>Services changed</h2>
+                <h5>Click an item to see the diff</h5>
                 <ul class="list-group" id="services_list">
                     <li class="list-group-item">Please select commits to compare</li>
                 </ul>
@@ -79,19 +81,17 @@
                 var services_list = $("#services_list");
                 services_list.empty();
 
-                data.files.forEach(function (value) {
+                data.files.forEach(function (value, i) {
                     if (value.filename.startsWith("policies")) {
                         var name = value.filename.split("/").reverse()[0].split('.')[0];
                         policies_list.append(
-                            `<li class="list-group-item">${name}</li>`
+                            `<a href="${data.html_url+"#diff-"+i}" class="list-group-item list-group-item-action">${name}</a>`
                         )
                     }
-                })
-                data.files.forEach(function (value) {
                     if (value.filename.startsWith("services")) {
                         var name = value.filename.split("/").reverse()[0].split('.')[0];
                         services_list.append(
-                            `<li class="list-group-item">${name}</li>`
+                            `<a href="${data.html_url+"#diff-"+i}" class="list-group-item list-group-item-action">${name}</a>`
                         )
                     }
                 })
