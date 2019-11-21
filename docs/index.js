@@ -7,12 +7,7 @@ function convertURLtoProxy(url) {
 }
 
 function convertDiffToChanges(diff) {
-  console.log(diff.chunks.map(x => x.changes).flat())
-  return diff.chunks.map(x => x.changes).flat().map(x => {
-    if (x.type === 'add') return '+'
-    if (x.type === 'del') return '-'
-    if (x.type === 'normal') return '+-' 
-  });
+  return diff.chunks.map(x => x.changes).flat().filter(x => x.content.match(/^[\+\-]+[\S\s]+[A-Za-z0-9]+/))
 }
 
 function generateListItemDetails(name, type, data, i) {
@@ -21,7 +16,11 @@ function generateListItemDetails(name, type, data, i) {
   const fileDiff = currentDiff.find(x => x.to === data.files[i].filename);
   const fileChanges = convertDiffToChanges(fileDiff);
   if (exists) {
-    return fileChanges;
+    return fileChanges.map(x => `
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        ${x.content}
+      </li>
+    `);
   }
   // else {
   //   return `
@@ -33,10 +32,12 @@ function generateListItemDetails(name, type, data, i) {
 }
 
 function generateListItem(name, type, data, i) {
+  const listItemDetails = generateListItemDetails(name, type, data, i);
   return `
   <div class="card m-1">
     <div class="card-header" id="header-${name}-${i}">
       <h5 class="mb-0 d-flex justify-content-between align-items-center">
+        <span class="badge badge-primary badge-pill">${listItemDetails.length}</span>
         <a class="btn btn-link" target="_blank" href="${data.html_url}">
           ${name}
         </a>
@@ -46,7 +47,9 @@ function generateListItem(name, type, data, i) {
 
     <div id="item-${name}-${i}" class="collapse" aria-labelledby="header-${name}-${i}">
       <div id="item-${name}-${i}-body" class="card-body">
-        ${generateListItemDetails(name, type, data, i)}
+        <ul class="list-group">
+        ${listItemDetails.join('')}
+        </ul>
       </div>
     </div>
   </div>
