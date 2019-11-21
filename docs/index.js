@@ -20,7 +20,7 @@ function processData(data) {
 }
 
 function doCompare(from, to) {
-  $.get(`https://api.github.com/repos/glassechidna/trackiam/compare/${from}...${to}`, processData);
+  $.get(`https://trackiam.geapp.io/compare/${from}...${to}`, processData);
 }
 
 function compareClick(ev) {
@@ -48,7 +48,7 @@ function getLocation() {
 }
 
 function main() {
-  $.get("https://api.github.com/repos/glassechidna/trackiam/commits", data => {
+  $.get("https://trackiam.geapp.io/commits", data => {
     var from = $("#from_commit_select")
     var to = $("#to_commit_select")
     data.forEach((commit) => {
