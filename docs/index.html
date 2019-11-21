@@ -15,7 +15,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">IAM Actions Tracker</a>
+        <a class="navbar-brand" href="index.html">IAM Actions Tracker</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -34,13 +34,13 @@
             <div class="col-sm">
                 <form>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Compare</label>
+                        <label for="from_commit_select">Compare</label>
                         <select class="custom-select" id="from_commit_select">
                             <option selected>Select from commit</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">to</label>
+                        <label for="to_commit_select">to</label>
                         <select class="custom-select" id="to_commit_select">
                             <option selected value="master">now</option>
                         </select>
@@ -48,7 +48,7 @@
 
 
                 </form>
-                <button onclick="compare_click()" class="btn btn-primary">Compare</button>
+                <!-- <button onclick="compare_click()" class="btn btn-primary">Compare</button> -->
             </div>
             <div class="col-sm">
                 <h2>Policies changed</h2>
@@ -75,60 +75,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"
+        integrity="sha256-H9jAz//QLkDOy/nzE9G4aYijQtkLt9FvGmdUTwBk6gs="
+        crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
-
-    <script>
-        function add_link_to_list(list, link, title) {
-
-        }
-
-        var do_compare = function (from, to) {
-            $.get("https://api.github.com/repos/glassechidna/trackiam/compare/" + from + "..." + to, function (data) {
-                var policies_list = $("#policies_list");
-                policies_list.empty();
-
-                var services_list = $("#services_list");
-                services_list.empty();
-
-                data.files.forEach(function (value, i) {
-                    var name = value.filename.split("/").reverse()[0].split('.')[0];
-                    var element = `<a href="${data.html_url + "#diff-" + i}" target="_blank" class="list-group-item list-group-item-action">${name}</a>`;
-                    if (value.filename.startsWith("policies")) {
-                        policies_list.append(element)
-                    }
-                    if (value.filename.startsWith("services")) {
-                        services_list.append(element)
-                    }
-                })
-            })
-        }
-
-        var get_commits = function () {
-            $.get("https://api.github.com/repos/glassechidna/trackiam/commits", function (data) {
-                var from = $("#from_commit_select")
-                var to = $("#to_commit_select")
-                data.forEach(function (commit) {
-
-                    var el = `<option value="${commit.sha}">
-                                ${commit.commit.author.date}</option>`
-                    from.append(el)
-                    to.append(el)
-                });
-            });
-        }
-        get_commits()
-
-        var compare_click = function (e) {
-            console.log(e)
-
-            var from = $("#from_commit_select")
-            var to = $("#to_commit_select")
-            do_compare(from.val(), to.val())
-        }
-    </script>
+    <script type="text/javascript" src="./index.js"></script>
 </body>
 
 </html>
