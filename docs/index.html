@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/darkly/bootstrap.min.css"
+      integrity="sha256-6W1mxPaAt4a6pkJVW5x5Xmq/LvxuQpR9dlzgy77SeZs="
+      crossorigin="anonymous" />
 
     <title>IAM Actions Tracker</title>
 </head>
@@ -29,18 +31,18 @@
         </div>
     </nav>
 
-    <div class="container pt-3">
+    <div class="container pt-3 pb-5">
         <div class="row">
             <div class="col-sm">
                 <form>
                     <div class="form-group">
-                        <label for="from_commit_select">Compare</label>
+                        <label for="from_commit_select">From</label>
                         <select class="custom-select" id="from_commit_select">
                             <option selected>Select from commit</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="to_commit_select">to</label>
+                        <label for="to_commit_select">To</label>
                         <select class="custom-select" id="to_commit_select">
                             <option selected value="master">now</option>
                         </select>
@@ -51,21 +53,25 @@
                 <!-- <button onclick="compare_click()" class="btn btn-primary">Compare</button> -->
             </div>
             <div class="col-sm">
-                <h2>Policies changed</h2>
-                <h5>Click an item to see the diff</h5>
+                <h3>Policies changed</h3>
+                <p class="text-muted">Click an item to see the diff</p>
                 <ul class="list-group" id="policies_list">
                     <li class="list-group-item">Please select commits to compare</li>
                 </ul>
             </div>
             <div class="col-sm">
-                <h2>Services changed</h2>
-                <h5>Click an item to see the diff</h5>
+                <h3>Services changed</h3>
+                <p class="text-muted">Click an item to see the diff</p>
                 <ul class="list-group" id="services_list">
                     <li class="list-group-item">Please select commits to compare</li>
                 </ul>
             </div>
         </div>
     </div>
+
+    <footer class="fixed-bottom text-center p-2 text-muted bg-light">
+      Made with ❤️ by Olly, Aidan & Rupert
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -81,6 +87,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./diffparser-2.0.1.js"></script>
     <script type="text/javascript" src="./index.js"></script>
 </body>
 
