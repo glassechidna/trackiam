@@ -6,16 +6,16 @@ var currentDiff = [];
 function generateListItemDetails(name, type, data, i) {
   const exists = currentDiff.find(x => x.to === data.files[i].filename);
   const isNew = exists.from == "/dev/null"
-  if (exists && isNew) {
+  if (exists) {
     return `${data.files[i].patch}`;
   }
-  else {
-    return `
-      <ul class="list-group" id="item-${name}-${i}-list">
-
-      </ul>
-    `;
-  };
+  // else {
+  //   return `
+  //     <ul class="list-group" id="item-${name}-${i}-list">
+  //
+  //     </ul>
+  //   `;
+  // };
 }
 
 function generateListItem(name, type, data, i) {
@@ -92,6 +92,31 @@ function getLocation() {
   if (to) $("#to_commit_select").val(to);
   compareClick()
 }
+
+// function githubAuth() {
+//   const client_id = "5f54fce357a399e3b20b";
+//   const redirect_uri = document.location.href.includes('localhost')
+//     ? 'http://localhost:8080/index.html'
+//     : 'https://glassechidna.github.io/trackiam/';
+//   const state = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+//   var code = document.location.searchParams.get('code');
+//   if (code) {
+//     $.post({
+//       url: "https://github.com/login/oauth/access_token",
+//       data: {
+//           client_id,
+//           redirect_uri,
+//           state,
+//           code
+//         }
+//       },
+//       console.log
+//     )
+//   }
+//   else {
+//     document.location = `https://github.com/login/oauth/authorize?client_id=${client_id}&${redirect_uri}&${state}`;
+//   }
+// }
 
 function main() {
   // githubAuth()
