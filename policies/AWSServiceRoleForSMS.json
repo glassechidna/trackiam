@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForSMS",
   "CreateDate": "2019-08-06T18:39:29Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4OSYRD2VJZ",
   "PolicyName": "AWSServiceRoleForSMS",
   "PolicyVersion": {
-    "CreateDate": "2019-08-06T18:39:29Z",
+    "CreateDate": "2019-11-21T00:14:49Z",
     "Document": {
       "Statement": [
         {
@@ -85,6 +85,8 @@
             "ec2:DeleteSnapshot",
             "ec2:DeregisterImage",
             "ec2:Describe*",
+            "ec2:DescribeImportImageTasks",
+            "ec2:ImportImage",
             "ec2:ModifySnapshotAttribute",
             "ec2:RunInstances"
           ],
@@ -133,7 +135,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-08-06T18:39:29Z"
+  "UpdateDate": "2019-11-21T00:14:49Z"
 }
