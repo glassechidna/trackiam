@@ -4,7 +4,7 @@ Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
 * Unique services: 197
-* Unique actions: 7159
+* Unique actions: 7162
 * Managed policies: 589
 
 Most common managed policy name prefixes:
@@ -28,7 +28,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 356 | 7 | 0 |
+| [`ec2`](services/ec2.yml) | 356 | 9 | 0 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`glue`](services/glue.yml) | 123 | 0 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 0 | 7 |
@@ -102,7 +102,7 @@ The following table summarises the AWS APIs.
 | [`sms`](services/sms.yml) | 28 | 0 | 2 |
 | [`appmesh`](services/appmesh.yml) | 28 | 0 | 1 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
-| [`elasticmapreduce`](services/elasticmapreduce.yml) | 27 | 2 | 8 |
+| [`elasticmapreduce`](services/elasticmapreduce.yml) | 27 | 3 | 8 |
 | [`forecast`](services/forecast.yml) | 27 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 27 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 26 | 2 | 0 |
@@ -232,13 +232,13 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 954 |
 | `Get` | 954 |
-| `Describe` | 916 |
+| `Describe` | 918 |
 | `Delete` | 839 |
 | `Create` | 765 |
 | `Update` | 580 |
 | `Put` | 197 |
 | `Start` | 120 |
-| `Modify` | 97 |
+| `Modify` | 98 |
 | `Untag` | 84 |
 
 Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
