@@ -129,13 +129,13 @@ The following table summarises the AWS APIs.
 | [`athena`](services/athena.yml) | 19 | 0 | 11 |
 | [`codebuild`](services/codebuild.yml) | 19 | 0 | 4 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
+| [`mgh`](services/mgh.yml) | 19 | 0 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`transfer`](services/transfer.yml) | 18 | 0 | 0 |
 | [`secretsmanager`](services/secretsmanager.yml) | 18 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 18 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
-| [`mgh`](services/mgh.yml) | 17 | 2 | 0 |
 | [`kafka`](services/kafka.yml) | 17 | 2 | 0 |
 | [`shield`](services/shield.yml) | 17 | 1 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
