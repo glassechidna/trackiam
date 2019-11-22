@@ -64,7 +64,7 @@ function generateListItem(name, type, data, i) {
 }
 
 function processListData(data) {
-  var diffUrl = convertURLtoApi(data.html_url) //convertURLtoProxy(data.html_url;
+  var diffUrl = convertURLtoApi(data.html_url) //convertURLtoProxy(data.html_url);
   $.get({
     url: diffUrl,
     headers: {
@@ -103,10 +103,10 @@ function doCompare(from, to) {
 }
 
 function compareClick(ev) {
-  var from = $("#from_commit_select")
-  var to = $("#to_commit_select")
-  setLocation(from.val(), to.val())
-  doCompare(from.val(), to.val())
+  var from = $("#from_commit_select").val()
+  var to = $("#to_commit_select").val()
+  setLocation(from, to)
+  if (from != "Select from commit") doCompare(from, to)
 }
 
 function setLocation(from, to) {
