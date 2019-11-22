@@ -1,4 +1,11 @@
-var currentDiff = [];
+var state = {
+  diff: [],
+  commits: []
+}
+
+function convertURLtoApi(url) {
+  return url.replace("https://github.com/glassechidna/trackiam/", "https://api.github.com/repos/glassechidna/trackiam/");
+}
 
 function convertURLtoProxy(url) {
   url = url.replace("https://api.github.com/repos/glassechidna/trackiam/", "https://trackiam.geapp.io/");
@@ -11,9 +18,9 @@ function convertDiffToChanges(diff) {
 }
 
 function generateListItemDetails(name, type, data, i) {
-  const exists = currentDiff.find(x => x.to === data.files[i].filename);
+  const exists = state.diff.find(x => x.to === data.files[i].filename);
   const isNew = exists.from == "/dev/null";
-  const fileDiff = currentDiff.find(x => x.to === data.files[i].filename);
+  const fileDiff = state.diff.find(x => x.to === data.files[i].filename);
   const fileChanges = convertDiffToChanges(fileDiff);
   if (exists) {
     return fileChanges.map(x => `
@@ -57,9 +64,14 @@ function generateListItem(name, type, data, i) {
 }
 
 function processListData(data) {
-  var diff_url = data.url.replace("https://github.com", "https://api.github.com/repos");
-  $.get({ url: diff_url, headers: { Accept: "application/vnd.github.v3.diff" } }, (diff) => {
-    currentDiff = diffparser(diff);
+  var diffUrl = convertURLtoApi(data.html_url) //convertURLtoProxy(data.html_url;
+  $.get({
+    url: diffUrl,
+    headers: {
+      Accept: "application/vnd.github.v3.diff"
+    }
+  }, (diff) => {
+    state.diff = diffparser(diff);
     var policies_list = $("#policies_list");
     policies_list.empty();
 
@@ -81,8 +93,13 @@ function processListData(data) {
 }
 
 function doCompare(from, to) {
-  currentDiff = [];
-  $.get(`https://trackiam.geapp.io/compare/${from}...${to}`, processListData);
+  state.diff = [];
+  $.get({
+    url: `https://trackiam.geapp.io/compare/${from}...${to}`,
+    headers: {
+      Accept: "application/json"
+    }
+  }, processListData);
 }
 
 function compareClick(ev) {
@@ -93,6 +110,7 @@ function compareClick(ev) {
 }
 
 function setLocation(from, to) {
+  if (to === "master") to = state.commits[0].sha
   var loc = new URL(document.location);
   loc.searchParams.set('from', from)
   loc.searchParams.set('to', to)
@@ -139,6 +157,7 @@ function main() {
   $.get(`https://trackiam.geapp.io/commits`, data => {
     var from = $("#from_commit_select")
     var to = $("#to_commit_select")
+    state.commits = data;
     data.forEach((commit) => {
       var el = `<option value="${commit.sha}">
                       ${moment(commit.commit.author.date)} (${moment(commit.commit.author.date).fromNow()})</option>`
