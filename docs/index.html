@@ -9,6 +9,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet"
       href="./bootstrap.min.css" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.min.css"
+      integrity="sha256-VVbO1uqtov1mU6f9qu/q+MfDmrqTfoba0rAE07szS20="
+      crossorigin="anonymous" />
+    <link rel="stylesheet"
+      href="./datepickerdark.css" />
+    <script src="https://kit.fontawesome.com/cfafadd78a.js"
+      crossorigin="anonymous"></script>
 
     <title>IAM Actions Tracker</title>
 </head>
@@ -30,26 +38,34 @@
     </nav>
 
     <div class="p-3 pb-5">
-        <div class="row">
-            <div class="col-sm">
-                <form>
-                    <div class="form-group">
-                        <label for="from_commit_select">From</label>
-                        <select class="custom-select" id="from_commit_select">
-                            <option selected>Select from commit</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="to_commit_select">To</label>
-                        <select class="custom-select" id="to_commit_select">
-                            <option selected value="master">now</option>
-                        </select>
-                    </div>
-
-
-                </form>
-                <!-- <button onclick="compare_click()" class="btn btn-primary">Compare</button> -->
+        <div class="row pb-3">
+          <div class="col-sm">
+            <div id="rangepicker" class="btn btn-success mr-2 mt-2">
+                <i class="fa fa-calendar"></i>&nbsp;
+                <span></span>
+                <i class="fa fa-caret-down"></i>
             </div>
+            <button onclick="compareClick()" class="btn btn-primary mt-2 mr-2">Search</button>
+            <button type="button" class="btn btn-success mt-2" data-toggle="collapse" data-target="#advanced-search" aria-expanded="true" aria-controls="#advanced-search">Advanced</button>
+            <div id="advanced-search" class="collapse pt-3">
+              <div class="row pb-1">
+                <div class="col-sm">
+                  <label class="pr-2" for="from_commit_select">From Commit: </label>
+                  <select onchange="updateFromCommitPicker()" class="btn btn-success p-5" id="from_commit_select">
+                      <option selected>Select from commit</option>
+                  </select>
+                </div>
+                <div class="col-sm">
+                  <label class="pr-2" for="to_commit_select">To Commit: </label>
+                  <select onchange="updateFromCommitPicker()" class="btn btn-success" id="to_commit_select">
+                      <option selected value="master">now</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
             <div class="col-sm">
                 <h3>Policies changed</h3>
                 <p class="text-muted">Click an item to see the diff</p>
@@ -84,6 +100,9 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.min.js"
+        integrity="sha256-zI6VVO07NPmVW11q3RQE42YbRmJIkkunrcQ9LEYxJsQ="
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="./diffparser-2.0.1.js"></script>
     <script type="text/javascript" src="./index.js"></script>
