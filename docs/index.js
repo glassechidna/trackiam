@@ -1,6 +1,8 @@
 var state = {
   diff: [],
-  commits: []
+  commits: [],
+  start: moment().startOf('week'),
+  end: moment()
 }
 
 function convertURLtoApi(url) {
@@ -103,18 +105,18 @@ function doCompare(from, to) {
 }
 
 function compareClick(ev) {
-  var from = $("#from_commit_select").val()
-  var to = $("#to_commit_select").val()
-  setLocation(from, to)
-  if (from != "Select from commit") doCompare(from, to)
+  setLocation();
+  var shas = getShasFromDates(state.start, state.end);
+  doCompare(shas.start, shas.end);
 }
 
-function setLocation(from, to) {
-  if (to === "master") to = state.commits[0].sha
+function setLocation() {
   var loc = new URL(document.location);
-  loc.searchParams.set('from', from)
-  loc.searchParams.set('to', to)
-  if (window.history.pushState) window.history.pushState({}, `${from}...${to}`, loc)
+  const start = moment(state.start).format()
+  const end = moment(state.end).format()
+  loc.searchParams.set('from', start)
+  loc.searchParams.set('to', end)
+  if (window.history.pushState) window.history.pushState({}, `${start}...${end}`, loc)
   else document.location = loc;
 }
 
@@ -122,38 +124,76 @@ function getLocation() {
   var loc = new URL(document.location);
   var from = loc.searchParams.get('from');
   var to = loc.searchParams.get('to');
-  if (from) $("#from_commit_select").val(from);
-  if (to) $("#to_commit_select").val(to);
-  compareClick()
+  if (moment(from, "YYYY-MM-DDTHH:mm:ssZ", true).isValid()) state.start = from
+  else state.start = getDateFromSha(from);
+  if (moment(to, "YYYY-MM-DDTHH:mm:ssZ", true).isValid()) state.end = to
+  else state.end = getDateFromSha(to);
+  setStartDate(state.start);
+  setEndDate(state.end);
+  updateDateDisplay();
 }
 
-// function githubAuth() {
-//   const client_id = "5f54fce357a399e3b20b";
-//   const redirect_uri = document.location.href.includes('localhost')
-//     ? 'http://localhost:8080/index.html'
-//     : 'https://glassechidna.github.io/trackiam/';
-//   const state = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-//   var code = document.location.searchParams.get('code');
-//   if (code) {
-//     $.post({
-//       url: "https://github.com/login/oauth/access_token",
-//       data: {
-//           client_id,
-//           redirect_uri,
-//           state,
-//           code
-//         }
-//       },
-//       console.log
-//     )
-//   }
-//   else {
-//     document.location = `https://github.com/login/oauth/authorize?client_id=${client_id}&${redirect_uri}&${state}`;
-//   }
-// }
+function getShasFromDates(start, end) {
+  var inScope = state.commits.filter(x => moment(x.commit.author.date).isBetween(start, end))
+  start = inScope[inScope.length - 1] ? inScope[inScope.length - 1].sha : null;
+  end = inScope[0] ? inScope[0].sha : null;
+  return { start, end }
+}
+
+function getDateFromSha(sha) {
+  const commit = state.commits.find(x => x.sha === sha);
+  if (commit.author && commit.author.date) return commit.author.date;
+  if (commit.commit && commit.commit.author && commit.commit.author.date) return commit.commit.author.date;
+}
+
+function updateFromCommitPicker() {
+  var start = getDateFromSha($("#from_commit_select").val());
+  var end = getDateFromSha($("#to_commit_select").val());
+  state.start = start;
+  state.end = end;
+  updateDateDisplay();
+}
+
+function updateFromDatePicker(start, end) {
+  const shas = getShasFromDates(start, end);
+  $("#from_commit_select").val(shas.start);
+  $("#to_commit_select").val(shas.end);
+  state.start = start;
+  state.end = end;
+  updateDateDisplay();
+}
+
+function setStartDate(start) {
+  $("#rangepicker").data('daterangepicker').setStartDate(moment(start))
+}
+
+function setEndDate(end) {
+  $("#rangepicker").data('daterangepicker').setEndDate(moment(end))
+}
+
+function updateDateDisplay() {
+  $('#rangepicker span').html(moment(state.start).format('MMMM D, YYYY') + ' - ' + moment(state.end).format('MMMM D, YYYY'));
+}
+
+function setupDatepicker() {
+
+  $('#rangepicker').daterangepicker({
+    startDate: state.start,
+    endDate: state.end,
+    ranges: {
+      'Today': [moment(), moment()],
+      'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+      'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+      'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+      'This Month': [moment().startOf('month'), moment().endOf('month')],
+      'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+    }
+  }, updateFromDatePicker);
+
+  updateFromDatePicker(state.start, state.end);
+}
 
 function main() {
-  // githubAuth()
   $.get(`https://trackiam.geapp.io/commits`, data => {
     var from = $("#from_commit_select")
     var to = $("#to_commit_select")
@@ -164,11 +204,10 @@ function main() {
       from.append(el)
       to.append(el)
     });
+    setupDatepicker();
     getLocation();
   });
 }
 
 // Events
 $(document).ready(main);
-$("#from_commit_select").on('change', compareClick)
-$("#to_commit_select").on('change', compareClick)
