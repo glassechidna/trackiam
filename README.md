@@ -4,8 +4,8 @@ Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
 * Unique services: 197
-* Unique actions: 7136
-* Managed policies: 586
+* Unique actions: 7153
+* Managed policies: 587
 
 Most common managed policy name prefixes:
 
@@ -13,7 +13,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 173 |
 | `arn:aws:iam::aws:policy/Amazon*` | 149 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 104 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 105 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 57 |
@@ -31,7 +31,7 @@ The following table summarises the AWS APIs.
 | [`ec2`](services/ec2.yml) | 356 | 7 | 0 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`glue`](services/glue.yml) | 123 | 0 | 1 |
-| [`ssm`](services/ssm.yml) | 120 | 0 | 8 |
+| [`ssm`](services/ssm.yml) | 121 | 0 | 7 |
 | [`rds`](services/rds.yml) | 111 | 6 | 1 |
 | [`ses`](services/ses.yml) | 103 | 2 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 4 | 0 |
@@ -51,7 +51,7 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 71 | 4 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 67 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
-| [`config`](services/config.yml) | 56 | 20 | 2 |
+| [`config`](services/config.yml) | 56 | 22 | 2 |
 | [`route53`](services/route53.yml) | 56 | 0 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`autoscaling`](services/autoscaling.yml) | 54 | 0 | 0 |
@@ -71,14 +71,14 @@ The following table summarises the AWS APIs.
 | [`elasticache`](services/elasticache.yml) | 42 | 6 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`kms`](services/kms.yml) | 40 | 1 | 2 |
+| [`dynamodb`](services/dynamodb.yml) | 39 | 3 | 6 |
 | [`personalize`](services/personalize.yml) | 39 | 3 | 0 |
 | [`logs`](services/logs.yml) | 39 | 0 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 38 | 0 | 0 |
 | [`codedeploy`](services/codedeploy.yml) | 37 | 9 | 0 |
-| [`dynamodb`](services/dynamodb.yml) | 37 | 3 | 8 |
 | [`lambda`](services/lambda.yml) | 37 | 2 | 2 |
-| [`appsync`](services/appsync.yml) | 36 | 0 | 1 |
+| [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
 | [`robomaker`](services/robomaker.yml) | 36 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 36 | 0 | 0 |
 | [`lex`](services/lex.yml) | 35 | 6 | 0 |
@@ -94,11 +94,11 @@ The following table summarises the AWS APIs.
 | [`events`](services/events.yml) | 31 | 0 | 0 |
 | [`medialive`](services/medialive.yml) | 30 | 1 | 0 |
 | [`worklink`](services/worklink.yml) | 30 | 0 | 0 |
-| [`amplify`](services/amplify.yml) | 29 | 4 | 0 |
+| [`amplify`](services/amplify.yml) | 29 | 8 | 0 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 28 | 3 | 0 |
+| [`connect`](services/connect.yml) | 28 | 1 | 6 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
-| [`connect`](services/connect.yml) | 28 | 0 | 6 |
 | [`sms`](services/sms.yml) | 28 | 0 | 2 |
 | [`appmesh`](services/appmesh.yml) | 28 | 0 | 1 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
@@ -194,7 +194,7 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
-| [`execute-api`](services/execute-api.yml) | 0 | 189 | 3 |
+| [`execute-api`](services/execute-api.yml) | 0 | 194 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 144 | 7 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
@@ -230,14 +230,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 953 |
-| `Get` | 950 |
+| `List` | 954 |
+| `Get` | 953 |
 | `Describe` | 915 |
-| `Delete` | 835 |
-| `Create` | 762 |
-| `Update` | 579 |
-| `Put` | 195 |
-| `Start` | 119 |
+| `Delete` | 838 |
+| `Create` | 765 |
+| `Update` | 580 |
+| `Put` | 196 |
+| `Start` | 120 |
 | `Modify` | 97 |
 | `Untag` | 84 |
 

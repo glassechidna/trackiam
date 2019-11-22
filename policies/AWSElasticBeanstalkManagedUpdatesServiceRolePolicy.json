@@ -1,0 +1,178 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSElasticBeanstalkManagedUpdatesServiceRolePolicy",
+  "CreateDate": "2019-11-21T22:35:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4HVFNJB4NR",
+  "PolicyName": "AWSElasticBeanstalkManagedUpdatesServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-11-21T22:35:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringLikeIfExists": {
+              "iam:PassedToService": [
+                "autoscaling.amazonaws.com",
+                "cloudformation.amazonaws.com",
+                "ec2.amazonaws.com",
+                "ecs.amazonaws.com",
+                "elasticbeanstalk.amazonaws.com",
+                "elasticloadbalancing.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowPassRoleToElasticBeanstalkAndDownstreamServices"
+        },
+        {
+          "Action": [
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/aws:cloudformation:stack-id": "arn:aws:cloudformation:*:*:stack/awseb-e-*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "EC2"
+        },
+        {
+          "Action": [
+            "autoscaling:AttachInstances",
+            "autoscaling:CreateAutoScalingGroup",
+            "autoscaling:CreateLaunchConfiguration",
+            "autoscaling:DeleteAutoScalingGroup",
+            "autoscaling:DeleteLaunchConfiguration",
+            "autoscaling:DeleteScheduledAction",
+            "autoscaling:DetachInstances",
+            "autoscaling:PutNotificationConfiguration",
+            "autoscaling:PutScalingPolicy",
+            "autoscaling:PutScheduledUpdateGroupAction",
+            "autoscaling:ResumeProcesses",
+            "autoscaling:SuspendProcesses",
+            "autoscaling:TerminateInstanceInAutoScalingGroup",
+            "autoscaling:UpdateAutoScalingGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:autoscaling:*:*:autoScalingGroup:*:autoScalingGroupName/awseb-e-*",
+            "arn:aws:autoscaling:*:*:launchConfiguration:*:launchConfigurationName/awseb-e-*"
+          ],
+          "Sid": "ASG"
+        },
+        {
+          "Action": [
+            "autoscaling:Describe*",
+            "cloudformation:Describe*",
+            "cloudformation:List*",
+            "ec2:Describe*",
+            "elasticloadbalancing:Describe*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReadOnlyAPIs"
+        },
+        {
+          "Action": [
+            "cloudformation:CreateStack",
+            "cloudformation:DeleteStack",
+            "cloudformation:GetTemplate",
+            "cloudformation:UpdateStack"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/awseb-e-*",
+          "Sid": "CFN"
+        },
+        {
+          "Action": [
+            "ec2:AssociateAddress",
+            "ec2:DisassociateAddress",
+            "ec2:allocateAddress",
+            "ec2:releaseAddress"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SingleInstanceAPIs"
+        },
+        {
+          "Action": [
+            "ecs:DeRegisterTaskDefinition",
+            "ecs:Describe*",
+            "ecs:List*",
+            "ecs:RegisterTaskDefinition"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ECS"
+        },
+        {
+          "Action": [
+            "elasticbeanstalk:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ElasticBeanstalkAPIs"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:DeRegisterTargets",
+            "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
+            "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
+            "elasticloadbalancing:RegisterTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticloadbalancing:*:*:loadbalancer/awseb-e-*",
+            "arn:aws:elasticloadbalancing:*:*:targetgroup/awseb-*"
+          ],
+          "Sid": "ELB"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:DeleteLogGroup",
+            "logs:PutRetentionPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/elasticbeanstalk/*",
+          "Sid": "CWL"
+        },
+        {
+          "Action": [
+            "s3:DeleteObject",
+            "s3:GetObject",
+            "s3:GetObjectAcl",
+            "s3:GetObjectVersion",
+            "s3:GetObjectVersionAcl",
+            "s3:PutObject",
+            "s3:PutObjectAcl",
+            "s3:PutObjectVersionAcl"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::elasticbeanstalk-*/*",
+          "Sid": "S3Obj"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:GetBucketPolicy",
+            "s3:ListBucket",
+            "s3:PutBucketPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::elasticbeanstalk-*",
+          "Sid": "S3Bucket"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-11-21T22:35:06Z"
+}
