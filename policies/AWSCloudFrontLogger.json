@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSCloudFrontLogger",
   "CreateDate": "2018-06-12T20:15:23Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIOI7RPKLCNINBTRP4",
   "PolicyName": "AWSCloudFrontLogger",
   "PolicyVersion": {
-    "CreateDate": "2018-06-12T20:15:23Z",
+    "CreateDate": "2019-11-22T19:33:51Z",
     "Document": {
       "Statement": [
         {
@@ -17,13 +17,13 @@
             "logs:PutLogEvents"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:logs:*:*:/aws/cloudfront/*"
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/cloudfront/*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2018-06-12T20:15:23Z"
+  "UpdateDate": "2019-11-22T19:33:51Z"
 }
