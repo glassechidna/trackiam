@@ -136,7 +136,9 @@ function getLocation() {
 }
 
 function getShasFromDates(start, end) {
-  var inScope = state.commits.filter(x => moment(x.commit.author.date).isBetween(start, end))
+  var inScope = state.commits.filter(x =>
+    moment(x.commit.author.date) || moment(x.author.date)
+  .isBetween(start, end))
   start = inScope[inScope.length - 1] ? inScope[inScope.length - 1].sha : null;
   end = inScope[0] ? inScope[0].sha : null;
   return { start, end }
@@ -199,7 +201,8 @@ function main() {
   $.get(`https://trackiam.geapp.io/commits`, data => {
     var from = $("#from_commit_select")
     var to = $("#to_commit_select")
-    if (data) state.commits = data;
+    if (data) state.commits = data.filter(x =>
+      x && x.commit && x.commit.author && x.commit.author.email == "aidan.steele+bot@glassechidna.com.au");
     state.commits.forEach((commit) => {
       var el = `<option value="${commit.sha}">
                       ${moment(commit.commit.author.date)} (${moment(commit.commit.author.date).fromNow()})</option>`
@@ -208,7 +211,6 @@ function main() {
     });
     setupDatepicker();
     getLocation();
-    console.log(state)
   });
 }
 
