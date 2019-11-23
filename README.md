@@ -4,7 +4,7 @@ Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
 * Unique services: 197
-* Unique actions: 7162
+* Unique actions: 7163
 * Managed policies: 589
 
 Most common managed policy name prefixes:
@@ -174,7 +174,7 @@ The following table summarises the AWS APIs.
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
 | [`iot`](services/iot.yml) | 8 | 0 | 169 |
-| [`sts`](services/sts.yml) | 8 | 0 | 0 |
+| [`sts`](services/sts.yml) | 8 | 0 | 1 |
 | [`sms-voice`](services/sms-voice.yml) | 8 | 0 | 0 |
 | [`savingsplans`](services/savingsplans.yml) | 8 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
@@ -239,7 +239,7 @@ Most common action prefixes:
 | `Put` | 197 |
 | `Start` | 120 |
 | `Modify` | 98 |
-| `Untag` | 84 |
+| `Tag` | 85 |
 
 Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
 having this idea and being gracious about me shamelessly ripping it off.
