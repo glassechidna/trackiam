@@ -142,8 +142,8 @@ function getShasFromDates(start, end) {
 
 function getDateFromSha(sha) {
   const commit = state.commits.find(x => x.sha === sha);
-  if (commit.author && commit.author.date) return commit.author.date;
-  if (commit.commit && commit.commit.author && commit.commit.author.date) return commit.commit.author.date;
+  if (commit && commit.author && commit.author.date) return commit.author.date;
+  if (commit && commit.commit && commit.commit.author && commit.commit.author.date) return commit.commit.author.date;
 }
 
 function updateFromCommitPicker() {
