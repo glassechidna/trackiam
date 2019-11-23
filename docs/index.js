@@ -125,9 +125,11 @@ function getLocation() {
   var from = loc.searchParams.get('from');
   var to = loc.searchParams.get('to');
   if (moment(from, "YYYY-MM-DDTHH:mm:ssZ", true).isValid()) state.start = from
-  else state.start = getDateFromSha(from);
+  else if (getDateFromSha(from)) state.start = getDateFromSha(from)
+  else state.start = getDateFromSha(state.commits[state.commits.length - 1].sha);
   if (moment(to, "YYYY-MM-DDTHH:mm:ssZ", true).isValid()) state.end = to
-  else state.end = getDateFromSha(to);
+  else if (getDateFromSha(to)) state.end = getDateFromSha(to);
+  else state.end = getDateFromSha(state.commits[0].sha);
   setStartDate(state.start);
   setEndDate(state.end);
   updateDateDisplay();
@@ -197,8 +199,8 @@ function main() {
   $.get(`https://trackiam.geapp.io/commits`, data => {
     var from = $("#from_commit_select")
     var to = $("#to_commit_select")
-    state.commits = data;
-    data.forEach((commit) => {
+    if (data) state.commits = data;
+    state.commits.forEach((commit) => {
       var el = `<option value="${commit.sha}">
                       ${moment(commit.commit.author.date)} (${moment(commit.commit.author.date).fromNow()})</option>`
       from.append(el)
@@ -206,6 +208,7 @@ function main() {
     });
     setupDatepicker();
     getLocation();
+    console.log(state)
   });
 }
 
