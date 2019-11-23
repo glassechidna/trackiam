@@ -4,7 +4,7 @@ Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
 
 * Unique services: 197
-* Unique actions: 7163
+* Unique actions: 7170
 * Managed policies: 589
 
 Most common managed policy name prefixes:
@@ -92,7 +92,7 @@ The following table summarises the AWS APIs.
 | [`workspaces`](services/workspaces.yml) | 32 | 8 | 0 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
 | [`events`](services/events.yml) | 31 | 0 | 0 |
-| [`medialive`](services/medialive.yml) | 30 | 1 | 0 |
+| [`medialive`](services/medialive.yml) | 30 | 1 | 7 |
 | [`worklink`](services/worklink.yml) | 30 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 29 | 8 | 0 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
@@ -230,14 +230,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 954 |
+| `List` | 955 |
 | `Get` | 954 |
-| `Describe` | 918 |
-| `Delete` | 839 |
-| `Create` | 765 |
-| `Update` | 580 |
+| `Describe` | 919 |
+| `Delete` | 840 |
+| `Create` | 766 |
+| `Update` | 581 |
 | `Put` | 197 |
-| `Start` | 120 |
+| `Start` | 121 |
 | `Modify` | 98 |
 | `Tag` | 85 |
 
