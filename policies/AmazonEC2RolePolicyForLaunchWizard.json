@@ -1,17 +1,34 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEC2RolePolicyForLaunchWizard",
   "CreateDate": "2019-11-13T08:05:53Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CBGI56NFS",
   "PolicyName": "AmazonEC2RolePolicyForLaunchWizard",
   "PolicyVersion": {
-    "CreateDate": "2019-11-13T08:05:53Z",
+    "CreateDate": "2019-11-24T21:48:01Z",
     "Document": {
       "Statement": [
         {
           "Action": "ec2:CreateTags",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "LaunchWizardResourceGroupID"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudformation:DescribeStackResource",
+            "cloudformation:DescribeStackResources",
+            "cloudformation:DescribeStacks",
+            "cloudformation:SignalResource",
+            "ec2:Describe*",
+            "ec2:ModifyInstanceAttribute"
+          ],
           "Condition": {
             "ForAllValues:StringEquals": {
               "aws:TagKeys": "LaunchWizardResourceGroupID"
@@ -43,6 +60,30 @@
         },
         {
           "Action": [
+            "dynamodb:BatchGetItem",
+            "dynamodb:CreateTable",
+            "dynamodb:DeleteTable",
+            "dynamodb:DescribeTable",
+            "dynamodb:PutItem",
+            "dynamodb:Query",
+            "dynamodb:Scan",
+            "dynamodb:UpdateItem",
+            "dynamodb:UpdateTable",
+            "s3:GetBucketLocation",
+            "s3:GetObject",
+            "s3:ListBucket",
+            "sqs:ReceiveMessage",
+            "sqs:SendMessage"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:dynamodb:*:*:table/LaunchWizard*",
+            "arn:aws:s3:::launchwizard*",
+            "arn:aws:sqs:*:*:LaunchWizard*"
+          ]
+        },
+        {
+          "Action": [
             "ec2:AssociateAddress",
             "ec2:DescribeAddresses"
           ],
@@ -51,6 +92,16 @@
         },
         {
           "Action": [
+            "ec2:DescribeImages",
+            "ec2:DescribeRegions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogGroups",
+            "logs:DescribeLogStreams",
             "logs:PutLogEvents",
             "s3:GetObject"
           ],
@@ -64,7 +115,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-11-13T08:05:53Z"
+  "UpdateDate": "2019-11-24T21:48:01Z"
 }
