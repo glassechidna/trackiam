@@ -1,7 +1,7 @@
 # AWS IAM by the numbers
 
 * Unique services: 198
-* Unique actions: 7184
+* Unique actions: 7196
 * Managed policies: 591
 
 Most common managed policy name prefixes:
@@ -60,7 +60,7 @@ The following table summarises the AWS APIs.
 | [`s3`](services/s3.yml) | 45 | 48 | 39 |
 | [`cloudformation`](services/cloudformation.yml) | 45 | 10 | 3 |
 | [`dms`](services/dms.yml) | 45 | 2 | 0 |
-| [`comprehend`](services/comprehend.yml) | 45 | 0 | 0 |
+| [`comprehend`](services/comprehend.yml) | 45 | 0 | 6 |
 | [`cloudfront`](services/cloudfront.yml) | 45 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 44 | 1 | 2 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 43 | 1 | 2 |
@@ -170,7 +170,7 @@ The following table summarises the AWS APIs.
 | [`transcribe`](services/transcribe.yml) | 9 | 0 | 1 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
-| [`iot`](services/iot.yml) | 8 | 0 | 169 |
+| [`iot`](services/iot.yml) | 8 | 0 | 175 |
 | [`sts`](services/sts.yml) | 8 | 0 | 1 |
 | [`sms-voice`](services/sms-voice.yml) | 8 | 0 | 0 |
 | [`savingsplans`](services/savingsplans.yml) | 8 | 0 | 0 |
@@ -228,12 +228,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `Get` | 957 |
-| `List` | 954 |
-| `Describe` | 921 |
-| `Delete` | 841 |
-| `Create` | 768 |
-| `Update` | 582 |
+| `Get` | 959 |
+| `List` | 956 |
+| `Describe` | 923 |
+| `Delete` | 842 |
+| `Create` | 769 |
+| `Update` | 583 |
 | `Put` | 197 |
 | `Start` | 122 |
 | `Modify` | 98 |

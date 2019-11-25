@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ComprehendReadOnly",
   "CreateDate": "2017-11-29T18:10:19Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJIUV5K2YCHQBBAH7G",
   "PolicyName": "ComprehendReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2018-11-20T01:54:51Z",
+    "CreateDate": "2019-11-25T19:35:48Z",
     "Document": {
       "Statement": [
         {
@@ -17,9 +17,11 @@
             "comprehend:BatchDetectKeyPhrases",
             "comprehend:BatchDetectSentiment",
             "comprehend:BatchDetectSyntax",
+            "comprehend:ClassifyDocument",
             "comprehend:DescribeDocumentClassificationJob",
             "comprehend:DescribeDocumentClassifier",
             "comprehend:DescribeDominantLanguageDetectionJob",
+            "comprehend:DescribeEndpoint",
             "comprehend:DescribeEntitiesDetectionJob",
             "comprehend:DescribeEntityRecognizer",
             "comprehend:DescribeKeyPhrasesDetectionJob",
@@ -33,10 +35,12 @@
             "comprehend:ListDocumentClassificationJobs",
             "comprehend:ListDocumentClassifiers",
             "comprehend:ListDominantLanguageDetectionJobs",
+            "comprehend:ListEndpoints",
             "comprehend:ListEntitiesDetectionJobs",
             "comprehend:ListEntityRecognizers",
             "comprehend:ListKeyPhrasesDetectionJobs",
             "comprehend:ListSentimentDetectionJobs",
+            "comprehend:ListTagsForResource",
             "comprehend:ListTopicsDetectionJobs"
           ],
           "Effect": "Allow",
@@ -46,7 +50,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2018-11-20T01:54:51Z"
+  "UpdateDate": "2019-11-25T19:35:48Z"
 }
