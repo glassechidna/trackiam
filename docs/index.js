@@ -20,24 +20,15 @@ function convertDiffToChanges(diff) {
 }
 
 function generateListItemDetails(name, type, data, i) {
-  const exists = state.diff.find(x => x.to === data.files[i].filename);
-  const isNew = exists.from == "/dev/null";
   const fileDiff = state.diff.find(x => x.to === data.files[i].filename);
   const fileChanges = convertDiffToChanges(fileDiff);
-  if (exists) {
+  if (fileDiff) {
     return fileChanges.map(x => `
       <li class="list-group-item d-flex justify-content-between align-items-center">
         ${x.content}
       </li>
     `);
-  }
-  // else {
-  //   return `
-  //     <ul class="list-group" id="item-${name}-${i}-list">
-  //
-  //     </ul>
-  //   `;
-  // };
+  };
 }
 
 function generateListItem(name, type, data, i) {
@@ -135,10 +126,29 @@ function getLocation() {
   updateDateDisplay();
 }
 
+function getDateFromCommit(x) {
+  if (x) {
+    if (x.commit && x.commit.author && x.commit.author.date) return moment(x.commit.author.date)
+    if (x.author && x.author.date) return moment(x.author.date)
+  }
+}
+
+function getDateFromBaseCommit(x) {
+  if (x) {
+    if (x.base_commit.author && x.base_commit.author.date) return moment(x.base_commit.author.date)
+    if (x.base_commit.commit.author && x.base_commit.commit.author.date) return moment(x.base_commit.commit.author.date)
+  }
+}
+
+function filterCommitsBetweenDates(start, end) {
+  return state.commits.filter(x => {
+    const date = getDateFromCommit(x);
+    return date && date.isBetween(start, end);
+  });
+}
+
 function getShasFromDates(start, end) {
-  var inScope = state.commits.filter(x =>
-    moment(x.commit.author.date) || moment(x.author.date)
-  .isBetween(start, end))
+  var inScope = filterCommitsBetweenDates(start, end)
   start = inScope[inScope.length - 1] ? inScope[inScope.length - 1].sha : null;
   end = inScope[0] ? inScope[0].sha : null;
   return { start, end }
