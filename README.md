@@ -1,8 +1,5 @@
 # AWS IAM by the numbers
 
-Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications, etc)
-are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
-
 * Unique services: 197
 * Unique actions: 7170
 * Managed policies: 589
