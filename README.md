@@ -26,9 +26,13 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 59 |
 
-You can explore the data collected using [the static site](https://glassechidna.github.io/trackiam/).
+The following table summarises the AWS APIs. 
 
-Collected data is published to the [policies](https://github.com/glassechidna/trackiam/tree/master/policies) and [services](https://github.com/glassechidna/trackiam/tree/master/services) folders in this repo.
+* The first column is the name of the API as far as IAM policies are concerned. 
+* The second column is IAM actions that exactly match the names of invokable 
+  APIs exposed by AWS.
+* The third column is invokable APIs that don't have a corresponding IAM action.
+* The fourth column is IAM actions that don't have a corresponding invokable API.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
