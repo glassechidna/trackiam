@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDataExchangeProviderFullAccess",
   "CreateDate": "2019-11-13T19:27:55Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MQSUGZZPZ",
   "PolicyName": "AWSDataExchangeProviderFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-11-13T19:27:55Z",
+    "CreateDate": "2019-11-25T16:25:47Z",
     "Document": {
       "Statement": [
         {
@@ -68,7 +68,11 @@
             "dataexchange:Delete*",
             "dataexchange:Get*",
             "dataexchange:List*",
-            "dataexchange:Update*"
+            "dataexchange:TagResource",
+            "dataexchange:UntagResource",
+            "dataexchange:Update*",
+            "tag:GetTagKeys",
+            "tag:GetTagValues"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -94,7 +98,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-11-13T19:27:55Z"
+  "UpdateDate": "2019-11-25T16:25:47Z"
 }
