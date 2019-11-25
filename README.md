@@ -127,6 +127,7 @@ The following table summarises the AWS APIs.
 | [`athena`](services/athena.yml) | 19 | 0 | 11 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`mgh`](services/mgh.yml) | 19 | 0 | 0 |
+| [`ce`](services/ce.yml) | 19 | 0 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`transfer`](services/transfer.yml) | 18 | 0 | 0 |
 | [`secretsmanager`](services/secretsmanager.yml) | 18 | 0 | 0 |
@@ -148,7 +149,6 @@ The following table summarises the AWS APIs.
 | [`opsworks-cm`](services/opsworks-cm.yml) | 15 | 1 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 15 | 0 | 1 |
 | [`license-manager`](services/license-manager.yml) | 15 | 0 | 0 |
-| [`ce`](services/ce.yml) | 14 | 5 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 14 | 4 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 3 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
