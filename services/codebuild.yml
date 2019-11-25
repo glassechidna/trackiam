@@ -2,25 +2,38 @@ Actions:
   - Name: codebuild:BatchDeleteBuilds
   - Name: codebuild:BatchGetBuilds
   - Name: codebuild:BatchGetProjects
+  - Name: codebuild:BatchGetReportGroups
+  - Name: codebuild:BatchGetReports
   - Name: codebuild:CreateProject
+  - Name: codebuild:CreateReportGroup
   - Name: codebuild:CreateWebhook
   - Name: codebuild:DeleteProject
+  - Name: codebuild:DeleteReport
+  - Name: codebuild:DeleteReportGroup
   - Name: codebuild:DeleteSourceCredentials
   - Name: codebuild:DeleteWebhook
+  - Name: codebuild:DescribeTestCases
   - Name: codebuild:ImportSourceCredentials
   - Name: codebuild:InvalidateProjectCache
   - Name: codebuild:ListBuilds
   - Name: codebuild:ListBuildsForProject
   - Name: codebuild:ListCuratedEnvironmentImages
   - Name: codebuild:ListProjects
+  - Name: codebuild:ListReportGroups
+  - Name: codebuild:ListReports
+  - Name: codebuild:ListReportsForReportGroup
   - Name: codebuild:ListSourceCredentials
   - Name: codebuild:StartBuild
   - Name: codebuild:StopBuild
   - Name: codebuild:UpdateProject
+  - Name: codebuild:UpdateReportGroup
   - Name: codebuild:UpdateWebhook
 
   # actions with no corresponding API
+  - Name: codebuild:BatchPutTestCases
+  - Name: codebuild:CreateReport
   - Name: codebuild:DeleteOAuthToken
   - Name: codebuild:ListConnectedOAuthAccounts
   - Name: codebuild:ListRepositories
   - Name: codebuild:PersistOAuthToken
+  - Name: codebuild:UpdateReport

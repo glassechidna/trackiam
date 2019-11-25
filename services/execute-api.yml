@@ -24,6 +24,7 @@ Actions:
   - Name: execute-api:CreateAuthorizer
   - Name: execute-api:CreateBillingGroup
   - Name: execute-api:CreateCertificateFromCsr
+  - Name: execute-api:CreateDomainConfiguration
   - Name: execute-api:CreateDynamicThingGroup
   - Name: execute-api:CreateJob
   - Name: execute-api:CreateKeysAndCertificate
@@ -32,6 +33,9 @@ Actions:
   - Name: execute-api:CreateParticipantConnection
   - Name: execute-api:CreatePolicy
   - Name: execute-api:CreatePolicyVersion
+  - Name: execute-api:CreateProvisioningClaim
+  - Name: execute-api:CreateProvisioningTemplate
+  - Name: execute-api:CreateProvisioningTemplateVersion
   - Name: execute-api:CreateRoleAlias
   - Name: execute-api:CreateScheduledAudit
   - Name: execute-api:CreateSecurityProfile
@@ -47,6 +51,7 @@ Actions:
   - Name: execute-api:DeleteCACertificate
   - Name: execute-api:DeleteCertificate
   - Name: execute-api:DeleteConnection
+  - Name: execute-api:DeleteDomainConfiguration
   - Name: execute-api:DeleteDynamicThingGroup
   - Name: execute-api:DeleteJob
   - Name: execute-api:DeleteJobExecution
@@ -54,6 +59,8 @@ Actions:
   - Name: execute-api:DeleteOTAUpdate
   - Name: execute-api:DeletePolicy
   - Name: execute-api:DeletePolicyVersion
+  - Name: execute-api:DeleteProvisioningTemplate
+  - Name: execute-api:DeleteProvisioningTemplateVersion
   - Name: execute-api:DeleteRegistrationCode
   - Name: execute-api:DeleteRoleAlias
   - Name: execute-api:DeleteScheduledAudit
@@ -75,12 +82,15 @@ Actions:
   - Name: execute-api:DescribeCACertificate
   - Name: execute-api:DescribeCertificate
   - Name: execute-api:DescribeDefaultAuthorizer
+  - Name: execute-api:DescribeDomainConfiguration
   - Name: execute-api:DescribeEndpoint
   - Name: execute-api:DescribeEventConfigurations
   - Name: execute-api:DescribeIndex
   - Name: execute-api:DescribeJob
   - Name: execute-api:DescribeJobExecution
   - Name: execute-api:DescribeMitigationAction
+  - Name: execute-api:DescribeProvisioningTemplate
+  - Name: execute-api:DescribeProvisioningTemplateVersion
   - Name: execute-api:DescribeRoleAlias
   - Name: execute-api:DescribeScheduledAudit
   - Name: execute-api:DescribeSecurityProfile
@@ -123,6 +133,7 @@ Actions:
   - Name: execute-api:ListCACertificates
   - Name: execute-api:ListCertificates
   - Name: execute-api:ListCertificatesByCA
+  - Name: execute-api:ListDomainConfigurations
   - Name: execute-api:ListIndices
   - Name: execute-api:ListJobExecutionsForJob
   - Name: execute-api:ListJobExecutionsForThing
@@ -135,6 +146,8 @@ Actions:
   - Name: execute-api:ListPolicyVersions
   - Name: execute-api:ListPrincipalPolicies
   - Name: execute-api:ListPrincipalThings
+  - Name: execute-api:ListProvisioningTemplateVersions
+  - Name: execute-api:ListProvisioningTemplates
   - Name: execute-api:ListRoleAliases
   - Name: execute-api:ListScheduledAudits
   - Name: execute-api:ListSecurityProfiles
@@ -186,11 +199,13 @@ Actions:
   - Name: execute-api:UpdateBillingGroup
   - Name: execute-api:UpdateCACertificate
   - Name: execute-api:UpdateCertificate
+  - Name: execute-api:UpdateDomainConfiguration
   - Name: execute-api:UpdateDynamicThingGroup
   - Name: execute-api:UpdateEventConfigurations
   - Name: execute-api:UpdateIndexingConfiguration
   - Name: execute-api:UpdateJob
   - Name: execute-api:UpdateMitigationAction
+  - Name: execute-api:UpdateProvisioningTemplate
   - Name: execute-api:UpdateRoleAlias
   - Name: execute-api:UpdateScheduledAudit
   - Name: execute-api:UpdateSecurityProfile

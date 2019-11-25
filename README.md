@@ -1,7 +1,7 @@
 # AWS IAM by the numbers
 
-* Unique services: 198
-* Unique actions: 7196
+* Unique services: 201
+* Unique actions: 7340
 * Managed policies: 591
 
 Most common managed policy name prefixes:
@@ -25,19 +25,19 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 361 | 4 | 0 |
+| [`ec2`](services/ec2.yml) | 361 | 6 | 0 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`glue`](services/glue.yml) | 123 | 0 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 0 | 7 |
 | [`rds`](services/rds.yml) | 111 | 6 | 1 |
-| [`ses`](services/ses.yml) | 103 | 2 | 0 |
+| [`ses`](services/ses.yml) | 103 | 8 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 4 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`chime`](services/chime.yml) | 91 | 0 | 49 |
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 83 | 22 | 0 |
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
-| [`redshift`](services/redshift.yml) | 82 | 0 | 18 |
+| [`redshift`](services/redshift.yml) | 82 | 4 | 18 |
 | [`waf-regional`](services/waf-regional.yml) | 80 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
 | [`waf`](services/waf.yml) | 76 | 0 | 0 |
@@ -53,28 +53,29 @@ The following table summarises the AWS APIs.
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`autoscaling`](services/autoscaling.yml) | 54 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 53 | 0 | 0 |
+| [`comprehend`](services/comprehend.yml) | 51 | 0 | 0 |
 | [`ds`](services/ds.yml) | 49 | 1 | 6 |
 | [`guardduty`](services/guardduty.yml) | 49 | 1 | 0 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`organizations`](services/organizations.yml) | 46 | 0 | 0 |
+| [`codedeploy`](services/codedeploy.yml) | 46 | 0 | 0 |
 | [`s3`](services/s3.yml) | 45 | 48 | 39 |
 | [`cloudformation`](services/cloudformation.yml) | 45 | 10 | 3 |
 | [`dms`](services/dms.yml) | 45 | 2 | 0 |
-| [`comprehend`](services/comprehend.yml) | 45 | 0 | 6 |
+| [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`cloudfront`](services/cloudfront.yml) | 45 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 44 | 1 | 2 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 43 | 1 | 2 |
 | [`backup`](services/backup.yml) | 43 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 42 | 6 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
-| [`kms`](services/kms.yml) | 40 | 1 | 7 |
 | [`dynamodb`](services/dynamodb.yml) | 39 | 3 | 6 |
 | [`personalize`](services/personalize.yml) | 39 | 3 | 0 |
 | [`logs`](services/logs.yml) | 39 | 0 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 38 | 0 | 0 |
-| [`codedeploy`](services/codedeploy.yml) | 37 | 9 | 0 |
-| [`lambda`](services/lambda.yml) | 37 | 2 | 2 |
+| [`lambda`](services/lambda.yml) | 37 | 7 | 2 |
+| [`medialive`](services/medialive.yml) | 37 | 6 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
 | [`robomaker`](services/robomaker.yml) | 36 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 36 | 0 | 0 |
@@ -89,10 +90,11 @@ The following table summarises the AWS APIs.
 | [`workspaces`](services/workspaces.yml) | 32 | 8 | 0 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
 | [`events`](services/events.yml) | 31 | 0 | 0 |
-| [`medialive`](services/medialive.yml) | 30 | 1 | 7 |
 | [`worklink`](services/worklink.yml) | 30 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 29 | 8 | 0 |
+| [`codebuild`](services/codebuild.yml) | 29 | 0 | 7 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
+| [`cloudwatch`](services/cloudwatch.yml) | 29 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 28 | 3 | 0 |
 | [`connect`](services/connect.yml) | 28 | 1 | 6 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
@@ -107,9 +109,8 @@ The following table summarises the AWS APIs.
 | [`mediaconvert`](services/mediaconvert.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
-| [`kinesisanalytics`](services/kinesisanalytics.yml) | 24 | 0 | 1 |
+| [`kinesisanalytics`](services/kinesisanalytics.yml) | 24 | 2 | 1 |
 | [`route53domains`](services/route53domains.yml) | 23 | 1 | 0 |
-| [`cloudwatch`](services/cloudwatch.yml) | 23 | 0 | 6 |
 | [`states`](services/states.yml) | 22 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
@@ -124,7 +125,6 @@ The following table summarises the AWS APIs.
 | [`servicediscovery`](services/servicediscovery.yml) | 20 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 20 | 0 | 0 |
 | [`athena`](services/athena.yml) | 19 | 0 | 11 |
-| [`codebuild`](services/codebuild.yml) | 19 | 0 | 4 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`mgh`](services/mgh.yml) | 19 | 0 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
@@ -132,15 +132,15 @@ The following table summarises the AWS APIs.
 | [`secretsmanager`](services/secretsmanager.yml) | 18 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 18 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
+| [`applicationinsights`](services/applicationinsights.yml) | 17 | 9 | 0 |
+| [`ram`](services/ram.yml) | 17 | 6 | 0 |
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
 | [`kafka`](services/kafka.yml) | 17 | 2 | 0 |
 | [`shield`](services/shield.yml) | 17 | 1 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
-| [`ram`](services/ram.yml) | 17 | 0 | 0 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`eks`](services/eks.yml) | 17 | 0 | 0 |
-| [`applicationinsights`](services/applicationinsights.yml) | 17 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 16 | 49 | 8 |
 | [`qldb`](services/qldb.yml) | 16 | 0 | 3 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
@@ -148,12 +148,12 @@ The following table summarises the AWS APIs.
 | [`opsworks-cm`](services/opsworks-cm.yml) | 15 | 1 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 15 | 0 | 1 |
 | [`license-manager`](services/license-manager.yml) | 15 | 0 | 0 |
+| [`ce`](services/ce.yml) | 14 | 5 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 14 | 4 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 3 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 14 | 0 | 2 |
 | [`fms`](services/fms.yml) | 14 | 0 | 0 |
-| [`ce`](services/ce.yml) | 14 | 0 | 0 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 13 | 0 | 1 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
@@ -191,9 +191,12 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
-| [`execute-api`](services/execute-api.yml) | 0 | 194 | 3 |
+| [`execute-api`](services/execute-api.yml) | 0 | 209 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 144 | 7 |
+| [`wafv2`](services/wafv2.yml) | 0 | 36 | 0 |
+| [`appconfig`](services/appconfig.yml) | 0 | 29 | 0 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
+| [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
@@ -228,16 +231,16 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `Get` | 959 |
-| `List` | 956 |
-| `Describe` | 923 |
-| `Delete` | 842 |
-| `Create` | 769 |
-| `Update` | 583 |
-| `Put` | 197 |
-| `Start` | 122 |
-| `Modify` | 98 |
-| `Tag` | 85 |
+| `List` | 987 |
+| `Get` | 977 |
+| `Describe` | 933 |
+| `Delete` | 863 |
+| `Create` | 787 |
+| `Update` | 599 |
+| `Put` | 202 |
+| `Start` | 123 |
+| `Modify` | 100 |
+| `Tag` | 89 |
 
 Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
 having this idea and being gracious about me shamelessly ripping it off.
