@@ -48,7 +48,7 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 71 | 4 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 67 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
-| [`config`](services/config.yml) | 56 | 22 | 2 |
+| [`config`](services/config.yml) | 59 | 19 | 2 |
 | [`route53`](services/route53.yml) | 56 | 0 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`autoscaling`](services/autoscaling.yml) | 54 | 0 | 0 |
@@ -89,9 +89,9 @@ The following table summarises the AWS APIs.
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`workspaces`](services/workspaces.yml) | 32 | 8 | 0 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
+| [`amplify`](services/amplify.yml) | 32 | 5 | 0 |
 | [`events`](services/events.yml) | 31 | 0 | 0 |
 | [`worklink`](services/worklink.yml) | 30 | 0 | 0 |
-| [`amplify`](services/amplify.yml) | 29 | 8 | 0 |
 | [`codebuild`](services/codebuild.yml) | 29 | 0 | 7 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 29 | 0 | 0 |
