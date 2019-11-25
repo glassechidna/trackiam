@@ -41,8 +41,13 @@ Actions:
   - Name: kms:UpdateKeyDescription
 
   # actions with no corresponding API
+  - Name: kms:GenerateDataKeyPair
+  - Name: kms:GenerateDataKeyPairWithoutPlaintext
+  - Name: kms:GetPublicKey
   - Name: kms:ReEncryptFrom
   - Name: kms:ReEncryptTo
+  - Name: kms:Sign
+  - Name: kms:Verify
 
   # APIs without an IAM action
   - Name: kms:ReEncrypt

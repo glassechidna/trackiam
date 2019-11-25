@@ -1,8 +1,8 @@
 # AWS IAM by the numbers
 
-* Unique services: 197
-* Unique actions: 7170
-* Managed policies: 589
+* Unique services: 198
+* Unique actions: 7185
+* Managed policies: 591
 
 Most common managed policy name prefixes:
 
@@ -13,7 +13,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 106 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
-| Other | 57 |
+| Other | 59 |
 
 The following table summarises the AWS APIs. 
 
@@ -67,7 +67,7 @@ The following table summarises the AWS APIs.
 | [`backup`](services/backup.yml) | 43 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 42 | 6 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
-| [`kms`](services/kms.yml) | 40 | 1 | 2 |
+| [`kms`](services/kms.yml) | 40 | 1 | 7 |
 | [`dynamodb`](services/dynamodb.yml) | 39 | 3 | 6 |
 | [`personalize`](services/personalize.yml) | 39 | 3 | 0 |
 | [`logs`](services/logs.yml) | 39 | 0 | 5 |
@@ -162,7 +162,7 @@ The following table summarises the AWS APIs.
 | [`resource-groups`](services/resource-groups.yml) | 12 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 30 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 31 |
 | [`fsx`](services/fsx.yml) | 11 | 0 | 0 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`cloud9`](services/cloud9.yml) | 10 | 0 | 0 |
@@ -206,6 +206,7 @@ The following table summarises the AWS APIs.
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 12 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
+| [`synthetics`](services/synthetics.yml) | 0 | 0 | 9 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
@@ -227,14 +228,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
+| `Get` | 957 |
 | `List` | 955 |
-| `Get` | 954 |
-| `Describe` | 919 |
-| `Delete` | 840 |
-| `Create` | 766 |
-| `Update` | 581 |
+| `Describe` | 921 |
+| `Delete` | 841 |
+| `Create` | 768 |
+| `Update` | 582 |
 | `Put` | 197 |
-| `Start` | 121 |
+| `Start` | 122 |
 | `Modify` | 98 |
 | `Tag` | 85 |
 
