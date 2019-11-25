@@ -11,10 +11,21 @@ import (
 )
 
 func printStats(acts actions, policies []*policyFile) ([]byte, error) {
-	tmpl, err := template.New("").Parse(`# AWS IAM by the numbers
+	tmpl, err := template.New("").Parse(`# AWS IAM Tracker
+
+This project collects IAM actions, AWS APIs and managed policies from various public sources.
+
+You can explore the data collected using [the static site](https://glassechidna.github.io/trackiam/).
+
+Collected data is published to the [policies](/policies) and [services](/services) folders in this repo.
 
 Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications, etc)
-are published to a public SNS topic: {{ .Backtick }}arn:aws:sns:us-east-1:258739955926:trackiam{{ .Backtick }}
+are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
+
+Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
+having this idea and being gracious about me shamelessly ripping it off.
+	
+# Stats
 
 * Unique services: {{ .ServiceCount }}
 * Unique actions: {{ .ActionCount }}
@@ -51,8 +62,6 @@ Most common action prefixes:
 | {{ $.Backtick }}{{ .Prefix }}{{ $.Backtick }} | {{ .Count }} |
 {{- end }}
 
-Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
-having this idea and being gracious about me shamelessly ripping it off.
 `)
 	if err != nil {
 		return nil, errors.WithStack(err)

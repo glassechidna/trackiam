@@ -1,7 +1,18 @@
-# AWS IAM by the numbers
+# AWS IAM Tracker
+
+This project collects IAM actions, AWS APIs and managed policies from various public sources.
+
+You can explore the data collected using [the static site](https://glassechidna.github.io/trackiam/).
+
+Collected data is published to the [policies](/policies) and [services](/services) folders in this repo.
 
 Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications, etc)
 are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
+
+Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
+having this idea and being gracious about me shamelessly ripping it off.
+
+# Stats
 
 * Unique services: 197
 * Unique actions: 7163
@@ -18,13 +29,9 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 57 |
 
-The following table summarises the AWS APIs. 
+You can explore the data collected using [the static site](https://glassechidna.github.io/trackiam/).
 
-* The first column is the name of the API as far as IAM policies are concerned. 
-* The second column is IAM actions that exactly match the names of invokable 
-  APIs exposed by AWS.
-* The third column is invokable APIs that don't have a corresponding IAM action.
-* The fourth column is IAM actions that don't have a corresponding invokable API.
+Collected data is published to the [policies](https://github.com/glassechidna/trackiam/tree/master/policies) and [services](https://github.com/glassechidna/trackiam/tree/master/services) folders in this repo.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
@@ -240,6 +247,3 @@ Most common action prefixes:
 | `Start` | 120 |
 | `Modify` | 98 |
 | `Tag` | 85 |
-
-Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
-having this idea and being gracious about me shamelessly ripping it off.
