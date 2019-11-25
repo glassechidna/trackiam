@@ -13,9 +13,6 @@ import (
 func printStats(acts actions, policies []*policyFile) ([]byte, error) {
 	tmpl, err := template.New("").Parse(`# AWS IAM by the numbers
 
-Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications, etc)
-are published to a public SNS topic: {{ .Backtick }}arn:aws:sns:us-east-1:258739955926:trackiam{{ .Backtick }}
-
 * Unique services: {{ .ServiceCount }}
 * Unique actions: {{ .ActionCount }}
 * Managed policies: {{ .PolicyCount }}
