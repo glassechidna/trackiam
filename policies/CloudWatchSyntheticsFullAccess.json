@@ -1,0 +1,139 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CloudWatchSyntheticsFullAccess",
+  "CreateDate": "2019-11-25T17:39:46Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4MAGQWEZP4",
+  "PolicyName": "CloudWatchSyntheticsFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-11-25T17:39:46Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "lambda.amazonaws.com",
+                "synthetics.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/service-role/CloudWatchSyntheticsRole*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:PutMetricAlarm"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudwatch:*:*:alarm:Synthetics-*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudwatch:*:*:alarm:*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:GetRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/service-role/CloudWatchSyntheticsRole*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:ListRoles",
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "lambda:AddPermission",
+            "lambda:CreateFunction",
+            "lambda:PublishVersion",
+            "lambda:UpdateFunctionConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:cwsyn-*"
+          ]
+        },
+        {
+          "Action": [
+            "lambda:GetLayerVersion",
+            "lambda:GetLayerVersionByArn",
+            "lambda:PublishLayerVersion"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:layer:Synthetics:*",
+            "arn:aws:lambda:*:*:layer:cwsyn-*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:PutBucketEncryption",
+            "s3:PutEncryptionConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::cw-syn-results-*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::cw-syn-*"
+        },
+        {
+          "Action": [
+            "s3:GetObjectVersion"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::aws-synthetics-library-*"
+        },
+        {
+          "Action": [
+            "synthetics:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-11-25T17:39:46Z"
+}

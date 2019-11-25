@@ -19,9 +19,6 @@ You can explore the data collected using [the static site](https://glassechidna.
 
 Collected data is published to the [policies](/policies) and [services](/services) folders in this repo.
 
-Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications, etc)
-are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
-
 Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
 having this idea and being gracious about me shamelessly ripping it off.
 	

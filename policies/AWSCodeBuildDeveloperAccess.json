@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeBuildDeveloperAccess",
   "CreateDate": "2016-12-01T19:02:32Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIMKTMR34XSBQW45HS",
   "PolicyName": "AWSCodeBuildDeveloperAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-11-05T22:12:45Z",
+    "CreateDate": "2019-11-25T20:36:49Z",
     "Document": {
       "Statement": [
         {
@@ -31,6 +31,7 @@
           "Action": [
             "cloudwatch:GetMetricStatistics",
             "codebuild:BatchGet*",
+            "codebuild:DescribeTestCases",
             "codebuild:List*",
             "codebuild:StartBuild",
             "codebuild:StopBuild",
@@ -79,7 +80,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2019-11-05T22:12:45Z"
+  "UpdateDate": "2019-11-25T20:36:49Z"
 }

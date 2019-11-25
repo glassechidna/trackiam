@@ -149,7 +149,9 @@ Actions:
   - Name: ec2:DescribeDhcpOptions
   - Name: ec2:DescribeEgressOnlyInternetGateways
   - Name: ec2:DescribeElasticGpus
+  - Name: ec2:DescribeExportImageTasks
   - Name: ec2:DescribeExportTasks
+  - Name: ec2:DescribeFastSnapshotRestores
   - Name: ec2:DescribeFleetHistory
   - Name: ec2:DescribeFleetInstances
   - Name: ec2:DescribeFleets
@@ -235,6 +237,7 @@ Actions:
   - Name: ec2:DetachVolume
   - Name: ec2:DetachVpnGateway
   - Name: ec2:DisableEbsEncryptionByDefault
+  - Name: ec2:DisableFastSnapshotRestores
   - Name: ec2:DisableTransitGatewayRouteTablePropagation
   - Name: ec2:DisableVgwRoutePropagation
   - Name: ec2:DisableVpcClassicLink
@@ -247,6 +250,7 @@ Actions:
   - Name: ec2:DisassociateTransitGatewayRouteTable
   - Name: ec2:DisassociateVpcCidrBlock
   - Name: ec2:EnableEbsEncryptionByDefault
+  - Name: ec2:EnableFastSnapshotRestores
   - Name: ec2:EnableTransitGatewayRouteTablePropagation
   - Name: ec2:EnableVgwRoutePropagation
   - Name: ec2:EnableVolumeIO
@@ -254,6 +258,7 @@ Actions:
   - Name: ec2:EnableVpcClassicLinkDnsSupport
   - Name: ec2:ExportClientVpnClientCertificateRevocationList
   - Name: ec2:ExportClientVpnClientConfiguration
+  - Name: ec2:ExportImage
   - Name: ec2:ExportTransitGatewayRoutes
   - Name: ec2:GetCapacityReservationUsage
   - Name: ec2:GetConsoleOutput
@@ -358,11 +363,8 @@ Actions:
 
   # APIs without an IAM action
   - Name: ec2:DeleteQueuedReservedInstances
-  - Name: ec2:DescribeExportImageTasks
-  - Name: ec2:DescribeFastSnapshotRestores
   - Name: ec2:DescribeInstanceTypeOfferings
   - Name: ec2:DescribeInstanceTypes
-  - Name: ec2:DisableFastSnapshotRestores
-  - Name: ec2:EnableFastSnapshotRestores
-  - Name: ec2:ExportImage
+  - Name: ec2:GetDefaultCreditSpecification
+  - Name: ec2:ModifyDefaultCreditSpecification
   - Name: ec2:ModifyVpnTunnelCertificate

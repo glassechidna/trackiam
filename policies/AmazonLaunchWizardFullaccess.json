@@ -1,18 +1,27 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLaunchWizardFullaccess",
   "CreateDate": "2019-11-13T17:08:13Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4E27VRMEE5",
   "PolicyName": "AmazonLaunchWizardFullaccess",
   "PolicyVersion": {
-    "CreateDate": "2019-11-13T17:08:13Z",
+    "CreateDate": "2019-11-24T21:55:08Z",
     "Document": {
       "Statement": [
         {
+          "Action": "cloudformation:TagResource",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "LaunchWizardResourceGroupID"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
           "Action": [
-            "cloudformation:CreateStack",
             "cloudformation:DeleteStack",
             "cloudformation:DescribeStack*",
             "cloudformation:Get*",
@@ -126,12 +135,7 @@
         },
         {
           "Action": [
-            "autoscaling:DescribeAutoScaling*",
-            "autoscaling:DescribeLaunchConfigurations",
-            "autoscaling:DescribeNotificationConfigurations",
-            "autoscaling:DescribePolicies",
-            "autoscaling:DescribeScaling*",
-            "autoscaling:DescribeScheduledActions",
+            "autoscaling:Describe*",
             "cloudformation:DescribeAccountLimits",
             "cloudformation:DescribeStackDriftDetectionStatus",
             "cloudformation:List*",
@@ -157,26 +161,7 @@
             "ec2:DeleteRouteTable",
             "ec2:DeleteSubnet",
             "ec2:DeleteTags",
-            "ec2:DescribeAccountAttributes",
-            "ec2:DescribeAddresses",
-            "ec2:DescribeAvailabilityZones",
-            "ec2:DescribeDhcpOptions",
-            "ec2:DescribeEgressOnlyInternetGateways",
-            "ec2:DescribeImage*",
-            "ec2:DescribeInstanceStatus",
-            "ec2:DescribeInstances",
-            "ec2:DescribeInternetGateways",
-            "ec2:DescribeKeyPairs",
-            "ec2:DescribeNatGateways",
-            "ec2:DescribeNetwork*",
-            "ec2:DescribeRegions",
-            "ec2:DescribeRouteTables",
-            "ec2:DescribeSecurityGroups",
-            "ec2:DescribeSnapshot*",
-            "ec2:DescribeSubnets",
-            "ec2:DescribeTags",
-            "ec2:DescribeVolume*",
-            "ec2:DescribeVpc*",
+            "ec2:Describe*",
             "ec2:DetachNetworkInterface",
             "ec2:DisassociateAddress",
             "ec2:DisassociateVpcCidrBlock",
@@ -216,11 +201,35 @@
         },
         {
           "Action": [
+            "cloudformation:CreateStack",
+            "elasticfilesystem:CreateFileSystem",
+            "elasticfilesystem:DescribeFileSystems",
+            "route53:ListHostedZones",
+            "s3:GetObject"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "cloudformation:Describe*",
             "cloudformation:List*"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:cloudformation:::stack/LaunchWizard*/"
+        },
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:PutMetricAlarm",
+            "iam:GetInstanceProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudwatch:*:*:alarm:LaunchWizard*",
+            "arn:aws:iam::*:instance-profile/LaunchWizard*"
+          ]
         },
         {
           "Action": [
@@ -252,6 +261,21 @@
         },
         {
           "Action": [
+            "sqs:AddPermission",
+            "sqs:CreateQueue",
+            "sqs:DeleteQueue",
+            "sqs:GetQueueAttributes",
+            "sqs:GetQueueUrl",
+            "sqs:ListQueueTags",
+            "sqs:ListQueues",
+            "sqs:SetQueueAttributes",
+            "sqs:TagQueue"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sqs:*:*:LaunchWizard*"
+        },
+        {
+          "Action": [
             "iam:AddRoleToInstanceProfile",
             "iam:CreateInstanceProfile",
             "iam:DeleteInstanceProfile",
@@ -269,7 +293,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-11-13T17:08:13Z"
+  "UpdateDate": "2019-11-24T21:55:08Z"
 }

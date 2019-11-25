@@ -1,32 +1,36 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSIoTDeviceDefenderAudit",
   "CreateDate": "2018-07-18T21:17:40Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJKUN6OAGIHZ66TRKO",
   "PolicyName": "AWSIoTDeviceDefenderAudit",
   "PolicyVersion": {
-    "CreateDate": "2018-07-18T21:17:40Z",
+    "CreateDate": "2019-11-25T19:10:15Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "cognito-identity:GetIdentityPoolRoles",
+            "iam:GenerateServiceLastAccessedDetails",
             "iam:GetPolicy",
             "iam:GetPolicyVersion",
             "iam:GetRolePolicy",
+            "iam:GetServiceLastAccessedDetails",
             "iam:ListAttachedRolePolicies",
             "iam:ListRolePolicies",
             "iot:DescribeCACertificate",
             "iot:DescribeCertificate",
+            "iot:DescribeRoleAlias",
             "iot:GetEffectivePolicies",
             "iot:GetLoggingOptions",
             "iot:GetPolicy",
             "iot:GetV2LoggingOptions",
             "iot:ListCACertificates",
             "iot:ListCertificates",
-            "iot:ListPolicies"
+            "iot:ListPolicies",
+            "iot:ListRoleAliases"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -37,7 +41,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2018-07-18T21:17:40Z"
+  "UpdateDate": "2019-11-25T19:10:15Z"
 }

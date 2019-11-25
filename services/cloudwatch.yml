@@ -2,13 +2,18 @@ Actions:
   - Name: cloudwatch:DeleteAlarms
   - Name: cloudwatch:DeleteAnomalyDetector
   - Name: cloudwatch:DeleteDashboards
+  - Name: cloudwatch:DeleteInsightRules
   - Name: cloudwatch:DescribeAlarmHistory
   - Name: cloudwatch:DescribeAlarms
   - Name: cloudwatch:DescribeAlarmsForMetric
   - Name: cloudwatch:DescribeAnomalyDetectors
+  - Name: cloudwatch:DescribeInsightRules
   - Name: cloudwatch:DisableAlarmActions
+  - Name: cloudwatch:DisableInsightRules
   - Name: cloudwatch:EnableAlarmActions
+  - Name: cloudwatch:EnableInsightRules
   - Name: cloudwatch:GetDashboard
+  - Name: cloudwatch:GetInsightRuleReport
   - Name: cloudwatch:GetMetricData
   - Name: cloudwatch:GetMetricStatistics
   - Name: cloudwatch:GetMetricWidgetImage
@@ -17,16 +22,9 @@ Actions:
   - Name: cloudwatch:ListTagsForResource
   - Name: cloudwatch:PutAnomalyDetector
   - Name: cloudwatch:PutDashboard
+  - Name: cloudwatch:PutInsightRule
   - Name: cloudwatch:PutMetricAlarm
   - Name: cloudwatch:PutMetricData
   - Name: cloudwatch:SetAlarmState
   - Name: cloudwatch:TagResource
   - Name: cloudwatch:UntagResource
-
-  # actions with no corresponding API
-  - Name: cloudwatch:DeleteInsightRules
-  - Name: cloudwatch:DescribeInsightRules
-  - Name: cloudwatch:DisableInsightRules
-  - Name: cloudwatch:EnableInsightRules
-  - Name: cloudwatch:GetInsightRuleReport
-  - Name: cloudwatch:PutInsightRule

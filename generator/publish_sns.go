@@ -14,7 +14,7 @@ func Publish() {
 
 	_, err := api.PublishWithContext(context.Background(), &sns.PublishInput{
 		Message:  aws.String("something changed"), // TODO: implement
-		TopicArn: aws.String("arn:aws:sns:us-east-1:258739955926:trackiam"),
+		TopicArn: aws.String(""), // TODO
 	})
 	if err != nil {
 		panic(fmt.Sprintf("%+v", err))

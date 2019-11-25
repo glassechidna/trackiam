@@ -4,6 +4,7 @@ Actions:
   - Name: codedeploy:BatchGetApplications
   - Name: codedeploy:BatchGetDeploymentGroups
   - Name: codedeploy:BatchGetDeploymentInstances
+  - Name: codedeploy:BatchGetDeploymentTargets
   - Name: codedeploy:BatchGetDeployments
   - Name: codedeploy:BatchGetOnPremisesInstances
   - Name: codedeploy:ContinueDeployment
@@ -14,6 +15,7 @@ Actions:
   - Name: codedeploy:DeleteApplication
   - Name: codedeploy:DeleteDeploymentConfig
   - Name: codedeploy:DeleteDeploymentGroup
+  - Name: codedeploy:DeleteGitHubAccountToken
   - Name: codedeploy:DeregisterOnPremisesInstance
   - Name: codedeploy:GetApplication
   - Name: codedeploy:GetApplicationRevision
@@ -21,29 +23,25 @@ Actions:
   - Name: codedeploy:GetDeploymentConfig
   - Name: codedeploy:GetDeploymentGroup
   - Name: codedeploy:GetDeploymentInstance
+  - Name: codedeploy:GetDeploymentTarget
   - Name: codedeploy:GetOnPremisesInstance
   - Name: codedeploy:ListApplicationRevisions
   - Name: codedeploy:ListApplications
   - Name: codedeploy:ListDeploymentConfigs
   - Name: codedeploy:ListDeploymentGroups
   - Name: codedeploy:ListDeploymentInstances
+  - Name: codedeploy:ListDeploymentTargets
   - Name: codedeploy:ListDeployments
+  - Name: codedeploy:ListGitHubAccountTokenNames
   - Name: codedeploy:ListOnPremisesInstances
+  - Name: codedeploy:ListTagsForResource
   - Name: codedeploy:PutLifecycleEventHookExecutionStatus
   - Name: codedeploy:RegisterApplicationRevision
   - Name: codedeploy:RegisterOnPremisesInstance
   - Name: codedeploy:RemoveTagsFromOnPremisesInstances
-  - Name: codedeploy:StopDeployment
-  - Name: codedeploy:UpdateApplication
-  - Name: codedeploy:UpdateDeploymentGroup
-
-  # APIs without an IAM action
-  - Name: codedeploy:BatchGetDeploymentTargets
-  - Name: codedeploy:DeleteGitHubAccountToken
-  - Name: codedeploy:GetDeploymentTarget
-  - Name: codedeploy:ListDeploymentTargets
-  - Name: codedeploy:ListGitHubAccountTokenNames
-  - Name: codedeploy:ListTagsForResource
   - Name: codedeploy:SkipWaitTimeForInstanceTermination
+  - Name: codedeploy:StopDeployment
   - Name: codedeploy:TagResource
   - Name: codedeploy:UntagResource
+  - Name: codedeploy:UpdateApplication
+  - Name: codedeploy:UpdateDeploymentGroup

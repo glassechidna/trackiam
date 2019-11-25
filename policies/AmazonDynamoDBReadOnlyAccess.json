@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDynamoDBReadOnlyAccess",
   "CreateDate": "2015-02-06T18:40:12Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIY2XFNA232XJ6J7X2",
   "PolicyName": "AmazonDynamoDBReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-11-20T01:18:15Z",
+    "CreateDate": "2019-11-25T19:08:05Z",
     "Document": {
       "Statement": [
         {
@@ -47,6 +47,8 @@
             "ec2:DescribeVpcs",
             "iam:GetRole",
             "iam:ListRoles",
+            "kms:DescribeKey",
+            "kms:ListAliases",
             "lambda:GetFunctionConfiguration",
             "lambda:ListEventSourceMappings",
             "lambda:ListFunctions",
@@ -65,7 +67,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2019-11-20T01:18:15Z"
+  "UpdateDate": "2019-11-25T19:08:05Z"
 }

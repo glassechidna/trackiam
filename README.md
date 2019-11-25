@@ -6,17 +6,14 @@ You can explore the data collected using [the static site](https://glassechidna.
 
 Collected data is published to the [policies](/policies) and [services](/services) folders in this repo.
 
-Changes (i.e. new IAM actions, new AWS APIs, new managed policies, modifications, etc)
-are published to a public SNS topic: `arn:aws:sns:us-east-1:258739955926:trackiam`
-
 Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
 having this idea and being gracious about me shamelessly ripping it off.
 
 # Stats
 
-* Unique services: 197
-* Unique actions: 7163
-* Managed policies: 589
+* Unique services: 201
+* Unique actions: 7340
+* Managed policies: 591
 
 Most common managed policy name prefixes:
 
@@ -27,7 +24,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 106 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
-| Other | 57 |
+| Other | 59 |
 
 You can explore the data collected using [the static site](https://glassechidna.github.io/trackiam/).
 
@@ -35,19 +32,19 @@ Collected data is published to the [policies](https://github.com/glassechidna/tr
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 356 | 9 | 0 |
+| [`ec2`](services/ec2.yml) | 361 | 6 | 0 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`glue`](services/glue.yml) | 123 | 0 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 0 | 7 |
 | [`rds`](services/rds.yml) | 111 | 6 | 1 |
-| [`ses`](services/ses.yml) | 103 | 2 | 0 |
+| [`ses`](services/ses.yml) | 103 | 8 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 4 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`chime`](services/chime.yml) | 91 | 0 | 49 |
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 83 | 22 | 0 |
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
-| [`redshift`](services/redshift.yml) | 82 | 0 | 18 |
+| [`redshift`](services/redshift.yml) | 82 | 4 | 18 |
 | [`waf-regional`](services/waf-regional.yml) | 80 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
 | [`waf`](services/waf.yml) | 76 | 0 | 0 |
@@ -58,33 +55,34 @@ Collected data is published to the [policies](https://github.com/glassechidna/tr
 | [`storagegateway`](services/storagegateway.yml) | 71 | 4 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 67 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
-| [`config`](services/config.yml) | 56 | 22 | 2 |
+| [`config`](services/config.yml) | 59 | 19 | 2 |
 | [`route53`](services/route53.yml) | 56 | 0 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`autoscaling`](services/autoscaling.yml) | 54 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 53 | 0 | 0 |
+| [`comprehend`](services/comprehend.yml) | 51 | 0 | 0 |
 | [`ds`](services/ds.yml) | 49 | 1 | 6 |
 | [`guardduty`](services/guardduty.yml) | 49 | 1 | 0 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`organizations`](services/organizations.yml) | 46 | 0 | 0 |
+| [`codedeploy`](services/codedeploy.yml) | 46 | 0 | 0 |
 | [`s3`](services/s3.yml) | 45 | 48 | 39 |
 | [`cloudformation`](services/cloudformation.yml) | 45 | 10 | 3 |
 | [`dms`](services/dms.yml) | 45 | 2 | 0 |
-| [`comprehend`](services/comprehend.yml) | 45 | 0 | 0 |
+| [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`cloudfront`](services/cloudfront.yml) | 45 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 44 | 1 | 2 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 43 | 1 | 2 |
 | [`backup`](services/backup.yml) | 43 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 42 | 6 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
-| [`kms`](services/kms.yml) | 40 | 1 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 39 | 3 | 6 |
 | [`personalize`](services/personalize.yml) | 39 | 3 | 0 |
 | [`logs`](services/logs.yml) | 39 | 0 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 38 | 0 | 0 |
-| [`codedeploy`](services/codedeploy.yml) | 37 | 9 | 0 |
-| [`lambda`](services/lambda.yml) | 37 | 2 | 2 |
+| [`lambda`](services/lambda.yml) | 37 | 7 | 2 |
+| [`medialive`](services/medialive.yml) | 37 | 6 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
 | [`robomaker`](services/robomaker.yml) | 36 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 36 | 0 | 0 |
@@ -98,11 +96,12 @@ Collected data is published to the [policies](https://github.com/glassechidna/tr
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`workspaces`](services/workspaces.yml) | 32 | 8 | 0 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
+| [`amplify`](services/amplify.yml) | 32 | 5 | 0 |
 | [`events`](services/events.yml) | 31 | 0 | 0 |
-| [`medialive`](services/medialive.yml) | 30 | 1 | 0 |
 | [`worklink`](services/worklink.yml) | 30 | 0 | 0 |
-| [`amplify`](services/amplify.yml) | 29 | 8 | 0 |
+| [`codebuild`](services/codebuild.yml) | 29 | 0 | 7 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
+| [`cloudwatch`](services/cloudwatch.yml) | 29 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 28 | 3 | 0 |
 | [`connect`](services/connect.yml) | 28 | 1 | 6 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
@@ -117,14 +116,13 @@ Collected data is published to the [policies](https://github.com/glassechidna/tr
 | [`mediaconvert`](services/mediaconvert.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
-| [`kinesisanalytics`](services/kinesisanalytics.yml) | 24 | 0 | 1 |
+| [`kinesisanalytics`](services/kinesisanalytics.yml) | 24 | 2 | 1 |
 | [`route53domains`](services/route53domains.yml) | 23 | 1 | 0 |
-| [`cloudwatch`](services/cloudwatch.yml) | 23 | 0 | 6 |
 | [`states`](services/states.yml) | 22 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
+| [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 0 |
 | [`es`](services/es.yml) | 21 | 2 | 5 |
-| [`dataexchange`](services/dataexchange.yml) | 21 | 1 | 1 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`cognito-identity`](services/cognito-identity.yml) | 21 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 20 | 3 | 0 |
@@ -134,23 +132,23 @@ Collected data is published to the [policies](https://github.com/glassechidna/tr
 | [`servicediscovery`](services/servicediscovery.yml) | 20 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 20 | 0 | 0 |
 | [`athena`](services/athena.yml) | 19 | 0 | 11 |
-| [`codebuild`](services/codebuild.yml) | 19 | 0 | 4 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`mgh`](services/mgh.yml) | 19 | 0 | 0 |
+| [`ce`](services/ce.yml) | 19 | 0 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`transfer`](services/transfer.yml) | 18 | 0 | 0 |
 | [`secretsmanager`](services/secretsmanager.yml) | 18 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 18 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
+| [`applicationinsights`](services/applicationinsights.yml) | 17 | 9 | 0 |
+| [`ram`](services/ram.yml) | 17 | 6 | 0 |
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
 | [`kafka`](services/kafka.yml) | 17 | 2 | 0 |
 | [`shield`](services/shield.yml) | 17 | 1 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
-| [`ram`](services/ram.yml) | 17 | 0 | 0 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`eks`](services/eks.yml) | 17 | 0 | 0 |
-| [`applicationinsights`](services/applicationinsights.yml) | 17 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 16 | 49 | 8 |
 | [`qldb`](services/qldb.yml) | 16 | 0 | 3 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
@@ -163,7 +161,6 @@ Collected data is published to the [policies](https://github.com/glassechidna/tr
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 14 | 0 | 2 |
 | [`fms`](services/fms.yml) | 14 | 0 | 0 |
-| [`ce`](services/ce.yml) | 14 | 0 | 0 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 13 | 0 | 1 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
@@ -172,7 +169,7 @@ Collected data is published to the [policies](https://github.com/glassechidna/tr
 | [`resource-groups`](services/resource-groups.yml) | 12 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 30 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 31 |
 | [`fsx`](services/fsx.yml) | 11 | 0 | 0 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`cloud9`](services/cloud9.yml) | 10 | 0 | 0 |
@@ -180,7 +177,7 @@ Collected data is published to the [policies](https://github.com/glassechidna/tr
 | [`transcribe`](services/transcribe.yml) | 9 | 0 | 1 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
-| [`iot`](services/iot.yml) | 8 | 0 | 169 |
+| [`iot`](services/iot.yml) | 8 | 0 | 175 |
 | [`sts`](services/sts.yml) | 8 | 0 | 1 |
 | [`sms-voice`](services/sms-voice.yml) | 8 | 0 | 0 |
 | [`savingsplans`](services/savingsplans.yml) | 8 | 0 | 0 |
@@ -201,9 +198,12 @@ Collected data is published to the [policies](https://github.com/glassechidna/tr
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
-| [`execute-api`](services/execute-api.yml) | 0 | 194 | 3 |
+| [`execute-api`](services/execute-api.yml) | 0 | 209 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 144 | 7 |
+| [`wafv2`](services/wafv2.yml) | 0 | 36 | 0 |
+| [`appconfig`](services/appconfig.yml) | 0 | 29 | 0 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
+| [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
@@ -216,6 +216,7 @@ Collected data is published to the [policies](https://github.com/glassechidna/tr
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 12 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
+| [`synthetics`](services/synthetics.yml) | 0 | 0 | 9 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
@@ -237,13 +238,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 954 |
-| `Get` | 954 |
-| `Describe` | 918 |
-| `Delete` | 839 |
-| `Create` | 765 |
-| `Update` | 580 |
-| `Put` | 197 |
-| `Start` | 120 |
-| `Modify` | 98 |
-| `Tag` | 85 |
+| `List` | 987 |
+| `Get` | 977 |
+| `Describe` | 933 |
+| `Delete` | 863 |
+| `Create` | 787 |
+| `Update` | 599 |
+| `Put` | 202 |
+| `Start` | 123 |
+| `Modify` | 100 |
+| `Tag` | 89 |

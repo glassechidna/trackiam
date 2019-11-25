@@ -18,11 +18,14 @@ Actions:
   - Name: kms:EnableKeyRotation
   - Name: kms:Encrypt
   - Name: kms:GenerateDataKey
+  - Name: kms:GenerateDataKeyPair
+  - Name: kms:GenerateDataKeyPairWithoutPlaintext
   - Name: kms:GenerateDataKeyWithoutPlaintext
   - Name: kms:GenerateRandom
   - Name: kms:GetKeyPolicy
   - Name: kms:GetKeyRotationStatus
   - Name: kms:GetParametersForImport
+  - Name: kms:GetPublicKey
   - Name: kms:ImportKeyMaterial
   - Name: kms:ListAliases
   - Name: kms:ListGrants
@@ -34,11 +37,13 @@ Actions:
   - Name: kms:RetireGrant
   - Name: kms:RevokeGrant
   - Name: kms:ScheduleKeyDeletion
+  - Name: kms:Sign
   - Name: kms:TagResource
   - Name: kms:UntagResource
   - Name: kms:UpdateAlias
   - Name: kms:UpdateCustomKeyStore
   - Name: kms:UpdateKeyDescription
+  - Name: kms:Verify
 
   # actions with no corresponding API
   - Name: kms:ReEncryptFrom
