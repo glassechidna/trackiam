@@ -1,7 +1,7 @@
 # AWS IAM by the numbers
 
 * Unique services: 198
-* Unique actions: 7185
+* Unique actions: 7184
 * Managed policies: 591
 
 Most common managed policy name prefixes:
@@ -113,8 +113,8 @@ The following table summarises the AWS APIs.
 | [`states`](services/states.yml) | 22 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
+| [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 0 |
 | [`es`](services/es.yml) | 21 | 2 | 5 |
-| [`dataexchange`](services/dataexchange.yml) | 21 | 1 | 1 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`cognito-identity`](services/cognito-identity.yml) | 21 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 20 | 3 | 0 |
@@ -229,7 +229,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `Get` | 957 |
-| `List` | 955 |
+| `List` | 954 |
 | `Describe` | 921 |
 | `Delete` | 841 |
 | `Create` | 768 |

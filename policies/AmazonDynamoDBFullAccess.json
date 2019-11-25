@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess",
   "CreateDate": "2015-02-06T18:40:11Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAINUGF2JSOSUY76KYA",
   "PolicyName": "AmazonDynamoDBFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-11-20T01:24:05Z",
+    "CreateDate": "2019-11-25T18:58:22Z",
     "Document": {
       "Statement": [
         {
@@ -79,6 +79,8 @@
             "ec2:DescribeVpcs",
             "iam:GetRole",
             "iam:ListRoles",
+            "kms:DescribeKey",
+            "kms:ListAliases",
             "lambda:CreateEventSourceMapping",
             "lambda:CreateFunction",
             "lambda:DeleteEventSourceMapping",
@@ -109,7 +111,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2019-11-20T01:24:05Z"
+  "UpdateDate": "2019-11-25T18:58:22Z"
 }
