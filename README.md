@@ -68,8 +68,8 @@ The following table summarises the AWS APIs.
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 43 | 1 | 2 |
 | [`backup`](services/backup.yml) | 43 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 42 | 6 | 0 |
+| [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
-| [`dynamodb`](services/dynamodb.yml) | 39 | 6 | 6 |
 | [`personalize`](services/personalize.yml) | 39 | 3 | 0 |
 | [`logs`](services/logs.yml) | 39 | 0 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |

@@ -9,6 +9,7 @@ Actions:
   - Name: dynamodb:DeleteTable
   - Name: dynamodb:DescribeBackup
   - Name: dynamodb:DescribeContinuousBackups
+  - Name: dynamodb:DescribeContributorInsights
   - Name: dynamodb:DescribeGlobalTable
   - Name: dynamodb:DescribeGlobalTableSettings
   - Name: dynamodb:DescribeLimits
@@ -20,6 +21,7 @@ Actions:
   - Name: dynamodb:GetRecords
   - Name: dynamodb:GetShardIterator
   - Name: dynamodb:ListBackups
+  - Name: dynamodb:ListContributorInsights
   - Name: dynamodb:ListGlobalTables
   - Name: dynamodb:ListStreams
   - Name: dynamodb:ListTables
@@ -32,6 +34,7 @@ Actions:
   - Name: dynamodb:TagResource
   - Name: dynamodb:UntagResource
   - Name: dynamodb:UpdateContinuousBackups
+  - Name: dynamodb:UpdateContributorInsights
   - Name: dynamodb:UpdateGlobalTable
   - Name: dynamodb:UpdateGlobalTableSettings
   - Name: dynamodb:UpdateItem
@@ -48,9 +51,6 @@ Actions:
   - Name: dynamodb:PurchaseReservedCapacityOfferings
 
   # APIs without an IAM action
-  - Name: dynamodb:DescribeContributorInsights
   - Name: dynamodb:DescribeEndpoints
-  - Name: dynamodb:ListContributorInsights
   - Name: dynamodb:TransactGetItems
   - Name: dynamodb:TransactWriteItems
-  - Name: dynamodb:UpdateContributorInsights
