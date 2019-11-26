@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/ServerMigrationServiceRole",
   "CreateDate": "2016-10-24T21:19:00Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJMBH3M6BO63XFW2D4",
   "PolicyName": "ServerMigrationServiceRole",
   "PolicyVersion": {
-    "CreateDate": "2018-11-26T19:33:29Z",
+    "CreateDate": "2019-11-26T00:48:45Z",
     "Document": {
       "Statement": [
         {
@@ -72,6 +72,8 @@
             "ec2:DeleteTags",
             "ec2:DeregisterImage",
             "ec2:Describe*",
+            "ec2:DescribeImportImageTasks",
+            "ec2:ImportImage",
             "ec2:ModifySnapshotAttribute"
           ],
           "Effect": "Allow",
@@ -112,7 +114,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2018-11-26T19:33:29Z"
+  "UpdateDate": "2019-11-26T00:48:45Z"
 }
