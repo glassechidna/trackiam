@@ -1,7 +1,7 @@
 # AWS IAM by the numbers
 
 * Unique services: 201
-* Unique actions: 7340
+* Unique actions: 7344
 * Managed policies: 591
 
 Most common managed policy name prefixes:
@@ -138,10 +138,10 @@ The following table summarises the AWS APIs.
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
 | [`kafka`](services/kafka.yml) | 17 | 2 | 0 |
 | [`shield`](services/shield.yml) | 17 | 1 | 0 |
+| [`eks`](services/eks.yml) | 17 | 0 | 4 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
-| [`eks`](services/eks.yml) | 17 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 16 | 49 | 8 |
 | [`qldb`](services/qldb.yml) | 16 | 0 | 3 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
@@ -231,11 +231,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 987 |
+| `List` | 988 |
 | `Get` | 977 |
-| `Describe` | 933 |
-| `Delete` | 863 |
-| `Create` | 787 |
+| `Describe` | 934 |
+| `Delete` | 864 |
+| `Create` | 788 |
 | `Update` | 599 |
 | `Put` | 202 |
 | `Start` | 123 |
