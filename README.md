@@ -1,7 +1,7 @@
 # AWS IAM by the numbers
 
 * Unique services: 201
-* Unique actions: 7344
+* Unique actions: 7348
 * Managed policies: 591
 
 Most common managed policy name prefixes:
@@ -57,7 +57,7 @@ The following table summarises the AWS APIs.
 | [`ds`](services/ds.yml) | 49 | 1 | 6 |
 | [`guardduty`](services/guardduty.yml) | 49 | 1 | 0 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
-| [`organizations`](services/organizations.yml) | 46 | 0 | 0 |
+| [`organizations`](services/organizations.yml) | 46 | 0 | 1 |
 | [`codedeploy`](services/codedeploy.yml) | 46 | 0 | 0 |
 | [`s3`](services/s3.yml) | 45 | 48 | 39 |
 | [`cloudformation`](services/cloudformation.yml) | 45 | 10 | 3 |
@@ -182,8 +182,8 @@ The following table summarises the AWS APIs.
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
 | [`health`](services/health.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
+| [`tag`](services/tag.yml) | 5 | 0 | 3 |
 | [`translate`](services/translate.yml) | 5 | 0 | 0 |
-| [`tag`](services/tag.yml) | 5 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 2 | 9 | 0 |
@@ -232,13 +232,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 988 |
-| `Get` | 977 |
-| `Describe` | 934 |
+| `Get` | 978 |
+| `Describe` | 936 |
 | `Delete` | 864 |
 | `Create` | 788 |
 | `Update` | 599 |
 | `Put` | 202 |
-| `Start` | 123 |
+| `Start` | 124 |
 | `Modify` | 100 |
 | `Tag` | 89 |
 
