@@ -1,7 +1,7 @@
 # AWS IAM by the numbers
 
 * Unique services: 201
-* Unique actions: 7361
+* Unique actions: 7374
 * Managed policies: 591
 
 Most common managed policy name prefixes:
@@ -203,9 +203,9 @@ The following table summarises the AWS APIs.
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
 | [`sso`](services/sso.yml) | 0 | 0 | 67 |
 | [`iotsitewise`](services/iotsitewise.yml) | 0 | 0 | 46 |
+| [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 37 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 26 |
-| [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 24 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 12 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
@@ -231,12 +231,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 991 |
-| `Get` | 978 |
+| `List` | 994 |
+| `Get` | 979 |
 | `Describe` | 939 |
-| `Delete` | 864 |
-| `Create` | 788 |
-| `Update` | 600 |
+| `Delete` | 867 |
+| `Create` | 791 |
+| `Update` | 601 |
 | `Put` | 202 |
 | `Start` | 124 |
 | `Modify` | 100 |
