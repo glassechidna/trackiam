@@ -14,6 +14,7 @@ Actions:
   - Name: redshift:CreateEventSubscription
   - Name: redshift:CreateHsmClientCertificate
   - Name: redshift:CreateHsmConfiguration
+  - Name: redshift:CreateScheduledAction
   - Name: redshift:CreateSnapshotCopyGrant
   - Name: redshift:CreateSnapshotSchedule
   - Name: redshift:CreateTags
@@ -25,6 +26,7 @@ Actions:
   - Name: redshift:DeleteEventSubscription
   - Name: redshift:DeleteHsmClientCertificate
   - Name: redshift:DeleteHsmConfiguration
+  - Name: redshift:DeleteScheduledAction
   - Name: redshift:DeleteSnapshotCopyGrant
   - Name: redshift:DeleteSnapshotSchedule
   - Name: redshift:DeleteTags
@@ -50,6 +52,7 @@ Actions:
   - Name: redshift:DescribeReservedNodeOfferings
   - Name: redshift:DescribeReservedNodes
   - Name: redshift:DescribeResize
+  - Name: redshift:DescribeScheduledActions
   - Name: redshift:DescribeSnapshotCopyGrants
   - Name: redshift:DescribeSnapshotSchedules
   - Name: redshift:DescribeStorage
@@ -70,6 +73,7 @@ Actions:
   - Name: redshift:ModifyClusterSnapshotSchedule
   - Name: redshift:ModifyClusterSubnetGroup
   - Name: redshift:ModifyEventSubscription
+  - Name: redshift:ModifyScheduledAction
   - Name: redshift:ModifySnapshotCopyRetentionPeriod
   - Name: redshift:ModifySnapshotSchedule
   - Name: redshift:PurchaseReservedNodeOffering
@@ -101,9 +105,3 @@ Actions:
   - Name: redshift:ModifySavedQuery
   - Name: redshift:ViewQueriesFromConsole
   - Name: redshift:ViewQueriesInConsole
-
-  # APIs without an IAM action
-  - Name: redshift:CreateScheduledAction
-  - Name: redshift:DeleteScheduledAction
-  - Name: redshift:DescribeScheduledActions
-  - Name: redshift:ModifyScheduledAction
