@@ -34,7 +34,7 @@ function generateListItem(name, htmlUrl, i, diff) {
     <div class="card-header" id="header-${name}-${i}">
       <h5 class="mb-0 d-flex justify-content-between align-items-center">
         <span class="badge badge-primary badge-pill">${listItemDetails.length}</span>
-        <a class="btn btn-link" target="_blank" href="${htmlUrl}">
+        <a class="btn btn-link" target="_blank" href="${htmlUrl}#diff-${i}">
           ${name}
         </a>
         <button type="button" class="btn btn-light" data-toggle="collapse" data-target="#item-${name}-${i}" aria-expanded="true" aria-controls="item-${name}-${i}">...</button>
