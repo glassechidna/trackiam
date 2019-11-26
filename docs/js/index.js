@@ -1,27 +1,23 @@
 var state = {
-  diff: [],
   commits: [],
   start: moment().startOf('week'),
   end: moment()
 }
 
-function convertURLtoApi(url) {
-  return url.replace("https://github.com/glassechidna/trackiam/", "https://api.github.com/repos/glassechidna/trackiam/");
-}
+const htmlBase = "https://github.com/glassechidna/trackiam"
+const preferredEndpoint = "https://trackiam.geapp.io"
+// const preferredEndpoint = "https://api.github.com/repos/glassechidna/trackiam"
 
-function convertURLtoProxy(url) {
-  url = url.replace("https://api.github.com/repos/glassechidna/trackiam/", "https://trackiam.geapp.io/");
-  url = url.replace("https://github.com/glassechidna/trackiam/", "https://trackiam.geapp.io/");
-  return url;
+function withPreferredEndpoint(url) {
+  return url.replace("https://api.github.com/repos/glassechidna/trackiam", preferredEndpoint);
 }
 
 function convertDiffToChanges(diff) {
   return diff.chunks.map(x => x.changes).flat().filter(x => x.content.match(/^[\+\-]+[\S\s]+[A-Za-z0-9]+/))
 }
 
-function generateListItemDetails(name, type, data, i) {
-  const fileDiff = state.diff.find(x => x.to === data.files[i].filename);
-  const fileChanges = convertDiffToChanges(fileDiff);
+function generateListItemDetails(fileDiff) {
+  var fileChanges = convertDiffToChanges(fileDiff);
   if (fileDiff) {
     return fileChanges.map(x => `
       <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -31,14 +27,14 @@ function generateListItemDetails(name, type, data, i) {
   };
 }
 
-function generateListItem(name, type, data, i) {
-  const listItemDetails = generateListItemDetails(name, type, data, i);
+function generateListItem(name, htmlUrl, i, diff) {
+  const listItemDetails = generateListItemDetails( diff);
   return `
   <div class="card m-1">
     <div class="card-header" id="header-${name}-${i}">
       <h5 class="mb-0 d-flex justify-content-between align-items-center">
         <span class="badge badge-primary badge-pill">${listItemDetails.length}</span>
-        <a class="btn btn-link" target="_blank" href="${data.html_url}">
+        <a class="btn btn-link" target="_blank" href="${htmlUrl}#diff-${i}">
           ${name}
         </a>
         <button type="button" class="btn btn-light" data-toggle="collapse" data-target="#item-${name}-${i}" aria-expanded="true" aria-controls="item-${name}-${i}">...</button>
@@ -56,43 +52,33 @@ function generateListItem(name, type, data, i) {
   `;
 }
 
-function processListData(data) {
-  var diffUrl = convertURLtoApi(data.html_url) //convertURLtoProxy(data.html_url);
+function doCompare(from, to) {
+  var htmlUrl = `${htmlBase}/compare/${from}...${to}`
   $.get({
-    url: diffUrl,
+    url: `${preferredEndpoint}/compare/${from}...${to}`,
     headers: {
       Accept: "application/vnd.github.v3.diff"
     }
   }, (diff) => {
-    state.diff = diffparser(diff);
+    var diff = diffparser(diff);
     var policies_list = $("#policies_list");
-    policies_list.empty();
-
     var services_list = $("#services_list");
+
+    policies_list.empty();
     services_list.empty();
 
-    data.files.forEach((value, i) => {
-      var name = value.filename.split("/").reverse()[0].split('.')[0];
-      var isPolicy = value.filename.startsWith("policies");
-      var isService = value.filename.startsWith("services");
-      var type = isPolicy ? 'policy' : isService ? 'service' : 'unknown';
-      var element = generateListItem(name, type, data, i);
+    diff.forEach((value, i) => {
+      var filename = value.to
+      var name = filename.split("/").reverse()[0].split('.')[0];
+      var isPolicy = filename.startsWith("policies");
+      var isService = filename.startsWith("services");
+      var element = generateListItem(name, htmlUrl, i, value);
       if (isPolicy) policies_list.append(element)
       else if (isService) services_list.append(element)
     });
     if ($("#policies_list").is(':empty')) $("#policies_list").append('<li class="list-group-item">No results</li>');
     if ($("#services_list").is(':empty')) $("#services_list").append('<li class="list-group-item">No results</li>');
   });
-}
-
-function doCompare(from, to) {
-  state.diff = [];
-  $.get({
-    url: `https://trackiam.geapp.io/compare/${from}...${to}`,
-    headers: {
-      Accept: "application/json"
-    }
-  }, processListData);
 }
 
 function compareClick(ev) {
@@ -207,8 +193,9 @@ function setupDatepicker() {
   updateFromDatePicker(state.start, state.end);
 }
 
+
 function main() {
-  $.get(`https://trackiam.geapp.io/commits`, data => {
+  $.get(`${preferredEndpoint}/commits`, data => {
     var from = $("#from_commit_select")
     var to = $("#to_commit_select")
     if (data) state.commits = data.filter(x =>
