@@ -1,8 +1,8 @@
 # AWS IAM by the numbers
 
 * Unique services: 201
-* Unique actions: 7374
-* Managed policies: 591
+* Unique actions: 7360
+* Managed policies: 590
 
 Most common managed policy name prefixes:
 
@@ -10,7 +10,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 173 |
 | `arn:aws:iam::aws:policy/Amazon*` | 150 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 106 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 105 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 59 |
@@ -201,7 +201,7 @@ The following table summarises the AWS APIs.
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 3 | 1 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
-| [`sso`](services/sso.yml) | 0 | 0 | 67 |
+| [`sso`](services/sso.yml) | 0 | 0 | 53 |
 | [`iotsitewise`](services/iotsitewise.yml) | 0 | 0 | 46 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 37 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
@@ -231,12 +231,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 994 |
-| `Get` | 979 |
-| `Describe` | 939 |
-| `Delete` | 867 |
-| `Create` | 791 |
-| `Update` | 601 |
+| `List` | 992 |
+| `Get` | 980 |
+| `Describe` | 937 |
+| `Delete` | 866 |
+| `Create` | 789 |
+| `Update` | 600 |
 | `Put` | 202 |
 | `Start` | 124 |
 | `Modify` | 100 |
