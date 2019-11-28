@@ -1,4 +1,15 @@
-# AWS IAM by the numbers
+# AWS IAM Tracker
+
+This project collects IAM actions, AWS APIs and managed policies from various public sources.
+
+You can explore the data collected using [the static site](https://glassechidna.github.io/trackiam/).
+
+Collected data is published to the [policies](/policies) and [services](/services) folders in this repo.
+
+Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
+having this idea and being gracious about me shamelessly ripping it off.
+
+# Stats
 
 * Unique services: 201
 * Unique actions: 7391
@@ -241,6 +252,3 @@ Most common action prefixes:
 | `Start` | 124 |
 | `Modify` | 100 |
 | `Tag` | 90 |
-
-Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
-having this idea and being gracious about me shamelessly ripping it off.
