@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v57",
+  "DefaultVersionId": "v58",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-11-22T01:10:29Z",
+    "CreateDate": "2019-11-26T01:37:01Z",
     "Document": {
       "Statement": [
         {
@@ -22,7 +22,6 @@
             "acm:Describe*",
             "acm:Get*",
             "acm:List*",
-            "aesop:Get*",
             "amplify:GetApp",
             "amplify:GetBranch",
             "amplify:GetDomainAssociation",
@@ -94,7 +93,10 @@
             "codestar:List*",
             "codestar:Verify*",
             "cognito-identity:Describe*",
-            "cognito-identity:Get*",
+            "cognito-identity:GetCredentialsForIdentity",
+            "cognito-identity:GetIdentityPoolRoles",
+            "cognito-identity:GetOpenIdToken",
+            "cognito-identity:GetOpenIdTokenForDeveloperIdentity",
             "cognito-identity:List*",
             "cognito-identity:Lookup*",
             "cognito-idp:AdminGet*",
@@ -220,7 +222,6 @@
             "glue:GetJobRun",
             "glue:GetJobRuns",
             "glue:GetJobs",
-            "glue:GetMapping",
             "glue:GetPartition",
             "glue:GetPartitions",
             "glue:GetPlan",
@@ -484,7 +485,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v57"
+    "VersionId": "v58"
   },
-  "UpdateDate": "2019-11-22T01:10:29Z"
+  "UpdateDate": "2019-11-26T01:37:01Z"
 }

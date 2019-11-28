@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonSageMakerNotebooksServiceRolePolicy",
   "CreateDate": "2019-10-18T20:27:37Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4MYB7OEJED",
   "PolicyName": "AmazonSageMakerNotebooksServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-11-14T22:43:23Z",
+    "CreateDate": "2019-11-26T18:58:12Z",
     "Document": {
       "Statement": [
         {
@@ -79,12 +79,29 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateUserProfile",
+            "sagemaker:DescribeUserProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sso:CreateManagedApplicationInstance",
+            "sso:DeleteManagedApplicationInstance",
+            "sso:GetManagedApplicationInstance"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-11-14T22:43:23Z"
+  "UpdateDate": "2019-11-26T18:58:12Z"
 }

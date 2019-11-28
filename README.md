@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 201
-* Unique actions: 7340
-* Managed policies: 591
+* Unique actions: 7391
+* Managed policies: 592
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 173 |
-| `arn:aws:iam::aws:policy/Amazon*` | 150 |
+| `arn:aws:iam::aws:policy/Amazon*` | 151 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 106 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -46,9 +46,9 @@ The following table summarises the AWS APIs.
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`chime`](services/chime.yml) | 91 | 0 | 49 |
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
+| [`redshift`](services/redshift.yml) | 86 | 0 | 18 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 83 | 22 | 0 |
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
-| [`redshift`](services/redshift.yml) | 82 | 4 | 18 |
 | [`waf-regional`](services/waf-regional.yml) | 80 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
 | [`waf`](services/waf.yml) | 76 | 0 | 0 |
@@ -65,10 +65,10 @@ The following table summarises the AWS APIs.
 | [`autoscaling`](services/autoscaling.yml) | 54 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 53 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 51 | 0 | 0 |
-| [`ds`](services/ds.yml) | 49 | 1 | 6 |
+| [`ds`](services/ds.yml) | 49 | 8 | 6 |
 | [`guardduty`](services/guardduty.yml) | 49 | 1 | 0 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
-| [`organizations`](services/organizations.yml) | 46 | 0 | 0 |
+| [`organizations`](services/organizations.yml) | 47 | 0 | 0 |
 | [`codedeploy`](services/codedeploy.yml) | 46 | 0 | 0 |
 | [`s3`](services/s3.yml) | 45 | 48 | 39 |
 | [`cloudformation`](services/cloudformation.yml) | 45 | 10 | 3 |
@@ -79,8 +79,8 @@ The following table summarises the AWS APIs.
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 43 | 1 | 2 |
 | [`backup`](services/backup.yml) | 43 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 42 | 6 | 0 |
+| [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
-| [`dynamodb`](services/dynamodb.yml) | 39 | 3 | 6 |
 | [`personalize`](services/personalize.yml) | 39 | 3 | 0 |
 | [`logs`](services/logs.yml) | 39 | 0 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
@@ -149,10 +149,10 @@ The following table summarises the AWS APIs.
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
 | [`kafka`](services/kafka.yml) | 17 | 2 | 0 |
 | [`shield`](services/shield.yml) | 17 | 1 | 0 |
+| [`eks`](services/eks.yml) | 17 | 0 | 4 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
-| [`eks`](services/eks.yml) | 17 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 16 | 49 | 8 |
 | [`qldb`](services/qldb.yml) | 16 | 0 | 3 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
@@ -183,6 +183,7 @@ The following table summarises the AWS APIs.
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
 | [`iot`](services/iot.yml) | 8 | 0 | 175 |
 | [`sts`](services/sts.yml) | 8 | 0 | 1 |
+| [`tag`](services/tag.yml) | 8 | 0 | 0 |
 | [`sms-voice`](services/sms-voice.yml) | 8 | 0 | 0 |
 | [`savingsplans`](services/savingsplans.yml) | 8 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
@@ -194,7 +195,6 @@ The following table summarises the AWS APIs.
 | [`health`](services/health.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`translate`](services/translate.yml) | 5 | 0 | 0 |
-| [`tag`](services/tag.yml) | 5 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 2 | 9 | 0 |
@@ -209,13 +209,14 @@ The following table summarises the AWS APIs.
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
+| [`elastic-inference`](services/elastic-inference.yml) | 0 | 3 | 1 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
-| [`sso`](services/sso.yml) | 0 | 0 | 67 |
-| [`iotsitewise`](services/iotsitewise.yml) | 0 | 0 | 46 |
+| [`iotsitewise`](services/iotsitewise.yml) | 0 | 0 | 77 |
+| [`sso`](services/sso.yml) | 0 | 0 | 53 |
+| [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 37 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 26 |
-| [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 24 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 12 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
@@ -235,20 +236,19 @@ The following table summarises the AWS APIs.
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
 | [`rds-db`](services/rds-db.yml) | 0 | 0 | 1 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 1 |
-| [`elastic-inference`](services/elastic-inference.yml) | 0 | 0 | 1 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 1 |
 
 Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 987 |
-| `Get` | 977 |
-| `Describe` | 933 |
-| `Delete` | 863 |
-| `Create` | 787 |
-| `Update` | 599 |
-| `Put` | 202 |
-| `Start` | 123 |
+| `List` | 998 |
+| `Get` | 983 |
+| `Describe` | 944 |
+| `Delete` | 870 |
+| `Create` | 793 |
+| `Update` | 605 |
+| `Put` | 203 |
+| `Start` | 124 |
 | `Modify` | 100 |
-| `Tag` | 89 |
+| `Tag` | 90 |
