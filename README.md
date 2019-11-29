@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 201
-* Unique actions: 7391
+* Unique services: 202
+* Unique actions: 7418
 * Managed policies: 593
 
 Most common managed policy name prefixes:
@@ -215,6 +215,7 @@ The following table summarises the AWS APIs.
 | [`iotsitewise`](services/iotsitewise.yml) | 0 | 0 | 77 |
 | [`sso`](services/sso.yml) | 0 | 0 | 53 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 37 |
+| [`schemas`](services/schemas.yml) | 0 | 0 | 27 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
@@ -242,14 +243,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 998 |
-| `Get` | 983 |
-| `Describe` | 944 |
-| `Delete` | 870 |
-| `Create` | 793 |
-| `Update` | 605 |
-| `Put` | 203 |
-| `Start` | 124 |
+| `List` | 1003 |
+| `Get` | 985 |
+| `Describe` | 948 |
+| `Delete` | 874 |
+| `Create` | 796 |
+| `Update` | 608 |
+| `Put` | 204 |
+| `Start` | 125 |
 | `Modify` | 100 |
-| `Tag` | 90 |
+| `Tag` | 91 |
 
