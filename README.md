@@ -8,19 +8,19 @@ Collected data is published to the [policies](/policies) and [services](/service
 
 Thank you to [alanakirby/aktion](https://github.com/alanakirby/aktion) for originally 
 having this idea and being gracious about me shamelessly ripping it off.
-
+	
 # Stats
 
 * Unique services: 201
 * Unique actions: 7391
-* Managed policies: 592
+* Managed policies: 593
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 173 |
-| `arn:aws:iam::aws:policy/Amazon*` | 151 |
+| `arn:aws:iam::aws:policy/Amazon*` | 152 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 106 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -252,3 +252,4 @@ Most common action prefixes:
 | `Start` | 124 |
 | `Modify` | 100 |
 | `Tag` | 90 |
+
