@@ -1,0 +1,46 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/EC2InstanceProfileForImageBuilder",
+  "CreateDate": "2019-12-01T19:08:23Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4EJC2UPLYL",
+  "PolicyName": "EC2InstanceProfileForImageBuilder",
+  "PolicyVersion": {
+    "CreateDate": "2019-12-01T19:08:23Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "kms:EncryptionContextKeys": "aws:imagebuilder:arn"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "imagebuilder:GetComponent"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::ec2imagebuilder*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-12-01T19:08:23Z"
+}
