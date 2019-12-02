@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 202
-* Unique actions: 7418
+* Unique services: 203
+* Unique actions: 7458
 * Managed policies: 595
 
 Most common managed policy name prefixes:
@@ -214,6 +214,7 @@ The following table summarises the AWS APIs.
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 0 | 0 | 77 |
 | [`sso`](services/sso.yml) | 0 | 0 | 53 |
+| [`imagebuilder`](services/imagebuilder.yml) | 0 | 0 | 40 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 37 |
 | [`schemas`](services/schemas.yml) | 0 | 0 | 27 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
@@ -243,14 +244,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1003 |
-| `Get` | 985 |
+| `List` | 1012 |
+| `Get` | 994 |
 | `Describe` | 948 |
-| `Delete` | 874 |
-| `Create` | 796 |
-| `Update` | 608 |
-| `Put` | 204 |
-| `Start` | 125 |
+| `Delete` | 880 |
+| `Create` | 802 |
+| `Update` | 611 |
+| `Put` | 207 |
+| `Start` | 126 |
 | `Modify` | 100 |
-| `Tag` | 91 |
+| `Tag` | 92 |
 
