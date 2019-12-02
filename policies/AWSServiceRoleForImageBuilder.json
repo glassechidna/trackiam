@@ -1,15 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForImageBuilder",
   "CreateDate": "2019-11-29T22:02:13Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NE22WISEW",
   "PolicyName": "AWSServiceRoleForImageBuilder",
   "PolicyVersion": {
-    "CreateDate": "2019-11-29T22:02:13Z",
+    "CreateDate": "2019-12-02T02:04:36Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ec2:RunInstances",
+          "Condition": {
+            "ArnLike": {
+              "ec2:LaunchTemplate": "arn:aws:ec2:*:*:launch-template/*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
@@ -21,11 +31,21 @@
           "Resource": "*"
         },
         {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "ec2.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
           "Action": [
             "autoscaling:CreateAutoScalingGroup"
           ],
           "Condition": {
-            "StringEquals": {
+            "ForAnyValue:StringEquals": {
               "aws:RequestTag/CreatedBy": "EC2 Image Builder"
             }
           },
@@ -38,8 +58,20 @@
             "autoscaling:DetachInstances"
           ],
           "Condition": {
-            "StringEquals": {
+            "ForAnyValue:StringEquals": {
               "autoscaling:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:RequestTag/CreatedBy": "EC2 Image Builder"
             }
           },
           "Effect": "Allow",
@@ -52,7 +84,7 @@
             "ec2:TerminateInstances"
           ],
           "Condition": {
-            "StringEquals": {
+            "ForAnyValue:StringEquals": {
               "ec2:ResourceTag/CreatedBy": "EC2 Image Builder"
             }
           },
@@ -64,7 +96,7 @@
             "ssm:SendCommand"
           ],
           "Condition": {
-            "StringLike": {
+            "ForAnyValue:StringEquals": {
               "ssm:resourceTag/CreatedBy": [
                 "EC2 Image Builder"
               ]
@@ -76,18 +108,13 @@
           ]
         },
         {
-          "Action": "ec2:CreateTags",
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:ec2:*::image/*"
-          ]
-        },
-        {
           "Action": "ssm:SendCommand",
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:s3:::*",
             "arn:aws:ssm:*:*:document/AWS-RunPowerShellScript",
-            "arn:aws:ssm:*:*:document/AWS-RunShellScript"
+            "arn:aws:ssm:*:*:document/AWS-RunShellScript",
+            "arn:aws:ssm:*:*:document/AWSEC2-RunSysprep"
           ]
         },
         {
@@ -150,7 +177,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-11-29T22:02:13Z"
+  "UpdateDate": "2019-12-02T02:04:36Z"
 }
