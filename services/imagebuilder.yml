@@ -1,6 +1,4 @@
 Actions:
-
-  # actions with no corresponding API
   - Name: imagebuilder:CancelImageCreation
   - Name: imagebuilder:CreateComponent
   - Name: imagebuilder:CreateDistributionConfiguration
@@ -41,3 +39,7 @@ Actions:
   - Name: imagebuilder:UpdateDistributionConfiguration
   - Name: imagebuilder:UpdateImagePipeline
   - Name: imagebuilder:UpdateInfrastructureConfiguration
+
+  # APIs without an IAM action
+  - Name: imagebuilder:ImportComponent
+  - Name: imagebuilder:ListImagePipelineImages

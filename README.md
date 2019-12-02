@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 203
-* Unique actions: 7458
+* Unique actions: 7463
 * Managed policies: 595
 
 Most common managed policy name prefixes:
@@ -81,6 +81,7 @@ The following table summarises the AWS APIs.
 | [`elasticache`](services/elasticache.yml) | 42 | 6 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
+| [`imagebuilder`](services/imagebuilder.yml) | 40 | 2 | 0 |
 | [`personalize`](services/personalize.yml) | 39 | 3 | 0 |
 | [`logs`](services/logs.yml) | 39 | 0 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
@@ -113,6 +114,7 @@ The following table summarises the AWS APIs.
 | [`appmesh`](services/appmesh.yml) | 28 | 0 | 1 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 27 | 3 | 8 |
+| [`schemas`](services/schemas.yml) | 27 | 2 | 0 |
 | [`forecast`](services/forecast.yml) | 27 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 27 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 26 | 2 | 0 |
@@ -158,8 +160,8 @@ The following table summarises the AWS APIs.
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
 | [`batch`](services/batch.yml) | 16 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 15 | 1 | 0 |
+| [`license-manager`](services/license-manager.yml) | 15 | 1 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 15 | 0 | 1 |
-| [`license-manager`](services/license-manager.yml) | 15 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 14 | 4 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 3 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
@@ -214,9 +216,7 @@ The following table summarises the AWS APIs.
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 0 | 0 | 77 |
 | [`sso`](services/sso.yml) | 0 | 0 | 53 |
-| [`imagebuilder`](services/imagebuilder.yml) | 0 | 0 | 40 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 37 |
-| [`schemas`](services/schemas.yml) | 0 | 0 | 27 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
@@ -244,7 +244,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1012 |
+| `List` | 1014 |
 | `Get` | 994 |
 | `Describe` | 948 |
 | `Delete` | 880 |
