@@ -13,22 +13,29 @@ function withPreferredEndpoint(url) {
 }
 
 function convertDiffToChanges(diff) {
-  return diff.chunks.map(x => x.changes).flat().filter(x => x.content.match(/^[\+\-]+[\S\s]+[A-Za-z0-9]+/))
+  return diff.chunks.map(x => x.changes).flat()
+    .filter(x => x.type != 'normal')
+    .filter(x => x.content.substring(1).match("[0-9a-zA-Z]+"))
 }
 
 function generateListItemDetails(fileDiff) {
   var fileChanges = convertDiffToChanges(fileDiff);
   if (fileDiff) {
-    return fileChanges.map(x => `
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        ${x.content}
+    return fileChanges.map(x => {
+      var color = (x.type == 'add') ? 'success' : 'danger'
+      var content = x.content.substring(1)
+      content = content.replace(/^  - Name: ([-\w]+:\w+)/, '$1');
+
+      return `
+      <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-${color}">
+        ${content}
       </li>
-    `);
+    `});
   };
 }
 
 function generateListItem(name, htmlUrl, i, diff) {
-  const listItemDetails = generateListItemDetails( diff);
+  const listItemDetails = generateListItemDetails(diff);
   return `
   <div class="card m-1">
     <div class="card-header" id="header-${name}-${i}">
