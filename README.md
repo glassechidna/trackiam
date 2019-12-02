@@ -146,6 +146,7 @@ The following table summarises the AWS APIs.
 | [`secretsmanager`](services/secretsmanager.yml) | 18 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 18 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
+| [`access-analyzer`](services/access-analyzer.yml) | 18 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 17 | 9 | 0 |
 | [`ram`](services/ram.yml) | 17 | 6 | 0 |
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
@@ -220,7 +221,6 @@ The following table summarises the AWS APIs.
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
-| [`access-analyzer`](services/access-analyzer.yml) | 0 | 0 | 18 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 12 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
