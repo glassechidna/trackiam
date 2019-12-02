@@ -1,0 +1,62 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AccessAnalyzerServiceRolePolicy",
+  "CreateDate": "2019-12-02T17:13:10Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4CAIXDDRI2",
+  "PolicyName": "AccessAnalyzerServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-12-02T17:13:10Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeAddresses",
+            "ec2:DescribeByoipCidrs",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs",
+            "iam:GetRole",
+            "iam:ListRoles",
+            "kms:DescribeKey",
+            "kms:GetKeyPolicy",
+            "kms:ListGrants",
+            "kms:ListKeyPolicies",
+            "kms:ListKeys",
+            "lambda:GetLayerVersionPolicy",
+            "lambda:GetPolicy",
+            "lambda:ListFunctions",
+            "lambda:ListLayerVersions",
+            "lambda:ListLayers",
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListAccountsForParent",
+            "organizations:ListChildren",
+            "organizations:ListDelegatedAdministrators",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListParents",
+            "organizations:ListRoots",
+            "s3:GetAccountPublicAccessBlock",
+            "s3:GetBucketAcl",
+            "s3:GetBucketLocation",
+            "s3:GetBucketPolicy",
+            "s3:GetBucketPolicyStatus",
+            "s3:GetBucketPublicAccessBlock",
+            "s3:ListAllMyBuckets",
+            "sqs:GetQueueAttributes",
+            "sqs:ListQueues"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-12-02T17:13:10Z"
+}

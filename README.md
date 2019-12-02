@@ -11,9 +11,9 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 203
-* Unique actions: 7463
-* Managed policies: 595
+* Unique services: 204
+* Unique actions: 7481
+* Managed policies: 598
 
 Most common managed policy name prefixes:
 
@@ -21,10 +21,10 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 173 |
 | `arn:aws:iam::aws:policy/Amazon*` | 152 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 107 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 108 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
-| Other | 60 |
+| Other | 62 |
 
 The following table summarises the AWS APIs. 
 
@@ -220,6 +220,7 @@ The following table summarises the AWS APIs.
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
+| [`access-analyzer`](services/access-analyzer.yml) | 0 | 0 | 18 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 12 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
@@ -244,14 +245,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1014 |
-| `Get` | 994 |
+| `List` | 1019 |
+| `Get` | 998 |
 | `Describe` | 948 |
-| `Delete` | 880 |
-| `Create` | 802 |
-| `Update` | 611 |
+| `Delete` | 882 |
+| `Create` | 804 |
+| `Update` | 613 |
 | `Put` | 207 |
-| `Start` | 126 |
+| `Start` | 127 |
 | `Modify` | 100 |
-| `Tag` | 92 |
+| `Tag` | 93 |
 
