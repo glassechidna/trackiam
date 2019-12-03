@@ -1,0 +1,55 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonCodeGuruReviewerServiceRolePolicy",
+  "CreateDate": "2019-12-03T05:31:12Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4NJY3GAUD2",
+  "PolicyName": "AmazonCodeGuruReviewerServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-12-03T05:31:12Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "codecommit:DescribePullRequestEvents",
+            "codecommit:GetCommentsForPullRequest",
+            "codecommit:GetDifferences",
+            "codecommit:GetPullRequest",
+            "codecommit:GetRepository",
+            "codecommit:GitPull",
+            "codecommit:ListPullRequests",
+            "codecommit:PostCommentForPullRequest",
+            "codecommit:UntagResource"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/codeguru-reviewer": "enabled"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AccessCodeGuruReviewerEnabledRepositories"
+        },
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:RemoveTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "events:ManagedBy": "codeguru-reviewer.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchEventsResourceCleanup"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-12-03T05:31:12Z"
+}
