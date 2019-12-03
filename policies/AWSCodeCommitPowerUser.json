@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeCommitPowerUser",
   "CreateDate": "2015-07-09T17:06:49Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAI4UIINUVGB5SEC57G",
   "PolicyName": "AWSCodeCommitPowerUser",
   "PolicyVersion": {
-    "CreateDate": "2019-11-20T17:12:55Z",
+    "CreateDate": "2019-12-03T08:15:40Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "codeguru-reviewer.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/codeguru-reviewer.amazonaws.com/AWSServiceRoleForAmazonCodeGuruReviewer",
+          "Sid": "AmazonCodeGuruReviewerSLRCreation"
+        },
         {
           "Action": [
             "codestar-notifications:CreateNotificationRule",
@@ -26,6 +37,22 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "CodeStarNotificationsReadWriteAccess"
+        },
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "events:ManagedBy": "codeguru-reviewer.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchEventsManagedRules"
         },
         {
           "Action": [
@@ -55,6 +82,17 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "codeguru-reviewer:AssociateRepository",
+            "codeguru-reviewer:DescribeRepositoryAssociation",
+            "codeguru-reviewer:DisassociateRepository",
+            "codeguru-reviewer:ListRepositoryAssociations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonCodeGuruReviewerFullAccess"
         },
         {
           "Action": [
@@ -154,7 +192,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2019-11-20T17:12:55Z"
+  "UpdateDate": "2019-12-03T08:15:40Z"
 }

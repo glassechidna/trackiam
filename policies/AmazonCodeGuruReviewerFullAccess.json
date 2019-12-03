@@ -1,0 +1,86 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonCodeGuruReviewerFullAccess",
+  "CreateDate": "2019-12-03T08:33:47Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4ENLFBTHWM",
+  "PolicyName": "AmazonCodeGuruReviewerFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-12-03T08:33:47Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "codeguru-reviewer.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/codeguru-reviewer.amazonaws.com/AWSServiceRoleForAmazonCodeGuruReviewer",
+          "Sid": "AmazonCodeGuruReviewerSLRCreation"
+        },
+        {
+          "Action": [
+            "codecommit:TagResource",
+            "codecommit:UntagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "codeguru-reviewer"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeCommitTagManagement"
+        },
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "events:ManagedBy": "codeguru-reviewer.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchEventsManagedRules"
+        },
+        {
+          "Action": [
+            "codecommit:ListRepositories"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeCommitAccess"
+        },
+        {
+          "Action": [
+            "codeguru-reviewer:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonCodeGuruReviewerFullAccess"
+        },
+        {
+          "Action": [
+            "iam:DeleteServiceLinkedRole",
+            "iam:GetServiceLinkedRoleDeletionStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/codeguru-reviewer.amazonaws.com/AWSServiceRoleForAmazonCodeGuruReviewer",
+          "Sid": "AmazonCodeGuruReviewerSLRDeletion"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-12-03T08:33:47Z"
+}

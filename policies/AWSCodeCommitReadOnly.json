@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeCommitReadOnly",
   "CreateDate": "2015-07-09T17:05:06Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJACNSXR7Z2VLJW3D6",
   "PolicyName": "AWSCodeCommitReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2019-11-20T17:12:40Z",
+    "CreateDate": "2019-12-03T08:08:37Z",
     "Document": {
       "Statement": [
         {
@@ -35,6 +35,15 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "codeguru-reviewer:DescribeRepositoryAssociation",
+            "codeguru-reviewer:ListRepositoryAssociations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonCodeGuruReviewerReadOnlyAccess"
         },
         {
           "Action": [
@@ -96,7 +105,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2019-11-20T17:12:40Z"
+  "UpdateDate": "2019-12-03T08:08:37Z"
 }

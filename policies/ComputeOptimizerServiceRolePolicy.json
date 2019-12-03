@@ -1,0 +1,48 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/ComputeOptimizerServiceRolePolicy",
+  "CreateDate": "2019-12-03T08:45:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4HPOQZNRNJ",
+  "PolicyName": "ComputeOptimizerServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-12-03T08:45:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:GetMetricData"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchAccess"
+        },
+        {
+          "Action": [
+            "compute-optimizer:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ComputeOptimizerFullAccess"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AwsOrgsAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-12-03T08:45:19Z"
+}

@@ -11,17 +11,17 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 204
-* Unique actions: 7481
-* Managed policies: 599
+* Unique services: 205
+* Unique actions: 7487
+* Managed policies: 602
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 173 |
-| `arn:aws:iam::aws:policy/Amazon*` | 152 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 109 |
+| `arn:aws:iam::aws:policy/Amazon*` | 154 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 110 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 62 |
@@ -229,6 +229,7 @@ The following table summarises the AWS APIs.
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
+| [`compute-optimizer`](services/compute-optimizer.yml) | 0 | 0 | 6 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 5 |
 | [`wellarchitected`](services/wellarchitected.yml) | 0 | 0 | 4 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
@@ -246,11 +247,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1019 |
-| `Get` | 998 |
+| `Get` | 1003 |
 | `Describe` | 948 |
 | `Delete` | 882 |
 | `Create` | 804 |
-| `Update` | 613 |
+| `Update` | 614 |
 | `Put` | 207 |
 | `Start` | 127 |
 | `Modify` | 100 |
