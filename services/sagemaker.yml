@@ -19,6 +19,7 @@ Actions:
   - Name: sagemaker:DeleteCodeRepository
   - Name: sagemaker:DeleteEndpoint
   - Name: sagemaker:DeleteEndpointConfig
+  - Name: sagemaker:DeleteHumanLoop
   - Name: sagemaker:DeleteModel
   - Name: sagemaker:DeleteModelPackage
   - Name: sagemaker:DeleteNotebookInstance
@@ -30,6 +31,7 @@ Actions:
   - Name: sagemaker:DescribeCompilationJob
   - Name: sagemaker:DescribeEndpoint
   - Name: sagemaker:DescribeEndpointConfig
+  - Name: sagemaker:DescribeHumanLoop
   - Name: sagemaker:DescribeHyperParameterTuningJob
   - Name: sagemaker:DescribeLabelingJob
   - Name: sagemaker:DescribeModel
@@ -47,6 +49,7 @@ Actions:
   - Name: sagemaker:ListCompilationJobs
   - Name: sagemaker:ListEndpointConfigs
   - Name: sagemaker:ListEndpoints
+  - Name: sagemaker:ListHumanLoops
   - Name: sagemaker:ListHyperParameterTuningJobs
   - Name: sagemaker:ListLabelingJobs
   - Name: sagemaker:ListLabelingJobsForWorkteam
@@ -62,8 +65,10 @@ Actions:
   - Name: sagemaker:ListWorkteams
   - Name: sagemaker:RenderUiTemplate
   - Name: sagemaker:Search
+  - Name: sagemaker:StartHumanLoop
   - Name: sagemaker:StartNotebookInstance
   - Name: sagemaker:StopCompilationJob
+  - Name: sagemaker:StopHumanLoop
   - Name: sagemaker:StopHyperParameterTuningJob
   - Name: sagemaker:StopLabelingJob
   - Name: sagemaker:StopNotebookInstance
@@ -96,7 +101,6 @@ Actions:
   - Name: sagemaker:DeleteDomain
   - Name: sagemaker:DeleteExperiment
   - Name: sagemaker:DeleteFlowDefinition
-  - Name: sagemaker:DeleteHumanLoop
   - Name: sagemaker:DeleteMonitoringSchedule
   - Name: sagemaker:DeleteTrial
   - Name: sagemaker:DeleteTrialComponent
@@ -106,7 +110,6 @@ Actions:
   - Name: sagemaker:DescribeDomain
   - Name: sagemaker:DescribeExperiment
   - Name: sagemaker:DescribeFlowDefinition
-  - Name: sagemaker:DescribeHumanLoop
   - Name: sagemaker:DescribeHumanTaskUi
   - Name: sagemaker:DescribeMonitoringSchedule
   - Name: sagemaker:DescribeProcessingJob
@@ -120,7 +123,6 @@ Actions:
   - Name: sagemaker:ListDomains
   - Name: sagemaker:ListExperiments
   - Name: sagemaker:ListFlowDefinitions
-  - Name: sagemaker:ListHumanLoops
   - Name: sagemaker:ListHumanTaskUis
   - Name: sagemaker:ListMonitoringExecutions
   - Name: sagemaker:ListMonitoringSchedules
@@ -128,10 +130,8 @@ Actions:
   - Name: sagemaker:ListTrialComponents
   - Name: sagemaker:ListTrials
   - Name: sagemaker:ListUserProfiles
-  - Name: sagemaker:StartHumanLoop
   - Name: sagemaker:StartMonitoringSchedule
   - Name: sagemaker:StopAutoMLJob
-  - Name: sagemaker:StopHumanLoop
   - Name: sagemaker:StopMonitoringSchedule
   - Name: sagemaker:StopProcessingJob
   - Name: sagemaker:UpdateDomain

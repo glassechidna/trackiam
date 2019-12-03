@@ -1,13 +1,19 @@
 Actions:
   - Name: s3:AbortMultipartUpload
+  - Name: s3:CreateAccessPoint
   - Name: s3:CreateBucket
   - Name: s3:CreateJob
+  - Name: s3:DeleteAccessPoint
+  - Name: s3:DeleteAccessPointPolicy
   - Name: s3:DeleteBucket
   - Name: s3:DeleteBucketPolicy
   - Name: s3:DeleteBucketWebsite
   - Name: s3:DeleteObject
   - Name: s3:DeleteObjectTagging
   - Name: s3:DescribeJob
+  - Name: s3:GetAccessPoint
+  - Name: s3:GetAccessPointPolicy
+  - Name: s3:GetAccessPointPolicyStatus
   - Name: s3:GetBucketAcl
   - Name: s3:GetBucketCORS
   - Name: s3:GetBucketLocation
@@ -26,7 +32,9 @@ Actions:
   - Name: s3:GetObjectTagging
   - Name: s3:GetObjectTorrent
   - Name: s3:HeadBucket
+  - Name: s3:ListAccessPoints
   - Name: s3:ListJobs
+  - Name: s3:PutAccessPointPolicy
   - Name: s3:PutBucketAcl
   - Name: s3:PutBucketCORS
   - Name: s3:PutBucketLogging
@@ -47,15 +55,9 @@ Actions:
 
   # actions with no corresponding API
   - Name: s3:BypassGovernanceRetention
-  - Name: s3:CreateAccessPoint
-  - Name: s3:DeleteAccessPoint
-  - Name: s3:DeleteAccessPointPolicy
   - Name: s3:DeleteObjectVersion
   - Name: s3:DeleteObjectVersionTagging
   - Name: s3:GetAccelerateConfiguration
-  - Name: s3:GetAccessPoint
-  - Name: s3:GetAccessPointPolicy
-  - Name: s3:GetAccessPointPolicyStatus
   - Name: s3:GetAccountPublicAccessBlock
   - Name: s3:GetAnalyticsConfiguration
   - Name: s3:GetBucketObjectLockConfiguration
@@ -70,7 +72,6 @@ Actions:
   - Name: s3:GetObjectVersionTagging
   - Name: s3:GetObjectVersionTorrent
   - Name: s3:GetReplicationConfiguration
-  - Name: s3:ListAccessPoints
   - Name: s3:ListAllMyBuckets
   - Name: s3:ListBucket
   - Name: s3:ListBucketMultipartUploads
@@ -78,7 +79,6 @@ Actions:
   - Name: s3:ListMultipartUploadParts
   - Name: s3:ObjectOwnerOverrideToBucketOwner
   - Name: s3:PutAccelerateConfiguration
-  - Name: s3:PutAccessPointPolicy
   - Name: s3:PutAccountPublicAccessBlock
   - Name: s3:PutAnalyticsConfiguration
   - Name: s3:PutBucketObjectLockConfiguration

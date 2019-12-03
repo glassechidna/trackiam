@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSCodeDeployRoleForLambda",
   "CreateDate": "2017-11-28T14:05:44Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJA3RQZIKNOSJ4ZQSA",
   "PolicyName": "AWSCodeDeployRoleForLambda",
   "PolicyVersion": {
-    "CreateDate": "2017-12-01T22:32:58Z",
+    "CreateDate": "2019-12-03T19:53:10Z",
     "Document": {
       "Statement": [
         {
@@ -27,6 +27,7 @@
           "Action": [
             "cloudwatch:DescribeAlarms",
             "lambda:GetAlias",
+            "lambda:GetProvisionedConcurrencyConfig",
             "lambda:UpdateAlias",
             "sns:Publish"
           ],
@@ -52,7 +53,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2017-12-01T22:32:58Z"
+  "UpdateDate": "2019-12-03T19:53:10Z"
 }
