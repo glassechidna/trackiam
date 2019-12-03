@@ -1,0 +1,37 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSNetworkManagerServiceRolePolicy",
+  "CreateDate": "2019-12-03T14:03:35Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4B346KOB7I",
+  "PolicyName": "AWSNetworkManagerServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-12-03T14:03:35Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "directconnect:DescribeConnections",
+            "directconnect:DescribeDirectConnectGatewayAttachments",
+            "directconnect:DescribeLocations",
+            "directconnect:DescribeVirtualInterfaces",
+            "ec2:DescribeCustomerGateways",
+            "ec2:DescribeTransitGatewayAttachments",
+            "ec2:DescribeTransitGatewayRouteTables",
+            "ec2:DescribeTransitGateways",
+            "ec2:DescribeVpnConnections",
+            "ec2:GetTransitGatewayRouteTableAssociations",
+            "ec2:SearchTransitGatewayRoutes"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-12-03T14:03:35Z"
+}
