@@ -46,9 +46,16 @@ Actions:
   - Name: s3:UpdateJobStatus
 
   # actions with no corresponding API
+  - Name: s3:BypassGovernanceRetention
+  - Name: s3:CreateAccessPoint
+  - Name: s3:DeleteAccessPoint
+  - Name: s3:DeleteAccessPointPolicy
   - Name: s3:DeleteObjectVersion
   - Name: s3:DeleteObjectVersionTagging
   - Name: s3:GetAccelerateConfiguration
+  - Name: s3:GetAccessPoint
+  - Name: s3:GetAccessPointPolicy
+  - Name: s3:GetAccessPointPolicyStatus
   - Name: s3:GetAccountPublicAccessBlock
   - Name: s3:GetAnalyticsConfiguration
   - Name: s3:GetBucketObjectLockConfiguration
@@ -63,14 +70,15 @@ Actions:
   - Name: s3:GetObjectVersionTagging
   - Name: s3:GetObjectVersionTorrent
   - Name: s3:GetReplicationConfiguration
+  - Name: s3:ListAccessPoints
   - Name: s3:ListAllMyBuckets
   - Name: s3:ListBucket
-  - Name: s3:ListBucketByTags
   - Name: s3:ListBucketMultipartUploads
   - Name: s3:ListBucketVersions
   - Name: s3:ListMultipartUploadParts
   - Name: s3:ObjectOwnerOverrideToBucketOwner
   - Name: s3:PutAccelerateConfiguration
+  - Name: s3:PutAccessPointPolicy
   - Name: s3:PutAccountPublicAccessBlock
   - Name: s3:PutAnalyticsConfiguration
   - Name: s3:PutBucketObjectLockConfiguration
