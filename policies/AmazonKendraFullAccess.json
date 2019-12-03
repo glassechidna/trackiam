@@ -1,0 +1,90 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonKendraFullAccess",
+  "CreateDate": "2019-12-03T16:15:37Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4BK2ALV3AM",
+  "PolicyName": "AmazonKendraFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-12-03T16:15:37Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "kendra.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "kendra:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:GetMetricData"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey",
+            "kms:ListAliases",
+            "kms:ListKeys"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:DescribeSecret"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:AmazonKendra-*"
+        },
+        {
+          "Action": [
+            "secretsmanager:ListSecrets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-12-03T16:15:37Z"
+}

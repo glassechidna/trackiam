@@ -11,16 +11,16 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 206
-* Unique actions: 7492
-* Managed policies: 607
+* Unique services: 207
+* Unique actions: 7575
+* Managed policies: 612
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 173 |
-| `arn:aws:iam::aws:policy/Amazon*` | 158 |
+| `arn:aws:iam::aws:policy/Amazon*` | 163 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 111 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -51,8 +51,8 @@ The following table summarises the AWS APIs.
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 80 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
+| [`sagemaker`](services/sagemaker.yml) | 76 | 0 | 63 |
 | [`waf`](services/waf.yml) | 76 | 0 | 0 |
-| [`sagemaker`](services/sagemaker.yml) | 76 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 75 | 0 | 11 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`gamelift`](services/gamelift.yml) | 73 | 0 | 0 |
@@ -221,6 +221,7 @@ The following table summarises the AWS APIs.
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
+| [`kendra`](services/kendra.yml) | 0 | 0 | 20 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 12 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
@@ -247,14 +248,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1019 |
+| `List` | 1037 |
 | `Get` | 1003 |
-| `Describe` | 948 |
-| `Delete` | 882 |
-| `Create` | 805 |
-| `Update` | 614 |
+| `Describe` | 963 |
+| `Delete` | 893 |
+| `Create` | 820 |
+| `Update` | 622 |
 | `Put` | 207 |
-| `Start` | 127 |
+| `Start` | 130 |
 | `Modify` | 101 |
 | `Tag` | 93 |
 

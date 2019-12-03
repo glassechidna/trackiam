@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/DataScientist",
   "CreateDate": "2016-11-10T17:28:48Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAJ5YHI2BQW7EQFYDXS",
   "PolicyName": "DataScientist",
   "PolicyVersion": {
-    "CreateDate": "2019-08-21T23:13:03Z",
+    "CreateDate": "2019-12-03T16:48:34Z",
     "Document": {
       "Statement": [
         {
@@ -21,6 +21,34 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "sagemaker:*FlowDefinition",
+            "sagemaker:*FlowDefinitions"
+          ],
+          "Condition": {
+            "StringEqualsIfExists": {
+              "sagemaker:WorkteamType": [
+                "private-crowd",
+                "vendor-crowd"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sagemaker:*"
+          ],
+          "Effect": "Allow",
+          "NotResource": [
+            "arn:aws:sagemaker:*:*:app/*",
+            "arn:aws:sagemaker:*:*:domain/*",
+            "arn:aws:sagemaker:*:*:flow-definition/*",
+            "arn:aws:sagemaker:*:*:user-profile/*"
+          ]
         },
         {
           "Action": [
@@ -68,7 +96,6 @@
             "rds:*",
             "redshift:*",
             "s3:CreateBucket",
-            "sagemaker:*",
             "sdb:*",
             "sns:CreateTopic",
             "sns:Get*",
@@ -109,6 +136,7 @@
             "s3:Get*",
             "s3:List*",
             "s3:PutAccelerateConfiguration",
+            "s3:PutBucketCors",
             "s3:PutBucketLogging",
             "s3:PutBucketNotification",
             "s3:PutBucketTagging",
@@ -120,12 +148,25 @@
           "Resource": [
             "*"
           ]
+        },
+        {
+          "Action": [
+            "sagemaker:*App",
+            "sagemaker:CreatePresignedDomainUrl",
+            "sagemaker:DescribeDomain",
+            "sagemaker:DescribeUserProfile",
+            "sagemaker:ListApps",
+            "sagemaker:ListDomains",
+            "sagemaker:ListUserProfiles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2019-08-21T23:13:03Z"
+  "UpdateDate": "2019-12-03T16:48:34Z"
 }

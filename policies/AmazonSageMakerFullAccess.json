@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerFullAccess",
   "CreateDate": "2017-11-29T13:07:59Z",
-  "DefaultVersionId": "v14",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJZ5IWYMXO5QDB4QOG",
   "PolicyName": "AmazonSageMakerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-10-29T22:22:26Z",
+    "CreateDate": "2019-12-03T16:32:12Z",
     "Document": {
       "Statement": [
         {
@@ -61,6 +61,22 @@
         },
         {
           "Action": [
+            "sagemaker:*FlowDefinition",
+            "sagemaker:*FlowDefinitions"
+          ],
+          "Condition": {
+            "StringEqualsIfExists": {
+              "sagemaker:WorkteamType": [
+                "private-crowd",
+                "vendor-crowd"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "secretsmanager:DescribeSecret",
             "secretsmanager:GetSecretValue"
           ],
@@ -71,6 +87,18 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "sagemaker:*"
+          ],
+          "Effect": "Allow",
+          "NotResource": [
+            "arn:aws:sagemaker:*:*:app/*",
+            "arn:aws:sagemaker:*:*:domain/*",
+            "arn:aws:sagemaker:*:*:flow-definition/*",
+            "arn:aws:sagemaker:*:*:user-profile/*"
+          ]
         },
         {
           "Action": [
@@ -95,8 +123,7 @@
             "codecommit:BatchGetRepositories",
             "codecommit:CreateRepository",
             "codecommit:GetRepository",
-            "codecommit:ListBranches",
-            "codecommit:ListRepositories",
+            "codecommit:List*",
             "cognito-idp:AdminAddUserToGroup",
             "cognito-idp:AdminCreateUser",
             "cognito-idp:AdminDeleteUser",
@@ -109,12 +136,7 @@
             "cognito-idp:CreateUserPoolDomain",
             "cognito-idp:DescribeUserPool",
             "cognito-idp:DescribeUserPoolClient",
-            "cognito-idp:ListGroups",
-            "cognito-idp:ListIdentityProviders",
-            "cognito-idp:ListUserPoolClients",
-            "cognito-idp:ListUserPools",
-            "cognito-idp:ListUsers",
-            "cognito-idp:ListUsersInGroup",
+            "cognito-idp:List*",
             "cognito-idp:UpdateUserPool",
             "cognito-idp:UpdateUserPoolClient",
             "ec2:CreateNetworkInterface",
@@ -153,12 +175,24 @@
             "kms:DescribeKey",
             "kms:ListAliases",
             "lambda:ListFunctions",
+            "logs:CreateLogDelivery",
             "logs:CreateLogGroup",
             "logs:CreateLogStream",
-            "logs:DescribeLogGroups",
-            "logs:DescribeLogStreams",
+            "logs:DeleteLogDelivery",
+            "logs:Describe*",
+            "logs:GetLogDelivery",
             "logs:GetLogEvents",
+            "logs:ListLogDeliveries",
             "logs:PutLogEvents",
+            "logs:PutResourcePolicy",
+            "logs:UpdateLogDelivery",
+            "robomaker:CancelSimulationJob",
+            "robomaker:CreateSimulationApplication",
+            "robomaker:CreateSimulationJob",
+            "robomaker:DeleteSimulationApplication",
+            "robomaker:DescribeSimulationApplication",
+            "robomaker:DescribeSimulationJob",
+            "secretsmanager:ListSecrets",
             "sns:ListTopics"
           ],
           "Effect": "Allow",
@@ -204,51 +238,7 @@
         },
         {
           "Action": [
-            "logs:CreateLogDelivery",
-            "logs:DeleteLogDelivery",
-            "logs:DescribeResourcePolicies",
-            "logs:GetLogDelivery",
-            "logs:ListLogDeliveries",
-            "logs:PutResourcePolicy",
-            "logs:UpdateLogDelivery"
-          ],
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
-            "robomaker:CancelSimulationJob",
-            "robomaker:CreateSimulationJob",
-            "robomaker:DescribeSimulationJob"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "*"
-          ]
-        },
-        {
-          "Action": [
-            "robomaker:CreateSimulationApplication",
-            "robomaker:DeleteSimulationApplication",
-            "robomaker:DescribeSimulationApplication"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "*"
-          ]
-        },
-        {
-          "Action": [
-            "s3:CreateBucket",
-            "s3:GetBucketLocation",
-            "s3:ListAllMyBuckets",
-            "s3:ListBucket"
-          ],
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
+            "s3:AbortMultipartUpload",
             "s3:DeleteObject",
             "s3:GetObject",
             "s3:PutObject"
@@ -263,7 +253,25 @@
         },
         {
           "Action": [
-            "sagemaker:*"
+            "s3:CreateBucket",
+            "s3:GetBucketCors",
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket",
+            "s3:PutBucketCors"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sagemaker:*App",
+            "sagemaker:CreatePresignedDomainUrl",
+            "sagemaker:DescribeDomain",
+            "sagemaker:DescribeUserProfile",
+            "sagemaker:ListApps",
+            "sagemaker:ListDomains",
+            "sagemaker:ListUserProfiles"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -281,13 +289,6 @@
         },
         {
           "Action": [
-            "secretsmanager:ListSecrets"
-          ],
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
             "sns:CreateTopic",
             "sns:Subscribe"
           ],
@@ -302,7 +303,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v14"
+    "VersionId": "v15"
   },
-  "UpdateDate": "2019-10-29T22:22:26Z"
+  "UpdateDate": "2019-12-03T16:32:12Z"
 }

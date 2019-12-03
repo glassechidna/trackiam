@@ -1,0 +1,29 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonKendraReadOnlyAccess",
+  "CreateDate": "2019-12-03T16:13:45Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4POKTT2LDN",
+  "PolicyName": "AmazonKendraReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-12-03T16:13:45Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "kendra:Describe*",
+            "kendra:List*",
+            "kendra:Query"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-12-03T16:13:45Z"
+}
