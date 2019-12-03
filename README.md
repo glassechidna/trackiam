@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 212
-* Unique actions: 7691
-* Managed policies: 614
+* Unique actions: 7698
+* Managed policies: 615
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 175 |
-| `arn:aws:iam::aws:policy/Amazon*` | 163 |
+| `arn:aws:iam::aws:policy/Amazon*` | 164 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 111 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -94,7 +94,7 @@ The following table summarises the AWS APIs.
 | [`lex`](services/lex.yml) | 35 | 6 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
-| [`rekognition`](services/rekognition.yml) | 34 | 0 | 0 |
+| [`rekognition`](services/rekognition.yml) | 34 | 0 | 7 |
 | [`iotanalytics`](services/iotanalytics.yml) | 33 | 1 | 0 |
 | [`workmail`](services/workmail.yml) | 33 | 0 | 53 |
 | [`sns`](services/sns.yml) | 33 | 0 | 0 |
@@ -104,6 +104,7 @@ The following table summarises the AWS APIs.
 | [`amplify`](services/amplify.yml) | 32 | 5 | 0 |
 | [`events`](services/events.yml) | 31 | 0 | 0 |
 | [`worklink`](services/worklink.yml) | 30 | 0 | 0 |
+| [`frauddetector`](services/frauddetector.yml) | 30 | 0 | 0 |
 | [`codebuild`](services/codebuild.yml) | 29 | 0 | 7 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 29 | 0 | 0 |
@@ -211,7 +212,6 @@ The following table summarises the AWS APIs.
 | [`execute-api`](services/execute-api.yml) | 0 | 209 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 144 | 7 |
 | [`wafv2`](services/wafv2.yml) | 0 | 36 | 0 |
-| [`frauddetector`](services/frauddetector.yml) | 0 | 30 | 0 |
 | [`appconfig`](services/appconfig.yml) | 0 | 29 | 0 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 0 | 9 | 0 |
@@ -255,12 +255,12 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1043 |
 | `Get` | 1026 |
-| `Describe` | 978 |
+| `Describe` | 980 |
 | `Delete` | 906 |
-| `Create` | 836 |
+| `Create` | 838 |
 | `Update` | 634 |
 | `Put` | 213 |
-| `Start` | 130 |
+| `Start` | 131 |
 | `Modify` | 101 |
 | `Tag` | 94 |
 
