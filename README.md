@@ -11,15 +11,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 207
-* Unique actions: 7575
-* Managed policies: 612
+* Unique services: 208
+* Unique actions: 7603
+* Managed policies: 614
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 173 |
+| `arn:aws:iam::aws:policy/AWS*` | 175 |
 | `arn:aws:iam::aws:policy/Amazon*` | 163 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 111 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
@@ -218,6 +218,7 @@ The following table summarises the AWS APIs.
 | [`iotsitewise`](services/iotsitewise.yml) | 0 | 0 | 77 |
 | [`sso`](services/sso.yml) | 0 | 0 | 53 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 37 |
+| [`networkmanager`](services/networkmanager.yml) | 0 | 0 | 28 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
@@ -248,14 +249,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1037 |
-| `Get` | 1003 |
-| `Describe` | 963 |
-| `Delete` | 893 |
-| `Create` | 820 |
-| `Update` | 622 |
+| `List` | 1038 |
+| `Get` | 1009 |
+| `Describe` | 964 |
+| `Delete` | 897 |
+| `Create` | 824 |
+| `Update` | 626 |
 | `Put` | 207 |
 | `Start` | 130 |
 | `Modify` | 101 |
-| `Tag` | 93 |
+| `Tag` | 94 |
 

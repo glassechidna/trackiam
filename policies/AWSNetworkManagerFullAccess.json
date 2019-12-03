@@ -1,0 +1,37 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSNetworkManagerFullAccess",
+  "CreateDate": "2019-12-03T17:37:58Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4ARXJ4NU7I",
+  "PolicyName": "AWSNetworkManagerFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-12-03T17:37:58Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "networkmanager.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "networkmanager:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-12-03T17:37:58Z"
+}
