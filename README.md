@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 213
-* Unique actions: 7715
+* Unique actions: 7728
 * Managed policies: 615
 
 Most common managed policy name prefixes:
@@ -165,7 +165,7 @@ The following table summarises the AWS APIs.
 | [`batch`](services/batch.yml) | 16 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 15 | 1 | 0 |
 | [`license-manager`](services/license-manager.yml) | 15 | 1 | 0 |
-| [`kinesisvideo`](services/kinesisvideo.yml) | 15 | 0 | 1 |
+| [`kinesisvideo`](services/kinesisvideo.yml) | 15 | 0 | 14 |
 | [`mediapackage`](services/mediapackage.yml) | 14 | 4 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 3 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
@@ -254,14 +254,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1046 |
-| `Get` | 1029 |
-| `Describe` | 983 |
-| `Delete` | 908 |
-| `Create` | 839 |
-| `Update` | 634 |
+| `List` | 1048 |
+| `Get` | 1031 |
+| `Describe` | 984 |
+| `Delete` | 909 |
+| `Create` | 840 |
+| `Update` | 635 |
 | `Put` | 214 |
 | `Start` | 131 |
 | `Modify` | 103 |
-| `Tag` | 94 |
+| `Tag` | 95 |
 
