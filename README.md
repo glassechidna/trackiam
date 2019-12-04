@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 212
-* Unique actions: 7698
+* Unique services: 213
+* Unique actions: 7715
 * Managed policies: 615
 
 Most common managed policy name prefixes:
@@ -38,9 +38,10 @@ The following table summarises the AWS APIs.
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 361 | 35 | 0 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
+| [`sagemaker`](services/sagemaker.yml) | 137 | 0 | 2 |
 | [`glue`](services/glue.yml) | 123 | 0 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 0 | 7 |
-| [`rds`](services/rds.yml) | 111 | 6 | 1 |
+| [`rds`](services/rds.yml) | 111 | 15 | 1 |
 | [`ses`](services/ses.yml) | 103 | 8 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 4 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
@@ -49,7 +50,6 @@ The following table summarises the AWS APIs.
 | [`redshift`](services/redshift.yml) | 86 | 0 | 18 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 83 | 22 | 0 |
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
-| [`sagemaker`](services/sagemaker.yml) | 81 | 0 | 58 |
 | [`waf-regional`](services/waf-regional.yml) | 80 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
 | [`waf`](services/waf.yml) | 76 | 0 | 0 |
@@ -81,12 +81,13 @@ The following table summarises the AWS APIs.
 | [`elasticache`](services/elasticache.yml) | 42 | 6 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
+| [`rekognition`](services/rekognition.yml) | 41 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 40 | 2 | 0 |
 | [`personalize`](services/personalize.yml) | 39 | 3 | 0 |
 | [`logs`](services/logs.yml) | 39 | 0 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 38 | 0 | 0 |
-| [`lambda`](services/lambda.yml) | 37 | 7 | 2 |
+| [`lambda`](services/lambda.yml) | 37 | 12 | 2 |
 | [`medialive`](services/medialive.yml) | 37 | 6 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
 | [`robomaker`](services/robomaker.yml) | 36 | 0 | 0 |
@@ -94,7 +95,6 @@ The following table summarises the AWS APIs.
 | [`lex`](services/lex.yml) | 35 | 6 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
-| [`rekognition`](services/rekognition.yml) | 34 | 0 | 7 |
 | [`iotanalytics`](services/iotanalytics.yml) | 33 | 1 | 0 |
 | [`workmail`](services/workmail.yml) | 33 | 0 | 53 |
 | [`sns`](services/sns.yml) | 33 | 0 | 0 |
@@ -220,6 +220,7 @@ The following table summarises the AWS APIs.
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 0 | 4 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 3 | 1 |
+| [`ebs`](services/ebs.yml) | 0 | 3 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 0 | 0 | 77 |
@@ -253,14 +254,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1043 |
-| `Get` | 1026 |
-| `Describe` | 980 |
-| `Delete` | 906 |
-| `Create` | 838 |
+| `List` | 1046 |
+| `Get` | 1029 |
+| `Describe` | 983 |
+| `Delete` | 908 |
+| `Create` | 839 |
 | `Update` | 634 |
-| `Put` | 213 |
+| `Put` | 214 |
 | `Start` | 131 |
-| `Modify` | 101 |
+| `Modify` | 103 |
 | `Tag` | 94 |
 
