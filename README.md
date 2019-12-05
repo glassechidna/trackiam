@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 213
-* Unique actions: 7728
+* Unique actions: 7732
 * Managed policies: 615
 
 Most common managed policy name prefixes:
@@ -120,6 +120,7 @@ The following table summarises the AWS APIs.
 | [`forecast`](services/forecast.yml) | 27 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 27 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 26 | 2 | 0 |
+| [`kinesisvideo`](services/kinesisvideo.yml) | 26 | 0 | 3 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`mediaconvert`](services/mediaconvert.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
@@ -165,7 +166,6 @@ The following table summarises the AWS APIs.
 | [`batch`](services/batch.yml) | 16 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 15 | 1 | 0 |
 | [`license-manager`](services/license-manager.yml) | 15 | 1 | 0 |
-| [`kinesisvideo`](services/kinesisvideo.yml) | 15 | 0 | 14 |
 | [`mediapackage`](services/mediapackage.yml) | 14 | 4 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 3 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
@@ -210,7 +210,7 @@ The following table summarises the AWS APIs.
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 209 | 3 |
-| [`apigateway`](services/apigateway.yml) | 0 | 144 | 7 |
+| [`apigateway`](services/apigateway.yml) | 0 | 148 | 7 |
 | [`wafv2`](services/wafv2.yml) | 0 | 36 | 0 |
 | [`appconfig`](services/appconfig.yml) | 0 | 29 | 0 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
@@ -257,7 +257,7 @@ Most common action prefixes:
 | `List` | 1048 |
 | `Get` | 1031 |
 | `Describe` | 984 |
-| `Delete` | 909 |
+| `Delete` | 911 |
 | `Create` | 840 |
 | `Update` | 635 |
 | `Put` | 214 |
