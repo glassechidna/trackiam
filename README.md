@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 213
-* Unique actions: 7733
+* Unique actions: 7735
 * Managed policies: 615
 
 Most common managed policy name prefixes:
@@ -40,7 +40,7 @@ The following table summarises the AWS APIs.
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`sagemaker`](services/sagemaker.yml) | 137 | 0 | 2 |
 | [`glue`](services/glue.yml) | 123 | 0 | 1 |
-| [`ssm`](services/ssm.yml) | 121 | 0 | 7 |
+| [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
 | [`rds`](services/rds.yml) | 111 | 15 | 1 |
 | [`ses`](services/ses.yml) | 103 | 8 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 4 | 0 |
@@ -154,8 +154,8 @@ The following table summarises the AWS APIs.
 | [`access-analyzer`](services/access-analyzer.yml) | 18 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 17 | 9 | 0 |
 | [`ram`](services/ram.yml) | 17 | 6 | 0 |
+| [`kafka`](services/kafka.yml) | 17 | 3 | 0 |
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
-| [`kafka`](services/kafka.yml) | 17 | 2 | 0 |
 | [`shield`](services/shield.yml) | 17 | 1 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 17 | 0 | 0 |
@@ -255,11 +255,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1048 |
-| `Get` | 1031 |
+| `Get` | 1032 |
 | `Describe` | 985 |
 | `Delete` | 911 |
 | `Create` | 840 |
-| `Update` | 635 |
+| `Update` | 636 |
 | `Put` | 214 |
 | `Start` | 131 |
 | `Modify` | 103 |
