@@ -1,0 +1,35 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudFormationStackSetsOrgAdminServiceRolePolicy",
+  "CreateDate": "2019-12-10T00:20:05Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4JEQ3CDBDV",
+  "PolicyName": "CloudFormationStackSetsOrgAdminServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-12-10T00:20:05Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/stacksets-exec-*",
+          "Sid": "AllowAssumeRoleInMemberAccounts"
+        },
+        {
+          "Action": [
+            "organizations:Describe*",
+            "organizations:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowsAWSOrganizationsReadAPIs"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-12-10T00:20:05Z"
+}
