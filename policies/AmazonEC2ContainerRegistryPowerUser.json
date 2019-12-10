@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPowerUser",
   "CreateDate": "2015-12-21T17:05:33Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJDNE5PIHROIBGGDDW",
   "PolicyName": "AmazonEC2ContainerRegistryPowerUser",
   "PolicyVersion": {
-    "CreateDate": "2016-10-11T22:28:07Z",
+    "CreateDate": "2019-12-10T20:48:08Z",
     "Document": {
       "Statement": [
         {
@@ -15,13 +15,17 @@
             "ecr:BatchCheckLayerAvailability",
             "ecr:BatchGetImage",
             "ecr:CompleteLayerUpload",
+            "ecr:DescribeImageScanFindings",
             "ecr:DescribeImages",
             "ecr:DescribeRepositories",
             "ecr:GetAuthorizationToken",
             "ecr:GetDownloadUrlForLayer",
+            "ecr:GetLifecyclePolicy",
+            "ecr:GetLifecyclePolicyPreview",
             "ecr:GetRepositoryPolicy",
             "ecr:InitiateLayerUpload",
             "ecr:ListImages",
+            "ecr:ListTagsForResource",
             "ecr:PutImage",
             "ecr:UploadLayerPart"
           ],
@@ -32,7 +36,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2016-10-11T22:28:07Z"
+  "UpdateDate": "2019-12-10T20:48:08Z"
 }
