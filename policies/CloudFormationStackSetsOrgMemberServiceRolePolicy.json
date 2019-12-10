@@ -1,0 +1,46 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudFormationStackSetsOrgMemberServiceRolePolicy",
+  "CreateDate": "2019-12-09T23:52:37Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4LHV6H6QDU",
+  "PolicyName": "CloudFormationStackSetsOrgMemberServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2019-12-09T23:52:37Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:AttachRolePolicy",
+            "iam:DetachRolePolicy"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PolicyARN": "arn:aws:iam::aws:policy/AdministratorAccess"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/stacksets-exec-*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:CreateRole",
+            "iam:DeleteRole",
+            "iam:GetRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/stacksets-exec-*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-12-09T23:52:37Z"
+}
