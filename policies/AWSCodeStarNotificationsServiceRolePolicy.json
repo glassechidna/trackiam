@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSCodeStarNotificationsServiceRolePolicy",
   "CreateDate": "2019-11-05T16:10:21Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4BGRXOB2GH",
   "PolicyName": "AWSCodeStarNotificationsServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-11-05T16:10:21Z",
+    "CreateDate": "2019-12-12T23:00:09Z",
     "Document": {
       "Statement": [
         {
@@ -25,7 +25,8 @@
         {
           "Action": [
             "codecommit:GetCommentsForComparedCommit",
-            "codecommit:GetCommentsForPullRequest"
+            "codecommit:GetCommentsForPullRequest",
+            "codepipeline:GetPipeline"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -43,7 +44,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-11-05T16:10:21Z"
+  "UpdateDate": "2019-12-12T23:00:09Z"
 }
