@@ -95,6 +95,7 @@ The following table summarises the AWS APIs.
 | [`lex`](services/lex.yml) | 35 | 6 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
+| [`codebuild`](services/codebuild.yml) | 34 | 0 | 7 |
 | [`iotanalytics`](services/iotanalytics.yml) | 33 | 1 | 0 |
 | [`workmail`](services/workmail.yml) | 33 | 0 | 53 |
 | [`sns`](services/sns.yml) | 33 | 0 | 0 |
@@ -105,7 +106,6 @@ The following table summarises the AWS APIs.
 | [`events`](services/events.yml) | 31 | 0 | 0 |
 | [`worklink`](services/worklink.yml) | 30 | 0 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 30 | 0 | 0 |
-| [`codebuild`](services/codebuild.yml) | 29 | 5 | 7 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 29 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 28 | 3 | 0 |

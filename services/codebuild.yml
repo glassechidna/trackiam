@@ -10,9 +10,11 @@ Actions:
   - Name: codebuild:DeleteProject
   - Name: codebuild:DeleteReport
   - Name: codebuild:DeleteReportGroup
+  - Name: codebuild:DeleteResourcePolicy
   - Name: codebuild:DeleteSourceCredentials
   - Name: codebuild:DeleteWebhook
   - Name: codebuild:DescribeTestCases
+  - Name: codebuild:GetResourcePolicy
   - Name: codebuild:ImportSourceCredentials
   - Name: codebuild:InvalidateProjectCache
   - Name: codebuild:ListBuilds
@@ -22,7 +24,10 @@ Actions:
   - Name: codebuild:ListReportGroups
   - Name: codebuild:ListReports
   - Name: codebuild:ListReportsForReportGroup
+  - Name: codebuild:ListSharedProjects
+  - Name: codebuild:ListSharedReportGroups
   - Name: codebuild:ListSourceCredentials
+  - Name: codebuild:PutResourcePolicy
   - Name: codebuild:StartBuild
   - Name: codebuild:StopBuild
   - Name: codebuild:UpdateProject
@@ -37,10 +42,3 @@ Actions:
   - Name: codebuild:ListRepositories
   - Name: codebuild:PersistOAuthToken
   - Name: codebuild:UpdateReport
-
-  # APIs without an IAM action
-  - Name: codebuild:DeleteResourcePolicy
-  - Name: codebuild:GetResourcePolicy
-  - Name: codebuild:ListSharedProjects
-  - Name: codebuild:ListSharedReportGroups
-  - Name: codebuild:PutResourcePolicy
