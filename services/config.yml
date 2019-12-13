@@ -5,8 +5,11 @@ Actions:
   - Name: config:DeleteConfigRule
   - Name: config:DeleteConfigurationAggregator
   - Name: config:DeleteConfigurationRecorder
+  - Name: config:DeleteConformancePack
   - Name: config:DeleteDeliveryChannel
   - Name: config:DeleteEvaluationResults
+  - Name: config:DeleteOrganizationConfigRule
+  - Name: config:DeleteOrganizationConformancePack
   - Name: config:DeletePendingAggregationRequest
   - Name: config:DeleteRemediationConfiguration
   - Name: config:DeleteRemediationExceptions
@@ -22,8 +25,15 @@ Actions:
   - Name: config:DescribeConfigurationAggregators
   - Name: config:DescribeConfigurationRecorderStatus
   - Name: config:DescribeConfigurationRecorders
+  - Name: config:DescribeConformancePackCompliance
+  - Name: config:DescribeConformancePackStatus
+  - Name: config:DescribeConformancePacks
   - Name: config:DescribeDeliveryChannelStatus
   - Name: config:DescribeDeliveryChannels
+  - Name: config:DescribeOrganizationConfigRuleStatuses
+  - Name: config:DescribeOrganizationConfigRules
+  - Name: config:DescribeOrganizationConformancePackStatuses
+  - Name: config:DescribeOrganizationConformancePacks
   - Name: config:DescribePendingAggregationRequests
   - Name: config:DescribeRemediationConfigurations
   - Name: config:DescribeRemediationExceptions
@@ -37,7 +47,11 @@ Actions:
   - Name: config:GetComplianceDetailsByResource
   - Name: config:GetComplianceSummaryByConfigRule
   - Name: config:GetComplianceSummaryByResourceType
+  - Name: config:GetConformancePackComplianceDetails
+  - Name: config:GetConformancePackComplianceSummary
   - Name: config:GetDiscoveredResourceCounts
+  - Name: config:GetOrganizationConfigRuleDetailedStatus
+  - Name: config:GetOrganizationConformancePackDetailedStatus
   - Name: config:GetResourceConfigHistory
   - Name: config:ListAggregateDiscoveredResources
   - Name: config:ListDiscoveredResources
@@ -46,8 +60,11 @@ Actions:
   - Name: config:PutConfigRule
   - Name: config:PutConfigurationAggregator
   - Name: config:PutConfigurationRecorder
+  - Name: config:PutConformancePack
   - Name: config:PutDeliveryChannel
   - Name: config:PutEvaluations
+  - Name: config:PutOrganizationConfigRule
+  - Name: config:PutOrganizationConformancePack
   - Name: config:PutRemediationConfigurations
   - Name: config:PutRemediationExceptions
   - Name: config:PutRetentionConfiguration
@@ -64,22 +81,5 @@ Actions:
   - Name: config:GetTagKeys
 
   # APIs without an IAM action
-  - Name: config:DeleteConformancePack
-  - Name: config:DeleteOrganizationConfigRule
-  - Name: config:DeleteOrganizationConformancePack
   - Name: config:DeleteResourceConfig
-  - Name: config:DescribeConformancePackCompliance
-  - Name: config:DescribeConformancePackStatus
-  - Name: config:DescribeConformancePacks
-  - Name: config:DescribeOrganizationConfigRuleStatuses
-  - Name: config:DescribeOrganizationConfigRules
-  - Name: config:DescribeOrganizationConformancePackStatuses
-  - Name: config:DescribeOrganizationConformancePacks
-  - Name: config:GetConformancePackComplianceDetails
-  - Name: config:GetConformancePackComplianceSummary
-  - Name: config:GetOrganizationConfigRuleDetailedStatus
-  - Name: config:GetOrganizationConformancePackDetailedStatus
-  - Name: config:PutConformancePack
-  - Name: config:PutOrganizationConfigRule
-  - Name: config:PutOrganizationConformancePack
   - Name: config:PutResourceConfig

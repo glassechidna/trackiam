@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 215
-* Unique actions: 7755
+* Unique actions: 7761
 * Managed policies: 619
 
 Most common managed policy name prefixes:
@@ -42,7 +42,7 @@ The following table summarises the AWS APIs.
 | [`glue`](services/glue.yml) | 123 | 0 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
 | [`rds`](services/rds.yml) | 111 | 15 | 1 |
-| [`ses`](services/ses.yml) | 103 | 8 | 0 |
+| [`ses`](services/ses.yml) | 103 | 9 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 4 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`chime`](services/chime.yml) | 91 | 0 | 50 |
@@ -52,6 +52,7 @@ The following table summarises the AWS APIs.
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 80 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
+| [`config`](services/config.yml) | 76 | 2 | 2 |
 | [`waf`](services/waf.yml) | 76 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 75 | 0 | 11 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
@@ -59,7 +60,6 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 71 | 4 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 67 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
-| [`config`](services/config.yml) | 59 | 19 | 2 |
 | [`route53`](services/route53.yml) | 56 | 0 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`autoscaling`](services/autoscaling.yml) | 54 | 0 | 0 |
@@ -105,7 +105,7 @@ The following table summarises the AWS APIs.
 | [`events`](services/events.yml) | 31 | 0 | 0 |
 | [`worklink`](services/worklink.yml) | 30 | 0 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 30 | 0 | 0 |
-| [`codebuild`](services/codebuild.yml) | 29 | 0 | 7 |
+| [`codebuild`](services/codebuild.yml) | 29 | 5 | 7 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 29 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 28 | 3 | 0 |
@@ -180,6 +180,7 @@ The following table summarises the AWS APIs.
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 32 |
+| [`detective`](services/detective.yml) | 11 | 0 | 5 |
 | [`fsx`](services/fsx.yml) | 11 | 0 | 0 |
 | [`cloud9`](services/cloud9.yml) | 10 | 0 | 2 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
@@ -229,7 +230,6 @@ The following table summarises the AWS APIs.
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
-| [`detective`](services/detective.yml) | 0 | 0 | 16 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 12 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
@@ -256,13 +256,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1051 |
-| `Get` | 1038 |
+| `List` | 1053 |
+| `Get` | 1039 |
 | `Describe` | 985 |
-| `Delete` | 913 |
+| `Delete` | 914 |
 | `Create` | 842 |
 | `Update` | 637 |
-| `Put` | 214 |
+| `Put` | 216 |
 | `Start` | 131 |
 | `Modify` | 103 |
 | `Tag` | 95 |
