@@ -90,6 +90,7 @@ The following table summarises the AWS APIs.
 | [`lambda`](services/lambda.yml) | 37 | 12 | 2 |
 | [`medialive`](services/medialive.yml) | 37 | 6 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
+| [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
 | [`robomaker`](services/robomaker.yml) | 36 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 36 | 0 | 0 |
 | [`lex`](services/lex.yml) | 35 | 6 | 0 |
@@ -102,7 +103,6 @@ The following table summarises the AWS APIs.
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`workspaces`](services/workspaces.yml) | 32 | 8 | 0 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
-| [`amplify`](services/amplify.yml) | 32 | 5 | 0 |
 | [`events`](services/events.yml) | 31 | 0 | 0 |
 | [`worklink`](services/worklink.yml) | 30 | 0 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 30 | 0 | 0 |

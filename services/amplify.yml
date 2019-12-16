@@ -1,10 +1,12 @@
 Actions:
   - Name: amplify:CreateApp
+  - Name: amplify:CreateBackendEnvironment
   - Name: amplify:CreateBranch
   - Name: amplify:CreateDeployment
   - Name: amplify:CreateDomainAssociation
   - Name: amplify:CreateWebHook
   - Name: amplify:DeleteApp
+  - Name: amplify:DeleteBackendEnvironment
   - Name: amplify:DeleteBranch
   - Name: amplify:DeleteDomainAssociation
   - Name: amplify:DeleteJob
@@ -12,12 +14,14 @@ Actions:
   - Name: amplify:GenerateAccessLogs
   - Name: amplify:GetApp
   - Name: amplify:GetArtifactUrl
+  - Name: amplify:GetBackendEnvironment
   - Name: amplify:GetBranch
   - Name: amplify:GetDomainAssociation
   - Name: amplify:GetJob
   - Name: amplify:GetWebHook
   - Name: amplify:ListApps
   - Name: amplify:ListArtifacts
+  - Name: amplify:ListBackendEnvironments
   - Name: amplify:ListBranches
   - Name: amplify:ListDomainAssociations
   - Name: amplify:ListJobs
@@ -33,8 +37,4 @@ Actions:
   - Name: amplify:UpdateWebHook
 
   # APIs without an IAM action
-  - Name: amplify:CreateBackendEnvironment
-  - Name: amplify:DeleteBackendEnvironment
-  - Name: amplify:GetBackendEnvironment
-  - Name: amplify:ListBackendEnvironments
   - Name: amplify:ListTagsForResource
