@@ -1,16 +1,21 @@
 Actions:
   - Name: ram:AcceptResourceShareInvitation
   - Name: ram:AssociateResourceShare
+  - Name: ram:AssociateResourceSharePermission
   - Name: ram:CreateResourceShare
   - Name: ram:DeleteResourceShare
   - Name: ram:DisassociateResourceShare
+  - Name: ram:DisassociateResourceSharePermission
   - Name: ram:EnableSharingWithAwsOrganization
+  - Name: ram:GetPermission
   - Name: ram:GetResourcePolicies
   - Name: ram:GetResourceShareAssociations
   - Name: ram:GetResourceShareInvitations
   - Name: ram:GetResourceShares
   - Name: ram:ListPendingInvitationResources
+  - Name: ram:ListPermissions
   - Name: ram:ListPrincipals
+  - Name: ram:ListResourceSharePermissions
   - Name: ram:ListResources
   - Name: ram:RejectResourceShareInvitation
   - Name: ram:TagResource
@@ -18,9 +23,4 @@ Actions:
   - Name: ram:UpdateResourceShare
 
   # APIs without an IAM action
-  - Name: ram:AssociateResourceSharePermission
-  - Name: ram:DisassociateResourceSharePermission
-  - Name: ram:GetPermission
-  - Name: ram:ListPermissions
-  - Name: ram:ListResourceSharePermissions
   - Name: ram:PromoteResourceShareCreatedFromPolicy

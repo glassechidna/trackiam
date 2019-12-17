@@ -127,6 +127,7 @@ The following table summarises the AWS APIs.
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 24 | 2 | 1 |
 | [`route53domains`](services/route53domains.yml) | 23 | 1 | 0 |
+| [`ram`](services/ram.yml) | 22 | 1 | 0 |
 | [`states`](services/states.yml) | 22 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
@@ -153,7 +154,6 @@ The following table summarises the AWS APIs.
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 18 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 17 | 9 | 0 |
-| [`ram`](services/ram.yml) | 17 | 6 | 0 |
 | [`kafka`](services/kafka.yml) | 17 | 3 | 0 |
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
 | [`shield`](services/shield.yml) | 17 | 1 | 0 |
