@@ -206,6 +206,7 @@ The following table summarises the AWS APIs.
 | [`outposts`](services/outposts.yml) | 5 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
+| [`ebs`](services/ebs.yml) | 3 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 2 | 11 | 0 |
 | [`pi`](services/pi.yml) | 2 | 0 | 0 |
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
@@ -222,7 +223,6 @@ The following table summarises the AWS APIs.
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 0 | 4 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 3 | 1 |
-| [`ebs`](services/ebs.yml) | 0 | 3 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 0 | 0 | 77 |
