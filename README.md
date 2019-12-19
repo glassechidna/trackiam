@@ -13,13 +13,13 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 216
 * Unique actions: 7774
-* Managed policies: 618
+* Managed policies: 619
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 175 |
+| `arn:aws:iam::aws:policy/AWS*` | 176 |
 | `arn:aws:iam::aws:policy/Amazon*` | 164 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 114 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
@@ -54,8 +54,8 @@ The following table summarises the AWS APIs.
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
 | [`config`](services/config.yml) | 76 | 2 | 2 |
 | [`waf`](services/waf.yml) | 76 | 0 | 0 |
+| [`gamelift`](services/gamelift.yml) | 76 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 75 | 0 | 11 |
-| [`gamelift`](services/gamelift.yml) | 73 | 3 | 0 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 71 | 4 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 67 | 0 | 0 |

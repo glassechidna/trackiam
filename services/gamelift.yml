@@ -50,6 +50,7 @@ Actions:
   - Name: gamelift:ListBuilds
   - Name: gamelift:ListFleets
   - Name: gamelift:ListScripts
+  - Name: gamelift:ListTagsForResource
   - Name: gamelift:PutScalingPolicy
   - Name: gamelift:RequestUploadCredentials
   - Name: gamelift:ResolveAlias
@@ -61,6 +62,8 @@ Actions:
   - Name: gamelift:StopFleetActions
   - Name: gamelift:StopGameSessionPlacement
   - Name: gamelift:StopMatchmaking
+  - Name: gamelift:TagResource
+  - Name: gamelift:UntagResource
   - Name: gamelift:UpdateAlias
   - Name: gamelift:UpdateBuild
   - Name: gamelift:UpdateFleetAttributes
@@ -72,8 +75,3 @@ Actions:
   - Name: gamelift:UpdateRuntimeConfiguration
   - Name: gamelift:UpdateScript
   - Name: gamelift:ValidateMatchmakingRuleSet
-
-  # APIs without an IAM action
-  - Name: gamelift:ListTagsForResource
-  - Name: gamelift:TagResource
-  - Name: gamelift:UntagResource
