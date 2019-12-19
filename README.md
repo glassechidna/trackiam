@@ -203,6 +203,7 @@ The following table summarises the AWS APIs.
 | [`compute-optimizer`](services/compute-optimizer.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`translate`](services/translate.yml) | 5 | 0 | 0 |
+| [`outposts`](services/outposts.yml) | 5 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 2 | 11 | 0 |
@@ -217,7 +218,6 @@ The following table summarises the AWS APIs.
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 0 | 9 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
-| [`outposts`](services/outposts.yml) | 0 | 5 | 0 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 0 | 4 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 3 | 1 |
