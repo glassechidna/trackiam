@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 215
-* Unique actions: 7767
+* Unique services: 216
+* Unique actions: 7774
 * Managed policies: 618
 
 Most common managed policy name prefixes:
@@ -55,8 +55,8 @@ The following table summarises the AWS APIs.
 | [`config`](services/config.yml) | 76 | 2 | 2 |
 | [`waf`](services/waf.yml) | 76 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 75 | 0 | 11 |
+| [`gamelift`](services/gamelift.yml) | 73 | 3 | 0 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
-| [`gamelift`](services/gamelift.yml) | 73 | 0 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 71 | 4 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 67 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
@@ -218,6 +218,7 @@ The following table summarises the AWS APIs.
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 0 | 9 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
+| [`codestar-connections`](services/codestar-connections.yml) | 0 | 4 | 0 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 0 | 4 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 3 | 1 |
@@ -256,14 +257,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1054 |
-| `Get` | 1039 |
+| `List` | 1056 |
+| `Get` | 1040 |
 | `Describe` | 985 |
-| `Delete` | 914 |
-| `Create` | 842 |
+| `Delete` | 915 |
+| `Create` | 843 |
 | `Update` | 637 |
 | `Put` | 216 |
 | `Start` | 131 |
 | `Modify` | 103 |
-| `Tag` | 96 |
+| `Tag` | 97 |
 
