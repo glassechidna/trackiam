@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 216
-* Unique actions: 7774
+* Unique actions: 7791
 * Managed policies: 620
 
 Most common managed policy name prefixes:
@@ -48,7 +48,7 @@ The following table summarises the AWS APIs.
 | [`chime`](services/chime.yml) | 91 | 0 | 50 |
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 86 | 0 | 18 |
-| [`mobiletargeting`](services/mobiletargeting.yml) | 83 | 22 | 0 |
+| [`mobiletargeting`](services/mobiletargeting.yml) | 83 | 24 | 0 |
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 80 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
@@ -58,7 +58,7 @@ The following table summarises the AWS APIs.
 | [`codecommit`](services/codecommit.yml) | 75 | 0 | 11 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 71 | 4 | 0 |
-| [`devicefarm`](services/devicefarm.yml) | 67 | 0 | 0 |
+| [`devicefarm`](services/devicefarm.yml) | 67 | 10 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
 | [`route53`](services/route53.yml) | 56 | 0 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
@@ -170,6 +170,7 @@ The following table summarises the AWS APIs.
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 3 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 14 | 0 | 2 |
+| [`transcribe`](services/transcribe.yml) | 14 | 0 | 1 |
 | [`fms`](services/fms.yml) | 14 | 0 | 0 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 13 | 0 | 1 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
@@ -185,7 +186,6 @@ The following table summarises the AWS APIs.
 | [`cloud9`](services/cloud9.yml) | 10 | 0 | 2 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
-| [`transcribe`](services/transcribe.yml) | 9 | 0 | 1 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
 | [`iot`](services/iot.yml) | 8 | 0 | 175 |
@@ -257,12 +257,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1056 |
-| `Get` | 1040 |
+| `List` | 1062 |
+| `Get` | 1043 |
 | `Describe` | 985 |
-| `Delete` | 915 |
-| `Create` | 843 |
-| `Update` | 637 |
+| `Delete` | 917 |
+| `Create` | 846 |
+| `Update` | 640 |
 | `Put` | 216 |
 | `Start` | 131 |
 | `Modify` | 103 |
