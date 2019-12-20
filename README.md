@@ -91,6 +91,7 @@ The following table summarises the AWS APIs.
 | [`medialive`](services/medialive.yml) | 37 | 6 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
 | [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
+| [`wafv2`](services/wafv2.yml) | 36 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 36 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 36 | 0 | 0 |
 | [`lex`](services/lex.yml) | 35 | 6 | 0 |
@@ -214,7 +215,6 @@ The following table summarises the AWS APIs.
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 209 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 148 | 7 |
-| [`wafv2`](services/wafv2.yml) | 0 | 36 | 0 |
 | [`appconfig`](services/appconfig.yml) | 0 | 29 | 0 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 0 | 9 | 0 |
