@@ -1,0 +1,122 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSImageBuilderFullAccess",
+  "CreateDate": "2019-12-20T18:25:12Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4EO4HCSNZH",
+  "PolicyName": "AWSImageBuilderFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2019-12-20T18:25:12Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "imagebuilder.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/imagebuilder.amazonaws.com/AWSServiceRoleForImageBuilder"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "ec2.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:instance-profile/*imagebuilder*",
+            "arn:aws:iam::*:role/*imagebuilder*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:DescribeImages",
+            "ec2:DescribeKeyPairs",
+            "ec2:DescribeRegions",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVolumes",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:GetInstanceProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:instance-profile/*imagebuilder*"
+        },
+        {
+          "Action": [
+            "iam:GetRole"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/imagebuilder.amazonaws.com/AWSServiceRoleForImageBuilder"
+        },
+        {
+          "Action": [
+            "iam:ListInstanceProfiles",
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "imagebuilder:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "license-manager:ListLicenseConfigurations",
+            "license-manager:ListLicenseSpecificationsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3::*:*imagebuilder*"
+        },
+        {
+          "Action": [
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sns:Publish"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sns:*:*:*imagebuilder*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2019-12-20T18:25:12Z"
+}
