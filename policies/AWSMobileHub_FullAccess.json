@@ -1,22 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMobileHub_FullAccess",
   "CreateDate": "2016-01-05T19:56:01Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIJLU43R6AGRBK76DM",
   "PolicyName": "AWSMobileHub_FullAccess",
   "PolicyVersion": {
-    "CreateDate": "2018-02-05T23:44:29Z",
+    "CreateDate": "2019-12-19T23:15:52Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "apigateway:GET",
-            "apigateway:GetResources",
-            "apigateway:GetRestApis",
             "apigateway:POST",
-            "apigateway:TestInvokeMethod",
             "cloudfront:GetDistribution",
             "devicefarm:CreateProject",
             "devicefarm:GetProject",
@@ -40,26 +37,7 @@
             "lex:GetIntents",
             "lex:GetSlotType",
             "lex:GetSlotTypes",
-            "mobilehub:CreateProject",
-            "mobilehub:DeleteProject",
-            "mobilehub:DeleteProjectSnapshot",
-            "mobilehub:DescribeBundle",
-            "mobilehub:ExportBundle",
-            "mobilehub:ExportProject",
-            "mobilehub:GenerateProjectParameters",
-            "mobilehub:GetProject",
-            "mobilehub:GetProjectSnapshot",
-            "mobilehub:ImportProject",
-            "mobilehub:ListAvailableConnectors",
-            "mobilehub:ListAvailableFeatures",
-            "mobilehub:ListAvailableRegions",
-            "mobilehub:ListBundles",
-            "mobilehub:ListProjectSnapshots",
-            "mobilehub:ListProjects",
-            "mobilehub:SynchronizeProject",
-            "mobilehub:UpdateProject",
-            "mobilehub:ValidateProject",
-            "mobilehub:VerifyServiceRole",
+            "mobilehub:*",
             "sns:ListTopics"
           ],
           "Effect": "Allow",
@@ -90,7 +68,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2018-02-05T23:44:29Z"
+  "UpdateDate": "2019-12-19T23:15:52Z"
 }
