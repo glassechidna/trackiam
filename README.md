@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 216
-* Unique actions: 7798
-* Managed policies: 620
+* Unique actions: 7801
+* Managed policies: 621
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 177 |
 | `arn:aws:iam::aws:policy/Amazon*` | 164 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 114 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 115 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 62 |
@@ -175,15 +175,16 @@ The following table summarises the AWS APIs.
 | [`fms`](services/fms.yml) | 14 | 0 | 0 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 13 | 0 | 1 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
+| [`health`](services/health.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`acm`](services/acm.yml) | 13 | 0 | 0 |
 | [`signer`](services/signer.yml) | 12 | 0 | 0 |
 | [`resource-groups`](services/resource-groups.yml) | 12 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
+| [`fsx`](services/fsx.yml) | 11 | 3 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 32 |
 | [`detective`](services/detective.yml) | 11 | 0 | 5 |
-| [`fsx`](services/fsx.yml) | 11 | 0 | 0 |
 | [`cloud9`](services/cloud9.yml) | 10 | 0 | 2 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
@@ -197,7 +198,6 @@ The following table summarises the AWS APIs.
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
 | [`mediatailor`](services/mediatailor.yml) | 7 | 0 | 0 |
 | [`macie`](services/macie.yml) | 7 | 0 | 0 |
-| [`health`](services/health.yml) | 6 | 0 | 7 |
 | [`textract`](services/textract.yml) | 6 | 0 | 0 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
@@ -259,9 +259,9 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1062 |
 | `Get` | 1043 |
-| `Describe` | 990 |
+| `Describe` | 991 |
 | `Delete` | 917 |
-| `Create` | 846 |
+| `Create` | 847 |
 | `Update` | 640 |
 | `Put` | 216 |
 | `Start` | 131 |
