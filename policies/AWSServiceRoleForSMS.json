@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForSMS",
   "CreateDate": "2019-08-06T18:39:29Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4OSYRD2VJZ",
   "PolicyName": "AWSServiceRoleForSMS",
   "PolicyVersion": {
-    "CreateDate": "2019-11-21T00:14:49Z",
+    "CreateDate": "2019-12-23T23:18:29Z",
     "Document": {
       "Statement": [
         {
@@ -56,6 +56,18 @@
           "Action": "iam:GetRole",
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": "ssm:SendCommand",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:s3:::*",
+            "arn:aws:ssm:*:*:document/AWS-RunPowerShellScript",
+            "arn:aws:ssm:*:*:document/AWS-RunRemoteScript",
+            "arn:aws:ssm:*:*:document/AWS-RunShellScript",
+            "arn:aws:ssm:*:*:managed-instance/*"
+          ]
         },
         {
           "Action": [
@@ -130,12 +142,20 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ssm:CancelCommand",
+            "ssm:GetCommandInvocation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-11-21T00:14:49Z"
+  "UpdateDate": "2019-12-23T23:18:29Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/ServerMigrationServiceRole",
   "CreateDate": "2016-10-24T21:19:00Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJMBH3M6BO63XFW2D4",
   "PolicyName": "ServerMigrationServiceRole",
   "PolicyVersion": {
-    "CreateDate": "2019-11-26T00:48:45Z",
+    "CreateDate": "2019-12-23T23:27:42Z",
     "Document": {
       "Statement": [
         {
@@ -41,6 +41,18 @@
           "Action": "iam:GetRole",
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": "ssm:SendCommand",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:s3:::*",
+            "arn:aws:ssm:*:*:document/AWS-RunPowerShellScript",
+            "arn:aws:ssm:*:*:document/AWS-RunRemoteScript",
+            "arn:aws:ssm:*:*:document/AWS-RunShellScript",
+            "arn:aws:ssm:*:*:managed-instance/*"
+          ]
         },
         {
           "Action": [
@@ -109,12 +121,20 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ssm:CancelCommand",
+            "ssm:GetCommandInvocation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2019-11-26T00:48:45Z"
+  "UpdateDate": "2019-12-23T23:27:42Z"
 }
