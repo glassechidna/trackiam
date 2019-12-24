@@ -167,11 +167,11 @@ The following table summarises the AWS APIs.
 | [`batch`](services/batch.yml) | 16 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 15 | 4 | 0 |
 | [`license-manager`](services/license-manager.yml) | 15 | 1 | 0 |
+| [`transcribe`](services/transcribe.yml) | 15 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 14 | 4 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 3 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 14 | 0 | 2 |
-| [`transcribe`](services/transcribe.yml) | 14 | 0 | 1 |
 | [`fms`](services/fms.yml) | 14 | 0 | 0 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 13 | 0 | 1 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
