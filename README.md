@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 361 | 35 | 0 |
+| [`ec2`](services/ec2.yml) | 363 | 33 | 0 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`sagemaker`](services/sagemaker.yml) | 137 | 0 | 2 |
 | [`glue`](services/glue.yml) | 123 | 0 | 1 |
@@ -172,6 +172,7 @@ The following table summarises the AWS APIs.
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 3 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 14 | 0 | 2 |
+| [`fsx`](services/fsx.yml) | 14 | 0 | 0 |
 | [`fms`](services/fms.yml) | 14 | 0 | 0 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 13 | 0 | 1 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
@@ -182,7 +183,6 @@ The following table summarises the AWS APIs.
 | [`resource-groups`](services/resource-groups.yml) | 12 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
-| [`fsx`](services/fsx.yml) | 11 | 3 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 32 |
 | [`detective`](services/detective.yml) | 11 | 0 | 5 |
 | [`cloud9`](services/cloud9.yml) | 10 | 0 | 2 |
