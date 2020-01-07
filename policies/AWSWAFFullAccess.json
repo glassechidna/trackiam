@@ -1,20 +1,21 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFFullAccess",
   "CreateDate": "2015-10-06T20:44:00Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJMIKIAFXZEGOLRH7C",
   "PolicyName": "AWSWAFFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2016-12-07T21:33:25Z",
+    "CreateDate": "2020-01-07T20:50:25Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "elasticloadbalancing:SetWebACL",
             "waf-regional:*",
-            "waf:*"
+            "waf:*",
+            "wafv2:*"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -23,7 +24,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2016-12-07T21:33:25Z"
+  "UpdateDate": "2020-01-07T20:50:25Z"
 }
