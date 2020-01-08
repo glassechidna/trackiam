@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/TranslateFullAccess",
   "CreateDate": "2018-11-27T23:36:20Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIAPOAEI2VFQYUK5RY",
   "PolicyName": "TranslateFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2018-11-27T23:36:20Z",
+    "CreateDate": "2020-01-08T21:22:27Z",
     "Document": {
       "Statement": [
         {
@@ -15,6 +15,11 @@
             "cloudwatch:GetMetricStatistics",
             "cloudwatch:ListMetrics",
             "comprehend:DetectDominantLanguage",
+            "iam:GetRole",
+            "iam:ListRoles",
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket",
             "translate:*"
           ],
           "Effect": "Allow",
@@ -24,7 +29,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2018-11-27T23:36:20Z"
+  "UpdateDate": "2020-01-08T21:22:27Z"
 }

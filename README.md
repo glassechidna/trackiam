@@ -188,6 +188,7 @@ The following table summarises the AWS APIs.
 | [`cloud9`](services/cloud9.yml) | 10 | 0 | 2 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
+| [`translate`](services/translate.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
 | [`iot`](services/iot.yml) | 8 | 0 | 175 |
@@ -203,7 +204,6 @@ The following table summarises the AWS APIs.
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
-| [`translate`](services/translate.yml) | 5 | 4 | 0 |
 | [`outposts`](services/outposts.yml) | 5 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
