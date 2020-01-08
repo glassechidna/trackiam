@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 216
-* Unique actions: 7806
-* Managed policies: 620
+* Unique actions: 7810
+* Managed policies: 621
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 177 |
-| `arn:aws:iam::aws:policy/Amazon*` | 163 |
+| `arn:aws:iam::aws:policy/Amazon*` | 164 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 115 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -160,6 +160,7 @@ The following table summarises the AWS APIs.
 | [`shield`](services/shield.yml) | 17 | 1 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 17 | 0 | 0 |
+| [`fms`](services/fms.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 16 | 49 | 8 |
 | [`qldb`](services/qldb.yml) | 16 | 0 | 3 |
@@ -171,7 +172,6 @@ The following table summarises the AWS APIs.
 | [`mediapackage`](services/mediapackage.yml) | 14 | 4 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 3 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
-| [`fms`](services/fms.yml) | 14 | 0 | 3 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 14 | 0 | 2 |
 | [`fsx`](services/fsx.yml) | 14 | 0 | 0 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 13 | 0 | 1 |
@@ -203,7 +203,7 @@ The following table summarises the AWS APIs.
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
-| [`translate`](services/translate.yml) | 5 | 0 | 0 |
+| [`translate`](services/translate.yml) | 5 | 4 | 0 |
 | [`outposts`](services/outposts.yml) | 5 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
@@ -257,14 +257,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1064 |
+| `List` | 1065 |
 | `Get` | 1043 |
-| `Describe` | 991 |
+| `Describe` | 992 |
 | `Delete` | 917 |
 | `Create` | 847 |
 | `Update` | 640 |
 | `Put` | 216 |
-| `Start` | 132 |
+| `Start` | 133 |
 | `Modify` | 103 |
 | `Tag` | 98 |
 

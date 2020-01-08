@@ -1,19 +1,22 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRekognitionReadOnlyAccess",
   "CreateDate": "2016-11-30T14:58:06Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILWSUHXUY4ES43SA4",
   "PolicyName": "AmazonRekognitionReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2017-12-06T23:28:39Z",
+    "CreateDate": "2020-01-08T20:02:40Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "rekognition:CompareFaces",
+            "rekognition:DescribeProjectVersions",
+            "rekognition:DescribeProjects",
             "rekognition:DescribeStreamProcessor",
+            "rekognition:DetectCustomLabels",
             "rekognition:DetectFaces",
             "rekognition:DetectLabels",
             "rekognition:DetectModerationLabels",
@@ -39,7 +42,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2017-12-06T23:28:39Z"
+  "UpdateDate": "2020-01-08T20:02:40Z"
 }
