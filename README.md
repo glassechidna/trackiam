@@ -13,14 +13,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 216
 * Unique actions: 7810
-* Managed policies: 621
+* Managed policies: 622
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 177 |
-| `arn:aws:iam::aws:policy/Amazon*` | 164 |
+| `arn:aws:iam::aws:policy/Amazon*` | 165 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 115 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
