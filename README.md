@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 216
-* Unique actions: 7821
+* Unique actions: 7826
 * Managed policies: 622
 
 Most common managed policy name prefixes:
@@ -41,11 +41,11 @@ The following table summarises the AWS APIs.
 | [`sagemaker`](services/sagemaker.yml) | 137 | 0 | 2 |
 | [`glue`](services/glue.yml) | 123 | 0 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
-| [`rds`](services/rds.yml) | 120 | 6 | 1 |
+| [`rds`](services/rds.yml) | 120 | 7 | 1 |
 | [`ses`](services/ses.yml) | 103 | 9 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 4 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
-| [`chime`](services/chime.yml) | 91 | 0 | 50 |
+| [`chime`](services/chime.yml) | 91 | 3 | 50 |
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 86 | 0 | 18 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 83 | 24 | 0 |
@@ -102,7 +102,7 @@ The following table summarises the AWS APIs.
 | [`workmail`](services/workmail.yml) | 33 | 0 | 53 |
 | [`sns`](services/sns.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
-| [`workspaces`](services/workspaces.yml) | 32 | 8 | 0 |
+| [`workspaces`](services/workspaces.yml) | 32 | 9 | 0 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
 | [`events`](services/events.yml) | 31 | 0 | 0 |
 | [`worklink`](services/worklink.yml) | 30 | 0 | 0 |
@@ -261,10 +261,10 @@ Most common action prefixes:
 | `Get` | 1043 |
 | `Describe` | 994 |
 | `Delete` | 919 |
-| `Create` | 851 |
+| `Create` | 852 |
 | `Update` | 641 |
 | `Put` | 216 |
 | `Start` | 133 |
-| `Modify` | 103 |
+| `Modify` | 104 |
 | `Tag` | 98 |
 
