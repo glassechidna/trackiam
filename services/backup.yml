@@ -10,6 +10,7 @@ Actions:
   - Name: backup:DeleteRecoveryPoint
   - Name: backup:DescribeBackupJob
   - Name: backup:DescribeBackupVault
+  - Name: backup:DescribeCopyJob
   - Name: backup:DescribeProtectedResource
   - Name: backup:DescribeRecoveryPoint
   - Name: backup:DescribeRestoreJob
@@ -28,6 +29,7 @@ Actions:
   - Name: backup:ListBackupPlans
   - Name: backup:ListBackupSelections
   - Name: backup:ListBackupVaults
+  - Name: backup:ListCopyJobs
   - Name: backup:ListProtectedResources
   - Name: backup:ListRecoveryPointsByBackupVault
   - Name: backup:ListRecoveryPointsByResource
@@ -36,6 +38,7 @@ Actions:
   - Name: backup:PutBackupVaultAccessPolicy
   - Name: backup:PutBackupVaultNotifications
   - Name: backup:StartBackupJob
+  - Name: backup:StartCopyJob
   - Name: backup:StartRestoreJob
   - Name: backup:StopBackupJob
   - Name: backup:TagResource
@@ -43,7 +46,5 @@ Actions:
   - Name: backup:UpdateBackupPlan
   - Name: backup:UpdateRecoveryPointLifecycle
 
-  # APIs without an IAM action
-  - Name: backup:DescribeCopyJob
-  - Name: backup:ListCopyJobs
-  - Name: backup:StartCopyJob
+  # actions with no corresponding API
+  - Name: backup:CopyIntoBackupVault
