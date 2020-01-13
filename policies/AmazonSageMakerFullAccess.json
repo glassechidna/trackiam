@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerFullAccess",
   "CreateDate": "2017-11-29T13:07:59Z",
-  "DefaultVersionId": "v15",
+  "DefaultVersionId": "v16",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJZ5IWYMXO5QDB4QOG",
   "PolicyName": "AmazonSageMakerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-12-03T16:32:12Z",
+    "CreateDate": "2020-01-13T20:47:34Z",
     "Document": {
       "Statement": [
         {
@@ -29,6 +29,21 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/sagemaker.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_SageMakerEndpoint"
+        },
+        {
+          "Action": "sagemaker:*",
+          "Condition": {
+            "StringEqualsIfExists": {
+              "sagemaker:WorkteamType": [
+                "private-crowd",
+                "vendor-crowd"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:flow-definition/*"
+          ]
         },
         {
           "Action": [
@@ -54,22 +69,6 @@
           "Condition": {
             "StringEqualsIgnoreCase": {
               "s3:ExistingObjectTag/SageMaker": "true"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
-            "sagemaker:*FlowDefinition",
-            "sagemaker:*FlowDefinitions"
-          ],
-          "Condition": {
-            "StringEqualsIfExists": {
-              "sagemaker:WorkteamType": [
-                "private-crowd",
-                "vendor-crowd"
-              ]
             }
           },
           "Effect": "Allow",
@@ -303,7 +302,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v15"
+    "VersionId": "v16"
   },
-  "UpdateDate": "2019-12-03T16:32:12Z"
+  "UpdateDate": "2020-01-13T20:47:34Z"
 }
