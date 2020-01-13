@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 216
-* Unique actions: 7837
+* Unique actions: 7841
 * Managed policies: 625
 
 Most common managed policy name prefixes:
@@ -76,8 +76,8 @@ The following table summarises the AWS APIs.
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`cloudfront`](services/cloudfront.yml) | 45 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 44 | 4 | 2 |
+| [`backup`](services/backup.yml) | 43 | 3 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 43 | 1 | 2 |
-| [`backup`](services/backup.yml) | 43 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 42 | 6 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
@@ -128,6 +128,7 @@ The following table summarises the AWS APIs.
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 24 | 2 | 1 |
 | [`route53domains`](services/route53domains.yml) | 23 | 1 | 0 |
+| [`elasticfilesystem`](services/elasticfilesystem.yml) | 22 | 1 | 5 |
 | [`ram`](services/ram.yml) | 22 | 1 | 0 |
 | [`states`](services/states.yml) | 22 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 0 |
@@ -171,7 +172,6 @@ The following table summarises the AWS APIs.
 | [`transcribe`](services/transcribe.yml) | 15 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 14 | 4 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 3 | 0 |
-| [`elasticfilesystem`](services/elasticfilesystem.yml) | 14 | 0 | 13 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`fsx`](services/fsx.yml) | 14 | 0 | 0 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 13 | 0 | 1 |
@@ -257,14 +257,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1068 |
+| `List` | 1069 |
 | `Get` | 1043 |
-| `Describe` | 995 |
+| `Describe` | 997 |
 | `Delete` | 921 |
 | `Create` | 853 |
 | `Update` | 641 |
 | `Put` | 217 |
-| `Start` | 133 |
+| `Start` | 134 |
 | `Modify` | 104 |
 | `Tag` | 99 |
 

@@ -1,17 +1,25 @@
 Actions:
+  - Name: elasticfilesystem:CreateAccessPoint
   - Name: elasticfilesystem:CreateFileSystem
   - Name: elasticfilesystem:CreateMountTarget
   - Name: elasticfilesystem:CreateTags
+  - Name: elasticfilesystem:DeleteAccessPoint
   - Name: elasticfilesystem:DeleteFileSystem
+  - Name: elasticfilesystem:DeleteFileSystemPolicy
   - Name: elasticfilesystem:DeleteMountTarget
   - Name: elasticfilesystem:DeleteTags
+  - Name: elasticfilesystem:DescribeFileSystemPolicy
   - Name: elasticfilesystem:DescribeFileSystems
   - Name: elasticfilesystem:DescribeLifecycleConfiguration
   - Name: elasticfilesystem:DescribeMountTargetSecurityGroups
   - Name: elasticfilesystem:DescribeMountTargets
   - Name: elasticfilesystem:DescribeTags
+  - Name: elasticfilesystem:ListTagsForResource
   - Name: elasticfilesystem:ModifyMountTargetSecurityGroups
+  - Name: elasticfilesystem:PutFileSystemPolicy
   - Name: elasticfilesystem:PutLifecycleConfiguration
+  - Name: elasticfilesystem:TagResource
+  - Name: elasticfilesystem:UntagResource
   - Name: elasticfilesystem:UpdateFileSystem
 
   # actions with no corresponding API
@@ -19,12 +27,7 @@ Actions:
   - Name: elasticfilesystem:ClientMount
   - Name: elasticfilesystem:ClientRootAccess
   - Name: elasticfilesystem:ClientWrite
-  - Name: elasticfilesystem:CreateAccessPoint
-  - Name: elasticfilesystem:DeleteAccessPoint
-  - Name: elasticfilesystem:DeleteFileSystemPolicy
-  - Name: elasticfilesystem:DescribeFileSystemPolicy
-  - Name: elasticfilesystem:ListTagsForResource
-  - Name: elasticfilesystem:PutFileSystemPolicy
   - Name: elasticfilesystem:Restore
-  - Name: elasticfilesystem:TagResource
-  - Name: elasticfilesystem:UntagResource
+
+  # APIs without an IAM action
+  - Name: elasticfilesystem:DescribeAccessPoints
