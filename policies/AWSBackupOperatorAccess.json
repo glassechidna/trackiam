@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupOperatorAccess",
   "CreateDate": "2019-11-18T22:23:17Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KHXVYMY4O",
   "PolicyName": "AWSBackupOperatorAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-11-18T22:23:17Z",
+    "CreateDate": "2020-01-13T16:15:02Z",
     "Document": {
       "Statement": [
         {
@@ -32,6 +32,7 @@
             "backup:GetRecoveryPointRestoreMetadata",
             "backup:List*",
             "backup:StartBackupJob",
+            "backup:StartCopyJob",
             "backup:StartRestoreJob"
           ],
           "Effect": "Allow",
@@ -47,8 +48,16 @@
         },
         {
           "Action": [
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstanceTypes",
+            "ec2:DescribeInstances",
+            "ec2:DescribePlacementGroups",
+            "ec2:DescribeSecurityGroups",
             "ec2:DescribeSnapshots",
+            "ec2:DescribeSubnets",
             "ec2:DescribeVolumes",
+            "ec2:DescribeVpcs",
             "ec2:describeAvailabilityZones"
           ],
           "Effect": "Allow",
@@ -120,7 +129,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-11-18T22:23:17Z"
+  "UpdateDate": "2020-01-13T16:15:02Z"
 }

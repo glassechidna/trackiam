@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 216
-* Unique actions: 7826
-* Managed policies: 622
+* Unique actions: 7837
+* Managed policies: 625
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 177 |
-| `arn:aws:iam::aws:policy/Amazon*` | 165 |
+| `arn:aws:iam::aws:policy/Amazon*` | 168 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 115 |
 | `arn:aws:iam::aws:policy/service-role/*` | 96 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -171,8 +171,8 @@ The following table summarises the AWS APIs.
 | [`transcribe`](services/transcribe.yml) | 15 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 14 | 4 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 3 | 0 |
+| [`elasticfilesystem`](services/elasticfilesystem.yml) | 14 | 0 | 13 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
-| [`elasticfilesystem`](services/elasticfilesystem.yml) | 14 | 0 | 2 |
 | [`fsx`](services/fsx.yml) | 14 | 0 | 0 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 13 | 0 | 1 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
@@ -257,14 +257,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1067 |
+| `List` | 1068 |
 | `Get` | 1043 |
-| `Describe` | 994 |
-| `Delete` | 919 |
-| `Create` | 852 |
+| `Describe` | 995 |
+| `Delete` | 921 |
+| `Create` | 853 |
 | `Update` | 641 |
-| `Put` | 216 |
+| `Put` | 217 |
 | `Start` | 133 |
 | `Modify` | 104 |
-| `Tag` | 98 |
+| `Tag` | 99 |
 

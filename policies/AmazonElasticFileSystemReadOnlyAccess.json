@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonElasticFileSystemReadOnlyAccess",
   "CreateDate": "2015-05-27T16:25:25Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIPN5S4NE5JJOKVC4Y",
   "PolicyName": "AmazonElasticFileSystemReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2017-08-14T10:09:49Z",
+    "CreateDate": "2020-01-13T16:16:12Z",
     "Document": {
       "Statement": [
         {
@@ -19,7 +19,14 @@
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcAttribute",
             "ec2:DescribeVpcs",
-            "elasticfilesystem:Describe*",
+            "elasticfilesystem:DescribeAccessPoints",
+            "elasticfilesystem:DescribeFileSystemPolicy",
+            "elasticfilesystem:DescribeFileSystems",
+            "elasticfilesystem:DescribeLifecycleConfiguration",
+            "elasticfilesystem:DescribeMountTargetSecurityGroups",
+            "elasticfilesystem:DescribeMountTargets",
+            "elasticfilesystem:DescribeTags",
+            "elasticfilesystem:ListTagsForResource",
             "kms:ListAliases"
           ],
           "Effect": "Allow",
@@ -29,7 +36,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2017-08-14T10:09:49Z"
+  "UpdateDate": "2020-01-13T16:16:12Z"
 }
