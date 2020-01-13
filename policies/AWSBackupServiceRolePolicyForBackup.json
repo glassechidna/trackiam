@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
   "CreateDate": "2019-01-10T21:01:28Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIOOYZSLZZXWFJJ5N2",
   "PolicyName": "AWSBackupServiceRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2019-06-25T20:26:08Z",
+    "CreateDate": "2020-01-13T16:02:39Z",
     "Document": {
       "Statement": [
         {
@@ -21,9 +21,31 @@
           "Resource": "*"
         },
         {
+          "Action": [
+            "kms:GenerateDataKeyWithoutPlaintext"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": [
+                "ec2.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*"
+        },
+        {
           "Action": "kms:DescribeKey",
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "backup:CopyIntoBackupVault",
+            "backup:DescribeBackupVault"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:backup:*:*:backup-vault:*"
         },
         {
           "Action": [
@@ -43,6 +65,28 @@
         },
         {
           "Action": [
+            "ec2:CopyImage"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CopySnapshot"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::snapshot/*"
+        },
+        {
+          "Action": [
+            "ec2:CreateImage",
+            "ec2:DeregisterImage"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "ec2:CreateSnapshot",
             "ec2:DeleteSnapshot",
             "ec2:DescribeSnapshots",
@@ -56,6 +100,13 @@
         },
         {
           "Action": [
+            "ec2:CreateTags"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:image/*"
+        },
+        {
+          "Action": [
             "ec2:CreateTags",
             "ec2:DeleteSnapshot"
           ],
@@ -64,7 +115,14 @@
         },
         {
           "Action": [
+            "ec2:DescribeElasticGpus",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstanceAttribute",
+            "ec2:DescribeInstanceCreditSpecifications",
+            "ec2:DescribeInstances",
+            "ec2:DescribeNetworkInterfaces",
             "ec2:DescribeSnapshots",
+            "ec2:DescribeSpotInstanceRequests",
             "ec2:DescribeTags"
           ],
           "Effect": "Allow",
@@ -118,7 +176,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2019-06-25T20:26:08Z"
+  "UpdateDate": "2020-01-13T16:02:39Z"
 }

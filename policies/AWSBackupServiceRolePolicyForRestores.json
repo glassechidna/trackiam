@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForRestores",
   "CreateDate": "2019-01-12T00:23:54Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJZCCL6F2WPVOUXZKI",
   "PolicyName": "AWSBackupServiceRolePolicyForRestores",
   "PolicyVersion": {
-    "CreateDate": "2019-10-03T19:10:42Z",
+    "CreateDate": "2020-01-13T16:04:56Z",
     "Document": {
       "Statement": [
         {
@@ -88,6 +88,20 @@
         },
         {
           "Action": [
+            "ec2:RunInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:TerminateInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*"
+        },
+        {
+          "Action": [
             "elasticfilesystem:CreateFilesystem",
             "elasticfilesystem:DeleteFilesystem",
             "elasticfilesystem:DescribeFilesystems",
@@ -137,7 +151,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2019-10-03T19:10:42Z"
+  "UpdateDate": "2020-01-13T16:04:56Z"
 }
