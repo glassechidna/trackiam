@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupFullAccess",
   "CreateDate": "2019-11-18T22:21:52Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LL52EIPJX",
   "PolicyName": "AWSBackupFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-11-18T22:21:52Z",
+    "CreateDate": "2020-01-13T18:40:45Z",
     "Document": {
       "Statement": [
         {
@@ -56,8 +56,16 @@
         },
         {
           "Action": [
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstanceTypes",
+            "ec2:DescribeInstances",
+            "ec2:DescribePlacementGroups",
+            "ec2:DescribeSecurityGroups",
             "ec2:DescribeSnapshots",
+            "ec2:DescribeSubnets",
             "ec2:DescribeVolumes",
+            "ec2:DescribeVpcs",
             "ec2:describeAvailabilityZones"
           ],
           "Effect": "Allow",
@@ -139,7 +147,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-11-18T22:21:52Z"
+  "UpdateDate": "2020-01-13T18:40:45Z"
 }
