@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 216
-* Unique actions: 7842
+* Unique actions: 7845
 * Managed policies: 625
 
 Most common managed policy name prefixes:
@@ -205,6 +205,7 @@ The following table summarises the AWS APIs.
 | [`compute-optimizer`](services/compute-optimizer.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`outposts`](services/outposts.yml) | 5 | 0 | 0 |
+| [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 4 | 0 | 3 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
 | [`ebs`](services/ebs.yml) | 3 | 0 | 0 |
@@ -220,7 +221,6 @@ The following table summarises the AWS APIs.
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 0 | 9 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`codestar-connections`](services/codestar-connections.yml) | 0 | 4 | 0 |
-| [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 0 | 4 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 3 | 1 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
@@ -257,11 +257,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1069 |
-| `Get` | 1043 |
+| `List` | 1070 |
+| `Get` | 1044 |
 | `Describe` | 997 |
 | `Delete` | 921 |
-| `Create` | 853 |
+| `Create` | 854 |
 | `Update` | 641 |
 | `Put` | 217 |
 | `Start` | 134 |

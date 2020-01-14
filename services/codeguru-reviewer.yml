@@ -1,7 +1,10 @@
 Actions:
-
-  # APIs without an IAM action
   - Name: codeguru-reviewer:AssociateRepository
   - Name: codeguru-reviewer:DescribeRepositoryAssociation
   - Name: codeguru-reviewer:DisassociateRepository
   - Name: codeguru-reviewer:ListRepositoryAssociations
+
+  # actions with no corresponding API
+  - Name: codeguru-reviewer:CreateConnectionToken
+  - Name: codeguru-reviewer:GetMetricsData
+  - Name: codeguru-reviewer:ListThirdPartyRepositories
