@@ -1,15 +1,30 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/APIGatewayServiceRolePolicy",
   "CreateDate": "2017-10-20T17:23:10Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJQQDZNLDBF2ULTWK6",
   "PolicyName": "APIGatewayServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-10-22T18:22:01Z",
+    "CreateDate": "2020-01-15T20:18:59Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ec2:CreateNetworkInterfacePermission",
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*"
+        },
+        {
+          "Action": "servicediscovery:GetNamespace",
+          "Effect": "Allow",
+          "Resource": "arn:aws:servicediscovery:*:*:namespace/*"
+        },
+        {
+          "Action": "servicediscovery:GetService",
+          "Effect": "Allow",
+          "Resource": "arn:aws:servicediscovery:*:*:service/*"
+        },
         {
           "Action": [
             "acm:DescribeCertificate"
@@ -19,7 +34,28 @@
         },
         {
           "Action": [
+            "ec2:AssignPrivateIpAddresses",
+            "ec2:CreateNetworkInterface",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeNetworkInterfaceAttribute",
+            "ec2:DescribeNetworkInterfacePermissions",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "ec2:UnassignPrivateIpAddresses"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "elasticloadbalancing:AddListenerCertificates",
+            "elasticloadbalancing:DescribeListeners",
+            "elasticloadbalancing:DescribeLoadBalancers",
             "elasticloadbalancing:ModifyListener",
             "elasticloadbalancing:RemoveListenerCertificates",
             "logs:CreateLogDelivery",
@@ -27,6 +63,7 @@
             "logs:GetLogDelivery",
             "logs:ListLogDeliveries",
             "logs:UpdateLogDelivery",
+            "servicediscovery:DiscoverInstances",
             "xray:GetSamplingRules",
             "xray:GetSamplingTargets",
             "xray:PutTelemetryRecords",
@@ -50,7 +87,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2019-10-22T18:22:01Z"
+  "UpdateDate": "2020-01-15T20:18:59Z"
 }
