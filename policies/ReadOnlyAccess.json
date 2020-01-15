@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v58",
+  "DefaultVersionId": "v59",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-11-26T01:37:01Z",
+    "CreateDate": "2020-01-15T22:48:37Z",
     "Document": {
       "Statement": [
         {
@@ -112,6 +112,7 @@
             "config:Describe*",
             "config:Get*",
             "config:List*",
+            "config:select-resource-config",
             "connect:Describe*",
             "connect:GetFederationToken",
             "connect:List*",
@@ -163,8 +164,10 @@
             "ecr:List*",
             "ecs:Describe*",
             "ecs:List*",
+            "eks:Describe*",
             "eks:DescribeCluster",
             "eks:DescribeUpdate",
+            "eks:List*",
             "eks:ListClusters",
             "eks:ListUpdates",
             "elasticache:Describe*",
@@ -182,6 +185,8 @@
             "elasticmapreduce:View*",
             "elastictranscoder:List*",
             "elastictranscoder:Read*",
+            "elemental-appliances-software:Get*",
+            "elemental-appliances-software:List*",
             "es:Describe*",
             "es:ESHttpGet",
             "es:ESHttpHead",
@@ -338,6 +343,7 @@
             "mediapackage:Describe*",
             "mediapackage:List*",
             "mgh:Describe*",
+            "mgh:GetHomeRegion",
             "mgh:List*",
             "mobileanalytics:Get*",
             "mobilehub:Describe*",
@@ -364,6 +370,8 @@
             "polly:Get*",
             "polly:List*",
             "polly:SynthesizeSpeech",
+            "ram:Get*",
+            "ram:List*",
             "rds:Describe*",
             "rds:Download*",
             "rds:List*",
@@ -485,7 +493,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v58"
+    "VersionId": "v59"
   },
-  "UpdateDate": "2019-11-26T01:37:01Z"
+  "UpdateDate": "2020-01-15T22:48:37Z"
 }
