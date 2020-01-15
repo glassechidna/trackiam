@@ -122,11 +122,11 @@ The following table summarises the AWS APIs.
 | [`datasync`](services/datasync.yml) | 27 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 26 | 2 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 26 | 0 | 3 |
+| [`kinesisanalytics`](services/kinesisanalytics.yml) | 26 | 0 | 1 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`mediaconvert`](services/mediaconvert.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
-| [`kinesisanalytics`](services/kinesisanalytics.yml) | 24 | 2 | 1 |
 | [`route53domains`](services/route53domains.yml) | 23 | 1 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 22 | 1 | 5 |
 | [`ram`](services/ram.yml) | 22 | 1 | 0 |

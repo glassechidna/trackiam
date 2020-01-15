@@ -4,6 +4,7 @@ Actions:
   - Name: kinesisanalytics:AddApplicationInputProcessingConfiguration
   - Name: kinesisanalytics:AddApplicationOutput
   - Name: kinesisanalytics:AddApplicationReferenceDataSource
+  - Name: kinesisanalytics:AddApplicationVpcConfiguration
   - Name: kinesisanalytics:CreateApplication
   - Name: kinesisanalytics:CreateApplicationSnapshot
   - Name: kinesisanalytics:DeleteApplication
@@ -12,6 +13,7 @@ Actions:
   - Name: kinesisanalytics:DeleteApplicationOutput
   - Name: kinesisanalytics:DeleteApplicationReferenceDataSource
   - Name: kinesisanalytics:DeleteApplicationSnapshot
+  - Name: kinesisanalytics:DeleteApplicationVpcConfiguration
   - Name: kinesisanalytics:DescribeApplication
   - Name: kinesisanalytics:DescribeApplicationSnapshot
   - Name: kinesisanalytics:DiscoverInputSchema
@@ -26,7 +28,3 @@ Actions:
 
   # actions with no corresponding API
   - Name: kinesisanalytics:GetApplicationState
-
-  # APIs without an IAM action
-  - Name: kinesisanalytics:AddApplicationVpcConfiguration
-  - Name: kinesisanalytics:DeleteApplicationVpcConfiguration
