@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/ViewOnlyAccess",
   "CreateDate": "2016-11-10T17:20:15Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAID22R6XPJATWOFDK6",
   "PolicyName": "ViewOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2018-10-15T18:34:54Z",
+    "CreateDate": "2020-01-16T17:42:09Z",
     "Document": {
       "Statement": [
         {
@@ -58,8 +58,6 @@
             "dax:DescribeParameterGroups",
             "dax:DescribeParameters",
             "dax:DescribeSubnetGroups",
-            "dax:DescribeTable",
-            "dax:ListTables",
             "dax:ListTags",
             "devicefarm:List*",
             "directconnect:Describe*",
@@ -190,6 +188,8 @@
             "route53:Get*",
             "route53:List*",
             "route53domains:List*",
+            "route53resolver:Get*",
+            "route53resolver:List*",
             "s3:ListAllMyBuckets",
             "s3:ListBucket",
             "sagemaker:Describe*",
@@ -224,7 +224,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2018-10-15T18:34:54Z"
+  "UpdateDate": "2020-01-16T17:42:09Z"
 }
