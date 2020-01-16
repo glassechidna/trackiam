@@ -83,10 +83,10 @@ The following table summarises the AWS APIs.
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`rekognition`](services/rekognition.yml) | 41 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 40 | 2 | 0 |
+| [`securityhub`](services/securityhub.yml) | 40 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 39 | 3 | 0 |
 | [`logs`](services/logs.yml) | 39 | 0 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
-| [`securityhub`](services/securityhub.yml) | 38 | 2 | 0 |
 | [`lambda`](services/lambda.yml) | 37 | 12 | 3 |
 | [`medialive`](services/medialive.yml) | 37 | 6 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
