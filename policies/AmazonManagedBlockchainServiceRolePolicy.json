@@ -1,0 +1,38 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonManagedBlockchainServiceRolePolicy",
+  "CreateDate": "2020-01-17T19:51:28Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4MMO7477QN",
+  "PolicyName": "AmazonManagedBlockchainServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-01-17T19:51:28Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/managedblockchain/*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/managedblockchain/*:log-stream:*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-01-17T19:51:28Z"
+}
