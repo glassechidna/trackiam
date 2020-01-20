@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 216
-* Unique actions: 7849
+* Unique actions: 7852
 * Managed policies: 628
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 363 | 34 | 0 |
+| [`ec2`](services/ec2.yml) | 363 | 36 | 0 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`sagemaker`](services/sagemaker.yml) | 137 | 2 | 2 |
 | [`glue`](services/glue.yml) | 123 | 0 | 1 |
@@ -155,7 +155,7 @@ The following table summarises the AWS APIs.
 | [`managedblockchain`](services/managedblockchain.yml) | 18 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 18 | 0 | 0 |
-| [`applicationinsights`](services/applicationinsights.yml) | 17 | 9 | 0 |
+| [`applicationinsights`](services/applicationinsights.yml) | 17 | 10 | 0 |
 | [`kafka`](services/kafka.yml) | 17 | 3 | 0 |
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
 | [`shield`](services/shield.yml) | 17 | 1 | 0 |
@@ -257,9 +257,9 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1070 |
-| `Get` | 1044 |
-| `Describe` | 999 |
+| `List` | 1071 |
+| `Get` | 1045 |
+| `Describe` | 1000 |
 | `Delete` | 921 |
 | `Create` | 854 |
 | `Update` | 643 |
