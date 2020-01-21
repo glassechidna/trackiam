@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSForWordPressPluginPolicy",
   "CreateDate": "2019-10-30T00:27:46Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KEKYXDWNJ",
   "PolicyName": "AWSForWordPressPluginPolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-10-30T00:27:46Z",
+    "CreateDate": "2020-01-20T23:20:47Z",
     "Document": {
       "Statement": [
         {
@@ -29,6 +29,7 @@
         },
         {
           "Action": [
+            "acm:DeleteCertificate",
             "cloudformation:DeleteStack",
             "cloudformation:DescribeStackEvents",
             "cloudformation:DescribeStackResources",
@@ -54,7 +55,6 @@
           "Action": [
             "polly:DescribeVoices",
             "polly:SynthesizeSpeech",
-            "s3:HeadBucket",
             "translate:TranslateText"
           ],
           "Effect": "Allow",
@@ -82,7 +82,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-10-30T00:27:46Z"
+  "UpdateDate": "2020-01-20T23:20:47Z"
 }
