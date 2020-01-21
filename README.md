@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 216
-* Unique actions: 7855
-* Managed policies: 628
+* Unique actions: 7856
+* Managed policies: 629
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 178 |
 | `arn:aws:iam::aws:policy/Amazon*` | 168 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 116 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 117 |
 | `arn:aws:iam::aws:policy/service-role/*` | 97 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 62 |
@@ -90,10 +90,10 @@ The following table summarises the AWS APIs.
 | [`lambda`](services/lambda.yml) | 37 | 12 | 3 |
 | [`medialive`](services/medialive.yml) | 37 | 6 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
+| [`codepipeline`](services/codepipeline.yml) | 36 | 1 | 0 |
 | [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
 | [`wafv2`](services/wafv2.yml) | 36 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 36 | 0 | 0 |
-| [`codepipeline`](services/codepipeline.yml) | 36 | 0 | 0 |
 | [`lex`](services/lex.yml) | 35 | 6 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
