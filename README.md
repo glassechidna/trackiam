@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 216
-* Unique actions: 7852
+* Unique actions: 7855
 * Managed policies: 628
 
 Most common managed policy name prefixes:
@@ -188,6 +188,7 @@ The following table summarises the AWS APIs.
 | [`cloud9`](services/cloud9.yml) | 10 | 0 | 2 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
+| [`codeguru-profiler`](services/codeguru-profiler.yml) | 9 | 0 | 3 |
 | [`translate`](services/translate.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
@@ -218,7 +219,6 @@ The following table summarises the AWS APIs.
 | [`apigateway`](services/apigateway.yml) | 0 | 148 | 7 |
 | [`appconfig`](services/appconfig.yml) | 0 | 29 | 0 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
-| [`codeguru-profiler`](services/codeguru-profiler.yml) | 0 | 9 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`codestar-connections`](services/codestar-connections.yml) | 0 | 4 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
@@ -257,8 +257,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1071 |
-| `Get` | 1045 |
+| `List` | 1072 |
+| `Get` | 1047 |
 | `Describe` | 1000 |
 | `Delete` | 921 |
 | `Create` | 854 |

@@ -1,6 +1,4 @@
 Actions:
-
-  # APIs without an IAM action
   - Name: codeguru-profiler:ConfigureAgent
   - Name: codeguru-profiler:CreateProfilingGroup
   - Name: codeguru-profiler:DeleteProfilingGroup
@@ -10,3 +8,8 @@ Actions:
   - Name: codeguru-profiler:ListProfilingGroups
   - Name: codeguru-profiler:PostAgentProfile
   - Name: codeguru-profiler:UpdateProfilingGroup
+
+  # actions with no corresponding API
+  - Name: codeguru-profiler:GetFindingsReport
+  - Name: codeguru-profiler:GetFindingsReportAccountSummary
+  - Name: codeguru-profiler:ListFindingsReports
