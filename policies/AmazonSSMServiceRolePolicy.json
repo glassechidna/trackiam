@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonSSMServiceRolePolicy",
   "CreateDate": "2017-11-13T19:20:08Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIXJ26NUGBA3TCV7EC",
   "PolicyName": "AmazonSSMServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-10-24T23:36:39Z",
+    "CreateDate": "2020-01-22T21:46:17Z",
     "Document": {
       "Statement": [
         {
@@ -21,6 +21,15 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudformation:DescribeStacks"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
         },
         {
           "Action": [
@@ -54,6 +63,7 @@
         },
         {
           "Action": [
+            "resource-groups:GetGroupQuery",
             "resource-groups:ListGroupResources",
             "resource-groups:ListGroups"
           ],
@@ -103,7 +113,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2019-10-24T23:36:39Z"
+  "UpdateDate": "2020-01-22T21:46:17Z"
 }
