@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/DynamoDBReplicationServiceRolePolicy",
   "CreateDate": "2017-11-09T23:55:34Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJCUNRXL4BWASNJED2",
   "PolicyName": "DynamoDBReplicationServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2018-07-02T21:48:12Z",
+    "CreateDate": "2020-01-22T22:55:38Z",
     "Document": {
       "Statement": [
         {
@@ -39,7 +39,8 @@
             "dynamodb:GetShardIterator",
             "dynamodb:PutItem",
             "dynamodb:Scan",
-            "dynamodb:UpdateItem"
+            "dynamodb:UpdateItem",
+            "dynamodb:UpdateTable"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -48,7 +49,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2018-07-02T21:48:12Z"
+  "UpdateDate": "2020-01-22T22:55:38Z"
 }
