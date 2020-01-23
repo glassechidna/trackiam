@@ -39,9 +39,9 @@ The following table summarises the AWS APIs.
 | [`ec2`](services/ec2.yml) | 363 | 36 | 0 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`sagemaker`](services/sagemaker.yml) | 137 | 2 | 2 |
+| [`rds`](services/rds.yml) | 123 | 7 | 1 |
 | [`glue`](services/glue.yml) | 123 | 0 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
-| [`rds`](services/rds.yml) | 120 | 7 | 4 |
 | [`ses`](services/ses.yml) | 103 | 9 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 4 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |

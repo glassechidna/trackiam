@@ -6,6 +6,7 @@ Actions:
   - Name: rds:ApplyPendingMaintenanceAction
   - Name: rds:AuthorizeDBSecurityGroupIngress
   - Name: rds:BacktrackDBCluster
+  - Name: rds:CancelExportTask
   - Name: rds:CopyDBClusterParameterGroup
   - Name: rds:CopyDBClusterSnapshot
   - Name: rds:CopyDBParameterGroup
@@ -67,6 +68,7 @@ Actions:
   - Name: rds:DescribeEventCategories
   - Name: rds:DescribeEventSubscriptions
   - Name: rds:DescribeEvents
+  - Name: rds:DescribeExportTasks
   - Name: rds:DescribeGlobalClusters
   - Name: rds:DescribeOptionGroupOptions
   - Name: rds:DescribeOptionGroups
@@ -116,15 +118,13 @@ Actions:
   - Name: rds:StartActivityStream
   - Name: rds:StartDBCluster
   - Name: rds:StartDBInstance
+  - Name: rds:StartExportTask
   - Name: rds:StopActivityStream
   - Name: rds:StopDBCluster
   - Name: rds:StopDBInstance
 
   # actions with no corresponding API
-  - Name: rds:CancelExportTask
-  - Name: rds:DescribeExportTasks
   - Name: rds:DownloadCompleteDBLogFile
-  - Name: rds:StartExportTask
 
   # APIs without an IAM action
   - Name: rds:CreateCustomAvailabilityZone
