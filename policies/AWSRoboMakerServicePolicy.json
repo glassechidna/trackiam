@@ -1,20 +1,23 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSRoboMakerServicePolicy",
   "CreateDate": "2018-11-26T06:30:08Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJYLVVUUQMAEEZ3ZNY",
   "PolicyName": "AWSRoboMakerServicePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-04-04T22:15:35Z",
+    "CreateDate": "2020-01-23T20:44:52Z",
     "Document": {
       "Statement": [
         {
           "Action": "iam:PassRole",
           "Condition": {
-            "StringEqualsIfExists": {
-              "iam:PassedToService": "lambda.amazonaws.com"
+            "StringEquals": {
+              "iam:PassedToService": [
+                "lambda.amazonaws.com",
+                "robomaker.amazonaws.com"
+              ]
             }
           },
           "Effect": "Allow",
@@ -38,7 +41,9 @@
             "greengrass:GetFunctionDefinitionVersion",
             "greengrass:GetGroup",
             "greengrass:GetGroupVersion",
-            "lambda:CreateFunction"
+            "lambda:CreateFunction",
+            "robomaker:CancelSimulationJob",
+            "robomaker:CreateSimulationJob"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -62,7 +67,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-04-04T22:15:35Z"
+  "UpdateDate": "2020-01-23T20:44:52Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/NeptuneConsoleFullAccess",
   "CreateDate": "2018-06-19T21:35:19Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJWTD4ELX2KRNICUVQ",
   "PolicyName": "NeptuneConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2018-11-06T21:19:54Z",
+    "CreateDate": "2020-01-23T20:49:41Z",
     "Document": {
       "Statement": [
         {
@@ -21,6 +21,16 @@
           "Resource": "arn:aws:iam::*:role/aws-service-role/rds.amazonaws.com/AWSServiceRoleForRDS"
         },
         {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:passedToService": "rds.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
           "Action": [
             "rds:CreateDBCluster",
             "rds:CreateDBInstance"
@@ -32,7 +42,7 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:rds:*"
+            "arn:aws:rds:*:*:*"
           ]
         },
         {
@@ -87,7 +97,6 @@
             "ec2:ModifyVpcAttribute",
             "ec2:ModifyVpcEndpoint",
             "iam:ListRoles",
-            "iam:PassRole",
             "kms:ListAliases",
             "kms:ListKeyPolicies",
             "kms:ListKeys",
@@ -176,7 +185,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2018-11-06T21:19:54Z"
+  "UpdateDate": "2020-01-23T20:49:41Z"
 }
