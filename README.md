@@ -43,12 +43,12 @@ The following table summarises the AWS APIs.
 | [`glue`](services/glue.yml) | 123 | 0 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
 | [`ses`](services/ses.yml) | 103 | 9 | 0 |
+| [`mobiletargeting`](services/mobiletargeting.yml) | 102 | 5 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 4 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`chime`](services/chime.yml) | 91 | 3 | 50 |
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 86 | 0 | 18 |
-| [`mobiletargeting`](services/mobiletargeting.yml) | 83 | 24 | 0 |
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 80 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |

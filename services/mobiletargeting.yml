@@ -1,10 +1,14 @@
 Actions:
   - Name: mobiletargeting:CreateApp
   - Name: mobiletargeting:CreateCampaign
+  - Name: mobiletargeting:CreateEmailTemplate
   - Name: mobiletargeting:CreateExportJob
   - Name: mobiletargeting:CreateImportJob
   - Name: mobiletargeting:CreateJourney
+  - Name: mobiletargeting:CreatePushTemplate
   - Name: mobiletargeting:CreateSegment
+  - Name: mobiletargeting:CreateSmsTemplate
+  - Name: mobiletargeting:CreateVoiceTemplate
   - Name: mobiletargeting:DeleteAdmChannel
   - Name: mobiletargeting:DeleteApnsChannel
   - Name: mobiletargeting:DeleteApnsSandboxChannel
@@ -14,14 +18,18 @@ Actions:
   - Name: mobiletargeting:DeleteBaiduChannel
   - Name: mobiletargeting:DeleteCampaign
   - Name: mobiletargeting:DeleteEmailChannel
+  - Name: mobiletargeting:DeleteEmailTemplate
   - Name: mobiletargeting:DeleteEndpoint
   - Name: mobiletargeting:DeleteEventStream
   - Name: mobiletargeting:DeleteGcmChannel
   - Name: mobiletargeting:DeleteJourney
+  - Name: mobiletargeting:DeletePushTemplate
   - Name: mobiletargeting:DeleteSegment
   - Name: mobiletargeting:DeleteSmsChannel
+  - Name: mobiletargeting:DeleteSmsTemplate
   - Name: mobiletargeting:DeleteUserEndpoints
   - Name: mobiletargeting:DeleteVoiceChannel
+  - Name: mobiletargeting:DeleteVoiceTemplate
   - Name: mobiletargeting:GetAdmChannel
   - Name: mobiletargeting:GetApnsChannel
   - Name: mobiletargeting:GetApnsSandboxChannel
@@ -38,6 +46,7 @@ Actions:
   - Name: mobiletargeting:GetCampaigns
   - Name: mobiletargeting:GetChannels
   - Name: mobiletargeting:GetEmailChannel
+  - Name: mobiletargeting:GetEmailTemplate
   - Name: mobiletargeting:GetEndpoint
   - Name: mobiletargeting:GetEventStream
   - Name: mobiletargeting:GetExportJob
@@ -46,6 +55,7 @@ Actions:
   - Name: mobiletargeting:GetImportJob
   - Name: mobiletargeting:GetImportJobs
   - Name: mobiletargeting:GetJourney
+  - Name: mobiletargeting:GetPushTemplate
   - Name: mobiletargeting:GetSegment
   - Name: mobiletargeting:GetSegmentExportJobs
   - Name: mobiletargeting:GetSegmentImportJobs
@@ -53,10 +63,14 @@ Actions:
   - Name: mobiletargeting:GetSegmentVersions
   - Name: mobiletargeting:GetSegments
   - Name: mobiletargeting:GetSmsChannel
+  - Name: mobiletargeting:GetSmsTemplate
   - Name: mobiletargeting:GetUserEndpoints
   - Name: mobiletargeting:GetVoiceChannel
+  - Name: mobiletargeting:GetVoiceTemplate
   - Name: mobiletargeting:ListJourneys
   - Name: mobiletargeting:ListTagsForResource
+  - Name: mobiletargeting:ListTemplateVersions
+  - Name: mobiletargeting:ListTemplates
   - Name: mobiletargeting:PhoneNumberValidate
   - Name: mobiletargeting:PutEventStream
   - Name: mobiletargeting:PutEvents
@@ -74,37 +88,23 @@ Actions:
   - Name: mobiletargeting:UpdateBaiduChannel
   - Name: mobiletargeting:UpdateCampaign
   - Name: mobiletargeting:UpdateEmailChannel
+  - Name: mobiletargeting:UpdateEmailTemplate
   - Name: mobiletargeting:UpdateEndpoint
   - Name: mobiletargeting:UpdateEndpointsBatch
   - Name: mobiletargeting:UpdateGcmChannel
   - Name: mobiletargeting:UpdateJourney
   - Name: mobiletargeting:UpdateJourneyState
+  - Name: mobiletargeting:UpdatePushTemplate
   - Name: mobiletargeting:UpdateSegment
   - Name: mobiletargeting:UpdateSmsChannel
+  - Name: mobiletargeting:UpdateSmsTemplate
+  - Name: mobiletargeting:UpdateTemplateActiveVersion
   - Name: mobiletargeting:UpdateVoiceChannel
+  - Name: mobiletargeting:UpdateVoiceTemplate
 
   # APIs without an IAM action
-  - Name: mobiletargeting:CreateEmailTemplate
-  - Name: mobiletargeting:CreatePushTemplate
-  - Name: mobiletargeting:CreateSmsTemplate
-  - Name: mobiletargeting:CreateVoiceTemplate
-  - Name: mobiletargeting:DeleteEmailTemplate
-  - Name: mobiletargeting:DeletePushTemplate
-  - Name: mobiletargeting:DeleteSmsTemplate
-  - Name: mobiletargeting:DeleteVoiceTemplate
   - Name: mobiletargeting:GetApplicationDateRangeKpi
   - Name: mobiletargeting:GetCampaignDateRangeKpi
-  - Name: mobiletargeting:GetEmailTemplate
   - Name: mobiletargeting:GetJourneyDateRangeKpi
   - Name: mobiletargeting:GetJourneyExecutionActivityMetrics
   - Name: mobiletargeting:GetJourneyExecutionMetrics
-  - Name: mobiletargeting:GetPushTemplate
-  - Name: mobiletargeting:GetSmsTemplate
-  - Name: mobiletargeting:GetVoiceTemplate
-  - Name: mobiletargeting:ListTemplateVersions
-  - Name: mobiletargeting:ListTemplates
-  - Name: mobiletargeting:UpdateEmailTemplate
-  - Name: mobiletargeting:UpdatePushTemplate
-  - Name: mobiletargeting:UpdateSmsTemplate
-  - Name: mobiletargeting:UpdateTemplateActiveVersion
-  - Name: mobiletargeting:UpdateVoiceTemplate
