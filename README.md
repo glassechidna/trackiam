@@ -151,6 +151,7 @@ The following table summarises the AWS APIs.
 | [`ce`](services/ce.yml) | 19 | 0 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`transfer`](services/transfer.yml) | 18 | 0 | 0 |
+| [`shield`](services/shield.yml) | 18 | 0 | 0 |
 | [`secretsmanager`](services/secretsmanager.yml) | 18 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 18 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
@@ -158,7 +159,6 @@ The following table summarises the AWS APIs.
 | [`applicationinsights`](services/applicationinsights.yml) | 17 | 10 | 0 |
 | [`kafka`](services/kafka.yml) | 17 | 3 | 0 |
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
-| [`shield`](services/shield.yml) | 17 | 1 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 17 | 0 | 0 |
 | [`fms`](services/fms.yml) | 17 | 0 | 0 |
