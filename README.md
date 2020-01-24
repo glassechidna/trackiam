@@ -105,11 +105,11 @@ The following table summarises the AWS APIs.
 | [`workspaces`](services/workspaces.yml) | 32 | 9 | 0 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
 | [`events`](services/events.yml) | 31 | 0 | 0 |
+| [`cloudhsm`](services/cloudhsm.yml) | 31 | 0 | 0 |
 | [`worklink`](services/worklink.yml) | 30 | 0 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 30 | 0 | 0 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 29 | 0 | 0 |
-| [`cloudhsm`](services/cloudhsm.yml) | 28 | 3 | 0 |
 | [`connect`](services/connect.yml) | 28 | 1 | 6 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`sms`](services/sms.yml) | 28 | 0 | 2 |
