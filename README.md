@@ -128,7 +128,7 @@ The following table summarises the AWS APIs.
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 23 | 1 | 0 |
-| [`elasticfilesystem`](services/elasticfilesystem.yml) | 22 | 1 | 5 |
+| [`elasticfilesystem`](services/elasticfilesystem.yml) | 23 | 0 | 5 |
 | [`ram`](services/ram.yml) | 22 | 1 | 0 |
 | [`states`](services/states.yml) | 22 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 0 |
