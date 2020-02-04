@@ -8,26 +8,35 @@ Actions:
   - Name: lambda:DeleteEventSourceMapping
   - Name: lambda:DeleteFunction
   - Name: lambda:DeleteFunctionConcurrency
+  - Name: lambda:DeleteFunctionEventInvokeConfig
   - Name: lambda:DeleteLayerVersion
+  - Name: lambda:DeleteProvisionedConcurrencyConfig
   - Name: lambda:GetAccountSettings
   - Name: lambda:GetAlias
   - Name: lambda:GetEventSourceMapping
   - Name: lambda:GetFunction
+  - Name: lambda:GetFunctionConcurrency
   - Name: lambda:GetFunctionConfiguration
+  - Name: lambda:GetFunctionEventInvokeConfig
   - Name: lambda:GetLayerVersion
   - Name: lambda:GetLayerVersionPolicy
   - Name: lambda:GetPolicy
+  - Name: lambda:GetProvisionedConcurrencyConfig
   - Name: lambda:InvokeAsync
   - Name: lambda:ListAliases
   - Name: lambda:ListEventSourceMappings
+  - Name: lambda:ListFunctionEventInvokeConfigs
   - Name: lambda:ListFunctions
   - Name: lambda:ListLayerVersions
   - Name: lambda:ListLayers
+  - Name: lambda:ListProvisionedConcurrencyConfigs
   - Name: lambda:ListTags
   - Name: lambda:ListVersionsByFunction
   - Name: lambda:PublishLayerVersion
   - Name: lambda:PublishVersion
   - Name: lambda:PutFunctionConcurrency
+  - Name: lambda:PutFunctionEventInvokeConfig
+  - Name: lambda:PutProvisionedConcurrencyConfig
   - Name: lambda:RemoveLayerVersionPermission
   - Name: lambda:RemovePermission
   - Name: lambda:TagResource
@@ -36,6 +45,7 @@ Actions:
   - Name: lambda:UpdateEventSourceMapping
   - Name: lambda:UpdateFunctionCode
   - Name: lambda:UpdateFunctionConfiguration
+  - Name: lambda:UpdateFunctionEventInvokeConfig
 
   # actions with no corresponding API
   - Name: lambda:DisableReplication
@@ -43,15 +53,5 @@ Actions:
   - Name: lambda:InvokeFunction
 
   # APIs without an IAM action
-  - Name: lambda:DeleteFunctionEventInvokeConfig
-  - Name: lambda:DeleteProvisionedConcurrencyConfig
-  - Name: lambda:GetFunctionConcurrency
-  - Name: lambda:GetFunctionEventInvokeConfig
   - Name: lambda:GetLayerVersionByArn
-  - Name: lambda:GetProvisionedConcurrencyConfig
   - Name: lambda:Invoke
-  - Name: lambda:ListFunctionEventInvokeConfigs
-  - Name: lambda:ListProvisionedConcurrencyConfigs
-  - Name: lambda:PutFunctionEventInvokeConfig
-  - Name: lambda:PutProvisionedConcurrencyConfig
-  - Name: lambda:UpdateFunctionEventInvokeConfig

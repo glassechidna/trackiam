@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 216
-* Unique actions: 7861
+* Unique actions: 7865
 * Managed policies: 629
 
 Most common managed policy name prefixes:
@@ -68,6 +68,7 @@ The following table summarises the AWS APIs.
 | [`comprehend`](services/comprehend.yml) | 51 | 0 | 0 |
 | [`ds`](services/ds.yml) | 49 | 8 | 6 |
 | [`guardduty`](services/guardduty.yml) | 49 | 1 | 0 |
+| [`lambda`](services/lambda.yml) | 47 | 2 | 3 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`organizations`](services/organizations.yml) | 47 | 0 | 0 |
 | [`backup`](services/backup.yml) | 46 | 0 | 1 |
@@ -87,7 +88,6 @@ The following table summarises the AWS APIs.
 | [`personalize`](services/personalize.yml) | 39 | 3 | 0 |
 | [`logs`](services/logs.yml) | 39 | 0 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
-| [`lambda`](services/lambda.yml) | 37 | 12 | 3 |
 | [`medialive`](services/medialive.yml) | 37 | 6 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
 | [`codepipeline`](services/codepipeline.yml) | 36 | 1 | 0 |
@@ -98,8 +98,8 @@ The following table summarises the AWS APIs.
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
 | [`codebuild`](services/codebuild.yml) | 34 | 0 | 7 |
+| [`workmail`](services/workmail.yml) | 33 | 3 | 53 |
 | [`iotanalytics`](services/iotanalytics.yml) | 33 | 1 | 0 |
-| [`workmail`](services/workmail.yml) | 33 | 0 | 53 |
 | [`sns`](services/sns.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`workspaces`](services/workspaces.yml) | 32 | 9 | 0 |
@@ -157,7 +157,7 @@ The following table summarises the AWS APIs.
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 18 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 17 | 10 | 0 |
-| [`kafka`](services/kafka.yml) | 17 | 3 | 0 |
+| [`kafka`](services/kafka.yml) | 17 | 4 | 0 |
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 17 | 0 | 0 |
@@ -257,7 +257,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1072 |
+| `List` | 1074 |
 | `Get` | 1047 |
 | `Describe` | 1002 |
 | `Delete` | 921 |
@@ -266,5 +266,5 @@ Most common action prefixes:
 | `Put` | 217 |
 | `Start` | 135 |
 | `Modify` | 104 |
-| `Tag` | 99 |
+| `Tag` | 100 |
 
