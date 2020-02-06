@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/ElastiCacheServiceRolePolicy",
   "CreateDate": "2017-12-07T17:50:04Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIML5LIBUZBVCSF7PI",
   "PolicyName": "ElastiCacheServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-09-25T23:09:07Z",
+    "CreateDate": "2020-02-06T21:27:13Z",
     "Document": {
       "Statement": [
         {
@@ -24,7 +24,11 @@
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcs",
             "ec2:ModifyNetworkInterfaceAttribute",
-            "ec2:RevokeSecurityGroupIngress"
+            "ec2:RevokeSecurityGroupIngress",
+            "outposts:GetOutpost",
+            "outposts:GetOutpostInstanceTypes",
+            "outposts:ListOutposts",
+            "outposts:ListSites"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -33,7 +37,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-09-25T23:09:07Z"
+  "UpdateDate": "2020-02-06T21:27:13Z"
 }
