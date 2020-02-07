@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 216
-* Unique actions: 7865
+* Unique actions: 7869
 * Managed policies: 630
 
 Most common managed policy name prefixes:
@@ -90,10 +90,10 @@ The following table summarises the AWS APIs.
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`medialive`](services/medialive.yml) | 37 | 6 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
+| [`robomaker`](services/robomaker.yml) | 36 | 4 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 36 | 1 | 0 |
 | [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
 | [`wafv2`](services/wafv2.yml) | 36 | 0 | 0 |
-| [`robomaker`](services/robomaker.yml) | 36 | 0 | 0 |
 | [`lex`](services/lex.yml) | 35 | 6 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
@@ -257,14 +257,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1074 |
+| `List` | 1075 |
 | `Get` | 1047 |
-| `Describe` | 1002 |
+| `Describe` | 1003 |
 | `Delete` | 921 |
 | `Create` | 855 |
 | `Update` | 643 |
 | `Put` | 217 |
-| `Start` | 135 |
+| `Start` | 136 |
 | `Modify` | 104 |
 | `Tag` | 100 |
 
