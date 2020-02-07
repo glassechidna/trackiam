@@ -85,12 +85,12 @@ The following table summarises the AWS APIs.
 | [`rekognition`](services/rekognition.yml) | 41 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 40 | 2 | 0 |
 | [`securityhub`](services/securityhub.yml) | 40 | 0 | 0 |
+| [`robomaker`](services/robomaker.yml) | 40 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 39 | 3 | 0 |
 | [`logs`](services/logs.yml) | 39 | 0 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`medialive`](services/medialive.yml) | 37 | 6 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
-| [`robomaker`](services/robomaker.yml) | 36 | 4 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 36 | 1 | 0 |
 | [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
 | [`wafv2`](services/wafv2.yml) | 36 | 0 | 0 |
