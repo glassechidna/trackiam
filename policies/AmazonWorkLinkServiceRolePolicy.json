@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonWorkLinkServiceRolePolicy",
   "CreateDate": "2019-03-18T18:00:16Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAINJJP6CO7ATFCV4CU",
   "PolicyName": "AmazonWorkLinkServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-03-18T18:00:16Z",
+    "CreateDate": "2020-02-07T20:48:49Z",
     "Document": {
       "Statement": [
         {
@@ -17,6 +17,15 @@
             "ec2:DeleteNetworkInterface",
             "ec2:DeleteNetworkInterfacePermission",
             "ec2:ModifyNetworkInterfaceAttribute"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:AddListenerCertificates",
+            "elasticloadbalancing:ModifyListener",
+            "elasticloadbalancing:RemoveListenerCertificates"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -33,7 +42,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-03-18T18:00:16Z"
+  "UpdateDate": "2020-02-07T20:48:49Z"
 }
