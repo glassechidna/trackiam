@@ -17,24 +17,31 @@ Actions:
   - Name: ds:DeleteLogSubscription
   - Name: ds:DeleteSnapshot
   - Name: ds:DeleteTrust
+  - Name: ds:DeregisterCertificate
   - Name: ds:DeregisterEventTopic
+  - Name: ds:DescribeCertificate
   - Name: ds:DescribeConditionalForwarders
   - Name: ds:DescribeDirectories
   - Name: ds:DescribeDomainControllers
   - Name: ds:DescribeEventTopics
+  - Name: ds:DescribeLDAPSSettings
   - Name: ds:DescribeSharedDirectories
   - Name: ds:DescribeSnapshots
   - Name: ds:DescribeTrusts
+  - Name: ds:DisableLDAPS
   - Name: ds:DisableRadius
   - Name: ds:DisableSso
+  - Name: ds:EnableLDAPS
   - Name: ds:EnableRadius
   - Name: ds:EnableSso
   - Name: ds:GetDirectoryLimits
   - Name: ds:GetSnapshotLimits
+  - Name: ds:ListCertificates
   - Name: ds:ListIpRoutes
   - Name: ds:ListLogSubscriptions
   - Name: ds:ListSchemaExtensions
   - Name: ds:ListTagsForResource
+  - Name: ds:RegisterCertificate
   - Name: ds:RegisterEventTopic
   - Name: ds:RejectSharedDirectory
   - Name: ds:RemoveIpRoutes
@@ -47,6 +54,7 @@ Actions:
   - Name: ds:UpdateConditionalForwarder
   - Name: ds:UpdateNumberOfDomainControllers
   - Name: ds:UpdateRadius
+  - Name: ds:UpdateTrust
   - Name: ds:VerifyTrust
 
   # actions with no corresponding API
@@ -56,13 +64,3 @@ Actions:
   - Name: ds:GetAuthorizedApplicationDetails
   - Name: ds:ListAuthorizedApplications
   - Name: ds:UnauthorizeApplication
-
-  # APIs without an IAM action
-  - Name: ds:DeregisterCertificate
-  - Name: ds:DescribeCertificate
-  - Name: ds:DescribeLDAPSSettings
-  - Name: ds:DisableLDAPS
-  - Name: ds:EnableLDAPS
-  - Name: ds:ListCertificates
-  - Name: ds:RegisterCertificate
-  - Name: ds:UpdateTrust

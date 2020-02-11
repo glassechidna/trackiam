@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 216
-* Unique actions: 7869
+* Unique actions: 7870
 * Managed policies: 630
 
 Most common managed policy name prefixes:
@@ -60,13 +60,13 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 71 | 4 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 67 | 10 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
+| [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`route53`](services/route53.yml) | 56 | 0 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`autoscaling`](services/autoscaling.yml) | 54 | 0 | 0 |
 | [`s3`](services/s3.yml) | 53 | 48 | 39 |
 | [`directconnect`](services/directconnect.yml) | 53 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 51 | 0 | 0 |
-| [`ds`](services/ds.yml) | 49 | 8 | 6 |
 | [`guardduty`](services/guardduty.yml) | 49 | 1 | 0 |
 | [`lambda`](services/lambda.yml) | 47 | 2 | 3 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
@@ -134,7 +134,7 @@ The following table summarises the AWS APIs.
 | [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 0 |
-| [`es`](services/es.yml) | 21 | 2 | 5 |
+| [`es`](services/es.yml) | 21 | 2 | 6 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`eks`](services/eks.yml) | 21 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 21 | 0 | 0 |
