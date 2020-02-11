@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 216
-* Unique actions: 7870
+* Unique actions: 7871
 * Managed policies: 630
 
 Most common managed policy name prefixes:
@@ -68,6 +68,7 @@ The following table summarises the AWS APIs.
 | [`directconnect`](services/directconnect.yml) | 53 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 51 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 49 | 1 | 0 |
+| [`quicksight`](services/quicksight.yml) | 47 | 18 | 9 |
 | [`lambda`](services/lambda.yml) | 47 | 2 | 3 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`organizations`](services/organizations.yml) | 47 | 0 | 0 |
@@ -163,7 +164,6 @@ The following table summarises the AWS APIs.
 | [`globalaccelerator`](services/globalaccelerator.yml) | 17 | 0 | 0 |
 | [`fms`](services/fms.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
-| [`quicksight`](services/quicksight.yml) | 16 | 49 | 8 |
 | [`qldb`](services/qldb.yml) | 16 | 0 | 3 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
 | [`batch`](services/batch.yml) | 16 | 0 | 0 |
@@ -258,7 +258,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1075 |
-| `Get` | 1047 |
+| `Get` | 1048 |
 | `Describe` | 1003 |
 | `Delete` | 921 |
 | `Create` | 855 |
