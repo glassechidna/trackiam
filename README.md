@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 217
-* Unique actions: 7874
+* Unique actions: 7878
 * Managed policies: 630
 
 Most common managed policy name prefixes:
@@ -99,7 +99,7 @@ The following table summarises the AWS APIs.
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
 | [`codebuild`](services/codebuild.yml) | 34 | 0 | 7 |
-| [`workmail`](services/workmail.yml) | 33 | 3 | 53 |
+| [`workmail`](services/workmail.yml) | 33 | 7 | 53 |
 | [`iotanalytics`](services/iotanalytics.yml) | 33 | 1 | 0 |
 | [`sns`](services/sns.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
@@ -258,13 +258,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1078 |
-| `Get` | 1048 |
+| `List` | 1079 |
+| `Get` | 1049 |
 | `Describe` | 1003 |
-| `Delete` | 921 |
+| `Delete` | 922 |
 | `Create` | 855 |
 | `Update` | 643 |
-| `Put` | 217 |
+| `Put` | 218 |
 | `Start` | 136 |
 | `Modify` | 104 |
 | `Tag` | 100 |
