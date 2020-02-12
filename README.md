@@ -11,15 +11,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 217
-* Unique actions: 7878
-* Managed policies: 630
+* Unique services: 218
+* Unique actions: 7879
+* Managed policies: 631
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 178 |
+| `arn:aws:iam::aws:policy/AWS*` | 179 |
 | `arn:aws:iam::aws:policy/Amazon*` | 169 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 117 |
 | `arn:aws:iam::aws:policy/service-role/*` | 97 |
@@ -251,6 +251,7 @@ The following table summarises the AWS APIs.
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
 | [`rds-db`](services/rds-db.yml) | 0 | 0 | 1 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 1 |
+| [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 1 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 1 |
 | [`arsenal`](services/arsenal.yml) | 0 | 0 | 1 |
 
