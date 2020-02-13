@@ -85,6 +85,7 @@ The following table summarises the AWS APIs.
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`rekognition`](services/rekognition.yml) | 41 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 40 | 2 | 0 |
+| [`workmail`](services/workmail.yml) | 40 | 0 | 53 |
 | [`securityhub`](services/securityhub.yml) | 40 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 40 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 39 | 3 | 0 |
@@ -99,7 +100,6 @@ The following table summarises the AWS APIs.
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
 | [`codebuild`](services/codebuild.yml) | 34 | 0 | 7 |
-| [`workmail`](services/workmail.yml) | 33 | 7 | 53 |
 | [`iotanalytics`](services/iotanalytics.yml) | 33 | 1 | 0 |
 | [`sns`](services/sns.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
