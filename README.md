@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 216
-* Unique actions: 7879
+* Unique actions: 7883
 * Managed policies: 631
 
 Most common managed policy name prefixes:
@@ -83,10 +83,10 @@ The following table summarises the AWS APIs.
 | [`elasticache`](services/elasticache.yml) | 42 | 6 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
-| [`rekognition`](services/rekognition.yml) | 41 | 0 | 0 |
+| [`rekognition`](services/rekognition.yml) | 41 | 0 | 2 |
+| [`securityhub`](services/securityhub.yml) | 41 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 40 | 2 | 0 |
 | [`workmail`](services/workmail.yml) | 40 | 0 | 53 |
-| [`securityhub`](services/securityhub.yml) | 40 | 0 | 1 |
 | [`robomaker`](services/robomaker.yml) | 40 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 39 | 3 | 0 |
 | [`logs`](services/logs.yml) | 39 | 0 | 5 |
@@ -150,9 +150,9 @@ The following table summarises the AWS APIs.
 | [`athena`](services/athena.yml) | 19 | 0 | 11 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`ce`](services/ce.yml) | 19 | 0 | 0 |
+| [`shield`](services/shield.yml) | 18 | 2 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`transfer`](services/transfer.yml) | 18 | 0 | 0 |
-| [`shield`](services/shield.yml) | 18 | 0 | 0 |
 | [`secretsmanager`](services/secretsmanager.yml) | 18 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 18 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
@@ -258,13 +258,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1077 |
-| `Get` | 1049 |
+| `Get` | 1050 |
 | `Describe` | 1004 |
 | `Delete` | 922 |
 | `Create` | 855 |
 | `Update` | 643 |
 | `Put` | 218 |
-| `Start` | 136 |
+| `Start` | 137 |
 | `Modify` | 104 |
 | `Tag` | 101 |
 
