@@ -80,10 +80,10 @@ The following table summarises the AWS APIs.
 | [`cloudfront`](services/cloudfront.yml) | 45 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 44 | 4 | 2 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 43 | 1 | 2 |
+| [`rekognition`](services/rekognition.yml) | 43 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 42 | 6 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
-| [`rekognition`](services/rekognition.yml) | 41 | 0 | 2 |
 | [`securityhub`](services/securityhub.yml) | 41 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 40 | 2 | 0 |
 | [`workmail`](services/workmail.yml) | 40 | 0 | 53 |
@@ -174,6 +174,7 @@ The following table summarises the AWS APIs.
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 3 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`fsx`](services/fsx.yml) | 14 | 0 | 0 |
+| [`cloud9`](services/cloud9.yml) | 13 | 0 | 2 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 13 | 0 | 1 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
 | [`health`](services/health.yml) | 13 | 0 | 0 |
@@ -185,7 +186,6 @@ The following table summarises the AWS APIs.
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 32 |
 | [`detective`](services/detective.yml) | 11 | 0 | 5 |
-| [`cloud9`](services/cloud9.yml) | 10 | 0 | 5 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 9 | 0 | 3 |
