@@ -1,23 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonChimeUserManagement",
   "CreateDate": "2017-11-01T22:17:26Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJGLHVUHNMQPSDGSOO",
   "PolicyName": "AmazonChimeUserManagement",
   "PolicyVersion": {
-    "CreateDate": "2019-12-10T19:30:07Z",
+    "CreateDate": "2020-02-18T19:26:10Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "chime:ActivateUsers",
             "chime:AssociatePhoneNumberWithUser",
+            "chime:AssociateSigninDelegateGroupsWithAccount",
             "chime:BatchSuspendUser",
             "chime:BatchUnsuspendUser",
             "chime:BatchUpdateUser",
+            "chime:CreateUser",
             "chime:DisassociatePhoneNumberFromUser",
+            "chime:DisassociateSigninDelegateGroupsFromAccount",
             "chime:GetAccount",
             "chime:GetAccountSettings",
             "chime:GetDomain",
@@ -55,7 +58,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2019-12-10T19:30:07Z"
+  "UpdateDate": "2020-02-18T19:26:10Z"
 }

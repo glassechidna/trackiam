@@ -2,6 +2,7 @@ Actions:
   - Name: chime:AssociatePhoneNumberWithUser
   - Name: chime:AssociatePhoneNumbersWithVoiceConnector
   - Name: chime:AssociatePhoneNumbersWithVoiceConnectorGroup
+  - Name: chime:AssociateSigninDelegateGroupsWithAccount
   - Name: chime:BatchCreateAttendee
   - Name: chime:BatchCreateRoomMembership
   - Name: chime:BatchDeletePhoneNumber
@@ -16,6 +17,7 @@ Actions:
   - Name: chime:CreatePhoneNumberOrder
   - Name: chime:CreateRoom
   - Name: chime:CreateRoomMembership
+  - Name: chime:CreateUser
   - Name: chime:CreateVoiceConnector
   - Name: chime:CreateVoiceConnectorGroup
   - Name: chime:DeleteAccount
@@ -34,6 +36,7 @@ Actions:
   - Name: chime:DisassociatePhoneNumberFromUser
   - Name: chime:DisassociatePhoneNumbersFromVoiceConnector
   - Name: chime:DisassociatePhoneNumbersFromVoiceConnectorGroup
+  - Name: chime:DisassociateSigninDelegateGroupsFromAccount
   - Name: chime:GetAccount
   - Name: chime:GetAccountSettings
   - Name: chime:GetAttendee
@@ -142,8 +145,3 @@ Actions:
   - Name: chime:UpdateSupportedLicenses
   - Name: chime:UpdateUserLicenses
   - Name: chime:ValidateAccountResource
-
-  # APIs without an IAM action
-  - Name: chime:AssociateSigninDelegateGroupsWithAccount
-  - Name: chime:CreateUser
-  - Name: chime:DisassociateSigninDelegateGroupsFromAccount

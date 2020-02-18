@@ -46,7 +46,7 @@ The following table summarises the AWS APIs.
 | [`mobiletargeting`](services/mobiletargeting.yml) | 102 | 5 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 4 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
-| [`chime`](services/chime.yml) | 91 | 3 | 50 |
+| [`chime`](services/chime.yml) | 94 | 0 | 50 |
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 86 | 0 | 18 |
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
