@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudFrontFullAccess",
   "CreateDate": "2015-02-06T18:39:50Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIPRV52SH6HDCCFY6U",
   "PolicyName": "CloudFrontFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2016-01-21T17:03:57Z",
+    "CreateDate": "2020-02-19T19:52:00Z",
     "Document": {
       "Statement": [
         {
@@ -16,7 +16,9 @@
             "cloudfront:*",
             "iam:ListServerCertificates",
             "waf:GetWebACL",
-            "waf:ListWebACLs"
+            "waf:ListWebACLs",
+            "wafv2:GetWebACL",
+            "wafv2:ListWebACLs"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -32,7 +34,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2016-01-21T17:03:57Z"
+  "UpdateDate": "2020-02-19T19:52:00Z"
 }

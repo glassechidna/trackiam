@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:55Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJJZMNYOTZCNQP36LG",
   "PolicyName": "CloudFrontReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2016-01-21T17:03:28Z",
+    "CreateDate": "2020-02-19T19:49:16Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,9 @@
             "iam:ListServerCertificates",
             "route53:List*",
             "waf:GetWebACL",
-            "waf:ListWebACLs"
+            "waf:ListWebACLs",
+            "wafv2:GetWebACL",
+            "wafv2:ListWebACLs"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -27,7 +29,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2016-01-21T17:03:28Z"
+  "UpdateDate": "2020-02-19T19:49:16Z"
 }
