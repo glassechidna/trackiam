@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForAmazonEKSNodegroup",
   "CreateDate": "2019-11-07T01:34:26Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4KH2AAMJJG",
   "PolicyName": "AWSServiceRoleForAmazonEKSNodegroup",
   "PolicyVersion": {
-    "CreateDate": "2020-01-16T21:53:23Z",
+    "CreateDate": "2020-02-21T20:40:41Z",
     "Document": {
       "Statement": [
         {
@@ -36,23 +36,26 @@
           "Action": "iam:PassRole",
           "Condition": {
             "StringEqualsIfExists": {
-              "iam:PassedToService": "ec2.amazonaws.com"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "AllowPassRoleToEC2"
-        },
-        {
-          "Action": "iam:PassRole",
-          "Condition": {
-            "StringEqualsIfExists": {
               "iam:PassedToService": "iam.amazonaws.com"
             }
           },
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowPassRoleToIAM"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEqualsIfExists": {
+              "iam:PassedToService": [
+                "ec2.amazonaws.com",
+                "ec2.amazonaws.com.cn"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowPassRoleToEC2"
         },
         {
           "Action": [
@@ -188,7 +191,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-01-16T21:53:23Z"
+  "UpdateDate": "2020-02-21T20:40:41Z"
 }

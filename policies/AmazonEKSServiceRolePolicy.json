@@ -1,0 +1,110 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEKSServiceRolePolicy",
+  "CreateDate": "2020-02-21T20:10:47Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4KZBLSP26Y",
+  "PolicyName": "AmazonEKSServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-02-21T20:10:47Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:DeleteSecurityGroup",
+            "ec2:RevokeSecurityGroupIngress"
+          ],
+          "Condition": {
+            "ForAnyValue:StringLike": {
+              "ec2:ResourceTag/Name": "eks-cluster-sg*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags",
+            "ec2:DeleteTags"
+          ],
+          "Condition": {
+            "ForAnyValue:StringLike": {
+              "aws:RequestTag/Name": "eks-cluster-sg*",
+              "aws:TagKeys": [
+                "kubernetes.io/cluster/*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateTags",
+            "ec2:DeleteTags"
+          ],
+          "Condition": {
+            "ForAnyValue:StringLike": {
+              "aws:TagKeys": [
+                "kubernetes.io/cluster/*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ]
+        },
+        {
+          "Action": "logs:CreateLogGroup",
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/eks/*"
+        },
+        {
+          "Action": "logs:PutLogEvents",
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/eks/*:*:*"
+        },
+        {
+          "Action": "route53:AssociateVPCWithHostedZone",
+          "Effect": "Allow",
+          "Resource": "arn:aws:route53:::hostedzone/*"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:CreateSecurityGroup",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DescribeInstances",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "iam:ListAttachedRolePolicies"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/eks/*:*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-02-21T20:10:47Z"
+}
