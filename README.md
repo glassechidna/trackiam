@@ -112,6 +112,7 @@ The following table summarises the AWS APIs.
 | [`connect`](services/connect.yml) | 29 | 0 | 6 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 29 | 0 | 0 |
+| [`appconfig`](services/appconfig.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`sms`](services/sms.yml) | 28 | 0 | 2 |
 | [`appmesh`](services/appmesh.yml) | 28 | 0 | 1 |
@@ -217,7 +218,6 @@ The following table summarises the AWS APIs.
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 209 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 148 | 7 |
-| [`appconfig`](services/appconfig.yml) | 0 | 29 | 0 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`codestar-connections`](services/codestar-connections.yml) | 0 | 4 | 0 |
