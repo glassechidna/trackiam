@@ -4,6 +4,8 @@ Actions:
   - Name: devicefarm:CreateNetworkProfile
   - Name: devicefarm:CreateProject
   - Name: devicefarm:CreateRemoteAccessSession
+  - Name: devicefarm:CreateTestGridProject
+  - Name: devicefarm:CreateTestGridUrl
   - Name: devicefarm:CreateUpload
   - Name: devicefarm:CreateVPCEConfiguration
   - Name: devicefarm:DeleteDevicePool
@@ -12,6 +14,7 @@ Actions:
   - Name: devicefarm:DeleteProject
   - Name: devicefarm:DeleteRemoteAccessSession
   - Name: devicefarm:DeleteRun
+  - Name: devicefarm:DeleteTestGridProject
   - Name: devicefarm:DeleteUpload
   - Name: devicefarm:DeleteVPCEConfiguration
   - Name: devicefarm:GetAccountSettings
@@ -28,6 +31,8 @@ Actions:
   - Name: devicefarm:GetRun
   - Name: devicefarm:GetSuite
   - Name: devicefarm:GetTest
+  - Name: devicefarm:GetTestGridProject
+  - Name: devicefarm:GetTestGridSession
   - Name: devicefarm:GetUpload
   - Name: devicefarm:GetVPCEConfiguration
   - Name: devicefarm:InstallToRemoteAccessSession
@@ -47,6 +52,10 @@ Actions:
   - Name: devicefarm:ListSamples
   - Name: devicefarm:ListSuites
   - Name: devicefarm:ListTagsForResource
+  - Name: devicefarm:ListTestGridProjects
+  - Name: devicefarm:ListTestGridSessionActions
+  - Name: devicefarm:ListTestGridSessionArtifacts
+  - Name: devicefarm:ListTestGridSessions
   - Name: devicefarm:ListTests
   - Name: devicefarm:ListUniqueProblems
   - Name: devicefarm:ListUploads
@@ -64,17 +73,6 @@ Actions:
   - Name: devicefarm:UpdateInstanceProfile
   - Name: devicefarm:UpdateNetworkProfile
   - Name: devicefarm:UpdateProject
+  - Name: devicefarm:UpdateTestGridProject
   - Name: devicefarm:UpdateUpload
   - Name: devicefarm:UpdateVPCEConfiguration
-
-  # APIs without an IAM action
-  - Name: devicefarm:CreateTestGridProject
-  - Name: devicefarm:CreateTestGridUrl
-  - Name: devicefarm:DeleteTestGridProject
-  - Name: devicefarm:GetTestGridProject
-  - Name: devicefarm:GetTestGridSession
-  - Name: devicefarm:ListTestGridProjects
-  - Name: devicefarm:ListTestGridSessionActions
-  - Name: devicefarm:ListTestGridSessionArtifacts
-  - Name: devicefarm:ListTestGridSessions
-  - Name: devicefarm:UpdateTestGridProject

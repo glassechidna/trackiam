@@ -52,13 +52,13 @@ The following table summarises the AWS APIs.
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 80 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
+| [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`config`](services/config.yml) | 76 | 2 | 2 |
 | [`waf`](services/waf.yml) | 76 | 0 | 0 |
 | [`gamelift`](services/gamelift.yml) | 76 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 75 | 0 | 11 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 71 | 4 | 0 |
-| [`devicefarm`](services/devicefarm.yml) | 67 | 10 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`route53`](services/route53.yml) | 56 | 0 | 0 |
