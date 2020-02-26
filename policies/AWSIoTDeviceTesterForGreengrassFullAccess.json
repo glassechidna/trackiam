@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSIoTDeviceTesterForGreengrassFullAccess",
   "CreateDate": "2020-02-20T21:21:27Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ORKVZSPY7",
   "PolicyName": "AWSIoTDeviceTesterForGreengrassFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-02-20T21:21:27Z",
+    "CreateDate": "2020-02-26T18:26:52Z",
     "Document": {
       "Statement": [
         {
@@ -45,6 +45,7 @@
           "Action": [
             "greengrass:*",
             "iam:ListAttachedRolePolicies",
+            "iot-device-tester:SendMetrics",
             "iot:CreateCertificateFromCsr",
             "iot:CreateKeysAndCertificate",
             "iot:CreatePolicy",
@@ -112,7 +113,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-02-20T21:21:27Z"
+  "UpdateDate": "2020-02-26T18:26:52Z"
 }
