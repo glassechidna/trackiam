@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 217
-* Unique actions: 7886
+* Unique actions: 7902
 * Managed policies: 633
 
 Most common managed policy name prefixes:
@@ -44,7 +44,7 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
 | [`ses`](services/ses.yml) | 103 | 9 | 0 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 102 | 5 | 0 |
-| [`lightsail`](services/lightsail.yml) | 101 | 4 | 0 |
+| [`lightsail`](services/lightsail.yml) | 101 | 12 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`chime`](services/chime.yml) | 94 | 0 | 50 |
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
@@ -159,10 +159,10 @@ The following table summarises the AWS APIs.
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 18 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 17 | 10 | 0 |
+| [`globalaccelerator`](services/globalaccelerator.yml) | 17 | 8 | 0 |
 | [`kafka`](services/kafka.yml) | 17 | 4 | 0 |
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
-| [`globalaccelerator`](services/globalaccelerator.yml) | 17 | 0 | 0 |
 | [`fms`](services/fms.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`qldb`](services/qldb.yml) | 16 | 0 | 3 |
@@ -258,14 +258,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1077 |
-| `Get` | 1050 |
+| `List` | 1079 |
+| `Get` | 1052 |
 | `Describe` | 1004 |
-| `Delete` | 924 |
-| `Create` | 855 |
+| `Delete` | 926 |
+| `Create` | 856 |
 | `Update` | 643 |
-| `Put` | 218 |
+| `Put` | 219 |
 | `Start` | 137 |
 | `Modify` | 104 |
-| `Tag` | 101 |
+| `Tag` | 102 |
 
