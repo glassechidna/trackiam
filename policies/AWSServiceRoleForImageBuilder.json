@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForImageBuilder",
   "CreateDate": "2019-11-29T22:02:13Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NE22WISEW",
   "PolicyName": "AWSServiceRoleForImageBuilder",
   "PolicyVersion": {
-    "CreateDate": "2019-12-02T06:18:40Z",
+    "CreateDate": "2020-02-28T19:03:21Z",
     "Document": {
       "Statement": [
         {
@@ -125,6 +125,7 @@
         {
           "Action": [
             "autoscaling:DescribeAutoScalingGroups",
+            "autoscaling:DescribeAutoScalingInstances",
             "autoscaling:SuspendProcesses"
           ],
           "Effect": "Allow",
@@ -184,7 +185,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2019-12-02T06:18:40Z"
+  "UpdateDate": "2020-02-28T19:03:21Z"
 }
