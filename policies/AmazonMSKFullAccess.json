@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonMSKFullAccess",
   "CreateDate": "2019-01-14T22:07:52Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJERQQQTWI5OMENTQE",
   "PolicyName": "AmazonMSKFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-01-14T22:07:52Z",
+    "CreateDate": "2020-02-28T01:16:55Z",
     "Document": {
       "Statement": [
         {
@@ -27,7 +27,12 @@
             "ec2:DescribeVpcs",
             "kafka:*",
             "kms:CreateGrant",
-            "kms:DescribeKey"
+            "kms:DescribeKey",
+            "logs:CreateLogDelivery",
+            "logs:DeleteLogDelivery",
+            "logs:GetLogDelivery",
+            "logs:ListLogDeliveries",
+            "logs:UpdateLogDelivery"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -44,7 +49,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-01-14T22:07:52Z"
+  "UpdateDate": "2020-02-28T01:16:55Z"
 }
