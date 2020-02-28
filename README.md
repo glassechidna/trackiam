@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 217
-* Unique actions: 7902
+* Unique actions: 7905
 * Managed policies: 633
 
 Most common managed policy name prefixes:
@@ -40,7 +40,7 @@ The following table summarises the AWS APIs.
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`sagemaker`](services/sagemaker.yml) | 137 | 2 | 2 |
 | [`rds`](services/rds.yml) | 123 | 7 | 1 |
-| [`glue`](services/glue.yml) | 123 | 0 | 1 |
+| [`glue`](services/glue.yml) | 123 | 1 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
 | [`ses`](services/ses.yml) | 103 | 9 | 0 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 102 | 5 | 0 |
@@ -53,7 +53,7 @@ The following table summarises the AWS APIs.
 | [`waf-regional`](services/waf-regional.yml) | 80 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
-| [`config`](services/config.yml) | 76 | 2 | 2 |
+| [`config`](services/config.yml) | 76 | 3 | 2 |
 | [`waf`](services/waf.yml) | 76 | 0 | 0 |
 | [`gamelift`](services/gamelift.yml) | 76 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 75 | 0 | 11 |
@@ -68,7 +68,7 @@ The following table summarises the AWS APIs.
 | [`directconnect`](services/directconnect.yml) | 53 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 51 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 49 | 1 | 0 |
-| [`quicksight`](services/quicksight.yml) | 47 | 18 | 9 |
+| [`quicksight`](services/quicksight.yml) | 47 | 19 | 9 |
 | [`lambda`](services/lambda.yml) | 47 | 2 | 3 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`organizations`](services/organizations.yml) | 47 | 0 | 0 |
@@ -258,7 +258,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1079 |
+| `List` | 1080 |
 | `Get` | 1052 |
 | `Describe` | 1004 |
 | `Delete` | 926 |
