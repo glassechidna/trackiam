@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 217
-* Unique actions: 7905
+* Unique actions: 7906
 * Managed policies: 633
 
 Most common managed policy name prefixes:
@@ -109,9 +109,9 @@ The following table summarises the AWS APIs.
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 0 | 0 |
 | [`worklink`](services/worklink.yml) | 30 | 0 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 30 | 0 | 0 |
+| [`cloudwatch`](services/cloudwatch.yml) | 29 | 1 | 0 |
 | [`connect`](services/connect.yml) | 29 | 0 | 6 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
-| [`cloudwatch`](services/cloudwatch.yml) | 29 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`sms`](services/sms.yml) | 28 | 0 | 2 |
@@ -264,7 +264,7 @@ Most common action prefixes:
 | `Delete` | 926 |
 | `Create` | 856 |
 | `Update` | 643 |
-| `Put` | 219 |
+| `Put` | 220 |
 | `Start` | 137 |
 | `Modify` | 104 |
 | `Tag` | 102 |
