@@ -1,5 +1,6 @@
 Actions:
   - Name: ec2:AcceptReservedInstancesExchangeQuote
+  - Name: ec2:AcceptTransitGatewayPeeringAttachment
   - Name: ec2:AcceptTransitGatewayVpcAttachment
   - Name: ec2:AcceptVpcEndpointConnections
   - Name: ec2:AcceptVpcPeeringConnection
@@ -15,6 +16,7 @@ Actions:
   - Name: ec2:AssociateIamInstanceProfile
   - Name: ec2:AssociateRouteTable
   - Name: ec2:AssociateSubnetCidrBlock
+  - Name: ec2:AssociateTransitGatewayMulticastDomain
   - Name: ec2:AssociateTransitGatewayRouteTable
   - Name: ec2:AssociateVpcCidrBlock
   - Name: ec2:AttachClassicLinkVpc
@@ -55,6 +57,8 @@ Actions:
   - Name: ec2:CreateKeyPair
   - Name: ec2:CreateLaunchTemplate
   - Name: ec2:CreateLaunchTemplateVersion
+  - Name: ec2:CreateLocalGatewayRoute
+  - Name: ec2:CreateLocalGatewayRouteTableVpcAssociation
   - Name: ec2:CreateNatGateway
   - Name: ec2:CreateNetworkAcl
   - Name: ec2:CreateNetworkAclEntry
@@ -75,6 +79,8 @@ Actions:
   - Name: ec2:CreateTrafficMirrorSession
   - Name: ec2:CreateTrafficMirrorTarget
   - Name: ec2:CreateTransitGateway
+  - Name: ec2:CreateTransitGatewayMulticastDomain
+  - Name: ec2:CreateTransitGatewayPeeringAttachment
   - Name: ec2:CreateTransitGatewayRoute
   - Name: ec2:CreateTransitGatewayRouteTable
   - Name: ec2:CreateTransitGatewayVpcAttachment
@@ -99,6 +105,8 @@ Actions:
   - Name: ec2:DeleteKeyPair
   - Name: ec2:DeleteLaunchTemplate
   - Name: ec2:DeleteLaunchTemplateVersions
+  - Name: ec2:DeleteLocalGatewayRoute
+  - Name: ec2:DeleteLocalGatewayRouteTableVpcAssociation
   - Name: ec2:DeleteNatGateway
   - Name: ec2:DeleteNetworkAcl
   - Name: ec2:DeleteNetworkAclEntry
@@ -117,6 +125,8 @@ Actions:
   - Name: ec2:DeleteTrafficMirrorSession
   - Name: ec2:DeleteTrafficMirrorTarget
   - Name: ec2:DeleteTransitGateway
+  - Name: ec2:DeleteTransitGatewayMulticastDomain
+  - Name: ec2:DeleteTransitGatewayPeeringAttachment
   - Name: ec2:DeleteTransitGatewayRoute
   - Name: ec2:DeleteTransitGatewayRouteTable
   - Name: ec2:DeleteTransitGatewayVpcAttachment
@@ -131,6 +141,8 @@ Actions:
   - Name: ec2:DeleteVpnGateway
   - Name: ec2:DeprovisionByoipCidr
   - Name: ec2:DeregisterImage
+  - Name: ec2:DeregisterTransitGatewayMulticastGroupMembers
+  - Name: ec2:DeregisterTransitGatewayMulticastGroupSources
   - Name: ec2:DescribeAccountAttributes
   - Name: ec2:DescribeAddresses
   - Name: ec2:DescribeAggregateIdFormat
@@ -177,6 +189,12 @@ Actions:
   - Name: ec2:DescribeKeyPairs
   - Name: ec2:DescribeLaunchTemplateVersions
   - Name: ec2:DescribeLaunchTemplates
+  - Name: ec2:DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociations
+  - Name: ec2:DescribeLocalGatewayRouteTableVpcAssociations
+  - Name: ec2:DescribeLocalGatewayRouteTables
+  - Name: ec2:DescribeLocalGatewayVirtualInterfaceGroups
+  - Name: ec2:DescribeLocalGatewayVirtualInterfaces
+  - Name: ec2:DescribeLocalGateways
   - Name: ec2:DescribeMovingAddresses
   - Name: ec2:DescribeNatGateways
   - Name: ec2:DescribeNetworkAcls
@@ -212,6 +230,8 @@ Actions:
   - Name: ec2:DescribeTrafficMirrorSessions
   - Name: ec2:DescribeTrafficMirrorTargets
   - Name: ec2:DescribeTransitGatewayAttachments
+  - Name: ec2:DescribeTransitGatewayMulticastDomains
+  - Name: ec2:DescribeTransitGatewayPeeringAttachments
   - Name: ec2:DescribeTransitGatewayRouteTables
   - Name: ec2:DescribeTransitGatewayVpcAttachments
   - Name: ec2:DescribeTransitGateways
@@ -248,6 +268,7 @@ Actions:
   - Name: ec2:DisassociateIamInstanceProfile
   - Name: ec2:DisassociateRouteTable
   - Name: ec2:DisassociateSubnetCidrBlock
+  - Name: ec2:DisassociateTransitGatewayMulticastDomain
   - Name: ec2:DisassociateTransitGatewayRouteTable
   - Name: ec2:DisassociateVpcCidrBlock
   - Name: ec2:EnableEbsEncryptionByDefault
@@ -271,6 +292,7 @@ Actions:
   - Name: ec2:GetPasswordData
   - Name: ec2:GetReservedInstancesExchangeQuote
   - Name: ec2:GetTransitGatewayAttachmentPropagations
+  - Name: ec2:GetTransitGatewayMulticastDomainAssociations
   - Name: ec2:GetTransitGatewayRouteTableAssociations
   - Name: ec2:GetTransitGatewayRouteTablePropagations
   - Name: ec2:ImportClientVpnClientCertificateRevocationList
@@ -324,6 +346,9 @@ Actions:
   - Name: ec2:PurchaseScheduledInstances
   - Name: ec2:RebootInstances
   - Name: ec2:RegisterImage
+  - Name: ec2:RegisterTransitGatewayMulticastGroupMembers
+  - Name: ec2:RegisterTransitGatewayMulticastGroupSources
+  - Name: ec2:RejectTransitGatewayPeeringAttachment
   - Name: ec2:RejectTransitGatewayVpcAttachment
   - Name: ec2:RejectVpcEndpointConnections
   - Name: ec2:RejectVpcPeeringConnection
@@ -350,9 +375,12 @@ Actions:
   - Name: ec2:RevokeSecurityGroupIngress
   - Name: ec2:RunInstances
   - Name: ec2:RunScheduledInstances
+  - Name: ec2:SearchLocalGatewayRoutes
+  - Name: ec2:SearchTransitGatewayMulticastGroups
   - Name: ec2:SearchTransitGatewayRoutes
   - Name: ec2:SendDiagnosticInterrupt
   - Name: ec2:StartInstances
+  - Name: ec2:StartVpcEndpointServicePrivateDnsVerification
   - Name: ec2:StopInstances
   - Name: ec2:TerminateClientVpnConnections
   - Name: ec2:TerminateInstances
@@ -364,39 +392,11 @@ Actions:
   - Name: ec2:WithdrawByoipCidr
 
   # APIs without an IAM action
-  - Name: ec2:AcceptTransitGatewayPeeringAttachment
-  - Name: ec2:AssociateTransitGatewayMulticastDomain
-  - Name: ec2:CreateLocalGatewayRoute
-  - Name: ec2:CreateLocalGatewayRouteTableVpcAssociation
-  - Name: ec2:CreateTransitGatewayMulticastDomain
-  - Name: ec2:CreateTransitGatewayPeeringAttachment
-  - Name: ec2:DeleteLocalGatewayRoute
-  - Name: ec2:DeleteLocalGatewayRouteTableVpcAssociation
   - Name: ec2:DeleteQueuedReservedInstances
-  - Name: ec2:DeleteTransitGatewayMulticastDomain
-  - Name: ec2:DeleteTransitGatewayPeeringAttachment
-  - Name: ec2:DeregisterTransitGatewayMulticastGroupMembers
-  - Name: ec2:DeregisterTransitGatewayMulticastGroupSources
   - Name: ec2:DescribeCoipPools
   - Name: ec2:DescribeInstanceTypeOfferings
   - Name: ec2:DescribeIpv6Pools
-  - Name: ec2:DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociations
-  - Name: ec2:DescribeLocalGatewayRouteTableVpcAssociations
-  - Name: ec2:DescribeLocalGatewayRouteTables
-  - Name: ec2:DescribeLocalGatewayVirtualInterfaceGroups
-  - Name: ec2:DescribeLocalGatewayVirtualInterfaces
-  - Name: ec2:DescribeLocalGateways
-  - Name: ec2:DescribeTransitGatewayMulticastDomains
-  - Name: ec2:DescribeTransitGatewayPeeringAttachments
-  - Name: ec2:DisassociateTransitGatewayMulticastDomain
   - Name: ec2:GetAssociatedIpv6PoolCidrs
   - Name: ec2:GetCoipPoolUsage
   - Name: ec2:GetDefaultCreditSpecification
-  - Name: ec2:GetTransitGatewayMulticastDomainAssociations
   - Name: ec2:ModifyDefaultCreditSpecification
-  - Name: ec2:RegisterTransitGatewayMulticastGroupMembers
-  - Name: ec2:RegisterTransitGatewayMulticastGroupSources
-  - Name: ec2:RejectTransitGatewayPeeringAttachment
-  - Name: ec2:SearchLocalGatewayRoutes
-  - Name: ec2:SearchTransitGatewayMulticastGroups
-  - Name: ec2:StartVpcEndpointServicePrivateDnsVerification
