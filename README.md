@@ -92,8 +92,8 @@ The following table summarises the AWS APIs.
 | [`logs`](services/logs.yml) | 39 | 0 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`medialive`](services/medialive.yml) | 37 | 6 | 0 |
+| [`codepipeline`](services/codepipeline.yml) | 37 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
-| [`codepipeline`](services/codepipeline.yml) | 36 | 1 | 0 |
 | [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
 | [`wafv2`](services/wafv2.yml) | 36 | 0 | 0 |
 | [`lex`](services/lex.yml) | 35 | 6 | 0 |
