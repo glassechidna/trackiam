@@ -1,19 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchSyntheticsReadOnlyAccess",
   "CreateDate": "2019-11-25T17:45:40Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4C7XDT2FFB",
   "PolicyName": "CloudWatchSyntheticsReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-11-25T17:45:40Z",
+    "CreateDate": "2020-03-06T19:26:01Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "synthetics:Describe*",
-            "synthetics:Get*"
+            "synthetics:Get*",
+            "synthetics:List*"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -22,7 +23,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-11-25T17:45:40Z"
+  "UpdateDate": "2020-03-06T19:26:01Z"
 }

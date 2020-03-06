@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 218
-* Unique actions: 7920
+* Unique actions: 7922
 * Managed policies: 633
 
 Most common managed policy name prefixes:
@@ -36,14 +36,14 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 391 | 8 | 0 |
+| [`ec2`](services/ec2.yml) | 391 | 9 | 0 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`sagemaker`](services/sagemaker.yml) | 137 | 2 | 2 |
 | [`rds`](services/rds.yml) | 123 | 7 | 1 |
 | [`glue`](services/glue.yml) | 123 | 1 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
+| [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
 | [`ses`](services/ses.yml) | 103 | 9 | 0 |
-| [`mobiletargeting`](services/mobiletargeting.yml) | 102 | 10 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 12 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`chime`](services/chime.yml) | 94 | 0 | 50 |
@@ -234,7 +234,7 @@ The following table summarises the AWS APIs.
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 12 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
-| [`synthetics`](services/synthetics.yml) | 0 | 0 | 9 |
+| [`synthetics`](services/synthetics.yml) | 0 | 0 | 10 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
@@ -259,14 +259,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1082 |
-| `Get` | 1055 |
+| `List` | 1083 |
+| `Get` | 1054 |
 | `Describe` | 1005 |
 | `Delete` | 927 |
-| `Create` | 858 |
+| `Create` | 857 |
 | `Update` | 645 |
 | `Put` | 220 |
 | `Start` | 137 |
-| `Modify` | 104 |
-| `Tag` | 102 |
+| `Modify` | 105 |
+| `Tag` | 103 |
 
