@@ -1,17 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSAppMeshReadOnly",
   "CreateDate": "2019-04-16T17:51:11Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HOPFCIWXP",
   "PolicyName": "AWSAppMeshReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2019-10-03T22:25:42Z",
+    "CreateDate": "2020-03-05T23:54:06Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "acm-pca:DescribeCertificateAuthority",
+            "acm-pca:ListCertificateAuthorities",
             "acm:DescribeCertificate",
             "acm:ListCertificates"
           ],
@@ -37,7 +39,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2019-10-03T22:25:42Z"
+  "UpdateDate": "2020-03-05T23:54:06Z"
 }

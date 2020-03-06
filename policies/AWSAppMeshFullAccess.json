@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSAppMeshFullAccess",
   "CreateDate": "2019-04-16T17:50:40Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ILVZ5BWFU",
   "PolicyName": "AWSAppMeshFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-10-03T22:28:34Z",
+    "CreateDate": "2020-03-05T23:36:53Z",
     "Document": {
       "Statement": [
         {
@@ -26,6 +26,8 @@
         },
         {
           "Action": [
+            "acm-pca:DescribeCertificateAuthority",
+            "acm-pca:ListCertificateAuthorities",
             "acm:DescribeCertificate",
             "acm:ListCertificates"
           ],
@@ -53,7 +55,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2019-10-03T22:28:34Z"
+  "UpdateDate": "2020-03-05T23:36:53Z"
 }
