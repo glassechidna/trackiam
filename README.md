@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 218
-* Unique actions: 7922
+* Unique actions: 7923
 * Managed policies: 634
 
 Most common managed policy name prefixes:
@@ -175,8 +175,8 @@ The following table summarises the AWS APIs.
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 3 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`fsx`](services/fsx.yml) | 14 | 0 | 0 |
+| [`serverlessrepo`](services/serverlessrepo.yml) | 13 | 1 | 1 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 2 |
-| [`serverlessrepo`](services/serverlessrepo.yml) | 13 | 0 | 1 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
 | [`health`](services/health.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |

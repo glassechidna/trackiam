@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSupportServiceRolePolicy",
   "CreateDate": "2018-04-19T18:04:44Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": false,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ7W6266ELXF5MISDS",
   "PolicyName": "AWSSupportServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-12-16T19:39:42Z",
+    "CreateDate": "2020-03-10T18:55:18Z",
     "Document": {
       "Statement": [
         {
@@ -21,6 +21,10 @@
             "a4b:searchProfiles",
             "a4b:searchRooms",
             "a4b:searchSkillGroups",
+            "access-analyzer:getFinding",
+            "access-analyzer:listAnalyzers",
+            "access-analyzer:listArchiveRules",
+            "access-analyzer:listFindings",
             "acm-pca:describeCertificateAuthority",
             "acm-pca:describeCertificateAuthorityAuditReport",
             "acm-pca:getCertificate",
@@ -35,6 +39,7 @@
             "application-autoscaling:describeScalableTargets",
             "application-autoscaling:describeScalingActivities",
             "application-autoscaling:describeScalingPolicies",
+            "application-autoscaling:describeScheduledActions",
             "appstream:describeDirectoryConfigs",
             "appstream:describeFleets",
             "appstream:describeImageBuilders",
@@ -171,9 +176,12 @@
             "cloudsearch:listDomainNames",
             "cloudtrail:describeTrails",
             "cloudtrail:getEventSelectors",
+            "cloudtrail:getInsightSelectors",
+            "cloudtrail:getTrail",
             "cloudtrail:getTrailStatus",
             "cloudtrail:listPublicKeys",
             "cloudtrail:listTags",
+            "cloudtrail:listTrails",
             "cloudtrail:lookupEvents",
             "cloudwatch:describeAlarmHistory",
             "cloudwatch:describeAlarms",
@@ -372,6 +380,7 @@
             "ec2:describeDhcpOptions",
             "ec2:describeElasticGpus",
             "ec2:describeExportTasks",
+            "ec2:describeFastSnapshotRestores",
             "ec2:describeFleetHistory",
             "ec2:describeFleetInstances",
             "ec2:describeFleets",
@@ -418,6 +427,9 @@
             "ec2:describeSpotPriceHistory",
             "ec2:describeSubnets",
             "ec2:describeTags",
+            "ec2:describeTrafficMirrorFilters",
+            "ec2:describeTrafficMirrorSessions",
+            "ec2:describeTrafficMirrorTargets",
             "ec2:describeTransitGatewayAttachments",
             "ec2:describeTransitGatewayRouteTables",
             "ec2:describeTransitGatewayVpcAttachments",
@@ -1440,7 +1452,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2019-12-16T19:39:42Z"
+  "UpdateDate": "2020-03-10T18:55:18Z"
 }
