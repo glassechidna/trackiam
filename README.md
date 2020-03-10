@@ -174,8 +174,8 @@ The following table summarises the AWS APIs.
 | [`mediapackage`](services/mediapackage.yml) | 14 | 4 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 3 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
+| [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`fsx`](services/fsx.yml) | 14 | 0 | 0 |
-| [`serverlessrepo`](services/serverlessrepo.yml) | 13 | 1 | 1 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 2 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
 | [`health`](services/health.yml) | 13 | 0 | 0 |
