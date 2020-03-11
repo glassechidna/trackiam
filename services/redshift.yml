@@ -76,12 +76,14 @@ Actions:
   - Name: redshift:ModifyScheduledAction
   - Name: redshift:ModifySnapshotCopyRetentionPeriod
   - Name: redshift:ModifySnapshotSchedule
+  - Name: redshift:PauseCluster
   - Name: redshift:PurchaseReservedNodeOffering
   - Name: redshift:RebootCluster
   - Name: redshift:ResetClusterParameterGroup
   - Name: redshift:ResizeCluster
   - Name: redshift:RestoreFromClusterSnapshot
   - Name: redshift:RestoreTableFromClusterSnapshot
+  - Name: redshift:ResumeCluster
   - Name: redshift:RevokeClusterSecurityGroupIngress
   - Name: redshift:RevokeSnapshotAccess
   - Name: redshift:RotateEncryptionKey
@@ -105,7 +107,3 @@ Actions:
   - Name: redshift:ModifySavedQuery
   - Name: redshift:ViewQueriesFromConsole
   - Name: redshift:ViewQueriesInConsole
-
-  # APIs without an IAM action
-  - Name: redshift:PauseCluster
-  - Name: redshift:ResumeCluster
