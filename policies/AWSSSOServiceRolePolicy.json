@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSSOServiceRolePolicy",
   "CreateDate": "2017-12-05T18:36:15Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIJ52KSWOD4GI54XP2",
   "PolicyName": "AWSSSOServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-08-30T19:55:59Z",
+    "CreateDate": "2020-03-12T20:36:59Z",
     "Document": {
       "Statement": [
         {
@@ -17,7 +17,6 @@
             "iam:DeleteRole",
             "iam:DeleteRolePolicy",
             "iam:DetachRolePolicy",
-            "iam:GetRole",
             "iam:ListAttachedRolePolicies",
             "iam:ListRolePolicies",
             "iam:PutRolePolicy",
@@ -87,6 +86,7 @@
         },
         {
           "Action": [
+            "iam:GetRole",
             "iam:ListRoles"
           ],
           "Effect": "Allow",
@@ -99,7 +99,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2019-08-30T19:55:59Z"
+  "UpdateDate": "2020-03-12T20:36:59Z"
 }
