@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSShieldDRTAccessPolicy",
   "CreateDate": "2018-06-05T22:29:39Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJWNCSZ4PARLO37VVY",
   "PolicyName": "AWSShieldDRTAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-02-11T17:08:57Z",
+    "CreateDate": "2020-03-12T19:11:00Z",
     "Document": {
       "Statement": [
         {
@@ -46,12 +46,14 @@
         {
           "Action": [
             "waf-regional:*",
-            "waf:*"
+            "waf:*",
+            "wafv2:*"
           ],
           "Effect": "Allow",
           "Resource": [
             "arn:aws:waf-regional:*",
-            "arn:aws:waf:*"
+            "arn:aws:waf:*",
+            "arn:aws:wafv2:*:*:*:*"
           ],
           "Sid": "DRTManageMitigations"
         }
@@ -59,7 +61,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2019-02-11T17:08:57Z"
+  "UpdateDate": "2020-03-12T19:11:00Z"
 }

@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 218
-* Unique actions: 7925
+* Unique actions: 7930
 * Managed policies: 634
 
 Most common managed policy name prefixes:
@@ -39,8 +39,8 @@ The following table summarises the AWS APIs.
 | [`ec2`](services/ec2.yml) | 391 | 9 | 0 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`sagemaker`](services/sagemaker.yml) | 137 | 2 | 2 |
+| [`glue`](services/glue.yml) | 124 | 0 | 1 |
 | [`rds`](services/rds.yml) | 123 | 7 | 1 |
-| [`glue`](services/glue.yml) | 123 | 1 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
 | [`ses`](services/ses.yml) | 103 | 9 | 0 |
@@ -72,9 +72,9 @@ The following table summarises the AWS APIs.
 | [`lambda`](services/lambda.yml) | 47 | 2 | 3 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`organizations`](services/organizations.yml) | 47 | 0 | 0 |
+| [`cloudformation`](services/cloudformation.yml) | 46 | 9 | 3 |
 | [`backup`](services/backup.yml) | 46 | 0 | 1 |
 | [`codedeploy`](services/codedeploy.yml) | 46 | 0 | 0 |
-| [`cloudformation`](services/cloudformation.yml) | 45 | 10 | 3 |
 | [`dms`](services/dms.yml) | 45 | 2 | 0 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`cloudfront`](services/cloudfront.yml) | 45 | 0 | 0 |
@@ -96,7 +96,7 @@ The following table summarises the AWS APIs.
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
 | [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
 | [`wafv2`](services/wafv2.yml) | 36 | 0 | 0 |
-| [`lex`](services/lex.yml) | 35 | 6 | 0 |
+| [`lex`](services/lex.yml) | 35 | 9 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
 | [`codebuild`](services/codebuild.yml) | 34 | 0 | 7 |
@@ -217,7 +217,7 @@ The following table summarises the AWS APIs.
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 209 | 3 |
-| [`apigateway`](services/apigateway.yml) | 0 | 148 | 7 |
+| [`apigateway`](services/apigateway.yml) | 0 | 150 | 7 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`codestar-connections`](services/codestar-connections.yml) | 0 | 4 | 0 |
@@ -259,14 +259,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1083 |
+| `List` | 1084 |
 | `Get` | 1054 |
 | `Describe` | 1005 |
-| `Delete` | 927 |
+| `Delete` | 929 |
 | `Create` | 857 |
 | `Update` | 645 |
 | `Put` | 220 |
 | `Start` | 137 |
 | `Modify` | 105 |
-| `Tag` | 103 |
+| `Tag` | 104 |
 
