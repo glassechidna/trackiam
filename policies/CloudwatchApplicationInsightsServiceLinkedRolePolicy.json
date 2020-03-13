@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "CreateDate": "2018-12-01T16:22:12Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJH3SHQERZRQMQOQ44",
   "PolicyName": "CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-11-01T01:06:25Z",
+    "CreateDate": "2020-03-13T19:39:57Z",
     "Document": {
       "Statement": [
         {
@@ -84,7 +84,29 @@
         },
         {
           "Action": [
+            "events:DeleteRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:events:*:*:rule/AmazonCloudWatch-ApplicationInsights-*"
+          ]
+        },
+        {
+          "Action": [
             "events:DescribeRule"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "lambda:GetFunctionConfiguration",
+            "lambda:ListEventSourceMappings"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -95,6 +117,7 @@
           "Action": [
             "logs:DescribeLogGroups",
             "logs:DescribeLogStreams",
+            "logs:FilterLogEvents",
             "logs:GetLogEvents"
           ],
           "Effect": "Allow",
@@ -180,12 +203,24 @@
           "Resource": [
             "*"
           ]
+        },
+        {
+          "Action": [
+            "xray:GetServiceGraph",
+            "xray:GetTimeSeriesServiceStatistics",
+            "xray:GetTraceGraph",
+            "xray:GetTraceSummaries"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2019-11-01T01:06:25Z"
+  "UpdateDate": "2020-03-13T19:39:57Z"
 }
