@@ -1,15 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonMSKFullAccess",
   "CreateDate": "2019-01-14T22:07:52Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJERQQQTWI5OMENTQE",
   "PolicyName": "AmazonMSKFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-02-28T01:16:55Z",
+    "CreateDate": "2020-03-14T00:45:51Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "delivery.logs.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/delivery.logs.amazonaws.com/AWSServiceRoleForLogDelivery*"
+        },
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
@@ -22,16 +32,21 @@
         },
         {
           "Action": [
+            "S3:GetBucketPolicy",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcs",
+            "firehose:TagDeliveryStream",
             "kafka:*",
             "kms:CreateGrant",
             "kms:DescribeKey",
             "logs:CreateLogDelivery",
             "logs:DeleteLogDelivery",
+            "logs:DescribeLogGroups",
+            "logs:DescribeResourcePolicies",
             "logs:GetLogDelivery",
             "logs:ListLogDeliveries",
+            "logs:PutResourcePolicy",
             "logs:UpdateLogDelivery"
           ],
           "Effect": "Allow",
@@ -49,7 +64,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-02-28T01:16:55Z"
+  "UpdateDate": "2020-03-14T00:45:51Z"
 }
