@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 218
-* Unique actions: 7935
+* Unique actions: 7947
 * Managed policies: 634
 
 Most common managed policy name prefixes:
@@ -64,7 +64,7 @@ The following table summarises the AWS APIs.
 | [`route53`](services/route53.yml) | 56 | 0 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`autoscaling`](services/autoscaling.yml) | 54 | 0 | 0 |
-| [`s3`](services/s3.yml) | 53 | 48 | 39 |
+| [`s3`](services/s3.yml) | 53 | 51 | 39 |
 | [`directconnect`](services/directconnect.yml) | 53 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 51 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 49 | 1 | 0 |
@@ -81,7 +81,7 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 44 | 4 | 2 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 43 | 1 | 2 |
 | [`rekognition`](services/rekognition.yml) | 43 | 0 | 0 |
-| [`elasticache`](services/elasticache.yml) | 42 | 6 | 0 |
+| [`elasticache`](services/elasticache.yml) | 42 | 15 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`securityhub`](services/securityhub.yml) | 41 | 0 | 0 |
@@ -260,13 +260,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1084 |
-| `Get` | 1054 |
-| `Describe` | 1005 |
-| `Delete` | 929 |
-| `Create` | 857 |
+| `Get` | 1055 |
+| `Describe` | 1006 |
+| `Delete` | 931 |
+| `Create` | 858 |
 | `Update` | 645 |
-| `Put` | 220 |
+| `Put` | 221 |
 | `Start` | 138 |
-| `Modify` | 105 |
+| `Modify` | 106 |
 | `Tag` | 104 |
 
