@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSEC2SpotFleetServiceRolePolicy",
   "CreateDate": "2017-10-23T19:13:06Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAILWCVTZD57EMYWMBO",
   "PolicyName": "AWSEC2SpotFleetServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2018-03-28T19:04:33Z",
+    "CreateDate": "2020-03-16T19:16:21Z",
     "Document": {
       "Statement": [
         {
@@ -46,7 +46,9 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:instance/*",
-            "arn:aws:ec2:*:*:spot-instances-request/*"
+            "arn:aws:ec2:*:*:spot-fleet-request/*",
+            "arn:aws:ec2:*:*:spot-instances-request/*",
+            "arn:aws:ec2:*:*:volume/*"
           ]
         },
         {
@@ -61,12 +63,30 @@
           "Resource": [
             "*"
           ]
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:RegisterInstancesWithLoadBalancer"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticloadbalancing:*:*:loadbalancer/*"
+          ]
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:RegisterTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticloadbalancing:*:*:*/*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2018-03-28T19:04:33Z"
+  "UpdateDate": "2020-03-16T19:16:21Z"
 }
