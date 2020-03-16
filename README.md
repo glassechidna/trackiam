@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 218
-* Unique actions: 7931
+* Unique actions: 7935
 * Managed policies: 634
 
 Most common managed policy name prefixes:
@@ -109,6 +109,7 @@ The following table summarises the AWS APIs.
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 0 | 0 |
 | [`worklink`](services/worklink.yml) | 30 | 0 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 30 | 0 | 0 |
+| [`elasticmapreduce`](services/elasticmapreduce.yml) | 29 | 1 | 8 |
 | [`cloudwatch`](services/cloudwatch.yml) | 29 | 1 | 0 |
 | [`connect`](services/connect.yml) | 29 | 0 | 6 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
@@ -118,7 +119,6 @@ The following table summarises the AWS APIs.
 | [`appmesh`](services/appmesh.yml) | 28 | 0 | 1 |
 | [`networkmanager`](services/networkmanager.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
-| [`elasticmapreduce`](services/elasticmapreduce.yml) | 27 | 3 | 8 |
 | [`schemas`](services/schemas.yml) | 27 | 2 | 0 |
 | [`datasync`](services/datasync.yml) | 27 | 2 | 0 |
 | [`forecast`](services/forecast.yml) | 27 | 0 | 0 |
@@ -240,6 +240,7 @@ The following table summarises the AWS APIs.
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`wellarchitected`](services/wellarchitected.yml) | 0 | 0 | 5 |
+| [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
 | [`cassandra`](services/cassandra.yml) | 0 | 0 | 5 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 5 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
@@ -251,7 +252,6 @@ The following table summarises the AWS APIs.
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
 | [`rds-db`](services/rds-db.yml) | 0 | 0 | 1 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 1 |
-| [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 1 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 1 |
 | [`arsenal`](services/arsenal.yml) | 0 | 0 | 1 |
 
