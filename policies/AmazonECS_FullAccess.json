@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonECS_FullAccess",
   "CreateDate": "2017-11-07T21:36:54Z",
-  "DefaultVersionId": "v16",
+  "DefaultVersionId": "v17",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ7S7AN6YQPTJC7IFS",
   "PolicyName": "AmazonECS_FullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-06-20T17:53:43Z",
+    "CreateDate": "2020-03-23T19:56:42Z",
     "Document": {
       "Statement": [
         {
@@ -155,6 +155,8 @@
             "ec2:RequestSpotFleet",
             "ec2:RunInstances",
             "ecs:*",
+            "elasticfilesystem:DescribeAccessPoints",
+            "elasticfilesystem:DescribeFileSystems",
             "elasticloadbalancing:CreateListener",
             "elasticloadbalancing:CreateLoadBalancer",
             "elasticloadbalancing:CreateRule",
@@ -215,7 +217,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v16"
+    "VersionId": "v17"
   },
-  "UpdateDate": "2019-06-20T17:53:43Z"
+  "UpdateDate": "2020-03-23T19:56:42Z"
 }

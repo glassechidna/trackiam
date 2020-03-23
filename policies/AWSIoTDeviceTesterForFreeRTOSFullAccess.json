@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSIoTDeviceTesterForFreeRTOSFullAccess",
   "CreateDate": "2020-02-12T20:33:53Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ADNJ2YUUH",
   "PolicyName": "AWSIoTDeviceTesterForFreeRTOSFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-02-18T18:05:37Z",
+    "CreateDate": "2020-03-23T19:49:50Z",
     "Document": {
       "Statement": [
         {
@@ -50,7 +50,11 @@
             "acm:ListCertificates",
             "freertos:ListHardwarePlatforms",
             "iam:ListRoles",
+            "iot-device-tester:CheckVersion",
+            "iot-device-tester:DownloadTestSuite",
+            "iot-device-tester:LatestIdt",
             "iot-device-tester:SendMetrics",
+            "iot-device-tester:SupportedVersion",
             "iot:AttachThingPrincipal",
             "iot:CreateCertificateFromCsr",
             "iot:CreateKeysAndCertificate",
@@ -146,7 +150,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-02-18T18:05:37Z"
+  "UpdateDate": "2020-03-23T19:49:50Z"
 }
