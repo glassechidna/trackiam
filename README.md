@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 218
-* Unique actions: 7954
+* Unique actions: 7964
 * Managed policies: 635
 
 Most common managed policy name prefixes:
@@ -138,7 +138,7 @@ The following table summarises the AWS APIs.
 | [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 0 |
-| [`es`](services/es.yml) | 21 | 2 | 8 |
+| [`es`](services/es.yml) | 21 | 9 | 8 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`eks`](services/eks.yml) | 21 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 21 | 0 | 0 |
@@ -153,10 +153,10 @@ The following table summarises the AWS APIs.
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`ce`](services/ce.yml) | 19 | 0 | 0 |
 | [`shield`](services/shield.yml) | 18 | 2 | 0 |
+| [`managedblockchain`](services/managedblockchain.yml) | 18 | 2 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`transfer`](services/transfer.yml) | 18 | 0 | 0 |
 | [`secretsmanager`](services/secretsmanager.yml) | 18 | 0 | 0 |
-| [`managedblockchain`](services/managedblockchain.yml) | 18 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 18 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 17 | 10 | 0 |
@@ -185,8 +185,8 @@ The following table summarises the AWS APIs.
 | [`resource-groups`](services/resource-groups.yml) | 12 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
+| [`detective`](services/detective.yml) | 11 | 1 | 5 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 36 |
-| [`detective`](services/detective.yml) | 11 | 0 | 5 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 9 | 0 | 3 |
@@ -259,14 +259,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1086 |
+| `List` | 1088 |
 | `Get` | 1055 |
-| `Describe` | 1006 |
-| `Delete` | 931 |
-| `Create` | 858 |
-| `Update` | 646 |
+| `Describe` | 1007 |
+| `Delete` | 932 |
+| `Create` | 859 |
+| `Update` | 648 |
 | `Put` | 221 |
-| `Start` | 138 |
+| `Start` | 139 |
 | `Modify` | 106 |
 | `Tag` | 104 |
 
