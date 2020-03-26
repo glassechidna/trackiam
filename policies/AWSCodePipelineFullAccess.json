@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodePipelineFullAccess",
   "CreateDate": "2015-07-09T16:58:07Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJP5LH77KSAT2KHQGG",
   "PolicyName": "AWSCodePipelineFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-11-05T23:04:28Z",
+    "CreateDate": "2020-03-26T16:06:34Z",
     "Document": {
       "Statement": [
         {
@@ -145,6 +145,14 @@
         },
         {
           "Action": [
+            "chatbot:DescribeSlackChannelConfigurations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsChatbotAccess"
+        },
+        {
+          "Action": [
             "sns:CreateTopic",
             "sns:SetTopicAttributes"
           ],
@@ -156,7 +164,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2019-11-05T23:04:28Z"
+  "UpdateDate": "2020-03-26T16:06:34Z"
 }
