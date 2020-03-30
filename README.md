@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 218
-* Unique actions: 7964
+* Unique actions: 7967
 * Managed policies: 635
 
 Most common managed policy name prefixes:
@@ -38,7 +38,7 @@ The following table summarises the AWS APIs.
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 391 | 9 | 0 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
-| [`sagemaker`](services/sagemaker.yml) | 137 | 2 | 2 |
+| [`sagemaker`](services/sagemaker.yml) | 139 | 0 | 2 |
 | [`glue`](services/glue.yml) | 124 | 0 | 1 |
 | [`rds`](services/rds.yml) | 123 | 7 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
@@ -132,7 +132,7 @@ The following table summarises the AWS APIs.
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 23 | 1 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 23 | 0 | 5 |
-| [`mediastore`](services/mediastore.yml) | 23 | 0 | 0 |
+| [`mediastore`](services/mediastore.yml) | 23 | 0 | 3 |
 | [`ram`](services/ram.yml) | 22 | 1 | 0 |
 | [`states`](services/states.yml) | 22 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 0 |
@@ -260,12 +260,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1088 |
-| `Get` | 1055 |
+| `Get` | 1056 |
 | `Describe` | 1007 |
-| `Delete` | 932 |
+| `Delete` | 933 |
 | `Create` | 859 |
 | `Update` | 648 |
-| `Put` | 221 |
+| `Put` | 222 |
 | `Start` | 139 |
 | `Modify` | 106 |
 | `Tag` | 104 |
