@@ -1,20 +1,23 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEC2RolePolicyForLaunchWizard",
   "CreateDate": "2019-11-13T08:05:53Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CBGI56NFS",
   "PolicyName": "AmazonEC2RolePolicyForLaunchWizard",
   "PolicyVersion": {
-    "CreateDate": "2019-11-24T21:48:01Z",
+    "CreateDate": "2020-03-31T22:01:02Z",
     "Document": {
       "Statement": [
         {
           "Action": "ec2:CreateTags",
           "Condition": {
             "ForAllValues:StringEquals": {
-              "aws:TagKeys": "LaunchWizardResourceGroupID"
+              "aws:TagKeys": [
+                "LaunchWizardApplicationType",
+                "LaunchWizardResourceGroupID"
+              ]
             }
           },
           "Effect": "Allow",
@@ -27,7 +30,10 @@
             "cloudformation:DescribeStacks",
             "cloudformation:SignalResource",
             "ec2:Describe*",
-            "ec2:ModifyInstanceAttribute"
+            "ec2:ModifyInstanceAttribute",
+            "ec2:RebootInstances",
+            "ec2:StartInstances",
+            "ec2:StopInstances"
           ],
           "Condition": {
             "ForAllValues:StringEquals": {
@@ -54,9 +60,33 @@
           "Resource": "*"
         },
         {
+          "Action": [
+            "ec2:DescribeRouteTables",
+            "ec2:ReplaceRoute"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "LaunchWizardApplicationType"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
           "Action": "logs:Create*",
           "Effect": "Allow",
           "Resource": "arn:aws:logs:*:*:*"
+        },
+        {
+          "Action": [
+            "cloudwatch:GetMetricStatistics",
+            "ec2:AssociateAddress",
+            "ec2:DescribeAddresses",
+            "ec2:DescribeImages",
+            "ec2:DescribeRegions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": [
@@ -84,14 +114,6 @@
         },
         {
           "Action": [
-            "ec2:AssociateAddress",
-            "ec2:DescribeAddresses"
-          ],
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
             "ec2:DescribeImages",
             "ec2:DescribeRegions"
           ],
@@ -103,11 +125,17 @@
             "logs:DescribeLogGroups",
             "logs:DescribeLogStreams",
             "logs:PutLogEvents",
-            "s3:GetObject"
+            "s3:GetBucketLocation",
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutObject",
+            "s3:PutObjectTagging"
           ],
           "Effect": "Allow",
           "Resource": [
             "arn:aws:logs:*:*:*",
+            "arn:aws:s3:::aws-sap-data-provider/config.properties",
+            "arn:aws:s3:::launchwizard*",
             "arn:aws:s3:::launchwizard*/*"
           ]
         }
@@ -115,7 +143,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-11-24T21:48:01Z"
+  "UpdateDate": "2020-03-31T22:01:02Z"
 }
