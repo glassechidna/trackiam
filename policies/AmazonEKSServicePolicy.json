@@ -1,15 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEKSServicePolicy",
   "CreateDate": "2018-05-27T21:08:21Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJFCNXU6HPGCIVXYDI",
   "PolicyName": "AmazonEKSServicePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-08-21T16:17:56Z",
+    "CreateDate": "2020-03-30T23:43:02Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "eks.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": "logs:CreateLogGroup",
           "Effect": "Allow",
@@ -65,7 +75,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2019-08-21T16:17:56Z"
+  "UpdateDate": "2020-03-30T23:43:02Z"
 }
