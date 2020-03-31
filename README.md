@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 218
-* Unique actions: 7969
+* Unique actions: 7973
 * Managed policies: 636
 
 Most common managed policy name prefixes:
@@ -77,10 +77,10 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 46 | 0 | 0 |
 | [`dms`](services/dms.yml) | 45 | 2 | 0 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
+| [`rekognition`](services/rekognition.yml) | 45 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 45 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 44 | 4 | 2 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 43 | 1 | 2 |
-| [`rekognition`](services/rekognition.yml) | 43 | 0 | 2 |
 | [`elasticache`](services/elasticache.yml) | 42 | 15 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
@@ -94,8 +94,8 @@ The following table summarises the AWS APIs.
 | [`medialive`](services/medialive.yml) | 37 | 6 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 37 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
+| [`wafv2`](services/wafv2.yml) | 36 | 4 | 0 |
 | [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
-| [`wafv2`](services/wafv2.yml) | 36 | 0 | 0 |
 | [`lex`](services/lex.yml) | 35 | 9 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
@@ -125,6 +125,7 @@ The following table summarises the AWS APIs.
 | [`kinesis`](services/kinesis.yml) | 26 | 2 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 26 | 0 | 3 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 26 | 0 | 1 |
+| [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`mediaconvert`](services/mediaconvert.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
@@ -132,7 +133,6 @@ The following table summarises the AWS APIs.
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 23 | 1 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 23 | 0 | 5 |
-| [`mediastore`](services/mediastore.yml) | 23 | 0 | 3 |
 | [`ram`](services/ram.yml) | 22 | 1 | 0 |
 | [`states`](services/states.yml) | 22 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 0 |
@@ -260,12 +260,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1088 |
-| `Get` | 1056 |
+| `Get` | 1057 |
 | `Describe` | 1007 |
-| `Delete` | 935 |
+| `Delete` | 937 |
 | `Create` | 859 |
 | `Update` | 648 |
-| `Put` | 222 |
+| `Put` | 223 |
 | `Start` | 139 |
 | `Modify` | 106 |
 | `Tag` | 104 |
