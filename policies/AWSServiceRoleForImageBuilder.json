@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForImageBuilder",
   "CreateDate": "2019-11-29T22:02:13Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NE22WISEW",
   "PolicyName": "AWSServiceRoleForImageBuilder",
   "PolicyVersion": {
-    "CreateDate": "2020-02-28T19:03:21Z",
+    "CreateDate": "2020-04-01T19:42:50Z",
     "Document": {
       "Statement": [
         {
@@ -172,20 +172,34 @@
         {
           "Action": [
             "ssm:AddTagsToResource",
+            "ssm:DescribeInstanceAssociationsStatus",
             "ssm:DescribeInstanceInformation",
             "ssm:GetAutomationExecution",
             "ssm:ListCommandInvocations",
             "ssm:ListCommands",
+            "ssm:ListInventoryEntries",
+            "ssm:SendAutomationSignal",
             "ssm:StopAutomationExecution"
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ssm:CreateAssociation",
+            "ssm:DeleteAssociation"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ssm:*:*:document/AWS-GatherSoftwareInventory"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-02-28T19:03:21Z"
+  "UpdateDate": "2020-04-01T19:42:50Z"
 }
