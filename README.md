@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 218
-* Unique actions: 7973
+* Unique actions: 7980
 * Managed policies: 636
 
 Most common managed policy name prefixes:
@@ -171,7 +171,7 @@ The following table summarises the AWS APIs.
 | [`opsworks-cm`](services/opsworks-cm.yml) | 15 | 4 | 0 |
 | [`license-manager`](services/license-manager.yml) | 15 | 1 | 0 |
 | [`transcribe`](services/transcribe.yml) | 15 | 0 | 1 |
-| [`mediaconnect`](services/mediaconnect.yml) | 14 | 6 | 0 |
+| [`mediaconnect`](services/mediaconnect.yml) | 14 | 8 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 14 | 4 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
@@ -216,7 +216,7 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
-| [`execute-api`](services/execute-api.yml) | 0 | 209 | 3 |
+| [`execute-api`](services/execute-api.yml) | 0 | 214 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 150 | 7 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
@@ -259,12 +259,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1088 |
+| `List` | 1089 |
 | `Get` | 1057 |
-| `Describe` | 1007 |
-| `Delete` | 937 |
-| `Create` | 859 |
-| `Update` | 648 |
+| `Describe` | 1008 |
+| `Delete` | 938 |
+| `Create` | 860 |
+| `Update` | 649 |
 | `Put` | 223 |
 | `Start` | 139 |
 | `Modify` | 106 |
