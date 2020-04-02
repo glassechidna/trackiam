@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeBuildDeveloperAccess",
   "CreateDate": "2016-12-01T19:02:32Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIMKTMR34XSBQW45HS",
   "PolicyName": "AWSCodeBuildDeveloperAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-01-02T20:18:38Z",
+    "CreateDate": "2020-04-02T17:19:29Z",
     "Document": {
       "Statement": [
         {
@@ -59,6 +59,14 @@
         },
         {
           "Action": [
+            "chatbot:DescribeSlackChannelConfigurations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsChatbotAccess"
+        },
+        {
+          "Action": [
             "codestar-notifications:ListEventTypes",
             "codestar-notifications:ListNotificationRules",
             "codestar-notifications:ListTagsforResource",
@@ -81,7 +89,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2020-01-02T20:18:38Z"
+  "UpdateDate": "2020-04-02T17:19:29Z"
 }
