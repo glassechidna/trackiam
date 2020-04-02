@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 218
-* Unique actions: 7980
+* Unique actions: 7993
 * Managed policies: 637
 
 Most common managed policy name prefixes:
@@ -53,9 +53,9 @@ The following table summarises the AWS APIs.
 | [`waf-regional`](services/waf-regional.yml) | 80 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
+| [`gamelift`](services/gamelift.yml) | 76 | 13 | 0 |
 | [`config`](services/config.yml) | 76 | 3 | 2 |
 | [`waf`](services/waf.yml) | 76 | 0 | 0 |
-| [`gamelift`](services/gamelift.yml) | 76 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 75 | 0 | 11 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 71 | 4 | 0 |
@@ -259,12 +259,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1089 |
+| `List` | 1091 |
 | `Get` | 1057 |
-| `Describe` | 1008 |
-| `Delete` | 938 |
-| `Create` | 860 |
-| `Update` | 649 |
+| `Describe` | 1010 |
+| `Delete` | 939 |
+| `Create` | 861 |
+| `Update` | 651 |
 | `Put` | 223 |
 | `Start` | 139 |
 | `Modify` | 106 |
