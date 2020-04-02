@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeDeployReadOnlyAccess",
   "CreateDate": "2015-05-19T18:21:32Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILZHHKCKB4NE7XOIQ",
   "PolicyName": "AWSCodeDeployReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-11-05T23:01:32Z",
+    "CreateDate": "2020-04-02T16:20:09Z",
     "Document": {
       "Statement": [
         {
@@ -35,7 +35,8 @@
         {
           "Action": [
             "codestar-notifications:ListEventTypes",
-            "codestar-notifications:ListNotificationRules"
+            "codestar-notifications:ListNotificationRules",
+            "codestar-notifications:ListTargets"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -45,7 +46,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-11-05T23:01:32Z"
+  "UpdateDate": "2020-04-02T16:20:09Z"
 }

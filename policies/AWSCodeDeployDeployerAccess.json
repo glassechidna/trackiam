@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeDeployDeployerAccess",
   "CreateDate": "2015-05-19T18:18:43Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJUWEPOMGLMVXJAPUI",
   "PolicyName": "AWSCodeDeployDeployerAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-11-05T22:59:06Z",
+    "CreateDate": "2020-04-02T16:16:11Z",
     "Document": {
       "Statement": [
         {
@@ -40,6 +40,14 @@
         },
         {
           "Action": [
+            "chatbot:DescribeSlackChannelConfigurations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsChatbotAccess"
+        },
+        {
+          "Action": [
             "codestar-notifications:ListEventTypes",
             "codestar-notifications:ListNotificationRules",
             "codestar-notifications:ListTagsforResource",
@@ -61,7 +69,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-11-05T22:59:06Z"
+  "UpdateDate": "2020-04-02T16:16:11Z"
 }
