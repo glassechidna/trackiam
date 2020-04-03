@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchSyntheticsFullAccess",
   "CreateDate": "2019-11-25T17:39:46Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MAGQWEZP4",
   "PolicyName": "CloudWatchSyntheticsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-11-25T17:39:46Z",
+    "CreateDate": "2020-04-03T17:53:31Z",
     "Document": {
       "Statement": [
         {
@@ -56,6 +56,17 @@
         },
         {
           "Action": [
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
             "iam:GetRole"
           ],
           "Effect": "Allow",
@@ -76,6 +87,7 @@
           "Action": [
             "lambda:AddPermission",
             "lambda:CreateFunction",
+            "lambda:GetFunctionConfiguration",
             "lambda:PublishVersion",
             "lambda:UpdateFunctionConfiguration"
           ],
@@ -133,7 +145,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-11-25T17:39:46Z"
+  "UpdateDate": "2020-04-03T17:53:31Z"
 }
