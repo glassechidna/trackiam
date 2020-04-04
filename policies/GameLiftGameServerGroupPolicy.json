@@ -1,0 +1,66 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/GameLiftGameServerGroupPolicy",
+  "CreateDate": "2020-04-03T23:12:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4JTX4JYBF6",
+  "PolicyName": "GameLiftGameServerGroupPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-04-03T23:12:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:TerminateInstances",
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/GameLift": "GameServerGroups"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "autoscaling:CompleteLifecycleAction",
+            "autoscaling:DetachInstances",
+            "autoscaling:EnterStandby",
+            "autoscaling:ResumeProcesses",
+            "autoscaling:SetInstanceProtection",
+            "autoscaling:SuspendProcesses",
+            "autoscaling:UpdateAutoScalingGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/GameLift": "GameServerGroups"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "sns:Publish",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sns:*:*:ActivatingLifecycleHookTopic-*",
+            "arn:aws:sns:*:*:TerminatingLifecycleHookTopic-*"
+          ]
+        },
+        {
+          "Action": [
+            "autoscaling:DescribeAutoScalingGroups",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstances",
+            "ec2:DescribeLaunchTemplateVersions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-04-03T23:12:19Z"
+}

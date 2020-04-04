@@ -11,9 +11,9 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 218
-* Unique actions: 7993
-* Managed policies: 637
+* Unique services: 219
+* Unique actions: 7994
+* Managed policies: 638
 
 Most common managed policy name prefixes:
 
@@ -24,7 +24,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 119 |
 | `arn:aws:iam::aws:policy/service-role/*` | 97 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
-| Other | 64 |
+| Other | 65 |
 
 The following table summarises the AWS APIs. 
 
@@ -252,6 +252,7 @@ The following table summarises the AWS APIs.
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
 | [`rds-db`](services/rds-db.yml) | 0 | 0 | 1 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 1 |
+| [`codeguru`](services/codeguru.yml) | 0 | 0 | 1 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 1 |
 | [`arsenal`](services/arsenal.yml) | 0 | 0 | 1 |
 
@@ -260,7 +261,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1091 |
-| `Get` | 1057 |
+| `Get` | 1058 |
 | `Describe` | 1010 |
 | `Delete` | 939 |
 | `Create` | 861 |
