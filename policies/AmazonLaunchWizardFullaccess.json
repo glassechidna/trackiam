@@ -1,20 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLaunchWizardFullaccess",
   "CreateDate": "2019-11-13T17:08:13Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4E27VRMEE5",
   "PolicyName": "AmazonLaunchWizardFullaccess",
   "PolicyVersion": {
-    "CreateDate": "2019-11-24T21:55:08Z",
+    "CreateDate": "2020-04-05T18:35:58Z",
     "Document": {
       "Statement": [
         {
           "Action": "cloudformation:TagResource",
           "Condition": {
-            "ForAllValues:StringEquals": {
-              "aws:TagKeys": "LaunchWizardResourceGroupID"
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": "LaunchWizard*"
             }
           },
           "Effect": "Allow",
@@ -37,13 +37,11 @@
             "ec2:AttachNetworkInterface",
             "ec2:AttachVolume",
             "ec2:AuthorizeSecurityGroupEgress",
-            "ec2:AuthorizeSecurityGroupIngress",
             "ec2:CreateDhcpOptions",
             "ec2:CreateEgressOnlyInternetGateway",
             "ec2:CreateInternetGateway",
             "ec2:CreateNatGateway",
             "ec2:CreateNetworkInterface",
-            "ec2:CreateSecurityGroup",
             "ec2:CreateVolume",
             "ec2:CreateVpc",
             "ec2:CreateVpcEndpoint",
@@ -75,11 +73,13 @@
             "ec2:StartInstances",
             "ec2:StopInstances",
             "ec2:TerminateInstances",
+            "elasticfilesystem:DeleteFileSystem",
+            "elasticfilesystem:DeleteMountTarget",
             "ssm:SendCommand"
           ],
           "Condition": {
             "ForAllValues:StringLike": {
-              "aws:TagKeys": "LaunchWizardResourceGroupID"
+              "aws:TagKeys": "LaunchWizard*"
             }
           },
           "Effect": "Allow",
@@ -202,8 +202,12 @@
         {
           "Action": [
             "cloudformation:CreateStack",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CreateSecurityGroup",
             "elasticfilesystem:CreateFileSystem",
+            "elasticfilesystem:CreateMountTarget",
             "elasticfilesystem:DescribeFileSystems",
+            "elasticfilesystem:DescribeMountTargets",
             "route53:ListHostedZones",
             "s3:GetObject"
           ],
@@ -233,11 +237,34 @@
         },
         {
           "Action": [
+            "iam:AddRoleToInstanceProfile",
+            "iam:CreateInstanceProfile",
+            "iam:DeleteInstanceProfile",
+            "iam:PassRole",
+            "iam:RemoveRoleFromInstanceProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:instance-profile/LaunchWizard*",
+            "arn:aws:iam::*:role/service-role/AmazonEC2RoleForLaunchWizard*"
+          ]
+        },
+        {
+          "Action": [
             "iam:CreateServiceLinkedRole"
           ],
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/service-role/AmazonLambdaRoleForLaunchWizard*"
           ]
         },
         {
@@ -276,24 +303,27 @@
         },
         {
           "Action": [
-            "iam:AddRoleToInstanceProfile",
-            "iam:CreateInstanceProfile",
-            "iam:DeleteInstanceProfile",
-            "iam:PassRole",
-            "iam:RemoveRoleFromInstanceProfile"
+            "lambda:CreateFunction",
+            "lambda:DeleteFunction",
+            "lambda:GetFunction",
+            "lambda:GetFunctionConfiguration",
+            "lambda:InvokeFunction",
+            "s3:CreateBucket",
+            "s3:DeleteBucket",
+            "s3:PutBucketVersioning"
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:iam::*:instance-profile/LaunchWizard*",
-            "arn:aws:iam::*:role/service-role/AmazonEC2RoleForLaunchWizard*"
+            "arn:aws:lambda:*:*:function:LaunchWizard*",
+            "arn:aws:s3:::launchwizard*"
           ],
-          "Sid": "VisualEditor0"
+          "Sid": "VisualEditorS3"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-11-24T21:55:08Z"
+  "UpdateDate": "2020-04-05T18:35:58Z"
 }
