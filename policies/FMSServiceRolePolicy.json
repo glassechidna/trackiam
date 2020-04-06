@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/FMSServiceRolePolicy",
   "CreateDate": "2018-03-28T23:01:12Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAI62NTGYJB446ACUEA",
   "PolicyName": "FMSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-03-10T20:10:50Z",
+    "CreateDate": "2020-04-06T18:55:16Z",
     "Document": {
       "Statement": [
         {
@@ -159,7 +159,12 @@
           "Action": [
             "organizations:DescribeAccount",
             "organizations:DescribeOrganization",
-            "organizations:ListAccounts"
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:ListAccounts",
+            "organizations:ListChildren",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListParents",
+            "organizations:ListRoots"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -256,7 +261,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2020-03-10T20:10:50Z"
+  "UpdateDate": "2020-04-06T18:55:16Z"
 }

@@ -1,0 +1,41 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSWAFConsoleReadOnlyAccess",
+  "CreateDate": "2020-04-06T18:43:24Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4NCJLTIT64",
+  "PolicyName": "AWSWAFConsoleReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-04-06T18:43:24Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "apigateway:GET",
+            "cloudfront:ListDistributions",
+            "cloudfront:ListDistributionsByWebACLId",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics",
+            "ec2:DescribeRegions",
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "waf-regional:Get*",
+            "waf-regional:List*",
+            "waf:Get*",
+            "waf:List*",
+            "wafv2:Describe*",
+            "wafv2:Get*",
+            "wafv2:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-04-06T18:43:24Z"
+}

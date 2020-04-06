@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 220
-* Unique actions: 8009
-* Managed policies: 638
+* Unique actions: 8022
+* Managed policies: 640
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 180 |
+| `arn:aws:iam::aws:policy/AWS*` | 182 |
 | `arn:aws:iam::aws:policy/Amazon*` | 170 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 119 |
 | `arn:aws:iam::aws:policy/service-role/*` | 97 |
@@ -46,7 +46,7 @@ The following table summarises the AWS APIs.
 | [`ses`](services/ses.yml) | 103 | 9 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 12 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
-| [`chime`](services/chime.yml) | 94 | 0 | 50 |
+| [`chime`](services/chime.yml) | 94 | 8 | 50 |
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 88 | 0 | 18 |
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
@@ -80,7 +80,7 @@ The following table summarises the AWS APIs.
 | [`rekognition`](services/rekognition.yml) | 45 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 45 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 44 | 4 | 2 |
-| [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 43 | 1 | 2 |
+| [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 43 | 2 | 2 |
 | [`elasticache`](services/elasticache.yml) | 42 | 15 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
@@ -168,9 +168,9 @@ The following table summarises the AWS APIs.
 | [`qldb`](services/qldb.yml) | 16 | 0 | 3 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
 | [`batch`](services/batch.yml) | 16 | 0 | 0 |
+| [`transcribe`](services/transcribe.yml) | 15 | 4 | 1 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 15 | 4 | 0 |
 | [`license-manager`](services/license-manager.yml) | 15 | 1 | 0 |
-| [`transcribe`](services/transcribe.yml) | 15 | 0 | 1 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 8 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 14 | 4 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
@@ -261,14 +261,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1095 |
-| `Get` | 1061 |
+| `List` | 1098 |
+| `Get` | 1064 |
 | `Describe` | 1010 |
-| `Delete` | 941 |
-| `Create` | 864 |
-| `Update` | 653 |
-| `Put` | 223 |
-| `Start` | 139 |
+| `Delete` | 944 |
+| `Create` | 865 |
+| `Update` | 654 |
+| `Put` | 224 |
+| `Start` | 140 |
 | `Modify` | 106 |
 | `Tag` | 104 |
 
