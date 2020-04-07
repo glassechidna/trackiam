@@ -15,6 +15,7 @@ Actions:
   - Name: chime:CreateBot
   - Name: chime:CreateMeeting
   - Name: chime:CreatePhoneNumberOrder
+  - Name: chime:CreateProxySession
   - Name: chime:CreateRoom
   - Name: chime:CreateRoomMembership
   - Name: chime:CreateUser
@@ -25,11 +26,13 @@ Actions:
   - Name: chime:DeleteEventsConfiguration
   - Name: chime:DeleteMeeting
   - Name: chime:DeletePhoneNumber
+  - Name: chime:DeleteProxySession
   - Name: chime:DeleteRoom
   - Name: chime:DeleteRoomMembership
   - Name: chime:DeleteVoiceConnector
   - Name: chime:DeleteVoiceConnectorGroup
   - Name: chime:DeleteVoiceConnectorOrigination
+  - Name: chime:DeleteVoiceConnectorProxy
   - Name: chime:DeleteVoiceConnectorStreamingConfiguration
   - Name: chime:DeleteVoiceConnectorTermination
   - Name: chime:DeleteVoiceConnectorTerminationCredentials
@@ -47,6 +50,7 @@ Actions:
   - Name: chime:GetPhoneNumber
   - Name: chime:GetPhoneNumberOrder
   - Name: chime:GetPhoneNumberSettings
+  - Name: chime:GetProxySession
   - Name: chime:GetRoom
   - Name: chime:GetUser
   - Name: chime:GetUserSettings
@@ -54,6 +58,7 @@ Actions:
   - Name: chime:GetVoiceConnectorGroup
   - Name: chime:GetVoiceConnectorLoggingConfiguration
   - Name: chime:GetVoiceConnectorOrigination
+  - Name: chime:GetVoiceConnectorProxy
   - Name: chime:GetVoiceConnectorStreamingConfiguration
   - Name: chime:GetVoiceConnectorTermination
   - Name: chime:GetVoiceConnectorTerminationHealth
@@ -64,6 +69,7 @@ Actions:
   - Name: chime:ListMeetings
   - Name: chime:ListPhoneNumberOrders
   - Name: chime:ListPhoneNumbers
+  - Name: chime:ListProxySessions
   - Name: chime:ListRoomMemberships
   - Name: chime:ListRooms
   - Name: chime:ListUsers
@@ -74,6 +80,7 @@ Actions:
   - Name: chime:PutEventsConfiguration
   - Name: chime:PutVoiceConnectorLoggingConfiguration
   - Name: chime:PutVoiceConnectorOrigination
+  - Name: chime:PutVoiceConnectorProxy
   - Name: chime:PutVoiceConnectorStreamingConfiguration
   - Name: chime:PutVoiceConnectorTermination
   - Name: chime:PutVoiceConnectorTerminationCredentials
@@ -87,6 +94,7 @@ Actions:
   - Name: chime:UpdateGlobalSettings
   - Name: chime:UpdatePhoneNumber
   - Name: chime:UpdatePhoneNumberSettings
+  - Name: chime:UpdateProxySession
   - Name: chime:UpdateRoom
   - Name: chime:UpdateRoomMembership
   - Name: chime:UpdateUser
@@ -123,6 +131,7 @@ Actions:
   - Name: chime:InviteUsersFromProvider
   - Name: chime:ListAccountUsageReportData
   - Name: chime:ListApiKeys
+  - Name: chime:ListAttendeeTags
   - Name: chime:ListCDRBucket
   - Name: chime:ListCallingRegions
   - Name: chime:ListDelegates
@@ -130,7 +139,9 @@ Actions:
   - Name: chime:ListDomains
   - Name: chime:ListGroups
   - Name: chime:ListMeetingEvents
+  - Name: chime:ListMeetingTags
   - Name: chime:ListMeetingsReportData
+  - Name: chime:ListTagsForResource
   - Name: chime:RenameAccount
   - Name: chime:RenewDelegate
   - Name: chime:ResetAccountResource
@@ -138,20 +149,16 @@ Actions:
   - Name: chime:StartDataExport
   - Name: chime:SubmitSupportRequest
   - Name: chime:SuspendUsers
+  - Name: chime:TagAttendee
+  - Name: chime:TagMeeting
+  - Name: chime:TagResource
   - Name: chime:UnauthorizeDirectory
+  - Name: chime:UntagAttendee
+  - Name: chime:UntagMeeting
+  - Name: chime:UntagResource
   - Name: chime:UpdateAccountOpenIdConfig
   - Name: chime:UpdateAccountResource
   - Name: chime:UpdateCDRSettings
   - Name: chime:UpdateSupportedLicenses
   - Name: chime:UpdateUserLicenses
   - Name: chime:ValidateAccountResource
-
-  # APIs without an IAM action
-  - Name: chime:CreateProxySession
-  - Name: chime:DeleteProxySession
-  - Name: chime:DeleteVoiceConnectorProxy
-  - Name: chime:GetProxySession
-  - Name: chime:GetVoiceConnectorProxy
-  - Name: chime:ListProxySessions
-  - Name: chime:PutVoiceConnectorProxy
-  - Name: chime:UpdateProxySession
