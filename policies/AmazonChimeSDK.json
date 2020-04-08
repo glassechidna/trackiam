@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonChimeSDK",
   "CreateDate": "2020-02-04T21:53:37Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ACM6EA4B7",
   "PolicyName": "AmazonChimeSDK",
   "PolicyVersion": {
-    "CreateDate": "2020-02-04T21:53:37Z",
+    "CreateDate": "2020-04-08T21:18:31Z",
     "Document": {
       "Statement": [
         {
@@ -19,8 +19,17 @@
             "chime:DeleteMeeting",
             "chime:GetAttendee",
             "chime:GetMeeting",
+            "chime:ListAttendeeTags",
             "chime:ListAttendees",
-            "chime:ListMeetings"
+            "chime:ListMeetingTags",
+            "chime:ListMeetings",
+            "chime:ListTagsForResource",
+            "chime:TagAttendee",
+            "chime:TagMeeting",
+            "chime:TagResource",
+            "chime:UntagAttendee",
+            "chime:UntagMeeting",
+            "chime:UntagResource"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -29,7 +38,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-02-04T21:53:37Z"
+  "UpdateDate": "2020-04-08T21:18:31Z"
 }

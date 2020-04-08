@@ -80,7 +80,7 @@ The following table summarises the AWS APIs.
 | [`rekognition`](services/rekognition.yml) | 45 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 45 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 44 | 4 | 2 |
-| [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 43 | 2 | 2 |
+| [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 44 | 1 | 2 |
 | [`elasticache`](services/elasticache.yml) | 42 | 15 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
