@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 220
-* Unique actions: 8034
+* Unique actions: 8036
 * Managed policies: 640
 
 Most common managed policy name prefixes:
@@ -238,11 +238,11 @@ The following table summarises the AWS APIs.
 | [`synthetics`](services/synthetics.yml) | 0 | 0 | 10 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
+| [`cassandra`](services/cassandra.yml) | 0 | 0 | 7 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`wellarchitected`](services/wellarchitected.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
-| [`cassandra`](services/cassandra.yml) | 0 | 0 | 5 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 5 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 4 |
@@ -269,6 +269,6 @@ Most common action prefixes:
 | `Update` | 654 |
 | `Put` | 225 |
 | `Start` | 140 |
-| `Tag` | 107 |
-| `Untag` | 106 |
+| `Tag` | 108 |
+| `Untag` | 107 |
 
