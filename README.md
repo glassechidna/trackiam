@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 220
-* Unique actions: 8036
+* Unique actions: 8039
 * Managed policies: 640
 
 Most common managed policy name prefixes:
@@ -36,15 +36,15 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 393 | 7 | 0 |
+| [`ec2`](services/ec2.yml) | 393 | 10 | 0 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`sagemaker`](services/sagemaker.yml) | 139 | 0 | 2 |
 | [`glue`](services/glue.yml) | 124 | 0 | 1 |
 | [`rds`](services/rds.yml) | 123 | 7 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
+| [`chime`](services/chime.yml) | 111 | 0 | 50 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
 | [`ses`](services/ses.yml) | 103 | 9 | 0 |
-| [`chime`](services/chime.yml) | 102 | 0 | 59 |
 | [`lightsail`](services/lightsail.yml) | 101 | 12 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
@@ -181,6 +181,7 @@ The following table summarises the AWS APIs.
 | [`health`](services/health.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`acm`](services/acm.yml) | 13 | 0 | 0 |
+| [`codeguru-profiler`](services/codeguru-profiler.yml) | 12 | 0 | 3 |
 | [`signer`](services/signer.yml) | 12 | 0 | 0 |
 | [`resource-groups`](services/resource-groups.yml) | 12 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 0 | 0 |
@@ -189,7 +190,6 @@ The following table summarises the AWS APIs.
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 36 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
-| [`codeguru-profiler`](services/codeguru-profiler.yml) | 9 | 0 | 6 |
 | [`translate`](services/translate.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
@@ -263,7 +263,7 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1101 |
 | `Get` | 1065 |
-| `Describe` | 1010 |
+| `Describe` | 1011 |
 | `Delete` | 944 |
 | `Create` | 865 |
 | `Update` | 654 |
