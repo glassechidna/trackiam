@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonCodeGuruReviewerServiceRolePolicy",
   "CreateDate": "2019-12-03T05:31:12Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NJY3GAUD2",
   "PolicyName": "AmazonCodeGuruReviewerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-12-03T05:31:12Z",
+    "CreateDate": "2020-04-09T07:33:48Z",
     "Document": {
       "Statement": [
         {
@@ -33,6 +33,35 @@
         },
         {
           "Action": [
+            "codestar-connections:UseConnection"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "codestar-connections:ProviderAction": [
+                "CreatePullRequestDiffComment",
+                "GetBranch",
+                "GetPullRequest",
+                "GitPull",
+                "ListBranchCommits",
+                "ListBranches",
+                "ListCommitFiles",
+                "ListOwners",
+                "ListPullRequestComments",
+                "ListPullRequestCommits",
+                "ListPullRequests",
+                "ListRepositories"
+              ]
+            },
+            "Null": {
+              "aws:ResourceTag/codeguru-reviewer": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AccessCodeGuruReviewerEnabledConnections"
+        },
+        {
+          "Action": [
             "events:DeleteRule",
             "events:RemoveTargets"
           ],
@@ -49,7 +78,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-12-03T05:31:12Z"
+  "UpdateDate": "2020-04-09T07:33:48Z"
 }
