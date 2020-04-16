@@ -1,15 +1,19 @@
 Actions:
   - Name: transcribe:CreateVocabulary
   - Name: transcribe:CreateVocabularyFilter
+  - Name: transcribe:DeleteMedicalTranscriptionJob
   - Name: transcribe:DeleteTranscriptionJob
   - Name: transcribe:DeleteVocabulary
   - Name: transcribe:DeleteVocabularyFilter
+  - Name: transcribe:GetMedicalTranscriptionJob
   - Name: transcribe:GetTranscriptionJob
   - Name: transcribe:GetVocabulary
   - Name: transcribe:GetVocabularyFilter
+  - Name: transcribe:ListMedicalTranscriptionJobs
   - Name: transcribe:ListTranscriptionJobs
   - Name: transcribe:ListVocabularies
   - Name: transcribe:ListVocabularyFilters
+  - Name: transcribe:StartMedicalTranscriptionJob
   - Name: transcribe:StartStreamTranscription
   - Name: transcribe:StartTranscriptionJob
   - Name: transcribe:UpdateVocabulary
@@ -17,9 +21,3 @@ Actions:
 
   # actions with no corresponding API
   - Name: transcribe:StartMedicalStreamTranscription
-
-  # APIs without an IAM action
-  - Name: transcribe:DeleteMedicalTranscriptionJob
-  - Name: transcribe:GetMedicalTranscriptionJob
-  - Name: transcribe:ListMedicalTranscriptionJobs
-  - Name: transcribe:StartMedicalTranscriptionJob

@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 220
-* Unique actions: 8040
+* Unique actions: 8041
 * Managed policies: 640
 
 Most common managed policy name prefixes:
@@ -134,10 +134,10 @@ The following table summarises the AWS APIs.
 | [`route53domains`](services/route53domains.yml) | 23 | 1 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 23 | 0 | 5 |
 | [`ram`](services/ram.yml) | 22 | 1 | 0 |
+| [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 1 |
 | [`states`](services/states.yml) | 22 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
-| [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 0 |
 | [`es`](services/es.yml) | 21 | 9 | 8 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`eks`](services/eks.yml) | 21 | 0 | 0 |
@@ -151,6 +151,7 @@ The following table summarises the AWS APIs.
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
 | [`athena`](services/athena.yml) | 19 | 0 | 11 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
+| [`transcribe`](services/transcribe.yml) | 19 | 0 | 1 |
 | [`ce`](services/ce.yml) | 19 | 0 | 0 |
 | [`shield`](services/shield.yml) | 18 | 2 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 18 | 2 | 0 |
@@ -168,7 +169,6 @@ The following table summarises the AWS APIs.
 | [`qldb`](services/qldb.yml) | 16 | 0 | 3 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
 | [`batch`](services/batch.yml) | 16 | 0 | 0 |
-| [`transcribe`](services/transcribe.yml) | 15 | 4 | 1 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 15 | 4 | 0 |
 | [`license-manager`](services/license-manager.yml) | 15 | 1 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 8 | 0 |
@@ -265,7 +265,7 @@ Most common action prefixes:
 | `Get` | 1065 |
 | `Describe` | 1011 |
 | `Delete` | 944 |
-| `Create` | 865 |
+| `Create` | 866 |
 | `Update` | 654 |
 | `Put` | 225 |
 | `Start` | 140 |
