@@ -1,0 +1,30 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonWorkDocsFullAccess",
+  "CreateDate": "2020-04-16T23:05:11Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4GTERAZYCR",
+  "PolicyName": "AmazonWorkDocsFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-04-16T23:05:11Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ds:DescribeDirectories",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "workdocs:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-04-16T23:05:11Z"
+}
