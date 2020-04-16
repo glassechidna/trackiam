@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/GameLiftGameServerGroupPolicy",
   "CreateDate": "2020-04-03T23:12:19Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JTX4JYBF6",
   "PolicyName": "GameLiftGameServerGroupPolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-04-03T23:12:19Z",
+    "CreateDate": "2020-04-16T17:13:11Z",
     "Document": {
       "Statement": [
         {
@@ -39,11 +39,23 @@
           "Resource": "*"
         },
         {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/GameLift"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
           "Action": "sns:Publish",
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:sns:*:*:ActivatingLifecycleHookTopic-*",
-            "arn:aws:sns:*:*:TerminatingLifecycleHookTopic-*"
+            "arn:*:sns:*:*:ActivatingLifecycleHookTopic-*",
+            "arn:*:sns:*:*:TerminatingLifecycleHookTopic-*"
           ]
         },
         {
@@ -60,7 +72,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-04-03T23:12:19Z"
+  "UpdateDate": "2020-04-16T17:13:11Z"
 }
