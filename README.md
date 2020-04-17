@@ -81,6 +81,7 @@ The following table summarises the AWS APIs.
 | [`rekognition`](services/rekognition.yml) | 45 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 44 | 4 | 2 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 44 | 1 | 2 |
+| [`lex`](services/lex.yml) | 44 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 42 | 15 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
 | [`securityhub`](services/securityhub.yml) | 42 | 0 | 0 |
@@ -96,7 +97,6 @@ The following table summarises the AWS APIs.
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
 | [`wafv2`](services/wafv2.yml) | 36 | 4 | 0 |
 | [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
-| [`lex`](services/lex.yml) | 35 | 9 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
 | [`codebuild`](services/codebuild.yml) | 34 | 0 | 7 |
