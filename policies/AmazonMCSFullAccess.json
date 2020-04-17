@@ -1,18 +1,53 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonMCSFullAccess",
   "CreateDate": "2019-12-03T13:45:25Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4K6JRQY7NV",
   "PolicyName": "AmazonMCSFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-12-03T13:45:25Z",
+    "CreateDate": "2020-04-17T19:19:29Z",
     "Document": {
       "Statement": [
         {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "cassandra.application-autoscaling.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/cassandra.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_CassandraTable"
+        },
+        {
+          "Action": [
+            "application-autoscaling:DeleteScalingPolicy",
+            "application-autoscaling:DeleteScheduledAction",
+            "application-autoscaling:DeregisterScalableTarget",
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingActivities",
+            "application-autoscaling:DescribeScalingPolicies",
+            "application-autoscaling:DescribeScheduledActions",
+            "application-autoscaling:PutScalingPolicy",
+            "application-autoscaling:PutScheduledAction",
+            "application-autoscaling:RegisterScalableTarget"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
           "Action": [
             "cassandra:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:PutMetricAlarm"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -21,7 +56,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-12-03T13:45:25Z"
+  "UpdateDate": "2020-04-17T19:19:29Z"
 }

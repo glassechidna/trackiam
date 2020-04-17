@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonMCSReadOnlyAccess",
   "CreateDate": "2019-12-03T13:46:21Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4F6NKMXCNS",
   "PolicyName": "AmazonMCSReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-12-03T13:46:21Z",
+    "CreateDate": "2020-04-17T19:21:34Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingActivities",
+            "application-autoscaling:DescribeScalingPolicies",
+            "application-autoscaling:DescribeScheduledActions",
+            "cloudwatch:DescribeAlarms"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "cassandra:Select"
@@ -21,7 +32,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-12-03T13:46:21Z"
+  "UpdateDate": "2020-04-17T19:21:34Z"
 }
