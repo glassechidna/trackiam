@@ -105,9 +105,9 @@ The following table summarises the AWS APIs.
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`workspaces`](services/workspaces.yml) | 32 | 9 | 0 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
+| [`frauddetector`](services/frauddetector.yml) | 32 | 0 | 0 |
 | [`events`](services/events.yml) | 31 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 0 | 0 |
-| [`frauddetector`](services/frauddetector.yml) | 30 | 2 | 0 |
 | [`worklink`](services/worklink.yml) | 30 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 29 | 1 | 8 |
 | [`cloudwatch`](services/cloudwatch.yml) | 29 | 1 | 0 |
