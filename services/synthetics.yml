@@ -1,13 +1,19 @@
 Actions:
-
-  # actions with no corresponding API
   - Name: synthetics:CreateCanary
   - Name: synthetics:DeleteCanary
   - Name: synthetics:DescribeCanaries
-  - Name: synthetics:DescribeTestRuns
   - Name: synthetics:ListTagsForResource
   - Name: synthetics:StartCanary
   - Name: synthetics:StopCanary
   - Name: synthetics:TagResource
   - Name: synthetics:UntagResource
   - Name: synthetics:UpdateCanary
+
+  # actions with no corresponding API
+  - Name: synthetics:DescribeTestRuns
+
+  # APIs without an IAM action
+  - Name: synthetics:DescribeCanariesLastRun
+  - Name: synthetics:DescribeRuntimeVersions
+  - Name: synthetics:GetCanary
+  - Name: synthetics:GetCanaryRuns

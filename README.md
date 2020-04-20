@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 222
-* Unique actions: 8046
+* Unique actions: 8052
 * Managed policies: 641
 
 Most common managed policy name prefixes:
@@ -142,7 +142,7 @@ The following table summarises the AWS APIs.
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`eks`](services/eks.yml) | 21 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 21 | 0 | 0 |
-| [`iotevents`](services/iotevents.yml) | 20 | 0 | 1 |
+| [`iotevents`](services/iotevents.yml) | 20 | 1 | 1 |
 | [`xray`](services/xray.yml) | 20 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 20 | 0 | 0 |
@@ -190,6 +190,7 @@ The following table summarises the AWS APIs.
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 36 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
+| [`synthetics`](services/synthetics.yml) | 9 | 4 | 1 |
 | [`translate`](services/translate.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
@@ -217,7 +218,7 @@ The following table summarises the AWS APIs.
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 214 | 3 |
-| [`apigateway`](services/apigateway.yml) | 0 | 150 | 7 |
+| [`apigateway`](services/apigateway.yml) | 0 | 151 | 7 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`codestar-connections`](services/codestar-connections.yml) | 0 | 4 | 0 |
@@ -235,7 +236,6 @@ The following table summarises the AWS APIs.
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 12 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
-| [`synthetics`](services/synthetics.yml) | 0 | 0 | 10 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`cassandra`](services/cassandra.yml) | 0 | 0 | 7 |
@@ -264,8 +264,8 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1102 |
-| `Get` | 1065 |
-| `Describe` | 1011 |
+| `Get` | 1067 |
+| `Describe` | 1013 |
 | `Delete` | 946 |
 | `Create` | 867 |
 | `Update` | 654 |
