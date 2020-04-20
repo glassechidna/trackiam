@@ -68,9 +68,9 @@ The following table summarises the AWS APIs.
 | [`directconnect`](services/directconnect.yml) | 53 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 51 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 49 | 1 | 0 |
+| [`lambda`](services/lambda.yml) | 48 | 1 | 3 |
 | [`quicksight`](services/quicksight.yml) | 47 | 19 | 9 |
 | [`organizations`](services/organizations.yml) | 47 | 4 | 0 |
-| [`lambda`](services/lambda.yml) | 47 | 2 | 3 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`cloudformation`](services/cloudformation.yml) | 46 | 9 | 3 |
 | [`backup`](services/backup.yml) | 46 | 0 | 1 |
