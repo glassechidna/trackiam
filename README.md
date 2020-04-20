@@ -148,6 +148,7 @@ The following table summarises the AWS APIs.
 | [`servicediscovery`](services/servicediscovery.yml) | 20 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 20 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 20 | 0 | 0 |
+| [`kafka`](services/kafka.yml) | 19 | 2 | 0 |
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
 | [`athena`](services/athena.yml) | 19 | 0 | 11 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
@@ -161,7 +162,6 @@ The following table summarises the AWS APIs.
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 18 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 17 | 10 | 0 |
-| [`kafka`](services/kafka.yml) | 17 | 4 | 0 |
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`fms`](services/fms.yml) | 17 | 0 | 0 |
