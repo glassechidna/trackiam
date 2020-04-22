@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 223
-* Unique actions: 8080
+* Unique actions: 8090
 * Managed policies: 641
 
 Most common managed policy name prefixes:
@@ -48,7 +48,7 @@ The following table summarises the AWS APIs.
 | [`lightsail`](services/lightsail.yml) | 101 | 12 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
-| [`redshift`](services/redshift.yml) | 88 | 0 | 18 |
+| [`redshift`](services/redshift.yml) | 88 | 4 | 18 |
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 80 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
@@ -208,7 +208,7 @@ The following table summarises the AWS APIs.
 | [`compute-optimizer`](services/compute-optimizer.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`outposts`](services/outposts.yml) | 5 | 2 | 0 |
-| [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 4 | 0 | 3 |
+| [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 4 | 6 | 3 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
 | [`ebs`](services/ebs.yml) | 3 | 0 | 0 |
@@ -264,13 +264,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1105 |
+| `List` | 1108 |
 | `Get` | 1068 |
-| `Describe` | 1020 |
-| `Delete` | 948 |
-| `Create` | 869 |
+| `Describe` | 1023 |
+| `Delete` | 949 |
+| `Create` | 870 |
 | `Update` | 656 |
-| `Put` | 226 |
+| `Put` | 227 |
 | `Start` | 140 |
 | `Tag` | 109 |
 | `Untag` | 108 |
