@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 223
-* Unique actions: 8090
+* Unique actions: 8089
 * Managed policies: 642
 
 Most common managed policy name prefixes:
@@ -186,11 +186,11 @@ The following table summarises the AWS APIs.
 | [`resource-groups`](services/resource-groups.yml) | 12 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
+| [`synthetics`](services/synthetics.yml) | 11 | 2 | 0 |
 | [`detective`](services/detective.yml) | 11 | 1 | 5 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 36 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
-| [`synthetics`](services/synthetics.yml) | 9 | 4 | 1 |
 | [`translate`](services/translate.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
@@ -266,7 +266,7 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1108 |
 | `Get` | 1068 |
-| `Describe` | 1023 |
+| `Describe` | 1022 |
 | `Delete` | 949 |
 | `Create` | 870 |
 | `Update` | 656 |
