@@ -146,6 +146,7 @@ The following table summarises the AWS APIs.
 | [`xray`](services/xray.yml) | 20 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 20 | 0 | 0 |
+| [`managedblockchain`](services/managedblockchain.yml) | 20 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 20 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 20 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 19 | 2 | 0 |
@@ -155,7 +156,6 @@ The following table summarises the AWS APIs.
 | [`transcribe`](services/transcribe.yml) | 19 | 0 | 1 |
 | [`ce`](services/ce.yml) | 19 | 0 | 0 |
 | [`shield`](services/shield.yml) | 18 | 2 | 0 |
-| [`managedblockchain`](services/managedblockchain.yml) | 18 | 2 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`transfer`](services/transfer.yml) | 18 | 0 | 0 |
 | [`secretsmanager`](services/secretsmanager.yml) | 18 | 0 | 0 |
