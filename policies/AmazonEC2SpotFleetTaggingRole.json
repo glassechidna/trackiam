@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetTaggingRole",
   "CreateDate": "2017-06-29T18:19:29Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJ5U6UMLCEYLX5OLC4",
   "PolicyName": "AmazonEC2SpotFleetTaggingRole",
   "PolicyVersion": {
-    "CreateDate": "2017-11-17T22:51:17Z",
+    "CreateDate": "2020-04-23T19:30:49Z",
     "Document": {
       "Statement": [
         {
@@ -32,6 +32,7 @@
             "ec2:DescribeInstanceStatus",
             "ec2:DescribeSubnets",
             "ec2:RequestSpotInstances",
+            "ec2:RunInstances",
             "ec2:TerminateInstances"
           ],
           "Effect": "Allow",
@@ -54,14 +55,14 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "*"
+            "arn:aws:elasticloadbalancing:*:*:*/*"
           ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2017-11-17T22:51:17Z"
+  "UpdateDate": "2020-04-23T19:30:49Z"
 }
