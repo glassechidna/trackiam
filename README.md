@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 223
-* Unique actions: 8089
+* Unique actions: 8096
 * Managed policies: 644
 
 Most common managed policy name prefixes:
@@ -58,7 +58,7 @@ The following table summarises the AWS APIs.
 | [`waf`](services/waf.yml) | 76 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 75 | 0 | 11 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
-| [`storagegateway`](services/storagegateway.yml) | 71 | 4 | 0 |
+| [`storagegateway`](services/storagegateway.yml) | 71 | 7 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`route53`](services/route53.yml) | 56 | 0 | 0 |
@@ -133,7 +133,7 @@ The following table summarises the AWS APIs.
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 23 | 5 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 23 | 0 | 5 |
-| [`ram`](services/ram.yml) | 22 | 1 | 0 |
+| [`ram`](services/ram.yml) | 22 | 2 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 1 |
 | [`states`](services/states.yml) | 22 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 0 |
@@ -181,10 +181,10 @@ The following table summarises the AWS APIs.
 | [`health`](services/health.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`acm`](services/acm.yml) | 13 | 0 | 0 |
+| [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 3 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 12 | 0 | 3 |
 | [`signer`](services/signer.yml) | 12 | 0 | 0 |
 | [`resource-groups`](services/resource-groups.yml) | 12 | 0 | 0 |
-| [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`synthetics`](services/synthetics.yml) | 11 | 2 | 0 |
 | [`detective`](services/detective.yml) | 11 | 1 | 5 |
@@ -264,14 +264,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1108 |
+| `List` | 1111 |
 | `Get` | 1068 |
 | `Describe` | 1022 |
-| `Delete` | 949 |
+| `Delete` | 950 |
 | `Create` | 870 |
-| `Update` | 656 |
+| `Update` | 657 |
 | `Put` | 227 |
 | `Start` | 140 |
-| `Tag` | 109 |
-| `Untag` | 108 |
+| `Tag` | 110 |
+| `Untag` | 109 |
 
