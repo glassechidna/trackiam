@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 223
-* Unique actions: 8099
+* Unique services: 224
+* Unique actions: 8101
 * Managed policies: 644
 
 Most common managed policy name prefixes:
@@ -251,6 +251,7 @@ The following table summarises the AWS APIs.
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |
 | [`account`](services/account.yml) | 0 | 0 | 3 |
 | [`sumerian`](services/sumerian.yml) | 0 | 0 | 2 |
+| [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 2 |
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
 | [`rds-db`](services/rds-db.yml) | 0 | 0 | 1 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 1 |
