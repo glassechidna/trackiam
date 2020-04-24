@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/Billing",
   "CreateDate": "2016-11-10T17:33:18Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAIFTHXT6FFMIRT7ZEA",
   "PolicyName": "Billing",
   "PolicyVersion": {
-    "CreateDate": "2018-02-06T23:46:37Z",
+    "CreateDate": "2020-04-24T18:12:01Z",
     "Document": {
       "Statement": [
         {
@@ -20,7 +20,8 @@
             "awsbillingconsole:*Usage",
             "budgets:ModifyBudget",
             "budgets:ViewBudget",
-            "cur:*"
+            "cur:*",
+            "purchase-orders:*PurchaseOrders"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -29,7 +30,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2018-02-06T23:46:37Z"
+  "UpdateDate": "2020-04-24T18:12:01Z"
 }

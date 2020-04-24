@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 223
-* Unique actions: 8096
+* Unique actions: 8099
 * Managed policies: 644
 
 Most common managed policy name prefixes:
@@ -221,9 +221,9 @@ The following table summarises the AWS APIs.
 | [`apigateway`](services/apigateway.yml) | 0 | 151 | 7 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
+| [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
 | [`codestar-connections`](services/codestar-connections.yml) | 0 | 4 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
-| [`elastic-inference`](services/elastic-inference.yml) | 0 | 3 | 1 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 0 | 0 | 77 |
@@ -266,7 +266,7 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1111 |
 | `Get` | 1068 |
-| `Describe` | 1022 |
+| `Describe` | 1025 |
 | `Delete` | 950 |
 | `Create` | 870 |
 | `Update` | 657 |
