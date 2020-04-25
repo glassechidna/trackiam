@@ -1,79 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForIoTSiteWise",
   "CreateDate": "2018-11-14T19:19:17Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJGQU4DZIQP6HLYQPE",
   "PolicyName": "AWSServiceRoleForIoTSiteWise",
   "PolicyVersion": {
-    "CreateDate": "2020-03-26T21:02:43Z",
+    "CreateDate": "2020-04-25T02:15:01Z",
     "Document": {
       "Statement": [
         {
-          "Action": "iam:PassRole",
-          "Condition": {
-            "StringLikeIfExists": {
-              "iam:PassedToService": "lambda.amazonaws.com"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
           "Action": [
-            "greengrass:CreateCoreDefinitionVersion",
-            "greengrass:CreateDeployment",
-            "greengrass:CreateFunctionDefinition",
-            "greengrass:CreateFunctionDefinitionVersion",
-            "greengrass:CreateGroupVersion",
-            "greengrass:CreateLoggerDefinition",
-            "greengrass:CreateLoggerDefinitionVersion",
-            "greengrass:CreateResourceDefinition",
-            "greengrass:CreateResourceDefinitionVersion",
             "greengrass:GetAssociatedRole",
-            "greengrass:GetConnectorDefinition",
-            "greengrass:GetConnectorDefinitionVersion",
             "greengrass:GetCoreDefinition",
             "greengrass:GetCoreDefinitionVersion",
-            "greengrass:GetDeploymentStatus",
-            "greengrass:GetFunctionDefinition",
-            "greengrass:GetFunctionDefinitionVersion",
             "greengrass:GetGroup",
-            "greengrass:GetGroupVersion",
-            "greengrass:GetLoggerDefinition",
-            "greengrass:GetLoggerDefinitionVersion",
-            "greengrass:GetResourceDefinition",
-            "greengrass:GetResourceDefinitionVersion",
-            "greengrass:ListCoreDefinitions",
-            "greengrass:UpdateCoreDefinition",
-            "greengrass:UpdateFunctionDefinition",
-            "greengrass:UpdateLoggerDefinition",
-            "greengrass:UpdateResourceDefinition"
+            "greengrass:GetGroupVersion"
           ],
           "Effect": "Allow",
           "Resource": "*"
-        },
-        {
-          "Action": [
-            "iot:GetThingShadow",
-            "iot:UpdateThingShadow"
-          ],
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
-            "lambda:CreateAlias",
-            "lambda:CreateFunction",
-            "lambda:GetFunction",
-            "lambda:ListVersionsByFunction",
-            "lambda:PublishVersion",
-            "lambda:UpdateAlias",
-            "lambda:UpdateFunctionCode"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:lambda:*:*:function:AWSIoTSiteWise*"
         },
         {
           "Action": [
@@ -96,7 +42,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2020-03-26T21:02:43Z"
+  "UpdateDate": "2020-04-25T02:15:01Z"
 }
