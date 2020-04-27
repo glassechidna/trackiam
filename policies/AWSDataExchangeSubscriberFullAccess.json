@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDataExchangeSubscriberFullAccess",
   "CreateDate": "2019-11-13T19:27:52Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MAWRW4GF7",
   "PolicyName": "AWSDataExchangeSubscriberFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-11-13T19:27:52Z",
+    "CreateDate": "2020-04-27T14:28:00Z",
     "Document": {
       "Statement": [
         {
@@ -54,6 +54,15 @@
         },
         {
           "Action": [
+            "kms:DescribeKey",
+            "kms:ListAliases",
+            "kms:ListKeys"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "s3:GetBucketLocation",
             "s3:ListAllMyBuckets",
             "s3:ListBucket"
@@ -65,7 +74,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-11-13T19:27:52Z"
+  "UpdateDate": "2020-04-27T14:28:00Z"
 }
