@@ -121,9 +121,9 @@ The following table summarises the AWS APIs.
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 27 | 2 | 0 |
 | [`datasync`](services/datasync.yml) | 27 | 2 | 0 |
+| [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
 | [`forecast`](services/forecast.yml) | 27 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 26 | 2 | 0 |
-| [`kinesisvideo`](services/kinesisvideo.yml) | 26 | 1 | 3 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 26 | 0 | 1 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
