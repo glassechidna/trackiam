@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 224
-* Unique actions: 8101
+* Unique actions: 8102
 * Managed policies: 644
 
 Most common managed policy name prefixes:
@@ -62,6 +62,7 @@ The following table summarises the AWS APIs.
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`route53`](services/route53.yml) | 56 | 0 | 0 |
+| [`cloudformation`](services/cloudformation.yml) | 54 | 1 | 3 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`autoscaling`](services/autoscaling.yml) | 54 | 0 | 0 |
 | [`s3`](services/s3.yml) | 53 | 51 | 39 |
@@ -72,7 +73,6 @@ The following table summarises the AWS APIs.
 | [`quicksight`](services/quicksight.yml) | 47 | 19 | 9 |
 | [`organizations`](services/organizations.yml) | 47 | 4 | 0 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
-| [`cloudformation`](services/cloudformation.yml) | 46 | 9 | 3 |
 | [`backup`](services/backup.yml) | 46 | 0 | 1 |
 | [`codedeploy`](services/codedeploy.yml) | 46 | 0 | 0 |
 | [`dms`](services/dms.yml) | 45 | 2 | 0 |
@@ -123,7 +123,7 @@ The following table summarises the AWS APIs.
 | [`datasync`](services/datasync.yml) | 27 | 2 | 0 |
 | [`forecast`](services/forecast.yml) | 27 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 26 | 2 | 0 |
-| [`kinesisvideo`](services/kinesisvideo.yml) | 26 | 0 | 3 |
+| [`kinesisvideo`](services/kinesisvideo.yml) | 26 | 1 | 3 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 26 | 0 | 1 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
@@ -266,7 +266,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1111 |
-| `Get` | 1068 |
+| `Get` | 1069 |
 | `Describe` | 1025 |
 | `Delete` | 950 |
 | `Create` | 870 |

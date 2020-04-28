@@ -9,6 +9,7 @@ Actions:
   - Name: cloudformation:DeleteStack
   - Name: cloudformation:DeleteStackInstances
   - Name: cloudformation:DeleteStackSet
+  - Name: cloudformation:DeregisterType
   - Name: cloudformation:DescribeAccountLimits
   - Name: cloudformation:DescribeChangeSet
   - Name: cloudformation:DescribeStackDriftDetectionStatus
@@ -20,6 +21,8 @@ Actions:
   - Name: cloudformation:DescribeStackSet
   - Name: cloudformation:DescribeStackSetOperation
   - Name: cloudformation:DescribeStacks
+  - Name: cloudformation:DescribeType
+  - Name: cloudformation:DescribeTypeRegistration
   - Name: cloudformation:DetectStackDrift
   - Name: cloudformation:DetectStackResourceDrift
   - Name: cloudformation:DetectStackSetDrift
@@ -37,7 +40,12 @@ Actions:
   - Name: cloudformation:ListStackSetOperations
   - Name: cloudformation:ListStackSets
   - Name: cloudformation:ListStacks
+  - Name: cloudformation:ListTypeRegistrations
+  - Name: cloudformation:ListTypeVersions
+  - Name: cloudformation:ListTypes
+  - Name: cloudformation:RegisterType
   - Name: cloudformation:SetStackPolicy
+  - Name: cloudformation:SetTypeDefaultVersion
   - Name: cloudformation:SignalResource
   - Name: cloudformation:StopStackSetOperation
   - Name: cloudformation:UpdateStack
@@ -52,12 +60,4 @@ Actions:
   - Name: cloudformation:UntagResource
 
   # APIs without an IAM action
-  - Name: cloudformation:DeregisterType
-  - Name: cloudformation:DescribeType
-  - Name: cloudformation:DescribeTypeRegistration
-  - Name: cloudformation:ListTypeRegistrations
-  - Name: cloudformation:ListTypeVersions
-  - Name: cloudformation:ListTypes
   - Name: cloudformation:RecordHandlerProgress
-  - Name: cloudformation:RegisterType
-  - Name: cloudformation:SetTypeDefaultVersion
