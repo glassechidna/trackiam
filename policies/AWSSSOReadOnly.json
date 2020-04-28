@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSSOReadOnly",
   "CreateDate": "2018-06-27T20:24:34Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJBSMEEZXFDMKMY43I",
   "PolicyName": "AWSSSOReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2019-10-24T15:45:14Z",
+    "CreateDate": "2020-04-28T21:17:21Z",
     "Document": {
       "Statement": [
         {
@@ -25,14 +25,17 @@
             "organizations:ListRoots",
             "sso-directory:DescribeDirectory",
             "sso:DescribePermissionsPolicies",
+            "sso:DescribeRegisteredRegions",
             "sso:GetApplicationInstance",
             "sso:GetApplicationTemplate",
+            "sso:GetManagedApplicationInstance",
             "sso:GetMfaDeviceManagementForDirectory",
             "sso:GetPermissionSet",
             "sso:GetPermissionsPolicy",
             "sso:GetProfile",
             "sso:GetSSOConfiguration",
             "sso:GetSSOStatus",
+            "sso:GetSharedSsoConfiguration",
             "sso:GetTrust",
             "sso:ListApplicationInstanceCertificates",
             "sso:ListApplicationInstances",
@@ -52,7 +55,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2019-10-24T15:45:14Z"
+  "UpdateDate": "2020-04-28T21:17:21Z"
 }
