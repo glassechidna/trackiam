@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 224
-* Unique actions: 8102
+* Unique actions: 8079
 * Managed policies: 644
 
 Most common managed policy name prefixes:
@@ -226,8 +226,8 @@ The following table summarises the AWS APIs.
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
-| [`iotsitewise`](services/iotsitewise.yml) | 0 | 0 | 77 |
 | [`sso`](services/sso.yml) | 0 | 0 | 54 |
+| [`iotsitewise`](services/iotsitewise.yml) | 0 | 0 | 54 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 37 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 26 |
@@ -265,14 +265,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1111 |
-| `Get` | 1069 |
-| `Describe` | 1025 |
-| `Delete` | 950 |
-| `Create` | 870 |
-| `Update` | 657 |
+| `List` | 1106 |
+| `Get` | 1067 |
+| `Describe` | 1021 |
+| `Delete` | 946 |
+| `Create` | 866 |
+| `Update` | 655 |
 | `Put` | 227 |
 | `Start` | 140 |
-| `Tag` | 110 |
-| `Untag` | 109 |
+| `Tag` | 111 |
+| `Untag` | 110 |
 
