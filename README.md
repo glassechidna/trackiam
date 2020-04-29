@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 224
-* Unique actions: 8079
+* Unique actions: 8086
 * Managed policies: 644
 
 Most common managed policy name prefixes:
@@ -50,12 +50,12 @@ The following table summarises the AWS APIs.
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 88 | 4 | 18 |
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
-| [`waf-regional`](services/waf-regional.yml) | 80 | 0 | 0 |
+| [`waf-regional`](services/waf-regional.yml) | 80 | 1 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`gamelift`](services/gamelift.yml) | 76 | 13 | 0 |
 | [`config`](services/config.yml) | 76 | 3 | 2 |
-| [`waf`](services/waf.yml) | 76 | 0 | 0 |
+| [`waf`](services/waf.yml) | 76 | 1 | 0 |
 | [`codecommit`](services/codecommit.yml) | 75 | 0 | 11 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 71 | 7 | 0 |
@@ -64,6 +64,7 @@ The following table summarises the AWS APIs.
 | [`route53`](services/route53.yml) | 56 | 0 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 54 | 1 | 3 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
+| [`iotsitewise`](services/iotsitewise.yml) | 54 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 54 | 0 | 0 |
 | [`s3`](services/s3.yml) | 53 | 51 | 39 |
 | [`directconnect`](services/directconnect.yml) | 53 | 0 | 0 |
@@ -149,11 +150,11 @@ The following table summarises the AWS APIs.
 | [`managedblockchain`](services/managedblockchain.yml) | 20 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 20 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 20 | 0 | 0 |
+| [`transcribe`](services/transcribe.yml) | 19 | 5 | 1 |
 | [`kafka`](services/kafka.yml) | 19 | 2 | 0 |
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
 | [`athena`](services/athena.yml) | 19 | 0 | 11 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
-| [`transcribe`](services/transcribe.yml) | 19 | 0 | 1 |
 | [`ce`](services/ce.yml) | 19 | 0 | 0 |
 | [`shield`](services/shield.yml) | 18 | 2 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
@@ -227,7 +228,6 @@ The following table summarises the AWS APIs.
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
 | [`sso`](services/sso.yml) | 0 | 0 | 54 |
-| [`iotsitewise`](services/iotsitewise.yml) | 0 | 0 | 54 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 37 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 26 |
@@ -265,12 +265,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1106 |
-| `Get` | 1067 |
+| `List` | 1107 |
+| `Get` | 1068 |
 | `Describe` | 1021 |
-| `Delete` | 946 |
-| `Create` | 866 |
-| `Update` | 655 |
+| `Delete` | 947 |
+| `Create` | 869 |
+| `Update` | 656 |
 | `Put` | 227 |
 | `Start` | 140 |
 | `Tag` | 111 |
