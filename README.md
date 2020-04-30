@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 224
-* Unique actions: 8087
+* Unique actions: 8088
 * Managed policies: 645
 
 Most common managed policy name prefixes:
@@ -120,7 +120,7 @@ The following table summarises the AWS APIs.
 | [`appmesh`](services/appmesh.yml) | 28 | 0 | 1 |
 | [`networkmanager`](services/networkmanager.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
-| [`schemas`](services/schemas.yml) | 27 | 2 | 0 |
+| [`schemas`](services/schemas.yml) | 27 | 3 | 0 |
 | [`datasync`](services/datasync.yml) | 27 | 2 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
 | [`forecast`](services/forecast.yml) | 27 | 0 | 0 |
@@ -143,7 +143,7 @@ The following table summarises the AWS APIs.
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`eks`](services/eks.yml) | 21 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 21 | 0 | 0 |
-| [`iotevents`](services/iotevents.yml) | 20 | 1 | 1 |
+| [`iotevents`](services/iotevents.yml) | 20 | 0 | 1 |
 | [`xray`](services/xray.yml) | 20 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 20 | 0 | 0 |
@@ -218,7 +218,7 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
-| [`execute-api`](services/execute-api.yml) | 0 | 214 | 3 |
+| [`execute-api`](services/execute-api.yml) | 0 | 215 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 151 | 7 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
@@ -266,12 +266,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1107 |
-| `Get` | 1068 |
+| `Get` | 1069 |
 | `Describe` | 1021 |
-| `Delete` | 947 |
+| `Delete` | 948 |
 | `Create` | 869 |
 | `Update` | 656 |
-| `Put` | 227 |
+| `Put` | 228 |
 | `Start` | 140 |
 | `Tag` | 111 |
 | `Untag` | 110 |
