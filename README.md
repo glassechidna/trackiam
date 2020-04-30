@@ -183,12 +183,12 @@ The following table summarises the AWS APIs.
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`acm`](services/acm.yml) | 13 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 3 | 0 |
+| [`detective`](services/detective.yml) | 12 | 0 | 5 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 12 | 0 | 3 |
 | [`signer`](services/signer.yml) | 12 | 0 | 0 |
 | [`resource-groups`](services/resource-groups.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`synthetics`](services/synthetics.yml) | 11 | 2 | 0 |
-| [`detective`](services/detective.yml) | 11 | 1 | 5 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 36 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
