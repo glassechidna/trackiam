@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AccessAnalyzerServiceRolePolicy",
   "CreateDate": "2019-12-02T17:13:10Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4CAIXDDRI2",
   "PolicyName": "AccessAnalyzerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-03-02T15:55:03Z",
+    "CreateDate": "2020-04-30T20:28:02Z",
     "Document": {
       "Statement": [
         {
@@ -50,6 +50,8 @@
             "s3:GetBucketPublicAccessBlock",
             "s3:ListAccessPoints",
             "s3:ListAllMyBuckets",
+            "sns:GetTopicAttributes",
+            "sns:ListTopics",
             "sqs:GetQueueAttributes",
             "sqs:ListQueues"
           ],
@@ -60,7 +62,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-03-02T15:55:03Z"
+  "UpdateDate": "2020-04-30T20:28:02Z"
 }
