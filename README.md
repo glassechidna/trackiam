@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 224
-* Unique actions: 8086
-* Managed policies: 644
+* Unique actions: 8087
+* Managed policies: 645
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 182 |
-| `arn:aws:iam::aws:policy/Amazon*` | 174 |
+| `arn:aws:iam::aws:policy/Amazon*` | 175 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 119 |
 | `arn:aws:iam::aws:policy/service-role/*` | 97 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -195,7 +195,7 @@ The following table summarises the AWS APIs.
 | [`translate`](services/translate.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
-| [`iot`](services/iot.yml) | 8 | 0 | 185 |
+| [`iot`](services/iot.yml) | 8 | 0 | 186 |
 | [`sts`](services/sts.yml) | 8 | 0 | 1 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
 | [`sms-voice`](services/sms-voice.yml) | 8 | 0 | 0 |

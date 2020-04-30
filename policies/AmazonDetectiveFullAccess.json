@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonDetectiveFullAccess",
+  "CreateDate": "2020-04-30T17:57:15Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4IRLX3QVOO",
+  "PolicyName": "AmazonDetectiveFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-04-30T17:57:15Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "detective:*",
+            "organizations:DescribeOrganization",
+            "organizations:ListAccounts"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "guardduty:ArchiveFindings"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:guardduty:*:*:detector/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-04-30T17:57:15Z"
+}

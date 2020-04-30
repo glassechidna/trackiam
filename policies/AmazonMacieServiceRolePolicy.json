@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonMacieServiceRolePolicy",
   "CreateDate": "2018-06-19T22:17:38Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJPLHONRH2HP2H6TNQ",
   "PolicyName": "AmazonMacieServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-09-27T21:50:33Z",
+    "CreateDate": "2020-04-30T17:41:57Z",
     "Document": {
       "Statement": [
         {
@@ -30,6 +30,8 @@
             "cloudtrail:ListTags",
             "cloudtrail:LookupEvents",
             "iam:ListAccountAliases",
+            "organizations:DescribeAccount",
+            "organizations:ListAccounts",
             "s3:Get*",
             "s3:List*"
           ],
@@ -59,7 +61,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-09-27T21:50:33Z"
+  "UpdateDate": "2020-04-30T17:41:57Z"
 }
