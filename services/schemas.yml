@@ -4,6 +4,7 @@ Actions:
   - Name: schemas:CreateSchema
   - Name: schemas:DeleteDiscoverer
   - Name: schemas:DeleteRegistry
+  - Name: schemas:DeleteResourcePolicy
   - Name: schemas:DeleteSchema
   - Name: schemas:DeleteSchemaVersion
   - Name: schemas:DescribeCodeBinding
@@ -12,12 +13,14 @@ Actions:
   - Name: schemas:DescribeSchema
   - Name: schemas:GetCodeBindingSource
   - Name: schemas:GetDiscoveredSchema
+  - Name: schemas:GetResourcePolicy
   - Name: schemas:ListDiscoverers
   - Name: schemas:ListRegistries
   - Name: schemas:ListSchemaVersions
   - Name: schemas:ListSchemas
   - Name: schemas:ListTagsForResource
   - Name: schemas:PutCodeBinding
+  - Name: schemas:PutResourcePolicy
   - Name: schemas:SearchSchemas
   - Name: schemas:StartDiscoverer
   - Name: schemas:StopDiscoverer
@@ -26,8 +29,3 @@ Actions:
   - Name: schemas:UpdateDiscoverer
   - Name: schemas:UpdateRegistry
   - Name: schemas:UpdateSchema
-
-  # APIs without an IAM action
-  - Name: schemas:DeleteResourcePolicy
-  - Name: schemas:GetResourcePolicy
-  - Name: schemas:PutResourcePolicy
