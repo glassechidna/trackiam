@@ -1,15 +1,29 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSEC2FleetServiceRolePolicy",
   "CreateDate": "2018-03-21T00:08:55Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJCL355O4TC27CPKVC",
   "PolicyName": "AWSEC2FleetServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2018-04-19T21:37:07Z",
+    "CreateDate": "2020-05-04T20:10:31Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": "RunInstances"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:volume/*"
+          ]
+        },
         {
           "Action": [
             "ec2:TerminateInstances"
@@ -79,7 +93,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2018-04-19T21:37:07Z"
+  "UpdateDate": "2020-05-04T20:10:31Z"
 }
