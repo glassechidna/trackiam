@@ -1,17 +1,18 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSElasticLoadBalancingServiceRolePolicy",
   "CreateDate": "2017-09-19T22:19:04Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIMHWGGSRHLOQUICJQ",
   "PolicyName": "AWSElasticLoadBalancingServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-10-07T22:55:16Z",
+    "CreateDate": "2020-05-05T19:32:02Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "ec2:AllocateAddress",
             "ec2:AssignIpv6Addresses",
             "ec2:AssignPrivateIpAddresses",
             "ec2:AssociateAddress",
@@ -23,6 +24,7 @@
             "ec2:DescribeAccountAttributes",
             "ec2:DescribeAddresses",
             "ec2:DescribeClassicLinkInstances",
+            "ec2:DescribeCoipPools",
             "ec2:DescribeInstances",
             "ec2:DescribeInternetGateways",
             "ec2:DescribeNetworkInterfaces",
@@ -32,13 +34,15 @@
             "ec2:DescribeVpcs",
             "ec2:DetachNetworkInterface",
             "ec2:DisassociateAddress",
+            "ec2:GetCoipPoolUsage",
             "ec2:ModifyNetworkInterfaceAttribute",
             "ec2:UnassignIpv6Addresses",
             "logs:CreateLogDelivery",
             "logs:DeleteLogDelivery",
             "logs:GetLogDelivery",
             "logs:ListLogDeliveries",
-            "logs:UpdateLogDelivery"
+            "logs:UpdateLogDelivery",
+            "outposts:GetOutpostInstanceTypes"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -47,7 +51,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2019-10-07T22:55:16Z"
+  "UpdateDate": "2020-05-05T19:32:02Z"
 }
