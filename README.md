@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 224
-* Unique actions: 8088
-* Managed policies: 645
+* Unique actions: 8099
+* Managed policies: 646
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 182 |
+| `arn:aws:iam::aws:policy/AWS*` | 183 |
 | `arn:aws:iam::aws:policy/Amazon*` | 175 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 119 |
 | `arn:aws:iam::aws:policy/service-role/*` | 97 |
@@ -213,7 +213,7 @@ The following table summarises the AWS APIs.
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
 | [`ebs`](services/ebs.yml) | 3 | 0 | 0 |
-| [`comprehendmedical`](services/comprehendmedical.yml) | 2 | 11 | 0 |
+| [`comprehendmedical`](services/comprehendmedical.yml) | 2 | 19 | 0 |
 | [`pi`](services/pi.yml) | 2 | 0 | 0 |
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 0 | 0 |
@@ -221,9 +221,9 @@ The following table summarises the AWS APIs.
 | [`execute-api`](services/execute-api.yml) | 0 | 215 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 151 | 7 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
+| [`codestar-connections`](services/codestar-connections.yml) | 0 | 7 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
-| [`codestar-connections`](services/codestar-connections.yml) | 0 | 4 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
@@ -265,14 +265,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1107 |
+| `List` | 1110 |
 | `Get` | 1069 |
-| `Describe` | 1021 |
+| `Describe` | 1023 |
 | `Delete` | 948 |
 | `Create` | 869 |
 | `Update` | 656 |
 | `Put` | 228 |
-| `Start` | 140 |
-| `Tag` | 111 |
-| `Untag` | 110 |
+| `Start` | 142 |
+| `Tag` | 112 |
+| `Untag` | 111 |
 
