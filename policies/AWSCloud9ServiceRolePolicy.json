@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSCloud9ServiceRolePolicy",
   "CreateDate": "2017-11-30T13:44:08Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJFXGCBXQIZATFZ4YG",
   "PolicyName": "AWSCloud9ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-03-16T10:20:54Z",
+    "CreateDate": "2020-05-07T09:15:24Z",
     "Document": {
       "Statement": [
         {
@@ -37,6 +37,36 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": "ec2.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AWSCloud9SSMAccessRole"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:StartSession"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ssm:resourceTag/aws:cloudformation:stack-name": [
+                "aws-cloud9-*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ]
         },
         {
           "Action": [
@@ -70,12 +100,30 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:ListInstanceProfiles"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:instance-profile/cloud9/*"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:StartSession"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/AWS-StartSSHSession"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-03-16T10:20:54Z"
+  "UpdateDate": "2020-05-07T09:15:24Z"
 }
