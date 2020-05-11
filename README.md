@@ -132,6 +132,7 @@ The following table summarises the AWS APIs.
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
+| [`kendra`](services/kendra.yml) | 24 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 23 | 5 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 23 | 0 | 5 |
 | [`ram`](services/ram.yml) | 22 | 2 | 0 |
@@ -143,7 +144,6 @@ The following table summarises the AWS APIs.
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`eks`](services/eks.yml) | 21 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 21 | 0 | 0 |
-| [`kendra`](services/kendra.yml) | 20 | 0 | 4 |
 | [`iotevents`](services/iotevents.yml) | 20 | 0 | 1 |
 | [`xray`](services/xray.yml) | 20 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
