@@ -1,15 +1,39 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSControlTowerServiceRolePolicy",
   "CreateDate": "2019-05-03T18:19:11Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4MW35THVLF",
   "PolicyName": "AWSControlTowerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-06-13T16:36:30Z",
+    "CreateDate": "2020-05-11T23:04:15Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "organizations:EnableAWSServiceAccess",
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "organizations:ServicePrincipal": "config.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "config:DeleteConfigurationAggregator",
+            "config:PutConfigurationAggregator",
+            "config:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/aws-control-tower": "managed-by-control-tower"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "cloudformation:CreateStack",
@@ -98,6 +122,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/service-role/AWSControlTowerCloudTrailRole",
+            "arn:aws:iam::*:role/service-role/AWSControlTowerConfigAggregatorRoleForOrganizations",
             "arn:aws:iam::*:role/service-role/AWSControlTowerStackSetRole"
           ]
         },
@@ -123,7 +148,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2019-06-13T16:36:30Z"
+  "UpdateDate": "2020-05-11T23:04:15Z"
 }
