@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 224
-* Unique actions: 8106
+* Unique actions: 8113
 * Managed policies: 647
 
 Most common managed policy name prefixes:
@@ -201,6 +201,7 @@ The following table summarises the AWS APIs.
 | [`sms-voice`](services/sms-voice.yml) | 8 | 0 | 0 |
 | [`savingsplans`](services/savingsplans.yml) | 8 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
+| [`codestar-connections`](services/codestar-connections.yml) | 7 | 0 | 7 |
 | [`mediatailor`](services/mediatailor.yml) | 7 | 0 | 0 |
 | [`macie`](services/macie.yml) | 7 | 0 | 0 |
 | [`textract`](services/textract.yml) | 6 | 0 | 0 |
@@ -221,7 +222,6 @@ The following table summarises the AWS APIs.
 | [`execute-api`](services/execute-api.yml) | 0 | 215 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 151 | 7 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
-| [`codestar-connections`](services/codestar-connections.yml) | 0 | 7 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
@@ -265,14 +265,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1111 |
-| `Get` | 1069 |
+| `List` | 1112 |
+| `Get` | 1071 |
 | `Describe` | 1024 |
 | `Delete` | 950 |
 | `Create` | 869 |
-| `Update` | 656 |
+| `Update` | 657 |
 | `Put` | 229 |
-| `Start` | 142 |
+| `Start` | 143 |
 | `Tag` | 113 |
 | `Untag` | 112 |
 

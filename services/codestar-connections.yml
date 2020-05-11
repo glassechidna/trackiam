@@ -1,6 +1,4 @@
 Actions:
-
-  # APIs without an IAM action
   - Name: codestar-connections:CreateConnection
   - Name: codestar-connections:DeleteConnection
   - Name: codestar-connections:GetConnection
@@ -8,3 +6,12 @@ Actions:
   - Name: codestar-connections:ListTagsForResource
   - Name: codestar-connections:TagResource
   - Name: codestar-connections:UntagResource
+
+  # actions with no corresponding API
+  - Name: codestar-connections:GetIndividualAccessToken
+  - Name: codestar-connections:GetInstallationUrl
+  - Name: codestar-connections:ListInstallationTargets
+  - Name: codestar-connections:PassConnection
+  - Name: codestar-connections:StartOAuthHandshake
+  - Name: codestar-connections:UpdateConnectionInstallation
+  - Name: codestar-connections:UseConnection
