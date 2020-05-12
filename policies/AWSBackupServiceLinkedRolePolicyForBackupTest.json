@@ -1,0 +1,40 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBackupServiceLinkedRolePolicyForBackupTest",
+  "CreateDate": "2020-05-12T17:37:29Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4KMHRZD5LV",
+  "PolicyName": "AWSBackupServiceLinkedRolePolicyForBackupTest",
+  "PolicyVersion": {
+    "CreateDate": "2020-05-12T17:37:29Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "elasticfilesystem:Backup",
+            "elasticfilesystem:DescribeTags"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/aws:elasticfilesystem:default-backup": "enabled"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticfilesystem:*:*:file-system/*"
+        },
+        {
+          "Action": [
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-05-12T17:37:29Z"
+}
