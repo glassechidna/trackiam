@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/FMSServiceRolePolicy",
   "CreateDate": "2018-03-28T23:01:12Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAI62NTGYJB446ACUEA",
   "PolicyName": "FMSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-04-06T18:55:16Z",
+    "CreateDate": "2020-05-12T21:02:44Z",
     "Document": {
       "Statement": [
         {
@@ -228,10 +228,14 @@
           ],
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:wafv2:*:*:global/ipset/*",
             "arn:aws:wafv2:*:*:global/managedruleset/*",
+            "arn:aws:wafv2:*:*:global/regexpatternset/*",
             "arn:aws:wafv2:*:*:global/rulegroup/*",
             "arn:aws:wafv2:*:*:global/webacl/*",
+            "arn:aws:wafv2:*:*:regional/ipset/*",
             "arn:aws:wafv2:*:*:regional/managedruleset/*",
+            "arn:aws:wafv2:*:*:regional/regexpatternset/*",
             "arn:aws:wafv2:*:*:regional/rulegroup/*",
             "arn:aws:wafv2:*:*:regional/webacl/*"
           ]
@@ -261,7 +265,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2020-04-06T18:55:16Z"
+  "UpdateDate": "2020-05-12T21:02:44Z"
 }
