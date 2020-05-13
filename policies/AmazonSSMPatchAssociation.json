@@ -1,0 +1,40 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSSMPatchAssociation",
+  "CreateDate": "2020-05-13T16:00:42Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4EWLEL5ZX7",
+  "PolicyName": "AmazonSSMPatchAssociation",
+  "PolicyVersion": {
+    "CreateDate": "2020-05-13T16:00:42Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ssm:DescribeEffectivePatchesForPatchBaseline",
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:patchbaseline/*"
+        },
+        {
+          "Action": "ssm:DescribePatchBaselines",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "ssm:GetPatchBaseline",
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:patchbaseline/*"
+        },
+        {
+          "Action": "tag:GetResources",
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-05-13T16:00:42Z"
+}
