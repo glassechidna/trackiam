@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 224
-* Unique actions: 8114
+* Unique services: 225
+* Unique actions: 8167
 * Managed policies: 649
 
 Most common managed policy name prefixes:
@@ -50,12 +50,12 @@ The following table summarises the AWS APIs.
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 88 | 4 | 18 |
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
-| [`waf-regional`](services/waf-regional.yml) | 80 | 1 | 0 |
+| [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
+| [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`gamelift`](services/gamelift.yml) | 76 | 13 | 0 |
 | [`config`](services/config.yml) | 76 | 3 | 2 |
-| [`waf`](services/waf.yml) | 76 | 1 | 0 |
 | [`codecommit`](services/codecommit.yml) | 75 | 0 | 11 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 71 | 7 | 0 |
@@ -221,6 +221,7 @@ The following table summarises the AWS APIs.
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 215 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 151 | 7 |
+| [`macie2`](services/macie2.yml) | 0 | 53 | 0 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
@@ -265,14 +266,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1112 |
-| `Get` | 1072 |
-| `Describe` | 1024 |
-| `Delete` | 950 |
-| `Create` | 869 |
-| `Update` | 657 |
-| `Put` | 229 |
+| `List` | 1120 |
+| `Get` | 1084 |
+| `Describe` | 1027 |
+| `Delete` | 954 |
+| `Create` | 875 |
+| `Update` | 662 |
+| `Put` | 230 |
 | `Start` | 143 |
-| `Tag` | 113 |
-| `Untag` | 112 |
+| `Tag` | 114 |
+| `Untag` | 113 |
 
