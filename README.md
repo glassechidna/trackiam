@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 225
-* Unique actions: 8167
+* Unique actions: 8168
 * Managed policies: 649
 
 Most common managed policy name prefixes:
@@ -68,6 +68,7 @@ The following table summarises the AWS APIs.
 | [`autoscaling`](services/autoscaling.yml) | 54 | 0 | 0 |
 | [`s3`](services/s3.yml) | 53 | 51 | 39 |
 | [`directconnect`](services/directconnect.yml) | 53 | 0 | 0 |
+| [`macie2`](services/macie2.yml) | 52 | 1 | 1 |
 | [`comprehend`](services/comprehend.yml) | 51 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 49 | 6 | 0 |
 | [`lambda`](services/lambda.yml) | 48 | 1 | 3 |
@@ -221,7 +222,6 @@ The following table summarises the AWS APIs.
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 215 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 151 | 7 |
-| [`macie2`](services/macie2.yml) | 0 | 53 | 0 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
@@ -266,7 +266,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1120 |
+| `List` | 1121 |
 | `Get` | 1084 |
 | `Describe` | 1027 |
 | `Delete` | 954 |

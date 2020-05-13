@@ -1,6 +1,4 @@
 Actions:
-
-  # APIs without an IAM action
   - Name: macie2:AcceptInvitation
   - Name: macie2:ArchiveFindings
   - Name: macie2:BatchGetCustomDataIdentifiers
@@ -43,7 +41,6 @@ Actions:
   - Name: macie2:ListInvitations
   - Name: macie2:ListMembers
   - Name: macie2:ListOrganizationAdminAccounts
-  - Name: macie2:ListTagsForResource
   - Name: macie2:PutClassificationExportConfiguration
   - Name: macie2:TagResource
   - Name: macie2:TestCustomDataIdentifier
@@ -54,3 +51,9 @@ Actions:
   - Name: macie2:UpdateMacieSession
   - Name: macie2:UpdateMemberSession
   - Name: macie2:UpdateOrganizationConfiguration
+
+  # actions with no corresponding API
+  - Name: macie2:ListTagsForResources
+
+  # APIs without an IAM action
+  - Name: macie2:ListTagsForResource
