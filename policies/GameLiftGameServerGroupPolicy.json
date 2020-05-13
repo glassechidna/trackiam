@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/GameLiftGameServerGroupPolicy",
   "CreateDate": "2020-04-03T23:12:19Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JTX4JYBF6",
   "PolicyName": "GameLiftGameServerGroupPolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-04-16T17:13:11Z",
+    "CreateDate": "2020-05-13T17:27:43Z",
     "Document": {
       "Statement": [
         {
@@ -63,7 +63,8 @@
             "autoscaling:DescribeAutoScalingGroups",
             "ec2:DescribeImages",
             "ec2:DescribeInstances",
-            "ec2:DescribeLaunchTemplateVersions"
+            "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribeSubnets"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -72,7 +73,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-04-16T17:13:11Z"
+  "UpdateDate": "2020-05-13T17:27:43Z"
 }
