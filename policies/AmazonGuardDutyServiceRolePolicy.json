@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonGuardDutyServiceRolePolicy",
   "CreateDate": "2017-11-28T20:12:59Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIHZREZOWNSSA6FWQO",
   "PolicyName": "AmazonGuardDutyServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-04-20T16:01:34Z",
+    "CreateDate": "2020-05-14T20:25:50Z",
     "Document": {
       "Statement": [
         {
@@ -15,7 +15,15 @@
             "ec2:DescribeImages",
             "ec2:DescribeInstances",
             "organizations:DescribeAccount",
-            "organizations:ListAccounts"
+            "organizations:ListAccounts",
+            "s3:GetAccountPublicAccessBlock",
+            "s3:GetBucketAcl",
+            "s3:GetBucketPolicy",
+            "s3:GetBucketPolicyStatus",
+            "s3:GetBucketPublicAccessBlock",
+            "s3:GetBucketTagging",
+            "s3:GetEncryptionConfiguration",
+            "s3:ListAllMyBuckets"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -24,7 +32,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-04-20T16:01:34Z"
+  "UpdateDate": "2020-05-14T20:25:50Z"
 }
