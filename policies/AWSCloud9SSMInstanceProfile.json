@@ -1,0 +1,31 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCloud9SSMInstanceProfile",
+  "CreateDate": "2020-05-14T11:40:49Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4IQOSNAKW6",
+  "PolicyName": "AWSCloud9SSMInstanceProfile",
+  "PolicyVersion": {
+    "CreateDate": "2020-05-14T11:40:49Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ssm:UpdateInstanceInformation",
+            "ssmmessages:CreateControlChannel",
+            "ssmmessages:CreateDataChannel",
+            "ssmmessages:OpenControlChannel",
+            "ssmmessages:OpenDataChannel"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-05-14T11:40:49Z"
+}
