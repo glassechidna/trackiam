@@ -141,6 +141,7 @@ Actions:
   - Name: ec2:DeleteVpnGateway
   - Name: ec2:DeprovisionByoipCidr
   - Name: ec2:DeregisterImage
+  - Name: ec2:DeregisterInstanceEventNotificationAttributes
   - Name: ec2:DeregisterTransitGatewayMulticastGroupMembers
   - Name: ec2:DeregisterTransitGatewayMulticastGroupSources
   - Name: ec2:DescribeAccountAttributes
@@ -182,7 +183,9 @@ Actions:
   - Name: ec2:DescribeImportSnapshotTasks
   - Name: ec2:DescribeInstanceAttribute
   - Name: ec2:DescribeInstanceCreditSpecifications
+  - Name: ec2:DescribeInstanceEventNotificationAttributes
   - Name: ec2:DescribeInstanceStatus
+  - Name: ec2:DescribeInstanceTypeOfferings
   - Name: ec2:DescribeInstanceTypes
   - Name: ec2:DescribeInstances
   - Name: ec2:DescribeInternetGateways
@@ -348,6 +351,7 @@ Actions:
   - Name: ec2:PurchaseScheduledInstances
   - Name: ec2:RebootInstances
   - Name: ec2:RegisterImage
+  - Name: ec2:RegisterInstanceEventNotificationAttributes
   - Name: ec2:RegisterTransitGatewayMulticastGroupMembers
   - Name: ec2:RegisterTransitGatewayMulticastGroupSources
   - Name: ec2:RejectTransitGatewayPeeringAttachment
@@ -395,12 +399,8 @@ Actions:
 
   # APIs without an IAM action
   - Name: ec2:DeleteQueuedReservedInstances
-  - Name: ec2:DeregisterInstanceEventNotificationAttributes
   - Name: ec2:DescribeCoipPools
-  - Name: ec2:DescribeInstanceEventNotificationAttributes
-  - Name: ec2:DescribeInstanceTypeOfferings
   - Name: ec2:DescribeIpv6Pools
   - Name: ec2:GetAssociatedIpv6PoolCidrs
   - Name: ec2:GetCoipPoolUsage
   - Name: ec2:ModifyAvailabilityZoneGroup
-  - Name: ec2:RegisterInstanceEventNotificationAttributes
