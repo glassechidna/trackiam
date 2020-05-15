@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSConfigRole",
   "CreateDate": "2015-04-02T17:36:23Z",
-  "DefaultVersionId": "v32",
+  "DefaultVersionId": "v33",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIQRXRDRGJUA33ELIO",
   "PolicyName": "AWSConfigRole",
   "PolicyVersion": {
-    "CreateDate": "2019-11-18T22:42:07Z",
+    "CreateDate": "2020-05-15T18:25:47Z",
     "Document": {
       "Statement": [
         {
@@ -23,6 +23,9 @@
             "autoscaling:DescribePolicies",
             "autoscaling:DescribeScheduledActions",
             "autoscaling:DescribeTags",
+            "backup:GetBackupSelection",
+            "backup:ListBackupPlans",
+            "backup:ListBackupSelections",
             "cloudformation:describeType",
             "cloudformation:listTypes",
             "cloudfront:ListTagsForResource",
@@ -47,6 +50,9 @@
             "dynamodb:ListTables",
             "dynamodb:ListTagsOfResource",
             "ec2:Describe*",
+            "ec2:GetEbsEncryptionByDefault",
+            "eks:DescribeCluster",
+            "eks:ListClusters",
             "elasticache:DescribeCacheClusters",
             "elasticache:DescribeReplicationGroups",
             "elasticfilesystem:DescribeFileSystems",
@@ -58,6 +64,7 @@
             "elasticloadbalancing:DescribeTags",
             "elasticmapreduce:DescribeCluster",
             "elasticmapreduce:DescribeSecurityConfiguration",
+            "elasticmapreduce:GetBlockPublicAccessConfiguration",
             "elasticmapreduce:ListClusters",
             "elasticmapreduce:ListInstances",
             "es:DescribeElasticsearchDomain",
@@ -148,6 +155,7 @@
             "sagemaker:ListNotebookInstances",
             "secretsmanager:ListSecretVersionIds",
             "secretsmanager:ListSecrets",
+            "securityhub:describeHub",
             "shield:DescribeDRTAccess",
             "shield:DescribeProtection",
             "shield:DescribeSubscription",
@@ -173,7 +181,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v32"
+    "VersionId": "v33"
   },
-  "UpdateDate": "2019-11-18T22:42:07Z"
+  "UpdateDate": "2020-05-15T18:25:47Z"
 }

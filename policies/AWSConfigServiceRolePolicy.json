@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSConfigServiceRolePolicy",
   "CreateDate": "2018-05-30T23:31:46Z",
-  "DefaultVersionId": "v18",
+  "DefaultVersionId": "v19",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJUCWFHNZER665LLQQ",
   "PolicyName": "AWSConfigServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-11-18T22:33:22Z",
+    "CreateDate": "2020-05-15T18:39:10Z",
     "Document": {
       "Statement": [
         {
@@ -23,6 +23,9 @@
             "autoscaling:DescribePolicies",
             "autoscaling:DescribeScheduledActions",
             "autoscaling:DescribeTags",
+            "backup:GetBackupSelection",
+            "backup:ListBackupPlans",
+            "backup:ListBackupSelections",
             "cloudformation:describeType",
             "cloudformation:listTypes",
             "cloudfront:ListTagsForResource",
@@ -47,6 +50,9 @@
             "dynamodb:ListTables",
             "dynamodb:ListTagsOfResource",
             "ec2:Describe*",
+            "ec2:GetEbsEncryptionByDefault",
+            "eks:DescribeCluster",
+            "eks:ListClusters",
             "elasticache:DescribeCacheClusters",
             "elasticache:DescribeReplicationGroups",
             "elasticfilesystem:DescribeFileSystems",
@@ -58,6 +64,7 @@
             "elasticloadbalancing:DescribeTags",
             "elasticmapreduce:DescribeCluster",
             "elasticmapreduce:DescribeSecurityConfiguration",
+            "elasticmapreduce:GetBlockPublicAccessConfiguration",
             "elasticmapreduce:ListClusters",
             "elasticmapreduce:ListInstances",
             "es:DescribeElasticsearchDomain",
@@ -147,6 +154,7 @@
             "sagemaker:ListNotebookInstances",
             "secretsmanager:ListSecretVersionIds",
             "secretsmanager:ListSecrets",
+            "securityhub:describeHub",
             "shield:DescribeDRTAccess",
             "shield:DescribeProtection",
             "shield:DescribeSubscription",
@@ -172,7 +180,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v18"
+    "VersionId": "v19"
   },
-  "UpdateDate": "2019-11-18T22:33:22Z"
+  "UpdateDate": "2020-05-15T18:39:10Z"
 }
