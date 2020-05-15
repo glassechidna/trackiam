@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLexFullAccess",
   "CreateDate": "2017-04-11T23:20:36Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJVLXDHKVC23HRTKSI",
   "PolicyName": "AmazonLexFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2017-11-15T23:55:07Z",
+    "CreateDate": "2020-05-15T16:34:50Z",
     "Document": {
       "Statement": [
         {
@@ -80,6 +80,11 @@
           "Resource": "arn:aws:lambda:*:*:function:AmazonLex*"
         },
         {
+          "Action": "kendra:ListIndices",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
           "Action": [
             "cloudwatch:DescribeAlarms",
             "cloudwatch:DescribeAlarmsForMetric",
@@ -132,7 +137,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2017-11-15T23:55:07Z"
+  "UpdateDate": "2020-05-15T16:34:50Z"
 }
