@@ -1,18 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDirectConnectReadOnlyAccess",
   "CreateDate": "2015-02-06T18:40:08Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAI23HZ27SI6FQMGNQ2",
   "PolicyName": "AWSDirectConnectReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-04-30T15:23:18Z",
+    "CreateDate": "2020-05-18T18:48:22Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "directconnect:Describe*",
+            "directconnect:List*",
             "ec2:DescribeTransitGateways",
             "ec2:DescribeVpnGateways"
           ],
@@ -23,7 +24,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2019-04-30T15:23:18Z"
+  "UpdateDate": "2020-05-18T18:48:22Z"
 }
