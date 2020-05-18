@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSElasticBeanstalkManagedUpdatesServiceRolePolicy",
   "CreateDate": "2019-11-21T22:35:06Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4HVFNJB4NR",
   "PolicyName": "AWSElasticBeanstalkManagedUpdatesServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-05-01T21:54:12Z",
+    "CreateDate": "2020-05-18T22:51:38Z",
     "Document": {
       "Statement": [
         {
@@ -34,7 +34,10 @@
           ],
           "Condition": {
             "StringLike": {
-              "ec2:ResourceTag/aws:cloudformation:stack-id": "arn:aws:cloudformation:*:*:stack/awseb-e-*"
+              "ec2:ResourceTag/aws:cloudformation:stack-id": [
+                "arn:aws:cloudformation:*:*:stack/awseb-e-*",
+                "arn:aws:cloudformation:*:*:stack/eb-*"
+              ]
             }
           },
           "Effect": "Allow",
@@ -61,7 +64,9 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:autoscaling:*:*:autoScalingGroup:*:autoScalingGroupName/awseb-e-*",
-            "arn:aws:autoscaling:*:*:launchConfiguration:*:launchConfigurationName/awseb-e-*"
+            "arn:aws:autoscaling:*:*:autoScalingGroup:*:autoScalingGroupName/eb-*",
+            "arn:aws:autoscaling:*:*:launchConfiguration:*:launchConfigurationName/awseb-e-*",
+            "arn:aws:autoscaling:*:*:launchConfiguration:*:launchConfigurationName/eb-*"
           ],
           "Sid": "ASG"
         },
@@ -86,7 +91,10 @@
             "cloudformation:UpdateStack"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:cloudformation:*:*:stack/awseb-e-*",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/awseb-e-*",
+            "arn:aws:cloudformation:*:*:stack/eb-*"
+          ],
           "Sid": "CFN"
         },
         {
@@ -129,7 +137,9 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:elasticloadbalancing:*:*:loadbalancer/awseb-e-*",
-            "arn:aws:elasticloadbalancing:*:*:targetgroup/awseb-*"
+            "arn:aws:elasticloadbalancing:*:*:loadbalancer/eb-*",
+            "arn:aws:elasticloadbalancing:*:*:targetgroup/awseb-*",
+            "arn:aws:elasticloadbalancing:*:*:targetgroup/eb-*"
           ],
           "Sid": "ELB"
         },
@@ -173,7 +183,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-05-01T21:54:12Z"
+  "UpdateDate": "2020-05-18T22:51:38Z"
 }
