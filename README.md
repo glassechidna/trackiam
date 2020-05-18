@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 225
-* Unique actions: 8169
+* Unique actions: 8175
 * Managed policies: 650
 
 Most common managed policy name prefixes:
@@ -42,7 +42,7 @@ The following table summarises the AWS APIs.
 | [`glue`](services/glue.yml) | 124 | 1 | 1 |
 | [`rds`](services/rds.yml) | 123 | 7 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
-| [`chime`](services/chime.yml) | 111 | 0 | 50 |
+| [`chime`](services/chime.yml) | 111 | 2 | 50 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
 | [`ses`](services/ses.yml) | 103 | 9 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 12 | 0 |
@@ -168,7 +168,7 @@ The following table summarises the AWS APIs.
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`fms`](services/fms.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
-| [`qldb`](services/qldb.yml) | 16 | 0 | 3 |
+| [`qldb`](services/qldb.yml) | 16 | 4 | 3 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
 | [`batch`](services/batch.yml) | 16 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 15 | 4 | 0 |
@@ -266,9 +266,9 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1121 |
+| `List` | 1122 |
 | `Get` | 1084 |
-| `Describe` | 1027 |
+| `Describe` | 1028 |
 | `Delete` | 954 |
 | `Create` | 875 |
 | `Update` | 662 |
