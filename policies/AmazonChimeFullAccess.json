@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonChimeFullAccess",
   "CreateDate": "2017-11-01T22:15:43Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIUJFSAKUERNORYRWO",
   "PolicyName": "AmazonChimeFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2017-11-01T22:15:43Z",
+    "CreateDate": "2020-05-19T18:17:17Z",
     "Document": {
       "Statement": [
         {
@@ -16,12 +16,59 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogDelivery",
+            "logs:CreateLogGroup",
+            "logs:DeleteLogDelivery",
+            "logs:DescribeLogGroups",
+            "logs:DescribeResourcePolicies",
+            "logs:GetLogDelivery",
+            "logs:ListLogDeliveries",
+            "logs:PutResourcePolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetBucketAcl",
+            "s3:GetBucketLocation",
+            "s3:GetBucketLogging",
+            "s3:GetBucketVersioning",
+            "s3:GetBucketWebsite",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sns:CreateTopic",
+            "sns:GetTopicAttributes"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sns:*:*:ChimeVoiceConnector-Streaming*"
+          ]
+        },
+        {
+          "Action": [
+            "sqs:CreateQueue",
+            "sqs:GetQueueAttributes"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sqs:*:*:ChimeVoiceConnector-Streaming*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2017-11-01T22:15:43Z"
+  "UpdateDate": "2020-05-19T18:17:17Z"
 }

@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 397 | 6 | 0 |
+| [`ec2`](services/ec2.yml) | 399 | 4 | 0 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`sagemaker`](services/sagemaker.yml) | 139 | 0 | 2 |
 | [`glue`](services/glue.yml) | 124 | 1 | 1 |
