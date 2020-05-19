@@ -1,0 +1,27 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSCodeDeployRoleForCloudFormation",
+  "CreateDate": "2020-05-19T17:12:52Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4CO24UTMFH",
+  "PolicyName": "AWSCodeDeployRoleForCloudFormation",
+  "PolicyVersion": {
+    "CreateDate": "2020-05-19T17:12:52Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "lambda:InvokeFunction"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:function:CodeDeployHook_*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-05-19T17:12:52Z"
+}

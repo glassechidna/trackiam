@@ -13,7 +13,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 225
 * Unique actions: 8175
-* Managed policies: 650
+* Managed policies: 651
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 184 |
 | `arn:aws:iam::aws:policy/Amazon*` | 176 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 120 |
-| `arn:aws:iam::aws:policy/service-role/*` | 97 |
+| `arn:aws:iam::aws:policy/service-role/*` | 98 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 66 |
 
@@ -145,6 +145,7 @@ The following table summarises the AWS APIs.
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`eks`](services/eks.yml) | 21 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 21 | 0 | 0 |
+| [`qldb`](services/qldb.yml) | 20 | 0 | 3 |
 | [`iotevents`](services/iotevents.yml) | 20 | 0 | 1 |
 | [`xray`](services/xray.yml) | 20 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
@@ -168,7 +169,6 @@ The following table summarises the AWS APIs.
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`fms`](services/fms.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
-| [`qldb`](services/qldb.yml) | 16 | 4 | 3 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
 | [`batch`](services/batch.yml) | 16 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 15 | 4 | 0 |

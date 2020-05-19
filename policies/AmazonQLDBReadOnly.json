@@ -1,23 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonQLDBReadOnly",
   "CreateDate": "2019-09-05T18:19:24Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4IC74JOQJR",
   "PolicyName": "AmazonQLDBReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2019-09-05T18:19:24Z",
+    "CreateDate": "2020-05-19T17:47:55Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "qldb:DescribeJournalKinesisStream",
             "qldb:DescribeJournalS3Export",
             "qldb:DescribeLedger",
             "qldb:GetBlock",
             "qldb:GetBlock",
             "qldb:GetDigest",
             "qldb:GetRevision",
+            "qldb:ListJournalKinesisStreamsForLedger",
             "qldb:ListJournalS3Exports",
             "qldb:ListJournalS3ExportsForLedger",
             "qldb:ListLedgers",
@@ -30,7 +32,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-09-05T18:19:24Z"
+  "UpdateDate": "2020-05-19T17:47:55Z"
 }

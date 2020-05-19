@@ -1,19 +1,21 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonQLDBFullAccess",
   "CreateDate": "2019-09-05T18:23:32Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HHBBWGE2J",
   "PolicyName": "AmazonQLDBFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-09-05T18:23:32Z",
+    "CreateDate": "2020-05-19T17:47:10Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "qldb:CancelJournalKinesisStream",
             "qldb:CreateLedger",
             "qldb:DeleteLedger",
+            "qldb:DescribeJournalKinesisStream",
             "qldb:DescribeJournalS3Export",
             "qldb:DescribeLedger",
             "qldb:ExportJournalToS3",
@@ -21,11 +23,13 @@
             "qldb:GetBlock",
             "qldb:GetDigest",
             "qldb:GetRevision",
+            "qldb:ListJournalKinesisStreamsForLedger",
             "qldb:ListJournalS3Exports",
             "qldb:ListJournalS3ExportsForLedger",
             "qldb:ListLedgers",
             "qldb:ListTagsForResource",
             "qldb:SendCommand",
+            "qldb:StreamJournalToKinesis",
             "qldb:TagResource",
             "qldb:UntagResource",
             "qldb:UpdateLedger"
@@ -37,7 +41,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-09-05T18:23:32Z"
+  "UpdateDate": "2020-05-19T17:47:10Z"
 }

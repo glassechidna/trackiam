@@ -1,17 +1,21 @@
 Actions:
+  - Name: qldb:CancelJournalKinesisStream
   - Name: qldb:CreateLedger
   - Name: qldb:DeleteLedger
+  - Name: qldb:DescribeJournalKinesisStream
   - Name: qldb:DescribeJournalS3Export
   - Name: qldb:DescribeLedger
   - Name: qldb:ExportJournalToS3
   - Name: qldb:GetBlock
   - Name: qldb:GetDigest
   - Name: qldb:GetRevision
+  - Name: qldb:ListJournalKinesisStreamsForLedger
   - Name: qldb:ListJournalS3Exports
   - Name: qldb:ListJournalS3ExportsForLedger
   - Name: qldb:ListLedgers
   - Name: qldb:ListTagsForResource
   - Name: qldb:SendCommand
+  - Name: qldb:StreamJournalToKinesis
   - Name: qldb:TagResource
   - Name: qldb:UntagResource
   - Name: qldb:UpdateLedger
@@ -20,9 +24,3 @@ Actions:
   - Name: qldb:ExecuteStatement
   - Name: qldb:InsertSampleData
   - Name: qldb:ShowCatalog
-
-  # APIs without an IAM action
-  - Name: qldb:CancelJournalKinesisStream
-  - Name: qldb:DescribeJournalKinesisStream
-  - Name: qldb:ListJournalKinesisStreamsForLedger
-  - Name: qldb:StreamJournalToKinesis
