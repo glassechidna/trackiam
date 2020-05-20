@@ -11,6 +11,7 @@ Actions:
   - Name: organizations:DeleteOrganization
   - Name: organizations:DeleteOrganizationalUnit
   - Name: organizations:DeletePolicy
+  - Name: organizations:DeregisterDelegatedAdministrator
   - Name: organizations:DescribeAccount
   - Name: organizations:DescribeCreateAccountStatus
   - Name: organizations:DescribeEffectivePolicy
@@ -31,6 +32,8 @@ Actions:
   - Name: organizations:ListAccountsForParent
   - Name: organizations:ListChildren
   - Name: organizations:ListCreateAccountStatus
+  - Name: organizations:ListDelegatedAdministrators
+  - Name: organizations:ListDelegatedServicesForAccount
   - Name: organizations:ListHandshakesForAccount
   - Name: organizations:ListHandshakesForOrganization
   - Name: organizations:ListOrganizationalUnitsForParent
@@ -41,14 +44,9 @@ Actions:
   - Name: organizations:ListTagsForResource
   - Name: organizations:ListTargetsForPolicy
   - Name: organizations:MoveAccount
+  - Name: organizations:RegisterDelegatedAdministrator
   - Name: organizations:RemoveAccountFromOrganization
   - Name: organizations:TagResource
   - Name: organizations:UntagResource
   - Name: organizations:UpdateOrganizationalUnit
   - Name: organizations:UpdatePolicy
-
-  # APIs without an IAM action
-  - Name: organizations:DeregisterDelegatedAdministrator
-  - Name: organizations:ListDelegatedAdministrators
-  - Name: organizations:ListDelegatedServicesForAccount
-  - Name: organizations:RegisterDelegatedAdministrator
