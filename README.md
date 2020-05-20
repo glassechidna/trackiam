@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 225
-* Unique actions: 8175
+* Unique actions: 8183
 * Managed policies: 652
 
 Most common managed policy name prefixes:
@@ -42,7 +42,7 @@ The following table summarises the AWS APIs.
 | [`glue`](services/glue.yml) | 124 | 1 | 1 |
 | [`rds`](services/rds.yml) | 123 | 7 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
-| [`chime`](services/chime.yml) | 111 | 2 | 50 |
+| [`chime`](services/chime.yml) | 111 | 4 | 50 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
 | [`ses`](services/ses.yml) | 103 | 9 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 12 | 0 |
@@ -75,8 +75,8 @@ The following table summarises the AWS APIs.
 | [`quicksight`](services/quicksight.yml) | 47 | 19 | 9 |
 | [`organizations`](services/organizations.yml) | 47 | 4 | 0 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
-| [`backup`](services/backup.yml) | 46 | 0 | 1 |
-| [`codedeploy`](services/codedeploy.yml) | 46 | 0 | 0 |
+| [`backup`](services/backup.yml) | 46 | 2 | 1 |
+| [`codedeploy`](services/codedeploy.yml) | 46 | 1 | 0 |
 | [`dms`](services/dms.yml) | 45 | 2 | 0 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`cloudfront`](services/cloudfront.yml) | 45 | 0 | 1 |
@@ -94,7 +94,7 @@ The following table summarises the AWS APIs.
 | [`logs`](services/logs.yml) | 39 | 3 | 5 |
 | [`personalize`](services/personalize.yml) | 39 | 3 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
-| [`medialive`](services/medialive.yml) | 37 | 6 | 0 |
+| [`medialive`](services/medialive.yml) | 37 | 9 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 37 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
 | [`wafv2`](services/wafv2.yml) | 36 | 4 | 0 |
@@ -266,13 +266,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1122 |
-| `Get` | 1084 |
-| `Describe` | 1028 |
-| `Delete` | 954 |
+| `List` | 1123 |
+| `Get` | 1085 |
+| `Describe` | 1030 |
+| `Delete` | 955 |
 | `Create` | 875 |
-| `Update` | 662 |
-| `Put` | 230 |
+| `Update` | 664 |
+| `Put` | 231 |
 | `Start` | 143 |
 | `Tag` | 114 |
 | `Untag` | 113 |
