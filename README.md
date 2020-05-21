@@ -88,13 +88,13 @@ The following table summarises the AWS APIs.
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
 | [`securityhub`](services/securityhub.yml) | 42 | 0 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
+| [`medialive`](services/medialive.yml) | 40 | 6 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 40 | 2 | 0 |
 | [`workmail`](services/workmail.yml) | 40 | 0 | 53 |
 | [`robomaker`](services/robomaker.yml) | 40 | 0 | 0 |
 | [`logs`](services/logs.yml) | 39 | 3 | 5 |
 | [`personalize`](services/personalize.yml) | 39 | 3 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
-| [`medialive`](services/medialive.yml) | 37 | 9 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 37 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
 | [`wafv2`](services/wafv2.yml) | 36 | 4 | 0 |
