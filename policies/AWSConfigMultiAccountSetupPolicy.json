@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSConfigMultiAccountSetupPolicy",
   "CreateDate": "2019-06-17T18:03:16Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4L5NAGNGTD",
   "PolicyName": "AWSConfigMultiAccountSetupPolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-03-04T16:51:40Z",
+    "CreateDate": "2020-05-21T22:59:26Z",
     "Document": {
       "Statement": [
         {
@@ -51,6 +51,13 @@
         },
         {
           "Action": [
+            "config:DescribeConfigurationRecorders"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "iam:GetRole"
           ],
           "Effect": "Allow",
@@ -70,7 +77,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-03-04T16:51:40Z"
+  "UpdateDate": "2020-05-21T22:59:26Z"
 }
