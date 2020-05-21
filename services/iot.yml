@@ -17,6 +17,7 @@ Actions:
   - Name: iot:AttachPrincipalPolicy
   - Name: iot:AttachSecurityProfile
   - Name: iot:AttachThingPrincipal
+  - Name: iot:CancelAuditMitigationActionsTask
   - Name: iot:CancelAuditTask
   - Name: iot:CancelCertificateTransfer
   - Name: iot:CancelJob
@@ -27,9 +28,11 @@ Actions:
   - Name: iot:CreateAuthorizer
   - Name: iot:CreateBillingGroup
   - Name: iot:CreateCertificateFromCsr
+  - Name: iot:CreateDimension
   - Name: iot:CreateDynamicThingGroup
   - Name: iot:CreateJob
   - Name: iot:CreateKeysAndCertificate
+  - Name: iot:CreateMitigationAction
   - Name: iot:CreateOTAUpdate
   - Name: iot:CreatePolicy
   - Name: iot:CreatePolicyVersion
@@ -49,9 +52,11 @@ Actions:
   - Name: iot:DeleteBillingGroup
   - Name: iot:DeleteCACertificate
   - Name: iot:DeleteCertificate
+  - Name: iot:DeleteDimension
   - Name: iot:DeleteDynamicThingGroup
   - Name: iot:DeleteJob
   - Name: iot:DeleteJobExecution
+  - Name: iot:DeleteMitigationAction
   - Name: iot:DeleteOTAUpdate
   - Name: iot:DeletePolicy
   - Name: iot:DeletePolicyVersion
@@ -69,16 +74,19 @@ Actions:
   - Name: iot:DeleteV2LoggingLevel
   - Name: iot:DeprecateThingType
   - Name: iot:DescribeAccountAuditConfiguration
+  - Name: iot:DescribeAuditMitigationActionsTask
   - Name: iot:DescribeAuditTask
   - Name: iot:DescribeAuthorizer
   - Name: iot:DescribeBillingGroup
   - Name: iot:DescribeCACertificate
   - Name: iot:DescribeCertificate
   - Name: iot:DescribeDefaultAuthorizer
+  - Name: iot:DescribeDimension
   - Name: iot:DescribeEndpoint
   - Name: iot:DescribeEventConfigurations
   - Name: iot:DescribeIndex
   - Name: iot:DescribeJob
+  - Name: iot:DescribeMitigationAction
   - Name: iot:DescribeProvisioningTemplate
   - Name: iot:DescribeProvisioningTemplateVersion
   - Name: iot:DescribeRoleAlias
@@ -112,16 +120,20 @@ Actions:
   - Name: iot:ListActiveViolations
   - Name: iot:ListAttachedPolicies
   - Name: iot:ListAuditFindings
+  - Name: iot:ListAuditMitigationActionsExecutions
+  - Name: iot:ListAuditMitigationActionsTasks
   - Name: iot:ListAuditTasks
   - Name: iot:ListAuthorizers
   - Name: iot:ListBillingGroups
   - Name: iot:ListCACertificates
   - Name: iot:ListCertificates
   - Name: iot:ListCertificatesByCA
+  - Name: iot:ListDimensions
   - Name: iot:ListIndices
   - Name: iot:ListJobExecutionsForJob
   - Name: iot:ListJobExecutionsForThing
   - Name: iot:ListJobs
+  - Name: iot:ListMitigationActions
   - Name: iot:ListOTAUpdates
   - Name: iot:ListOutgoingCertificates
   - Name: iot:ListPolicies
@@ -168,6 +180,7 @@ Actions:
   - Name: iot:SetLoggingOptions
   - Name: iot:SetV2LoggingLevel
   - Name: iot:SetV2LoggingOptions
+  - Name: iot:StartAuditMitigationActionsTask
   - Name: iot:StartOnDemandAuditTask
   - Name: iot:StartThingRegistrationTask
   - Name: iot:StopThingRegistrationTask
@@ -182,10 +195,12 @@ Actions:
   - Name: iot:UpdateBillingGroup
   - Name: iot:UpdateCACertificate
   - Name: iot:UpdateCertificate
+  - Name: iot:UpdateDimension
   - Name: iot:UpdateDynamicThingGroup
   - Name: iot:UpdateEventConfigurations
   - Name: iot:UpdateIndexingConfiguration
   - Name: iot:UpdateJob
+  - Name: iot:UpdateMitigationAction
   - Name: iot:UpdateProvisioningTemplate
   - Name: iot:UpdateRoleAlias
   - Name: iot:UpdateScheduledAudit
