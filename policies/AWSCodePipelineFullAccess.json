@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodePipelineFullAccess",
   "CreateDate": "2015-07-09T16:58:07Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJP5LH77KSAT2KHQGG",
   "PolicyName": "AWSCodePipelineFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-03-26T16:06:34Z",
+    "CreateDate": "2020-05-21T22:03:13Z",
     "Document": {
       "Statement": [
         {
@@ -116,7 +116,8 @@
             "s3:GetObjectVersion",
             "s3:ListAllMyBuckets",
             "s3:ListBucket",
-            "sns:ListTopics"
+            "sns:ListTopics",
+            "states:ListStateMachines"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -164,7 +165,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2020-03-26T16:06:34Z"
+  "UpdateDate": "2020-05-21T22:03:13Z"
 }
