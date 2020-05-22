@@ -51,6 +51,7 @@ Actions:
   - Name: chime:GetPhoneNumberOrder
   - Name: chime:GetPhoneNumberSettings
   - Name: chime:GetProxySession
+  - Name: chime:GetRetentionSettings
   - Name: chime:GetRoom
   - Name: chime:GetUser
   - Name: chime:GetUserSettings
@@ -81,12 +82,15 @@ Actions:
   - Name: chime:ListVoiceConnectors
   - Name: chime:LogoutUser
   - Name: chime:PutEventsConfiguration
+  - Name: chime:PutRetentionSettings
   - Name: chime:PutVoiceConnectorLoggingConfiguration
   - Name: chime:PutVoiceConnectorOrigination
   - Name: chime:PutVoiceConnectorProxy
   - Name: chime:PutVoiceConnectorStreamingConfiguration
   - Name: chime:PutVoiceConnectorTermination
   - Name: chime:PutVoiceConnectorTerminationCredentials
+  - Name: chime:RedactConversationMessage
+  - Name: chime:RedactRoomMessage
   - Name: chime:RegenerateSecurityToken
   - Name: chime:ResetPersonalPIN
   - Name: chime:RestorePhoneNumber
@@ -162,9 +166,3 @@ Actions:
   - Name: chime:UpdateSupportedLicenses
   - Name: chime:UpdateUserLicenses
   - Name: chime:ValidateAccountResource
-
-  # APIs without an IAM action
-  - Name: chime:GetRetentionSettings
-  - Name: chime:PutRetentionSettings
-  - Name: chime:RedactConversationMessage
-  - Name: chime:RedactRoomMessage
