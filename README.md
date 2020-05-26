@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 225
-* Unique actions: 8198
+* Unique actions: 8200
 * Managed policies: 652
 
 Most common managed policy name prefixes:
@@ -133,6 +133,7 @@ The following table summarises the AWS APIs.
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
+| [`transcribe`](services/transcribe.yml) | 24 | 0 | 3 |
 | [`kendra`](services/kendra.yml) | 24 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 23 | 5 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 23 | 0 | 5 |
@@ -152,7 +153,6 @@ The following table summarises the AWS APIs.
 | [`servicediscovery`](services/servicediscovery.yml) | 20 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 20 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 20 | 0 | 0 |
-| [`transcribe`](services/transcribe.yml) | 19 | 5 | 1 |
 | [`kafka`](services/kafka.yml) | 19 | 2 | 0 |
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
 | [`athena`](services/athena.yml) | 19 | 0 | 11 |
@@ -273,7 +273,7 @@ Most common action prefixes:
 | `Create` | 877 |
 | `Update` | 666 |
 | `Put` | 231 |
-| `Start` | 144 |
+| `Start` | 146 |
 | `Tag` | 114 |
 | `Untag` | 113 |
 
