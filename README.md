@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 225
-* Unique actions: 8200
-* Managed policies: 652
+* Unique actions: 8202
+* Managed policies: 653
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 184 |
+| `arn:aws:iam::aws:policy/AWS*` | 185 |
 | `arn:aws:iam::aws:policy/Amazon*` | 176 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 120 |
 | `arn:aws:iam::aws:policy/service-role/*` | 99 |
@@ -63,6 +63,7 @@ The following table summarises the AWS APIs.
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`route53`](services/route53.yml) | 56 | 0 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 54 | 1 | 3 |
+| [`guardduty`](services/guardduty.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`iotsitewise`](services/iotsitewise.yml) | 54 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 54 | 0 | 0 |
@@ -71,7 +72,6 @@ The following table summarises the AWS APIs.
 | [`macie2`](services/macie2.yml) | 52 | 1 | 1 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 51 | 0 | 0 |
-| [`guardduty`](services/guardduty.yml) | 49 | 6 | 0 |
 | [`lambda`](services/lambda.yml) | 48 | 1 | 3 |
 | [`quicksight`](services/quicksight.yml) | 47 | 19 | 9 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
@@ -153,7 +153,7 @@ The following table summarises the AWS APIs.
 | [`servicediscovery`](services/servicediscovery.yml) | 20 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 20 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 20 | 0 | 0 |
-| [`kafka`](services/kafka.yml) | 19 | 2 | 0 |
+| [`kafka`](services/kafka.yml) | 19 | 2 | 2 |
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
 | [`athena`](services/athena.yml) | 19 | 0 | 11 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
@@ -267,11 +267,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1127 |
-| `Get` | 1085 |
+| `Get` | 1086 |
 | `Describe` | 1033 |
 | `Delete` | 957 |
 | `Create` | 877 |
-| `Update` | 666 |
+| `Update` | 667 |
 | `Put` | 231 |
 | `Start` | 146 |
 | `Tag` | 114 |

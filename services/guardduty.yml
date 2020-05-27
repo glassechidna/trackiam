@@ -16,9 +16,12 @@ Actions:
   - Name: guardduty:DeleteMembers
   - Name: guardduty:DeletePublishingDestination
   - Name: guardduty:DeleteThreatIntelSet
+  - Name: guardduty:DescribeOrganizationConfiguration
   - Name: guardduty:DescribePublishingDestination
+  - Name: guardduty:DisableOrganizationAdminAccount
   - Name: guardduty:DisassociateFromMasterAccount
   - Name: guardduty:DisassociateMembers
+  - Name: guardduty:EnableOrganizationAdminAccount
   - Name: guardduty:GetDetector
   - Name: guardduty:GetFilter
   - Name: guardduty:GetFindings
@@ -34,6 +37,7 @@ Actions:
   - Name: guardduty:ListFindings
   - Name: guardduty:ListInvitations
   - Name: guardduty:ListMembers
+  - Name: guardduty:ListOrganizationAdminAccounts
   - Name: guardduty:ListPublishingDestinations
   - Name: guardduty:ListTagsForResource
   - Name: guardduty:ListThreatIntelSets
@@ -46,13 +50,9 @@ Actions:
   - Name: guardduty:UpdateFilter
   - Name: guardduty:UpdateFindingsFeedback
   - Name: guardduty:UpdateIPSet
+  - Name: guardduty:UpdateOrganizationConfiguration
   - Name: guardduty:UpdatePublishingDestination
   - Name: guardduty:UpdateThreatIntelSet
 
   # APIs without an IAM action
-  - Name: guardduty:DescribeOrganizationConfiguration
-  - Name: guardduty:DisableOrganizationAdminAccount
-  - Name: guardduty:EnableOrganizationAdminAccount
   - Name: guardduty:ListIPSets
-  - Name: guardduty:ListOrganizationAdminAccounts
-  - Name: guardduty:UpdateOrganizationConfiguration
