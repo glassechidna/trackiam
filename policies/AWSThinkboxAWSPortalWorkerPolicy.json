@@ -1,0 +1,62 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSThinkboxAWSPortalWorkerPolicy",
+  "CreateDate": "2020-05-27T19:15:05Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4PI3G53MMS",
+  "PolicyName": "AWSThinkboxAWSPortalWorkerPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-05-27T19:15:05Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:DescribeLogGroups",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/thinkbox*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-portal-cache*"
+          ]
+        },
+        {
+          "Action": [
+            "sqs:GetQueueUrl",
+            "sqs:SendMessage"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sqs:*:*:DeadlineAWS*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-05-27T19:15:05Z"
+}

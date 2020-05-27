@@ -1,0 +1,239 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSThinkboxDeadlineResourceTrackerAdminPolicy",
+  "CreateDate": "2020-05-27T19:29:09Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4FKWWNUOP2",
+  "PolicyName": "AWSThinkboxDeadlineResourceTrackerAdminPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-05-27T19:29:09Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "dynamodb.application-autoscaling.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "application-autoscaling.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          ]
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "lambda.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/DeadlineResourceTrackerAccess*"
+          ]
+        },
+        {
+          "Action": [
+            "lambda:AddPermission",
+            "lambda:RemovePermission"
+          ],
+          "Condition": {
+            "StringLike": {
+              "lambda:Principal": "events.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:DeadlineResourceTracker*"
+          ]
+        },
+        {
+          "Action": [
+            "lambda:CreateEventSourceMapping",
+            "lambda:DeleteEventSourceMapping"
+          ],
+          "Condition": {
+            "StringLike": {
+              "lambda:FunctionArn": [
+                "arn:aws:lambda:*:*:function:DeadlineResourceTracker*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "application-autoscaling:DeleteScalingPolicy",
+            "application-autoscaling:DeregisterScalableTarget",
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingPolicies",
+            "application-autoscaling:PutScalingPolicy",
+            "application-autoscaling:RegisterScalableTarget"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudformation:CreateStack",
+            "cloudformation:DeleteStack",
+            "cloudformation:DescribeStacks",
+            "cloudformation:UpdateTerminationProtection"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/DeadlineResourceTracker*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudformation:ListStacks"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "dynamodb:BatchWriteItem",
+            "dynamodb:Scan"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:dynamodb:*:*:table/DeadlineFleetHealth*"
+          ]
+        },
+        {
+          "Action": [
+            "dynamodb:CreateTable",
+            "dynamodb:DeleteTable",
+            "dynamodb:DescribeTable",
+            "dynamodb:ListTagsOfResource",
+            "dynamodb:TagResource",
+            "dynamodb:UntagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:dynamodb:*:*:table/DeadlineEC2ComputeNodeHealth*",
+            "arn:aws:dynamodb:*:*:table/DeadlineEC2ComputeNodeInfo*",
+            "arn:aws:dynamodb:*:*:table/DeadlineFleetHealth*"
+          ]
+        },
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:DescribeRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:events:*:*:rule/DeadlineResourceTracker*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:GetRole",
+            "iam:ListAttachedRolePolicies"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/DeadlineResourceTracker*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:GetUser"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "lambda:CreateFunction",
+            "lambda:DeleteFunction",
+            "lambda:GetFunction",
+            "lambda:GetFunctionConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:DeadlineResourceTracker*"
+          ]
+        },
+        {
+          "Action": [
+            "lambda:GetEventSourceMapping"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*/DeadlineAWSResourceTrackerTemplate-*.yaml",
+            "arn:aws:s3:::*/deadline_aws_resource_tracker-*.zip"
+          ]
+        },
+        {
+          "Action": [
+            "sqs:CreateQueue",
+            "sqs:DeleteQueue",
+            "sqs:GetQueueAttributes",
+            "sqs:ListQueueTags",
+            "sqs:TagQueue",
+            "sqs:UntagQueue"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sqs:*:*:DeadlineAWSComputeNodeState*",
+            "arn:aws:sqs:*:*:DeadlineResourceTracker*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-05-27T19:29:09Z"
+}

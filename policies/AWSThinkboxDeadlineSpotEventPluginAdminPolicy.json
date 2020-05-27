@@ -1,0 +1,130 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSThinkboxDeadlineSpotEventPluginAdminPolicy",
+  "CreateDate": "2020-05-27T19:38:34Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4MNSGMZZZZ",
+  "PolicyName": "AWSThinkboxDeadlineSpotEventPluginAdminPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-05-27T19:38:34Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": "RunInstances"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/aws:ec2spot:fleet-request-id": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "spot.amazonaws.com",
+                "spotfleet.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": "ec2.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/DeadlineSpot*",
+            "arn:aws:iam::*:role/aws-ec2-spot-fleet-tagging-role"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CancelSpotFleetRequests",
+            "ec2:DescribeSpotFleetInstances",
+            "ec2:DescribeSpotFleetRequests",
+            "ec2:ModifySpotFleetRequest",
+            "ec2:RequestSpotFleet"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:RunInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:GetInstanceProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:instance-profile/*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:GetRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/DeadlineSpot*",
+            "arn:aws:iam::*:role/aws-ec2-spot-fleet-tagging-role"
+          ]
+        },
+        {
+          "Action": [
+            "iam:GetUser"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-05-27T19:38:34Z"
+}

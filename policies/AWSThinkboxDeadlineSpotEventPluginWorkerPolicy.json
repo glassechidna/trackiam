@@ -1,0 +1,54 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSThinkboxDeadlineSpotEventPluginWorkerPolicy",
+  "CreateDate": "2020-05-27T19:35:00Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4JS2KSV4B2",
+  "PolicyName": "AWSThinkboxDeadlineSpotEventPluginWorkerPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-05-27T19:35:00Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ARN": "${ec2:SourceInstanceARN}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstances",
+            "ec2:DescribeTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "sqs:GetQueueUrl",
+            "sqs:SendMessage"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sqs:*:*:DeadlineAWSComputeNodeState*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-05-27T19:35:00Z"
+}

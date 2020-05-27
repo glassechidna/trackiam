@@ -1,0 +1,382 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSThinkboxAWSPortalAdminPolicy",
+  "CreateDate": "2020-05-27T19:41:02Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4BVM3T5TP2",
+  "PolicyName": "AWSThinkboxAWSPortalAdminPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-05-27T19:41:02Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "StringLike": {
+              "ec2:CreateAction": "RunInstances"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "StringLike": {
+              "ec2:PlacementGroup": "*DeadlinePlacementGroup*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*"
+        },
+        {
+          "Action": "ec2:RunInstances",
+          "Condition": {
+            "StringLike": {
+              "ec2:InstanceProfile": "arn:aws:iam::*:instance-profile/AWSPortal*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*"
+        },
+        {
+          "Action": "ec2:TerminateInstances",
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/aws:cloudformation:logical-id": "ReverseForwarder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "ec2:TerminateInstances",
+          "Condition": {
+            "StringLike": {
+              "ec2:PlacementGroup": "*DeadlinePlacementGroup*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "ec2:TerminateInstances",
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/aws:ec2spot:fleet-request-id": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "ec2fleet.amazonaws.com",
+                "spot.amazonaws.com",
+                "spotfleet.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "cloudformation.amazonaws.com",
+                "ec2.amazonaws.com",
+                "ec2fleet.amazonaws.com",
+                "spot.amazonaws.com",
+                "spotfleet.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AWSPortal*",
+            "arn:aws:iam::*:role/DeadlineSpot*"
+          ]
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:Encrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": [
+                "s3.*.amazonaws.com",
+                "secretsmanager.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret"
+          ],
+          "Condition": {
+            "StringLike": {
+              "secretsmanager:Name": [
+                "rcs-tls-pw*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "ec2:RunInstances",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:key-pair/*",
+            "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:placement-group/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:volume/*",
+            "arn:aws:ec2:*::image/*",
+            "arn:aws:ec2:*::snapshot/*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudformation:CreateChangeSet",
+            "cloudformation:CreateStack",
+            "cloudformation:DeleteChangeSet",
+            "cloudformation:DeleteStack",
+            "cloudformation:DescribeChangeSet",
+            "cloudformation:DescribeStackEvents",
+            "cloudformation:DescribeStackResources",
+            "cloudformation:ExecuteChangeSet",
+            "cloudformation:ListStackResources",
+            "cloudformation:UpdateTerminationProtection"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/Deadline*/*",
+            "arn:aws:cloudformation:*:*:stack/stack*/*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudformation:DescribeStacks",
+            "cloudformation:EstimateTemplateCost"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "dynamodb:Scan"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:dynamodb:*:*:table/DeadlineFleetHealth*"
+        },
+        {
+          "Action": [
+            "ec2:AllocateAddress",
+            "ec2:AssociateAddress",
+            "ec2:AssociateRouteTable",
+            "ec2:AttachInternetGateway",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CancelSpotFleetRequests",
+            "ec2:CreateFleet",
+            "ec2:CreateInternetGateway",
+            "ec2:CreateLaunchTemplate",
+            "ec2:CreateNatGateway",
+            "ec2:CreatePlacementGroup",
+            "ec2:CreateRoute",
+            "ec2:CreateRouteTable",
+            "ec2:CreateSecurityGroup",
+            "ec2:CreateSubnet",
+            "ec2:CreateVpc",
+            "ec2:CreateVpcEndpoint",
+            "ec2:DeleteFleets",
+            "ec2:DeleteInternetGateway",
+            "ec2:DeleteLaunchTemplate",
+            "ec2:DeleteNatGateway",
+            "ec2:DeletePlacementGroup",
+            "ec2:DeleteRoute",
+            "ec2:DeleteRouteTable",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DeleteSubnet",
+            "ec2:DeleteVpc",
+            "ec2:DeleteVpcEndpoints",
+            "ec2:DescribeAddresses",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeFleetHistory",
+            "ec2:DescribeFleetInstances",
+            "ec2:DescribeFleets",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstances",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeKeyPairs",
+            "ec2:DescribeLaunchTemplates",
+            "ec2:DescribeNatGateways",
+            "ec2:DescribePlacementGroups",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSpotFleetInstances",
+            "ec2:DescribeSpotFleetRequestHistory",
+            "ec2:DescribeSpotFleetRequests",
+            "ec2:DescribeSpotPriceHistory",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs",
+            "ec2:DetachInternetGateway",
+            "ec2:DisassociateAddress",
+            "ec2:DisassociateRouteTable",
+            "ec2:GetConsoleOutput",
+            "ec2:ImportKeyPair",
+            "ec2:ModifyFleet",
+            "ec2:ModifyInstanceAttribute",
+            "ec2:ModifySpotFleetRequest",
+            "ec2:ModifyVpcAttribute",
+            "ec2:ReleaseAddress",
+            "ec2:RequestSpotFleet",
+            "ec2:RevokeSecurityGroupIngress"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:internet-gateway/*",
+            "arn:aws:ec2:*:*:route-table/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:volume/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:GetInstanceProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:instance-profile/AWSPortal*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:GetPolicy",
+            "iam:ListEntitiesForPolicy",
+            "iam:ListPolicyVersions"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:policy/AWSPortal*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:GetRole",
+            "iam:GetRolePolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AWSPortal*",
+            "arn:aws:iam::*:role/DeadlineSpot*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:GetUser"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:DescribeLogGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:DeleteRetentionPolicy",
+            "logs:DescribeLogStreams",
+            "logs:GetLogEvents",
+            "logs:PutRetentionPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/thinkbox*"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:DeleteBucket",
+            "s3:DeleteBucketPolicy",
+            "s3:DeleteObject",
+            "s3:DeleteObjectVersion",
+            "s3:GetBucketAcl",
+            "s3:GetBucketLocation",
+            "s3:GetBucketLogging",
+            "s3:GetBucketVersioning",
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:ListBucketVersions",
+            "s3:PutBucketAcl",
+            "s3:PutBucketCORS",
+            "s3:PutBucketLogging",
+            "s3:PutBucketVersioning",
+            "s3:PutEncryptionConfiguration",
+            "s3:PutLifecycleConfiguration",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3::*:aws-portal-cache*",
+            "arn:aws:s3::*:awsportal*",
+            "arn:aws:s3::*:logs-for-aws-portal-cache*",
+            "arn:aws:s3::*:logs-for-stack*",
+            "arn:aws:s3::*:stack*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:TagResource",
+            "secretsmanager:UpdateSecret"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:rcs-tls-pw*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-05-27T19:41:02Z"
+}
