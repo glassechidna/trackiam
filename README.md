@@ -84,12 +84,12 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 44 | 4 | 2 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 44 | 1 | 2 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
+| [`workmail`](services/workmail.yml) | 43 | 0 | 53 |
 | [`elasticache`](services/elasticache.yml) | 42 | 15 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
 | [`securityhub`](services/securityhub.yml) | 42 | 0 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`medialive`](services/medialive.yml) | 40 | 6 | 0 |
-| [`workmail`](services/workmail.yml) | 40 | 3 | 53 |
 | [`imagebuilder`](services/imagebuilder.yml) | 40 | 2 | 0 |
 | [`robomaker`](services/robomaker.yml) | 40 | 0 | 0 |
 | [`logs`](services/logs.yml) | 39 | 3 | 5 |
