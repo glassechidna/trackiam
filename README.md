@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 225
-* Unique actions: 8202
+* Unique actions: 8205
 * Managed policies: 660
 
 Most common managed policy name prefixes:
@@ -89,8 +89,8 @@ The following table summarises the AWS APIs.
 | [`securityhub`](services/securityhub.yml) | 42 | 0 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`medialive`](services/medialive.yml) | 40 | 6 | 0 |
+| [`workmail`](services/workmail.yml) | 40 | 3 | 53 |
 | [`imagebuilder`](services/imagebuilder.yml) | 40 | 2 | 0 |
-| [`workmail`](services/workmail.yml) | 40 | 0 | 53 |
 | [`robomaker`](services/robomaker.yml) | 40 | 0 | 0 |
 | [`logs`](services/logs.yml) | 39 | 3 | 5 |
 | [`personalize`](services/personalize.yml) | 39 | 3 | 0 |
@@ -143,6 +143,7 @@ The following table summarises the AWS APIs.
 | [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`es`](services/es.yml) | 21 | 9 | 8 |
+| [`kafka`](services/kafka.yml) | 21 | 2 | 0 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`eks`](services/eks.yml) | 21 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 21 | 0 | 0 |
@@ -153,7 +154,6 @@ The following table summarises the AWS APIs.
 | [`servicediscovery`](services/servicediscovery.yml) | 20 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 20 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 20 | 0 | 0 |
-| [`kafka`](services/kafka.yml) | 19 | 2 | 2 |
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
 | [`athena`](services/athena.yml) | 19 | 0 | 11 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
@@ -267,12 +267,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1127 |
-| `Get` | 1086 |
+| `Get` | 1087 |
 | `Describe` | 1033 |
-| `Delete` | 957 |
+| `Delete` | 958 |
 | `Create` | 877 |
 | `Update` | 667 |
-| `Put` | 231 |
+| `Put` | 232 |
 | `Start` | 146 |
 | `Tag` | 114 |
 | `Untag` | 113 |

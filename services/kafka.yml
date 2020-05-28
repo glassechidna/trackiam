@@ -7,6 +7,7 @@ Actions:
   - Name: kafka:DescribeConfiguration
   - Name: kafka:DescribeConfigurationRevision
   - Name: kafka:GetBootstrapBrokers
+  - Name: kafka:GetCompatibleKafkaVersions
   - Name: kafka:ListClusterOperations
   - Name: kafka:ListClusters
   - Name: kafka:ListConfigurations
@@ -17,11 +18,8 @@ Actions:
   - Name: kafka:UpdateBrokerCount
   - Name: kafka:UpdateBrokerStorage
   - Name: kafka:UpdateClusterConfiguration
-  - Name: kafka:UpdateMonitoring
-
-  # actions with no corresponding API
-  - Name: kafka:GetCompatibleKafkaVersions
   - Name: kafka:UpdateClusterKafkaVersion
+  - Name: kafka:UpdateMonitoring
 
   # APIs without an IAM action
   - Name: kafka:ListConfigurationRevisions
