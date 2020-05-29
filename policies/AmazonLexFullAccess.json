@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLexFullAccess",
   "CreateDate": "2017-04-11T23:20:36Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJVLXDHKVC23HRTKSI",
   "PolicyName": "AmazonLexFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-05-15T16:34:50Z",
+    "CreateDate": "2020-05-29T15:21:00Z",
     "Document": {
       "Statement": [
         {
@@ -64,6 +64,22 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/aws-service-role/channels.lex.amazonaws.com/AWSServiceRoleForLexChannels"
+          ]
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": [
+                "lex.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/lex.amazonaws.com/AWSServiceRoleForLexBots"
           ]
         },
         {
@@ -137,7 +153,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2020-05-15T16:34:50Z"
+  "UpdateDate": "2020-05-29T15:21:00Z"
 }
