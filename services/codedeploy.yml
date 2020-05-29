@@ -16,6 +16,7 @@ Actions:
   - Name: codedeploy:DeleteDeploymentConfig
   - Name: codedeploy:DeleteDeploymentGroup
   - Name: codedeploy:DeleteGitHubAccountToken
+  - Name: codedeploy:DeleteResourcesByExternalId
   - Name: codedeploy:DeregisterOnPremisesInstance
   - Name: codedeploy:GetApplication
   - Name: codedeploy:GetApplicationRevision
@@ -46,5 +47,5 @@ Actions:
   - Name: codedeploy:UpdateApplication
   - Name: codedeploy:UpdateDeploymentGroup
 
-  # APIs without an IAM action
-  - Name: codedeploy:DeleteResourcesByExternalId
+  # actions with no corresponding API
+  - Name: codedeploy:CreateCloudFormationDeployment
