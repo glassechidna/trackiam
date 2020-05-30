@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupFullAccess",
   "CreateDate": "2019-11-18T22:21:52Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LL52EIPJX",
   "PolicyName": "AWSBackupFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-01-13T18:40:45Z",
+    "CreateDate": "2020-05-29T23:46:51Z",
     "Document": {
       "Statement": [
         {
@@ -25,12 +25,56 @@
         },
         {
           "Action": [
+            "dynamodb:DeleteBackup"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "backup.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DeleteSnapshot",
+            "ec2:DeregisterImage"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "backup.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "kms:CreateGrant",
             "kms:Decrypt"
           ],
           "Condition": {
             "StringEquals": {
               "kms:EncryptionContextKeys": "aws:backup:backup-vault"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "rds:DeleteDBClusterSnapshot",
+            "rds:DeleteDBSnapshot"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "backup.amazonaws.com"
+              ]
             }
           },
           "Effect": "Allow",
@@ -147,7 +191,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-01-13T18:40:45Z"
+  "UpdateDate": "2020-05-29T23:46:51Z"
 }
