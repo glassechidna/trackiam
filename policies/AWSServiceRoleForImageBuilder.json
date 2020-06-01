@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForImageBuilder",
   "CreateDate": "2019-11-29T22:02:13Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NE22WISEW",
   "PolicyName": "AWSServiceRoleForImageBuilder",
   "PolicyVersion": {
-    "CreateDate": "2020-04-16T19:45:25Z",
+    "CreateDate": "2020-06-01T17:40:18Z",
     "Document": {
       "Statement": [
         {
@@ -93,6 +93,21 @@
         },
         {
           "Action": [
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ]
+        },
+        {
+          "Action": [
             "ssm:SendCommand"
           ],
           "Condition": {
@@ -140,6 +155,8 @@
             "ec2:DescribeImages",
             "ec2:DescribeInstanceAttribute",
             "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstanceTypeOfferings",
+            "ec2:DescribeInstanceTypes",
             "ec2:DescribeInstances",
             "ec2:DescribeSubnets",
             "ec2:DescribeTags",
@@ -154,6 +171,19 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*::image/*"
+        },
+        {
+          "Action": [
+            "ec2:RunInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:key-pair/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*::image/*"
+          ]
         },
         {
           "Action": [
@@ -200,7 +230,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2020-04-16T19:45:25Z"
+  "UpdateDate": "2020-06-01T17:40:18Z"
 }

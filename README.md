@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 225
-* Unique actions: 8209
+* Unique actions: 8221
 * Managed policies: 660
 
 Most common managed policy name prefixes:
@@ -110,7 +110,7 @@ The following table summarises the AWS APIs.
 | [`frauddetector`](services/frauddetector.yml) | 32 | 0 | 0 |
 | [`events`](services/events.yml) | 31 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 0 | 0 |
-| [`worklink`](services/worklink.yml) | 30 | 0 | 0 |
+| [`worklink`](services/worklink.yml) | 30 | 3 | 0 |
 | [`schemas`](services/schemas.yml) | 30 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 29 | 4 | 8 |
 | [`cloudwatch`](services/cloudwatch.yml) | 29 | 1 | 0 |
@@ -154,8 +154,8 @@ The following table summarises the AWS APIs.
 | [`servicediscovery`](services/servicediscovery.yml) | 20 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 20 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 20 | 0 | 0 |
+| [`athena`](services/athena.yml) | 19 | 9 | 11 |
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
-| [`athena`](services/athena.yml) | 19 | 0 | 11 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`ce`](services/ce.yml) | 19 | 0 | 0 |
 | [`shield`](services/shield.yml) | 18 | 2 | 0 |
@@ -266,14 +266,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1127 |
-| `Get` | 1088 |
+| `List` | 1131 |
+| `Get` | 1091 |
 | `Describe` | 1034 |
-| `Delete` | 958 |
-| `Create` | 878 |
-| `Update` | 667 |
+| `Delete` | 959 |
+| `Create` | 879 |
+| `Update` | 668 |
 | `Put` | 232 |
 | `Start` | 146 |
-| `Tag` | 114 |
-| `Untag` | 113 |
+| `Tag` | 115 |
+| `Untag` | 114 |
 
