@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 225
-* Unique actions: 8221
+* Unique actions: 8211
 * Managed policies: 660
 
 Most common managed policy name prefixes:
@@ -119,6 +119,7 @@ The following table summarises the AWS APIs.
 | [`appconfig`](services/appconfig.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`sms`](services/sms.yml) | 28 | 0 | 2 |
+| [`athena`](services/athena.yml) | 28 | 0 | 1 |
 | [`appmesh`](services/appmesh.yml) | 28 | 0 | 1 |
 | [`networkmanager`](services/networkmanager.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
@@ -154,7 +155,6 @@ The following table summarises the AWS APIs.
 | [`servicediscovery`](services/servicediscovery.yml) | 20 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 20 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 20 | 0 | 0 |
-| [`athena`](services/athena.yml) | 19 | 9 | 11 |
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`ce`](services/ce.yml) | 19 | 0 | 0 |
@@ -267,7 +267,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1131 |
-| `Get` | 1091 |
+| `Get` | 1083 |
 | `Describe` | 1034 |
 | `Delete` | 959 |
 | `Create` | 879 |

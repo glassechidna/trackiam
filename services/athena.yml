@@ -1,44 +1,32 @@
 Actions:
   - Name: athena:BatchGetNamedQuery
   - Name: athena:BatchGetQueryExecution
+  - Name: athena:CreateDataCatalog
   - Name: athena:CreateNamedQuery
   - Name: athena:CreateWorkGroup
+  - Name: athena:DeleteDataCatalog
   - Name: athena:DeleteNamedQuery
   - Name: athena:DeleteWorkGroup
+  - Name: athena:GetDataCatalog
+  - Name: athena:GetDatabase
   - Name: athena:GetNamedQuery
   - Name: athena:GetQueryExecution
   - Name: athena:GetQueryResults
+  - Name: athena:GetTableMetadata
   - Name: athena:GetWorkGroup
+  - Name: athena:ListDataCatalogs
+  - Name: athena:ListDatabases
   - Name: athena:ListNamedQueries
   - Name: athena:ListQueryExecutions
+  - Name: athena:ListTableMetadata
   - Name: athena:ListTagsForResource
   - Name: athena:ListWorkGroups
   - Name: athena:StartQueryExecution
   - Name: athena:StopQueryExecution
   - Name: athena:TagResource
   - Name: athena:UntagResource
+  - Name: athena:UpdateDataCatalog
   - Name: athena:UpdateWorkGroup
 
   # actions with no corresponding API
-  - Name: athena:CancelQueryExecution
-  - Name: athena:GetCatalogs
-  - Name: athena:GetExecutionEngine
-  - Name: athena:GetExecutionEngines
-  - Name: athena:GetNamespace
-  - Name: athena:GetNamespaces
-  - Name: athena:GetQueryExecutions
   - Name: athena:GetQueryResultsStream
-  - Name: athena:GetTable
-  - Name: athena:GetTables
-  - Name: athena:RunQuery
-
-  # APIs without an IAM action
-  - Name: athena:CreateDataCatalog
-  - Name: athena:DeleteDataCatalog
-  - Name: athena:GetDataCatalog
-  - Name: athena:GetDatabase
-  - Name: athena:GetTableMetadata
-  - Name: athena:ListDataCatalogs
-  - Name: athena:ListDatabases
-  - Name: athena:ListTableMetadata
-  - Name: athena:UpdateDataCatalog
