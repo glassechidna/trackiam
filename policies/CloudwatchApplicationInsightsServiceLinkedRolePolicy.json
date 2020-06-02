@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "CreateDate": "2018-12-01T16:22:12Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJH3SHQERZRQMQOQ44",
   "PolicyName": "CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-03-13T19:39:57Z",
+    "CreateDate": "2020-06-02T19:50:03Z",
     "Document": {
       "Statement": [
         {
@@ -16,6 +16,15 @@
           "Resource": [
             "arn:aws:ec2:*:*:instance/*",
             "arn:aws:ssm:*:*:document/AWSEC2-CheckPerformanceCounterSets"
+          ]
+        },
+        {
+          "Action": [
+            "application-autoscaling:DescribeScalableTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
           ]
         },
         {
@@ -64,7 +73,20 @@
         },
         {
           "Action": [
-            "ec2:DescribeInstances"
+            "dynamodb:DescribeContributorInsights",
+            "dynamodb:DescribeTable",
+            "dynamodb:DescribeTimeToLive"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstances",
+            "ec2:DescribeVolumeStatus",
+            "ec2:DescribeVolumes"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -127,6 +149,7 @@
         },
         {
           "Action": [
+            "rds:DescribeDBClusters",
             "rds:DescribeDBInstances"
           ],
           "Effect": "Allow",
@@ -139,6 +162,16 @@
             "resource-groups:GetGroup",
             "resource-groups:GetGroupQuery",
             "resource-groups:ListGroupResources"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:GetMetricsConfiguration",
+            "s3:GetReplicationConfiguration"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -197,6 +230,15 @@
         },
         {
           "Action": [
+            "states:DescribeStateMachine"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
             "tag:GetResources"
           ],
           "Effect": "Allow",
@@ -220,7 +262,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2020-03-13T19:39:57Z"
+  "UpdateDate": "2020-06-02T19:50:03Z"
 }
