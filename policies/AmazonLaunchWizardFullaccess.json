@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLaunchWizardFullaccess",
   "CreateDate": "2019-11-13T17:08:13Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4E27VRMEE5",
   "PolicyName": "AmazonLaunchWizardFullaccess",
   "PolicyVersion": {
-    "CreateDate": "2020-04-06T21:51:50Z",
+    "CreateDate": "2020-06-03T16:57:16Z",
     "Document": {
       "Statement": [
         {
@@ -21,67 +21,55 @@
           "Resource": "*"
         },
         {
-          "Action": [
-            "cloudformation:DeleteStack",
-            "cloudformation:DescribeStack*",
-            "cloudformation:Get*",
-            "cloudformation:ListStacks",
-            "cloudformation:SignalResource",
-            "ec2:AllocateAddress",
-            "ec2:AllocateHosts",
-            "ec2:AssignPrivateIpAddresses",
-            "ec2:AssociateAddress",
-            "ec2:AssociateDhcpOptions",
-            "ec2:AssociateSubnetCidrBlock",
-            "ec2:AttachInternetGateway",
-            "ec2:AttachNetworkInterface",
-            "ec2:AttachVolume",
-            "ec2:AuthorizeSecurityGroupEgress",
-            "ec2:CreateDhcpOptions",
-            "ec2:CreateEgressOnlyInternetGateway",
-            "ec2:CreateInternetGateway",
-            "ec2:CreateNatGateway",
-            "ec2:CreateNetworkInterface",
-            "ec2:CreateVolume",
-            "ec2:CreateVpc",
-            "ec2:CreateVpcEndpoint",
-            "ec2:DeleteDhcpOptions",
-            "ec2:DeleteInternetGateway",
-            "ec2:DeleteKeyPair",
-            "ec2:DeleteNatGateway",
-            "ec2:DeleteSecurityGroup",
-            "ec2:DeleteSnapshot",
-            "ec2:DeleteVolume",
-            "ec2:DeleteVpc",
-            "ec2:DetachInternetGateway",
-            "ec2:DetachVolume",
-            "ec2:DisassociateIamInstanceProfile",
-            "ec2:DisassociateRouteTable",
-            "ec2:DisassociateSubnetCidrBlock",
-            "ec2:GetConsoleOutput",
-            "ec2:GetPasswordData",
-            "ec2:ModifyInstanceAttribute",
-            "ec2:ModifySubnetAttribute",
-            "ec2:ModifyVolumeAttribute",
-            "ec2:ModifyVpcAttribute",
-            "ec2:ReleaseAddress",
-            "ec2:ReplaceRoute",
-            "ec2:ReplaceRouteTableAssociation",
-            "ec2:RevokeSecurityGroupEgress",
-            "ec2:RevokeSecurityGroupIngress",
-            "ec2:RunInstances",
-            "ec2:StartInstances",
-            "ec2:StopInstances",
-            "ec2:TerminateInstances",
-            "elasticfilesystem:DeleteFileSystem",
-            "elasticfilesystem:DeleteMountTarget",
-            "ssm:SendCommand"
-          ],
+          "Action": "ssm:SendCommand",
           "Condition": {
             "ForAllValues:StringLike": {
               "aws:TagKeys": "LaunchWizard*"
             }
           },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags",
+            "ec2:DeleteTags"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/aws:cloudformation:stack-id": "arn:aws:cloudformation:*:*:stack/LaunchWizard-*/*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DeleteSnapshot"
+          ],
+          "Condition": {
+            "Null": {
+              "ec2:ResourceTag/LaunchWizardResourceGroupID": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:StopInstances",
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/aws:cloudformation:stack-id": "arn:aws:cloudformation:*:*:stack/LaunchWizard-*/*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "applicationinsights:*",
           "Effect": "Allow",
           "Resource": "*"
         },
@@ -97,6 +85,11 @@
             "arn:aws:logs:*:*:log-group:*:*:*",
             "arn:aws:logs:::log-group:LaunchWizard*"
           ]
+        },
+        {
+          "Action": "resource-groups:List*",
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": [
@@ -147,20 +140,12 @@
             "ds:ListAuthorizedApplications",
             "ec2:AssociateRouteTable",
             "ec2:AssociateVpcCidrBlock",
-            "ec2:CreateInternetGateway",
-            "ec2:CreateKeyPair",
-            "ec2:CreateNatGateway",
-            "ec2:CreateRoute",
-            "ec2:CreateRouteTable",
-            "ec2:CreateSubnet",
-            "ec2:CreateTags",
             "ec2:DeleteNetworkAcl",
             "ec2:DeleteNetworkInterface",
             "ec2:DeleteNetworkInterfacePermission",
             "ec2:DeleteRoute",
             "ec2:DeleteRouteTable",
             "ec2:DeleteSubnet",
-            "ec2:DeleteTags",
             "ec2:Describe*",
             "ec2:DetachNetworkInterface",
             "ec2:DisassociateAddress",
@@ -217,11 +202,79 @@
         },
         {
           "Action": [
+            "cloudformation:DeleteStack",
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:DeleteDhcpOptions",
+            "ec2:DeleteInternetGateway",
+            "ec2:DeleteKeyPair",
+            "ec2:DeleteNatGateway",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DeleteVolume",
+            "ec2:DeleteVpc",
+            "ec2:DetachInternetGateway",
+            "ec2:DetachVolume",
+            "ec2:DisassociateIamInstanceProfile",
+            "ec2:DisassociateRouteTable",
+            "ec2:DisassociateSubnetCidrBlock",
+            "ec2:GetConsoleOutput",
+            "ec2:GetPasswordData",
+            "ec2:ReleaseAddress",
+            "ec2:ReplaceRoute",
+            "ec2:ReplaceRouteTableAssociation",
+            "ec2:RevokeSecurityGroupEgress",
+            "ec2:RevokeSecurityGroupIngress",
+            "elasticfilesystem:DeleteFileSystem",
+            "elasticfilesystem:DeleteMountTarget"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "cloudformation:Describe*",
             "cloudformation:List*"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:cloudformation:::stack/LaunchWizard*/"
+        },
+        {
+          "Action": [
+            "cloudformation:DescribeStack*",
+            "cloudformation:Get*",
+            "cloudformation:ListStacks",
+            "cloudformation:SignalResource",
+            "ec2:AllocateAddress",
+            "ec2:AllocateHosts",
+            "ec2:AssignPrivateIpAddresses",
+            "ec2:AssociateAddress",
+            "ec2:AssociateDhcpOptions",
+            "ec2:AssociateSubnetCidrBlock",
+            "ec2:AttachInternetGateway",
+            "ec2:AttachNetworkInterface",
+            "ec2:AttachVolume",
+            "ec2:CreateDhcpOptions",
+            "ec2:CreateEgressOnlyInternetGateway",
+            "ec2:CreateInternetGateway",
+            "ec2:CreateInternetGateway",
+            "ec2:CreateKeyPair",
+            "ec2:CreateNatGateway",
+            "ec2:CreateNatGateway",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateRoute",
+            "ec2:CreateRouteTable",
+            "ec2:CreateSubnet",
+            "ec2:CreateVolume",
+            "ec2:CreateVpc",
+            "ec2:CreateVpcEndpoint",
+            "ec2:ModifyInstanceAttribute",
+            "ec2:ModifySubnetAttribute",
+            "ec2:ModifyVolumeAttribute",
+            "ec2:ModifyVpcAttribute",
+            "ec2:RunInstances",
+            "ec2:StartInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": [
@@ -235,6 +288,15 @@
             "arn:aws:cloudwatch:*:*:alarm:LaunchWizard*",
             "arn:aws:iam::*:instance-profile/LaunchWizard*"
           ]
+        },
+        {
+          "Action": [
+            "cloudwatch:Describe*",
+            "cloudwatch:Get*",
+            "cloudwatch:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": [
@@ -256,6 +318,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/application-insights.amazonaws.com/AWSServiceRoleForApplicationInsights",
             "arn:aws:iam::*:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling*"
           ]
         },
@@ -266,6 +329,23 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/service-role/AmazonLambdaRoleForLaunchWizard*"
+          ]
+        },
+        {
+          "Action": [
+            "lambda:CreateFunction",
+            "lambda:DeleteFunction",
+            "lambda:GetFunction",
+            "lambda:GetFunctionConfiguration",
+            "lambda:InvokeFunction",
+            "s3:CreateBucket",
+            "s3:DeleteBucket",
+            "s3:PutBucketVersioning"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:LaunchWizard*",
+            "arn:aws:s3:::launchwizard*"
           ]
         },
         {
@@ -289,6 +369,26 @@
         },
         {
           "Action": [
+            "route53:ChangeResourceRecordSets",
+            "route53:GetChange",
+            "route53:ListHostedZones",
+            "route53:ListHostedZonesByName",
+            "route53:ListResourceRecordSets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:ListBuckets",
+            "s3:ListObjects",
+            "s3:ListObjectsV2"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "sqs:AddPermission",
             "sqs:CreateQueue",
             "sqs:DeleteQueue",
@@ -301,30 +401,12 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:sqs:*:*:LaunchWizard*"
-        },
-        {
-          "Action": [
-            "lambda:CreateFunction",
-            "lambda:DeleteFunction",
-            "lambda:GetFunction",
-            "lambda:GetFunctionConfiguration",
-            "lambda:InvokeFunction",
-            "s3:CreateBucket",
-            "s3:DeleteBucket",
-            "s3:PutBucketVersioning"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:lambda:*:*:function:LaunchWizard*",
-            "arn:aws:s3:::launchwizard*"
-          ],
-          "Sid": "VisualEditorS3"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-04-06T21:51:50Z"
+  "UpdateDate": "2020-06-03T16:57:16Z"
 }
