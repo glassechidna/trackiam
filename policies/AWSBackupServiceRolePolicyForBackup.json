@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
   "CreateDate": "2019-01-10T21:01:28Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIOOYZSLZZXWFJJ5N2",
   "PolicyName": "AWSBackupServiceRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2020-01-13T16:02:39Z",
+    "CreateDate": "2020-06-03T07:06:09Z",
     "Document": {
       "Statement": [
         {
@@ -139,14 +139,27 @@
         {
           "Action": [
             "rds:AddTagsToResource",
+            "rds:CopyDBClusterSnapshot",
             "rds:CopyDBSnapshot",
+            "rds:CreateDBClusterSnapshot",
             "rds:CreateDBSnapshot",
+            "rds:DescribeDBClusterSnapshots",
+            "rds:DescribeDBClusters",
             "rds:DescribeDBInstances",
             "rds:DescribeDBSnapshots",
             "rds:ListTagsForResource"
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "rds:DeleteDBClusterSnapshot"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:rds:*:*:cluster-snapshot:awsbackup:*"
+          ]
         },
         {
           "Action": [
@@ -176,7 +189,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-01-13T16:02:39Z"
+  "UpdateDate": "2020-06-03T07:06:09Z"
 }
