@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 225
-* Unique actions: 8221
+* Unique actions: 8222
 * Managed policies: 663
 
 Most common managed policy name prefixes:
@@ -117,6 +117,7 @@ The following table summarises the AWS APIs.
 | [`connect`](services/connect.yml) | 29 | 0 | 6 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 29 | 0 | 0 |
+| [`es`](services/es.yml) | 28 | 9 | 9 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`sms`](services/sms.yml) | 28 | 0 | 2 |
 | [`athena`](services/athena.yml) | 28 | 0 | 1 |
@@ -143,7 +144,6 @@ The following table summarises the AWS APIs.
 | [`states`](services/states.yml) | 22 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
-| [`es`](services/es.yml) | 21 | 16 | 8 |
 | [`kafka`](services/kafka.yml) | 21 | 2 | 0 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`eks`](services/eks.yml) | 21 | 0 | 0 |

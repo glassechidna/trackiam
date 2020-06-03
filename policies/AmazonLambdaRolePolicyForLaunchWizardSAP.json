@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLambdaRolePolicyForLaunchWizardSAP",
   "CreateDate": "2020-03-30T20:25:12Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NMJOHL3TN",
   "PolicyName": "AmazonLambdaRolePolicyForLaunchWizardSAP",
   "PolicyVersion": {
-    "CreateDate": "2020-06-03T16:20:46Z",
+    "CreateDate": "2020-06-03T19:36:41Z",
     "Document": {
       "Statement": [
         {
@@ -35,8 +35,8 @@
             "ssm:sendCommand"
           ],
           "Condition": {
-            "StringLike": {
-              "ec2:ResourceTag/aws:cloudformation:stack-id": "arn:aws:cloudformation:*:*:stack/LaunchWizard-*/*"
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": "LaunchWizard*"
             }
           },
           "Effect": "Allow",
@@ -85,7 +85,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-06-03T16:20:46Z"
+  "UpdateDate": "2020-06-03T19:36:41Z"
 }
