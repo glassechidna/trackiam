@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonAppFlowReadOnlyAccess",
+  "CreateDate": "2020-06-02T23:26:51Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CCGEQPIQI",
+  "PolicyName": "AmazonAppFlowReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-06-02T23:26:51Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "appflow:DescribeConnectorFields",
+            "appflow:DescribeConnectorProfiles",
+            "appflow:DescribeConnectors",
+            "appflow:DescribeFlowExecution",
+            "appflow:DescribeFlows",
+            "appflow:ListConnectorFields",
+            "appflow:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-06-02T23:26:51Z"
+}

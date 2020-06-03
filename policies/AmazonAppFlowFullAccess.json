@@ -1,0 +1,89 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonAppFlowFullAccess",
+  "CreateDate": "2020-06-02T23:30:14Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4PGBU2ALC4",
+  "PolicyName": "AmazonAppFlowFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-06-02T23:30:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "kms:CreateGrant"
+          ],
+          "Condition": {
+            "Bool": {
+              "kms:GrantIsForAWSResource": "true"
+            },
+            "StringLike": {
+              "kms:ViaService": "appflow.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "KMSGrantAccess"
+        },
+        {
+          "Action": [
+            "kms:ListGrants"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": "appflow.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "KMSListGrantAccess"
+        },
+        {
+          "Action": "appflow:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "iam:ListRoles",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListRolesForRedshift"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey",
+            "kms:ListAliases",
+            "kms:ListKeys"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "KMSListAccess"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:GetBucketPolicy",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "S3ReadAccess"
+        },
+        {
+          "Action": [
+            "s3:PutBucketPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::appflow-*",
+          "Sid": "S3PutBucketPolicyAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-06-02T23:30:14Z"
+}
