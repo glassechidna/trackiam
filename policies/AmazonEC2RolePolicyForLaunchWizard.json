@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEC2RolePolicyForLaunchWizard",
   "CreateDate": "2019-11-13T08:05:53Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CBGI56NFS",
   "PolicyName": "AmazonEC2RolePolicyForLaunchWizard",
   "PolicyVersion": {
-    "CreateDate": "2020-03-31T22:01:02Z",
+    "CreateDate": "2020-06-03T18:30:04Z",
     "Document": {
       "Statement": [
         {
@@ -29,11 +29,7 @@
             "cloudformation:DescribeStackResources",
             "cloudformation:DescribeStacks",
             "cloudformation:SignalResource",
-            "ec2:Describe*",
-            "ec2:ModifyInstanceAttribute",
-            "ec2:RebootInstances",
-            "ec2:StartInstances",
-            "ec2:StopInstances"
+            "ec2:Describe*"
           ],
           "Condition": {
             "ForAllValues:StringEquals": {
@@ -49,11 +45,15 @@
             "ec2:CreateVolume",
             "ec2:DescribeInstances",
             "ec2:DescribeVolumes",
-            "ec2:ModifyVolume"
+            "ec2:ModifyInstanceAttribute",
+            "ec2:ModifyVolume",
+            "ec2:RebootInstances",
+            "ec2:StartInstances",
+            "ec2:StopInstances"
           ],
           "Condition": {
-            "ForAllValues:StringLike": {
-              "aws:TagKeys": "LaunchWizardResourceGroupID"
+            "Null": {
+              "ec2:ResourceTag/LaunchWizardResourceGroupID": "false"
             }
           },
           "Effect": "Allow",
@@ -143,7 +143,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-03-31T22:01:02Z"
+  "UpdateDate": "2020-06-03T18:30:04Z"
 }
