@@ -1,0 +1,108 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AlexaForBusinessLifesizeDelegatedAccessPolicy",
+  "CreateDate": "2020-06-04T19:46:56Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4HXQBRRIQV",
+  "PolicyName": "AlexaForBusinessLifesizeDelegatedAccessPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-06-04T19:46:56Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "a4b:RegisterAVSDevice"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "a4b:amazonId": [
+                "A2IWO7UEGWV4TL"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "a4b:SearchDevices"
+          ],
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "a4b:filters_deviceType": [
+                "*A2IWO7UEGWV4TL"
+              ]
+            },
+            "Null": {
+              "a4b:filters_deviceType": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "a4b:AssociateContactWithAddressBook",
+            "a4b:CreateAddressBook",
+            "a4b:CreateConferenceProvider",
+            "a4b:CreateContact",
+            "a4b:CreateRoom",
+            "a4b:DeleteAddressBook",
+            "a4b:DeleteContact",
+            "a4b:DeleteRoom",
+            "a4b:DisassociateContactFromAddressBook",
+            "a4b:GetAddressBook",
+            "a4b:GetContact",
+            "a4b:GetRoom",
+            "a4b:ListConferenceProviders",
+            "a4b:PutConferencePreference",
+            "a4b:SearchProfiles",
+            "a4b:SearchRooms",
+            "a4b:UpdateContact",
+            "a4b:UpdateProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "a4b:AssociateDeviceWithRoom"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:a4b:us-east-1:*:device/*/*:A2IWO7UEGWV4TL",
+            "arn:aws:a4b:us-east-1:*:room/*"
+          ]
+        },
+        {
+          "Action": [
+            "a4b:DeleteDevice",
+            "a4b:DisassociateDeviceFromRoom",
+            "a4b:GetDevice",
+            "a4b:UpdateDevice"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:a4b:us-east-1:*:device/*/*:A2IWO7UEGWV4TL"
+          ]
+        },
+        {
+          "Action": [
+            "kms:DescribeKey"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:::key/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-06-04T19:46:56Z"
+}
