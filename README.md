@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 226
-* Unique actions: 8226
+* Unique actions: 8232
 * Managed policies: 665
 
 Most common managed policy name prefixes:
@@ -82,7 +82,7 @@ The following table summarises the AWS APIs.
 | [`cloudfront`](services/cloudfront.yml) | 45 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 45 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 44 | 4 | 2 |
-| [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 44 | 1 | 2 |
+| [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 44 | 3 | 2 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 43 | 0 | 53 |
 | [`elasticache`](services/elasticache.yml) | 42 | 15 | 0 |
@@ -92,8 +92,8 @@ The following table summarises the AWS APIs.
 | [`medialive`](services/medialive.yml) | 40 | 6 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 40 | 2 | 0 |
 | [`robomaker`](services/robomaker.yml) | 40 | 0 | 0 |
+| [`personalize`](services/personalize.yml) | 39 | 7 | 0 |
 | [`logs`](services/logs.yml) | 39 | 3 | 5 |
-| [`personalize`](services/personalize.yml) | 39 | 3 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 37 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
@@ -267,11 +267,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1135 |
+| `List` | 1136 |
 | `Get` | 1083 |
-| `Describe` | 1036 |
-| `Delete` | 961 |
-| `Create` | 880 |
+| `Describe` | 1037 |
+| `Delete` | 962 |
+| `Create` | 881 |
 | `Update` | 669 |
 | `Put` | 232 |
 | `Start` | 147 |
