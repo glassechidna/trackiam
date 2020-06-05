@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/CheesepuffsServiceRolePolicy",
+  "CreateDate": "2020-06-05T21:38:20Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4AI3F6DTMN",
+  "PolicyName": "CheesepuffsServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-06-05T21:38:20Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogDelivery",
+            "logs:DeleteLogDelivery",
+            "logs:DescribeLogGroups",
+            "logs:DescribeResourcePolicies",
+            "logs:GetLogDelivery",
+            "logs:ListLogDeliveries",
+            "logs:UpdateLogDelivery",
+            "s3:GetBucketPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-06-05T21:38:20Z"
+}

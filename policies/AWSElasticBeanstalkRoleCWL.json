@@ -1,0 +1,30 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkRoleCWL",
+  "CreateDate": "2020-06-05T21:49:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4G4S2QMTW3",
+  "PolicyName": "AWSElasticBeanstalkRoleCWL",
+  "PolicyVersion": {
+    "CreateDate": "2020-06-05T21:49:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:DeleteLogGroup",
+            "logs:PutRetentionPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/elasticbeanstalk/*",
+          "Sid": "AllowCWL"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-06-05T21:49:06Z"
+}

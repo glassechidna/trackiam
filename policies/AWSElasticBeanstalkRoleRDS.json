@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkRoleRDS",
+  "CreateDate": "2020-06-05T21:46:55Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4G5JWEESE4",
+  "PolicyName": "AWSElasticBeanstalkRoleRDS",
+  "PolicyVersion": {
+    "CreateDate": "2020-06-05T21:46:55Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "rds:AuthorizeDBSecurityGroupIngress",
+            "rds:CreateDBInstance",
+            "rds:CreateDBSecurityGroup",
+            "rds:DeleteDBInstance",
+            "rds:DeleteDBSecurityGroup",
+            "rds:ModifyDBInstance"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:rds:*:*:db:*",
+            "arn:aws:rds:*:*:secgrp:awseb-e-*"
+          ],
+          "Sid": "AllowRDS"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-06-05T21:46:55Z"
+}
