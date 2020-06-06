@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupFullAccess",
   "CreateDate": "2019-11-18T22:21:52Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LL52EIPJX",
   "PolicyName": "AWSBackupFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-05-29T23:46:51Z",
+    "CreateDate": "2020-06-06T00:06:57Z",
     "Document": {
       "Statement": [
         {
@@ -91,6 +91,11 @@
           "Resource": "*"
         },
         {
+          "Action": "organizations:DescribeOrganization",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
           "Action": [
             "dynamodb:ListBackups",
             "dynamodb:ListTables"
@@ -145,7 +150,11 @@
             "rds:DescribeDBInstances",
             "rds:DescribeDBSnapshots",
             "rds:ListTagsForResource",
+            "rds:describeDBClusterParameterGroups",
+            "rds:describeDBClusterSnapshots",
+            "rds:describeDBClusters",
             "rds:describeDBEngineVersions",
+            "rds:describeDBParameterGroups",
             "rds:describeDBSnapshots",
             "rds:describeDBSubnetGroups",
             "rds:describeOptionGroups",
@@ -191,7 +200,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-05-29T23:46:51Z"
+  "UpdateDate": "2020-06-06T00:06:57Z"
 }
