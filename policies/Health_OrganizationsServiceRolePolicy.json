@@ -1,25 +1,31 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/Health_OrganizationsServiceRolePolicy",
   "CreateDate": "2019-12-16T13:28:21Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4EZKGOJYHQ",
   "PolicyName": "Health_OrganizationsServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-12-16T13:28:21Z",
+    "CreateDate": "2020-06-08T12:48:44Z",
     "Document": {
       "Statement": [
         {
           "Action": "organizations:ListAccounts",
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": "organizations:ListAWSServiceAccessForOrganization",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListAWSServiceAccessForOrganization0"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-12-16T13:28:21Z"
+  "UpdateDate": "2020-06-08T12:48:44Z"
 }
