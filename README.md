@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 226
-* Unique actions: 8232
+* Unique actions: 8238
 * Managed policies: 672
 
 Most common managed policy name prefixes:
@@ -148,17 +148,17 @@ The following table summarises the AWS APIs.
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`eks`](services/eks.yml) | 21 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 21 | 0 | 0 |
+| [`servicediscovery`](services/servicediscovery.yml) | 20 | 3 | 0 |
 | [`qldb`](services/qldb.yml) | 20 | 0 | 3 |
 | [`iotevents`](services/iotevents.yml) | 20 | 0 | 1 |
 | [`xray`](services/xray.yml) | 20 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
-| [`servicediscovery`](services/servicediscovery.yml) | 20 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 20 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 20 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`ce`](services/ce.yml) | 19 | 0 | 0 |
-| [`shield`](services/shield.yml) | 18 | 2 | 0 |
+| [`shield`](services/shield.yml) | 18 | 5 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`transfer`](services/transfer.yml) | 18 | 0 | 0 |
 | [`secretsmanager`](services/secretsmanager.yml) | 18 | 0 | 0 |
@@ -267,7 +267,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1136 |
+| `List` | 1137 |
 | `Get` | 1083 |
 | `Describe` | 1037 |
 | `Delete` | 962 |
@@ -275,6 +275,6 @@ Most common action prefixes:
 | `Update` | 669 |
 | `Put` | 232 |
 | `Start` | 147 |
-| `Tag` | 115 |
-| `Untag` | 114 |
+| `Tag` | 116 |
+| `Untag` | 115 |
 
