@@ -1,6 +1,5 @@
 Actions:
   - Name: macie2:AcceptInvitation
-  - Name: macie2:ArchiveFindings
   - Name: macie2:BatchGetCustomDataIdentifiers
   - Name: macie2:CreateClassificationJob
   - Name: macie2:CreateCustomDataIdentifier
@@ -44,7 +43,6 @@ Actions:
   - Name: macie2:PutClassificationExportConfiguration
   - Name: macie2:TagResource
   - Name: macie2:TestCustomDataIdentifier
-  - Name: macie2:UnarchiveFindings
   - Name: macie2:UntagResource
   - Name: macie2:UpdateClassificationJob
   - Name: macie2:UpdateFindingsFilter
@@ -53,7 +51,9 @@ Actions:
   - Name: macie2:UpdateOrganizationConfiguration
 
   # actions with no corresponding API
+  - Name: macie2:ArchiveFindings
   - Name: macie2:ListTagsForResources
+  - Name: macie2:UnarchiveFindings
 
   # APIs without an IAM action
   - Name: macie2:ListTagsForResource
