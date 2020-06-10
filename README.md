@@ -91,13 +91,13 @@ The following table summarises the AWS APIs.
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`medialive`](services/medialive.yml) | 40 | 6 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 40 | 2 | 0 |
+| [`wafv2`](services/wafv2.yml) | 40 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 40 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 39 | 7 | 0 |
 | [`logs`](services/logs.yml) | 39 | 3 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 37 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
-| [`wafv2`](services/wafv2.yml) | 36 | 4 | 0 |
 | [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |

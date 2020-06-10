@@ -5,8 +5,10 @@ Actions:
   - Name: wafv2:CreateRegexPatternSet
   - Name: wafv2:CreateRuleGroup
   - Name: wafv2:CreateWebACL
+  - Name: wafv2:DeleteFirewallManagerRuleGroups
   - Name: wafv2:DeleteIPSet
   - Name: wafv2:DeleteLoggingConfiguration
+  - Name: wafv2:DeletePermissionPolicy
   - Name: wafv2:DeleteRegexPatternSet
   - Name: wafv2:DeleteRuleGroup
   - Name: wafv2:DeleteWebACL
@@ -14,6 +16,7 @@ Actions:
   - Name: wafv2:DisassociateWebACL
   - Name: wafv2:GetIPSet
   - Name: wafv2:GetLoggingConfiguration
+  - Name: wafv2:GetPermissionPolicy
   - Name: wafv2:GetRateBasedStatementManagedKeys
   - Name: wafv2:GetRegexPatternSet
   - Name: wafv2:GetRuleGroup
@@ -29,15 +32,10 @@ Actions:
   - Name: wafv2:ListTagsForResource
   - Name: wafv2:ListWebACLs
   - Name: wafv2:PutLoggingConfiguration
+  - Name: wafv2:PutPermissionPolicy
   - Name: wafv2:TagResource
   - Name: wafv2:UntagResource
   - Name: wafv2:UpdateIPSet
   - Name: wafv2:UpdateRegexPatternSet
   - Name: wafv2:UpdateRuleGroup
   - Name: wafv2:UpdateWebACL
-
-  # APIs without an IAM action
-  - Name: wafv2:DeleteFirewallManagerRuleGroups
-  - Name: wafv2:DeletePermissionPolicy
-  - Name: wafv2:GetPermissionPolicy
-  - Name: wafv2:PutPermissionPolicy
