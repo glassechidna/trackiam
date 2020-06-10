@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 227
-* Unique actions: 8273
+* Unique actions: 8277
 * Managed policies: 671
 
 Most common managed policy name prefixes:
@@ -109,6 +109,7 @@ The following table summarises the AWS APIs.
 | [`workspaces`](services/workspaces.yml) | 32 | 9 | 0 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 32 | 0 | 0 |
+| [`codeartifact`](services/codeartifact.yml) | 31 | 0 | 4 |
 | [`events`](services/events.yml) | 31 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 30 | 0 | 0 |
@@ -222,7 +223,6 @@ The following table summarises the AWS APIs.
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 215 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 151 | 7 |
-| [`codeartifact`](services/codeartifact.yml) | 0 | 31 | 0 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
@@ -274,7 +274,7 @@ Most common action prefixes:
 | `Delete` | 967 |
 | `Create` | 883 |
 | `Update` | 671 |
-| `Put` | 234 |
+| `Put` | 235 |
 | `Start` | 147 |
 | `Tag` | 116 |
 | `Untag` | 115 |

@@ -1,6 +1,4 @@
 Actions:
-
-  # APIs without an IAM action
   - Name: codeartifact:AssociateExternalConnection
   - Name: codeartifact:CopyPackageVersions
   - Name: codeartifact:CreateDomain
@@ -32,3 +30,9 @@ Actions:
   - Name: codeartifact:PutRepositoryPermissionsPolicy
   - Name: codeartifact:UpdatePackageVersionsStatus
   - Name: codeartifact:UpdateRepository
+
+  # actions with no corresponding API
+  - Name: codeartifact:AssociateWithDownstreamRepository
+  - Name: codeartifact:PublishPackageVersion
+  - Name: codeartifact:PutPackageMetadata
+  - Name: codeartifact:ReadFromRepository
