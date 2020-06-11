@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 227
-* Unique actions: 8277
+* Unique actions: 8279
 * Managed policies: 671
 
 Most common managed policy name prefixes:
@@ -81,7 +81,7 @@ The following table summarises the AWS APIs.
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`cloudfront`](services/cloudfront.yml) | 45 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 45 | 0 | 0 |
-| [`ecs`](services/ecs.yml) | 44 | 4 | 2 |
+| [`ecs`](services/ecs.yml) | 44 | 5 | 2 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 44 | 3 | 2 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 43 | 0 | 53 |
@@ -198,8 +198,8 @@ The following table summarises the AWS APIs.
 | [`translate`](services/translate.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 9 | 0 | 0 |
+| [`iot`](services/iot.yml) | 8 | 1 | 201 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
-| [`iot`](services/iot.yml) | 8 | 0 | 201 |
 | [`sts`](services/sts.yml) | 8 | 0 | 2 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
 | [`sms-voice`](services/sms-voice.yml) | 8 | 0 | 0 |
@@ -268,10 +268,10 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1144 |
+| `List` | 1145 |
 | `Get` | 1090 |
 | `Describe` | 1041 |
-| `Delete` | 967 |
+| `Delete` | 968 |
 | `Create` | 883 |
 | `Update` | 671 |
 | `Put` | 235 |
