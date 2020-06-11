@@ -195,10 +195,10 @@ The following table summarises the AWS APIs.
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 10 | 0 | 3 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
+| [`iot`](services/iot.yml) | 9 | 0 | 201 |
 | [`translate`](services/translate.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 9 | 0 | 0 |
-| [`iot`](services/iot.yml) | 8 | 1 | 201 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
 | [`sts`](services/sts.yml) | 8 | 0 | 2 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
