@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 227
-* Unique actions: 8279
+* Unique actions: 8284
 * Managed policies: 671
 
 Most common managed policy name prefixes:
@@ -42,7 +42,7 @@ The following table summarises the AWS APIs.
 | [`glue`](services/glue.yml) | 124 | 1 | 1 |
 | [`rds`](services/rds.yml) | 123 | 7 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
-| [`chime`](services/chime.yml) | 115 | 0 | 50 |
+| [`chime`](services/chime.yml) | 115 | 1 | 50 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
 | [`ses`](services/ses.yml) | 103 | 9 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 12 | 0 |
@@ -114,10 +114,10 @@ The following table summarises the AWS APIs.
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 30 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 29 | 4 | 8 |
+| [`appconfig`](services/appconfig.yml) | 29 | 4 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 29 | 1 | 0 |
 | [`connect`](services/connect.yml) | 29 | 0 | 6 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
-| [`appconfig`](services/appconfig.yml) | 29 | 0 | 0 |
 | [`es`](services/es.yml) | 28 | 9 | 9 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`sms`](services/sms.yml) | 28 | 0 | 2 |
@@ -268,11 +268,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1145 |
-| `Get` | 1090 |
+| `List` | 1146 |
+| `Get` | 1091 |
 | `Describe` | 1041 |
-| `Delete` | 968 |
-| `Create` | 883 |
+| `Delete` | 969 |
+| `Create` | 885 |
 | `Update` | 671 |
 | `Put` | 235 |
 | `Start` | 147 |
