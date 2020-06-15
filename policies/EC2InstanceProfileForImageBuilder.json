@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/EC2InstanceProfileForImageBuilder",
   "CreateDate": "2019-12-01T19:08:23Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4EJC2UPLYL",
   "PolicyName": "EC2InstanceProfileForImageBuilder",
   "PolicyVersion": {
-    "CreateDate": "2019-12-01T19:08:23Z",
+    "CreateDate": "2020-06-15T17:44:31Z",
     "Document": {
       "Statement": [
         {
@@ -31,6 +31,15 @@
         },
         {
           "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/imagebuilder/*"
+        },
+        {
+          "Action": [
             "s3:GetObject"
           ],
           "Effect": "Allow",
@@ -40,7 +49,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-12-01T19:08:23Z"
+  "UpdateDate": "2020-06-15T17:44:31Z"
 }
