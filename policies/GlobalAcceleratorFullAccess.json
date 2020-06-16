@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/GlobalAcceleratorFullAccess",
   "CreateDate": "2018-11-27T02:44:44Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ3NSRQKPB42BCNRT6",
   "PolicyName": "GlobalAcceleratorFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-10-21T21:25:42Z",
+    "CreateDate": "2020-06-16T16:47:10Z",
     "Document": {
       "Statement": [
         {
@@ -29,7 +29,8 @@
           "Action": [
             "ec2:DescribeAddresses",
             "ec2:DescribeInstances",
-            "ec2:DescribeInternetGateways"
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeRegions"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -45,7 +46,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2019-10-21T21:25:42Z"
+  "UpdateDate": "2020-06-16T16:47:10Z"
 }
