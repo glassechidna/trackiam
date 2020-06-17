@@ -1,0 +1,37 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCodeArtifactAdminAccess",
+  "CreateDate": "2020-06-16T23:53:23Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4MBONPJNI5",
+  "PolicyName": "AWSCodeArtifactAdminAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-06-16T23:53:23Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "sts:GetServiceBearerToken",
+          "Condition": {
+            "StringEquals": {
+              "sts:AWSServiceName": "codeartifact.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "codeartifact:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-06-16T23:53:23Z"
+}
