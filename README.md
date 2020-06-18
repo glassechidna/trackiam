@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 227
-* Unique actions: 8287
-* Managed policies: 673
+* Unique actions: 8288
+* Managed policies: 674
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 194 |
 | `arn:aws:iam::aws:policy/Amazon*` | 178 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 121 |
-| `arn:aws:iam::aws:policy/service-role/*` | 105 |
+| `arn:aws:iam::aws:policy/service-role/*` | 106 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 68 |
 
@@ -61,7 +61,7 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 71 | 7 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
-| [`route53`](services/route53.yml) | 56 | 0 | 0 |
+| [`route53`](services/route53.yml) | 56 | 1 | 0 |
 | [`directconnect`](services/directconnect.yml) | 56 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 54 | 3 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 54 | 1 | 3 |
@@ -268,7 +268,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1146 |
+| `List` | 1147 |
 | `Get` | 1091 |
 | `Describe` | 1042 |
 | `Delete` | 969 |
