@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSConfigServiceRolePolicy",
   "CreateDate": "2018-05-30T23:31:46Z",
-  "DefaultVersionId": "v19",
+  "DefaultVersionId": "v20",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJUCWFHNZER665LLQQ",
   "PolicyName": "AWSConfigServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-05-15T18:39:10Z",
+    "CreateDate": "2020-06-19T16:09:31Z",
     "Document": {
       "Statement": [
         {
@@ -43,6 +43,7 @@
             "config:List*",
             "config:Put*",
             "config:Select*",
+            "dax:DescribeClusters",
             "dms:DescribeReplicationInstances",
             "dynamodb:DescribeContinuousBackups",
             "dynamodb:DescribeLimits",
@@ -111,6 +112,7 @@
             "lambda:ListAliases",
             "lambda:ListFunctions",
             "logs:DescribeLogGroups",
+            "organizations:DescribeOrganization",
             "rds:DescribeDBClusterSnapshotAttributes",
             "rds:DescribeDBClusterSnapshots",
             "rds:DescribeDBClusters",
@@ -169,9 +171,15 @@
             "ssm:DescribeDocument",
             "ssm:GetAutomationExecution",
             "ssm:GetDocument",
+            "storagegateway:ListGateways",
+            "storagegateway:ListVolumes",
             "support:DescribeCases",
+            "waf-regional:GetLoggingConfiguration",
             "waf-regional:GetWebACL",
-            "waf-regional:GetWebACLForResource"
+            "waf-regional:GetWebACLForResource",
+            "waf:GetLoggingConfiguration",
+            "waf:GetWebACL",
+            "wafv2:GetLoggingConfiguration"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -180,7 +188,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v19"
+    "VersionId": "v20"
   },
-  "UpdateDate": "2020-05-15T18:39:10Z"
+  "UpdateDate": "2020-06-19T16:09:31Z"
 }
