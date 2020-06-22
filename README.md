@@ -76,10 +76,10 @@ The following table summarises the AWS APIs.
 | [`quicksight`](services/quicksight.yml) | 47 | 19 | 9 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
+| [`rekognition`](services/rekognition.yml) | 47 | 0 | 0 |
 | [`backup`](services/backup.yml) | 46 | 2 | 1 |
 | [`dms`](services/dms.yml) | 45 | 2 | 0 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
-| [`rekognition`](services/rekognition.yml) | 45 | 0 | 2 |
 | [`cloudfront`](services/cloudfront.yml) | 45 | 0 | 1 |
 | [`ecs`](services/ecs.yml) | 44 | 5 | 2 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 44 | 3 | 2 |
