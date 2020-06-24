@@ -26,6 +26,7 @@ Actions:
   - Name: codecommit:GetBlob
   - Name: codecommit:GetBranch
   - Name: codecommit:GetComment
+  - Name: codecommit:GetCommentReactions
   - Name: codecommit:GetCommentsForComparedCommit
   - Name: codecommit:GetCommentsForPullRequest
   - Name: codecommit:GetCommit
@@ -57,6 +58,7 @@ Actions:
   - Name: codecommit:PostCommentForComparedCommit
   - Name: codecommit:PostCommentForPullRequest
   - Name: codecommit:PostCommentReply
+  - Name: codecommit:PutCommentReaction
   - Name: codecommit:PutFile
   - Name: codecommit:PutRepositoryTriggers
   - Name: codecommit:TagResource
@@ -78,7 +80,6 @@ Actions:
   # actions with no corresponding API
   - Name: codecommit:BatchGetPullRequests
   - Name: codecommit:CancelUploadArchive
-  - Name: codecommit:GetCommentReactions
   - Name: codecommit:GetCommitHistory
   - Name: codecommit:GetCommitsFromMergeBase
   - Name: codecommit:GetObjectIdentifier
@@ -87,5 +88,4 @@ Actions:
   - Name: codecommit:GetUploadArchiveStatus
   - Name: codecommit:GitPull
   - Name: codecommit:GitPush
-  - Name: codecommit:PutCommentReaction
   - Name: codecommit:UploadArchive

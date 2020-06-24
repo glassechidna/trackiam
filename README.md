@@ -11,9 +11,9 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 227
-* Unique actions: 8292
-* Managed policies: 673
+* Unique services: 228
+* Unique actions: 8297
+* Managed policies: 674
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 194 |
 | `arn:aws:iam::aws:policy/Amazon*` | 178 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 121 |
-| `arn:aws:iam::aws:policy/service-role/*` | 105 |
+| `arn:aws:iam::aws:policy/service-role/*` | 106 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 68 |
 
@@ -53,10 +53,10 @@ The following table summarises the AWS APIs.
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
 | [`config`](services/config.yml) | 77 | 2 | 2 |
+| [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`gamelift`](services/gamelift.yml) | 76 | 13 | 0 |
-| [`codecommit`](services/codecommit.yml) | 75 | 0 | 13 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 71 | 7 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
@@ -217,6 +217,7 @@ The following table summarises the AWS APIs.
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
 | [`ebs`](services/ebs.yml) | 3 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 2 | 19 | 0 |
+| [`honeycode`](services/honeycode.yml) | 2 | 0 | 3 |
 | [`pi`](services/pi.yml) | 2 | 0 | 0 |
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 0 | 0 |
@@ -268,8 +269,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1147 |
-| `Get` | 1093 |
+| `List` | 1148 |
+| `Get` | 1094 |
 | `Describe` | 1042 |
 | `Delete` | 969 |
 | `Create` | 885 |

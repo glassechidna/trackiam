@@ -1,0 +1,48 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonMachineLearningRoleforRedshiftDataSourceV3",
+  "CreateDate": "2020-06-24T18:00:09Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4DIXIZO4E2",
+  "PolicyName": "AmazonMachineLearningRoleforRedshiftDataSourceV3",
+  "PolicyVersion": {
+    "CreateDate": "2020-06-24T18:00:09Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CreateSecurityGroup",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeSecurityGroups",
+            "ec2:RevokeSecurityGroupIngress",
+            "redshift:AuthorizeClusterSecurityGroupIngress",
+            "redshift:CreateClusterSecurityGroup",
+            "redshift:DescribeClusterSecurityGroups",
+            "redshift:DescribeClusters",
+            "redshift:ModifyCluster",
+            "redshift:RevokeClusterSecurityGroupIngress"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:GetBucketPolicy",
+            "s3:GetObject",
+            "s3:PutBucketPolicy",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::amazon-machine-learning*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-06-24T18:00:09Z"
+}
