@@ -4,6 +4,7 @@ Actions:
   - Name: autoscaling:AttachLoadBalancers
   - Name: autoscaling:BatchDeleteScheduledAction
   - Name: autoscaling:BatchPutScheduledUpdateGroupAction
+  - Name: autoscaling:CancelInstanceRefresh
   - Name: autoscaling:CompleteLifecycleAction
   - Name: autoscaling:CreateAutoScalingGroup
   - Name: autoscaling:CreateLaunchConfiguration
@@ -20,6 +21,7 @@ Actions:
   - Name: autoscaling:DescribeAutoScalingGroups
   - Name: autoscaling:DescribeAutoScalingInstances
   - Name: autoscaling:DescribeAutoScalingNotificationTypes
+  - Name: autoscaling:DescribeInstanceRefreshes
   - Name: autoscaling:DescribeLaunchConfigurations
   - Name: autoscaling:DescribeLifecycleHookTypes
   - Name: autoscaling:DescribeLifecycleHooks
@@ -50,11 +52,7 @@ Actions:
   - Name: autoscaling:SetDesiredCapacity
   - Name: autoscaling:SetInstanceHealth
   - Name: autoscaling:SetInstanceProtection
+  - Name: autoscaling:StartInstanceRefresh
   - Name: autoscaling:SuspendProcesses
   - Name: autoscaling:TerminateInstanceInAutoScalingGroup
   - Name: autoscaling:UpdateAutoScalingGroup
-
-  # APIs without an IAM action
-  - Name: autoscaling:CancelInstanceRefresh
-  - Name: autoscaling:DescribeInstanceRefreshes
-  - Name: autoscaling:StartInstanceRefresh
