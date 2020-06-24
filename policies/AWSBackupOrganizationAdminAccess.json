@@ -1,0 +1,76 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSBackupOrganizationAdminAccess",
+  "CreateDate": "2020-06-24T16:23:14Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4E5BC3XLFS",
+  "PolicyName": "AWSBackupOrganizationAdminAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-06-24T16:23:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "organizations:AttachPolicy",
+            "organizations:CreatePolicy",
+            "organizations:DeletePolicy",
+            "organizations:DescribeEffectivePolicy",
+            "organizations:DescribePolicy",
+            "organizations:DetachPolicy",
+            "organizations:DisablePolicyType",
+            "organizations:EnablePolicyType",
+            "organizations:ListPolicies",
+            "organizations:ListPoliciesForTarget",
+            "organizations:ListTargetsForPolicy",
+            "organizations:UpdatePolicy"
+          ],
+          "Condition": {
+            "StringLikeIfExists": {
+              "organizations:PolicyType": [
+                "BACKUP_POLICY"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "organizations:DisableAWSServiceAccess",
+            "organizations:EnableAWSServiceAccess"
+          ],
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "organizations:ServicePrincipal": [
+                "backup.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListAccountsForParent",
+            "organizations:ListChildren",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListParents",
+            "organizations:ListRoots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-06-24T16:23:14Z"
+}

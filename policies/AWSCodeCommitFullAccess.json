@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeCommitFullAccess",
   "CreateDate": "2015-07-09T17:02:19Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAI4VCZ3XPIZLQ5NZV2",
   "PolicyName": "AWSCodeCommitFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-03-26T16:23:20Z",
+    "CreateDate": "2020-06-24T17:08:06Z",
     "Document": {
       "Statement": [
         {
@@ -73,8 +73,10 @@
         {
           "Action": [
             "codeguru-reviewer:AssociateRepository",
+            "codeguru-reviewer:DescribeCodeReview",
             "codeguru-reviewer:DescribeRepositoryAssociation",
             "codeguru-reviewer:DisassociateRepository",
+            "codeguru-reviewer:ListCodeReviews",
             "codeguru-reviewer:ListRepositoryAssociations"
           ],
           "Effect": "Allow",
@@ -191,7 +193,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2020-03-26T16:23:20Z"
+  "UpdateDate": "2020-06-24T17:08:06Z"
 }

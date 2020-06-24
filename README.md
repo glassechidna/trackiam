@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 227
-* Unique actions: 8290
-* Managed policies: 672
+* Unique actions: 8292
+* Managed policies: 673
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 193 |
+| `arn:aws:iam::aws:policy/AWS*` | 194 |
 | `arn:aws:iam::aws:policy/Amazon*` | 178 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 121 |
 | `arn:aws:iam::aws:policy/service-role/*` | 105 |
@@ -56,7 +56,7 @@ The following table summarises the AWS APIs.
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`gamelift`](services/gamelift.yml) | 76 | 13 | 0 |
-| [`codecommit`](services/codecommit.yml) | 75 | 0 | 11 |
+| [`codecommit`](services/codecommit.yml) | 75 | 0 | 13 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 71 | 7 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
@@ -269,12 +269,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1147 |
-| `Get` | 1092 |
+| `Get` | 1093 |
 | `Describe` | 1042 |
 | `Delete` | 969 |
 | `Create` | 885 |
 | `Update` | 671 |
-| `Put` | 235 |
+| `Put` | 236 |
 | `Start` | 149 |
 | `Tag` | 116 |
 | `Untag` | 115 |
