@@ -106,6 +106,7 @@ The following table summarises the AWS APIs.
 | [`worklink`](services/worklink.yml) | 33 | 0 | 0 |
 | [`sns`](services/sns.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
+| [`appconfig`](services/appconfig.yml) | 33 | 0 | 0 |
 | [`workspaces`](services/workspaces.yml) | 32 | 9 | 0 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 32 | 0 | 0 |
@@ -114,7 +115,6 @@ The following table summarises the AWS APIs.
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 30 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 29 | 4 | 8 |
-| [`appconfig`](services/appconfig.yml) | 29 | 4 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 29 | 1 | 0 |
 | [`connect`](services/connect.yml) | 29 | 0 | 6 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
