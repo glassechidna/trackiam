@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 228
-* Unique actions: 8303
+* Unique actions: 8307
 * Managed policies: 683
 
 Most common managed policy name prefixes:
@@ -185,8 +185,8 @@ The following table summarises the AWS APIs.
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`acm`](services/acm.yml) | 13 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 4 | 0 |
+| [`codeguru-profiler`](services/codeguru-profiler.yml) | 12 | 0 | 8 |
 | [`detective`](services/detective.yml) | 12 | 0 | 5 |
-| [`codeguru-profiler`](services/codeguru-profiler.yml) | 12 | 0 | 4 |
 | [`signer`](services/signer.yml) | 12 | 0 | 0 |
 | [`resource-groups`](services/resource-groups.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
