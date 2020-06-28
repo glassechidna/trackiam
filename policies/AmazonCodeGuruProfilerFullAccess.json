@@ -1,15 +1,27 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonCodeGuruProfilerFullAccess",
   "CreateDate": "2019-12-03T10:13:27Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FVCBNS424",
   "PolicyName": "AmazonCodeGuruProfilerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-04-06T21:16:38Z",
+    "CreateDate": "2020-06-28T00:04:51Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "codeguru-profiler.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*AWSServiceRoleForCodeGuruProfiler*"
+        },
         {
           "Action": [
             "codeguru-profiler:*",
@@ -24,7 +36,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-04-06T21:16:38Z"
+  "UpdateDate": "2020-06-28T00:04:51Z"
 }
