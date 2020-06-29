@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 228
-* Unique actions: 8307
-* Managed policies: 683
+* Unique actions: 8305
+* Managed policies: 682
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 194 |
 | `arn:aws:iam::aws:policy/Amazon*` | 184 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 124 |
-| `arn:aws:iam::aws:policy/service-role/*` | 106 |
+| `arn:aws:iam::aws:policy/service-role/*` | 105 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 68 |
 
@@ -52,7 +52,7 @@ The following table summarises the AWS APIs.
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
-| [`config`](services/config.yml) | 77 | 2 | 2 |
+| [`config`](services/config.yml) | 77 | 2 | 0 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
@@ -270,7 +270,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1148 |
-| `Get` | 1096 |
+| `Get` | 1094 |
 | `Describe` | 1042 |
 | `Delete` | 971 |
 | `Create` | 885 |
