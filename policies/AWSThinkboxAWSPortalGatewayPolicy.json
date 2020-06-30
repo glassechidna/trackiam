@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSThinkboxAWSPortalGatewayPolicy",
   "CreateDate": "2020-05-27T19:05:00Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FP27FM4BH",
   "PolicyName": "AWSThinkboxAWSPortalGatewayPolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-05-27T19:05:00Z",
+    "CreateDate": "2020-06-30T16:02:07Z",
     "Document": {
       "Statement": [
         {
@@ -61,6 +61,15 @@
         },
         {
           "Action": [
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::stack*/gateway_certs/*"
+          ]
+        },
+        {
+          "Action": [
             "secretsmanager:GetSecretValue"
           ],
           "Effect": "Allow",
@@ -72,7 +81,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-05-27T19:05:00Z"
+  "UpdateDate": "2020-06-30T16:02:07Z"
 }
