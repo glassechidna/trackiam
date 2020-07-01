@@ -1,17 +1,54 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEC2RolePolicyForLaunchWizard",
   "CreateDate": "2019-11-13T08:05:53Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CBGI56NFS",
   "PolicyName": "AmazonEC2RolePolicyForLaunchWizard",
   "PolicyVersion": {
-    "CreateDate": "2020-06-03T23:17:35Z",
+    "CreateDate": "2020-07-01T19:04:48Z",
     "Document": {
       "Statement": [
         {
-          "Action": "ec2:CreateTags",
+          "Action": [
+            "cloudformation:DescribeStackResource",
+            "cloudformation:DescribeStackResources",
+            "cloudformation:DescribeStacks",
+            "cloudformation:SignalResource",
+            "ec2:Describe*"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "LaunchWizardResourceGroupID"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:AttachVolume",
+            "ec2:RebootInstances",
+            "ec2:StartInstances",
+            "ec2:StopInstances"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/LaunchWizardResourceGroupID": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateTags",
+            "ec2:CreateVolume"
+          ],
           "Condition": {
             "ForAllValues:StringEquals": {
               "aws:TagKeys": [
@@ -25,52 +62,15 @@
         },
         {
           "Action": [
-            "cloudformation:DescribeStackResource",
-            "cloudformation:DescribeStackResources",
-            "cloudformation:DescribeStacks",
-            "cloudformation:SignalResource",
-            "ec2:Describe*",
-            "ec2:ModifyInstanceAttribute",
-            "ec2:RebootInstances",
-            "ec2:StartInstances",
-            "ec2:StopInstances"
-          ],
-          "Condition": {
-            "ForAllValues:StringEquals": {
-              "aws:TagKeys": "LaunchWizardResourceGroupID"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
-            "ec2:AttachVolume",
-            "ec2:CreateVolume",
-            "ec2:DescribeInstances",
-            "ec2:DescribeVolumes",
-            "ec2:ModifyVolume"
-          ],
-          "Condition": {
-            "ForAllValues:StringLike": {
-              "aws:TagKeys": "LaunchWizardResourceGroupID"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
-            "ec2:DescribeRouteTables",
             "ec2:ReplaceRoute"
           ],
           "Condition": {
-            "ForAllValues:StringEquals": {
-              "aws:TagKeys": "LaunchWizardApplicationType"
+            "StringLike": {
+              "ec2:ResourceTag/LaunchWizardApplicationType": "*"
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "arn:aws:ec2:*:*:route-table/*"
         },
         {
           "Action": "logs:Create*",
@@ -80,10 +80,17 @@
         {
           "Action": [
             "cloudwatch:GetMetricStatistics",
+            "cloudwatch:PutMetricData",
             "ec2:AssociateAddress",
             "ec2:DescribeAddresses",
             "ec2:DescribeImages",
-            "ec2:DescribeRegions"
+            "ec2:DescribeImages",
+            "ec2:DescribeInstances",
+            "ec2:DescribeRegions",
+            "ec2:DescribeRegions",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeVolumes",
+            "ec2:ModifyInstanceAttribute"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -114,14 +121,6 @@
         },
         {
           "Action": [
-            "ec2:DescribeImages",
-            "ec2:DescribeRegions"
-          ],
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
             "logs:DescribeLogGroups",
             "logs:DescribeLogStreams",
             "logs:PutLogEvents",
@@ -143,7 +142,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2020-06-03T23:17:35Z"
+  "UpdateDate": "2020-07-01T19:04:48Z"
 }
