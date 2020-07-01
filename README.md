@@ -42,7 +42,7 @@ The following table summarises the AWS APIs.
 | [`glue`](services/glue.yml) | 124 | 7 | 1 |
 | [`rds`](services/rds.yml) | 123 | 7 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
-| [`chime`](services/chime.yml) | 115 | 4 | 50 |
+| [`chime`](services/chime.yml) | 118 | 1 | 50 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
 | [`ses`](services/ses.yml) | 103 | 9 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 12 | 0 |
@@ -62,13 +62,13 @@ The following table summarises the AWS APIs.
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`autoscaling`](services/autoscaling.yml) | 57 | 0 | 0 |
+| [`s3`](services/s3.yml) | 56 | 48 | 39 |
 | [`route53`](services/route53.yml) | 56 | 1 | 0 |
 | [`directconnect`](services/directconnect.yml) | 56 | 0 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 54 | 1 | 3 |
 | [`guardduty`](services/guardduty.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`iotsitewise`](services/iotsitewise.yml) | 54 | 0 | 0 |
-| [`s3`](services/s3.yml) | 53 | 51 | 39 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 51 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 50 | 1 | 3 |
