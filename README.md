@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 228
-* Unique actions: 8319
+* Unique actions: 8342
 * Managed policies: 682
 
 Most common managed policy name prefixes:
@@ -120,9 +120,9 @@ The following table summarises the AWS APIs.
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
 | [`es`](services/es.yml) | 28 | 9 | 9 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
+| [`appmesh`](services/appmesh.yml) | 28 | 0 | 11 |
 | [`sms`](services/sms.yml) | 28 | 0 | 2 |
 | [`athena`](services/athena.yml) | 28 | 0 | 1 |
-| [`appmesh`](services/appmesh.yml) | 28 | 0 | 1 |
 | [`networkmanager`](services/networkmanager.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 27 | 2 | 0 |
@@ -232,10 +232,10 @@ The following table summarises the AWS APIs.
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
 | [`sso`](services/sso.yml) | 0 | 0 | 54 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 37 |
+| [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
-| [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
-| [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 15 |
+| [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`appflow`](services/appflow.yml) | 0 | 0 | 15 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 12 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
@@ -269,14 +269,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1149 |
+| `List` | 1154 |
 | `Get` | 1098 |
-| `Describe` | 1043 |
-| `Delete` | 974 |
-| `Create` | 887 |
-| `Update` | 673 |
+| `Describe` | 1047 |
+| `Delete` | 978 |
+| `Create` | 891 |
+| `Update` | 677 |
 | `Put` | 237 |
 | `Start` | 149 |
-| `Tag` | 116 |
-| `Untag` | 115 |
+| `Tag` | 117 |
+| `Untag` | 116 |
 
