@@ -1,42 +1,38 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLambdaRolePolicyForLaunchWizardSAP",
   "CreateDate": "2020-03-30T20:25:12Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NMJOHL3TN",
   "PolicyName": "AmazonLambdaRolePolicyForLaunchWizardSAP",
   "PolicyVersion": {
-    "CreateDate": "2020-06-03T19:36:41Z",
+    "CreateDate": "2020-07-01T19:49:27Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "ec2:CreateRoute",
-            "ec2:DeleteRoute",
-            "ec2:DescribeRouteTables"
+            "ec2:DeleteRoute"
           ],
           "Condition": {
-            "ForAllValues:StringEquals": {
-              "aws:TagKeys": "LaunchWizardApplicationType"
+            "StringLike": {
+              "ec2:ResourceTag/LaunchWizardApplicationType": "*"
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "arn:aws:ec2:*:*:route-table/*"
         },
         {
           "Action": [
-            "ec2:CreateTags",
-            "ec2:DescribeInstanceAttribute",
-            "ec2:DescribeInstances",
-            "ec2:DescribeTags",
-            "ec2:ModifyInstanceAttribute",
-            "ssm:GetParameter",
-            "ssm:sendCommand"
+            "ec2:CreateTags"
           ],
           "Condition": {
             "ForAllValues:StringLike": {
               "aws:TagKeys": "LaunchWizard*"
+            },
+            "StringLike": {
+              "ec2:ResourceTag/LaunchWizardApplicationType": "*"
             }
           },
           "Effect": "Allow",
@@ -44,7 +40,26 @@
         },
         {
           "Action": [
+            "ssm:SendCommand"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ssm:resourceTag/LaunchWizardApplicationType": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstanceAttribute",
+            "ec2:DescribeInstances",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeTags",
             "ec2:DescribeVpcs",
+            "ec2:ModifyInstanceAttribute",
             "ssm:ListCommands"
           ],
           "Effect": "Allow",
@@ -74,18 +89,26 @@
         },
         {
           "Action": [
-            "ssm:GetDocument"
+            "ssm:GetDocument",
+            "ssm:sendCommand"
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:ssm:::document/AWS-RunShellScript"
+            "arn:aws:ssm:*:*:document/AWS-RunShellScript"
           ]
+        },
+        {
+          "Action": [
+            "ssm:GetParameter"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:parameter/LaunchWizard*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-06-03T19:36:41Z"
+  "UpdateDate": "2020-07-01T19:49:27Z"
 }
