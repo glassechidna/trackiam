@@ -60,6 +60,7 @@ The following table summarises the AWS APIs.
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 71 | 7 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
+| [`quicksight`](services/quicksight.yml) | 60 | 19 | 9 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`autoscaling`](services/autoscaling.yml) | 57 | 0 | 0 |
 | [`s3`](services/s3.yml) | 56 | 48 | 39 |
@@ -73,7 +74,6 @@ The following table summarises the AWS APIs.
 | [`comprehend`](services/comprehend.yml) | 51 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 50 | 1 | 3 |
 | [`lambda`](services/lambda.yml) | 48 | 1 | 3 |
-| [`quicksight`](services/quicksight.yml) | 47 | 32 | 9 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 47 | 0 | 0 |
