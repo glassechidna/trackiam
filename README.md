@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 228
-* Unique actions: 8355
+* Unique actions: 8358
 * Managed policies: 682
 
 Most common managed policy name prefixes:
@@ -39,7 +39,7 @@ The following table summarises the AWS APIs.
 | [`ec2`](services/ec2.yml) | 399 | 11 | 0 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`sagemaker`](services/sagemaker.yml) | 139 | 0 | 2 |
-| [`glue`](services/glue.yml) | 124 | 7 | 1 |
+| [`glue`](services/glue.yml) | 124 | 8 | 1 |
 | [`rds`](services/rds.yml) | 123 | 7 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
 | [`chime`](services/chime.yml) | 118 | 1 | 50 |
@@ -139,7 +139,7 @@ The following table summarises the AWS APIs.
 | [`transcribe`](services/transcribe.yml) | 24 | 0 | 3 |
 | [`kendra`](services/kendra.yml) | 24 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 23 | 5 | 0 |
-| [`elasticfilesystem`](services/elasticfilesystem.yml) | 23 | 0 | 5 |
+| [`elasticfilesystem`](services/elasticfilesystem.yml) | 23 | 2 | 5 |
 | [`servicediscovery`](services/servicediscovery.yml) | 23 | 0 | 0 |
 | [`ram`](services/ram.yml) | 22 | 2 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 1 |
@@ -270,12 +270,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1157 |
-| `Get` | 1098 |
-| `Describe` | 1050 |
+| `Get` | 1099 |
+| `Describe` | 1051 |
 | `Delete` | 980 |
 | `Create` | 893 |
 | `Update` | 680 |
-| `Put` | 237 |
+| `Put` | 238 |
 | `Start` | 149 |
 | `Tag` | 117 |
 | `Untag` | 116 |
