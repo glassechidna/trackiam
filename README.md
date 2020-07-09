@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 228
-* Unique actions: 8361
+* Unique actions: 8367
 * Managed policies: 684
 
 Most common managed policy name prefixes:
@@ -38,7 +38,7 @@ The following table summarises the AWS APIs.
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 399 | 11 | 0 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
-| [`sagemaker`](services/sagemaker.yml) | 139 | 0 | 2 |
+| [`sagemaker`](services/sagemaker.yml) | 139 | 1 | 2 |
 | [`glue`](services/glue.yml) | 124 | 8 | 1 |
 | [`rds`](services/rds.yml) | 123 | 7 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
@@ -96,6 +96,7 @@ The following table summarises the AWS APIs.
 | [`personalize`](services/personalize.yml) | 39 | 7 | 0 |
 | [`logs`](services/logs.yml) | 39 | 3 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
+| [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`codepipeline`](services/codepipeline.yml) | 37 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
 | [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
@@ -121,7 +122,6 @@ The following table summarises the AWS APIs.
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
 | [`es`](services/es.yml) | 28 | 9 | 9 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
-| [`appmesh`](services/appmesh.yml) | 28 | 0 | 11 |
 | [`sms`](services/sms.yml) | 28 | 0 | 2 |
 | [`athena`](services/athena.yml) | 28 | 0 | 1 |
 | [`networkmanager`](services/networkmanager.yml) | 28 | 0 | 0 |
@@ -161,9 +161,9 @@ The following table summarises the AWS APIs.
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`ce`](services/ce.yml) | 19 | 0 | 0 |
 | [`shield`](services/shield.yml) | 18 | 5 | 0 |
+| [`secretsmanager`](services/secretsmanager.yml) | 18 | 1 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`transfer`](services/transfer.yml) | 18 | 0 | 0 |
-| [`secretsmanager`](services/secretsmanager.yml) | 18 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 18 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 17 | 10 | 0 |
@@ -214,8 +214,8 @@ The following table summarises the AWS APIs.
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`outposts`](services/outposts.yml) | 5 | 2 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
+| [`ebs`](services/ebs.yml) | 3 | 3 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
-| [`ebs`](services/ebs.yml) | 3 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 2 | 19 | 0 |
 | [`honeycode`](services/honeycode.yml) | 2 | 0 | 3 |
 | [`pi`](services/pi.yml) | 2 | 0 | 0 |
@@ -242,7 +242,7 @@ The following table summarises the AWS APIs.
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
-| [`cassandra`](services/cassandra.yml) | 0 | 0 | 7 |
+| [`cassandra`](services/cassandra.yml) | 0 | 0 | 8 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`wellarchitected`](services/wellarchitected.yml) | 0 | 0 | 5 |
@@ -272,11 +272,11 @@ Most common action prefixes:
 | `List` | 1158 |
 | `Get` | 1099 |
 | `Describe` | 1051 |
-| `Delete` | 980 |
+| `Delete` | 981 |
 | `Create` | 893 |
 | `Update` | 680 |
-| `Put` | 238 |
-| `Start` | 149 |
+| `Put` | 239 |
+| `Start` | 150 |
 | `Tag` | 118 |
 | `Untag` | 117 |
 
