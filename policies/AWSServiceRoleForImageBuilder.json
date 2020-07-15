@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForImageBuilder",
   "CreateDate": "2019-11-29T22:02:13Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NE22WISEW",
   "PolicyName": "AWSServiceRoleForImageBuilder",
   "PolicyVersion": {
-    "CreateDate": "2020-06-01T17:40:18Z",
+    "CreateDate": "2020-07-15T21:23:31Z",
     "Document": {
       "Statement": [
         {
@@ -34,7 +34,10 @@
           "Action": "iam:PassRole",
           "Condition": {
             "StringEquals": {
-              "iam:PassedToService": "ec2.amazonaws.com"
+              "iam:PassedToService": [
+                "ec2.amazonaws.com",
+                "ec2.amazonaws.com.cn"
+              ]
             }
           },
           "Effect": "Allow",
@@ -230,7 +233,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2020-06-01T17:40:18Z"
+  "UpdateDate": "2020-07-15T21:23:31Z"
 }
