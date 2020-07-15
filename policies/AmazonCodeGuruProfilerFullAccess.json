@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonCodeGuruProfilerFullAccess",
   "CreateDate": "2019-12-03T10:13:27Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FVCBNS424",
   "PolicyName": "AmazonCodeGuruProfilerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-06-28T00:04:51Z",
+    "CreateDate": "2020-07-15T03:23:08Z",
     "Document": {
       "Statement": [
         {
@@ -27,7 +27,8 @@
             "codeguru-profiler:*",
             "codeguru:*",
             "iam:ListRoles",
-            "iam:ListUsers"
+            "iam:ListUsers",
+            "sns:ListTopics"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -36,7 +37,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-06-28T00:04:51Z"
+  "UpdateDate": "2020-07-15T03:23:08Z"
 }
