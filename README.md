@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 229
-* Unique actions: 8385
+* Unique services: 230
+* Unique actions: 8403
 * Managed policies: 685
 
 Most common managed policy name prefixes:
@@ -224,6 +224,7 @@ The following table summarises the AWS APIs.
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 215 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 151 | 7 |
+| [`ivs`](services/ivs.yml) | 0 | 18 | 0 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
@@ -270,14 +271,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1162 |
-| `Get` | 1102 |
+| `List` | 1166 |
+| `Get` | 1105 |
 | `Describe` | 1051 |
-| `Delete` | 983 |
-| `Create` | 895 |
-| `Update` | 681 |
-| `Put` | 240 |
+| `Delete` | 985 |
+| `Create` | 897 |
+| `Update` | 682 |
+| `Put` | 241 |
 | `Start` | 150 |
-| `Tag` | 119 |
-| `Untag` | 118 |
+| `Tag` | 120 |
+| `Untag` | 119 |
 
