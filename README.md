@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 230
-* Unique actions: 8403
+* Unique services: 229
+* Unique actions: 8385
 * Managed policies: 685
 
 Most common managed policy name prefixes:
@@ -164,6 +164,7 @@ The following table summarises the AWS APIs.
 | [`secretsmanager`](services/secretsmanager.yml) | 18 | 1 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`transfer`](services/transfer.yml) | 18 | 0 | 0 |
+| [`ivs`](services/ivs.yml) | 18 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 18 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 17 | 10 | 0 |
@@ -224,7 +225,6 @@ The following table summarises the AWS APIs.
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 215 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 151 | 7 |
-| [`ivs`](services/ivs.yml) | 0 | 18 | 0 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
@@ -237,7 +237,6 @@ The following table summarises the AWS APIs.
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
-| [`IVS`](services/IVS.yml) | 0 | 0 | 18 |
 | [`appflow`](services/appflow.yml) | 0 | 0 | 15 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 12 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
@@ -271,14 +270,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1166 |
-| `Get` | 1105 |
+| `List` | 1162 |
+| `Get` | 1102 |
 | `Describe` | 1051 |
-| `Delete` | 985 |
-| `Create` | 897 |
-| `Update` | 682 |
-| `Put` | 241 |
+| `Delete` | 983 |
+| `Create` | 895 |
+| `Update` | 681 |
+| `Put` | 240 |
 | `Start` | 150 |
-| `Tag` | 120 |
-| `Untag` | 119 |
+| `Tag` | 119 |
+| `Untag` | 118 |
 
