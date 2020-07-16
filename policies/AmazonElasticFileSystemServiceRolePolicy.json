@@ -1,32 +1,89 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonElasticFileSystemServiceRolePolicy",
   "CreateDate": "2019-11-05T16:52:41Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4FXCJYWBN7",
   "PolicyName": "AmazonElasticFileSystemServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-11-05T16:52:41Z",
+    "CreateDate": "2020-07-16T16:48:14Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": [
+                "backup.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": "backup.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/backup.amazonaws.com/AWSServiceRoleForBackup"
+          ]
+        },
+        {
+          "Action": [
+            "backup-storage:MountCapsule",
             "ec2:CreateNetworkInterface",
             "ec2:DeleteNetworkInterface",
             "ec2:DescribeNetworkInterfaceAttribute",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
-            "ec2:ModifyNetworkInterfaceAttribute"
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "tag:GetResources"
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "backup:CreateBackupPlan",
+            "backup:CreateBackupSelection"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:backup:*:*:backup-plan:aws/efs/*"
+          ]
+        },
+        {
+          "Action": [
+            "backup:CreateBackupVault",
+            "backup:PutBackupVaultAccessPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:backup:*:*:backup-vault:aws/efs/automatic-backup-vault"
+          ]
+        },
+        {
+          "Action": [
+            "kms:DescribeKey"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-11-05T16:52:41Z"
+  "UpdateDate": "2020-07-16T16:48:14Z"
 }
