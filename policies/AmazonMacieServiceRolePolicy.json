@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonMacieServiceRolePolicy",
   "CreateDate": "2018-06-19T22:17:38Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJPLHONRH2HP2H6TNQ",
   "PolicyName": "AmazonMacieServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-04-30T17:41:57Z",
+    "CreateDate": "2020-07-17T21:31:07Z",
     "Document": {
       "Statement": [
         {
@@ -32,8 +32,24 @@
             "iam:ListAccountAliases",
             "organizations:DescribeAccount",
             "organizations:ListAccounts",
-            "s3:Get*",
-            "s3:List*"
+            "s3:GetAccountPublicAccessBlock",
+            "s3:GetBucketAcl",
+            "s3:GetBucketLocation",
+            "s3:GetBucketLogging",
+            "s3:GetBucketPolicy",
+            "s3:GetBucketPolicyStatus",
+            "s3:GetBucketPublicAccessBlock",
+            "s3:GetBucketTagging",
+            "s3:GetBucketVersioning",
+            "s3:GetBucketWebsite",
+            "s3:GetEncryptionConfiguration",
+            "s3:GetLifecycleConfiguration",
+            "s3:GetObject",
+            "s3:GetObjectAcl",
+            "s3:GetObjectTagging",
+            "s3:GetReplicationConfiguration",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -61,7 +77,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-04-30T17:41:57Z"
+  "UpdateDate": "2020-07-17T21:31:07Z"
 }
