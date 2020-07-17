@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSIoTDeviceTesterForFreeRTOSFullAccess",
   "CreateDate": "2020-02-12T20:33:53Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ADNJ2YUUH",
   "PolicyName": "AWSIoTDeviceTesterForFreeRTOSFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-03-23T19:49:50Z",
+    "CreateDate": "2020-07-17T17:09:58Z",
     "Document": {
       "Statement": [
         {
@@ -136,6 +136,17 @@
         },
         {
           "Action": [
+            "iot:CancelJobExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iot:*:*:job/*",
+            "arn:aws:iot:*:*:thing/idt*"
+          ],
+          "Sid": "VisualEditor6"
+        },
+        {
+          "Action": [
             "s3:GetObject",
             "s3:PutObject"
           ],
@@ -150,7 +161,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-03-23T19:49:50Z"
+  "UpdateDate": "2020-07-17T17:09:58Z"
 }
