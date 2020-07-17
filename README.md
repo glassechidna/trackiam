@@ -104,6 +104,7 @@ The following table summarises the AWS APIs.
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
 | [`codebuild`](services/codebuild.yml) | 34 | 0 | 7 |
 | [`iotanalytics`](services/iotanalytics.yml) | 33 | 1 | 0 |
+| [`connect`](services/connect.yml) | 33 | 0 | 6 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 0 |
 | [`sns`](services/sns.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
@@ -118,7 +119,6 @@ The following table summarises the AWS APIs.
 | [`forecast`](services/forecast.yml) | 30 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 29 | 4 | 8 |
 | [`cloudwatch`](services/cloudwatch.yml) | 29 | 1 | 0 |
-| [`connect`](services/connect.yml) | 29 | 0 | 10 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
 | [`es`](services/es.yml) | 28 | 9 | 9 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
