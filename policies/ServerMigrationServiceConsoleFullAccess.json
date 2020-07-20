@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ServerMigrationServiceConsoleFullAccess",
   "CreateDate": "2020-05-09T17:18:57Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4IIEMRGEYB",
   "PolicyName": "ServerMigrationServiceConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-05-09T17:18:57Z",
+    "CreateDate": "2020-07-20T22:00:37Z",
     "Document": {
       "Statement": [
         {
@@ -19,6 +19,11 @@
               "iam:AWSServiceName": "sms.amazonaws.com"
             }
           },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "iam:GetInstanceProfile",
           "Effect": "Allow",
           "Resource": "*"
         },
@@ -69,7 +74,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-05-09T17:18:57Z"
+  "UpdateDate": "2020-07-20T22:00:37Z"
 }

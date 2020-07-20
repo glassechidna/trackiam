@@ -1,15 +1,39 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/ServerMigrationServiceLaunchRole",
   "CreateDate": "2018-11-26T19:53:06Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIIIAAMVUCBR2OLXZO",
   "PolicyName": "ServerMigrationServiceLaunchRole",
   "PolicyVersion": {
-    "CreateDate": "2018-11-26T19:53:06Z",
+    "CreateDate": "2020-07-20T21:56:41Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "ec2.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:AssociateIamInstanceProfile",
+            "ec2:DisassociateIamInstanceProfile",
+            "ec2:ReplaceIamInstanceProfileAssociation"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/aws:cloudformation:stack-id": "arn:aws:cloudformation:*:*:stack/sms-app-*/*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*"
+        },
         {
           "Action": [
             "ec2:ModifyInstanceAttribute",
@@ -42,7 +66,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2018-11-26T19:53:06Z"
+  "UpdateDate": "2020-07-20T21:56:41Z"
 }
