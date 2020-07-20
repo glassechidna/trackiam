@@ -1,0 +1,30 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/ServerMigrationServiceRoleForInstanceValidation",
+  "CreateDate": "2020-07-20T22:25:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4LJMOLEWUV",
+  "PolicyName": "ServerMigrationServiceRoleForInstanceValidation",
+  "PolicyVersion": {
+    "CreateDate": "2020-07-20T22:25:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "s3:GetObject",
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::sms-app-*/*"
+        },
+        {
+          "Action": "sms:NotifyAppValidationOutput",
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-07-20T22:25:07Z"
+}

@@ -1,18 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/FMSServiceRolePolicy",
   "CreateDate": "2018-03-28T23:01:12Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAI62NTGYJB446ACUEA",
   "PolicyName": "FMSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-05-12T21:02:44Z",
+    "CreateDate": "2020-07-20T23:05:16Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "apigateway:SetWebACL",
+            "elasticloadbalancing:SetSecurityGroups",
             "elasticloadbalancing:SetWebACL",
             "waf-regional:AssociateWebACL",
             "waf-regional:DeleteWebACL",
@@ -147,6 +148,13 @@
         },
         {
           "Action": [
+            "elasticloadbalancing:ApplySecurityGroupsToLoadBalancer"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "iam:DeleteServiceLinkedRole",
             "iam:GetServiceLinkedRoleDeletionStatus"
           ],
@@ -265,7 +273,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2020-05-12T21:02:44Z"
+  "UpdateDate": "2020-07-20T23:05:16Z"
 }
