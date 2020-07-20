@@ -1,15 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForSMS",
   "CreateDate": "2019-08-06T18:39:29Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4OSYRD2VJZ",
   "PolicyName": "AWSServiceRoleForSMS",
   "PolicyVersion": {
-    "CreateDate": "2020-04-20T17:55:26Z",
+    "CreateDate": "2020-07-20T18:48:59Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "ec2.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": "iam:PassRole",
           "Condition": {
@@ -36,6 +46,20 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:cloudformation:*:*:stack/sms-app-*/*"
+        },
+        {
+          "Action": [
+            "ec2:AssociateIamInstanceProfile",
+            "ec2:DisassociateIamInstanceProfile",
+            "ec2:ReplaceIamInstanceProfileAssociation"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/aws:cloudformation:stack-id": "arn:aws:cloudformation:*:*:stack/sms-app-*/*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*"
         },
         {
           "Action": [
@@ -156,7 +180,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-04-20T17:55:26Z"
+  "UpdateDate": "2020-07-20T18:48:59Z"
 }

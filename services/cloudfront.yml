@@ -47,3 +47,19 @@ Actions:
 
   # actions with no corresponding API
   - Name: cloudfront:ListDistributionsByLambdaFunction
+
+  # APIs without an IAM action
+  - Name: cloudfront:CreateCachePolicy
+  - Name: cloudfront:CreateOriginRequestPolicy
+  - Name: cloudfront:DeleteCachePolicy
+  - Name: cloudfront:DeleteOriginRequestPolicy
+  - Name: cloudfront:GetCachePolicy
+  - Name: cloudfront:GetCachePolicyConfig
+  - Name: cloudfront:GetOriginRequestPolicy
+  - Name: cloudfront:GetOriginRequestPolicyConfig
+  - Name: cloudfront:ListCachePolicies
+  - Name: cloudfront:ListDistributionsByCachePolicyId
+  - Name: cloudfront:ListDistributionsByOriginRequestPolicyId
+  - Name: cloudfront:ListOriginRequestPolicies
+  - Name: cloudfront:UpdateCachePolicy
+  - Name: cloudfront:UpdateOriginRequestPolicy

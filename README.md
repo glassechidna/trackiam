@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 229
-* Unique actions: 8389
+* Unique actions: 8428
 * Managed policies: 685
 
 Most common managed policy name prefixes:
@@ -79,9 +79,9 @@ The following table summarises the AWS APIs.
 | [`rekognition`](services/rekognition.yml) | 47 | 0 | 0 |
 | [`backup`](services/backup.yml) | 46 | 2 | 1 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 2 |
+| [`cloudfront`](services/cloudfront.yml) | 45 | 14 | 1 |
 | [`dms`](services/dms.yml) | 45 | 2 | 0 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
-| [`cloudfront`](services/cloudfront.yml) | 45 | 0 | 1 |
 | [`ecs`](services/ecs.yml) | 44 | 5 | 2 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 43 | 0 | 53 |
@@ -111,10 +111,10 @@ The following table summarises the AWS APIs.
 | [`appconfig`](services/appconfig.yml) | 33 | 0 | 0 |
 | [`workspaces`](services/workspaces.yml) | 32 | 9 | 0 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
-| [`frauddetector`](services/frauddetector.yml) | 32 | 0 | 0 |
 | [`codeartifact`](services/codeartifact.yml) | 31 | 0 | 4 |
 | [`events`](services/events.yml) | 31 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 0 | 0 |
+| [`frauddetector`](services/frauddetector.yml) | 30 | 16 | 2 |
 | [`schemas`](services/schemas.yml) | 30 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 30 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 29 | 4 | 8 |
@@ -168,9 +168,9 @@ The following table summarises the AWS APIs.
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 18 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 17 | 10 | 0 |
+| [`fms`](services/fms.yml) | 17 | 9 | 0 |
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
-| [`fms`](services/fms.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
 | [`batch`](services/batch.yml) | 16 | 0 | 0 |
@@ -270,14 +270,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1162 |
-| `Get` | 1102 |
+| `List` | 1169 |
+| `Get` | 1114 |
 | `Describe` | 1051 |
-| `Delete` | 983 |
-| `Create` | 895 |
-| `Update` | 681 |
-| `Put` | 240 |
+| `Delete` | 988 |
+| `Create` | 898 |
+| `Update` | 685 |
+| `Put` | 246 |
 | `Start` | 151 |
-| `Tag` | 119 |
-| `Untag` | 118 |
+| `Tag` | 120 |
+| `Untag` | 119 |
 
