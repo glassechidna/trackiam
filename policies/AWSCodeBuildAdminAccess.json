@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess",
   "CreateDate": "2016-12-01T19:04:44Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJQJGIOIE3CD2TQXDS",
   "PolicyName": "AWSCodeBuildAdminAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-04-02T17:21:40Z",
+    "CreateDate": "2020-07-21T04:22:37Z",
     "Document": {
       "Statement": [
         {
@@ -75,6 +75,13 @@
         },
         {
           "Action": [
+            "ssm:StartSession"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecs:*:*:task/*/*"
+        },
+        {
+          "Action": [
             "chatbot:DescribeSlackChannelConfigurations"
           ],
           "Effect": "Allow",
@@ -114,7 +121,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2020-04-02T17:21:40Z"
+  "UpdateDate": "2020-07-21T04:22:37Z"
 }

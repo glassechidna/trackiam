@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeBuildDeveloperAccess",
   "CreateDate": "2016-12-01T19:02:32Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIMKTMR34XSBQW45HS",
   "PolicyName": "AWSCodeBuildDeveloperAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-04-02T17:19:29Z",
+    "CreateDate": "2020-07-21T04:23:02Z",
     "Document": {
       "Statement": [
         {
@@ -59,6 +59,13 @@
         },
         {
           "Action": [
+            "ssm:StartSession"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecs:*:*:task/*/*"
+        },
+        {
+          "Action": [
             "chatbot:DescribeSlackChannelConfigurations"
           ],
           "Effect": "Allow",
@@ -89,7 +96,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2020-04-02T17:19:29Z"
+  "UpdateDate": "2020-07-21T04:23:02Z"
 }
