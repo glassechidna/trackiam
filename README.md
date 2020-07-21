@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 229
-* Unique actions: 8432
+* Unique actions: 8435
 * Managed policies: 686
 
 Most common managed policy name prefixes:
@@ -150,12 +150,12 @@ The following table summarises the AWS APIs.
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`eks`](services/eks.yml) | 21 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 21 | 0 | 0 |
+| [`codeguru-profiler`](services/codeguru-profiler.yml) | 20 | 3 | 0 |
 | [`qldb`](services/qldb.yml) | 20 | 0 | 3 |
 | [`iotevents`](services/iotevents.yml) | 20 | 0 | 1 |
 | [`xray`](services/xray.yml) | 20 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 20 | 0 | 0 |
-| [`codeguru-profiler`](services/codeguru-profiler.yml) | 20 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 20 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
@@ -270,7 +270,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1169 |
+| `List` | 1170 |
 | `Get` | 1116 |
 | `Describe` | 1051 |
 | `Delete` | 988 |
@@ -278,6 +278,6 @@ Most common action prefixes:
 | `Update` | 685 |
 | `Put` | 246 |
 | `Start` | 152 |
-| `Tag` | 120 |
-| `Untag` | 119 |
+| `Tag` | 121 |
+| `Untag` | 120 |
 
