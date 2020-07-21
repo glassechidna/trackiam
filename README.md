@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 229
-* Unique actions: 8434
+* Unique actions: 8432
 * Managed policies: 686
 
 Most common managed policy name prefixes:
@@ -79,6 +79,7 @@ The following table summarises the AWS APIs.
 | [`rekognition`](services/rekognition.yml) | 47 | 0 | 0 |
 | [`backup`](services/backup.yml) | 46 | 2 | 1 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 2 |
+| [`frauddetector`](services/frauddetector.yml) | 46 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 45 | 14 | 1 |
 | [`dms`](services/dms.yml) | 45 | 2 | 0 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
@@ -114,7 +115,6 @@ The following table summarises the AWS APIs.
 | [`codeartifact`](services/codeartifact.yml) | 31 | 0 | 4 |
 | [`events`](services/events.yml) | 31 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 0 | 0 |
-| [`frauddetector`](services/frauddetector.yml) | 30 | 16 | 2 |
 | [`schemas`](services/schemas.yml) | 30 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 30 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 29 | 4 | 8 |
@@ -273,10 +273,10 @@ Most common action prefixes:
 | `List` | 1169 |
 | `Get` | 1116 |
 | `Describe` | 1051 |
-| `Delete` | 989 |
+| `Delete` | 988 |
 | `Create` | 898 |
 | `Update` | 685 |
-| `Put` | 247 |
+| `Put` | 246 |
 | `Start` | 152 |
 | `Tag` | 120 |
 | `Untag` | 119 |
