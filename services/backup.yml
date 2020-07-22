@@ -13,6 +13,7 @@ Actions:
   - Name: backup:DescribeCopyJob
   - Name: backup:DescribeProtectedResource
   - Name: backup:DescribeRecoveryPoint
+  - Name: backup:DescribeRegionSettings
   - Name: backup:DescribeRestoreJob
   - Name: backup:ExportBackupPlanTemplate
   - Name: backup:GetBackupPlan
@@ -45,10 +46,7 @@ Actions:
   - Name: backup:UntagResource
   - Name: backup:UpdateBackupPlan
   - Name: backup:UpdateRecoveryPointLifecycle
+  - Name: backup:UpdateRegionSettings
 
   # actions with no corresponding API
   - Name: backup:CopyIntoBackupVault
-
-  # APIs without an IAM action
-  - Name: backup:DescribeRegionSettings
-  - Name: backup:UpdateRegionSettings

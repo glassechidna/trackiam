@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 229
-* Unique actions: 8441
+* Unique actions: 8453
 * Managed policies: 686
 
 Most common managed policy name prefixes:
@@ -60,7 +60,7 @@ The following table summarises the AWS APIs.
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 71 | 7 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
-| [`quicksight`](services/quicksight.yml) | 60 | 19 | 9 |
+| [`quicksight`](services/quicksight.yml) | 60 | 30 | 9 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`autoscaling`](services/autoscaling.yml) | 57 | 0 | 0 |
 | [`s3`](services/s3.yml) | 56 | 48 | 39 |
@@ -75,10 +75,10 @@ The following table summarises the AWS APIs.
 | [`macie2`](services/macie2.yml) | 50 | 1 | 3 |
 | [`ecs`](services/ecs.yml) | 49 | 0 | 2 |
 | [`lambda`](services/lambda.yml) | 48 | 1 | 3 |
+| [`backup`](services/backup.yml) | 48 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 47 | 0 | 0 |
-| [`backup`](services/backup.yml) | 46 | 2 | 1 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 2 |
 | [`frauddetector`](services/frauddetector.yml) | 46 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 45 | 14 | 1 |
@@ -90,7 +90,7 @@ The following table summarises the AWS APIs.
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
 | [`securityhub`](services/securityhub.yml) | 42 | 0 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
-| [`medialive`](services/medialive.yml) | 40 | 6 | 0 |
+| [`medialive`](services/medialive.yml) | 40 | 7 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 40 | 2 | 0 |
 | [`wafv2`](services/wafv2.yml) | 40 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 40 | 0 | 0 |
@@ -270,12 +270,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1170 |
-| `Get` | 1116 |
-| `Describe` | 1055 |
-| `Delete` | 988 |
-| `Create` | 898 |
-| `Update` | 685 |
+| `List` | 1171 |
+| `Get` | 1117 |
+| `Describe` | 1059 |
+| `Delete` | 990 |
+| `Create` | 900 |
+| `Update` | 687 |
 | `Put` | 246 |
 | `Start` | 152 |
 | `Tag` | 121 |
