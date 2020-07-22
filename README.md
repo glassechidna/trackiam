@@ -73,6 +73,7 @@ The following table summarises the AWS APIs.
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 51 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 50 | 1 | 3 |
+| [`ecs`](services/ecs.yml) | 49 | 0 | 2 |
 | [`lambda`](services/lambda.yml) | 48 | 1 | 3 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
@@ -83,7 +84,6 @@ The following table summarises the AWS APIs.
 | [`cloudfront`](services/cloudfront.yml) | 45 | 14 | 1 |
 | [`dms`](services/dms.yml) | 45 | 2 | 0 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
-| [`ecs`](services/ecs.yml) | 44 | 5 | 2 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 43 | 0 | 53 |
 | [`elasticache`](services/elasticache.yml) | 42 | 15 | 0 |

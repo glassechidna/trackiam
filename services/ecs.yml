@@ -1,14 +1,17 @@
 Actions:
+  - Name: ecs:CreateCapacityProvider
   - Name: ecs:CreateCluster
   - Name: ecs:CreateService
   - Name: ecs:CreateTaskSet
   - Name: ecs:DeleteAccountSetting
   - Name: ecs:DeleteAttributes
+  - Name: ecs:DeleteCapacityProvider
   - Name: ecs:DeleteCluster
   - Name: ecs:DeleteService
   - Name: ecs:DeleteTaskSet
   - Name: ecs:DeregisterContainerInstance
   - Name: ecs:DeregisterTaskDefinition
+  - Name: ecs:DescribeCapacityProviders
   - Name: ecs:DescribeClusters
   - Name: ecs:DescribeContainerInstances
   - Name: ecs:DescribeServices
@@ -28,6 +31,7 @@ Actions:
   - Name: ecs:PutAccountSetting
   - Name: ecs:PutAccountSettingDefault
   - Name: ecs:PutAttributes
+  - Name: ecs:PutClusterCapacityProviders
   - Name: ecs:RegisterContainerInstance
   - Name: ecs:RegisterTaskDefinition
   - Name: ecs:RunTask
@@ -38,6 +42,7 @@ Actions:
   - Name: ecs:SubmitTaskStateChange
   - Name: ecs:TagResource
   - Name: ecs:UntagResource
+  - Name: ecs:UpdateClusterSettings
   - Name: ecs:UpdateContainerAgent
   - Name: ecs:UpdateContainerInstancesState
   - Name: ecs:UpdateService
@@ -47,10 +52,3 @@ Actions:
   # actions with no corresponding API
   - Name: ecs:Poll
   - Name: ecs:StartTelemetrySession
-
-  # APIs without an IAM action
-  - Name: ecs:CreateCapacityProvider
-  - Name: ecs:DeleteCapacityProvider
-  - Name: ecs:DescribeCapacityProviders
-  - Name: ecs:PutClusterCapacityProviders
-  - Name: ecs:UpdateClusterSettings
