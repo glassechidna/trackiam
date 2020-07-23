@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 231
-* Unique actions: 8464
+* Unique actions: 8480
 * Managed policies: 686
 
 Most common managed policy name prefixes:
@@ -45,7 +45,7 @@ The following table summarises the AWS APIs.
 | [`chime`](services/chime.yml) | 118 | 1 | 50 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
 | [`ses`](services/ses.yml) | 103 | 9 | 0 |
-| [`lightsail`](services/lightsail.yml) | 101 | 12 | 0 |
+| [`lightsail`](services/lightsail.yml) | 101 | 26 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 88 | 4 | 18 |
@@ -110,7 +110,7 @@ The following table summarises the AWS APIs.
 | [`sns`](services/sns.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 33 | 0 | 0 |
-| [`workspaces`](services/workspaces.yml) | 32 | 9 | 0 |
+| [`workspaces`](services/workspaces.yml) | 32 | 11 | 0 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
 | [`codeartifact`](services/codeartifact.yml) | 31 | 0 | 4 |
 | [`events`](services/events.yml) | 31 | 0 | 0 |
@@ -273,11 +273,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1175 |
-| `Get` | 1118 |
-| `Describe` | 1061 |
-| `Delete` | 990 |
-| `Create` | 901 |
-| `Update` | 688 |
+| `Get` | 1123 |
+| `Describe` | 1062 |
+| `Delete` | 992 |
+| `Create` | 903 |
+| `Update` | 691 |
 | `Put` | 246 |
 | `Start` | 152 |
 | `Tag` | 122 |
