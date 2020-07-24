@@ -9,6 +9,7 @@ Actions:
   - Name: elasticfilesystem:DeleteMountTarget
   - Name: elasticfilesystem:DeleteTags
   - Name: elasticfilesystem:DescribeAccessPoints
+  - Name: elasticfilesystem:DescribeBackupPolicy
   - Name: elasticfilesystem:DescribeFileSystemPolicy
   - Name: elasticfilesystem:DescribeFileSystems
   - Name: elasticfilesystem:DescribeLifecycleConfiguration
@@ -17,6 +18,7 @@ Actions:
   - Name: elasticfilesystem:DescribeTags
   - Name: elasticfilesystem:ListTagsForResource
   - Name: elasticfilesystem:ModifyMountTargetSecurityGroups
+  - Name: elasticfilesystem:PutBackupPolicy
   - Name: elasticfilesystem:PutFileSystemPolicy
   - Name: elasticfilesystem:PutLifecycleConfiguration
   - Name: elasticfilesystem:TagResource
@@ -29,7 +31,3 @@ Actions:
   - Name: elasticfilesystem:ClientRootAccess
   - Name: elasticfilesystem:ClientWrite
   - Name: elasticfilesystem:Restore
-
-  # APIs without an IAM action
-  - Name: elasticfilesystem:DescribeBackupPolicy
-  - Name: elasticfilesystem:PutBackupPolicy

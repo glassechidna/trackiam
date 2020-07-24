@@ -132,6 +132,7 @@ The following table summarises the AWS APIs.
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 26 | 0 | 1 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
+| [`elasticfilesystem`](services/elasticfilesystem.yml) | 25 | 0 | 5 |
 | [`mediaconvert`](services/mediaconvert.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 25 | 0 | 0 |
@@ -139,7 +140,6 @@ The following table summarises the AWS APIs.
 | [`transcribe`](services/transcribe.yml) | 24 | 0 | 3 |
 | [`kendra`](services/kendra.yml) | 24 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 23 | 5 | 0 |
-| [`elasticfilesystem`](services/elasticfilesystem.yml) | 23 | 2 | 5 |
 | [`servicediscovery`](services/servicediscovery.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`ram`](services/ram.yml) | 22 | 2 | 0 |
