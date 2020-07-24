@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 230
-* Unique actions: 8476
+* Unique actions: 8479
 * Managed policies: 687
 
 Most common managed policy name prefixes:
@@ -38,7 +38,7 @@ The following table summarises the AWS APIs.
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 399 | 11 | 0 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
-| [`sagemaker`](services/sagemaker.yml) | 139 | 1 | 2 |
+| [`sagemaker`](services/sagemaker.yml) | 139 | 4 | 2 |
 | [`glue`](services/glue.yml) | 124 | 8 | 1 |
 | [`rds`](services/rds.yml) | 123 | 7 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
@@ -80,10 +80,10 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 47 | 0 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 2 |
-| [`frauddetector`](services/frauddetector.yml) | 46 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 45 | 14 | 1 |
 | [`dms`](services/dms.yml) | 45 | 2 | 0 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
+| [`frauddetector`](services/frauddetector.yml) | 45 | 0 | 1 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 43 | 0 | 53 |
 | [`elasticache`](services/elasticache.yml) | 42 | 15 | 0 |
@@ -271,11 +271,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1173 |
+| `List` | 1174 |
 | `Get` | 1123 |
 | `Describe` | 1060 |
-| `Delete` | 992 |
-| `Create` | 903 |
+| `Delete` | 993 |
+| `Create` | 904 |
 | `Update` | 691 |
 | `Put` | 246 |
 | `Start` | 152 |
