@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSSOServiceRolePolicy",
   "CreateDate": "2017-12-05T18:36:15Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIJ52KSWOD4GI54XP2",
   "PolicyName": "AWSSSOServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-07-02T20:20:49Z",
+    "CreateDate": "2020-07-24T22:05:44Z",
     "Document": {
       "Statement": [
         {
@@ -94,25 +94,12 @@
             "*"
           ],
           "Sid": "ListRolesInTheAccount"
-        },
-        {
-          "Action": [
-            "identitystore:DescribeGroup",
-            "identitystore:DescribeUser",
-            "identitystore:ListGroups",
-            "identitystore:ListUsers"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "*"
-          ],
-          "Sid": "AllowDescribeAndListOperationsOnIdentitySource"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2020-07-02T20:20:49Z"
+  "UpdateDate": "2020-07-24T22:05:44Z"
 }
