@@ -80,6 +80,7 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 47 | 0 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 2 |
+| [`personalize`](services/personalize.yml) | 46 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 45 | 14 | 1 |
 | [`dms`](services/dms.yml) | 45 | 2 | 0 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
@@ -94,7 +95,6 @@ The following table summarises the AWS APIs.
 | [`imagebuilder`](services/imagebuilder.yml) | 40 | 2 | 0 |
 | [`wafv2`](services/wafv2.yml) | 40 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 40 | 0 | 0 |
-| [`personalize`](services/personalize.yml) | 39 | 7 | 0 |
 | [`logs`](services/logs.yml) | 39 | 3 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
