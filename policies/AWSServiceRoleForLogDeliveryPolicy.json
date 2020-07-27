@@ -1,17 +1,18 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForLogDeliveryPolicy",
   "CreateDate": "2019-10-04T17:31:19Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4EMA7ANTDG",
   "PolicyName": "AWSServiceRoleForLogDeliveryPolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-10-04T17:31:19Z",
+    "CreateDate": "2020-07-27T19:38:52Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "firehose:ListTagsForDeliveryStream",
             "firehose:PutRecord",
             "firehose:PutRecordBatch"
           ],
@@ -27,7 +28,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-10-04T17:31:19Z"
+  "UpdateDate": "2020-07-27T19:38:52Z"
 }
