@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 230
-* Unique actions: 8479
+* Unique actions: 8487
 * Managed policies: 687
 
 Most common managed policy name prefixes:
@@ -39,7 +39,7 @@ The following table summarises the AWS APIs.
 | [`ec2`](services/ec2.yml) | 399 | 11 | 0 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`sagemaker`](services/sagemaker.yml) | 139 | 4 | 2 |
-| [`glue`](services/glue.yml) | 124 | 8 | 1 |
+| [`glue`](services/glue.yml) | 124 | 9 | 1 |
 | [`rds`](services/rds.yml) | 123 | 7 | 1 |
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
 | [`chime`](services/chime.yml) | 118 | 1 | 50 |
@@ -82,9 +82,9 @@ The following table summarises the AWS APIs.
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 2 |
 | [`personalize`](services/personalize.yml) | 46 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 45 | 14 | 1 |
-| [`dms`](services/dms.yml) | 45 | 2 | 0 |
+| [`dms`](services/dms.yml) | 45 | 8 | 0 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
-| [`frauddetector`](services/frauddetector.yml) | 45 | 0 | 1 |
+| [`frauddetector`](services/frauddetector.yml) | 45 | 0 | 0 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 43 | 0 | 53 |
 | [`elasticache`](services/elasticache.yml) | 42 | 15 | 0 |
@@ -126,7 +126,7 @@ The following table summarises the AWS APIs.
 | [`athena`](services/athena.yml) | 28 | 0 | 1 |
 | [`networkmanager`](services/networkmanager.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
-| [`datasync`](services/datasync.yml) | 27 | 2 | 0 |
+| [`datasync`](services/datasync.yml) | 27 | 4 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
 | [`kinesis`](services/kinesis.yml) | 26 | 2 | 0 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 26 | 0 | 1 |
@@ -272,13 +272,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1174 |
-| `Get` | 1123 |
-| `Describe` | 1060 |
-| `Delete` | 993 |
-| `Create` | 904 |
+| `Get` | 1122 |
+| `Describe` | 1064 |
+| `Delete` | 994 |
+| `Create` | 905 |
 | `Update` | 691 |
 | `Put` | 246 |
-| `Start` | 152 |
+| `Start` | 153 |
 | `Tag` | 122 |
 | `Untag` | 121 |
 
