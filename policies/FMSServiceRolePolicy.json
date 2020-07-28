@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/FMSServiceRolePolicy",
   "CreateDate": "2018-03-28T23:01:12Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAI62NTGYJB446ACUEA",
   "PolicyName": "FMSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-07-20T23:05:16Z",
+    "CreateDate": "2020-07-28T16:30:44Z",
     "Document": {
       "Statement": [
         {
@@ -250,6 +250,19 @@
         },
         {
           "Action": [
+            "wafv2:DeleteLoggingConfiguration",
+            "wafv2:GetLoggingConfiguration",
+            "wafv2:ListLoggingConfigurations",
+            "wafv2:PutLoggingConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:wafv2:*:*:global/webacl/*",
+            "arn:aws:wafv2:*:*:regional/webacl/*"
+          ]
+        },
+        {
+          "Action": [
             "wafv2:DeletePermissionPolicy",
             "wafv2:GetPermissionPolicy",
             "wafv2:PutPermissionPolicy"
@@ -273,7 +286,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2020-07-20T23:05:16Z"
+  "UpdateDate": "2020-07-28T16:30:44Z"
 }
