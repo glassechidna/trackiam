@@ -1,15 +1,27 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSBetaServiceRolePolicy",
   "CreateDate": "2018-05-02T19:41:04Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ36CJAE6OYAR4YEK4",
   "PolicyName": "AmazonRDSBetaServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2018-07-05T18:29:48Z",
+    "CreateDate": "2020-07-28T19:26:48Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/RDS"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "ec2:AuthorizeSecurityGroupIngress",
@@ -64,7 +76,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2018-07-05T18:29:48Z"
+  "UpdateDate": "2020-07-28T19:26:48Z"
 }
