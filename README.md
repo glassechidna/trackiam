@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 230
-* Unique actions: 8487
+* Unique actions: 8493
 * Managed policies: 687
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 399 | 11 | 0 |
+| [`ec2`](services/ec2.yml) | 399 | 12 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 142 | 1 | 2 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`glue`](services/glue.yml) | 124 | 9 | 1 |
@@ -66,8 +66,8 @@ The following table summarises the AWS APIs.
 | [`s3`](services/s3.yml) | 56 | 48 | 39 |
 | [`route53`](services/route53.yml) | 56 | 1 | 0 |
 | [`directconnect`](services/directconnect.yml) | 56 | 0 | 0 |
+| [`guardduty`](services/guardduty.yml) | 54 | 3 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 54 | 1 | 3 |
-| [`guardduty`](services/guardduty.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`iotsitewise`](services/iotsitewise.yml) | 54 | 0 | 0 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
@@ -187,9 +187,9 @@ The following table summarises the AWS APIs.
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`acm`](services/acm.yml) | 13 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 4 | 0 |
+| [`resource-groups`](services/resource-groups.yml) | 12 | 3 | 0 |
 | [`detective`](services/detective.yml) | 12 | 0 | 5 |
 | [`signer`](services/signer.yml) | 12 | 0 | 0 |
-| [`resource-groups`](services/resource-groups.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`synthetics`](services/synthetics.yml) | 11 | 2 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 39 |
@@ -272,11 +272,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1174 |
-| `Get` | 1122 |
+| `Get` | 1125 |
 | `Describe` | 1064 |
 | `Delete` | 994 |
 | `Create` | 905 |
-| `Update` | 692 |
+| `Update` | 693 |
 | `Put` | 246 |
 | `Start` | 153 |
 | `Tag` | 122 |
