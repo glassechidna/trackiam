@@ -1,15 +1,28 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCloud9User",
   "CreateDate": "2017-11-30T16:16:17Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJPFGFWQF67QVARP6U",
   "PolicyName": "AWSCloud9User",
   "PolicyVersion": {
-    "CreateDate": "2018-07-02T08:46:37Z",
+    "CreateDate": "2020-07-29T06:26:43Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ssm:StartSession",
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaFirst": "cloud9.amazonaws.com"
+            },
+            "StringLike": {
+              "ssm:resourceTag/aws:cloud9:environment": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*"
+        },
         {
           "Action": [
             "cloud9:CreateEnvironmentEC2",
@@ -74,12 +87,21 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ssm:StartSession"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2018-07-02T08:46:37Z"
+  "UpdateDate": "2020-07-29T06:26:43Z"
 }
