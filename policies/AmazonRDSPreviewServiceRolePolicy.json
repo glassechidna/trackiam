@@ -1,15 +1,27 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSPreviewServiceRolePolicy",
   "CreateDate": "2018-05-31T18:02:00Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIZHJJBU3675JOUEMQ",
   "PolicyName": "AmazonRDSPreviewServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2018-05-31T18:02:00Z",
+    "CreateDate": "2020-07-29T00:05:20Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/RDS"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "ec2:AuthorizeSecurityGroupIngress",
@@ -60,7 +72,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2018-05-31T18:02:00Z"
+  "UpdateDate": "2020-07-29T00:05:20Z"
 }
