@@ -1,35 +1,15 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForImageBuilder",
   "CreateDate": "2019-11-29T22:02:13Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NE22WISEW",
   "PolicyName": "AWSServiceRoleForImageBuilder",
   "PolicyVersion": {
-    "CreateDate": "2020-07-15T21:23:31Z",
+    "CreateDate": "2020-07-30T21:37:31Z",
     "Document": {
       "Statement": [
-        {
-          "Action": "ec2:RunInstances",
-          "Condition": {
-            "ArnLike": {
-              "ec2:LaunchTemplate": "arn:aws:ec2:*:*:launch-template/*"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": "iam:CreateServiceLinkedRole",
-          "Condition": {
-            "StringEquals": {
-              "iam:AWSServiceName": "autoscaling.amazonaws.com"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*"
-        },
         {
           "Action": "iam:PassRole",
           "Condition": {
@@ -44,25 +24,15 @@
           "Resource": "*"
         },
         {
-          "Action": [
-            "autoscaling:CreateAutoScalingGroup"
-          ],
+          "Action": "kms:CreateGrant",
           "Condition": {
-            "ForAnyValue:StringEquals": {
-              "aws:RequestTag/CreatedBy": "EC2 Image Builder"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
-            "autoscaling:DeleteAutoScalingGroup",
-            "autoscaling:DetachInstances"
-          ],
-          "Condition": {
-            "ForAnyValue:StringEquals": {
-              "autoscaling:ResourceTag/CreatedBy": "EC2 Image Builder"
+            "Bool": {
+              "kms:GrantIsForAWSResource": true
+            },
+            "StringLike": {
+              "kms:ViaService": [
+                "ec2.*.amazonaws.com"
+              ]
             }
           },
           "Effect": "Allow",
@@ -82,7 +52,21 @@
         },
         {
           "Action": [
-            "ec2:DeleteLaunchTemplate",
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ]
+        },
+        {
+          "Action": [
             "ec2:StopInstances",
             "ec2:TerminateInstances"
           ],
@@ -96,18 +80,27 @@
         },
         {
           "Action": [
-            "ec2:RunInstances"
+            "kms:Decrypt",
+            "kms:DescribeKey",
+            "kms:Encrypt",
+            "kms:GenerateDataKeyWithoutPlaintext",
+            "kms:ReEncryptFrom",
+            "kms:ReEncryptTo"
           ],
           "Condition": {
-            "StringEquals": {
-              "aws:RequestTag/CreatedBy": "EC2 Image Builder"
+            "ForAllValues:StringEquals": {
+              "kms:EncryptionContextKeys": [
+                "aws:ebs:id"
+              ]
+            },
+            "StringLike": {
+              "kms:ViaService": [
+                "ec2.*.amazonaws.com"
+              ]
             }
           },
           "Effect": "Allow",
-          "Resource": [
-            "arn:aws:ec2:*:*:instance/*",
-            "arn:aws:ec2:*:*:volume/*"
-          ]
+          "Resource": "*"
         },
         {
           "Action": [
@@ -139,15 +132,6 @@
           "Action": "ssm:StartAutomationExecution",
           "Effect": "Allow",
           "Resource": "arn:aws:ssm:*:*:automation-definition/ImageBuilder*"
-        },
-        {
-          "Action": [
-            "autoscaling:DescribeAutoScalingGroups",
-            "autoscaling:DescribeAutoScalingInstances",
-            "autoscaling:SuspendProcesses"
-          ],
-          "Effect": "Allow",
-          "Resource": "*"
         },
         {
           "Action": [
@@ -233,7 +217,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2020-07-15T21:23:31Z"
+  "UpdateDate": "2020-07-30T21:37:31Z"
 }
