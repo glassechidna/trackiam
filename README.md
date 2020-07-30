@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 230
-* Unique actions: 8516
+* Unique actions: 8517
 * Managed policies: 687
 
 Most common managed policy name prefixes:
@@ -87,6 +87,7 @@ The following table summarises the AWS APIs.
 | [`frauddetector`](services/frauddetector.yml) | 45 | 0 | 0 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 43 | 0 | 53 |
+| [`codebuild`](services/codebuild.yml) | 43 | 0 | 8 |
 | [`elasticache`](services/elasticache.yml) | 42 | 15 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
 | [`securityhub`](services/securityhub.yml) | 42 | 1 | 0 |
@@ -102,7 +103,6 @@ The following table summarises the AWS APIs.
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
 | [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
-| [`codebuild`](services/codebuild.yml) | 34 | 9 | 7 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
 | [`iotanalytics`](services/iotanalytics.yml) | 33 | 1 | 0 |
 | [`connect`](services/connect.yml) | 33 | 0 | 6 |

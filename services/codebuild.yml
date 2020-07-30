@@ -1,5 +1,6 @@
 Actions:
   - Name: codebuild:BatchDeleteBuilds
+  - Name: codebuild:BatchGetBuildBatches
   - Name: codebuild:BatchGetBuilds
   - Name: codebuild:BatchGetProjects
   - Name: codebuild:BatchGetReportGroups
@@ -7,16 +8,20 @@ Actions:
   - Name: codebuild:CreateProject
   - Name: codebuild:CreateReportGroup
   - Name: codebuild:CreateWebhook
+  - Name: codebuild:DeleteBuildBatch
   - Name: codebuild:DeleteProject
   - Name: codebuild:DeleteReport
   - Name: codebuild:DeleteReportGroup
   - Name: codebuild:DeleteResourcePolicy
   - Name: codebuild:DeleteSourceCredentials
   - Name: codebuild:DeleteWebhook
+  - Name: codebuild:DescribeCodeCoverages
   - Name: codebuild:DescribeTestCases
   - Name: codebuild:GetResourcePolicy
   - Name: codebuild:ImportSourceCredentials
   - Name: codebuild:InvalidateProjectCache
+  - Name: codebuild:ListBuildBatches
+  - Name: codebuild:ListBuildBatchesForProject
   - Name: codebuild:ListBuilds
   - Name: codebuild:ListBuildsForProject
   - Name: codebuild:ListCuratedEnvironmentImages
@@ -28,13 +33,18 @@ Actions:
   - Name: codebuild:ListSharedReportGroups
   - Name: codebuild:ListSourceCredentials
   - Name: codebuild:PutResourcePolicy
+  - Name: codebuild:RetryBuild
+  - Name: codebuild:RetryBuildBatch
   - Name: codebuild:StartBuild
+  - Name: codebuild:StartBuildBatch
   - Name: codebuild:StopBuild
+  - Name: codebuild:StopBuildBatch
   - Name: codebuild:UpdateProject
   - Name: codebuild:UpdateReportGroup
   - Name: codebuild:UpdateWebhook
 
   # actions with no corresponding API
+  - Name: codebuild:BatchPutCodeCoverages
   - Name: codebuild:BatchPutTestCases
   - Name: codebuild:CreateReport
   - Name: codebuild:DeleteOAuthToken
@@ -42,14 +52,3 @@ Actions:
   - Name: codebuild:ListRepositories
   - Name: codebuild:PersistOAuthToken
   - Name: codebuild:UpdateReport
-
-  # APIs without an IAM action
-  - Name: codebuild:BatchGetBuildBatches
-  - Name: codebuild:DeleteBuildBatch
-  - Name: codebuild:DescribeCodeCoverages
-  - Name: codebuild:ListBuildBatches
-  - Name: codebuild:ListBuildBatchesForProject
-  - Name: codebuild:RetryBuild
-  - Name: codebuild:RetryBuildBatch
-  - Name: codebuild:StartBuildBatch
-  - Name: codebuild:StopBuildBatch
