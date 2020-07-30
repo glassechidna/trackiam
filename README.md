@@ -132,6 +132,7 @@ The following table summarises the AWS APIs.
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 26 | 0 | 1 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
+| [`fms`](services/fms.yml) | 25 | 1 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 25 | 0 | 5 |
 | [`mediaconvert`](services/mediaconvert.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
@@ -168,7 +169,6 @@ The following table summarises the AWS APIs.
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 18 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 17 | 10 | 0 |
-| [`fms`](services/fms.yml) | 17 | 9 | 0 |
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeCommitReadOnly",
   "CreateDate": "2015-07-09T17:05:06Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJACNSXR7Z2VLJW3D6",
   "PolicyName": "AWSCodeCommitReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2020-06-24T16:06:55Z",
+    "CreateDate": "2020-07-30T23:08:05Z",
     "Document": {
       "Statement": [
         {
@@ -46,6 +46,15 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AmazonCodeGuruReviewerReadOnlyAccess"
+        },
+        {
+          "Action": [
+            "codestar-connections:GetConnection",
+            "codestar-connections:ListConnections"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:codestar-connections:*:*:connection/*",
+          "Sid": "CodeStarConnectionsReadOnlyAccess"
         },
         {
           "Action": [
@@ -108,7 +117,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2020-06-24T16:06:55Z"
+  "UpdateDate": "2020-07-30T23:08:05Z"
 }
