@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeBuildReadOnlyAccess",
   "CreateDate": "2016-12-01T19:03:41Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJIZZWN6557F5HVP2K",
   "PolicyName": "AWSCodeBuildReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-04-02T16:49:01Z",
+    "CreateDate": "2020-07-30T18:28:43Z",
     "Document": {
       "Statement": [
         {
@@ -27,6 +27,7 @@
           "Action": [
             "cloudwatch:GetMetricStatistics",
             "codebuild:BatchGet*",
+            "codebuild:DescribeCodeCoverages",
             "codebuild:DescribeTestCases",
             "codebuild:GetResourcePolicy",
             "codebuild:List*",
@@ -55,7 +56,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2020-04-02T16:49:01Z"
+  "UpdateDate": "2020-07-30T18:28:43Z"
 }

@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 230
-* Unique actions: 8493
+* Unique actions: 8516
 * Managed policies: 687
 
 Most common managed policy name prefixes:
@@ -44,7 +44,7 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
 | [`chime`](services/chime.yml) | 118 | 1 | 50 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
-| [`ses`](services/ses.yml) | 103 | 9 | 0 |
+| [`ses`](services/ses.yml) | 103 | 21 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 26 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 0 |
@@ -66,7 +66,7 @@ The following table summarises the AWS APIs.
 | [`s3`](services/s3.yml) | 56 | 48 | 39 |
 | [`route53`](services/route53.yml) | 56 | 1 | 0 |
 | [`directconnect`](services/directconnect.yml) | 56 | 0 | 0 |
-| [`guardduty`](services/guardduty.yml) | 54 | 3 | 0 |
+| [`guardduty`](services/guardduty.yml) | 54 | 4 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 54 | 1 | 3 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`iotsitewise`](services/iotsitewise.yml) | 54 | 0 | 0 |
@@ -102,8 +102,8 @@ The following table summarises the AWS APIs.
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
 | [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
+| [`codebuild`](services/codebuild.yml) | 34 | 9 | 7 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
-| [`codebuild`](services/codebuild.yml) | 34 | 0 | 7 |
 | [`iotanalytics`](services/iotanalytics.yml) | 33 | 1 | 0 |
 | [`connect`](services/connect.yml) | 33 | 0 | 6 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 0 |
@@ -147,7 +147,7 @@ The following table summarises the AWS APIs.
 | [`states`](services/states.yml) | 22 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
-| [`kafka`](services/kafka.yml) | 21 | 2 | 0 |
+| [`kafka`](services/kafka.yml) | 21 | 3 | 0 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`eks`](services/eks.yml) | 21 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 21 | 0 | 0 |
@@ -271,14 +271,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1174 |
-| `Get` | 1125 |
-| `Describe` | 1064 |
-| `Delete` | 994 |
-| `Create` | 905 |
-| `Update` | 693 |
-| `Put` | 246 |
-| `Start` | 153 |
+| `List` | 1177 |
+| `Get` | 1128 |
+| `Describe` | 1065 |
+| `Delete` | 997 |
+| `Create` | 907 |
+| `Update` | 695 |
+| `Put` | 247 |
+| `Start` | 154 |
 | `Tag` | 122 |
 | `Untag` | 121 |
 
