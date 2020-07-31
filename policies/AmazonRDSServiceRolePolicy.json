@@ -1,15 +1,27 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSServiceRolePolicy",
   "CreateDate": "2018-01-08T18:17:46Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIPEU5ZOBJWKWHUIBA",
   "PolicyName": "AmazonRDSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-04-16T20:12:27Z",
+    "CreateDate": "2020-07-31T01:14:11Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/RDS"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "ec2:AssignPrivateIpAddresses",
@@ -86,7 +98,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2019-04-16T20:12:27Z"
+  "UpdateDate": "2020-07-31T01:14:11Z"
 }
