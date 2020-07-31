@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeCommitFullAccess",
   "CreateDate": "2015-07-09T17:02:19Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAI4VCZ3XPIZLQ5NZV2",
   "PolicyName": "AWSCodeCommitFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-06-24T17:08:06Z",
+    "CreateDate": "2020-07-30T23:17:35Z",
     "Document": {
       "Statement": [
         {
@@ -82,6 +82,15 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AmazonCodeGuruReviewerFullAccess"
+        },
+        {
+          "Action": [
+            "codestar-connections:GetConnection",
+            "codestar-connections:ListConnections"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:codestar-connections:*:*:connection/*",
+          "Sid": "CodeStarConnectionsReadOnlyAccess"
         },
         {
           "Action": [
@@ -193,7 +202,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2020-06-24T17:08:06Z"
+  "UpdateDate": "2020-07-30T23:17:35Z"
 }
