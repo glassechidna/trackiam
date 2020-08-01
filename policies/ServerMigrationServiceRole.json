@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/ServerMigrationServiceRole",
   "CreateDate": "2016-10-24T21:19:00Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJMBH3M6BO63XFW2D4",
   "PolicyName": "ServerMigrationServiceRole",
   "PolicyVersion": {
-    "CreateDate": "2020-04-20T19:05:50Z",
+    "CreateDate": "2020-08-01T03:40:03Z",
     "Document": {
       "Statement": [
         {
@@ -36,6 +36,11 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:cloudformation:*:*:stack/sms-app-*/*"
+        },
+        {
+          "Action": "iam:GetInstanceProfile",
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": "iam:GetRole",
@@ -135,7 +140,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2020-04-20T19:05:50Z"
+  "UpdateDate": "2020-08-01T03:40:03Z"
 }

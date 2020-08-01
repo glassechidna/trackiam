@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForSMS",
   "CreateDate": "2019-08-06T18:39:29Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4OSYRD2VJZ",
   "PolicyName": "AWSServiceRoleForSMS",
   "PolicyVersion": {
-    "CreateDate": "2020-07-25T02:26:29Z",
+    "CreateDate": "2020-08-01T03:40:53Z",
     "Document": {
       "Statement": [
         {
@@ -87,6 +87,11 @@
               "ec2:ResourceTag/aws:cloudformation:stack-id": "arn:aws:cloudformation:*:*:stack/sms-app-*/*"
             }
           },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "iam:GetInstanceProfile",
           "Effect": "Allow",
           "Resource": "*"
         },
@@ -194,7 +199,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2020-07-25T02:26:29Z"
+  "UpdateDate": "2020-08-01T03:40:53Z"
 }
