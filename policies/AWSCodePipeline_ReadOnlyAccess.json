@@ -1,0 +1,60 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCodePipeline_ReadOnlyAccess",
+  "CreateDate": "2020-08-03T22:25:17Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4IGBTPGT6W",
+  "PolicyName": "AWSCodePipeline_ReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-08-03T22:25:17Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "codestar-notifications:DescribeNotificationRule"
+          ],
+          "Condition": {
+            "StringLike": {
+              "codestar-notifications:NotificationsForResource": "arn:aws:codepipeline:*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsReadOnlyAccess"
+        },
+        {
+          "Action": [
+            "codepipeline:GetPipeline",
+            "codepipeline:GetPipelineExecution",
+            "codepipeline:GetPipelineState",
+            "codepipeline:ListActionExecutions",
+            "codepipeline:ListActionTypes",
+            "codepipeline:ListPipelineExecutions",
+            "codepipeline:ListPipelines",
+            "codepipeline:ListTagsForResource",
+            "codestar-notifications:ListEventTypes",
+            "codestar-notifications:ListNotificationRules",
+            "codestar-notifications:ListTargets",
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetBucketPolicy",
+            "s3:GetObject",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3::*:codepipeline-*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-08-03T22:25:17Z"
+}
