@@ -1,0 +1,40 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonBraketServiceRolePolicy",
+  "CreateDate": "2020-08-04T17:12:23Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4NIYU42I3S",
+  "PolicyName": "AmazonBraketServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-08-04T17:12:23Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogGroups",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/braket/*"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::amazon-braket-*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-08-04T17:12:23Z"
+}
