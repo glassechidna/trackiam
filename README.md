@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 230
-* Unique actions: 8517
+* Unique actions: 8518
 * Managed policies: 690
 
 Most common managed policy name prefixes:
@@ -122,7 +122,7 @@ The following table summarises the AWS APIs.
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
 | [`es`](services/es.yml) | 28 | 9 | 9 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
-| [`sms`](services/sms.yml) | 28 | 0 | 8 |
+| [`sms`](services/sms.yml) | 28 | 0 | 9 |
 | [`athena`](services/athena.yml) | 28 | 0 | 1 |
 | [`networkmanager`](services/networkmanager.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
@@ -160,9 +160,9 @@ The following table summarises the AWS APIs.
 | [`acm-pca`](services/acm-pca.yml) | 20 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
+| [`secretsmanager`](services/secretsmanager.yml) | 19 | 0 | 0 |
 | [`ce`](services/ce.yml) | 19 | 0 | 0 |
 | [`shield`](services/shield.yml) | 18 | 5 | 0 |
-| [`secretsmanager`](services/secretsmanager.yml) | 18 | 1 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`transfer`](services/transfer.yml) | 18 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 18 | 0 | 0 |
