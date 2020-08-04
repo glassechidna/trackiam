@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSRoboMakerServicePolicy",
   "CreateDate": "2018-11-26T06:30:08Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJYLVVUUQMAEEZ3ZNY",
   "PolicyName": "AWSRoboMakerServicePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-02-04T19:33:08Z",
+    "CreateDate": "2020-08-04T20:38:08Z",
     "Document": {
       "Statement": [
         {
@@ -68,13 +68,16 @@
             "robomaker:TagResource"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:robomaker:*:*:/createsimulationjob"
+          "Resource": [
+            "arn:aws:robomaker:*:*:/createsimulationjob",
+            "arn:aws:robomaker:*:*:simulation-job/*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-02-04T19:33:08Z"
+  "UpdateDate": "2020-08-04T20:38:08Z"
 }

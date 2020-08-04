@@ -1,0 +1,71 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSLakeFormationCrossAccountManager",
+  "CreateDate": "2020-08-04T20:59:46Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4HPT7Y7QL3",
+  "PolicyName": "AWSLakeFormationCrossAccountManager",
+  "PolicyVersion": {
+    "CreateDate": "2020-08-04T20:59:46Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ram:CreateResourceShare"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "ram:RequestedResourceType": [
+                "glue:Catalog",
+                "glue:Database",
+                "glue:Table"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ram:DeleteResourceShare",
+            "ram:UpdateResourceShare"
+          ],
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "ram:ResourceShareName": [
+                "LakeFormation*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "glue:PutResourcePolicy",
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "ram:Get*",
+            "ram:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "organizations:ListAccountsForParent",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListRoots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-08-04T20:59:46Z"
+}
