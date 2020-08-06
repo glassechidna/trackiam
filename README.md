@@ -118,6 +118,7 @@ The following table summarises the AWS APIs.
 | [`schemas`](services/schemas.yml) | 30 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 30 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 29 | 4 | 8 |
+| [`datasync`](services/datasync.yml) | 29 | 2 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 29 | 1 | 0 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
 | [`es`](services/es.yml) | 28 | 9 | 9 |
@@ -126,7 +127,6 @@ The following table summarises the AWS APIs.
 | [`athena`](services/athena.yml) | 28 | 0 | 1 |
 | [`networkmanager`](services/networkmanager.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
-| [`datasync`](services/datasync.yml) | 27 | 4 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
 | [`kinesis`](services/kinesis.yml) | 26 | 2 | 0 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 26 | 0 | 1 |
