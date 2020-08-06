@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSMigrationHubDiscoveryAccess",
   "CreateDate": "2017-08-14T13:30:51Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAITRMRLSV7JAL6YIGG",
   "PolicyName": "AWSMigrationHubDiscoveryAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-02-20T16:35:50Z",
+    "CreateDate": "2020-08-06T17:34:42Z",
     "Document": {
       "Statement": [
         {
@@ -32,7 +32,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:image/*",
-            "arn:aws:ec2:*:*:instance/*"
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:volume/*"
           ]
         },
         {
@@ -44,12 +45,21 @@
           "Resource": [
             "*"
           ]
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstanceAttribute"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-02-20T16:35:50Z"
+  "UpdateDate": "2020-08-06T17:34:42Z"
 }

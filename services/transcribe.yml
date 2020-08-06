@@ -1,17 +1,21 @@
 Actions:
+  - Name: transcribe:CreateLanguageModel
   - Name: transcribe:CreateMedicalVocabulary
   - Name: transcribe:CreateVocabulary
   - Name: transcribe:CreateVocabularyFilter
+  - Name: transcribe:DeleteLanguageModel
   - Name: transcribe:DeleteMedicalTranscriptionJob
   - Name: transcribe:DeleteMedicalVocabulary
   - Name: transcribe:DeleteTranscriptionJob
   - Name: transcribe:DeleteVocabulary
   - Name: transcribe:DeleteVocabularyFilter
+  - Name: transcribe:DescribeLanguageModel
   - Name: transcribe:GetMedicalTranscriptionJob
   - Name: transcribe:GetMedicalVocabulary
   - Name: transcribe:GetTranscriptionJob
   - Name: transcribe:GetVocabulary
   - Name: transcribe:GetVocabularyFilter
+  - Name: transcribe:ListLanguageModels
   - Name: transcribe:ListMedicalTranscriptionJobs
   - Name: transcribe:ListMedicalVocabularies
   - Name: transcribe:ListTranscriptionJobs
@@ -28,9 +32,3 @@ Actions:
   - Name: transcribe:StartMedicalStreamTranscription
   - Name: transcribe:StartMedicalStreamTranscriptionWebSocket
   - Name: transcribe:StartStreamTranscriptionWebSocket
-
-  # APIs without an IAM action
-  - Name: transcribe:CreateLanguageModel
-  - Name: transcribe:DeleteLanguageModel
-  - Name: transcribe:DescribeLanguageModel
-  - Name: transcribe:ListLanguageModels

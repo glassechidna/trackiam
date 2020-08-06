@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/MigrationHubServiceRolePolicy",
   "CreateDate": "2019-06-12T17:22:16Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NWLJ3LLW3",
   "PolicyName": "MigrationHubServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-02-20T16:59:36Z",
+    "CreateDate": "2020-08-06T18:08:46Z",
     "Document": {
       "Statement": [
         {
@@ -32,7 +32,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:image/*",
-            "arn:aws:ec2:*:*:instance/*"
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:volume/*"
           ]
         },
         {
@@ -44,12 +45,21 @@
           "Resource": [
             "*"
           ]
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstanceAttribute"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-02-20T16:59:36Z"
+  "UpdateDate": "2020-08-06T18:08:46Z"
 }

@@ -13,14 +13,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 230
 * Unique actions: 8524
-* Managed policies: 691
+* Managed policies: 692
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 200 |
-| `arn:aws:iam::aws:policy/Amazon*` | 185 |
+| `arn:aws:iam::aws:policy/Amazon*` | 186 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 125 |
 | `arn:aws:iam::aws:policy/service-role/*` | 106 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -124,6 +124,7 @@ The following table summarises the AWS APIs.
 | [`es`](services/es.yml) | 28 | 9 | 9 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`sms`](services/sms.yml) | 28 | 0 | 9 |
+| [`transcribe`](services/transcribe.yml) | 28 | 0 | 3 |
 | [`athena`](services/athena.yml) | 28 | 0 | 1 |
 | [`networkmanager`](services/networkmanager.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
@@ -138,7 +139,6 @@ The following table summarises the AWS APIs.
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
-| [`transcribe`](services/transcribe.yml) | 24 | 4 | 3 |
 | [`kendra`](services/kendra.yml) | 24 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 23 | 5 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 23 | 0 | 0 |
