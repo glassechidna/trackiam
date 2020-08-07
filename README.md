@@ -102,6 +102,7 @@ The following table summarises the AWS APIs.
 | [`codepipeline`](services/codepipeline.yml) | 37 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 1 |
 | [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
+| [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
 | [`iotanalytics`](services/iotanalytics.yml) | 33 | 1 | 0 |
@@ -123,7 +124,6 @@ The following table summarises the AWS APIs.
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
 | [`es`](services/es.yml) | 28 | 9 | 9 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
-| [`sms`](services/sms.yml) | 28 | 0 | 9 |
 | [`transcribe`](services/transcribe.yml) | 28 | 0 | 3 |
 | [`athena`](services/athena.yml) | 28 | 0 | 1 |
 | [`networkmanager`](services/networkmanager.yml) | 28 | 0 | 0 |

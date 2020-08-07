@@ -4,6 +4,7 @@ Actions:
   - Name: sms:DeleteApp
   - Name: sms:DeleteAppLaunchConfiguration
   - Name: sms:DeleteAppReplicationConfiguration
+  - Name: sms:DeleteAppValidationConfiguration
   - Name: sms:DeleteReplicationJob
   - Name: sms:DeleteServerCatalog
   - Name: sms:DisassociateConnector
@@ -12,16 +13,22 @@ Actions:
   - Name: sms:GetApp
   - Name: sms:GetAppLaunchConfiguration
   - Name: sms:GetAppReplicationConfiguration
+  - Name: sms:GetAppValidationConfiguration
+  - Name: sms:GetAppValidationOutput
   - Name: sms:GetConnectors
   - Name: sms:GetReplicationJobs
   - Name: sms:GetReplicationRuns
   - Name: sms:GetServers
+  - Name: sms:ImportAppCatalog
   - Name: sms:ImportServerCatalog
   - Name: sms:LaunchApp
   - Name: sms:ListApps
+  - Name: sms:NotifyAppValidationOutput
   - Name: sms:PutAppLaunchConfiguration
   - Name: sms:PutAppReplicationConfiguration
+  - Name: sms:PutAppValidationConfiguration
   - Name: sms:StartAppReplication
+  - Name: sms:StartOnDemandAppReplication
   - Name: sms:StartOnDemandReplicationRun
   - Name: sms:StopAppReplication
   - Name: sms:TerminateApp
@@ -29,12 +36,5 @@ Actions:
   - Name: sms:UpdateReplicationJob
 
   # actions with no corresponding API
-  - Name: sms:DeleteAppValidationConfiguration
-  - Name: sms:GetAppValidationConfiguration
-  - Name: sms:GetAppValidationOutput
   - Name: sms:GetMessages
-  - Name: sms:ImportAppCatalog
-  - Name: sms:NotifyAppValidationOutput
-  - Name: sms:PutAppValidationConfiguration
   - Name: sms:SendMessage
-  - Name: sms:StartOnDemandAppReplication
