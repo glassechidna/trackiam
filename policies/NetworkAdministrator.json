@@ -1,15 +1,29 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/NetworkAdministrator",
   "CreateDate": "2016-11-10T17:31:35Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAJPNMADZFJCVPJVZA2",
   "PolicyName": "NetworkAdministrator",
   "PolicyVersion": {
-    "CreateDate": "2020-03-31T16:34:49Z",
+    "CreateDate": "2020-08-08T00:10:51Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": [
+                "transitgateway.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "autoscaling:Describe*",
@@ -251,7 +265,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2020-03-31T16:34:49Z"
+  "UpdateDate": "2020-08-08T00:10:51Z"
 }
