@@ -1,35 +1,15 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSThinkboxAWSPortalAdminPolicy",
   "CreateDate": "2020-05-27T19:41:02Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BVM3T5TP2",
   "PolicyName": "AWSThinkboxAWSPortalAdminPolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-05-27T19:41:02Z",
+    "CreateDate": "2020-08-08T03:39:47Z",
     "Document": {
       "Statement": [
-        {
-          "Action": "ec2:CreateTags",
-          "Condition": {
-            "StringLike": {
-              "ec2:CreateAction": "RunInstances"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": "ec2:CreateTags",
-          "Condition": {
-            "StringLike": {
-              "ec2:PlacementGroup": "*DeadlinePlacementGroup*"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:instance/*"
-        },
         {
           "Action": "ec2:RunInstances",
           "Condition": {
@@ -83,6 +63,30 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/*"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:CreateAction": "RunInstances"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:PlacementGroup": "*DeadlinePlacementGroup*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*"
         },
         {
           "Action": [
@@ -236,6 +240,7 @@
             "ec2:DescribeSpotFleetRequests",
             "ec2:DescribeSpotPriceHistory",
             "ec2:DescribeSubnets",
+            "ec2:DescribeTags",
             "ec2:DescribeVpcEndpoints",
             "ec2:DescribeVpcs",
             "ec2:DetachInternetGateway",
@@ -256,11 +261,13 @@
         },
         {
           "Action": [
-            "ec2:CreateTags"
+            "ec2:CreateTags",
+            "ec2:DeleteTags"
           ],
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:internet-gateway/*",
+            "arn:aws:ec2:*:*:natgateway/*",
             "arn:aws:ec2:*:*:route-table/*",
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:subnet/*",
@@ -341,6 +348,7 @@
             "s3:PutBucketAcl",
             "s3:PutBucketCORS",
             "s3:PutBucketLogging",
+            "s3:PutBucketTagging",
             "s3:PutBucketVersioning",
             "s3:PutEncryptionConfiguration",
             "s3:PutLifecycleConfiguration",
@@ -376,7 +384,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-05-27T19:41:02Z"
+  "UpdateDate": "2020-08-08T03:39:47Z"
 }
