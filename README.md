@@ -113,12 +113,12 @@ The following table summarises the AWS APIs.
 | [`appconfig`](services/appconfig.yml) | 33 | 0 | 0 |
 | [`workspaces`](services/workspaces.yml) | 32 | 11 | 0 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
+| [`elasticmapreduce`](services/elasticmapreduce.yml) | 32 | 1 | 8 |
 | [`codeartifact`](services/codeartifact.yml) | 31 | 0 | 4 |
 | [`events`](services/events.yml) | 31 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 30 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 30 | 0 | 0 |
-| [`elasticmapreduce`](services/elasticmapreduce.yml) | 29 | 4 | 8 |
 | [`datasync`](services/datasync.yml) | 29 | 2 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 29 | 1 | 0 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |

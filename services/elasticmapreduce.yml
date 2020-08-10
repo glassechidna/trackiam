@@ -11,6 +11,7 @@ Actions:
   - Name: elasticmapreduce:DescribeSecurityConfiguration
   - Name: elasticmapreduce:DescribeStep
   - Name: elasticmapreduce:GetBlockPublicAccessConfiguration
+  - Name: elasticmapreduce:GetManagedScalingPolicy
   - Name: elasticmapreduce:ListBootstrapActions
   - Name: elasticmapreduce:ListClusters
   - Name: elasticmapreduce:ListInstanceFleets
@@ -23,7 +24,9 @@ Actions:
   - Name: elasticmapreduce:ModifyInstanceGroups
   - Name: elasticmapreduce:PutAutoScalingPolicy
   - Name: elasticmapreduce:PutBlockPublicAccessConfiguration
+  - Name: elasticmapreduce:PutManagedScalingPolicy
   - Name: elasticmapreduce:RemoveAutoScalingPolicy
+  - Name: elasticmapreduce:RemoveManagedScalingPolicy
   - Name: elasticmapreduce:RemoveTags
   - Name: elasticmapreduce:RunJobFlow
   - Name: elasticmapreduce:SetTerminationProtection
@@ -40,7 +43,4 @@ Actions:
   - Name: elasticmapreduce:ViewEventsFromAllClustersInConsole
 
   # APIs without an IAM action
-  - Name: elasticmapreduce:GetManagedScalingPolicy
-  - Name: elasticmapreduce:PutManagedScalingPolicy
-  - Name: elasticmapreduce:RemoveManagedScalingPolicy
   - Name: elasticmapreduce:SetVisibleToAllUsers
