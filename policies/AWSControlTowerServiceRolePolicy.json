@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSControlTowerServiceRolePolicy",
   "CreateDate": "2019-05-03T18:19:11Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4MW35THVLF",
   "PolicyName": "AWSControlTowerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-05-11T23:04:15Z",
+    "CreateDate": "2020-08-10T19:17:12Z",
     "Document": {
       "Statement": [
         {
@@ -56,7 +56,30 @@
           "Resource": [
             "arn:aws:cloudformation:*:*:stack/AWSControlTower*/*",
             "arn:aws:cloudformation:*:*:stack/StackSet-AWSControlTower*/*",
+            "arn:aws:cloudformation:*:*:stackset-target/AWSControlTower*/*",
             "arn:aws:cloudformation:*:*:stackset/AWSControlTower*:*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudformation:CreateStack",
+            "cloudformation:CreateStackInstances",
+            "cloudformation:CreateStackSet",
+            "cloudformation:DeleteStack",
+            "cloudformation:DeleteStackInstances",
+            "cloudformation:DeleteStackSet",
+            "cloudformation:DescribeStackInstance",
+            "cloudformation:DescribeStackSet",
+            "cloudformation:DescribeStackSetOperation",
+            "cloudformation:DescribeStacks",
+            "cloudformation:ListStackInstances",
+            "cloudformation:UpdateStack",
+            "cloudformation:UpdateStackInstances",
+            "cloudformation:UpdateStackSet"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:type/resource/AWS-IAM-Role"
           ]
         },
         {
@@ -148,7 +171,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-05-11T23:04:15Z"
+  "UpdateDate": "2020-08-10T19:17:12Z"
 }
