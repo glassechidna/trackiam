@@ -59,6 +59,7 @@ Actions:
   - Name: ec2:CreateLaunchTemplateVersion
   - Name: ec2:CreateLocalGatewayRoute
   - Name: ec2:CreateLocalGatewayRouteTableVpcAssociation
+  - Name: ec2:CreateManagedPrefixList
   - Name: ec2:CreateNatGateway
   - Name: ec2:CreateNetworkAcl
   - Name: ec2:CreateNetworkAclEntry
@@ -107,6 +108,7 @@ Actions:
   - Name: ec2:DeleteLaunchTemplateVersions
   - Name: ec2:DeleteLocalGatewayRoute
   - Name: ec2:DeleteLocalGatewayRouteTableVpcAssociation
+  - Name: ec2:DeleteManagedPrefixList
   - Name: ec2:DeleteNatGateway
   - Name: ec2:DeleteNetworkAcl
   - Name: ec2:DeleteNetworkAclEntry
@@ -199,6 +201,7 @@ Actions:
   - Name: ec2:DescribeLocalGatewayVirtualInterfaceGroups
   - Name: ec2:DescribeLocalGatewayVirtualInterfaces
   - Name: ec2:DescribeLocalGateways
+  - Name: ec2:DescribeManagedPrefixLists
   - Name: ec2:DescribeMovingAddresses
   - Name: ec2:DescribeNatGateways
   - Name: ec2:DescribeNetworkAcls
@@ -295,6 +298,8 @@ Actions:
   - Name: ec2:GetEbsEncryptionByDefault
   - Name: ec2:GetHostReservationPurchasePreview
   - Name: ec2:GetLaunchTemplateData
+  - Name: ec2:GetManagedPrefixListAssociations
+  - Name: ec2:GetManagedPrefixListEntries
   - Name: ec2:GetPasswordData
   - Name: ec2:GetReservedInstancesExchangeQuote
   - Name: ec2:GetTransitGatewayAttachmentPropagations
@@ -324,6 +329,7 @@ Actions:
   - Name: ec2:ModifyInstanceMetadataOptions
   - Name: ec2:ModifyInstancePlacement
   - Name: ec2:ModifyLaunchTemplate
+  - Name: ec2:ModifyManagedPrefixList
   - Name: ec2:ModifyNetworkInterfaceAttribute
   - Name: ec2:ModifyReservedInstances
   - Name: ec2:ModifySnapshotAttribute
@@ -378,6 +384,7 @@ Actions:
   - Name: ec2:ResetNetworkInterfaceAttribute
   - Name: ec2:ResetSnapshotAttribute
   - Name: ec2:RestoreAddressToClassic
+  - Name: ec2:RestoreManagedPrefixListVersion
   - Name: ec2:RevokeClientVpnIngress
   - Name: ec2:RevokeSecurityGroupEgress
   - Name: ec2:RevokeSecurityGroupIngress
@@ -401,17 +408,10 @@ Actions:
 
   # APIs without an IAM action
   - Name: ec2:CreateCarrierGateway
-  - Name: ec2:CreateManagedPrefixList
   - Name: ec2:DeleteCarrierGateway
-  - Name: ec2:DeleteManagedPrefixList
   - Name: ec2:DeleteQueuedReservedInstances
   - Name: ec2:DescribeCarrierGateways
   - Name: ec2:DescribeIpv6Pools
-  - Name: ec2:DescribeManagedPrefixLists
   - Name: ec2:GetAssociatedIpv6PoolCidrs
   - Name: ec2:GetGroupsForCapacityReservation
-  - Name: ec2:GetManagedPrefixListAssociations
-  - Name: ec2:GetManagedPrefixListEntries
   - Name: ec2:ModifyAvailabilityZoneGroup
-  - Name: ec2:ModifyManagedPrefixList
-  - Name: ec2:RestoreManagedPrefixListVersion
