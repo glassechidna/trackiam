@@ -74,8 +74,8 @@ The following table summarises the AWS APIs.
 | [`comprehend`](services/comprehend.yml) | 51 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 50 | 1 | 3 |
 | [`ecs`](services/ecs.yml) | 49 | 0 | 2 |
-| [`lambda`](services/lambda.yml) | 48 | 1 | 3 |
 | [`backup`](services/backup.yml) | 48 | 0 | 1 |
+| [`lambda`](services/lambda.yml) | 47 | 2 | 3 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 47 | 0 | 0 |
