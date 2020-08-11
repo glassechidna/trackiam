@@ -1,13 +1,13 @@
 {
-  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForSMS",
-  "CreateDate": "2019-08-06T18:39:29Z",
-  "DefaultVersionId": "v8",
+  "Arn": "arn:aws:iam::aws:policy/service-role/ServerMigration_ServiceRole",
+  "CreateDate": "2020-08-11T20:41:44Z",
+  "DefaultVersionId": "v1",
   "IsAttachable": true,
-  "Path": "/aws-service-role/",
-  "PolicyId": "ANPAZKAPJZG4OSYRD2VJZ",
-  "PolicyName": "AWSServiceRoleForSMS",
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4NKLZNDFDI",
+  "PolicyName": "ServerMigration_ServiceRole",
   "PolicyVersion": {
-    "CreateDate": "2020-08-11T20:46:24Z",
+    "CreateDate": "2020-08-11T20:41:44Z",
     "Document": {
       "Statement": [
         {
@@ -115,21 +115,6 @@
           "Resource": "arn:aws:ec2:*:*:snapshot/*"
         },
         {
-          "Action": [
-            "ec2:ModifyInstanceAttribute",
-            "ec2:StartInstances",
-            "ec2:StopInstances",
-            "ec2:TerminateInstances"
-          ],
-          "Condition": {
-            "ForAllValues:StringLike": {
-              "ec2:ResourceTag/aws:cloudformation:stack-id": "arn:aws:cloudformation:*:*:stack/sms-app-*/*"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
           "Action": "ssm:SendCommand",
           "Effect": "Allow",
           "Resource": [
@@ -171,21 +156,6 @@
             "ec2:DescribeSnapshots",
             "ec2:GetEbsEncryptionByDefault",
             "ec2:ImportImage"
-          ],
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
-            "ec2:CreateTags",
-            "ec2:DeleteTags"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:instance/*"
-        },
-        {
-          "Action": [
-            "ec2:RunInstances"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -240,7 +210,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v1"
   },
-  "UpdateDate": "2020-08-11T20:46:24Z"
+  "UpdateDate": "2020-08-11T20:41:44Z"
 }
