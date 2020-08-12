@@ -1,0 +1,43 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonEKSVPCResourceController",
+  "CreateDate": "2020-08-12T00:55:34Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4PBOFT2NNA",
+  "PolicyName": "AmazonEKSVPCResourceController",
+  "PolicyVersion": {
+    "CreateDate": "2020-08-12T00:55:34Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:CreateNetworkInterfacePermission",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "ec2:ResourceTag/eks:eni:owner": "eks-vpc-resource-controller"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:AssignPrivateIpAddresses",
+            "ec2:AttachNetworkInterface",
+            "ec2:CreateNetworkInterface",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DetachNetworkInterface",
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "ec2:UnassignPrivateIpAddresses"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-08-12T00:55:34Z"
+}
