@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 231
-* Unique actions: 8533
-* Managed policies: 695
+* Unique actions: 8540
+* Managed policies: 696
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 201 |
 | `arn:aws:iam::aws:policy/Amazon*` | 187 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 125 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 126 |
 | `arn:aws:iam::aws:policy/service-role/*` | 107 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 68 |
@@ -128,8 +128,8 @@ The following table summarises the AWS APIs.
 | [`athena`](services/athena.yml) | 28 | 0 | 1 |
 | [`networkmanager`](services/networkmanager.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
+| [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
-| [`kinesis`](services/kinesis.yml) | 26 | 2 | 0 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 26 | 0 | 1 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
@@ -163,8 +163,8 @@ The following table summarises the AWS APIs.
 | [`secretsmanager`](services/secretsmanager.yml) | 19 | 0 | 0 |
 | [`ce`](services/ce.yml) | 19 | 0 | 0 |
 | [`shield`](services/shield.yml) | 18 | 5 | 0 |
+| [`transfer`](services/transfer.yml) | 18 | 2 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
-| [`transfer`](services/transfer.yml) | 18 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 18 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 18 | 0 | 0 |
@@ -223,7 +223,7 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
-| [`execute-api`](services/execute-api.yml) | 0 | 215 | 3 |
+| [`execute-api`](services/execute-api.yml) | 0 | 220 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 151 | 7 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
@@ -272,12 +272,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1179 |
+| `List` | 1181 |
 | `Get` | 1129 |
-| `Describe` | 1067 |
-| `Delete` | 999 |
-| `Create` | 909 |
-| `Update` | 695 |
+| `Describe` | 1069 |
+| `Delete` | 1000 |
+| `Create` | 910 |
+| `Update` | 696 |
 | `Put` | 248 |
 | `Start` | 154 |
 | `Tag` | 123 |
