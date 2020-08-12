@@ -1,18 +1,24 @@
 Actions:
   - Name: elasticache:AddTagsToResource
   - Name: elasticache:AuthorizeCacheSecurityGroupIngress
+  - Name: elasticache:BatchApplyUpdateAction
+  - Name: elasticache:BatchStopUpdateAction
+  - Name: elasticache:CompleteMigration
   - Name: elasticache:CopySnapshot
   - Name: elasticache:CreateCacheCluster
   - Name: elasticache:CreateCacheParameterGroup
   - Name: elasticache:CreateCacheSecurityGroup
   - Name: elasticache:CreateCacheSubnetGroup
+  - Name: elasticache:CreateGlobalReplicationGroup
   - Name: elasticache:CreateReplicationGroup
   - Name: elasticache:CreateSnapshot
+  - Name: elasticache:DecreaseNodeGroupsInGlobalReplicationGroup
   - Name: elasticache:DecreaseReplicaCount
   - Name: elasticache:DeleteCacheCluster
   - Name: elasticache:DeleteCacheParameterGroup
   - Name: elasticache:DeleteCacheSecurityGroup
   - Name: elasticache:DeleteCacheSubnetGroup
+  - Name: elasticache:DeleteGlobalReplicationGroup
   - Name: elasticache:DeleteReplicationGroup
   - Name: elasticache:DeleteSnapshot
   - Name: elasticache:DescribeCacheClusters
@@ -23,38 +29,30 @@ Actions:
   - Name: elasticache:DescribeCacheSubnetGroups
   - Name: elasticache:DescribeEngineDefaultParameters
   - Name: elasticache:DescribeEvents
+  - Name: elasticache:DescribeGlobalReplicationGroups
   - Name: elasticache:DescribeReplicationGroups
   - Name: elasticache:DescribeReservedCacheNodes
   - Name: elasticache:DescribeReservedCacheNodesOfferings
+  - Name: elasticache:DescribeServiceUpdates
   - Name: elasticache:DescribeSnapshots
+  - Name: elasticache:DescribeUpdateActions
+  - Name: elasticache:DisassociateGlobalReplicationGroup
+  - Name: elasticache:FailoverGlobalReplicationGroup
+  - Name: elasticache:IncreaseNodeGroupsInGlobalReplicationGroup
   - Name: elasticache:IncreaseReplicaCount
   - Name: elasticache:ListAllowedNodeTypeModifications
   - Name: elasticache:ListTagsForResource
   - Name: elasticache:ModifyCacheCluster
   - Name: elasticache:ModifyCacheParameterGroup
   - Name: elasticache:ModifyCacheSubnetGroup
+  - Name: elasticache:ModifyGlobalReplicationGroup
   - Name: elasticache:ModifyReplicationGroup
   - Name: elasticache:ModifyReplicationGroupShardConfiguration
   - Name: elasticache:PurchaseReservedCacheNodesOffering
+  - Name: elasticache:RebalanceSlotsInGlobalReplicationGroup
   - Name: elasticache:RebootCacheCluster
   - Name: elasticache:RemoveTagsFromResource
   - Name: elasticache:ResetCacheParameterGroup
   - Name: elasticache:RevokeCacheSecurityGroupIngress
-  - Name: elasticache:TestFailover
-
-  # APIs without an IAM action
-  - Name: elasticache:BatchApplyUpdateAction
-  - Name: elasticache:BatchStopUpdateAction
-  - Name: elasticache:CompleteMigration
-  - Name: elasticache:CreateGlobalReplicationGroup
-  - Name: elasticache:DecreaseNodeGroupsInGlobalReplicationGroup
-  - Name: elasticache:DeleteGlobalReplicationGroup
-  - Name: elasticache:DescribeGlobalReplicationGroups
-  - Name: elasticache:DescribeServiceUpdates
-  - Name: elasticache:DescribeUpdateActions
-  - Name: elasticache:DisassociateGlobalReplicationGroup
-  - Name: elasticache:FailoverGlobalReplicationGroup
-  - Name: elasticache:IncreaseNodeGroupsInGlobalReplicationGroup
-  - Name: elasticache:ModifyGlobalReplicationGroup
-  - Name: elasticache:RebalanceSlotsInGlobalReplicationGroup
   - Name: elasticache:StartMigration
+  - Name: elasticache:TestFailover

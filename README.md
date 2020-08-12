@@ -13,7 +13,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 231
 * Unique actions: 8540
-* Managed policies: 696
+* Managed policies: 697
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 201 |
 | `arn:aws:iam::aws:policy/Amazon*` | 187 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 126 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 127 |
 | `arn:aws:iam::aws:policy/service-role/*` | 107 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 68 |
@@ -62,6 +62,7 @@ The following table summarises the AWS APIs.
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
 | [`quicksight`](services/quicksight.yml) | 60 | 30 | 9 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
+| [`elasticache`](services/elasticache.yml) | 57 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 57 | 0 | 0 |
 | [`s3`](services/s3.yml) | 56 | 48 | 39 |
 | [`route53`](services/route53.yml) | 56 | 1 | 0 |
@@ -89,7 +90,6 @@ The following table summarises the AWS APIs.
 | [`workmail`](services/workmail.yml) | 43 | 0 | 53 |
 | [`codebuild`](services/codebuild.yml) | 43 | 0 | 8 |
 | [`securityhub`](services/securityhub.yml) | 43 | 0 | 0 |
-| [`elasticache`](services/elasticache.yml) | 42 | 15 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`medialive`](services/medialive.yml) | 40 | 7 | 0 |

@@ -1,0 +1,27 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/ClientVPNServiceConnectionsRolePolicy",
+  "CreateDate": "2020-08-12T19:48:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4PG4VWZTEZ",
+  "PolicyName": "ClientVPNServiceConnectionsRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-08-12T19:48:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "lambda:InvokeFunction"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:function:AWSClientVPN-*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-08-12T19:48:06Z"
+}
