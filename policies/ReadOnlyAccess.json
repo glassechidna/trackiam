@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v65",
+  "DefaultVersionId": "v66",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-06-15T17:12:13Z",
+    "CreateDate": "2020-08-13T21:10:04Z",
     "Document": {
       "Statement": [
         {
@@ -93,6 +93,22 @@
             "cloudwatch:Describe*",
             "cloudwatch:Get*",
             "cloudwatch:List*",
+            "codeartifact:DescribeDomain",
+            "codeartifact:DescribePackageVersion",
+            "codeartifact:DescribeRepository",
+            "codeartifact:GetAuthorizationToken",
+            "codeartifact:GetDomainPermissionsPolicy",
+            "codeartifact:GetPackageVersionAsset",
+            "codeartifact:GetPackageVersionReadme",
+            "codeartifact:GetRepositoryEndpoint",
+            "codeartifact:GetRepositoryPermissionsPolicy",
+            "codeartifact:ListDomains",
+            "codeartifact:ListPackageVersionAssets",
+            "codeartifact:ListPackageVersionDependencies",
+            "codeartifact:ListPackageVersions",
+            "codeartifact:ListPackages",
+            "codeartifact:ListRepositories",
+            "codeartifact:ListRepositoriesInDomain",
             "codebuild:BatchGet*",
             "codebuild:DescribeTestCases",
             "codebuild:List*",
@@ -137,6 +153,7 @@
             "cognito-sync:Get*",
             "cognito-sync:List*",
             "cognito-sync:QueryRecords",
+            "compute-optimizer:DescribeRecommendationExportJobs",
             "compute-optimizer:GetAutoScalingGroupRecommendations",
             "compute-optimizer:GetEC2InstanceRecommendations",
             "compute-optimizer:GetEC2RecommendationProjectedMetrics",
@@ -565,6 +582,7 @@
             "waf-regional:List*",
             "waf:Get*",
             "waf:List*",
+            "wafv2:CheckCapacity",
             "wafv2:Describe*",
             "wafv2:Get*",
             "wafv2:List*",
@@ -588,7 +606,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v65"
+    "VersionId": "v66"
   },
-  "UpdateDate": "2020-06-15T17:12:13Z"
+  "UpdateDate": "2020-08-13T21:10:04Z"
 }
