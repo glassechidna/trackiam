@@ -1,27 +1,46 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCertificateManagerFullAccess",
   "CreateDate": "2016-01-21T17:02:36Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJYCHABBP6VQIVBCBQ",
   "PolicyName": "AWSCertificateManagerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2016-01-21T17:02:36Z",
+    "CreateDate": "2020-08-17T22:18:28Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "acm.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/acm.amazonaws.com/AWSServiceRoleForCertificateManager*"
+        },
         {
           "Action": [
             "acm:*"
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:DeleteServiceLinkedRole",
+            "iam:GetRole",
+            "iam:GetServiceLinkedRoleDeletionStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/acm.amazonaws.com/AWSServiceRoleForCertificateManager*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2016-01-21T17:02:36Z"
+  "UpdateDate": "2020-08-17T22:18:28Z"
 }

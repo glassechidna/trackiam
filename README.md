@@ -143,6 +143,7 @@ The following table summarises the AWS APIs.
 | [`route53domains`](services/route53domains.yml) | 23 | 5 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
+| [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
 | [`ram`](services/ram.yml) | 22 | 2 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 1 |
 | [`states`](services/states.yml) | 22 | 0 | 0 |
@@ -152,7 +153,6 @@ The following table summarises the AWS APIs.
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`eks`](services/eks.yml) | 21 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 21 | 0 | 0 |
-| [`acm-pca`](services/acm-pca.yml) | 20 | 3 | 0 |
 | [`qldb`](services/qldb.yml) | 20 | 0 | 3 |
 | [`iotevents`](services/iotevents.yml) | 20 | 0 | 1 |
 | [`xray`](services/xray.yml) | 20 | 0 | 0 |
