@@ -1,0 +1,58 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSCodeDeployRoleForLambdaLimited",
+  "CreateDate": "2020-08-17T17:14:14Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4C55RUFGEB",
+  "PolicyName": "AWSCodeDeployRoleForLambdaLimited",
+  "PolicyVersion": {
+    "CreateDate": "2020-08-17T17:14:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:GetObjectVersion"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "s3:ExistingObjectTag/UseWithCodeDeploy": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms",
+            "lambda:GetAlias",
+            "lambda:GetProvisionedConcurrencyConfig",
+            "lambda:UpdateAlias"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "lambda:InvokeFunction"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:function:CodeDeployHook_*"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:GetObjectVersion"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*/CodeDeploy/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-08-17T17:14:14Z"
+}
