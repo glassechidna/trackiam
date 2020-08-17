@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 232
-* Unique actions: 8547
+* Unique actions: 8576
 * Managed policies: 698
 
 Most common managed policy name prefixes:
@@ -60,7 +60,7 @@ The following table summarises the AWS APIs.
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 71 | 7 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
-| [`quicksight`](services/quicksight.yml) | 60 | 30 | 9 |
+| [`quicksight`](services/quicksight.yml) | 60 | 39 | 9 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`elasticache`](services/elasticache.yml) | 57 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 57 | 0 | 0 |
@@ -92,10 +92,10 @@ The following table summarises the AWS APIs.
 | [`securityhub`](services/securityhub.yml) | 43 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
+| [`robomaker`](services/robomaker.yml) | 40 | 17 | 0 |
 | [`medialive`](services/medialive.yml) | 40 | 7 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 40 | 2 | 0 |
 | [`wafv2`](services/wafv2.yml) | 40 | 0 | 2 |
-| [`robomaker`](services/robomaker.yml) | 40 | 0 | 0 |
 | [`logs`](services/logs.yml) | 39 | 3 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
@@ -152,12 +152,12 @@ The following table summarises the AWS APIs.
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`eks`](services/eks.yml) | 21 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 21 | 0 | 0 |
+| [`acm-pca`](services/acm-pca.yml) | 20 | 3 | 0 |
 | [`qldb`](services/qldb.yml) | 20 | 0 | 3 |
 | [`iotevents`](services/iotevents.yml) | 20 | 0 | 1 |
 | [`xray`](services/xray.yml) | 20 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 20 | 0 | 0 |
-| [`acm-pca`](services/acm-pca.yml) | 20 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`secretsmanager`](services/secretsmanager.yml) | 19 | 0 | 0 |
@@ -273,13 +273,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1181 |
-| `Get` | 1131 |
-| `Describe` | 1069 |
-| `Delete` | 1000 |
-| `Create` | 911 |
-| `Update` | 696 |
-| `Put` | 248 |
+| `List` | 1186 |
+| `Get` | 1133 |
+| `Describe` | 1075 |
+| `Delete` | 1003 |
+| `Create` | 915 |
+| `Update` | 699 |
+| `Put` | 249 |
 | `Start` | 154 |
 | `Tag` | 123 |
 | `Untag` | 122 |
