@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 232
-* Unique actions: 8576
+* Unique services: 233
+* Unique actions: 8583
 * Managed policies: 698
 
 Most common managed policy name prefixes:
@@ -44,7 +44,7 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
 | [`chime`](services/chime.yml) | 118 | 1 | 50 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
-| [`ses`](services/ses.yml) | 103 | 21 | 0 |
+| [`ses`](services/ses.yml) | 103 | 24 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 26 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 90 | 0 | 1 |
@@ -229,6 +229,7 @@ The following table summarises the AWS APIs.
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
+| [`identitystore`](services/identitystore.yml) | 0 | 4 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
@@ -273,11 +274,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1186 |
-| `Get` | 1133 |
-| `Describe` | 1075 |
+| `List` | 1189 |
+| `Get` | 1134 |
+| `Describe` | 1077 |
 | `Delete` | 1003 |
-| `Create` | 915 |
+| `Create` | 916 |
 | `Update` | 699 |
 | `Put` | 249 |
 | `Start` | 154 |
