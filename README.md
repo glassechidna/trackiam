@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 233
-* Unique actions: 8587
+* Unique actions: 8590
 * Managed policies: 698
 
 Most common managed policy name prefixes:
@@ -58,7 +58,7 @@ The following table summarises the AWS APIs.
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`gamelift`](services/gamelift.yml) | 76 | 13 | 0 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
-| [`storagegateway`](services/storagegateway.yml) | 71 | 7 | 0 |
+| [`storagegateway`](services/storagegateway.yml) | 71 | 10 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
 | [`quicksight`](services/quicksight.yml) | 60 | 39 | 9 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
@@ -149,6 +149,7 @@ The following table summarises the AWS APIs.
 | [`states`](services/states.yml) | 22 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
+| [`ivs`](services/ivs.yml) | 22 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 21 | 3 | 0 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`eks`](services/eks.yml) | 21 | 0 | 0 |
@@ -164,7 +165,6 @@ The following table summarises the AWS APIs.
 | [`ce`](services/ce.yml) | 19 | 0 | 0 |
 | [`shield`](services/shield.yml) | 18 | 5 | 0 |
 | [`transfer`](services/transfer.yml) | 18 | 2 | 0 |
-| [`ivs`](services/ivs.yml) | 18 | 0 | 4 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 18 | 0 | 0 |
@@ -274,11 +274,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1190 |
+| `List` | 1191 |
 | `Get` | 1135 |
 | `Describe` | 1077 |
-| `Delete` | 1004 |
-| `Create` | 916 |
+| `Delete` | 1005 |
+| `Create` | 917 |
 | `Update` | 699 |
 | `Put` | 249 |
 | `Start` | 154 |
