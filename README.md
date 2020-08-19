@@ -215,6 +215,7 @@ The following table summarises the AWS APIs.
 | [`braket`](services/braket.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`outposts`](services/outposts.yml) | 5 | 2 | 0 |
+| [`identitystore`](services/identitystore.yml) | 4 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`ebs`](services/ebs.yml) | 3 | 3 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
@@ -229,7 +230,6 @@ The following table summarises the AWS APIs.
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
-| [`identitystore`](services/identitystore.yml) | 0 | 4 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
