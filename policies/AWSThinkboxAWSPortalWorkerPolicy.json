@@ -1,15 +1,38 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSThinkboxAWSPortalWorkerPolicy",
   "CreateDate": "2020-05-27T19:15:05Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4PI3G53MMS",
   "PolicyName": "AWSThinkboxAWSPortalWorkerPolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-06-30T16:11:00Z",
+    "CreateDate": "2020-08-20T21:18:56Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ARN": "${ec2:SourceInstanceARN}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:DescribeTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
         {
           "Action": [
             "logs:CreateLogGroup"
@@ -65,7 +88,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-06-30T16:11:00Z"
+  "UpdateDate": "2020-08-20T21:18:56Z"
 }
