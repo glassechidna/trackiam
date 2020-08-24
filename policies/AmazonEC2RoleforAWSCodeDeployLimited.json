@@ -1,0 +1,43 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforAWSCodeDeployLimited",
+  "CreateDate": "2020-08-24T17:55:18Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4NN2A7WC6C",
+  "PolicyName": "AmazonEC2RoleforAWSCodeDeployLimited",
+  "PolicyVersion": {
+    "CreateDate": "2020-08-24T17:55:18Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:GetObjectVersion",
+            "s3:ListBucket"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "s3:ExistingObjectTag/UseWithCodeDeploy": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:GetObjectVersion",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*/CodeDeploy/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-08-24T17:55:18Z"
+}
