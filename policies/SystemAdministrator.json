@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/SystemAdministrator",
   "CreateDate": "2016-11-10T17:23:56Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAITJPEZXCYCBXANDSW",
   "PolicyName": "SystemAdministrator",
   "PolicyVersion": {
-    "CreateDate": "2019-06-18T23:13:44Z",
+    "CreateDate": "2020-08-24T20:05:29Z",
     "Document": {
       "Statement": [
         {
@@ -64,6 +64,8 @@
             "ec2:CreateInstanceExportTask",
             "ec2:CreateInternetGateway",
             "ec2:CreateKeyPair",
+            "ec2:CreateLaunchTemplate",
+            "ec2:CreateLaunchTemplateVersion",
             "ec2:CreateNatGateway",
             "ec2:CreateNetworkInterface",
             "ec2:CreatePlacementGroup",
@@ -83,6 +85,8 @@
             "ec2:CreateVpnGateway",
             "ec2:DeleteFlowLogs",
             "ec2:DeleteKeyPair",
+            "ec2:DeleteLaunchTemplate",
+            "ec2:DeleteLaunchTemplateVersions",
             "ec2:DeleteNatGateway",
             "ec2:DeleteNetworkInterface",
             "ec2:DeletePlacementGroup",
@@ -109,6 +113,7 @@
             "ec2:EnableVpcClassicLinkDnsSupport",
             "ec2:GetConsoleOutput",
             "ec2:GetHostReservationPurchasePreview",
+            "ec2:GetLaunchTemplateData",
             "ec2:GetPasswordData",
             "ec2:Import*",
             "ec2:Modify*",
@@ -261,7 +266,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2019-06-18T23:13:44Z"
+  "UpdateDate": "2020-08-24T20:05:29Z"
 }
