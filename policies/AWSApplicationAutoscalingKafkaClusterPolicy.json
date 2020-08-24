@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSApplicationAutoscalingKafkaClusterPolicy",
+  "CreateDate": "2020-08-24T18:36:01Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4FTCIZBJA2",
+  "PolicyName": "AWSApplicationAutoscalingKafkaClusterPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-08-24T18:36:01Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:PutMetricAlarm",
+            "kafka:DescribeCluster",
+            "kafka:DescribeClusterOperation",
+            "kafka:UpdateBrokerStorage"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-08-24T18:36:01Z"
+}

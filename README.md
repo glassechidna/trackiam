@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 233
-* Unique actions: 8592
-* Managed policies: 699
+* Unique actions: 8600
+* Managed policies: 700
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 201 |
 | `arn:aws:iam::aws:policy/Amazon*` | 187 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 127 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 128 |
 | `arn:aws:iam::aws:policy/service-role/*` | 109 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 68 |
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 406 | 8 | 0 |
+| [`ec2`](services/ec2.yml) | 406 | 13 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 142 | 1 | 2 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`glue`](services/glue.yml) | 124 | 9 | 1 |
@@ -141,6 +141,7 @@ The following table summarises the AWS APIs.
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 24 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 23 | 5 | 0 |
+| [`kafka`](services/kafka.yml) | 23 | 3 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
@@ -150,13 +151,12 @@ The following table summarises the AWS APIs.
 | [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 22 | 0 | 0 |
-| [`kafka`](services/kafka.yml) | 21 | 3 | 2 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`eks`](services/eks.yml) | 21 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 21 | 0 | 0 |
+| [`xray`](services/xray.yml) | 20 | 3 | 0 |
 | [`qldb`](services/qldb.yml) | 20 | 0 | 3 |
 | [`iotevents`](services/iotevents.yml) | 20 | 0 | 1 |
-| [`xray`](services/xray.yml) | 20 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 20 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
@@ -274,14 +274,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1191 |
-| `Get` | 1135 |
+| `List` | 1192 |
+| `Get` | 1136 |
 | `Describe` | 1077 |
-| `Delete` | 1006 |
-| `Create` | 917 |
+| `Delete` | 1007 |
+| `Create` | 918 |
 | `Update` | 700 |
 | `Put` | 249 |
 | `Start` | 154 |
-| `Tag` | 123 |
-| `Untag` | 122 |
+| `Tag` | 124 |
+| `Untag` | 123 |
 

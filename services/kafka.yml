@@ -2,6 +2,7 @@ Actions:
   - Name: kafka:CreateCluster
   - Name: kafka:CreateConfiguration
   - Name: kafka:DeleteCluster
+  - Name: kafka:DeleteConfiguration
   - Name: kafka:DescribeCluster
   - Name: kafka:DescribeClusterOperation
   - Name: kafka:DescribeConfiguration
@@ -19,11 +20,8 @@ Actions:
   - Name: kafka:UpdateBrokerStorage
   - Name: kafka:UpdateClusterConfiguration
   - Name: kafka:UpdateClusterKafkaVersion
-  - Name: kafka:UpdateMonitoring
-
-  # actions with no corresponding API
-  - Name: kafka:DeleteConfiguration
   - Name: kafka:UpdateConfiguration
+  - Name: kafka:UpdateMonitoring
 
   # APIs without an IAM action
   - Name: kafka:ListConfigurationRevisions
