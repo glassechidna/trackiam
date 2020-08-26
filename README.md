@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 233
-* Unique actions: 8600
+* Unique actions: 8610
 * Managed policies: 700
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 406 | 13 | 0 |
+| [`ec2`](services/ec2.yml) | 409 | 10 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 142 | 1 | 2 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`glue`](services/glue.yml) | 124 | 9 | 1 |
@@ -146,9 +146,9 @@ The following table summarises the AWS APIs.
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
 | [`ram`](services/ram.yml) | 22 | 2 | 0 |
+| [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 10 |
 | [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 1 |
 | [`states`](services/states.yml) | 22 | 0 | 0 |
-| [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 22 | 0 | 0 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
@@ -274,13 +274,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1192 |
-| `Get` | 1136 |
+| `List` | 1194 |
+| `Get` | 1139 |
 | `Describe` | 1077 |
-| `Delete` | 1007 |
-| `Create` | 918 |
+| `Delete` | 1008 |
+| `Create` | 919 |
 | `Update` | 700 |
-| `Put` | 249 |
+| `Put` | 250 |
 | `Start` | 154 |
 | `Tag` | 124 |
 | `Untag` | 123 |

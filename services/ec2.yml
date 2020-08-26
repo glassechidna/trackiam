@@ -41,6 +41,7 @@ Actions:
   - Name: ec2:CopyImage
   - Name: ec2:CopySnapshot
   - Name: ec2:CreateCapacityReservation
+  - Name: ec2:CreateCarrierGateway
   - Name: ec2:CreateClientVpnEndpoint
   - Name: ec2:CreateClientVpnRoute
   - Name: ec2:CreateCustomerGateway
@@ -94,6 +95,7 @@ Actions:
   - Name: ec2:CreateVpnConnection
   - Name: ec2:CreateVpnConnectionRoute
   - Name: ec2:CreateVpnGateway
+  - Name: ec2:DeleteCarrierGateway
   - Name: ec2:DeleteClientVpnEndpoint
   - Name: ec2:DeleteClientVpnRoute
   - Name: ec2:DeleteCustomerGateway
@@ -153,6 +155,7 @@ Actions:
   - Name: ec2:DescribeBundleTasks
   - Name: ec2:DescribeByoipCidrs
   - Name: ec2:DescribeCapacityReservations
+  - Name: ec2:DescribeCarrierGateways
   - Name: ec2:DescribeClassicLinkInstances
   - Name: ec2:DescribeClientVpnAuthorizationRules
   - Name: ec2:DescribeClientVpnConnections
@@ -407,12 +410,9 @@ Actions:
   - Name: ec2:WithdrawByoipCidr
 
   # APIs without an IAM action
-  - Name: ec2:CreateCarrierGateway
   - Name: ec2:CreateTransitGatewayPrefixListReference
-  - Name: ec2:DeleteCarrierGateway
   - Name: ec2:DeleteQueuedReservedInstances
   - Name: ec2:DeleteTransitGatewayPrefixListReference
-  - Name: ec2:DescribeCarrierGateways
   - Name: ec2:DescribeIpv6Pools
   - Name: ec2:GetAssociatedIpv6PoolCidrs
   - Name: ec2:GetGroupsForCapacityReservation
