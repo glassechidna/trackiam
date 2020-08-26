@@ -1,15 +1,30 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/KafkaServiceRolePolicy",
   "CreateDate": "2018-11-15T23:31:48Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJUXPRZ76MAP2EVQJU",
   "PolicyName": "KafkaServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-05-23T19:58:58Z",
+    "CreateDate": "2020-08-26T20:40:53Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "secretsmanager:DeleteResourcePolicy",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetResourcePolicy",
+            "secretsmanager:PutResourcePolicy"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "secretsmanager:SecretId": "arn:*:secretsmanager:*:*:secret:AmazonMSK_*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "acm-pca:GetCertificateAuthorityCertificate",
@@ -18,7 +33,8 @@
             "ec2:CreateNetworkInterfacePermission",
             "ec2:DeleteNetworkInterface",
             "ec2:DescribeNetworkInterfaces",
-            "ec2:DetachNetworkInterface"
+            "ec2:DetachNetworkInterface",
+            "secretsmanager:ListSecrets"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -27,7 +43,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-05-23T19:58:58Z"
+  "UpdateDate": "2020-08-26T20:40:53Z"
 }

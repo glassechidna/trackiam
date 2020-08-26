@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 233
-* Unique actions: 8610
+* Unique actions: 8618
 * Managed policies: 700
 
 Most common managed policy name prefixes:
@@ -114,6 +114,7 @@ The following table summarises the AWS APIs.
 | [`workspaces`](services/workspaces.yml) | 32 | 11 | 0 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 32 | 1 | 8 |
+| [`route53resolver`](services/route53resolver.yml) | 32 | 0 | 0 |
 | [`codeartifact`](services/codeartifact.yml) | 31 | 0 | 4 |
 | [`events`](services/events.yml) | 31 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 0 | 0 |
@@ -146,7 +147,6 @@ The following table summarises the AWS APIs.
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
 | [`ram`](services/ram.yml) | 22 | 2 | 0 |
-| [`route53resolver`](services/route53resolver.yml) | 22 | 0 | 10 |
 | [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 1 |
 | [`states`](services/states.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
@@ -193,6 +193,7 @@ The following table summarises the AWS APIs.
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`synthetics`](services/synthetics.yml) | 11 | 2 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 39 |
+| [`appflow`](services/appflow.yml) | 10 | 8 | 5 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 10 | 0 | 3 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
@@ -240,7 +241,6 @@ The following table summarises the AWS APIs.
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 18 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
-| [`appflow`](services/appflow.yml) | 0 | 0 | 15 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 9 |
@@ -274,14 +274,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1194 |
+| `List` | 1196 |
 | `Get` | 1139 |
-| `Describe` | 1077 |
+| `Describe` | 1080 |
 | `Delete` | 1008 |
 | `Create` | 919 |
-| `Update` | 700 |
+| `Update` | 701 |
 | `Put` | 250 |
-| `Start` | 154 |
+| `Start` | 155 |
 | `Tag` | 124 |
 | `Untag` | 123 |
 

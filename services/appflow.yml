@@ -1,18 +1,28 @@
 Actions:
-
-  # actions with no corresponding API
   - Name: appflow:CreateConnectorProfile
   - Name: appflow:CreateFlow
   - Name: appflow:DeleteConnectorProfile
   - Name: appflow:DeleteFlow
-  - Name: appflow:DescribeConnectorFields
   - Name: appflow:DescribeConnectorProfiles
   - Name: appflow:DescribeConnectors
-  - Name: appflow:DescribeFlowExecution
-  - Name: appflow:DescribeFlows
-  - Name: appflow:ListConnectorFields
   - Name: appflow:ListTagsForResource
-  - Name: appflow:RunFlow
   - Name: appflow:TagResource
   - Name: appflow:UntagResource
   - Name: appflow:UpdateFlow
+
+  # actions with no corresponding API
+  - Name: appflow:DescribeConnectorFields
+  - Name: appflow:DescribeFlowExecution
+  - Name: appflow:DescribeFlows
+  - Name: appflow:ListConnectorFields
+  - Name: appflow:RunFlow
+
+  # APIs without an IAM action
+  - Name: appflow:DescribeConnectorEntity
+  - Name: appflow:DescribeFlow
+  - Name: appflow:DescribeFlowExecutionRecords
+  - Name: appflow:ListConnectorEntities
+  - Name: appflow:ListFlows
+  - Name: appflow:StartFlow
+  - Name: appflow:StopFlow
+  - Name: appflow:UpdateConnectorProfile
