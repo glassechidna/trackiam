@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 233
-* Unique actions: 8618
-* Managed policies: 700
+* Unique actions: 8620
+* Managed policies: 701
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 201 |
+| `arn:aws:iam::aws:policy/AWS*` | 202 |
 | `arn:aws:iam::aws:policy/Amazon*` | 187 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 128 |
 | `arn:aws:iam::aws:policy/service-role/*` | 109 |
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 409 | 10 | 0 |
+| [`ec2`](services/ec2.yml) | 409 | 11 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 142 | 1 | 2 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`glue`](services/glue.yml) | 124 | 9 | 1 |
@@ -56,7 +56,7 @@ The following table summarises the AWS APIs.
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
-| [`gamelift`](services/gamelift.yml) | 76 | 13 | 0 |
+| [`gamelift`](services/gamelift.yml) | 76 | 14 | 0 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 71 | 10 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
@@ -276,7 +276,7 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1196 |
 | `Get` | 1139 |
-| `Describe` | 1080 |
+| `Describe` | 1081 |
 | `Delete` | 1008 |
 | `Create` | 919 |
 | `Update` | 701 |

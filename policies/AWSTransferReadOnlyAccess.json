@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSTransferReadOnlyAccess",
+  "CreateDate": "2020-08-27T17:54:51Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4ITRAALBSI",
+  "PolicyName": "AWSTransferReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-08-27T17:54:51Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "transfer:DescribeServer",
+            "transfer:DescribeUser",
+            "transfer:ListServers",
+            "transfer:ListTagsForResource",
+            "transfer:ListUsers",
+            "transfer:TestIdentityProvider"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-08-27T17:54:51Z"
+}
