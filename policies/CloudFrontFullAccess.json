@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudFrontFullAccess",
   "CreateDate": "2015-02-06T18:39:50Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIPRV52SH6HDCCFY6U",
   "PolicyName": "CloudFrontFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-02-19T19:52:00Z",
+    "CreateDate": "2020-08-27T17:09:55Z",
     "Document": {
       "Statement": [
         {
@@ -25,6 +25,21 @@
         },
         {
           "Action": [
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam:::*"
+        },
+        {
+          "Action": [
+            "kinesis:DescribeStream",
+            "kinesis:ListStreams"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:kinesis:::*"
+        },
+        {
+          "Action": [
             "s3:ListAllMyBuckets"
           ],
           "Effect": "Allow",
@@ -34,7 +49,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-02-19T19:52:00Z"
+  "UpdateDate": "2020-08-27T17:09:55Z"
 }
