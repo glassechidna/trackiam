@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonAppStreamFullAccess",
   "CreateDate": "2015-02-06T18:40:09Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJLZZXU2YQVGL4QDNC",
   "PolicyName": "AmazonAppStreamFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-07-09T21:54:51Z",
+    "CreateDate": "2020-08-28T17:24:35Z",
     "Document": {
       "Statement": [
         {
@@ -38,10 +38,12 @@
         {
           "Action": [
             "application-autoscaling:DeleteScalingPolicy",
+            "application-autoscaling:DeleteScheduledAction",
             "application-autoscaling:DescribeScalableTargets",
             "application-autoscaling:DescribeScalingPolicies",
             "application-autoscaling:DescribeScheduledActions",
             "application-autoscaling:PutScalingPolicy",
+            "application-autoscaling:PutScheduledAction",
             "application-autoscaling:RegisterScalableTarget"
           ],
           "Effect": "Allow",
@@ -79,7 +81,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2020-07-09T21:54:51Z"
+  "UpdateDate": "2020-08-28T17:24:35Z"
 }
