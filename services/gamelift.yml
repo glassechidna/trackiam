@@ -1,8 +1,10 @@
 Actions:
   - Name: gamelift:AcceptMatch
+  - Name: gamelift:ClaimGameServer
   - Name: gamelift:CreateAlias
   - Name: gamelift:CreateBuild
   - Name: gamelift:CreateFleet
+  - Name: gamelift:CreateGameServerGroup
   - Name: gamelift:CreateGameSession
   - Name: gamelift:CreateGameSessionQueue
   - Name: gamelift:CreateMatchmakingConfiguration
@@ -15,6 +17,7 @@ Actions:
   - Name: gamelift:DeleteAlias
   - Name: gamelift:DeleteBuild
   - Name: gamelift:DeleteFleet
+  - Name: gamelift:DeleteGameServerGroup
   - Name: gamelift:DeleteGameSessionQueue
   - Name: gamelift:DeleteMatchmakingConfiguration
   - Name: gamelift:DeleteMatchmakingRuleSet
@@ -22,6 +25,7 @@ Actions:
   - Name: gamelift:DeleteScript
   - Name: gamelift:DeleteVpcPeeringAuthorization
   - Name: gamelift:DeleteVpcPeeringConnection
+  - Name: gamelift:DeregisterGameServer
   - Name: gamelift:DescribeAlias
   - Name: gamelift:DescribeBuild
   - Name: gamelift:DescribeEC2InstanceLimits
@@ -30,6 +34,9 @@ Actions:
   - Name: gamelift:DescribeFleetEvents
   - Name: gamelift:DescribeFleetPortSettings
   - Name: gamelift:DescribeFleetUtilization
+  - Name: gamelift:DescribeGameServer
+  - Name: gamelift:DescribeGameServerGroup
+  - Name: gamelift:DescribeGameServerInstances
   - Name: gamelift:DescribeGameSessionDetails
   - Name: gamelift:DescribeGameSessionPlacement
   - Name: gamelift:DescribeGameSessionQueues
@@ -49,11 +56,15 @@ Actions:
   - Name: gamelift:ListAliases
   - Name: gamelift:ListBuilds
   - Name: gamelift:ListFleets
+  - Name: gamelift:ListGameServerGroups
+  - Name: gamelift:ListGameServers
   - Name: gamelift:ListScripts
   - Name: gamelift:ListTagsForResource
   - Name: gamelift:PutScalingPolicy
+  - Name: gamelift:RegisterGameServer
   - Name: gamelift:RequestUploadCredentials
   - Name: gamelift:ResolveAlias
+  - Name: gamelift:ResumeGameServerGroup
   - Name: gamelift:SearchGameSessions
   - Name: gamelift:StartFleetActions
   - Name: gamelift:StartGameSessionPlacement
@@ -62,6 +73,7 @@ Actions:
   - Name: gamelift:StopFleetActions
   - Name: gamelift:StopGameSessionPlacement
   - Name: gamelift:StopMatchmaking
+  - Name: gamelift:SuspendGameServerGroup
   - Name: gamelift:TagResource
   - Name: gamelift:UntagResource
   - Name: gamelift:UpdateAlias
@@ -69,25 +81,11 @@ Actions:
   - Name: gamelift:UpdateFleetAttributes
   - Name: gamelift:UpdateFleetCapacity
   - Name: gamelift:UpdateFleetPortSettings
+  - Name: gamelift:UpdateGameServer
+  - Name: gamelift:UpdateGameServerGroup
   - Name: gamelift:UpdateGameSession
   - Name: gamelift:UpdateGameSessionQueue
   - Name: gamelift:UpdateMatchmakingConfiguration
   - Name: gamelift:UpdateRuntimeConfiguration
   - Name: gamelift:UpdateScript
   - Name: gamelift:ValidateMatchmakingRuleSet
-
-  # APIs without an IAM action
-  - Name: gamelift:ClaimGameServer
-  - Name: gamelift:CreateGameServerGroup
-  - Name: gamelift:DeleteGameServerGroup
-  - Name: gamelift:DeregisterGameServer
-  - Name: gamelift:DescribeGameServer
-  - Name: gamelift:DescribeGameServerGroup
-  - Name: gamelift:DescribeGameServerInstances
-  - Name: gamelift:ListGameServerGroups
-  - Name: gamelift:ListGameServers
-  - Name: gamelift:RegisterGameServer
-  - Name: gamelift:ResumeGameServerGroup
-  - Name: gamelift:SuspendGameServerGroup
-  - Name: gamelift:UpdateGameServer
-  - Name: gamelift:UpdateGameServerGroup
