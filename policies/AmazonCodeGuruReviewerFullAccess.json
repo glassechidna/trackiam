@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonCodeGuruReviewerFullAccess",
   "CreateDate": "2019-12-03T08:33:47Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ENLFBTHWM",
   "PolicyName": "AmazonCodeGuruReviewerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-05-07T00:43:09Z",
+    "CreateDate": "2020-08-29T04:16:08Z",
     "Document": {
       "Statement": [
         {
@@ -94,7 +94,8 @@
         },
         {
           "Action": [
-            "codeguru-reviewer:*"
+            "codeguru-reviewer:*",
+            "codeguru:*"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -113,7 +114,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-05-07T00:43:09Z"
+  "UpdateDate": "2020-08-29T04:16:08Z"
 }
