@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/NeptuneConsoleFullAccess",
   "CreateDate": "2018-06-19T21:35:19Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJWTD4ELX2KRNICUVQ",
   "PolicyName": "NeptuneConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-01-23T20:49:41Z",
+    "CreateDate": "2020-09-02T17:25:07Z",
     "Document": {
       "Statement": [
         {
@@ -37,7 +37,10 @@
           ],
           "Condition": {
             "StringEquals": {
-              "rds:DatabaseEngine": "graphdb"
+              "rds:DatabaseEngine": [
+                "graphdb",
+                "neptune"
+              ]
             }
           },
           "Effect": "Allow",
@@ -185,7 +188,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-01-23T20:49:41Z"
+  "UpdateDate": "2020-09-02T17:25:07Z"
 }
