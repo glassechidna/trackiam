@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudFrontFullAccess",
   "CreateDate": "2015-02-06T18:39:50Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIPRV52SH6HDCCFY6U",
   "PolicyName": "CloudFrontFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-08-27T17:09:55Z",
+    "CreateDate": "2020-09-03T20:18:42Z",
     "Document": {
       "Statement": [
         {
@@ -15,6 +15,7 @@
             "acm:ListCertificates",
             "cloudfront:*",
             "iam:ListServerCertificates",
+            "kinesis:ListStreams",
             "waf:GetWebACL",
             "waf:ListWebACLs",
             "wafv2:GetWebACL",
@@ -28,15 +29,14 @@
             "iam:ListRoles"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:iam:::*"
+          "Resource": "arn:aws:iam::*:*"
         },
         {
           "Action": [
-            "kinesis:DescribeStream",
-            "kinesis:ListStreams"
+            "kinesis:DescribeStream"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:kinesis:::*"
+          "Resource": "arn:aws:kinesis:*:*:*"
         },
         {
           "Action": [
@@ -49,7 +49,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2020-08-27T17:09:55Z"
+  "UpdateDate": "2020-09-03T20:18:42Z"
 }
