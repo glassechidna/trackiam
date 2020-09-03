@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 233
-* Unique actions: 8634
+* Unique actions: 8638
 * Managed policies: 704
 
 Most common managed policy name prefixes:
@@ -143,6 +143,7 @@ The following table summarises the AWS APIs.
 | [`kendra`](services/kendra.yml) | 24 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 23 | 5 | 0 |
 | [`kafka`](services/kafka.yml) | 23 | 3 | 0 |
+| [`xray`](services/xray.yml) | 23 | 0 | 4 |
 | [`servicediscovery`](services/servicediscovery.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
@@ -154,7 +155,6 @@ The following table summarises the AWS APIs.
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`eks`](services/eks.yml) | 21 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 21 | 0 | 0 |
-| [`xray`](services/xray.yml) | 20 | 3 | 0 |
 | [`qldb`](services/qldb.yml) | 20 | 0 | 3 |
 | [`iotevents`](services/iotevents.yml) | 20 | 0 | 1 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
@@ -275,7 +275,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1199 |
-| `Get` | 1141 |
+| `Get` | 1145 |
 | `Describe` | 1082 |
 | `Delete` | 1010 |
 | `Create` | 922 |

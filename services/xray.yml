@@ -14,13 +14,17 @@ Actions:
   - Name: xray:GetTimeSeriesServiceStatistics
   - Name: xray:GetTraceGraph
   - Name: xray:GetTraceSummaries
+  - Name: xray:ListTagsForResource
   - Name: xray:PutEncryptionConfig
   - Name: xray:PutTelemetryRecords
   - Name: xray:PutTraceSegments
+  - Name: xray:TagResource
+  - Name: xray:UntagResource
   - Name: xray:UpdateGroup
   - Name: xray:UpdateSamplingRule
 
-  # APIs without an IAM action
-  - Name: xray:ListTagsForResource
-  - Name: xray:TagResource
-  - Name: xray:UntagResource
+  # actions with no corresponding API
+  - Name: xray:GetInsight
+  - Name: xray:GetInsightEvents
+  - Name: xray:GetInsightImpactGraph
+  - Name: xray:GetInsightSummaries
