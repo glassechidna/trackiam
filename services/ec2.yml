@@ -83,6 +83,7 @@ Actions:
   - Name: ec2:CreateTransitGateway
   - Name: ec2:CreateTransitGatewayMulticastDomain
   - Name: ec2:CreateTransitGatewayPeeringAttachment
+  - Name: ec2:CreateTransitGatewayPrefixListReference
   - Name: ec2:CreateTransitGatewayRoute
   - Name: ec2:CreateTransitGatewayRouteTable
   - Name: ec2:CreateTransitGatewayVpcAttachment
@@ -131,6 +132,7 @@ Actions:
   - Name: ec2:DeleteTransitGateway
   - Name: ec2:DeleteTransitGatewayMulticastDomain
   - Name: ec2:DeleteTransitGatewayPeeringAttachment
+  - Name: ec2:DeleteTransitGatewayPrefixListReference
   - Name: ec2:DeleteTransitGatewayRoute
   - Name: ec2:DeleteTransitGatewayRouteTable
   - Name: ec2:DeleteTransitGatewayVpcAttachment
@@ -307,6 +309,7 @@ Actions:
   - Name: ec2:GetReservedInstancesExchangeQuote
   - Name: ec2:GetTransitGatewayAttachmentPropagations
   - Name: ec2:GetTransitGatewayMulticastDomainAssociations
+  - Name: ec2:GetTransitGatewayPrefixListReferences
   - Name: ec2:GetTransitGatewayRouteTableAssociations
   - Name: ec2:GetTransitGatewayRouteTablePropagations
   - Name: ec2:ImportClientVpnClientCertificateRevocationList
@@ -341,6 +344,8 @@ Actions:
   - Name: ec2:ModifyTrafficMirrorFilterNetworkServices
   - Name: ec2:ModifyTrafficMirrorFilterRule
   - Name: ec2:ModifyTrafficMirrorSession
+  - Name: ec2:ModifyTransitGateway
+  - Name: ec2:ModifyTransitGatewayPrefixListReference
   - Name: ec2:ModifyTransitGatewayVpcAttachment
   - Name: ec2:ModifyVolume
   - Name: ec2:ModifyVolumeAttribute
@@ -410,14 +415,9 @@ Actions:
   - Name: ec2:WithdrawByoipCidr
 
   # APIs without an IAM action
-  - Name: ec2:CreateTransitGatewayPrefixListReference
   - Name: ec2:DeleteQueuedReservedInstances
-  - Name: ec2:DeleteTransitGatewayPrefixListReference
   - Name: ec2:DescribeIpv6Pools
   - Name: ec2:GetAssociatedIpv6PoolCidrs
   - Name: ec2:GetGroupsForCapacityReservation
-  - Name: ec2:GetTransitGatewayPrefixListReferences
   - Name: ec2:ModifyAvailabilityZoneGroup
-  - Name: ec2:ModifyTransitGateway
-  - Name: ec2:ModifyTransitGatewayPrefixListReference
   - Name: ec2:ModifyVpnConnectionOptions
