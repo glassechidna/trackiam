@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 233
-* Unique actions: 8638
-* Managed policies: 704
+* Unique actions: 8639
+* Managed policies: 705
 
 Most common managed policy name prefixes:
 
@@ -24,7 +24,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 128 |
 | `arn:aws:iam::aws:policy/service-role/*` | 109 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
-| Other | 70 |
+| Other | 71 |
 
 The following table summarises the AWS APIs. 
 
@@ -227,7 +227,7 @@ The following table summarises the AWS APIs.
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 220 | 3 |
-| [`apigateway`](services/apigateway.yml) | 0 | 151 | 7 |
+| [`apigateway`](services/apigateway.yml) | 0 | 152 | 7 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
