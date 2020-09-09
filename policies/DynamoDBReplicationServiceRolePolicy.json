@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/DynamoDBReplicationServiceRolePolicy",
   "CreateDate": "2017-11-09T23:55:34Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJCUNRXL4BWASNJED2",
   "PolicyName": "DynamoDBReplicationServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-07-24T21:40:41Z",
+    "CreateDate": "2020-09-09T18:43:04Z",
     "Document": {
       "Statement": [
         {
@@ -31,6 +31,7 @@
             "application-autoscaling:PutScalingPolicy",
             "application-autoscaling:RegisterScalableTarget",
             "dynamodb:DeleteItem",
+            "dynamodb:DescribeLimits",
             "dynamodb:DescribeStream",
             "dynamodb:DescribeTable",
             "dynamodb:DescribeTimeToLive",
@@ -50,7 +51,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2020-07-24T21:40:41Z"
+  "UpdateDate": "2020-09-09T18:43:04Z"
 }
