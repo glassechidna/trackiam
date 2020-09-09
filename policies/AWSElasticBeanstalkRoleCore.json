@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkRoleCore",
   "CreateDate": "2020-06-05T21:48:24Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4OXQ5DMW6K",
   "PolicyName": "AWSElasticBeanstalkRoleCore",
   "PolicyVersion": {
-    "CreateDate": "2020-06-05T21:48:24Z",
+    "CreateDate": "2020-09-09T20:31:14Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,24 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "LTRunInstances"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "autoscaling.amazonaws.com",
+                "cloudformation.amazonaws.com",
+                "ec2.amazonaws.com",
+                "ecs.amazonaws.com",
+                "elasticbeanstalk.amazonaws.com",
+                "elasticloadbalancing.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-elasticbeanstalk-*",
+          "Sid": "AllowPassRole"
         },
         {
           "Action": [
@@ -196,7 +214,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-06-05T21:48:24Z"
+  "UpdateDate": "2020-09-09T20:31:14Z"
 }

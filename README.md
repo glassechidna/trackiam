@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 234
-* Unique actions: 8648
+* Unique actions: 8649
 * Managed policies: 706
 
 Most common managed policy name prefixes:
@@ -39,7 +39,7 @@ The following table summarises the AWS APIs.
 | [`ec2`](services/ec2.yml) | 414 | 6 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 142 | 1 | 2 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
-| [`glue`](services/glue.yml) | 124 | 9 | 1 |
+| [`glue`](services/glue.yml) | 124 | 10 | 1 |
 | [`rds`](services/rds.yml) | 123 | 7 | 0 |
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
 | [`chime`](services/chime.yml) | 119 | 0 | 50 |
@@ -199,6 +199,7 @@ The following table summarises the AWS APIs.
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`iot`](services/iot.yml) | 9 | 0 | 201 |
 | [`translate`](services/translate.yml) | 9 | 0 | 0 |
+| [`redshift-data`](services/redshift-data.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 9 | 0 | 0 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
@@ -243,7 +244,6 @@ The following table summarises the AWS APIs.
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
-| [`redshift-data`](services/redshift-data.yml) | 0 | 0 | 9 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`cassandra`](services/cassandra.yml) | 0 | 0 | 8 |
@@ -276,7 +276,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1202 |
-| `Get` | 1146 |
+| `Get` | 1147 |
 | `Describe` | 1084 |
 | `Delete` | 1010 |
 | `Create` | 922 |
