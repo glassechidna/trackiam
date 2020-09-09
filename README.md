@@ -19,10 +19,10 @@ Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 203 |
+| `arn:aws:iam::aws:policy/AWS*` | 202 |
 | `arn:aws:iam::aws:policy/Amazon*` | 187 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 128 |
-| `arn:aws:iam::aws:policy/service-role/*` | 109 |
+| `arn:aws:iam::aws:policy/service-role/*` | 110 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 71 |
 

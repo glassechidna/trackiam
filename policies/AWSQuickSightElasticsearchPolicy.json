@@ -1,0 +1,54 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSQuickSightElasticsearchPolicy",
+  "CreateDate": "2020-09-09T17:27:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4BLUM3JVIN",
+  "PolicyName": "AWSQuickSightElasticsearchPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-09-09T17:27:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "es:ListDomainNames",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "es:DescribeElasticsearchDomain"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:es:*:*:domain/*"
+          ]
+        },
+        {
+          "Action": [
+            "es:ESHttpGet"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:es:*:*:domain/*/",
+            "arn:aws:es:*:*:domain/*/_cat/indices"
+          ]
+        },
+        {
+          "Action": [
+            "es:ESHttpGet",
+            "es:ESHttpPost"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:es:*:*:domain/*/_opendistro/_sql"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-09-09T17:27:19Z"
+}
