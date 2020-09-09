@@ -11,16 +11,16 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 233
-* Unique actions: 8640
-* Managed policies: 705
+* Unique services: 234
+* Unique actions: 8648
+* Managed policies: 706
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 202 |
-| `arn:aws:iam::aws:policy/Amazon*` | 187 |
+| `arn:aws:iam::aws:policy/Amazon*` | 188 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 128 |
 | `arn:aws:iam::aws:policy/service-role/*` | 110 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -61,6 +61,7 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 71 | 10 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
 | [`quicksight`](services/quicksight.yml) | 60 | 39 | 9 |
+| [`cloudfront`](services/cloudfront.yml) | 59 | 9 | 0 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`elasticache`](services/elasticache.yml) | 57 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 57 | 0 | 0 |
@@ -82,7 +83,6 @@ The following table summarises the AWS APIs.
 | [`rekognition`](services/rekognition.yml) | 47 | 0 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
 | [`personalize`](services/personalize.yml) | 46 | 0 | 0 |
-| [`cloudfront`](services/cloudfront.yml) | 45 | 23 | 1 |
 | [`dms`](services/dms.yml) | 45 | 8 | 0 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`frauddetector`](services/frauddetector.yml) | 45 | 0 | 0 |
@@ -243,6 +243,7 @@ The following table summarises the AWS APIs.
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
+| [`redshift-data`](services/redshift-data.yml) | 0 | 0 | 9 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`cassandra`](services/cassandra.yml) | 0 | 0 | 8 |
@@ -274,9 +275,9 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1199 |
-| `Get` | 1145 |
-| `Describe` | 1082 |
+| `List` | 1202 |
+| `Get` | 1146 |
+| `Describe` | 1084 |
 | `Delete` | 1010 |
 | `Create` | 922 |
 | `Update` | 702 |

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticBeanstalkWorkerTier",
   "CreateDate": "2016-02-08T23:12:02Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJQDLBRSJVKVF4JMSK",
   "PolicyName": "AWSElasticBeanstalkWorkerTier",
   "PolicyVersion": {
-    "CreateDate": "2019-03-01T00:07:00Z",
+    "CreateDate": "2020-09-09T19:53:40Z",
     "Document": {
       "Statement": [
         {
@@ -34,6 +34,17 @@
             "arn:aws:dynamodb:*:*:table/*-stack-AWSEBWorkerCronLeaderRegistry*"
           ],
           "Sid": "DynamoPeriodicTasks"
+        },
+        {
+          "Action": [
+            "elasticbeanstalk:PutInstanceStatistics"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticbeanstalk:*:*:application/*",
+            "arn:aws:elasticbeanstalk:*:*:environment/*"
+          ],
+          "Sid": "ElasticBeanstalkHealthAccess"
         },
         {
           "Action": [
@@ -86,7 +97,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2019-03-01T00:07:00Z"
+  "UpdateDate": "2020-09-09T19:53:40Z"
 }

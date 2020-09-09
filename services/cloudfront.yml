@@ -1,19 +1,25 @@
 Actions:
+  - Name: cloudfront:CreateCachePolicy
   - Name: cloudfront:CreateCloudFrontOriginAccessIdentity
   - Name: cloudfront:CreateDistribution
   - Name: cloudfront:CreateDistributionWithTags
   - Name: cloudfront:CreateFieldLevelEncryptionConfig
   - Name: cloudfront:CreateFieldLevelEncryptionProfile
   - Name: cloudfront:CreateInvalidation
+  - Name: cloudfront:CreateOriginRequestPolicy
   - Name: cloudfront:CreatePublicKey
   - Name: cloudfront:CreateStreamingDistribution
   - Name: cloudfront:CreateStreamingDistributionWithTags
+  - Name: cloudfront:DeleteCachePolicy
   - Name: cloudfront:DeleteCloudFrontOriginAccessIdentity
   - Name: cloudfront:DeleteDistribution
   - Name: cloudfront:DeleteFieldLevelEncryptionConfig
   - Name: cloudfront:DeleteFieldLevelEncryptionProfile
+  - Name: cloudfront:DeleteOriginRequestPolicy
   - Name: cloudfront:DeletePublicKey
   - Name: cloudfront:DeleteStreamingDistribution
+  - Name: cloudfront:GetCachePolicy
+  - Name: cloudfront:GetCachePolicyConfig
   - Name: cloudfront:GetCloudFrontOriginAccessIdentity
   - Name: cloudfront:GetCloudFrontOriginAccessIdentityConfig
   - Name: cloudfront:GetDistribution
@@ -23,52 +29,43 @@ Actions:
   - Name: cloudfront:GetFieldLevelEncryptionProfile
   - Name: cloudfront:GetFieldLevelEncryptionProfileConfig
   - Name: cloudfront:GetInvalidation
+  - Name: cloudfront:GetOriginRequestPolicy
+  - Name: cloudfront:GetOriginRequestPolicyConfig
   - Name: cloudfront:GetPublicKey
   - Name: cloudfront:GetPublicKeyConfig
   - Name: cloudfront:GetStreamingDistribution
   - Name: cloudfront:GetStreamingDistributionConfig
+  - Name: cloudfront:ListCachePolicies
   - Name: cloudfront:ListCloudFrontOriginAccessIdentities
   - Name: cloudfront:ListDistributions
+  - Name: cloudfront:ListDistributionsByCachePolicyId
+  - Name: cloudfront:ListDistributionsByOriginRequestPolicyId
   - Name: cloudfront:ListDistributionsByWebACLId
   - Name: cloudfront:ListFieldLevelEncryptionConfigs
   - Name: cloudfront:ListFieldLevelEncryptionProfiles
   - Name: cloudfront:ListInvalidations
+  - Name: cloudfront:ListOriginRequestPolicies
   - Name: cloudfront:ListPublicKeys
   - Name: cloudfront:ListStreamingDistributions
   - Name: cloudfront:ListTagsForResource
   - Name: cloudfront:TagResource
   - Name: cloudfront:UntagResource
+  - Name: cloudfront:UpdateCachePolicy
   - Name: cloudfront:UpdateCloudFrontOriginAccessIdentity
   - Name: cloudfront:UpdateDistribution
   - Name: cloudfront:UpdateFieldLevelEncryptionConfig
   - Name: cloudfront:UpdateFieldLevelEncryptionProfile
+  - Name: cloudfront:UpdateOriginRequestPolicy
   - Name: cloudfront:UpdatePublicKey
   - Name: cloudfront:UpdateStreamingDistribution
 
-  # actions with no corresponding API
-  - Name: cloudfront:ListDistributionsByLambdaFunction
-
   # APIs without an IAM action
-  - Name: cloudfront:CreateCachePolicy
   - Name: cloudfront:CreateMonitoringSubscription
-  - Name: cloudfront:CreateOriginRequestPolicy
   - Name: cloudfront:CreateRealtimeLogConfig
-  - Name: cloudfront:DeleteCachePolicy
   - Name: cloudfront:DeleteMonitoringSubscription
-  - Name: cloudfront:DeleteOriginRequestPolicy
   - Name: cloudfront:DeleteRealtimeLogConfig
-  - Name: cloudfront:GetCachePolicy
-  - Name: cloudfront:GetCachePolicyConfig
   - Name: cloudfront:GetMonitoringSubscription
-  - Name: cloudfront:GetOriginRequestPolicy
-  - Name: cloudfront:GetOriginRequestPolicyConfig
   - Name: cloudfront:GetRealtimeLogConfig
-  - Name: cloudfront:ListCachePolicies
-  - Name: cloudfront:ListDistributionsByCachePolicyId
-  - Name: cloudfront:ListDistributionsByOriginRequestPolicyId
   - Name: cloudfront:ListDistributionsByRealtimeLogConfig
-  - Name: cloudfront:ListOriginRequestPolicies
   - Name: cloudfront:ListRealtimeLogConfigs
-  - Name: cloudfront:UpdateCachePolicy
-  - Name: cloudfront:UpdateOriginRequestPolicy
   - Name: cloudfront:UpdateRealtimeLogConfig

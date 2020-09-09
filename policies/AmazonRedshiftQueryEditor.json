@@ -1,15 +1,30 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor",
   "CreateDate": "2018-10-04T22:50:32Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAINVFHHP7CWVHTGBGM",
   "PolicyName": "AmazonRedshiftQueryEditor",
   "PolicyVersion": {
-    "CreateDate": "2018-10-04T22:50:32Z",
+    "CreateDate": "2020-09-09T19:51:14Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:TagResource"
+          ],
+          "Condition": {
+            "StringLike": {
+              "secretsmanager:ResourceTag/RedshiftDataFullAccess": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecretsManagerCreateGetPermissions"
+        },
         {
           "Action": [
             "redshift:CancelQuery",
@@ -30,12 +45,36 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "redshift-data:CancelStatement",
+            "redshift-data:DescribeStatement",
+            "redshift-data:DescribeTable",
+            "redshift-data:ExecuteStatement",
+            "redshift-data:GetStatementResult",
+            "redshift-data:ListDatabases",
+            "redshift-data:ListSchemas",
+            "redshift-data:ListStatements",
+            "redshift-data:ListTables"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DataAPIPermissions"
+        },
+        {
+          "Action": [
+            "secretsmanager:ListSecrets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecretsManagerListPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2018-10-04T22:50:32Z"
+  "UpdateDate": "2020-09-09T19:51:14Z"
 }

@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier",
   "CreateDate": "2016-02-08T23:08:54Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIUF4325SJYOREKW3A",
   "PolicyName": "AWSElasticBeanstalkWebTier",
   "PolicyVersion": {
-    "CreateDate": "2019-03-01T00:04:49Z",
+    "CreateDate": "2020-09-09T19:38:36Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "elasticbeanstalk:PutInstanceStatistics"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticbeanstalk:*:*:application/*",
+            "arn:aws:elasticbeanstalk:*:*:environment/*"
+          ],
+          "Sid": "ElasticBeanstalkHealthAccess"
+        },
         {
           "Action": [
             "logs:CreateLogStream",
@@ -52,7 +63,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2019-03-01T00:04:49Z"
+  "UpdateDate": "2020-09-09T19:38:36Z"
 }
