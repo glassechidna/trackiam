@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 234
-* Unique actions: 8649
+* Unique actions: 8672
 * Managed policies: 707
 
 Most common managed policy name prefixes:
@@ -165,6 +165,7 @@ The following table summarises the AWS APIs.
 | [`ce`](services/ce.yml) | 19 | 0 | 0 |
 | [`shield`](services/shield.yml) | 18 | 5 | 0 |
 | [`transfer`](services/transfer.yml) | 18 | 2 | 0 |
+| [`appflow`](services/appflow.yml) | 18 | 0 | 5 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 18 | 0 | 0 |
@@ -193,7 +194,6 @@ The following table summarises the AWS APIs.
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`synthetics`](services/synthetics.yml) | 11 | 2 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 39 |
-| [`appflow`](services/appflow.yml) | 10 | 8 | 5 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 10 | 1 | 3 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
@@ -217,6 +217,7 @@ The following table summarises the AWS APIs.
 | [`braket`](services/braket.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`outposts`](services/outposts.yml) | 5 | 2 | 0 |
+| [`sso`](services/sso.yml) | 4 | 23 | 50 |
 | [`identitystore`](services/identitystore.yml) | 4 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`ebs`](services/ebs.yml) | 3 | 3 | 0 |
@@ -235,7 +236,6 @@ The following table summarises the AWS APIs.
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
-| [`sso`](services/sso.yml) | 0 | 0 | 54 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 37 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
@@ -275,14 +275,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1202 |
-| `Get` | 1147 |
-| `Describe` | 1084 |
-| `Delete` | 1010 |
-| `Create` | 922 |
+| `List` | 1211 |
+| `Get` | 1148 |
+| `Describe` | 1088 |
+| `Delete` | 1012 |
+| `Create` | 923 |
 | `Update` | 702 |
-| `Put` | 251 |
+| `Put` | 252 |
 | `Start` | 156 |
-| `Tag` | 124 |
-| `Untag` | 123 |
+| `Tag` | 125 |
+| `Untag` | 124 |
 

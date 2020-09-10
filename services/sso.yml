@@ -1,4 +1,8 @@
 Actions:
+  - Name: sso:CreatePermissionSet
+  - Name: sso:DeletePermissionSet
+  - Name: sso:ListPermissionSets
+  - Name: sso:UpdatePermissionSet
 
   # actions with no corresponding API
   - Name: sso:AssociateDirectory
@@ -6,13 +10,11 @@ Actions:
   - Name: sso:CreateApplicationInstance
   - Name: sso:CreateApplicationInstanceCertificate
   - Name: sso:CreateManagedApplicationInstance
-  - Name: sso:CreatePermissionSet
   - Name: sso:CreateProfile
   - Name: sso:CreateTrust
   - Name: sso:DeleteApplicationInstance
   - Name: sso:DeleteApplicationInstanceCertificate
   - Name: sso:DeleteManagedApplicationInstance
-  - Name: sso:DeletePermissionSet
   - Name: sso:DeletePermissionsPolicy
   - Name: sso:DeleteProfile
   - Name: sso:DescribePermissionsPolicies
@@ -36,7 +38,6 @@ Actions:
   - Name: sso:ListApplicationTemplates
   - Name: sso:ListApplications
   - Name: sso:ListDirectoryAssociations
-  - Name: sso:ListPermissionSets
   - Name: sso:ListProfileAssociations
   - Name: sso:ListProfiles
   - Name: sso:PutMfaDeviceManagementForDirectory
@@ -51,7 +52,31 @@ Actions:
   - Name: sso:UpdateApplicationInstanceStatus
   - Name: sso:UpdateDirectoryAssociation
   - Name: sso:UpdateManagedApplicationInstanceStatus
-  - Name: sso:UpdatePermissionSet
   - Name: sso:UpdateProfile
   - Name: sso:UpdateSSOConfiguration
   - Name: sso:UpdateTrust
+
+  # APIs without an IAM action
+  - Name: sso:AttachManagedPolicyToPermissionSet
+  - Name: sso:CreateAccountAssignment
+  - Name: sso:DeleteAccountAssignment
+  - Name: sso:DeleteInlinePolicyFromPermissionSet
+  - Name: sso:DescribeAccountAssignmentCreationStatus
+  - Name: sso:DescribeAccountAssignmentDeletionStatus
+  - Name: sso:DescribePermissionSet
+  - Name: sso:DescribePermissionSetProvisioningStatus
+  - Name: sso:DetachManagedPolicyFromPermissionSet
+  - Name: sso:GetInlinePolicyForPermissionSet
+  - Name: sso:ListAccountAssignmentCreationStatus
+  - Name: sso:ListAccountAssignmentDeletionStatus
+  - Name: sso:ListAccountAssignments
+  - Name: sso:ListAccountsForProvisionedPermissionSet
+  - Name: sso:ListInstances
+  - Name: sso:ListManagedPoliciesInPermissionSet
+  - Name: sso:ListPermissionSetProvisioningStatus
+  - Name: sso:ListPermissionSetsProvisionedToAccount
+  - Name: sso:ListTagsForResource
+  - Name: sso:ProvisionPermissionSet
+  - Name: sso:PutInlinePolicyToPermissionSet
+  - Name: sso:TagResource
+  - Name: sso:UntagResource
