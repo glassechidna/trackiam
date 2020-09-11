@@ -1,30 +1,15 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor",
   "CreateDate": "2018-10-04T22:50:32Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAINVFHHP7CWVHTGBGM",
   "PolicyName": "AmazonRedshiftQueryEditor",
   "PolicyVersion": {
-    "CreateDate": "2020-09-09T19:51:14Z",
+    "CreateDate": "2020-09-11T01:07:22Z",
     "Document": {
       "Statement": [
-        {
-          "Action": [
-            "secretsmanager:CreateSecret",
-            "secretsmanager:GetSecretValue",
-            "secretsmanager:TagResource"
-          ],
-          "Condition": {
-            "StringLike": {
-              "secretsmanager:ResourceTag/RedshiftDataFullAccess": "*"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "SecretsManagerCreateGetPermissions"
-        },
         {
           "Action": [
             "redshift:CancelQuery",
@@ -61,20 +46,12 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "DataAPIPermissions"
-        },
-        {
-          "Action": [
-            "secretsmanager:ListSecrets"
-          ],
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "SecretsManagerListPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-09-09T19:51:14Z"
+  "UpdateDate": "2020-09-11T01:07:22Z"
 }
