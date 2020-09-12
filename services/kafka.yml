@@ -23,6 +23,11 @@ Actions:
   - Name: kafka:UpdateConfiguration
   - Name: kafka:UpdateMonitoring
 
+  # actions with no corresponding API
+  - Name: kafka:BatchAssociateScramSecret
+  - Name: kafka:BatchDisassociateScramSecret
+  - Name: kafka:ListScramSecrets
+
   # APIs without an IAM action
   - Name: kafka:ListConfigurationRevisions
   - Name: kafka:ListKafkaVersions
