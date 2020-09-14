@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess",
   "CreateDate": "2016-12-01T19:04:44Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJQJGIOIE3CD2TQXDS",
   "PolicyName": "AWSCodeBuildAdminAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-07-21T04:22:37Z",
+    "CreateDate": "2020-09-14T16:03:39Z",
     "Document": {
       "Statement": [
         {
@@ -90,6 +90,27 @@
         },
         {
           "Action": [
+            "codestar-connections:CreateConnection",
+            "codestar-connections:DeleteConnection",
+            "codestar-connections:GetConnection",
+            "codestar-connections:GetIndividualAccessToken",
+            "codestar-connections:GetInstallationUrl",
+            "codestar-connections:ListConnections",
+            "codestar-connections:ListInstallationTargets",
+            "codestar-connections:ListTagsForResource",
+            "codestar-connections:PassConnection",
+            "codestar-connections:StartOAuthHandshake",
+            "codestar-connections:TagResource",
+            "codestar-connections:UntagResource",
+            "codestar-connections:UpdateConnectionInstallation",
+            "codestar-connections:UseConnection"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:codestar-connections:*:*:connection/*",
+          "Sid": "CodeStarConnectionsReadWriteAccess"
+        },
+        {
+          "Action": [
             "codestar-notifications:ListEventTypes",
             "codestar-notifications:ListNotificationRules",
             "codestar-notifications:ListTagsforResource",
@@ -121,7 +142,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2020-07-21T04:22:37Z"
+  "UpdateDate": "2020-09-14T16:03:39Z"
 }
