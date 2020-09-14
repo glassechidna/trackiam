@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupOperatorAccess",
   "CreateDate": "2019-11-18T22:23:17Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KHXVYMY4O",
   "PolicyName": "AWSBackupOperatorAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-06-24T16:24:21Z",
+    "CreateDate": "2020-09-14T22:35:03Z",
     "Document": {
       "Statement": [
         {
@@ -27,6 +27,14 @@
           "Action": "organizations:DescribeOrganization",
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": "ssm:SendCommand",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ssm:*:*:document/AWSEC2-CreateVssSnapshot"
+          ]
         },
         {
           "Action": [
@@ -103,6 +111,14 @@
         },
         {
           "Action": [
+            "ssm:CancelCommand",
+            "ssm:GetCommandInvocation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "storagegateway:DescribeCachediSCSIVolumes",
             "storagegateway:DescribeStorediSCSIVolumes"
           ],
@@ -138,7 +154,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-06-24T16:24:21Z"
+  "UpdateDate": "2020-09-14T22:35:03Z"
 }

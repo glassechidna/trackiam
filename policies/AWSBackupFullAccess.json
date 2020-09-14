@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupFullAccess",
   "CreateDate": "2019-11-18T22:21:52Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LL52EIPJX",
   "PolicyName": "AWSBackupFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-06-06T00:06:57Z",
+    "CreateDate": "2020-09-14T22:35:25Z",
     "Document": {
       "Statement": [
         {
@@ -54,12 +54,17 @@
         },
         {
           "Action": [
-            "kms:CreateGrant",
-            "kms:Decrypt"
+            "kms:CreateGrant"
           ],
           "Condition": {
-            "StringEquals": {
+            "Bool": {
+              "kms:GrantIsForAWSResource": true
+            },
+            "ForAnyValue:StringEquals": {
               "kms:EncryptionContextKeys": "aws:backup:backup-vault"
+            },
+            "StringLike": {
+              "kms:ViaService": "backup.*.amazonaws.com"
             }
           },
           "Effect": "Allow",
@@ -94,6 +99,14 @@
           "Action": "organizations:DescribeOrganization",
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": "ssm:SendCommand",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ssm:*:*:document/AWSEC2-CreateVssSnapshot"
+          ]
         },
         {
           "Action": [
@@ -165,6 +178,14 @@
         },
         {
           "Action": [
+            "ssm:CancelCommand",
+            "ssm:GetCommandInvocation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "storagegateway:DescribeCachediSCSIVolumes",
             "storagegateway:DescribeStorediSCSIVolumes"
           ],
@@ -200,7 +221,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-06-06T00:06:57Z"
+  "UpdateDate": "2020-09-14T22:35:25Z"
 }

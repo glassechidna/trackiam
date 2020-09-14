@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
   "CreateDate": "2019-01-10T21:01:28Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIOOYZSLZZXWFJJ5N2",
   "PolicyName": "AWSBackupServiceRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2020-06-03T07:06:09Z",
+    "CreateDate": "2020-09-14T22:33:50Z",
     "Document": {
       "Statement": [
         {
@@ -38,6 +38,14 @@
           "Action": "kms:DescribeKey",
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": "ssm:SendCommand",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ssm:*:*:document/AWSEC2-CreateVssSnapshot"
+          ]
         },
         {
           "Action": [
@@ -172,6 +180,14 @@
         },
         {
           "Action": [
+            "ssm:CancelCommand",
+            "ssm:GetCommandInvocation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "storagegateway:CreateSnapshot",
             "storagegateway:ListTagsForResource"
           ],
@@ -189,7 +205,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2020-06-03T07:06:09Z"
+  "UpdateDate": "2020-09-14T22:33:50Z"
 }
