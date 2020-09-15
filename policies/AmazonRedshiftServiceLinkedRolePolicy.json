@@ -1,26 +1,30 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRedshiftServiceLinkedRolePolicy",
   "CreateDate": "2017-09-18T19:19:45Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJPY2VXNRUYOY3SRZS",
   "PolicyName": "AmazonRedshiftServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2017-09-25T21:20:15Z",
+    "CreateDate": "2020-09-15T20:44:31Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "ec2:AssociateAddress",
             "ec2:CreateNetworkInterface",
+            "ec2:CreateVpcEndpoint",
             "ec2:DeleteNetworkInterface",
+            "ec2:DeleteVpcEndpoints",
             "ec2:DescribeAddresses",
             "ec2:DescribeNetworkInterfaces",
             "ec2:DescribeSubnets",
+            "ec2:DescribeVpcEndpoints",
             "ec2:DescribeVpcs",
             "ec2:DisassociateAddress",
-            "ec2:ModifyNetworkInterfaceAttribute"
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "ec2:ModifyVpcEndpoint"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -29,7 +33,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2017-09-25T21:20:15Z"
+  "UpdateDate": "2020-09-15T20:44:31Z"
 }
