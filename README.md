@@ -132,6 +132,7 @@ The following table summarises the AWS APIs.
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
 | [`sso`](services/sso.yml) | 27 | 0 | 50 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
+| [`kafka`](services/kafka.yml) | 26 | 3 | 0 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 26 | 0 | 1 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
@@ -143,7 +144,6 @@ The following table summarises the AWS APIs.
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 24 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 23 | 5 | 0 |
-| [`kafka`](services/kafka.yml) | 23 | 3 | 3 |
 | [`xray`](services/xray.yml) | 23 | 0 | 4 |
 | [`servicediscovery`](services/servicediscovery.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |

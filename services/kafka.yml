@@ -1,4 +1,6 @@
 Actions:
+  - Name: kafka:BatchAssociateScramSecret
+  - Name: kafka:BatchDisassociateScramSecret
   - Name: kafka:CreateCluster
   - Name: kafka:CreateConfiguration
   - Name: kafka:DeleteCluster
@@ -13,6 +15,7 @@ Actions:
   - Name: kafka:ListClusters
   - Name: kafka:ListConfigurations
   - Name: kafka:ListNodes
+  - Name: kafka:ListScramSecrets
   - Name: kafka:ListTagsForResource
   - Name: kafka:TagResource
   - Name: kafka:UntagResource
@@ -22,11 +25,6 @@ Actions:
   - Name: kafka:UpdateClusterKafkaVersion
   - Name: kafka:UpdateConfiguration
   - Name: kafka:UpdateMonitoring
-
-  # actions with no corresponding API
-  - Name: kafka:BatchAssociateScramSecret
-  - Name: kafka:BatchDisassociateScramSecret
-  - Name: kafka:ListScramSecrets
 
   # APIs without an IAM action
   - Name: kafka:ListConfigurationRevisions
