@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 234
-* Unique actions: 8682
+* Unique actions: 8698
 * Managed policies: 709
 
 Most common managed policy name prefixes:
@@ -47,7 +47,7 @@ The following table summarises the AWS APIs.
 | [`ses`](services/ses.yml) | 103 | 24 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 26 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
-| [`greengrass`](services/greengrass.yml) | 90 | 0 | 1 |
+| [`greengrass`](services/greengrass.yml) | 90 | 2 | 1 |
 | [`gamelift`](services/gamelift.yml) | 90 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 88 | 4 | 18 |
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
@@ -105,8 +105,8 @@ The following table summarises the AWS APIs.
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
+| [`connect`](services/connect.yml) | 33 | 14 | 6 |
 | [`iotanalytics`](services/iotanalytics.yml) | 33 | 1 | 0 |
-| [`connect`](services/connect.yml) | 33 | 0 | 6 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 0 |
 | [`sns`](services/sns.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
@@ -275,12 +275,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1212 |
-| `Get` | 1148 |
-| `Describe` | 1090 |
+| `List` | 1214 |
+| `Get` | 1149 |
+| `Describe` | 1092 |
 | `Delete` | 1013 |
-| `Create` | 924 |
-| `Update` | 703 |
+| `Create` | 926 |
+| `Update` | 710 |
 | `Put` | 252 |
 | `Start` | 156 |
 | `Tag` | 125 |
