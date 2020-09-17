@@ -78,6 +78,7 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 49 | 0 | 2 |
 | [`backup`](services/backup.yml) | 48 | 0 | 1 |
 | [`lambda`](services/lambda.yml) | 47 | 2 | 3 |
+| [`connect`](services/connect.yml) | 47 | 0 | 6 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 47 | 0 | 0 |
@@ -105,7 +106,6 @@ The following table summarises the AWS APIs.
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
-| [`connect`](services/connect.yml) | 33 | 14 | 6 |
 | [`iotanalytics`](services/iotanalytics.yml) | 33 | 1 | 0 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 0 |
 | [`sns`](services/sns.yml) | 33 | 0 | 0 |
