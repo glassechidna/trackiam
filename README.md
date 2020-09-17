@@ -13,13 +13,13 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 234
 * Unique actions: 8703
-* Managed policies: 709
+* Managed policies: 708
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 204 |
+| `arn:aws:iam::aws:policy/AWS*` | 203 |
 | `arn:aws:iam::aws:policy/Amazon*` | 188 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 128 |
 | `arn:aws:iam::aws:policy/service-role/*` | 111 |
@@ -68,11 +68,11 @@ The following table summarises the AWS APIs.
 | [`s3`](services/s3.yml) | 56 | 48 | 39 |
 | [`route53`](services/route53.yml) | 56 | 1 | 0 |
 | [`directconnect`](services/directconnect.yml) | 56 | 0 | 0 |
+| [`comprehend`](services/comprehend.yml) | 56 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 54 | 4 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 54 | 1 | 3 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`iotsitewise`](services/iotsitewise.yml) | 54 | 0 | 0 |
-| [`comprehend`](services/comprehend.yml) | 51 | 5 | 0 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 50 | 1 | 3 |
 | [`ecs`](services/ecs.yml) | 49 | 0 | 2 |
