@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchSyntheticsFullAccess",
   "CreateDate": "2019-11-25T17:39:46Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MAGQWEZP4",
   "PolicyName": "CloudWatchSyntheticsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-04-22T18:37:11Z",
+    "CreateDate": "2020-09-18T16:39:53Z",
     "Document": {
       "Statement": [
         {
@@ -78,7 +78,9 @@
           "Action": [
             "iam:ListRoles",
             "s3:GetBucketLocation",
-            "s3:ListAllMyBuckets"
+            "s3:ListAllMyBuckets",
+            "xray:BatchGetTraces",
+            "xray:GetTraceSummaries"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -165,7 +167,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-04-22T18:37:11Z"
+  "UpdateDate": "2020-09-18T16:39:53Z"
 }
