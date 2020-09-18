@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 234
-* Unique actions: 8703
-* Managed policies: 708
+* Unique actions: 8706
+* Managed policies: 709
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 203 |
 | `arn:aws:iam::aws:policy/Amazon*` | 188 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 128 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 129 |
 | `arn:aws:iam::aws:policy/service-role/*` | 111 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 71 |
@@ -92,7 +92,7 @@ The following table summarises the AWS APIs.
 | [`codebuild`](services/codebuild.yml) | 43 | 0 | 8 |
 | [`securityhub`](services/securityhub.yml) | 43 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
-| [`medialive`](services/medialive.yml) | 41 | 6 | 0 |
+| [`medialive`](services/medialive.yml) | 41 | 9 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`robomaker`](services/robomaker.yml) | 40 | 17 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 40 | 2 | 0 |
