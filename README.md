@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 234
-* Unique actions: 8706
+* Unique actions: 8708
 * Managed policies: 708
 
 Most common managed policy name prefixes:
@@ -39,7 +39,7 @@ The following table summarises the AWS APIs.
 | [`ec2`](services/ec2.yml) | 414 | 6 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 142 | 1 | 2 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
-| [`glue`](services/glue.yml) | 124 | 10 | 1 |
+| [`glue`](services/glue.yml) | 124 | 11 | 1 |
 | [`rds`](services/rds.yml) | 123 | 7 | 0 |
 | [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
 | [`chime`](services/chime.yml) | 119 | 0 | 50 |
@@ -71,8 +71,8 @@ The following table summarises the AWS APIs.
 | [`comprehend`](services/comprehend.yml) | 56 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 54 | 4 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 54 | 1 | 3 |
+| [`iotsitewise`](services/iotsitewise.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
-| [`iotsitewise`](services/iotsitewise.yml) | 54 | 0 | 0 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 50 | 1 | 3 |
 | [`ecs`](services/ecs.yml) | 49 | 0 | 2 |
@@ -279,7 +279,7 @@ Most common action prefixes:
 | `Get` | 1149 |
 | `Describe` | 1093 |
 | `Delete` | 1013 |
-| `Create` | 926 |
+| `Create` | 927 |
 | `Update` | 710 |
 | `Put` | 252 |
 | `Start` | 157 |
