@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v66",
+  "DefaultVersionId": "v67",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-08-13T21:10:04Z",
+    "CreateDate": "2020-09-23T20:35:11Z",
     "Document": {
       "Statement": [
         {
@@ -55,11 +55,14 @@
             "autoscaling-plans:Describe*",
             "autoscaling-plans:GetScalingPlanResourceForecastData",
             "autoscaling:Describe*",
+            "aws-portal:View*",
             "backup:Describe*",
             "backup:Get*",
             "backup:List*",
             "batch:Describe*",
             "batch:List*",
+            "budgets:Describe*",
+            "budgets:View*",
             "cassandra:Select",
             "chatbot:Describe*",
             "chatbot:Get*",
@@ -110,6 +113,7 @@
             "codeartifact:ListRepositories",
             "codeartifact:ListRepositoriesInDomain",
             "codebuild:BatchGet*",
+            "codebuild:DescribeCodeCoverages",
             "codebuild:DescribeTestCases",
             "codebuild:List*",
             "codecommit:BatchGet*",
@@ -241,6 +245,7 @@
             "elasticfilesystem:Describe*",
             "elasticloadbalancing:Describe*",
             "elasticmapreduce:Describe*",
+            "elasticmapreduce:GetBlockPublicAccessConfiguration",
             "elasticmapreduce:List*",
             "elasticmapreduce:View*",
             "elastictranscoder:List*",
@@ -347,6 +352,9 @@
             "iotanalytics:Get*",
             "iotanalytics:List*",
             "iotanalytics:SampleChannelData",
+            "iotsitewise:Describe*",
+            "iotsitewise:Get*",
+            "iotsitewise:List*",
             "kafka:Describe*",
             "kafka:Get*",
             "kafka:List*",
@@ -415,6 +423,7 @@
             "logs:Get*",
             "logs:ListTagsLogGroup",
             "logs:StartQuery",
+            "logs:StopQuery",
             "logs:TestMetricFilter",
             "machinelearning:Describe*",
             "machinelearning:Get*",
@@ -606,7 +615,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v66"
+    "VersionId": "v67"
   },
-  "UpdateDate": "2020-08-13T21:10:04Z"
+  "UpdateDate": "2020-09-23T20:35:11Z"
 }
