@@ -52,8 +52,8 @@ The following table summarises the AWS APIs.
 | [`redshift`](services/redshift.yml) | 88 | 4 | 18 |
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
+| [`config`](services/config.yml) | 79 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
-| [`config`](services/config.yml) | 77 | 2 | 0 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
