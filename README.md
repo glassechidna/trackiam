@@ -123,6 +123,7 @@ The following table summarises the AWS APIs.
 | [`forecast`](services/forecast.yml) | 30 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 29 | 1 | 0 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
+| [`ce`](services/ce.yml) | 29 | 0 | 0 |
 | [`es`](services/es.yml) | 28 | 9 | 9 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`transcribe`](services/transcribe.yml) | 28 | 0 | 3 |
@@ -161,7 +162,6 @@ The following table summarises the AWS APIs.
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 20 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
-| [`ce`](services/ce.yml) | 19 | 0 | 10 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`secretsmanager`](services/secretsmanager.yml) | 19 | 0 | 0 |
 | [`shield`](services/shield.yml) | 18 | 5 | 0 |
