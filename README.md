@@ -200,11 +200,11 @@ The following table summarises the AWS APIs.
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`iot`](services/iot.yml) | 9 | 0 | 212 |
 | [`translate`](services/translate.yml) | 9 | 0 | 0 |
+| [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 9 | 0 | 0 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
-| [`savingsplans`](services/savingsplans.yml) | 8 | 1 | 0 |
 | [`sts`](services/sts.yml) | 8 | 0 | 2 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
 | [`sms-voice`](services/sms-voice.yml) | 8 | 0 | 0 |
