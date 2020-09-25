@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/NetworkAdministrator",
   "CreateDate": "2016-11-10T17:31:35Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAJPNMADZFJCVPJVZA2",
   "PolicyName": "NetworkAdministrator",
   "PolicyVersion": {
-    "CreateDate": "2020-08-08T00:10:51Z",
+    "CreateDate": "2020-09-24T23:55:10Z",
     "Document": {
       "Statement": [
         {
@@ -45,6 +45,7 @@
             "ec2:AttachInternetGateway",
             "ec2:AttachNetworkInterface",
             "ec2:AttachVpnGateway",
+            "ec2:CreateCarrierGateway",
             "ec2:CreateCustomerGateway",
             "ec2:CreateDefaultSubnet",
             "ec2:CreateDefaultVpc",
@@ -70,6 +71,7 @@
             "ec2:CreateVpnConnection",
             "ec2:CreateVpnConnectionRoute",
             "ec2:CreateVpnGateway",
+            "ec2:DeleteCarrierGateway",
             "ec2:DeleteEgressOnlyInternetGateway",
             "ec2:DeleteFlowLogs",
             "ec2:DeleteNatGateway",
@@ -88,6 +90,7 @@
             "ec2:DescribeAccountAttributes",
             "ec2:DescribeAddresses",
             "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeCarrierGateways",
             "ec2:DescribeClassicLinkInstances",
             "ec2:DescribeCustomerGateways",
             "ec2:DescribeDhcpOptions",
@@ -265,7 +268,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2020-08-08T00:10:51Z"
+  "UpdateDate": "2020-09-24T23:55:10Z"
 }
