@@ -41,7 +41,7 @@ The following table summarises the AWS APIs.
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`glue`](services/glue.yml) | 124 | 11 | 1 |
 | [`rds`](services/rds.yml) | 123 | 7 | 0 |
-| [`ssm`](services/ssm.yml) | 121 | 1 | 7 |
+| [`ssm`](services/ssm.yml) | 122 | 0 | 7 |
 | [`chime`](services/chime.yml) | 119 | 0 | 50 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
 | [`ses`](services/ses.yml) | 103 | 24 | 0 |
@@ -215,12 +215,12 @@ The following table summarises the AWS APIs.
 | [`textract`](services/textract.yml) | 6 | 0 | 0 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
+| [`ebs`](services/ebs.yml) | 6 | 0 | 0 |
 | [`braket`](services/braket.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`outposts`](services/outposts.yml) | 5 | 2 | 0 |
 | [`identitystore`](services/identitystore.yml) | 4 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
-| [`ebs`](services/ebs.yml) | 3 | 3 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 2 | 19 | 0 |
 | [`honeycode`](services/honeycode.yml) | 2 | 0 | 3 |
