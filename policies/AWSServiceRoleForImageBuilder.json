@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForImageBuilder",
   "CreateDate": "2019-11-29T22:02:13Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NE22WISEW",
   "PolicyName": "AWSServiceRoleForImageBuilder",
   "PolicyVersion": {
-    "CreateDate": "2020-08-31T20:49:10Z",
+    "CreateDate": "2020-09-28T18:13:06Z",
     "Document": {
       "Statement": [
         {
@@ -49,6 +49,18 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:ModifySnapshotAttribute"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "ec2:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::snapshot/*"
         },
         {
           "Action": [
@@ -186,6 +198,15 @@
         },
         {
           "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/imagebuilder/*"
+        },
+        {
+          "Action": [
             "sns:Publish"
           ],
           "Effect": "Allow",
@@ -222,7 +243,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2020-08-31T20:49:10Z"
+  "UpdateDate": "2020-09-28T18:13:06Z"
 }
