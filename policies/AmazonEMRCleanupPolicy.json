@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEMRCleanupPolicy",
   "CreateDate": "2017-09-26T23:54:19Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAI4YEZURRMKACW56EA",
   "PolicyName": "AmazonEMRCleanupPolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-06-25T20:40:52Z",
+    "CreateDate": "2020-09-29T21:11:54Z",
     "Document": {
       "Statement": [
         {
@@ -15,10 +15,12 @@
             "ec2:CancelSpotInstanceRequests",
             "ec2:DeleteLaunchTemplate",
             "ec2:DeleteNetworkInterface",
+            "ec2:DeletePlacementGroup",
             "ec2:DeleteVolume",
             "ec2:DescribeInstanceAttribute",
             "ec2:DescribeInstances",
             "ec2:DescribeLaunchTemplates",
+            "ec2:DescribePlacementGroups",
             "ec2:DescribeSpotInstanceRequests",
             "ec2:DescribeVolumeStatus",
             "ec2:DescribeVolumes",
@@ -33,7 +35,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-06-25T20:40:52Z"
+  "UpdateDate": "2020-09-29T21:11:54Z"
 }
