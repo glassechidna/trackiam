@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/Ec2ImageBuilderCrossAccountDistributionAccess",
+  "CreateDate": "2020-09-30T19:22:54Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4PHZOLIXKT",
+  "PolicyName": "Ec2ImageBuilderCrossAccountDistributionAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-09-30T19:22:54Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:CreateTags",
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::image/*"
+        },
+        {
+          "Action": [
+            "ec2:CopyImage",
+            "ec2:DescribeImages",
+            "ec2:ModifyImageAttribute"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-09-30T19:22:54Z"
+}
