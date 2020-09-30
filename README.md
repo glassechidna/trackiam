@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 235
-* Unique actions: 8752
+* Unique services: 236
+* Unique actions: 8763
 * Managed policies: 711
 
 Most common managed policy name prefixes:
@@ -65,7 +65,7 @@ The following table summarises the AWS APIs.
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`elasticache`](services/elasticache.yml) | 57 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 57 | 0 | 0 |
-| [`s3`](services/s3.yml) | 56 | 48 | 39 |
+| [`s3`](services/s3.yml) | 56 | 51 | 39 |
 | [`route53`](services/route53.yml) | 56 | 1 | 0 |
 | [`directconnect`](services/directconnect.yml) | 56 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 56 | 0 | 0 |
@@ -178,7 +178,7 @@ The following table summarises the AWS APIs.
 | [`batch`](services/batch.yml) | 16 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 15 | 4 | 0 |
 | [`license-manager`](services/license-manager.yml) | 15 | 1 | 0 |
-| [`mediaconnect`](services/mediaconnect.yml) | 14 | 8 | 0 |
+| [`mediaconnect`](services/mediaconnect.yml) | 14 | 13 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 14 | 4 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
@@ -235,6 +235,7 @@ The following table summarises the AWS APIs.
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
+| [`s3-outposts`](services/s3-outposts.yml) | 0 | 3 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 37 |
@@ -276,11 +277,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1221 |
-| `Get` | 1152 |
-| `Describe` | 1100 |
-| `Delete` | 1020 |
-| `Create` | 933 |
+| `List` | 1225 |
+| `Get` | 1153 |
+| `Describe` | 1102 |
+| `Delete` | 1022 |
+| `Create` | 934 |
 | `Update` | 716 |
 | `Put` | 252 |
 | `Start` | 158 |
