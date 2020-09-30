@@ -1,6 +1,4 @@
 Actions:
-
-  # APIs without an IAM action
   - Name: timestream:CancelQuery
   - Name: timestream:CreateDatabase
   - Name: timestream:CreateTable
@@ -12,9 +10,16 @@ Actions:
   - Name: timestream:ListDatabases
   - Name: timestream:ListTables
   - Name: timestream:ListTagsForResource
-  - Name: timestream:Query
   - Name: timestream:TagResource
   - Name: timestream:UntagResource
   - Name: timestream:UpdateDatabase
   - Name: timestream:UpdateTable
   - Name: timestream:WriteRecords
+
+  # actions with no corresponding API
+  - Name: timestream:ListMeasures
+  - Name: timestream:Select
+  - Name: timestream:SelectValues
+
+  # APIs without an IAM action
+  - Name: timestream:Query

@@ -12,17 +12,17 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 236
-* Unique actions: 8763
-* Managed policies: 712
+* Unique actions: 8766
+* Managed policies: 716
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 204 |
-| `arn:aws:iam::aws:policy/Amazon*` | 190 |
+| `arn:aws:iam::aws:policy/Amazon*` | 193 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 128 |
-| `arn:aws:iam::aws:policy/service-role/*` | 111 |
+| `arn:aws:iam::aws:policy/service-role/*` | 112 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 72 |
 
@@ -174,6 +174,7 @@ The following table summarises the AWS APIs.
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
+| [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
 | [`batch`](services/batch.yml) | 16 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 15 | 4 | 0 |
@@ -230,7 +231,6 @@ The following table summarises the AWS APIs.
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 220 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 7 |
-| [`timestream`](services/timestream.yml) | 0 | 17 | 0 |
 | [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
@@ -277,7 +277,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1225 |
+| `List` | 1226 |
 | `Get` | 1153 |
 | `Describe` | 1102 |
 | `Delete` | 1022 |

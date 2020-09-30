@@ -1,0 +1,35 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSQuickSightTimestreamPolicy",
+  "CreateDate": "2020-09-30T21:47:03Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4CFKVDHQJH",
+  "PolicyName": "AWSQuickSightTimestreamPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-09-30T21:47:03Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "timestream:CancelQuery",
+            "timestream:DescribeDatabase",
+            "timestream:DescribeEndpoints",
+            "timestream:DescribeTable",
+            "timestream:ListDatabases",
+            "timestream:ListMeasures",
+            "timestream:ListTables",
+            "timestream:Select",
+            "timestream:SelectValues"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-09-30T21:47:03Z"
+}

@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonTimestreamReadOnlyAccess",
+  "CreateDate": "2020-09-30T21:47:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4I7VUQXAEJ",
+  "PolicyName": "AmazonTimestreamReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-09-30T21:47:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "timestream:CancelQuery",
+            "timestream:DescribeDatabase",
+            "timestream:DescribeEndpoints",
+            "timestream:DescribeTable",
+            "timestream:ListDatabases",
+            "timestream:ListMeasures",
+            "timestream:ListTables",
+            "timestream:ListTagsForResource",
+            "timestream:Select",
+            "timestream:SelectValues"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-09-30T21:47:08Z"
+}

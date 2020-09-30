@@ -1,0 +1,52 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonTimestreamFullAccess",
+  "CreateDate": "2020-09-30T21:47:14Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CGYUJBH4V",
+  "PolicyName": "AmazonTimestreamFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-09-30T21:47:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "kms:CreateGrant"
+          ],
+          "Condition": {
+            "Bool": {
+              "kms:GrantIsForAWSResource": true
+            },
+            "ForAnyValue:StringEquals": {
+              "kms:EncryptionContextKeys": "aws:timestream:database-name"
+            },
+            "StringLike": {
+              "kms:ViaService": "timestream.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "timestream:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-09-30T21:47:14Z"
+}
