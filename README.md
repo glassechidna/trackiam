@@ -69,7 +69,7 @@ The following table summarises the AWS APIs.
 | [`route53`](services/route53.yml) | 56 | 1 | 0 |
 | [`directconnect`](services/directconnect.yml) | 56 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 56 | 0 | 0 |
-| [`guardduty`](services/guardduty.yml) | 54 | 4 | 0 |
+| [`guardduty`](services/guardduty.yml) | 55 | 3 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 54 | 1 | 3 |
 | [`iotsitewise`](services/iotsitewise.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
