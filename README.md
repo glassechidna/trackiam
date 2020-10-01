@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 236
-* Unique actions: 8766
+* Unique actions: 8795
 * Managed policies: 717
 
 Most common managed policy name prefixes:
@@ -222,6 +222,7 @@ The following table summarises the AWS APIs.
 | [`outposts`](services/outposts.yml) | 5 | 2 | 0 |
 | [`identitystore`](services/identitystore.yml) | 4 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
+| [`s3-outposts`](services/s3-outposts.yml) | 3 | 0 | 29 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 2 | 19 | 0 |
 | [`honeycode`](services/honeycode.yml) | 2 | 0 | 3 |
@@ -235,7 +236,6 @@ The following table summarises the AWS APIs.
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
-| [`s3-outposts`](services/s3-outposts.yml) | 0 | 3 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 37 |
@@ -277,13 +277,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1226 |
-| `Get` | 1153 |
+| `List` | 1231 |
+| `Get` | 1161 |
 | `Describe` | 1102 |
-| `Delete` | 1022 |
-| `Create` | 934 |
+| `Delete` | 1028 |
+| `Create` | 936 |
 | `Update` | 716 |
-| `Put` | 252 |
+| `Put` | 259 |
 | `Start` | 158 |
 | `Tag` | 126 |
 | `Untag` | 125 |
