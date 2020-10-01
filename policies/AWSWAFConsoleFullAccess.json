@@ -1,19 +1,21 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFConsoleFullAccess",
   "CreateDate": "2020-04-06T18:38:38Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AZOTQ7KAT",
   "PolicyName": "AWSWAFConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-04-06T18:38:38Z",
+    "CreateDate": "2020-10-01T20:13:57Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "apigateway:GET",
             "apigateway:SetWebACL",
+            "appsync:ListGraphqlApis",
+            "appsync:SetWebACL",
             "cloudfront:ListDistributions",
             "cloudfront:ListDistributionsByWebACLId",
             "cloudfront:UpdateDistribution",
@@ -34,7 +36,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-04-06T18:38:38Z"
+  "UpdateDate": "2020-10-01T20:13:57Z"
 }
