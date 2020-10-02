@@ -1,0 +1,53 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonS3OutpostsFullAccess",
+  "CreateDate": "2020-10-02T17:26:30Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4BKMLUXKOR",
+  "PolicyName": "AmazonS3OutpostsFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-10-02T17:26:30Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "s3-outposts:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "datasync:DescribeLocation*",
+            "datasync:DescribeTask",
+            "datasync:ListLocations",
+            "datasync:ListTasks"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "outposts:GetOutpost",
+            "outposts:ListOutposts"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-10-02T17:26:30Z"
+}

@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 236
-* Unique actions: 8795
-* Managed policies: 717
+* Unique actions: 8803
+* Managed policies: 718
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 204 |
-| `arn:aws:iam::aws:policy/Amazon*` | 193 |
+| `arn:aws:iam::aws:policy/Amazon*` | 194 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 129 |
 | `arn:aws:iam::aws:policy/service-role/*` | 112 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -65,7 +65,7 @@ The following table summarises the AWS APIs.
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`elasticache`](services/elasticache.yml) | 57 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 57 | 0 | 0 |
-| [`s3`](services/s3.yml) | 56 | 51 | 39 |
+| [`s3`](services/s3.yml) | 56 | 54 | 39 |
 | [`route53`](services/route53.yml) | 56 | 1 | 0 |
 | [`directconnect`](services/directconnect.yml) | 56 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 56 | 0 | 0 |
@@ -82,8 +82,8 @@ The following table summarises the AWS APIs.
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 47 | 0 | 0 |
+| [`personalize`](services/personalize.yml) | 46 | 2 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
-| [`personalize`](services/personalize.yml) | 46 | 0 | 0 |
 | [`dms`](services/dms.yml) | 45 | 8 | 0 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`frauddetector`](services/frauddetector.yml) | 45 | 0 | 0 |
@@ -174,9 +174,9 @@ The following table summarises the AWS APIs.
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
+| [`batch`](services/batch.yml) | 16 | 3 | 0 |
 | [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
-| [`batch`](services/batch.yml) | 16 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 15 | 4 | 0 |
 | [`license-manager`](services/license-manager.yml) | 15 | 1 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 13 | 0 |
@@ -277,14 +277,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1231 |
-| `Get` | 1161 |
+| `List` | 1232 |
+| `Get` | 1162 |
 | `Describe` | 1102 |
-| `Delete` | 1028 |
+| `Delete` | 1029 |
 | `Create` | 936 |
 | `Update` | 716 |
-| `Put` | 259 |
+| `Put` | 262 |
 | `Start` | 158 |
-| `Tag` | 126 |
-| `Untag` | 125 |
+| `Tag` | 127 |
+| `Untag` | 126 |
 
