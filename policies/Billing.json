@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/Billing",
   "CreateDate": "2016-11-10T17:33:18Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAIFTHXT6FFMIRT7ZEA",
   "PolicyName": "Billing",
   "PolicyVersion": {
-    "CreateDate": "2020-08-27T20:09:10Z",
+    "CreateDate": "2020-10-05T20:37:01Z",
     "Document": {
       "Statement": [
         {
@@ -17,7 +17,17 @@
             "aws-portal:*Usage",
             "budgets:ModifyBudget",
             "budgets:ViewBudget",
-            "cur:*",
+            "ce:CreateNotificationSubscription",
+            "ce:CreateReport",
+            "ce:DeleteNotificationSubscription",
+            "ce:DeleteReport",
+            "ce:UpdateNotificationSubscription",
+            "ce:UpdatePreferences",
+            "ce:UpdateReport",
+            "cur:DeleteReportDefinition",
+            "cur:DescribeReportDefinitions",
+            "cur:ModifyReportDefinition",
+            "cur:PutReportDefinition",
             "purchase-orders:*PurchaseOrders"
           ],
           "Effect": "Allow",
@@ -27,7 +37,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-08-27T20:09:10Z"
+  "UpdateDate": "2020-10-05T20:37:01Z"
 }
