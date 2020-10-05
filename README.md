@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 236
-* Unique actions: 8813
+* Unique actions: 8815
 * Managed policies: 720
 
 Most common managed policy name prefixes:
@@ -63,6 +63,7 @@ The following table summarises the AWS APIs.
 | [`quicksight`](services/quicksight.yml) | 60 | 39 | 9 |
 | [`cloudfront`](services/cloudfront.yml) | 59 | 9 | 0 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
+| [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`elasticache`](services/elasticache.yml) | 57 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 57 | 0 | 0 |
 | [`route53`](services/route53.yml) | 56 | 1 | 0 |
@@ -94,7 +95,6 @@ The following table summarises the AWS APIs.
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
 | [`medialive`](services/medialive.yml) | 41 | 9 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
-| [`robomaker`](services/robomaker.yml) | 40 | 17 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 40 | 2 | 0 |
 | [`wafv2`](services/wafv2.yml) | 40 | 0 | 2 |
 | [`logs`](services/logs.yml) | 39 | 3 | 5 |
@@ -277,12 +277,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1232 |
+| `List` | 1233 |
 | `Get` | 1163 |
 | `Describe` | 1104 |
 | `Delete` | 1031 |
 | `Create` | 938 |
-| `Update` | 719 |
+| `Update` | 720 |
 | `Put` | 262 |
 | `Start` | 158 |
 | `Tag` | 127 |

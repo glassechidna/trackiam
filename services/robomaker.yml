@@ -1,8 +1,11 @@
 Actions:
+  - Name: robomaker:BatchDeleteWorlds
   - Name: robomaker:BatchDescribeSimulationJob
   - Name: robomaker:CancelDeploymentJob
   - Name: robomaker:CancelSimulationJob
   - Name: robomaker:CancelSimulationJobBatch
+  - Name: robomaker:CancelWorldExportJob
+  - Name: robomaker:CancelWorldGenerationJob
   - Name: robomaker:CreateDeploymentJob
   - Name: robomaker:CreateFleet
   - Name: robomaker:CreateRobot
@@ -11,10 +14,14 @@ Actions:
   - Name: robomaker:CreateSimulationApplication
   - Name: robomaker:CreateSimulationApplicationVersion
   - Name: robomaker:CreateSimulationJob
+  - Name: robomaker:CreateWorldExportJob
+  - Name: robomaker:CreateWorldGenerationJob
+  - Name: robomaker:CreateWorldTemplate
   - Name: robomaker:DeleteFleet
   - Name: robomaker:DeleteRobot
   - Name: robomaker:DeleteRobotApplication
   - Name: robomaker:DeleteSimulationApplication
+  - Name: robomaker:DeleteWorldTemplate
   - Name: robomaker:DeregisterRobot
   - Name: robomaker:DescribeDeploymentJob
   - Name: robomaker:DescribeFleet
@@ -23,6 +30,11 @@ Actions:
   - Name: robomaker:DescribeSimulationApplication
   - Name: robomaker:DescribeSimulationJob
   - Name: robomaker:DescribeSimulationJobBatch
+  - Name: robomaker:DescribeWorld
+  - Name: robomaker:DescribeWorldExportJob
+  - Name: robomaker:DescribeWorldGenerationJob
+  - Name: robomaker:DescribeWorldTemplate
+  - Name: robomaker:GetWorldTemplateBody
   - Name: robomaker:ListDeploymentJobs
   - Name: robomaker:ListFleets
   - Name: robomaker:ListRobotApplications
@@ -31,6 +43,10 @@ Actions:
   - Name: robomaker:ListSimulationJobBatches
   - Name: robomaker:ListSimulationJobs
   - Name: robomaker:ListTagsForResource
+  - Name: robomaker:ListWorldExportJobs
+  - Name: robomaker:ListWorldGenerationJobs
+  - Name: robomaker:ListWorldTemplates
+  - Name: robomaker:ListWorlds
   - Name: robomaker:RegisterRobot
   - Name: robomaker:RestartSimulationJob
   - Name: robomaker:StartSimulationJobBatch
@@ -39,22 +55,8 @@ Actions:
   - Name: robomaker:UntagResource
   - Name: robomaker:UpdateRobotApplication
   - Name: robomaker:UpdateSimulationApplication
-
-  # APIs without an IAM action
-  - Name: robomaker:BatchDeleteWorlds
-  - Name: robomaker:CancelWorldExportJob
-  - Name: robomaker:CancelWorldGenerationJob
-  - Name: robomaker:CreateWorldExportJob
-  - Name: robomaker:CreateWorldGenerationJob
-  - Name: robomaker:CreateWorldTemplate
-  - Name: robomaker:DeleteWorldTemplate
-  - Name: robomaker:DescribeWorld
-  - Name: robomaker:DescribeWorldExportJob
-  - Name: robomaker:DescribeWorldGenerationJob
-  - Name: robomaker:DescribeWorldTemplate
-  - Name: robomaker:GetWorldTemplateBody
-  - Name: robomaker:ListWorldExportJobs
-  - Name: robomaker:ListWorldGenerationJobs
-  - Name: robomaker:ListWorldTemplates
-  - Name: robomaker:ListWorlds
   - Name: robomaker:UpdateWorldTemplate
+
+  # actions with no corresponding API
+  - Name: robomaker:ListSupportedAvailabilityZones
+  - Name: robomaker:UpdateRobotDeployment
