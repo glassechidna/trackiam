@@ -1,19 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSIoTThingsRegistration",
   "CreateDate": "2017-12-01T20:21:52Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAI3YQXTC5XAEVTJNEU",
   "PolicyName": "AWSIoTThingsRegistration",
   "PolicyVersion": {
-    "CreateDate": "2020-02-27T23:27:23Z",
+    "CreateDate": "2020-10-05T19:20:12Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "iot:AddThingToBillingGroup",
             "iot:AddThingToThingGroup",
+            "iot:AttachPolicy",
             "iot:AttachPrincipalPolicy",
             "iot:AttachThingPrincipal",
             "iot:CreateCertificateFromCsr",
@@ -24,11 +25,14 @@
             "iot:DescribeThing",
             "iot:DescribeThingGroup",
             "iot:DescribeThingType",
+            "iot:DetachPolicy",
             "iot:DetachThingPrincipal",
             "iot:GetPolicy",
+            "iot:ListAttachedPolicies",
             "iot:ListPolicyPrincipals",
             "iot:ListPrincipalPolicies",
             "iot:ListPrincipalThings",
+            "iot:ListTargetsForPolicy",
             "iot:ListThingGroupsForThing",
             "iot:ListThingPrincipals",
             "iot:RegisterCertificate",
@@ -48,7 +52,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-02-27T23:27:23Z"
+  "UpdateDate": "2020-10-05T19:20:12Z"
 }
