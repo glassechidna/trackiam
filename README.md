@@ -88,12 +88,12 @@ The following table summarises the AWS APIs.
 | [`dms`](services/dms.yml) | 45 | 8 | 0 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`frauddetector`](services/frauddetector.yml) | 45 | 0 | 0 |
+| [`medialive`](services/medialive.yml) | 44 | 6 | 0 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 43 | 4 | 53 |
 | [`codebuild`](services/codebuild.yml) | 43 | 0 | 8 |
 | [`securityhub`](services/securityhub.yml) | 43 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
-| [`medialive`](services/medialive.yml) | 41 | 9 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`imagebuilder`](services/imagebuilder.yml) | 40 | 2 | 0 |
 | [`wafv2`](services/wafv2.yml) | 40 | 0 | 2 |
