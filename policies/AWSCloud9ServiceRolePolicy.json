@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSCloud9ServiceRolePolicy",
   "CreateDate": "2017-11-30T13:44:08Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJFXGCBXQIZATFZ4YG",
   "PolicyName": "AWSCloud9ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-07-02T17:06:14Z",
+    "CreateDate": "2020-10-06T12:43:49Z",
     "Document": {
       "Statement": [
         {
@@ -54,22 +54,6 @@
         },
         {
           "Action": [
-            "ssm:StartSession"
-          ],
-          "Condition": {
-            "StringLike": {
-              "ssm:resourceTag/aws:cloudformation:stack-name": [
-                "aws-cloud9-*"
-              ]
-            }
-          },
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:ec2:*:*:instance/*"
-          ]
-        },
-        {
-          "Action": [
             "cloudformation:CreateStack",
             "cloudformation:DescribeStackEvents",
             "cloudformation:DescribeStackResources",
@@ -103,27 +87,19 @@
         },
         {
           "Action": [
+            "iam:GetInstanceProfile",
             "iam:ListInstanceProfiles"
           ],
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:instance-profile/cloud9/*"
           ]
-        },
-        {
-          "Action": [
-            "ssm:StartSession"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:ssm:*:*:document/AWS-StartSSHSession"
-          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2020-07-02T17:06:14Z"
+  "UpdateDate": "2020-10-06T12:43:49Z"
 }
