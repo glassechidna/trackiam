@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 236
-* Unique actions: 8815
+* Unique actions: 8824
 * Managed policies: 720
 
 Most common managed policy name prefixes:
@@ -62,9 +62,9 @@ The following table summarises the AWS APIs.
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
 | [`quicksight`](services/quicksight.yml) | 60 | 39 | 9 |
 | [`cloudfront`](services/cloudfront.yml) | 59 | 9 | 0 |
+| [`elasticache`](services/elasticache.yml) | 57 | 8 | 0 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
-| [`elasticache`](services/elasticache.yml) | 57 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 57 | 0 | 0 |
 | [`route53`](services/route53.yml) | 56 | 1 | 0 |
 | [`directconnect`](services/directconnect.yml) | 56 | 0 | 0 |
@@ -180,7 +180,7 @@ The following table summarises the AWS APIs.
 | [`opsworks-cm`](services/opsworks-cm.yml) | 15 | 4 | 0 |
 | [`license-manager`](services/license-manager.yml) | 15 | 1 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 13 | 0 |
-| [`mediapackage`](services/mediapackage.yml) | 14 | 4 | 0 |
+| [`mediapackage`](services/mediapackage.yml) | 14 | 5 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`fsx`](services/fsx.yml) | 14 | 0 | 0 |
@@ -279,9 +279,9 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1233 |
 | `Get` | 1163 |
-| `Describe` | 1104 |
-| `Delete` | 1031 |
-| `Create` | 938 |
+| `Describe` | 1106 |
+| `Delete` | 1033 |
+| `Create` | 940 |
 | `Update` | 720 |
 | `Put` | 262 |
 | `Start` | 158 |
