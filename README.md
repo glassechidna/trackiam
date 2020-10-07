@@ -164,6 +164,7 @@ The following table summarises the AWS APIs.
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`secretsmanager`](services/secretsmanager.yml) | 19 | 0 | 0 |
+| [`batch`](services/batch.yml) | 19 | 0 | 0 |
 | [`shield`](services/shield.yml) | 18 | 5 | 0 |
 | [`transfer`](services/transfer.yml) | 18 | 2 | 0 |
 | [`appflow`](services/appflow.yml) | 18 | 0 | 5 |
@@ -174,7 +175,6 @@ The following table summarises the AWS APIs.
 | [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
-| [`batch`](services/batch.yml) | 16 | 3 | 0 |
 | [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 15 | 4 | 0 |
