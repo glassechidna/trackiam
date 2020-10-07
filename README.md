@@ -13,7 +13,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 236
 * Unique actions: 8824
-* Managed policies: 720
+* Managed policies: 721
 
 Most common managed policy name prefixes:
 
@@ -24,7 +24,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 129 |
 | `arn:aws:iam::aws:policy/service-role/*` | 112 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
-| Other | 72 |
+| Other | 73 |
 
 The following table summarises the AWS APIs. 
 
@@ -59,10 +59,10 @@ The following table summarises the AWS APIs.
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 71 | 10 | 0 |
+| [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
 | [`quicksight`](services/quicksight.yml) | 60 | 39 | 9 |
 | [`cloudfront`](services/cloudfront.yml) | 59 | 9 | 0 |
-| [`elasticache`](services/elasticache.yml) | 57 | 8 | 0 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`autoscaling`](services/autoscaling.yml) | 57 | 0 | 0 |

@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CloudWatchLambdaInsightsExecutionRolePolicy",
+  "CreateDate": "2020-10-07T19:27:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4EDWWYYDS6",
+  "PolicyName": "CloudWatchLambdaInsightsExecutionRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-10-07T19:27:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "logs:CreateLogGroup",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/lambda-insights:*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-10-07T19:27:06Z"
+}

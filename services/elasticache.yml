@@ -12,6 +12,8 @@ Actions:
   - Name: elasticache:CreateGlobalReplicationGroup
   - Name: elasticache:CreateReplicationGroup
   - Name: elasticache:CreateSnapshot
+  - Name: elasticache:CreateUser
+  - Name: elasticache:CreateUserGroup
   - Name: elasticache:DecreaseNodeGroupsInGlobalReplicationGroup
   - Name: elasticache:DecreaseReplicaCount
   - Name: elasticache:DeleteCacheCluster
@@ -21,6 +23,8 @@ Actions:
   - Name: elasticache:DeleteGlobalReplicationGroup
   - Name: elasticache:DeleteReplicationGroup
   - Name: elasticache:DeleteSnapshot
+  - Name: elasticache:DeleteUser
+  - Name: elasticache:DeleteUserGroup
   - Name: elasticache:DescribeCacheClusters
   - Name: elasticache:DescribeCacheEngineVersions
   - Name: elasticache:DescribeCacheParameterGroups
@@ -36,6 +40,8 @@ Actions:
   - Name: elasticache:DescribeServiceUpdates
   - Name: elasticache:DescribeSnapshots
   - Name: elasticache:DescribeUpdateActions
+  - Name: elasticache:DescribeUserGroups
+  - Name: elasticache:DescribeUsers
   - Name: elasticache:DisassociateGlobalReplicationGroup
   - Name: elasticache:FailoverGlobalReplicationGroup
   - Name: elasticache:IncreaseNodeGroupsInGlobalReplicationGroup
@@ -48,6 +54,8 @@ Actions:
   - Name: elasticache:ModifyGlobalReplicationGroup
   - Name: elasticache:ModifyReplicationGroup
   - Name: elasticache:ModifyReplicationGroupShardConfiguration
+  - Name: elasticache:ModifyUser
+  - Name: elasticache:ModifyUserGroup
   - Name: elasticache:PurchaseReservedCacheNodesOffering
   - Name: elasticache:RebalanceSlotsInGlobalReplicationGroup
   - Name: elasticache:RebootCacheCluster
@@ -56,13 +64,3 @@ Actions:
   - Name: elasticache:RevokeCacheSecurityGroupIngress
   - Name: elasticache:StartMigration
   - Name: elasticache:TestFailover
-
-  # APIs without an IAM action
-  - Name: elasticache:CreateUser
-  - Name: elasticache:CreateUserGroup
-  - Name: elasticache:DeleteUser
-  - Name: elasticache:DeleteUserGroup
-  - Name: elasticache:DescribeUserGroups
-  - Name: elasticache:DescribeUsers
-  - Name: elasticache:ModifyUser
-  - Name: elasticache:ModifyUserGroup
