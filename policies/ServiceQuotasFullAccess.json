@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ServiceQuotasFullAccess",
   "CreateDate": "2019-06-24T15:44:35Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CGHQWENW3",
   "PolicyName": "ServiceQuotasFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-06-24T15:44:35Z",
+    "CreateDate": "2020-10-08T22:17:35Z",
     "Document": {
       "Statement": [
         {
@@ -39,7 +39,7 @@
             "organizations:EnableAWSServiceAccess"
           ],
           "Condition": {
-            "ForAllValues:StringLike": {
+            "StringLike": {
               "organizations:ServicePrincipal": [
                 "servicequotas.amazonaws.com"
               ]
@@ -74,7 +74,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-06-24T15:44:35Z"
+  "UpdateDate": "2020-10-08T22:17:35Z"
 }
