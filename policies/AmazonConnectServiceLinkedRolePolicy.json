@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2018-09-25T21:29:18Z",
+    "CreateDate": "2020-10-08T01:40:01Z",
     "Document": {
       "Statement": [
         {
@@ -25,12 +25,46 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/connect.amazonaws.com/AWSServiceRoleForAmazonConnect_*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/connect/*:*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:DeleteObject",
+            "s3:GetObject",
+            "s3:GetObjectAcl",
+            "s3:PutObject",
+            "s3:PutObjectAcl"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::amazon-connect-*/*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:GetBucketAcl",
+            "s3:GetBucketLocation"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::amazon-connect-*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2018-09-25T21:29:18Z"
+  "UpdateDate": "2020-10-08T01:40:01Z"
 }
