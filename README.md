@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 236
-* Unique actions: 8824
+* Unique actions: 8828
 * Managed policies: 722
 
 Most common managed policy name prefixes:
@@ -50,7 +50,7 @@ The following table summarises the AWS APIs.
 | [`greengrass`](services/greengrass.yml) | 90 | 2 | 1 |
 | [`gamelift`](services/gamelift.yml) | 90 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 88 | 4 | 18 |
-| [`servicecatalog`](services/servicecatalog.yml) | 83 | 0 | 0 |
+| [`servicecatalog`](services/servicecatalog.yml) | 83 | 1 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`config`](services/config.yml) | 79 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
@@ -172,7 +172,7 @@ The following table summarises the AWS APIs.
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 18 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 17 | 10 | 0 |
-| [`snowball`](services/snowball.yml) | 17 | 2 | 0 |
+| [`snowball`](services/snowball.yml) | 17 | 5 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
@@ -278,11 +278,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1233 |
-| `Get` | 1163 |
-| `Describe` | 1106 |
+| `Get` | 1164 |
+| `Describe` | 1107 |
 | `Delete` | 1033 |
-| `Create` | 940 |
-| `Update` | 720 |
+| `Create` | 941 |
+| `Update` | 721 |
 | `Put` | 262 |
 | `Start` | 158 |
 | `Tag` | 127 |
