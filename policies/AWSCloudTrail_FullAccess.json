@@ -1,0 +1,110 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCloudTrail_FullAccess",
+  "CreateDate": "2020-10-08T23:41:15Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CA4SIJQAM",
+  "PolicyName": "AWSCloudTrail_FullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-10-08T23:41:15Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "cloudtrail.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "cloudtrail:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:GetRolePolicy",
+            "iam:GetUser",
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "kms:CreateAlias",
+            "kms:CreateKey",
+            "kms:ListAliases",
+            "kms:ListKeys"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "lambda:ListFunctions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:aws-cloudtrail-logs*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:PutBucketPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-cloudtrail-logs*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:GetBucketPolicy",
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sns:AddPermission",
+            "sns:CreateTopic",
+            "sns:GetTopicAttributes",
+            "sns:SetTopicAttributes"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sns:*:*:aws-cloudtrail-logs*"
+          ]
+        },
+        {
+          "Action": [
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-10-08T23:41:15Z"
+}
