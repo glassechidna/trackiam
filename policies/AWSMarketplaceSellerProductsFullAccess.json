@@ -1,15 +1,28 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerProductsFullAccess",
   "CreateDate": "2019-07-02T21:06:25Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DS2YFEG4N",
   "PolicyName": "AWSMarketplaceSellerProductsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-03-05T23:11:44Z",
+    "CreateDate": "2020-10-09T22:22:38Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "iam:GetRole",
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "assets.marketplace.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*"
+        },
         {
           "Action": [
             "aws-marketplace:CancelChangeSet",
@@ -34,7 +47,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-03-05T23:11:44Z"
+  "UpdateDate": "2020-10-09T22:22:38Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLaunchWizard_Fullaccess",
   "CreateDate": "2020-08-06T17:47:30Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ABPQ7BLC2",
   "PolicyName": "AmazonLaunchWizard_Fullaccess",
   "PolicyVersion": {
-    "CreateDate": "2020-09-01T20:02:51Z",
+    "CreateDate": "2020-10-09T22:27:30Z",
     "Document": {
       "Statement": [
         {
@@ -342,6 +342,14 @@
         },
         {
           "Action": [
+            "kms:ListAliases",
+            "kms:ListKeys"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "lambda:CreateFunction",
             "lambda:DeleteFunction",
             "lambda:GetFunction",
@@ -389,6 +397,17 @@
         },
         {
           "Action": [
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket",
+            "s3:ListObjects",
+            "s3:ListObjectsV2"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "s3:GetObject"
           ],
           "Effect": "Allow",
@@ -397,15 +416,6 @@
             "arn:aws:s3:::launchwizard*",
             "arn:aws:s3:::launchwizard*/*"
           ]
-        },
-        {
-          "Action": [
-            "s3:ListAllMyBuckets",
-            "s3:ListObjects",
-            "s3:ListObjectsV2"
-          ],
-          "Effect": "Allow",
-          "Resource": "*"
         },
         {
           "Action": [
@@ -426,7 +436,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-09-01T20:02:51Z"
+  "UpdateDate": "2020-10-09T22:27:30Z"
 }

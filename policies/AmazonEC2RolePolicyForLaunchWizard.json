@@ -1,15 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEC2RolePolicyForLaunchWizard",
   "CreateDate": "2019-11-13T08:05:53Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CBGI56NFS",
   "PolicyName": "AmazonEC2RolePolicyForLaunchWizard",
   "PolicyVersion": {
-    "CreateDate": "2020-07-01T19:04:48Z",
+    "CreateDate": "2020-10-09T22:28:01Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ssm:SendCommand",
+          "Condition": {
+            "StringLike": {
+              "ssm:resourceTag/LaunchWizardApplicationType": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*"
+        },
         {
           "Action": [
             "cloudformation:DescribeStackResource",
@@ -84,13 +94,12 @@
             "ec2:AssociateAddress",
             "ec2:DescribeAddresses",
             "ec2:DescribeImages",
-            "ec2:DescribeImages",
             "ec2:DescribeInstances",
-            "ec2:DescribeRegions",
             "ec2:DescribeRegions",
             "ec2:DescribeRouteTables",
             "ec2:DescribeVolumes",
-            "ec2:ModifyInstanceAttribute"
+            "ec2:ModifyInstanceAttribute",
+            "ssm:GetCommandInvocation"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -134,15 +143,24 @@
           "Resource": [
             "arn:aws:logs:*:*:*",
             "arn:aws:s3:::aws-sap-data-provider/config.properties",
-            "arn:aws:s3:::launchwizard*",
-            "arn:aws:s3:::launchwizard*/*"
+            "arn:aws:s3:::launchwizard*"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:GetDocument",
+            "ssm:SendCommand"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/AWSSAP-InstallBackint"
           ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2020-07-01T19:04:48Z"
+  "UpdateDate": "2020-10-09T22:28:01Z"
 }
