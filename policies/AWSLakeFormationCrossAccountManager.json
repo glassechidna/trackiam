@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSLakeFormationCrossAccountManager",
   "CreateDate": "2020-08-04T20:59:46Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v1",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HPT7Y7QL3",
   "PolicyName": "AWSLakeFormationCrossAccountManager",
   "PolicyVersion": {
-    "CreateDate": "2020-10-07T22:39:34Z",
+    "CreateDate": "2020-08-04T20:59:46Z",
     "Document": {
       "Statement": [
         {
@@ -15,32 +15,12 @@
             "ram:CreateResourceShare"
           ],
           "Condition": {
-            "StringEquals": {
-              "ram:RequestedResourceType": "glue:Catalog"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
-            "ram:CreateResourceShare"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "ram:RequestedResourceType": "glue:Database"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
-            "ram:CreateResourceShare"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "ram:RequestedResourceType": "glue:Table"
+            "ForAllValues:StringEquals": {
+              "ram:RequestedResourceType": [
+                "glue:Catalog",
+                "glue:Database",
+                "glue:Table"
+              ]
             }
           },
           "Effect": "Allow",
@@ -52,8 +32,10 @@
             "ram:UpdateResourceShare"
           ],
           "Condition": {
-            "StringLike": {
-              "ram:ResourceShareName": "LakeFormation"
+            "ForAllValues:StringLike": {
+              "ram:ResourceShareName": [
+                "LakeFormation*"
+              ]
             }
           },
           "Effect": "Allow",
@@ -83,7 +65,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v1"
   },
-  "UpdateDate": "2020-10-07T22:39:34Z"
+  "UpdateDate": "2020-10-09T19:05:06Z"
 }
