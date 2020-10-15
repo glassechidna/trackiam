@@ -1,8 +1,12 @@
 Actions:
   - Name: codestar-connections:CreateConnection
+  - Name: codestar-connections:CreateHost
   - Name: codestar-connections:DeleteConnection
+  - Name: codestar-connections:DeleteHost
   - Name: codestar-connections:GetConnection
+  - Name: codestar-connections:GetHost
   - Name: codestar-connections:ListConnections
+  - Name: codestar-connections:ListHosts
   - Name: codestar-connections:ListTagsForResource
   - Name: codestar-connections:TagResource
   - Name: codestar-connections:UntagResource
@@ -12,12 +16,8 @@ Actions:
   - Name: codestar-connections:GetInstallationUrl
   - Name: codestar-connections:ListInstallationTargets
   - Name: codestar-connections:PassConnection
+  - Name: codestar-connections:RegisterAppCode
+  - Name: codestar-connections:StartAppRegistrationHandshake
   - Name: codestar-connections:StartOAuthHandshake
   - Name: codestar-connections:UpdateConnectionInstallation
   - Name: codestar-connections:UseConnection
-
-  # APIs without an IAM action
-  - Name: codestar-connections:CreateHost
-  - Name: codestar-connections:DeleteHost
-  - Name: codestar-connections:GetHost
-  - Name: codestar-connections:ListHosts

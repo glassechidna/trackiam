@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 236
-* Unique actions: 8843
+* Unique actions: 8845
 * Managed policies: 724
 
 Most common managed policy name prefixes:
@@ -196,6 +196,7 @@ The following table summarises the AWS APIs.
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`synthetics`](services/synthetics.yml) | 11 | 2 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 39 |
+| [`codestar-connections`](services/codestar-connections.yml) | 11 | 0 | 9 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 10 | 1 | 3 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
@@ -211,7 +212,6 @@ The following table summarises the AWS APIs.
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
 | [`sms-voice`](services/sms-voice.yml) | 8 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
-| [`codestar-connections`](services/codestar-connections.yml) | 7 | 4 | 7 |
 | [`mediatailor`](services/mediatailor.yml) | 7 | 0 | 0 |
 | [`macie`](services/macie.yml) | 7 | 0 | 0 |
 | [`textract`](services/textract.yml) | 6 | 0 | 0 |
@@ -284,7 +284,7 @@ Most common action prefixes:
 | `Create` | 943 |
 | `Update` | 723 |
 | `Put` | 262 |
-| `Start` | 158 |
+| `Start` | 159 |
 | `Tag` | 127 |
 | `Untag` | 126 |
 
