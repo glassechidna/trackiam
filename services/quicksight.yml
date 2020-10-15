@@ -1,26 +1,33 @@
 Actions:
+  - Name: quicksight:CreateAccountCustomization
   - Name: quicksight:CreateDashboard
   - Name: quicksight:CreateGroup
   - Name: quicksight:CreateGroupMembership
   - Name: quicksight:CreateIAMPolicyAssignment
+  - Name: quicksight:CreateNamespace
   - Name: quicksight:CreateTemplate
   - Name: quicksight:CreateTemplateAlias
   - Name: quicksight:CreateTheme
   - Name: quicksight:CreateThemeAlias
+  - Name: quicksight:DeleteAccountCustomization
   - Name: quicksight:DeleteDashboard
   - Name: quicksight:DeleteGroup
   - Name: quicksight:DeleteGroupMembership
   - Name: quicksight:DeleteIAMPolicyAssignment
+  - Name: quicksight:DeleteNamespace
   - Name: quicksight:DeleteTemplate
   - Name: quicksight:DeleteTemplateAlias
   - Name: quicksight:DeleteTheme
   - Name: quicksight:DeleteThemeAlias
   - Name: quicksight:DeleteUser
   - Name: quicksight:DeleteUserByPrincipalId
+  - Name: quicksight:DescribeAccountCustomization
+  - Name: quicksight:DescribeAccountSettings
   - Name: quicksight:DescribeDashboard
   - Name: quicksight:DescribeDashboardPermissions
   - Name: quicksight:DescribeGroup
   - Name: quicksight:DescribeIAMPolicyAssignment
+  - Name: quicksight:DescribeNamespace
   - Name: quicksight:DescribeTemplate
   - Name: quicksight:DescribeTemplateAlias
   - Name: quicksight:DescribeTemplatePermissions
@@ -29,12 +36,14 @@ Actions:
   - Name: quicksight:DescribeThemePermissions
   - Name: quicksight:DescribeUser
   - Name: quicksight:GetDashboardEmbedUrl
+  - Name: quicksight:GetSessionEmbedUrl
   - Name: quicksight:ListDashboardVersions
   - Name: quicksight:ListDashboards
   - Name: quicksight:ListGroupMemberships
   - Name: quicksight:ListGroups
   - Name: quicksight:ListIAMPolicyAssignments
   - Name: quicksight:ListIAMPolicyAssignmentsForUser
+  - Name: quicksight:ListNamespaces
   - Name: quicksight:ListTagsForResource
   - Name: quicksight:ListTemplateAliases
   - Name: quicksight:ListTemplateVersions
@@ -47,6 +56,8 @@ Actions:
   - Name: quicksight:RegisterUser
   - Name: quicksight:TagResource
   - Name: quicksight:UntagResource
+  - Name: quicksight:UpdateAccountCustomization
+  - Name: quicksight:UpdateAccountSettings
   - Name: quicksight:UpdateDashboard
   - Name: quicksight:UpdateDashboardPermissions
   - Name: quicksight:UpdateDashboardPublishedVersion
@@ -62,30 +73,28 @@ Actions:
 
   # actions with no corresponding API
   - Name: quicksight:CreateAdmin
+  - Name: quicksight:CreateCustomPermissions
   - Name: quicksight:CreateReader
   - Name: quicksight:CreateUser
+  - Name: quicksight:DescribeCustomPermissions
   - Name: quicksight:GetAuthCode
   - Name: quicksight:GetGroupMapping
+  - Name: quicksight:ListCustomPermissions
   - Name: quicksight:SearchDirectoryGroups
   - Name: quicksight:SetGroupMapping
   - Name: quicksight:Subscribe
   - Name: quicksight:Unsubscribe
+  - Name: quicksight:UpdateCustomPermissions
 
   # APIs without an IAM action
   - Name: quicksight:CancelIngestion
-  - Name: quicksight:CreateAccountCustomization
   - Name: quicksight:CreateAnalysis
   - Name: quicksight:CreateDataSet
   - Name: quicksight:CreateDataSource
   - Name: quicksight:CreateIngestion
-  - Name: quicksight:CreateNamespace
-  - Name: quicksight:DeleteAccountCustomization
   - Name: quicksight:DeleteAnalysis
   - Name: quicksight:DeleteDataSet
   - Name: quicksight:DeleteDataSource
-  - Name: quicksight:DeleteNamespace
-  - Name: quicksight:DescribeAccountCustomization
-  - Name: quicksight:DescribeAccountSettings
   - Name: quicksight:DescribeAnalysis
   - Name: quicksight:DescribeAnalysisPermissions
   - Name: quicksight:DescribeDataSet
@@ -93,18 +102,13 @@ Actions:
   - Name: quicksight:DescribeDataSource
   - Name: quicksight:DescribeDataSourcePermissions
   - Name: quicksight:DescribeIngestion
-  - Name: quicksight:DescribeNamespace
-  - Name: quicksight:GetSessionEmbedUrl
   - Name: quicksight:ListAnalyses
   - Name: quicksight:ListDataSets
   - Name: quicksight:ListDataSources
   - Name: quicksight:ListIngestions
-  - Name: quicksight:ListNamespaces
   - Name: quicksight:RestoreAnalysis
   - Name: quicksight:SearchAnalyses
   - Name: quicksight:SearchDashboards
-  - Name: quicksight:UpdateAccountCustomization
-  - Name: quicksight:UpdateAccountSettings
   - Name: quicksight:UpdateAnalysis
   - Name: quicksight:UpdateAnalysisPermissions
   - Name: quicksight:UpdateDataSet

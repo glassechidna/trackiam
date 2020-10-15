@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 236
-* Unique actions: 8839
+* Unique actions: 8843
 * Managed policies: 724
 
 Most common managed policy name prefixes:
@@ -58,18 +58,18 @@ The following table summarises the AWS APIs.
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
+| [`quicksight`](services/quicksight.yml) | 71 | 28 | 13 |
 | [`storagegateway`](services/storagegateway.yml) | 71 | 10 | 0 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
-| [`quicksight`](services/quicksight.yml) | 60 | 39 | 9 |
 | [`cloudfront`](services/cloudfront.yml) | 59 | 9 | 0 |
+| [`s3`](services/s3.yml) | 58 | 52 | 39 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`autoscaling`](services/autoscaling.yml) | 57 | 0 | 0 |
 | [`route53`](services/route53.yml) | 56 | 1 | 0 |
 | [`directconnect`](services/directconnect.yml) | 56 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 56 | 0 | 0 |
-| [`s3`](services/s3.yml) | 55 | 55 | 39 |
 | [`guardduty`](services/guardduty.yml) | 55 | 3 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 54 | 1 | 3 |
 | [`iotsitewise`](services/iotsitewise.yml) | 54 | 1 | 0 |
@@ -277,12 +277,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1233 |
+| `List` | 1234 |
 | `Get` | 1164 |
-| `Describe` | 1111 |
+| `Describe` | 1112 |
 | `Delete` | 1034 |
-| `Create` | 942 |
-| `Update` | 722 |
+| `Create` | 943 |
+| `Update` | 723 |
 | `Put` | 262 |
 | `Start` | 158 |
 | `Tag` | 127 |
