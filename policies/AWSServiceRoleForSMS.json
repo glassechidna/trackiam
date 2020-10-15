@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForSMS",
   "CreateDate": "2019-08-06T18:39:29Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4OSYRD2VJZ",
   "PolicyName": "AWSServiceRoleForSMS",
   "PolicyVersion": {
-    "CreateDate": "2020-09-29T18:07:16Z",
+    "CreateDate": "2020-10-15T17:28:13Z",
     "Document": {
       "Statement": [
         {
@@ -75,7 +75,9 @@
           "Condition": {
             "ForAllValues:StringEquals": {
               "cloudformation:ResourceTypes": [
-                "AWS::EC2::Instance"
+                "AWS::ApplicationInsights::Application",
+                "AWS::EC2::Instance",
+                "AWS::ResourceGroups::Group"
               ]
             },
             "Null": {
@@ -130,12 +132,62 @@
           "Resource": "*"
         },
         {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "application-insights.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/application-insights.amazonaws.com/AWSServiceRoleForApplicationInsights"
+          ]
+        },
+        {
+          "Action": [
+            "resource-groups:CreateGroup",
+            "resource-groups:DeleteGroup",
+            "resource-groups:GetGroup",
+            "resource-groups:UpdateGroup"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/aws:cloudformation:stack-id": "arn:aws:cloudformation:*:*:stack/sms-app-*/*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:resource-groups:*:*:group/sms-app-*"
+        },
+        {
           "Action": "ssm:SendCommand",
           "Effect": "Allow",
           "Resource": [
             "arn:aws:s3:::sms-app-*",
             "arn:aws:ssm:*::document/AWS-RunRemoteScript"
           ]
+        },
+        {
+          "Action": [
+            "applicationinsights:CreateApplication",
+            "applicationinsights:CreateComponent",
+            "applicationinsights:DeleteApplication",
+            "applicationinsights:DeleteComponent",
+            "applicationinsights:UpdateApplication",
+            "applicationinsights:UpdateComponentConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:applicationinsights:*:*:application/resource-group/sms-app-*"
+        },
+        {
+          "Action": [
+            "applicationinsights:Describe*",
+            "applicationinsights:List*",
+            "cloudformation:ListStackResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": [
@@ -240,7 +292,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2020-09-29T18:07:16Z"
+  "UpdateDate": "2020-10-15T17:28:13Z"
 }

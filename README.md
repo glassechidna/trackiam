@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 236
-* Unique actions: 8829
+* Unique actions: 8839
 * Managed policies: 724
 
 Most common managed policy name prefixes:
@@ -79,18 +79,18 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 49 | 0 | 2 |
 | [`backup`](services/backup.yml) | 48 | 0 | 1 |
 | [`lambda`](services/lambda.yml) | 47 | 2 | 3 |
+| [`rekognition`](services/rekognition.yml) | 47 | 1 | 0 |
 | [`connect`](services/connect.yml) | 47 | 0 | 6 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
-| [`rekognition`](services/rekognition.yml) | 47 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 46 | 2 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
 | [`dms`](services/dms.yml) | 45 | 8 | 0 |
+| [`workmail`](services/workmail.yml) | 45 | 4 | 51 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`frauddetector`](services/frauddetector.yml) | 45 | 0 | 0 |
 | [`medialive`](services/medialive.yml) | 44 | 6 | 0 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
-| [`workmail`](services/workmail.yml) | 43 | 4 | 53 |
 | [`codebuild`](services/codebuild.yml) | 43 | 0 | 8 |
 | [`securityhub`](services/securityhub.yml) | 43 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
@@ -167,10 +167,10 @@ The following table summarises the AWS APIs.
 | [`batch`](services/batch.yml) | 19 | 0 | 0 |
 | [`shield`](services/shield.yml) | 18 | 5 | 0 |
 | [`transfer`](services/transfer.yml) | 18 | 2 | 0 |
+| [`access-analyzer`](services/access-analyzer.yml) | 18 | 1 | 0 |
 | [`appflow`](services/appflow.yml) | 18 | 0 | 5 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
-| [`access-analyzer`](services/access-analyzer.yml) | 18 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 17 | 10 | 0 |
 | [`snowball`](services/snowball.yml) | 17 | 5 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
@@ -205,6 +205,7 @@ The following table summarises the AWS APIs.
 | [`redshift-data`](services/redshift-data.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 9 | 0 | 0 |
+| [`budgets`](services/budgets.yml) | 8 | 14 | 2 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
 | [`sts`](services/sts.yml) | 8 | 0 | 2 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
@@ -232,7 +233,6 @@ The following table summarises the AWS APIs.
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 220 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 7 |
-| [`budgets`](services/budgets.yml) | 0 | 14 | 2 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
@@ -279,10 +279,10 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1233 |
 | `Get` | 1164 |
-| `Describe` | 1107 |
-| `Delete` | 1033 |
-| `Create` | 941 |
-| `Update` | 721 |
+| `Describe` | 1111 |
+| `Delete` | 1034 |
+| `Create` | 942 |
+| `Update` | 722 |
 | `Put` | 262 |
 | `Start` | 158 |
 | `Tag` | 127 |
