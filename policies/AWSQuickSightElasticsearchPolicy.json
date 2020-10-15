@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSQuickSightElasticsearchPolicy",
   "CreateDate": "2020-09-09T17:27:19Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4BLUM3JVIN",
   "PolicyName": "AWSQuickSightElasticsearchPolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-09-09T17:27:19Z",
+    "CreateDate": "2020-10-15T17:09:55Z",
     "Document": {
       "Statement": [
         {
@@ -31,7 +31,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:es:*:*:domain/*/",
-            "arn:aws:es:*:*:domain/*/_cat/indices"
+            "arn:aws:es:*:*:domain/*/_cat/indices",
+            "arn:aws:es:*:*:domain/*/_cluster/settings"
           ]
         },
         {
@@ -48,7 +49,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-09-09T17:27:19Z"
+  "UpdateDate": "2020-10-15T17:09:55Z"
 }
