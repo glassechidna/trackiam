@@ -76,6 +76,7 @@ The following table summarises the AWS APIs.
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 50 | 1 | 3 |
+| [`medialive`](services/medialive.yml) | 49 | 6 | 0 |
 | [`ecs`](services/ecs.yml) | 49 | 0 | 2 |
 | [`backup`](services/backup.yml) | 48 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 48 | 0 | 0 |
@@ -89,7 +90,6 @@ The following table summarises the AWS APIs.
 | [`workmail`](services/workmail.yml) | 45 | 4 | 51 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`frauddetector`](services/frauddetector.yml) | 45 | 0 | 0 |
-| [`medialive`](services/medialive.yml) | 44 | 11 | 0 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
 | [`codebuild`](services/codebuild.yml) | 43 | 0 | 8 |
 | [`securityhub`](services/securityhub.yml) | 43 | 0 | 0 |
