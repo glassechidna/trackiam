@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 236
-* Unique actions: 8850
+* Unique actions: 8852
 * Managed policies: 724
 
 Most common managed policy name prefixes:
@@ -131,7 +131,7 @@ The following table summarises the AWS APIs.
 | [`networkmanager`](services/networkmanager.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
-| [`sso`](services/sso.yml) | 27 | 0 | 50 |
+| [`sso`](services/sso.yml) | 27 | 0 | 52 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
 | [`kafka`](services/kafka.yml) | 26 | 3 | 0 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 26 | 0 | 1 |
