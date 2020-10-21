@@ -1,43 +1,49 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSSOServiceRolePolicy",
   "CreateDate": "2017-12-05T18:36:15Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIJ52KSWOD4GI54XP2",
   "PolicyName": "AWSSSOServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-08-26T17:46:14Z",
+    "CreateDate": "2020-10-21T20:27:38Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "iam:AttachRolePolicy",
             "iam:CreateRole",
-            "iam:DeleteRole",
-            "iam:DeleteRolePolicy",
-            "iam:DetachRolePolicy",
-            "iam:ListAttachedRolePolicies",
-            "iam:ListRolePolicies",
             "iam:PutRolePolicy",
-            "iam:UpdateRole"
+            "iam:UpdateRole",
+            "iam:UpdateRoleDescription"
           ],
+          "Condition": {
+            "StringNotEquals": {
+              "aws:PrincipalOrgMasterAccountId": "${aws:PrincipalAccount}"
+            }
+          },
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/aws-reserved/sso.amazonaws.com/*"
-          ]
+          ],
+          "Sid": "IAMRoleProvisioningActions"
         },
         {
           "Action": [
             "iam:CreateSAMLProvider",
-            "iam:DeleteSAMLProvider",
-            "iam:GetSAMLProvider",
             "iam:UpdateSAMLProvider"
           ],
+          "Condition": {
+            "StringNotEquals": {
+              "aws:PrincipalOrgMasterAccountId": "${aws:PrincipalAccount}"
+            }
+          },
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:saml-provider/AWSSSO_*"
-          ]
+          ],
+          "Sid": "IAMSAMLProviderProvisioningActions"
         },
         {
           "Action": [
@@ -74,6 +80,20 @@
         {
           "Action": [
             "iam:DeleteRole",
+            "iam:DeleteRolePolicy",
+            "iam:DetachRolePolicy",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListRolePolicies"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-reserved/sso.amazonaws.com/*"
+          ],
+          "Sid": "IAMRoleCleanupActions"
+        },
+        {
+          "Action": [
+            "iam:DeleteRole",
             "iam:DeleteServiceLinkedRole",
             "iam:GetRole",
             "iam:GetServiceLinkedRoleDeletionStatus"
@@ -82,7 +102,18 @@
           "Resource": [
             "arn:aws:iam::*:role/aws-service-role/sso.amazonaws.com/AWSServiceRoleForSSO"
           ],
-          "Sid": "AllowDeletionOfServiceLinkedRoleForSSO"
+          "Sid": "IAMSLRCleanupActions"
+        },
+        {
+          "Action": [
+            "iam:DeleteSAMLProvider",
+            "iam:GetSAMLProvider"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:saml-provider/AWSSSO_*"
+          ],
+          "Sid": "IAMSAMLProviderCleanupActions"
         },
         {
           "Action": [
@@ -93,7 +124,7 @@
           "Resource": [
             "*"
           ],
-          "Sid": "ListRolesInTheAccount"
+          "Sid": "IAMRoleReadActions"
         },
         {
           "Action": [
@@ -112,7 +143,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2020-08-26T17:46:14Z"
+  "UpdateDate": "2020-10-21T20:27:38Z"
 }
