@@ -167,6 +167,7 @@ The following table summarises the AWS APIs.
 | [`batch`](services/batch.yml) | 19 | 0 | 0 |
 | [`shield`](services/shield.yml) | 18 | 5 | 0 |
 | [`transfer`](services/transfer.yml) | 18 | 2 | 0 |
+| [`opsworks-cm`](services/opsworks-cm.yml) | 18 | 1 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 18 | 1 | 0 |
 | [`appflow`](services/appflow.yml) | 18 | 0 | 5 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
@@ -177,7 +178,6 @@ The following table summarises the AWS APIs.
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
-| [`opsworks-cm`](services/opsworks-cm.yml) | 15 | 4 | 0 |
 | [`license-manager`](services/license-manager.yml) | 15 | 1 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 13 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 14 | 5 | 0 |
