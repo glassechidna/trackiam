@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSServiceRolePolicy",
   "CreateDate": "2018-01-08T18:17:46Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIPEU5ZOBJWKWHUIBA",
   "PolicyName": "AmazonRDSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-07-31T01:14:11Z",
+    "CreateDate": "2020-10-21T22:31:39Z",
     "Document": {
       "Statement": [
         {
@@ -89,6 +89,13 @@
         },
         {
           "Action": [
+            "rds:CrossRegionCommunication"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "sns:Publish"
           ],
           "Effect": "Allow",
@@ -98,7 +105,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2020-07-31T01:14:11Z"
+  "UpdateDate": "2020-10-21T22:31:39Z"
 }

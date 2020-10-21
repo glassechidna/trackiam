@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSPreviewServiceRolePolicy",
   "CreateDate": "2018-05-31T18:02:00Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIZHJJBU3675JOUEMQ",
   "PolicyName": "AmazonRDSPreviewServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-07-29T00:05:20Z",
+    "CreateDate": "2020-10-21T22:28:54Z",
     "Document": {
       "Statement": [
         {
@@ -63,6 +63,13 @@
         },
         {
           "Action": [
+            "rds:CrossRegionCommunication"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "sns:Publish"
           ],
           "Effect": "Allow",
@@ -72,7 +79,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-07-29T00:05:20Z"
+  "UpdateDate": "2020-10-21T22:28:54Z"
 }
