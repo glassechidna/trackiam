@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 236
-* Unique actions: 8852
+* Unique actions: 8860
 * Managed policies: 724
 
 Most common managed policy name prefixes:
@@ -40,7 +40,7 @@ The following table summarises the AWS APIs.
 | [`sagemaker`](services/sagemaker.yml) | 142 | 1 | 2 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`glue`](services/glue.yml) | 124 | 11 | 1 |
-| [`rds`](services/rds.yml) | 123 | 7 | 0 |
+| [`rds`](services/rds.yml) | 123 | 7 | 1 |
 | [`ssm`](services/ssm.yml) | 122 | 0 | 7 |
 | [`chime`](services/chime.yml) | 119 | 0 | 50 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
@@ -62,7 +62,7 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 71 | 10 | 0 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
-| [`cloudfront`](services/cloudfront.yml) | 59 | 9 | 0 |
+| [`cloudfront`](services/cloudfront.yml) | 59 | 16 | 0 |
 | [`s3`](services/s3.yml) | 58 | 52 | 39 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
@@ -277,12 +277,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1235 |
-| `Get` | 1164 |
+| `List` | 1237 |
+| `Get` | 1166 |
 | `Describe` | 1112 |
-| `Delete` | 1034 |
-| `Create` | 943 |
-| `Update` | 723 |
+| `Delete` | 1035 |
+| `Create` | 944 |
+| `Update` | 724 |
 | `Put` | 262 |
 | `Start` | 159 |
 | `Tag` | 127 |
