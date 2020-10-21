@@ -1,0 +1,55 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSDataLifecycleManagerServiceRoleForAMIManagement",
+  "CreateDate": "2020-10-21T19:39:41Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4MG6O7FWSP",
+  "PolicyName": "AWSDataLifecycleManagerServiceRoleForAMIManagement",
+  "PolicyVersion": {
+    "CreateDate": "2020-10-21T19:39:41Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:CreateTags",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*::image/*",
+            "arn:aws:ec2:*::snapshot/*"
+          ]
+        },
+        {
+          "Action": "ec2:DeleteSnapshot",
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::snapshot/*"
+        },
+        {
+          "Action": [
+            "ec2:CopyImage",
+            "ec2:CreateImage",
+            "ec2:DeregisterImage",
+            "ec2:ModifyImageAttribute",
+            "ec2:ResetImageAttribute"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeImageAttribute",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstances",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeVolumes"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-10-21T19:39:41Z"
+}

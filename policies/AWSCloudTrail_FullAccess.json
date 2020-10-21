@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCloudTrail_FullAccess",
   "CreateDate": "2020-10-08T23:41:15Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CA4SIJQAM",
   "PolicyName": "AWSCloudTrail_FullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-10-08T23:41:15Z",
+    "CreateDate": "2020-10-21T19:40:46Z",
     "Document": {
       "Statement": [
         {
@@ -24,6 +24,14 @@
         },
         {
           "Action": "cloudtrail:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "dynamodb:ListGlobalTables",
+            "dynamodb:ListTables"
+          ],
           "Effect": "Allow",
           "Resource": "*"
         },
@@ -104,7 +112,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-10-08T23:41:15Z"
+  "UpdateDate": "2020-10-21T19:40:46Z"
 }
