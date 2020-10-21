@@ -66,8 +66,8 @@ The following table summarises the AWS APIs.
 | [`s3`](services/s3.yml) | 58 | 52 | 39 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
+| [`route53`](services/route53.yml) | 57 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 57 | 0 | 0 |
-| [`route53`](services/route53.yml) | 56 | 1 | 0 |
 | [`directconnect`](services/directconnect.yml) | 56 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 56 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 55 | 3 | 0 |
