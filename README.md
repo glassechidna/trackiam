@@ -143,13 +143,13 @@ The following table summarises the AWS APIs.
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
+| [`ram`](services/ram.yml) | 24 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 24 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 23 | 5 | 0 |
 | [`xray`](services/xray.yml) | 23 | 0 | 4 |
 | [`servicediscovery`](services/servicediscovery.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
-| [`ram`](services/ram.yml) | 22 | 2 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 1 |
 | [`states`](services/states.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
