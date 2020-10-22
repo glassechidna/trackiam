@@ -121,7 +121,7 @@ The following table summarises the AWS APIs.
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 30 | 1 | 0 |
 | [`forecast`](services/forecast.yml) | 30 | 0 | 0 |
-| [`cloudwatch`](services/cloudwatch.yml) | 29 | 1 | 0 |
+| [`cloudwatch`](services/cloudwatch.yml) | 30 | 0 | 0 |
 | [`ce`](services/ce.yml) | 29 | 0 | 10 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
 | [`es`](services/es.yml) | 28 | 9 | 9 |
