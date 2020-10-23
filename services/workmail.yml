@@ -1,6 +1,7 @@
 Actions:
   - Name: workmail:AssociateDelegateToResource
   - Name: workmail:AssociateMemberToGroup
+  - Name: workmail:CancelMailboxExportJob
   - Name: workmail:CreateAlias
   - Name: workmail:CreateGroup
   - Name: workmail:CreateOrganization
@@ -16,6 +17,7 @@ Actions:
   - Name: workmail:DeleteUser
   - Name: workmail:DeregisterFromWorkMail
   - Name: workmail:DescribeGroup
+  - Name: workmail:DescribeMailboxExportJob
   - Name: workmail:DescribeOrganization
   - Name: workmail:DescribeResource
   - Name: workmail:DescribeUser
@@ -28,6 +30,7 @@ Actions:
   - Name: workmail:ListAliases
   - Name: workmail:ListGroupMembers
   - Name: workmail:ListGroups
+  - Name: workmail:ListMailboxExportJobs
   - Name: workmail:ListMailboxPermissions
   - Name: workmail:ListOrganizations
   - Name: workmail:ListResourceDelegates
@@ -39,6 +42,7 @@ Actions:
   - Name: workmail:PutRetentionPolicy
   - Name: workmail:RegisterToWorkMail
   - Name: workmail:ResetPassword
+  - Name: workmail:StartMailboxExportJob
   - Name: workmail:TagResource
   - Name: workmail:UntagResource
   - Name: workmail:UpdateMailboxQuota
@@ -97,9 +101,3 @@ Actions:
   - Name: workmail:UpdateOutboundMailFlowRule
   - Name: workmail:UpdateSmtpGateway
   - Name: workmail:WipeMobileDevice
-
-  # APIs without an IAM action
-  - Name: workmail:CancelMailboxExportJob
-  - Name: workmail:DescribeMailboxExportJob
-  - Name: workmail:ListMailboxExportJobs
-  - Name: workmail:StartMailboxExportJob

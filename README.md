@@ -77,6 +77,7 @@ The following table summarises the AWS APIs.
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 50 | 1 | 3 |
 | [`medialive`](services/medialive.yml) | 49 | 6 | 0 |
+| [`workmail`](services/workmail.yml) | 49 | 0 | 51 |
 | [`ecs`](services/ecs.yml) | 49 | 0 | 2 |
 | [`backup`](services/backup.yml) | 48 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 48 | 0 | 0 |
@@ -87,7 +88,6 @@ The following table summarises the AWS APIs.
 | [`personalize`](services/personalize.yml) | 46 | 2 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
 | [`dms`](services/dms.yml) | 45 | 8 | 0 |
-| [`workmail`](services/workmail.yml) | 45 | 4 | 51 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`frauddetector`](services/frauddetector.yml) | 45 | 0 | 0 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
