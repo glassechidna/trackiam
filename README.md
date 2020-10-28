@@ -81,11 +81,11 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 49 | 0 | 2 |
 | [`backup`](services/backup.yml) | 48 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 48 | 0 | 0 |
+| [`personalize`](services/personalize.yml) | 48 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 47 | 2 | 3 |
 | [`connect`](services/connect.yml) | 47 | 0 | 6 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
-| [`personalize`](services/personalize.yml) | 46 | 2 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
 | [`dms`](services/dms.yml) | 45 | 8 | 0 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
