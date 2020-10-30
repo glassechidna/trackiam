@@ -206,6 +206,7 @@ The following table summarises the AWS APIs.
 | [`redshift-data`](services/redshift-data.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 9 | 0 | 0 |
+| [`braket`](services/braket.yml) | 9 | 0 | 0 |
 | [`budgets`](services/budgets.yml) | 8 | 14 | 2 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
 | [`sts`](services/sts.yml) | 8 | 0 | 2 |
@@ -214,7 +215,6 @@ The following table summarises the AWS APIs.
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
 | [`mediatailor`](services/mediatailor.yml) | 7 | 0 | 0 |
 | [`macie`](services/macie.yml) | 7 | 0 | 0 |
-| [`braket`](services/braket.yml) | 6 | 3 | 0 |
 | [`textract`](services/textract.yml) | 6 | 0 | 0 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
