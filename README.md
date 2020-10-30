@@ -174,13 +174,13 @@ The following table summarises the AWS APIs.
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 17 | 10 | 0 |
 | [`snowball`](services/snowball.yml) | 17 | 5 | 0 |
+| [`mediapackage`](services/mediapackage.yml) | 17 | 2 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
 | [`license-manager`](services/license-manager.yml) | 15 | 1 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 13 | 0 |
-| [`mediapackage`](services/mediapackage.yml) | 14 | 5 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`fsx`](services/fsx.yml) | 14 | 0 | 0 |
