@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 236
-* Unique actions: 8896
+* Unique actions: 8899
 * Managed policies: 725
 
 Most common managed policy name prefixes:
@@ -214,11 +214,11 @@ The following table summarises the AWS APIs.
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
 | [`mediatailor`](services/mediatailor.yml) | 7 | 0 | 0 |
 | [`macie`](services/macie.yml) | 7 | 0 | 0 |
+| [`braket`](services/braket.yml) | 6 | 3 | 0 |
 | [`textract`](services/textract.yml) | 6 | 0 | 0 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
 | [`ebs`](services/ebs.yml) | 6 | 0 | 0 |
-| [`braket`](services/braket.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`outposts`](services/outposts.yml) | 5 | 2 | 0 |
 | [`identitystore`](services/identitystore.yml) | 4 | 0 | 0 |
@@ -277,7 +277,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1244 |
+| `List` | 1245 |
 | `Get` | 1169 |
 | `Describe` | 1116 |
 | `Delete` | 1041 |
@@ -285,6 +285,6 @@ Most common action prefixes:
 | `Update` | 729 |
 | `Put` | 262 |
 | `Start` | 159 |
-| `Tag` | 128 |
-| `Untag` | 127 |
+| `Tag` | 129 |
+| `Untag` | 128 |
 
