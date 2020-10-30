@@ -1,15 +1,32 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AutoScalingServiceRolePolicy",
   "CreateDate": "2018-01-08T23:10:55Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIC5D2V7MRWBMHGD7G",
   "PolicyName": "AutoScalingServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2018-10-31T18:19:10Z",
+    "CreateDate": "2020-10-30T00:01:26Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:DescribeRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "events:ManagedBy": "autoscaling.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EventBridgeRuleManagement"
+        },
         {
           "Action": [
             "iam:CreateServiceLinkedRole"
@@ -86,7 +103,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2018-10-31T18:19:10Z"
+  "UpdateDate": "2020-10-30T00:01:26Z"
 }
