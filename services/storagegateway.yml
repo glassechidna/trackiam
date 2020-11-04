@@ -4,6 +4,7 @@ Actions:
   - Name: storagegateway:AddTagsToResource
   - Name: storagegateway:AddUploadBuffer
   - Name: storagegateway:AddWorkingStorage
+  - Name: storagegateway:AssignTapePool
   - Name: storagegateway:AttachVolume
   - Name: storagegateway:CancelArchival
   - Name: storagegateway:CancelRetrieval
@@ -13,8 +14,10 @@ Actions:
   - Name: storagegateway:CreateSnapshot
   - Name: storagegateway:CreateSnapshotFromVolumeRecoveryPoint
   - Name: storagegateway:CreateStorediSCSIVolume
+  - Name: storagegateway:CreateTapePool
   - Name: storagegateway:CreateTapeWithBarcode
   - Name: storagegateway:CreateTapes
+  - Name: storagegateway:DeleteAutomaticTapeCreationPolicy
   - Name: storagegateway:DeleteBandwidthRateLimit
   - Name: storagegateway:DeleteChapCredentials
   - Name: storagegateway:DeleteFileShare
@@ -22,6 +25,7 @@ Actions:
   - Name: storagegateway:DeleteSnapshotSchedule
   - Name: storagegateway:DeleteTape
   - Name: storagegateway:DeleteTapeArchive
+  - Name: storagegateway:DeleteTapePool
   - Name: storagegateway:DeleteVolume
   - Name: storagegateway:DescribeBandwidthRateLimit
   - Name: storagegateway:DescribeCache
@@ -43,10 +47,12 @@ Actions:
   - Name: storagegateway:DetachVolume
   - Name: storagegateway:DisableGateway
   - Name: storagegateway:JoinDomain
+  - Name: storagegateway:ListAutomaticTapeCreationPolicies
   - Name: storagegateway:ListFileShares
   - Name: storagegateway:ListGateways
   - Name: storagegateway:ListLocalDisks
   - Name: storagegateway:ListTagsForResource
+  - Name: storagegateway:ListTapePools
   - Name: storagegateway:ListTapes
   - Name: storagegateway:ListVolumeInitiators
   - Name: storagegateway:ListVolumeRecoveryPoints
@@ -61,6 +67,7 @@ Actions:
   - Name: storagegateway:SetSMBGuestPassword
   - Name: storagegateway:ShutdownGateway
   - Name: storagegateway:StartGateway
+  - Name: storagegateway:UpdateAutomaticTapeCreationPolicy
   - Name: storagegateway:UpdateBandwidthRateLimit
   - Name: storagegateway:UpdateChapCredentials
   - Name: storagegateway:UpdateGatewayInformation
@@ -71,15 +78,11 @@ Actions:
   - Name: storagegateway:UpdateSnapshotSchedule
   - Name: storagegateway:UpdateVTLDeviceType
 
+  # actions with no corresponding API
+  - Name: storagegateway:BypassGovernanceRetention
+
   # APIs without an IAM action
-  - Name: storagegateway:AssignTapePool
-  - Name: storagegateway:CreateTapePool
-  - Name: storagegateway:DeleteAutomaticTapeCreationPolicy
-  - Name: storagegateway:DeleteTapePool
   - Name: storagegateway:DescribeAvailabilityMonitorTest
-  - Name: storagegateway:ListAutomaticTapeCreationPolicies
-  - Name: storagegateway:ListTapePools
   - Name: storagegateway:StartAvailabilityMonitorTest
-  - Name: storagegateway:UpdateAutomaticTapeCreationPolicy
   - Name: storagegateway:UpdateSMBFileShareVisibility
   - Name: storagegateway:UpdateSMBSecurityStrategy
