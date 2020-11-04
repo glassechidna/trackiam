@@ -133,6 +133,7 @@ The following table summarises the AWS APIs.
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
 | [`sso`](services/sso.yml) | 27 | 0 | 52 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
+| [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 26 | 3 | 0 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 26 | 0 | 1 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
@@ -146,7 +147,6 @@ The following table summarises the AWS APIs.
 | [`ram`](services/ram.yml) | 24 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 24 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 23 | 5 | 0 |
-| [`xray`](services/xray.yml) | 23 | 0 | 4 |
 | [`servicediscovery`](services/servicediscovery.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
