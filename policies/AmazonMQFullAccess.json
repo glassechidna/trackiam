@@ -1,15 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonMQFullAccess",
   "CreateDate": "2017-11-28T15:28:29Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJLKBROJNQYDDXOOGG",
   "PolicyName": "AmazonMQFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2018-12-18T20:33:17Z",
+    "CreateDate": "2020-11-04T16:34:09Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "mq.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "cloudformation:CreateStack",
@@ -45,7 +55,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2018-12-18T20:33:17Z"
+  "UpdateDate": "2020-11-04T16:34:09Z"
 }
