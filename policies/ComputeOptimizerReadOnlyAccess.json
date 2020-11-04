@@ -1,19 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ComputeOptimizerReadOnlyAccess",
   "CreateDate": "2020-03-07T00:11:02Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FI27MEARJ",
   "PolicyName": "ComputeOptimizerReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-03-07T00:11:02Z",
+    "CreateDate": "2020-11-04T20:57:54Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "autoscaling:DescribeAutoScalingGroups",
             "cloudwatch:GetMetricData",
+            "compute-optimizer:DescribeRecommendationExportJobs",
             "compute-optimizer:GetAutoScalingGroupRecommendations",
             "compute-optimizer:GetEC2InstanceRecommendations",
             "compute-optimizer:GetEC2RecommendationProjectedMetrics",
@@ -31,7 +32,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-03-07T00:11:02Z"
+  "UpdateDate": "2020-11-04T20:57:54Z"
 }
