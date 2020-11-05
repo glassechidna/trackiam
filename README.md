@@ -165,10 +165,10 @@ The following table summarises the AWS APIs.
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`secretsmanager`](services/secretsmanager.yml) | 19 | 0 | 0 |
 | [`batch`](services/batch.yml) | 19 | 0 | 0 |
+| [`access-analyzer`](services/access-analyzer.yml) | 19 | 0 | 0 |
 | [`shield`](services/shield.yml) | 18 | 5 | 0 |
 | [`transfer`](services/transfer.yml) | 18 | 2 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 18 | 1 | 0 |
-| [`access-analyzer`](services/access-analyzer.yml) | 18 | 1 | 0 |
 | [`appflow`](services/appflow.yml) | 18 | 0 | 5 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
