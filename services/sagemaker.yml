@@ -3,6 +3,7 @@ Actions:
   - Name: sagemaker:AssociateTrialComponent
   - Name: sagemaker:CreateAlgorithm
   - Name: sagemaker:CreateApp
+  - Name: sagemaker:CreateAppImageConfig
   - Name: sagemaker:CreateAutoMLJob
   - Name: sagemaker:CreateCodeRepository
   - Name: sagemaker:CreateCompilationJob
@@ -13,6 +14,8 @@ Actions:
   - Name: sagemaker:CreateFlowDefinition
   - Name: sagemaker:CreateHumanTaskUi
   - Name: sagemaker:CreateHyperParameterTuningJob
+  - Name: sagemaker:CreateImage
+  - Name: sagemaker:CreateImageVersion
   - Name: sagemaker:CreateLabelingJob
   - Name: sagemaker:CreateModel
   - Name: sagemaker:CreateModelPackage
@@ -31,6 +34,7 @@ Actions:
   - Name: sagemaker:CreateWorkteam
   - Name: sagemaker:DeleteAlgorithm
   - Name: sagemaker:DeleteApp
+  - Name: sagemaker:DeleteAppImageConfig
   - Name: sagemaker:DeleteCodeRepository
   - Name: sagemaker:DeleteDomain
   - Name: sagemaker:DeleteEndpoint
@@ -38,6 +42,8 @@ Actions:
   - Name: sagemaker:DeleteExperiment
   - Name: sagemaker:DeleteFlowDefinition
   - Name: sagemaker:DeleteHumanLoop
+  - Name: sagemaker:DeleteImage
+  - Name: sagemaker:DeleteImageVersion
   - Name: sagemaker:DeleteModel
   - Name: sagemaker:DeleteModelPackage
   - Name: sagemaker:DeleteMonitoringSchedule
@@ -51,6 +57,7 @@ Actions:
   - Name: sagemaker:DeleteWorkteam
   - Name: sagemaker:DescribeAlgorithm
   - Name: sagemaker:DescribeApp
+  - Name: sagemaker:DescribeAppImageConfig
   - Name: sagemaker:DescribeAutoMLJob
   - Name: sagemaker:DescribeCodeRepository
   - Name: sagemaker:DescribeCompilationJob
@@ -62,6 +69,8 @@ Actions:
   - Name: sagemaker:DescribeHumanLoop
   - Name: sagemaker:DescribeHumanTaskUi
   - Name: sagemaker:DescribeHyperParameterTuningJob
+  - Name: sagemaker:DescribeImage
+  - Name: sagemaker:DescribeImageVersion
   - Name: sagemaker:DescribeLabelingJob
   - Name: sagemaker:DescribeModel
   - Name: sagemaker:DescribeModelPackage
@@ -81,6 +90,7 @@ Actions:
   - Name: sagemaker:GetSearchSuggestions
   - Name: sagemaker:InvokeEndpoint
   - Name: sagemaker:ListAlgorithms
+  - Name: sagemaker:ListAppImageConfigs
   - Name: sagemaker:ListApps
   - Name: sagemaker:ListAutoMLJobs
   - Name: sagemaker:ListCandidatesForAutoMLJob
@@ -94,6 +104,8 @@ Actions:
   - Name: sagemaker:ListHumanLoops
   - Name: sagemaker:ListHumanTaskUis
   - Name: sagemaker:ListHyperParameterTuningJobs
+  - Name: sagemaker:ListImageVersions
+  - Name: sagemaker:ListImages
   - Name: sagemaker:ListLabelingJobs
   - Name: sagemaker:ListLabelingJobsForWorkteam
   - Name: sagemaker:ListModelPackages
@@ -128,11 +140,13 @@ Actions:
   - Name: sagemaker:StopProcessingJob
   - Name: sagemaker:StopTrainingJob
   - Name: sagemaker:StopTransformJob
+  - Name: sagemaker:UpdateAppImageConfig
   - Name: sagemaker:UpdateCodeRepository
   - Name: sagemaker:UpdateDomain
   - Name: sagemaker:UpdateEndpoint
   - Name: sagemaker:UpdateEndpointWeightsAndCapacities
   - Name: sagemaker:UpdateExperiment
+  - Name: sagemaker:UpdateImage
   - Name: sagemaker:UpdateMonitoringSchedule
   - Name: sagemaker:UpdateNotebookInstance
   - Name: sagemaker:UpdateNotebookInstanceLifecycleConfig
@@ -147,18 +161,4 @@ Actions:
   - Name: sagemaker:BatchPutMetrics
 
   # APIs without an IAM action
-  - Name: sagemaker:CreateAppImageConfig
-  - Name: sagemaker:CreateImage
-  - Name: sagemaker:CreateImageVersion
-  - Name: sagemaker:DeleteAppImageConfig
   - Name: sagemaker:DeleteHumanTaskUi
-  - Name: sagemaker:DeleteImage
-  - Name: sagemaker:DeleteImageVersion
-  - Name: sagemaker:DescribeAppImageConfig
-  - Name: sagemaker:DescribeImage
-  - Name: sagemaker:DescribeImageVersion
-  - Name: sagemaker:ListAppImageConfigs
-  - Name: sagemaker:ListImageVersions
-  - Name: sagemaker:ListImages
-  - Name: sagemaker:UpdateAppImageConfig
-  - Name: sagemaker:UpdateImage
