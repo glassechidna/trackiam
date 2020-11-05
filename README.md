@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 236
-* Unique actions: 8900
+* Unique actions: 8917
 * Managed policies: 726
 
 Most common managed policy name prefixes:
@@ -87,9 +87,9 @@ The following table summarises the AWS APIs.
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
+| [`frauddetector`](services/frauddetector.yml) | 45 | 8 | 0 |
 | [`dms`](services/dms.yml) | 45 | 8 | 0 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
-| [`frauddetector`](services/frauddetector.yml) | 45 | 0 | 0 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
 | [`codebuild`](services/codebuild.yml) | 43 | 0 | 8 |
 | [`securityhub`](services/securityhub.yml) | 43 | 0 | 0 |
@@ -115,8 +115,8 @@ The following table summarises the AWS APIs.
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 32 | 5 | 8 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 32 | 0 | 0 |
+| [`events`](services/events.yml) | 31 | 9 | 0 |
 | [`codeartifact`](services/codeartifact.yml) | 31 | 3 | 4 |
-| [`events`](services/events.yml) | 31 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 31 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 30 | 1 | 0 |
@@ -277,14 +277,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1245 |
+| `List` | 1247 |
 | `Get` | 1169 |
-| `Describe` | 1116 |
-| `Delete` | 1041 |
-| `Create` | 949 |
-| `Update` | 729 |
+| `Describe` | 1118 |
+| `Delete` | 1050 |
+| `Create` | 950 |
+| `Update` | 730 |
 | `Put` | 262 |
-| `Start` | 159 |
+| `Start` | 160 |
 | `Tag` | 129 |
 | `Untag` | 128 |
 
