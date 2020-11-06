@@ -97,6 +97,7 @@ The following table summarises the AWS APIs.
 | [`imagebuilder`](services/imagebuilder.yml) | 41 | 1 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`wafv2`](services/wafv2.yml) | 40 | 0 | 2 |
+| [`events`](services/events.yml) | 40 | 0 | 0 |
 | [`logs`](services/logs.yml) | 39 | 3 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
@@ -115,7 +116,6 @@ The following table summarises the AWS APIs.
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 32 | 5 | 8 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 32 | 0 | 0 |
-| [`events`](services/events.yml) | 31 | 9 | 0 |
 | [`codeartifact`](services/codeartifact.yml) | 31 | 3 | 4 |
 | [`datasync`](services/datasync.yml) | 31 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 0 | 0 |

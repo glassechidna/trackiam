@@ -1,21 +1,28 @@
 Actions:
   - Name: events:ActivateEventSource
+  - Name: events:CancelReplay
+  - Name: events:CreateArchive
   - Name: events:CreateEventBus
   - Name: events:CreatePartnerEventSource
   - Name: events:DeactivateEventSource
+  - Name: events:DeleteArchive
   - Name: events:DeleteEventBus
   - Name: events:DeletePartnerEventSource
   - Name: events:DeleteRule
+  - Name: events:DescribeArchive
   - Name: events:DescribeEventBus
   - Name: events:DescribeEventSource
   - Name: events:DescribePartnerEventSource
+  - Name: events:DescribeReplay
   - Name: events:DescribeRule
   - Name: events:DisableRule
   - Name: events:EnableRule
+  - Name: events:ListArchives
   - Name: events:ListEventBuses
   - Name: events:ListEventSources
   - Name: events:ListPartnerEventSourceAccounts
   - Name: events:ListPartnerEventSources
+  - Name: events:ListReplays
   - Name: events:ListRuleNamesByTarget
   - Name: events:ListRules
   - Name: events:ListTagsForResource
@@ -27,17 +34,8 @@ Actions:
   - Name: events:PutTargets
   - Name: events:RemovePermission
   - Name: events:RemoveTargets
+  - Name: events:StartReplay
   - Name: events:TagResource
   - Name: events:TestEventPattern
   - Name: events:UntagResource
-
-  # APIs without an IAM action
-  - Name: events:CancelReplay
-  - Name: events:CreateArchive
-  - Name: events:DeleteArchive
-  - Name: events:DescribeArchive
-  - Name: events:DescribeReplay
-  - Name: events:ListArchives
-  - Name: events:ListReplays
-  - Name: events:StartReplay
   - Name: events:UpdateArchive
