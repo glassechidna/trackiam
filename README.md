@@ -74,6 +74,7 @@ The following table summarises the AWS APIs.
 | [`cloudformation`](services/cloudformation.yml) | 54 | 1 | 3 |
 | [`iotsitewise`](services/iotsitewise.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
+| [`frauddetector`](services/frauddetector.yml) | 53 | 0 | 0 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 50 | 1 | 3 |
 | [`medialive`](services/medialive.yml) | 49 | 6 | 0 |
@@ -87,7 +88,6 @@ The following table summarises the AWS APIs.
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
-| [`frauddetector`](services/frauddetector.yml) | 45 | 8 | 0 |
 | [`dms`](services/dms.yml) | 45 | 8 | 0 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
