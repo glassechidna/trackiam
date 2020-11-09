@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 236
-* Unique actions: 8916
+* Unique actions: 8931
 * Managed policies: 726
 
 Most common managed policy name prefixes:
@@ -53,7 +53,7 @@ The following table summarises the AWS APIs.
 | [`servicecatalog`](services/servicecatalog.yml) | 83 | 1 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`config`](services/config.yml) | 79 | 0 | 0 |
-| [`storagegateway`](services/storagegateway.yml) | 78 | 4 | 1 |
+| [`storagegateway`](services/storagegateway.yml) | 78 | 6 | 1 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
@@ -63,7 +63,7 @@ The following table summarises the AWS APIs.
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 59 | 16 | 0 |
-| [`s3`](services/s3.yml) | 58 | 52 | 39 |
+| [`s3`](services/s3.yml) | 58 | 56 | 39 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`route53`](services/route53.yml) | 57 | 0 | 0 |
@@ -93,7 +93,7 @@ The following table summarises the AWS APIs.
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
 | [`codebuild`](services/codebuild.yml) | 43 | 0 | 8 |
 | [`securityhub`](services/securityhub.yml) | 43 | 0 | 0 |
-| [`dynamodb`](services/dynamodb.yml) | 42 | 3 | 6 |
+| [`dynamodb`](services/dynamodb.yml) | 42 | 6 | 6 |
 | [`imagebuilder`](services/imagebuilder.yml) | 41 | 1 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`wafv2`](services/wafv2.yml) | 40 | 0 | 2 |
@@ -117,14 +117,14 @@ The following table summarises the AWS APIs.
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 32 | 0 | 0 |
 | [`codeartifact`](services/codeartifact.yml) | 31 | 3 | 4 |
-| [`datasync`](services/datasync.yml) | 31 | 0 | 0 |
+| [`datasync`](services/datasync.yml) | 31 | 1 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 30 | 1 | 0 |
 | [`forecast`](services/forecast.yml) | 30 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 30 | 0 | 0 |
 | [`ce`](services/ce.yml) | 29 | 0 | 10 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
-| [`es`](services/es.yml) | 28 | 9 | 9 |
+| [`es`](services/es.yml) | 28 | 11 | 9 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`transcribe`](services/transcribe.yml) | 28 | 0 | 3 |
 | [`athena`](services/athena.yml) | 28 | 0 | 1 |
@@ -181,9 +181,9 @@ The following table summarises the AWS APIs.
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
 | [`license-manager`](services/license-manager.yml) | 15 | 1 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 13 | 0 |
+| [`fsx`](services/fsx.yml) | 14 | 3 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
-| [`fsx`](services/fsx.yml) | 14 | 0 | 0 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 2 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
 | [`health`](services/health.yml) | 13 | 0 | 0 |
@@ -277,13 +277,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1247 |
-| `Get` | 1169 |
-| `Describe` | 1118 |
-| `Delete` | 1050 |
+| `List` | 1249 |
+| `Get` | 1171 |
+| `Describe` | 1121 |
+| `Delete` | 1051 |
 | `Create` | 949 |
-| `Update` | 730 |
-| `Put` | 262 |
+| `Update` | 733 |
+| `Put` | 263 |
 | `Start` | 160 |
 | `Tag` | 129 |
 | `Untag` | 128 |

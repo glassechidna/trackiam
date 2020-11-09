@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
   "CreateDate": "2019-01-10T21:01:28Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIOOYZSLZZXWFJJ5N2",
   "PolicyName": "AWSBackupServiceRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2020-09-14T22:33:50Z",
+    "CreateDate": "2020-11-09T16:50:56Z",
     "Document": {
       "Statement": [
         {
@@ -15,6 +15,19 @@
           "Condition": {
             "Bool": {
               "kms:GrantIsForAWSResource": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:ModifyImageAttribute",
+            "ec2:ModifySnapshotAttribute"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/aws:backup:source-resource": "false"
             }
           },
           "Effect": "Allow",
@@ -35,6 +48,34 @@
           "Resource": "arn:aws:kms:*:*:key/*"
         },
         {
+          "Action": "fsx:CreateBackup",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:fsx:*:*:backup/*",
+            "arn:aws:fsx:*:*:file-system/*"
+          ]
+        },
+        {
+          "Action": "fsx:DeleteBackup",
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:backup/*"
+        },
+        {
+          "Action": "fsx:DescribeBackups",
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:backup/*"
+        },
+        {
+          "Action": "fsx:DescribeFileSystems",
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:file-system/*"
+        },
+        {
+          "Action": "fsx:ListTagsForResource",
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:file-system/*"
+        },
+        {
           "Action": "kms:DescribeKey",
           "Effect": "Allow",
           "Resource": "*"
@@ -49,6 +90,7 @@
         },
         {
           "Action": [
+            "backup:CopyFromBackupVault",
             "backup:CopyIntoBackupVault",
             "backup:DescribeBackupVault"
           ],
@@ -162,7 +204,8 @@
         },
         {
           "Action": [
-            "rds:DeleteDBClusterSnapshot"
+            "rds:DeleteDBClusterSnapshot",
+            "rds:ModifyDBClusterSnapshotAttribute"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -171,7 +214,8 @@
         },
         {
           "Action": [
-            "rds:DeleteDBSnapshot"
+            "rds:DeleteDBSnapshot",
+            "rds:ModifyDBSnapshotAttribute"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -205,7 +249,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2020-09-14T22:33:50Z"
+  "UpdateDate": "2020-11-09T16:50:56Z"
 }

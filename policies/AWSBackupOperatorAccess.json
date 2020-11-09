@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupOperatorAccess",
   "CreateDate": "2019-11-18T22:23:17Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KHXVYMY4O",
   "PolicyName": "AWSBackupOperatorAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-09-14T22:35:03Z",
+    "CreateDate": "2020-11-09T16:43:44Z",
     "Document": {
       "Statement": [
         {
@@ -22,6 +22,21 @@
             "arn:aws:iam::*:role/*AWSBackup*",
             "arn:aws:iam::*:role/*AwsBackup*"
           ]
+        },
+        {
+          "Action": "ds:DescribeDirectories",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "fsx:DescribeBackups",
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:backup/*"
+        },
+        {
+          "Action": "fsx:DescribeFileSystems",
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:file-system/*"
         },
         {
           "Action": "organizations:DescribeOrganization",
@@ -154,7 +169,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2020-09-14T22:35:03Z"
+  "UpdateDate": "2020-11-09T16:43:44Z"
 }

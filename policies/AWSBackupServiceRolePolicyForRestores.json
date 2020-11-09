@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForRestores",
   "CreateDate": "2019-01-12T00:23:54Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJZCCL6F2WPVOUXZKI",
   "PolicyName": "AWSBackupServiceRolePolicyForRestores",
   "PolicyVersion": {
-    "CreateDate": "2020-05-29T21:48:32Z",
+    "CreateDate": "2020-11-09T16:52:12Z",
     "Document": {
       "Statement": [
         {
@@ -19,6 +19,19 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "fsx:DeleteFileSystem",
+            "fsx:UntagResource"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/aws:backup:source-resource": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:file-system/*"
         },
         {
           "Action": [
@@ -40,6 +53,21 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": "ds:DescribeDirectories",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "fsx:DescribeBackups",
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:backup/*"
+        },
+        {
+          "Action": "fsx:DescribeFileSystems",
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:file-system/*"
         },
         {
           "Action": "kms:DescribeKey",
@@ -112,6 +140,16 @@
         },
         {
           "Action": [
+            "fsx:CreateFileSystemFromBackup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:fsx:*:*:backup/*",
+            "arn:aws:fsx:*:*:file-system/*"
+          ]
+        },
+        {
+          "Action": [
             "rds:AddTagsToResource",
             "rds:DeleteDBCluster",
             "rds:DeleteDBInstance",
@@ -154,7 +192,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2020-05-29T21:48:32Z"
+  "UpdateDate": "2020-11-09T16:52:12Z"
 }

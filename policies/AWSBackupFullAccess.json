@@ -1,15 +1,27 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupFullAccess",
   "CreateDate": "2019-11-18T22:21:52Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LL52EIPJX",
   "PolicyName": "AWSBackupFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-09-14T22:35:25Z",
+    "CreateDate": "2020-11-09T16:49:24Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "fsx:DeleteBackup",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "backup.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:backup/*"
+        },
         {
           "Action": "iam:PassRole",
           "Condition": {
@@ -96,6 +108,21 @@
           "Resource": "*"
         },
         {
+          "Action": "ds:DescribeDirectories",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "fsx:DescribeBackups",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "fsx:DescribeFileSystems",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
           "Action": "organizations:DescribeOrganization",
           "Effect": "Allow",
           "Resource": "*"
@@ -168,7 +195,6 @@
             "rds:describeDBClusters",
             "rds:describeDBEngineVersions",
             "rds:describeDBParameterGroups",
-            "rds:describeDBSnapshots",
             "rds:describeDBSubnetGroups",
             "rds:describeOptionGroups",
             "rds:describeOrderableDBInstanceOptions"
@@ -221,7 +247,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2020-09-14T22:35:25Z"
+  "UpdateDate": "2020-11-09T16:49:24Z"
 }
