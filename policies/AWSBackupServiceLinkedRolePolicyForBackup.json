@@ -1,15 +1,82 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBackupServiceLinkedRolePolicyForBackup",
   "CreateDate": "2020-06-02T23:08:40Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ONJBD4ZY2",
   "PolicyName": "AWSBackupServiceLinkedRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2020-06-02T23:08:40Z",
+    "CreateDate": "2020-11-10T18:37:51Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "AWSBackupManagedResource"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*::image/*",
+            "arn:aws:ec2:*::snapshot/*"
+          ]
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "Null": {
+              "ec2:ResourceTag/AWSBackupManagedResource": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*::image/*",
+            "arn:aws:ec2:*::snapshot/*"
+          ]
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": "CopySnapshot"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::snapshot/*"
+        },
+        {
+          "Action": "kms:CreateGrant",
+          "Condition": {
+            "Bool": {
+              "kms:GrantIsForAWSResource": "true"
+            },
+            "StringLike": {
+              "kms:ViaService": [
+                "ec2.*.amazonaws.com",
+                "rds.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DeleteSnapshot",
+            "ec2:DeregisterImage"
+          ],
+          "Condition": {
+            "Null": {
+              "ec2:ResourceTag/AWSBackupManagedResource": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "elasticfilesystem:Backup",
@@ -25,6 +92,66 @@
         },
         {
           "Action": [
+            "kms:GenerateDataKeyWithoutPlaintext",
+            "kms:ListGrants",
+            "kms:ReEncryptFrom"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": [
+                "ec2.*.amazonaws.com",
+                "rds.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "ec2:CopyImage",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "ec2:CopySnapshot",
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::snapshot/*"
+        },
+        {
+          "Action": "kms:DescribeKey",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeImages",
+            "ec2:DescribeSnapshots",
+            "rds:DescribeDBClusterSnapshots",
+            "rds:DescribeDBSnapshots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "rds:AddTagsToResource",
+            "rds:CopyDBClusterSnapshot",
+            "rds:DeleteDBClusterSnapshot"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:rds:*:*:cluster-snapshot:awsbackup:*"
+        },
+        {
+          "Action": [
+            "rds:AddTagsToResource",
+            "rds:CopyDBSnapshot",
+            "rds:DeleteDBSnapshot"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:rds:*:*:snapshot:awsbackup:*"
+        },
+        {
+          "Action": [
             "tag:GetResources"
           ],
           "Effect": "Allow",
@@ -34,7 +161,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-06-02T23:08:40Z"
+  "UpdateDate": "2020-11-10T18:37:51Z"
 }
