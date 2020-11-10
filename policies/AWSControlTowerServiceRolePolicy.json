@@ -1,19 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSControlTowerServiceRolePolicy",
   "CreateDate": "2019-05-03T18:19:11Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4MW35THVLF",
   "PolicyName": "AWSControlTowerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-08-10T19:17:12Z",
+    "CreateDate": "2020-11-10T21:08:05Z",
     "Document": {
       "Statement": [
         {
           "Action": "organizations:EnableAWSServiceAccess",
           "Condition": {
-            "ForAllValues:StringLike": {
+            "StringLike": {
               "organizations:ServicePrincipal": "config.amazonaws.com"
             }
           },
@@ -171,7 +171,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2020-08-10T19:17:12Z"
+  "UpdateDate": "2020-11-10T21:08:05Z"
 }
