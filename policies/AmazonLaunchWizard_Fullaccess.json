@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLaunchWizard_Fullaccess",
   "CreateDate": "2020-08-06T17:47:30Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ABPQ7BLC2",
   "PolicyName": "AmazonLaunchWizard_Fullaccess",
   "PolicyVersion": {
-    "CreateDate": "2020-10-09T22:27:30Z",
+    "CreateDate": "2020-11-11T20:26:48Z",
     "Document": {
       "Statement": [
         {
@@ -167,7 +167,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:logs:*:*:log-group:*:*:*",
-            "arn:aws:logs:::log-group:LaunchWizard*"
+            "arn:aws:logs:*:*:log-group:LaunchWizard*"
           ]
         },
         {
@@ -203,7 +203,7 @@
             "arn:aws:autoscaling:*:*:autoScalingGroup:*:autoScalingGroupName/LaunchWizard*",
             "arn:aws:autoscaling:*:*:launchConfiguration:*:launchConfigurationName/LaunchWizard*",
             "arn:aws:logs:*:*:log-group:*:*:*",
-            "arn:aws:logs:::log-group:LaunchWizard*",
+            "arn:aws:logs:*:*:log-group:LaunchWizard*",
             "arn:aws:resource-groups:*:*:group/LaunchWizard*",
             "arn:aws:sns:*:*:*",
             "arn:aws:ssm:*:*:document/LaunchWizard*",
@@ -290,7 +290,7 @@
             "cloudformation:List*"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:cloudformation:::stack/LaunchWizard*/"
+          "Resource": "arn:aws:cloudformation:*:*:stack/LaunchWizard*/"
         },
         {
           "Action": [
@@ -379,7 +379,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:logs:*:*:log-group:*:*:*",
-            "arn:aws:logs:::log-group:LaunchWizard*",
+            "arn:aws:logs:*:*:log-group:LaunchWizard*",
             "arn:aws:ssm:*:*:document/LaunchWizard*",
             "arn:aws:ssm:*:*:parameter/LaunchWizard*"
           ]
@@ -399,16 +399,15 @@
           "Action": [
             "s3:GetBucketLocation",
             "s3:ListAllMyBuckets",
-            "s3:ListBucket",
-            "s3:ListObjects",
-            "s3:ListObjectsV2"
+            "s3:ListBucket"
           ],
           "Effect": "Allow",
           "Resource": "*"
         },
         {
           "Action": [
-            "s3:GetObject"
+            "s3:GetObject",
+            "s3:PutObject"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -436,7 +435,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-10-09T22:27:30Z"
+  "UpdateDate": "2020-11-11T20:26:48Z"
 }
