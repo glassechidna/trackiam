@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSQuicksightAthenaAccess",
   "CreateDate": "2016-12-09T02:31:03Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAI4JB77JXFQXDWNRPM",
   "PolicyName": "AWSQuicksightAthenaAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-06-25T16:24:58Z",
+    "CreateDate": "2020-11-11T02:12:40Z",
     "Document": {
       "Statement": [
         {
@@ -29,7 +29,10 @@
             "athena:GetTableMetadata",
             "athena:GetTables",
             "athena:GetWorkGroup",
+            "athena:ListDataCatalogs",
+            "athena:ListDatabases",
             "athena:ListQueryExecutions",
+            "athena:ListTableMetadata",
             "athena:ListWorkGroups",
             "athena:RunQuery",
             "athena:StartQueryExecution",
@@ -96,7 +99,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2020-06-25T16:24:58Z"
+  "UpdateDate": "2020-11-11T02:12:40Z"
 }
