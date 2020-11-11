@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 236
-* Unique actions: 8931
+* Unique services: 237
+* Unique actions: 8969
 * Managed policies: 727
 
 Most common managed policy name prefixes:
@@ -239,6 +239,7 @@ The following table summarises the AWS APIs.
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 42 |
+| [`databrew`](services/databrew.yml) | 0 | 0 | 38 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
@@ -277,14 +278,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1249 |
+| `List` | 1257 |
 | `Get` | 1171 |
-| `Describe` | 1121 |
-| `Delete` | 1051 |
-| `Create` | 949 |
-| `Update` | 733 |
+| `Describe` | 1126 |
+| `Delete` | 1056 |
+| `Create` | 955 |
+| `Update` | 739 |
 | `Put` | 263 |
-| `Start` | 160 |
-| `Tag` | 129 |
-| `Untag` | 128 |
+| `Start` | 162 |
+| `Tag` | 130 |
+| `Untag` | 129 |
 
