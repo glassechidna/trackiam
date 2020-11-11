@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 237
-* Unique actions: 8969
+* Unique actions: 8970
 * Managed policies: 728
 
 Most common managed policy name prefixes:
@@ -101,6 +101,7 @@ The following table summarises the AWS APIs.
 | [`logs`](services/logs.yml) | 39 | 3 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
+| [`databrew`](services/databrew.yml) | 37 | 1 | 1 |
 | [`codepipeline`](services/codepipeline.yml) | 37 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 2 |
 | [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
@@ -239,7 +240,6 @@ The following table summarises the AWS APIs.
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 42 |
-| [`databrew`](services/databrew.yml) | 0 | 0 | 38 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |

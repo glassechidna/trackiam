@@ -1,6 +1,4 @@
 Actions:
-
-  # actions with no corresponding API
   - Name: databrew:BatchDeleteRecipeVersion
   - Name: databrew:CreateDataset
   - Name: databrew:CreateProfileJob
@@ -27,7 +25,6 @@ Actions:
   - Name: databrew:ListSchedules
   - Name: databrew:ListTagsForResource
   - Name: databrew:PublishRecipe
-  - Name: databrew:SetProjectSessionAction
   - Name: databrew:StartJobRun
   - Name: databrew:StartProjectSession
   - Name: databrew:StopJobRun
@@ -39,3 +36,9 @@ Actions:
   - Name: databrew:UpdateRecipe
   - Name: databrew:UpdateRecipeJob
   - Name: databrew:UpdateSchedule
+
+  # actions with no corresponding API
+  - Name: databrew:SetProjectSessionAction
+
+  # APIs without an IAM action
+  - Name: databrew:SendProjectSessionAction
