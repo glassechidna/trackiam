@@ -179,7 +179,7 @@ The following table summarises the AWS APIs.
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
-| [`license-manager`](services/license-manager.yml) | 15 | 1 | 0 |
+| [`license-manager`](services/license-manager.yml) | 16 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 13 | 0 |
 | [`fsx`](services/fsx.yml) | 14 | 3 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
