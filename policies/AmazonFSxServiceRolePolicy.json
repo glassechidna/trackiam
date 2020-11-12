@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonFSxServiceRolePolicy",
   "CreateDate": "2018-11-28T10:38:37Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIVQ24YKVRBV5IYQ5G",
   "PolicyName": "AmazonFSxServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-06-18T13:25:32Z",
+    "CreateDate": "2020-11-12T20:19:45Z",
     "Document": {
       "Statement": [
         {
@@ -19,10 +19,12 @@
             "ec2:CreateNetworkInterface",
             "ec2:CreateNetworkInterfacePermission",
             "ec2:DeleteNetworkInterface",
+            "ec2:DescribeAddresses",
             "ec2:DescribeNetworkInterfaces",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcs",
+            "ec2:DisassociateAddress",
             "route53:AssociateVPCWithHostedZone"
           ],
           "Effect": "Allow",
@@ -32,7 +34,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-06-18T13:25:32Z"
+  "UpdateDate": "2020-11-12T20:19:45Z"
 }
