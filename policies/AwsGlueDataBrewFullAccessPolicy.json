@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AwsGlueDataBrewFullAccessPolicy",
   "CreateDate": "2020-11-11T16:51:39Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ACNRIK7M3",
   "PolicyName": "AwsGlueDataBrewFullAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-11-11T16:51:39Z",
+    "CreateDate": "2020-11-12T23:04:55Z",
     "Document": {
       "Statement": [
         {
@@ -68,12 +68,22 @@
           "Resource": [
             "*"
           ]
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::databrew-public-datasets-*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-11-11T16:51:39Z"
+  "UpdateDate": "2020-11-12T23:04:55Z"
 }

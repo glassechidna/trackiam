@@ -1,13 +1,17 @@
 Actions:
   - Name: servicecatalog:AcceptPortfolioShare
+  - Name: servicecatalog:AssociateAttributeGroup
   - Name: servicecatalog:AssociateBudgetWithResource
   - Name: servicecatalog:AssociatePrincipalWithPortfolio
   - Name: servicecatalog:AssociateProductWithPortfolio
+  - Name: servicecatalog:AssociateResource
   - Name: servicecatalog:AssociateServiceActionWithProvisioningArtifact
   - Name: servicecatalog:AssociateTagOptionWithResource
   - Name: servicecatalog:BatchAssociateServiceActionWithProvisioningArtifact
   - Name: servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact
   - Name: servicecatalog:CopyProduct
+  - Name: servicecatalog:CreateApplication
+  - Name: servicecatalog:CreateAttributeGroup
   - Name: servicecatalog:CreateConstraint
   - Name: servicecatalog:CreatePortfolio
   - Name: servicecatalog:CreatePortfolioShare
@@ -16,6 +20,8 @@ Actions:
   - Name: servicecatalog:CreateProvisioningArtifact
   - Name: servicecatalog:CreateServiceAction
   - Name: servicecatalog:CreateTagOption
+  - Name: servicecatalog:DeleteApplication
+  - Name: servicecatalog:DeleteAttributeGroup
   - Name: servicecatalog:DeleteConstraint
   - Name: servicecatalog:DeletePortfolio
   - Name: servicecatalog:DeletePortfolioShare
@@ -40,16 +46,24 @@ Actions:
   - Name: servicecatalog:DescribeServiceActionExecutionParameters
   - Name: servicecatalog:DescribeTagOption
   - Name: servicecatalog:DisableAWSOrganizationsAccess
+  - Name: servicecatalog:DisassociateAttributeGroup
   - Name: servicecatalog:DisassociateBudgetFromResource
   - Name: servicecatalog:DisassociatePrincipalFromPortfolio
   - Name: servicecatalog:DisassociateProductFromPortfolio
+  - Name: servicecatalog:DisassociateResource
   - Name: servicecatalog:DisassociateServiceActionFromProvisioningArtifact
   - Name: servicecatalog:DisassociateTagOptionFromResource
   - Name: servicecatalog:EnableAWSOrganizationsAccess
   - Name: servicecatalog:ExecuteProvisionedProductPlan
   - Name: servicecatalog:ExecuteProvisionedProductServiceAction
   - Name: servicecatalog:GetAWSOrganizationsAccessStatus
+  - Name: servicecatalog:GetApplication
+  - Name: servicecatalog:GetAttributeGroup
   - Name: servicecatalog:ListAcceptedPortfolioShares
+  - Name: servicecatalog:ListApplications
+  - Name: servicecatalog:ListAssociatedAttributeGroups
+  - Name: servicecatalog:ListAssociatedResources
+  - Name: servicecatalog:ListAttributeGroups
   - Name: servicecatalog:ListBudgetsForResource
   - Name: servicecatalog:ListConstraintsForPortfolio
   - Name: servicecatalog:ListLaunchPaths
@@ -74,6 +88,8 @@ Actions:
   - Name: servicecatalog:SearchProductsAsAdmin
   - Name: servicecatalog:SearchProvisionedProducts
   - Name: servicecatalog:TerminateProvisionedProduct
+  - Name: servicecatalog:UpdateApplication
+  - Name: servicecatalog:UpdateAttributeGroup
   - Name: servicecatalog:UpdateConstraint
   - Name: servicecatalog:UpdatePortfolio
   - Name: servicecatalog:UpdateProduct
@@ -83,21 +99,8 @@ Actions:
   - Name: servicecatalog:UpdateServiceAction
   - Name: servicecatalog:UpdateTagOption
 
+  # actions with no corresponding API
+  - Name: servicecatalog:ImportAsProvisionedProduct
+
   # APIs without an IAM action
-  - Name: servicecatalog:AssociateAttributeGroup
-  - Name: servicecatalog:AssociateResource
-  - Name: servicecatalog:CreateApplication
-  - Name: servicecatalog:CreateAttributeGroup
-  - Name: servicecatalog:DeleteApplication
-  - Name: servicecatalog:DeleteAttributeGroup
-  - Name: servicecatalog:DisassociateAttributeGroup
-  - Name: servicecatalog:DisassociateResource
-  - Name: servicecatalog:GetApplication
-  - Name: servicecatalog:GetAttributeGroup
   - Name: servicecatalog:GetProvisionedProductOutputs
-  - Name: servicecatalog:ListApplications
-  - Name: servicecatalog:ListAssociatedAttributeGroups
-  - Name: servicecatalog:ListAssociatedResources
-  - Name: servicecatalog:ListAttributeGroups
-  - Name: servicecatalog:UpdateApplication
-  - Name: servicecatalog:UpdateAttributeGroup

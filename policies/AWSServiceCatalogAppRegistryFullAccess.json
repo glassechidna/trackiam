@@ -1,0 +1,43 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSServiceCatalogAppRegistryFullAccess",
+  "CreateDate": "2020-11-12T22:25:58Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4N2G3EPAYN",
+  "PolicyName": "AWSServiceCatalogAppRegistryFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-11-12T22:25:58Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudformation:DescribeStacks",
+            "servicecatalog:AssociateAttributeGroup",
+            "servicecatalog:AssociateResource",
+            "servicecatalog:CreateApplication",
+            "servicecatalog:CreateAttributeGroup",
+            "servicecatalog:DeleteApplication",
+            "servicecatalog:DeleteAttributeGroup",
+            "servicecatalog:DisassociateAttributeGroup",
+            "servicecatalog:DisassociateResource",
+            "servicecatalog:GetApplication",
+            "servicecatalog:GetAttributeGroup",
+            "servicecatalog:ListApplications",
+            "servicecatalog:ListAssociatedAttributeGroups",
+            "servicecatalog:ListAssociatedResources",
+            "servicecatalog:ListAttributeGroups",
+            "servicecatalog:UpdateApplication",
+            "servicecatalog:UpdateAttributeGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-11-12T22:25:58Z"
+}

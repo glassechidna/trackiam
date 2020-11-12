@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 237
-* Unique actions: 8999
-* Managed policies: 729
+* Unique actions: 9000
+* Managed policies: 731
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 208 |
+| `arn:aws:iam::aws:policy/AWS*` | 210 |
 | `arn:aws:iam::aws:policy/Amazon*` | 195 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 132 |
 | `arn:aws:iam::aws:policy/service-role/*` | 113 |
@@ -47,10 +47,10 @@ The following table summarises the AWS APIs.
 | [`ses`](services/ses.yml) | 103 | 34 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 40 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
+| [`servicecatalog`](services/servicecatalog.yml) | 99 | 1 | 1 |
 | [`greengrass`](services/greengrass.yml) | 90 | 2 | 1 |
 | [`gamelift`](services/gamelift.yml) | 90 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 88 | 4 | 18 |
-| [`servicecatalog`](services/servicecatalog.yml) | 83 | 17 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`config`](services/config.yml) | 79 | 0 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 78 | 6 | 1 |
