@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 237
-* Unique actions: 8969
+* Unique actions: 8999
 * Managed policies: 729
 
 Most common managed policy name prefixes:
@@ -45,12 +45,12 @@ The following table summarises the AWS APIs.
 | [`chime`](services/chime.yml) | 119 | 0 | 50 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
 | [`ses`](services/ses.yml) | 103 | 34 | 0 |
-| [`lightsail`](services/lightsail.yml) | 101 | 26 | 0 |
+| [`lightsail`](services/lightsail.yml) | 101 | 40 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 90 | 2 | 1 |
 | [`gamelift`](services/gamelift.yml) | 90 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 88 | 4 | 18 |
-| [`servicecatalog`](services/servicecatalog.yml) | 83 | 1 | 0 |
+| [`servicecatalog`](services/servicecatalog.yml) | 83 | 17 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`config`](services/config.yml) | 79 | 0 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 78 | 6 | 1 |
@@ -278,12 +278,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1257 |
-| `Get` | 1171 |
+| `List` | 1261 |
+| `Get` | 1180 |
 | `Describe` | 1126 |
-| `Delete` | 1056 |
-| `Create` | 955 |
-| `Update` | 739 |
+| `Delete` | 1060 |
+| `Create` | 960 |
+| `Update` | 742 |
 | `Put` | 263 |
 | `Start` | 162 |
 | `Tag` | 130 |
