@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 237
-* Unique actions: 9007
+* Unique actions: 9009
 * Managed policies: 731
 
 Most common managed policy name prefixes:
@@ -48,6 +48,7 @@ The following table summarises the AWS APIs.
 | [`lightsail`](services/lightsail.yml) | 101 | 40 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`servicecatalog`](services/servicecatalog.yml) | 99 | 1 | 1 |
+| [`quicksight`](services/quicksight.yml) | 99 | 0 | 15 |
 | [`greengrass`](services/greengrass.yml) | 90 | 2 | 1 |
 | [`gamelift`](services/gamelift.yml) | 90 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 88 | 4 | 18 |
@@ -59,7 +60,6 @@ The following table summarises the AWS APIs.
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
-| [`quicksight`](services/quicksight.yml) | 71 | 28 | 13 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 59 | 16 | 0 |
@@ -89,11 +89,11 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
 | [`dms`](services/dms.yml) | 45 | 8 | 0 |
+| [`dynamodb`](services/dynamodb.yml) | 45 | 3 | 6 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
 | [`codebuild`](services/codebuild.yml) | 43 | 0 | 8 |
 | [`securityhub`](services/securityhub.yml) | 43 | 0 | 0 |
-| [`dynamodb`](services/dynamodb.yml) | 42 | 6 | 6 |
 | [`imagebuilder`](services/imagebuilder.yml) | 41 | 1 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`wafv2`](services/wafv2.yml) | 40 | 0 | 2 |

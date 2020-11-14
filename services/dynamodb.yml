@@ -10,6 +10,7 @@ Actions:
   - Name: dynamodb:DescribeBackup
   - Name: dynamodb:DescribeContinuousBackups
   - Name: dynamodb:DescribeContributorInsights
+  - Name: dynamodb:DescribeExport
   - Name: dynamodb:DescribeGlobalTable
   - Name: dynamodb:DescribeGlobalTableSettings
   - Name: dynamodb:DescribeLimits
@@ -17,11 +18,13 @@ Actions:
   - Name: dynamodb:DescribeTable
   - Name: dynamodb:DescribeTableReplicaAutoScaling
   - Name: dynamodb:DescribeTimeToLive
+  - Name: dynamodb:ExportTableToPointInTime
   - Name: dynamodb:GetItem
   - Name: dynamodb:GetRecords
   - Name: dynamodb:GetShardIterator
   - Name: dynamodb:ListBackups
   - Name: dynamodb:ListContributorInsights
+  - Name: dynamodb:ListExports
   - Name: dynamodb:ListGlobalTables
   - Name: dynamodb:ListStreams
   - Name: dynamodb:ListTables
@@ -52,8 +55,5 @@ Actions:
 
   # APIs without an IAM action
   - Name: dynamodb:DescribeEndpoints
-  - Name: dynamodb:DescribeExport
-  - Name: dynamodb:ExportTableToPointInTime
-  - Name: dynamodb:ListExports
   - Name: dynamodb:TransactGetItems
   - Name: dynamodb:TransactWriteItems

@@ -1,16 +1,24 @@
 Actions:
+  - Name: quicksight:CancelIngestion
   - Name: quicksight:CreateAccountCustomization
+  - Name: quicksight:CreateAnalysis
   - Name: quicksight:CreateDashboard
+  - Name: quicksight:CreateDataSet
+  - Name: quicksight:CreateDataSource
   - Name: quicksight:CreateGroup
   - Name: quicksight:CreateGroupMembership
   - Name: quicksight:CreateIAMPolicyAssignment
+  - Name: quicksight:CreateIngestion
   - Name: quicksight:CreateNamespace
   - Name: quicksight:CreateTemplate
   - Name: quicksight:CreateTemplateAlias
   - Name: quicksight:CreateTheme
   - Name: quicksight:CreateThemeAlias
   - Name: quicksight:DeleteAccountCustomization
+  - Name: quicksight:DeleteAnalysis
   - Name: quicksight:DeleteDashboard
+  - Name: quicksight:DeleteDataSet
+  - Name: quicksight:DeleteDataSource
   - Name: quicksight:DeleteGroup
   - Name: quicksight:DeleteGroupMembership
   - Name: quicksight:DeleteIAMPolicyAssignment
@@ -23,10 +31,17 @@ Actions:
   - Name: quicksight:DeleteUserByPrincipalId
   - Name: quicksight:DescribeAccountCustomization
   - Name: quicksight:DescribeAccountSettings
+  - Name: quicksight:DescribeAnalysis
+  - Name: quicksight:DescribeAnalysisPermissions
   - Name: quicksight:DescribeDashboard
   - Name: quicksight:DescribeDashboardPermissions
+  - Name: quicksight:DescribeDataSet
+  - Name: quicksight:DescribeDataSetPermissions
+  - Name: quicksight:DescribeDataSource
+  - Name: quicksight:DescribeDataSourcePermissions
   - Name: quicksight:DescribeGroup
   - Name: quicksight:DescribeIAMPolicyAssignment
+  - Name: quicksight:DescribeIngestion
   - Name: quicksight:DescribeNamespace
   - Name: quicksight:DescribeTemplate
   - Name: quicksight:DescribeTemplateAlias
@@ -37,12 +52,16 @@ Actions:
   - Name: quicksight:DescribeUser
   - Name: quicksight:GetDashboardEmbedUrl
   - Name: quicksight:GetSessionEmbedUrl
+  - Name: quicksight:ListAnalyses
   - Name: quicksight:ListDashboardVersions
   - Name: quicksight:ListDashboards
+  - Name: quicksight:ListDataSets
+  - Name: quicksight:ListDataSources
   - Name: quicksight:ListGroupMemberships
   - Name: quicksight:ListGroups
   - Name: quicksight:ListIAMPolicyAssignments
   - Name: quicksight:ListIAMPolicyAssignmentsForUser
+  - Name: quicksight:ListIngestions
   - Name: quicksight:ListNamespaces
   - Name: quicksight:ListTagsForResource
   - Name: quicksight:ListTemplateAliases
@@ -54,13 +73,22 @@ Actions:
   - Name: quicksight:ListUserGroups
   - Name: quicksight:ListUsers
   - Name: quicksight:RegisterUser
+  - Name: quicksight:RestoreAnalysis
+  - Name: quicksight:SearchAnalyses
+  - Name: quicksight:SearchDashboards
   - Name: quicksight:TagResource
   - Name: quicksight:UntagResource
   - Name: quicksight:UpdateAccountCustomization
   - Name: quicksight:UpdateAccountSettings
+  - Name: quicksight:UpdateAnalysis
+  - Name: quicksight:UpdateAnalysisPermissions
   - Name: quicksight:UpdateDashboard
   - Name: quicksight:UpdateDashboardPermissions
   - Name: quicksight:UpdateDashboardPublishedVersion
+  - Name: quicksight:UpdateDataSet
+  - Name: quicksight:UpdateDataSetPermissions
+  - Name: quicksight:UpdateDataSource
+  - Name: quicksight:UpdateDataSourcePermissions
   - Name: quicksight:UpdateGroup
   - Name: quicksight:UpdateIAMPolicyAssignment
   - Name: quicksight:UpdateTemplate
@@ -80,38 +108,10 @@ Actions:
   - Name: quicksight:GetAuthCode
   - Name: quicksight:GetGroupMapping
   - Name: quicksight:ListCustomPermissions
+  - Name: quicksight:PassDataSet
+  - Name: quicksight:PassDataSource
   - Name: quicksight:SearchDirectoryGroups
   - Name: quicksight:SetGroupMapping
   - Name: quicksight:Subscribe
   - Name: quicksight:Unsubscribe
   - Name: quicksight:UpdateCustomPermissions
-
-  # APIs without an IAM action
-  - Name: quicksight:CancelIngestion
-  - Name: quicksight:CreateAnalysis
-  - Name: quicksight:CreateDataSet
-  - Name: quicksight:CreateDataSource
-  - Name: quicksight:CreateIngestion
-  - Name: quicksight:DeleteAnalysis
-  - Name: quicksight:DeleteDataSet
-  - Name: quicksight:DeleteDataSource
-  - Name: quicksight:DescribeAnalysis
-  - Name: quicksight:DescribeAnalysisPermissions
-  - Name: quicksight:DescribeDataSet
-  - Name: quicksight:DescribeDataSetPermissions
-  - Name: quicksight:DescribeDataSource
-  - Name: quicksight:DescribeDataSourcePermissions
-  - Name: quicksight:DescribeIngestion
-  - Name: quicksight:ListAnalyses
-  - Name: quicksight:ListDataSets
-  - Name: quicksight:ListDataSources
-  - Name: quicksight:ListIngestions
-  - Name: quicksight:RestoreAnalysis
-  - Name: quicksight:SearchAnalyses
-  - Name: quicksight:SearchDashboards
-  - Name: quicksight:UpdateAnalysis
-  - Name: quicksight:UpdateAnalysisPermissions
-  - Name: quicksight:UpdateDataSet
-  - Name: quicksight:UpdateDataSetPermissions
-  - Name: quicksight:UpdateDataSource
-  - Name: quicksight:UpdateDataSourcePermissions
