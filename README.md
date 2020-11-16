@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 237
-* Unique actions: 9009
+* Unique actions: 9011
 * Managed policies: 731
 
 Most common managed policy name prefixes:
@@ -46,8 +46,8 @@ The following table summarises the AWS APIs.
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
 | [`ses`](services/ses.yml) | 103 | 34 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 40 | 0 |
+| [`servicecatalog`](services/servicecatalog.yml) | 100 | 1 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
-| [`servicecatalog`](services/servicecatalog.yml) | 99 | 1 | 1 |
 | [`quicksight`](services/quicksight.yml) | 99 | 0 | 15 |
 | [`greengrass`](services/greengrass.yml) | 90 | 2 | 1 |
 | [`gamelift`](services/gamelift.yml) | 90 | 0 | 0 |
@@ -72,8 +72,8 @@ The following table summarises the AWS APIs.
 | [`comprehend`](services/comprehend.yml) | 56 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 55 | 3 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 54 | 1 | 3 |
+| [`iotsitewise`](services/iotsitewise.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
-| [`iotsitewise`](services/iotsitewise.yml) | 54 | 0 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 53 | 0 | 0 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 50 | 1 | 3 |
@@ -88,7 +88,7 @@ The following table summarises the AWS APIs.
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
-| [`dms`](services/dms.yml) | 45 | 8 | 0 |
+| [`dms`](services/dms.yml) | 45 | 9 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 45 | 3 | 6 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
@@ -282,7 +282,7 @@ Most common action prefixes:
 | `Get` | 1180 |
 | `Describe` | 1128 |
 | `Delete` | 1061 |
-| `Create` | 961 |
+| `Create` | 962 |
 | `Update` | 743 |
 | `Put` | 263 |
 | `Start` | 162 |

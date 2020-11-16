@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess",
   "CreateDate": "2015-02-06T18:40:11Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAINUGF2JSOSUY76KYA",
   "PolicyName": "AmazonDynamoDBFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-11-25T18:58:22Z",
+    "CreateDate": "2020-11-16T18:19:47Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,7 @@
                 "contributorinsights.dynamodb.amazonaws.com",
                 "dax.amazonaws.com",
                 "dynamodb.application-autoscaling.amazonaws.com",
+                "kinesisreplication.dynamodb.amazonaws.com",
                 "replication.dynamodb.amazonaws.com"
               ]
             }
@@ -79,6 +80,9 @@
             "ec2:DescribeVpcs",
             "iam:GetRole",
             "iam:ListRoles",
+            "kinesis:DescribeStream",
+            "kinesis:DescribeStreamSummary",
+            "kinesis:ListStreams",
             "kms:DescribeKey",
             "kms:ListAliases",
             "lambda:CreateEventSourceMapping",
@@ -111,7 +115,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2019-11-25T18:58:22Z"
+  "UpdateDate": "2020-11-16T18:19:47Z"
 }
