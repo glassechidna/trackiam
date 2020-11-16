@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSHealthFullAccess",
   "CreateDate": "2016-12-06T12:30:31Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAI3CUMPCPEUPCSXC4Y",
   "PolicyName": "AWSHealthFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-12-22T14:25:03Z",
+    "CreateDate": "2020-11-16T18:11:34Z",
     "Document": {
       "Statement": [
         {
@@ -36,7 +36,10 @@
         {
           "Action": [
             "health:*",
-            "organizations:ListAccounts"
+            "organizations:DescribeAccount",
+            "organizations:ListAccounts",
+            "organizations:ListDelegatedAdministrators",
+            "organizations:ListParents"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -45,7 +48,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-12-22T14:25:03Z"
+  "UpdateDate": "2020-11-16T18:11:34Z"
 }
