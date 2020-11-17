@@ -1,0 +1,67 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSLambda_FullAccess",
+  "CreateDate": "2020-11-17T21:14:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4OXQPYWZ5D",
+  "PolicyName": "AWSLambda_FullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-11-17T21:14:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "lambda.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudformation:DescribeStacks",
+            "cloudformation:ListStackResources",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:ListMetrics",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "iam:GetPolicy",
+            "iam:GetPolicyVersion",
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListRolePolicies",
+            "iam:ListRoles",
+            "kms:ListAliases",
+            "lambda:*",
+            "logs:DescribeLogGroups",
+            "states:DescribeStateMachine",
+            "states:ListStateMachines",
+            "tag:GetResources",
+            "xray:BatchGetTraces",
+            "xray:GetTraceSummaries"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogStreams",
+            "logs:FilterLogEvents",
+            "logs:GetLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/lambda/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-11-17T21:14:08Z"
+}
