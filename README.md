@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 237
-* Unique actions: 9011
+* Unique actions: 9014
 * Managed policies: 731
 
 Most common managed policy name prefixes:
@@ -243,7 +243,7 @@ The following table summarises the AWS APIs.
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
-| [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 18 |
+| [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
@@ -278,7 +278,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1263 |
+| `List` | 1266 |
 | `Get` | 1180 |
 | `Describe` | 1128 |
 | `Delete` | 1061 |
