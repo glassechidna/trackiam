@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 238
-* Unique actions: 9043
+* Unique actions: 9061
 * Managed policies: 732
 
 Most common managed policy name prefixes:
@@ -42,7 +42,7 @@ The following table summarises the AWS APIs.
 | [`glue`](services/glue.yml) | 124 | 11 | 1 |
 | [`rds`](services/rds.yml) | 123 | 7 | 1 |
 | [`ssm`](services/ssm.yml) | 122 | 0 | 7 |
-| [`chime`](services/chime.yml) | 119 | 0 | 50 |
+| [`chime`](services/chime.yml) | 119 | 14 | 50 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
 | [`ses`](services/ses.yml) | 103 | 34 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 40 | 0 |
@@ -83,8 +83,8 @@ The following table summarises the AWS APIs.
 | [`backup`](services/backup.yml) | 48 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 48 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 48 | 0 | 0 |
+| [`connect`](services/connect.yml) | 47 | 4 | 6 |
 | [`lambda`](services/lambda.yml) | 47 | 2 | 3 |
-| [`connect`](services/connect.yml) | 47 | 0 | 6 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
@@ -124,6 +124,7 @@ The following table summarises the AWS APIs.
 | [`forecast`](services/forecast.yml) | 30 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 30 | 0 | 0 |
 | [`ce`](services/ce.yml) | 29 | 0 | 10 |
+| [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
 | [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
 | [`es`](services/es.yml) | 28 | 11 | 9 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
@@ -241,7 +242,6 @@ The following table summarises the AWS APIs.
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 42 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
-| [`network-firewall`](services/network-firewall.yml) | 0 | 0 | 29 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
@@ -279,13 +279,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1270 |
-| `Get` | 1180 |
+| `List` | 1272 |
+| `Get` | 1183 |
 | `Describe` | 1133 |
-| `Delete` | 1065 |
-| `Create` | 965 |
-| `Update` | 750 |
-| `Put` | 264 |
+| `Delete` | 1068 |
+| `Create` | 970 |
+| `Update` | 754 |
+| `Put` | 265 |
 | `Start` | 162 |
 | `Tag` | 131 |
 | `Untag` | 130 |
