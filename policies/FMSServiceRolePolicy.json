@@ -1,15 +1,150 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/FMSServiceRolePolicy",
   "CreateDate": "2018-03-28T23:01:12Z",
-  "DefaultVersionId": "v16",
+  "DefaultVersionId": "v17",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAI62NTGYJB446ACUEA",
   "PolicyName": "FMSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-09-08T18:03:00Z",
+    "CreateDate": "2020-11-17T17:35:16Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "FMManaged",
+                "Name"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:subnet/*"
+          ]
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "FMManaged",
+                "Name"
+              ]
+            },
+            "StringEquals": {
+              "ec2:CreateAction": "CreateRouteTable"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:route-table/*"
+        },
+        {
+          "Action": "ec2:DeleteRouteTable",
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/FMManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:route-table/*"
+        },
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "network-firewall.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "ram:CreateResourceShare",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "FMManaged",
+                "Name"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/FMManaged": [
+                "true"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "network-firewall:DeleteFirewall",
+            "network-firewall:DeleteFirewallPolicy"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/FMManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "network-firewall:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "FMManaged",
+                "Name"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ram:AssociateResourceShare",
+            "ram:DeleteResourceShare",
+            "ram:UpdateResourceShare"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/FMManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ram:*:*:resource-share/*"
+        },
+        {
+          "Action": [
+            "ram:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "FMManaged",
+                "Name"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ram:*:*:resource-share/*"
+          ]
+        },
+        {
+          "Action": "iam:GetRole",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "apigateway:SetWebACL",
@@ -88,6 +223,18 @@
         },
         {
           "Action": [
+            "ec2:AssociateRouteTable",
+            "ec2:CreateRouteTable",
+            "ec2:CreateSubnet",
+            "ec2:DeleteSubnet",
+            "ec2:DisassociateRouteTable",
+            "ec2:ReplaceRouteTableAssociation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "ec2:AuthorizeSecurityGroupEgress",
             "ec2:AuthorizeSecurityGroupIngress",
             "ec2:DeleteSecurityGroup",
@@ -149,6 +296,17 @@
         },
         {
           "Action": [
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeTags",
+            "ec2:DescribeVpcEndpoints"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "elasticloadbalancing:ApplySecurityGroupsToLoadBalancer"
           ],
           "Effect": "Allow",
@@ -163,6 +321,37 @@
           "Resource": [
             "arn:aws:iam::*:role/aws-service-role/fms.amazonaws.com/AWSServiceRoleForFMS"
           ]
+        },
+        {
+          "Action": [
+            "logs:ListLogDeliveries"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "network-firewall:AssociateFirewallPolicy",
+            "network-firewall:AssociateSubnets",
+            "network-firewall:CreateFirewall",
+            "network-firewall:CreateFirewallPolicy",
+            "network-firewall:DeleteResourcePolicy",
+            "network-firewall:DescribeFirewall",
+            "network-firewall:DescribeFirewallPolicy",
+            "network-firewall:DescribeResourcePolicy",
+            "network-firewall:DescribeRuleGroup",
+            "network-firewall:DisassociateSubnets",
+            "network-firewall:ListFirewallPolicies",
+            "network-firewall:ListFirewalls",
+            "network-firewall:ListRuleGroups",
+            "network-firewall:PutResourcePolicy",
+            "network-firewall:UpdateFirewallDeleteProtection",
+            "network-firewall:UpdateFirewallPolicy",
+            "network-firewall:UpdateFirewallPolicyChangeProtection",
+            "network-firewall:UpdateSubnetChangeProtection"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": [
@@ -283,12 +472,21 @@
           "Resource": [
             "arn:aws:wafv2:*:*:regional/webacl/*"
           ]
+        },
+        {
+          "Action": [
+            "ram:GetResourceShareAssociations",
+            "ram:GetResourceShares"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ram"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v16"
+    "VersionId": "v17"
   },
-  "UpdateDate": "2020-09-08T18:03:00Z"
+  "UpdateDate": "2020-11-17T17:35:16Z"
 }

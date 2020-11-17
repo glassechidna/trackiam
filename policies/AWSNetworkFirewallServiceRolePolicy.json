@@ -1,0 +1,55 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSNetworkFirewallServiceRolePolicy",
+  "CreateDate": "2020-11-17T17:17:26Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4DF6QQZAL3",
+  "PolicyName": "AWSNetworkFirewallServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-11-17T17:17:26Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/AWSNetworkFirewallManaged": "true",
+              "ec2:CreateAction": "CreateVpcEndpoint"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-endpoint/*"
+        },
+        {
+          "Action": [
+            "ec2:DeleteVpcEndpoints"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AWSNetworkFirewallManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateVpcEndpoint",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-11-17T17:17:26Z"
+}
