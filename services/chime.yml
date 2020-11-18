@@ -14,11 +14,15 @@ Actions:
   - Name: chime:CreateAttendee
   - Name: chime:CreateBot
   - Name: chime:CreateMeeting
+  - Name: chime:CreateMeetingDialOut
   - Name: chime:CreateMeetingWithAttendees
   - Name: chime:CreatePhoneNumberOrder
   - Name: chime:CreateProxySession
   - Name: chime:CreateRoom
   - Name: chime:CreateRoomMembership
+  - Name: chime:CreateSipMediaApplication
+  - Name: chime:CreateSipMediaApplicationCall
+  - Name: chime:CreateSipRule
   - Name: chime:CreateUser
   - Name: chime:CreateVoiceConnector
   - Name: chime:CreateVoiceConnectorGroup
@@ -30,6 +34,8 @@ Actions:
   - Name: chime:DeleteProxySession
   - Name: chime:DeleteRoom
   - Name: chime:DeleteRoomMembership
+  - Name: chime:DeleteSipMediaApplication
+  - Name: chime:DeleteSipRule
   - Name: chime:DeleteVoiceConnector
   - Name: chime:DeleteVoiceConnectorEmergencyCallingConfiguration
   - Name: chime:DeleteVoiceConnectorGroup
@@ -55,6 +61,9 @@ Actions:
   - Name: chime:GetProxySession
   - Name: chime:GetRetentionSettings
   - Name: chime:GetRoom
+  - Name: chime:GetSipMediaApplication
+  - Name: chime:GetSipMediaApplicationLoggingConfiguration
+  - Name: chime:GetSipRule
   - Name: chime:GetUser
   - Name: chime:GetUserSettings
   - Name: chime:GetVoiceConnector
@@ -78,6 +87,8 @@ Actions:
   - Name: chime:ListProxySessions
   - Name: chime:ListRoomMemberships
   - Name: chime:ListRooms
+  - Name: chime:ListSipMediaApplications
+  - Name: chime:ListSipRules
   - Name: chime:ListTagsForResource
   - Name: chime:ListUsers
   - Name: chime:ListVoiceConnectorGroups
@@ -86,6 +97,7 @@ Actions:
   - Name: chime:LogoutUser
   - Name: chime:PutEventsConfiguration
   - Name: chime:PutRetentionSettings
+  - Name: chime:PutSipMediaApplicationLoggingConfiguration
   - Name: chime:PutVoiceConnectorEmergencyCallingConfiguration
   - Name: chime:PutVoiceConnectorLoggingConfiguration
   - Name: chime:PutVoiceConnectorOrigination
@@ -114,6 +126,8 @@ Actions:
   - Name: chime:UpdateProxySession
   - Name: chime:UpdateRoom
   - Name: chime:UpdateRoomMembership
+  - Name: chime:UpdateSipMediaApplication
+  - Name: chime:UpdateSipRule
   - Name: chime:UpdateUser
   - Name: chime:UpdateUserSettings
   - Name: chime:UpdateVoiceConnector
@@ -170,19 +184,3 @@ Actions:
   - Name: chime:UpdateSupportedLicenses
   - Name: chime:UpdateUserLicenses
   - Name: chime:ValidateAccountResource
-
-  # APIs without an IAM action
-  - Name: chime:CreateMeetingDialOut
-  - Name: chime:CreateSipMediaApplication
-  - Name: chime:CreateSipMediaApplicationCall
-  - Name: chime:CreateSipRule
-  - Name: chime:DeleteSipMediaApplication
-  - Name: chime:DeleteSipRule
-  - Name: chime:GetSipMediaApplication
-  - Name: chime:GetSipMediaApplicationLoggingConfiguration
-  - Name: chime:GetSipRule
-  - Name: chime:ListSipMediaApplications
-  - Name: chime:ListSipRules
-  - Name: chime:PutSipMediaApplicationLoggingConfiguration
-  - Name: chime:UpdateSipMediaApplication
-  - Name: chime:UpdateSipRule
