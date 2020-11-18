@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 239
-* Unique actions: 9069
+* Unique actions: 9079
 * Managed policies: 736
 
 Most common managed policy name prefixes:
@@ -63,7 +63,7 @@ The following table summarises the AWS APIs.
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 59 | 16 | 0 |
-| [`s3`](services/s3.yml) | 58 | 56 | 39 |
+| [`s3`](services/s3.yml) | 58 | 63 | 39 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`route53`](services/route53.yml) | 57 | 0 | 0 |
@@ -77,10 +77,10 @@ The following table summarises the AWS APIs.
 | [`frauddetector`](services/frauddetector.yml) | 53 | 0 | 0 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 50 | 1 | 3 |
+| [`backup`](services/backup.yml) | 50 | 0 | 2 |
 | [`medialive`](services/medialive.yml) | 49 | 6 | 0 |
 | [`workmail`](services/workmail.yml) | 49 | 0 | 51 |
 | [`ecs`](services/ecs.yml) | 49 | 0 | 2 |
-| [`backup`](services/backup.yml) | 48 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 48 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 48 | 0 | 0 |
 | [`connect`](services/connect.yml) | 47 | 4 | 6 |
@@ -280,13 +280,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1272 |
-| `Get` | 1189 |
-| `Describe` | 1133 |
-| `Delete` | 1068 |
+| `List` | 1273 |
+| `Get` | 1191 |
+| `Describe` | 1134 |
+| `Delete` | 1070 |
 | `Create` | 971 |
-| `Update` | 754 |
-| `Put` | 266 |
+| `Update` | 755 |
+| `Put` | 268 |
 | `Start` | 162 |
 | `Tag` | 131 |
 | `Untag` | 130 |

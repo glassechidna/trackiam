@@ -11,6 +11,7 @@ Actions:
   - Name: backup:DescribeBackupJob
   - Name: backup:DescribeBackupVault
   - Name: backup:DescribeCopyJob
+  - Name: backup:DescribeGlobalSettings
   - Name: backup:DescribeProtectedResource
   - Name: backup:DescribeRecoveryPoint
   - Name: backup:DescribeRegionSettings
@@ -45,8 +46,10 @@ Actions:
   - Name: backup:TagResource
   - Name: backup:UntagResource
   - Name: backup:UpdateBackupPlan
+  - Name: backup:UpdateGlobalSettings
   - Name: backup:UpdateRecoveryPointLifecycle
   - Name: backup:UpdateRegionSettings
 
   # actions with no corresponding API
+  - Name: backup:CopyFromBackupVault
   - Name: backup:CopyIntoBackupVault
