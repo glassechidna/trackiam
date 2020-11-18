@@ -108,6 +108,7 @@ The following table summarises the AWS APIs.
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
+| [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
 | [`iotanalytics`](services/iotanalytics.yml) | 33 | 1 | 0 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 0 |
 | [`sns`](services/sns.yml) | 33 | 0 | 0 |
@@ -117,7 +118,6 @@ The following table summarises the AWS APIs.
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 32 | 5 | 8 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 32 | 0 | 0 |
-| [`codeartifact`](services/codeartifact.yml) | 31 | 3 | 4 |
 | [`datasync`](services/datasync.yml) | 31 | 1 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 0 | 0 |

@@ -26,8 +26,11 @@ Actions:
   - Name: codeartifact:ListPackages
   - Name: codeartifact:ListRepositories
   - Name: codeartifact:ListRepositoriesInDomain
+  - Name: codeartifact:ListTagsForResource
   - Name: codeartifact:PutDomainPermissionsPolicy
   - Name: codeartifact:PutRepositoryPermissionsPolicy
+  - Name: codeartifact:TagResource
+  - Name: codeartifact:UntagResource
   - Name: codeartifact:UpdatePackageVersionsStatus
   - Name: codeartifact:UpdateRepository
 
@@ -36,8 +39,3 @@ Actions:
   - Name: codeartifact:PublishPackageVersion
   - Name: codeartifact:PutPackageMetadata
   - Name: codeartifact:ReadFromRepository
-
-  # APIs without an IAM action
-  - Name: codeartifact:ListTagsForResource
-  - Name: codeartifact:TagResource
-  - Name: codeartifact:UntagResource
