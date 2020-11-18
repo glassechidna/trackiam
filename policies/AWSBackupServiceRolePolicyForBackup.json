@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
   "CreateDate": "2019-01-10T21:01:28Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIOOYZSLZZXWFJJ5N2",
   "PolicyName": "AWSBackupServiceRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2020-11-09T16:50:56Z",
+    "CreateDate": "2020-11-18T23:16:27Z",
     "Document": {
       "Statement": [
         {
@@ -90,7 +90,13 @@
         },
         {
           "Action": [
-            "backup:CopyFromBackupVault",
+            "backup:CopyFromBackupVault"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "backup:CopyIntoBackupVault",
             "backup:DescribeBackupVault"
           ],
@@ -249,7 +255,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2020-11-09T16:50:56Z"
+  "UpdateDate": "2020-11-18T23:16:27Z"
 }
