@@ -12,6 +12,8 @@ Actions:
   - Name: s3:DeleteJobTagging
   - Name: s3:DeleteObject
   - Name: s3:DeleteObjectTagging
+  - Name: s3:DeleteStorageLensConfiguration
+  - Name: s3:DeleteStorageLensConfigurationTagging
   - Name: s3:DescribeJob
   - Name: s3:GetAccessPoint
   - Name: s3:GetAccessPointPolicy
@@ -35,8 +37,11 @@ Actions:
   - Name: s3:GetObjectRetention
   - Name: s3:GetObjectTagging
   - Name: s3:GetObjectTorrent
+  - Name: s3:GetStorageLensConfiguration
+  - Name: s3:GetStorageLensConfigurationTagging
   - Name: s3:ListAccessPoints
   - Name: s3:ListJobs
+  - Name: s3:ListStorageLensConfigurations
   - Name: s3:PutAccessPointPolicy
   - Name: s3:PutBucketAcl
   - Name: s3:PutBucketCORS
@@ -54,6 +59,8 @@ Actions:
   - Name: s3:PutObjectLegalHold
   - Name: s3:PutObjectRetention
   - Name: s3:PutObjectTagging
+  - Name: s3:PutStorageLensConfiguration
+  - Name: s3:PutStorageLensConfigurationTagging
   - Name: s3:RestoreObject
   - Name: s3:UpdateJobPriority
   - Name: s3:UpdateJobStatus
@@ -77,6 +84,7 @@ Actions:
   - Name: s3:GetObjectVersionTagging
   - Name: s3:GetObjectVersionTorrent
   - Name: s3:GetReplicationConfiguration
+  - Name: s3:GetStorageLensDashboard
   - Name: s3:ListAllMyBuckets
   - Name: s3:ListBucket
   - Name: s3:ListBucketMultipartUploads
@@ -115,8 +123,6 @@ Actions:
   - Name: s3:DeleteBucketTagging
   - Name: s3:DeleteObjects
   - Name: s3:DeletePublicAccessBlock
-  - Name: s3:DeleteStorageLensConfiguration
-  - Name: s3:DeleteStorageLensConfigurationTagging
   - Name: s3:GetBucket
   - Name: s3:GetBucketAccelerateConfiguration
   - Name: s3:GetBucketAnalyticsConfiguration
@@ -130,8 +136,6 @@ Actions:
   - Name: s3:GetBucketReplication
   - Name: s3:GetObjectLockConfiguration
   - Name: s3:GetPublicAccessBlock
-  - Name: s3:GetStorageLensConfiguration
-  - Name: s3:GetStorageLensConfigurationTagging
   - Name: s3:HeadBucket
   - Name: s3:HeadObject
   - Name: s3:ListBucketAnalyticsConfigurations
@@ -145,7 +149,6 @@ Actions:
   - Name: s3:ListObjectsV2
   - Name: s3:ListParts
   - Name: s3:ListRegionalBuckets
-  - Name: s3:ListStorageLensConfigurations
   - Name: s3:PutBucketAccelerateConfiguration
   - Name: s3:PutBucketAnalyticsConfiguration
   - Name: s3:PutBucketEncryption
@@ -158,8 +161,6 @@ Actions:
   - Name: s3:PutBucketReplication
   - Name: s3:PutObjectLockConfiguration
   - Name: s3:PutPublicAccessBlock
-  - Name: s3:PutStorageLensConfiguration
-  - Name: s3:PutStorageLensConfigurationTagging
   - Name: s3:SelectObjectContent
   - Name: s3:UploadPart
   - Name: s3:UploadPartCopy

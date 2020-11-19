@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 239
-* Unique actions: 9079
+* Unique actions: 9082
 * Managed policies: 736
 
 Most common managed policy name prefixes:
@@ -60,10 +60,10 @@ The following table summarises the AWS APIs.
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
+| [`s3`](services/s3.yml) | 65 | 56 | 40 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 59 | 16 | 0 |
-| [`s3`](services/s3.yml) | 58 | 63 | 39 |
 | [`ds`](services/ds.yml) | 57 | 0 | 6 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`route53`](services/route53.yml) | 57 | 0 | 0 |
@@ -228,7 +228,7 @@ The following table summarises the AWS APIs.
 | [`s3-outposts`](services/s3-outposts.yml) | 3 | 0 | 29 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 2 | 19 | 0 |
-| [`honeycode`](services/honeycode.yml) | 2 | 0 | 3 |
+| [`honeycode`](services/honeycode.yml) | 2 | 0 | 5 |
 | [`pi`](services/pi.yml) | 2 | 0 | 0 |
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 0 | 0 |
@@ -280,11 +280,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1273 |
-| `Get` | 1191 |
+| `List` | 1274 |
+| `Get` | 1192 |
 | `Describe` | 1134 |
 | `Delete` | 1070 |
-| `Create` | 971 |
+| `Create` | 972 |
 | `Update` | 755 |
 | `Put` | 268 |
 | `Start` | 162 |
