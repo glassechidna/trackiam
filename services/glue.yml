@@ -12,6 +12,7 @@ Actions:
   - Name: glue:BatchGetWorkflows
   - Name: glue:BatchStopJobRun
   - Name: glue:CancelMLTaskRun
+  - Name: glue:CheckSchemaVersionValidity
   - Name: glue:CreateClassifier
   - Name: glue:CreateConnection
   - Name: glue:CreateCrawler
@@ -20,6 +21,8 @@ Actions:
   - Name: glue:CreateJob
   - Name: glue:CreateMLTransform
   - Name: glue:CreatePartition
+  - Name: glue:CreateRegistry
+  - Name: glue:CreateSchema
   - Name: glue:CreateScript
   - Name: glue:CreateSecurityConfiguration
   - Name: glue:CreateTable
@@ -34,7 +37,10 @@ Actions:
   - Name: glue:DeleteJob
   - Name: glue:DeleteMLTransform
   - Name: glue:DeletePartition
+  - Name: glue:DeleteRegistry
   - Name: glue:DeleteResourcePolicy
+  - Name: glue:DeleteSchema
+  - Name: glue:DeleteSchemaVersions
   - Name: glue:DeleteSecurityConfiguration
   - Name: glue:DeleteTable
   - Name: glue:DeleteTableVersion
@@ -68,7 +74,12 @@ Actions:
   - Name: glue:GetPartition
   - Name: glue:GetPartitions
   - Name: glue:GetPlan
+  - Name: glue:GetRegistry
   - Name: glue:GetResourcePolicy
+  - Name: glue:GetSchema
+  - Name: glue:GetSchemaByDefinition
+  - Name: glue:GetSchemaVersion
+  - Name: glue:GetSchemaVersionsDiff
   - Name: glue:GetSecurityConfiguration
   - Name: glue:GetSecurityConfigurations
   - Name: glue:GetTable
@@ -89,11 +100,18 @@ Actions:
   - Name: glue:ListDevEndpoints
   - Name: glue:ListJobs
   - Name: glue:ListMLTransforms
+  - Name: glue:ListRegistries
+  - Name: glue:ListSchemaVersions
+  - Name: glue:ListSchemas
   - Name: glue:ListTriggers
   - Name: glue:ListWorkflows
   - Name: glue:PutDataCatalogEncryptionSettings
   - Name: glue:PutResourcePolicy
+  - Name: glue:PutSchemaVersionMetadata
   - Name: glue:PutWorkflowRunProperties
+  - Name: glue:QuerySchemaVersionMetadata
+  - Name: glue:RegisterSchemaVersion
+  - Name: glue:RemoveSchemaVersionMetadata
   - Name: glue:ResetJobBookmark
   - Name: glue:SearchTables
   - Name: glue:StartCrawler
@@ -119,6 +137,8 @@ Actions:
   - Name: glue:UpdateJob
   - Name: glue:UpdateMLTransform
   - Name: glue:UpdatePartition
+  - Name: glue:UpdateRegistry
+  - Name: glue:UpdateSchema
   - Name: glue:UpdateTable
   - Name: glue:UpdateTrigger
   - Name: glue:UpdateUserDefinedFunction
@@ -129,33 +149,13 @@ Actions:
 
   # APIs without an IAM action
   - Name: glue:BatchUpdatePartition
-  - Name: glue:CheckSchemaVersionValidity
-  - Name: glue:CreateRegistry
-  - Name: glue:CreateSchema
   - Name: glue:DeleteColumnStatisticsForPartition
   - Name: glue:DeleteColumnStatisticsForTable
-  - Name: glue:DeleteRegistry
-  - Name: glue:DeleteSchema
-  - Name: glue:DeleteSchemaVersions
   - Name: glue:GetColumnStatisticsForPartition
   - Name: glue:GetColumnStatisticsForTable
   - Name: glue:GetPartitionIndexes
-  - Name: glue:GetRegistry
   - Name: glue:GetResourcePolicies
-  - Name: glue:GetSchema
-  - Name: glue:GetSchemaByDefinition
-  - Name: glue:GetSchemaVersion
-  - Name: glue:GetSchemaVersionsDiff
-  - Name: glue:ListRegistries
-  - Name: glue:ListSchemaVersions
-  - Name: glue:ListSchemas
-  - Name: glue:PutSchemaVersionMetadata
-  - Name: glue:QuerySchemaVersionMetadata
-  - Name: glue:RegisterSchemaVersion
-  - Name: glue:RemoveSchemaVersionMetadata
   - Name: glue:ResumeWorkflowRun
   - Name: glue:StopWorkflowRun
   - Name: glue:UpdateColumnStatisticsForPartition
   - Name: glue:UpdateColumnStatisticsForTable
-  - Name: glue:UpdateRegistry
-  - Name: glue:UpdateSchema

@@ -38,9 +38,9 @@ The following table summarises the AWS APIs.
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 414 | 9 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 156 | 1 | 2 |
+| [`glue`](services/glue.yml) | 144 | 11 | 1 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`chime`](services/chime.yml) | 133 | 0 | 50 |
-| [`glue`](services/glue.yml) | 124 | 31 | 1 |
 | [`rds`](services/rds.yml) | 123 | 7 | 1 |
 | [`ssm`](services/ssm.yml) | 122 | 0 | 7 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
