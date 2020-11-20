@@ -11,15 +11,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 239
-* Unique actions: 9106
-* Managed policies: 736
+* Unique services: 241
+* Unique actions: 9111
+* Managed policies: 738
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 212 |
+| `arn:aws:iam::aws:policy/AWS*` | 214 |
 | `arn:aws:iam::aws:policy/Amazon*` | 195 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 135 |
 | `arn:aws:iam::aws:policy/service-role/*` | 113 |
@@ -261,6 +261,7 @@ The following table summarises the AWS APIs.
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 5 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 4 |
+| [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 4 |
 | [`artifact`](services/artifact.yml) | 0 | 0 | 4 |
 | [`resource-explorer`](services/resource-explorer.yml) | 0 | 0 | 3 |
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |
@@ -272,6 +273,7 @@ The following table summarises the AWS APIs.
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 1 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 1 |
 | [`iq`](services/iq.yml) | 0 | 0 | 1 |
+| [`elemental-support-content`](services/elemental-support-content.yml) | 0 | 0 | 1 |
 | [`codeguru`](services/codeguru.yml) | 0 | 0 | 1 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 1 |
 | [`arsenal`](services/arsenal.yml) | 0 | 0 | 1 |
@@ -281,11 +283,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1277 |
-| `Get` | 1197 |
+| `Get` | 1199 |
 | `Describe` | 1135 |
 | `Delete` | 1073 |
-| `Create` | 975 |
-| `Update` | 757 |
+| `Create` | 976 |
+| `Update` | 758 |
 | `Put` | 269 |
 | `Start` | 162 |
 | `Tag` | 131 |

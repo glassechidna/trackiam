@@ -1,0 +1,40 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSGlueSchemaRegistryReadonlyAccess",
+  "CreateDate": "2020-11-20T00:20:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4B2SFYL4LZ",
+  "PolicyName": "AWSGlueSchemaRegistryReadonlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-11-20T00:20:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "glue:CheckSchemaVersionValidity",
+            "glue:GetRegistry",
+            "glue:GetSchema",
+            "glue:GetSchemaByDefinition",
+            "glue:GetSchemaVersion",
+            "glue:GetSchemaVersionsDiff",
+            "glue:GetTags",
+            "glue:ListRegistries",
+            "glue:ListSchemaVersions",
+            "glue:ListSchemas",
+            "glue:QuerySchemaVersionMetadata"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AWSGlueSchemaRegistryReadonlyAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-11-20T00:20:06Z"
+}

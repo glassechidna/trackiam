@@ -1,0 +1,62 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSGlueSchemaRegistryFullAccess",
+  "CreateDate": "2020-11-20T00:19:00Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4H2OHGXA4A",
+  "PolicyName": "AWSGlueSchemaRegistryFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-11-20T00:19:00Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "glue:CheckSchemaVersionValidity",
+            "glue:CreateRegistry",
+            "glue:CreateSchema",
+            "glue:DeleteRegistry",
+            "glue:DeleteSchema",
+            "glue:DeleteSchemaVersions",
+            "glue:GetRegistry",
+            "glue:GetSchema",
+            "glue:GetSchemaByDefinition",
+            "glue:GetSchemaVersion",
+            "glue:GetSchemaVersionsDiff",
+            "glue:ListRegistries",
+            "glue:ListSchemaVersions",
+            "glue:ListSchemas",
+            "glue:PutSchemaVersionMetadata",
+            "glue:QuerySchemaVersionMetadata",
+            "glue:RegisterSchemaVersion",
+            "glue:RemoveSchemaVersionMetadata",
+            "glue:UpdateRegistry",
+            "glue:UpdateSchema"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AWSGlueSchemaRegistryFullAccess"
+        },
+        {
+          "Action": [
+            "glue:GetTags",
+            "glue:TagResource",
+            "glue:UnTagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:registry/*",
+            "arn:aws:glue:*:*:schema/*"
+          ],
+          "Sid": "AWSGlueSchemaRegistryTagsFullAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-11-20T00:19:00Z"
+}
