@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 241
-* Unique actions: 9114
+* Unique actions: 9188
 * Managed policies: 738
 
 Most common managed policy name prefixes:
@@ -40,7 +40,7 @@ The following table summarises the AWS APIs.
 | [`sagemaker`](services/sagemaker.yml) | 156 | 1 | 2 |
 | [`glue`](services/glue.yml) | 144 | 11 | 1 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
-| [`chime`](services/chime.yml) | 133 | 0 | 50 |
+| [`chime`](services/chime.yml) | 133 | 48 | 50 |
 | [`rds`](services/rds.yml) | 123 | 7 | 1 |
 | [`ssm`](services/ssm.yml) | 122 | 0 | 7 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
@@ -76,6 +76,7 @@ The following table summarises the AWS APIs.
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 53 | 0 | 0 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
+| [`connect`](services/connect.yml) | 50 | 25 | 3 |
 | [`macie2`](services/macie2.yml) | 50 | 1 | 3 |
 | [`backup`](services/backup.yml) | 50 | 0 | 2 |
 | [`medialive`](services/medialive.yml) | 49 | 6 | 0 |
@@ -83,7 +84,6 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 49 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 48 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 48 | 0 | 0 |
-| [`connect`](services/connect.yml) | 47 | 4 | 6 |
 | [`lambda`](services/lambda.yml) | 47 | 2 | 3 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
@@ -118,9 +118,9 @@ The following table summarises the AWS APIs.
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 32 | 5 | 8 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 32 | 0 | 0 |
+| [`cloudhsm`](services/cloudhsm.yml) | 31 | 2 | 0 |
 | [`datasync`](services/datasync.yml) | 31 | 1 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
-| [`cloudhsm`](services/cloudhsm.yml) | 31 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 30 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 30 | 0 | 0 |
 | [`ce`](services/ce.yml) | 29 | 0 | 10 |
@@ -199,7 +199,7 @@ The following table summarises the AWS APIs.
 | [`synthetics`](services/synthetics.yml) | 11 | 2 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 39 |
 | [`codestar-connections`](services/codestar-connections.yml) | 11 | 0 | 9 |
-| [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 10 | 1 | 3 |
+| [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 10 | 4 | 3 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`iot`](services/iot.yml) | 9 | 0 | 212 |
@@ -282,14 +282,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1277 |
-| `Get` | 1199 |
-| `Describe` | 1135 |
-| `Delete` | 1073 |
-| `Create` | 976 |
-| `Update` | 759 |
-| `Put` | 269 |
+| `List` | 1294 |
+| `Get` | 1203 |
+| `Describe` | 1146 |
+| `Delete` | 1083 |
+| `Create` | 983 |
+| `Update` | 766 |
+| `Put` | 271 |
 | `Start` | 163 |
-| `Tag` | 131 |
-| `Untag` | 130 |
+| `Tag` | 132 |
+| `Untag` | 131 |
 
