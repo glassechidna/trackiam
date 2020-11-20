@@ -13,6 +13,7 @@ Actions:
   - Name: ec2:AssociateAddress
   - Name: ec2:AssociateClientVpnTargetNetwork
   - Name: ec2:AssociateDhcpOptions
+  - Name: ec2:AssociateEnclaveCertificateIamRole
   - Name: ec2:AssociateIamInstanceProfile
   - Name: ec2:AssociateRouteTable
   - Name: ec2:AssociateSubnetCidrBlock
@@ -277,6 +278,7 @@ Actions:
   - Name: ec2:DisableVpcClassicLinkDnsSupport
   - Name: ec2:DisassociateAddress
   - Name: ec2:DisassociateClientVpnTargetNetwork
+  - Name: ec2:DisassociateEnclaveCertificateIamRole
   - Name: ec2:DisassociateIamInstanceProfile
   - Name: ec2:DisassociateRouteTable
   - Name: ec2:DisassociateSubnetCidrBlock
@@ -294,6 +296,7 @@ Actions:
   - Name: ec2:ExportClientVpnClientConfiguration
   - Name: ec2:ExportImage
   - Name: ec2:ExportTransitGatewayRoutes
+  - Name: ec2:GetAssociatedEnclaveCertificateIamRoles
   - Name: ec2:GetCapacityReservationUsage
   - Name: ec2:GetCoipPoolUsage
   - Name: ec2:GetConsoleOutput
@@ -415,11 +418,8 @@ Actions:
   - Name: ec2:WithdrawByoipCidr
 
   # APIs without an IAM action
-  - Name: ec2:AssociateEnclaveCertificateIamRole
   - Name: ec2:DeleteQueuedReservedInstances
   - Name: ec2:DescribeIpv6Pools
-  - Name: ec2:DisassociateEnclaveCertificateIamRole
-  - Name: ec2:GetAssociatedEnclaveCertificateIamRoles
   - Name: ec2:GetAssociatedIpv6PoolCidrs
   - Name: ec2:GetGroupsForCapacityReservation
   - Name: ec2:ModifyAvailabilityZoneGroup
