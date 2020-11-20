@@ -1,0 +1,75 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonConnect_FullAccess",
+  "CreateDate": "2020-11-20T19:54:21Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4JXAE7KLRO",
+  "PolicyName": "AmazonConnect_FullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-11-20T19:54:21Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "connect.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "iam:DeleteServiceLinkedRole",
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/connect.amazonaws.com/AWSServiceRoleForAmazonConnect*"
+        },
+        {
+          "Action": [
+            "connect:*",
+            "ds:AuthorizeApplication",
+            "ds:CheckAlias",
+            "ds:CreateAlias",
+            "ds:CreateIdentityPoolDirectory",
+            "ds:DeleteDirectory",
+            "ds:DescribeDirectories",
+            "ds:UnauthorizeApplication",
+            "firehose:DescribeDeliveryStream",
+            "firehose:ListDeliveryStreams",
+            "kinesis:DescribeStream",
+            "kinesis:ListStreams",
+            "kms:DescribeKey",
+            "kms:ListAliases",
+            "lambda:ListFunctions",
+            "lex:GetBots",
+            "logs:CreateLogGroup",
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:GetBucketAcl"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::amazon-connect-*"
+        },
+        {
+          "Action": [
+            "servicequotas:GetServiceQuota"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:servicequotas:*:*:connect/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-11-20T19:54:21Z"
+}
