@@ -1,29 +1,50 @@
 Actions:
+  - Name: connect:AssociateApprovedOrigin
+  - Name: connect:AssociateInstanceStorageConfig
+  - Name: connect:AssociateLambdaFunction
+  - Name: connect:AssociateLexBot
   - Name: connect:AssociateRoutingProfileQueues
+  - Name: connect:AssociateSecurityKey
   - Name: connect:CreateContactFlow
   - Name: connect:CreateInstance
   - Name: connect:CreateRoutingProfile
   - Name: connect:CreateUser
+  - Name: connect:CreateUserHierarchyGroup
+  - Name: connect:DeleteInstance
   - Name: connect:DeleteUser
+  - Name: connect:DeleteUserHierarchyGroup
   - Name: connect:DescribeContactFlow
   - Name: connect:DescribeInstance
+  - Name: connect:DescribeInstanceAttribute
+  - Name: connect:DescribeInstanceStorageConfig
   - Name: connect:DescribeRoutingProfile
   - Name: connect:DescribeUser
   - Name: connect:DescribeUserHierarchyGroup
   - Name: connect:DescribeUserHierarchyStructure
+  - Name: connect:DisassociateApprovedOrigin
+  - Name: connect:DisassociateInstanceStorageConfig
+  - Name: connect:DisassociateLambdaFunction
+  - Name: connect:DisassociateLexBot
   - Name: connect:DisassociateRoutingProfileQueues
+  - Name: connect:DisassociateSecurityKey
   - Name: connect:GetContactAttributes
   - Name: connect:GetCurrentMetricData
   - Name: connect:GetFederationToken
   - Name: connect:GetMetricData
+  - Name: connect:ListApprovedOrigins
   - Name: connect:ListContactFlows
   - Name: connect:ListHoursOfOperations
+  - Name: connect:ListInstanceAttributes
+  - Name: connect:ListInstanceStorageConfigs
   - Name: connect:ListInstances
+  - Name: connect:ListLambdaFunctions
+  - Name: connect:ListLexBots
   - Name: connect:ListPhoneNumbers
   - Name: connect:ListPrompts
   - Name: connect:ListQueues
   - Name: connect:ListRoutingProfileQueues
   - Name: connect:ListRoutingProfiles
+  - Name: connect:ListSecurityKeys
   - Name: connect:ListSecurityProfiles
   - Name: connect:ListTagsForResource
   - Name: connect:ListUserHierarchyGroups
@@ -40,11 +61,15 @@ Actions:
   - Name: connect:UpdateContactAttributes
   - Name: connect:UpdateContactFlowContent
   - Name: connect:UpdateContactFlowName
+  - Name: connect:UpdateInstanceAttribute
+  - Name: connect:UpdateInstanceStorageConfig
   - Name: connect:UpdateRoutingProfileConcurrency
   - Name: connect:UpdateRoutingProfileDefaultOutboundQueue
   - Name: connect:UpdateRoutingProfileName
   - Name: connect:UpdateRoutingProfileQueues
   - Name: connect:UpdateUserHierarchy
+  - Name: connect:UpdateUserHierarchyGroupName
+  - Name: connect:UpdateUserHierarchyStructure
   - Name: connect:UpdateUserIdentityInfo
   - Name: connect:UpdateUserPhoneConfig
   - Name: connect:UpdateUserRoutingProfile
@@ -54,30 +79,3 @@ Actions:
   - Name: connect:DestroyInstance
   - Name: connect:GetFederationTokens
   - Name: connect:ModifyInstance
-
-  # APIs without an IAM action
-  - Name: connect:AssociateApprovedOrigin
-  - Name: connect:AssociateInstanceStorageConfig
-  - Name: connect:AssociateLambdaFunction
-  - Name: connect:AssociateLexBot
-  - Name: connect:AssociateSecurityKey
-  - Name: connect:CreateUserHierarchyGroup
-  - Name: connect:DeleteInstance
-  - Name: connect:DeleteUserHierarchyGroup
-  - Name: connect:DescribeInstanceAttribute
-  - Name: connect:DescribeInstanceStorageConfig
-  - Name: connect:DisassociateApprovedOrigin
-  - Name: connect:DisassociateInstanceStorageConfig
-  - Name: connect:DisassociateLambdaFunction
-  - Name: connect:DisassociateLexBot
-  - Name: connect:DisassociateSecurityKey
-  - Name: connect:ListApprovedOrigins
-  - Name: connect:ListInstanceAttributes
-  - Name: connect:ListInstanceStorageConfigs
-  - Name: connect:ListLambdaFunctions
-  - Name: connect:ListLexBots
-  - Name: connect:ListSecurityKeys
-  - Name: connect:UpdateInstanceAttribute
-  - Name: connect:UpdateInstanceStorageConfig
-  - Name: connect:UpdateUserHierarchyGroupName
-  - Name: connect:UpdateUserHierarchyStructure

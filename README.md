@@ -59,6 +59,7 @@ The following table summarises the AWS APIs.
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
+| [`connect`](services/connect.yml) | 75 | 0 | 3 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`s3`](services/s3.yml) | 65 | 56 | 40 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
@@ -76,7 +77,6 @@ The following table summarises the AWS APIs.
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 53 | 0 | 0 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
-| [`connect`](services/connect.yml) | 50 | 25 | 3 |
 | [`macie2`](services/macie2.yml) | 50 | 1 | 3 |
 | [`backup`](services/backup.yml) | 50 | 0 | 2 |
 | [`medialive`](services/medialive.yml) | 49 | 6 | 0 |
