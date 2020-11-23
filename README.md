@@ -120,6 +120,7 @@ The following table summarises the AWS APIs.
 | [`route53resolver`](services/route53resolver.yml) | 32 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 2 | 0 |
 | [`datasync`](services/datasync.yml) | 31 | 1 | 0 |
+| [`sso`](services/sso.yml) | 31 | 0 | 52 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 30 | 4 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 30 | 0 | 0 |
@@ -133,7 +134,6 @@ The following table summarises the AWS APIs.
 | [`networkmanager`](services/networkmanager.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
-| [`sso`](services/sso.yml) | 27 | 4 | 52 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 26 | 3 | 0 |

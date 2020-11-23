@@ -1,12 +1,15 @@
 Actions:
   - Name: sso:AttachManagedPolicyToPermissionSet
   - Name: sso:CreateAccountAssignment
+  - Name: sso:CreateInstanceAccessControlAttributeConfiguration
   - Name: sso:CreatePermissionSet
   - Name: sso:DeleteAccountAssignment
   - Name: sso:DeleteInlinePolicyFromPermissionSet
+  - Name: sso:DeleteInstanceAccessControlAttributeConfiguration
   - Name: sso:DeletePermissionSet
   - Name: sso:DescribeAccountAssignmentCreationStatus
   - Name: sso:DescribeAccountAssignmentDeletionStatus
+  - Name: sso:DescribeInstanceAccessControlAttributeConfiguration
   - Name: sso:DescribePermissionSet
   - Name: sso:DescribePermissionSetProvisioningStatus
   - Name: sso:DetachManagedPolicyFromPermissionSet
@@ -25,6 +28,7 @@ Actions:
   - Name: sso:PutInlinePolicyToPermissionSet
   - Name: sso:TagResource
   - Name: sso:UntagResource
+  - Name: sso:UpdateInstanceAccessControlAttributeConfiguration
   - Name: sso:UpdatePermissionSet
 
   # actions with no corresponding API
@@ -80,9 +84,3 @@ Actions:
   - Name: sso:UpdateProfile
   - Name: sso:UpdateSSOConfiguration
   - Name: sso:UpdateTrust
-
-  # APIs without an IAM action
-  - Name: sso:CreateInstanceAccessControlAttributeConfiguration
-  - Name: sso:DeleteInstanceAccessControlAttributeConfiguration
-  - Name: sso:DescribeInstanceAccessControlAttributeConfiguration
-  - Name: sso:UpdateInstanceAccessControlAttributeConfiguration
