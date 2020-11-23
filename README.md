@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 241
-* Unique actions: 9188
+* Unique actions: 9198
 * Managed policies: 738
 
 Most common managed policy name prefixes:
@@ -193,8 +193,8 @@ The following table summarises the AWS APIs.
 | [`acm`](services/acm.yml) | 13 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 4 | 0 |
 | [`resource-groups`](services/resource-groups.yml) | 12 | 3 | 0 |
+| [`signer`](services/signer.yml) | 12 | 0 | 5 |
 | [`detective`](services/detective.yml) | 12 | 0 | 5 |
-| [`signer`](services/signer.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`synthetics`](services/synthetics.yml) | 11 | 2 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 39 |
@@ -203,7 +203,7 @@ The following table summarises the AWS APIs.
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`iot`](services/iot.yml) | 9 | 0 | 212 |
-| [`translate`](services/translate.yml) | 9 | 0 | 0 |
+| [`translate`](services/translate.yml) | 9 | 0 | 5 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
@@ -282,12 +282,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1294 |
-| `Get` | 1203 |
+| `List` | 1296 |
+| `Get` | 1204 |
 | `Describe` | 1146 |
-| `Delete` | 1083 |
-| `Create` | 983 |
-| `Update` | 766 |
+| `Delete` | 1084 |
+| `Create` | 984 |
+| `Update` | 767 |
 | `Put` | 271 |
 | `Start` | 163 |
 | `Tag` | 132 |
