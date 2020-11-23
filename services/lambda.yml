@@ -2,19 +2,24 @@ Actions:
   - Name: lambda:AddLayerVersionPermission
   - Name: lambda:AddPermission
   - Name: lambda:CreateAlias
+  - Name: lambda:CreateCodeSigningConfig
   - Name: lambda:CreateEventSourceMapping
   - Name: lambda:CreateFunction
   - Name: lambda:DeleteAlias
+  - Name: lambda:DeleteCodeSigningConfig
   - Name: lambda:DeleteEventSourceMapping
   - Name: lambda:DeleteFunction
+  - Name: lambda:DeleteFunctionCodeSigningConfig
   - Name: lambda:DeleteFunctionConcurrency
   - Name: lambda:DeleteFunctionEventInvokeConfig
   - Name: lambda:DeleteLayerVersion
   - Name: lambda:DeleteProvisionedConcurrencyConfig
   - Name: lambda:GetAccountSettings
   - Name: lambda:GetAlias
+  - Name: lambda:GetCodeSigningConfig
   - Name: lambda:GetEventSourceMapping
   - Name: lambda:GetFunction
+  - Name: lambda:GetFunctionCodeSigningConfig
   - Name: lambda:GetFunctionConcurrency
   - Name: lambda:GetFunctionConfiguration
   - Name: lambda:GetFunctionEventInvokeConfig
@@ -24,9 +29,11 @@ Actions:
   - Name: lambda:GetProvisionedConcurrencyConfig
   - Name: lambda:InvokeAsync
   - Name: lambda:ListAliases
+  - Name: lambda:ListCodeSigningConfigs
   - Name: lambda:ListEventSourceMappings
   - Name: lambda:ListFunctionEventInvokeConfigs
   - Name: lambda:ListFunctions
+  - Name: lambda:ListFunctionsByCodeSigningConfig
   - Name: lambda:ListLayerVersions
   - Name: lambda:ListLayers
   - Name: lambda:ListProvisionedConcurrencyConfigs
@@ -34,6 +41,7 @@ Actions:
   - Name: lambda:ListVersionsByFunction
   - Name: lambda:PublishLayerVersion
   - Name: lambda:PublishVersion
+  - Name: lambda:PutFunctionCodeSigningConfig
   - Name: lambda:PutFunctionConcurrency
   - Name: lambda:PutFunctionEventInvokeConfig
   - Name: lambda:PutProvisionedConcurrencyConfig
@@ -42,6 +50,7 @@ Actions:
   - Name: lambda:TagResource
   - Name: lambda:UntagResource
   - Name: lambda:UpdateAlias
+  - Name: lambda:UpdateCodeSigningConfig
   - Name: lambda:UpdateEventSourceMapping
   - Name: lambda:UpdateFunctionCode
   - Name: lambda:UpdateFunctionConfiguration
@@ -51,6 +60,7 @@ Actions:
   - Name: lambda:DisableReplication
   - Name: lambda:EnableReplication
   - Name: lambda:InvokeFunction
+  - Name: lambda:UpdateFunctionCodeSigningConfig
 
   # APIs without an IAM action
   - Name: lambda:GetLayerVersionByArn

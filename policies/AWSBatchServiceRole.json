@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole",
   "CreateDate": "2016-12-06T19:36:24Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIUETIXPCKASQJURFE",
   "PolicyName": "AWSBatchServiceRole",
   "PolicyVersion": {
-    "CreateDate": "2019-10-08T19:31:12Z",
+    "CreateDate": "2020-11-23T18:19:27Z",
     "Document": {
       "Statement": [
         {
@@ -56,6 +56,13 @@
           ]
         },
         {
+          "Action": "ecs:TagResource",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ecs:*:*:task/*_Batch_*"
+          ]
+        },
+        {
           "Action": [
             "autoscaling:CreateAutoScalingGroup",
             "autoscaling:CreateLaunchConfiguration",
@@ -100,6 +107,7 @@
             "ecs:DescribeContainerInstances",
             "ecs:DescribeTaskDefinition",
             "ecs:DescribeTasks",
+            "ecs:ListAccountSettings",
             "ecs:ListClusters",
             "ecs:ListContainerInstances",
             "ecs:ListTaskDefinitionFamilies",
@@ -124,7 +132,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2019-10-08T19:31:12Z"
+  "UpdateDate": "2020-11-23T18:19:27Z"
 }
