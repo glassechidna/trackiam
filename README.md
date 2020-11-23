@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 241
-* Unique actions: 9241
+* Unique actions: 9245
 * Managed policies: 738
 
 Most common managed policy name prefixes:
@@ -83,16 +83,16 @@ The following table summarises the AWS APIs.
 | [`medialive`](services/medialive.yml) | 49 | 6 | 0 |
 | [`ecs`](services/ecs.yml) | 49 | 1 | 2 |
 | [`workmail`](services/workmail.yml) | 49 | 0 | 51 |
+| [`securityhub`](services/securityhub.yml) | 48 | 0 | 0 |
 | [`rekognition`](services/rekognition.yml) | 48 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 48 | 0 | 0 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
-| [`dynamodb`](services/dynamodb.yml) | 45 | 9 | 6 |
+| [`dynamodb`](services/dynamodb.yml) | 45 | 9 | 10 |
 | [`dms`](services/dms.yml) | 45 | 9 | 0 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
-| [`securityhub`](services/securityhub.yml) | 43 | 5 | 0 |
 | [`codebuild`](services/codebuild.yml) | 43 | 0 | 8 |
 | [`imagebuilder`](services/imagebuilder.yml) | 41 | 1 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |

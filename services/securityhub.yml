@@ -14,14 +14,17 @@ Actions:
   - Name: securityhub:DeleteMembers
   - Name: securityhub:DescribeActionTargets
   - Name: securityhub:DescribeHub
+  - Name: securityhub:DescribeOrganizationConfiguration
   - Name: securityhub:DescribeProducts
   - Name: securityhub:DescribeStandards
   - Name: securityhub:DescribeStandardsControls
   - Name: securityhub:DisableImportFindingsForProduct
+  - Name: securityhub:DisableOrganizationAdminAccount
   - Name: securityhub:DisableSecurityHub
   - Name: securityhub:DisassociateFromMasterAccount
   - Name: securityhub:DisassociateMembers
   - Name: securityhub:EnableImportFindingsForProduct
+  - Name: securityhub:EnableOrganizationAdminAccount
   - Name: securityhub:EnableSecurityHub
   - Name: securityhub:GetEnabledStandards
   - Name: securityhub:GetFindings
@@ -34,18 +37,13 @@ Actions:
   - Name: securityhub:ListEnabledProductsForImport
   - Name: securityhub:ListInvitations
   - Name: securityhub:ListMembers
+  - Name: securityhub:ListOrganizationAdminAccounts
   - Name: securityhub:ListTagsForResource
   - Name: securityhub:TagResource
   - Name: securityhub:UntagResource
   - Name: securityhub:UpdateActionTarget
   - Name: securityhub:UpdateFindings
   - Name: securityhub:UpdateInsight
+  - Name: securityhub:UpdateOrganizationConfiguration
   - Name: securityhub:UpdateSecurityHubConfiguration
   - Name: securityhub:UpdateStandardsControl
-
-  # APIs without an IAM action
-  - Name: securityhub:DescribeOrganizationConfiguration
-  - Name: securityhub:DisableOrganizationAdminAccount
-  - Name: securityhub:EnableOrganizationAdminAccount
-  - Name: securityhub:ListOrganizationAdminAccounts
-  - Name: securityhub:UpdateOrganizationConfiguration
