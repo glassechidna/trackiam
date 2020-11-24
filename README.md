@@ -64,12 +64,12 @@ The following table summarises the AWS APIs.
 | [`s3`](services/s3.yml) | 65 | 56 | 40 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
+| [`comprehend`](services/comprehend.yml) | 60 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 59 | 16 | 0 |
 | [`ds`](services/ds.yml) | 57 | 3 | 6 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`route53`](services/route53.yml) | 57 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 57 | 0 | 0 |
-| [`comprehend`](services/comprehend.yml) | 56 | 4 | 0 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
 | [`directconnect`](services/directconnect.yml) | 56 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 55 | 3 | 0 |

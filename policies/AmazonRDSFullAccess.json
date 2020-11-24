@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRDSFullAccess",
   "CreateDate": "2015-02-06T18:40:52Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAI3R4QMOG6Q5A4VWVG",
   "PolicyName": "AmazonRDSFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-08-27T23:38:56Z",
+    "CreateDate": "2020-11-24T19:30:26Z",
     "Document": {
       "Statement": [
         {
@@ -43,11 +43,16 @@
             "cloudwatch:PutMetricAlarm",
             "ec2:DescribeAccountAttributes",
             "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeCoipPools",
             "ec2:DescribeInternetGateways",
+            "ec2:DescribeLocalGatewayRouteTableVpcAssociations",
+            "ec2:DescribeLocalGatewayRouteTables",
+            "ec2:DescribeLocalGateways",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcAttribute",
             "ec2:DescribeVpcs",
+            "ec2:GetCoipPoolUsage",
             "logs:DescribeLogStreams",
             "logs:GetLogEvents",
             "outposts:GetOutpostInstanceTypes",
@@ -63,7 +68,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2020-08-27T23:38:56Z"
+  "UpdateDate": "2020-11-24T19:30:26Z"
 }
