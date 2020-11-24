@@ -1,20 +1,21 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSConfigRoleForOrganizations",
   "CreateDate": "2018-03-19T22:53:01Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIEHGYAUTHXSXZAW2E",
   "PolicyName": "AWSConfigRoleForOrganizations",
   "PolicyVersion": {
-    "CreateDate": "2018-03-19T22:53:01Z",
+    "CreateDate": "2020-11-24T20:19:13Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "organizations:DescribeOrganization",
             "organizations:ListAWSServiceAccessForOrganization",
-            "organizations:ListAccounts"
+            "organizations:ListAccounts",
+            "organizations:ListDelegatedAdministrators"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -23,7 +24,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2018-03-19T22:53:01Z"
+  "UpdateDate": "2020-11-24T20:19:13Z"
 }
