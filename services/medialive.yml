@@ -1,8 +1,10 @@
 Actions:
+  - Name: medialive:AcceptInputDeviceTransfer
   - Name: medialive:BatchDelete
   - Name: medialive:BatchStart
   - Name: medialive:BatchStop
   - Name: medialive:BatchUpdateSchedule
+  - Name: medialive:CancelInputDeviceTransfer
   - Name: medialive:CreateChannel
   - Name: medialive:CreateInput
   - Name: medialive:CreateInputSecurityGroup
@@ -27,6 +29,7 @@ Actions:
   - Name: medialive:DescribeReservation
   - Name: medialive:DescribeSchedule
   - Name: medialive:ListChannels
+  - Name: medialive:ListInputDeviceTransfers
   - Name: medialive:ListInputDevices
   - Name: medialive:ListInputSecurityGroups
   - Name: medialive:ListInputs
@@ -36,10 +39,12 @@ Actions:
   - Name: medialive:ListReservations
   - Name: medialive:ListTagsForResource
   - Name: medialive:PurchaseOffering
+  - Name: medialive:RejectInputDeviceTransfer
   - Name: medialive:StartChannel
   - Name: medialive:StartMultiplex
   - Name: medialive:StopChannel
   - Name: medialive:StopMultiplex
+  - Name: medialive:TransferInputDevice
   - Name: medialive:UpdateChannel
   - Name: medialive:UpdateChannelClass
   - Name: medialive:UpdateInput
@@ -50,9 +55,4 @@ Actions:
   - Name: medialive:UpdateReservation
 
   # APIs without an IAM action
-  - Name: medialive:AcceptInputDeviceTransfer
-  - Name: medialive:CancelInputDeviceTransfer
   - Name: medialive:DeleteSchedule
-  - Name: medialive:ListInputDeviceTransfers
-  - Name: medialive:RejectInputDeviceTransfer
-  - Name: medialive:TransferInputDevice
