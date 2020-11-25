@@ -109,6 +109,7 @@ The following table summarises the AWS APIs.
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
+| [`forecast`](services/forecast.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 33 | 1 | 0 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`sns`](services/sns.yml) | 33 | 0 | 0 |
@@ -122,7 +123,6 @@ The following table summarises the AWS APIs.
 | [`datasync`](services/datasync.yml) | 31 | 1 | 0 |
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
-| [`forecast`](services/forecast.yml) | 30 | 4 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 30 | 0 | 0 |
 | [`ce`](services/ce.yml) | 29 | 0 | 10 |
 | [`transcribe`](services/transcribe.yml) | 29 | 0 | 2 |
