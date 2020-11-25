@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDirectoryServiceFullAccess",
   "CreateDate": "2015-02-06T18:41:11Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAINAW5ANUWTH3R4ANI",
   "PolicyName": "AWSDirectoryServiceFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-02-05T20:29:43Z",
+    "CreateDate": "2020-11-24T23:24:10Z",
     "Document": {
       "Statement": [
         {
@@ -16,10 +16,8 @@
             "organizations:EnableAWSServiceAccess"
           ],
           "Condition": {
-            "ForAllValues:StringLike": {
-              "organizations:ServicePrincipal": [
-                "ds.amazonaws.com"
-              ]
+            "StringEquals": {
+              "organizations:ServicePrincipal": "ds.amazonaws.com"
             }
           },
           "Effect": "Allow",
@@ -82,7 +80,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2019-02-05T20:29:43Z"
+  "UpdateDate": "2020-11-24T23:24:10Z"
 }
