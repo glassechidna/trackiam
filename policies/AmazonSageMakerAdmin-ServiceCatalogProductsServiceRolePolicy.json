@@ -1,0 +1,380 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerAdmin-ServiceCatalogProductsServiceRolePolicy",
+  "CreateDate": "2020-11-27T18:48:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4NAOSKQH4V",
+  "PolicyName": "AmazonSageMakerAdmin-ServiceCatalogProductsServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-11-27T18:48:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "s3:GetObject",
+          "Condition": {
+            "StringEquals": {
+              "s3:ExistingObjectTag/servicecatalog:provisioning": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "apigateway:DELETE",
+            "apigateway:GET",
+            "apigateway:PATCH",
+            "apigateway:POST",
+            "apigateway:PUT"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/sagemaker:launch-source": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "apigateway:POST"
+          ],
+          "Condition": {
+            "ForAnyValue:StringLike": {
+              "aws:TagKeys": [
+                "sagemaker:launch-source"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudformation:CreateStack",
+            "cloudformation:DeleteStack",
+            "cloudformation:UpdateStack"
+          ],
+          "Condition": {
+            "ArnLikeIfExists": {
+              "cloudformation:RoleArn": [
+                "arn:aws:sts::*:assumed-role/AmazonSageMakerServiceCatalog*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/SC-*"
+        },
+        {
+          "Action": [
+            "cognito-idp:CreateGroup",
+            "cognito-idp:CreateUserPoolClient",
+            "cognito-idp:CreateUserPoolDomain",
+            "cognito-idp:DeleteGroup",
+            "cognito-idp:DeleteUserPool",
+            "cognito-idp:DeleteUserPoolClient",
+            "cognito-idp:DeleteUserPoolDomain",
+            "cognito-idp:DescribeUserPool",
+            "cognito-idp:DescribeUserPoolClient",
+            "cognito-idp:UpdateUserPool",
+            "cognito-idp:UpdateUserPoolClient"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/sagemaker:launch-source": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cognito-idp:CreateUserPool"
+          ],
+          "Condition": {
+            "ForAnyValue:StringLike": {
+              "aws:TagKeys": [
+                "sagemaker:launch-source"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "s3:GetObject",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::sagemaker-*"
+          ]
+        },
+        {
+          "Action": [
+            "apigateway:PATCH"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:apigateway:*::/account"
+          ]
+        },
+        {
+          "Action": [
+            "cloudformation:DescribeStackEvents",
+            "cloudformation:DescribeStacks"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/SC-*"
+        },
+        {
+          "Action": [
+            "cloudformation:GetTemplateSummary",
+            "cloudformation:ValidateTemplate"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "codebuild:CreateProject",
+            "codebuild:DeleteProject",
+            "codebuild:UpdateProject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:codebuild:*:*:project/sagemaker-*"
+          ]
+        },
+        {
+          "Action": [
+            "codecommit:CreateCommit",
+            "codecommit:CreateRepository",
+            "codecommit:DeleteRepository",
+            "codecommit:GetRepository",
+            "codecommit:TagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:codecommit:*:*:sagemaker-*"
+          ]
+        },
+        {
+          "Action": [
+            "codecommit:ListRepositories"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "codepipeline:CreatePipeline",
+            "codepipeline:DeletePipeline",
+            "codepipeline:GetPipeline",
+            "codepipeline:GetPipelineState",
+            "codepipeline:StartPipelineExecution",
+            "codepipeline:TagResource",
+            "codepipeline:UpdatePipeline"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:codepipeline:*:*:sagemaker-*"
+          ]
+        },
+        {
+          "Action": [
+            "ecr:CreateRepository",
+            "ecr:DeleteRepository"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ecr:*:*:repository/sagemaker-*"
+          ]
+        },
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:DescribeRule",
+            "events:DisableRule",
+            "events:EnableRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:events:*:*:rule/sagemaker-*"
+          ]
+        },
+        {
+          "Action": [
+            "firehose:CreateDeliveryStream",
+            "firehose:DeleteDeliveryStream",
+            "firehose:DescribeDeliveryStream",
+            "firehose:StartDeliveryStreamEncryption",
+            "firehose:StopDeliveryStreamEncryption",
+            "firehose:UpdateDestination"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:firehose:*:*:deliverystream/sagemaker-*"
+        },
+        {
+          "Action": [
+            "glue:CreateClassifier",
+            "glue:DeleteClassifier",
+            "glue:DeleteCrawler",
+            "glue:DeleteJob",
+            "glue:DeleteTrigger",
+            "glue:DeleteWorkflow",
+            "glue:StopCrawler"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "glue:CreateCrawler",
+            "glue:GetCrawler"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:crawler/sagemaker-*"
+          ]
+        },
+        {
+          "Action": [
+            "glue:CreateDatabase",
+            "glue:DeleteDatabase"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:catalog",
+            "arn:aws:glue:*:*:database/sagemaker-*",
+            "arn:aws:glue:*:*:table/sagemaker-*",
+            "arn:aws:glue:*:*:userDefinedFunction/sagemaker-*"
+          ]
+        },
+        {
+          "Action": [
+            "glue:CreateJob"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:job/sagemaker-*"
+          ]
+        },
+        {
+          "Action": [
+            "glue:CreateTrigger",
+            "glue:GetTrigger"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:trigger/sagemaker-*"
+          ]
+        },
+        {
+          "Action": [
+            "glue:CreateWorkflow"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:workflow/sagemaker-*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/service-role/AmazonSageMakerServiceCatalog*"
+          ]
+        },
+        {
+          "Action": [
+            "lambda:AddPermission",
+            "lambda:CreateFunction",
+            "lambda:DeleteFunction",
+            "lambda:GetFunction",
+            "lambda:GetFunctionConfiguration",
+            "lambda:InvokeFunction",
+            "lambda:RemovePermission"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:sagemaker-*"
+          ]
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DeleteLogGroup",
+            "logs:DeleteLogStream",
+            "logs:DescribeLogGroups",
+            "logs:DescribeLogStreams",
+            "logs:PutRetentionPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/apigateway/AccessLogs/*",
+            "arn:aws:logs:*:*:log-group::log-stream:*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:DeleteBucket",
+            "s3:DeleteBucketPolicy",
+            "s3:GetBucketPolicy",
+            "s3:PutBucketAcl",
+            "s3:PutBucketLogging",
+            "s3:PutBucketNotification",
+            "s3:PutBucketPolicy",
+            "s3:PutBucketPublicAccessBlock",
+            "s3:PutEncryptionConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::sagemaker-*"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateEndpoint",
+            "sagemaker:CreateEndpointConfig",
+            "sagemaker:CreateModel",
+            "sagemaker:CreateWorkteam",
+            "sagemaker:DeleteEndpoint",
+            "sagemaker:DeleteEndpointConfig",
+            "sagemaker:DeleteModel",
+            "sagemaker:DeleteWorkteam",
+            "sagemaker:DescribeEndpoint",
+            "sagemaker:DescribeEndpointConfig",
+            "sagemaker:DescribeModel",
+            "sagemaker:DescribeWorkteam"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:*"
+          ]
+        },
+        {
+          "Action": [
+            "states:CreateStateMachine",
+            "states:DeleteStateMachine",
+            "states:UpdateStateMachine"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:states:*:*:stateMachine:sagemaker-*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-11-27T18:48:07Z"
+}
