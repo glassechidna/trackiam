@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonCodeGuruReviewerServiceRolePolicy",
   "CreateDate": "2019-12-03T05:31:12Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NJY3GAUD2",
   "PolicyName": "AmazonCodeGuruReviewerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-06-22T05:41:49Z",
+    "CreateDate": "2020-11-27T15:09:46Z",
     "Document": {
       "Statement": [
         {
@@ -74,12 +74,23 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "CloudWatchEventsResourceCleanup"
+        },
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::codeguru-reviewer-*",
+            "arn:aws:s3:::codeguru-reviewer-*/*"
+          ],
+          "Sid": "AllowGuruS3GetObject"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-06-22T05:41:49Z"
+  "UpdateDate": "2020-11-27T15:09:46Z"
 }
