@@ -1,0 +1,314 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSPanoramaServiceRolePolicy",
+  "CreateDate": "2020-12-01T13:14:43Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4G7G35B6C5",
+  "PolicyName": "AWSPanoramaServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-01T13:14:43Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "greengrass.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AWSPanoramaGreengrassGroupRole",
+            "arn:aws:iam::*:role/AWSPanoramaGreengrassRole",
+            "arn:aws:iam::*:role/service-role/AWSPanoramaGreengrassGroupRole",
+            "arn:aws:iam::*:role/service-role/AWSPanoramaGreengrassRole"
+          ],
+          "Sid": "PanoramaIAMPassGreengrassRoleAccess"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "sagemaker.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AWSPanoramaSageMakerRole",
+            "arn:aws:iam::*:role/service-role/AWSPanoramaSageMakerRole"
+          ],
+          "Sid": "PanoramaIAMPassSageMakerRoleAccess"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEqualsIfExists": {
+              "iam:PassedToService": "iot.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AWSPanoramaApplianceRole",
+            "arn:aws:iam::*:role/service-role/AWSPanoramaApplianceRole"
+          ],
+          "Sid": "PanoramaIAMPassIoTRoleAccess"
+        },
+        {
+          "Action": [
+            "greengrass:AssociateRoleToGroup",
+            "greengrass:AssociateServiceRoleToAccount",
+            "greengrass:CreateCoreDefinition",
+            "greengrass:CreateCoreDefinitionVersion",
+            "greengrass:CreateDeployment",
+            "greengrass:CreateFunctionDefinition",
+            "greengrass:CreateFunctionDefinitionVersion",
+            "greengrass:CreateGroup",
+            "greengrass:CreateGroupCertificateAuthority",
+            "greengrass:CreateGroupVersion",
+            "greengrass:CreateLoggerDefinition",
+            "greengrass:CreateLoggerDefinitionVersion",
+            "greengrass:CreateResourceDefinition",
+            "greengrass:CreateResourceDefinitionVersion",
+            "greengrass:CreateSubscriptionDefinition",
+            "greengrass:CreateSubscriptionDefinitionVersion",
+            "greengrass:DeleteCoreDefinition",
+            "greengrass:DeleteFunctionDefinition",
+            "greengrass:DeleteGroup",
+            "greengrass:DeleteLoggerDefinition",
+            "greengrass:DeleteResourceDefinition",
+            "greengrass:DeleteSubscriptionDefinition",
+            "greengrass:DisassociateRoleFromGroup",
+            "greengrass:DisassociateServiceRoleFromAccount",
+            "greengrass:GetAssociatedRole",
+            "greengrass:GetConnectivityInfo",
+            "greengrass:GetCoreDefinition",
+            "greengrass:GetCoreDefinitionVersion",
+            "greengrass:GetDeploymentStatus",
+            "greengrass:GetDeviceDefinition",
+            "greengrass:GetDeviceDefinitionVersion",
+            "greengrass:GetFunctionDefinition",
+            "greengrass:GetFunctionDefinitionVersion",
+            "greengrass:GetGroup",
+            "greengrass:GetGroupCertificateAuthority",
+            "greengrass:GetGroupCertificateConfiguration",
+            "greengrass:GetGroupVersion",
+            "greengrass:GetLoggerDefinition",
+            "greengrass:GetLoggerDefinitionVersion",
+            "greengrass:GetResourceDefinition",
+            "greengrass:GetServiceRoleForAccount",
+            "greengrass:GetSubscriptionDefinition",
+            "greengrass:GetSubscriptionDefinitionVersion",
+            "greengrass:ListCoreDefinitionVersions",
+            "greengrass:ListCoreDefinitions",
+            "greengrass:ListDeployments",
+            "greengrass:ListDeviceDefinitionVersions",
+            "greengrass:ListDeviceDefinitions",
+            "greengrass:ListFunctionDefinitionVersions",
+            "greengrass:ListFunctionDefinitions",
+            "greengrass:ListGroupCertificateAuthorities",
+            "greengrass:ListGroupVersions",
+            "greengrass:ListGroups",
+            "greengrass:ListLoggerDefinitionVersions",
+            "greengrass:ListLoggerDefinitions",
+            "greengrass:ListSubscriptionDefinitionVersions",
+            "greengrass:ListSubscriptionDefinitions",
+            "greengrass:ResetDeployments",
+            "greengrass:UpdateConnectivityInfo",
+            "greengrass:UpdateCoreDefinition",
+            "greengrass:UpdateDeviceDefinition",
+            "greengrass:UpdateFunctionDefinition",
+            "greengrass:UpdateGroup",
+            "greengrass:UpdateGroupCertificateConfiguration",
+            "greengrass:UpdateLoggerDefinition",
+            "greengrass:UpdateResourceDefinition",
+            "greengrass:UpdateSubscriptionDefinition"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "PanoramaGreenGrassAccess"
+        },
+        {
+          "Action": [
+            "iot:AttachPolicy",
+            "iot:CreateRoleAlias"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iot:*:*:policy/panorama*",
+            "arn:aws:iot:*:*:rolealias/panorama*"
+          ],
+          "Sid": "PanoramaCWLogsAccess"
+        },
+        {
+          "Action": [
+            "iot:AttachPrincipalPolicy",
+            "iot:AttachThingPrincipal",
+            "iot:DeleteCertificate",
+            "iot:DetachPrincipalPolicy",
+            "iot:DetachThingPrincipal",
+            "iot:UpdateCertificate"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iot:*:*:cert/*",
+            "arn:aws:iot:*:*:thing/panorama*"
+          ],
+          "Sid": "PanoramaIoTCertificateAccess"
+        },
+        {
+          "Action": [
+            "iot:CreateJob",
+            "iot:DeleteJob",
+            "iot:DescribeJobExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iot:*:*:job/panorama*",
+            "arn:aws:iot:*:*:thing/panorama*"
+          ],
+          "Sid": "PanoramaIoTJobAccess"
+        },
+        {
+          "Action": [
+            "iot:CreateKeysAndCertificate",
+            "iot:CreatePolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "PanoramaIoTCreateCertificateAndPolicyAccess"
+        },
+        {
+          "Action": [
+            "iot:CreatePolicyVersion"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iot:*:*:policy/panorama*"
+          ],
+          "Sid": "PanoramaIoTCreatePolicyVersionAccess"
+        },
+        {
+          "Action": [
+            "iot:CreateThing",
+            "iot:DeleteThing",
+            "iot:DeleteThingShadow",
+            "iot:DescribeThing",
+            "iot:GetThingShadow",
+            "iot:UpdateThing",
+            "iot:UpdateThingShadow"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iot:*:*:thing/panorama*"
+          ],
+          "Sid": "PanoramaIoTThingAccess"
+        },
+        {
+          "Action": [
+            "iot:DescribeEndpoint"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "PanoramaIoTEndpointAccess"
+        },
+        {
+          "Action": [
+            "lambda:GetFunction",
+            "lambda:GetFunctionConfiguration",
+            "lambda:ListFunctions",
+            "lambda:ListVersionsByFunction"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:*"
+          ],
+          "Sid": "PanoramaLambdaUsersFunctionAccess"
+        },
+        {
+          "Action": [
+            "panorama:Describe*",
+            "panorama:Get*",
+            "panorama:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "PanoramaAccess"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:DeleteBucket",
+            "s3:DeleteObject",
+            "s3:GetBucket*",
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*aws-panorama*"
+          ],
+          "Sid": "PanoramaS3Access"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateCompilationJob",
+            "sagemaker:CreateTrainingJob",
+            "sagemaker:DescribeCompilationJob",
+            "sagemaker:StopCompilationJob",
+            "sagemaker:StopTrainingJob"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:compilation-job/panorama*",
+            "arn:aws:sagemaker:*:*:training-job/panorama*"
+          ],
+          "Sid": "PanoramaSageMakerWriteAccess"
+        },
+        {
+          "Action": [
+            "sagemaker:DescribeTrainingJob"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:training-job/*"
+          ],
+          "Sid": "PanoramaSageMakerReadAccess"
+        },
+        {
+          "Action": [
+            "sagemaker:ListCompilationJobs"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "PanoramaSageMakerListAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-01T13:14:43Z"
+}

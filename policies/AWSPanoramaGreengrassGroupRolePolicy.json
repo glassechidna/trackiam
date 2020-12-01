@@ -1,0 +1,69 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSPanoramaGreengrassGroupRolePolicy",
+  "CreateDate": "2020-12-01T13:10:22Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4IRCPXKCEG",
+  "PolicyName": "AWSPanoramaGreengrassGroupRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-01T13:10:22Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "cloudwatch:PutDashboard",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudwatch::*:dashboard/panorama*"
+          ],
+          "Sid": "PanoramaCLoudWatchPutDashboard"
+        },
+        {
+          "Action": "cloudwatch:PutMetricData",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PanoramaCloudWatchPutMetricData"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/greengrass/*",
+          "Sid": "PanoramaGreenGrassCloudWatchAccess"
+        },
+        {
+          "Action": [
+            "panorama:*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "PanoramaAccess"
+        },
+        {
+          "Action": [
+            "s3:GetBucket*",
+            "s3:GetObject",
+            "s3:HeadBucket",
+            "s3:ListBucket",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*aws-panorama*"
+          ],
+          "Sid": "PanoramaS3Access"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-01T13:10:22Z"
+}

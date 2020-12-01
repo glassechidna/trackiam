@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSPanoramaSageMakerRolePolicy",
+  "CreateDate": "2020-12-01T13:13:54Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4O23KYQMI2",
+  "PolicyName": "AWSPanoramaSageMakerRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-01T13:13:54Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "s3:GetBucket*",
+            "s3:GetObject",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*aws-panorama*"
+          ],
+          "Sid": "PanoramaSageMakerS3Access"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-01T13:13:54Z"
+}

@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSPanoramaApplianceRolePolicy",
+  "CreateDate": "2020-12-01T13:13:18Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4CWIHTBB4Y",
+  "PolicyName": "AWSPanoramaApplianceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-01T13:13:18Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "logs:CreateLogGroup",
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/panorama_device*",
+          "Sid": "PanoramaDeviceCreateLogGroup"
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/panorama_device*:log-stream:*",
+          "Sid": "PanoramaDeviceCreateLogStream"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-01T13:13:18Z"
+}
