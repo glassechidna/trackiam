@@ -1,0 +1,76 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonDevOpsGuruServiceRolePolicy",
+  "CreateDate": "2020-12-01T10:24:42Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4LOGPH224B",
+  "PolicyName": "AmazonDevOpsGuruServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-01T10:24:42Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ssm:GetOpsItem",
+            "ssm:UpdateOpsItem"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/DevOps-GuruInsightSsmOpsItemRelated": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowAccessOpsItem"
+        },
+        {
+          "Action": [
+            "cloudformation:DescribeStacks",
+            "cloudformation:GetTemplate",
+            "cloudformation:ListImports",
+            "cloudformation:ListStackResources",
+            "cloudformation:ListStacks",
+            "cloudtrail:LookupEvents",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:DescribeAnomalyDetectors",
+            "cloudwatch:GetDashboard",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:ListDashboards",
+            "cloudwatch:ListMetrics",
+            "codedeploy:BatchGetDeployments",
+            "codedeploy:GetDeploymentGroup",
+            "codedeploy:ListDeployments",
+            "config:DescribeConfigurationRecorderStatus",
+            "config:GetResourceConfigHistory",
+            "events:ListRuleNamesByTarget",
+            "xray:GetServiceGraph"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "events:PutRule",
+            "events:PutTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/DevOps-Guru-managed-*",
+          "Sid": "AllowPutTargetsOnASpecificRule"
+        },
+        {
+          "Action": [
+            "ssm:CreateOpsItem"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowCreateOpsItem"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-01T10:24:42Z"
+}
