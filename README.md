@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 242
-* Unique actions: 9264
+* Unique services: 243
+* Unique actions: 9288
 * Managed policies: 743
 
 Most common managed policy name prefixes:
@@ -245,6 +245,7 @@ The following table summarises the AWS APIs.
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
+| [`amplifybackend`](services/amplifybackend.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
@@ -283,12 +284,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1305 |
-| `Get` | 1209 |
+| `List` | 1306 |
+| `Get` | 1215 |
 | `Describe` | 1153 |
-| `Delete` | 1092 |
-| `Create` | 993 |
-| `Update` | 775 |
+| `Delete` | 1096 |
+| `Create` | 998 |
+| `Update` | 779 |
 | `Put` | 273 |
 | `Start` | 165 |
 | `Tag` | 133 |
