@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerFeatureStoreAccess",
+  "CreateDate": "2020-12-01T16:24:05Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4FO5MQNGJU",
+  "PolicyName": "AmazonSageMakerFeatureStoreAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-01T16:24:05Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "s3:GetBucketAcl",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*SageMaker*",
+            "arn:aws:s3:::*Sagemaker*",
+            "arn:aws:s3:::*sagemaker*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-01T16:24:05Z"
+}

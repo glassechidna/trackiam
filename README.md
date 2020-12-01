@@ -11,16 +11,16 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 245
-* Unique actions: 9358
-* Managed policies: 749
+* Unique services: 247
+* Unique actions: 9448
+* Managed policies: 753
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 215 |
-| `arn:aws:iam::aws:policy/Amazon*` | 196 |
+| `arn:aws:iam::aws:policy/Amazon*` | 200 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 137 |
 | `arn:aws:iam::aws:policy/service-role/*` | 117 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 417 | 6 | 0 |
-| [`sagemaker`](services/sagemaker.yml) | 156 | 1 | 2 |
+| [`sagemaker`](services/sagemaker.yml) | 156 | 1 | 55 |
 | [`glue`](services/glue.yml) | 144 | 13 | 1 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`chime`](services/chime.yml) | 133 | 48 | 50 |
@@ -249,6 +249,8 @@ The following table summarises the AWS APIs.
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`amplifybackend`](services/amplifybackend.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
+| [`ecr-public`](services/ecr-public.yml) | 0 | 0 | 19 |
+| [`devops-guru`](services/devops-guru.yml) | 0 | 0 | 18 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
@@ -286,14 +288,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1322 |
-| `Get` | 1223 |
-| `Describe` | 1161 |
-| `Delete` | 1107 |
-| `Create` | 1010 |
-| `Update` | 785 |
-| `Put` | 276 |
-| `Start` | 165 |
+| `List` | 1338 |
+| `Get` | 1231 |
+| `Describe` | 1179 |
+| `Delete` | 1119 |
+| `Create` | 1018 |
+| `Update` | 793 |
+| `Put` | 282 |
+| `Start` | 166 |
 | `Tag` | 135 |
 | `Untag` | 134 |
 
