@@ -1,16 +1,21 @@
 Actions:
+  - Name: sagemaker:AddAssociation
   - Name: sagemaker:AddTags
   - Name: sagemaker:AssociateTrialComponent
+  - Name: sagemaker:CreateAction
   - Name: sagemaker:CreateAlgorithm
   - Name: sagemaker:CreateApp
   - Name: sagemaker:CreateAppImageConfig
+  - Name: sagemaker:CreateArtifact
   - Name: sagemaker:CreateAutoMLJob
   - Name: sagemaker:CreateCodeRepository
   - Name: sagemaker:CreateCompilationJob
+  - Name: sagemaker:CreateContext
   - Name: sagemaker:CreateDomain
   - Name: sagemaker:CreateEndpoint
   - Name: sagemaker:CreateEndpointConfig
   - Name: sagemaker:CreateExperiment
+  - Name: sagemaker:CreateFeatureGroup
   - Name: sagemaker:CreateFlowDefinition
   - Name: sagemaker:CreateHumanTaskUi
   - Name: sagemaker:CreateHyperParameterTuningJob
@@ -19,12 +24,15 @@ Actions:
   - Name: sagemaker:CreateLabelingJob
   - Name: sagemaker:CreateModel
   - Name: sagemaker:CreateModelPackage
+  - Name: sagemaker:CreateModelPackageGroup
   - Name: sagemaker:CreateMonitoringSchedule
   - Name: sagemaker:CreateNotebookInstance
   - Name: sagemaker:CreateNotebookInstanceLifecycleConfig
+  - Name: sagemaker:CreatePipeline
   - Name: sagemaker:CreatePresignedDomainUrl
   - Name: sagemaker:CreatePresignedNotebookInstanceUrl
   - Name: sagemaker:CreateProcessingJob
+  - Name: sagemaker:CreateProject
   - Name: sagemaker:CreateTrainingJob
   - Name: sagemaker:CreateTransformJob
   - Name: sagemaker:CreateTrial
@@ -32,39 +40,53 @@ Actions:
   - Name: sagemaker:CreateUserProfile
   - Name: sagemaker:CreateWorkforce
   - Name: sagemaker:CreateWorkteam
+  - Name: sagemaker:DeleteAction
   - Name: sagemaker:DeleteAlgorithm
   - Name: sagemaker:DeleteApp
   - Name: sagemaker:DeleteAppImageConfig
+  - Name: sagemaker:DeleteArtifact
+  - Name: sagemaker:DeleteAssociation
   - Name: sagemaker:DeleteCodeRepository
+  - Name: sagemaker:DeleteContext
   - Name: sagemaker:DeleteDomain
   - Name: sagemaker:DeleteEndpoint
   - Name: sagemaker:DeleteEndpointConfig
   - Name: sagemaker:DeleteExperiment
+  - Name: sagemaker:DeleteFeatureGroup
   - Name: sagemaker:DeleteFlowDefinition
   - Name: sagemaker:DeleteHumanLoop
   - Name: sagemaker:DeleteImage
   - Name: sagemaker:DeleteImageVersion
   - Name: sagemaker:DeleteModel
   - Name: sagemaker:DeleteModelPackage
+  - Name: sagemaker:DeleteModelPackageGroup
+  - Name: sagemaker:DeleteModelPackageGroupPolicy
   - Name: sagemaker:DeleteMonitoringSchedule
   - Name: sagemaker:DeleteNotebookInstance
   - Name: sagemaker:DeleteNotebookInstanceLifecycleConfig
+  - Name: sagemaker:DeletePipeline
+  - Name: sagemaker:DeleteProject
+  - Name: sagemaker:DeleteRecord
   - Name: sagemaker:DeleteTags
   - Name: sagemaker:DeleteTrial
   - Name: sagemaker:DeleteTrialComponent
   - Name: sagemaker:DeleteUserProfile
   - Name: sagemaker:DeleteWorkforce
   - Name: sagemaker:DeleteWorkteam
+  - Name: sagemaker:DescribeAction
   - Name: sagemaker:DescribeAlgorithm
   - Name: sagemaker:DescribeApp
   - Name: sagemaker:DescribeAppImageConfig
+  - Name: sagemaker:DescribeArtifact
   - Name: sagemaker:DescribeAutoMLJob
   - Name: sagemaker:DescribeCodeRepository
   - Name: sagemaker:DescribeCompilationJob
+  - Name: sagemaker:DescribeContext
   - Name: sagemaker:DescribeDomain
   - Name: sagemaker:DescribeEndpoint
   - Name: sagemaker:DescribeEndpointConfig
   - Name: sagemaker:DescribeExperiment
+  - Name: sagemaker:DescribeFeatureGroup
   - Name: sagemaker:DescribeFlowDefinition
   - Name: sagemaker:DescribeHumanLoop
   - Name: sagemaker:DescribeHumanTaskUi
@@ -74,10 +96,15 @@ Actions:
   - Name: sagemaker:DescribeLabelingJob
   - Name: sagemaker:DescribeModel
   - Name: sagemaker:DescribeModelPackage
+  - Name: sagemaker:DescribeModelPackageGroup
   - Name: sagemaker:DescribeMonitoringSchedule
   - Name: sagemaker:DescribeNotebookInstance
   - Name: sagemaker:DescribeNotebookInstanceLifecycleConfig
+  - Name: sagemaker:DescribePipeline
+  - Name: sagemaker:DescribePipelineDefinitionForExecution
+  - Name: sagemaker:DescribePipelineExecution
   - Name: sagemaker:DescribeProcessingJob
+  - Name: sagemaker:DescribeProject
   - Name: sagemaker:DescribeSubscribedWorkteam
   - Name: sagemaker:DescribeTrainingJob
   - Name: sagemaker:DescribeTransformJob
@@ -86,20 +113,30 @@ Actions:
   - Name: sagemaker:DescribeUserProfile
   - Name: sagemaker:DescribeWorkforce
   - Name: sagemaker:DescribeWorkteam
+  - Name: sagemaker:DisableSagemakerServicecatalogPortfolio
   - Name: sagemaker:DisassociateTrialComponent
+  - Name: sagemaker:EnableSagemakerServicecatalogPortfolio
+  - Name: sagemaker:GetModelPackageGroupPolicy
+  - Name: sagemaker:GetRecord
+  - Name: sagemaker:GetSagemakerServicecatalogPortfolioStatus
   - Name: sagemaker:GetSearchSuggestions
   - Name: sagemaker:InvokeEndpoint
+  - Name: sagemaker:ListActions
   - Name: sagemaker:ListAlgorithms
   - Name: sagemaker:ListAppImageConfigs
   - Name: sagemaker:ListApps
+  - Name: sagemaker:ListArtifacts
+  - Name: sagemaker:ListAssociations
   - Name: sagemaker:ListAutoMLJobs
   - Name: sagemaker:ListCandidatesForAutoMLJob
   - Name: sagemaker:ListCodeRepositories
   - Name: sagemaker:ListCompilationJobs
+  - Name: sagemaker:ListContexts
   - Name: sagemaker:ListDomains
   - Name: sagemaker:ListEndpointConfigs
   - Name: sagemaker:ListEndpoints
   - Name: sagemaker:ListExperiments
+  - Name: sagemaker:ListFeatureGroups
   - Name: sagemaker:ListFlowDefinitions
   - Name: sagemaker:ListHumanLoops
   - Name: sagemaker:ListHumanTaskUis
@@ -108,13 +145,19 @@ Actions:
   - Name: sagemaker:ListImages
   - Name: sagemaker:ListLabelingJobs
   - Name: sagemaker:ListLabelingJobsForWorkteam
+  - Name: sagemaker:ListModelPackageGroups
   - Name: sagemaker:ListModelPackages
   - Name: sagemaker:ListModels
   - Name: sagemaker:ListMonitoringExecutions
   - Name: sagemaker:ListMonitoringSchedules
   - Name: sagemaker:ListNotebookInstanceLifecycleConfigs
   - Name: sagemaker:ListNotebookInstances
+  - Name: sagemaker:ListPipelineExecutionSteps
+  - Name: sagemaker:ListPipelineExecutions
+  - Name: sagemaker:ListPipelineParametersForExecution
+  - Name: sagemaker:ListPipelines
   - Name: sagemaker:ListProcessingJobs
+  - Name: sagemaker:ListProjects
   - Name: sagemaker:ListSubscribedWorkteams
   - Name: sagemaker:ListTags
   - Name: sagemaker:ListTrainingJobs
@@ -125,11 +168,14 @@ Actions:
   - Name: sagemaker:ListUserProfiles
   - Name: sagemaker:ListWorkforces
   - Name: sagemaker:ListWorkteams
+  - Name: sagemaker:PutModelPackageGroupPolicy
+  - Name: sagemaker:PutRecord
   - Name: sagemaker:RenderUiTemplate
   - Name: sagemaker:Search
   - Name: sagemaker:StartHumanLoop
   - Name: sagemaker:StartMonitoringSchedule
   - Name: sagemaker:StartNotebookInstance
+  - Name: sagemaker:StartPipelineExecution
   - Name: sagemaker:StopAutoMLJob
   - Name: sagemaker:StopCompilationJob
   - Name: sagemaker:StopHumanLoop
@@ -137,19 +183,26 @@ Actions:
   - Name: sagemaker:StopLabelingJob
   - Name: sagemaker:StopMonitoringSchedule
   - Name: sagemaker:StopNotebookInstance
+  - Name: sagemaker:StopPipelineExecution
   - Name: sagemaker:StopProcessingJob
   - Name: sagemaker:StopTrainingJob
   - Name: sagemaker:StopTransformJob
+  - Name: sagemaker:UpdateAction
   - Name: sagemaker:UpdateAppImageConfig
+  - Name: sagemaker:UpdateArtifact
   - Name: sagemaker:UpdateCodeRepository
+  - Name: sagemaker:UpdateContext
   - Name: sagemaker:UpdateDomain
   - Name: sagemaker:UpdateEndpoint
   - Name: sagemaker:UpdateEndpointWeightsAndCapacities
   - Name: sagemaker:UpdateExperiment
   - Name: sagemaker:UpdateImage
+  - Name: sagemaker:UpdateModelPackage
   - Name: sagemaker:UpdateMonitoringSchedule
   - Name: sagemaker:UpdateNotebookInstance
   - Name: sagemaker:UpdateNotebookInstanceLifecycleConfig
+  - Name: sagemaker:UpdatePipeline
+  - Name: sagemaker:UpdatePipelineExecution
   - Name: sagemaker:UpdateTrial
   - Name: sagemaker:UpdateTrialComponent
   - Name: sagemaker:UpdateUserProfile
@@ -157,61 +210,8 @@ Actions:
   - Name: sagemaker:UpdateWorkteam
 
   # actions with no corresponding API
-  - Name: sagemaker:AddAssociation
   - Name: sagemaker:BatchGetMetrics
   - Name: sagemaker:BatchPutMetrics
-  - Name: sagemaker:CreateAction
-  - Name: sagemaker:CreateArtifact
-  - Name: sagemaker:CreateContext
-  - Name: sagemaker:CreateFeatureGroup
-  - Name: sagemaker:CreateModelPackageGroup
-  - Name: sagemaker:CreatePipeline
-  - Name: sagemaker:CreateProject
-  - Name: sagemaker:DeleteAction
-  - Name: sagemaker:DeleteArtifact
-  - Name: sagemaker:DeleteAssociation
-  - Name: sagemaker:DeleteContext
-  - Name: sagemaker:DeleteFeatureGroup
-  - Name: sagemaker:DeleteModelPackageGroup
-  - Name: sagemaker:DeleteModelPackageGroupPolicy
-  - Name: sagemaker:DeletePipeline
-  - Name: sagemaker:DeleteProject
-  - Name: sagemaker:DeleteRecord
-  - Name: sagemaker:DescribeAction
-  - Name: sagemaker:DescribeArtifact
-  - Name: sagemaker:DescribeContext
-  - Name: sagemaker:DescribeFeatureGroup
-  - Name: sagemaker:DescribeModelPackageGroup
-  - Name: sagemaker:DescribePipeline
-  - Name: sagemaker:DescribePipelineDefinitionForExecution
-  - Name: sagemaker:DescribePipelineExecution
-  - Name: sagemaker:DescribeProject
-  - Name: sagemaker:DisableSagemakerServicecatalogPortfolio
-  - Name: sagemaker:EnableSagemakerServicecatalogPortfolio
-  - Name: sagemaker:GetModelPackageGroupPolicy
-  - Name: sagemaker:GetRecord
-  - Name: sagemaker:GetSagemakerServicecatalogPortfolioStatus
-  - Name: sagemaker:ListActions
-  - Name: sagemaker:ListArtifacts
-  - Name: sagemaker:ListAssociations
-  - Name: sagemaker:ListContexts
-  - Name: sagemaker:ListFeatureGroups
-  - Name: sagemaker:ListModelPackageGroups
-  - Name: sagemaker:ListPipelineExecutionSteps
-  - Name: sagemaker:ListPipelineExecutions
-  - Name: sagemaker:ListPipelineParametersForExecution
-  - Name: sagemaker:ListPipelines
-  - Name: sagemaker:ListProjects
-  - Name: sagemaker:PutModelPackageGroupPolicy
-  - Name: sagemaker:PutRecord
-  - Name: sagemaker:StartPipelineExecution
-  - Name: sagemaker:StopPipelineExecution
-  - Name: sagemaker:UpdateAction
-  - Name: sagemaker:UpdateArtifact
-  - Name: sagemaker:UpdateContext
-  - Name: sagemaker:UpdateModelPackage
-  - Name: sagemaker:UpdatePipeline
-  - Name: sagemaker:UpdatePipelineExecution
 
   # APIs without an IAM action
   - Name: sagemaker:DeleteHumanTaskUi
