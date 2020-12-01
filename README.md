@@ -131,7 +131,6 @@ The following table summarises the AWS APIs.
 | [`es`](services/es.yml) | 28 | 11 | 9 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`athena`](services/athena.yml) | 28 | 0 | 1 |
-| [`profile`](services/profile.yml) | 28 | 0 | 0 |
 | [`networkmanager`](services/networkmanager.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
@@ -251,6 +250,7 @@ The following table summarises the AWS APIs.
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 45 |
 | [`panorama`](services/panorama.yml) | 0 | 0 | 42 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
+| [`profile`](services/profile.yml) | 0 | 0 | 28 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
