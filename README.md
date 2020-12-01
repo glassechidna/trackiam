@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 247
-* Unique actions: 9448
-* Managed policies: 753
+* Unique actions: 9459
+* Managed policies: 755
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 215 |
-| `arn:aws:iam::aws:policy/Amazon*` | 200 |
+| `arn:aws:iam::aws:policy/Amazon*` | 202 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 137 |
 | `arn:aws:iam::aws:policy/service-role/*` | 117 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -229,7 +229,7 @@ The following table summarises the AWS APIs.
 | [`s3-outposts`](services/s3-outposts.yml) | 3 | 0 | 29 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 2 | 19 | 0 |
-| [`honeycode`](services/honeycode.yml) | 2 | 0 | 5 |
+| [`honeycode`](services/honeycode.yml) | 2 | 0 | 15 |
 | [`pi`](services/pi.yml) | 2 | 0 | 0 |
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 0 | 0 |
@@ -249,7 +249,7 @@ The following table summarises the AWS APIs.
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`amplifybackend`](services/amplifybackend.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
-| [`ecr-public`](services/ecr-public.yml) | 0 | 0 | 19 |
+| [`ecr-public`](services/ecr-public.yml) | 0 | 0 | 20 |
 | [`devops-guru`](services/devops-guru.yml) | 0 | 0 | 18 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
@@ -288,14 +288,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1338 |
+| `List` | 1341 |
 | `Get` | 1231 |
-| `Describe` | 1179 |
+| `Describe` | 1181 |
 | `Delete` | 1119 |
 | `Create` | 1018 |
 | `Update` | 793 |
 | `Put` | 282 |
-| `Start` | 166 |
+| `Start` | 167 |
 | `Tag` | 135 |
 | `Untag` | 134 |
 

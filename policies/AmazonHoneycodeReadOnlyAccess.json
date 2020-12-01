@@ -1,19 +1,21 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonHoneycodeReadOnlyAccess",
   "CreateDate": "2020-06-24T20:28:16Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CRFGMHZ3B",
   "PolicyName": "AmazonHoneycodeReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-06-24T20:28:16Z",
+    "CreateDate": "2020-12-01T17:27:53Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "honeycode:Describe*",
             "honeycode:Get*",
-            "honeycode:List*"
+            "honeycode:List*",
+            "honeycode:Query*"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -22,7 +24,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-06-24T20:28:16Z"
+  "UpdateDate": "2020-12-01T17:27:53Z"
 }

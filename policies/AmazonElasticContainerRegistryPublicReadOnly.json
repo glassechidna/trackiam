@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonElasticContainerRegistryPublicReadOnly",
+  "CreateDate": "2020-12-01T17:27:04Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4AD7UYLF25",
+  "PolicyName": "AmazonElasticContainerRegistryPublicReadOnly",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-01T17:27:04Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ecr-public:BatchCheckLayerAvailability",
+            "ecr-public:DescribeImageTags",
+            "ecr-public:DescribeImages",
+            "ecr-public:DescribeRegistries",
+            "ecr-public:DescribeRepositories",
+            "ecr-public:GetAuthorizationToken",
+            "ecr-public:GetRegistryCatalogData",
+            "ecr-public:GetRepositoryCatalogData",
+            "ecr-public:GetRepositoryPolicy",
+            "sts:GetServiceBearerToken"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-01T17:27:04Z"
+}

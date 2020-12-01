@@ -1,19 +1,29 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonHoneycodeWorkbookFullAccess",
   "CreateDate": "2020-06-24T20:28:46Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4OQLA2WKSW",
   "PolicyName": "AmazonHoneycodeWorkbookFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-06-24T20:28:46Z",
+    "CreateDate": "2020-12-01T17:30:06Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "honeycode:BatchCreateTableRows",
+            "honeycode:BatchDeleteTableRows",
+            "honeycode:BatchUpdateTableRows",
+            "honeycode:BatchUpsertTableRows",
+            "honeycode:DescribeTableDataImportJob",
             "honeycode:GetScreenData",
-            "honeycode:InvokeScreenAutomation"
+            "honeycode:InvokeScreenAutomation",
+            "honeycode:ListTableColumns",
+            "honeycode:ListTableRows",
+            "honeycode:ListTables",
+            "honeycode:QueryTableRows",
+            "honeycode:StartTableDataImportJob"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -22,7 +32,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-06-24T20:28:46Z"
+  "UpdateDate": "2020-12-01T17:30:06Z"
 }
