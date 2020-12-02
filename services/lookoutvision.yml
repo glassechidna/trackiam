@@ -1,6 +1,4 @@
 Actions:
-
-  # APIs without an IAM action
   - Name: lookoutvision:CreateDataset
   - Name: lookoutvision:CreateModel
   - Name: lookoutvision:CreateProject
@@ -17,3 +15,8 @@ Actions:
   - Name: lookoutvision:StartModel
   - Name: lookoutvision:StopModel
   - Name: lookoutvision:UpdateDatasetEntries
+
+  # actions with no corresponding API
+  - Name: lookoutvision:DescribeTrialDetection
+  - Name: lookoutvision:ListTrialDetections
+  - Name: lookoutvision:StartTrialDetection

@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 250
-* Unique actions: 9547
-* Managed policies: 756
+* Unique actions: 9550
+* Managed policies: 757
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 215 |
 | `arn:aws:iam::aws:policy/Amazon*` | 202 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 137 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 138 |
 | `arn:aws:iam::aws:policy/service-role/*` | 117 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 78 |
@@ -185,6 +185,7 @@ The following table summarises the AWS APIs.
 | [`signer`](services/signer.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
+| [`lookoutvision`](services/lookoutvision.yml) | 16 | 0 | 3 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
 | [`license-manager`](services/license-manager.yml) | 16 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 13 | 0 |
@@ -240,7 +241,6 @@ The following table summarises the AWS APIs.
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 220 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 7 |
-| [`lookoutvision`](services/lookoutvision.yml) | 0 | 16 | 0 |
 | [`app-integrations`](services/app-integrations.yml) | 0 | 9 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
@@ -291,14 +291,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1360 |
+| `List` | 1361 |
 | `Get` | 1242 |
-| `Describe` | 1186 |
+| `Describe` | 1187 |
 | `Delete` | 1135 |
 | `Create` | 1033 |
 | `Update` | 807 |
 | `Put` | 282 |
-| `Start` | 169 |
+| `Start` | 170 |
 | `Tag` | 136 |
 | `Untag` | 135 |
 
