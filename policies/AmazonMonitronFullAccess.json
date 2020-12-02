@@ -1,0 +1,72 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonMonitronFullAccess",
+  "CreateDate": "2020-12-02T22:40:28Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4MHDVZEITQ",
+  "PolicyName": "AmazonMonitronFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-02T22:40:28Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "monitron.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "kms:CreateGrant",
+          "Condition": {
+            "Bool": {
+              "kms:GrantIsForAWSResource": true
+            },
+            "StringLike": {
+              "kms:ViaService": [
+                "monitron.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey",
+            "kms:ListAliases",
+            "kms:ListKeys"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "monitron:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ds:DescribeDirectories",
+            "ds:DescribeTrusts",
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSSSOPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-02T22:40:28Z"
+}

@@ -11,16 +11,16 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 250
-* Unique actions: 9550
-* Managed policies: 757
+* Unique services: 251
+* Unique actions: 9562
+* Managed policies: 758
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 215 |
-| `arn:aws:iam::aws:policy/Amazon*` | 202 |
+| `arn:aws:iam::aws:policy/Amazon*` | 203 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 138 |
 | `arn:aws:iam::aws:policy/service-role/*` | 117 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -255,6 +255,7 @@ The following table summarises the AWS APIs.
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
+| [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 9 |
@@ -291,14 +292,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1361 |
-| `Get` | 1242 |
+| `List` | 1364 |
+| `Get` | 1244 |
 | `Describe` | 1187 |
-| `Delete` | 1135 |
-| `Create` | 1033 |
-| `Update` | 807 |
+| `Delete` | 1136 |
+| `Create` | 1034 |
+| `Update` | 808 |
 | `Put` | 282 |
 | `Start` | 170 |
-| `Tag` | 136 |
-| `Untag` | 135 |
+| `Tag` | 137 |
+| `Untag` | 136 |
 
