@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 251
-* Unique actions: 9562
-* Managed policies: 758
+* Unique actions: 9586
+* Managed policies: 759
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 215 |
 | `arn:aws:iam::aws:policy/Amazon*` | 203 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 138 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 139 |
 | `arn:aws:iam::aws:policy/service-role/*` | 117 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 78 |
@@ -185,9 +185,9 @@ The following table summarises the AWS APIs.
 | [`signer`](services/signer.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
+| [`license-manager`](services/license-manager.yml) | 16 | 0 | 24 |
 | [`lookoutvision`](services/lookoutvision.yml) | 16 | 0 | 3 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
-| [`license-manager`](services/license-manager.yml) | 16 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 13 | 0 |
 | [`fsx`](services/fsx.yml) | 14 | 3 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
@@ -292,11 +292,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1364 |
-| `Get` | 1244 |
+| `List` | 1370 |
+| `Get` | 1248 |
 | `Describe` | 1187 |
-| `Delete` | 1136 |
-| `Create` | 1034 |
+| `Delete` | 1139 |
+| `Create` | 1039 |
 | `Update` | 808 |
 | `Put` | 282 |
 | `Start` | 170 |

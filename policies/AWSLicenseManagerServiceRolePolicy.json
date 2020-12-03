@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSLicenseManagerServiceRolePolicy",
   "CreateDate": "2018-11-26T19:02:53Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIM7JPETWHTYNBQSZE",
   "PolicyName": "AWSLicenseManagerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-11-15T22:10:12Z",
+    "CreateDate": "2020-12-03T08:38:18Z",
     "Document": {
       "Statement": [
         {
@@ -24,8 +24,9 @@
         },
         {
           "Action": [
-            "license-manager:GetLicenseConfiguration",
+            "license-manager:GetLicense*",
             "license-manager:GetServiceSettings",
+            "license-manager:ListDistributedGrants",
             "license-manager:ListUsageForLicenseConfiguration",
             "license-manager:UpdateLicenseSpecificationsForResource"
           ],
@@ -113,7 +114,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-11-15T22:10:12Z"
+  "UpdateDate": "2020-12-03T08:38:18Z"
 }

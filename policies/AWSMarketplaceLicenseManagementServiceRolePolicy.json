@@ -1,0 +1,37 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSMarketplaceLicenseManagementServiceRolePolicy",
+  "CreateDate": "2020-12-03T08:33:40Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4DTCV6FSO7",
+  "PolicyName": "AWSMarketplaceLicenseManagementServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-03T08:33:40Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "license-manager:AcceptGrant",
+            "license-manager:CreateGrant",
+            "license-manager:CreateGrantVersion",
+            "license-manager:DeleteGrant",
+            "license-manager:GetGrant",
+            "license-manager:ListDistributedGrants",
+            "license-manager:ListReceivedGrants",
+            "organizations:DescribeOrganization"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowLicenseManagerActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-03T08:33:40Z"
+}
