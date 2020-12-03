@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPrivateMarketplaceAdminFullAccess",
   "CreateDate": "2018-11-27T16:32:32Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ6VRZDDCYDOVCOCEI",
   "PolicyName": "AWSPrivateMarketplaceAdminFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-10-28T21:48:03Z",
+    "CreateDate": "2020-12-03T15:12:31Z",
     "Document": {
       "Statement": [
         {
@@ -32,12 +32,24 @@
           "Resource": [
             "*"
           ]
+        },
+        {
+          "Action": [
+            "aws-marketplace:CancelChangeSet",
+            "aws-marketplace:DescribeChangeSet",
+            "aws-marketplace:DescribeEntity",
+            "aws-marketplace:ListChangeSets",
+            "aws-marketplace:ListEntities",
+            "aws-marketplace:StartChangeSet"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-10-28T21:48:03Z"
+  "UpdateDate": "2020-12-03T15:12:31Z"
 }
