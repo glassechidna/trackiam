@@ -1,22 +1,4 @@
 Actions:
-  - Name: license-manager:CreateLicenseConfiguration
-  - Name: license-manager:DeleteLicenseConfiguration
-  - Name: license-manager:GetLicenseConfiguration
-  - Name: license-manager:GetServiceSettings
-  - Name: license-manager:ListAssociationsForLicenseConfiguration
-  - Name: license-manager:ListFailuresForLicenseConfigurationOperations
-  - Name: license-manager:ListLicenseConfigurations
-  - Name: license-manager:ListLicenseSpecificationsForResource
-  - Name: license-manager:ListResourceInventory
-  - Name: license-manager:ListTagsForResource
-  - Name: license-manager:ListUsageForLicenseConfiguration
-  - Name: license-manager:TagResource
-  - Name: license-manager:UntagResource
-  - Name: license-manager:UpdateLicenseConfiguration
-  - Name: license-manager:UpdateLicenseSpecificationsForResource
-  - Name: license-manager:UpdateServiceSettings
-
-  # actions with no corresponding API
   - Name: license-manager:AcceptGrant
   - Name: license-manager:CheckInLicense
   - Name: license-manager:CheckoutBorrowLicense
@@ -24,20 +6,41 @@ Actions:
   - Name: license-manager:CreateGrant
   - Name: license-manager:CreateGrantVersion
   - Name: license-manager:CreateLicense
+  - Name: license-manager:CreateLicenseConfiguration
   - Name: license-manager:CreateLicenseVersion
   - Name: license-manager:CreateToken
   - Name: license-manager:DeleteGrant
   - Name: license-manager:DeleteLicense
+  - Name: license-manager:DeleteLicenseConfiguration
   - Name: license-manager:DeleteToken
   - Name: license-manager:ExtendLicenseConsumption
   - Name: license-manager:GetAccessToken
   - Name: license-manager:GetGrant
   - Name: license-manager:GetLicense
+  - Name: license-manager:GetLicenseConfiguration
   - Name: license-manager:GetLicenseUsage
+  - Name: license-manager:GetServiceSettings
+  - Name: license-manager:ListAssociationsForLicenseConfiguration
   - Name: license-manager:ListDistributedGrants
+  - Name: license-manager:ListFailuresForLicenseConfigurationOperations
+  - Name: license-manager:ListLicenseConfigurations
+  - Name: license-manager:ListLicenseSpecificationsForResource
   - Name: license-manager:ListLicenseVersions
   - Name: license-manager:ListLicenses
   - Name: license-manager:ListReceivedGrants
-  - Name: license-manager:ListReceivedLicensess
+  - Name: license-manager:ListResourceInventory
+  - Name: license-manager:ListTagsForResource
   - Name: license-manager:ListTokens
+  - Name: license-manager:ListUsageForLicenseConfiguration
   - Name: license-manager:RejectGrant
+  - Name: license-manager:TagResource
+  - Name: license-manager:UntagResource
+  - Name: license-manager:UpdateLicenseConfiguration
+  - Name: license-manager:UpdateLicenseSpecificationsForResource
+  - Name: license-manager:UpdateServiceSettings
+
+  # actions with no corresponding API
+  - Name: license-manager:ListReceivedLicensess
+
+  # APIs without an IAM action
+  - Name: license-manager:ListReceivedLicenses

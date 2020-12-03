@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 251
-* Unique actions: 9586
+* Unique actions: 9588
 * Managed policies: 759
 
 Most common managed policy name prefixes:
@@ -99,6 +99,7 @@ The following table summarises the AWS APIs.
 | [`wafv2`](services/wafv2.yml) | 40 | 0 | 2 |
 | [`events`](services/events.yml) | 40 | 0 | 0 |
 | [`logs`](services/logs.yml) | 39 | 3 | 5 |
+| [`license-manager`](services/license-manager.yml) | 39 | 1 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`databrew`](services/databrew.yml) | 38 | 0 | 0 |
@@ -185,7 +186,6 @@ The following table summarises the AWS APIs.
 | [`signer`](services/signer.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
-| [`license-manager`](services/license-manager.yml) | 16 | 0 | 24 |
 | [`lookoutvision`](services/lookoutvision.yml) | 16 | 0 | 3 |
 | [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 13 | 0 |
@@ -209,12 +209,12 @@ The following table summarises the AWS APIs.
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 10 | 4 | 3 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
+| [`compute-optimizer`](services/compute-optimizer.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`iot`](services/iot.yml) | 9 | 0 | 212 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
-| [`compute-optimizer`](services/compute-optimizer.yml) | 9 | 0 | 0 |
 | [`braket`](services/braket.yml) | 9 | 0 | 0 |
 | [`budgets`](services/budgets.yml) | 8 | 14 | 2 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
@@ -292,8 +292,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1370 |
-| `Get` | 1248 |
+| `List` | 1371 |
+| `Get` | 1249 |
 | `Describe` | 1187 |
 | `Delete` | 1139 |
 | `Create` | 1039 |
