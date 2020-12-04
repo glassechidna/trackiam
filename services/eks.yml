@@ -1,14 +1,19 @@
 Actions:
+  - Name: eks:CreateAddon
   - Name: eks:CreateCluster
   - Name: eks:CreateFargateProfile
   - Name: eks:CreateNodegroup
+  - Name: eks:DeleteAddon
   - Name: eks:DeleteCluster
   - Name: eks:DeleteFargateProfile
   - Name: eks:DeleteNodegroup
+  - Name: eks:DescribeAddon
+  - Name: eks:DescribeAddonVersions
   - Name: eks:DescribeCluster
   - Name: eks:DescribeFargateProfile
   - Name: eks:DescribeNodegroup
   - Name: eks:DescribeUpdate
+  - Name: eks:ListAddons
   - Name: eks:ListClusters
   - Name: eks:ListFargateProfiles
   - Name: eks:ListNodegroups
@@ -16,15 +21,11 @@ Actions:
   - Name: eks:ListUpdates
   - Name: eks:TagResource
   - Name: eks:UntagResource
+  - Name: eks:UpdateAddon
   - Name: eks:UpdateClusterConfig
   - Name: eks:UpdateClusterVersion
   - Name: eks:UpdateNodegroupConfig
   - Name: eks:UpdateNodegroupVersion
 
-  # APIs without an IAM action
-  - Name: eks:CreateAddon
-  - Name: eks:DeleteAddon
-  - Name: eks:DescribeAddon
-  - Name: eks:DescribeAddonVersions
-  - Name: eks:ListAddons
-  - Name: eks:UpdateAddon
+  # actions with no corresponding API
+  - Name: eks:AccessKubernetesApi

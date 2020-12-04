@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLambdaRolePolicyForLaunchWizardSAP",
   "CreateDate": "2020-03-30T20:25:12Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NMJOHL3TN",
   "PolicyName": "AmazonLambdaRolePolicyForLaunchWizardSAP",
   "PolicyVersion": {
-    "CreateDate": "2020-07-01T19:49:27Z",
+    "CreateDate": "2020-12-04T16:00:56Z",
     "Document": {
       "Statement": [
         {
@@ -75,16 +75,12 @@
             "s3:GetObjectVersionAcl",
             "s3:ListBucket",
             "s3:ListBucketVersions",
-            "s3:ListObjectVersions",
-            "s3:ListObjects",
-            "s3:ListObjectsV2",
             "s3:PutObject",
             "s3:PutObjectTagging"
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:s3:::launchwizard*",
-            "arn:aws:s3:::launchwizard*/*"
+            "arn:aws:s3:::launchwizard*"
           ]
         },
         {
@@ -108,7 +104,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-07-01T19:49:27Z"
+  "UpdateDate": "2020-12-04T16:00:56Z"
 }

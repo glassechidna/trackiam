@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLaunchWizard_Fullaccess",
   "CreateDate": "2020-08-06T17:47:30Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ABPQ7BLC2",
   "PolicyName": "AmazonLaunchWizard_Fullaccess",
   "PolicyVersion": {
-    "CreateDate": "2020-11-14T02:27:14Z",
+    "CreateDate": "2020-12-04T16:01:43Z",
     "Document": {
       "Statement": [
         {
@@ -427,6 +427,27 @@
         },
         {
           "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:DeleteResourcePolicy",
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:ListSecretVersionIds",
+            "secretsmanager:PutResourcePolicy",
+            "secretsmanager:TagResource",
+            "secretsmanager:UntagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:LaunchWizard*"
+        },
+        {
+          "Action": [
+            "secretsmanager:GetRandomPassword",
+            "secretsmanager:ListSecrets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "sqs:AddPermission",
             "sqs:CreateQueue",
             "sqs:DeleteQueue",
@@ -444,7 +465,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2020-11-14T02:27:14Z"
+  "UpdateDate": "2020-12-04T16:01:43Z"
 }

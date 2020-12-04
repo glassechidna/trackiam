@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 251
-* Unique actions: 9588
+* Unique actions: 9589
 * Managed policies: 759
 
 Most common managed policy name prefixes:
@@ -137,6 +137,7 @@ The following table summarises the AWS APIs.
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
+| [`eks`](services/eks.yml) | 27 | 0 | 1 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 26 | 3 | 0 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 26 | 1 | 1 |
@@ -159,11 +160,11 @@ The following table summarises the AWS APIs.
 | [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 1 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 22 | 0 | 0 |
-| [`eks`](services/eks.yml) | 21 | 6 | 0 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`cognito-identity`](services/cognito-identity.yml) | 21 | 0 | 0 |
 | [`qldb`](services/qldb.yml) | 20 | 0 | 3 |
 | [`iotevents`](services/iotevents.yml) | 20 | 0 | 1 |
+| [`transfer`](services/transfer.yml) | 20 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 20 | 0 | 0 |
 | [`ecr-public`](services/ecr-public.yml) | 20 | 0 | 0 |
@@ -173,7 +174,6 @@ The following table summarises the AWS APIs.
 | [`batch`](services/batch.yml) | 19 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 19 | 0 | 0 |
 | [`shield`](services/shield.yml) | 18 | 12 | 0 |
-| [`transfer`](services/transfer.yml) | 18 | 2 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 18 | 1 | 0 |
 | [`appflow`](services/appflow.yml) | 18 | 0 | 5 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
