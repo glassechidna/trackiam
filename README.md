@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 251
-* Unique actions: 9589
+* Unique actions: 9596
 * Managed policies: 759
 
 Most common managed policy name prefixes:
@@ -41,8 +41,8 @@ The following table summarises the AWS APIs.
 | [`glue`](services/glue.yml) | 144 | 13 | 1 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`chime`](services/chime.yml) | 133 | 48 | 50 |
-| [`rds`](services/rds.yml) | 123 | 7 | 1 |
-| [`ssm`](services/ssm.yml) | 122 | 0 | 7 |
+| [`rds`](services/rds.yml) | 123 | 9 | 1 |
+| [`ssm`](services/ssm.yml) | 122 | 5 | 7 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
 | [`ses`](services/ses.yml) | 103 | 34 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 40 | 0 |
@@ -153,10 +153,10 @@ The following table summarises the AWS APIs.
 | [`kendra`](services/kendra.yml) | 24 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 24 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 23 | 5 | 0 |
+| [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
-| [`states`](services/states.yml) | 22 | 1 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 1 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 22 | 0 | 0 |
@@ -292,14 +292,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1371 |
-| `Get` | 1249 |
+| `List` | 1372 |
+| `Get` | 1250 |
 | `Describe` | 1187 |
-| `Delete` | 1139 |
-| `Create` | 1039 |
-| `Update` | 808 |
+| `Delete` | 1140 |
+| `Create` | 1040 |
+| `Update` | 809 |
 | `Put` | 282 |
-| `Start` | 170 |
+| `Start` | 171 |
 | `Tag` | 137 |
 | `Untag` | 136 |
 
