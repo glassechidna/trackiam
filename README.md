@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 251
-* Unique actions: 9596
-* Managed policies: 759
+* Unique actions: 9602
+* Managed policies: 758
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 215 |
+| `arn:aws:iam::aws:policy/AWS*` | 214 |
 | `arn:aws:iam::aws:policy/Amazon*` | 203 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 139 |
 | `arn:aws:iam::aws:policy/service-role/*` | 117 |
@@ -126,9 +126,9 @@ The following table summarises the AWS APIs.
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 30 | 0 | 0 |
 | [`ce`](services/ce.yml) | 29 | 0 | 10 |
+| [`ecr`](services/ecr.yml) | 29 | 0 | 6 |
 | [`transcribe`](services/transcribe.yml) | 29 | 0 | 2 |
 | [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
-| [`ecr`](services/ecr.yml) | 29 | 0 | 0 |
 | [`es`](services/es.yml) | 28 | 11 | 9 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`athena`](services/athena.yml) | 28 | 0 | 1 |
@@ -293,12 +293,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1372 |
-| `Get` | 1250 |
-| `Describe` | 1187 |
-| `Delete` | 1140 |
+| `Get` | 1251 |
+| `Describe` | 1188 |
+| `Delete` | 1141 |
 | `Create` | 1040 |
 | `Update` | 809 |
-| `Put` | 282 |
+| `Put` | 284 |
 | `Start` | 171 |
 | `Tag` | 137 |
 | `Untag` | 136 |

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ElasticLoadBalancingFullAccess",
   "CreateDate": "2018-09-20T20:42:07Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIDPMLA3IUIOQCISJ4",
   "PolicyName": "ElasticLoadBalancingFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-03-25T21:33:12Z",
+    "CreateDate": "2020-12-04T20:01:39Z",
     "Document": {
       "Statement": [
         {
@@ -31,6 +31,7 @@
             "ec2:DescribeAccountAttributes",
             "ec2:DescribeAddresses",
             "ec2:DescribeClassicLinkInstances",
+            "ec2:DescribeCoipPools",
             "ec2:DescribeInstances",
             "ec2:DescribeInternetGateways",
             "ec2:DescribeNetworkInterfaces",
@@ -38,7 +39,8 @@
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcClassicLink",
-            "ec2:DescribeVpcs"
+            "ec2:DescribeVpcs",
+            "ec2:GetCoipPoolUsage"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -47,7 +49,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2019-03-25T21:33:12Z"
+  "UpdateDate": "2020-12-04T20:01:39Z"
 }
