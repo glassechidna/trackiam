@@ -13,7 +13,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 251
 * Unique actions: 9602
-* Managed policies: 758
+* Managed policies: 760
 
 Most common managed policy name prefixes:
 
@@ -21,8 +21,8 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 214 |
 | `arn:aws:iam::aws:policy/Amazon*` | 203 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 139 |
-| `arn:aws:iam::aws:policy/service-role/*` | 117 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 140 |
+| `arn:aws:iam::aws:policy/service-role/*` | 118 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 78 |
 
@@ -78,6 +78,7 @@ The following table summarises the AWS APIs.
 | [`medialive`](services/medialive.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 53 | 0 | 0 |
+| [`dms`](services/dms.yml) | 51 | 3 | 0 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 50 | 1 | 3 |
 | [`backup`](services/backup.yml) | 50 | 0 | 2 |
@@ -90,7 +91,6 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
 | [`dynamodb`](services/dynamodb.yml) | 45 | 9 | 10 |
-| [`dms`](services/dms.yml) | 45 | 9 | 0 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
 | [`codebuild`](services/codebuild.yml) | 43 | 1 | 8 |

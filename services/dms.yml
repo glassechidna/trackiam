@@ -1,6 +1,7 @@
 Actions:
   - Name: dms:AddTagsToResource
   - Name: dms:ApplyPendingMaintenanceAction
+  - Name: dms:CancelReplicationTaskAssessmentRun
   - Name: dms:CreateEndpoint
   - Name: dms:CreateEventSubscription
   - Name: dms:CreateReplicationInstance
@@ -12,7 +13,9 @@ Actions:
   - Name: dms:DeleteReplicationInstance
   - Name: dms:DeleteReplicationSubnetGroup
   - Name: dms:DeleteReplicationTask
+  - Name: dms:DeleteReplicationTaskAssessmentRun
   - Name: dms:DescribeAccountAttributes
+  - Name: dms:DescribeApplicableIndividualAssessments
   - Name: dms:DescribeCertificates
   - Name: dms:DescribeConnections
   - Name: dms:DescribeEndpointTypes
@@ -26,6 +29,8 @@ Actions:
   - Name: dms:DescribeReplicationInstances
   - Name: dms:DescribeReplicationSubnetGroups
   - Name: dms:DescribeReplicationTaskAssessmentResults
+  - Name: dms:DescribeReplicationTaskAssessmentRuns
+  - Name: dms:DescribeReplicationTaskIndividualAssessments
   - Name: dms:DescribeReplicationTasks
   - Name: dms:DescribeSchemas
   - Name: dms:DescribeTableStatistics
@@ -42,16 +47,11 @@ Actions:
   - Name: dms:RemoveTagsFromResource
   - Name: dms:StartReplicationTask
   - Name: dms:StartReplicationTaskAssessment
+  - Name: dms:StartReplicationTaskAssessmentRun
   - Name: dms:StopReplicationTask
   - Name: dms:TestConnection
 
   # APIs without an IAM action
-  - Name: dms:CancelReplicationTaskAssessmentRun
   - Name: dms:DeleteConnection
-  - Name: dms:DeleteReplicationTaskAssessmentRun
-  - Name: dms:DescribeApplicableIndividualAssessments
   - Name: dms:DescribePendingMaintenanceActions
-  - Name: dms:DescribeReplicationTaskAssessmentRuns
-  - Name: dms:DescribeReplicationTaskIndividualAssessments
   - Name: dms:MoveReplicationTask
-  - Name: dms:StartReplicationTaskAssessmentRun
