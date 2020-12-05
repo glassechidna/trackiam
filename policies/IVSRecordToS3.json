@@ -1,0 +1,29 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/IVSRecordToS3",
+  "CreateDate": "2020-12-05T00:10:43Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4M65NGVKOJ",
+  "PolicyName": "IVSRecordToS3",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-05T00:10:43Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::AWSIVS_*/ivs/*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-05T00:10:43Z"
+}

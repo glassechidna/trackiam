@@ -13,7 +13,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 251
 * Unique actions: 9602
-* Managed policies: 760
+* Managed policies: 761
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 214 |
 | `arn:aws:iam::aws:policy/Amazon*` | 203 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 140 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 141 |
 | `arn:aws:iam::aws:policy/service-role/*` | 118 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 78 |
@@ -59,7 +59,7 @@ The following table summarises the AWS APIs.
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
-| [`connect`](services/connect.yml) | 75 | 8 | 3 |
+| [`connect`](services/connect.yml) | 76 | 7 | 3 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`s3`](services/s3.yml) | 65 | 56 | 40 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |

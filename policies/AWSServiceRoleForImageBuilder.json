@@ -1,15 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForImageBuilder",
   "CreateDate": "2019-11-29T22:02:13Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NE22WISEW",
   "PolicyName": "AWSServiceRoleForImageBuilder",
   "PolicyVersion": {
-    "CreateDate": "2020-09-28T18:13:06Z",
+    "CreateDate": "2020-12-04T23:27:05Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "ssm.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": "iam:PassRole",
           "Condition": {
@@ -171,6 +181,15 @@
         },
         {
           "Action": [
+            "ec2:CreateLaunchTemplateVersion",
+            "ec2:DescribeLaunchTemplates",
+            "ec2:ModifyLaunchTemplate"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "ec2:CreateTags"
           ],
           "Effect": "Allow",
@@ -186,7 +205,8 @@
             "arn:aws:ec2:*:*:network-interface/*",
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:subnet/*",
-            "arn:aws:ec2:*::image/*"
+            "arn:aws:ec2:*::image/*",
+            "arn:aws:ec2:*::snapshot/*"
           ]
         },
         {
@@ -243,7 +263,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2020-09-28T18:13:06Z"
+  "UpdateDate": "2020-12-04T23:27:05Z"
 }
