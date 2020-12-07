@@ -1,15 +1,31 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonAppFlowFullAccess",
   "CreateDate": "2020-06-02T23:30:14Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4PGBU2ALC4",
   "PolicyName": "AmazonAppFlowFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-06-02T23:30:14Z",
+    "CreateDate": "2020-12-07T22:49:15Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "secretsmanager:CreateSecret",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "appflow.amazonaws.com"
+              ]
+            },
+            "StringLike": {
+              "secretsmanager:Name": "appflow!*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecretsManagerCreateSecretAccess"
+        },
         {
           "Action": [
             "kms:CreateGrant"
@@ -38,6 +54,24 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "KMSListGrantAccess"
+        },
+        {
+          "Action": [
+            "secretsmanager:PutResourcePolicy"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "appflow.amazonaws.com"
+              ]
+            },
+            "StringEqualsIgnoreCase": {
+              "secretsmanager:ResourceTag/aws:secretsmanager:owningService": "appflow"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecretsManagerPutResourcePolicyAccess"
         },
         {
           "Action": "appflow:*",
@@ -83,7 +117,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-06-02T23:30:14Z"
+  "UpdateDate": "2020-12-07T22:49:15Z"
 }
