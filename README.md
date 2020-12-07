@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 251
-* Unique actions: 9602
-* Managed policies: 761
+* Unique actions: 9605
+* Managed policies: 762
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 214 |
 | `arn:aws:iam::aws:policy/Amazon*` | 203 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 141 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 142 |
 | `arn:aws:iam::aws:policy/service-role/*` | 118 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 78 |
@@ -46,7 +46,7 @@ The following table summarises the AWS APIs.
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
 | [`ses`](services/ses.yml) | 103 | 34 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 40 | 0 |
-| [`servicecatalog`](services/servicecatalog.yml) | 100 | 1 | 0 |
+| [`servicecatalog`](services/servicecatalog.yml) | 100 | 4 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 99 | 0 | 15 |
 | [`greengrass`](services/greengrass.yml) | 90 | 2 | 1 |
@@ -292,7 +292,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1372 |
+| `List` | 1373 |
 | `Get` | 1251 |
 | `Describe` | 1188 |
 | `Delete` | 1141 |
@@ -300,6 +300,6 @@ Most common action prefixes:
 | `Update` | 809 |
 | `Put` | 284 |
 | `Start` | 171 |
-| `Tag` | 137 |
-| `Untag` | 136 |
+| `Tag` | 138 |
+| `Untag` | 137 |
 

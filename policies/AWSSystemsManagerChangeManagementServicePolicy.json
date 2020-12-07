@@ -1,0 +1,83 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSystemsManagerChangeManagementServicePolicy",
+  "CreateDate": "2020-12-07T22:21:57Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4MZTL6DXTC",
+  "PolicyName": "AWSSystemsManagerChangeManagementServicePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-07T22:21:57Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "ssm.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "iam:GetGroup",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:CreateAssociation",
+            "ssm:CreateOpsItem",
+            "ssm:DeleteAssociation",
+            "ssm:GetAutomationExecution",
+            "ssm:GetCalendarState",
+            "ssm:GetDocument",
+            "ssm:GetOpsItem",
+            "ssm:StartAutomationExecution",
+            "ssm:StopAutomationExecution",
+            "ssm:UpdateOpsItem"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "sso-directory:DescribeUsers",
+            "sso-directory:IsMemberInGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "sso:ListDirectoryAssociations"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-07T22:21:57Z"
+}
