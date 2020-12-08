@@ -1,0 +1,199 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSAuditManagerServiceRolePolicy",
+  "CreateDate": "2020-12-08T15:12:12Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4C5N52UWST",
+  "PolicyName": "AWSAuditManagerServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-08T15:12:12Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "events:PutRule"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "events:detail-type": "Security Hub Findings - Imported",
+              "events:source": "aws.securityhub"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CreateEventsAccess"
+        },
+        {
+          "Action": [
+            "cloudtrail:DescribeTrails"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudtrailAccess"
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudwatchAccess"
+        },
+        {
+          "Action": [
+            "cognito-idp:DescribeUserPool"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CognitoAccess"
+        },
+        {
+          "Action": [
+            "config:DescribeConfigRules",
+            "config:DescribeDeliveryChannels",
+            "config:ListDiscoveredResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ConfigAccess"
+        },
+        {
+          "Action": [
+            "ec2:DescribeFlowLogs",
+            "ec2:DescribeInstances",
+            "ec2:DescribeNetworkAcls",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2Access"
+        },
+        {
+          "Action": [
+            "elasticfilesystem:DescribeFileSystems"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EFSAccess"
+        },
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:DescribeRule",
+            "events:DisableRule",
+            "events:EnableRule",
+            "events:ListTargetsByRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/AuditManagerSecurityHubFindingsReceiver",
+          "Sid": "EventsAccess"
+        },
+        {
+          "Action": [
+            "events:DescribeRule"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EventBridgeAccess"
+        },
+        {
+          "Action": [
+            "guardduty:ListDetectors"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GuardDutyAccess"
+        },
+        {
+          "Action": [
+            "iam:GenerateCredentialReport",
+            "iam:GetAccountPasswordPolicy",
+            "iam:GetAccountSummary",
+            "iam:ListEntitiesForPolicy",
+            "iam:ListGroupPolicies",
+            "iam:ListGroups",
+            "iam:ListPolicies",
+            "iam:ListRolePolicies",
+            "iam:ListRoles",
+            "iam:ListUserPolicies",
+            "iam:ListUsers"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IAMAccess"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey",
+            "kms:ListGrants",
+            "kms:ListKeys"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "KMSAccess"
+        },
+        {
+          "Action": [
+            "license-manager:ListAssociationsForLicenseConfiguration",
+            "license-manager:ListLicenseConfigurations",
+            "license-manager:ListUsageForLicenseConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LicenseManagerAccess"
+        },
+        {
+          "Action": [
+            "organizations:DescribePolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "OrganizationsAccess"
+        },
+        {
+          "Action": [
+            "route53:GetQueryLoggingConfig"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Route53Access"
+        },
+        {
+          "Action": [
+            "s3:GetLifecycleConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "S3Access"
+        },
+        {
+          "Action": [
+            "securityhub:DescribeStandards"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecurityHubAccess"
+        },
+        {
+          "Action": [
+            "waf:ListActivatedRulesInRuleGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "WAFAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-08T15:12:12Z"
+}
