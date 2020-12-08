@@ -5,15 +5,18 @@ Actions:
   - Name: ecr:CompleteLayerUpload
   - Name: ecr:CreateRepository
   - Name: ecr:DeleteLifecyclePolicy
+  - Name: ecr:DeleteRegistryPolicy
   - Name: ecr:DeleteRepository
   - Name: ecr:DeleteRepositoryPolicy
   - Name: ecr:DescribeImageScanFindings
   - Name: ecr:DescribeImages
+  - Name: ecr:DescribeRegistry
   - Name: ecr:DescribeRepositories
   - Name: ecr:GetAuthorizationToken
   - Name: ecr:GetDownloadUrlForLayer
   - Name: ecr:GetLifecyclePolicy
   - Name: ecr:GetLifecyclePolicyPreview
+  - Name: ecr:GetRegistryPolicy
   - Name: ecr:GetRepositoryPolicy
   - Name: ecr:InitiateLayerUpload
   - Name: ecr:ListImages
@@ -22,6 +25,8 @@ Actions:
   - Name: ecr:PutImageScanningConfiguration
   - Name: ecr:PutImageTagMutability
   - Name: ecr:PutLifecyclePolicy
+  - Name: ecr:PutRegistryPolicy
+  - Name: ecr:PutReplicationConfiguration
   - Name: ecr:SetRepositoryPolicy
   - Name: ecr:StartImageScan
   - Name: ecr:StartLifecyclePolicyPreview
@@ -30,9 +35,4 @@ Actions:
   - Name: ecr:UploadLayerPart
 
   # actions with no corresponding API
-  - Name: ecr:DeleteRegistryPolicy
-  - Name: ecr:DescribeRegistry
-  - Name: ecr:GetRegistryPolicy
-  - Name: ecr:PutRegistryPolicy
-  - Name: ecr:PutReplicationConfiguration
   - Name: ecr:ReplicateImage

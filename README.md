@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 252
-* Unique actions: 9690
+* Unique services: 254
+* Unique actions: 9711
 * Managed policies: 764
 
 Most common managed policy name prefixes:
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 417 | 6 | 0 |
-| [`sagemaker`](services/sagemaker.yml) | 209 | 1 | 36 |
+| [`sagemaker`](services/sagemaker.yml) | 243 | 1 | 2 |
 | [`glue`](services/glue.yml) | 144 | 13 | 1 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`chime`](services/chime.yml) | 133 | 48 | 50 |
@@ -80,6 +80,7 @@ The following table summarises the AWS APIs.
 | [`frauddetector`](services/frauddetector.yml) | 53 | 0 | 0 |
 | [`dms`](services/dms.yml) | 51 | 3 | 0 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
+| [`auditmanager`](services/auditmanager.yml) | 51 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 50 | 1 | 3 |
 | [`backup`](services/backup.yml) | 50 | 0 | 2 |
 | [`ecs`](services/ecs.yml) | 49 | 1 | 2 |
@@ -110,6 +111,7 @@ The following table summarises the AWS APIs.
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
+| [`ecr`](services/ecr.yml) | 34 | 0 | 1 |
 | [`forecast`](services/forecast.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 33 | 1 | 0 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
@@ -126,7 +128,6 @@ The following table summarises the AWS APIs.
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 30 | 0 | 0 |
 | [`ce`](services/ce.yml) | 29 | 0 | 10 |
-| [`ecr`](services/ecr.yml) | 29 | 0 | 6 |
 | [`transcribe`](services/transcribe.yml) | 29 | 0 | 2 |
 | [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
 | [`es`](services/es.yml) | 28 | 11 | 9 |
@@ -241,13 +242,14 @@ The following table summarises the AWS APIs.
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 220 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 7 |
+| [`emr-containers`](services/emr-containers.yml) | 0 | 15 | 0 |
 | [`app-integrations`](services/app-integrations.yml) | 0 | 9 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
+| [`healthlake`](services/healthlake.yml) | 0 | 6 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
-| [`auditmanager`](services/auditmanager.yml) | 0 | 0 | 51 |
 | [`proton`](services/proton.yml) | 0 | 0 | 47 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 45 |
 | [`panorama`](services/panorama.yml) | 0 | 0 | 42 |
@@ -293,14 +295,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1387 |
+| `List` | 1392 |
 | `Get` | 1268 |
-| `Describe` | 1195 |
-| `Delete` | 1150 |
-| `Create` | 1050 |
+| `Describe` | 1200 |
+| `Delete` | 1153 |
+| `Create` | 1053 |
 | `Update` | 819 |
 | `Put` | 284 |
-| `Start` | 171 |
-| `Tag` | 139 |
-| `Untag` | 138 |
+| `Start` | 173 |
+| `Tag` | 140 |
+| `Untag` | 139 |
 
