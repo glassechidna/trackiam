@@ -11,9 +11,9 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 251
-* Unique actions: 9605
-* Managed policies: 763
+* Unique services: 252
+* Unique actions: 9690
+* Managed policies: 764
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 214 |
 | `arn:aws:iam::aws:policy/Amazon*` | 203 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 143 |
-| `arn:aws:iam::aws:policy/service-role/*` | 118 |
+| `arn:aws:iam::aws:policy/service-role/*` | 119 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 78 |
 
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 417 | 6 | 0 |
-| [`sagemaker`](services/sagemaker.yml) | 209 | 1 | 2 |
+| [`sagemaker`](services/sagemaker.yml) | 209 | 1 | 36 |
 | [`glue`](services/glue.yml) | 144 | 13 | 1 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
 | [`chime`](services/chime.yml) | 133 | 48 | 50 |
@@ -247,6 +247,7 @@ The following table summarises the AWS APIs.
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 0 | 2 | 0 |
+| [`auditmanager`](services/auditmanager.yml) | 0 | 0 | 51 |
 | [`proton`](services/proton.yml) | 0 | 0 | 47 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 45 |
 | [`panorama`](services/panorama.yml) | 0 | 0 | 42 |
@@ -292,14 +293,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1373 |
-| `Get` | 1251 |
-| `Describe` | 1188 |
-| `Delete` | 1141 |
-| `Create` | 1040 |
-| `Update` | 809 |
+| `List` | 1387 |
+| `Get` | 1268 |
+| `Describe` | 1195 |
+| `Delete` | 1150 |
+| `Create` | 1050 |
+| `Update` | 819 |
 | `Put` | 284 |
 | `Start` | 171 |
-| `Tag` | 138 |
-| `Untag` | 137 |
+| `Tag` | 139 |
+| `Untag` | 138 |
 
