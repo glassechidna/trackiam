@@ -8,6 +8,7 @@ Actions:
   - Name: ssm:CreateDocument
   - Name: ssm:CreateMaintenanceWindow
   - Name: ssm:CreateOpsItem
+  - Name: ssm:CreateOpsMetadata
   - Name: ssm:CreatePatchBaseline
   - Name: ssm:CreateResourceDataSync
   - Name: ssm:DeleteActivation
@@ -15,6 +16,7 @@ Actions:
   - Name: ssm:DeleteDocument
   - Name: ssm:DeleteInventory
   - Name: ssm:DeleteMaintenanceWindow
+  - Name: ssm:DeleteOpsMetadata
   - Name: ssm:DeleteParameter
   - Name: ssm:DeleteParameters
   - Name: ssm:DeletePatchBaseline
@@ -70,6 +72,7 @@ Actions:
   - Name: ssm:GetMaintenanceWindowExecutionTaskInvocation
   - Name: ssm:GetMaintenanceWindowTask
   - Name: ssm:GetOpsItem
+  - Name: ssm:GetOpsMetadata
   - Name: ssm:GetOpsSummary
   - Name: ssm:GetParameter
   - Name: ssm:GetParameterHistory
@@ -88,6 +91,7 @@ Actions:
   - Name: ssm:ListDocumentVersions
   - Name: ssm:ListDocuments
   - Name: ssm:ListInventoryEntries
+  - Name: ssm:ListOpsMetadata
   - Name: ssm:ListResourceComplianceSummaries
   - Name: ssm:ListResourceDataSync
   - Name: ssm:ListTagsForResource
@@ -118,6 +122,7 @@ Actions:
   - Name: ssm:UpdateMaintenanceWindowTask
   - Name: ssm:UpdateManagedInstanceRole
   - Name: ssm:UpdateOpsItem
+  - Name: ssm:UpdateOpsMetadata
   - Name: ssm:UpdatePatchBaseline
   - Name: ssm:UpdateResourceDataSync
   - Name: ssm:UpdateServiceSetting
@@ -130,10 +135,3 @@ Actions:
   - Name: ssm:PutConfigurePackageResult
   - Name: ssm:UpdateInstanceAssociationStatus
   - Name: ssm:UpdateInstanceInformation
-
-  # APIs without an IAM action
-  - Name: ssm:CreateOpsMetadata
-  - Name: ssm:DeleteOpsMetadata
-  - Name: ssm:GetOpsMetadata
-  - Name: ssm:ListOpsMetadata
-  - Name: ssm:UpdateOpsMetadata

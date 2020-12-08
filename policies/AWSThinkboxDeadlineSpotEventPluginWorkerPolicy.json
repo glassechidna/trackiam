@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSThinkboxDeadlineSpotEventPluginWorkerPolicy",
   "CreateDate": "2020-05-27T19:35:00Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JS2KSV4B2",
   "PolicyName": "AWSThinkboxDeadlineSpotEventPluginWorkerPolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-05-27T19:35:00Z",
+    "CreateDate": "2020-12-07T23:31:31Z",
     "Document": {
       "Statement": [
         {
@@ -16,7 +16,21 @@
           ],
           "Condition": {
             "StringEquals": {
-              "aws:ARN": "${ec2:SourceInstanceARN}"
+              "ec2:ResourceTag/DeadlineResourceTracker": "SpotEventPlugin"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/DeadlineTrackedAWSResource": "SpotEventPlugin"
             }
           },
           "Effect": "Allow",
@@ -48,7 +62,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-05-27T19:35:00Z"
+  "UpdateDate": "2020-12-07T23:31:31Z"
 }
