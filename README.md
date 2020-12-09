@@ -204,6 +204,7 @@ The following table summarises the AWS APIs.
 | [`honeycode`](services/honeycode.yml) | 12 | 0 | 5 |
 | [`detective`](services/detective.yml) | 12 | 0 | 5 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
+| [`emr-containers`](services/emr-containers.yml) | 11 | 4 | 0 |
 | [`synthetics`](services/synthetics.yml) | 11 | 2 | 0 |
 | [`codestar-connections`](services/codestar-connections.yml) | 11 | 1 | 9 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 39 |
@@ -242,7 +243,6 @@ The following table summarises the AWS APIs.
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 220 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 7 |
-| [`emr-containers`](services/emr-containers.yml) | 0 | 15 | 0 |
 | [`app-integrations`](services/app-integrations.yml) | 0 | 9 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
