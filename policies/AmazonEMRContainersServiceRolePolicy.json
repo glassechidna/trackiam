@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEMRContainersServiceRolePolicy",
+  "CreateDate": "2020-12-09T00:38:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4P24YZ52G4",
+  "PolicyName": "AmazonEMRContainersServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-09T00:38:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "eks:DescribeCluster",
+            "elasticloadbalancing:DescribeInstanceHealth",
+            "elasticloadbalancing:DescribeLoadBalancers"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-09T00:38:19Z"
+}
