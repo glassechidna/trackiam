@@ -90,6 +90,7 @@ The following table summarises the AWS APIs.
 | [`personalize`](services/personalize.yml) | 48 | 0 | 0 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
+| [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
 | [`dynamodb`](services/dynamodb.yml) | 45 | 9 | 10 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
@@ -144,7 +145,6 @@ The following table summarises the AWS APIs.
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 26 | 1 | 1 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
-| [`globalaccelerator`](services/globalaccelerator.yml) | 25 | 22 | 0 |
 | [`fms`](services/fms.yml) | 25 | 1 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 25 | 0 | 5 |
 | [`mediaconvert`](services/mediaconvert.yml) | 25 | 0 | 0 |
