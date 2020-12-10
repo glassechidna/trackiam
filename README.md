@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 254
-* Unique actions: 9745
+* Unique actions: 9759
 * Managed policies: 765
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 417 | 6 | 0 |
+| [`ec2`](services/ec2.yml) | 417 | 20 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 243 | 1 | 2 |
 | [`glue`](services/glue.yml) | 144 | 13 | 1 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
@@ -109,6 +109,7 @@ The following table summarises the AWS APIs.
 | [`appsync`](services/appsync.yml) | 36 | 5 | 2 |
 | [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
+| [`networkmanager`](services/networkmanager.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
@@ -131,9 +132,9 @@ The following table summarises the AWS APIs.
 | [`ce`](services/ce.yml) | 29 | 0 | 10 |
 | [`transcribe`](services/transcribe.yml) | 29 | 0 | 2 |
 | [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
+| [`kendra`](services/kendra.yml) | 29 | 0 | 0 |
 | [`es`](services/es.yml) | 28 | 11 | 9 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
-| [`networkmanager`](services/networkmanager.yml) | 28 | 0 | 7 |
 | [`athena`](services/athena.yml) | 28 | 0 | 1 |
 | [`profile`](services/profile.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
@@ -150,7 +151,6 @@ The following table summarises the AWS APIs.
 | [`mediaconvert`](services/mediaconvert.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
-| [`kendra`](services/kendra.yml) | 24 | 0 | 5 |
 | [`ram`](services/ram.yml) | 24 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 24 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 23 | 5 | 0 |
@@ -297,12 +297,12 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1398 |
 | `Get` | 1270 |
-| `Describe` | 1205 |
-| `Delete` | 1158 |
-| `Create` | 1058 |
+| `Describe` | 1209 |
+| `Delete` | 1162 |
+| `Create` | 1061 |
 | `Update` | 824 |
 | `Put` | 284 |
-| `Start` | 173 |
+| `Start` | 174 |
 | `Tag` | 140 |
 | `Untag` | 139 |
 
