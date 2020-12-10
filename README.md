@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 254
-* Unique actions: 9740
+* Unique actions: 9745
 * Managed policies: 765
 
 Most common managed policy name prefixes:
@@ -150,8 +150,8 @@ The following table summarises the AWS APIs.
 | [`mediaconvert`](services/mediaconvert.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
+| [`kendra`](services/kendra.yml) | 24 | 0 | 5 |
 | [`ram`](services/ram.yml) | 24 | 0 | 0 |
-| [`kendra`](services/kendra.yml) | 24 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 24 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 23 | 5 | 0 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
@@ -295,12 +295,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1397 |
+| `List` | 1398 |
 | `Get` | 1270 |
-| `Describe` | 1204 |
-| `Delete` | 1157 |
-| `Create` | 1057 |
-| `Update` | 823 |
+| `Describe` | 1205 |
+| `Delete` | 1158 |
+| `Create` | 1058 |
+| `Update` | 824 |
 | `Put` | 284 |
 | `Start` | 173 |
 | `Tag` | 140 |
