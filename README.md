@@ -295,11 +295,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1398 |
+| `List` | 1399 |
 | `Get` | 1270 |
 | `Describe` | 1209 |
 | `Delete` | 1162 |
-| `Create` | 1061 |
+| `Create` | 1060 |
 | `Update` | 824 |
 | `Put` | 284 |
 | `Start` | 174 |
