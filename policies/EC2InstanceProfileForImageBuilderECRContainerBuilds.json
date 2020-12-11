@@ -1,0 +1,67 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/EC2InstanceProfileForImageBuilderECRContainerBuilds",
+  "CreateDate": "2020-12-11T19:48:15Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4C32QNC6KD",
+  "PolicyName": "EC2InstanceProfileForImageBuilderECRContainerBuilds",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-11T19:48:15Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "imagebuilder.amazonaws.com"
+              ],
+              "kms:EncryptionContextKeys": "aws:imagebuilder:arn"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ecr:BatchCheckLayerAvailability",
+            "ecr:BatchGetImage",
+            "ecr:CompleteLayerUpload",
+            "ecr:GetAuthorizationToken",
+            "ecr:GetDownloadUrlForLayer",
+            "ecr:InitiateLayerUpload",
+            "ecr:PutImage",
+            "ecr:UploadLayerPart",
+            "imagebuilder:GetComponent",
+            "imagebuilder:GetContainerRecipe"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/imagebuilder/*"
+        },
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::ec2imagebuilder*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-11T19:48:15Z"
+}
