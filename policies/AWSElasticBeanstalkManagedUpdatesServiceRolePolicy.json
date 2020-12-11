@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSElasticBeanstalkManagedUpdatesServiceRolePolicy",
   "CreateDate": "2019-11-21T22:35:06Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4HVFNJB4NR",
   "PolicyName": "AWSElasticBeanstalkManagedUpdatesServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-09-11T18:28:47Z",
+    "CreateDate": "2020-12-11T18:21:32Z",
     "Document": {
       "Statement": [
         {
@@ -76,7 +76,10 @@
             "cloudformation:Describe*",
             "cloudformation:List*",
             "ec2:Describe*",
-            "elasticloadbalancing:Describe*"
+            "elasticloadbalancing:Describe*",
+            "logs:DescribeLogGroups",
+            "sns:GetTopicAttributes",
+            "sns:ListSubscriptionsByTopic"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -147,7 +150,6 @@
           "Action": [
             "logs:CreateLogGroup",
             "logs:DeleteLogGroup",
-            "logs:DescribeLogGroups",
             "logs:PutRetentionPolicy"
           ],
           "Effect": "Allow",
@@ -179,12 +181,20 @@
           "Effect": "Allow",
           "Resource": "arn:aws:s3:::elasticbeanstalk-*",
           "Sid": "S3Bucket"
+        },
+        {
+          "Action": [
+            "sns:CreateTopic"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sns:*:*:ElasticBeanstalkNotifications-Environment-*",
+          "Sid": "SNS"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-09-11T18:28:47Z"
+  "UpdateDate": "2020-12-11T18:21:32Z"
 }

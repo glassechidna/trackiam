@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSDataLifecycleManagerServiceRole",
   "CreateDate": "2018-07-06T19:34:16Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIZRLOKFUFE7YXQOJS",
   "PolicyName": "AWSDataLifecycleManagerServiceRole",
   "PolicyVersion": {
-    "CreateDate": "2020-09-09T18:52:08Z",
+    "CreateDate": "2020-12-11T18:15:06Z",
     "Document": {
       "Statement": [
         {
@@ -34,12 +34,26 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*::snapshot/*"
+        },
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:DescribeRule",
+            "events:DisableRule",
+            "events:EnableRule",
+            "events:ListTargetsByRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/AwsDataLifecycleRule.managed-cwe.*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2020-09-09T18:52:08Z"
+  "UpdateDate": "2020-12-11T18:15:06Z"
 }

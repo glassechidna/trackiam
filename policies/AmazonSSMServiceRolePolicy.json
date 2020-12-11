@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonSSMServiceRolePolicy",
   "CreateDate": "2017-11-13T19:20:08Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIXJ26NUGBA3TCV7EC",
   "PolicyName": "AmazonSSMServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-11-11T19:27:12Z",
+    "CreateDate": "2020-12-11T17:30:16Z",
     "Document": {
       "Statement": [
         {
@@ -21,6 +21,34 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": "cloudformation:DeleteStackInstances",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stackset-target/AWS-QuickSetup-SSM*:*",
+            "arn:aws:cloudformation:*:*:stackset/AWS-QuickSetup-SSM*:*",
+            "arn:aws:cloudformation:*:*:type/resource/*"
+          ]
+        },
+        {
+          "Action": "cloudformation:ListStackSets",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "organizations:DescribeOrganization",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudformation:DeleteStackSet",
+            "cloudformation:DescribeStackSetOperation",
+            "cloudformation:ListStackInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stackset/AWS-QuickSetup-SSM*:*"
         },
         {
           "Action": [
@@ -146,7 +174,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2020-11-11T19:27:12Z"
+  "UpdateDate": "2020-12-11T17:30:16Z"
 }
