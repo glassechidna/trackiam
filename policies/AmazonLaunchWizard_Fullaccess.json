@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLaunchWizard_Fullaccess",
   "CreateDate": "2020-08-06T17:47:30Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ABPQ7BLC2",
   "PolicyName": "AmazonLaunchWizard_Fullaccess",
   "PolicyVersion": {
-    "CreateDate": "2020-12-04T16:01:43Z",
+    "CreateDate": "2020-12-12T21:51:14Z",
     "Document": {
       "Statement": [
         {
@@ -460,12 +460,19 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:sqs:*:*:LaunchWizard*"
+        },
+        {
+          "Action": [
+            "ssm:CreateOpsMetadata"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2020-12-04T16:01:43Z"
+  "UpdateDate": "2020-12-12T21:51:14Z"
 }
