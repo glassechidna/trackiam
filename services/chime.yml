@@ -11,8 +11,15 @@ Actions:
   - Name: chime:BatchUpdatePhoneNumber
   - Name: chime:BatchUpdateUser
   - Name: chime:CreateAccount
+  - Name: chime:CreateAppInstance
+  - Name: chime:CreateAppInstanceAdmin
+  - Name: chime:CreateAppInstanceUser
   - Name: chime:CreateAttendee
   - Name: chime:CreateBot
+  - Name: chime:CreateChannel
+  - Name: chime:CreateChannelBan
+  - Name: chime:CreateChannelMembership
+  - Name: chime:CreateChannelModerator
   - Name: chime:CreateMeeting
   - Name: chime:CreateMeetingDialOut
   - Name: chime:CreateMeetingWithAttendees
@@ -27,7 +34,16 @@ Actions:
   - Name: chime:CreateVoiceConnector
   - Name: chime:CreateVoiceConnectorGroup
   - Name: chime:DeleteAccount
+  - Name: chime:DeleteAppInstance
+  - Name: chime:DeleteAppInstanceAdmin
+  - Name: chime:DeleteAppInstanceStreamingConfigurations
+  - Name: chime:DeleteAppInstanceUser
   - Name: chime:DeleteAttendee
+  - Name: chime:DeleteChannel
+  - Name: chime:DeleteChannelBan
+  - Name: chime:DeleteChannelMembership
+  - Name: chime:DeleteChannelMessage
+  - Name: chime:DeleteChannelModerator
   - Name: chime:DeleteEventsConfiguration
   - Name: chime:DeleteMeeting
   - Name: chime:DeletePhoneNumber
@@ -44,17 +60,30 @@ Actions:
   - Name: chime:DeleteVoiceConnectorStreamingConfiguration
   - Name: chime:DeleteVoiceConnectorTermination
   - Name: chime:DeleteVoiceConnectorTerminationCredentials
+  - Name: chime:DescribeAppInstance
+  - Name: chime:DescribeAppInstanceAdmin
+  - Name: chime:DescribeAppInstanceUser
+  - Name: chime:DescribeChannel
+  - Name: chime:DescribeChannelBan
+  - Name: chime:DescribeChannelMembership
+  - Name: chime:DescribeChannelMembershipForAppInstanceUser
+  - Name: chime:DescribeChannelModeratedByAppInstanceUser
+  - Name: chime:DescribeChannelModerator
   - Name: chime:DisassociatePhoneNumberFromUser
   - Name: chime:DisassociatePhoneNumbersFromVoiceConnector
   - Name: chime:DisassociatePhoneNumbersFromVoiceConnectorGroup
   - Name: chime:DisassociateSigninDelegateGroupsFromAccount
   - Name: chime:GetAccount
   - Name: chime:GetAccountSettings
+  - Name: chime:GetAppInstanceRetentionSettings
+  - Name: chime:GetAppInstanceStreamingConfigurations
   - Name: chime:GetAttendee
   - Name: chime:GetBot
+  - Name: chime:GetChannelMessage
   - Name: chime:GetEventsConfiguration
   - Name: chime:GetGlobalSettings
   - Name: chime:GetMeeting
+  - Name: chime:GetMessagingSessionEndpoint
   - Name: chime:GetPhoneNumber
   - Name: chime:GetPhoneNumberOrder
   - Name: chime:GetPhoneNumberSettings
@@ -77,9 +106,19 @@ Actions:
   - Name: chime:GetVoiceConnectorTerminationHealth
   - Name: chime:InviteUsers
   - Name: chime:ListAccounts
+  - Name: chime:ListAppInstanceAdmins
+  - Name: chime:ListAppInstanceUsers
+  - Name: chime:ListAppInstances
   - Name: chime:ListAttendeeTags
   - Name: chime:ListAttendees
   - Name: chime:ListBots
+  - Name: chime:ListChannelBans
+  - Name: chime:ListChannelMemberships
+  - Name: chime:ListChannelMembershipsForAppInstanceUser
+  - Name: chime:ListChannelMessages
+  - Name: chime:ListChannelModerators
+  - Name: chime:ListChannels
+  - Name: chime:ListChannelsModeratedByAppInstanceUser
   - Name: chime:ListMeetingTags
   - Name: chime:ListMeetings
   - Name: chime:ListPhoneNumberOrders
@@ -95,6 +134,8 @@ Actions:
   - Name: chime:ListVoiceConnectorTerminationCredentials
   - Name: chime:ListVoiceConnectors
   - Name: chime:LogoutUser
+  - Name: chime:PutAppInstanceRetentionSettings
+  - Name: chime:PutAppInstanceStreamingConfigurations
   - Name: chime:PutEventsConfiguration
   - Name: chime:PutRetentionSettings
   - Name: chime:PutSipMediaApplicationLoggingConfiguration
@@ -105,12 +146,14 @@ Actions:
   - Name: chime:PutVoiceConnectorStreamingConfiguration
   - Name: chime:PutVoiceConnectorTermination
   - Name: chime:PutVoiceConnectorTerminationCredentials
+  - Name: chime:RedactChannelMessage
   - Name: chime:RedactConversationMessage
   - Name: chime:RedactRoomMessage
   - Name: chime:RegenerateSecurityToken
   - Name: chime:ResetPersonalPIN
   - Name: chime:RestorePhoneNumber
   - Name: chime:SearchAvailablePhoneNumbers
+  - Name: chime:SendChannelMessage
   - Name: chime:TagAttendee
   - Name: chime:TagMeeting
   - Name: chime:TagResource
@@ -119,7 +162,12 @@ Actions:
   - Name: chime:UntagResource
   - Name: chime:UpdateAccount
   - Name: chime:UpdateAccountSettings
+  - Name: chime:UpdateAppInstance
+  - Name: chime:UpdateAppInstanceUser
   - Name: chime:UpdateBot
+  - Name: chime:UpdateChannel
+  - Name: chime:UpdateChannelMessage
+  - Name: chime:UpdateChannelReadMarker
   - Name: chime:UpdateGlobalSettings
   - Name: chime:UpdatePhoneNumber
   - Name: chime:UpdatePhoneNumberSettings
@@ -139,6 +187,7 @@ Actions:
   - Name: chime:AddDomain
   - Name: chime:AddOrUpdateGroups
   - Name: chime:AuthorizeDirectory
+  - Name: chime:Connect
   - Name: chime:ConnectDirectory
   - Name: chime:CreateApiKey
   - Name: chime:CreateBotMembership
@@ -184,53 +233,3 @@ Actions:
   - Name: chime:UpdateSupportedLicenses
   - Name: chime:UpdateUserLicenses
   - Name: chime:ValidateAccountResource
-
-  # APIs without an IAM action
-  - Name: chime:CreateAppInstance
-  - Name: chime:CreateAppInstanceAdmin
-  - Name: chime:CreateAppInstanceUser
-  - Name: chime:CreateChannel
-  - Name: chime:CreateChannelBan
-  - Name: chime:CreateChannelMembership
-  - Name: chime:CreateChannelModerator
-  - Name: chime:DeleteAppInstance
-  - Name: chime:DeleteAppInstanceAdmin
-  - Name: chime:DeleteAppInstanceStreamingConfigurations
-  - Name: chime:DeleteAppInstanceUser
-  - Name: chime:DeleteChannel
-  - Name: chime:DeleteChannelBan
-  - Name: chime:DeleteChannelMembership
-  - Name: chime:DeleteChannelMessage
-  - Name: chime:DeleteChannelModerator
-  - Name: chime:DescribeAppInstance
-  - Name: chime:DescribeAppInstanceAdmin
-  - Name: chime:DescribeAppInstanceUser
-  - Name: chime:DescribeChannel
-  - Name: chime:DescribeChannelBan
-  - Name: chime:DescribeChannelMembership
-  - Name: chime:DescribeChannelMembershipForAppInstanceUser
-  - Name: chime:DescribeChannelModeratedByAppInstanceUser
-  - Name: chime:DescribeChannelModerator
-  - Name: chime:GetAppInstanceRetentionSettings
-  - Name: chime:GetAppInstanceStreamingConfigurations
-  - Name: chime:GetChannelMessage
-  - Name: chime:GetMessagingSessionEndpoint
-  - Name: chime:ListAppInstanceAdmins
-  - Name: chime:ListAppInstanceUsers
-  - Name: chime:ListAppInstances
-  - Name: chime:ListChannelBans
-  - Name: chime:ListChannelMemberships
-  - Name: chime:ListChannelMembershipsForAppInstanceUser
-  - Name: chime:ListChannelMessages
-  - Name: chime:ListChannelModerators
-  - Name: chime:ListChannels
-  - Name: chime:ListChannelsModeratedByAppInstanceUser
-  - Name: chime:PutAppInstanceRetentionSettings
-  - Name: chime:PutAppInstanceStreamingConfigurations
-  - Name: chime:RedactChannelMessage
-  - Name: chime:SendChannelMessage
-  - Name: chime:UpdateAppInstance
-  - Name: chime:UpdateAppInstanceUser
-  - Name: chime:UpdateChannel
-  - Name: chime:UpdateChannelMessage
-  - Name: chime:UpdateChannelReadMarker
