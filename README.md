@@ -201,12 +201,12 @@ The following table summarises the AWS APIs.
 | [`acm`](services/acm.yml) | 13 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 4 | 0 |
 | [`resource-groups`](services/resource-groups.yml) | 12 | 3 | 0 |
+| [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`honeycode`](services/honeycode.yml) | 12 | 0 | 5 |
 | [`detective`](services/detective.yml) | 12 | 0 | 5 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`emr-containers`](services/emr-containers.yml) | 11 | 4 | 0 |
 | [`synthetics`](services/synthetics.yml) | 11 | 2 | 0 |
-| [`codestar-connections`](services/codestar-connections.yml) | 11 | 1 | 9 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 39 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 10 | 4 | 3 |
