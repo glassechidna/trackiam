@@ -146,7 +146,7 @@ The following table summarises the AWS APIs.
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 26 | 1 | 1 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
-| [`fms`](services/fms.yml) | 25 | 1 | 0 |
+| [`fms`](services/fms.yml) | 26 | 0 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 25 | 0 | 5 |
 | [`mediaconvert`](services/mediaconvert.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |

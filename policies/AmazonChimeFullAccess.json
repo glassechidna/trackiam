@@ -1,18 +1,35 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonChimeFullAccess",
   "CreateDate": "2017-11-01T22:15:43Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIUJFSAKUERNORYRWO",
   "PolicyName": "AmazonChimeFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-05-19T18:17:17Z",
+    "CreateDate": "2020-12-14T21:00:52Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "chime:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "kinesis:DescribeStream"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:kinesis:*:*:stream/chime-chat-*",
+            "arn:aws:kinesis:*:*:stream/chime-messaging-*"
+          ]
+        },
+        {
+          "Action": [
+            "kinesis:ListStreams"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -46,6 +63,16 @@
         },
         {
           "Action": [
+            "s3:GetEncryptionConfiguration",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::chime-chat-*"
+          ]
+        },
+        {
+          "Action": [
             "sns:CreateTopic",
             "sns:GetTopicAttributes"
           ],
@@ -68,7 +95,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-05-19T18:17:17Z"
+  "UpdateDate": "2020-12-14T21:00:52Z"
 }
