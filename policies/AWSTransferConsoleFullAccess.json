@@ -1,0 +1,51 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSTransferConsoleFullAccess",
+  "CreateDate": "2020-12-14T19:33:25Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4KYSTLCO3J",
+  "PolicyName": "AWSTransferConsoleFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-14T19:33:25Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "transfer.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "acm:ListCertificates",
+            "ec2:DescribeAddresses",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs",
+            "health:DescribeEventAggregates",
+            "iam:GetPolicyVersion",
+            "iam:ListPolicies",
+            "iam:ListRoles",
+            "route53:ListHostedZones",
+            "s3:ListAllMyBuckets",
+            "transfer:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-14T19:33:25Z"
+}
