@@ -1,0 +1,66 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSIoTFleetHubFederationAccess",
+  "CreateDate": "2020-12-15T08:08:05Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4H4EGQA254",
+  "PolicyName": "AWSIoTFleetHubFederationAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-15T08:08:05Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarmHistory",
+            "cloudwatch:PutMetricAlarm"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch:*:*:iotfleethub*"
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:ListMetrics",
+            "iot:CreateFleetMetric",
+            "iot:DeleteFleetMetric",
+            "iot:DescribeFleetMetric",
+            "iot:DescribeIndex",
+            "iot:DescribeThingGroup",
+            "iot:GetBucketsAggregation",
+            "iot:GetCardinality",
+            "iot:GetIndexingConfiguration",
+            "iot:GetPercentiles",
+            "iot:GetStatistics",
+            "iot:ListFleetMetrics",
+            "iot:SearchIndex",
+            "iot:UpdateFleetMetric",
+            "iotfleethub:DescribeApplication",
+            "iotfleethub:DescribeDashboard",
+            "iotfleethub:ListDashboards",
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sns:CreateTopic",
+            "sns:DeleteTopic",
+            "sns:ListSubscriptionsByTopic",
+            "sns:Subscribe",
+            "sns:Unsubscribe"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sns:*:*:iotfleethub*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-15T08:08:05Z"
+}

@@ -11,9 +11,9 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 254
-* Unique actions: 9797
-* Managed policies: 769
+* Unique services: 255
+* Unique actions: 9816
+* Managed policies: 770
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 217 |
 | `arn:aws:iam::aws:policy/Amazon*` | 203 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 144 |
-| `arn:aws:iam::aws:policy/service-role/*` | 119 |
+| `arn:aws:iam::aws:policy/service-role/*` | 120 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 79 |
 
@@ -213,7 +213,7 @@ The following table summarises the AWS APIs.
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
-| [`iot`](services/iot.yml) | 9 | 0 | 212 |
+| [`iot`](services/iot.yml) | 9 | 0 | 218 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
@@ -259,6 +259,7 @@ The following table summarises the AWS APIs.
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
+| [`iotfleethub`](services/iotfleethub.yml) | 0 | 0 | 13 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
@@ -295,14 +296,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1410 |
-| `Get` | 1275 |
-| `Describe` | 1211 |
-| `Delete` | 1164 |
-| `Create` | 1062 |
-| `Update` | 830 |
+| `List` | 1414 |
+| `Get` | 1276 |
+| `Describe` | 1214 |
+| `Delete` | 1167 |
+| `Create` | 1065 |
+| `Update` | 833 |
 | `Put` | 285 |
 | `Start` | 174 |
-| `Tag` | 140 |
-| `Untag` | 139 |
+| `Tag` | 141 |
+| `Untag` | 140 |
 
