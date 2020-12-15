@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 255
-* Unique actions: 9816
+* Unique services: 256
+* Unique actions: 9867
 * Managed policies: 770
 
 Most common managed policy name prefixes:
@@ -250,6 +250,7 @@ The following table summarises the AWS APIs.
 | [`healthlake`](services/healthlake.yml) | 0 | 6 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
+| [`iotwireless`](services/iotwireless.yml) | 0 | 0 | 51 |
 | [`proton`](services/proton.yml) | 0 | 0 | 47 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 45 |
 | [`panorama`](services/panorama.yml) | 0 | 0 | 42 |
@@ -296,14 +297,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1414 |
-| `Get` | 1276 |
+| `List` | 1422 |
+| `Get` | 1289 |
 | `Describe` | 1214 |
-| `Delete` | 1167 |
-| `Create` | 1065 |
-| `Update` | 833 |
+| `Delete` | 1174 |
+| `Create` | 1072 |
+| `Update` | 837 |
 | `Put` | 285 |
 | `Start` | 174 |
-| `Tag` | 141 |
-| `Untag` | 140 |
+| `Tag` | 142 |
+| `Untag` | 141 |
 
