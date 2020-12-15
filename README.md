@@ -41,7 +41,7 @@ The following table summarises the AWS APIs.
 | [`chime`](services/chime.yml) | 181 | 0 | 51 |
 | [`glue`](services/glue.yml) | 144 | 13 | 1 |
 | [`iam`](services/iam.yml) | 140 | 0 | 1 |
-| [`ssm`](services/ssm.yml) | 127 | 4 | 7 |
+| [`ssm`](services/ssm.yml) | 131 | 0 | 7 |
 | [`rds`](services/rds.yml) | 123 | 9 | 1 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
 | [`ses`](services/ses.yml) | 103 | 34 | 0 |
@@ -198,6 +198,7 @@ The following table summarises the AWS APIs.
 | [`translate`](services/translate.yml) | 14 | 0 | 0 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 2 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
+| [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 13 | 0 | 0 |
 | [`health`](services/health.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`acm`](services/acm.yml) | 13 | 0 | 0 |
@@ -247,7 +248,6 @@ The following table summarises the AWS APIs.
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 231 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 7 |
-| [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 0 | 13 | 0 |
 | [`app-integrations`](services/app-integrations.yml) | 0 | 9 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |

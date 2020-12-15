@@ -88,9 +88,11 @@ Actions:
   - Name: ssm:ListCommands
   - Name: ssm:ListComplianceItems
   - Name: ssm:ListComplianceSummaries
+  - Name: ssm:ListDocumentMetadataHistory
   - Name: ssm:ListDocumentVersions
   - Name: ssm:ListDocuments
   - Name: ssm:ListInventoryEntries
+  - Name: ssm:ListOpsItemEvents
   - Name: ssm:ListOpsMetadata
   - Name: ssm:ListResourceComplianceSummaries
   - Name: ssm:ListResourceDataSync
@@ -110,6 +112,7 @@ Actions:
   - Name: ssm:SendCommand
   - Name: ssm:StartAssociationsOnce
   - Name: ssm:StartAutomationExecution
+  - Name: ssm:StartChangeRequestExecution
   - Name: ssm:StartSession
   - Name: ssm:StopAutomationExecution
   - Name: ssm:TerminateSession
@@ -117,6 +120,7 @@ Actions:
   - Name: ssm:UpdateAssociationStatus
   - Name: ssm:UpdateDocument
   - Name: ssm:UpdateDocumentDefaultVersion
+  - Name: ssm:UpdateDocumentMetadata
   - Name: ssm:UpdateMaintenanceWindow
   - Name: ssm:UpdateMaintenanceWindowTarget
   - Name: ssm:UpdateMaintenanceWindowTask
@@ -135,9 +139,3 @@ Actions:
   - Name: ssm:PutConfigurePackageResult
   - Name: ssm:UpdateInstanceAssociationStatus
   - Name: ssm:UpdateInstanceInformation
-
-  # APIs without an IAM action
-  - Name: ssm:ListDocumentMetadataHistory
-  - Name: ssm:ListOpsItemEvents
-  - Name: ssm:StartChangeRequestExecution
-  - Name: ssm:UpdateDocumentMetadata
