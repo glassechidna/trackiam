@@ -1,0 +1,31 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSIoTWirelessLogging",
+  "CreateDate": "2020-12-15T15:32:40Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4L3X44AIHR",
+  "PolicyName": "AWSIoTWirelessLogging",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-15T15:32:40Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogGroups",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/iotwireless*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-15T15:32:40Z"
+}
