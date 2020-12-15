@@ -17,6 +17,7 @@ Actions:
   - Name: execute-api:CancelAuditMitigationActionsTask
   - Name: execute-api:CancelAuditTask
   - Name: execute-api:CancelCertificateTransfer
+  - Name: execute-api:CancelDetectMitigationActionsTask
   - Name: execute-api:CancelJob
   - Name: execute-api:CancelJobExecution
   - Name: execute-api:ClearDefaultAuthorizer
@@ -25,6 +26,7 @@ Actions:
   - Name: execute-api:CreateAuthorizer
   - Name: execute-api:CreateBillingGroup
   - Name: execute-api:CreateCertificateFromCsr
+  - Name: execute-api:CreateCustomMetric
   - Name: execute-api:CreateDimension
   - Name: execute-api:CreateDomainConfiguration
   - Name: execute-api:CreateDynamicThingGroup
@@ -54,6 +56,7 @@ Actions:
   - Name: execute-api:DeleteCACertificate
   - Name: execute-api:DeleteCertificate
   - Name: execute-api:DeleteConnection
+  - Name: execute-api:DeleteCustomMetric
   - Name: execute-api:DeleteDimension
   - Name: execute-api:DeleteDomainConfiguration
   - Name: execute-api:DeleteDynamicThingGroup
@@ -86,7 +89,9 @@ Actions:
   - Name: execute-api:DescribeBillingGroup
   - Name: execute-api:DescribeCACertificate
   - Name: execute-api:DescribeCertificate
+  - Name: execute-api:DescribeCustomMetric
   - Name: execute-api:DescribeDefaultAuthorizer
+  - Name: execute-api:DescribeDetectMitigationActionsTask
   - Name: execute-api:DescribeDimension
   - Name: execute-api:DescribeDomainConfiguration
   - Name: execute-api:DescribeEndpoint
@@ -112,6 +117,7 @@ Actions:
   - Name: execute-api:DisableTopicRule
   - Name: execute-api:DisconnectParticipant
   - Name: execute-api:EnableTopicRule
+  - Name: execute-api:GetBehaviorModelTrainingSummaries
   - Name: execute-api:GetCardinality
   - Name: execute-api:GetConnection
   - Name: execute-api:GetEffectivePolicies
@@ -140,6 +146,9 @@ Actions:
   - Name: execute-api:ListCACertificates
   - Name: execute-api:ListCertificates
   - Name: execute-api:ListCertificatesByCA
+  - Name: execute-api:ListCustomMetrics
+  - Name: execute-api:ListDetectMitigationActionsExecutions
+  - Name: execute-api:ListDetectMitigationActionsTasks
   - Name: execute-api:ListDimensions
   - Name: execute-api:ListDomainConfigurations
   - Name: execute-api:ListIndices
@@ -195,6 +204,7 @@ Actions:
   - Name: execute-api:SetV2LoggingLevel
   - Name: execute-api:SetV2LoggingOptions
   - Name: execute-api:StartAuditMitigationActionsTask
+  - Name: execute-api:StartDetectMitigationActionsTask
   - Name: execute-api:StartOnDemandAuditTask
   - Name: execute-api:StartThingRegistrationTask
   - Name: execute-api:StopThingRegistrationTask
@@ -209,6 +219,7 @@ Actions:
   - Name: execute-api:UpdateBillingGroup
   - Name: execute-api:UpdateCACertificate
   - Name: execute-api:UpdateCertificate
+  - Name: execute-api:UpdateCustomMetric
   - Name: execute-api:UpdateDimension
   - Name: execute-api:UpdateDomainConfiguration
   - Name: execute-api:UpdateDynamicThingGroup
