@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 256
-* Unique actions: 9867
+* Unique services: 257
+* Unique actions: 9877
 * Managed policies: 776
 
 Most common managed policy name prefixes:
@@ -264,6 +264,7 @@ The following table summarises the AWS APIs.
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
+| [`aps`](services/aps.yml) | 0 | 0 | 10 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`cassandra`](services/cassandra.yml) | 0 | 0 | 8 |
@@ -297,12 +298,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1422 |
-| `Get` | 1289 |
-| `Describe` | 1214 |
-| `Delete` | 1174 |
-| `Create` | 1072 |
-| `Update` | 837 |
+| `List` | 1423 |
+| `Get` | 1292 |
+| `Describe` | 1215 |
+| `Delete` | 1175 |
+| `Create` | 1073 |
+| `Update` | 838 |
 | `Put` | 285 |
 | `Start` | 174 |
 | `Tag` | 142 |
