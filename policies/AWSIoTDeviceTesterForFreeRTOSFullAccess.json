@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSIoTDeviceTesterForFreeRTOSFullAccess",
   "CreateDate": "2020-02-12T20:33:53Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ADNJ2YUUH",
   "PolicyName": "AWSIoTDeviceTesterForFreeRTOSFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-07-17T17:09:58Z",
+    "CreateDate": "2020-12-15T18:03:46Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,89 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/idt-*",
           "Sid": "VisualEditor0"
+        },
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:DeleteSecurityGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/Owner": "IoTDeviceTester"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*"
+          ],
+          "Sid": "VisualEditor8"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/Owner": "IoTDeviceTester"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*"
+          ],
+          "Sid": "VisualEditor11"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": [
+                "Owner"
+              ],
+              "ec2:CreateAction": [
+                "CreateSecurityGroup",
+                "RunInstances"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:security-group/*"
+          ],
+          "Sid": "VisualEditor13"
+        },
+        {
+          "Action": [
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/Owner": "IoTDeviceTester"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "VisualEditor9"
+        },
+        {
+          "Action": [
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/Owner": "IoTDeviceTester"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "VisualEditor7"
         },
         {
           "Action": [
@@ -81,6 +164,34 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "VisualEditor1"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstances",
+            "ec2:DescribeSecurityGroups",
+            "ssm:DescribeParameters",
+            "ssm:GetParameters"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "VisualEditor12"
+        },
+        {
+          "Action": [
+            "ec2:RunInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:image/*",
+            "arn:aws:ec2:*:*:key-pair/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:placement-group/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:snapshot/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "VisualEditor10"
         },
         {
           "Action": [
@@ -161,7 +272,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-07-17T17:09:58Z"
+  "UpdateDate": "2020-12-15T18:03:46Z"
 }
