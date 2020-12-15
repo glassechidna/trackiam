@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SecurityAudit",
   "CreateDate": "2015-02-06T18:41:01Z",
-  "DefaultVersionId": "v33",
+  "DefaultVersionId": "v34",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIX2T3QCXHR2OGGCTO",
   "PolicyName": "SecurityAudit",
   "PolicyVersion": {
-    "CreateDate": "2020-09-28T18:51:23Z",
+    "CreateDate": "2020-12-15T00:04:54Z",
     "Document": {
       "Statement": [
         {
@@ -90,6 +90,7 @@
             "datasync:List*",
             "dax:Describe*",
             "dax:ListTags",
+            "detective:GetGraphIngestState",
             "detective:ListGraphs",
             "detective:ListMembers",
             "directconnect:Describe*",
@@ -107,13 +108,26 @@
             "dynamodb:ListTagsOfResource",
             "ec2:Describe*",
             "ec2:DescribeTransitGatewayAttachments",
+            "ec2:DescribeTransitGatewayAttachments",
+            "ec2:DescribeTransitGatewayMulticastDomains",
             "ec2:DescribeTransitGatewayMulticastDomains",
             "ec2:DescribeTransitGatewayPeeringAttachments",
+            "ec2:DescribeTransitGatewayPeeringAttachments",
+            "ec2:DescribeTransitGatewayRouteTables",
             "ec2:DescribeTransitGatewayRouteTables",
             "ec2:DescribeTransitGatewayVpcAttachments",
+            "ec2:DescribeTransitGatewayVpcAttachments",
             "ec2:DescribeTransitGateways",
+            "ec2:DescribeTransitGateways",
+            "ec2:GetManagedPrefixListAssociations",
+            "ec2:GetManagedPrefixListAssociations",
+            "ec2:GetManagedPrefixListEntries",
+            "ec2:GetManagedPrefixListEntries",
+            "ecr:DescribeImages",
             "ecr:DescribeRepositories",
+            "ecr:GetLifecyclePolicy",
             "ecr:GetRepositoryPolicy",
+            "ecr:ListTagsForResource",
             "ecs:Describe*",
             "ecs:List*",
             "eks:DescribeCluster",
@@ -261,6 +275,8 @@
             "snowball:ListJobs",
             "sns:GetTopicAttributes",
             "sns:ListSubscriptionsByTopic",
+            "sns:ListTagsForResource",
+            "sns:ListTagsForResource",
             "sns:ListTopics",
             "sqs:GetQueueAttributes",
             "sqs:ListDeadLetterSourceQueues",
@@ -294,8 +310,22 @@
             "transfer:List*",
             "translate:List*",
             "trustedadvisor:Describe*",
+            "waf-regional:GetWebACL",
+            "waf-regional:ListResourcesForWebACL",
+            "waf-regional:ListTagsForResource",
             "waf-regional:ListWebACLs",
+            "waf:GetWebACL",
+            "waf:ListTagsForResource",
             "waf:ListWebACLs",
+            "wafv2:GetWebACL",
+            "wafv2:ListAvailableManagedRuleGroups",
+            "wafv2:ListIPSets",
+            "wafv2:ListLoggingConfigurations",
+            "wafv2:ListRegexPatternSets",
+            "wafv2:ListResourcesForWebACL",
+            "wafv2:ListRuleGroups",
+            "wafv2:ListTagsForResource",
+            "wafv2:ListWebACLs",
             "workspaces:Describe*"
           ],
           "Effect": "Allow",
@@ -311,6 +341,7 @@
             "arn:aws:apigateway:*::/apis/*/routes",
             "arn:aws:apigateway:*::/apis/*/stages",
             "arn:aws:apigateway:*::/apis/*/stages/*",
+            "arn:aws:apigateway:*::/clientcertificates/*",
             "arn:aws:apigateway:*::/restapis",
             "arn:aws:apigateway:*::/restapis/*/authorizers",
             "arn:aws:apigateway:*::/restapis/*/authorizers/*",
@@ -320,6 +351,7 @@
             "arn:aws:apigateway:*::/restapis/*/resources/*/methods/*",
             "arn:aws:apigateway:*::/restapis/*/stages",
             "arn:aws:apigateway:*::/restapis/*/stages/*",
+            "arn:aws:apigateway:*::/tags/*",
             "arn:aws:apigateway:*::/vpclinks"
           ]
         }
@@ -327,7 +359,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v33"
+    "VersionId": "v34"
   },
-  "UpdateDate": "2020-09-28T18:51:23Z"
+  "UpdateDate": "2020-12-15T00:04:54Z"
 }
