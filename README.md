@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 254
-* Unique actions: 9774
+* Unique actions: 9797
 * Managed policies: 769
 
 Most common managed policy name prefixes:
@@ -254,6 +254,7 @@ The following table summarises the AWS APIs.
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 45 |
 | [`panorama`](services/panorama.yml) | 0 | 0 | 42 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
+| [`wellarchitected`](services/wellarchitected.yml) | 0 | 0 | 28 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
@@ -269,7 +270,6 @@ The following table summarises the AWS APIs.
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 6 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
-| [`wellarchitected`](services/wellarchitected.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 5 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
@@ -295,12 +295,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1402 |
-| `Get` | 1270 |
+| `List` | 1410 |
+| `Get` | 1275 |
 | `Describe` | 1211 |
-| `Delete` | 1163 |
-| `Create` | 1061 |
-| `Update` | 825 |
+| `Delete` | 1164 |
+| `Create` | 1062 |
+| `Update` | 830 |
 | `Put` | 285 |
 | `Start` | 174 |
 | `Tag` | 140 |
