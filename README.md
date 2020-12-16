@@ -109,6 +109,7 @@ The following table summarises the AWS APIs.
 | [`codepipeline`](services/codepipeline.yml) | 37 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 2 |
 | [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
+| [`geo`](services/geo.yml) | 35 | 0 | 3 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`networkmanager`](services/networkmanager.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
@@ -137,6 +138,7 @@ The following table summarises the AWS APIs.
 | [`es`](services/es.yml) | 28 | 11 | 9 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`athena`](services/athena.yml) | 28 | 0 | 1 |
+| [`wellarchitected`](services/wellarchitected.yml) | 28 | 0 | 0 |
 | [`profile`](services/profile.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
@@ -257,9 +259,7 @@ The following table summarises the AWS APIs.
 | [`proton`](services/proton.yml) | 0 | 0 | 47 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 45 |
 | [`panorama`](services/panorama.yml) | 0 | 0 | 42 |
-| [`geo`](services/geo.yml) | 0 | 0 | 38 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
-| [`wellarchitected`](services/wellarchitected.yml) | 0 | 0 | 28 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
