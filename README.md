@@ -89,6 +89,7 @@ The following table summarises the AWS APIs.
 | [`securityhub`](services/securityhub.yml) | 48 | 0 | 0 |
 | [`rekognition`](services/rekognition.yml) | 48 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 48 | 0 | 0 |
+| [`imagebuilder`](services/imagebuilder.yml) | 47 | 1 | 0 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
@@ -97,7 +98,6 @@ The following table summarises the AWS APIs.
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
 | [`codebuild`](services/codebuild.yml) | 43 | 1 | 8 |
-| [`imagebuilder`](services/imagebuilder.yml) | 41 | 7 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`wafv2`](services/wafv2.yml) | 40 | 0 | 2 |
 | [`events`](services/events.yml) | 40 | 0 | 0 |

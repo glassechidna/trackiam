@@ -1,12 +1,14 @@
 Actions:
   - Name: imagebuilder:CancelImageCreation
   - Name: imagebuilder:CreateComponent
+  - Name: imagebuilder:CreateContainerRecipe
   - Name: imagebuilder:CreateDistributionConfiguration
   - Name: imagebuilder:CreateImage
   - Name: imagebuilder:CreateImagePipeline
   - Name: imagebuilder:CreateImageRecipe
   - Name: imagebuilder:CreateInfrastructureConfiguration
   - Name: imagebuilder:DeleteComponent
+  - Name: imagebuilder:DeleteContainerRecipe
   - Name: imagebuilder:DeleteDistributionConfiguration
   - Name: imagebuilder:DeleteImage
   - Name: imagebuilder:DeleteImagePipeline
@@ -14,6 +16,8 @@ Actions:
   - Name: imagebuilder:DeleteInfrastructureConfiguration
   - Name: imagebuilder:GetComponent
   - Name: imagebuilder:GetComponentPolicy
+  - Name: imagebuilder:GetContainerRecipe
+  - Name: imagebuilder:GetContainerRecipePolicy
   - Name: imagebuilder:GetDistributionConfiguration
   - Name: imagebuilder:GetImage
   - Name: imagebuilder:GetImagePipeline
@@ -23,6 +27,7 @@ Actions:
   - Name: imagebuilder:GetInfrastructureConfiguration
   - Name: imagebuilder:ListComponentBuildVersions
   - Name: imagebuilder:ListComponents
+  - Name: imagebuilder:ListContainerRecipes
   - Name: imagebuilder:ListDistributionConfigurations
   - Name: imagebuilder:ListImageBuildVersions
   - Name: imagebuilder:ListImagePipelineImages
@@ -32,6 +37,7 @@ Actions:
   - Name: imagebuilder:ListInfrastructureConfigurations
   - Name: imagebuilder:ListTagsForResource
   - Name: imagebuilder:PutComponentPolicy
+  - Name: imagebuilder:PutContainerRecipePolicy
   - Name: imagebuilder:PutImagePolicy
   - Name: imagebuilder:PutImageRecipePolicy
   - Name: imagebuilder:StartImagePipelineExecution
@@ -42,10 +48,4 @@ Actions:
   - Name: imagebuilder:UpdateInfrastructureConfiguration
 
   # APIs without an IAM action
-  - Name: imagebuilder:CreateContainerRecipe
-  - Name: imagebuilder:DeleteContainerRecipe
-  - Name: imagebuilder:GetContainerRecipe
-  - Name: imagebuilder:GetContainerRecipePolicy
   - Name: imagebuilder:ImportComponent
-  - Name: imagebuilder:ListContainerRecipes
-  - Name: imagebuilder:PutContainerRecipePolicy
