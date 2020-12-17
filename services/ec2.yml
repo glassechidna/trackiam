@@ -65,6 +65,7 @@ Actions:
   - Name: ec2:CreateNatGateway
   - Name: ec2:CreateNetworkAcl
   - Name: ec2:CreateNetworkAclEntry
+  - Name: ec2:CreateNetworkInsightsPath
   - Name: ec2:CreateNetworkInterface
   - Name: ec2:CreateNetworkInterfacePermission
   - Name: ec2:CreatePlacementGroup
@@ -116,9 +117,12 @@ Actions:
   - Name: ec2:DeleteNatGateway
   - Name: ec2:DeleteNetworkAcl
   - Name: ec2:DeleteNetworkAclEntry
+  - Name: ec2:DeleteNetworkInsightsAnalysis
+  - Name: ec2:DeleteNetworkInsightsPath
   - Name: ec2:DeleteNetworkInterface
   - Name: ec2:DeleteNetworkInterfacePermission
   - Name: ec2:DeletePlacementGroup
+  - Name: ec2:DeleteQueuedReservedInstances
   - Name: ec2:DeleteRoute
   - Name: ec2:DeleteRouteTable
   - Name: ec2:DeleteSecurityGroup
@@ -131,6 +135,8 @@ Actions:
   - Name: ec2:DeleteTrafficMirrorSession
   - Name: ec2:DeleteTrafficMirrorTarget
   - Name: ec2:DeleteTransitGateway
+  - Name: ec2:DeleteTransitGatewayConnect
+  - Name: ec2:DeleteTransitGatewayConnectPeer
   - Name: ec2:DeleteTransitGatewayMulticastDomain
   - Name: ec2:DeleteTransitGatewayPeeringAttachment
   - Name: ec2:DeleteTransitGatewayPrefixListReference
@@ -198,6 +204,7 @@ Actions:
   - Name: ec2:DescribeInstanceTypes
   - Name: ec2:DescribeInstances
   - Name: ec2:DescribeInternetGateways
+  - Name: ec2:DescribeIpv6Pools
   - Name: ec2:DescribeKeyPairs
   - Name: ec2:DescribeLaunchTemplateVersions
   - Name: ec2:DescribeLaunchTemplates
@@ -297,6 +304,7 @@ Actions:
   - Name: ec2:ExportImage
   - Name: ec2:ExportTransitGatewayRoutes
   - Name: ec2:GetAssociatedEnclaveCertificateIamRoles
+  - Name: ec2:GetAssociatedIpv6PoolCidrs
   - Name: ec2:GetCapacityReservationUsage
   - Name: ec2:GetCoipPoolUsage
   - Name: ec2:GetConsoleOutput
@@ -304,6 +312,7 @@ Actions:
   - Name: ec2:GetDefaultCreditSpecification
   - Name: ec2:GetEbsDefaultKmsKeyId
   - Name: ec2:GetEbsEncryptionByDefault
+  - Name: ec2:GetGroupsForCapacityReservation
   - Name: ec2:GetHostReservationPurchasePreview
   - Name: ec2:GetLaunchTemplateData
   - Name: ec2:GetManagedPrefixListAssociations
@@ -321,6 +330,7 @@ Actions:
   - Name: ec2:ImportKeyPair
   - Name: ec2:ImportSnapshot
   - Name: ec2:ImportVolume
+  - Name: ec2:ModifyAvailabilityZoneGroup
   - Name: ec2:ModifyCapacityReservation
   - Name: ec2:ModifyClientVpnEndpoint
   - Name: ec2:ModifyDefaultCreditSpecification
@@ -360,6 +370,7 @@ Actions:
   - Name: ec2:ModifyVpcPeeringConnectionOptions
   - Name: ec2:ModifyVpcTenancy
   - Name: ec2:ModifyVpnConnection
+  - Name: ec2:ModifyVpnConnectionOptions
   - Name: ec2:ModifyVpnTunnelCertificate
   - Name: ec2:ModifyVpnTunnelOptions
   - Name: ec2:MonitorInstances
@@ -373,6 +384,7 @@ Actions:
   - Name: ec2:RegisterInstanceEventNotificationAttributes
   - Name: ec2:RegisterTransitGatewayMulticastGroupMembers
   - Name: ec2:RegisterTransitGatewayMulticastGroupSources
+  - Name: ec2:RejectTransitGatewayMulticastDomainAssociations
   - Name: ec2:RejectTransitGatewayPeeringAttachment
   - Name: ec2:RejectTransitGatewayVpcAttachment
   - Name: ec2:RejectVpcEndpointConnections
@@ -406,6 +418,7 @@ Actions:
   - Name: ec2:SearchTransitGatewayRoutes
   - Name: ec2:SendDiagnosticInterrupt
   - Name: ec2:StartInstances
+  - Name: ec2:StartNetworkInsightsAnalysis
   - Name: ec2:StartVpcEndpointServicePrivateDnsVerification
   - Name: ec2:StopInstances
   - Name: ec2:TerminateClientVpnConnections
@@ -419,22 +432,9 @@ Actions:
 
   # APIs without an IAM action
   - Name: ec2:AcceptTransitGatewayMulticastDomainAssociations
-  - Name: ec2:CreateNetworkInsightsPath
   - Name: ec2:CreateTransitGatewayConnect
   - Name: ec2:CreateTransitGatewayConnectPeer
-  - Name: ec2:DeleteNetworkInsightsAnalysis
-  - Name: ec2:DeleteNetworkInsightsPath
-  - Name: ec2:DeleteQueuedReservedInstances
-  - Name: ec2:DeleteTransitGatewayConnect
-  - Name: ec2:DeleteTransitGatewayConnectPeer
-  - Name: ec2:DescribeIpv6Pools
   - Name: ec2:DescribeNetworkInsightsAnalyses
   - Name: ec2:DescribeNetworkInsightsPaths
   - Name: ec2:DescribeTransitGatewayConnectPeers
   - Name: ec2:DescribeTransitGatewayConnects
-  - Name: ec2:GetAssociatedIpv6PoolCidrs
-  - Name: ec2:GetGroupsForCapacityReservation
-  - Name: ec2:ModifyAvailabilityZoneGroup
-  - Name: ec2:ModifyVpnConnectionOptions
-  - Name: ec2:RejectTransitGatewayMulticastDomainAssociations
-  - Name: ec2:StartNetworkInsightsAnalysis
