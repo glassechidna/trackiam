@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonFreeRTOSOTAUpdate",
   "CreateDate": "2018-08-27T22:43:07Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAINC2TXHAYDOK3SWMU",
   "PolicyName": "AmazonFreeRTOSOTAUpdate",
   "PolicyVersion": {
-    "CreateDate": "2019-10-07T20:11:30Z",
+    "CreateDate": "2020-12-18T17:47:30Z",
     "Document": {
       "Statement": [
         {
@@ -20,7 +20,8 @@
         },
         {
           "Action": [
-            "iot:DeleteJob"
+            "iot:DeleteJob",
+            "iot:DescribeJob"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:iot:*:*:job/AFR_OTA*"
@@ -65,7 +66,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-10-07T20:11:30Z"
+  "UpdateDate": "2020-12-18T17:47:30Z"
 }
