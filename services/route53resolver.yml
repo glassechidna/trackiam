@@ -11,6 +11,7 @@ Actions:
   - Name: route53resolver:DisassociateResolverEndpointIpAddress
   - Name: route53resolver:DisassociateResolverQueryLogConfig
   - Name: route53resolver:DisassociateResolverRule
+  - Name: route53resolver:GetResolverDnssecConfig
   - Name: route53resolver:GetResolverEndpoint
   - Name: route53resolver:GetResolverQueryLogConfig
   - Name: route53resolver:GetResolverQueryLogConfigAssociation
@@ -18,6 +19,7 @@ Actions:
   - Name: route53resolver:GetResolverRule
   - Name: route53resolver:GetResolverRuleAssociation
   - Name: route53resolver:GetResolverRulePolicy
+  - Name: route53resolver:ListResolverDnssecConfigs
   - Name: route53resolver:ListResolverEndpointIpAddresses
   - Name: route53resolver:ListResolverEndpoints
   - Name: route53resolver:ListResolverQueryLogConfigAssociations
@@ -29,10 +31,6 @@ Actions:
   - Name: route53resolver:PutResolverRulePolicy
   - Name: route53resolver:TagResource
   - Name: route53resolver:UntagResource
+  - Name: route53resolver:UpdateResolverDnssecConfig
   - Name: route53resolver:UpdateResolverEndpoint
   - Name: route53resolver:UpdateResolverRule
-
-  # APIs without an IAM action
-  - Name: route53resolver:GetResolverDnssecConfig
-  - Name: route53resolver:ListResolverDnssecConfigs
-  - Name: route53resolver:UpdateResolverDnssecConfig

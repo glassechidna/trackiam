@@ -111,6 +111,7 @@ The following table summarises the AWS APIs.
 | [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
 | [`geo`](services/geo.yml) | 35 | 0 | 3 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
+| [`route53resolver`](services/route53resolver.yml) | 35 | 0 | 0 |
 | [`networkmanager`](services/networkmanager.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
@@ -125,7 +126,6 @@ The following table summarises the AWS APIs.
 | [`workspaces`](services/workspaces.yml) | 32 | 18 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 32 | 14 | 8 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
-| [`route53resolver`](services/route53resolver.yml) | 32 | 3 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 2 | 0 |
 | [`datasync`](services/datasync.yml) | 31 | 1 | 0 |
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |
