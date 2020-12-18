@@ -13,10 +13,13 @@ Actions:
   - Name: kafka:GetCompatibleKafkaVersions
   - Name: kafka:ListClusterOperations
   - Name: kafka:ListClusters
+  - Name: kafka:ListConfigurationRevisions
   - Name: kafka:ListConfigurations
+  - Name: kafka:ListKafkaVersions
   - Name: kafka:ListNodes
   - Name: kafka:ListScramSecrets
   - Name: kafka:ListTagsForResource
+  - Name: kafka:RebootBroker
   - Name: kafka:TagResource
   - Name: kafka:UntagResource
   - Name: kafka:UpdateBrokerCount
@@ -25,8 +28,3 @@ Actions:
   - Name: kafka:UpdateClusterKafkaVersion
   - Name: kafka:UpdateConfiguration
   - Name: kafka:UpdateMonitoring
-
-  # APIs without an IAM action
-  - Name: kafka:ListConfigurationRevisions
-  - Name: kafka:ListKafkaVersions
-  - Name: kafka:RebootBroker
