@@ -1,0 +1,30 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonPrometheusQueryAccess",
+  "CreateDate": "2020-12-19T01:02:58Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4GQ2MT4E46",
+  "PolicyName": "AmazonPrometheusQueryAccess",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-19T01:02:58Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aps:GetLabels",
+            "aps:GetMetricMetadata",
+            "aps:GetSeries",
+            "aps:QueryMetrics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-19T01:02:58Z"
+}
