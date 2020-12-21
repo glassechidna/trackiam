@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 260
-* Unique actions: 9985
+* Unique actions: 9996
 * Managed policies: 781
 
 Most common managed policy name prefixes:
@@ -46,14 +46,14 @@ The following table summarises the AWS APIs.
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
 | [`ses`](services/ses.yml) | 103 | 34 | 0 |
 | [`lightsail`](services/lightsail.yml) | 101 | 40 | 0 |
-| [`servicecatalog`](services/servicecatalog.yml) | 100 | 6 | 0 |
+| [`servicecatalog`](services/servicecatalog.yml) | 100 | 7 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 99 | 0 | 15 |
 | [`greengrass`](services/greengrass.yml) | 90 | 17 | 1 |
 | [`gamelift`](services/gamelift.yml) | 90 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 88 | 4 | 18 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
-| [`config`](services/config.yml) | 79 | 1 | 0 |
+| [`config`](services/config.yml) | 79 | 5 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 78 | 6 | 1 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
@@ -174,6 +174,7 @@ The following table summarises the AWS APIs.
 | [`ecr-public`](services/ecr-public.yml) | 20 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
+| [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
 | [`secretsmanager`](services/secretsmanager.yml) | 19 | 0 | 0 |
 | [`batch`](services/batch.yml) | 19 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 19 | 0 | 0 |
@@ -190,7 +191,6 @@ The following table summarises the AWS APIs.
 | [`signer`](services/signer.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
-| [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 3 |
 | [`lookoutvision`](services/lookoutvision.yml) | 16 | 0 | 3 |
 | [`resource-groups`](services/resource-groups.yml) | 15 | 0 | 1 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 13 | 0 |
@@ -229,7 +229,7 @@ The following table summarises the AWS APIs.
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
 | [`sms-voice`](services/sms-voice.yml) | 8 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
-| [`outposts`](services/outposts.yml) | 7 | 0 | 0 |
+| [`outposts`](services/outposts.yml) | 7 | 3 | 0 |
 | [`mediatailor`](services/mediatailor.yml) | 7 | 0 | 0 |
 | [`macie`](services/macie.yml) | 7 | 0 | 0 |
 | [`textract`](services/textract.yml) | 6 | 0 | 0 |
@@ -248,7 +248,7 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
-| [`execute-api`](services/execute-api.yml) | 0 | 231 | 3 |
+| [`execute-api`](services/execute-api.yml) | 0 | 234 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 7 |
 | [`app-integrations`](services/app-integrations.yml) | 0 | 9 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
@@ -301,14 +301,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1446 |
-| `Get` | 1314 |
+| `List` | 1448 |
+| `Get` | 1316 |
 | `Describe` | 1223 |
-| `Delete` | 1185 |
+| `Delete` | 1186 |
 | `Create` | 1084 |
 | `Update` | 845 |
-| `Put` | 289 |
-| `Start` | 177 |
-| `Tag` | 144 |
-| `Untag` | 143 |
+| `Put` | 290 |
+| `Start` | 178 |
+| `Tag` | 145 |
+| `Untag` | 144 |
 
