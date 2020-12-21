@@ -1,0 +1,67 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonFISServiceRolePolicy",
+  "CreateDate": "2020-12-21T21:18:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4JLZR2TQJD",
+  "PolicyName": "AmazonFISServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-21T21:18:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:DescribeRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "events:ManagedBy": "fis.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EventBridge"
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatch"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstances",
+            "iam:GetRole",
+            "iam:GetUser",
+            "iam:ListRoles",
+            "iam:ListUsers",
+            "rds:DescribeDBClusters",
+            "rds:DescribeDBInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeUserResources"
+        },
+        {
+          "Action": [
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Tagging"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-21T21:18:19Z"
+}
