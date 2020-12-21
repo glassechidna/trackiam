@@ -86,6 +86,7 @@ The following table summarises the AWS APIs.
 | [`backup`](services/backup.yml) | 50 | 0 | 2 |
 | [`ecs`](services/ecs.yml) | 49 | 1 | 2 |
 | [`workmail`](services/workmail.yml) | 49 | 0 | 51 |
+| [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 10 |
 | [`securityhub`](services/securityhub.yml) | 48 | 0 | 0 |
 | [`rekognition`](services/rekognition.yml) | 48 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 48 | 0 | 0 |
@@ -94,7 +95,6 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
-| [`dynamodb`](services/dynamodb.yml) | 45 | 9 | 10 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`lex`](services/lex.yml) | 44 | 0 | 0 |
 | [`codebuild`](services/codebuild.yml) | 43 | 1 | 8 |

@@ -13,11 +13,14 @@ Actions:
   - Name: dynamodb:DescribeExport
   - Name: dynamodb:DescribeGlobalTable
   - Name: dynamodb:DescribeGlobalTableSettings
+  - Name: dynamodb:DescribeKinesisStreamingDestination
   - Name: dynamodb:DescribeLimits
   - Name: dynamodb:DescribeStream
   - Name: dynamodb:DescribeTable
   - Name: dynamodb:DescribeTableReplicaAutoScaling
   - Name: dynamodb:DescribeTimeToLive
+  - Name: dynamodb:DisableKinesisStreamingDestination
+  - Name: dynamodb:EnableKinesisStreamingDestination
   - Name: dynamodb:ExportTableToPointInTime
   - Name: dynamodb:GetItem
   - Name: dynamodb:GetRecords
@@ -60,9 +63,6 @@ Actions:
   # APIs without an IAM action
   - Name: dynamodb:BatchExecuteStatement
   - Name: dynamodb:DescribeEndpoints
-  - Name: dynamodb:DescribeKinesisStreamingDestination
-  - Name: dynamodb:DisableKinesisStreamingDestination
-  - Name: dynamodb:EnableKinesisStreamingDestination
   - Name: dynamodb:ExecuteStatement
   - Name: dynamodb:ExecuteTransaction
   - Name: dynamodb:TransactGetItems
