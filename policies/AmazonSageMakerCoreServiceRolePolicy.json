@@ -1,0 +1,52 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonSageMakerCoreServiceRolePolicy",
+  "CreateDate": "2020-12-21T21:40:47Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4MMWQCSNKX",
+  "PolicyName": "AmazonSageMakerCoreServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2020-12-21T21:40:47Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateNetworkInterfacePermission"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:AuthorizedService": "sagemaker.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeDhcpOptions",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2020-12-21T21:40:47Z"
+}
