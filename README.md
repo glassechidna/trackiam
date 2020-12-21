@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 260
-* Unique actions: 9982
+* Unique actions: 9985
 * Managed policies: 781
 
 Most common managed policy name prefixes:
@@ -190,8 +190,8 @@ The following table summarises the AWS APIs.
 | [`signer`](services/signer.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
+| [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 3 |
 | [`lookoutvision`](services/lookoutvision.yml) | 16 | 0 | 3 |
-| [`servicequotas`](services/servicequotas.yml) | 16 | 0 | 0 |
 | [`resource-groups`](services/resource-groups.yml) | 15 | 0 | 1 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 13 | 0 |
 | [`fsx`](services/fsx.yml) | 14 | 3 | 0 |
@@ -301,7 +301,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1445 |
+| `List` | 1446 |
 | `Get` | 1314 |
 | `Describe` | 1223 |
 | `Delete` | 1185 |
@@ -309,6 +309,6 @@ Most common action prefixes:
 | `Update` | 845 |
 | `Put` | 289 |
 | `Start` | 177 |
-| `Tag` | 143 |
-| `Untag` | 142 |
+| `Tag` | 144 |
+| `Untag` | 143 |
 
