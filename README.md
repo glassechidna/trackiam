@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 260
-* Unique actions: 10002
+* Unique actions: 10000
 * Managed policies: 783
 
 Most common managed policy name prefixes:
@@ -52,6 +52,7 @@ The following table summarises the AWS APIs.
 | [`greengrass`](services/greengrass.yml) | 90 | 17 | 1 |
 | [`gamelift`](services/gamelift.yml) | 90 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 88 | 4 | 18 |
+| [`connect`](services/connect.yml) | 82 | 7 | 1 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`config`](services/config.yml) | 79 | 5 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 78 | 6 | 1 |
@@ -59,7 +60,6 @@ The following table summarises the AWS APIs.
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
-| [`connect`](services/connect.yml) | 76 | 13 | 3 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`s3`](services/s3.yml) | 65 | 56 | 40 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
