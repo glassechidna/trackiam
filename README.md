@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 260
-* Unique actions: 10000
+* Unique actions: 10001
 * Managed policies: 783
 
 Most common managed policy name prefixes:
@@ -214,8 +214,8 @@ The following table summarises the AWS APIs.
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 39 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 10 | 4 | 3 |
+| [`compute-optimizer`](services/compute-optimizer.yml) | 10 | 0 | 1 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
-| [`compute-optimizer`](services/compute-optimizer.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`iot`](services/iot.yml) | 9 | 0 | 218 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
@@ -302,7 +302,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1449 |
-| `Get` | 1316 |
+| `Get` | 1317 |
 | `Describe` | 1224 |
 | `Delete` | 1187 |
 | `Create` | 1085 |
