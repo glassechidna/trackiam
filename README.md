@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 260
-* Unique actions: 10001
+* Unique actions: 10002
 * Managed policies: 783
 
 Most common managed policy name prefixes:
@@ -192,7 +192,7 @@ The following table summarises the AWS APIs.
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
 | [`lookoutvision`](services/lookoutvision.yml) | 16 | 0 | 3 |
-| [`resource-groups`](services/resource-groups.yml) | 15 | 0 | 1 |
+| [`resource-groups`](services/resource-groups.yml) | 15 | 1 | 1 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 13 | 0 |
 | [`fsx`](services/fsx.yml) | 14 | 3 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
@@ -212,9 +212,9 @@ The following table summarises the AWS APIs.
 | [`emr-containers`](services/emr-containers.yml) | 11 | 4 | 0 |
 | [`synthetics`](services/synthetics.yml) | 11 | 2 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 39 |
+| [`compute-optimizer`](services/compute-optimizer.yml) | 11 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 10 | 4 | 3 |
-| [`compute-optimizer`](services/compute-optimizer.yml) | 10 | 0 | 1 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`iot`](services/iot.yml) | 9 | 0 | 218 |
@@ -307,7 +307,7 @@ Most common action prefixes:
 | `Delete` | 1187 |
 | `Create` | 1085 |
 | `Update` | 847 |
-| `Put` | 290 |
+| `Put` | 291 |
 | `Start` | 178 |
 | `Tag` | 145 |
 | `Untag` | 144 |
