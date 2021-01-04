@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 260
-* Unique actions: 10001
+* Unique actions: 10003
 * Managed policies: 783
 
 Most common managed policy name prefixes:
@@ -74,8 +74,8 @@ The following table summarises the AWS APIs.
 | [`directconnect`](services/directconnect.yml) | 56 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 55 | 3 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 55 | 2 | 0 |
+| [`medialive`](services/medialive.yml) | 55 | 0 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 54 | 1 | 3 |
-| [`medialive`](services/medialive.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 53 | 0 | 0 |
 | [`dms`](services/dms.yml) | 51 | 3 | 0 |
@@ -146,6 +146,7 @@ The following table summarises the AWS APIs.
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
 | [`eks`](services/eks.yml) | 27 | 0 | 1 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
+| [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 26 | 1 | 1 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
@@ -184,7 +185,6 @@ The following table summarises the AWS APIs.
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`devops-guru`](services/devops-guru.yml) | 18 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
-| [`applicationinsights`](services/applicationinsights.yml) | 17 | 10 | 0 |
 | [`snowball`](services/snowball.yml) | 17 | 5 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 17 | 2 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
@@ -251,9 +251,9 @@ The following table summarises the AWS APIs.
 | [`execute-api`](services/execute-api.yml) | 0 | 234 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 7 |
 | [`app-integrations`](services/app-integrations.yml) | 0 | 9 | 0 |
+| [`healthlake`](services/healthlake.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
-| [`healthlake`](services/healthlake.yml) | 0 | 6 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`proton`](services/proton.yml) | 0 | 0 | 47 |
@@ -303,12 +303,12 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1448 |
 | `Get` | 1317 |
-| `Describe` | 1224 |
+| `Describe` | 1225 |
 | `Delete` | 1187 |
 | `Create` | 1085 |
 | `Update` | 847 |
 | `Put` | 291 |
-| `Start` | 178 |
+| `Start` | 179 |
 | `Tag` | 145 |
 | `Untag` | 144 |
 
