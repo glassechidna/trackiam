@@ -130,8 +130,8 @@ The following table summarises the AWS APIs.
 | [`datasync`](services/datasync.yml) | 31 | 1 | 0 |
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
+| [`ce`](services/ce.yml) | 30 | 0 | 10 |
 | [`cloudwatch`](services/cloudwatch.yml) | 30 | 0 | 0 |
-| [`ce`](services/ce.yml) | 29 | 1 | 10 |
 | [`transcribe`](services/transcribe.yml) | 29 | 0 | 2 |
 | [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 29 | 0 | 0 |
