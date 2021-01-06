@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSOpsWorksCMServiceRole",
   "CreateDate": "2016-11-24T09:49:46Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJ6I6MPGJE62URSHCO",
   "PolicyName": "AWSOpsWorksCMServiceRole",
   "PolicyVersion": {
-    "CreateDate": "2019-12-16T13:45:19Z",
+    "CreateDate": "2021-01-06T15:08:35Z",
     "Document": {
       "Statement": [
         {
@@ -139,6 +139,18 @@
         },
         {
           "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:TagResource",
+            "secretsmanager:UntagResource",
+            "secretsmanager:UpdateSecret"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:aws-opsworks-cm-secrets-*"
+        },
+        {
+          "Action": [
             "ssm:DescribeInstanceInformation",
             "ssm:GetCommandInvocation",
             "ssm:ListCommandInvocations",
@@ -173,7 +185,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2019-12-16T13:45:19Z"
+  "UpdateDate": "2021-01-06T15:08:35Z"
 }
