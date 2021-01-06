@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 260
-* Unique actions: 10004
+* Unique actions: 10006
 * Managed policies: 783
 
 Most common managed policy name prefixes:
@@ -269,11 +269,11 @@ The following table summarises the AWS APIs.
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
+| [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 8 |
 | [`cassandra`](services/cassandra.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 7 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
-| [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 6 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 5 |
@@ -308,7 +308,7 @@ Most common action prefixes:
 | `Create` | 1085 |
 | `Update` | 847 |
 | `Put` | 291 |
-| `Start` | 179 |
+| `Start` | 180 |
 | `Tag` | 145 |
 | `Untag` | 144 |
 
