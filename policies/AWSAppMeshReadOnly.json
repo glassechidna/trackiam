@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSAppMeshReadOnly",
   "CreateDate": "2019-04-16T17:51:11Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HOPFCIWXP",
   "PolicyName": "AWSAppMeshReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2020-03-05T23:54:06Z",
+    "CreateDate": "2021-01-07T19:53:16Z",
     "Document": {
       "Statement": [
         {
@@ -34,12 +34,21 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:cloudformation:*:*:stack/AWSAppMesh-GettingStarted-*"
+        },
+        {
+          "Action": [
+            "servicediscovery:ListInstances",
+            "servicediscovery:ListNamespaces",
+            "servicediscovery:ListServices"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-03-05T23:54:06Z"
+  "UpdateDate": "2021-01-07T19:53:16Z"
 }

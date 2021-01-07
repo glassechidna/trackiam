@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSAppMeshFullAccess",
   "CreateDate": "2019-04-16T17:50:40Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ILVZ5BWFU",
   "PolicyName": "AWSAppMeshFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-03-05T23:36:53Z",
+    "CreateDate": "2021-01-07T19:54:08Z",
     "Document": {
       "Statement": [
         {
@@ -50,12 +50,21 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:cloudformation:*:*:stack/AWSAppMesh-GettingStarted-*"
+        },
+        {
+          "Action": [
+            "servicediscovery:ListInstances",
+            "servicediscovery:ListNamespaces",
+            "servicediscovery:ListServices"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2020-03-05T23:36:53Z"
+  "UpdateDate": "2021-01-07T19:54:08Z"
 }
