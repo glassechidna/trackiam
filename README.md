@@ -46,10 +46,10 @@ The following table summarises the AWS APIs.
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
 | [`servicecatalog`](services/servicecatalog.yml) | 104 | 3 | 0 |
 | [`ses`](services/ses.yml) | 103 | 34 | 0 |
+| [`greengrass`](services/greengrass.yml) | 103 | 4 | 1 |
 | [`lightsail`](services/lightsail.yml) | 101 | 40 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 99 | 0 | 15 |
-| [`greengrass`](services/greengrass.yml) | 90 | 17 | 1 |
 | [`gamelift`](services/gamelift.yml) | 90 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 88 | 4 | 18 |
 | [`connect`](services/connect.yml) | 82 | 7 | 1 |

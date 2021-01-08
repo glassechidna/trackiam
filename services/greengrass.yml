@@ -1,6 +1,8 @@
 Actions:
   - Name: greengrass:AssociateRoleToGroup
   - Name: greengrass:AssociateServiceRoleToAccount
+  - Name: greengrass:CancelDeployment
+  - Name: greengrass:CreateComponentVersion
   - Name: greengrass:CreateConnectorDefinition
   - Name: greengrass:CreateConnectorDefinitionVersion
   - Name: greengrass:CreateCoreDefinition
@@ -20,23 +22,29 @@ Actions:
   - Name: greengrass:CreateSoftwareUpdateJob
   - Name: greengrass:CreateSubscriptionDefinition
   - Name: greengrass:CreateSubscriptionDefinitionVersion
+  - Name: greengrass:DeleteComponent
   - Name: greengrass:DeleteConnectorDefinition
   - Name: greengrass:DeleteCoreDefinition
+  - Name: greengrass:DeleteCoreDevice
   - Name: greengrass:DeleteDeviceDefinition
   - Name: greengrass:DeleteFunctionDefinition
   - Name: greengrass:DeleteGroup
   - Name: greengrass:DeleteLoggerDefinition
   - Name: greengrass:DeleteResourceDefinition
   - Name: greengrass:DeleteSubscriptionDefinition
+  - Name: greengrass:DescribeComponent
   - Name: greengrass:DisassociateRoleFromGroup
   - Name: greengrass:DisassociateServiceRoleFromAccount
   - Name: greengrass:GetAssociatedRole
   - Name: greengrass:GetBulkDeploymentStatus
+  - Name: greengrass:GetComponent
   - Name: greengrass:GetConnectivityInfo
   - Name: greengrass:GetConnectorDefinition
   - Name: greengrass:GetConnectorDefinitionVersion
   - Name: greengrass:GetCoreDefinition
   - Name: greengrass:GetCoreDefinitionVersion
+  - Name: greengrass:GetCoreDevice
+  - Name: greengrass:GetDeployment
   - Name: greengrass:GetDeploymentStatus
   - Name: greengrass:GetDeviceDefinition
   - Name: greengrass:GetDeviceDefinitionVersion
@@ -55,18 +63,23 @@ Actions:
   - Name: greengrass:GetSubscriptionDefinitionVersion
   - Name: greengrass:ListBulkDeploymentDetailedReports
   - Name: greengrass:ListBulkDeployments
+  - Name: greengrass:ListComponentVersions
+  - Name: greengrass:ListComponents
   - Name: greengrass:ListConnectorDefinitionVersions
   - Name: greengrass:ListConnectorDefinitions
   - Name: greengrass:ListCoreDefinitionVersions
   - Name: greengrass:ListCoreDefinitions
+  - Name: greengrass:ListCoreDevices
   - Name: greengrass:ListDeployments
   - Name: greengrass:ListDeviceDefinitionVersions
   - Name: greengrass:ListDeviceDefinitions
+  - Name: greengrass:ListEffectiveDeployments
   - Name: greengrass:ListFunctionDefinitionVersions
   - Name: greengrass:ListFunctionDefinitions
   - Name: greengrass:ListGroupCertificateAuthorities
   - Name: greengrass:ListGroupVersions
   - Name: greengrass:ListGroups
+  - Name: greengrass:ListInstalledComponents
   - Name: greengrass:ListLoggerDefinitionVersions
   - Name: greengrass:ListLoggerDefinitions
   - Name: greengrass:ListResourceDefinitionVersions
@@ -94,20 +107,7 @@ Actions:
   - Name: greengrass:Discover
 
   # APIs without an IAM action
-  - Name: greengrass:CancelDeployment
-  - Name: greengrass:CreateComponentVersion
-  - Name: greengrass:DeleteComponent
-  - Name: greengrass:DeleteCoreDevice
-  - Name: greengrass:DescribeComponent
-  - Name: greengrass:GetComponent
   - Name: greengrass:GetComponentVersionArtifact
-  - Name: greengrass:GetCoreDevice
-  - Name: greengrass:GetDeployment
   - Name: greengrass:GetThingRuntimeConfiguration
-  - Name: greengrass:ListComponentVersions
-  - Name: greengrass:ListComponents
-  - Name: greengrass:ListCoreDevices
-  - Name: greengrass:ListEffectiveDeployments
-  - Name: greengrass:ListInstalledComponents
   - Name: greengrass:ResolveComponentCandidates
   - Name: greengrass:UpdateThingRuntimeConfiguration
