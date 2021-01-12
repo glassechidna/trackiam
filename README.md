@@ -52,9 +52,9 @@ The following table summarises the AWS APIs.
 | [`quicksight`](services/quicksight.yml) | 99 | 0 | 18 |
 | [`gamelift`](services/gamelift.yml) | 90 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 88 | 4 | 18 |
+| [`config`](services/config.yml) | 84 | 0 | 0 |
 | [`connect`](services/connect.yml) | 82 | 7 | 1 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
-| [`config`](services/config.yml) | 79 | 5 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 78 | 6 | 1 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
