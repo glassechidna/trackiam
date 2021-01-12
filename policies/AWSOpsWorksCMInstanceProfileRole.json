@@ -1,19 +1,24 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSOpsWorksCMInstanceProfileRole",
   "CreateDate": "2016-11-24T09:48:22Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAICSU3OSHCURP2WIZW",
   "PolicyName": "AWSOpsWorksCMInstanceProfileRole",
   "PolicyVersion": {
-    "CreateDate": "2019-10-22T07:40:17Z",
+    "CreateDate": "2021-01-12T09:37:42Z",
     "Document": {
       "Statement": [
         {
           "Action": "acm:GetCertificate",
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": "secretsmanager:GetSecretValue",
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:aws-opsworks-cm-secrets-*"
         },
         {
           "Action": [
@@ -42,7 +47,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2019-10-22T07:40:17Z"
+  "UpdateDate": "2021-01-12T09:37:42Z"
 }
