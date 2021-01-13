@@ -1,5 +1,6 @@
 Actions:
   - Name: ec2:AcceptReservedInstancesExchangeQuote
+  - Name: ec2:AcceptTransitGatewayMulticastDomainAssociations
   - Name: ec2:AcceptTransitGatewayPeeringAttachment
   - Name: ec2:AcceptTransitGatewayVpcAttachment
   - Name: ec2:AcceptVpcEndpointConnections
@@ -83,6 +84,8 @@ Actions:
   - Name: ec2:CreateTrafficMirrorSession
   - Name: ec2:CreateTrafficMirrorTarget
   - Name: ec2:CreateTransitGateway
+  - Name: ec2:CreateTransitGatewayConnect
+  - Name: ec2:CreateTransitGatewayConnectPeer
   - Name: ec2:CreateTransitGatewayMulticastDomain
   - Name: ec2:CreateTransitGatewayPeeringAttachment
   - Name: ec2:CreateTransitGatewayPrefixListReference
@@ -218,6 +221,8 @@ Actions:
   - Name: ec2:DescribeMovingAddresses
   - Name: ec2:DescribeNatGateways
   - Name: ec2:DescribeNetworkAcls
+  - Name: ec2:DescribeNetworkInsightsAnalyses
+  - Name: ec2:DescribeNetworkInsightsPaths
   - Name: ec2:DescribeNetworkInterfaceAttribute
   - Name: ec2:DescribeNetworkInterfacePermissions
   - Name: ec2:DescribeNetworkInterfaces
@@ -250,6 +255,8 @@ Actions:
   - Name: ec2:DescribeTrafficMirrorSessions
   - Name: ec2:DescribeTrafficMirrorTargets
   - Name: ec2:DescribeTransitGatewayAttachments
+  - Name: ec2:DescribeTransitGatewayConnectPeers
+  - Name: ec2:DescribeTransitGatewayConnects
   - Name: ec2:DescribeTransitGatewayMulticastDomains
   - Name: ec2:DescribeTransitGatewayPeeringAttachments
   - Name: ec2:DescribeTransitGatewayRouteTables
@@ -429,12 +436,3 @@ Actions:
   - Name: ec2:UpdateSecurityGroupRuleDescriptionsEgress
   - Name: ec2:UpdateSecurityGroupRuleDescriptionsIngress
   - Name: ec2:WithdrawByoipCidr
-
-  # APIs without an IAM action
-  - Name: ec2:AcceptTransitGatewayMulticastDomainAssociations
-  - Name: ec2:CreateTransitGatewayConnect
-  - Name: ec2:CreateTransitGatewayConnectPeer
-  - Name: ec2:DescribeNetworkInsightsAnalyses
-  - Name: ec2:DescribeNetworkInsightsPaths
-  - Name: ec2:DescribeTransitGatewayConnectPeers
-  - Name: ec2:DescribeTransitGatewayConnects
