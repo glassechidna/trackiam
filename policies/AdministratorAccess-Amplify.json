@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AdministratorAccess-Amplify",
   "CreateDate": "2020-12-01T19:03:08Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AML23RALR",
   "PolicyName": "AdministratorAccess-Amplify",
   "PolicyVersion": {
-    "CreateDate": "2020-12-01T19:03:08Z",
+    "CreateDate": "2021-01-13T22:36:27Z",
     "Document": {
       "Statement": [
         {
@@ -117,6 +117,7 @@
             "iam:GetPolicy",
             "iam:GetRole",
             "iam:GetRolePolicy",
+            "iam:ListPolicyVersions",
             "iam:ListRoleTags",
             "iam:PassRole",
             "iam:PutRolePolicy",
@@ -188,9 +189,11 @@
             "amplify:ListBranches",
             "amplify:ListDomainAssociations",
             "amplify:UpdateApp",
-            "amplifybackend: *",
+            "amplifybackend:*",
             "appsync:GetIntrospectionSchema",
             "appsync:GraphQL",
+            "appsync:ListApiKeys",
+            "appsync:UpdateApiKey",
             "cognito-idp:AdminAddUserToGroup",
             "cognito-idp:AdminConfirmSignUp",
             "cognito-idp:AdminCreateUser",
@@ -207,9 +210,14 @@
             "cognito-idp:CreateGroup",
             "cognito-idp:DeleteGroup",
             "cognito-idp:DeleteUser",
+            "cognito-idp:DescribeIdentityProvider",
             "cognito-idp:ListGroups",
             "cognito-idp:ListUsers",
             "cognito-idp:ListUsersInGroup",
+            "iam:AttachRolePolicy",
+            "iam:CreatePolicy",
+            "iam:PutRolePolicy",
+            "mobiletargeting:*",
             "s3:DeleteBucket",
             "s3:DeleteBucketPolicy",
             "s3:DeleteBucketWebsite",
@@ -218,7 +226,9 @@
             "s3:GetObject",
             "s3:ListAllMyBuckets",
             "s3:ListBucket",
-            "s3:PutObject"
+            "s3:ListBucketVersions",
+            "s3:PutObject",
+            "sts:AssumeRole"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -248,7 +258,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-12-01T19:03:08Z"
+  "UpdateDate": "2021-01-13T22:36:27Z"
 }
