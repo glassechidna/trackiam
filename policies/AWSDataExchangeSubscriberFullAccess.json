@@ -1,15 +1,27 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDataExchangeSubscriberFullAccess",
   "CreateDate": "2019-11-13T19:27:52Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MAWRW4GF7",
   "PolicyName": "AWSDataExchangeSubscriberFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-04-27T14:28:00Z",
+    "CreateDate": "2021-01-14T17:06:28Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "s3:GetObject",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "dataexchange.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*aws-data-exchange*"
+        },
         {
           "Action": [
             "dataexchange:CancelJob",
@@ -26,11 +38,6 @@
           },
           "Effect": "Allow",
           "Resource": "*"
-        },
-        {
-          "Action": "s3:GetObject",
-          "Effect": "Allow",
-          "Resource": "arn:aws:s3:::*aws-data-exchange*"
         },
         {
           "Action": [
@@ -74,7 +81,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-04-27T14:28:00Z"
+  "UpdateDate": "2021-01-14T17:06:28Z"
 }
