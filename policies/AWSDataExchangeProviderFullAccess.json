@@ -1,18 +1,35 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDataExchangeProviderFullAccess",
   "CreateDate": "2019-11-13T19:27:55Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MQSUGZZPZ",
   "PolicyName": "AWSDataExchangeProviderFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-04-27T14:30:12Z",
+    "CreateDate": "2021-01-14T21:20:09Z",
     "Document": {
       "Statement": [
         {
           "Action": "s3:GetObject",
           "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "dataexchange.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*aws-data-exchange*"
+        },
+        {
+          "Action": "s3:GetObject",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "dataexchange.amazonaws.com"
+              ]
+            },
             "StringEqualsIgnoreCase": {
               "s3:ExistingObjectTag/AWSDataExchange": "true"
             }
@@ -40,7 +57,17 @@
           "Resource": "*"
         },
         {
-          "Action": "s3:GetObject",
+          "Action": [
+            "s3:PutObject",
+            "s3:PutObjectAcl"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "dataexchange.amazonaws.com"
+              ]
+            }
+          },
           "Effect": "Allow",
           "Resource": "arn:aws:s3:::*aws-data-exchange*"
         },
@@ -95,20 +122,12 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
-        },
-        {
-          "Action": [
-            "s3:PutObject",
-            "s3:PutObjectAcl"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:s3:::*aws-data-exchange*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-04-27T14:30:12Z"
+  "UpdateDate": "2021-01-14T21:20:09Z"
 }
