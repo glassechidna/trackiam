@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "CreateDate": "2018-12-01T16:22:12Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJH3SHQERZRQMQOQ44",
   "PolicyName": "CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-11-09T22:39:19Z",
+    "CreateDate": "2021-01-19T20:27:15Z",
     "Document": {
       "Statement": [
         {
@@ -15,6 +15,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ssm:*:*:document/AWS-ConfigureAWSPackage",
             "arn:aws:ssm:*:*:document/AWSEC2-CheckPerformanceCounterSets",
             "arn:aws:ssm:*:*:document/AWSEC2-DetectWorkload"
           ]
@@ -278,7 +279,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2020-11-09T22:39:19Z"
+  "UpdateDate": "2021-01-19T20:27:15Z"
 }
