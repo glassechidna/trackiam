@@ -1,18 +1,35 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDataExchangeFullAccess",
   "CreateDate": "2019-11-13T19:27:59Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MPDTDB3FH",
   "PolicyName": "AWSDataExchangeFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-04-27T14:22:05Z",
+    "CreateDate": "2021-01-19T19:42:47Z",
     "Document": {
       "Statement": [
         {
           "Action": "s3:GetObject",
           "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "dataexchange.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*aws-data-exchange*"
+        },
+        {
+          "Action": "s3:GetObject",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "dataexchange.amazonaws.com"
+              ]
+            },
             "StringEqualsIgnoreCase": {
               "s3:ExistingObjectTag/AWSDataExchange": "true"
             }
@@ -21,7 +38,17 @@
           "Resource": "*"
         },
         {
-          "Action": "s3:GetObject",
+          "Action": [
+            "s3:PutObject",
+            "s3:PutObjectAcl"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "dataexchange.amazonaws.com"
+              ]
+            }
+          },
           "Effect": "Allow",
           "Resource": "arn:aws:s3:::*aws-data-exchange*"
         },
@@ -78,20 +105,12 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
-        },
-        {
-          "Action": [
-            "s3:PutObject",
-            "s3:PutObjectAcl"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:s3:::*aws-data-exchange*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-04-27T14:22:05Z"
+  "UpdateDate": "2021-01-19T19:42:47Z"
 }
