@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 261
-* Unique actions: 10018
+* Unique actions: 10017
 * Managed policies: 786
 
 Most common managed policy name prefixes:
@@ -91,8 +91,8 @@ The following table summarises the AWS APIs.
 | [`rekognition`](services/rekognition.yml) | 48 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 48 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 47 | 1 | 0 |
-| [`appstream`](services/appstream.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
+| [`appstream`](services/appstream.yml) | 47 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
@@ -131,11 +131,11 @@ The following table summarises the AWS APIs.
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`ce`](services/ce.yml) | 30 | 0 | 10 |
+| [`kafka`](services/kafka.yml) | 30 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 30 | 0 | 0 |
 | [`transcribe`](services/transcribe.yml) | 29 | 0 | 2 |
 | [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 29 | 0 | 0 |
-| [`kafka`](services/kafka.yml) | 29 | 0 | 0 |
 | [`es`](services/es.yml) | 28 | 11 | 9 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`athena`](services/athena.yml) | 28 | 0 | 1 |
@@ -303,11 +303,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1449 |
-| `Get` | 1320 |
+| `Get` | 1318 |
 | `Describe` | 1226 |
 | `Delete` | 1190 |
 | `Create` | 1087 |
-| `Update` | 849 |
+| `Update` | 850 |
 | `Put` | 292 |
 | `Start` | 180 |
 | `Tag` | 145 |
