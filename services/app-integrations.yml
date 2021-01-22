@@ -1,6 +1,4 @@
 Actions:
-
-  # APIs without an IAM action
   - Name: app-integrations:CreateEventIntegration
   - Name: app-integrations:DeleteEventIntegration
   - Name: app-integrations:GetEventIntegration
@@ -10,3 +8,7 @@ Actions:
   - Name: app-integrations:TagResource
   - Name: app-integrations:UntagResource
   - Name: app-integrations:UpdateEventIntegration
+
+  # actions with no corresponding API
+  - Name: app-integrations:CreateEventIntegrationAssociation
+  - Name: app-integrations:DeleteEventIntegrationAssociation

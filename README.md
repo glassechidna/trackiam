@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 261
-* Unique actions: 10051
+* Unique actions: 10053
 * Managed policies: 789
 
 Most common managed policy name prefixes:
@@ -219,6 +219,7 @@ The following table summarises the AWS APIs.
 | [`outposts`](services/outposts.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`iot`](services/iot.yml) | 9 | 0 | 218 |
+| [`app-integrations`](services/app-integrations.yml) | 9 | 0 | 2 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
@@ -250,7 +251,6 @@ The following table summarises the AWS APIs.
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 234 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 7 |
-| [`app-integrations`](services/app-integrations.yml) | 0 | 9 | 0 |
 | [`healthlake`](services/healthlake.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
@@ -305,8 +305,8 @@ Most common action prefixes:
 | `List` | 1458 |
 | `Get` | 1318 |
 | `Describe` | 1233 |
-| `Delete` | 1192 |
-| `Create` | 1093 |
+| `Delete` | 1193 |
+| `Create` | 1094 |
 | `Update` | 856 |
 | `Put` | 292 |
 | `Start` | 181 |
