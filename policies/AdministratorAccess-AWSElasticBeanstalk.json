@@ -1,0 +1,348 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AdministratorAccess-AWSElasticBeanstalk",
+  "CreateDate": "2021-01-22T19:36:54Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4AX52KWGWY",
+  "PolicyName": "AdministratorAccess-AWSElasticBeanstalk",
+  "PolicyVersion": {
+    "CreateDate": "2021-01-22T19:36:54Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:RunInstances",
+          "Condition": {
+            "ArnLike": {
+              "ec2:LaunchTemplate": "arn:aws:ec2:*:*:launch-template/*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "autoscaling.amazonaws.com",
+                "cloudformation.amazonaws.com",
+                "ec2.amazonaws.com",
+                "ecs.amazonaws.com",
+                "elasticbeanstalk.amazonaws.com",
+                "elasticloadbalancing.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*"
+        },
+        {
+          "Action": [
+            "ec2:RebootInstances",
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/aws:cloudformation:stack-id": [
+                "arn:aws:cloudformation:*:*:stack/awseb-e-*",
+                "arn:aws:cloudformation:*:*:stack/eb-*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*"
+        },
+        {
+          "Action": [
+            "iam:AttachRolePolicy"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PolicyArn": [
+                "arn:aws:iam::aws:policy/AWSElasticBeanstalk*",
+                "arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalk*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-elasticbeanstalk*"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": [
+                "autoscaling.amazonaws.com",
+                "elasticbeanstalk.amazonaws.com",
+                "elasticloadbalancing.amazonaws.com",
+                "maintenance.elasticbeanstalk.amazonaws.com",
+                "managedupdates.elasticbeanstalk.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling*",
+            "arn:aws:iam::*:role/aws-service-role/elasticbeanstalk.amazonaws.com/AWSServiceRoleForElasticBeanstalk*",
+            "arn:aws:iam::*:role/aws-service-role/elasticloadbalancing.amazonaws.com/AWSServiceRoleForElasticLoadBalancing*",
+            "arn:aws:iam::*:role/aws-service-role/maintenance.elasticbeanstalk.amazonaws.com/AWSServiceRoleForElasticBeanstalk*",
+            "arn:aws:iam::*:role/aws-service-role/managedupdates.elasticbeanstalk.amazonaws.com/AWSServiceRoleForElasticBeanstalk*"
+          ]
+        },
+        {
+          "Action": [
+            "acm:Describe*",
+            "acm:List*",
+            "autoscaling:Describe*",
+            "cloudformation:Describe*",
+            "cloudformation:Estimate*",
+            "cloudformation:Get*",
+            "cloudformation:List*",
+            "cloudformation:Validate*",
+            "cloudtrail:LookupEvents",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics",
+            "codecommit:Get*",
+            "codecommit:UploadArchive",
+            "ec2:AllocateAddress",
+            "ec2:AssociateAddress",
+            "ec2:AuthorizeSecurityGroup*",
+            "ec2:CreateLaunchTemplate*",
+            "ec2:CreateSecurityGroup",
+            "ec2:CreateTags",
+            "ec2:DeleteLaunchTemplate*",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DeleteTags",
+            "ec2:Describe*",
+            "ec2:DisassociateAddress",
+            "ec2:ReleaseAddress",
+            "ec2:RevokeSecurityGroup*",
+            "ecs:CreateCluster",
+            "ecs:DeRegisterTaskDefinition",
+            "ecs:Describe*",
+            "ecs:List*",
+            "ecs:RegisterTaskDefinition",
+            "elasticbeanstalk:*",
+            "elasticloadbalancing:Describe*",
+            "iam:GetRole",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListInstanceProfiles",
+            "iam:ListRolePolicies",
+            "iam:ListRoles",
+            "iam:ListServerCertificates",
+            "logs:Describe*",
+            "rds:Describe*",
+            "s3:ListAllMyBuckets",
+            "sns:ListSubscriptionsByTopic",
+            "sns:ListTopics",
+            "sqs:ListQueues"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "autoscaling:*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:autoscaling:*:*:autoScalingGroup:*:autoScalingGroupName/awseb-e-*",
+            "arn:aws:autoscaling:*:*:autoScalingGroup:*:autoScalingGroupName/eb-*",
+            "arn:aws:autoscaling:*:*:launchConfiguration:*:launchConfigurationName/awseb-e-*",
+            "arn:aws:autoscaling:*:*:launchConfiguration:*:launchConfigurationName/eb-*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudformation:CancelUpdateStack",
+            "cloudformation:ContinueUpdateRollback",
+            "cloudformation:CreateStack",
+            "cloudformation:DeleteStack",
+            "cloudformation:GetTemplate",
+            "cloudformation:ListStackResources",
+            "cloudformation:SignalResource",
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource",
+            "cloudformation:UpdateStack"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/awseb-*",
+            "arn:aws:cloudformation:*:*:stack/eb-*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:PutMetricAlarm"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudwatch:*:*:alarm:awseb-*",
+            "arn:aws:cloudwatch:*:*:alarm:eb-*"
+          ]
+        },
+        {
+          "Action": [
+            "codebuild:BatchGetBuilds",
+            "codebuild:CreateProject",
+            "codebuild:DeleteProject",
+            "codebuild:StartBuild"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:codebuild:*:*:project/Elastic-Beanstalk-*"
+        },
+        {
+          "Action": [
+            "dynamodb:CreateTable",
+            "dynamodb:DeleteTable",
+            "dynamodb:DescribeTable",
+            "dynamodb:TagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:dynamodb:*:*:table/awseb-e-*",
+            "arn:aws:dynamodb:*:*:table/eb-*"
+          ]
+        },
+        {
+          "Action": [
+            "ecs:DeleteCluster"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecs:*:*:cluster/awseb-*"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticloadbalancing:*:*:listener-rule/app/awseb-*/*/*/*",
+            "arn:aws:elasticloadbalancing:*:*:listener-rule/app/eb-*/*/*/*",
+            "arn:aws:elasticloadbalancing:*:*:listener/*/awseb-*/*/*",
+            "arn:aws:elasticloadbalancing:*:*:listener/*/eb-*/*/*",
+            "arn:aws:elasticloadbalancing:*:*:listener/awseb-*",
+            "arn:aws:elasticloadbalancing:*:*:listener/eb-*",
+            "arn:aws:elasticloadbalancing:*:*:loadbalancer/*/awseb-*/*",
+            "arn:aws:elasticloadbalancing:*:*:loadbalancer/*/eb-*/*",
+            "arn:aws:elasticloadbalancing:*:*:loadbalancer/awseb-*",
+            "arn:aws:elasticloadbalancing:*:*:loadbalancer/eb-*",
+            "arn:aws:elasticloadbalancing:*:*:targetgroup/awseb-*",
+            "arn:aws:elasticloadbalancing:*:*:targetgroup/eb-*"
+          ]
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:*Rule",
+            "elasticloadbalancing:*Tags",
+            "elasticloadbalancing:SetRulePriorities",
+            "elasticloadbalancing:SetSecurityGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticloadbalancing:*:*:listener-rule/app/*/*/*/*",
+            "arn:aws:elasticloadbalancing:*:*:listener/app/*/*/*",
+            "arn:aws:elasticloadbalancing:*:*:loadbalancer/app/*/*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:AddRoleToInstanceProfile",
+            "iam:CreateInstanceProfile",
+            "iam:CreateRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:instance-profile/aws-elasticbeanstalk*",
+            "arn:aws:iam::*:role/aws-elasticbeanstalk*"
+          ]
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:DeleteLogGroup",
+            "logs:PutRetentionPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/elasticbeanstalk/*"
+        },
+        {
+          "Action": [
+            "rds:*DBSubnetGroup",
+            "rds:AuthorizeDBSecurityGroupIngress",
+            "rds:CreateDBInstance",
+            "rds:CreateDBSecurityGroup",
+            "rds:DeleteDBInstance",
+            "rds:DeleteDBSecurityGroup",
+            "rds:ModifyDBInstance",
+            "rds:RestoreDBInstanceFromDBSnapshot"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:rds:*:*:db:*",
+            "arn:aws:rds:*:*:secgrp:awseb-e-*",
+            "arn:aws:rds:*:*:secgrp:eb-*",
+            "arn:aws:rds:*:*:snapshot:*",
+            "arn:aws:rds:*:*:subgrp:awseb-e-*",
+            "arn:aws:rds:*:*:subgrp:eb-*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:GetBucket*",
+            "s3:ListBucket",
+            "s3:PutBucketPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::elasticbeanstalk-*"
+        },
+        {
+          "Action": [
+            "s3:Delete*",
+            "s3:Get*",
+            "s3:Put*"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::elasticbeanstalk-*/*"
+        },
+        {
+          "Action": [
+            "sns:CreateTopic",
+            "sns:DeleteTopic",
+            "sns:GetTopicAttributes",
+            "sns:Publish",
+            "sns:SetTopicAttributes",
+            "sns:Subscribe",
+            "sns:Unsubscribe"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sns:*:*:ElasticBeanstalkNotifications-*"
+        },
+        {
+          "Action": [
+            "sqs:*QueueAttributes",
+            "sqs:CreateQueue",
+            "sqs:DeleteQueue",
+            "sqs:SendMessage",
+            "sqs:TagQueue"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sqs:*:*:awseb-e-*",
+            "arn:aws:sqs:*:*:eb-*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-01-22T19:36:54Z"
+}

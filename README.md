@@ -12,19 +12,19 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 261
-* Unique actions: 10017
-* Managed policies: 787
+* Unique actions: 10051
+* Managed policies: 789
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 225 |
+| `arn:aws:iam::aws:policy/AWS*` | 226 |
 | `arn:aws:iam::aws:policy/Amazon*` | 207 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 149 |
 | `arn:aws:iam::aws:policy/service-role/*` | 120 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
-| Other | 79 |
+| Other | 80 |
 
 The following table summarises the AWS APIs. 
 
@@ -96,7 +96,7 @@ The following table summarises the AWS APIs.
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
-| [`lex`](services/lex.yml) | 44 | 0 | 0 |
+| [`lex`](services/lex.yml) | 44 | 34 | 0 |
 | [`codebuild`](services/codebuild.yml) | 43 | 1 | 8 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`wafv2`](services/wafv2.yml) | 40 | 0 | 2 |
@@ -302,14 +302,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1449 |
+| `List` | 1458 |
 | `Get` | 1318 |
-| `Describe` | 1226 |
-| `Delete` | 1190 |
-| `Create` | 1087 |
-| `Update` | 850 |
+| `Describe` | 1233 |
+| `Delete` | 1192 |
+| `Create` | 1093 |
+| `Update` | 856 |
 | `Put` | 292 |
-| `Start` | 180 |
+| `Start` | 181 |
 | `Tag` | 145 |
 | `Untag` | 144 |
 
