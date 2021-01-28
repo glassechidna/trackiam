@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 261
-* Unique actions: 10061
+* Unique actions: 10064
 * Managed policies: 790
 
 Most common managed policy name prefixes:
@@ -160,6 +160,7 @@ The following table summarises the AWS APIs.
 | [`route53domains`](services/route53domains.yml) | 23 | 5 | 0 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 23 | 0 | 0 |
+| [`managedblockchain`](services/managedblockchain.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 1 |
@@ -171,7 +172,6 @@ The following table summarises the AWS APIs.
 | [`qldb`](services/qldb.yml) | 20 | 0 | 3 |
 | [`transfer`](services/transfer.yml) | 20 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
-| [`managedblockchain`](services/managedblockchain.yml) | 20 | 0 | 0 |
 | [`ecr-public`](services/ecr-public.yml) | 20 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
@@ -302,7 +302,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1458 |
+| `List` | 1459 |
 | `Get` | 1323 |
 | `Describe` | 1233 |
 | `Delete` | 1193 |
@@ -310,6 +310,6 @@ Most common action prefixes:
 | `Update` | 856 |
 | `Put` | 293 |
 | `Start` | 181 |
-| `Tag` | 145 |
-| `Untag` | 144 |
+| `Tag` | 146 |
+| `Untag` | 145 |
 
