@@ -50,10 +50,10 @@ The following table summarises the AWS APIs.
 | [`lightsail`](services/lightsail.yml) | 101 | 41 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 99 | 0 | 18 |
+| [`connect`](services/connect.yml) | 93 | 7 | 1 |
 | [`gamelift`](services/gamelift.yml) | 90 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 88 | 4 | 18 |
 | [`config`](services/config.yml) | 84 | 0 | 0 |
-| [`connect`](services/connect.yml) | 82 | 7 | 12 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 78 | 6 | 1 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |

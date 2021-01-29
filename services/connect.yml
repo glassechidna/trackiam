@@ -3,10 +3,12 @@ Actions:
   - Name: connect:AssociateInstanceStorageConfig
   - Name: connect:AssociateLambdaFunction
   - Name: connect:AssociateLexBot
+  - Name: connect:AssociateQueueQuickConnects
   - Name: connect:AssociateRoutingProfileQueues
   - Name: connect:AssociateSecurityKey
   - Name: connect:CreateContactFlow
   - Name: connect:CreateInstance
+  - Name: connect:CreateQueue
   - Name: connect:CreateQuickConnect
   - Name: connect:CreateRoutingProfile
   - Name: connect:CreateUser
@@ -16,9 +18,11 @@ Actions:
   - Name: connect:DeleteUser
   - Name: connect:DeleteUserHierarchyGroup
   - Name: connect:DescribeContactFlow
+  - Name: connect:DescribeHoursOfOperation
   - Name: connect:DescribeInstance
   - Name: connect:DescribeInstanceAttribute
   - Name: connect:DescribeInstanceStorageConfig
+  - Name: connect:DescribeQueue
   - Name: connect:DescribeQuickConnect
   - Name: connect:DescribeRoutingProfile
   - Name: connect:DescribeUser
@@ -28,6 +32,7 @@ Actions:
   - Name: connect:DisassociateInstanceStorageConfig
   - Name: connect:DisassociateLambdaFunction
   - Name: connect:DisassociateLexBot
+  - Name: connect:DisassociateQueueQuickConnects
   - Name: connect:DisassociateRoutingProfileQueues
   - Name: connect:DisassociateSecurityKey
   - Name: connect:GetContactAttributes
@@ -44,6 +49,7 @@ Actions:
   - Name: connect:ListLexBots
   - Name: connect:ListPhoneNumbers
   - Name: connect:ListPrompts
+  - Name: connect:ListQueueQuickConnects
   - Name: connect:ListQueues
   - Name: connect:ListQuickConnects
   - Name: connect:ListRoutingProfileQueues
@@ -68,6 +74,11 @@ Actions:
   - Name: connect:UpdateContactFlowName
   - Name: connect:UpdateInstanceAttribute
   - Name: connect:UpdateInstanceStorageConfig
+  - Name: connect:UpdateQueueHoursOfOperation
+  - Name: connect:UpdateQueueMaxContacts
+  - Name: connect:UpdateQueueName
+  - Name: connect:UpdateQueueOutboundCallerConfig
+  - Name: connect:UpdateQueueStatus
   - Name: connect:UpdateQuickConnectConfig
   - Name: connect:UpdateQuickConnectName
   - Name: connect:UpdateRoutingProfileConcurrency
@@ -83,18 +94,7 @@ Actions:
   - Name: connect:UpdateUserSecurityProfiles
 
   # actions with no corresponding API
-  - Name: connect:AssociateQueueQuickConnects
-  - Name: connect:CreateQueue
-  - Name: connect:DescribeHoursOfOperation
-  - Name: connect:DescribeQueue
-  - Name: connect:DisassociateQueueQuickConnects
   - Name: connect:GetFederationTokens
-  - Name: connect:ListQueueQuickConnects
-  - Name: connect:UpdateQueueHoursOfOperation
-  - Name: connect:UpdateQueueMaxContacts
-  - Name: connect:UpdateQueueName
-  - Name: connect:UpdateQueueOutboundCallerConfig
-  - Name: connect:UpdateQueueStatus
 
   # APIs without an IAM action
   - Name: connect:CreateIntegrationAssociation

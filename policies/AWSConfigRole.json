@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSConfigRole",
   "CreateDate": "2015-04-02T17:36:23Z",
-  "DefaultVersionId": "v35",
+  "DefaultVersionId": "v36",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIQRXRDRGJUA33ELIO",
   "PolicyName": "AWSConfigRole",
   "PolicyVersion": {
-    "CreateDate": "2020-12-18T22:22:51Z",
+    "CreateDate": "2021-01-29T19:22:20Z",
     "Document": {
       "Statement": [
         {
@@ -52,11 +52,28 @@
             "dynamodb:ListTagsOfResource",
             "ec2:Describe*",
             "ec2:GetEbsEncryptionByDefault",
+            "ecr:DescribeRepositories",
+            "ecr:GetLifecyclePolicy",
+            "ecr:GetRepositoryPolicy",
+            "ecr:ListTagsForResource",
+            "ecs:DescribeClusters",
+            "ecs:DescribeServices",
+            "ecs:DescribeTaskDefinition",
+            "ecs:DescribeTaskSets",
+            "ecs:ListClusters",
+            "ecs:ListServices",
+            "ecs:ListTagsForResource",
+            "ecs:ListTaskDefinitions",
             "eks:DescribeCluster",
+            "eks:DescribeNodegroup",
             "eks:ListClusters",
+            "eks:ListNodegroups",
             "elasticache:DescribeCacheClusters",
             "elasticache:DescribeReplicationGroups",
             "elasticfilesystem:DescribeFileSystems",
+            "elasticfilesystem:DescribeLifecycleConfiguration",
+            "elasticfilesystem:DescribeMountTargetSecurityGroups",
+            "elasticfilesystem:DescribeMountTargets",
             "elasticloadbalancing:DescribeListeners",
             "elasticloadbalancing:DescribeLoadBalancerAttributes",
             "elasticloadbalancing:DescribeLoadBalancerPolicies",
@@ -190,7 +207,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v35"
+    "VersionId": "v36"
   },
-  "UpdateDate": "2020-12-18T22:22:51Z"
+  "UpdateDate": "2021-01-29T19:22:20Z"
 }
