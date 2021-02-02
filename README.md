@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 261
-* Unique actions: 10075
+* Unique actions: 10079
 * Managed policies: 789
 
 Most common managed policy name prefixes:
@@ -138,7 +138,7 @@ The following table summarises the AWS APIs.
 | [`kendra`](services/kendra.yml) | 29 | 0 | 0 |
 | [`es`](services/es.yml) | 28 | 11 | 9 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
-| [`athena`](services/athena.yml) | 28 | 0 | 1 |
+| [`athena`](services/athena.yml) | 28 | 0 | 2 |
 | [`wellarchitected`](services/wellarchitected.yml) | 28 | 0 | 0 |
 | [`profile`](services/profile.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
@@ -190,8 +190,8 @@ The following table summarises the AWS APIs.
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`signer`](services/signer.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
+| [`lookoutvision`](services/lookoutvision.yml) | 16 | 3 | 3 |
 | [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
-| [`lookoutvision`](services/lookoutvision.yml) | 16 | 0 | 3 |
 | [`resource-groups`](services/resource-groups.yml) | 15 | 1 | 1 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 13 | 0 |
 | [`fsx`](services/fsx.yml) | 14 | 3 | 0 |
@@ -302,7 +302,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1460 |
+| `List` | 1462 |
 | `Get` | 1323 |
 | `Describe` | 1235 |
 | `Delete` | 1193 |
@@ -310,6 +310,6 @@ Most common action prefixes:
 | `Update` | 861 |
 | `Put` | 293 |
 | `Start` | 181 |
-| `Tag` | 146 |
-| `Untag` | 145 |
+| `Tag` | 147 |
+| `Untag` | 146 |
 
