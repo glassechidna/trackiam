@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 261
-* Unique actions: 10079
+* Unique actions: 10084
 * Managed policies: 789
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 437 | 0 | 0 |
+| [`ec2`](services/ec2.yml) | 437 | 3 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 243 | 1 | 2 |
 | [`chime`](services/chime.yml) | 181 | 0 | 51 |
 | [`glue`](services/glue.yml) | 145 | 12 | 1 |
@@ -72,8 +72,8 @@ The following table summarises the AWS APIs.
 | [`autoscaling`](services/autoscaling.yml) | 57 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
 | [`directconnect`](services/directconnect.yml) | 56 | 0 | 0 |
+| [`iotsitewise`](services/iotsitewise.yml) | 55 | 3 | 0 |
 | [`guardduty`](services/guardduty.yml) | 55 | 3 | 0 |
-| [`iotsitewise`](services/iotsitewise.yml) | 55 | 2 | 0 |
 | [`medialive`](services/medialive.yml) | 55 | 0 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 54 | 1 | 3 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
@@ -104,8 +104,8 @@ The following table summarises the AWS APIs.
 | [`events`](services/events.yml) | 40 | 0 | 0 |
 | [`logs`](services/logs.yml) | 39 | 3 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
+| [`databrew`](services/databrew.yml) | 38 | 1 | 0 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
-| [`databrew`](services/databrew.yml) | 38 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 37 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 2 |
 | [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
@@ -304,9 +304,9 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1462 |
 | `Get` | 1323 |
-| `Describe` | 1235 |
+| `Describe` | 1237 |
 | `Delete` | 1193 |
-| `Create` | 1095 |
+| `Create` | 1096 |
 | `Update` | 861 |
 | `Put` | 293 |
 | `Start` | 181 |
