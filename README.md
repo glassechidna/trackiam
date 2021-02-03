@@ -53,9 +53,9 @@ The following table summarises the AWS APIs.
 | [`connect`](services/connect.yml) | 93 | 7 | 1 |
 | [`gamelift`](services/gamelift.yml) | 90 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 88 | 4 | 18 |
+| [`storagegateway`](services/storagegateway.yml) | 84 | 0 | 1 |
 | [`config`](services/config.yml) | 84 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
-| [`storagegateway`](services/storagegateway.yml) | 78 | 6 | 1 |
 | [`a4b`](services/a4b.yml) | 77 | 16 | 3 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |

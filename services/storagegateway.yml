@@ -27,7 +27,9 @@ Actions:
   - Name: storagegateway:DeleteTapeArchive
   - Name: storagegateway:DeleteTapePool
   - Name: storagegateway:DeleteVolume
+  - Name: storagegateway:DescribeAvailabilityMonitorTest
   - Name: storagegateway:DescribeBandwidthRateLimit
+  - Name: storagegateway:DescribeBandwidthRateLimitSchedule
   - Name: storagegateway:DescribeCache
   - Name: storagegateway:DescribeCachediSCSIVolumes
   - Name: storagegateway:DescribeChapCredentials
@@ -66,25 +68,21 @@ Actions:
   - Name: storagegateway:SetLocalConsolePassword
   - Name: storagegateway:SetSMBGuestPassword
   - Name: storagegateway:ShutdownGateway
+  - Name: storagegateway:StartAvailabilityMonitorTest
   - Name: storagegateway:StartGateway
   - Name: storagegateway:UpdateAutomaticTapeCreationPolicy
   - Name: storagegateway:UpdateBandwidthRateLimit
+  - Name: storagegateway:UpdateBandwidthRateLimitSchedule
   - Name: storagegateway:UpdateChapCredentials
   - Name: storagegateway:UpdateGatewayInformation
   - Name: storagegateway:UpdateGatewaySoftwareNow
   - Name: storagegateway:UpdateMaintenanceStartTime
   - Name: storagegateway:UpdateNFSFileShare
   - Name: storagegateway:UpdateSMBFileShare
+  - Name: storagegateway:UpdateSMBFileShareVisibility
+  - Name: storagegateway:UpdateSMBSecurityStrategy
   - Name: storagegateway:UpdateSnapshotSchedule
   - Name: storagegateway:UpdateVTLDeviceType
 
   # actions with no corresponding API
   - Name: storagegateway:BypassGovernanceRetention
-
-  # APIs without an IAM action
-  - Name: storagegateway:DescribeAvailabilityMonitorTest
-  - Name: storagegateway:DescribeBandwidthRateLimitSchedule
-  - Name: storagegateway:StartAvailabilityMonitorTest
-  - Name: storagegateway:UpdateBandwidthRateLimitSchedule
-  - Name: storagegateway:UpdateSMBFileShareVisibility
-  - Name: storagegateway:UpdateSMBSecurityStrategy
