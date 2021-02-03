@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 261
-* Unique actions: 10084
+* Unique actions: 10086
 * Managed policies: 789
 
 Most common managed policy name prefixes:
@@ -104,7 +104,7 @@ The following table summarises the AWS APIs.
 | [`events`](services/events.yml) | 40 | 0 | 0 |
 | [`logs`](services/logs.yml) | 39 | 3 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
-| [`databrew`](services/databrew.yml) | 38 | 1 | 0 |
+| [`databrew`](services/databrew.yml) | 39 | 0 | 0 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`codepipeline`](services/codepipeline.yml) | 37 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 2 |
@@ -267,9 +267,9 @@ The following table summarises the AWS APIs.
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
+| [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
-| [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 8 |
 | [`cassandra`](services/cassandra.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`grafana`](services/grafana.yml) | 0 | 0 | 7 |
@@ -309,7 +309,7 @@ Most common action prefixes:
 | `Create` | 1096 |
 | `Update` | 861 |
 | `Put` | 293 |
-| `Start` | 181 |
+| `Start` | 182 |
 | `Tag` | 147 |
 | `Untag` | 146 |
 
