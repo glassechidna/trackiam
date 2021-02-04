@@ -1,17 +1,33 @@
 Actions:
+  - Name: lex:BuildBotLocale
+  - Name: lex:CreateBot
+  - Name: lex:CreateBotAlias
+  - Name: lex:CreateBotLocale
   - Name: lex:CreateBotVersion
+  - Name: lex:CreateIntent
   - Name: lex:CreateIntentVersion
+  - Name: lex:CreateSlot
+  - Name: lex:CreateSlotType
   - Name: lex:CreateSlotTypeVersion
   - Name: lex:DeleteBot
   - Name: lex:DeleteBotAlias
   - Name: lex:DeleteBotChannelAssociation
+  - Name: lex:DeleteBotLocale
   - Name: lex:DeleteBotVersion
   - Name: lex:DeleteIntent
   - Name: lex:DeleteIntentVersion
   - Name: lex:DeleteSession
+  - Name: lex:DeleteSlot
   - Name: lex:DeleteSlotType
   - Name: lex:DeleteSlotTypeVersion
   - Name: lex:DeleteUtterances
+  - Name: lex:DescribeBot
+  - Name: lex:DescribeBotAlias
+  - Name: lex:DescribeBotLocale
+  - Name: lex:DescribeBotVersion
+  - Name: lex:DescribeIntent
+  - Name: lex:DescribeSlot
+  - Name: lex:DescribeSlotType
   - Name: lex:GetBot
   - Name: lex:GetBotAlias
   - Name: lex:GetBotAliases
@@ -32,6 +48,13 @@ Actions:
   - Name: lex:GetSlotTypeVersions
   - Name: lex:GetSlotTypes
   - Name: lex:GetUtterancesView
+  - Name: lex:ListBotAliases
+  - Name: lex:ListBotLocales
+  - Name: lex:ListBotVersions
+  - Name: lex:ListBots
+  - Name: lex:ListIntents
+  - Name: lex:ListSlotTypes
+  - Name: lex:ListSlots
   - Name: lex:ListTagsForResource
   - Name: lex:PostContent
   - Name: lex:PostText
@@ -40,42 +63,26 @@ Actions:
   - Name: lex:PutIntent
   - Name: lex:PutSession
   - Name: lex:PutSlotType
+  - Name: lex:RecognizeText
+  - Name: lex:StartConversation
   - Name: lex:StartImport
   - Name: lex:TagResource
   - Name: lex:UntagResource
-
-  # APIs without an IAM action
-  - Name: lex:BuildBotLocale
-  - Name: lex:CreateBot
-  - Name: lex:CreateBotAlias
-  - Name: lex:CreateBotLocale
-  - Name: lex:CreateIntent
-  - Name: lex:CreateSlot
-  - Name: lex:CreateSlotType
-  - Name: lex:DeleteBotLocale
-  - Name: lex:DeleteSlot
-  - Name: lex:DescribeBot
-  - Name: lex:DescribeBotAlias
-  - Name: lex:DescribeBotLocale
-  - Name: lex:DescribeBotVersion
-  - Name: lex:DescribeIntent
-  - Name: lex:DescribeSlot
-  - Name: lex:DescribeSlotType
-  - Name: lex:ListBotAliases
-  - Name: lex:ListBotLocales
-  - Name: lex:ListBotVersions
-  - Name: lex:ListBots
-  - Name: lex:ListBuiltInIntents
-  - Name: lex:ListBuiltInSlotTypes
-  - Name: lex:ListIntents
-  - Name: lex:ListSlotTypes
-  - Name: lex:ListSlots
-  - Name: lex:RecognizeText
-  - Name: lex:RecognizeUtterance
-  - Name: lex:StartConversation
   - Name: lex:UpdateBot
   - Name: lex:UpdateBotAlias
   - Name: lex:UpdateBotLocale
   - Name: lex:UpdateIntent
   - Name: lex:UpdateSlot
   - Name: lex:UpdateSlotType
+
+  # actions with no corresponding API
+  - Name: lex:CreateBotChannel
+  - Name: lex:DeleteBotChannel
+  - Name: lex:DescribeBotChannel
+  - Name: lex:ListBotChannels
+  - Name: lex:RecognizeSpeech
+
+  # APIs without an IAM action
+  - Name: lex:ListBuiltInIntents
+  - Name: lex:ListBuiltInSlotTypes
+  - Name: lex:RecognizeUtterance

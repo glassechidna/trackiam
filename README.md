@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 262
-* Unique actions: 10108
+* Unique actions: 10113
 * Managed policies: 789
 
 Most common managed policy name prefixes:
@@ -60,6 +60,7 @@ The following table summarises the AWS APIs.
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
+| [`lex`](services/lex.yml) | 75 | 3 | 5 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`s3`](services/s3.yml) | 65 | 56 | 42 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
@@ -96,7 +97,6 @@ The following table summarises the AWS APIs.
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
-| [`lex`](services/lex.yml) | 44 | 34 | 0 |
 | [`codebuild`](services/codebuild.yml) | 43 | 1 | 8 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`wafv2`](services/wafv2.yml) | 40 | 0 | 2 |
@@ -303,11 +303,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1468 |
+| `List` | 1469 |
 | `Get` | 1323 |
-| `Describe` | 1241 |
-| `Delete` | 1196 |
-| `Create` | 1099 |
+| `Describe` | 1242 |
+| `Delete` | 1197 |
+| `Create` | 1100 |
 | `Update` | 862 |
 | `Put` | 293 |
 | `Start` | 184 |
