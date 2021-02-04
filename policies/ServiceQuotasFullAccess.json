@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ServiceQuotasFullAccess",
   "CreateDate": "2019-06-24T15:44:35Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CGHQWENW3",
   "PolicyName": "ServiceQuotasFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-12-21T18:12:22Z",
+    "CreateDate": "2021-02-04T21:29:43Z",
     "Document": {
       "Statement": [
         {
@@ -16,7 +16,7 @@
           ],
           "Condition": {
             "Null": {
-              "cloudwatch:ResourceTag/ServiceQuotaMonitor": "false"
+              "aws:ResourceTag/ServiceQuotaMonitor": "false"
             }
           },
           "Effect": "Allow",
@@ -77,7 +77,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-12-21T18:12:22Z"
+  "UpdateDate": "2021-02-04T21:29:43Z"
 }
