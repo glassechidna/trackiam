@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AutoScalingServiceRolePolicy",
   "CreateDate": "2018-01-08T23:10:55Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIC5D2V7MRWBMHGD7G",
   "PolicyName": "AutoScalingServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-10-30T00:01:26Z",
+    "CreateDate": "2021-02-05T01:37:46Z",
     "Document": {
       "Statement": [
         {
@@ -75,6 +75,8 @@
             "ec2:ModifyInstanceAttribute",
             "ec2:RequestSpotInstances",
             "ec2:RunInstances",
+            "ec2:StartInstances",
+            "ec2:StopInstances",
             "ec2:TerminateInstances"
           ],
           "Effect": "Allow",
@@ -103,7 +105,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-10-30T00:01:26Z"
+  "UpdateDate": "2021-02-05T01:37:46Z"
 }
