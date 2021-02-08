@@ -174,6 +174,7 @@ The following table summarises the AWS APIs.
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
 | [`ecr-public`](services/ecr-public.yml) | 20 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
+| [`lookoutvision`](services/lookoutvision.yml) | 19 | 0 | 3 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
 | [`secretsmanager`](services/secretsmanager.yml) | 19 | 0 | 0 |
@@ -190,7 +191,6 @@ The following table summarises the AWS APIs.
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`signer`](services/signer.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
-| [`lookoutvision`](services/lookoutvision.yml) | 16 | 3 | 3 |
 | [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
 | [`resource-groups`](services/resource-groups.yml) | 15 | 1 | 1 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 13 | 0 |
