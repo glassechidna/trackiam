@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDataExchangeSubscriberFullAccess",
   "CreateDate": "2019-11-13T19:27:52Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MAWRW4GF7",
   "PolicyName": "AWSDataExchangeSubscriberFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-01-14T17:06:28Z",
+    "CreateDate": "2021-02-08T23:34:25Z",
     "Document": {
       "Statement": [
         {
@@ -32,7 +32,8 @@
             "StringEquals": {
               "dataexchange:JobType": [
                 "EXPORT_ASSETS_TO_S3",
-                "EXPORT_ASSET_TO_SIGNED_URL"
+                "EXPORT_ASSET_TO_SIGNED_URL",
+                "EXPORT_REVISIONS_TO_S3"
               ]
             }
           },
@@ -81,7 +82,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2021-01-14T17:06:28Z"
+  "UpdateDate": "2021-02-08T23:34:25Z"
 }
