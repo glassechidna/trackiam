@@ -144,10 +144,10 @@ The following table summarises the AWS APIs.
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
+| [`kinesisanalytics`](services/kinesisanalytics.yml) | 27 | 0 | 1 |
 | [`eks`](services/eks.yml) | 27 | 0 | 1 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
-| [`kinesisanalytics`](services/kinesisanalytics.yml) | 26 | 1 | 1 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`fms`](services/fms.yml) | 26 | 0 | 0 |
