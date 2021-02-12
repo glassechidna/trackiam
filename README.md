@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 263
-* Unique actions: 10134
+* Unique actions: 10142
 * Managed policies: 792
 
 Most common managed policy name prefixes:
@@ -39,8 +39,8 @@ The following table summarises the AWS APIs.
 | [`ec2`](services/ec2.yml) | 437 | 3 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 243 | 1 | 2 |
 | [`chime`](services/chime.yml) | 181 | 0 | 51 |
+| [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`glue`](services/glue.yml) | 145 | 12 | 1 |
-| [`iam`](services/iam.yml) | 140 | 0 | 19 |
 | [`ssm`](services/ssm.yml) | 131 | 0 | 7 |
 | [`rds`](services/rds.yml) | 123 | 10 | 1 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
@@ -80,8 +80,8 @@ The following table summarises the AWS APIs.
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 53 | 0 | 0 |
 | [`dms`](services/dms.yml) | 51 | 3 | 0 |
+| [`macie2`](services/macie2.yml) | 51 | 2 | 0 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
-| [`macie2`](services/macie2.yml) | 51 | 0 | 0 |
 | [`iotwireless`](services/iotwireless.yml) | 51 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 51 | 0 | 0 |
 | [`backup`](services/backup.yml) | 50 | 0 | 2 |
@@ -106,7 +106,7 @@ The following table summarises the AWS APIs.
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 39 | 0 | 0 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
-| [`codepipeline`](services/codepipeline.yml) | 37 | 0 | 0 |
+| [`codepipeline`](services/codepipeline.yml) | 37 | 2 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 2 |
 | [`amplify`](services/amplify.yml) | 36 | 1 | 0 |
 | [`geo`](services/geo.yml) | 35 | 0 | 3 |
@@ -143,9 +143,9 @@ The following table summarises the AWS APIs.
 | [`profile`](services/profile.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
+| [`eks`](services/eks.yml) | 27 | 4 | 1 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 27 | 0 | 1 |
-| [`eks`](services/eks.yml) | 27 | 0 | 1 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
@@ -304,12 +304,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1475 |
-| `Get` | 1325 |
-| `Describe` | 1242 |
+| `List` | 1476 |
+| `Get` | 1327 |
+| `Describe` | 1243 |
 | `Delete` | 1197 |
 | `Create` | 1100 |
-| `Update` | 862 |
+| `Update` | 863 |
 | `Put` | 293 |
 | `Start` | 184 |
 | `Tag` | 154 |
