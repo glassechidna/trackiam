@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSCodeStarServiceRole",
   "CreateDate": "2017-04-19T15:20:50Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIN6D4M2KD3NBOC4M4",
   "PolicyName": "AWSCodeStarServiceRole",
   "PolicyVersion": {
-    "CreateDate": "2019-04-24T19:25:28Z",
+    "CreateDate": "2021-02-15T22:25:37Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "codestar-connections:PassConnection",
+          "Condition": {
+            "ForAnyValue:StringEqualsIfExists": {
+              "codestar-connections:PassedToService": "codepipeline.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ProjectCodeStarConnectionsPassConnections"
+        },
         {
           "Action": [
             "iam:AttachUserPolicy",
@@ -89,6 +100,15 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "ProjectStackTemplate"
+        },
+        {
+          "Action": [
+            "codestar-connections:GetConnection",
+            "codestar-connections:UseConnection"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ProjectCodeStarConnections"
         },
         {
           "Action": [
@@ -196,7 +216,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2019-04-24T19:25:28Z"
+  "UpdateDate": "2021-02-15T22:25:37Z"
 }
