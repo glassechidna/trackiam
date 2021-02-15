@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 263
-* Unique actions: 10149
+* Unique actions: 10151
 * Managed policies: 792
 
 Most common managed policy name prefixes:
@@ -75,7 +75,7 @@ The following table summarises the AWS APIs.
 | [`directconnect`](services/directconnect.yml) | 56 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 55 | 3 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 55 | 2 | 0 |
-| [`medialive`](services/medialive.yml) | 55 | 0 | 0 |
+| [`medialive`](services/medialive.yml) | 55 | 1 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 54 | 1 | 3 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 53 | 0 | 0 |
@@ -246,8 +246,8 @@ The following table summarises the AWS APIs.
 | [`comprehendmedical`](services/comprehendmedical.yml) | 2 | 19 | 0 |
 | [`pi`](services/pi.yml) | 2 | 0 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
+| [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 1 | 0 |
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
-| [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 234 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 7 |
@@ -308,9 +308,9 @@ Most common action prefixes:
 | `Get` | 1328 |
 | `Describe` | 1246 |
 | `Delete` | 1197 |
-| `Create` | 1100 |
+| `Create` | 1101 |
 | `Update` | 865 |
-| `Put` | 293 |
+| `Put` | 294 |
 | `Start` | 184 |
 | `Tag` | 154 |
 | `Untag` | 153 |
