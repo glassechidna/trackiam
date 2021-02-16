@@ -1,15 +1,46 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor",
   "CreateDate": "2018-10-04T22:50:32Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAINVFHHP7CWVHTGBGM",
   "PolicyName": "AmazonRedshiftQueryEditor",
   "PolicyVersion": {
-    "CreateDate": "2020-09-11T01:07:22Z",
+    "CreateDate": "2021-02-16T19:33:45Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "redshift-data:CancelStatement",
+            "redshift-data:DescribeStatement",
+            "redshift-data:GetStatementResult",
+            "redshift-data:ListStatements"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "redshift-data:statement-owner-iam-userid": "${aws:userid}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DataAPIIAMSessionPermissionsRestriction"
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "secretsmanager:ResourceTag/RedshiftQueryOwner": "${aws:userid}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:*",
+          "Sid": "SecretsManagerCreateGetPermissions"
+        },
         {
           "Action": [
             "redshift:CancelQuery",
@@ -33,25 +64,29 @@
         },
         {
           "Action": [
-            "redshift-data:CancelStatement",
-            "redshift-data:DescribeStatement",
             "redshift-data:DescribeTable",
             "redshift-data:ExecuteStatement",
-            "redshift-data:GetStatementResult",
             "redshift-data:ListDatabases",
             "redshift-data:ListSchemas",
-            "redshift-data:ListStatements",
             "redshift-data:ListTables"
           ],
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "DataAPIPermissions"
+        },
+        {
+          "Action": [
+            "secretsmanager:ListSecrets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecretsManagerListPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-09-11T01:07:22Z"
+  "UpdateDate": "2021-02-16T19:33:45Z"
 }
