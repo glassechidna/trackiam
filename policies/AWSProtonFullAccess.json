@@ -1,0 +1,66 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSProtonFullAccess",
+  "CreateDate": "2021-02-17T19:07:18Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4IOK6P734E",
+  "PolicyName": "AWSProtonFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-02-17T19:07:18Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "codestar-connections:PassConnection"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "codestar-connections:PassedToService": "proton.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:codestar-connections:*:*:connection/*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "proton.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "kms:CreateGrant"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": "proton.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "codestar-connections:ListConnections",
+            "kms:DescribeKey",
+            "kms:ListAliases",
+            "proton:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-02-17T19:07:18Z"
+}

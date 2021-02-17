@@ -1,0 +1,56 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSProtonDeveloperAccess",
+  "CreateDate": "2021-02-17T19:02:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4FWOFPRNSU",
+  "PolicyName": "AWSProtonDeveloperAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-02-17T19:02:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "codestar-connections:PassConnection"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "codestar-connections:PassedToService": "proton.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:codestar-connections:*:*:connection/*"
+        },
+        {
+          "Action": [
+            "codestar-connections:ListConnections",
+            "proton:CreateService",
+            "proton:DeleteService",
+            "proton:GetEnvironment",
+            "proton:GetService",
+            "proton:GetServiceInstance",
+            "proton:GetServiceTemplate",
+            "proton:GetServiceTemplateMajorVersion",
+            "proton:GetServiceTemplateMinorVersion",
+            "proton:ListEnvironments",
+            "proton:ListServiceInstances",
+            "proton:ListServiceTemplateMajorVersions",
+            "proton:ListServiceTemplateMinorVersions",
+            "proton:ListServiceTemplates",
+            "proton:ListServices",
+            "proton:UpdateService",
+            "proton:UpdateServiceInstance",
+            "proton:UpdateServicePipeline"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-02-17T19:02:08Z"
+}
