@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCloudTrail_FullAccess",
   "CreateDate": "2020-10-08T23:41:15Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CA4SIJQAM",
   "PolicyName": "AWSCloudTrail_FullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-10-21T19:40:46Z",
+    "CreateDate": "2021-02-22T19:01:00Z",
     "Document": {
       "Statement": [
         {
@@ -73,7 +73,8 @@
         {
           "Action": [
             "s3:CreateBucket",
-            "s3:PutBucketPolicy"
+            "s3:PutBucketPolicy",
+            "s3:PutBucketPublicAccessBlock"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -112,7 +113,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-01-19T20:18:58Z"
+  "UpdateDate": "2021-02-22T19:01:00Z"
 }
