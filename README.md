@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 263
-* Unique actions: 10152
+* Unique actions: 10156
 * Managed policies: 798
 
 Most common managed policy name prefixes:
@@ -270,6 +270,7 @@ The following table summarises the AWS APIs.
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 9 |
+| [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`cassandra`](services/cassandra.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
@@ -278,7 +279,6 @@ The following table summarises the AWS APIs.
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
-| [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 5 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 5 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 4 |
@@ -305,13 +305,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1477 |
-| `Get` | 1328 |
+| `Get` | 1329 |
 | `Describe` | 1247 |
-| `Delete` | 1197 |
+| `Delete` | 1198 |
 | `Create` | 1101 |
 | `Update` | 865 |
 | `Put` | 294 |
-| `Start` | 184 |
+| `Start` | 185 |
 | `Tag` | 154 |
 | `Untag` | 153 |
 
