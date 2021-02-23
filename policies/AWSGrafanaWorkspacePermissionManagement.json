@@ -1,0 +1,31 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSGrafanaWorkspacePermissionManagement",
+  "CreateDate": "2021-02-23T00:15:54Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4G37QQNGZW",
+  "PolicyName": "AWSGrafanaWorkspacePermissionManagement",
+  "PolicyVersion": {
+    "CreateDate": "2021-02-23T00:15:54Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "grafana:DescribeWorkspace",
+            "grafana:ListPermissions",
+            "grafana:ListWorkspaces",
+            "grafana:UpdatePermissions"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:grafana:*:*:/workspaces*",
+          "Sid": "AWSGrafanaPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-02-23T00:15:54Z"
+}
