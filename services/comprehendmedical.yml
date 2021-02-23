@@ -1,13 +1,10 @@
 Actions:
-  - Name: comprehendmedical:DetectEntities
-  - Name: comprehendmedical:DetectPHI
-
-  # APIs without an IAM action
   - Name: comprehendmedical:DescribeEntitiesDetectionV2Job
   - Name: comprehendmedical:DescribeICD10CMInferenceJob
   - Name: comprehendmedical:DescribePHIDetectionJob
   - Name: comprehendmedical:DescribeRxNormInferenceJob
   - Name: comprehendmedical:DetectEntitiesV2
+  - Name: comprehendmedical:DetectPHI
   - Name: comprehendmedical:InferICD10CM
   - Name: comprehendmedical:InferRxNorm
   - Name: comprehendmedical:ListEntitiesDetectionV2Jobs
@@ -22,3 +19,6 @@ Actions:
   - Name: comprehendmedical:StopICD10CMInferenceJob
   - Name: comprehendmedical:StopPHIDetectionJob
   - Name: comprehendmedical:StopRxNormInferenceJob
+
+  # APIs without an IAM action
+  - Name: comprehendmedical:DetectEntities

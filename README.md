@@ -169,6 +169,7 @@ The following table summarises the AWS APIs.
 | [`cognito-identity`](services/cognito-identity.yml) | 21 | 2 | 0 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`iotevents`](services/iotevents.yml) | 20 | 3 | 14 |
+| [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 1 | 0 |
 | [`qldb`](services/qldb.yml) | 20 | 0 | 3 |
 | [`transfer`](services/transfer.yml) | 20 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
@@ -243,7 +244,6 @@ The following table summarises the AWS APIs.
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`s3-outposts`](services/s3-outposts.yml) | 3 | 0 | 29 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
-| [`comprehendmedical`](services/comprehendmedical.yml) | 2 | 19 | 0 |
 | [`pi`](services/pi.yml) | 2 | 0 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 1 | 0 |
