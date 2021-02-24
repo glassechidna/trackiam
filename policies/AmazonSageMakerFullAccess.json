@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerFullAccess",
   "CreateDate": "2017-11-29T13:07:59Z",
-  "DefaultVersionId": "v18",
+  "DefaultVersionId": "v19",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJZ5IWYMXO5QDB4QOG",
   "PolicyName": "AmazonSageMakerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-12-01T16:31:19Z",
+    "CreateDate": "2021-02-24T01:19:55Z",
     "Document": {
       "Statement": [
         {
@@ -399,6 +399,18 @@
         },
         {
           "Action": [
+            "s3:GetBucketAcl",
+            "s3:PutObjectAcl"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*SageMaker*",
+            "arn:aws:s3:::*Sagemaker*",
+            "arn:aws:s3:::*sagemaker*"
+          ]
+        },
+        {
+          "Action": [
             "sagemaker:*App",
             "sagemaker:CreatePresignedDomainUrl",
             "sagemaker:DescribeDomain",
@@ -458,7 +470,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v18"
+    "VersionId": "v19"
   },
-  "UpdateDate": "2020-12-01T16:31:19Z"
+  "UpdateDate": "2021-02-24T01:19:55Z"
 }
