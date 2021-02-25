@@ -88,10 +88,10 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 49 | 1 | 2 |
 | [`workmail`](services/workmail.yml) | 49 | 0 | 51 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 10 |
+| [`imagebuilder`](services/imagebuilder.yml) | 48 | 1 | 0 |
 | [`securityhub`](services/securityhub.yml) | 48 | 0 | 7 |
 | [`rekognition`](services/rekognition.yml) | 48 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 48 | 0 | 0 |
-| [`imagebuilder`](services/imagebuilder.yml) | 47 | 2 | 0 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 47 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
