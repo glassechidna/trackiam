@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 263
-* Unique actions: 10164
+* Unique services: 264
+* Unique actions: 10187
 * Managed policies: 801
 
 Most common managed policy name prefixes:
@@ -262,6 +262,7 @@ The following table summarises the AWS APIs.
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
+| [`lookoutmetrics`](services/lookoutmetrics.yml) | 0 | 0 | 23 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 0 | 0 | 22 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
@@ -304,13 +305,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1478 |
-| `Get` | 1330 |
-| `Describe` | 1249 |
-| `Delete` | 1198 |
-| `Create` | 1101 |
-| `Update` | 865 |
-| `Put` | 294 |
+| `List` | 1483 |
+| `Get` | 1334 |
+| `Describe` | 1253 |
+| `Delete` | 1200 |
+| `Create` | 1104 |
+| `Update` | 867 |
+| `Put` | 295 |
 | `Start` | 186 |
 | `Tag` | 155 |
 | `Untag` | 154 |
