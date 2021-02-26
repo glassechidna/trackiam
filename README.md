@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 264
-* Unique actions: 10188
+* Unique actions: 10190
 * Managed policies: 801
 
 Most common managed policy name prefixes:
@@ -124,7 +124,7 @@ The following table summarises the AWS APIs.
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 33 | 0 | 0 |
 | [`workspaces`](services/workspaces.yml) | 32 | 18 | 0 |
-| [`elasticmapreduce`](services/elasticmapreduce.yml) | 32 | 14 | 8 |
+| [`elasticmapreduce`](services/elasticmapreduce.yml) | 32 | 15 | 8 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 2 | 0 |
 | [`datasync`](services/datasync.yml) | 31 | 1 | 0 |
@@ -143,7 +143,7 @@ The following table summarises the AWS APIs.
 | [`profile`](services/profile.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
-| [`eks`](services/eks.yml) | 27 | 4 | 1 |
+| [`eks`](services/eks.yml) | 27 | 5 | 1 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 27 | 0 | 1 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
@@ -310,7 +310,7 @@ Most common action prefixes:
 | `Describe` | 1253 |
 | `Delete` | 1200 |
 | `Create` | 1104 |
-| `Update` | 867 |
+| `Update` | 868 |
 | `Put` | 295 |
 | `Start` | 186 |
 | `Tag` | 155 |
