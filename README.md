@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 264
-* Unique actions: 10193
+* Unique actions: 10202
 * Managed policies: 799
 
 Most common managed policy name prefixes:
@@ -115,9 +115,9 @@ The following table summarises the AWS APIs.
 | [`networkmanager`](services/networkmanager.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
+| [`forecast`](services/forecast.yml) | 34 | 1 | 0 |
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
 | [`ecr`](services/ecr.yml) | 34 | 0 | 1 |
-| [`forecast`](services/forecast.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 33 | 1 | 0 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`sns`](services/sns.yml) | 33 | 0 | 0 |
@@ -138,8 +138,8 @@ The following table summarises the AWS APIs.
 | [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 29 | 0 | 0 |
 | [`es`](services/es.yml) | 28 | 12 | 9 |
+| [`wellarchitected`](services/wellarchitected.yml) | 28 | 3 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
-| [`wellarchitected`](services/wellarchitected.yml) | 28 | 0 | 0 |
 | [`profile`](services/profile.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
@@ -174,11 +174,11 @@ The following table summarises the AWS APIs.
 | [`qldb`](services/qldb.yml) | 20 | 0 | 3 |
 | [`transfer`](services/transfer.yml) | 20 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
+| [`secretsmanager`](services/secretsmanager.yml) | 19 | 3 | 0 |
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
 | [`lookoutvision`](services/lookoutvision.yml) | 19 | 0 | 3 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
-| [`secretsmanager`](services/secretsmanager.yml) | 19 | 0 | 0 |
 | [`batch`](services/batch.yml) | 19 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 19 | 0 | 0 |
 | [`shield`](services/shield.yml) | 18 | 12 | 0 |
@@ -199,12 +199,12 @@ The following table summarises the AWS APIs.
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`translate`](services/translate.yml) | 14 | 0 | 0 |
+| [`acm`](services/acm.yml) | 13 | 2 | 0 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 2 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 13 | 0 | 0 |
 | [`health`](services/health.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
-| [`acm`](services/acm.yml) | 13 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 12 | 5 | 0 |
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`honeycode`](services/honeycode.yml) | 12 | 0 | 5 |
@@ -305,14 +305,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1484 |
-| `Get` | 1334 |
+| `List` | 1485 |
+| `Get` | 1335 |
 | `Describe` | 1253 |
 | `Delete` | 1200 |
 | `Create` | 1104 |
 | `Update` | 871 |
-| `Put` | 295 |
+| `Put` | 296 |
 | `Start` | 186 |
-| `Tag` | 155 |
-| `Untag` | 154 |
+| `Tag` | 156 |
+| `Untag` | 155 |
 
