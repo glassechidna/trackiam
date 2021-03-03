@@ -13,13 +13,13 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 264
 * Unique actions: 10202
-* Managed policies: 799
+* Managed policies: 800
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 231 |
+| `arn:aws:iam::aws:policy/AWS*` | 232 |
 | `arn:aws:iam::aws:policy/Amazon*` | 211 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 151 |
 | `arn:aws:iam::aws:policy/service-role/*` | 119 |
@@ -194,12 +194,12 @@ The following table summarises the AWS APIs.
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
 | [`resource-groups`](services/resource-groups.yml) | 15 | 1 | 1 |
+| [`acm`](services/acm.yml) | 15 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 13 | 0 |
 | [`fsx`](services/fsx.yml) | 14 | 3 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`translate`](services/translate.yml) | 14 | 0 | 0 |
-| [`acm`](services/acm.yml) | 13 | 2 | 0 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 2 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 13 | 0 | 0 |
