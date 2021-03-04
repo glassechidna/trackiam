@@ -129,6 +129,7 @@ The following table summarises the AWS APIs.
 | [`datasync`](services/datasync.yml) | 31 | 4 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 2 | 0 |
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |
+| [`wellarchitected`](services/wellarchitected.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`ce`](services/ce.yml) | 30 | 0 | 10 |
 | [`kafka`](services/kafka.yml) | 30 | 0 | 0 |
@@ -138,7 +139,6 @@ The following table summarises the AWS APIs.
 | [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 29 | 0 | 0 |
 | [`es`](services/es.yml) | 28 | 12 | 9 |
-| [`wellarchitected`](services/wellarchitected.yml) | 28 | 3 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`profile`](services/profile.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
