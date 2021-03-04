@@ -1,23 +1,27 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEventBridgeReadOnlyAccess",
   "CreateDate": "2019-07-11T13:59:07Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BDMP3LZME",
   "PolicyName": "AmazonEventBridgeReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-11-06T03:15:41Z",
+    "CreateDate": "2021-03-04T19:08:31Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "events:DescribeApiDestination",
             "events:DescribeArchive",
+            "events:DescribeConnection",
             "events:DescribeEventBus",
             "events:DescribeEventSource",
             "events:DescribeReplay",
             "events:DescribeRule",
+            "events:ListApiDestinations",
             "events:ListArchives",
+            "events:ListConnections",
             "events:ListEventBuses",
             "events:ListEventSources",
             "events:ListReplays",
@@ -33,7 +37,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-11-06T03:15:41Z"
+  "UpdateDate": "2021-03-04T19:08:31Z"
 }

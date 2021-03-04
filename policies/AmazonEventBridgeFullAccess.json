@@ -1,15 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEventBridgeFullAccess",
   "CreateDate": "2019-07-11T14:08:55Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BUM4GCASI",
   "PolicyName": "AmazonEventBridgeFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-07-11T14:08:55Z",
+    "CreateDate": "2021-03-04T18:56:38Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "apidestinations.events.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/AmazonEventBridgeApiDestinationsServiceRolePolicy"
+        },
         {
           "Action": "iam:PassRole",
           "Condition": {
@@ -24,12 +34,23 @@
           "Action": "events:*",
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:PutSecretValue",
+            "secretsmanager:UpdateSecret"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:events!*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-07-11T14:08:55Z"
+  "UpdateDate": "2021-03-04T18:56:38Z"
 }
