@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 264
-* Unique actions: 10213
+* Unique actions: 10214
 * Managed policies: 800
 
 Most common managed policy name prefixes:
@@ -81,6 +81,7 @@ The following table summarises the AWS APIs.
 | [`frauddetector`](services/frauddetector.yml) | 53 | 0 | 0 |
 | [`dms`](services/dms.yml) | 51 | 3 | 0 |
 | [`macie2`](services/macie2.yml) | 51 | 2 | 0 |
+| [`events`](services/events.yml) | 51 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`iotwireless`](services/iotwireless.yml) | 51 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 51 | 0 | 0 |
@@ -99,7 +100,6 @@ The following table summarises the AWS APIs.
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`codebuild`](services/codebuild.yml) | 43 | 1 | 8 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
-| [`events`](services/events.yml) | 40 | 11 | 0 |
 | [`wafv2`](services/wafv2.yml) | 40 | 0 | 2 |
 | [`license-manager`](services/license-manager.yml) | 40 | 0 | 0 |
 | [`logs`](services/logs.yml) | 39 | 3 | 5 |

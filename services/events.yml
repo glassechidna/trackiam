@@ -1,15 +1,22 @@
 Actions:
   - Name: events:ActivateEventSource
   - Name: events:CancelReplay
+  - Name: events:CreateApiDestination
   - Name: events:CreateArchive
+  - Name: events:CreateConnection
   - Name: events:CreateEventBus
   - Name: events:CreatePartnerEventSource
   - Name: events:DeactivateEventSource
+  - Name: events:DeauthorizeConnection
+  - Name: events:DeleteApiDestination
   - Name: events:DeleteArchive
+  - Name: events:DeleteConnection
   - Name: events:DeleteEventBus
   - Name: events:DeletePartnerEventSource
   - Name: events:DeleteRule
+  - Name: events:DescribeApiDestination
   - Name: events:DescribeArchive
+  - Name: events:DescribeConnection
   - Name: events:DescribeEventBus
   - Name: events:DescribeEventSource
   - Name: events:DescribePartnerEventSource
@@ -17,7 +24,9 @@ Actions:
   - Name: events:DescribeRule
   - Name: events:DisableRule
   - Name: events:EnableRule
+  - Name: events:ListApiDestinations
   - Name: events:ListArchives
+  - Name: events:ListConnections
   - Name: events:ListEventBuses
   - Name: events:ListEventSources
   - Name: events:ListPartnerEventSourceAccounts
@@ -38,17 +47,9 @@ Actions:
   - Name: events:TagResource
   - Name: events:TestEventPattern
   - Name: events:UntagResource
-  - Name: events:UpdateArchive
-
-  # APIs without an IAM action
-  - Name: events:CreateApiDestination
-  - Name: events:CreateConnection
-  - Name: events:DeauthorizeConnection
-  - Name: events:DeleteApiDestination
-  - Name: events:DeleteConnection
-  - Name: events:DescribeApiDestination
-  - Name: events:DescribeConnection
-  - Name: events:ListApiDestinations
-  - Name: events:ListConnections
   - Name: events:UpdateApiDestination
+  - Name: events:UpdateArchive
   - Name: events:UpdateConnection
+
+  # actions with no corresponding API
+  - Name: events:InvokeApiDestination
