@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 264
-* Unique actions: 10214
+* Unique actions: 10222
 * Managed policies: 799
 
 Most common managed policy name prefixes:
@@ -134,8 +134,8 @@ The following table summarises the AWS APIs.
 | [`ce`](services/ce.yml) | 30 | 0 | 10 |
 | [`kafka`](services/kafka.yml) | 30 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 30 | 0 | 0 |
+| [`athena`](services/athena.yml) | 29 | 5 | 1 |
 | [`transcribe`](services/transcribe.yml) | 29 | 0 | 2 |
-| [`athena`](services/athena.yml) | 29 | 0 | 1 |
 | [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 29 | 0 | 0 |
 | [`es`](services/es.yml) | 28 | 12 | 9 |
@@ -181,7 +181,7 @@ The following table summarises the AWS APIs.
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
 | [`batch`](services/batch.yml) | 19 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 19 | 0 | 0 |
-| [`shield`](services/shield.yml) | 18 | 12 | 0 |
+| [`shield`](services/shield.yml) | 18 | 15 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 18 | 1 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 18 | 1 | 0 |
 | [`appflow`](services/appflow.yml) | 18 | 0 | 5 |
@@ -305,14 +305,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1487 |
-| `Get` | 1335 |
+| `List` | 1489 |
+| `Get` | 1336 |
 | `Describe` | 1255 |
-| `Delete` | 1202 |
-| `Create` | 1106 |
-| `Update` | 873 |
+| `Delete` | 1203 |
+| `Create` | 1107 |
+| `Update` | 874 |
 | `Put` | 296 |
 | `Start` | 186 |
-| `Tag` | 156 |
-| `Untag` | 155 |
+| `Tag` | 157 |
+| `Untag` | 156 |
 
