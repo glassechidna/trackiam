@@ -162,6 +162,7 @@ Actions:
   - Name: ec2:DeregisterTransitGatewayMulticastGroupSources
   - Name: ec2:DescribeAccountAttributes
   - Name: ec2:DescribeAddresses
+  - Name: ec2:DescribeAddressesAttribute
   - Name: ec2:DescribeAggregateIdFormat
   - Name: ec2:DescribeAvailabilityZones
   - Name: ec2:DescribeBundleTasks
@@ -337,6 +338,7 @@ Actions:
   - Name: ec2:ImportKeyPair
   - Name: ec2:ImportSnapshot
   - Name: ec2:ImportVolume
+  - Name: ec2:ModifyAddressAttribute
   - Name: ec2:ModifyAvailabilityZoneGroup
   - Name: ec2:ModifyCapacityReservation
   - Name: ec2:ModifyClientVpnEndpoint
@@ -407,6 +409,7 @@ Actions:
   - Name: ec2:ReportInstanceStatus
   - Name: ec2:RequestSpotFleet
   - Name: ec2:RequestSpotInstances
+  - Name: ec2:ResetAddressAttribute
   - Name: ec2:ResetEbsDefaultKmsKeyId
   - Name: ec2:ResetFpgaImageAttribute
   - Name: ec2:ResetImageAttribute
@@ -436,8 +439,3 @@ Actions:
   - Name: ec2:UpdateSecurityGroupRuleDescriptionsEgress
   - Name: ec2:UpdateSecurityGroupRuleDescriptionsIngress
   - Name: ec2:WithdrawByoipCidr
-
-  # APIs without an IAM action
-  - Name: ec2:DescribeAddressesAttribute
-  - Name: ec2:ModifyAddressAttribute
-  - Name: ec2:ResetAddressAttribute
