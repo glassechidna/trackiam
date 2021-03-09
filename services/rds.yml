@@ -20,6 +20,7 @@ Actions:
   - Name: rds:CreateDBInstanceReadReplica
   - Name: rds:CreateDBParameterGroup
   - Name: rds:CreateDBProxy
+  - Name: rds:CreateDBProxyEndpoint
   - Name: rds:CreateDBSecurityGroup
   - Name: rds:CreateDBSnapshot
   - Name: rds:CreateDBSubnetGroup
@@ -34,6 +35,7 @@ Actions:
   - Name: rds:DeleteDBInstanceAutomatedBackup
   - Name: rds:DeleteDBParameterGroup
   - Name: rds:DeleteDBProxy
+  - Name: rds:DeleteDBProxyEndpoint
   - Name: rds:DeleteDBSecurityGroup
   - Name: rds:DeleteDBSnapshot
   - Name: rds:DeleteDBSubnetGroup
@@ -57,6 +59,7 @@ Actions:
   - Name: rds:DescribeDBParameterGroups
   - Name: rds:DescribeDBParameters
   - Name: rds:DescribeDBProxies
+  - Name: rds:DescribeDBProxyEndpoints
   - Name: rds:DescribeDBProxyTargetGroups
   - Name: rds:DescribeDBProxyTargets
   - Name: rds:DescribeDBSecurityGroups
@@ -90,6 +93,7 @@ Actions:
   - Name: rds:ModifyDBInstance
   - Name: rds:ModifyDBParameterGroup
   - Name: rds:ModifyDBProxy
+  - Name: rds:ModifyDBProxyEndpoint
   - Name: rds:ModifyDBProxyTargetGroup
   - Name: rds:ModifyDBSnapshot
   - Name: rds:ModifyDBSnapshotAttribute
@@ -129,15 +133,11 @@ Actions:
 
   # APIs without an IAM action
   - Name: rds:CreateCustomAvailabilityZone
-  - Name: rds:CreateDBProxyEndpoint
   - Name: rds:DeleteCustomAvailabilityZone
-  - Name: rds:DeleteDBProxyEndpoint
   - Name: rds:DeleteInstallationMedia
   - Name: rds:DescribeCustomAvailabilityZones
-  - Name: rds:DescribeDBProxyEndpoints
   - Name: rds:DescribeInstallationMedia
   - Name: rds:ImportInstallationMedia
   - Name: rds:ModifyCertificates
-  - Name: rds:ModifyDBProxyEndpoint
   - Name: rds:StartDBInstanceAutomatedBackupsReplication
   - Name: rds:StopDBInstanceAutomatedBackupsReplication
