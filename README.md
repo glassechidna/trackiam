@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 264
-* Unique actions: 10222
+* Unique actions: 10226
 * Managed policies: 799
 
 Most common managed policy name prefixes:
@@ -42,7 +42,7 @@ The following table summarises the AWS APIs.
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`glue`](services/glue.yml) | 145 | 12 | 1 |
 | [`ssm`](services/ssm.yml) | 131 | 0 | 7 |
-| [`rds`](services/rds.yml) | 124 | 9 | 1 |
+| [`rds`](services/rds.yml) | 124 | 13 | 1 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 107 | 5 | 0 |
 | [`greengrass`](services/greengrass.yml) | 105 | 2 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 104 | 3 | 0 |
@@ -114,8 +114,8 @@ The following table summarises the AWS APIs.
 | [`route53resolver`](services/route53resolver.yml) | 35 | 0 | 0 |
 | [`networkmanager`](services/networkmanager.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
+| [`forecast`](services/forecast.yml) | 35 | 0 | 0 |
 | [`swf`](services/swf.yml) | 34 | 3 | 12 |
-| [`forecast`](services/forecast.yml) | 34 | 1 | 0 |
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
 | [`ecr`](services/ecr.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 33 | 1 | 0 |
@@ -307,9 +307,9 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1489 |
 | `Get` | 1336 |
-| `Describe` | 1255 |
-| `Delete` | 1203 |
-| `Create` | 1107 |
+| `Describe` | 1256 |
+| `Delete` | 1204 |
+| `Create` | 1108 |
 | `Update` | 874 |
 | `Put` | 296 |
 | `Start` | 186 |

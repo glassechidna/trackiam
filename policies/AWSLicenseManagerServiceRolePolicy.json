@@ -1,15 +1,30 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSLicenseManagerServiceRolePolicy",
   "CreateDate": "2018-11-26T19:02:53Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIM7JPETWHTYNBQSZE",
   "PolicyName": "AWSLicenseManagerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-12-03T08:38:18Z",
+    "CreateDate": "2021-03-09T20:23:10Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "license-management.marketplace.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/license-management.marketplace.amazonaws.com/AWSServiceRoleForMarketplaceLicenseManagement"
+          ],
+          "Sid": "IAMPermissions"
+        },
         {
           "Action": [
             "ec2:DescribeHosts",
@@ -114,7 +129,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-12-03T08:38:18Z"
+  "UpdateDate": "2021-03-09T20:23:10Z"
 }
