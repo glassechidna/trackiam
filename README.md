@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 264
-* Unique actions: 10226
+* Unique actions: 10227
 * Managed policies: 800
 
 Most common managed policy name prefixes:
@@ -85,7 +85,7 @@ The following table summarises the AWS APIs.
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`iotwireless`](services/iotwireless.yml) | 51 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 51 | 0 | 0 |
-| [`backup`](services/backup.yml) | 50 | 0 | 2 |
+| [`backup`](services/backup.yml) | 50 | 0 | 3 |
 | [`ecs`](services/ecs.yml) | 49 | 1 | 2 |
 | [`workmail`](services/workmail.yml) | 49 | 0 | 51 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 10 |
