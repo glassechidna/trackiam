@@ -1,15 +1,27 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBatchFullAccess",
   "CreateDate": "2016-12-06T19:35:42Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ7K2KIWB3HZVK3CUO",
   "PolicyName": "AWSBatchFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2018-11-05T21:09:23Z",
+    "CreateDate": "2021-03-10T07:02:45Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "batch.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*Batch*"
+        },
         {
           "Action": [
             "batch:*",
@@ -53,7 +65,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2018-11-05T21:09:23Z"
+  "UpdateDate": "2021-03-10T07:02:45Z"
 }
