@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 264
-* Unique actions: 10227
+* Unique actions: 10231
 * Managed policies: 800
 
 Most common managed policy name prefixes:
@@ -81,11 +81,11 @@ The following table summarises the AWS APIs.
 | [`frauddetector`](services/frauddetector.yml) | 53 | 0 | 0 |
 | [`dms`](services/dms.yml) | 51 | 3 | 0 |
 | [`macie2`](services/macie2.yml) | 51 | 2 | 0 |
+| [`backup`](services/backup.yml) | 51 | 0 | 2 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`iotwireless`](services/iotwireless.yml) | 51 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 51 | 0 | 0 |
-| [`backup`](services/backup.yml) | 50 | 0 | 3 |
 | [`ecs`](services/ecs.yml) | 49 | 1 | 2 |
 | [`workmail`](services/workmail.yml) | 49 | 0 | 51 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 10 |
@@ -174,13 +174,13 @@ The following table summarises the AWS APIs.
 | [`qldb`](services/qldb.yml) | 20 | 0 | 3 |
 | [`transfer`](services/transfer.yml) | 20 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
+| [`access-analyzer`](services/access-analyzer.yml) | 19 | 4 | 0 |
 | [`secretsmanager`](services/secretsmanager.yml) | 19 | 3 | 0 |
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
 | [`lookoutvision`](services/lookoutvision.yml) | 19 | 0 | 3 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
 | [`batch`](services/batch.yml) | 19 | 0 | 0 |
-| [`access-analyzer`](services/access-analyzer.yml) | 19 | 0 | 0 |
 | [`shield`](services/shield.yml) | 18 | 15 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 18 | 1 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 18 | 1 | 0 |
@@ -305,11 +305,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1489 |
-| `Get` | 1336 |
+| `List` | 1491 |
+| `Get` | 1337 |
 | `Describe` | 1256 |
 | `Delete` | 1204 |
-| `Create` | 1108 |
+| `Create` | 1109 |
 | `Update` | 874 |
 | `Put` | 296 |
 | `Start` | 186 |
