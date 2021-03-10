@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
   "CreateDate": "2019-01-10T21:01:28Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIOOYZSLZZXWFJJ5N2",
   "PolicyName": "AWSBackupServiceRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2020-11-18T23:16:27Z",
+    "CreateDate": "2021-03-10T18:32:53Z",
     "Document": {
       "Statement": [
         {
@@ -28,6 +28,21 @@
           "Condition": {
             "Null": {
               "aws:ResourceTag/aws:backup:source-resource": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": [
+                "dynamodb.*.amazonaws.com"
+              ]
             }
           },
           "Effect": "Allow",
@@ -230,6 +245,15 @@
         },
         {
           "Action": [
+            "rds:ModifyDBInstance"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:rds:*:*:db:*"
+          ]
+        },
+        {
+          "Action": [
             "ssm:CancelCommand",
             "ssm:GetCommandInvocation"
           ],
@@ -255,7 +279,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2020-11-18T23:16:27Z"
+  "UpdateDate": "2021-03-10T18:32:53Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupFullAccess",
   "CreateDate": "2019-11-18T22:21:52Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LL52EIPJX",
   "PolicyName": "AWSBackupFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-11-09T16:49:24Z",
+    "CreateDate": "2021-03-10T18:32:22Z",
     "Document": {
       "Statement": [
         {
@@ -187,10 +187,11 @@
         },
         {
           "Action": [
+            "rds:DescribeDBClusterParameterGroups",
+            "rds:DescribeDBInstanceAutomatedBackups",
             "rds:DescribeDBInstances",
             "rds:DescribeDBSnapshots",
             "rds:ListTagsForResource",
-            "rds:describeDBClusterParameterGroups",
             "rds:describeDBClusterSnapshots",
             "rds:describeDBClusters",
             "rds:describeDBEngineVersions",
@@ -247,7 +248,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2020-11-09T16:49:24Z"
+  "UpdateDate": "2021-03-10T18:32:22Z"
 }
