@@ -1,13 +1,17 @@
 Actions:
   - Name: access-analyzer:ApplyArchiveRule
+  - Name: access-analyzer:CreateAccessPreview
   - Name: access-analyzer:CreateAnalyzer
   - Name: access-analyzer:CreateArchiveRule
   - Name: access-analyzer:DeleteAnalyzer
   - Name: access-analyzer:DeleteArchiveRule
+  - Name: access-analyzer:GetAccessPreview
   - Name: access-analyzer:GetAnalyzedResource
   - Name: access-analyzer:GetAnalyzer
   - Name: access-analyzer:GetArchiveRule
   - Name: access-analyzer:GetFinding
+  - Name: access-analyzer:ListAccessPreviewFindings
+  - Name: access-analyzer:ListAccessPreviews
   - Name: access-analyzer:ListAnalyzedResources
   - Name: access-analyzer:ListAnalyzers
   - Name: access-analyzer:ListArchiveRules
@@ -18,9 +22,3 @@ Actions:
   - Name: access-analyzer:UntagResource
   - Name: access-analyzer:UpdateArchiveRule
   - Name: access-analyzer:UpdateFindings
-
-  # APIs without an IAM action
-  - Name: access-analyzer:CreateAccessPreview
-  - Name: access-analyzer:GetAccessPreview
-  - Name: access-analyzer:ListAccessPreviewFindings
-  - Name: access-analyzer:ListAccessPreviews

@@ -1,4 +1,6 @@
 Actions:
+  - Name: eks:AssociateEncryptionConfig
+  - Name: eks:AssociateIdentityProviderConfig
   - Name: eks:CreateAddon
   - Name: eks:CreateCluster
   - Name: eks:CreateFargateProfile
@@ -11,11 +13,14 @@ Actions:
   - Name: eks:DescribeAddonVersions
   - Name: eks:DescribeCluster
   - Name: eks:DescribeFargateProfile
+  - Name: eks:DescribeIdentityProviderConfig
   - Name: eks:DescribeNodegroup
   - Name: eks:DescribeUpdate
+  - Name: eks:DisassociateIdentityProviderConfig
   - Name: eks:ListAddons
   - Name: eks:ListClusters
   - Name: eks:ListFargateProfiles
+  - Name: eks:ListIdentityProviderConfigs
   - Name: eks:ListNodegroups
   - Name: eks:ListTagsForResource
   - Name: eks:ListUpdates
@@ -29,10 +34,3 @@ Actions:
 
   # actions with no corresponding API
   - Name: eks:AccessKubernetesApi
-
-  # APIs without an IAM action
-  - Name: eks:AssociateEncryptionConfig
-  - Name: eks:AssociateIdentityProviderConfig
-  - Name: eks:DescribeIdentityProviderConfig
-  - Name: eks:DisassociateIdentityProviderConfig
-  - Name: eks:ListIdentityProviderConfigs

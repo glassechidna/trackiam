@@ -126,6 +126,7 @@ The following table summarises the AWS APIs.
 | [`workspaces`](services/workspaces.yml) | 32 | 18 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 32 | 15 | 8 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
+| [`eks`](services/eks.yml) | 32 | 0 | 1 |
 | [`datasync`](services/datasync.yml) | 31 | 4 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 31 | 2 | 0 |
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |
@@ -143,7 +144,6 @@ The following table summarises the AWS APIs.
 | [`profile`](services/profile.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
-| [`eks`](services/eks.yml) | 27 | 5 | 1 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 27 | 0 | 1 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
@@ -163,6 +163,7 @@ The following table summarises the AWS APIs.
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
+| [`access-analyzer`](services/access-analyzer.yml) | 23 | 0 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 1 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 22 | 0 | 0 |
@@ -174,7 +175,6 @@ The following table summarises the AWS APIs.
 | [`qldb`](services/qldb.yml) | 20 | 0 | 3 |
 | [`transfer`](services/transfer.yml) | 20 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
-| [`access-analyzer`](services/access-analyzer.yml) | 19 | 4 | 0 |
 | [`secretsmanager`](services/secretsmanager.yml) | 19 | 3 | 0 |
 | [`mgh`](services/mgh.yml) | 19 | 1 | 0 |
 | [`lookoutvision`](services/lookoutvision.yml) | 19 | 0 | 3 |
