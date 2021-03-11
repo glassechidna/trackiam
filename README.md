@@ -191,12 +191,12 @@ The following table summarises the AWS APIs.
 | [`mediapackage`](services/mediapackage.yml) | 17 | 2 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`signer`](services/signer.yml) | 17 | 0 | 0 |
+| [`fsx`](services/fsx.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
 | [`resource-groups`](services/resource-groups.yml) | 15 | 1 | 1 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 14 | 13 | 0 |
-| [`fsx`](services/fsx.yml) | 14 | 3 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`translate`](services/translate.yml) | 14 | 0 | 0 |
