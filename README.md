@@ -65,7 +65,7 @@ The following table summarises the AWS APIs.
 | [`s3`](services/s3.yml) | 65 | 56 | 42 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
-| [`comprehend`](services/comprehend.yml) | 60 | 1 | 0 |
+| [`comprehend`](services/comprehend.yml) | 61 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 59 | 16 | 0 |
 | [`route53`](services/route53.yml) | 57 | 7 | 0 |
 | [`ds`](services/ds.yml) | 57 | 5 | 6 |
