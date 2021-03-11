@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/BatchServiceRolePolicy",
   "CreateDate": "2021-03-10T06:55:36Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4COHHXEWBT",
   "PolicyName": "BatchServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-03-10T06:55:36Z",
+    "CreateDate": "2021-03-11T18:03:48Z",
     "Document": {
       "Statement": [
         {
@@ -222,12 +222,27 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:ecs:*:*:task/*/*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/batch/job*"
+        },
+        {
+          "Action": [
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/batch/job*:log-stream:*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-03-10T06:55:36Z"
+  "UpdateDate": "2021-03-11T18:03:48Z"
 }

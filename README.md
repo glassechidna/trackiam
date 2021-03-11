@@ -161,13 +161,13 @@ The following table summarises the AWS APIs.
 | [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 23 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 0 | 0 |
+| [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 23 | 0 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 1 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 22 | 0 | 0 |
-| [`cognito-identity`](services/cognito-identity.yml) | 21 | 2 | 0 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`iotevents`](services/iotevents.yml) | 20 | 3 | 14 |
 | [`ecr-public`](services/ecr-public.yml) | 20 | 3 | 0 |
