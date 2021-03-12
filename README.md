@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 264
-* Unique actions: 10232
+* Unique actions: 10260
 * Managed policies: 803
 
 Most common managed policy name prefixes:
@@ -123,7 +123,7 @@ The following table summarises the AWS APIs.
 | [`sns`](services/sns.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 33 | 0 | 0 |
-| [`workspaces`](services/workspaces.yml) | 32 | 18 | 0 |
+| [`workspaces`](services/workspaces.yml) | 32 | 21 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 32 | 15 | 8 |
 | [`inspector`](services/inspector.yml) | 32 | 5 | 0 |
 | [`eks`](services/eks.yml) | 32 | 0 | 1 |
@@ -232,7 +232,7 @@ The following table summarises the AWS APIs.
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
 | [`sms-voice`](services/sms-voice.yml) | 8 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
-| [`mediatailor`](services/mediatailor.yml) | 7 | 0 | 0 |
+| [`mediatailor`](services/mediatailor.yml) | 7 | 25 | 0 |
 | [`macie`](services/macie.yml) | 7 | 0 | 0 |
 | [`textract`](services/textract.yml) | 6 | 0 | 0 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
@@ -305,14 +305,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1491 |
-| `Get` | 1337 |
-| `Describe` | 1256 |
-| `Delete` | 1204 |
-| `Create` | 1109 |
-| `Update` | 874 |
-| `Put` | 296 |
-| `Start` | 186 |
+| `List` | 1495 |
+| `Get` | 1339 |
+| `Describe` | 1260 |
+| `Delete` | 1210 |
+| `Create` | 1114 |
+| `Update` | 878 |
+| `Put` | 297 |
+| `Start` | 187 |
 | `Tag` | 157 |
 | `Untag` | 156 |
 
