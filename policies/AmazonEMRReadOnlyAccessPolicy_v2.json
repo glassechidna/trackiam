@@ -1,0 +1,51 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonEMRReadOnlyAccessPolicy_v2",
+  "CreateDate": "2021-03-12T01:39:16Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4GDFTJ74PD",
+  "PolicyName": "AmazonEMRReadOnlyAccessPolicy_v2",
+  "PolicyVersion": {
+    "CreateDate": "2021-03-12T01:39:16Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:GetMetricStatistics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ViewMetricsInEMRConsole"
+        },
+        {
+          "Action": [
+            "elasticmapreduce:DescribeCluster",
+            "elasticmapreduce:DescribeEditor",
+            "elasticmapreduce:DescribeJobFlows",
+            "elasticmapreduce:DescribeSecurityConfiguration",
+            "elasticmapreduce:DescribeStep",
+            "elasticmapreduce:GetBlockPublicAccessConfiguration",
+            "elasticmapreduce:GetManagedScalingPolicy",
+            "elasticmapreduce:ListBootstrapActions",
+            "elasticmapreduce:ListClusters",
+            "elasticmapreduce:ListEditors",
+            "elasticmapreduce:ListInstanceFleets",
+            "elasticmapreduce:ListInstanceGroups",
+            "elasticmapreduce:ListInstances",
+            "elasticmapreduce:ListSecurityConfigurations",
+            "elasticmapreduce:ListSteps",
+            "elasticmapreduce:ViewEventsFromAllClustersInConsole"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ElasticMapReduceActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-03-12T01:39:16Z"
+}

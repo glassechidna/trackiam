@@ -1,0 +1,340 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonEMRServicePolicy_v2",
+  "CreateDate": "2021-03-12T01:11:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4M2DU3H3GW",
+  "PolicyName": "AmazonEMRServicePolicy_v2",
+  "PolicyVersion": {
+    "CreateDate": "2021-03-12T01:11:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:CreateLaunchTemplate",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/for-use-with-amazon-emr-managed-policies": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:launch-template/*",
+          "Sid": "CreateEMRTaggedLaunchTemplate"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": "application-autoscaling.amazonaws.com*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/EMR_AutoScaling_DefaultRole",
+          "Sid": "PassRoleForAutoScaling"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": "ec2.amazonaws.com*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/EMR_EC2_DefaultRole",
+          "Sid": "PassRoleForEC2"
+        },
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:RevokeSecurityGroupEgress",
+            "ec2:RevokeSecurityGroupIngress"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/for-use-with-amazon-emr-managed-policies": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ManageSecurityGroups"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet",
+            "ec2:CreateLaunchTemplate",
+            "ec2:CreateLaunchTemplateVersion",
+            "ec2:CreateNetworkInterface",
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/for-use-with-amazon-emr-managed-policies": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "CreateInTaggedNetwork"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet",
+            "ec2:CreateLaunchTemplateVersion",
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/for-use-with-amazon-emr-managed-policies": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:launch-template/*",
+          "Sid": "CreateWithEMRTaggedLaunchTemplate"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet",
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/for-use-with-amazon-emr-managed-policies": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "CreateEMRTaggedInstancesAndVolumes"
+        },
+        {
+          "Action": [
+            "ec2:CreateLaunchTemplateVersion",
+            "ec2:DeleteLaunchTemplate",
+            "ec2:DeleteNetworkInterface",
+            "ec2:ModifyInstanceAttribute",
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/for-use-with-amazon-emr-managed-policies": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ManageEMRTaggedResources"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/for-use-with-amazon-emr-managed-policies": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*"
+          ],
+          "Sid": "CreateNetworkInterfaceNeededForPrivateSubnet"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/for-use-with-amazon-emr-managed-policies": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*"
+          ],
+          "Sid": "CreateDefaultSecurityGroupWithEMRTags"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/for-use-with-amazon-emr-managed-policies": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:vpc/*"
+          ],
+          "Sid": "CreateDefaultSecurityGroupInVPCWithEMRTags"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/for-use-with-amazon-emr-managed-policies": "true",
+              "ec2:CreateAction": "CreateSecurityGroup"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*",
+          "Sid": "TagOnCreateDefaultSecurityGroupWithEMRTags"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "CreateFleet",
+                "CreateLaunchTemplate",
+                "CreateNetworkInterface",
+                "RunInstances"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "TagOnCreateTaggedEMRResources"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags",
+            "ec2:DeleteTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/for-use-with-amazon-emr-managed-policies": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "ManageTagsOnEMRTaggedResources"
+        },
+        {
+          "Action": [
+            "application-autoscaling:DeleteScalingPolicy",
+            "application-autoscaling:DeregisterScalableTarget",
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingPolicies",
+            "application-autoscaling:PutScalingPolicy",
+            "application-autoscaling:RegisterScalableTarget"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AutoScaling"
+        },
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:PutMetricAlarm"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch:*:*:alarm:*_EMR_Auto_Scaling",
+          "Sid": "AutoScalingCloudWatch"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet",
+            "ec2:CreateLaunchTemplate",
+            "ec2:CreateLaunchTemplateVersion",
+            "ec2:RunInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:capacity-reservation/*",
+            "arn:aws:ec2:*:*:dedicated-host/*",
+            "arn:aws:ec2:*:*:fleet/*",
+            "arn:aws:ec2:*:*:key-pair/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:placement-group/EMR_*",
+            "arn:aws:ec2:*::image/ami-*",
+            "arn:aws:resource-groups:*:*:group/*"
+          ],
+          "Sid": "ResourcesToLaunchEC2"
+        },
+        {
+          "Action": [
+            "ec2:CreatePlacementGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:placement-group/EMR_*",
+          "Sid": "CreateEMRPlacementGroups"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags",
+            "ec2:DeleteTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:placement-group/EMR_*"
+          ],
+          "Sid": "TagPlacementGroups"
+        },
+        {
+          "Action": [
+            "ec2:DeletePlacementGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DeletePlacementGroups"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeCapacityReservations",
+            "ec2:DescribeDhcpOptions",
+            "ec2:DescribeInstances",
+            "ec2:DescribeLaunchTemplates",
+            "ec2:DescribeNetworkAcls",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribePlacementGroups",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVolumeStatus",
+            "ec2:DescribeVolumes",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListActionsForEC2Resources"
+        },
+        {
+          "Action": [
+            "resource-groups:ListGroupResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ResourceGroupsForCapacityReservations"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-03-12T01:11:08Z"
+}
