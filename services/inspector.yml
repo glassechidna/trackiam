@@ -2,6 +2,7 @@ Actions:
   - Name: inspector:AddAttributesToFindings
   - Name: inspector:CreateAssessmentTarget
   - Name: inspector:CreateAssessmentTemplate
+  - Name: inspector:CreateExclusionsPreview
   - Name: inspector:CreateResourceGroup
   - Name: inspector:DeleteAssessmentRun
   - Name: inspector:DeleteAssessmentTarget
@@ -10,15 +11,19 @@ Actions:
   - Name: inspector:DescribeAssessmentTargets
   - Name: inspector:DescribeAssessmentTemplates
   - Name: inspector:DescribeCrossAccountAccessRole
+  - Name: inspector:DescribeExclusions
   - Name: inspector:DescribeFindings
   - Name: inspector:DescribeResourceGroups
   - Name: inspector:DescribeRulesPackages
+  - Name: inspector:GetAssessmentReport
+  - Name: inspector:GetExclusionsPreview
   - Name: inspector:GetTelemetryMetadata
   - Name: inspector:ListAssessmentRunAgents
   - Name: inspector:ListAssessmentRuns
   - Name: inspector:ListAssessmentTargets
   - Name: inspector:ListAssessmentTemplates
   - Name: inspector:ListEventSubscriptions
+  - Name: inspector:ListExclusions
   - Name: inspector:ListFindings
   - Name: inspector:ListRulesPackages
   - Name: inspector:ListTagsForResource
@@ -31,10 +36,3 @@ Actions:
   - Name: inspector:SubscribeToEvent
   - Name: inspector:UnsubscribeFromEvent
   - Name: inspector:UpdateAssessmentTarget
-
-  # APIs without an IAM action
-  - Name: inspector:CreateExclusionsPreview
-  - Name: inspector:DescribeExclusions
-  - Name: inspector:GetAssessmentReport
-  - Name: inspector:GetExclusionsPreview
-  - Name: inspector:ListExclusions

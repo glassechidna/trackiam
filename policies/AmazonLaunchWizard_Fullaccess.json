@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLaunchWizard_Fullaccess",
   "CreateDate": "2020-08-06T17:47:30Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ABPQ7BLC2",
   "PolicyName": "AmazonLaunchWizard_Fullaccess",
   "PolicyVersion": {
-    "CreateDate": "2021-02-12T17:06:05Z",
+    "CreateDate": "2021-04-08T19:03:02Z",
     "Document": {
       "Statement": [
         {
@@ -51,6 +51,7 @@
             "ec2:CreateDhcpOptions",
             "ec2:CreateEgressOnlyInternetGateway",
             "ec2:CreateNetworkInterface",
+            "ec2:CreatePlacementGroup",
             "ec2:CreateTags",
             "ec2:CreateVolume",
             "ec2:CreateVpcEndpoint",
@@ -61,6 +62,7 @@
             "ec2:DeleteNetworkAcl",
             "ec2:DeleteNetworkInterface",
             "ec2:DeleteNetworkInterfacePermission",
+            "ec2:DeletePlacementGroup",
             "ec2:DeleteRoute",
             "ec2:DeleteRouteTable",
             "ec2:DeleteSecurityGroup",
@@ -81,6 +83,7 @@
             "ec2:GetLaunchTemplateData",
             "ec2:GetPasswordData",
             "ec2:ModifyInstanceAttribute",
+            "ec2:ModifyInstancePlacement",
             "ec2:ModifyNetworkInterfaceAttribute",
             "ec2:ModifySubnetAttribute",
             "ec2:ModifyVolume",
@@ -453,6 +456,16 @@
         },
         {
           "Action": [
+            "sns:CreateTopic",
+            "sns:DeleteTopic",
+            "sns:Subscribe",
+            "sns:Unsubscribe"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sns:*:*:LaunchWizard*"
+        },
+        {
+          "Action": [
             "sqs:AddPermission",
             "sqs:CreateQueue",
             "sqs:DeleteQueue",
@@ -477,7 +490,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2021-02-12T17:06:05Z"
+  "UpdateDate": "2021-04-08T19:03:02Z"
 }

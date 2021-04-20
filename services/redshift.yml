@@ -64,6 +64,7 @@ Actions:
   - Name: redshift:EnableSnapshotCopy
   - Name: redshift:GetClusterCredentials
   - Name: redshift:GetReservedNodeExchangeOfferings
+  - Name: redshift:ModifyAquaConfiguration
   - Name: redshift:ModifyCluster
   - Name: redshift:ModifyClusterDbRevision
   - Name: redshift:ModifyClusterIamRoles
@@ -109,7 +110,14 @@ Actions:
   - Name: redshift:ViewQueriesInConsole
 
   # APIs without an IAM action
+  - Name: redshift:AuthorizeEndpointAccess
+  - Name: redshift:CreateEndpointAccess
   - Name: redshift:CreateUsageLimit
+  - Name: redshift:DeleteEndpointAccess
   - Name: redshift:DeleteUsageLimit
+  - Name: redshift:DescribeEndpointAccess
+  - Name: redshift:DescribeEndpointAuthorization
   - Name: redshift:DescribeUsageLimits
+  - Name: redshift:ModifyEndpointAccess
   - Name: redshift:ModifyUsageLimit
+  - Name: redshift:RevokeEndpointAccess

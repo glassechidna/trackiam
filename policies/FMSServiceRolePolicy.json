@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/FMSServiceRolePolicy",
   "CreateDate": "2018-03-28T23:01:12Z",
-  "DefaultVersionId": "v17",
+  "DefaultVersionId": "v18",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAI62NTGYJB446ACUEA",
   "PolicyName": "FMSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-11-17T17:35:16Z",
+    "CreateDate": "2021-03-31T21:02:38Z",
     "Document": {
       "Statement": [
         {
@@ -139,6 +139,32 @@
           "Resource": [
             "arn:aws:ram:*:*:resource-share/*"
           ]
+        },
+        {
+          "Action": [
+            "route53resolver:AssociateFirewallRuleGroup",
+            "route53resolver:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/FMManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:route53resolver:*:*:firewall-rule-group-association/*"
+        },
+        {
+          "Action": [
+            "route53resolver:DisassociateFirewallRuleGroup",
+            "route53resolver:UpdateFirewallRuleGroupAssociation"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/FMManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:route53resolver:*:*:firewall-rule-group-association/*"
         },
         {
           "Action": "iam:GetRole",
@@ -372,6 +398,19 @@
         },
         {
           "Action": [
+            "route53resolver:GetFirewallRuleGroup",
+            "route53resolver:GetFirewallRuleGroupAssociation",
+            "route53resolver:GetFirewallRuleGroupPolicy",
+            "route53resolver:ListFirewallRuleGroupAssociations",
+            "route53resolver:ListFirewallRuleGroups",
+            "route53resolver:ListTagsForResource",
+            "route53resolver:PutFirewallRuleGroupPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "waf-regional:CreateWebACL",
             "waf-regional:GetChangeToken",
             "waf:CreateWebACL",
@@ -486,7 +525,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v17"
+    "VersionId": "v18"
   },
-  "UpdateDate": "2020-11-17T17:35:16Z"
+  "UpdateDate": "2021-03-31T21:02:38Z"
 }

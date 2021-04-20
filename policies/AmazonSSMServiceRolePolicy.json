@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonSSMServiceRolePolicy",
   "CreateDate": "2017-11-13T19:20:08Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIXJ26NUGBA3TCV7EC",
   "PolicyName": "AmazonSSMServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-01-05T23:57:10Z",
+    "CreateDate": "2021-03-23T18:12:57Z",
     "Document": {
       "Statement": [
         {
@@ -141,6 +141,17 @@
         },
         {
           "Action": [
+            "ssm:GetServiceSetting",
+            "ssm:UpdateServiceSetting"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsdata/*",
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsitem/*"
+          ]
+        },
+        {
+          "Action": [
             "states:DescribeExecution",
             "states:StartExecution"
           ],
@@ -175,7 +186,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2021-01-05T23:57:10Z"
+  "UpdateDate": "2021-03-23T18:12:57Z"
 }

@@ -1,0 +1,50 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSApplicationMigrationAgentPolicy",
+  "CreateDate": "2021-04-07T07:00:21Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4D2GD5QYXR",
+  "PolicyName": "AWSApplicationMigrationAgentPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-04-07T07:00:21Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "mgn:TagResource",
+          "Effect": "Allow",
+          "Resource": "arn:aws:mgn:*:*:source-server/*"
+        },
+        {
+          "Action": [
+            "mgn:GetAgentCommandForMgn",
+            "mgn:GetAgentConfirmedResumeInfoForMgn",
+            "mgn:GetAgentInstallationAssetsForMgn",
+            "mgn:GetAgentReplicationInfoForMgn",
+            "mgn:GetAgentRuntimeConfigurationForMgn",
+            "mgn:RegisterAgentForMgn",
+            "mgn:UpdateAgentBacklogForMgn",
+            "mgn:UpdateAgentConversionInfoForMgn",
+            "mgn:UpdateAgentReplicationInfoForMgn",
+            "mgn:UpdateAgentSourcePropertiesForMgn"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "mgn:SendAgentLogsForMgn",
+            "mgn:SendAgentMetricsForMgn",
+            "mgn:SendClientLogsForMgn"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-04-07T07:00:21Z"
+}

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AwsGlueDataBrewFullAccessPolicy",
   "CreateDate": "2020-11-11T16:51:39Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ACNRIK7M3",
   "PolicyName": "AwsGlueDataBrewFullAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-11-12T23:04:55Z",
+    "CreateDate": "2021-03-30T17:03:07Z",
     "Document": {
       "Statement": [
         {
@@ -48,6 +48,11 @@
             "dataexchange:ListDataSets",
             "dataexchange:ListRevisionAssets",
             "dataexchange:StartJob",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "glue:GetConnection",
+            "glue:GetConnections",
             "glue:GetDataCatalogEncryptionSettings",
             "glue:GetDatabases",
             "glue:GetPartitions",
@@ -58,15 +63,32 @@
             "kms:DescribeKey",
             "kms:ListAliases",
             "kms:ListKeys",
+            "redshift-data:ListDatabases",
+            "redshift-data:ListSchemas",
+            "redshift-data:ListTables",
+            "redshift:DescribeClusterSubnetGroups",
+            "redshift:DescribeClusters",
             "s3:GetBucketCORS",
             "s3:GetBucketLocation",
             "s3:GetEncryptionConfiguration",
             "s3:ListAllMyBuckets",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:ListSecrets",
             "sts:GetCallerIdentity"
           ],
           "Effect": "Allow",
           "Resource": [
             "*"
+          ]
+        },
+        {
+          "Action": [
+            "glue:CreateConnection"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:catalog",
+            "arn:aws:glue:*:*:connection/AwsGlueDataBrew-*"
           ]
         },
         {
@@ -83,7 +105,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-11-12T23:04:55Z"
+  "UpdateDate": "2021-03-30T17:03:07Z"
 }

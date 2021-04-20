@@ -21,15 +21,18 @@ Actions:
   - Name: iot:CancelAuditMitigationActionsTask
   - Name: iot:CancelAuditTask
   - Name: iot:CancelCertificateTransfer
+  - Name: iot:CancelDetectMitigationActionsTask
   - Name: iot:CancelJob
   - Name: iot:CancelJobExecution
   - Name: iot:ClearDefaultAuthorizer
   - Name: iot:CloseTunnel
+  - Name: iot:ConfirmTopicRuleDestination
   - Name: iot:Connect
   - Name: iot:CreateAuditSuppression
   - Name: iot:CreateAuthorizer
   - Name: iot:CreateBillingGroup
   - Name: iot:CreateCertificateFromCsr
+  - Name: iot:CreateCustomMetric
   - Name: iot:CreateDimension
   - Name: iot:CreateDomainConfiguration
   - Name: iot:CreateDynamicThingGroup
@@ -51,12 +54,14 @@ Actions:
   - Name: iot:CreateThingGroup
   - Name: iot:CreateThingType
   - Name: iot:CreateTopicRule
+  - Name: iot:CreateTopicRuleDestination
   - Name: iot:DeleteAccountAuditConfiguration
   - Name: iot:DeleteAuditSuppression
   - Name: iot:DeleteAuthorizer
   - Name: iot:DeleteBillingGroup
   - Name: iot:DeleteCACertificate
   - Name: iot:DeleteCertificate
+  - Name: iot:DeleteCustomMetric
   - Name: iot:DeleteDimension
   - Name: iot:DeleteDomainConfiguration
   - Name: iot:DeleteDynamicThingGroup
@@ -78,6 +83,7 @@ Actions:
   - Name: iot:DeleteThingGroup
   - Name: iot:DeleteThingType
   - Name: iot:DeleteTopicRule
+  - Name: iot:DeleteTopicRuleDestination
   - Name: iot:DeleteV2LoggingLevel
   - Name: iot:DeprecateThingType
   - Name: iot:DescribeAccountAuditConfiguration
@@ -89,7 +95,9 @@ Actions:
   - Name: iot:DescribeBillingGroup
   - Name: iot:DescribeCACertificate
   - Name: iot:DescribeCertificate
+  - Name: iot:DescribeCustomMetric
   - Name: iot:DescribeDefaultAuthorizer
+  - Name: iot:DescribeDetectMitigationActionsTask
   - Name: iot:DescribeDimension
   - Name: iot:DescribeDomainConfiguration
   - Name: iot:DescribeEndpoint
@@ -115,6 +123,7 @@ Actions:
   - Name: iot:DetachThingPrincipal
   - Name: iot:DisableTopicRule
   - Name: iot:EnableTopicRule
+  - Name: iot:GetBehaviorModelTrainingSummaries
   - Name: iot:GetBucketsAggregation
   - Name: iot:GetCardinality
   - Name: iot:GetEffectivePolicies
@@ -128,6 +137,7 @@ Actions:
   - Name: iot:GetRegistrationCode
   - Name: iot:GetStatistics
   - Name: iot:GetTopicRule
+  - Name: iot:GetTopicRuleDestination
   - Name: iot:GetV2LoggingOptions
   - Name: iot:ListActiveViolations
   - Name: iot:ListAttachedPolicies
@@ -141,6 +151,9 @@ Actions:
   - Name: iot:ListCACertificates
   - Name: iot:ListCertificates
   - Name: iot:ListCertificatesByCA
+  - Name: iot:ListCustomMetrics
+  - Name: iot:ListDetectMitigationActionsExecutions
+  - Name: iot:ListDetectMitigationActionsTasks
   - Name: iot:ListDimensions
   - Name: iot:ListDomainConfigurations
   - Name: iot:ListFleetMetrics
@@ -175,6 +188,7 @@ Actions:
   - Name: iot:ListThings
   - Name: iot:ListThingsInBillingGroup
   - Name: iot:ListThingsInThingGroup
+  - Name: iot:ListTopicRuleDestinations
   - Name: iot:ListTopicRules
   - Name: iot:ListTunnels
   - Name: iot:ListV2LoggingLevels
@@ -196,6 +210,7 @@ Actions:
   - Name: iot:SetV2LoggingLevel
   - Name: iot:SetV2LoggingOptions
   - Name: iot:StartAuditMitigationActionsTask
+  - Name: iot:StartDetectMitigationActionsTask
   - Name: iot:StartOnDemandAuditTask
   - Name: iot:StartThingRegistrationTask
   - Name: iot:StopThingRegistrationTask
@@ -211,6 +226,7 @@ Actions:
   - Name: iot:UpdateBillingGroup
   - Name: iot:UpdateCACertificate
   - Name: iot:UpdateCertificate
+  - Name: iot:UpdateCustomMetric
   - Name: iot:UpdateDimension
   - Name: iot:UpdateDomainConfiguration
   - Name: iot:UpdateDynamicThingGroup
@@ -227,4 +243,5 @@ Actions:
   - Name: iot:UpdateThing
   - Name: iot:UpdateThingGroup
   - Name: iot:UpdateThingGroupsForThing
+  - Name: iot:UpdateTopicRuleDestination
   - Name: iot:ValidateSecurityProfileBehaviors

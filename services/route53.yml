@@ -1,26 +1,33 @@
 Actions:
+  - Name: route53:ActivateKeySigningKey
   - Name: route53:AssociateVPCWithHostedZone
   - Name: route53:ChangeResourceRecordSets
   - Name: route53:ChangeTagsForResource
   - Name: route53:CreateHealthCheck
   - Name: route53:CreateHostedZone
+  - Name: route53:CreateKeySigningKey
   - Name: route53:CreateQueryLoggingConfig
   - Name: route53:CreateReusableDelegationSet
   - Name: route53:CreateTrafficPolicy
   - Name: route53:CreateTrafficPolicyInstance
   - Name: route53:CreateTrafficPolicyVersion
   - Name: route53:CreateVPCAssociationAuthorization
+  - Name: route53:DeactivateKeySigningKey
   - Name: route53:DeleteHealthCheck
   - Name: route53:DeleteHostedZone
+  - Name: route53:DeleteKeySigningKey
   - Name: route53:DeleteQueryLoggingConfig
   - Name: route53:DeleteReusableDelegationSet
   - Name: route53:DeleteTrafficPolicy
   - Name: route53:DeleteTrafficPolicyInstance
   - Name: route53:DeleteVPCAssociationAuthorization
+  - Name: route53:DisableHostedZoneDNSSEC
   - Name: route53:DisassociateVPCFromHostedZone
+  - Name: route53:EnableHostedZoneDNSSEC
   - Name: route53:GetAccountLimit
   - Name: route53:GetChange
   - Name: route53:GetCheckerIpRanges
+  - Name: route53:GetDNSSEC
   - Name: route53:GetGeoLocation
   - Name: route53:GetHealthCheck
   - Name: route53:GetHealthCheckCount
@@ -56,12 +63,3 @@ Actions:
   - Name: route53:UpdateHostedZoneComment
   - Name: route53:UpdateTrafficPolicyComment
   - Name: route53:UpdateTrafficPolicyInstance
-
-  # APIs without an IAM action
-  - Name: route53:ActivateKeySigningKey
-  - Name: route53:CreateKeySigningKey
-  - Name: route53:DeactivateKeySigningKey
-  - Name: route53:DeleteKeySigningKey
-  - Name: route53:DisableHostedZoneDNSSEC
-  - Name: route53:EnableHostedZoneDNSSEC
-  - Name: route53:GetDNSSEC

@@ -1,0 +1,82 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSApplicationMigrationReplicationServerPolicy",
+  "CreateDate": "2021-04-07T07:21:57Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4PXFWAA3SE",
+  "PolicyName": "AWSApplicationMigrationReplicationServerPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-04-07T07:21:57Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": "CreateSnapshot"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshot"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/AWSApplicationMigrationServiceManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*"
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshot"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AWSApplicationMigrationServiceManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstances",
+            "ec2:DescribeSnapshots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "mgn:BatchCreateVolumeSnapshotGroupForMgn",
+            "mgn:BatchDeleteSnapshotRequestForMgn",
+            "mgn:DescribeReplicationServerAssociationsForMgn",
+            "mgn:DescribeSnapshotRequestsForMgn",
+            "mgn:GetAgentSnapshotCreditsForMgn",
+            "mgn:GetChannelCommandsForMgn",
+            "mgn:NotifyAgentAuthenticationForMgn",
+            "mgn:NotifyAgentConnectedForMgn",
+            "mgn:NotifyAgentDisconnectedForMgn",
+            "mgn:NotifyAgentReplicationProgressForMgn",
+            "mgn:SendChannelCommandResultForMgn",
+            "mgn:SendClientLogsForMgn",
+            "mgn:SendClientMetricsForMgn",
+            "mgn:UpdateAgentReplicationProcessStateForMgn"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-04-07T07:21:57Z"
+}

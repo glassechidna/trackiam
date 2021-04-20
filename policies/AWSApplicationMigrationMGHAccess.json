@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSApplicationMigrationMGHAccess",
+  "CreateDate": "2021-04-07T07:10:01Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4KOE4CJMGD",
+  "PolicyName": "AWSApplicationMigrationMGHAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-04-07T07:10:01Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "mgh:AssociateCreatedArtifact",
+            "mgh:CreateProgressUpdateStream",
+            "mgh:DisassociateCreatedArtifact",
+            "mgh:GetHomeRegion",
+            "mgh:ImportMigrationTask",
+            "mgh:NotifyMigrationTaskState",
+            "mgh:PutResourceAttributes"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-04-07T07:10:01Z"
+}

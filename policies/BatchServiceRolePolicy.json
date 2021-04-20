@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/BatchServiceRolePolicy",
   "CreateDate": "2021-03-10T06:55:36Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4COHHXEWBT",
   "PolicyName": "BatchServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-03-11T18:03:48Z",
+    "CreateDate": "2021-03-25T22:50:04Z",
     "Document": {
       "Statement": [
         {
@@ -125,14 +125,18 @@
           "Action": "ec2:RunInstances",
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:ec2:*:*:capacity-reservation/*",
+            "arn:aws:ec2:*:*:elastic-gpu/*",
             "arn:aws:ec2:*:*:key-pair/*",
             "arn:aws:ec2:*:*:launch-template/*",
             "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:placement-group/*",
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:subnet/*",
             "arn:aws:ec2:*:*:volume/*",
             "arn:aws:ec2:*::image/*",
-            "arn:aws:ec2:*::snapshot/*"
+            "arn:aws:ec2:*::snapshot/*",
+            "arn:aws:elastic-inference:*:*:elastic-inference-accelerator/*"
           ]
         },
         {
@@ -242,7 +246,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-03-11T18:03:48Z"
+  "UpdateDate": "2021-03-25T22:50:04Z"
 }

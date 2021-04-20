@@ -1,15 +1,22 @@
 Actions:
   - Name: lightsail:AllocateStaticIp
+  - Name: lightsail:AttachCertificateToDistribution
   - Name: lightsail:AttachDisk
   - Name: lightsail:AttachInstancesToLoadBalancer
   - Name: lightsail:AttachLoadBalancerTlsCertificate
   - Name: lightsail:AttachStaticIp
   - Name: lightsail:CloseInstancePublicPorts
   - Name: lightsail:CopySnapshot
+  - Name: lightsail:CreateCertificate
   - Name: lightsail:CreateCloudFormationStack
+  - Name: lightsail:CreateContactMethod
+  - Name: lightsail:CreateContainerService
+  - Name: lightsail:CreateContainerServiceDeployment
+  - Name: lightsail:CreateContainerServiceRegistryLogin
   - Name: lightsail:CreateDisk
   - Name: lightsail:CreateDiskFromSnapshot
   - Name: lightsail:CreateDiskSnapshot
+  - Name: lightsail:CreateDistribution
   - Name: lightsail:CreateDomain
   - Name: lightsail:CreateDomainEntry
   - Name: lightsail:CreateInstanceSnapshot
@@ -21,8 +28,15 @@ Actions:
   - Name: lightsail:CreateRelationalDatabase
   - Name: lightsail:CreateRelationalDatabaseFromSnapshot
   - Name: lightsail:CreateRelationalDatabaseSnapshot
+  - Name: lightsail:DeleteAlarm
+  - Name: lightsail:DeleteAutoSnapshot
+  - Name: lightsail:DeleteCertificate
+  - Name: lightsail:DeleteContactMethod
+  - Name: lightsail:DeleteContainerImage
+  - Name: lightsail:DeleteContainerService
   - Name: lightsail:DeleteDisk
   - Name: lightsail:DeleteDiskSnapshot
+  - Name: lightsail:DeleteDistribution
   - Name: lightsail:DeleteDomain
   - Name: lightsail:DeleteDomainEntry
   - Name: lightsail:DeleteInstance
@@ -33,19 +47,37 @@ Actions:
   - Name: lightsail:DeleteLoadBalancerTlsCertificate
   - Name: lightsail:DeleteRelationalDatabase
   - Name: lightsail:DeleteRelationalDatabaseSnapshot
+  - Name: lightsail:DetachCertificateFromDistribution
   - Name: lightsail:DetachDisk
   - Name: lightsail:DetachInstancesFromLoadBalancer
   - Name: lightsail:DetachStaticIp
+  - Name: lightsail:DisableAddOn
   - Name: lightsail:DownloadDefaultKeyPair
+  - Name: lightsail:EnableAddOn
   - Name: lightsail:ExportSnapshot
   - Name: lightsail:GetActiveNames
+  - Name: lightsail:GetAlarms
+  - Name: lightsail:GetAutoSnapshots
   - Name: lightsail:GetBlueprints
   - Name: lightsail:GetBundles
+  - Name: lightsail:GetCertificates
   - Name: lightsail:GetCloudFormationStackRecords
+  - Name: lightsail:GetContactMethods
+  - Name: lightsail:GetContainerAPIMetadata
+  - Name: lightsail:GetContainerImages
+  - Name: lightsail:GetContainerLog
+  - Name: lightsail:GetContainerServiceDeployments
+  - Name: lightsail:GetContainerServiceMetricData
+  - Name: lightsail:GetContainerServicePowers
+  - Name: lightsail:GetContainerServices
   - Name: lightsail:GetDisk
   - Name: lightsail:GetDiskSnapshot
   - Name: lightsail:GetDiskSnapshots
   - Name: lightsail:GetDisks
+  - Name: lightsail:GetDistributionBundles
+  - Name: lightsail:GetDistributionLatestCacheReset
+  - Name: lightsail:GetDistributionMetricData
+  - Name: lightsail:GetDistributions
   - Name: lightsail:GetDomain
   - Name: lightsail:GetDomains
   - Name: lightsail:GetExportSnapshotRecords
@@ -85,61 +117,27 @@ Actions:
   - Name: lightsail:IsVpcPeered
   - Name: lightsail:OpenInstancePublicPorts
   - Name: lightsail:PeerVpc
+  - Name: lightsail:PutAlarm
   - Name: lightsail:PutInstancePublicPorts
   - Name: lightsail:RebootInstance
   - Name: lightsail:RebootRelationalDatabase
+  - Name: lightsail:RegisterContainerImage
   - Name: lightsail:ReleaseStaticIp
+  - Name: lightsail:ResetDistributionCache
+  - Name: lightsail:SendContactMethodVerification
+  - Name: lightsail:SetIpAddressType
   - Name: lightsail:StartInstance
   - Name: lightsail:StartRelationalDatabase
   - Name: lightsail:StopInstance
   - Name: lightsail:StopRelationalDatabase
   - Name: lightsail:TagResource
+  - Name: lightsail:TestAlarm
   - Name: lightsail:UnpeerVpc
   - Name: lightsail:UntagResource
+  - Name: lightsail:UpdateContainerService
+  - Name: lightsail:UpdateDistribution
+  - Name: lightsail:UpdateDistributionBundle
   - Name: lightsail:UpdateDomainEntry
   - Name: lightsail:UpdateLoadBalancerAttribute
   - Name: lightsail:UpdateRelationalDatabase
   - Name: lightsail:UpdateRelationalDatabaseParameters
-
-  # APIs without an IAM action
-  - Name: lightsail:AttachCertificateToDistribution
-  - Name: lightsail:CreateCertificate
-  - Name: lightsail:CreateContactMethod
-  - Name: lightsail:CreateContainerService
-  - Name: lightsail:CreateContainerServiceDeployment
-  - Name: lightsail:CreateContainerServiceRegistryLogin
-  - Name: lightsail:CreateDistribution
-  - Name: lightsail:DeleteAlarm
-  - Name: lightsail:DeleteAutoSnapshot
-  - Name: lightsail:DeleteCertificate
-  - Name: lightsail:DeleteContactMethod
-  - Name: lightsail:DeleteContainerImage
-  - Name: lightsail:DeleteContainerService
-  - Name: lightsail:DeleteDistribution
-  - Name: lightsail:DetachCertificateFromDistribution
-  - Name: lightsail:DisableAddOn
-  - Name: lightsail:EnableAddOn
-  - Name: lightsail:GetAlarms
-  - Name: lightsail:GetAutoSnapshots
-  - Name: lightsail:GetCertificates
-  - Name: lightsail:GetContactMethods
-  - Name: lightsail:GetContainerAPIMetadata
-  - Name: lightsail:GetContainerImages
-  - Name: lightsail:GetContainerLog
-  - Name: lightsail:GetContainerServiceDeployments
-  - Name: lightsail:GetContainerServiceMetricData
-  - Name: lightsail:GetContainerServicePowers
-  - Name: lightsail:GetContainerServices
-  - Name: lightsail:GetDistributionBundles
-  - Name: lightsail:GetDistributionLatestCacheReset
-  - Name: lightsail:GetDistributionMetricData
-  - Name: lightsail:GetDistributions
-  - Name: lightsail:PutAlarm
-  - Name: lightsail:RegisterContainerImage
-  - Name: lightsail:ResetDistributionCache
-  - Name: lightsail:SendContactMethodVerification
-  - Name: lightsail:SetIpAddressType
-  - Name: lightsail:TestAlarm
-  - Name: lightsail:UpdateContainerService
-  - Name: lightsail:UpdateDistribution
-  - Name: lightsail:UpdateDistributionBundle

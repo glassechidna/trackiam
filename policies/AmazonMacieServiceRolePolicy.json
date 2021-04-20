@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonMacieServiceRolePolicy",
   "CreateDate": "2018-06-19T22:17:38Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJPLHONRH2HP2H6TNQ",
   "PolicyName": "AmazonMacieServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-07-17T21:31:07Z",
+    "CreateDate": "2021-04-13T17:55:07Z",
     "Document": {
       "Statement": [
         {
@@ -56,6 +56,26 @@
         },
         {
           "Action": [
+            "logs:CreateLogGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/macie/*"
+          ]
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/macie/*:log-stream:*"
+          ]
+        },
+        {
+          "Action": [
             "s3:CreateBucket",
             "s3:DeleteBucket",
             "s3:DeleteBucketPolicy",
@@ -77,7 +97,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-07-17T21:31:07Z"
+  "UpdateDate": "2021-04-13T17:55:07Z"
 }

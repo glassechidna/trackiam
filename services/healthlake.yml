@@ -1,6 +1,4 @@
 Actions:
-
-  # APIs without an IAM action
   - Name: healthlake:CreateFHIRDatastore
   - Name: healthlake:DeleteFHIRDatastore
   - Name: healthlake:DescribeFHIRDatastore
@@ -9,3 +7,12 @@ Actions:
   - Name: healthlake:ListFHIRDatastores
   - Name: healthlake:StartFHIRExportJob
   - Name: healthlake:StartFHIRImportJob
+
+  # actions with no corresponding API
+  - Name: healthlake:CreateResource
+  - Name: healthlake:DeleteResource
+  - Name: healthlake:GetCapabilities
+  - Name: healthlake:ReadResource
+  - Name: healthlake:SearchWithGet
+  - Name: healthlake:SearchWithPost
+  - Name: healthlake:UpdateResource

@@ -1,22 +1,24 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSVPCTransitGatewayServiceRolePolicy",
   "CreateDate": "2018-11-26T16:21:17Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJS2PBJSYV2EZW3MIQ",
   "PolicyName": "AWSVPCTransitGatewayServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2018-11-26T16:21:17Z",
+    "CreateDate": "2021-04-15T16:31:44Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "ec2:AssignIpv6Addresses",
             "ec2:CreateNetworkInterface",
             "ec2:CreateNetworkInterfacePermission",
             "ec2:DeleteNetworkInterface",
             "ec2:DescribeNetworkInterfaces",
-            "ec2:ModifyNetworkInterfaceAttribute"
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "ec2:UnAssignIpv6Addresses"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -26,7 +28,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2018-11-26T16:21:17Z"
+  "UpdateDate": "2021-04-15T16:31:44Z"
 }

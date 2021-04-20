@@ -1,0 +1,42 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSApplicationMigrationReadOnlyAccess",
+  "CreateDate": "2021-04-07T07:15:26Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4M2IUSVNLL",
+  "PolicyName": "AWSApplicationMigrationReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-04-07T07:15:26Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeInstances",
+            "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "mgn:DescribeJobLogItems",
+            "mgn:DescribeJobs",
+            "mgn:DescribeReplicationConfigurationTemplates",
+            "mgn:DescribeSourceServers",
+            "mgn:GetLaunchConfiguration",
+            "mgn:GetReplicationConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-04-07T07:15:26Z"
+}

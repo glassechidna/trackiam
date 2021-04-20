@@ -38,6 +38,7 @@ Actions:
   - Name: greengrass:GetAssociatedRole
   - Name: greengrass:GetBulkDeploymentStatus
   - Name: greengrass:GetComponent
+  - Name: greengrass:GetComponentVersionArtifact
   - Name: greengrass:GetConnectivityInfo
   - Name: greengrass:GetConnectorDefinition
   - Name: greengrass:GetConnectorDefinitionVersion
@@ -89,6 +90,7 @@ Actions:
   - Name: greengrass:ListSubscriptionDefinitions
   - Name: greengrass:ListTagsForResource
   - Name: greengrass:ResetDeployments
+  - Name: greengrass:ResolveComponentCandidates
   - Name: greengrass:StartBulkDeployment
   - Name: greengrass:StopBulkDeployment
   - Name: greengrass:TagResource
@@ -107,7 +109,3 @@ Actions:
 
   # actions with no corresponding API
   - Name: greengrass:Discover
-
-  # APIs without an IAM action
-  - Name: greengrass:GetComponentVersionArtifact
-  - Name: greengrass:ResolveComponentCandidates

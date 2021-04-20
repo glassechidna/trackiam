@@ -1,5 +1,6 @@
 Actions:
   - Name: codeguru-reviewer:AssociateRepository
+  - Name: codeguru-reviewer:CreateCodeReview
   - Name: codeguru-reviewer:DescribeCodeReview
   - Name: codeguru-reviewer:DescribeRecommendationFeedback
   - Name: codeguru-reviewer:DescribeRepositoryAssociation
@@ -8,15 +9,12 @@ Actions:
   - Name: codeguru-reviewer:ListRecommendationFeedback
   - Name: codeguru-reviewer:ListRecommendations
   - Name: codeguru-reviewer:ListRepositoryAssociations
+  - Name: codeguru-reviewer:ListTagsForResource
   - Name: codeguru-reviewer:PutRecommendationFeedback
+  - Name: codeguru-reviewer:TagResource
+  - Name: codeguru-reviewer:UnTagResource
 
   # actions with no corresponding API
   - Name: codeguru-reviewer:CreateConnectionToken
   - Name: codeguru-reviewer:GetMetricsData
   - Name: codeguru-reviewer:ListThirdPartyRepositories
-
-  # APIs without an IAM action
-  - Name: codeguru-reviewer:CreateCodeReview
-  - Name: codeguru-reviewer:ListTagsForResource
-  - Name: codeguru-reviewer:TagResource
-  - Name: codeguru-reviewer:UntagResource

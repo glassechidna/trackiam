@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "CreateDate": "2018-12-01T16:22:12Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJH3SHQERZRQMQOQ44",
   "PolicyName": "CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-01-19T20:27:15Z",
+    "CreateDate": "2021-04-15T00:30:19Z",
     "Document": {
       "Statement": [
         {
@@ -195,6 +195,13 @@
         },
         {
           "Action": [
+            "ssm:AddTagsToResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:opsitem/*"
+        },
+        {
+          "Action": [
             "ssm:AddTagsToResource",
             "ssm:DeleteParameter",
             "ssm:GetParameters",
@@ -279,7 +286,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2021-01-19T20:27:15Z"
+  "UpdateDate": "2021-04-15T00:30:19Z"
 }

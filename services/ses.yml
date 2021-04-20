@@ -3,10 +3,15 @@ Actions:
   - Name: ses:CreateConfigurationSet
   - Name: ses:CreateConfigurationSetEventDestination
   - Name: ses:CreateConfigurationSetTrackingOptions
+  - Name: ses:CreateContact
+  - Name: ses:CreateContactList
   - Name: ses:CreateCustomVerificationEmailTemplate
   - Name: ses:CreateDedicatedIpPool
   - Name: ses:CreateDeliverabilityTestReport
   - Name: ses:CreateEmailIdentity
+  - Name: ses:CreateEmailIdentityPolicy
+  - Name: ses:CreateEmailTemplate
+  - Name: ses:CreateImportJob
   - Name: ses:CreateReceiptFilter
   - Name: ses:CreateReceiptRule
   - Name: ses:CreateReceiptRuleSet
@@ -14,14 +19,19 @@ Actions:
   - Name: ses:DeleteConfigurationSet
   - Name: ses:DeleteConfigurationSetEventDestination
   - Name: ses:DeleteConfigurationSetTrackingOptions
+  - Name: ses:DeleteContact
+  - Name: ses:DeleteContactList
   - Name: ses:DeleteCustomVerificationEmailTemplate
   - Name: ses:DeleteDedicatedIpPool
   - Name: ses:DeleteEmailIdentity
+  - Name: ses:DeleteEmailIdentityPolicy
+  - Name: ses:DeleteEmailTemplate
   - Name: ses:DeleteIdentity
   - Name: ses:DeleteIdentityPolicy
   - Name: ses:DeleteReceiptFilter
   - Name: ses:DeleteReceiptRule
   - Name: ses:DeleteReceiptRuleSet
+  - Name: ses:DeleteSuppressedDestination
   - Name: ses:DeleteTemplate
   - Name: ses:DeleteVerifiedEmailAddress
   - Name: ses:DescribeActiveReceiptRuleSet
@@ -33,48 +43,68 @@ Actions:
   - Name: ses:GetBlacklistReports
   - Name: ses:GetConfigurationSet
   - Name: ses:GetConfigurationSetEventDestinations
+  - Name: ses:GetContact
+  - Name: ses:GetContactList
   - Name: ses:GetCustomVerificationEmailTemplate
   - Name: ses:GetDedicatedIp
   - Name: ses:GetDedicatedIps
   - Name: ses:GetDeliverabilityDashboardOptions
   - Name: ses:GetDeliverabilityTestReport
+  - Name: ses:GetDomainDeliverabilityCampaign
   - Name: ses:GetDomainStatisticsReport
   - Name: ses:GetEmailIdentity
+  - Name: ses:GetEmailIdentityPolicies
+  - Name: ses:GetEmailTemplate
   - Name: ses:GetIdentityDkimAttributes
   - Name: ses:GetIdentityMailFromDomainAttributes
   - Name: ses:GetIdentityNotificationAttributes
   - Name: ses:GetIdentityPolicies
   - Name: ses:GetIdentityVerificationAttributes
+  - Name: ses:GetImportJob
   - Name: ses:GetSendQuota
   - Name: ses:GetSendStatistics
+  - Name: ses:GetSuppressedDestination
   - Name: ses:GetTemplate
   - Name: ses:ListConfigurationSets
+  - Name: ses:ListContactLists
+  - Name: ses:ListContacts
   - Name: ses:ListCustomVerificationEmailTemplates
   - Name: ses:ListDedicatedIpPools
   - Name: ses:ListDeliverabilityTestReports
+  - Name: ses:ListDomainDeliverabilityCampaigns
   - Name: ses:ListEmailIdentities
+  - Name: ses:ListEmailTemplates
   - Name: ses:ListIdentities
   - Name: ses:ListIdentityPolicies
+  - Name: ses:ListImportJobs
   - Name: ses:ListReceiptFilters
   - Name: ses:ListReceiptRuleSets
+  - Name: ses:ListSuppressedDestinations
   - Name: ses:ListTagsForResource
   - Name: ses:ListTemplates
   - Name: ses:ListVerifiedEmailAddresses
   - Name: ses:PutAccountDedicatedIpWarmupAttributes
+  - Name: ses:PutAccountDetails
   - Name: ses:PutAccountSendingAttributes
+  - Name: ses:PutAccountSuppressionAttributes
   - Name: ses:PutConfigurationSetDeliveryOptions
   - Name: ses:PutConfigurationSetReputationOptions
   - Name: ses:PutConfigurationSetSendingOptions
+  - Name: ses:PutConfigurationSetSuppressionOptions
   - Name: ses:PutConfigurationSetTrackingOptions
   - Name: ses:PutDedicatedIpInPool
   - Name: ses:PutDedicatedIpWarmupAttributes
   - Name: ses:PutDeliverabilityDashboardOption
+  - Name: ses:PutEmailIdentityConfigurationSetAttributes
   - Name: ses:PutEmailIdentityDkimAttributes
+  - Name: ses:PutEmailIdentityDkimSigningAttributes
   - Name: ses:PutEmailIdentityFeedbackAttributes
   - Name: ses:PutEmailIdentityMailFromAttributes
   - Name: ses:PutIdentityPolicy
+  - Name: ses:PutSuppressedDestination
   - Name: ses:ReorderReceiptRuleSet
   - Name: ses:SendBounce
+  - Name: ses:SendBulkEmail
   - Name: ses:SendBulkTemplatedEmail
   - Name: ses:SendCustomVerificationEmail
   - Name: ses:SendEmail
@@ -88,6 +118,7 @@ Actions:
   - Name: ses:SetIdentityNotificationTopic
   - Name: ses:SetReceiptRulePosition
   - Name: ses:TagResource
+  - Name: ses:TestRenderEmailTemplate
   - Name: ses:TestRenderTemplate
   - Name: ses:UntagResource
   - Name: ses:UpdateAccountSendingEnabled
@@ -95,47 +126,14 @@ Actions:
   - Name: ses:UpdateConfigurationSetReputationMetricsEnabled
   - Name: ses:UpdateConfigurationSetSendingEnabled
   - Name: ses:UpdateConfigurationSetTrackingOptions
+  - Name: ses:UpdateContact
+  - Name: ses:UpdateContactList
   - Name: ses:UpdateCustomVerificationEmailTemplate
+  - Name: ses:UpdateEmailIdentityPolicy
+  - Name: ses:UpdateEmailTemplate
   - Name: ses:UpdateReceiptRule
   - Name: ses:UpdateTemplate
   - Name: ses:VerifyDomainDkim
   - Name: ses:VerifyDomainIdentity
   - Name: ses:VerifyEmailAddress
   - Name: ses:VerifyEmailIdentity
-
-  # APIs without an IAM action
-  - Name: ses:CreateContact
-  - Name: ses:CreateContactList
-  - Name: ses:CreateEmailIdentityPolicy
-  - Name: ses:CreateEmailTemplate
-  - Name: ses:CreateImportJob
-  - Name: ses:DeleteContact
-  - Name: ses:DeleteContactList
-  - Name: ses:DeleteEmailIdentityPolicy
-  - Name: ses:DeleteEmailTemplate
-  - Name: ses:DeleteSuppressedDestination
-  - Name: ses:GetContact
-  - Name: ses:GetContactList
-  - Name: ses:GetDomainDeliverabilityCampaign
-  - Name: ses:GetEmailIdentityPolicies
-  - Name: ses:GetEmailTemplate
-  - Name: ses:GetImportJob
-  - Name: ses:GetSuppressedDestination
-  - Name: ses:ListContactLists
-  - Name: ses:ListContacts
-  - Name: ses:ListDomainDeliverabilityCampaigns
-  - Name: ses:ListEmailTemplates
-  - Name: ses:ListImportJobs
-  - Name: ses:ListSuppressedDestinations
-  - Name: ses:PutAccountDetails
-  - Name: ses:PutAccountSuppressionAttributes
-  - Name: ses:PutConfigurationSetSuppressionOptions
-  - Name: ses:PutEmailIdentityConfigurationSetAttributes
-  - Name: ses:PutEmailIdentityDkimSigningAttributes
-  - Name: ses:PutSuppressedDestination
-  - Name: ses:SendBulkEmail
-  - Name: ses:TestRenderEmailTemplate
-  - Name: ses:UpdateContact
-  - Name: ses:UpdateContactList
-  - Name: ses:UpdateEmailIdentityPolicy
-  - Name: ses:UpdateEmailTemplate

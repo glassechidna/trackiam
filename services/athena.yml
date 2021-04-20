@@ -3,13 +3,16 @@ Actions:
   - Name: athena:BatchGetQueryExecution
   - Name: athena:CreateDataCatalog
   - Name: athena:CreateNamedQuery
+  - Name: athena:CreatePreparedStatement
   - Name: athena:CreateWorkGroup
   - Name: athena:DeleteDataCatalog
   - Name: athena:DeleteNamedQuery
+  - Name: athena:DeletePreparedStatement
   - Name: athena:DeleteWorkGroup
   - Name: athena:GetDataCatalog
   - Name: athena:GetDatabase
   - Name: athena:GetNamedQuery
+  - Name: athena:GetPreparedStatement
   - Name: athena:GetQueryExecution
   - Name: athena:GetQueryResults
   - Name: athena:GetTableMetadata
@@ -18,6 +21,7 @@ Actions:
   - Name: athena:ListDatabases
   - Name: athena:ListEngineVersions
   - Name: athena:ListNamedQueries
+  - Name: athena:ListPreparedStatements
   - Name: athena:ListQueryExecutions
   - Name: athena:ListTableMetadata
   - Name: athena:ListTagsForResource
@@ -27,14 +31,8 @@ Actions:
   - Name: athena:TagResource
   - Name: athena:UntagResource
   - Name: athena:UpdateDataCatalog
+  - Name: athena:UpdatePreparedStatement
   - Name: athena:UpdateWorkGroup
 
   # actions with no corresponding API
   - Name: athena:GetQueryResultsStream
-
-  # APIs without an IAM action
-  - Name: athena:CreatePreparedStatement
-  - Name: athena:DeletePreparedStatement
-  - Name: athena:GetPreparedStatement
-  - Name: athena:ListPreparedStatements
-  - Name: athena:UpdatePreparedStatement

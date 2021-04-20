@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSImageBuilderFullAccess",
   "CreateDate": "2019-12-20T18:25:12Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4EO4HCSNZH",
   "PolicyName": "AWSImageBuilderFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-12-20T18:25:12Z",
+    "CreateDate": "2021-04-13T17:33:42Z",
     "Document": {
       "Statement": [
         {
@@ -36,9 +36,12 @@
         {
           "Action": [
             "ec2:DescribeImages",
+            "ec2:DescribeInstanceTypeOfferings",
             "ec2:DescribeKeyPairs",
+            "ec2:DescribeLaunchTemplates",
             "ec2:DescribeRegions",
             "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSnapshots",
             "ec2:DescribeSubnets",
             "ec2:DescribeVolumes",
             "ec2:DescribeVpcs"
@@ -116,7 +119,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-12-20T18:25:12Z"
+  "UpdateDate": "2021-04-13T17:33:42Z"
 }

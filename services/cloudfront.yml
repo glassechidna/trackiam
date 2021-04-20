@@ -6,8 +6,11 @@ Actions:
   - Name: cloudfront:CreateFieldLevelEncryptionConfig
   - Name: cloudfront:CreateFieldLevelEncryptionProfile
   - Name: cloudfront:CreateInvalidation
+  - Name: cloudfront:CreateKeyGroup
+  - Name: cloudfront:CreateMonitoringSubscription
   - Name: cloudfront:CreateOriginRequestPolicy
   - Name: cloudfront:CreatePublicKey
+  - Name: cloudfront:CreateRealtimeLogConfig
   - Name: cloudfront:CreateStreamingDistribution
   - Name: cloudfront:CreateStreamingDistributionWithTags
   - Name: cloudfront:DeleteCachePolicy
@@ -15,8 +18,11 @@ Actions:
   - Name: cloudfront:DeleteDistribution
   - Name: cloudfront:DeleteFieldLevelEncryptionConfig
   - Name: cloudfront:DeleteFieldLevelEncryptionProfile
+  - Name: cloudfront:DeleteKeyGroup
+  - Name: cloudfront:DeleteMonitoringSubscription
   - Name: cloudfront:DeleteOriginRequestPolicy
   - Name: cloudfront:DeletePublicKey
+  - Name: cloudfront:DeleteRealtimeLogConfig
   - Name: cloudfront:DeleteStreamingDistribution
   - Name: cloudfront:GetCachePolicy
   - Name: cloudfront:GetCachePolicyConfig
@@ -29,23 +35,31 @@ Actions:
   - Name: cloudfront:GetFieldLevelEncryptionProfile
   - Name: cloudfront:GetFieldLevelEncryptionProfileConfig
   - Name: cloudfront:GetInvalidation
+  - Name: cloudfront:GetKeyGroup
+  - Name: cloudfront:GetKeyGroupConfig
+  - Name: cloudfront:GetMonitoringSubscription
   - Name: cloudfront:GetOriginRequestPolicy
   - Name: cloudfront:GetOriginRequestPolicyConfig
   - Name: cloudfront:GetPublicKey
   - Name: cloudfront:GetPublicKeyConfig
+  - Name: cloudfront:GetRealtimeLogConfig
   - Name: cloudfront:GetStreamingDistribution
   - Name: cloudfront:GetStreamingDistributionConfig
   - Name: cloudfront:ListCachePolicies
   - Name: cloudfront:ListCloudFrontOriginAccessIdentities
   - Name: cloudfront:ListDistributions
   - Name: cloudfront:ListDistributionsByCachePolicyId
+  - Name: cloudfront:ListDistributionsByKeyGroup
   - Name: cloudfront:ListDistributionsByOriginRequestPolicyId
+  - Name: cloudfront:ListDistributionsByRealtimeLogConfig
   - Name: cloudfront:ListDistributionsByWebACLId
   - Name: cloudfront:ListFieldLevelEncryptionConfigs
   - Name: cloudfront:ListFieldLevelEncryptionProfiles
   - Name: cloudfront:ListInvalidations
+  - Name: cloudfront:ListKeyGroups
   - Name: cloudfront:ListOriginRequestPolicies
   - Name: cloudfront:ListPublicKeys
+  - Name: cloudfront:ListRealtimeLogConfigs
   - Name: cloudfront:ListStreamingDistributions
   - Name: cloudfront:ListTagsForResource
   - Name: cloudfront:TagResource
@@ -55,24 +69,8 @@ Actions:
   - Name: cloudfront:UpdateDistribution
   - Name: cloudfront:UpdateFieldLevelEncryptionConfig
   - Name: cloudfront:UpdateFieldLevelEncryptionProfile
+  - Name: cloudfront:UpdateKeyGroup
   - Name: cloudfront:UpdateOriginRequestPolicy
   - Name: cloudfront:UpdatePublicKey
-  - Name: cloudfront:UpdateStreamingDistribution
-
-  # APIs without an IAM action
-  - Name: cloudfront:CreateKeyGroup
-  - Name: cloudfront:CreateMonitoringSubscription
-  - Name: cloudfront:CreateRealtimeLogConfig
-  - Name: cloudfront:DeleteKeyGroup
-  - Name: cloudfront:DeleteMonitoringSubscription
-  - Name: cloudfront:DeleteRealtimeLogConfig
-  - Name: cloudfront:GetKeyGroup
-  - Name: cloudfront:GetKeyGroupConfig
-  - Name: cloudfront:GetMonitoringSubscription
-  - Name: cloudfront:GetRealtimeLogConfig
-  - Name: cloudfront:ListDistributionsByKeyGroup
-  - Name: cloudfront:ListDistributionsByRealtimeLogConfig
-  - Name: cloudfront:ListKeyGroups
-  - Name: cloudfront:ListRealtimeLogConfigs
-  - Name: cloudfront:UpdateKeyGroup
   - Name: cloudfront:UpdateRealtimeLogConfig
+  - Name: cloudfront:UpdateStreamingDistribution

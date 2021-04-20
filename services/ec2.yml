@@ -287,6 +287,7 @@ Actions:
   - Name: ec2:DetachVpnGateway
   - Name: ec2:DisableEbsEncryptionByDefault
   - Name: ec2:DisableFastSnapshotRestores
+  - Name: ec2:DisableSerialConsoleAccess
   - Name: ec2:DisableTransitGatewayRouteTablePropagation
   - Name: ec2:DisableVgwRoutePropagation
   - Name: ec2:DisableVpcClassicLink
@@ -302,6 +303,7 @@ Actions:
   - Name: ec2:DisassociateVpcCidrBlock
   - Name: ec2:EnableEbsEncryptionByDefault
   - Name: ec2:EnableFastSnapshotRestores
+  - Name: ec2:EnableSerialConsoleAccess
   - Name: ec2:EnableTransitGatewayRouteTablePropagation
   - Name: ec2:EnableVgwRoutePropagation
   - Name: ec2:EnableVolumeIO
@@ -327,6 +329,7 @@ Actions:
   - Name: ec2:GetManagedPrefixListEntries
   - Name: ec2:GetPasswordData
   - Name: ec2:GetReservedInstancesExchangeQuote
+  - Name: ec2:GetSerialConsoleAccessStatus
   - Name: ec2:GetTransitGatewayAttachmentPropagations
   - Name: ec2:GetTransitGatewayMulticastDomainAssociations
   - Name: ec2:GetTransitGatewayPrefixListReferences
@@ -439,3 +442,11 @@ Actions:
   - Name: ec2:UpdateSecurityGroupRuleDescriptionsEgress
   - Name: ec2:UpdateSecurityGroupRuleDescriptionsIngress
   - Name: ec2:WithdrawByoipCidr
+
+  # APIs without an IAM action
+  - Name: ec2:CreateReplaceRootVolumeTask
+  - Name: ec2:CreateRestoreImageTask
+  - Name: ec2:CreateStoreImageTask
+  - Name: ec2:DescribeReplaceRootVolumeTasks
+  - Name: ec2:DescribeStoreImageTasks
+  - Name: ec2:GetFlowLogsIntegrationTemplate

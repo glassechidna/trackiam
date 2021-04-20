@@ -1,10 +1,13 @@
 Actions:
   - Name: s3:AbortMultipartUpload
   - Name: s3:CreateAccessPoint
+  - Name: s3:CreateAccessPointForObjectLambda
   - Name: s3:CreateBucket
   - Name: s3:CreateJob
   - Name: s3:DeleteAccessPoint
+  - Name: s3:DeleteAccessPointForObjectLambda
   - Name: s3:DeleteAccessPointPolicy
+  - Name: s3:DeleteAccessPointPolicyForObjectLambda
   - Name: s3:DeleteBucket
   - Name: s3:DeleteBucketOwnershipControls
   - Name: s3:DeleteBucketPolicy
@@ -16,8 +19,12 @@ Actions:
   - Name: s3:DeleteStorageLensConfigurationTagging
   - Name: s3:DescribeJob
   - Name: s3:GetAccessPoint
+  - Name: s3:GetAccessPointConfigurationForObjectLambda
+  - Name: s3:GetAccessPointForObjectLambda
   - Name: s3:GetAccessPointPolicy
+  - Name: s3:GetAccessPointPolicyForObjectLambda
   - Name: s3:GetAccessPointPolicyStatus
+  - Name: s3:GetAccessPointPolicyStatusForObjectLambda
   - Name: s3:GetBucketAcl
   - Name: s3:GetBucketCORS
   - Name: s3:GetBucketLocation
@@ -40,9 +47,12 @@ Actions:
   - Name: s3:GetStorageLensConfiguration
   - Name: s3:GetStorageLensConfigurationTagging
   - Name: s3:ListAccessPoints
+  - Name: s3:ListAccessPointsForObjectLambda
   - Name: s3:ListJobs
   - Name: s3:ListStorageLensConfigurations
+  - Name: s3:PutAccessPointConfigurationForObjectLambda
   - Name: s3:PutAccessPointPolicy
+  - Name: s3:PutAccessPointPolicyForObjectLambda
   - Name: s3:PutBucketAcl
   - Name: s3:PutBucketCORS
   - Name: s3:PutBucketLogging
@@ -166,3 +176,4 @@ Actions:
   - Name: s3:SelectObjectContent
   - Name: s3:UploadPart
   - Name: s3:UploadPartCopy
+  - Name: s3:WriteGetObjectResponse
