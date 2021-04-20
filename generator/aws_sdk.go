@@ -14,7 +14,7 @@ import (
 func apiDocs() ([]*apiDoc, error) {
 	output := []*apiDoc{}
 
-	resp, err := http.Get("https://github.com/aws/aws-sdk-go/archive/master.zip")
+	resp, err := http.Get("https://github.com/aws/aws-sdk-go/archive/main.zip")
 	if err != nil {
 		return nil, errors.WithStack(err)
 	}
