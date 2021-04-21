@@ -1,16 +1,20 @@
 Actions:
+  - Name: appsync:CreateApiCache
   - Name: appsync:CreateApiKey
   - Name: appsync:CreateDataSource
   - Name: appsync:CreateFunction
   - Name: appsync:CreateGraphqlApi
   - Name: appsync:CreateResolver
   - Name: appsync:CreateType
+  - Name: appsync:DeleteApiCache
   - Name: appsync:DeleteApiKey
   - Name: appsync:DeleteDataSource
   - Name: appsync:DeleteFunction
   - Name: appsync:DeleteGraphqlApi
   - Name: appsync:DeleteResolver
   - Name: appsync:DeleteType
+  - Name: appsync:FlushApiCache
+  - Name: appsync:GetApiCache
   - Name: appsync:GetDataSource
   - Name: appsync:GetFunction
   - Name: appsync:GetGraphqlApi
@@ -29,6 +33,7 @@ Actions:
   - Name: appsync:StartSchemaCreation
   - Name: appsync:TagResource
   - Name: appsync:UntagResource
+  - Name: appsync:UpdateApiCache
   - Name: appsync:UpdateApiKey
   - Name: appsync:UpdateDataSource
   - Name: appsync:UpdateFunction
@@ -39,10 +44,3 @@ Actions:
   # actions with no corresponding API
   - Name: appsync:GraphQL
   - Name: appsync:SetWebACL
-
-  # APIs without an IAM action
-  - Name: appsync:CreateApiCache
-  - Name: appsync:DeleteApiCache
-  - Name: appsync:FlushApiCache
-  - Name: appsync:GetApiCache
-  - Name: appsync:UpdateApiCache

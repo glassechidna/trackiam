@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 267
-* Unique actions: 10505
+* Unique actions: 10509
 * Managed policies: 809
 
 Most common managed policy name prefixes:
@@ -53,7 +53,7 @@ The following table summarises the AWS APIs.
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
 | [`connect`](services/connect.yml) | 94 | 6 | 1 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
-| [`redshift`](services/redshift.yml) | 89 | 11 | 18 |
+| [`redshift`](services/redshift.yml) | 89 | 15 | 18 |
 | [`storagegateway`](services/storagegateway.yml) | 89 | 0 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
@@ -101,6 +101,7 @@ The following table summarises the AWS APIs.
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`codebuild`](services/codebuild.yml) | 43 | 1 | 8 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
+| [`appsync`](services/appsync.yml) | 41 | 0 | 2 |
 | [`wafv2`](services/wafv2.yml) | 40 | 0 | 2 |
 | [`license-manager`](services/license-manager.yml) | 40 | 0 | 0 |
 | [`logs`](services/logs.yml) | 39 | 3 | 5 |
@@ -111,7 +112,6 @@ The following table summarises the AWS APIs.
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
-| [`appsync`](services/appsync.yml) | 36 | 5 | 2 |
 | [`cloudwatch`](services/cloudwatch.yml) | 36 | 0 | 0 |
 | [`geo`](services/geo.yml) | 35 | 0 | 3 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
@@ -310,10 +310,10 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1522 |
 | `Get` | 1379 |
-| `Describe` | 1281 |
-| `Delete` | 1231 |
+| `Describe` | 1282 |
+| `Delete` | 1232 |
 | `Create` | 1133 |
-| `Update` | 899 |
+| `Update` | 900 |
 | `Put` | 308 |
 | `Start` | 193 |
 | `Tag` | 163 |
