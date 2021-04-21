@@ -69,13 +69,13 @@ The following table summarises the AWS APIs.
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
 | [`comprehend`](services/comprehend.yml) | 61 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 60 | 0 | 0 |
+| [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
 | [`ds`](services/ds.yml) | 57 | 5 | 6 |
 | [`autoscaling`](services/autoscaling.yml) | 57 | 3 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`frauddetector`](services/frauddetector.yml) | 57 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 56 | 3 | 0 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
-| [`guardduty`](services/guardduty.yml) | 55 | 3 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 55 | 2 | 0 |
 | [`medialive`](services/medialive.yml) | 55 | 1 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 54 | 1 | 3 |
