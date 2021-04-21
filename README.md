@@ -13,13 +13,13 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 267
 * Unique actions: 10509
-* Managed policies: 809
+* Managed policies: 810
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 232 |
+| `arn:aws:iam::aws:policy/AWS*` | 233 |
 | `arn:aws:iam::aws:policy/Amazon*` | 214 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 153 |
 | `arn:aws:iam::aws:policy/service-role/*` | 123 |
@@ -239,6 +239,7 @@ The following table summarises the AWS APIs.
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
 | [`mediatailor`](services/mediatailor.yml) | 7 | 24 | 0 |
 | [`macie`](services/macie.yml) | 7 | 0 | 0 |
+| [`elastic-inference`](services/elastic-inference.yml) | 6 | 0 | 1 |
 | [`textract`](services/textract.yml) | 6 | 0 | 0 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
@@ -257,7 +258,6 @@ The following table summarises the AWS APIs.
 | [`execute-api`](services/execute-api.yml) | 0 | 234 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
-| [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 1 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
