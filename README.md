@@ -108,6 +108,7 @@ The following table summarises the AWS APIs.
 | [`databrew`](services/databrew.yml) | 39 | 0 | 0 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`codepipeline`](services/codepipeline.yml) | 37 | 2 | 0 |
+| [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 36 | 5 | 2 |
@@ -117,7 +118,6 @@ The following table summarises the AWS APIs.
 | [`networkmanager`](services/networkmanager.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 35 | 0 | 0 |
-| [`swf`](services/swf.yml) | 34 | 3 | 12 |
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
 | [`ecr`](services/ecr.yml) | 34 | 0 | 1 |
 | [`athena`](services/athena.yml) | 34 | 0 | 1 |

@@ -32,6 +32,9 @@ Actions:
   - Name: swf:StartWorkflowExecution
   - Name: swf:TagResource
   - Name: swf:TerminateWorkflowExecution
+  - Name: swf:UndeprecateActivityType
+  - Name: swf:UndeprecateDomain
+  - Name: swf:UndeprecateWorkflowType
   - Name: swf:UntagResource
 
   # actions with no corresponding API
@@ -47,8 +50,3 @@ Actions:
   - Name: swf:SignalExternalWorkflowExecution
   - Name: swf:StartChildWorkflowExecution
   - Name: swf:StartTimer
-
-  # APIs without an IAM action
-  - Name: swf:UndeprecateActivityType
-  - Name: swf:UndeprecateDomain
-  - Name: swf:UndeprecateWorkflowType
