@@ -82,6 +82,7 @@ The following table summarises the AWS APIs.
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`macie2`](services/macie2.yml) | 51 | 4 | 0 |
 | [`dms`](services/dms.yml) | 51 | 4 | 0 |
+| [`securityhub`](services/securityhub.yml) | 51 | 0 | 7 |
 | [`backup`](services/backup.yml) | 51 | 0 | 2 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 51 | 0 | 0 |
@@ -92,7 +93,6 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 49 | 3 | 2 |
 | [`imagebuilder`](services/imagebuilder.yml) | 49 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 10 |
-| [`securityhub`](services/securityhub.yml) | 48 | 3 | 7 |
 | [`personalize`](services/personalize.yml) | 48 | 0 | 0 |
 | [`appstream`](services/appstream.yml) | 47 | 1 | 1 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |

@@ -1,4 +1,5 @@
 Actions:
+  - Name: securityhub:AcceptAdministratorInvitation
   - Name: securityhub:AcceptInvitation
   - Name: securityhub:BatchDisableStandards
   - Name: securityhub:BatchEnableStandards
@@ -21,11 +22,13 @@ Actions:
   - Name: securityhub:DisableImportFindingsForProduct
   - Name: securityhub:DisableOrganizationAdminAccount
   - Name: securityhub:DisableSecurityHub
+  - Name: securityhub:DisassociateFromAdministratorAccount
   - Name: securityhub:DisassociateFromMasterAccount
   - Name: securityhub:DisassociateMembers
   - Name: securityhub:EnableImportFindingsForProduct
   - Name: securityhub:EnableOrganizationAdminAccount
   - Name: securityhub:EnableSecurityHub
+  - Name: securityhub:GetAdministratorAccount
   - Name: securityhub:GetEnabledStandards
   - Name: securityhub:GetFindings
   - Name: securityhub:GetInsightResults
@@ -56,8 +59,3 @@ Actions:
   - Name: securityhub:GetUsage
   - Name: securityhub:SendFindingEvents
   - Name: securityhub:SendInsightEvents
-
-  # APIs without an IAM action
-  - Name: securityhub:AcceptAdministratorInvitation
-  - Name: securityhub:DisassociateFromAdministratorAccount
-  - Name: securityhub:GetAdministratorAccount
