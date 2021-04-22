@@ -171,6 +171,7 @@ The following table summarises the AWS APIs.
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 1 |
+| [`snowball`](services/snowball.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 22 | 0 | 0 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
@@ -191,7 +192,6 @@ The following table summarises the AWS APIs.
 | [`fsx`](services/fsx.yml) | 18 | 0 | 4 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
-| [`snowball`](services/snowball.yml) | 17 | 5 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 17 | 2 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`signer`](services/signer.yml) | 17 | 0 | 0 |
