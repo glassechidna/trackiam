@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 267
-* Unique actions: 10509
+* Unique actions: 10512
 * Managed policies: 810
 
 Most common managed policy name prefixes:
@@ -92,7 +92,7 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 49 | 3 | 2 |
 | [`imagebuilder`](services/imagebuilder.yml) | 49 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 10 |
-| [`securityhub`](services/securityhub.yml) | 48 | 0 | 7 |
+| [`securityhub`](services/securityhub.yml) | 48 | 3 | 7 |
 | [`personalize`](services/personalize.yml) | 48 | 0 | 0 |
 | [`appstream`](services/appstream.yml) | 47 | 1 | 1 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
@@ -100,11 +100,11 @@ The following table summarises the AWS APIs.
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`codebuild`](services/codebuild.yml) | 43 | 1 | 8 |
+| [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`appsync`](services/appsync.yml) | 41 | 0 | 2 |
 | [`wafv2`](services/wafv2.yml) | 40 | 0 | 2 |
 | [`license-manager`](services/license-manager.yml) | 40 | 0 | 0 |
-| [`logs`](services/logs.yml) | 39 | 3 | 5 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 39 | 0 | 0 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
@@ -142,6 +142,7 @@ The following table summarises the AWS APIs.
 | [`kendra`](services/kendra.yml) | 29 | 0 | 0 |
 | [`es`](services/es.yml) | 28 | 12 | 9 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
+| [`route53domains`](services/route53domains.yml) | 28 | 0 | 0 |
 | [`profile`](services/profile.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
@@ -162,7 +163,6 @@ The following table summarises the AWS APIs.
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
 | [`ram`](services/ram.yml) | 24 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 24 | 0 | 0 |
-| [`route53domains`](services/route53domains.yml) | 23 | 5 | 0 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 23 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 0 | 0 |
@@ -309,7 +309,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1522 |
-| `Get` | 1379 |
+| `Get` | 1380 |
 | `Describe` | 1282 |
 | `Delete` | 1232 |
 | `Create` | 1133 |

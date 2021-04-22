@@ -8,6 +8,7 @@ Actions:
   - Name: logs:DeleteLogGroup
   - Name: logs:DeleteLogStream
   - Name: logs:DeleteMetricFilter
+  - Name: logs:DeleteQueryDefinition
   - Name: logs:DeleteResourcePolicy
   - Name: logs:DeleteRetentionPolicy
   - Name: logs:DeleteSubscriptionFilter
@@ -17,6 +18,7 @@ Actions:
   - Name: logs:DescribeLogStreams
   - Name: logs:DescribeMetricFilters
   - Name: logs:DescribeQueries
+  - Name: logs:DescribeQueryDefinitions
   - Name: logs:DescribeResourcePolicies
   - Name: logs:DescribeSubscriptionFilters
   - Name: logs:DisassociateKmsKey
@@ -30,6 +32,7 @@ Actions:
   - Name: logs:PutDestinationPolicy
   - Name: logs:PutLogEvents
   - Name: logs:PutMetricFilter
+  - Name: logs:PutQueryDefinition
   - Name: logs:PutResourcePolicy
   - Name: logs:PutRetentionPolicy
   - Name: logs:PutSubscriptionFilter
@@ -45,8 +48,3 @@ Actions:
   - Name: logs:GetLogDelivery
   - Name: logs:ListLogDeliveries
   - Name: logs:UpdateLogDelivery
-
-  # APIs without an IAM action
-  - Name: logs:DeleteQueryDefinition
-  - Name: logs:DescribeQueryDefinitions
-  - Name: logs:PutQueryDefinition
