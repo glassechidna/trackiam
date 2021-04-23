@@ -78,7 +78,7 @@ The following table summarises the AWS APIs.
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
 | [`iotsitewise`](services/iotsitewise.yml) | 55 | 2 | 0 |
 | [`medialive`](services/medialive.yml) | 55 | 1 | 0 |
-| [`cloudformation`](services/cloudformation.yml) | 54 | 1 | 3 |
+| [`cloudformation`](services/cloudformation.yml) | 55 | 0 | 3 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`macie2`](services/macie2.yml) | 51 | 4 | 0 |
 | [`dms`](services/dms.yml) | 51 | 4 | 0 |
