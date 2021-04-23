@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSOpsWorksCMServiceRole",
   "CreateDate": "2016-11-24T09:49:46Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJ6I6MPGJE62URSHCO",
   "PolicyName": "AWSOpsWorksCMServiceRole",
   "PolicyVersion": {
-    "CreateDate": "2021-01-06T15:08:35Z",
+    "CreateDate": "2021-04-23T17:32:13Z",
     "Document": {
       "Statement": [
         {
@@ -147,7 +147,7 @@
             "secretsmanager:UpdateSecret"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:secretsmanager:*:*:aws-opsworks-cm-secrets-*"
+          "Resource": "arn:aws:secretsmanager:*:*:opsworks-cm!aws-opsworks-cm-secrets-*"
         },
         {
           "Action": [
@@ -185,7 +185,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2021-01-06T15:08:35Z"
+  "UpdateDate": "2021-04-23T17:32:13Z"
 }
