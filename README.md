@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 267
-* Unique actions: 10512
+* Unique actions: 10514
 * Managed policies: 810
 
 Most common managed policy name prefixes:
@@ -183,11 +183,11 @@ The following table summarises the AWS APIs.
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
 | [`secretsmanager`](services/secretsmanager.yml) | 19 | 3 | 0 |
 | [`lookoutvision`](services/lookoutvision.yml) | 19 | 0 | 3 |
+| [`devops-guru`](services/devops-guru.yml) | 19 | 0 | 2 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
 | [`batch`](services/batch.yml) | 19 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 18 | 1 | 0 |
-| [`devops-guru`](services/devops-guru.yml) | 18 | 1 | 0 |
 | [`appflow`](services/appflow.yml) | 18 | 0 | 5 |
 | [`fsx`](services/fsx.yml) | 18 | 0 | 4 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
@@ -309,13 +309,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1522 |
-| `Get` | 1380 |
+| `Get` | 1381 |
 | `Describe` | 1282 |
 | `Delete` | 1232 |
 | `Create` | 1133 |
 | `Update` | 900 |
 | `Put` | 308 |
-| `Start` | 193 |
+| `Start` | 194 |
 | `Tag` | 163 |
 | `Untag` | 161 |
 

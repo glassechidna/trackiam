@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDevOpsGuruReadOnlyAccess",
   "CreateDate": "2020-12-01T16:34:40Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JK4QO3QK6",
   "PolicyName": "AmazonDevOpsGuruReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-12-01T16:34:40Z",
+    "CreateDate": "2021-04-23T18:44:36Z",
     "Document": {
       "Statement": [
         {
@@ -35,13 +35,15 @@
             "devops-guru:DescribeInsight",
             "devops-guru:DescribeResourceCollectionHealth",
             "devops-guru:DescribeServiceIntegration",
+            "devops-guru:GetCostEstimation",
             "devops-guru:GetResourceCollection",
             "devops-guru:ListAnomaliesForInsight",
             "devops-guru:ListEvents",
             "devops-guru:ListInsights",
             "devops-guru:ListNotificationChannels",
             "devops-guru:ListRecommendations",
-            "devops-guru:SearchInsights"
+            "devops-guru:SearchInsights",
+            "devops-guru:StartCostEstimation"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -51,7 +53,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-12-01T16:34:40Z"
+  "UpdateDate": "2021-04-23T18:44:36Z"
 }

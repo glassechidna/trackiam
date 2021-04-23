@@ -3,6 +3,7 @@ Actions:
   - Name: devops-guru:DescribeAccountHealth
   - Name: devops-guru:DescribeAccountOverview
   - Name: devops-guru:DescribeAnomaly
+  - Name: devops-guru:DescribeFeedback
   - Name: devops-guru:DescribeInsight
   - Name: devops-guru:DescribeResourceCollectionHealth
   - Name: devops-guru:DescribeServiceIntegration
@@ -18,5 +19,6 @@ Actions:
   - Name: devops-guru:UpdateResourceCollection
   - Name: devops-guru:UpdateServiceIntegration
 
-  # APIs without an IAM action
-  - Name: devops-guru:DescribeFeedback
+  # actions with no corresponding API
+  - Name: devops-guru:GetCostEstimation
+  - Name: devops-guru:StartCostEstimation
