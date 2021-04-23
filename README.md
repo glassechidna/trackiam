@@ -188,11 +188,11 @@ The following table summarises the AWS APIs.
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
 | [`batch`](services/batch.yml) | 19 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 18 | 1 | 0 |
+| [`mediapackage`](services/mediapackage.yml) | 18 | 1 | 0 |
 | [`appflow`](services/appflow.yml) | 18 | 0 | 5 |
 | [`fsx`](services/fsx.yml) | 18 | 0 | 4 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
-| [`mediapackage`](services/mediapackage.yml) | 17 | 2 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`signer`](services/signer.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
