@@ -52,8 +52,8 @@ The following table summarises the AWS APIs.
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 99 | 0 | 19 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
+| [`redshift`](services/redshift.yml) | 93 | 11 | 18 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
-| [`redshift`](services/redshift.yml) | 89 | 15 | 18 |
 | [`storagegateway`](services/storagegateway.yml) | 89 | 0 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
