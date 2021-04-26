@@ -12,6 +12,7 @@ Actions:
   - Name: rds:CopyDBParameterGroup
   - Name: rds:CopyDBSnapshot
   - Name: rds:CopyOptionGroup
+  - Name: rds:CreateCustomAvailabilityZone
   - Name: rds:CreateDBCluster
   - Name: rds:CreateDBClusterEndpoint
   - Name: rds:CreateDBClusterParameterGroup
@@ -27,6 +28,7 @@ Actions:
   - Name: rds:CreateEventSubscription
   - Name: rds:CreateGlobalCluster
   - Name: rds:CreateOptionGroup
+  - Name: rds:DeleteCustomAvailabilityZone
   - Name: rds:DeleteDBCluster
   - Name: rds:DeleteDBClusterEndpoint
   - Name: rds:DeleteDBClusterParameterGroup
@@ -41,10 +43,12 @@ Actions:
   - Name: rds:DeleteDBSubnetGroup
   - Name: rds:DeleteEventSubscription
   - Name: rds:DeleteGlobalCluster
+  - Name: rds:DeleteInstallationMedia
   - Name: rds:DeleteOptionGroup
   - Name: rds:DeregisterDBProxyTargets
   - Name: rds:DescribeAccountAttributes
   - Name: rds:DescribeCertificates
+  - Name: rds:DescribeCustomAvailabilityZones
   - Name: rds:DescribeDBClusterBacktracks
   - Name: rds:DescribeDBClusterEndpoints
   - Name: rds:DescribeDBClusterParameterGroups
@@ -73,6 +77,7 @@ Actions:
   - Name: rds:DescribeEvents
   - Name: rds:DescribeExportTasks
   - Name: rds:DescribeGlobalClusters
+  - Name: rds:DescribeInstallationMedia
   - Name: rds:DescribeOptionGroupOptions
   - Name: rds:DescribeOptionGroups
   - Name: rds:DescribeOrderableDBInstanceOptions
@@ -84,7 +89,9 @@ Actions:
   - Name: rds:DownloadDBLogFilePortion
   - Name: rds:FailoverDBCluster
   - Name: rds:FailoverGlobalCluster
+  - Name: rds:ImportInstallationMedia
   - Name: rds:ListTagsForResource
+  - Name: rds:ModifyCertificates
   - Name: rds:ModifyCurrentDBClusterCapacity
   - Name: rds:ModifyDBCluster
   - Name: rds:ModifyDBClusterEndpoint
@@ -123,21 +130,12 @@ Actions:
   - Name: rds:StartActivityStream
   - Name: rds:StartDBCluster
   - Name: rds:StartDBInstance
+  - Name: rds:StartDBInstanceAutomatedBackupsReplication
   - Name: rds:StartExportTask
   - Name: rds:StopActivityStream
   - Name: rds:StopDBCluster
   - Name: rds:StopDBInstance
+  - Name: rds:StopDBInstanceAutomatedBackupsReplication
 
   # actions with no corresponding API
   - Name: rds:CrossRegionCommunication
-
-  # APIs without an IAM action
-  - Name: rds:CreateCustomAvailabilityZone
-  - Name: rds:DeleteCustomAvailabilityZone
-  - Name: rds:DeleteInstallationMedia
-  - Name: rds:DescribeCustomAvailabilityZones
-  - Name: rds:DescribeInstallationMedia
-  - Name: rds:ImportInstallationMedia
-  - Name: rds:ModifyCertificates
-  - Name: rds:StartDBInstanceAutomatedBackupsReplication
-  - Name: rds:StopDBInstanceAutomatedBackupsReplication
