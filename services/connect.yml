@@ -8,13 +8,17 @@ Actions:
   - Name: connect:AssociateSecurityKey
   - Name: connect:CreateContactFlow
   - Name: connect:CreateInstance
+  - Name: connect:CreateIntegrationAssociation
   - Name: connect:CreateQueue
   - Name: connect:CreateQuickConnect
   - Name: connect:CreateRoutingProfile
+  - Name: connect:CreateUseCase
   - Name: connect:CreateUser
   - Name: connect:CreateUserHierarchyGroup
   - Name: connect:DeleteInstance
+  - Name: connect:DeleteIntegrationAssociation
   - Name: connect:DeleteQuickConnect
+  - Name: connect:DeleteUseCase
   - Name: connect:DeleteUser
   - Name: connect:DeleteUserHierarchyGroup
   - Name: connect:DescribeContactFlow
@@ -45,6 +49,7 @@ Actions:
   - Name: connect:ListInstanceAttributes
   - Name: connect:ListInstanceStorageConfigs
   - Name: connect:ListInstances
+  - Name: connect:ListIntegrationAssociations
   - Name: connect:ListLambdaFunctions
   - Name: connect:ListLexBots
   - Name: connect:ListPhoneNumbers
@@ -58,6 +63,7 @@ Actions:
   - Name: connect:ListSecurityKeys
   - Name: connect:ListSecurityProfiles
   - Name: connect:ListTagsForResource
+  - Name: connect:ListUseCases
   - Name: connect:ListUserHierarchyGroups
   - Name: connect:ListUsers
   - Name: connect:ResumeContactRecording
@@ -95,12 +101,6 @@ Actions:
   - Name: connect:UpdateUserSecurityProfiles
 
   # actions with no corresponding API
+  - Name: connect:AssociateCustomerProfilesDomain
+  - Name: connect:DisassociateCustomerProfilesDomain
   - Name: connect:GetFederationTokens
-
-  # APIs without an IAM action
-  - Name: connect:CreateIntegrationAssociation
-  - Name: connect:CreateUseCase
-  - Name: connect:DeleteIntegrationAssociation
-  - Name: connect:DeleteUseCase
-  - Name: connect:ListIntegrationAssociations
-  - Name: connect:ListUseCases

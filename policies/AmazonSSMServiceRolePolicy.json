@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonSSMServiceRolePolicy",
   "CreateDate": "2017-11-13T19:20:08Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIXJ26NUGBA3TCV7EC",
   "PolicyName": "AmazonSSMServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-03-23T18:12:57Z",
+    "CreateDate": "2021-04-26T20:43:46Z",
     "Document": {
       "Statement": [
         {
@@ -17,6 +17,19 @@
               "iam:PassedToService": [
                 "ssm.amazonaws.com"
               ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "events:PutRule",
+            "events:PutTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "events:ManagedBy": "ssm.amazonaws.com"
             }
           },
           "Effect": "Allow",
@@ -37,7 +50,17 @@
           "Resource": "*"
         },
         {
+          "Action": "events:DescribeRule",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
           "Action": "organizations:DescribeOrganization",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "securityhub:DescribeHub",
           "Effect": "Allow",
           "Resource": "*"
         },
@@ -62,7 +85,8 @@
         },
         {
           "Action": [
-            "compute-optimizer:GetEC2InstanceRecommendations"
+            "compute-optimizer:GetEC2InstanceRecommendations",
+            "compute-optimizer:GetEnrollmentStatus"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -73,6 +97,7 @@
           "Action": [
             "config:DescribeComplianceByConfigRule",
             "config:DescribeComplianceByResource",
+            "config:DescribeConfigurationRecorders",
             "config:DescribeRemediationConfigurations"
           ],
           "Effect": "Allow",
@@ -98,6 +123,16 @@
           "Effect": "Allow",
           "Resource": [
             "*"
+          ]
+        },
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:RemoveTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:events:*:*:rule/SSMExplorerManagedRule"
           ]
         },
         {
@@ -186,7 +221,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2021-03-23T18:12:57Z"
+  "UpdateDate": "2021-04-26T20:43:46Z"
 }

@@ -1,0 +1,87 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSystemsManagerOpsDataSyncServiceRolePolicy",
+  "CreateDate": "2021-04-26T20:42:39Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4FUXS4O2QJ",
+  "PolicyName": "AWSSystemsManagerOpsDataSyncServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-04-26T20:42:39Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "securityhub:BatchUpdateFindings",
+          "Condition": {
+            "Null": {
+              "securityhub:ASFFSyntaxPath/Confidence": false,
+              "securityhub:ASFFSyntaxPath/Criticality": false,
+              "securityhub:ASFFSyntaxPath/Note": false,
+              "securityhub:ASFFSyntaxPath/RelatedFindings": false,
+              "securityhub:ASFFSyntaxPath/Types": false,
+              "securityhub:ASFFSyntaxPath/UserDefinedFields": false,
+              "securityhub:ASFFSyntaxPath/VerificationState": false
+            },
+            "StringEquals": {
+              "securityhub:ASFFSyntaxPath/Workflow.Status": "SUPPRESSED"
+            }
+          },
+          "Effect": "Deny",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ssm:GetOpsItem",
+            "ssm:UpdateOpsItem"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/ExplorerSecurityHubOpsItem": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "securityhub:BatchUpdateFindings",
+            "securityhub:GetFindings"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:AddTagsToResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:opsitem/*"
+        },
+        {
+          "Action": [
+            "ssm:CreateOpsItem"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ssm:GetServiceSetting",
+            "ssm:UpdateServiceSetting"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsdata/*",
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsitem/*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-04-26T20:42:39Z"
+}

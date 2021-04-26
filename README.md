@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 268
-* Unique actions: 10519
-* Managed policies: 810
+* Unique actions: 10521
+* Managed policies: 811
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 233 |
 | `arn:aws:iam::aws:policy/Amazon*` | 214 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 153 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 154 |
 | `arn:aws:iam::aws:policy/service-role/*` | 123 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 80 |
@@ -48,10 +48,10 @@ The following table summarises the AWS APIs.
 | [`mobiletargeting`](services/mobiletargeting.yml) | 112 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 107 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 107 | 0 | 0 |
+| [`connect`](services/connect.yml) | 100 | 0 | 3 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 99 | 0 | 19 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
-| [`connect`](services/connect.yml) | 94 | 6 | 1 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`redshift`](services/redshift.yml) | 89 | 15 | 18 |
 | [`storagegateway`](services/storagegateway.yml) | 89 | 0 | 1 |
