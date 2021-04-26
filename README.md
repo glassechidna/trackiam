@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 268
-* Unique actions: 10515
+* Unique actions: 10519
 * Managed policies: 810
 
 Most common managed policy name prefixes:
@@ -93,7 +93,7 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 49 | 3 | 2 |
 | [`imagebuilder`](services/imagebuilder.yml) | 49 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 10 |
-| [`personalize`](services/personalize.yml) | 48 | 0 | 0 |
+| [`personalize`](services/personalize.yml) | 48 | 3 | 0 |
 | [`appstream`](services/appstream.yml) | 47 | 1 | 1 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
@@ -147,8 +147,8 @@ The following table summarises the AWS APIs.
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
+| [`kinesisanalytics`](services/kinesisanalytics.yml) | 27 | 1 | 1 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
-| [`kinesisanalytics`](services/kinesisanalytics.yml) | 27 | 0 | 1 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
@@ -309,12 +309,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1522 |
+| `List` | 1523 |
 | `Get` | 1381 |
-| `Describe` | 1282 |
+| `Describe` | 1283 |
 | `Delete` | 1232 |
-| `Create` | 1133 |
-| `Update` | 900 |
+| `Create` | 1134 |
+| `Update` | 901 |
 | `Put` | 308 |
 | `Start` | 195 |
 | `Tag` | 163 |
