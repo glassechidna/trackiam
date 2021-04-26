@@ -73,10 +73,10 @@ The following table summarises the AWS APIs.
 | [`ds`](services/ds.yml) | 57 | 5 | 6 |
 | [`autoscaling`](services/autoscaling.yml) | 57 | 3 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
+| [`iotsitewise`](services/iotsitewise.yml) | 57 | 0 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 57 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 56 | 3 | 0 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
-| [`iotsitewise`](services/iotsitewise.yml) | 55 | 2 | 0 |
 | [`medialive`](services/medialive.yml) | 55 | 1 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 55 | 0 | 3 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
