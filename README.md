@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 267
-* Unique actions: 10514
+* Unique services: 268
+* Unique actions: 10515
 * Managed policies: 810
 
 Most common managed policy name prefixes:
@@ -295,6 +295,7 @@ The following table summarises the AWS APIs.
 | [`sumerian`](services/sumerian.yml) | 0 | 0 | 2 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 2 |
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
+| [`ssm-incidents`](services/ssm-incidents.yml) | 0 | 0 | 1 |
 | [`rds-db`](services/rds-db.yml) | 0 | 0 | 1 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 1 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 1 |
@@ -315,7 +316,7 @@ Most common action prefixes:
 | `Create` | 1133 |
 | `Update` | 900 |
 | `Put` | 308 |
-| `Start` | 194 |
+| `Start` | 195 |
 | `Tag` | 163 |
 | `Untag` | 161 |
 
