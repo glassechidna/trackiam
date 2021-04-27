@@ -108,6 +108,7 @@ The following table summarises the AWS APIs.
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 39 | 0 | 0 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
+| [`es`](services/es.yml) | 37 | 3 | 9 |
 | [`codepipeline`](services/codepipeline.yml) | 37 | 2 | 0 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
@@ -140,7 +141,6 @@ The following table summarises the AWS APIs.
 | [`transcribe`](services/transcribe.yml) | 29 | 0 | 2 |
 | [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 29 | 0 | 0 |
-| [`es`](services/es.yml) | 28 | 12 | 9 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`route53domains`](services/route53domains.yml) | 28 | 0 | 0 |
 | [`profile`](services/profile.yml) | 28 | 0 | 0 |

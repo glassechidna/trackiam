@@ -1,31 +1,40 @@
 Actions:
   - Name: es:AcceptInboundCrossClusterSearchConnection
   - Name: es:AddTags
+  - Name: es:AssociatePackage
   - Name: es:CreateElasticsearchDomain
   - Name: es:CreateOutboundCrossClusterSearchConnection
+  - Name: es:CreatePackage
   - Name: es:DeleteElasticsearchDomain
   - Name: es:DeleteElasticsearchServiceRole
   - Name: es:DeleteInboundCrossClusterSearchConnection
   - Name: es:DeleteOutboundCrossClusterSearchConnection
+  - Name: es:DeletePackage
   - Name: es:DescribeElasticsearchDomain
   - Name: es:DescribeElasticsearchDomainConfig
   - Name: es:DescribeElasticsearchDomains
   - Name: es:DescribeElasticsearchInstanceTypeLimits
   - Name: es:DescribeInboundCrossClusterSearchConnections
   - Name: es:DescribeOutboundCrossClusterSearchConnections
+  - Name: es:DescribePackages
   - Name: es:DescribeReservedElasticsearchInstanceOfferings
   - Name: es:DescribeReservedElasticsearchInstances
+  - Name: es:DissociatePackage
   - Name: es:GetCompatibleElasticsearchVersions
+  - Name: es:GetPackageVersionHistory
   - Name: es:GetUpgradeHistory
   - Name: es:GetUpgradeStatus
   - Name: es:ListDomainNames
+  - Name: es:ListDomainsForPackage
   - Name: es:ListElasticsearchInstanceTypes
   - Name: es:ListElasticsearchVersions
+  - Name: es:ListPackagesForDomain
   - Name: es:ListTags
   - Name: es:PurchaseReservedElasticsearchInstanceOffering
   - Name: es:RejectInboundCrossClusterSearchConnection
   - Name: es:RemoveTags
   - Name: es:UpdateElasticsearchDomainConfig
+  - Name: es:UpdatePackage
   - Name: es:UpgradeElasticsearchDomain
 
   # actions with no corresponding API
@@ -40,15 +49,6 @@ Actions:
   - Name: es:ListElasticsearchInstanceTypeDetails
 
   # APIs without an IAM action
-  - Name: es:AssociatePackage
   - Name: es:CancelElasticsearchServiceSoftwareUpdate
-  - Name: es:CreatePackage
-  - Name: es:DeletePackage
   - Name: es:DescribeDomainAutoTunes
-  - Name: es:DescribePackages
-  - Name: es:DissociatePackage
-  - Name: es:GetPackageVersionHistory
-  - Name: es:ListDomainsForPackage
-  - Name: es:ListPackagesForDomain
   - Name: es:StartElasticsearchServiceSoftwareUpdate
-  - Name: es:UpdatePackage
