@@ -150,6 +150,7 @@ The following table summarises the AWS APIs.
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 27 | 1 | 1 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
+| [`mediaconnect`](services/mediaconnect.yml) | 27 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 26 | 0 | 0 |
@@ -200,7 +201,6 @@ The following table summarises the AWS APIs.
 | [`resource-groups`](services/resource-groups.yml) | 16 | 0 | 1 |
 | [`detective`](services/detective.yml) | 15 | 0 | 5 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
-| [`mediaconnect`](services/mediaconnect.yml) | 14 | 13 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`fis`](services/fis.yml) | 14 | 0 | 3 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
