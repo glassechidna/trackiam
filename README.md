@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 268
-* Unique actions: 10521
+* Unique services: 269
+* Unique actions: 10550
 * Managed policies: 811
 
 Most common managed policy name prefixes:
@@ -99,7 +99,7 @@ The following table summarises the AWS APIs.
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
-| [`codebuild`](services/codebuild.yml) | 43 | 1 | 8 |
+| [`codebuild`](services/codebuild.yml) | 44 | 0 | 8 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`appsync`](services/appsync.yml) | 41 | 0 | 2 |
@@ -208,6 +208,7 @@ The following table summarises the AWS APIs.
 | [`translate`](services/translate.yml) | 14 | 0 | 0 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 2 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 0 | 1 |
+| [`synthetics`](services/synthetics.yml) | 13 | 0 | 0 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 13 | 0 | 0 |
 | [`health`](services/health.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
@@ -216,7 +217,6 @@ The following table summarises the AWS APIs.
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`emr-containers`](services/emr-containers.yml) | 11 | 4 | 0 |
-| [`synthetics`](services/synthetics.yml) | 11 | 2 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 39 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 11 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
@@ -264,6 +264,7 @@ The following table summarises the AWS APIs.
 | [`proton`](services/proton.yml) | 0 | 0 | 50 |
 | [`panorama`](services/panorama.yml) | 0 | 0 | 42 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
+| [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
@@ -309,12 +310,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1523 |
-| `Get` | 1381 |
-| `Describe` | 1283 |
+| `List` | 1533 |
+| `Get` | 1385 |
+| `Describe` | 1290 |
 | `Delete` | 1232 |
-| `Create` | 1134 |
-| `Update` | 901 |
+| `Create` | 1135 |
+| `Update` | 902 |
 | `Put` | 308 |
 | `Start` | 195 |
 | `Tag` | 163 |
