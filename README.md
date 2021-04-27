@@ -200,6 +200,7 @@ The following table summarises the AWS APIs.
 | [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
 | [`resource-groups`](services/resource-groups.yml) | 16 | 0 | 1 |
 | [`detective`](services/detective.yml) | 15 | 0 | 5 |
+| [`emr-containers`](services/emr-containers.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`fis`](services/fis.yml) | 14 | 0 | 3 |
@@ -216,7 +217,6 @@ The following table summarises the AWS APIs.
 | [`honeycode`](services/honeycode.yml) | 12 | 0 | 14 |
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
-| [`emr-containers`](services/emr-containers.yml) | 11 | 4 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 39 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 11 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
