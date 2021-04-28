@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 269
-* Unique actions: 10550
+* Unique services: 270
+* Unique actions: 10596
 * Managed policies: 815
 
 Most common managed policy name prefixes:
@@ -72,8 +72,8 @@ The following table summarises the AWS APIs.
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
 | [`ds`](services/ds.yml) | 57 | 5 | 6 |
 | [`autoscaling`](services/autoscaling.yml) | 57 | 3 | 0 |
+| [`iotsitewise`](services/iotsitewise.yml) | 57 | 1 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
-| [`iotsitewise`](services/iotsitewise.yml) | 57 | 0 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 57 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 56 | 3 | 0 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
@@ -257,6 +257,7 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 234 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
+| [`nimble`](services/nimble.yml) | 0 | 45 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
@@ -310,14 +311,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1533 |
-| `Get` | 1385 |
+| `List` | 1543 |
+| `Get` | 1397 |
 | `Describe` | 1290 |
-| `Delete` | 1232 |
-| `Create` | 1135 |
-| `Update` | 902 |
-| `Put` | 308 |
-| `Start` | 195 |
-| `Tag` | 163 |
-| `Untag` | 161 |
+| `Delete` | 1239 |
+| `Create` | 1141 |
+| `Update` | 907 |
+| `Put` | 310 |
+| `Start` | 196 |
+| `Tag` | 164 |
+| `Untag` | 162 |
 
