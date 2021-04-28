@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 270
-* Unique actions: 10596
+* Unique actions: 10598
 * Managed policies: 815
 
 Most common managed policy name prefixes:
@@ -99,6 +99,7 @@ The following table summarises the AWS APIs.
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
+| [`nimble`](services/nimble.yml) | 45 | 0 | 2 |
 | [`codebuild`](services/codebuild.yml) | 44 | 0 | 8 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
@@ -257,7 +258,6 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 234 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
-| [`nimble`](services/nimble.yml) | 0 | 45 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
@@ -312,12 +312,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1543 |
-| `Get` | 1397 |
+| `Get` | 1398 |
 | `Describe` | 1290 |
 | `Delete` | 1239 |
 | `Create` | 1141 |
 | `Update` | 907 |
-| `Put` | 310 |
+| `Put` | 311 |
 | `Start` | 196 |
 | `Tag` | 164 |
 | `Untag` | 162 |
