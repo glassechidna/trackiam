@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AwsGlueDataBrewFullAccessPolicy",
   "CreateDate": "2020-11-11T16:51:39Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ACNRIK7M3",
   "PolicyName": "AwsGlueDataBrewFullAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-03-30T17:03:07Z",
+    "CreateDate": "2021-04-28T15:54:32Z",
     "Document": {
       "Statement": [
         {
@@ -40,6 +40,9 @@
         },
         {
           "Action": [
+            "appflow:DescribeFlow",
+            "appflow:DescribeFlowExecutionRecords",
+            "appflow:ListFlows",
             "cloudtrail:LookupEvents",
             "databrew:*",
             "dataexchange:CreateJob",
@@ -105,7 +108,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2021-03-30T17:03:07Z"
+  "UpdateDate": "2021-04-28T15:54:32Z"
 }
