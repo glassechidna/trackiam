@@ -1,0 +1,93 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonNimbleStudio-StudioUser",
+  "CreateDate": "2021-04-28T04:48:11Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CA37MTXJV",
+  "PolicyName": "AmazonNimbleStudio-StudioUser",
+  "PolicyVersion": {
+    "CreateDate": "2021-04-28T04:48:11Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ds:CreateComputer",
+            "ds:DescribeDirectories",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "fsx:DescribeFileSystems"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaLast": "nimble.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "nimble:CreateStreamingSessionStream",
+            "nimble:DeleteStreamingSession",
+            "nimble:GetStreamingSession",
+            "nimble:GetStreamingSessionStream",
+            "nimble:ListStreamingSessions"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "nimble:createdBy": "${nimble:requesterPrincipalId}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "nimble:ListLaunchProfiles"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "nimble:requesterPrincipalId": "${nimble:principalId}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "nimble:GetFeatureMap",
+            "nimble:GetStudioMember",
+            "nimble:ListEulaAcceptances",
+            "nimble:ListEulas",
+            "nimble:ListStudioMembers",
+            "nimble:PutStudioLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sso-directory:DescribeUsers",
+            "sso-directory:SearchUsers"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-04-28T04:48:11Z"
+}
