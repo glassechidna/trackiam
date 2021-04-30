@@ -5,20 +5,30 @@ Actions:
   - Name: elasticmapreduce:AddTags
   - Name: elasticmapreduce:CancelSteps
   - Name: elasticmapreduce:CreateSecurityConfiguration
+  - Name: elasticmapreduce:CreateStudio
+  - Name: elasticmapreduce:CreateStudioSessionMapping
   - Name: elasticmapreduce:DeleteSecurityConfiguration
+  - Name: elasticmapreduce:DeleteStudio
+  - Name: elasticmapreduce:DeleteStudioSessionMapping
   - Name: elasticmapreduce:DescribeCluster
   - Name: elasticmapreduce:DescribeJobFlows
+  - Name: elasticmapreduce:DescribeNotebookExecution
   - Name: elasticmapreduce:DescribeSecurityConfiguration
   - Name: elasticmapreduce:DescribeStep
+  - Name: elasticmapreduce:DescribeStudio
   - Name: elasticmapreduce:GetBlockPublicAccessConfiguration
   - Name: elasticmapreduce:GetManagedScalingPolicy
+  - Name: elasticmapreduce:GetStudioSessionMapping
   - Name: elasticmapreduce:ListBootstrapActions
   - Name: elasticmapreduce:ListClusters
   - Name: elasticmapreduce:ListInstanceFleets
   - Name: elasticmapreduce:ListInstanceGroups
   - Name: elasticmapreduce:ListInstances
+  - Name: elasticmapreduce:ListNotebookExecutions
   - Name: elasticmapreduce:ListSecurityConfigurations
   - Name: elasticmapreduce:ListSteps
+  - Name: elasticmapreduce:ListStudioSessionMappings
+  - Name: elasticmapreduce:ListStudios
   - Name: elasticmapreduce:ModifyCluster
   - Name: elasticmapreduce:ModifyInstanceFleet
   - Name: elasticmapreduce:ModifyInstanceGroups
@@ -30,31 +40,28 @@ Actions:
   - Name: elasticmapreduce:RemoveTags
   - Name: elasticmapreduce:RunJobFlow
   - Name: elasticmapreduce:SetTerminationProtection
+  - Name: elasticmapreduce:StartNotebookExecution
+  - Name: elasticmapreduce:StopNotebookExecution
   - Name: elasticmapreduce:TerminateJobFlows
+  - Name: elasticmapreduce:UpdateStudio
+  - Name: elasticmapreduce:UpdateStudioSessionMapping
 
   # actions with no corresponding API
   - Name: elasticmapreduce:CreateEditor
+  - Name: elasticmapreduce:CreateRepository
   - Name: elasticmapreduce:DeleteEditor
+  - Name: elasticmapreduce:DeleteRepository
   - Name: elasticmapreduce:DescribeEditor
+  - Name: elasticmapreduce:DescribeRepository
+  - Name: elasticmapreduce:LinkRepository
   - Name: elasticmapreduce:ListEditors
+  - Name: elasticmapreduce:ListRepositories
   - Name: elasticmapreduce:OpenEditorInConsole
   - Name: elasticmapreduce:StartEditor
   - Name: elasticmapreduce:StopEditor
+  - Name: elasticmapreduce:UnlinkRepository
+  - Name: elasticmapreduce:UpdateRepository
   - Name: elasticmapreduce:ViewEventsFromAllClustersInConsole
 
   # APIs without an IAM action
-  - Name: elasticmapreduce:CreateStudio
-  - Name: elasticmapreduce:CreateStudioSessionMapping
-  - Name: elasticmapreduce:DeleteStudio
-  - Name: elasticmapreduce:DeleteStudioSessionMapping
-  - Name: elasticmapreduce:DescribeNotebookExecution
-  - Name: elasticmapreduce:DescribeStudio
-  - Name: elasticmapreduce:GetStudioSessionMapping
-  - Name: elasticmapreduce:ListNotebookExecutions
-  - Name: elasticmapreduce:ListStudioSessionMappings
-  - Name: elasticmapreduce:ListStudios
   - Name: elasticmapreduce:SetVisibleToAllUsers
-  - Name: elasticmapreduce:StartNotebookExecution
-  - Name: elasticmapreduce:StopNotebookExecution
-  - Name: elasticmapreduce:UpdateStudio
-  - Name: elasticmapreduce:UpdateStudioSessionMapping

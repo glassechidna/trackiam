@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 270
-* Unique actions: 10598
+* Unique actions: 10605
 * Managed policies: 815
 
 Most common managed policy name prefixes:
@@ -97,6 +97,7 @@ The following table summarises the AWS APIs.
 | [`appstream`](services/appstream.yml) | 47 | 1 | 1 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
+| [`elasticmapreduce`](services/elasticmapreduce.yml) | 46 | 1 | 15 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`nimble`](services/nimble.yml) | 45 | 0 | 2 |
@@ -131,7 +132,6 @@ The following table summarises the AWS APIs.
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 33 | 0 | 0 |
 | [`workspaces`](services/workspaces.yml) | 32 | 21 | 0 |
-| [`elasticmapreduce`](services/elasticmapreduce.yml) | 32 | 15 | 8 |
 | [`datasync`](services/datasync.yml) | 32 | 3 | 0 |
 | [`eks`](services/eks.yml) | 32 | 0 | 1 |
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |
@@ -311,12 +311,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1543 |
+| `List` | 1544 |
 | `Get` | 1398 |
-| `Describe` | 1290 |
-| `Delete` | 1239 |
-| `Create` | 1141 |
-| `Update` | 907 |
+| `Describe` | 1291 |
+| `Delete` | 1240 |
+| `Create` | 1142 |
+| `Update` | 908 |
 | `Put` | 311 |
 | `Start` | 196 |
 | `Tag` | 164 |
