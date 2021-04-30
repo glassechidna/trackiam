@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 270
-* Unique actions: 10605
+* Unique actions: 10616
 * Managed policies: 815
 
 Most common managed policy name prefixes:
@@ -61,8 +61,8 @@ The following table summarises the AWS APIs.
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`s3`](services/s3.yml) | 75 | 57 | 42 |
+| [`cloudfront`](services/cloudfront.yml) | 75 | 8 | 0 |
 | [`lex`](services/lex.yml) | 75 | 3 | 5 |
-| [`cloudfront`](services/cloudfront.yml) | 75 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`route53`](services/route53.yml) | 64 | 0 | 0 |
@@ -116,11 +116,11 @@ The following table summarises the AWS APIs.
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 36 | 0 | 0 |
+| [`forecast`](services/forecast.yml) | 35 | 1 | 0 |
 | [`geo`](services/geo.yml) | 35 | 0 | 3 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`networkmanager`](services/networkmanager.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
-| [`forecast`](services/forecast.yml) | 35 | 0 | 0 |
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
 | [`ecr`](services/ecr.yml) | 34 | 0 | 1 |
 | [`athena`](services/athena.yml) | 34 | 0 | 1 |
@@ -142,9 +142,9 @@ The following table summarises the AWS APIs.
 | [`transcribe`](services/transcribe.yml) | 29 | 0 | 2 |
 | [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 29 | 0 | 0 |
+| [`profile`](services/profile.yml) | 28 | 2 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`route53domains`](services/route53domains.yml) | 28 | 0 | 0 |
-| [`profile`](services/profile.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
@@ -311,12 +311,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1544 |
-| `Get` | 1398 |
-| `Describe` | 1291 |
-| `Delete` | 1240 |
-| `Create` | 1142 |
-| `Update` | 908 |
+| `List` | 1545 |
+| `Get` | 1400 |
+| `Describe` | 1292 |
+| `Delete` | 1242 |
+| `Create` | 1143 |
+| `Update` | 909 |
 | `Put` | 311 |
 | `Start` | 196 |
 | `Tag` | 164 |
