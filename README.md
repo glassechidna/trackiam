@@ -67,10 +67,10 @@ The following table summarises the AWS APIs.
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`route53`](services/route53.yml) | 64 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
+| [`ds`](services/ds.yml) | 62 | 0 | 6 |
 | [`comprehend`](services/comprehend.yml) | 61 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 60 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
-| [`ds`](services/ds.yml) | 57 | 5 | 6 |
 | [`autoscaling`](services/autoscaling.yml) | 57 | 3 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 57 | 1 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |

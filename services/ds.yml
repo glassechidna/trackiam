@@ -1,6 +1,7 @@
 Actions:
   - Name: ds:AcceptSharedDirectory
   - Name: ds:AddIpRoutes
+  - Name: ds:AddRegion
   - Name: ds:AddTagsToResource
   - Name: ds:CancelSchemaExtension
   - Name: ds:ConnectDirectory
@@ -25,12 +26,15 @@ Actions:
   - Name: ds:DescribeDomainControllers
   - Name: ds:DescribeEventTopics
   - Name: ds:DescribeLDAPSSettings
+  - Name: ds:DescribeRegions
   - Name: ds:DescribeSharedDirectories
   - Name: ds:DescribeSnapshots
   - Name: ds:DescribeTrusts
+  - Name: ds:DisableClientAuthentication
   - Name: ds:DisableLDAPS
   - Name: ds:DisableRadius
   - Name: ds:DisableSso
+  - Name: ds:EnableClientAuthentication
   - Name: ds:EnableLDAPS
   - Name: ds:EnableRadius
   - Name: ds:EnableSso
@@ -45,6 +49,7 @@ Actions:
   - Name: ds:RegisterEventTopic
   - Name: ds:RejectSharedDirectory
   - Name: ds:RemoveIpRoutes
+  - Name: ds:RemoveRegion
   - Name: ds:RemoveTagsFromResource
   - Name: ds:ResetUserPassword
   - Name: ds:RestoreFromSnapshot
@@ -64,10 +69,3 @@ Actions:
   - Name: ds:GetAuthorizedApplicationDetails
   - Name: ds:ListAuthorizedApplications
   - Name: ds:UnauthorizeApplication
-
-  # APIs without an IAM action
-  - Name: ds:AddRegion
-  - Name: ds:DescribeRegions
-  - Name: ds:DisableClientAuthentication
-  - Name: ds:EnableClientAuthentication
-  - Name: ds:RemoveRegion
