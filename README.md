@@ -80,8 +80,8 @@ The following table summarises the AWS APIs.
 | [`medialive`](services/medialive.yml) | 55 | 1 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 55 | 0 | 3 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
+| [`dms`](services/dms.yml) | 53 | 2 | 0 |
 | [`macie2`](services/macie2.yml) | 51 | 4 | 0 |
-| [`dms`](services/dms.yml) | 51 | 4 | 0 |
 | [`securityhub`](services/securityhub.yml) | 51 | 0 | 7 |
 | [`backup`](services/backup.yml) | 51 | 0 | 2 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
