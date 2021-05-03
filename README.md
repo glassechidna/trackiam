@@ -63,7 +63,7 @@ The following table summarises the AWS APIs.
 | [`s3`](services/s3.yml) | 75 | 57 | 42 |
 | [`cloudfront`](services/cloudfront.yml) | 75 | 8 | 0 |
 | [`lex`](services/lex.yml) | 75 | 3 | 5 |
-| [`opsworks`](services/opsworks.yml) | 73 | 1 | 0 |
+| [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`route53`](services/route53.yml) | 64 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
