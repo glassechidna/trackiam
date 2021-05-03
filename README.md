@@ -66,7 +66,7 @@ The following table summarises the AWS APIs.
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`route53`](services/route53.yml) | 64 | 0 | 0 |
-| [`clouddirectory`](services/clouddirectory.yml) | 62 | 4 | 0 |
+| [`clouddirectory`](services/clouddirectory.yml) | 63 | 3 | 0 |
 | [`ds`](services/ds.yml) | 62 | 0 | 6 |
 | [`comprehend`](services/comprehend.yml) | 61 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 60 | 0 | 0 |
