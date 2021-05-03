@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 270
-* Unique actions: 10616
+* Unique services: 272
+* Unique actions: 10628
 * Managed policies: 815
 
 Most common managed policy name prefixes:
@@ -38,7 +38,7 @@ The following table summarises the AWS APIs.
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 443 | 6 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 244 | 0 | 2 |
-| [`chime`](services/chime.yml) | 181 | 0 | 51 |
+| [`chime`](services/chime.yml) | 181 | 1 | 51 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`glue`](services/glue.yml) | 147 | 10 | 1 |
 | [`lightsail`](services/lightsail.yml) | 142 | 0 | 0 |
@@ -258,8 +258,10 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 234 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
+| [`finspace`](services/finspace.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
+| [`finspace-api`](services/finspace-api.yml) | 0 | 3 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`proton`](services/proton.yml) | 0 | 0 | 50 |
@@ -311,14 +313,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1545 |
-| `Get` | 1400 |
+| `List` | 1547 |
+| `Get` | 1403 |
 | `Describe` | 1292 |
-| `Delete` | 1242 |
-| `Create` | 1143 |
-| `Update` | 909 |
+| `Delete` | 1243 |
+| `Create` | 1145 |
+| `Update` | 910 |
 | `Put` | 311 |
 | `Start` | 196 |
-| `Tag` | 164 |
-| `Untag` | 162 |
+| `Tag` | 165 |
+| `Untag` | 163 |
 
