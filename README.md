@@ -38,7 +38,7 @@ The following table summarises the AWS APIs.
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 443 | 6 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 244 | 0 | 2 |
-| [`chime`](services/chime.yml) | 181 | 1 | 52 |
+| [`chime`](services/chime.yml) | 182 | 1 | 51 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`glue`](services/glue.yml) | 147 | 10 | 1 |
 | [`lightsail`](services/lightsail.yml) | 142 | 0 | 0 |
@@ -177,6 +177,7 @@ The following table summarises the AWS APIs.
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 22 | 0 | 0 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
+| [`devops-guru`](services/devops-guru.yml) | 21 | 0 | 0 |
 | [`iotevents`](services/iotevents.yml) | 20 | 3 | 14 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 1 | 0 |
 | [`qldb`](services/qldb.yml) | 20 | 0 | 3 |
@@ -185,7 +186,6 @@ The following table summarises the AWS APIs.
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
 | [`secretsmanager`](services/secretsmanager.yml) | 19 | 3 | 0 |
 | [`lookoutvision`](services/lookoutvision.yml) | 19 | 0 | 3 |
-| [`devops-guru`](services/devops-guru.yml) | 19 | 0 | 2 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
 | [`batch`](services/batch.yml) | 19 | 0 | 0 |
