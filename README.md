@@ -188,8 +188,8 @@ The following table summarises the AWS APIs.
 | [`lookoutvision`](services/lookoutvision.yml) | 19 | 0 | 3 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
+| [`opsworks-cm`](services/opsworks-cm.yml) | 19 | 0 | 0 |
 | [`batch`](services/batch.yml) | 19 | 0 | 0 |
-| [`opsworks-cm`](services/opsworks-cm.yml) | 18 | 1 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 18 | 1 | 0 |
 | [`appflow`](services/appflow.yml) | 18 | 0 | 5 |
 | [`fsx`](services/fsx.yml) | 18 | 0 | 4 |
