@@ -19,6 +19,7 @@ Actions:
   - Name: ecs:DescribeTaskSets
   - Name: ecs:DescribeTasks
   - Name: ecs:DiscoverPollEndpoint
+  - Name: ecs:ExecuteCommand
   - Name: ecs:ListAccountSettings
   - Name: ecs:ListAttributes
   - Name: ecs:ListClusters
@@ -42,6 +43,8 @@ Actions:
   - Name: ecs:SubmitTaskStateChange
   - Name: ecs:TagResource
   - Name: ecs:UntagResource
+  - Name: ecs:UpdateCapacityProvider
+  - Name: ecs:UpdateCluster
   - Name: ecs:UpdateClusterSettings
   - Name: ecs:UpdateContainerAgent
   - Name: ecs:UpdateContainerInstancesState
@@ -52,8 +55,3 @@ Actions:
   # actions with no corresponding API
   - Name: ecs:Poll
   - Name: ecs:StartTelemetrySession
-
-  # APIs without an IAM action
-  - Name: ecs:ExecuteCommand
-  - Name: ecs:UpdateCapacityProvider
-  - Name: ecs:UpdateCluster

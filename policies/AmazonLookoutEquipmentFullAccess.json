@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLookoutEquipmentFullAccess",
   "CreateDate": "2021-04-08T15:52:08Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KPPCPGNJA",
   "PolicyName": "AmazonLookoutEquipmentFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-04-08T15:52:08Z",
+    "CreateDate": "2021-05-05T16:46:56Z",
     "Document": {
       "Statement": [
         {
@@ -40,6 +40,13 @@
         },
         {
           "Action": [
+            "kms:DescribeKey"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "lookoutequipment:*"
           ],
           "Effect": "Allow",
@@ -49,7 +56,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-04-08T15:52:08Z"
+  "UpdateDate": "2021-05-05T16:46:56Z"
 }
