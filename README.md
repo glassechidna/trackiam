@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 272
-* Unique actions: 10630
+* Unique services: 273
+* Unique actions: 10652
 * Managed policies: 816
 
 Most common managed policy name prefixes:
@@ -172,8 +172,8 @@ The following table summarises the AWS APIs.
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
+| [`snowball`](services/snowball.yml) | 22 | 3 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 1 |
-| [`snowball`](services/snowball.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 22 | 0 | 0 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
@@ -271,6 +271,7 @@ The following table summarises the AWS APIs.
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
+| [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 18 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
@@ -313,12 +314,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1548 |
+| `List` | 1549 |
 | `Get` | 1403 |
-| `Describe` | 1292 |
-| `Delete` | 1243 |
-| `Create` | 1145 |
-| `Update` | 910 |
+| `Describe` | 1298 |
+| `Delete` | 1245 |
+| `Create` | 1147 |
+| `Update` | 911 |
 | `Put` | 311 |
 | `Start` | 196 |
 | `Tag` | 165 |
