@@ -13,14 +13,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 273
 * Unique actions: 10655
-* Managed policies: 816
+* Managed policies: 818
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 233 |
-| `arn:aws:iam::aws:policy/Amazon*` | 218 |
+| `arn:aws:iam::aws:policy/Amazon*` | 220 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 155 |
 | `arn:aws:iam::aws:policy/service-role/*` | 123 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -81,6 +81,7 @@ The following table summarises the AWS APIs.
 | [`cloudformation`](services/cloudformation.yml) | 55 | 0 | 3 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`dms`](services/dms.yml) | 53 | 2 | 0 |
+| [`workspaces`](services/workspaces.yml) | 53 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
 | [`macie2`](services/macie2.yml) | 51 | 4 | 0 |
 | [`securityhub`](services/securityhub.yml) | 51 | 0 | 7 |
@@ -131,7 +132,6 @@ The following table summarises the AWS APIs.
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 33 | 0 | 0 |
-| [`workspaces`](services/workspaces.yml) | 32 | 21 | 0 |
 | [`datasync`](services/datasync.yml) | 32 | 3 | 0 |
 | [`eks`](services/eks.yml) | 32 | 0 | 1 |
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |

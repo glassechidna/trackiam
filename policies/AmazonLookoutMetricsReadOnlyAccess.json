@@ -1,0 +1,40 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonLookoutMetricsReadOnlyAccess",
+  "CreateDate": "2021-05-07T00:43:34Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4MP33SLV3F",
+  "PolicyName": "AmazonLookoutMetricsReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-05-07T00:43:34Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "lookoutmetrics:DescribeAlert",
+            "lookoutmetrics:DescribeAnomalyDetectionExecutions",
+            "lookoutmetrics:DescribeAnomalyDetector",
+            "lookoutmetrics:DescribeMetricSet",
+            "lookoutmetrics:GetAnomalyGroup",
+            "lookoutmetrics:GetDataQualityMetrics",
+            "lookoutmetrics:GetFeedback",
+            "lookoutmetrics:GetSampleData",
+            "lookoutmetrics:ListAlerts",
+            "lookoutmetrics:ListAnomalyDetectors",
+            "lookoutmetrics:ListAnomalyGroupSummaries",
+            "lookoutmetrics:ListAnomalyGroupTimeSeries",
+            "lookoutmetrics:ListMetricSets",
+            "lookoutmetrics:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-05-07T00:43:34Z"
+}
