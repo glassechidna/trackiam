@@ -1,0 +1,44 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSIncidentManagerServiceRolePolicy",
+  "CreateDate": "2021-05-10T03:34:45Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4INCMTEIEV",
+  "PolicyName": "AWSIncidentManagerServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-05-10T03:34:45Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ssm-contacts:StartEngagement",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IncidentEngagementPermissions"
+        },
+        {
+          "Action": [
+            "ssm-incidents:CreateTimelineEvent",
+            "ssm-incidents:ListIncidentRecords"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "UpdateIncidentRecordPermissions"
+        },
+        {
+          "Action": [
+            "ssm:AssociateOpsItemRelatedItem",
+            "ssm:CreateOpsItem"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RelatedOpsItemPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-05-10T03:34:45Z"
+}
