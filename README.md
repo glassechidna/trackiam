@@ -174,6 +174,7 @@ The following table summarises the AWS APIs.
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
 | [`snowball`](services/snowball.yml) | 22 | 3 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 1 |
+| [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 22 | 0 | 0 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
@@ -184,7 +185,6 @@ The following table summarises the AWS APIs.
 | [`transfer`](services/transfer.yml) | 20 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
-| [`secretsmanager`](services/secretsmanager.yml) | 19 | 3 | 0 |
 | [`lookoutvision`](services/lookoutvision.yml) | 19 | 0 | 3 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
