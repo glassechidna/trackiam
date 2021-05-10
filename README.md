@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 273
-* Unique actions: 10665
+* Unique services: 274
+* Unique actions: 10719
 * Managed policies: 818
 
 Most common managed policy name prefixes:
@@ -267,7 +267,9 @@ The following table summarises the AWS APIs.
 | [`proton`](services/proton.yml) | 0 | 0 | 50 |
 | [`panorama`](services/panorama.yml) | 0 | 0 | 42 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
+| [`ssm-incidents`](services/ssm-incidents.yml) | 0 | 0 | 29 |
 | [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
+| [`ssm-contacts`](services/ssm-contacts.yml) | 0 | 0 | 26 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
@@ -300,7 +302,6 @@ The following table summarises the AWS APIs.
 | [`sumerian`](services/sumerian.yml) | 0 | 0 | 2 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 2 |
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
-| [`ssm-incidents`](services/ssm-incidents.yml) | 0 | 0 | 1 |
 | [`rds-db`](services/rds-db.yml) | 0 | 0 | 1 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 1 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 1 |
@@ -314,14 +315,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1551 |
-| `Get` | 1405 |
-| `Describe` | 1298 |
-| `Delete` | 1246 |
-| `Create` | 1148 |
-| `Update` | 912 |
-| `Put` | 311 |
-| `Start` | 196 |
-| `Tag` | 165 |
-| `Untag` | 163 |
+| `List` | 1563 |
+| `Get` | 1412 |
+| `Describe` | 1300 |
+| `Delete` | 1254 |
+| `Create` | 1153 |
+| `Update` | 921 |
+| `Put` | 313 |
+| `Start` | 197 |
+| `Tag` | 166 |
+| `Untag` | 164 |
 
