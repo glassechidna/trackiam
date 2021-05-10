@@ -1,0 +1,54 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSIncidentManagerResolverAccess",
+  "CreateDate": "2021-05-10T06:12:34Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4EQ4SDPENY",
+  "PolicyName": "AWSIncidentManagerResolverAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-05-10T06:12:34Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ssm-incidents:CreateTimelineEvent",
+            "ssm-incidents:DeleteTimelineEvent",
+            "ssm-incidents:GetIncidentRecord",
+            "ssm-incidents:GetTimelineEvent",
+            "ssm-incidents:ListIncidentRecords",
+            "ssm-incidents:ListRelatedItems",
+            "ssm-incidents:ListTimelineEvents",
+            "ssm-incidents:UpdateIncidentRecord",
+            "ssm-incidents:UpdateRelatedItems",
+            "ssm-incidents:UpdateTimelineEvent"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IncidentRecordResolverPermissions"
+        },
+        {
+          "Action": [
+            "ssm-incidents:GetResponsePlan",
+            "ssm-incidents:ListResponsePlans"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ResponsePlanReadOnlyPermissions"
+        },
+        {
+          "Action": [
+            "ssm-incidents:StartIncident"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "StartIncidentPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-05-10T06:12:34Z"
+}
