@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 274
-* Unique actions: 10719
+* Unique actions: 10721
 * Managed policies: 820
 
 Most common managed policy name prefixes:
@@ -79,6 +79,7 @@ The following table summarises the AWS APIs.
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
 | [`medialive`](services/medialive.yml) | 55 | 1 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 55 | 0 | 3 |
+| [`workmail`](services/workmail.yml) | 54 | 0 | 51 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`dms`](services/dms.yml) | 53 | 2 | 0 |
 | [`workspaces`](services/workspaces.yml) | 53 | 0 | 0 |
@@ -91,7 +92,6 @@ The following table summarises the AWS APIs.
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`iotwireless`](services/iotwireless.yml) | 51 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 51 | 0 | 0 |
-| [`workmail`](services/workmail.yml) | 49 | 5 | 51 |
 | [`imagebuilder`](services/imagebuilder.yml) | 49 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 10 |
 | [`personalize`](services/personalize.yml) | 48 | 3 | 0 |
@@ -158,7 +158,7 @@ The following table summarises the AWS APIs.
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`fms`](services/fms.yml) | 26 | 0 | 0 |
 | [`mgn`](services/mgn.yml) | 25 | 0 | 26 |
-| [`elasticfilesystem`](services/elasticfilesystem.yml) | 25 | 0 | 5 |
+| [`elasticfilesystem`](services/elasticfilesystem.yml) | 25 | 0 | 7 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 25 | 0 | 1 |
 | [`mediaconvert`](services/mediaconvert.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
@@ -317,11 +317,11 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1563 |
 | `Get` | 1412 |
-| `Describe` | 1300 |
+| `Describe` | 1301 |
 | `Delete` | 1254 |
 | `Create` | 1153 |
 | `Update` | 921 |
-| `Put` | 313 |
+| `Put` | 314 |
 | `Start` | 197 |
 | `Tag` | 166 |
 | `Untag` | 164 |

@@ -4,6 +4,7 @@ Actions:
   - Name: workmail:CancelMailboxExportJob
   - Name: workmail:CreateAlias
   - Name: workmail:CreateGroup
+  - Name: workmail:CreateMobileDeviceAccessRule
   - Name: workmail:CreateOrganization
   - Name: workmail:CreateResource
   - Name: workmail:CreateUser
@@ -11,6 +12,7 @@ Actions:
   - Name: workmail:DeleteAlias
   - Name: workmail:DeleteGroup
   - Name: workmail:DeleteMailboxPermissions
+  - Name: workmail:DeleteMobileDeviceAccessRule
   - Name: workmail:DeleteOrganization
   - Name: workmail:DeleteResource
   - Name: workmail:DeleteRetentionPolicy
@@ -26,12 +28,14 @@ Actions:
   - Name: workmail:GetAccessControlEffect
   - Name: workmail:GetDefaultRetentionPolicy
   - Name: workmail:GetMailboxDetails
+  - Name: workmail:GetMobileDeviceAccessEffect
   - Name: workmail:ListAccessControlRules
   - Name: workmail:ListAliases
   - Name: workmail:ListGroupMembers
   - Name: workmail:ListGroups
   - Name: workmail:ListMailboxExportJobs
   - Name: workmail:ListMailboxPermissions
+  - Name: workmail:ListMobileDeviceAccessRules
   - Name: workmail:ListOrganizations
   - Name: workmail:ListResourceDelegates
   - Name: workmail:ListResources
@@ -46,6 +50,7 @@ Actions:
   - Name: workmail:TagResource
   - Name: workmail:UntagResource
   - Name: workmail:UpdateMailboxQuota
+  - Name: workmail:UpdateMobileDeviceAccessRule
   - Name: workmail:UpdatePrimaryEmailAddress
   - Name: workmail:UpdateResource
 
@@ -101,10 +106,3 @@ Actions:
   - Name: workmail:UpdateOutboundMailFlowRule
   - Name: workmail:UpdateSmtpGateway
   - Name: workmail:WipeMobileDevice
-
-  # APIs without an IAM action
-  - Name: workmail:CreateMobileDeviceAccessRule
-  - Name: workmail:DeleteMobileDeviceAccessRule
-  - Name: workmail:GetMobileDeviceAccessEffect
-  - Name: workmail:ListMobileDeviceAccessRules
-  - Name: workmail:UpdateMobileDeviceAccessRule
