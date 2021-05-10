@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 274
-* Unique actions: 10721
+* Unique actions: 10723
 * Managed policies: 820
 
 Most common managed policy name prefixes:
@@ -44,7 +44,7 @@ The following table summarises the AWS APIs.
 | [`lightsail`](services/lightsail.yml) | 142 | 0 | 0 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
 | [`rds`](services/rds.yml) | 137 | 0 | 1 |
-| [`ssm`](services/ssm.yml) | 131 | 1 | 10 |
+| [`ssm`](services/ssm.yml) | 134 | 1 | 7 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 112 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 107 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 107 | 0 | 0 |
@@ -148,7 +148,7 @@ The following table summarises the AWS APIs.
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
-| [`kinesisanalytics`](services/kinesisanalytics.yml) | 27 | 2 | 1 |
+| [`kinesisanalytics`](services/kinesisanalytics.yml) | 27 | 4 | 1 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 27 | 0 | 0 |
@@ -315,9 +315,9 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1563 |
+| `List` | 1564 |
 | `Get` | 1412 |
-| `Describe` | 1301 |
+| `Describe` | 1302 |
 | `Delete` | 1254 |
 | `Create` | 1153 |
 | `Update` | 921 |
