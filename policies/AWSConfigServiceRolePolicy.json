@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSConfigServiceRolePolicy",
   "CreateDate": "2018-05-30T23:31:46Z",
-  "DefaultVersionId": "v23",
+  "DefaultVersionId": "v24",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJUCWFHNZER665LLQQ",
   "PolicyName": "AWSConfigServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-04-01T22:19:18Z",
+    "CreateDate": "2021-05-11T00:14:41Z",
     "Document": {
       "Statement": [
         {
@@ -15,6 +15,7 @@
             "acm:DescribeCertificate",
             "acm:ListCertificates",
             "acm:ListTagsForCertificate",
+            "apigateway:GET",
             "application-autoscaling:DescribeScalableTargets",
             "application-autoscaling:DescribeScalingPolicies",
             "autoscaling:DescribeAutoScalingGroups",
@@ -173,6 +174,8 @@
             "route53:ListTagsForResource",
             "s3:GetAccelerateConfiguration",
             "s3:GetAccessPoint",
+            "s3:GetAccessPointPolicy",
+            "s3:GetAccessPointPolicyStatus",
             "s3:GetAccountPublicAccessBlock",
             "s3:GetBucketAcl",
             "s3:GetBucketCORS",
@@ -235,7 +238,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v23"
+    "VersionId": "v24"
   },
-  "UpdateDate": "2021-04-01T22:19:18Z"
+  "UpdateDate": "2021-05-11T00:14:41Z"
 }
