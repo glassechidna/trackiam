@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "CreateDate": "2018-12-01T16:22:12Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJH3SHQERZRQMQOQ44",
   "PolicyName": "CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-04-15T00:30:19Z",
+    "CreateDate": "2021-05-11T22:38:14Z",
     "Document": {
       "Statement": [
         {
@@ -102,6 +102,38 @@
             "ec2:DescribeInstances",
             "ec2:DescribeVolumeStatus",
             "ec2:DescribeVolumes"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "ecs:DescribeClusters",
+            "ecs:DescribeContainerInstances",
+            "ecs:DescribeServices",
+            "ecs:DescribeTaskDefinition",
+            "ecs:DescribeTaskSets",
+            "ecs:DescribeTasks",
+            "ecs:ListClusters",
+            "ecs:ListContainerInstances",
+            "ecs:ListServices",
+            "ecs:ListTasks"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "eks:DescribeCluster",
+            "eks:DescribeFargateProfile",
+            "eks:DescribeNodegroup",
+            "eks:ListClusters",
+            "eks:ListFargateProfiles",
+            "eks:ListNodegroups"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -286,7 +318,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2021-04-15T00:30:19Z"
+  "UpdateDate": "2021-05-11T22:38:14Z"
 }
