@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 274
-* Unique actions: 10714
+* Unique actions: 10718
 * Managed policies: 820
 
 Most common managed policy name prefixes:
@@ -140,6 +140,7 @@ The following table summarises the AWS APIs.
 | [`ce`](services/ce.yml) | 30 | 0 | 10 |
 | [`kafka`](services/kafka.yml) | 30 | 0 | 0 |
 | [`transcribe`](services/transcribe.yml) | 29 | 0 | 2 |
+| [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 29 | 0 | 0 |
 | [`profile`](services/profile.yml) | 28 | 2 | 0 |
@@ -165,6 +166,7 @@ The following table summarises the AWS APIs.
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
 | [`ram`](services/ram.yml) | 24 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 24 | 0 | 0 |
+| [`ssm-contacts`](services/ssm-contacts.yml) | 23 | 4 | 3 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 23 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 0 | 0 |
@@ -267,9 +269,7 @@ The following table summarises the AWS APIs.
 | [`proton`](services/proton.yml) | 0 | 0 | 50 |
 | [`panorama`](services/panorama.yml) | 0 | 0 | 42 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
-| [`ssm-incidents`](services/ssm-incidents.yml) | 0 | 0 | 29 |
 | [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
-| [`ssm-contacts`](services/ssm-contacts.yml) | 0 | 0 | 26 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
@@ -315,14 +315,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1563 |
-| `Get` | 1412 |
+| `List` | 1564 |
+| `Get` | 1413 |
 | `Describe` | 1299 |
 | `Delete` | 1254 |
 | `Create` | 1152 |
 | `Update` | 919 |
 | `Put` | 314 |
 | `Start` | 196 |
-| `Tag` | 166 |
-| `Untag` | 164 |
+| `Tag` | 167 |
+| `Untag` | 165 |
 

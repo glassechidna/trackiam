@@ -1,15 +1,11 @@
 Actions:
-
-  # actions with no corresponding API
   - Name: ssm-contacts:AcceptPage
   - Name: ssm-contacts:ActivateContactChannel
-  - Name: ssm-contacts:AssociateContact
   - Name: ssm-contacts:CreateContact
   - Name: ssm-contacts:CreateContactChannel
   - Name: ssm-contacts:DeactivateContactChannel
   - Name: ssm-contacts:DeleteContact
   - Name: ssm-contacts:DeleteContactChannel
-  - Name: ssm-contacts:DeleteContactPolicy
   - Name: ssm-contacts:DescribeEngagement
   - Name: ssm-contacts:DescribePage
   - Name: ssm-contacts:GetContact
@@ -26,4 +22,14 @@ Actions:
   - Name: ssm-contacts:StopEngagement
   - Name: ssm-contacts:UpdateContact
   - Name: ssm-contacts:UpdateContactChannel
+
+  # actions with no corresponding API
+  - Name: ssm-contacts:AssociateContact
+  - Name: ssm-contacts:DeleteContactPolicy
   - Name: ssm-contacts:UpdateContactPolicy
+
+  # APIs without an IAM action
+  - Name: ssm-contacts:GetContactPolicy
+  - Name: ssm-contacts:ListTagsForResource
+  - Name: ssm-contacts:TagResource
+  - Name: ssm-contacts:UntagResource
