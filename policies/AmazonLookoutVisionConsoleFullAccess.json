@@ -1,0 +1,106 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonLookoutVisionConsoleFullAccess",
+  "CreateDate": "2021-05-11T19:37:17Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4NJJ7RFZ5A",
+  "PolicyName": "AmazonLookoutVisionConsoleFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-05-11T19:37:17Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LookoutVisionConsoleDashboardAccess"
+        },
+        {
+          "Action": [
+            "groundtruthlabeling:AssociatePatchToManifestJob",
+            "groundtruthlabeling:DescribeConsoleJob",
+            "groundtruthlabeling:RunGenerateManifestByCrawlingJob"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LookoutVisionConsoleDatasetLabelingToolsAccess"
+        },
+        {
+          "Action": [
+            "kms:ListAliases"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LookoutVisionConsoleKmsKeySelectorAccess"
+        },
+        {
+          "Action": [
+            "lookoutvision:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LookoutVisionFullAccess"
+        },
+        {
+          "Action": [
+            "s3:AbortMultipartUpload",
+            "s3:GetObject",
+            "s3:GetObjectVersion",
+            "s3:ListMultipartUploadParts",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::lookoutvision-*/*",
+          "Sid": "LookoutVisionConsoleS3ObjectAccess"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:PutBucketPublicAccessBlock",
+            "s3:PutBucketVersioning",
+            "s3:PutEncryptionConfiguration",
+            "s3:PutLifecycleConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::lookoutvision-*",
+          "Sid": "LookoutVisionConsoleS3BucketFirstUseSetupAccess"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:GetBucketVersioning",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::lookoutvision-*",
+          "Sid": "LookoutVisionConsoleS3BucketAccess"
+        },
+        {
+          "Action": [
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LookoutVisionConsoleS3BucketSearchAccess"
+        },
+        {
+          "Action": [
+            "tag:GetTagKeys",
+            "tag:GetTagValues"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LookoutVisionConsoleTagSelectorAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-05-11T19:37:17Z"
+}
