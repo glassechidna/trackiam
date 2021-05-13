@@ -108,10 +108,10 @@ The following table summarises the AWS APIs.
 | [`appsync`](services/appsync.yml) | 41 | 0 | 2 |
 | [`wafv2`](services/wafv2.yml) | 40 | 0 | 2 |
 | [`license-manager`](services/license-manager.yml) | 40 | 0 | 0 |
+| [`es`](services/es.yml) | 39 | 1 | 9 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 39 | 0 | 0 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
-| [`es`](services/es.yml) | 37 | 3 | 9 |
 | [`codepipeline`](services/codepipeline.yml) | 37 | 2 | 0 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
