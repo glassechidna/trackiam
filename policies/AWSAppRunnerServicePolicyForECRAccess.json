@@ -1,0 +1,31 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSAppRunnerServicePolicyForECRAccess",
+  "CreateDate": "2021-05-14T19:17:21Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4LYM3IT6IY",
+  "PolicyName": "AWSAppRunnerServicePolicyForECRAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-05-14T19:17:21Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ecr:BatchCheckLayerAvailability",
+            "ecr:BatchGetImage",
+            "ecr:DescribeImages",
+            "ecr:GetAuthorizationToken",
+            "ecr:GetDownloadUrlForLayer"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-05-14T19:17:21Z"
+}

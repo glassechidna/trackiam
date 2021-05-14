@@ -1,0 +1,52 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AppRunnerServiceRolePolicy",
+  "CreateDate": "2021-05-14T19:15:04Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4FKEGI2QN2",
+  "PolicyName": "AppRunnerServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-05-14T19:15:04Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:DescribeRule",
+            "events:DisableRule",
+            "events:EnableRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/AWSAppRunnerManagedRule*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:PutRetentionPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/apprunner/*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/apprunner/*:log-stream:*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-05-14T19:15:04Z"
+}
