@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 274
-* Unique actions: 10719
+* Unique services: 275
+* Unique actions: 10729
 * Managed policies: 826
 
 Most common managed policy name prefixes:
@@ -150,9 +150,9 @@ The following table summarises the AWS APIs.
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 27 | 4 | 1 |
+| [`mediaconnect`](services/mediaconnect.yml) | 27 | 3 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
-| [`mediaconnect`](services/mediaconnect.yml) | 27 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 26 | 0 | 0 |
@@ -214,9 +214,9 @@ The following table summarises the AWS APIs.
 | [`lakeformation`](services/lakeformation.yml) | 13 | 10 | 1 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 2 |
 | [`synthetics`](services/synthetics.yml) | 13 | 0 | 0 |
-| [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 13 | 0 | 0 |
 | [`health`](services/health.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
+| [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 12 | 1 | 1 |
 | [`honeycode`](services/honeycode.yml) | 12 | 0 | 14 |
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
@@ -248,6 +248,7 @@ The following table summarises the AWS APIs.
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
 | [`ebs`](services/ebs.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
+| [`application-cost-profiler`](services/application-cost-profiler.yml) | 6 | 0 | 0 |
 | [`aps`](services/aps.yml) | 5 | 0 | 5 |
 | [`identitystore`](services/identitystore.yml) | 4 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
@@ -315,13 +316,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1564 |
-| `Get` | 1413 |
+| `List` | 1565 |
+| `Get` | 1414 |
 | `Describe` | 1299 |
-| `Delete` | 1254 |
+| `Delete` | 1255 |
 | `Create` | 1152 |
-| `Update` | 919 |
-| `Put` | 314 |
+| `Update` | 921 |
+| `Put` | 315 |
 | `Start` | 196 |
 | `Tag` | 167 |
 | `Untag` | 165 |
