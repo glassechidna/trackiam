@@ -1,0 +1,52 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceCatalogAppRegistryServiceRolePolicy",
+  "CreateDate": "2021-05-18T22:18:55Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4H3V4QGJFH",
+  "PolicyName": "AWSServiceCatalogAppRegistryServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-05-18T22:18:55Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "resource-groups:CreateGroup",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/EnableAWSServiceCatalogAppRegistry": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "resource-groups:DeleteGroup",
+            "resource-groups:GetGroup",
+            "resource-groups:GetTags",
+            "resource-groups:Tag",
+            "resource-groups:Untag",
+            "resource-groups:UpdateGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/EnableAWSServiceCatalogAppRegistry": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "cloudformation:DescribeStacks",
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-05-18T22:18:55Z"
+}
