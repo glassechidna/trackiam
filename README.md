@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 275
-* Unique actions: 10729
+* Unique services: 276
+* Unique actions: 10767
 * Managed policies: 826
 
 Most common managed policy name prefixes:
@@ -61,8 +61,8 @@ The following table summarises the AWS APIs.
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`s3`](services/s3.yml) | 75 | 57 | 42 |
+| [`lex`](services/lex.yml) | 75 | 12 | 5 |
 | [`cloudfront`](services/cloudfront.yml) | 75 | 8 | 0 |
-| [`lex`](services/lex.yml) | 75 | 3 | 5 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`route53`](services/route53.yml) | 64 | 0 | 0 |
@@ -106,8 +106,8 @@ The following table summarises the AWS APIs.
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`appsync`](services/appsync.yml) | 41 | 0 | 2 |
+| [`license-manager`](services/license-manager.yml) | 40 | 5 | 0 |
 | [`wafv2`](services/wafv2.yml) | 40 | 0 | 2 |
-| [`license-manager`](services/license-manager.yml) | 40 | 0 | 0 |
 | [`es`](services/es.yml) | 39 | 1 | 9 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 39 | 0 | 0 |
@@ -220,8 +220,8 @@ The following table summarises the AWS APIs.
 | [`honeycode`](services/honeycode.yml) | 12 | 0 | 14 |
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
+| [`compute-optimizer`](services/compute-optimizer.yml) | 11 | 2 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 30 |
-| [`compute-optimizer`](services/compute-optimizer.yml) | 11 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`outposts`](services/outposts.yml) | 10 | 0 | 0 |
@@ -261,6 +261,7 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 234 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
+| [`apprunner`](services/apprunner.yml) | 0 | 22 | 0 |
 | [`finspace`](services/finspace.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
@@ -316,14 +317,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1565 |
-| `Get` | 1414 |
-| `Describe` | 1299 |
-| `Delete` | 1255 |
-| `Create` | 1152 |
-| `Update` | 921 |
+| `List` | 1573 |
+| `Get` | 1415 |
+| `Describe` | 1304 |
+| `Delete` | 1261 |
+| `Create` | 1158 |
+| `Update` | 924 |
 | `Put` | 315 |
-| `Start` | 196 |
-| `Tag` | 167 |
-| `Untag` | 165 |
+| `Start` | 197 |
+| `Tag` | 168 |
+| `Untag` | 166 |
 
