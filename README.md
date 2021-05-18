@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 276
-* Unique actions: 10767
+* Unique actions: 10766
 * Managed policies: 826
 
 Most common managed policy name prefixes:
@@ -70,8 +70,8 @@ The following table summarises the AWS APIs.
 | [`ds`](services/ds.yml) | 62 | 0 | 6 |
 | [`comprehend`](services/comprehend.yml) | 61 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 60 | 0 | 0 |
+| [`autoscaling`](services/autoscaling.yml) | 60 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
-| [`autoscaling`](services/autoscaling.yml) | 57 | 3 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 57 | 1 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`frauddetector`](services/frauddetector.yml) | 57 | 0 | 0 |
@@ -214,9 +214,9 @@ The following table summarises the AWS APIs.
 | [`lakeformation`](services/lakeformation.yml) | 13 | 10 | 1 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 2 |
 | [`synthetics`](services/synthetics.yml) | 13 | 0 | 0 |
+| [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 13 | 0 | 0 |
 | [`health`](services/health.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
-| [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 12 | 1 | 1 |
 | [`honeycode`](services/honeycode.yml) | 12 | 0 | 14 |
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
@@ -317,7 +317,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1573 |
+| `List` | 1572 |
 | `Get` | 1415 |
 | `Describe` | 1304 |
 | `Delete` | 1261 |

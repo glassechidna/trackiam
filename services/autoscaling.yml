@@ -16,6 +16,7 @@ Actions:
   - Name: autoscaling:DeletePolicy
   - Name: autoscaling:DeleteScheduledAction
   - Name: autoscaling:DeleteTags
+  - Name: autoscaling:DeleteWarmPool
   - Name: autoscaling:DescribeAccountLimits
   - Name: autoscaling:DescribeAdjustmentTypes
   - Name: autoscaling:DescribeAutoScalingGroups
@@ -35,6 +36,7 @@ Actions:
   - Name: autoscaling:DescribeScheduledActions
   - Name: autoscaling:DescribeTags
   - Name: autoscaling:DescribeTerminationPolicyTypes
+  - Name: autoscaling:DescribeWarmPool
   - Name: autoscaling:DetachInstances
   - Name: autoscaling:DetachLoadBalancerTargetGroups
   - Name: autoscaling:DetachLoadBalancers
@@ -47,6 +49,7 @@ Actions:
   - Name: autoscaling:PutNotificationConfiguration
   - Name: autoscaling:PutScalingPolicy
   - Name: autoscaling:PutScheduledUpdateGroupAction
+  - Name: autoscaling:PutWarmPool
   - Name: autoscaling:RecordLifecycleActionHeartbeat
   - Name: autoscaling:ResumeProcesses
   - Name: autoscaling:SetDesiredCapacity
@@ -56,8 +59,3 @@ Actions:
   - Name: autoscaling:SuspendProcesses
   - Name: autoscaling:TerminateInstanceInAutoScalingGroup
   - Name: autoscaling:UpdateAutoScalingGroup
-
-  # APIs without an IAM action
-  - Name: autoscaling:DeleteWarmPool
-  - Name: autoscaling:DescribeWarmPool
-  - Name: autoscaling:PutWarmPool
