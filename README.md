@@ -102,11 +102,11 @@ The following table summarises the AWS APIs.
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`nimble`](services/nimble.yml) | 45 | 0 | 2 |
+| [`license-manager`](services/license-manager.yml) | 45 | 0 | 0 |
 | [`codebuild`](services/codebuild.yml) | 44 | 0 | 8 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 10 |
 | [`appsync`](services/appsync.yml) | 41 | 0 | 2 |
-| [`license-manager`](services/license-manager.yml) | 40 | 5 | 0 |
 | [`wafv2`](services/wafv2.yml) | 40 | 0 | 2 |
 | [`es`](services/es.yml) | 39 | 1 | 9 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
