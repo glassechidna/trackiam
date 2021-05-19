@@ -1,6 +1,4 @@
 Actions:
-
-  # APIs without an IAM action
   - Name: apprunner:AssociateCustomDomain
   - Name: apprunner:CreateAutoScalingConfiguration
   - Name: apprunner:CreateConnection
@@ -23,3 +21,6 @@ Actions:
   - Name: apprunner:TagResource
   - Name: apprunner:UntagResource
   - Name: apprunner:UpdateService
+
+  # actions with no corresponding API
+  - Name: apprunner:DescribeOperation

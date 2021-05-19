@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 276
-* Unique actions: 10766
+* Unique actions: 10767
 * Managed policies: 827
 
 Most common managed policy name prefixes:
@@ -176,6 +176,7 @@ The following table summarises the AWS APIs.
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
 | [`snowball`](services/snowball.yml) | 22 | 3 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 1 |
+| [`apprunner`](services/apprunner.yml) | 22 | 0 | 1 |
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 22 | 0 | 0 |
@@ -261,7 +262,6 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 234 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
-| [`apprunner`](services/apprunner.yml) | 0 | 22 | 0 |
 | [`finspace`](services/finspace.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
@@ -319,7 +319,7 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1572 |
 | `Get` | 1415 |
-| `Describe` | 1304 |
+| `Describe` | 1305 |
 | `Delete` | 1261 |
 | `Create` | 1158 |
 | `Update` | 924 |
