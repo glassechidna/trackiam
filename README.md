@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 276
-* Unique actions: 10767
+* Unique actions: 10768
 * Managed policies: 827
 
 Most common managed policy name prefixes:
@@ -69,8 +69,8 @@ The following table summarises the AWS APIs.
 | [`clouddirectory`](services/clouddirectory.yml) | 63 | 3 | 0 |
 | [`ds`](services/ds.yml) | 62 | 0 | 6 |
 | [`comprehend`](services/comprehend.yml) | 61 | 0 | 0 |
+| [`autoscaling`](services/autoscaling.yml) | 60 | 1 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 60 | 0 | 0 |
-| [`autoscaling`](services/autoscaling.yml) | 60 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 57 | 1 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
@@ -116,8 +116,8 @@ The following table summarises the AWS APIs.
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
+| [`forecast`](services/forecast.yml) | 36 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 36 | 0 | 0 |
-| [`forecast`](services/forecast.yml) | 35 | 1 | 0 |
 | [`geo`](services/geo.yml) | 35 | 0 | 3 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`networkmanager`](services/networkmanager.yml) | 35 | 0 | 0 |
@@ -318,7 +318,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1572 |
-| `Get` | 1415 |
+| `Get` | 1416 |
 | `Describe` | 1305 |
 | `Delete` | 1261 |
 | `Create` | 1158 |
