@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 276
-* Unique actions: 10768
+* Unique actions: 10775
 * Managed policies: 827
 
 Most common managed policy name prefixes:
@@ -61,7 +61,7 @@ The following table summarises the AWS APIs.
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`s3`](services/s3.yml) | 75 | 57 | 42 |
-| [`lex`](services/lex.yml) | 75 | 12 | 5 |
+| [`lex`](services/lex.yml) | 75 | 18 | 5 |
 | [`cloudfront`](services/cloudfront.yml) | 75 | 8 | 0 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
@@ -94,7 +94,7 @@ The following table summarises the AWS APIs.
 | [`auditmanager`](services/auditmanager.yml) | 51 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 49 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 10 |
-| [`personalize`](services/personalize.yml) | 48 | 3 | 0 |
+| [`personalize`](services/personalize.yml) | 48 | 4 | 0 |
 | [`appstream`](services/appstream.yml) | 47 | 1 | 1 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
@@ -319,10 +319,10 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1572 |
 | `Get` | 1416 |
-| `Describe` | 1305 |
-| `Delete` | 1261 |
-| `Create` | 1158 |
-| `Update` | 924 |
+| `Describe` | 1306 |
+| `Delete` | 1263 |
+| `Create` | 1160 |
+| `Update` | 925 |
 | `Put` | 315 |
 | `Start` | 197 |
 | `Tag` | 168 |
