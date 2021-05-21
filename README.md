@@ -151,6 +151,7 @@ The following table summarises the AWS APIs.
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 27 | 4 | 1 |
 | [`mediaconnect`](services/mediaconnect.yml) | 27 | 3 | 0 |
+| [`elasticfilesystem`](services/elasticfilesystem.yml) | 27 | 0 | 5 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
@@ -159,7 +160,6 @@ The following table summarises the AWS APIs.
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`fms`](services/fms.yml) | 26 | 0 | 0 |
 | [`mgn`](services/mgn.yml) | 25 | 0 | 26 |
-| [`elasticfilesystem`](services/elasticfilesystem.yml) | 25 | 0 | 7 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 25 | 0 | 1 |
 | [`mediaconvert`](services/mediaconvert.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
