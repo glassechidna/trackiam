@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEC2RolePolicyForLaunchWizard",
   "CreateDate": "2019-11-13T08:05:53Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CBGI56NFS",
   "PolicyName": "AmazonEC2RolePolicyForLaunchWizard",
   "PolicyVersion": {
-    "CreateDate": "2020-10-09T22:28:01Z",
+    "CreateDate": "2021-05-24T23:05:02Z",
     "Document": {
       "Statement": [
         {
@@ -81,6 +81,19 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*:*:route-table/*"
+        },
+        {
+          "Action": [
+            "fsx:DescribeFileSystems",
+            "fsx:ListTagsForResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": "LaunchWizard*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": "logs:Create*",
@@ -160,7 +173,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2020-10-09T22:28:01Z"
+  "UpdateDate": "2021-05-24T23:05:02Z"
 }

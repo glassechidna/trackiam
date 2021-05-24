@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLaunchWizard_Fullaccess",
   "CreateDate": "2020-08-06T17:47:30Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ABPQ7BLC2",
   "PolicyName": "AmazonLaunchWizard_Fullaccess",
   "PolicyVersion": {
-    "CreateDate": "2021-04-08T19:03:02Z",
+    "CreateDate": "2021-05-24T23:04:20Z",
     "Document": {
       "Statement": [
         {
@@ -115,6 +115,35 @@
           "Condition": {
             "StringLike": {
               "ec2:ResourceTag/aws:cloudformation:stack-id": "arn:aws:cloudformation:*:*:stack/LaunchWizard-*/*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "fsx:CreateFileSystem"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/Name": [
+                "LaunchWizard*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "fsx:DeleteFileSystem",
+            "fsx:ListTagsForResource",
+            "fsx:TagResource",
+            "fsx:UntagResource"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/Name": "LaunchWizard*"
             }
           },
           "Effect": "Allow",
@@ -346,6 +375,13 @@
         },
         {
           "Action": [
+            "fsx:DescribeFileSystems"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "iam:AddRoleToInstanceProfile",
             "iam:CreateInstanceProfile",
             "iam:DeleteInstanceProfile",
@@ -438,6 +474,7 @@
             "secretsmanager:CreateSecret",
             "secretsmanager:DeleteResourcePolicy",
             "secretsmanager:DeleteSecret",
+            "secretsmanager:GetSecretValue",
             "secretsmanager:ListSecretVersionIds",
             "secretsmanager:PutResourcePolicy",
             "secretsmanager:TagResource",
@@ -490,7 +527,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2021-04-08T19:03:02Z"
+  "UpdateDate": "2021-05-24T23:04:20Z"
 }
