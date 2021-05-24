@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSIoTFleetHubFederationAccess",
   "CreateDate": "2020-12-15T08:08:05Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4H4EGQA254",
   "PolicyName": "AWSIoTFleetHubFederationAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-04-12T18:27:43Z",
+    "CreateDate": "2021-05-24T14:12:59Z",
     "Document": {
       "Statement": [
         {
@@ -24,10 +24,15 @@
             "cloudwatch:DescribeAlarms",
             "cloudwatch:GetMetricData",
             "cloudwatch:ListMetrics",
+            "iot:CancelJob",
             "iot:CreateFleetMetric",
+            "iot:CreateJob",
             "iot:DeleteFleetMetric",
             "iot:DescribeFleetMetric",
             "iot:DescribeIndex",
+            "iot:DescribeJob",
+            "iot:DescribeJobExecution",
+            "iot:DescribeJobTemplate",
             "iot:DescribeThingGroup",
             "iot:GetBucketsAggregation",
             "iot:GetCardinality",
@@ -35,6 +40,12 @@
             "iot:GetPercentiles",
             "iot:GetStatistics",
             "iot:ListFleetMetrics",
+            "iot:ListJobExecutionsForJob",
+            "iot:ListJobExecutionsForThing",
+            "iot:ListJobTemplates",
+            "iot:ListJobs",
+            "iot:ListThingGroups",
+            "iot:ListThingsInThingGroup",
             "iot:SearchIndex",
             "iot:UpdateFleetMetric",
             "iotfleethub:DescribeApplication",
@@ -58,7 +69,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-04-12T18:27:43Z"
+  "UpdateDate": "2021-05-24T14:12:59Z"
 }
