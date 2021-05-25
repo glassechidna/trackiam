@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 276
-* Unique actions: 10781
+* Unique actions: 10790
 * Managed policies: 827
 
 Most common managed policy name prefixes:
@@ -182,10 +182,10 @@ The following table summarises the AWS APIs.
 | [`lookoutequipment`](services/lookoutequipment.yml) | 22 | 0 | 0 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`devops-guru`](services/devops-guru.yml) | 21 | 0 | 0 |
+| [`transfer`](services/transfer.yml) | 20 | 5 | 0 |
 | [`iotevents`](services/iotevents.yml) | 20 | 3 | 14 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 1 | 0 |
 | [`qldb`](services/qldb.yml) | 20 | 0 | 3 |
-| [`transfer`](services/transfer.yml) | 20 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
 | [`lookoutvision`](services/lookoutvision.yml) | 19 | 0 | 3 |
@@ -260,7 +260,7 @@ The following table summarises the AWS APIs.
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 2 | 0 | 0 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 1 | 0 |
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
-| [`execute-api`](services/execute-api.yml) | 0 | 234 | 3 |
+| [`execute-api`](services/execute-api.yml) | 0 | 238 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`finspace`](services/finspace.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
@@ -317,12 +317,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1573 |
+| `List` | 1575 |
 | `Get` | 1416 |
-| `Describe` | 1307 |
-| `Delete` | 1264 |
-| `Create` | 1161 |
-| `Update` | 926 |
+| `Describe` | 1309 |
+| `Delete` | 1266 |
+| `Create` | 1163 |
+| `Update` | 927 |
 | `Put` | 315 |
 | `Start` | 197 |
 | `Tag` | 168 |
