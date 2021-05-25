@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 276
-* Unique actions: 10780
+* Unique actions: 10781
 * Managed policies: 827
 
 Most common managed policy name prefixes:
@@ -175,7 +175,7 @@ The following table summarises the AWS APIs.
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
 | [`snowball`](services/snowball.yml) | 22 | 3 | 0 |
-| [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 1 |
+| [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 2 |
 | [`apprunner`](services/apprunner.yml) | 22 | 0 | 1 |
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
