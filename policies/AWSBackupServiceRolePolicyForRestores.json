@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForRestores",
   "CreateDate": "2019-01-12T00:23:54Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJZCCL6F2WPVOUXZKI",
   "PolicyName": "AWSBackupServiceRolePolicyForRestores",
   "PolicyVersion": {
-    "CreateDate": "2021-03-10T18:30:25Z",
+    "CreateDate": "2021-05-25T00:02:53Z",
     "Document": {
       "Statement": [
         {
@@ -65,11 +65,6 @@
           "Resource": "arn:aws:fsx:*:*:backup/*"
         },
         {
-          "Action": "fsx:DescribeFileSystems",
-          "Effect": "Allow",
-          "Resource": "arn:aws:fsx:*:*:file-system/*"
-        },
-        {
           "Action": "kms:DescribeKey",
           "Effect": "Allow",
           "Resource": "*"
@@ -108,6 +103,8 @@
         },
         {
           "Action": [
+            "ec2:DescribeImages",
+            "ec2:DescribeInstances",
             "ec2:DescribeSnapshots",
             "ec2:DescribeVolumes"
           ],
@@ -147,6 +144,14 @@
             "arn:aws:fsx:*:*:backup/*",
             "arn:aws:fsx:*:*:file-system/*"
           ]
+        },
+        {
+          "Action": [
+            "fsx:DescribeFileSystems",
+            "fsx:TagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:file-system/*"
         },
         {
           "Action": [
@@ -193,7 +198,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2021-03-10T18:30:25Z"
+  "UpdateDate": "2021-05-25T00:02:53Z"
 }
