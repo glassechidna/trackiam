@@ -4,18 +4,24 @@ Actions:
   - Name: lex:CreateBotAlias
   - Name: lex:CreateBotLocale
   - Name: lex:CreateBotVersion
+  - Name: lex:CreateExport
   - Name: lex:CreateIntent
   - Name: lex:CreateIntentVersion
+  - Name: lex:CreateResourcePolicy
   - Name: lex:CreateSlot
   - Name: lex:CreateSlotType
   - Name: lex:CreateSlotTypeVersion
+  - Name: lex:CreateUploadUrl
   - Name: lex:DeleteBot
   - Name: lex:DeleteBotAlias
   - Name: lex:DeleteBotChannelAssociation
   - Name: lex:DeleteBotLocale
   - Name: lex:DeleteBotVersion
+  - Name: lex:DeleteExport
+  - Name: lex:DeleteImport
   - Name: lex:DeleteIntent
   - Name: lex:DeleteIntentVersion
+  - Name: lex:DeleteResourcePolicy
   - Name: lex:DeleteSession
   - Name: lex:DeleteSlot
   - Name: lex:DeleteSlotType
@@ -25,7 +31,10 @@ Actions:
   - Name: lex:DescribeBotAlias
   - Name: lex:DescribeBotLocale
   - Name: lex:DescribeBotVersion
+  - Name: lex:DescribeExport
+  - Name: lex:DescribeImport
   - Name: lex:DescribeIntent
+  - Name: lex:DescribeResourcePolicy
   - Name: lex:DescribeSlot
   - Name: lex:DescribeSlotType
   - Name: lex:GetBot
@@ -52,6 +61,10 @@ Actions:
   - Name: lex:ListBotLocales
   - Name: lex:ListBotVersions
   - Name: lex:ListBots
+  - Name: lex:ListBuiltInIntents
+  - Name: lex:ListBuiltInSlotTypes
+  - Name: lex:ListExports
+  - Name: lex:ListImports
   - Name: lex:ListIntents
   - Name: lex:ListSlotTypes
   - Name: lex:ListSlots
@@ -71,7 +84,9 @@ Actions:
   - Name: lex:UpdateBot
   - Name: lex:UpdateBotAlias
   - Name: lex:UpdateBotLocale
+  - Name: lex:UpdateExport
   - Name: lex:UpdateIntent
+  - Name: lex:UpdateResourcePolicy
   - Name: lex:UpdateSlot
   - Name: lex:UpdateSlotType
 
@@ -83,21 +98,6 @@ Actions:
   - Name: lex:RecognizeSpeech
 
   # APIs without an IAM action
-  - Name: lex:CreateExport
-  - Name: lex:CreateResourcePolicy
   - Name: lex:CreateResourcePolicyStatement
-  - Name: lex:CreateUploadUrl
-  - Name: lex:DeleteExport
-  - Name: lex:DeleteImport
-  - Name: lex:DeleteResourcePolicy
   - Name: lex:DeleteResourcePolicyStatement
-  - Name: lex:DescribeExport
-  - Name: lex:DescribeImport
-  - Name: lex:DescribeResourcePolicy
-  - Name: lex:ListBuiltInIntents
-  - Name: lex:ListBuiltInSlotTypes
-  - Name: lex:ListExports
-  - Name: lex:ListImports
   - Name: lex:RecognizeUtterance
-  - Name: lex:UpdateExport
-  - Name: lex:UpdateResourcePolicy

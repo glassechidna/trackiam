@@ -54,6 +54,7 @@ The following table summarises the AWS APIs.
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 93 | 11 | 18 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
+| [`lex`](services/lex.yml) | 90 | 3 | 5 |
 | [`storagegateway`](services/storagegateway.yml) | 89 | 0 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
@@ -61,7 +62,6 @@ The following table summarises the AWS APIs.
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`s3`](services/s3.yml) | 75 | 57 | 42 |
-| [`lex`](services/lex.yml) | 75 | 18 | 5 |
 | [`cloudfront`](services/cloudfront.yml) | 75 | 8 | 0 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
