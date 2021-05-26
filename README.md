@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 276
-* Unique actions: 10790
+* Unique actions: 10793
 * Managed policies: 827
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 443 | 6 | 0 |
+| [`ec2`](services/ec2.yml) | 443 | 8 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 244 | 0 | 2 |
 | [`chime`](services/chime.yml) | 182 | 1 | 51 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
@@ -184,8 +184,8 @@ The following table summarises the AWS APIs.
 | [`devops-guru`](services/devops-guru.yml) | 21 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 20 | 5 | 0 |
 | [`iotevents`](services/iotevents.yml) | 20 | 3 | 14 |
+| [`qldb`](services/qldb.yml) | 20 | 1 | 3 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 1 | 0 |
-| [`qldb`](services/qldb.yml) | 20 | 0 | 3 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
 | [`lookoutvision`](services/lookoutvision.yml) | 19 | 0 | 3 |
@@ -319,10 +319,10 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1575 |
 | `Get` | 1416 |
-| `Describe` | 1309 |
+| `Describe` | 1310 |
 | `Delete` | 1266 |
 | `Create` | 1163 |
-| `Update` | 927 |
+| `Update` | 928 |
 | `Put` | 315 |
 | `Start` | 197 |
 | `Tag` | 168 |
