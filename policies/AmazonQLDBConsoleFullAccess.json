@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonQLDBConsoleFullAccess",
   "CreateDate": "2019-09-05T18:24:20Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4H2DEHAFRU",
   "PolicyName": "AmazonQLDBConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-05-19T17:45:54Z",
+    "CreateDate": "2021-05-27T17:22:17Z",
     "Document": {
       "Statement": [
         {
@@ -36,7 +36,6 @@
             "qldb:ExecuteStatement",
             "qldb:ExportJournalToS3",
             "qldb:GetBlock",
-            "qldb:GetBlock",
             "qldb:GetDigest",
             "qldb:GetRevision",
             "qldb:InsertSampleData",
@@ -45,12 +44,23 @@
             "qldb:ListJournalS3ExportsForLedger",
             "qldb:ListLedgers",
             "qldb:ListTagsForResource",
+            "qldb:PartiQLCreateIndex",
+            "qldb:PartiQLCreateTable",
+            "qldb:PartiQLDelete",
+            "qldb:PartiQLDropIndex",
+            "qldb:PartiQLDropTable",
+            "qldb:PartiQLHistoryFunction",
+            "qldb:PartiQLInsert",
+            "qldb:PartiQLSelect",
+            "qldb:PartiQLUndropTable",
+            "qldb:PartiQLUpdate",
             "qldb:SendCommand",
             "qldb:ShowCatalog",
             "qldb:StreamJournalToKinesis",
             "qldb:TagResource",
             "qldb:UntagResource",
-            "qldb:UpdateLedger"
+            "qldb:UpdateLedger",
+            "qldb:UpdateLedgerPermissionsMode"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -59,7 +69,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-05-19T17:45:54Z"
+  "UpdateDate": "2021-05-27T17:22:17Z"
 }

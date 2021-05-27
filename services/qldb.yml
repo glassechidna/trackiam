@@ -19,11 +19,19 @@ Actions:
   - Name: qldb:TagResource
   - Name: qldb:UntagResource
   - Name: qldb:UpdateLedger
+  - Name: qldb:UpdateLedgerPermissionsMode
 
   # actions with no corresponding API
   - Name: qldb:ExecuteStatement
   - Name: qldb:InsertSampleData
+  - Name: qldb:PartiQLCreateIndex
+  - Name: qldb:PartiQLCreateTable
+  - Name: qldb:PartiQLDelete
+  - Name: qldb:PartiQLDropIndex
+  - Name: qldb:PartiQLDropTable
+  - Name: qldb:PartiQLHistoryFunction
+  - Name: qldb:PartiQLInsert
+  - Name: qldb:PartiQLSelect
+  - Name: qldb:PartiQLUndropTable
+  - Name: qldb:PartiQLUpdate
   - Name: qldb:ShowCatalog
-
-  # APIs without an IAM action
-  - Name: qldb:UpdateLedgerPermissionsMode

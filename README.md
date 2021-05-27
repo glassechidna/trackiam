@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 276
-* Unique actions: 10810
+* Unique actions: 10820
 * Managed policies: 828
 
 Most common managed policy name prefixes:
@@ -112,6 +112,7 @@ The following table summarises the AWS APIs.
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 39 | 0 | 0 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
+| [`kendra`](services/kendra.yml) | 38 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 37 | 2 | 0 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
@@ -122,6 +123,7 @@ The following table summarises the AWS APIs.
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`networkmanager`](services/networkmanager.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
+| [`iotevents`](services/iotevents.yml) | 34 | 3 | 1 |
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
 | [`ecr`](services/ecr.yml) | 34 | 0 | 1 |
 | [`athena`](services/athena.yml) | 34 | 0 | 1 |
@@ -139,7 +141,6 @@ The following table summarises the AWS APIs.
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`ce`](services/ce.yml) | 30 | 0 | 10 |
 | [`kafka`](services/kafka.yml) | 30 | 0 | 0 |
-| [`kendra`](services/kendra.yml) | 29 | 0 | 9 |
 | [`transcribe`](services/transcribe.yml) | 29 | 0 | 2 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
@@ -180,11 +181,10 @@ The following table summarises the AWS APIs.
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 22 | 0 | 0 |
+| [`qldb`](services/qldb.yml) | 21 | 0 | 13 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`devops-guru`](services/devops-guru.yml) | 21 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 20 | 5 | 0 |
-| [`iotevents`](services/iotevents.yml) | 20 | 3 | 15 |
-| [`qldb`](services/qldb.yml) | 20 | 1 | 3 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 1 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
