@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 276
-* Unique actions: 10820
+* Unique actions: 10821
 * Managed policies: 828
 
 Most common managed policy name prefixes:
@@ -194,7 +194,7 @@ The following table summarises the AWS APIs.
 | [`opsworks-cm`](services/opsworks-cm.yml) | 19 | 0 | 0 |
 | [`batch`](services/batch.yml) | 19 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 18 | 1 | 0 |
-| [`appflow`](services/appflow.yml) | 18 | 0 | 5 |
+| [`appflow`](services/appflow.yml) | 18 | 0 | 6 |
 | [`fsx`](services/fsx.yml) | 18 | 0 | 4 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
