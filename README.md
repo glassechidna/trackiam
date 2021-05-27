@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 276
-* Unique actions: 10800
+* Unique actions: 10810
 * Managed policies: 828
 
 Most common managed policy name prefixes:
@@ -139,10 +139,10 @@ The following table summarises the AWS APIs.
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`ce`](services/ce.yml) | 30 | 0 | 10 |
 | [`kafka`](services/kafka.yml) | 30 | 0 | 0 |
+| [`kendra`](services/kendra.yml) | 29 | 0 | 9 |
 | [`transcribe`](services/transcribe.yml) | 29 | 0 | 2 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
-| [`kendra`](services/kendra.yml) | 29 | 0 | 0 |
 | [`profile`](services/profile.yml) | 28 | 2 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`route53domains`](services/route53domains.yml) | 28 | 0 | 0 |
@@ -183,7 +183,7 @@ The following table summarises the AWS APIs.
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`devops-guru`](services/devops-guru.yml) | 21 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 20 | 5 | 0 |
-| [`iotevents`](services/iotevents.yml) | 20 | 3 | 14 |
+| [`iotevents`](services/iotevents.yml) | 20 | 3 | 15 |
 | [`qldb`](services/qldb.yml) | 20 | 1 | 3 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 1 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
@@ -317,12 +317,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1578 |
-| `Get` | 1415 |
-| `Describe` | 1310 |
-| `Delete` | 1267 |
-| `Create` | 1164 |
-| `Update` | 928 |
+| `List` | 1580 |
+| `Get` | 1416 |
+| `Describe` | 1312 |
+| `Delete` | 1268 |
+| `Create` | 1165 |
+| `Update` | 930 |
 | `Put` | 315 |
 | `Start` | 197 |
 | `Tag` | 169 |
