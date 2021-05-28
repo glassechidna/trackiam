@@ -102,6 +102,7 @@ The following table summarises the AWS APIs.
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
 | [`kms`](services/kms.yml) | 45 | 1 | 2 |
 | [`nimble`](services/nimble.yml) | 45 | 0 | 2 |
+| [`geo`](services/geo.yml) | 45 | 0 | 2 |
 | [`license-manager`](services/license-manager.yml) | 45 | 0 | 0 |
 | [`codebuild`](services/codebuild.yml) | 44 | 0 | 8 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
@@ -119,7 +120,6 @@ The following table summarises the AWS APIs.
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 36 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 36 | 0 | 0 |
-| [`geo`](services/geo.yml) | 35 | 0 | 12 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`networkmanager`](services/networkmanager.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |

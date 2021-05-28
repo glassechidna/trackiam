@@ -1,21 +1,26 @@
 Actions:
   - Name: geo:AssociateTrackerConsumer
+  - Name: geo:BatchDeleteDevicePositionHistory
   - Name: geo:BatchDeleteGeofence
   - Name: geo:BatchEvaluateGeofences
   - Name: geo:BatchGetDevicePosition
   - Name: geo:BatchPutGeofence
   - Name: geo:BatchUpdateDevicePosition
+  - Name: geo:CalculateRoute
   - Name: geo:CreateGeofenceCollection
   - Name: geo:CreateMap
   - Name: geo:CreatePlaceIndex
+  - Name: geo:CreateRouteCalculator
   - Name: geo:CreateTracker
   - Name: geo:DeleteGeofenceCollection
   - Name: geo:DeleteMap
   - Name: geo:DeletePlaceIndex
+  - Name: geo:DeleteRouteCalculator
   - Name: geo:DeleteTracker
   - Name: geo:DescribeGeofenceCollection
   - Name: geo:DescribeMap
   - Name: geo:DescribePlaceIndex
+  - Name: geo:DescribeRouteCalculator
   - Name: geo:DescribeTracker
   - Name: geo:DisassociateTrackerConsumer
   - Name: geo:GetDevicePosition
@@ -25,26 +30,21 @@ Actions:
   - Name: geo:GetMapSprites
   - Name: geo:GetMapStyleDescriptor
   - Name: geo:GetMapTile
+  - Name: geo:ListDevicePositions
   - Name: geo:ListGeofenceCollections
   - Name: geo:ListGeofences
   - Name: geo:ListMaps
   - Name: geo:ListPlaceIndexes
+  - Name: geo:ListRouteCalculators
+  - Name: geo:ListTagsForResource
   - Name: geo:ListTrackerConsumers
   - Name: geo:ListTrackers
   - Name: geo:PutGeofence
   - Name: geo:SearchPlaceIndexForPosition
   - Name: geo:SearchPlaceIndexForText
-
-  # actions with no corresponding API
-  - Name: geo:BatchDeleteDevicePositionHistory
-  - Name: geo:CalculateRoute
-  - Name: geo:CreateRouteCalculator
-  - Name: geo:DeleteRouteCalculator
-  - Name: geo:DescribeRouteCalculator
-  - Name: geo:ListDevicePositions
-  - Name: geo:ListRouteCalculators
-  - Name: geo:ListTagsForResource
   - Name: geo:TagResource
   - Name: geo:UntagResource
+
+  # actions with no corresponding API
   - Name: geo:UpdateGeofenceCollection
   - Name: geo:UpdateTracker
