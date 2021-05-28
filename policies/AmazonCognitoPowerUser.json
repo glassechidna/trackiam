@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonCognitoPowerUser",
   "CreateDate": "2015-03-24T17:14:56Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJKW5H2HNCPGCYGR6Y",
   "PolicyName": "AmazonCognitoPowerUser",
   "PolicyVersion": {
-    "CreateDate": "2021-05-27T22:48:53Z",
+    "CreateDate": "2021-01-12T16:56:15Z",
     "Document": {
       "Statement": [
         {
@@ -31,7 +31,9 @@
             "cognito-sync:*",
             "iam:GetRole",
             "iam:GetSAMLProvider",
+            "iam:ListOpenIDConnectProviders",
             "iam:ListOpenIdConnectProviders",
+            "iam:ListRoles",
             "iam:ListRoles",
             "iam:ListSAMLProviders",
             "kinesis:ListStreams",
@@ -40,7 +42,7 @@
             "mobiletargeting:GetApps",
             "ses:GetIdentityVerificationAttributes",
             "ses:ListIdentities",
-            "sns:GetSMSSandboxAccountStatus",
+            "sns:ListPlatformApplications",
             "sns:ListPlatformApplications"
           ],
           "Effect": "Allow",
@@ -61,7 +63,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2021-05-27T22:48:53Z"
+  "UpdateDate": "2021-05-27T23:47:02Z"
 }
