@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 276
-* Unique actions: 10821
+* Unique actions: 10833
 * Managed policies: 828
 
 Most common managed policy name prefixes:
@@ -84,13 +84,13 @@ The following table summarises the AWS APIs.
 | [`dms`](services/dms.yml) | 53 | 2 | 0 |
 | [`workspaces`](services/workspaces.yml) | 53 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
+| [`iotwireless`](services/iotwireless.yml) | 51 | 6 | 0 |
 | [`macie2`](services/macie2.yml) | 51 | 5 | 0 |
 | [`securityhub`](services/securityhub.yml) | 51 | 0 | 7 |
 | [`backup`](services/backup.yml) | 51 | 0 | 2 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 51 | 0 | 0 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
-| [`iotwireless`](services/iotwireless.yml) | 51 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 51 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 49 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 10 |
@@ -128,8 +128,8 @@ The following table summarises the AWS APIs.
 | [`ecr`](services/ecr.yml) | 34 | 0 | 1 |
 | [`athena`](services/athena.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
+| [`sns`](services/sns.yml) | 33 | 6 | 0 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
-| [`sns`](services/sns.yml) | 33 | 0 | 0 |
 | [`shield`](services/shield.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
@@ -317,13 +317,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1580 |
-| `Get` | 1416 |
+| `List` | 1582 |
+| `Get` | 1419 |
 | `Describe` | 1312 |
-| `Delete` | 1268 |
-| `Create` | 1165 |
-| `Update` | 930 |
-| `Put` | 315 |
+| `Delete` | 1269 |
+| `Create` | 1166 |
+| `Update` | 931 |
+| `Put` | 316 |
 | `Start` | 197 |
 | `Tag` | 169 |
 | `Untag` | 167 |
