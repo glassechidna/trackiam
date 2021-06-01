@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonKeyspacesFullAccess",
   "CreateDate": "2020-04-23T17:06:37Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HMS72N6JG",
   "PolicyName": "AmazonKeyspacesFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-04-23T17:06:37Z",
+    "CreateDate": "2021-06-01T19:31:39Z",
     "Document": {
       "Statement": [
         {
@@ -31,7 +31,9 @@
             "application-autoscaling:DescribeScheduledActions",
             "application-autoscaling:PutScalingPolicy",
             "application-autoscaling:PutScheduledAction",
-            "application-autoscaling:RegisterScalableTarget"
+            "application-autoscaling:RegisterScalableTarget",
+            "kms:DescribeKey",
+            "kms:ListAliases"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -56,7 +58,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-04-23T17:06:37Z"
+  "UpdateDate": "2021-06-01T19:31:39Z"
 }
