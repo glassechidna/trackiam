@@ -81,10 +81,10 @@ The following table summarises the AWS APIs.
 | [`cloudformation`](services/cloudformation.yml) | 55 | 0 | 3 |
 | [`workmail`](services/workmail.yml) | 54 | 0 | 51 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
+| [`iotwireless`](services/iotwireless.yml) | 53 | 4 | 0 |
 | [`dms`](services/dms.yml) | 53 | 2 | 0 |
 | [`workspaces`](services/workspaces.yml) | 53 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
-| [`iotwireless`](services/iotwireless.yml) | 51 | 6 | 0 |
 | [`macie2`](services/macie2.yml) | 51 | 5 | 0 |
 | [`securityhub`](services/securityhub.yml) | 51 | 0 | 7 |
 | [`backup`](services/backup.yml) | 51 | 0 | 2 |
@@ -110,6 +110,7 @@ The following table summarises the AWS APIs.
 | [`appsync`](services/appsync.yml) | 41 | 0 | 2 |
 | [`wafv2`](services/wafv2.yml) | 40 | 0 | 2 |
 | [`es`](services/es.yml) | 39 | 1 | 9 |
+| [`sns`](services/sns.yml) | 39 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 39 | 0 | 0 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
@@ -128,7 +129,6 @@ The following table summarises the AWS APIs.
 | [`ecr`](services/ecr.yml) | 34 | 0 | 1 |
 | [`athena`](services/athena.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
-| [`sns`](services/sns.yml) | 33 | 6 | 0 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`shield`](services/shield.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |

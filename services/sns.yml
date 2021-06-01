@@ -4,18 +4,23 @@ Actions:
   - Name: sns:ConfirmSubscription
   - Name: sns:CreatePlatformApplication
   - Name: sns:CreatePlatformEndpoint
+  - Name: sns:CreateSMSSandboxPhoneNumber
   - Name: sns:CreateTopic
   - Name: sns:DeleteEndpoint
   - Name: sns:DeletePlatformApplication
+  - Name: sns:DeleteSMSSandboxPhoneNumber
   - Name: sns:DeleteTopic
   - Name: sns:GetEndpointAttributes
   - Name: sns:GetPlatformApplicationAttributes
   - Name: sns:GetSMSAttributes
+  - Name: sns:GetSMSSandboxAccountStatus
   - Name: sns:GetSubscriptionAttributes
   - Name: sns:GetTopicAttributes
   - Name: sns:ListEndpointsByPlatformApplication
+  - Name: sns:ListOriginationNumbers
   - Name: sns:ListPhoneNumbersOptedOut
   - Name: sns:ListPlatformApplications
+  - Name: sns:ListSMSSandboxPhoneNumbers
   - Name: sns:ListSubscriptions
   - Name: sns:ListSubscriptionsByTopic
   - Name: sns:ListTagsForResource
@@ -32,11 +37,4 @@ Actions:
   - Name: sns:TagResource
   - Name: sns:Unsubscribe
   - Name: sns:UntagResource
-
-  # APIs without an IAM action
-  - Name: sns:CreateSMSSandboxPhoneNumber
-  - Name: sns:DeleteSMSSandboxPhoneNumber
-  - Name: sns:GetSMSSandboxAccountStatus
-  - Name: sns:ListOriginationNumbers
-  - Name: sns:ListSMSSandboxPhoneNumbers
   - Name: sns:VerifySMSSandboxPhoneNumber
