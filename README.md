@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 276
-* Unique actions: 10833
+* Unique actions: 10834
 * Managed policies: 828
 
 Most common managed policy name prefixes:
@@ -77,6 +77,7 @@ The following table summarises the AWS APIs.
 | [`frauddetector`](services/frauddetector.yml) | 57 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 56 | 3 | 0 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
+| [`macie2`](services/macie2.yml) | 56 | 0 | 0 |
 | [`medialive`](services/medialive.yml) | 55 | 1 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 55 | 0 | 3 |
 | [`workmail`](services/workmail.yml) | 54 | 0 | 51 |
@@ -85,7 +86,6 @@ The following table summarises the AWS APIs.
 | [`dms`](services/dms.yml) | 53 | 2 | 0 |
 | [`workspaces`](services/workspaces.yml) | 53 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
-| [`macie2`](services/macie2.yml) | 51 | 5 | 0 |
 | [`securityhub`](services/securityhub.yml) | 51 | 0 | 7 |
 | [`backup`](services/backup.yml) | 51 | 0 | 2 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
@@ -255,7 +255,7 @@ The following table summarises the AWS APIs.
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`s3-outposts`](services/s3-outposts.yml) | 3 | 0 | 29 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
-| [`pi`](services/pi.yml) | 2 | 0 | 0 |
+| [`pi`](services/pi.yml) | 2 | 0 | 1 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 2 | 0 | 0 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 1 | 0 |
@@ -318,7 +318,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1582 |
-| `Get` | 1419 |
+| `Get` | 1420 |
 | `Describe` | 1312 |
 | `Delete` | 1269 |
 | `Create` | 1166 |

@@ -17,16 +17,19 @@ Actions:
   - Name: macie2:DescribeOrganizationConfiguration
   - Name: macie2:DisableMacie
   - Name: macie2:DisableOrganizationAdminAccount
+  - Name: macie2:DisassociateFromAdministratorAccount
   - Name: macie2:DisassociateFromMasterAccount
   - Name: macie2:DisassociateMember
   - Name: macie2:EnableMacie
   - Name: macie2:EnableOrganizationAdminAccount
+  - Name: macie2:GetAdministratorAccount
   - Name: macie2:GetBucketStatistics
   - Name: macie2:GetClassificationExportConfiguration
   - Name: macie2:GetCustomDataIdentifier
   - Name: macie2:GetFindingStatistics
   - Name: macie2:GetFindings
   - Name: macie2:GetFindingsFilter
+  - Name: macie2:GetFindingsPublicationConfiguration
   - Name: macie2:GetInvitationsCount
   - Name: macie2:GetMacieSession
   - Name: macie2:GetMasterAccount
@@ -42,6 +45,8 @@ Actions:
   - Name: macie2:ListOrganizationAdminAccounts
   - Name: macie2:ListTagsForResource
   - Name: macie2:PutClassificationExportConfiguration
+  - Name: macie2:PutFindingsPublicationConfiguration
+  - Name: macie2:SearchResources
   - Name: macie2:TagResource
   - Name: macie2:TestCustomDataIdentifier
   - Name: macie2:UntagResource
@@ -50,10 +55,3 @@ Actions:
   - Name: macie2:UpdateMacieSession
   - Name: macie2:UpdateMemberSession
   - Name: macie2:UpdateOrganizationConfiguration
-
-  # APIs without an IAM action
-  - Name: macie2:DisassociateFromAdministratorAccount
-  - Name: macie2:GetAdministratorAccount
-  - Name: macie2:GetFindingsPublicationConfiguration
-  - Name: macie2:PutFindingsPublicationConfiguration
-  - Name: macie2:SearchResources
