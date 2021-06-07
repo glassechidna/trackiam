@@ -1,19 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSNetworkManagerServiceRolePolicy",
   "CreateDate": "2019-12-03T14:03:35Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4B346KOB7I",
   "PolicyName": "AWSNetworkManagerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-12-10T12:06:22Z",
+    "CreateDate": "2021-06-07T16:18:24Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "directconnect:DescribeConnections",
             "directconnect:DescribeDirectConnectGatewayAttachments",
+            "directconnect:DescribeDirectConnectGateways",
             "directconnect:DescribeLocations",
             "directconnect:DescribeVirtualInterfaces",
             "ec2:DescribeCustomerGateways",
@@ -23,6 +24,7 @@
             "ec2:DescribeTransitGatewayPeeringAttachments",
             "ec2:DescribeTransitGatewayRouteTables",
             "ec2:DescribeTransitGateways",
+            "ec2:DescribeVpcs",
             "ec2:DescribeVpnConnections",
             "ec2:GetTransitGatewayRouteTableAssociations",
             "ec2:SearchTransitGatewayRoutes"
@@ -34,7 +36,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-12-10T12:06:22Z"
+  "UpdateDate": "2021-06-07T16:18:24Z"
 }
