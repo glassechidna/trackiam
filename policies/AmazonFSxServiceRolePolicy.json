@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonFSxServiceRolePolicy",
   "CreateDate": "2018-11-28T10:38:37Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIVQ24YKVRBV5IYQ5G",
   "PolicyName": "AmazonFSxServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-11-12T20:19:45Z",
+    "CreateDate": "2021-06-07T21:03:26Z",
     "Document": {
       "Statement": [
         {
@@ -29,12 +29,30 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "firehose:DescribeDeliveryStream",
+            "firehose:PutRecord",
+            "firehose:PutRecordBatch"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:firehose:*:*:deliverystream/aws-fsx-*"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogGroups",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/fsx/*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-11-12T20:19:45Z"
+  "UpdateDate": "2021-06-07T21:03:26Z"
 }
