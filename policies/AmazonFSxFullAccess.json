@@ -1,19 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonFSxFullAccess",
   "CreateDate": "2018-11-28T16:34:43Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIEUV6Z2X4VNZRVB5I",
   "PolicyName": "AmazonFSxFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2018-11-28T16:34:43Z",
+    "CreateDate": "2021-06-08T12:05:31Z",
     "Document": {
       "Statement": [
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
-            "StringLike": {
+            "StringEquals": {
               "iam:AWSServiceName": [
                 "fsx.amazonaws.com"
               ]
@@ -25,7 +25,7 @@
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
-            "StringLike": {
+            "StringEquals": {
               "iam:AWSServiceName": [
                 "s3.data-source.lustre.fsx.amazonaws.com"
               ]
@@ -41,12 +41,32 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "firehose:PutRecord"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:firehose:*:*:deliverystream/aws-fsx-*"
+          ]
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/fsx/*:log-group:*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2018-11-28T16:34:43Z"
+  "UpdateDate": "2021-06-08T12:05:31Z"
 }
