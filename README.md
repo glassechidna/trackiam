@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 276
-* Unique actions: 10836
+* Unique actions: 10859
 * Managed policies: 828
 
 Most common managed policy name prefixes:
@@ -113,8 +113,8 @@ The following table summarises the AWS APIs.
 | [`sns`](services/sns.yml) | 39 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 39 | 0 | 0 |
+| [`kendra`](services/kendra.yml) | 38 | 1 | 0 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
-| [`kendra`](services/kendra.yml) | 38 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 37 | 2 | 0 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
@@ -150,6 +150,7 @@ The following table summarises the AWS APIs.
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
+| [`proton`](services/proton.yml) | 27 | 22 | 23 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 27 | 4 | 1 |
 | [`mediaconnect`](services/mediaconnect.yml) | 27 | 3 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 27 | 0 | 5 |
@@ -268,7 +269,6 @@ The following table summarises the AWS APIs.
 | [`finspace-api`](services/finspace-api.yml) | 0 | 3 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
-| [`proton`](services/proton.yml) | 0 | 0 | 50 |
 | [`panorama`](services/panorama.yml) | 0 | 0 | 42 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
@@ -317,12 +317,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1582 |
-| `Get` | 1420 |
+| `List` | 1585 |
+| `Get` | 1424 |
 | `Describe` | 1312 |
-| `Delete` | 1269 |
-| `Create` | 1166 |
-| `Update` | 931 |
+| `Delete` | 1272 |
+| `Create` | 1169 |
+| `Update` | 935 |
 | `Put` | 316 |
 | `Start` | 197 |
 | `Tag` | 169 |
