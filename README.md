@@ -74,6 +74,7 @@ The following table summarises the AWS APIs.
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 57 | 1 | 1 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
+| [`iotwireless`](services/iotwireless.yml) | 57 | 0 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 57 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 56 | 3 | 0 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
@@ -82,7 +83,6 @@ The following table summarises the AWS APIs.
 | [`cloudformation`](services/cloudformation.yml) | 55 | 0 | 3 |
 | [`workmail`](services/workmail.yml) | 54 | 0 | 51 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
-| [`iotwireless`](services/iotwireless.yml) | 53 | 4 | 0 |
 | [`dms`](services/dms.yml) | 53 | 2 | 0 |
 | [`workspaces`](services/workspaces.yml) | 53 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
