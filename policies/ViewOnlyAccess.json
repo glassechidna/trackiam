@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/ViewOnlyAccess",
   "CreateDate": "2016-11-10T17:20:15Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAID22R6XPJATWOFDK6",
   "PolicyName": "ViewOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-08-18T22:51:43Z",
+    "CreateDate": "2021-06-11T19:27:03Z",
     "Document": {
       "Statement": [
         {
@@ -41,7 +41,6 @@
             "codedeploy:List*",
             "codepipeline:ListPipelines",
             "codestar:List*",
-            "codestar:Verify*",
             "cognito-identity:ListIdentities",
             "cognito-identity:ListIdentityPools",
             "cognito-idp:List*",
@@ -128,7 +127,6 @@
             "elasticloadbalancing:DescribeLoadBalancers",
             "elasticloadbalancing:DescribeTargetGroups",
             "elasticloadbalancing:DescribeTargetHealth",
-            "elasticloadbalancing:DescribeTargetHealth",
             "elasticmapreduce:List*",
             "elastictranscoder:List*",
             "es:DescribeElasticsearchDomain",
@@ -139,6 +137,7 @@
             "events:ListTargetsByRule",
             "firehose:DescribeDeliveryStream",
             "firehose:List*",
+            "fsx:DescribeFileSystems",
             "gamelift:List*",
             "glacier:List*",
             "greengrass:List*",
@@ -181,6 +180,11 @@
             "opsworks-cm:Describe*",
             "opsworks:Describe*",
             "organizations:List*",
+            "outposts:GetOutpost",
+            "outposts:GetOutpostInstanceTypes",
+            "outposts:ListOutposts",
+            "outposts:ListSites",
+            "outposts:ListTagsForResource",
             "polly:Describe*",
             "polly:List*",
             "rds:Describe*",
@@ -227,7 +231,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2020-08-18T22:51:43Z"
+  "UpdateDate": "2021-06-11T19:27:03Z"
 }
