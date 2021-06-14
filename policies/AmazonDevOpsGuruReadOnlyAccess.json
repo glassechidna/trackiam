@@ -1,15 +1,22 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDevOpsGuruReadOnlyAccess",
   "CreateDate": "2020-12-01T16:34:40Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JK4QO3QK6",
   "PolicyName": "AmazonDevOpsGuruReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-04-23T18:44:36Z",
+    "CreateDate": "2021-06-14T22:34:43Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "iam:GetRole"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/devops-guru.amazonaws.com/AWSServiceRoleForDevOpsGuru"
+        },
         {
           "Action": [
             "cloudformation:DescribeStacks",
@@ -32,6 +39,7 @@
             "devops-guru:DescribeAccountHealth",
             "devops-guru:DescribeAccountOverview",
             "devops-guru:DescribeAnomaly",
+            "devops-guru:DescribeFeedback",
             "devops-guru:DescribeInsight",
             "devops-guru:DescribeResourceCollectionHealth",
             "devops-guru:DescribeServiceIntegration",
@@ -53,7 +61,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-04-23T18:44:36Z"
+  "UpdateDate": "2021-06-14T22:34:43Z"
 }
