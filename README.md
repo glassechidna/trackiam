@@ -13,7 +13,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 276
 * Unique actions: 10875
-* Managed policies: 829
+* Managed policies: 830
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 234 |
 | `arn:aws:iam::aws:policy/Amazon*` | 224 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 160 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 161 |
 | `arn:aws:iam::aws:policy/service-role/*` | 124 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 80 |
@@ -48,7 +48,7 @@ The following table summarises the AWS APIs.
 | [`mobiletargeting`](services/mobiletargeting.yml) | 112 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 107 | 3 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 107 | 0 | 0 |
-| [`connect`](services/connect.yml) | 100 | 3 | 3 |
+| [`connect`](services/connect.yml) | 103 | 0 | 3 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 1 | 0 |
 | [`quicksight`](services/quicksight.yml) | 99 | 0 | 19 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |

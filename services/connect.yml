@@ -1,5 +1,6 @@
 Actions:
   - Name: connect:AssociateApprovedOrigin
+  - Name: connect:AssociateBot
   - Name: connect:AssociateInstanceStorageConfig
   - Name: connect:AssociateLambdaFunction
   - Name: connect:AssociateLexBot
@@ -33,6 +34,7 @@ Actions:
   - Name: connect:DescribeUserHierarchyGroup
   - Name: connect:DescribeUserHierarchyStructure
   - Name: connect:DisassociateApprovedOrigin
+  - Name: connect:DisassociateBot
   - Name: connect:DisassociateInstanceStorageConfig
   - Name: connect:DisassociateLambdaFunction
   - Name: connect:DisassociateLexBot
@@ -44,6 +46,7 @@ Actions:
   - Name: connect:GetFederationToken
   - Name: connect:GetMetricData
   - Name: connect:ListApprovedOrigins
+  - Name: connect:ListBots
   - Name: connect:ListContactFlows
   - Name: connect:ListHoursOfOperations
   - Name: connect:ListInstanceAttributes
@@ -104,8 +107,3 @@ Actions:
   - Name: connect:AssociateCustomerProfilesDomain
   - Name: connect:DisassociateCustomerProfilesDomain
   - Name: connect:GetFederationTokens
-
-  # APIs without an IAM action
-  - Name: connect:AssociateBot
-  - Name: connect:DisassociateBot
-  - Name: connect:ListBots
