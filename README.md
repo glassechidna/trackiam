@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 276
-* Unique actions: 10872
+* Unique actions: 10875
 * Managed policies: 829
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 443 | 8 | 0 |
+| [`ec2`](services/ec2.yml) | 443 | 11 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 245 | 2 | 2 |
 | [`chime`](services/chime.yml) | 183 | 0 | 51 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
@@ -95,12 +95,12 @@ The following table summarises the AWS APIs.
 | [`imagebuilder`](services/imagebuilder.yml) | 49 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 10 |
 | [`personalize`](services/personalize.yml) | 48 | 4 | 0 |
+| [`kms`](services/kms.yml) | 47 | 1 | 3 |
 | [`appstream`](services/appstream.yml) | 47 | 1 | 1 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 46 | 1 | 15 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
-| [`kms`](services/kms.yml) | 45 | 1 | 5 |
 | [`nimble`](services/nimble.yml) | 45 | 0 | 2 |
 | [`geo`](services/geo.yml) | 45 | 0 | 2 |
 | [`license-manager`](services/license-manager.yml) | 45 | 0 | 0 |
@@ -319,7 +319,7 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1587 |
 | `Get` | 1424 |
-| `Describe` | 1312 |
+| `Describe` | 1313 |
 | `Delete` | 1272 |
 | `Create` | 1169 |
 | `Update` | 936 |

@@ -34,6 +34,7 @@ Actions:
   - Name: kms:ListResourceTags
   - Name: kms:ListRetirableGrants
   - Name: kms:PutKeyPolicy
+  - Name: kms:ReplicateKey
   - Name: kms:RetireGrant
   - Name: kms:RevokeGrant
   - Name: kms:ScheduleKeyDeletion
@@ -43,14 +44,13 @@ Actions:
   - Name: kms:UpdateAlias
   - Name: kms:UpdateCustomKeyStore
   - Name: kms:UpdateKeyDescription
+  - Name: kms:UpdatePrimaryRegion
   - Name: kms:Verify
 
   # actions with no corresponding API
   - Name: kms:ReEncryptFrom
   - Name: kms:ReEncryptTo
-  - Name: kms:ReplicateKey
   - Name: kms:SynchronizeMultiRegionKey
-  - Name: kms:UpdatePrimaryRegion
 
   # APIs without an IAM action
   - Name: kms:ReEncrypt
