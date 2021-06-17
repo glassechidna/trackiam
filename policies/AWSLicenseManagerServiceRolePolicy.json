@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSLicenseManagerServiceRolePolicy",
   "CreateDate": "2018-11-26T19:02:53Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIM7JPETWHTYNBQSZE",
   "PolicyName": "AWSLicenseManagerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-06-15T17:06:26Z",
+    "CreateDate": "2021-06-17T03:54:13Z",
     "Document": {
       "Statement": [
         {
@@ -24,6 +24,21 @@
             "arn:aws:iam::*:role/aws-service-role/license-management.marketplace.amazonaws.com/AWSServiceRoleForMarketplaceLicenseManagement"
           ],
           "Sid": "IAMPermissions"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "license-manager.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:iam::*:role/aws-service-role/license-manager.member-account.amazonaws.com/AWSServiceRoleForAWSLicenseManagerMemberAccountRole"
+          ],
+          "Sid": "IAMPermissionsForCreatingMemberSLR"
         },
         {
           "Action": [
@@ -53,7 +68,8 @@
         {
           "Action": [
             "organizations:DescribeOrganization",
-            "organizations:ListAWSServiceAccessForOrganization"
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListDelegatedAdministrators"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -128,7 +144,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2021-06-15T17:06:26Z"
+  "UpdateDate": "2021-06-17T03:54:13Z"
 }
