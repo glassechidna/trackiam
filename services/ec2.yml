@@ -70,13 +70,16 @@ Actions:
   - Name: ec2:CreateNetworkInterface
   - Name: ec2:CreateNetworkInterfacePermission
   - Name: ec2:CreatePlacementGroup
+  - Name: ec2:CreateReplaceRootVolumeTask
   - Name: ec2:CreateReservedInstancesListing
+  - Name: ec2:CreateRestoreImageTask
   - Name: ec2:CreateRoute
   - Name: ec2:CreateRouteTable
   - Name: ec2:CreateSecurityGroup
   - Name: ec2:CreateSnapshot
   - Name: ec2:CreateSnapshots
   - Name: ec2:CreateSpotDatafeedSubscription
+  - Name: ec2:CreateStoreImageTask
   - Name: ec2:CreateSubnet
   - Name: ec2:CreateTags
   - Name: ec2:CreateTrafficMirrorFilter
@@ -232,6 +235,7 @@ Actions:
   - Name: ec2:DescribePrincipalIdFormat
   - Name: ec2:DescribePublicIpv4Pools
   - Name: ec2:DescribeRegions
+  - Name: ec2:DescribeReplaceRootVolumeTasks
   - Name: ec2:DescribeReservedInstances
   - Name: ec2:DescribeReservedInstancesListings
   - Name: ec2:DescribeReservedInstancesModifications
@@ -250,6 +254,7 @@ Actions:
   - Name: ec2:DescribeSpotInstanceRequests
   - Name: ec2:DescribeSpotPriceHistory
   - Name: ec2:DescribeStaleSecurityGroups
+  - Name: ec2:DescribeStoreImageTasks
   - Name: ec2:DescribeSubnets
   - Name: ec2:DescribeTags
   - Name: ec2:DescribeTrafficMirrorFilters
@@ -322,6 +327,7 @@ Actions:
   - Name: ec2:GetDefaultCreditSpecification
   - Name: ec2:GetEbsDefaultKmsKeyId
   - Name: ec2:GetEbsEncryptionByDefault
+  - Name: ec2:GetFlowLogsIntegrationTemplate
   - Name: ec2:GetGroupsForCapacityReservation
   - Name: ec2:GetHostReservationPurchasePreview
   - Name: ec2:GetLaunchTemplateData
@@ -445,13 +451,7 @@ Actions:
 
   # APIs without an IAM action
   - Name: ec2:AssociateTrunkInterface
-  - Name: ec2:CreateReplaceRootVolumeTask
-  - Name: ec2:CreateRestoreImageTask
-  - Name: ec2:CreateStoreImageTask
-  - Name: ec2:DescribeReplaceRootVolumeTasks
-  - Name: ec2:DescribeStoreImageTasks
   - Name: ec2:DescribeTrunkInterfaceAssociations
   - Name: ec2:DisableImageDeprecation
   - Name: ec2:DisassociateTrunkInterface
   - Name: ec2:EnableImageDeprecation
-  - Name: ec2:GetFlowLogsIntegrationTemplate
