@@ -1,0 +1,54 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSBugBustPlayerAccess",
+  "CreateDate": "2021-06-24T07:15:00Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CPEJPLKKR",
+  "PolicyName": "AWSBugBustPlayerAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-06-24T07:15:00Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "bugbust:GetEvent",
+            "bugbust:GetJoinEventStatus",
+            "bugbust:JoinEvent",
+            "bugbust:ListBugs",
+            "bugbust:ListEventParticipants",
+            "bugbust:ListEventScores",
+            "bugbust:ListEvents",
+            "bugbust:ListProfilingGroups",
+            "bugbust:ListPullRequests",
+            "bugbust:UpdateWorkItem"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSBugBustPlayerAccess"
+        },
+        {
+          "Action": [
+            "codeguru-profiler:DescribeProfilingGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeGuruProfilerPermission"
+        },
+        {
+          "Action": [
+            "codeguru-reviewer:DescribeCodeReview",
+            "codeguru-reviewer:ListRecommendations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeGuruReviewerPermission"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-06-24T07:15:00Z"
+}

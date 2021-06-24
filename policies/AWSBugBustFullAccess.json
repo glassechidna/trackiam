@@ -1,0 +1,47 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSBugBustFullAccess",
+  "CreateDate": "2021-06-24T07:03:26Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4MQU5DXLFC",
+  "PolicyName": "AWSBugBustFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-06-24T07:03:26Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "bugbust:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSBugBustFullAccess"
+        },
+        {
+          "Action": [
+            "codeguru-profiler:DescribeProfilingGroup",
+            "codeguru-profiler:ListProfilingGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeGuruProfilerPermission"
+        },
+        {
+          "Action": [
+            "codeguru-reviewer:DescribeCodeReview",
+            "codeguru-reviewer:ListCodeReviews",
+            "codeguru-reviewer:ListRecommendations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeGuruReviewerPermission"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-06-24T07:03:26Z"
+}

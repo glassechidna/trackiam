@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBugBustServiceRolePolicy",
+  "CreateDate": "2021-06-24T06:59:05Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4LXHZTN64K",
+  "PolicyName": "AWSBugBustServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-06-24T06:59:05Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "codeguru-reviewer:DescribeCodeReview",
+            "codeguru-reviewer:ListRecommendations",
+            "codeguru-reviewer:UntagResource"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/bugbust": "enabled"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-06-24T06:59:05Z"
+}
