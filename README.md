@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 277
-* Unique actions: 10912
+* Unique actions: 10913
 * Managed policies: 833
 
 Most common managed policy name prefixes:
@@ -57,12 +57,12 @@ The following table summarises the AWS APIs.
 | [`lex`](services/lex.yml) | 90 | 3 | 5 |
 | [`storagegateway`](services/storagegateway.yml) | 89 | 0 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
+| [`cloudfront`](services/cloudfront.yml) | 83 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`s3`](services/s3.yml) | 75 | 57 | 42 |
-| [`cloudfront`](services/cloudfront.yml) | 75 | 8 | 0 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`route53`](services/route53.yml) | 64 | 0 | 0 |
@@ -166,8 +166,8 @@ The following table summarises the AWS APIs.
 | [`mediaconvert`](services/mediaconvert.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
+| [`amplifybackend`](services/amplifybackend.yml) | 24 | 1 | 0 |
 | [`ram`](services/ram.yml) | 24 | 0 | 0 |
-| [`amplifybackend`](services/amplifybackend.yml) | 24 | 0 | 0 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 23 | 4 | 3 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 23 | 0 | 0 |

@@ -5,6 +5,7 @@ Actions:
   - Name: cloudfront:CreateDistributionWithTags
   - Name: cloudfront:CreateFieldLevelEncryptionConfig
   - Name: cloudfront:CreateFieldLevelEncryptionProfile
+  - Name: cloudfront:CreateFunction
   - Name: cloudfront:CreateInvalidation
   - Name: cloudfront:CreateKeyGroup
   - Name: cloudfront:CreateMonitoringSubscription
@@ -18,12 +19,14 @@ Actions:
   - Name: cloudfront:DeleteDistribution
   - Name: cloudfront:DeleteFieldLevelEncryptionConfig
   - Name: cloudfront:DeleteFieldLevelEncryptionProfile
+  - Name: cloudfront:DeleteFunction
   - Name: cloudfront:DeleteKeyGroup
   - Name: cloudfront:DeleteMonitoringSubscription
   - Name: cloudfront:DeleteOriginRequestPolicy
   - Name: cloudfront:DeletePublicKey
   - Name: cloudfront:DeleteRealtimeLogConfig
   - Name: cloudfront:DeleteStreamingDistribution
+  - Name: cloudfront:DescribeFunction
   - Name: cloudfront:GetCachePolicy
   - Name: cloudfront:GetCachePolicyConfig
   - Name: cloudfront:GetCloudFrontOriginAccessIdentity
@@ -34,6 +37,7 @@ Actions:
   - Name: cloudfront:GetFieldLevelEncryptionConfig
   - Name: cloudfront:GetFieldLevelEncryptionProfile
   - Name: cloudfront:GetFieldLevelEncryptionProfileConfig
+  - Name: cloudfront:GetFunction
   - Name: cloudfront:GetInvalidation
   - Name: cloudfront:GetKeyGroup
   - Name: cloudfront:GetKeyGroupConfig
@@ -55,6 +59,7 @@ Actions:
   - Name: cloudfront:ListDistributionsByWebACLId
   - Name: cloudfront:ListFieldLevelEncryptionConfigs
   - Name: cloudfront:ListFieldLevelEncryptionProfiles
+  - Name: cloudfront:ListFunctions
   - Name: cloudfront:ListInvalidations
   - Name: cloudfront:ListKeyGroups
   - Name: cloudfront:ListOriginRequestPolicies
@@ -62,25 +67,18 @@ Actions:
   - Name: cloudfront:ListRealtimeLogConfigs
   - Name: cloudfront:ListStreamingDistributions
   - Name: cloudfront:ListTagsForResource
+  - Name: cloudfront:PublishFunction
   - Name: cloudfront:TagResource
+  - Name: cloudfront:TestFunction
   - Name: cloudfront:UntagResource
   - Name: cloudfront:UpdateCachePolicy
   - Name: cloudfront:UpdateCloudFrontOriginAccessIdentity
   - Name: cloudfront:UpdateDistribution
   - Name: cloudfront:UpdateFieldLevelEncryptionConfig
   - Name: cloudfront:UpdateFieldLevelEncryptionProfile
+  - Name: cloudfront:UpdateFunction
   - Name: cloudfront:UpdateKeyGroup
   - Name: cloudfront:UpdateOriginRequestPolicy
   - Name: cloudfront:UpdatePublicKey
   - Name: cloudfront:UpdateRealtimeLogConfig
   - Name: cloudfront:UpdateStreamingDistribution
-
-  # APIs without an IAM action
-  - Name: cloudfront:CreateFunction
-  - Name: cloudfront:DeleteFunction
-  - Name: cloudfront:DescribeFunction
-  - Name: cloudfront:GetFunction
-  - Name: cloudfront:ListFunctions
-  - Name: cloudfront:PublishFunction
-  - Name: cloudfront:TestFunction
-  - Name: cloudfront:UpdateFunction
