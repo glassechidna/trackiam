@@ -140,6 +140,7 @@ The following table summarises the AWS APIs.
 | [`wellarchitected`](services/wellarchitected.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`ce`](services/ce.yml) | 30 | 0 | 10 |
+| [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 30 | 0 | 0 |
 | [`transcribe`](services/transcribe.yml) | 29 | 0 | 2 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
@@ -152,7 +153,6 @@ The following table summarises the AWS APIs.
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
 | [`proton`](services/proton.yml) | 27 | 22 | 23 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 27 | 4 | 1 |
-| [`mediaconnect`](services/mediaconnect.yml) | 27 | 3 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 27 | 0 | 5 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
