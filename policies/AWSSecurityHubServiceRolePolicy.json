@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSecurityHubServiceRolePolicy",
   "CreateDate": "2018-11-27T23:47:51Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJQPCESDDYDLLSOGYO",
   "PolicyName": "AWSSecurityHubServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-09-21T19:59:01Z",
+    "CreateDate": "2021-06-29T19:55:36Z",
     "Document": {
       "Statement": [
         {
@@ -38,7 +38,8 @@
             "config:DeleteConfigRule",
             "config:DescribeConfigRuleEvaluationStatus",
             "config:GetComplianceDetailsByConfigRule",
-            "config:PutConfigRule"
+            "config:PutConfigRule",
+            "config:PutEvaluations"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:config:*:*:config-rule/aws-service-rule/*securityhub*"
@@ -47,7 +48,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2020-09-21T19:59:01Z"
+  "UpdateDate": "2021-06-29T19:55:36Z"
 }
