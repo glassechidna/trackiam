@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 277
-* Unique actions: 10913
+* Unique actions: 10916
 * Managed policies: 833
 
 Most common managed policy name prefixes:
@@ -169,8 +169,8 @@ The following table summarises the AWS APIs.
 | [`amplifybackend`](services/amplifybackend.yml) | 24 | 1 | 0 |
 | [`ram`](services/ram.yml) | 24 | 0 | 0 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 23 | 4 | 3 |
+| [`servicediscovery`](services/servicediscovery.yml) | 23 | 3 | 0 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
-| [`servicediscovery`](services/servicediscovery.yml) | 23 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 0 | 0 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
@@ -323,7 +323,7 @@ Most common action prefixes:
 | `Describe` | 1317 |
 | `Delete` | 1274 |
 | `Create` | 1172 |
-| `Update` | 942 |
+| `Update` | 945 |
 | `Put` | 316 |
 | `Start` | 197 |
 | `Tag` | 169 |
