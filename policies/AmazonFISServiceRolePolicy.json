@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonFISServiceRolePolicy",
   "CreateDate": "2020-12-21T21:18:19Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4JLZR2TQJD",
   "PolicyName": "AmazonFISServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-01-18T15:40:47Z",
+    "CreateDate": "2021-06-30T13:50:04Z",
     "Document": {
       "Statement": [
         {
@@ -29,6 +29,7 @@
         },
         {
           "Action": [
+            "cloudwatch:DescribeAlarmHistory",
             "cloudwatch:DescribeAlarms"
           ],
           "Effect": "Allow",
@@ -63,7 +64,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-01-18T15:40:47Z"
+  "UpdateDate": "2021-06-30T13:50:04Z"
 }
