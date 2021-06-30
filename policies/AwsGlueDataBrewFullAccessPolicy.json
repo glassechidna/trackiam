@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AwsGlueDataBrewFullAccessPolicy",
   "CreateDate": "2020-11-11T16:51:39Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ACNRIK7M3",
   "PolicyName": "AwsGlueDataBrewFullAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-06-30T16:50:53Z",
+    "CreateDate": "2021-06-30T18:23:37Z",
     "Document": {
       "Statement": [
         {
@@ -101,6 +101,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:glue:*:*:catalog",
+            "arn:aws:glue:*:*:database/*",
             "arn:aws:glue:*:*:table/*/awsgluedatabrew*"
           ]
         },
@@ -128,7 +129,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2021-06-30T16:50:53Z"
+  "UpdateDate": "2021-06-30T18:23:37Z"
 }
