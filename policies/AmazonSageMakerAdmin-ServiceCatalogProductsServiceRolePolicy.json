@@ -1,15 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerAdmin-ServiceCatalogProductsServiceRolePolicy",
   "CreateDate": "2020-11-27T18:48:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NAOSKQH4V",
   "PolicyName": "AmazonSageMakerAdmin-ServiceCatalogProductsServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-11-27T18:48:07Z",
+    "CreateDate": "2021-07-02T06:13:39Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "codestar-connections:PassConnection",
+          "Condition": {
+            "StringEquals": {
+              "codestar-connections:PassedToService": "codepipeline.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:codestar-connections:*:*:connection/*"
+        },
         {
           "Action": "s3:GetObject",
           "Condition": {
@@ -334,25 +344,31 @@
             "s3:PutBucketNotification",
             "s3:PutBucketPolicy",
             "s3:PutBucketPublicAccessBlock",
-            "s3:PutEncryptionConfiguration"
+            "s3:PutBucketTagging",
+            "s3:PutEncryptionConfiguration",
+            "s3:PutObjectTagging"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:s3:::sagemaker-*"
         },
         {
           "Action": [
+            "sagemaker:CreateCodeRepository",
             "sagemaker:CreateEndpoint",
             "sagemaker:CreateEndpointConfig",
             "sagemaker:CreateModel",
             "sagemaker:CreateWorkteam",
+            "sagemaker:DeleteCodeRepository",
             "sagemaker:DeleteEndpoint",
             "sagemaker:DeleteEndpointConfig",
             "sagemaker:DeleteModel",
             "sagemaker:DeleteWorkteam",
+            "sagemaker:DescribeCodeRepository",
             "sagemaker:DescribeEndpoint",
             "sagemaker:DescribeEndpointConfig",
             "sagemaker:DescribeModel",
-            "sagemaker:DescribeWorkteam"
+            "sagemaker:DescribeWorkteam",
+            "sagemaker:UpdateCodeRepository"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -374,7 +390,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-11-27T18:48:07Z"
+  "UpdateDate": "2021-07-02T06:13:39Z"
 }
