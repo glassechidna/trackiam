@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBackupServiceLinkedRolePolicyForBackup",
   "CreateDate": "2020-06-02T23:08:40Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ONJBD4ZY2",
   "PolicyName": "AWSBackupServiceLinkedRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2021-04-12T18:11:02Z",
+    "CreateDate": "2021-07-05T23:27:46Z",
     "Document": {
       "Statement": [
         {
@@ -110,6 +110,11 @@
           "Resource": "*"
         },
         {
+          "Action": "dynamodb:DeleteBackup",
+          "Effect": "Allow",
+          "Resource": "arn:aws:dynamodb:*:*:table/*/backup/*"
+        },
+        {
           "Action": "ec2:CopyImage",
           "Effect": "Allow",
           "Resource": "*"
@@ -173,7 +178,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2021-04-12T18:11:02Z"
+  "UpdateDate": "2021-07-05T23:27:46Z"
 }
