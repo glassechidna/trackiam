@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 277
-* Unique actions: 10916
+* Unique actions: 10926
 * Managed policies: 833
 
 Most common managed policy name prefixes:
@@ -36,9 +36,9 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 451 | 3 | 0 |
+| [`ec2`](services/ec2.yml) | 451 | 5 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 245 | 2 | 2 |
-| [`chime`](services/chime.yml) | 184 | 0 | 51 |
+| [`chime`](services/chime.yml) | 188 | 0 | 51 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`glue`](services/glue.yml) | 147 | 10 | 1 |
 | [`lightsail`](services/lightsail.yml) | 142 | 0 | 0 |
@@ -57,7 +57,7 @@ The following table summarises the AWS APIs.
 | [`lex`](services/lex.yml) | 90 | 3 | 5 |
 | [`storagegateway`](services/storagegateway.yml) | 89 | 0 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
-| [`cloudfront`](services/cloudfront.yml) | 83 | 0 | 0 |
+| [`cloudfront`](services/cloudfront.yml) | 83 | 2 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
@@ -72,7 +72,7 @@ The following table summarises the AWS APIs.
 | [`autoscaling`](services/autoscaling.yml) | 60 | 1 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 60 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
-| [`iotsitewise`](services/iotsitewise.yml) | 57 | 1 | 1 |
+| [`iotsitewise`](services/iotsitewise.yml) | 57 | 3 | 1 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`iotwireless`](services/iotwireless.yml) | 57 | 0 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 57 | 0 | 0 |
@@ -318,13 +318,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1596 |
-| `Get` | 1427 |
-| `Describe` | 1317 |
-| `Delete` | 1274 |
-| `Create` | 1172 |
+| `List` | 1598 |
+| `Get` | 1428 |
+| `Describe` | 1319 |
+| `Delete` | 1275 |
+| `Create` | 1173 |
 | `Update` | 945 |
-| `Put` | 316 |
+| `Put` | 317 |
 | `Start` | 197 |
 | `Tag` | 169 |
 | `Untag` | 167 |
