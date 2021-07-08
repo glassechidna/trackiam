@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 277
-* Unique actions: 10926
+* Unique actions: 10927
 * Managed policies: 833
 
 Most common managed policy name prefixes:
@@ -218,11 +218,11 @@ The following table summarises the AWS APIs.
 | [`synthetics`](services/synthetics.yml) | 13 | 0 | 0 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 13 | 0 | 0 |
 | [`health`](services/health.yml) | 13 | 0 | 0 |
+| [`compute-optimizer`](services/compute-optimizer.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`honeycode`](services/honeycode.yml) | 12 | 0 | 14 |
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
-| [`compute-optimizer`](services/compute-optimizer.yml) | 11 | 2 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 30 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
@@ -242,7 +242,7 @@ The following table summarises the AWS APIs.
 | [`sms-voice`](services/sms-voice.yml) | 8 | 0 | 0 |
 | [`iotfleethub`](services/iotfleethub.yml) | 8 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
-| [`mediatailor`](services/mediatailor.yml) | 7 | 24 | 0 |
+| [`mediatailor`](services/mediatailor.yml) | 7 | 25 | 0 |
 | [`macie`](services/macie.yml) | 7 | 0 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 6 | 0 | 1 |
 | [`textract`](services/textract.yml) | 6 | 0 | 0 |
@@ -318,7 +318,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1598 |
+| `List` | 1599 |
 | `Get` | 1428 |
 | `Describe` | 1319 |
 | `Delete` | 1275 |

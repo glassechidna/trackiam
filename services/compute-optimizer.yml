@@ -1,7 +1,9 @@
 Actions:
   - Name: compute-optimizer:DescribeRecommendationExportJobs
   - Name: compute-optimizer:ExportAutoScalingGroupRecommendations
+  - Name: compute-optimizer:ExportEBSVolumeRecommendations
   - Name: compute-optimizer:ExportEC2InstanceRecommendations
+  - Name: compute-optimizer:ExportLambdaFunctionRecommendations
   - Name: compute-optimizer:GetAutoScalingGroupRecommendations
   - Name: compute-optimizer:GetEBSVolumeRecommendations
   - Name: compute-optimizer:GetEC2InstanceRecommendations
@@ -10,7 +12,3 @@ Actions:
   - Name: compute-optimizer:GetLambdaFunctionRecommendations
   - Name: compute-optimizer:GetRecommendationSummaries
   - Name: compute-optimizer:UpdateEnrollmentStatus
-
-  # APIs without an IAM action
-  - Name: compute-optimizer:ExportEBSVolumeRecommendations
-  - Name: compute-optimizer:ExportLambdaFunctionRecommendations
