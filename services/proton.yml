@@ -1,31 +1,53 @@
 Actions:
+  - Name: proton:AcceptEnvironmentAccountConnection
+  - Name: proton:CancelEnvironmentDeployment
+  - Name: proton:CancelServiceInstanceDeployment
+  - Name: proton:CancelServicePipelineDeployment
   - Name: proton:CreateEnvironment
+  - Name: proton:CreateEnvironmentAccountConnection
   - Name: proton:CreateEnvironmentTemplate
+  - Name: proton:CreateEnvironmentTemplateVersion
   - Name: proton:CreateService
   - Name: proton:CreateServiceTemplate
+  - Name: proton:CreateServiceTemplateVersion
   - Name: proton:DeleteEnvironment
+  - Name: proton:DeleteEnvironmentAccountConnection
   - Name: proton:DeleteEnvironmentTemplate
+  - Name: proton:DeleteEnvironmentTemplateVersion
   - Name: proton:DeleteService
   - Name: proton:DeleteServiceTemplate
+  - Name: proton:DeleteServiceTemplateVersion
+  - Name: proton:GetAccountSettings
   - Name: proton:GetEnvironment
+  - Name: proton:GetEnvironmentAccountConnection
   - Name: proton:GetEnvironmentTemplate
+  - Name: proton:GetEnvironmentTemplateVersion
   - Name: proton:GetService
   - Name: proton:GetServiceInstance
   - Name: proton:GetServiceTemplate
+  - Name: proton:GetServiceTemplateVersion
+  - Name: proton:ListEnvironmentAccountConnections
+  - Name: proton:ListEnvironmentTemplateVersions
   - Name: proton:ListEnvironmentTemplates
   - Name: proton:ListEnvironments
   - Name: proton:ListServiceInstances
+  - Name: proton:ListServiceTemplateVersions
   - Name: proton:ListServiceTemplates
   - Name: proton:ListServices
   - Name: proton:ListTagsForResource
+  - Name: proton:RejectEnvironmentAccountConnection
   - Name: proton:TagResource
   - Name: proton:UntagResource
+  - Name: proton:UpdateAccountSettings
   - Name: proton:UpdateEnvironment
+  - Name: proton:UpdateEnvironmentAccountConnection
   - Name: proton:UpdateEnvironmentTemplate
+  - Name: proton:UpdateEnvironmentTemplateVersion
   - Name: proton:UpdateService
   - Name: proton:UpdateServiceInstance
   - Name: proton:UpdateServicePipeline
   - Name: proton:UpdateServiceTemplate
+  - Name: proton:UpdateServiceTemplateVersion
 
   # actions with no corresponding API
   - Name: proton:CreateEnvironmentTemplateMajorVersion
@@ -51,27 +73,3 @@ Actions:
   - Name: proton:UpdateEnvironmentTemplateMinorVersion
   - Name: proton:UpdateServiceTemplateMajorVersion
   - Name: proton:UpdateServiceTemplateMinorVersion
-
-  # APIs without an IAM action
-  - Name: proton:AcceptEnvironmentAccountConnection
-  - Name: proton:CancelEnvironmentDeployment
-  - Name: proton:CancelServiceInstanceDeployment
-  - Name: proton:CancelServicePipelineDeployment
-  - Name: proton:CreateEnvironmentAccountConnection
-  - Name: proton:CreateEnvironmentTemplateVersion
-  - Name: proton:CreateServiceTemplateVersion
-  - Name: proton:DeleteEnvironmentAccountConnection
-  - Name: proton:DeleteEnvironmentTemplateVersion
-  - Name: proton:DeleteServiceTemplateVersion
-  - Name: proton:GetAccountSettings
-  - Name: proton:GetEnvironmentAccountConnection
-  - Name: proton:GetEnvironmentTemplateVersion
-  - Name: proton:GetServiceTemplateVersion
-  - Name: proton:ListEnvironmentAccountConnections
-  - Name: proton:ListEnvironmentTemplateVersions
-  - Name: proton:ListServiceTemplateVersions
-  - Name: proton:RejectEnvironmentAccountConnection
-  - Name: proton:UpdateAccountSettings
-  - Name: proton:UpdateEnvironmentAccountConnection
-  - Name: proton:UpdateEnvironmentTemplateVersion
-  - Name: proton:UpdateServiceTemplateVersion

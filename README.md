@@ -92,6 +92,7 @@ The following table summarises the AWS APIs.
 | [`rekognition`](services/rekognition.yml) | 51 | 0 | 0 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 51 | 0 | 0 |
+| [`proton`](services/proton.yml) | 49 | 0 | 23 |
 | [`imagebuilder`](services/imagebuilder.yml) | 49 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 10 |
 | [`personalize`](services/personalize.yml) | 48 | 4 | 0 |
@@ -151,7 +152,6 @@ The following table summarises the AWS APIs.
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
-| [`proton`](services/proton.yml) | 27 | 22 | 23 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 27 | 4 | 1 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 27 | 0 | 5 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
