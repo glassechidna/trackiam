@@ -57,7 +57,7 @@ The following table summarises the AWS APIs.
 | [`lex`](services/lex.yml) | 90 | 3 | 5 |
 | [`storagegateway`](services/storagegateway.yml) | 89 | 0 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
-| [`cloudfront`](services/cloudfront.yml) | 83 | 2 | 0 |
+| [`cloudfront`](services/cloudfront.yml) | 85 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |

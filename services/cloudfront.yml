@@ -1,4 +1,5 @@
 Actions:
+  - Name: cloudfront:AssociateAlias
   - Name: cloudfront:CreateCachePolicy
   - Name: cloudfront:CreateCloudFrontOriginAccessIdentity
   - Name: cloudfront:CreateDistribution
@@ -51,6 +52,7 @@ Actions:
   - Name: cloudfront:GetStreamingDistributionConfig
   - Name: cloudfront:ListCachePolicies
   - Name: cloudfront:ListCloudFrontOriginAccessIdentities
+  - Name: cloudfront:ListConflictingAliases
   - Name: cloudfront:ListDistributions
   - Name: cloudfront:ListDistributionsByCachePolicyId
   - Name: cloudfront:ListDistributionsByKeyGroup
@@ -82,7 +84,3 @@ Actions:
   - Name: cloudfront:UpdatePublicKey
   - Name: cloudfront:UpdateRealtimeLogConfig
   - Name: cloudfront:UpdateStreamingDistribution
-
-  # APIs without an IAM action
-  - Name: cloudfront:AssociateAlias
-  - Name: cloudfront:ListConflictingAliases
