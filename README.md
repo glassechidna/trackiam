@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 277
-* Unique actions: 10927
+* Unique actions: 10931
 * Managed policies: 833
 
 Most common managed policy name prefixes:
@@ -114,7 +114,7 @@ The following table summarises the AWS APIs.
 | [`sns`](services/sns.yml) | 39 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 39 | 0 | 0 |
-| [`kendra`](services/kendra.yml) | 38 | 1 | 0 |
+| [`kendra`](services/kendra.yml) | 38 | 5 | 0 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`codepipeline`](services/codepipeline.yml) | 37 | 2 | 0 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
@@ -318,13 +318,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1599 |
+| `List` | 1600 |
 | `Get` | 1428 |
-| `Describe` | 1319 |
-| `Delete` | 1275 |
+| `Describe` | 1320 |
+| `Delete` | 1276 |
 | `Create` | 1173 |
 | `Update` | 945 |
-| `Put` | 317 |
+| `Put` | 318 |
 | `Start` | 197 |
 | `Tag` | 169 |
 | `Untag` | 167 |
