@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 277
-* Unique actions: 10931
+* Unique actions: 10938
 * Managed policies: 833
 
 Most common managed policy name prefixes:
@@ -52,9 +52,9 @@ The following table summarises the AWS APIs.
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 1 | 0 |
 | [`quicksight`](services/quicksight.yml) | 99 | 12 | 19 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
-| [`redshift`](services/redshift.yml) | 93 | 11 | 18 |
+| [`redshift`](services/redshift.yml) | 93 | 15 | 18 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
-| [`lex`](services/lex.yml) | 90 | 3 | 5 |
+| [`lex`](services/lex.yml) | 90 | 6 | 5 |
 | [`storagegateway`](services/storagegateway.yml) | 89 | 0 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 85 | 0 | 0 |
@@ -319,13 +319,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1600 |
-| `Get` | 1428 |
-| `Describe` | 1320 |
-| `Delete` | 1276 |
-| `Create` | 1173 |
+| `Get` | 1430 |
+| `Describe` | 1321 |
+| `Delete` | 1277 |
+| `Create` | 1174 |
 | `Update` | 945 |
 | `Put` | 318 |
-| `Start` | 197 |
+| `Start` | 198 |
 | `Tag` | 169 |
 | `Untag` | 167 |
 
