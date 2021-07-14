@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 277
-* Unique actions: 10943
+* Unique actions: 10954
 * Managed policies: 833
 
 Most common managed policy name prefixes:
@@ -41,7 +41,7 @@ The following table summarises the AWS APIs.
 | [`chime`](services/chime.yml) | 188 | 0 | 51 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`glue`](services/glue.yml) | 147 | 10 | 1 |
-| [`lightsail`](services/lightsail.yml) | 142 | 0 | 0 |
+| [`lightsail`](services/lightsail.yml) | 142 | 11 | 0 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
 | [`rds`](services/rds.yml) | 137 | 0 | 1 |
 | [`ssm`](services/ssm.yml) | 134 | 1 | 7 |
@@ -214,6 +214,7 @@ The following table summarises the AWS APIs.
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`translate`](services/translate.yml) | 14 | 0 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 10 | 1 |
+| [`healthlake`](services/healthlake.yml) | 13 | 0 | 7 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 2 |
 | [`synthetics`](services/synthetics.yml) | 13 | 0 | 0 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 13 | 0 | 0 |
@@ -236,7 +237,6 @@ The following table summarises the AWS APIs.
 | [`braket`](services/braket.yml) | 9 | 0 | 0 |
 | [`budgets`](services/budgets.yml) | 8 | 14 | 2 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
-| [`healthlake`](services/healthlake.yml) | 8 | 0 | 12 |
 | [`sts`](services/sts.yml) | 8 | 0 | 3 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
 | [`sms-voice`](services/sms-voice.yml) | 8 | 0 | 0 |
@@ -319,11 +319,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1603 |
-| `Get` | 1430 |
+| `Get` | 1434 |
 | `Describe` | 1321 |
-| `Delete` | 1277 |
-| `Create` | 1174 |
-| `Update` | 945 |
+| `Delete` | 1279 |
+| `Create` | 1176 |
+| `Update` | 947 |
 | `Put` | 318 |
 | `Start` | 198 |
 | `Tag` | 170 |
