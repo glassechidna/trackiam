@@ -1,0 +1,145 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/Route53RecoveryReadinessServiceRolePolicy",
+  "CreateDate": "2021-07-15T16:06:21Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4J7MSL2FYD",
+  "PolicyName": "Route53RecoveryReadinessServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-07-15T16:06:21Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "servicequotas.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/servicequotas.amazonaws.com/AWSServiceRoleForServiceQuotas"
+        },
+        {
+          "Action": [
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingPolicies",
+            "autoscaling:DescribeAccountLimits",
+            "autoscaling:DescribeAutoScalingGroups",
+            "autoscaling:DescribeAutoScalingInstances",
+            "autoscaling:DescribeLifecycleHooks",
+            "autoscaling:DescribeLoadBalancerTargetGroups",
+            "autoscaling:DescribeLoadBalancers",
+            "autoscaling:DescribeNotificationConfigurations",
+            "autoscaling:DescribePolicies",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:GetMetricData",
+            "dynamodb:DescribeLimits",
+            "dynamodb:ListGlobalTables",
+            "dynamodb:ListTables",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeInstances",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVolumes",
+            "ec2:DescribeVpcs",
+            "ec2:DescribeVpnConnections",
+            "ec2:GetEbsDefaultKmsKeyId",
+            "ec2:GetEbsEncryptionByDefault",
+            "elasticloadbalancing:DescribeInstanceHealth",
+            "elasticloadbalancing:DescribeLoadBalancerAttributes",
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "elasticloadbalancing:DescribeTargetGroups",
+            "elasticloadbalancing:DescribeTargetHealth",
+            "kafka:DescribeCluster",
+            "kafka:DescribeConfigurationRevision",
+            "lambda:ListFunctions",
+            "rds:DescribeAccountAttributes",
+            "route53:GetHostedZone",
+            "servicequotas:ListAWSDefaultServiceQuotas",
+            "servicequotas:ListRequestedServiceQuotaChangeHistory",
+            "servicequotas:ListServiceQuotas",
+            "servicequotas:ListServices",
+            "sns:GetEndpointAttributes",
+            "sns:GetSubscriptionAttributes"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "dynamodb:DescribeReservedCapacity",
+            "dynamodb:DescribeReservedCapacityOfferings"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:dynamodb:*:*:*"
+        },
+        {
+          "Action": [
+            "dynamodb:DescribeTable",
+            "dynamodb:DescribeTimeToLive"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:dynamodb:*:*:table/*"
+        },
+        {
+          "Action": [
+            "rds:DescribeDBClusters"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:rds:*:*:cluster:*"
+        },
+        {
+          "Action": [
+            "rds:DescribeDBInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:rds:*:*:db:*"
+        },
+        {
+          "Action": [
+            "route53:GetHealthCheck",
+            "route53:GetHealthCheckStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:route53:::healthcheck/*"
+        },
+        {
+          "Action": [
+            "route53:ListResourceRecordSets"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:route53:::hostedzone/*"
+        },
+        {
+          "Action": [
+            "servicequotas:RequestServiceQuotaIncrease"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:servicequotas:*:*:*"
+        },
+        {
+          "Action": [
+            "sns:GetTopicAttributes",
+            "sns:ListSubscriptionsByTopic"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sns:*:*:*"
+        },
+        {
+          "Action": [
+            "sqs:GetQueueAttributes",
+            "sqs:GetQueueUrl"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sqs:*:*:*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-07-15T16:06:21Z"
+}
