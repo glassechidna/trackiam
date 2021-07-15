@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSGlueConsoleSageMakerNotebookFullAccess",
   "CreateDate": "2018-10-05T17:52:35Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJELFOHJC42QS3ZSYY",
   "PolicyName": "AWSGlueConsoleSageMakerNotebookFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-09-26T17:14:11Z",
+    "CreateDate": "2021-07-15T15:24:19Z",
     "Document": {
       "Statement": [
         {
@@ -92,8 +92,10 @@
             "tag:GetResources"
           ],
           "Condition": {
-            "StringEquals": {
-              "aws:TagKeys": "aws-glue-*"
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": [
+                "aws-glue-*"
+              ]
             }
           },
           "Effect": "Allow",
@@ -196,8 +198,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:s3:::*/*aws-glue-*/*",
-            "arn:aws:s3:::aws-glue-*",
-            "arn:aws:s3:::aws-glue-*/*"
+            "arn:aws:s3:::aws-glue-*"
           ]
         },
         {
@@ -228,7 +229,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-09-26T17:14:11Z"
+  "UpdateDate": "2021-07-15T15:24:19Z"
 }
