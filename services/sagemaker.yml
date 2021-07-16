@@ -204,6 +204,8 @@ Actions:
   - Name: sagemaker:RenderUiTemplate
   - Name: sagemaker:Search
   - Name: sagemaker:SendHeartbeat
+  - Name: sagemaker:SendPipelineExecutionStepFailure
+  - Name: sagemaker:SendPipelineExecutionStepSuccess
   - Name: sagemaker:StartHumanLoop
   - Name: sagemaker:StartMonitoringSchedule
   - Name: sagemaker:StartNotebookInstance
@@ -248,7 +250,3 @@ Actions:
   # actions with no corresponding API
   - Name: sagemaker:BatchGetMetrics
   - Name: sagemaker:BatchPutMetrics
-
-  # APIs without an IAM action
-  - Name: sagemaker:SendPipelineExecutionStepFailure
-  - Name: sagemaker:SendPipelineExecutionStepSuccess
