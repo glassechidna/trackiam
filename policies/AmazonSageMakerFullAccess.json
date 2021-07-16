@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerFullAccess",
   "CreateDate": "2017-11-29T13:07:59Z",
-  "DefaultVersionId": "v19",
+  "DefaultVersionId": "v20",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJZ5IWYMXO5QDB4QOG",
   "PolicyName": "AmazonSageMakerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-02-24T01:19:55Z",
+    "CreateDate": "2021-07-16T00:06:59Z",
     "Document": {
       "Statement": [
         {
@@ -51,16 +51,27 @@
           ],
           "Condition": {
             "StringEquals": {
+              "iam:PassedToService": "sagemaker.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
               "iam:PassedToService": [
                 "glue.amazonaws.com",
                 "robomaker.amazonaws.com",
-                "sagemaker.amazonaws.com",
                 "states.amazonaws.com"
               ]
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/*"
+          "Resource": "arn:aws:iam::*:role/*AmazonSageMaker*"
         },
         {
           "Action": [
@@ -470,7 +481,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v19"
+    "VersionId": "v20"
   },
-  "UpdateDate": "2021-02-24T01:19:55Z"
+  "UpdateDate": "2021-07-16T00:06:59Z"
 }
