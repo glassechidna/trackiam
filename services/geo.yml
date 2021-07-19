@@ -44,7 +44,10 @@ Actions:
   - Name: geo:SearchPlaceIndexForText
   - Name: geo:TagResource
   - Name: geo:UntagResource
-
-  # actions with no corresponding API
   - Name: geo:UpdateGeofenceCollection
   - Name: geo:UpdateTracker
+
+  # APIs without an IAM action
+  - Name: geo:UpdateMap
+  - Name: geo:UpdatePlaceIndex
+  - Name: geo:UpdateRouteCalculator

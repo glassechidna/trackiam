@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 277
-* Unique actions: 10960
+* Unique actions: 10963
 * Managed policies: 834
 
 Most common managed policy name prefixes:
@@ -96,6 +96,7 @@ The following table summarises the AWS APIs.
 | [`imagebuilder`](services/imagebuilder.yml) | 49 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 10 |
 | [`personalize`](services/personalize.yml) | 48 | 4 | 0 |
+| [`geo`](services/geo.yml) | 47 | 3 | 0 |
 | [`kms`](services/kms.yml) | 47 | 1 | 3 |
 | [`appstream`](services/appstream.yml) | 47 | 1 | 1 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
@@ -103,7 +104,6 @@ The following table summarises the AWS APIs.
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 46 | 1 | 15 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
 | [`nimble`](services/nimble.yml) | 45 | 0 | 2 |
-| [`geo`](services/geo.yml) | 45 | 0 | 2 |
 | [`license-manager`](services/license-manager.yml) | 45 | 0 | 0 |
 | [`codebuild`](services/codebuild.yml) | 44 | 0 | 8 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
@@ -323,7 +323,7 @@ Most common action prefixes:
 | `Describe` | 1322 |
 | `Delete` | 1280 |
 | `Create` | 1177 |
-| `Update` | 947 |
+| `Update` | 950 |
 | `Put` | 318 |
 | `Start` | 198 |
 | `Tag` | 170 |
