@@ -7,6 +7,8 @@ Actions:
   - Name: lightsail:AttachStaticIp
   - Name: lightsail:CloseInstancePublicPorts
   - Name: lightsail:CopySnapshot
+  - Name: lightsail:CreateBucket
+  - Name: lightsail:CreateBucketAccessKey
   - Name: lightsail:CreateCertificate
   - Name: lightsail:CreateCloudFormationStack
   - Name: lightsail:CreateContactMethod
@@ -30,6 +32,8 @@ Actions:
   - Name: lightsail:CreateRelationalDatabaseSnapshot
   - Name: lightsail:DeleteAlarm
   - Name: lightsail:DeleteAutoSnapshot
+  - Name: lightsail:DeleteBucket
+  - Name: lightsail:DeleteBucketAccessKey
   - Name: lightsail:DeleteCertificate
   - Name: lightsail:DeleteContactMethod
   - Name: lightsail:DeleteContainerImage
@@ -59,6 +63,10 @@ Actions:
   - Name: lightsail:GetAlarms
   - Name: lightsail:GetAutoSnapshots
   - Name: lightsail:GetBlueprints
+  - Name: lightsail:GetBucketAccessKeys
+  - Name: lightsail:GetBucketBundles
+  - Name: lightsail:GetBucketMetricData
+  - Name: lightsail:GetBuckets
   - Name: lightsail:GetBundles
   - Name: lightsail:GetCertificates
   - Name: lightsail:GetCloudFormationStackRecords
@@ -126,6 +134,7 @@ Actions:
   - Name: lightsail:ResetDistributionCache
   - Name: lightsail:SendContactMethodVerification
   - Name: lightsail:SetIpAddressType
+  - Name: lightsail:SetResourceAccessForBucket
   - Name: lightsail:StartInstance
   - Name: lightsail:StartRelationalDatabase
   - Name: lightsail:StopInstance
@@ -134,6 +143,8 @@ Actions:
   - Name: lightsail:TestAlarm
   - Name: lightsail:UnpeerVpc
   - Name: lightsail:UntagResource
+  - Name: lightsail:UpdateBucket
+  - Name: lightsail:UpdateBucketBundle
   - Name: lightsail:UpdateContainerService
   - Name: lightsail:UpdateDistribution
   - Name: lightsail:UpdateDistributionBundle
@@ -141,16 +152,3 @@ Actions:
   - Name: lightsail:UpdateLoadBalancerAttribute
   - Name: lightsail:UpdateRelationalDatabase
   - Name: lightsail:UpdateRelationalDatabaseParameters
-
-  # APIs without an IAM action
-  - Name: lightsail:CreateBucket
-  - Name: lightsail:CreateBucketAccessKey
-  - Name: lightsail:DeleteBucket
-  - Name: lightsail:DeleteBucketAccessKey
-  - Name: lightsail:GetBucketAccessKeys
-  - Name: lightsail:GetBucketBundles
-  - Name: lightsail:GetBucketMetricData
-  - Name: lightsail:GetBuckets
-  - Name: lightsail:SetResourceAccessForBucket
-  - Name: lightsail:UpdateBucket
-  - Name: lightsail:UpdateBucketBundle
