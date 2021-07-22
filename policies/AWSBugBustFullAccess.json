@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBugBustFullAccess",
   "CreateDate": "2021-06-24T07:03:26Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MQU5DXLFC",
   "PolicyName": "AWSBugBustFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-06-24T07:03:26Z",
+    "CreateDate": "2021-07-22T20:04:29Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "bugbust.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/bugbust.amazonaws.com/AWSServiceRoleForBugBust",
+          "Sid": "AWSBugBustSLRCreation"
+        },
         {
           "Action": [
             "bugbust:*"
@@ -41,7 +52,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-06-24T07:03:26Z"
+  "UpdateDate": "2021-07-22T20:04:29Z"
 }
