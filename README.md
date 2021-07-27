@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 277
-* Unique actions: 11008
+* Unique services: 280
+* Unique actions: 11064
 * Managed policies: 834
 
 Most common managed policy name prefixes:
@@ -49,8 +49,8 @@ The following table summarises the AWS APIs.
 | [`greengrass`](services/greengrass.yml) | 107 | 3 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 107 | 0 | 0 |
 | [`connect`](services/connect.yml) | 103 | 0 | 3 |
+| [`quicksight`](services/quicksight.yml) | 101 | 12 | 19 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 1 | 0 |
-| [`quicksight`](services/quicksight.yml) | 99 | 12 | 21 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 93 | 15 | 18 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
@@ -227,12 +227,12 @@ The following table summarises the AWS APIs.
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 30 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
+| [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
 | [`outposts`](services/outposts.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`iot`](services/iot.yml) | 9 | 0 | 239 |
 | [`app-integrations`](services/app-integrations.yml) | 9 | 0 | 2 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
-| [`redshift-data`](services/redshift-data.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`braket`](services/braket.yml) | 9 | 0 | 0 |
 | [`budgets`](services/budgets.yml) | 8 | 14 | 2 |
@@ -263,9 +263,12 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 238 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
+| [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 0 | 32 | 0 |
+| [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 0 | 20 | 0 |
 | [`finspace`](services/finspace.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
+| [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 0 | 3 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 3 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
@@ -318,14 +321,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1610 |
-| `Get` | 1439 |
-| `Describe` | 1332 |
-| `Delete` | 1287 |
-| `Create` | 1182 |
-| `Update` | 952 |
+| `List` | 1622 |
+| `Get` | 1449 |
+| `Describe` | 1336 |
+| `Delete` | 1296 |
+| `Create` | 1191 |
+| `Update` | 961 |
 | `Put` | 320 |
 | `Start` | 198 |
-| `Tag` | 170 |
-| `Untag` | 168 |
+| `Tag` | 171 |
+| `Untag` | 169 |
 
