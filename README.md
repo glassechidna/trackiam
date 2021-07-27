@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 277
-* Unique actions: 10972
+* Unique actions: 10980
 * Managed policies: 834
 
 Most common managed policy name prefixes:
@@ -272,11 +272,11 @@ The following table summarises the AWS APIs.
 | [`panorama`](services/panorama.yml) | 0 | 0 | 42 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
+| [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
-| [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 18 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 14 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
@@ -318,13 +318,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1604 |
-| `Get` | 1436 |
+| `List` | 1606 |
+| `Get` | 1438 |
 | `Describe` | 1323 |
-| `Delete` | 1281 |
+| `Delete` | 1283 |
 | `Create` | 1178 |
 | `Update` | 950 |
-| `Put` | 318 |
+| `Put` | 320 |
 | `Start` | 198 |
 | `Tag` | 170 |
 | `Untag` | 168 |
