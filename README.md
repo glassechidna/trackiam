@@ -166,7 +166,7 @@ The following table summarises the AWS APIs.
 | [`mediaconvert`](services/mediaconvert.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
-| [`amplifybackend`](services/amplifybackend.yml) | 24 | 1 | 0 |
+| [`amplifybackend`](services/amplifybackend.yml) | 25 | 0 | 0 |
 | [`ram`](services/ram.yml) | 24 | 0 | 0 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 23 | 4 | 3 |
 | [`servicediscovery`](services/servicediscovery.yml) | 23 | 3 | 0 |
