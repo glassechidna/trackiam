@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSLicenseManagerServiceRolePolicy",
   "CreateDate": "2018-11-26T19:02:53Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIM7JPETWHTYNBQSZE",
   "PolicyName": "AWSLicenseManagerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-06-17T03:54:13Z",
+    "CreateDate": "2021-07-30T01:43:19Z",
     "Document": {
       "Statement": [
         {
@@ -31,7 +31,7 @@
           ],
           "Condition": {
             "StringEquals": {
-              "iam:AWSServiceName": "license-manager.amazonaws.com"
+              "iam:AWSServiceName": "license-manager.member-account.amazonaws.com"
             }
           },
           "Effect": "Allow",
@@ -144,7 +144,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2021-06-17T03:54:13Z"
+  "UpdateDate": "2021-07-30T01:43:19Z"
 }
