@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 280
-* Unique actions: 11071
+* Unique actions: 11099
 * Managed policies: 835
 
 Most common managed policy name prefixes:
@@ -52,7 +52,7 @@ The following table summarises the AWS APIs.
 | [`quicksight`](services/quicksight.yml) | 101 | 12 | 19 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 1 | 0 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
-| [`redshift`](services/redshift.yml) | 93 | 15 | 18 |
+| [`redshift`](services/redshift.yml) | 93 | 23 | 18 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`lex`](services/lex.yml) | 90 | 6 | 5 |
 | [`storagegateway`](services/storagegateway.yml) | 89 | 0 | 1 |
@@ -272,11 +272,11 @@ The following table summarises the AWS APIs.
 | [`finspace-api`](services/finspace-api.yml) | 0 | 3 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
+| [`deepracer`](services/deepracer.yml) | 0 | 0 | 46 |
 | [`panorama`](services/panorama.yml) | 0 | 0 | 42 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
-| [`deepracer`](services/deepracer.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
@@ -321,14 +321,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1623 |
-| `Get` | 1450 |
-| `Describe` | 1336 |
-| `Delete` | 1296 |
-| `Create` | 1191 |
-| `Update` | 961 |
+| `List` | 1627 |
+| `Get` | 1454 |
+| `Describe` | 1339 |
+| `Delete` | 1297 |
+| `Create` | 1194 |
+| `Update` | 962 |
 | `Put` | 320 |
 | `Start` | 199 |
-| `Tag` | 172 |
-| `Untag` | 170 |
+| `Tag` | 173 |
+| `Untag` | 171 |
 
