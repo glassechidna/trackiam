@@ -1,19 +1,23 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonGuardDutyServiceRolePolicy",
   "CreateDate": "2017-11-28T20:12:59Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIHZREZOWNSSA6FWQO",
   "PolicyName": "AmazonGuardDutyServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-05-14T20:25:50Z",
+    "CreateDate": "2021-08-03T23:14:07Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "ec2:DescribeImages",
             "ec2:DescribeInstances",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeTransitGatewayAttachments",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcPeeringConnections",
             "organizations:DescribeAccount",
             "organizations:ListAccounts",
             "s3:GetAccountPublicAccessBlock",
@@ -32,7 +36,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-05-14T20:25:50Z"
+  "UpdateDate": "2021-08-03T23:14:07Z"
 }
