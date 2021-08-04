@@ -1,6 +1,8 @@
 Actions:
   - Name: redshift:AcceptReservedNodeExchange
+  - Name: redshift:AssociateDataShareConsumer
   - Name: redshift:AuthorizeClusterSecurityGroupIngress
+  - Name: redshift:AuthorizeDataShare
   - Name: redshift:AuthorizeSnapshotAccess
   - Name: redshift:BatchDeleteClusterSnapshots
   - Name: redshift:BatchModifyClusterSnapshots
@@ -19,6 +21,7 @@ Actions:
   - Name: redshift:CreateSnapshotSchedule
   - Name: redshift:CreateTags
   - Name: redshift:CreateUsageLimit
+  - Name: redshift:DeauthorizeDataShare
   - Name: redshift:DeleteCluster
   - Name: redshift:DeleteClusterParameterGroup
   - Name: redshift:DeleteClusterSecurityGroup
@@ -42,6 +45,9 @@ Actions:
   - Name: redshift:DescribeClusterTracks
   - Name: redshift:DescribeClusterVersions
   - Name: redshift:DescribeClusters
+  - Name: redshift:DescribeDataShares
+  - Name: redshift:DescribeDataSharesForConsumer
+  - Name: redshift:DescribeDataSharesForProducer
   - Name: redshift:DescribeDefaultClusterParameters
   - Name: redshift:DescribeEventCategories
   - Name: redshift:DescribeEventSubscriptions
@@ -63,6 +69,7 @@ Actions:
   - Name: redshift:DescribeUsageLimits
   - Name: redshift:DisableLogging
   - Name: redshift:DisableSnapshotCopy
+  - Name: redshift:DisassociateDataShareConsumer
   - Name: redshift:EnableLogging
   - Name: redshift:EnableSnapshotCopy
   - Name: redshift:GetClusterCredentials
@@ -84,6 +91,7 @@ Actions:
   - Name: redshift:PauseCluster
   - Name: redshift:PurchaseReservedNodeOffering
   - Name: redshift:RebootCluster
+  - Name: redshift:RejectDataShare
   - Name: redshift:ResetClusterParameterGroup
   - Name: redshift:ResizeCluster
   - Name: redshift:RestoreFromClusterSnapshot
@@ -115,25 +123,17 @@ Actions:
 
   # APIs without an IAM action
   - Name: redshift:AddPartner
-  - Name: redshift:AssociateDataShareConsumer
-  - Name: redshift:AuthorizeDataShare
   - Name: redshift:AuthorizeEndpointAccess
   - Name: redshift:CreateAuthenticationProfile
   - Name: redshift:CreateEndpointAccess
-  - Name: redshift:DeauthorizeDataShare
   - Name: redshift:DeleteAuthenticationProfile
   - Name: redshift:DeleteEndpointAccess
   - Name: redshift:DeletePartner
   - Name: redshift:DescribeAuthenticationProfiles
-  - Name: redshift:DescribeDataShares
-  - Name: redshift:DescribeDataSharesForConsumer
-  - Name: redshift:DescribeDataSharesForProducer
   - Name: redshift:DescribeEndpointAccess
   - Name: redshift:DescribeEndpointAuthorization
   - Name: redshift:DescribePartners
-  - Name: redshift:DisassociateDataShareConsumer
   - Name: redshift:ModifyAuthenticationProfile
   - Name: redshift:ModifyEndpointAccess
-  - Name: redshift:RejectDataShare
   - Name: redshift:RevokeEndpointAccess
   - Name: redshift:UpdatePartnerStatus

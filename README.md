@@ -49,10 +49,10 @@ The following table summarises the AWS APIs.
 | [`greengrass`](services/greengrass.yml) | 107 | 3 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 107 | 0 | 1 |
 | [`connect`](services/connect.yml) | 103 | 0 | 3 |
+| [`redshift`](services/redshift.yml) | 101 | 15 | 18 |
 | [`quicksight`](services/quicksight.yml) | 101 | 12 | 19 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 1 | 0 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
-| [`redshift`](services/redshift.yml) | 93 | 23 | 18 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`lex`](services/lex.yml) | 90 | 6 | 5 |
 | [`storagegateway`](services/storagegateway.yml) | 89 | 0 | 1 |
@@ -115,6 +115,7 @@ The following table summarises the AWS APIs.
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 39 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 38 | 5 | 0 |
+| [`transcribe`](services/transcribe.yml) | 38 | 0 | 2 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`codepipeline`](services/codepipeline.yml) | 37 | 2 | 0 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
@@ -143,7 +144,6 @@ The following table summarises the AWS APIs.
 | [`ce`](services/ce.yml) | 30 | 0 | 10 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 30 | 0 | 0 |
-| [`transcribe`](services/transcribe.yml) | 29 | 0 | 11 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
 | [`profile`](services/profile.yml) | 28 | 2 | 0 |

@@ -1,8 +1,11 @@
 Actions:
+  - Name: transcribe:CreateCallAnalyticsCategory
   - Name: transcribe:CreateLanguageModel
   - Name: transcribe:CreateMedicalVocabulary
   - Name: transcribe:CreateVocabulary
   - Name: transcribe:CreateVocabularyFilter
+  - Name: transcribe:DeleteCallAnalyticsCategory
+  - Name: transcribe:DeleteCallAnalyticsJob
   - Name: transcribe:DeleteLanguageModel
   - Name: transcribe:DeleteMedicalTranscriptionJob
   - Name: transcribe:DeleteMedicalVocabulary
@@ -10,34 +13,31 @@ Actions:
   - Name: transcribe:DeleteVocabulary
   - Name: transcribe:DeleteVocabularyFilter
   - Name: transcribe:DescribeLanguageModel
+  - Name: transcribe:GetCallAnalyticsCategory
+  - Name: transcribe:GetCallAnalyticsJob
   - Name: transcribe:GetMedicalTranscriptionJob
   - Name: transcribe:GetMedicalVocabulary
   - Name: transcribe:GetTranscriptionJob
   - Name: transcribe:GetVocabulary
   - Name: transcribe:GetVocabularyFilter
+  - Name: transcribe:ListCallAnalyticsCategories
+  - Name: transcribe:ListCallAnalyticsJobs
   - Name: transcribe:ListLanguageModels
   - Name: transcribe:ListMedicalTranscriptionJobs
   - Name: transcribe:ListMedicalVocabularies
   - Name: transcribe:ListTranscriptionJobs
   - Name: transcribe:ListVocabularies
   - Name: transcribe:ListVocabularyFilters
+  - Name: transcribe:StartCallAnalyticsJob
   - Name: transcribe:StartMedicalStreamTranscription
   - Name: transcribe:StartMedicalTranscriptionJob
   - Name: transcribe:StartStreamTranscription
   - Name: transcribe:StartTranscriptionJob
+  - Name: transcribe:UpdateCallAnalyticsCategory
   - Name: transcribe:UpdateMedicalVocabulary
   - Name: transcribe:UpdateVocabulary
   - Name: transcribe:UpdateVocabularyFilter
 
   # actions with no corresponding API
-  - Name: transcribe:CreateCallAnalyticsCategory
-  - Name: transcribe:DeleteCallAnalyticsCategory
-  - Name: transcribe:DeleteCallAnalyticsJob
-  - Name: transcribe:GetCallAnalyticsCategory
-  - Name: transcribe:GetCallAnalyticsJob
-  - Name: transcribe:ListCallAnalyticsCategories
-  - Name: transcribe:ListCallAnalyticsJobs
-  - Name: transcribe:StartCallAnalyticsJob
   - Name: transcribe:StartMedicalStreamTranscriptionWebSocket
   - Name: transcribe:StartStreamTranscriptionWebSocket
-  - Name: transcribe:UpdateCallAnalyticsCategory
