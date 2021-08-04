@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSSOMemberAccountAdministrator",
   "CreateDate": "2018-06-27T20:45:42Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIQYHEY7KJWXZFNDPY",
   "PolicyName": "AWSSSOMemberAccountAdministrator",
   "PolicyVersion": {
-    "CreateDate": "2018-10-17T20:35:52Z",
+    "CreateDate": "2021-08-04T20:13:14Z",
     "Document": {
       "Statement": [
         {
@@ -27,7 +27,7 @@
             "organizations:ListOrganizationalUnitsForParent",
             "organizations:ListParents",
             "organizations:ListRoots",
-            "sso-directory:DescribeDirectory",
+            "sso-directory:*",
             "sso:*"
           ],
           "Effect": "Allow",
@@ -38,7 +38,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2018-10-17T20:35:52Z"
+  "UpdateDate": "2021-08-04T20:13:14Z"
 }
