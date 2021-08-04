@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSSOMasterAccountAdministrator",
   "CreateDate": "2018-06-27T20:36:51Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIHXAQZIS3GOYIETUC",
   "PolicyName": "AWSSSOMasterAccountAdministrator",
   "PolicyVersion": {
-    "CreateDate": "2018-10-17T20:41:20Z",
+    "CreateDate": "2021-08-04T21:10:42Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "sso.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/sso.amazonaws.com/AWSServiceRoleForSSO",
+          "Sid": "AWSSSOCreateSLR"
+        },
         {
           "Action": "iam:PassRole",
           "Condition": {
@@ -38,7 +49,7 @@
             "organizations:ListOrganizationalUnitsForParent",
             "organizations:ListParents",
             "organizations:ListRoots",
-            "sso-directory:DescribeDirectory",
+            "sso-directory:*",
             "sso:*"
           ],
           "Effect": "Allow",
@@ -49,7 +60,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2018-10-17T20:41:20Z"
+  "UpdateDate": "2021-08-04T21:10:42Z"
 }

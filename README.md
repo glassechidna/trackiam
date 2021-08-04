@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 280
-* Unique actions: 11108
+* Unique actions: 11109
 * Managed policies: 835
 
 Most common managed policy name prefixes:
@@ -189,6 +189,7 @@ The following table summarises the AWS APIs.
 | [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 1 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
+| [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 19 | 1 | 1 |
 | [`lookoutvision`](services/lookoutvision.yml) | 19 | 0 | 3 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
@@ -264,7 +265,6 @@ The following table summarises the AWS APIs.
 | [`execute-api`](services/execute-api.yml) | 0 | 238 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 0 | 32 | 0 |
-| [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 0 | 20 | 0 |
 | [`finspace`](services/finspace.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
@@ -323,7 +323,7 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1629 |
 | `Get` | 1456 |
-| `Describe` | 1339 |
+| `Describe` | 1340 |
 | `Delete` | 1299 |
 | `Create` | 1195 |
 | `Update` | 963 |
