@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 280
-* Unique actions: 11109
+* Unique actions: 11110
 * Managed policies: 836
 
 Most common managed policy name prefixes:
@@ -138,6 +138,7 @@ The following table summarises the AWS APIs.
 | [`appconfig`](services/appconfig.yml) | 33 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 32 | 3 | 0 |
 | [`eks`](services/eks.yml) | 32 | 0 | 1 |
+| [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 31 | 1 | 1 |
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |
 | [`wellarchitected`](services/wellarchitected.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
@@ -256,6 +257,7 @@ The following table summarises the AWS APIs.
 | [`identitystore`](services/identitystore.yml) | 4 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`s3-outposts`](services/s3-outposts.yml) | 3 | 0 | 29 |
+| [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 3 | 0 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
 | [`pi`](services/pi.yml) | 3 | 0 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
@@ -264,11 +266,9 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 238 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
-| [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 0 | 32 | 0 |
 | [`finspace`](services/finspace.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
-| [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 0 | 3 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 3 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
@@ -322,7 +322,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1629 |
-| `Get` | 1456 |
+| `Get` | 1457 |
 | `Describe` | 1340 |
 | `Delete` | 1299 |
 | `Create` | 1195 |
