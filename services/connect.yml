@@ -7,7 +7,9 @@ Actions:
   - Name: connect:AssociateQueueQuickConnects
   - Name: connect:AssociateRoutingProfileQueues
   - Name: connect:AssociateSecurityKey
+  - Name: connect:CreateAgentStatus
   - Name: connect:CreateContactFlow
+  - Name: connect:CreateHoursOfOperation
   - Name: connect:CreateInstance
   - Name: connect:CreateIntegrationAssociation
   - Name: connect:CreateQueue
@@ -16,12 +18,14 @@ Actions:
   - Name: connect:CreateUseCase
   - Name: connect:CreateUser
   - Name: connect:CreateUserHierarchyGroup
+  - Name: connect:DeleteHoursOfOperation
   - Name: connect:DeleteInstance
   - Name: connect:DeleteIntegrationAssociation
   - Name: connect:DeleteQuickConnect
   - Name: connect:DeleteUseCase
   - Name: connect:DeleteUser
   - Name: connect:DeleteUserHierarchyGroup
+  - Name: connect:DescribeAgentStatus
   - Name: connect:DescribeContactFlow
   - Name: connect:DescribeHoursOfOperation
   - Name: connect:DescribeInstance
@@ -45,6 +49,7 @@ Actions:
   - Name: connect:GetCurrentMetricData
   - Name: connect:GetFederationToken
   - Name: connect:GetMetricData
+  - Name: connect:ListAgentStatuses
   - Name: connect:ListApprovedOrigins
   - Name: connect:ListBots
   - Name: connect:ListContactFlows
@@ -79,9 +84,11 @@ Actions:
   - Name: connect:SuspendContactRecording
   - Name: connect:TagResource
   - Name: connect:UntagResource
+  - Name: connect:UpdateAgentStatus
   - Name: connect:UpdateContactAttributes
   - Name: connect:UpdateContactFlowContent
   - Name: connect:UpdateContactFlowName
+  - Name: connect:UpdateHoursOfOperation
   - Name: connect:UpdateInstanceAttribute
   - Name: connect:UpdateInstanceStorageConfig
   - Name: connect:UpdateQueueHoursOfOperation
@@ -107,12 +114,3 @@ Actions:
   - Name: connect:AssociateCustomerProfilesDomain
   - Name: connect:DisassociateCustomerProfilesDomain
   - Name: connect:GetFederationTokens
-
-  # APIs without an IAM action
-  - Name: connect:CreateAgentStatus
-  - Name: connect:CreateHoursOfOperation
-  - Name: connect:DeleteHoursOfOperation
-  - Name: connect:DescribeAgentStatus
-  - Name: connect:ListAgentStatuses
-  - Name: connect:UpdateAgentStatus
-  - Name: connect:UpdateHoursOfOperation
