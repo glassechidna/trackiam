@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSTrustedAdvisorServiceRolePolicy",
   "CreateDate": "2018-02-22T21:24:25Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJH4QJ2WMHBOB47BUE",
   "PolicyName": "AWSTrustedAdvisorServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-04-08T16:15:31Z",
+    "CreateDate": "2021-08-10T22:41:30Z",
     "Document": {
       "Statement": [
         {
@@ -46,6 +46,7 @@
             "elasticloadbalancing:DescribeLoadBalancerPolicies",
             "elasticloadbalancing:DescribeLoadBalancerPolicyTypes",
             "elasticloadbalancing:DescribeLoadBalancers",
+            "elasticloadbalancing:DescribeTargetGroups",
             "iam:GenerateCredentialReport",
             "iam:GetAccountPasswordPolicy",
             "iam:GetAccountSummary",
@@ -80,6 +81,7 @@
             "route53:ListHostedZones",
             "route53:ListHostedZonesByName",
             "route53:ListResourceRecordSets",
+            "s3:GetAccountPublicAccessBlock",
             "s3:GetBucketAcl",
             "s3:GetBucketLocation",
             "s3:GetBucketLogging",
@@ -99,7 +101,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2020-04-08T16:15:31Z"
+  "UpdateDate": "2021-08-10T22:41:30Z"
 }
