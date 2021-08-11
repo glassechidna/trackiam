@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 280
-* Unique actions: 11122
+* Unique services: 281
+* Unique actions: 11136
 * Managed policies: 836
 
 Most common managed policy name prefixes:
@@ -105,7 +105,7 @@ The following table summarises the AWS APIs.
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
 | [`nimble`](services/nimble.yml) | 45 | 0 | 2 |
 | [`license-manager`](services/license-manager.yml) | 45 | 0 | 0 |
-| [`codebuild`](services/codebuild.yml) | 44 | 0 | 8 |
+| [`codebuild`](services/codebuild.yml) | 44 | 1 | 8 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
 | [`appsync`](services/appsync.yml) | 41 | 0 | 2 |
@@ -219,6 +219,7 @@ The following table summarises the AWS APIs.
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 7 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 2 |
 | [`synthetics`](services/synthetics.yml) | 13 | 0 | 0 |
+| [`snow-device-management`](services/snow-device-management.yml) | 13 | 0 | 0 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 13 | 0 | 0 |
 | [`health`](services/health.yml) | 13 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 13 | 0 | 0 |
@@ -321,14 +322,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1632 |
+| `List` | 1637 |
 | `Get` | 1458 |
-| `Describe` | 1341 |
+| `Describe` | 1345 |
 | `Delete` | 1300 |
-| `Create` | 1197 |
-| `Update` | 966 |
+| `Create` | 1198 |
+| `Update` | 967 |
 | `Put` | 321 |
 | `Start` | 200 |
-| `Tag` | 173 |
-| `Untag` | 171 |
+| `Tag` | 174 |
+| `Untag` | 172 |
 

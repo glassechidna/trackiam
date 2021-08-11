@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForImageBuilder",
   "CreateDate": "2019-11-29T22:02:13Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NE22WISEW",
   "PolicyName": "AWSServiceRoleForImageBuilder",
   "PolicyVersion": {
-    "CreateDate": "2020-12-04T23:27:05Z",
+    "CreateDate": "2021-08-11T18:07:10Z",
     "Document": {
       "Statement": [
         {
@@ -235,6 +235,7 @@
         {
           "Action": [
             "ssm:AddTagsToResource",
+            "ssm:DescribeAssociationExecutions",
             "ssm:DescribeInstanceAssociationsStatus",
             "ssm:DescribeInstanceInformation",
             "ssm:GetAutomationExecution",
@@ -263,7 +264,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2020-12-04T23:27:05Z"
+  "UpdateDate": "2021-08-11T18:07:10Z"
 }
