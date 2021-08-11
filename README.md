@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 281
-* Unique actions: 11136
-* Managed policies: 836
+* Unique actions: 11135
+* Managed policies: 837
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 236 |
 | `arn:aws:iam::aws:policy/Amazon*` | 225 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 164 |
-| `arn:aws:iam::aws:policy/service-role/*` | 124 |
+| `arn:aws:iam::aws:policy/service-role/*` | 125 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 80 |
 
@@ -54,7 +54,7 @@ The following table summarises the AWS APIs.
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 1 | 0 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
-| [`lex`](services/lex.yml) | 90 | 6 | 5 |
+| [`lex`](services/lex.yml) | 91 | 5 | 4 |
 | [`storagegateway`](services/storagegateway.yml) | 89 | 0 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 85 | 0 | 0 |
