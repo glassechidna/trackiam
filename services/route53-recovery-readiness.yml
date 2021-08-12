@@ -16,6 +16,7 @@ Actions:
   - Name: route53-recovery-readiness:GetReadinessCheckResourceStatus
   - Name: route53-recovery-readiness:GetReadinessCheckStatus
   - Name: route53-recovery-readiness:GetRecoveryGroup
+  - Name: route53-recovery-readiness:GetRecoveryGroupReadinessSummary
   - Name: route53-recovery-readiness:GetResourceSet
   - Name: route53-recovery-readiness:ListCells
   - Name: route53-recovery-readiness:ListCrossAccountAuthorizations
@@ -30,9 +31,3 @@ Actions:
   - Name: route53-recovery-readiness:UpdateReadinessCheck
   - Name: route53-recovery-readiness:UpdateRecoveryGroup
   - Name: route53-recovery-readiness:UpdateResourceSet
-
-  # actions with no corresponding API
-  - Name: route53-recovery-readiness:GetRecoveryGroupReadinessStatus
-
-  # APIs without an IAM action
-  - Name: route53-recovery-readiness:GetRecoveryGroupReadinessSummary
