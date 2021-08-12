@@ -188,9 +188,9 @@ The following table summarises the AWS APIs.
 | [`devops-guru`](services/devops-guru.yml) | 21 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 20 | 5 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 1 | 0 |
+| [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 20 | 0 | 1 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
-| [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 19 | 1 | 1 |
 | [`lookoutvision`](services/lookoutvision.yml) | 19 | 0 | 3 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
