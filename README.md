@@ -261,9 +261,9 @@ The following table summarises the AWS APIs.
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 3 | 0 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
 | [`pi`](services/pi.yml) | 3 | 0 | 0 |
+| [`workmailmessageflow`](services/workmailmessageflow.yml) | 2 | 0 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 2 | 0 | 0 |
-| [`workmailmessageflow`](services/workmailmessageflow.yml) | 1 | 1 | 0 |
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 238 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
