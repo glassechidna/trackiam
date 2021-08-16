@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 281
-* Unique actions: 11134
+* Unique actions: 11136
 * Managed policies: 837
 
 Most common managed policy name prefixes:
@@ -67,7 +67,7 @@ The following table summarises the AWS APIs.
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`route53`](services/route53.yml) | 64 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 63 | 3 | 0 |
-| [`ds`](services/ds.yml) | 62 | 0 | 6 |
+| [`ds`](services/ds.yml) | 62 | 1 | 6 |
 | [`comprehend`](services/comprehend.yml) | 61 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 60 | 1 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 60 | 0 | 0 |
@@ -81,9 +81,9 @@ The following table summarises the AWS APIs.
 | [`macie2`](services/macie2.yml) | 56 | 0 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 55 | 9 | 3 |
 | [`medialive`](services/medialive.yml) | 55 | 1 | 0 |
+| [`dms`](services/dms.yml) | 54 | 1 | 0 |
 | [`workmail`](services/workmail.yml) | 54 | 0 | 51 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
-| [`dms`](services/dms.yml) | 53 | 2 | 0 |
 | [`workspaces`](services/workspaces.yml) | 53 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
 | [`securityhub`](services/securityhub.yml) | 51 | 0 | 9 |
@@ -284,8 +284,8 @@ The following table summarises the AWS APIs.
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
+| [`chatbot`](services/chatbot.yml) | 0 | 0 | 13 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
-| [`chatbot`](services/chatbot.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`grafana`](services/grafana.yml) | 0 | 0 | 9 |
@@ -324,8 +324,8 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1637 |
 | `Get` | 1457 |
-| `Describe` | 1345 |
-| `Delete` | 1300 |
+| `Describe` | 1346 |
+| `Delete` | 1301 |
 | `Create` | 1198 |
 | `Update` | 967 |
 | `Put` | 321 |
