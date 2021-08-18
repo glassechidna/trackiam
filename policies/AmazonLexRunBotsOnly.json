@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLexRunBotsOnly",
   "CreateDate": "2017-04-11T23:06:24Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJVZGB5CM3N6YWJHBE",
   "PolicyName": "AmazonLexRunBotsOnly",
   "PolicyVersion": {
-    "CreateDate": "2020-05-12T19:26:15Z",
+    "CreateDate": "2021-08-18T00:15:48Z",
     "Document": {
       "Statement": [
         {
@@ -16,7 +16,10 @@
             "lex:GetSession",
             "lex:PostContent",
             "lex:PostText",
-            "lex:PutSession"
+            "lex:PutSession",
+            "lex:RecognizeText",
+            "lex:RecognizeUtterance",
+            "lex:StartConversation"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -25,7 +28,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-05-12T19:26:15Z"
+  "UpdateDate": "2021-08-18T00:15:48Z"
 }

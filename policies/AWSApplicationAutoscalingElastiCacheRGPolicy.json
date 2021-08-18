@@ -1,0 +1,45 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSApplicationAutoscalingElastiCacheRGPolicy",
+  "CreateDate": "2021-08-17T23:41:42Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4A7HPQJPZ7",
+  "PolicyName": "AWSApplicationAutoscalingElastiCacheRGPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-08-17T23:41:42Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:PutMetricAlarm"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudwatch:*:*:alarm:TargetTracking*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms",
+            "elasticache:DecreaseReplicaCount",
+            "elasticache:DescribeCacheClusters",
+            "elasticache:DescribeCacheParameters",
+            "elasticache:DescribeReplicationGroups",
+            "elasticache:IncreaseReplicaCount",
+            "elasticache:ModifyReplicationGroupShardConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-08-17T23:41:42Z"
+}
