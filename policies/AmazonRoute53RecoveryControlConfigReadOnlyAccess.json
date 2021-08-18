@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonRoute53RecoveryControlConfigReadOnlyAccess",
+  "CreateDate": "2021-08-18T18:01:12Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4DBQWX62W5",
+  "PolicyName": "AmazonRoute53RecoveryControlConfigReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-08-18T18:01:12Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "route53-recovery-control-config:DescribeCluster",
+            "route53-recovery-control-config:DescribeControlPanel",
+            "route53-recovery-control-config:DescribeRoutingControl",
+            "route53-recovery-control-config:DescribeRoutingControlByName",
+            "route53-recovery-control-config:DescribeSafetyRule",
+            "route53-recovery-control-config:ListAssociatedRoute53HealthChecks",
+            "route53-recovery-control-config:ListClusters",
+            "route53-recovery-control-config:ListControlPanels",
+            "route53-recovery-control-config:ListRoutingControls",
+            "route53-recovery-control-config:ListSafetyRules"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-08-18T18:01:12Z"
+}
