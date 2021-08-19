@@ -1,0 +1,62 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRolePolicyForBackupReports",
+  "CreateDate": "2021-08-19T21:16:45Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4MSKXNYMTU",
+  "PolicyName": "AWSServiceRolePolicyForBackupReports",
+  "PolicyVersion": {
+    "CreateDate": "2021-08-19T21:16:45Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "backup:DescribeFramework",
+            "backup:ListBackupJobs",
+            "backup:ListCopyJobs",
+            "backup:ListRestoreJobs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "config:BatchGetResourceConfig",
+            "config:DescribeConfigurationAggregators",
+            "config:DescribeConfigurationRecorderStatus",
+            "config:DescribeConfigurationRecorders",
+            "config:SelectAggregateResourceConfig",
+            "config:SelectResourceConfig",
+            "s3:GetBucketLocation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "config:DeleteConfigRule",
+            "config:DescribeConfigRuleEvaluationStatus",
+            "config:DescribeConfigRules",
+            "config:GetComplianceDetailsByConfigRule",
+            "config:PutConfigRule"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:config:*:*:config-rule/aws-service-rule/backup.amazonaws.com*"
+        },
+        {
+          "Action": [
+            "config:DeleteConfigurationAggregator",
+            "config:PutConfigurationAggregator"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:config:*:*:config-aggregator/aws-service-config-aggregator/backup.amazonaws.com*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-08-19T21:16:45Z"
+}
