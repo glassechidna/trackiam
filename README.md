@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 282
-* Unique actions: 11179
+* Unique actions: 11181
 * Managed policies: 846
 
 Most common managed policy name prefixes:
@@ -131,6 +131,7 @@ The following table summarises the AWS APIs.
 | [`ecr`](services/ecr.yml) | 34 | 0 | 1 |
 | [`athena`](services/athena.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
+| [`memorydb`](services/memorydb.yml) | 33 | 2 | 2 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`shield`](services/shield.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
@@ -276,7 +277,6 @@ The following table summarises the AWS APIs.
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 50 |
 | [`panorama`](services/panorama.yml) | 0 | 0 | 42 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
-| [`memorydb`](services/memorydb.yml) | 0 | 0 | 35 |
 | [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
@@ -323,7 +323,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1640 |
+| `List` | 1641 |
 | `Get` | 1458 |
 | `Describe` | 1356 |
 | `Delete` | 1306 |
