@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/MemoryDBServiceRolePolicy",
   "CreateDate": "2021-08-17T22:34:59Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4KWEJCOJNF",
   "PolicyName": "MemoryDBServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-08-17T22:34:59Z",
+    "CreateDate": "2021-08-18T23:48:16Z",
     "Document": {
       "Statement": [
         {
@@ -65,6 +65,14 @@
         },
         {
           "Action": [
+            "ec2:DeleteNetworkInterface",
+            "ec2:ModifyNetworkInterfaceAttribute"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*"
+        },
+        {
+          "Action": [
             "ec2:DescribeAvailabilityZones",
             "ec2:DescribeNetworkInterfaces",
             "ec2:DescribeSecurityGroups",
@@ -78,7 +86,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-08-17T22:34:59Z"
+  "UpdateDate": "2021-08-18T23:48:16Z"
 }
