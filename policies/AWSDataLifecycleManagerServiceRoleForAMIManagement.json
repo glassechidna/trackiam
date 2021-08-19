@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSDataLifecycleManagerServiceRoleForAMIManagement",
   "CreateDate": "2020-10-21T19:39:41Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4MG6O7FWSP",
   "PolicyName": "AWSDataLifecycleManagerServiceRoleForAMIManagement",
   "PolicyVersion": {
-    "CreateDate": "2020-10-21T19:39:41Z",
+    "CreateDate": "2021-08-19T17:03:44Z",
     "Document": {
       "Statement": [
         {
@@ -44,12 +44,20 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DisableImageDeprecation",
+            "ec2:EnableImageDeprecation"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::image/*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-10-21T19:39:41Z"
+  "UpdateDate": "2021-08-19T17:03:44Z"
 }
