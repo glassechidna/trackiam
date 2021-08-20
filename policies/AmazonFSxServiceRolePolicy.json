@@ -1,15 +1,64 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonFSxServiceRolePolicy",
   "CreateDate": "2018-11-28T10:38:37Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIVQ24YKVRBV5IYQ5G",
   "PolicyName": "AmazonFSxServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-06-07T21:03:26Z",
+    "CreateDate": "2021-08-20T12:51:29Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "ec2:AssignPrivateIpAddresses",
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "ec2:UnassignPrivateIpAddresses"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonFSx.FileSystemId": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateRoute",
+            "ec2:DeleteRoute",
+            "ec2:ReplaceRoute"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonFSx": "ManagedByAmazonFSx"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:route-table/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "AmazonFSx.FileSystemId"
+            },
+            "StringEquals": {
+              "ec2:CreateAction": "CreateNetworkInterface"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*"
+          ]
+        },
         {
           "Action": [
             "cloudwatch:PutMetricData",
@@ -20,7 +69,9 @@
             "ec2:CreateNetworkInterfacePermission",
             "ec2:DeleteNetworkInterface",
             "ec2:DescribeAddresses",
+            "ec2:DescribeDhcpOptions",
             "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeRouteTables",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcs",
@@ -52,7 +103,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2021-06-07T21:03:26Z"
+  "UpdateDate": "2021-08-20T12:51:29Z"
 }
