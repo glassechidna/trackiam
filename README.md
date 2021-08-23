@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 282
-* Unique actions: 11181
+* Unique actions: 11203
 * Managed policies: 847
 
 Most common managed policy name prefixes:
@@ -41,7 +41,7 @@ The following table summarises the AWS APIs.
 | [`chime`](services/chime.yml) | 188 | 2 | 51 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 153 | 0 | 0 |
-| [`glue`](services/glue.yml) | 147 | 10 | 1 |
+| [`glue`](services/glue.yml) | 147 | 19 | 1 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
 | [`rds`](services/rds.yml) | 137 | 0 | 1 |
 | [`ssm`](services/ssm.yml) | 134 | 1 | 7 |
@@ -86,8 +86,8 @@ The following table summarises the AWS APIs.
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`workspaces`](services/workspaces.yml) | 53 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
+| [`backup`](services/backup.yml) | 51 | 13 | 2 |
 | [`securityhub`](services/securityhub.yml) | 51 | 0 | 9 |
-| [`backup`](services/backup.yml) | 51 | 0 | 2 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 51 | 0 | 0 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
@@ -323,14 +323,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1641 |
-| `Get` | 1458 |
-| `Describe` | 1356 |
-| `Delete` | 1306 |
-| `Create` | 1203 |
-| `Update` | 972 |
+| `List` | 1645 |
+| `Get` | 1461 |
+| `Describe` | 1359 |
+| `Delete` | 1309 |
+| `Create` | 1206 |
+| `Update` | 975 |
 | `Put` | 321 |
-| `Start` | 200 |
+| `Start` | 202 |
 | `Tag` | 175 |
 | `Untag` | 173 |
 
