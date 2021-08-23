@@ -65,6 +65,7 @@ The following table summarises the AWS APIs.
 | [`s3`](services/s3.yml) | 75 | 57 | 42 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
+| [`backup`](services/backup.yml) | 64 | 0 | 2 |
 | [`route53`](services/route53.yml) | 64 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 63 | 3 | 0 |
 | [`ds`](services/ds.yml) | 62 | 1 | 6 |
@@ -86,7 +87,6 @@ The following table summarises the AWS APIs.
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`workspaces`](services/workspaces.yml) | 53 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
-| [`backup`](services/backup.yml) | 51 | 13 | 2 |
 | [`securityhub`](services/securityhub.yml) | 51 | 0 | 9 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 51 | 0 | 0 |
