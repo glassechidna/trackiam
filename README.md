@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 282
-* Unique actions: 11204
+* Unique actions: 11207
 * Managed policies: 848
 
 Most common managed policy name prefixes:
@@ -115,7 +115,7 @@ The following table summarises the AWS APIs.
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 39 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 38 | 5 | 0 |
-| [`transcribe`](services/transcribe.yml) | 38 | 0 | 2 |
+| [`transcribe`](services/transcribe.yml) | 38 | 3 | 2 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`codepipeline`](services/codepipeline.yml) | 37 | 2 | 0 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
@@ -228,13 +228,13 @@ The following table summarises the AWS APIs.
 | [`honeycode`](services/honeycode.yml) | 12 | 0 | 14 |
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
+| [`iot`](services/iot.yml) | 11 | 0 | 240 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 30 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
 | [`outposts`](services/outposts.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
-| [`iot`](services/iot.yml) | 9 | 0 | 242 |
 | [`app-integrations`](services/app-integrations.yml) | 9 | 0 | 2 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
@@ -323,7 +323,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1645 |
+| `List` | 1646 |
 | `Get` | 1461 |
 | `Describe` | 1359 |
 | `Delete` | 1309 |
@@ -331,6 +331,6 @@ Most common action prefixes:
 | `Update` | 975 |
 | `Put` | 321 |
 | `Start` | 202 |
-| `Tag` | 175 |
-| `Untag` | 173 |
+| `Tag` | 176 |
+| `Untag` | 174 |
 
