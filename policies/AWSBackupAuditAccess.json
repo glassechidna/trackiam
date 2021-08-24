@@ -1,0 +1,65 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSBackupAuditAccess",
+  "CreateDate": "2021-08-24T01:02:23Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4C7QUTQXCL",
+  "PolicyName": "AWSBackupAuditAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-08-24T01:02:23Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "backup:CreateFramework",
+            "backup:CreateReportPlan",
+            "backup:DeleteFramework",
+            "backup:DeleteReportPlan",
+            "backup:DescribeFramework",
+            "backup:DescribeReportJob",
+            "backup:DescribeReportPlan",
+            "backup:ListBackupPlans",
+            "backup:ListBackupVaults",
+            "backup:ListFrameworks",
+            "backup:ListReportJobs",
+            "backup:ListReportPlans",
+            "backup:StartReportJob",
+            "backup:UpdateFramework",
+            "backup:UpdateReportPlan"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "config:DescribeComplianceByConfigRule",
+            "config:GetComplianceDetailsByConfigRule"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:config:*:*:config-rule/*"
+        },
+        {
+          "Action": [
+            "config:DescribeConfigurationRecorderStatus",
+            "config:DescribeConfigurationRecorders"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-08-24T01:02:23Z"
+}
