@@ -10,11 +10,13 @@ Actions:
   - Name: kendra:DeleteDataSource
   - Name: kendra:DeleteFaq
   - Name: kendra:DeleteIndex
+  - Name: kendra:DeletePrincipalMapping
   - Name: kendra:DeleteQuerySuggestionsBlockList
   - Name: kendra:DeleteThesaurus
   - Name: kendra:DescribeDataSource
   - Name: kendra:DescribeFaq
   - Name: kendra:DescribeIndex
+  - Name: kendra:DescribePrincipalMapping
   - Name: kendra:DescribeQuerySuggestionsBlockList
   - Name: kendra:DescribeQuerySuggestionsConfig
   - Name: kendra:DescribeThesaurus
@@ -22,10 +24,12 @@ Actions:
   - Name: kendra:ListDataSourceSyncJobs
   - Name: kendra:ListDataSources
   - Name: kendra:ListFaqs
+  - Name: kendra:ListGroupsOlderThanOrderingId
   - Name: kendra:ListIndices
   - Name: kendra:ListQuerySuggestionsBlockLists
   - Name: kendra:ListTagsForResource
   - Name: kendra:ListThesauri
+  - Name: kendra:PutPrincipalMapping
   - Name: kendra:Query
   - Name: kendra:StartDataSourceSyncJob
   - Name: kendra:StopDataSourceSyncJob
@@ -40,7 +44,3 @@ Actions:
 
   # APIs without an IAM action
   - Name: kendra:BatchGetDocumentStatus
-  - Name: kendra:DeletePrincipalMapping
-  - Name: kendra:DescribePrincipalMapping
-  - Name: kendra:ListGroupsOlderThanOrderingId
-  - Name: kendra:PutPrincipalMapping
