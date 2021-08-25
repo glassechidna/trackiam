@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLaunchWizard_Fullaccess",
   "CreateDate": "2020-08-06T17:47:30Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ABPQ7BLC2",
   "PolicyName": "AmazonLaunchWizard_Fullaccess",
   "PolicyVersion": {
-    "CreateDate": "2021-05-24T23:04:20Z",
+    "CreateDate": "2021-08-25T17:24:45Z",
     "Document": {
       "Statement": [
         {
@@ -32,6 +32,7 @@
         },
         {
           "Action": [
+            "cloudformation:GetTemplateSummary",
             "ds:AddIpRoutes",
             "ds:CreateComputer",
             "ds:CreateMicrosoftAD",
@@ -97,7 +98,9 @@
             "ec2:RunInstances",
             "ec2:StartInstances",
             "elasticfilesystem:DeleteFileSystem",
-            "elasticfilesystem:DeleteMountTarget"
+            "elasticfilesystem:DeleteMountTarget",
+            "servicecatalog:AssociateProductWithPortfolio",
+            "sts:GetCallerIdentity"
           ],
           "Condition": {
             "ForAnyValue:StringEquals": {
@@ -185,6 +188,26 @@
           ]
         },
         {
+          "Action": [
+            "servicecatalog:AssociatePrincipalWithPortfolio",
+            "servicecatalog:CreateConstraint",
+            "servicecatalog:CreatePortfolio",
+            "servicecatalog:CreateProduct",
+            "servicecatalog:CreateProvisioningArtifact",
+            "servicecatalog:DescribePortfolio"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "launchwizard.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:catalog:*:*:*/*",
+            "arn:aws:servicecatalog:*:*:*/*"
+          ]
+        },
+        {
           "Action": "applicationinsights:*",
           "Effect": "Allow",
           "Resource": "*"
@@ -253,6 +276,7 @@
             "cloudformation:DescribeAccountLimits",
             "cloudformation:DescribeStackDriftDetectionStatus",
             "cloudformation:List*",
+            "cloudformation:ValidateTemplate",
             "ds:Describe*",
             "ds:ListAuthorizedApplications",
             "ec2:Describe*",
@@ -527,7 +551,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2021-05-24T23:04:20Z"
+  "UpdateDate": "2021-08-25T17:24:45Z"
 }
