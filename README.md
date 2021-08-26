@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 282
-* Unique actions: 11208
+* Unique actions: 11209
 * Managed policies: 849
 
 Most common managed policy name prefixes:
@@ -216,6 +216,7 @@ The following table summarises the AWS APIs.
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`translate`](services/translate.yml) | 14 | 0 | 0 |
+| [`compute-optimizer`](services/compute-optimizer.yml) | 14 | 0 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 13 | 10 | 1 |
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 7 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 2 |
@@ -223,7 +224,6 @@ The following table summarises the AWS APIs.
 | [`snow-device-management`](services/snow-device-management.yml) | 13 | 0 | 0 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 13 | 0 | 0 |
 | [`health`](services/health.yml) | 13 | 0 | 0 |
-| [`compute-optimizer`](services/compute-optimizer.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`honeycode`](services/honeycode.yml) | 12 | 0 | 14 |
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
@@ -324,7 +324,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1646 |
-| `Get` | 1461 |
+| `Get` | 1462 |
 | `Describe` | 1359 |
 | `Delete` | 1309 |
 | `Create` | 1206 |
