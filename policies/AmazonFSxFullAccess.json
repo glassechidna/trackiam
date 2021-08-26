@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonFSxFullAccess",
   "CreateDate": "2018-11-28T16:34:43Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIEUV6Z2X4VNZRVB5I",
   "PolicyName": "AmazonFSxFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-06-08T12:05:31Z",
+    "CreateDate": "2021-08-26T13:17:29Z",
     "Document": {
       "Statement": [
         {
@@ -33,6 +33,25 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "fsx.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/AmazonFSx": "ManagedByAmazonFSx"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:route-table/*"
+          ]
         },
         {
           "Action": [
@@ -66,7 +85,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-06-08T12:05:31Z"
+  "UpdateDate": "2021-08-26T13:17:29Z"
 }
