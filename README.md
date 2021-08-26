@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 282
-* Unique actions: 11209
+* Unique actions: 11210
 * Managed policies: 849
 
 Most common managed policy name prefixes:
@@ -45,7 +45,7 @@ The following table summarises the AWS APIs.
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
 | [`rds`](services/rds.yml) | 137 | 0 | 2 |
 | [`ssm`](services/ssm.yml) | 134 | 1 | 7 |
-| [`mobiletargeting`](services/mobiletargeting.yml) | 112 | 0 | 0 |
+| [`mobiletargeting`](services/mobiletargeting.yml) | 112 | 0 | 1 |
 | [`connect`](services/connect.yml) | 110 | 0 | 3 |
 | [`greengrass`](services/greengrass.yml) | 107 | 3 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 107 | 0 | 1 |
@@ -70,7 +70,7 @@ The following table summarises the AWS APIs.
 | [`clouddirectory`](services/clouddirectory.yml) | 63 | 3 | 0 |
 | [`ds`](services/ds.yml) | 62 | 1 | 6 |
 | [`comprehend`](services/comprehend.yml) | 61 | 0 | 0 |
-| [`autoscaling`](services/autoscaling.yml) | 60 | 1 | 0 |
+| [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 60 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 57 | 3 | 1 |
@@ -324,7 +324,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1646 |
-| `Get` | 1462 |
+| `Get` | 1463 |
 | `Describe` | 1359 |
 | `Delete` | 1309 |
 | `Create` | 1206 |
