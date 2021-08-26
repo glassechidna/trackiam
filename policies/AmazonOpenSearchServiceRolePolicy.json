@@ -1,0 +1,103 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonOpenSearchServiceRolePolicy",
+  "CreateDate": "2021-08-26T09:27:09Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4NHHCOTRP6",
+  "PolicyName": "AmazonOpenSearchServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-08-26T09:27:09Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "Stmt1480452973134"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*"
+          ],
+          "Sid": "Stmt1480452973194"
+        },
+        {
+          "Action": [
+            "ec2:DeleteNetworkInterface",
+            "ec2:ModifyNetworkInterfaceAttribute"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*"
+          ],
+          "Sid": "Stmt1480452973144"
+        },
+        {
+          "Action": [
+            "ec2:DescribeNetworkInterfaces"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Stmt1480452973145"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSecurityGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Stmt1480452973154"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSubnets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Stmt1480452973164"
+        },
+        {
+          "Action": [
+            "ec2:DescribeTags"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Stmt1480452973195"
+        },
+        {
+          "Action": [
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Stmt1480452973174"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:AddListenerCertificates",
+            "elasticloadbalancing:RemoveListenerCertificates"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticloadbalancing:*:*:listener/*"
+          ],
+          "Sid": "Stmt1480452973184"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-08-26T09:27:09Z"
+}
