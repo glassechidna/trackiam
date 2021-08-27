@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "CreateDate": "2018-12-01T16:22:12Z",
-  "DefaultVersionId": "v15",
+  "DefaultVersionId": "v16",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJH3SHQERZRQMQOQ44",
   "PolicyName": "CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-08-13T19:59:56Z",
+    "CreateDate": "2021-08-27T22:03:15Z",
     "Document": {
       "Statement": [
         {
@@ -90,7 +90,8 @@
           "Action": [
             "dynamodb:DescribeContributorInsights",
             "dynamodb:DescribeTable",
-            "dynamodb:DescribeTimeToLive"
+            "dynamodb:DescribeTimeToLive",
+            "dynamodb:ListTables"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -176,7 +177,8 @@
         {
           "Action": [
             "lambda:GetFunctionConfiguration",
-            "lambda:ListEventSourceMappings"
+            "lambda:ListEventSourceMappings",
+            "lambda:ListFunctions"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -207,6 +209,16 @@
         },
         {
           "Action": [
+            "resource-groups:CreateGroup",
+            "resource-groups:DeleteGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:resource-groups:*:*:group/ApplicationInsights-*"
+          ]
+        },
+        {
+          "Action": [
             "resource-groups:GetGroup",
             "resource-groups:GetGroupQuery",
             "resource-groups:ListGroupResources"
@@ -219,12 +231,33 @@
         {
           "Action": [
             "s3:GetMetricsConfiguration",
-            "s3:GetReplicationConfiguration"
+            "s3:GetReplicationConfiguration",
+            "s3:ListAllMyBuckets"
           ],
           "Effect": "Allow",
           "Resource": [
             "*"
           ]
+        },
+        {
+          "Action": [
+            "sns:GetSMSAttributes",
+            "sns:GetSubscriptionAttributes",
+            "sns:GetTopicAttributes",
+            "sns:ListSubscriptionsByTopic",
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "sqs:ListQueues"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": [
@@ -287,7 +320,8 @@
           "Action": [
             "states:DescribeExecution",
             "states:DescribeStateMachine",
-            "states:GetExecutionHistory"
+            "states:GetExecutionHistory",
+            "states:ListStateMachines"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -319,7 +353,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v15"
+    "VersionId": "v16"
   },
-  "UpdateDate": "2021-08-13T19:59:56Z"
+  "UpdateDate": "2021-08-27T22:03:15Z"
 }
