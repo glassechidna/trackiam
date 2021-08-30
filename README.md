@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 282
-* Unique actions: 11213
+* Unique actions: 11214
 * Managed policies: 849
 
 Most common managed policy name prefixes:
@@ -80,7 +80,7 @@ The following table summarises the AWS APIs.
 | [`directconnect`](services/directconnect.yml) | 56 | 3 | 0 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
 | [`macie2`](services/macie2.yml) | 56 | 0 | 0 |
-| [`cloudformation`](services/cloudformation.yml) | 55 | 9 | 3 |
+| [`cloudformation`](services/cloudformation.yml) | 55 | 10 | 3 |
 | [`medialive`](services/medialive.yml) | 55 | 1 | 0 |
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
 | [`workmail`](services/workmail.yml) | 54 | 0 | 51 |
