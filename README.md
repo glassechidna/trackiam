@@ -115,9 +115,9 @@ The following table summarises the AWS APIs.
 | [`sns`](services/sns.yml) | 39 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 39 | 0 | 0 |
+| [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
 | [`transcribe`](services/transcribe.yml) | 38 | 3 | 2 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
-| [`codepipeline`](services/codepipeline.yml) | 37 | 2 | 0 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
