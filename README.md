@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 282
-* Unique actions: 11214
+* Unique actions: 11216
 * Managed policies: 849
 
 Most common managed policy name prefixes:
@@ -77,10 +77,10 @@ The following table summarises the AWS APIs.
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`iotwireless`](services/iotwireless.yml) | 57 | 0 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 57 | 0 | 0 |
+| [`cloudformation`](services/cloudformation.yml) | 56 | 9 | 3 |
 | [`directconnect`](services/directconnect.yml) | 56 | 3 | 0 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
 | [`macie2`](services/macie2.yml) | 56 | 0 | 0 |
-| [`cloudformation`](services/cloudformation.yml) | 55 | 10 | 3 |
 | [`medialive`](services/medialive.yml) | 55 | 1 | 0 |
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
 | [`workmail`](services/workmail.yml) | 54 | 0 | 51 |
@@ -287,9 +287,9 @@ The following table summarises the AWS APIs.
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 13 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
+| [`grafana`](services/grafana.yml) | 0 | 0 | 11 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
-| [`grafana`](services/grafana.yml) | 0 | 0 | 9 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`cassandra`](services/cassandra.yml) | 0 | 0 | 8 |
@@ -325,10 +325,10 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1646 |
 | `Get` | 1464 |
-| `Describe` | 1359 |
+| `Describe` | 1360 |
 | `Delete` | 1309 |
 | `Create` | 1206 |
-| `Update` | 975 |
+| `Update` | 976 |
 | `Put` | 322 |
 | `Start` | 202 |
 | `Tag` | 176 |
