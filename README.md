@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 282
-* Unique actions: 11216
+* Unique actions: 11222
 * Managed policies: 849
 
 Most common managed policy name prefixes:
@@ -266,7 +266,7 @@ The following table summarises the AWS APIs.
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 2 | 0 | 0 |
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
-| [`execute-api`](services/execute-api.yml) | 0 | 238 | 3 |
+| [`execute-api`](services/execute-api.yml) | 0 | 244 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`finspace`](services/finspace.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
@@ -323,12 +323,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1646 |
-| `Get` | 1464 |
-| `Describe` | 1360 |
-| `Delete` | 1309 |
-| `Create` | 1206 |
-| `Update` | 976 |
+| `List` | 1647 |
+| `Get` | 1465 |
+| `Describe` | 1361 |
+| `Delete` | 1310 |
+| `Create` | 1207 |
+| `Update` | 977 |
 | `Put` | 322 |
 | `Start` | 202 |
 | `Tag` | 176 |
