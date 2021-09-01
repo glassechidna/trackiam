@@ -47,8 +47,8 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 134 | 1 | 7 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 112 | 0 | 1 |
 | [`connect`](services/connect.yml) | 110 | 0 | 3 |
+| [`servicecatalog`](services/servicecatalog.yml) | 108 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 107 | 3 | 1 |
-| [`servicecatalog`](services/servicecatalog.yml) | 107 | 0 | 1 |
 | [`redshift`](services/redshift.yml) | 101 | 15 | 18 |
 | [`quicksight`](services/quicksight.yml) | 101 | 12 | 19 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 1 | 0 |
