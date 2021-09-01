@@ -7,6 +7,7 @@ Actions:
   - Name: directconnect:AllocateTransitVirtualInterface
   - Name: directconnect:AssociateConnectionWithLag
   - Name: directconnect:AssociateHostedConnection
+  - Name: directconnect:AssociateMacSecKey
   - Name: directconnect:AssociateVirtualInterface
   - Name: directconnect:ConfirmConnection
   - Name: directconnect:ConfirmPrivateVirtualInterface
@@ -47,16 +48,13 @@ Actions:
   - Name: directconnect:DescribeVirtualGateways
   - Name: directconnect:DescribeVirtualInterfaces
   - Name: directconnect:DisassociateConnectionFromLag
+  - Name: directconnect:DisassociateMacSecKey
   - Name: directconnect:ListVirtualInterfaceTestHistory
   - Name: directconnect:StartBgpFailoverTest
   - Name: directconnect:StopBgpFailoverTest
   - Name: directconnect:TagResource
   - Name: directconnect:UntagResource
+  - Name: directconnect:UpdateConnection
   - Name: directconnect:UpdateDirectConnectGatewayAssociation
   - Name: directconnect:UpdateLag
   - Name: directconnect:UpdateVirtualInterfaceAttributes
-
-  # APIs without an IAM action
-  - Name: directconnect:AssociateMacSecKey
-  - Name: directconnect:DisassociateMacSecKey
-  - Name: directconnect:UpdateConnection
