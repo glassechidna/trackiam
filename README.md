@@ -119,6 +119,7 @@ The following table summarises the AWS APIs.
 | [`transcribe`](services/transcribe.yml) | 38 | 3 | 2 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
+| [`iotevents`](services/iotevents.yml) | 37 | 0 | 1 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 36 | 0 | 0 |
@@ -126,7 +127,6 @@ The following table summarises the AWS APIs.
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`networkmanager`](services/networkmanager.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
-| [`iotevents`](services/iotevents.yml) | 34 | 3 | 1 |
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
 | [`ecr`](services/ecr.yml) | 34 | 0 | 1 |
 | [`athena`](services/athena.yml) | 34 | 0 | 1 |
