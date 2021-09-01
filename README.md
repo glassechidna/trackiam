@@ -53,8 +53,8 @@ The following table summarises the AWS APIs.
 | [`quicksight`](services/quicksight.yml) | 101 | 12 | 19 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 1 | 0 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
+| [`lex`](services/lex.yml) | 94 | 2 | 4 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
-| [`lex`](services/lex.yml) | 91 | 5 | 4 |
 | [`storagegateway`](services/storagegateway.yml) | 89 | 0 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 85 | 0 | 0 |
@@ -159,6 +159,7 @@ The following table summarises the AWS APIs.
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
+| [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
@@ -171,7 +172,6 @@ The following table summarises the AWS APIs.
 | [`amplifybackend`](services/amplifybackend.yml) | 25 | 0 | 0 |
 | [`ram`](services/ram.yml) | 24 | 0 | 0 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 23 | 4 | 3 |
-| [`servicediscovery`](services/servicediscovery.yml) | 23 | 3 | 0 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 0 | 0 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
