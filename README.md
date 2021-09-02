@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 282
-* Unique actions: 11243
+* Unique actions: 11258
 * Managed policies: 850
 
 Most common managed policy name prefixes:
@@ -62,7 +62,7 @@ The following table summarises the AWS APIs.
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
-| [`s3`](services/s3.yml) | 75 | 57 | 42 |
+| [`s3`](services/s3.yml) | 75 | 65 | 42 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`backup`](services/backup.yml) | 64 | 0 | 2 |
@@ -156,6 +156,7 @@ The following table summarises the AWS APIs.
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 27 | 0 | 5 |
+| [`fsx`](services/fsx.yml) | 27 | 0 | 4 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
@@ -187,7 +188,7 @@ The following table summarises the AWS APIs.
 | [`qldb`](services/qldb.yml) | 21 | 0 | 13 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`devops-guru`](services/devops-guru.yml) | 21 | 0 | 0 |
-| [`transfer`](services/transfer.yml) | 20 | 5 | 0 |
+| [`transfer`](services/transfer.yml) | 20 | 12 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 1 | 0 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 20 | 0 | 1 |
 | [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
@@ -198,7 +199,6 @@ The following table summarises the AWS APIs.
 | [`opsworks-cm`](services/opsworks-cm.yml) | 19 | 0 | 0 |
 | [`batch`](services/batch.yml) | 19 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 18 | 1 | 0 |
-| [`fsx`](services/fsx.yml) | 18 | 0 | 13 |
 | [`appflow`](services/appflow.yml) | 18 | 0 | 6 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 3 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
@@ -323,13 +323,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1647 |
-| `Get` | 1469 |
-| `Describe` | 1364 |
-| `Delete` | 1312 |
-| `Create` | 1211 |
+| `List` | 1650 |
+| `Get` | 1472 |
+| `Describe` | 1367 |
+| `Delete` | 1314 |
+| `Create` | 1213 |
 | `Update` | 982 |
-| `Put` | 322 |
+| `Put` | 323 |
 | `Start` | 202 |
 | `Tag` | 176 |
 | `Untag` | 174 |
