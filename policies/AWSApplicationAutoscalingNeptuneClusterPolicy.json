@@ -1,0 +1,77 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSApplicationAutoscalingNeptuneClusterPolicy",
+  "CreateDate": "2021-09-02T21:14:55Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4LJVNMME6T",
+  "PolicyName": "AWSApplicationAutoscalingNeptuneClusterPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-09-02T21:14:55Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "rds:AddTagsToResource",
+          "Condition": {
+            "StringEquals": {
+              "rds:DatabaseEngine": "neptune"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:rds:*:*:db:autoscaled-reader*"
+          ]
+        },
+        {
+          "Action": "rds:CreateDBInstance",
+          "Condition": {
+            "StringEquals": {
+              "rds:DatabaseEngine": "neptune"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:rds:*:*:cluster:*",
+            "arn:aws:rds:*:*:db:autoscaled-reader*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:PutMetricAlarm"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudwatch:*:*:alarm:TargetTracking*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms",
+            "rds:DescribeDBClusterParameters",
+            "rds:DescribeDBClusters",
+            "rds:DescribeDBInstances",
+            "rds:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "rds:DeleteDBInstance"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:rds:*:*:db:autoscaled-reader*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-09-02T21:14:55Z"
+}
