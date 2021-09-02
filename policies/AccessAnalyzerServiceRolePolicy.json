@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AccessAnalyzerServiceRolePolicy",
   "CreateDate": "2019-12-02T17:13:10Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4CAIXDDRI2",
   "PolicyName": "AccessAnalyzerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-11-24T20:58:37Z",
+    "CreateDate": "2021-09-02T16:49:47Z",
     "Document": {
       "Statement": [
         {
@@ -41,6 +41,7 @@
             "organizations:ListOrganizationalUnitsForParent",
             "organizations:ListParents",
             "organizations:ListRoots",
+            "s3:DescribeMultiRegionAccessPointOperation",
             "s3:GetAccessPoint",
             "s3:GetAccessPointPolicy",
             "s3:GetAccessPointPolicyStatus",
@@ -50,8 +51,12 @@
             "s3:GetBucketPolicy",
             "s3:GetBucketPolicyStatus",
             "s3:GetBucketPublicAccessBlock",
+            "s3:GetMultiRegionAccessPoint",
+            "s3:GetMultiRegionAccessPointPolicy",
+            "s3:GetMultiRegionAccessPointPolicyStatus",
             "s3:ListAccessPoints",
             "s3:ListAllMyBuckets",
+            "s3:ListMultiRegionAccessPoints",
             "secretsmanager:DescribeSecret",
             "secretsmanager:GetResourcePolicy",
             "secretsmanager:ListSecrets",
@@ -67,7 +72,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2020-11-24T20:58:37Z"
+  "UpdateDate": "2021-09-02T16:49:47Z"
 }
