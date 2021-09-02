@@ -16,10 +16,12 @@ Actions:
   - Name: ec2:AssociateDhcpOptions
   - Name: ec2:AssociateEnclaveCertificateIamRole
   - Name: ec2:AssociateIamInstanceProfile
+  - Name: ec2:AssociateInstanceEventWindow
   - Name: ec2:AssociateRouteTable
   - Name: ec2:AssociateSubnetCidrBlock
   - Name: ec2:AssociateTransitGatewayMulticastDomain
   - Name: ec2:AssociateTransitGatewayRouteTable
+  - Name: ec2:AssociateTrunkInterface
   - Name: ec2:AssociateVpcCidrBlock
   - Name: ec2:AttachClassicLinkVpc
   - Name: ec2:AttachInternetGateway
@@ -55,6 +57,7 @@ Actions:
   - Name: ec2:CreateFlowLogs
   - Name: ec2:CreateFpgaImage
   - Name: ec2:CreateImage
+  - Name: ec2:CreateInstanceEventWindow
   - Name: ec2:CreateInstanceExportTask
   - Name: ec2:CreateInternetGateway
   - Name: ec2:CreateKeyPair
@@ -81,6 +84,7 @@ Actions:
   - Name: ec2:CreateSpotDatafeedSubscription
   - Name: ec2:CreateStoreImageTask
   - Name: ec2:CreateSubnet
+  - Name: ec2:CreateSubnetCidrReservation
   - Name: ec2:CreateTags
   - Name: ec2:CreateTrafficMirrorFilter
   - Name: ec2:CreateTrafficMirrorFilterRule
@@ -113,6 +117,7 @@ Actions:
   - Name: ec2:DeleteFleets
   - Name: ec2:DeleteFlowLogs
   - Name: ec2:DeleteFpgaImage
+  - Name: ec2:DeleteInstanceEventWindow
   - Name: ec2:DeleteInternetGateway
   - Name: ec2:DeleteKeyPair
   - Name: ec2:DeleteLaunchTemplate
@@ -135,6 +140,7 @@ Actions:
   - Name: ec2:DeleteSnapshot
   - Name: ec2:DeleteSpotDatafeedSubscription
   - Name: ec2:DeleteSubnet
+  - Name: ec2:DeleteSubnetCidrReservation
   - Name: ec2:DeleteTags
   - Name: ec2:DeleteTrafficMirrorFilter
   - Name: ec2:DeleteTrafficMirrorFilterRule
@@ -206,6 +212,7 @@ Actions:
   - Name: ec2:DescribeInstanceAttribute
   - Name: ec2:DescribeInstanceCreditSpecifications
   - Name: ec2:DescribeInstanceEventNotificationAttributes
+  - Name: ec2:DescribeInstanceEventWindows
   - Name: ec2:DescribeInstanceStatus
   - Name: ec2:DescribeInstanceTypeOfferings
   - Name: ec2:DescribeInstanceTypes
@@ -269,6 +276,7 @@ Actions:
   - Name: ec2:DescribeTransitGatewayRouteTables
   - Name: ec2:DescribeTransitGatewayVpcAttachments
   - Name: ec2:DescribeTransitGateways
+  - Name: ec2:DescribeTrunkInterfaceAssociations
   - Name: ec2:DescribeVolumeAttribute
   - Name: ec2:DescribeVolumeStatus
   - Name: ec2:DescribeVolumes
@@ -303,10 +311,12 @@ Actions:
   - Name: ec2:DisassociateClientVpnTargetNetwork
   - Name: ec2:DisassociateEnclaveCertificateIamRole
   - Name: ec2:DisassociateIamInstanceProfile
+  - Name: ec2:DisassociateInstanceEventWindow
   - Name: ec2:DisassociateRouteTable
   - Name: ec2:DisassociateSubnetCidrBlock
   - Name: ec2:DisassociateTransitGatewayMulticastDomain
   - Name: ec2:DisassociateTransitGatewayRouteTable
+  - Name: ec2:DisassociateTrunkInterface
   - Name: ec2:DisassociateVpcCidrBlock
   - Name: ec2:EnableEbsEncryptionByDefault
   - Name: ec2:EnableFastSnapshotRestores
@@ -339,6 +349,7 @@ Actions:
   - Name: ec2:GetPasswordData
   - Name: ec2:GetReservedInstancesExchangeQuote
   - Name: ec2:GetSerialConsoleAccessStatus
+  - Name: ec2:GetSubnetCidrReservations
   - Name: ec2:GetTransitGatewayAttachmentPropagations
   - Name: ec2:GetTransitGatewayMulticastDomainAssociations
   - Name: ec2:GetTransitGatewayPrefixListReferences
@@ -366,6 +377,7 @@ Actions:
   - Name: ec2:ModifyInstanceCapacityReservationAttributes
   - Name: ec2:ModifyInstanceCreditSpecification
   - Name: ec2:ModifyInstanceEventStartTime
+  - Name: ec2:ModifyInstanceEventWindow
   - Name: ec2:ModifyInstanceMetadataOptions
   - Name: ec2:ModifyInstancePlacement
   - Name: ec2:ModifyLaunchTemplate
@@ -452,17 +464,3 @@ Actions:
   - Name: ec2:UpdateSecurityGroupRuleDescriptionsEgress
   - Name: ec2:UpdateSecurityGroupRuleDescriptionsIngress
   - Name: ec2:WithdrawByoipCidr
-
-  # APIs without an IAM action
-  - Name: ec2:AssociateInstanceEventWindow
-  - Name: ec2:AssociateTrunkInterface
-  - Name: ec2:CreateInstanceEventWindow
-  - Name: ec2:CreateSubnetCidrReservation
-  - Name: ec2:DeleteInstanceEventWindow
-  - Name: ec2:DeleteSubnetCidrReservation
-  - Name: ec2:DescribeInstanceEventWindows
-  - Name: ec2:DescribeTrunkInterfaceAssociations
-  - Name: ec2:DisassociateInstanceEventWindow
-  - Name: ec2:DisassociateTrunkInterface
-  - Name: ec2:GetSubnetCidrReservations
-  - Name: ec2:ModifyInstanceEventWindow
