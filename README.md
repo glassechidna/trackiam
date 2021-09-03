@@ -58,11 +58,11 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 89 | 0 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 85 | 0 | 0 |
+| [`s3`](services/s3.yml) | 83 | 57 | 42 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
-| [`s3`](services/s3.yml) | 75 | 65 | 42 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`backup`](services/backup.yml) | 64 | 0 | 2 |

@@ -4,6 +4,7 @@ Actions:
   - Name: s3:CreateAccessPointForObjectLambda
   - Name: s3:CreateBucket
   - Name: s3:CreateJob
+  - Name: s3:CreateMultiRegionAccessPoint
   - Name: s3:DeleteAccessPoint
   - Name: s3:DeleteAccessPointForObjectLambda
   - Name: s3:DeleteAccessPointPolicy
@@ -13,11 +14,13 @@ Actions:
   - Name: s3:DeleteBucketPolicy
   - Name: s3:DeleteBucketWebsite
   - Name: s3:DeleteJobTagging
+  - Name: s3:DeleteMultiRegionAccessPoint
   - Name: s3:DeleteObject
   - Name: s3:DeleteObjectTagging
   - Name: s3:DeleteStorageLensConfiguration
   - Name: s3:DeleteStorageLensConfigurationTagging
   - Name: s3:DescribeJob
+  - Name: s3:DescribeMultiRegionAccessPointOperation
   - Name: s3:GetAccessPoint
   - Name: s3:GetAccessPointConfigurationForObjectLambda
   - Name: s3:GetAccessPointForObjectLambda
@@ -38,6 +41,9 @@ Actions:
   - Name: s3:GetBucketVersioning
   - Name: s3:GetBucketWebsite
   - Name: s3:GetJobTagging
+  - Name: s3:GetMultiRegionAccessPoint
+  - Name: s3:GetMultiRegionAccessPointPolicy
+  - Name: s3:GetMultiRegionAccessPointPolicyStatus
   - Name: s3:GetObject
   - Name: s3:GetObjectAcl
   - Name: s3:GetObjectLegalHold
@@ -49,6 +55,7 @@ Actions:
   - Name: s3:ListAccessPoints
   - Name: s3:ListAccessPointsForObjectLambda
   - Name: s3:ListJobs
+  - Name: s3:ListMultiRegionAccessPoints
   - Name: s3:ListStorageLensConfigurations
   - Name: s3:PutAccessPointConfigurationForObjectLambda
   - Name: s3:PutAccessPointPolicy
@@ -64,6 +71,7 @@ Actions:
   - Name: s3:PutBucketVersioning
   - Name: s3:PutBucketWebsite
   - Name: s3:PutJobTagging
+  - Name: s3:PutMultiRegionAccessPointPolicy
   - Name: s3:PutObject
   - Name: s3:PutObjectAcl
   - Name: s3:PutObjectLegalHold
@@ -122,7 +130,6 @@ Actions:
   # APIs without an IAM action
   - Name: s3:CompleteMultipartUpload
   - Name: s3:CopyObject
-  - Name: s3:CreateMultiRegionAccessPoint
   - Name: s3:CreateMultipartUpload
   - Name: s3:DeleteBucketAnalyticsConfiguration
   - Name: s3:DeleteBucketCors
@@ -134,10 +141,8 @@ Actions:
   - Name: s3:DeleteBucketMetricsConfiguration
   - Name: s3:DeleteBucketReplication
   - Name: s3:DeleteBucketTagging
-  - Name: s3:DeleteMultiRegionAccessPoint
   - Name: s3:DeleteObjects
   - Name: s3:DeletePublicAccessBlock
-  - Name: s3:DescribeMultiRegionAccessPointOperation
   - Name: s3:GetBucket
   - Name: s3:GetBucketAccelerateConfiguration
   - Name: s3:GetBucketAnalyticsConfiguration
@@ -149,9 +154,6 @@ Actions:
   - Name: s3:GetBucketMetricsConfiguration
   - Name: s3:GetBucketNotificationConfiguration
   - Name: s3:GetBucketReplication
-  - Name: s3:GetMultiRegionAccessPoint
-  - Name: s3:GetMultiRegionAccessPointPolicy
-  - Name: s3:GetMultiRegionAccessPointPolicyStatus
   - Name: s3:GetObjectLockConfiguration
   - Name: s3:GetPublicAccessBlock
   - Name: s3:HeadBucket
@@ -161,7 +163,6 @@ Actions:
   - Name: s3:ListBucketInventoryConfigurations
   - Name: s3:ListBucketMetricsConfigurations
   - Name: s3:ListBuckets
-  - Name: s3:ListMultiRegionAccessPoints
   - Name: s3:ListMultipartUploads
   - Name: s3:ListObjectVersions
   - Name: s3:ListObjects
@@ -178,7 +179,6 @@ Actions:
   - Name: s3:PutBucketMetricsConfiguration
   - Name: s3:PutBucketNotificationConfiguration
   - Name: s3:PutBucketReplication
-  - Name: s3:PutMultiRegionAccessPointPolicy
   - Name: s3:PutObjectLockConfiguration
   - Name: s3:PutPublicAccessBlock
   - Name: s3:SelectObjectContent
