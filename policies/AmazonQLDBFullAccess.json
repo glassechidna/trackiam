@@ -1,15 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonQLDBFullAccess",
   "CreateDate": "2019-09-05T18:23:32Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HHBBWGE2J",
   "PolicyName": "AmazonQLDBFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-05-27T17:15:06Z",
+    "CreateDate": "2021-09-02T23:21:04Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "qldb.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "qldb:CancelJournalKinesisStream",
@@ -50,8 +60,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v3"
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
   },
-  "UpdateDate": "2021-05-27T17:15:06Z"
+  "UpdateDate": "2021-09-02T23:21:04Z"
 }

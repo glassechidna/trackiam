@@ -1,15 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonQLDBConsoleFullAccess",
   "CreateDate": "2019-09-05T18:24:20Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4H2DEHAFRU",
   "PolicyName": "AmazonQLDBConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-05-27T17:22:17Z",
+    "CreateDate": "2021-09-02T23:21:23Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "qldb.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "dbqms:*"
@@ -68,8 +78,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v3"
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
   },
-  "UpdateDate": "2021-05-27T17:22:17Z"
+  "UpdateDate": "2021-09-02T23:21:23Z"
 }
