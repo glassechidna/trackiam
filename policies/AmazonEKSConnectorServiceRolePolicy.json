@@ -1,0 +1,89 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEKSConnectorServiceRolePolicy",
+  "CreateDate": "2021-09-04T20:31:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4H2PH3AV2C",
+  "PolicyName": "AmazonEKSConnectorServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-09-04T20:31:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "events:PutRule",
+          "Condition": {
+            "StringEquals": {
+              "events:ManagedBy": "eks-connector.amazonaws.com",
+              "events:source": "aws.ssm"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PutManagedEventRule"
+        },
+        {
+          "Action": "events:PutTargets",
+          "Condition": {
+            "StringEquals": {
+              "events:ManagedBy": "eks-connector.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PutManagedEventTarget"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "ssm.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PassAnyRoleToSsm"
+        },
+        {
+          "Action": [
+            "ssm:CreateActivation",
+            "ssm:DeleteActivation",
+            "ssm:DescribeInstanceInformation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AccessSSMService"
+        },
+        {
+          "Action": [
+            "ssm:DeregisterManagedInstance"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:eks:*:*:cluster/*"
+          ],
+          "Sid": "ConnectorAgentDeregister"
+        },
+        {
+          "Action": [
+            "ssm:StartSession"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:eks:*:*:cluster/*",
+            "arn:aws:ssm:*::document/AmazonEKS-ExecuteNonInteractiveCommand"
+          ],
+          "Sid": "ConnectorAgentStartSession"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-09-04T20:31:08Z"
+}
