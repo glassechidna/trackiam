@@ -1,0 +1,73 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/KafkaConnectServiceRolePolicy",
+  "CreateDate": "2021-09-07T13:12:44Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4KFEKH7VR6",
+  "PolicyName": "KafkaConnectServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-09-07T13:12:44Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:AttachNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DetachNetworkInterface"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/AmazonMSKConnectManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "AmazonMSKConnectManaged"
+            },
+            "StringEquals": {
+              "aws:RequestTag/AmazonMSKConnectManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": "CreateNetworkInterface"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-09-07T13:12:44Z"
+}
