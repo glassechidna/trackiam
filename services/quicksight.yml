@@ -5,6 +5,8 @@ Actions:
   - Name: quicksight:CreateDashboard
   - Name: quicksight:CreateDataSet
   - Name: quicksight:CreateDataSource
+  - Name: quicksight:CreateFolder
+  - Name: quicksight:CreateFolderMembership
   - Name: quicksight:CreateGroup
   - Name: quicksight:CreateGroupMembership
   - Name: quicksight:CreateIAMPolicyAssignment
@@ -19,6 +21,8 @@ Actions:
   - Name: quicksight:DeleteDashboard
   - Name: quicksight:DeleteDataSet
   - Name: quicksight:DeleteDataSource
+  - Name: quicksight:DeleteFolder
+  - Name: quicksight:DeleteFolderMembership
   - Name: quicksight:DeleteGroup
   - Name: quicksight:DeleteGroupMembership
   - Name: quicksight:DeleteIAMPolicyAssignment
@@ -39,6 +43,9 @@ Actions:
   - Name: quicksight:DescribeDataSetPermissions
   - Name: quicksight:DescribeDataSource
   - Name: quicksight:DescribeDataSourcePermissions
+  - Name: quicksight:DescribeFolder
+  - Name: quicksight:DescribeFolderPermissions
+  - Name: quicksight:DescribeFolderResolvedPermissions
   - Name: quicksight:DescribeGroup
   - Name: quicksight:DescribeIAMPolicyAssignment
   - Name: quicksight:DescribeIngestion
@@ -59,6 +66,8 @@ Actions:
   - Name: quicksight:ListDashboards
   - Name: quicksight:ListDataSets
   - Name: quicksight:ListDataSources
+  - Name: quicksight:ListFolderMembers
+  - Name: quicksight:ListFolders
   - Name: quicksight:ListGroupMemberships
   - Name: quicksight:ListGroups
   - Name: quicksight:ListIAMPolicyAssignments
@@ -78,6 +87,7 @@ Actions:
   - Name: quicksight:RestoreAnalysis
   - Name: quicksight:SearchAnalyses
   - Name: quicksight:SearchDashboards
+  - Name: quicksight:SearchFolders
   - Name: quicksight:TagResource
   - Name: quicksight:UntagResource
   - Name: quicksight:UpdateAccountCustomization
@@ -91,6 +101,8 @@ Actions:
   - Name: quicksight:UpdateDataSetPermissions
   - Name: quicksight:UpdateDataSource
   - Name: quicksight:UpdateDataSourcePermissions
+  - Name: quicksight:UpdateFolder
+  - Name: quicksight:UpdateFolderPermissions
   - Name: quicksight:UpdateGroup
   - Name: quicksight:UpdateIAMPolicyAssignment
   - Name: quicksight:UpdateTemplate
@@ -121,17 +133,3 @@ Actions:
   - Name: quicksight:Subscribe
   - Name: quicksight:Unsubscribe
   - Name: quicksight:UpdateCustomPermissions
-
-  # APIs without an IAM action
-  - Name: quicksight:CreateFolder
-  - Name: quicksight:CreateFolderMembership
-  - Name: quicksight:DeleteFolder
-  - Name: quicksight:DeleteFolderMembership
-  - Name: quicksight:DescribeFolder
-  - Name: quicksight:DescribeFolderPermissions
-  - Name: quicksight:DescribeFolderResolvedPermissions
-  - Name: quicksight:ListFolderMembers
-  - Name: quicksight:ListFolders
-  - Name: quicksight:SearchFolders
-  - Name: quicksight:UpdateFolder
-  - Name: quicksight:UpdateFolderPermissions
