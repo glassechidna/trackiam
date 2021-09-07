@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 282
-* Unique actions: 11259
+* Unique actions: 11264
 * Managed policies: 853
 
 Most common managed policy name prefixes:
@@ -138,7 +138,7 @@ The following table summarises the AWS APIs.
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 33 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 32 | 3 | 0 |
-| [`eks`](services/eks.yml) | 32 | 0 | 1 |
+| [`eks`](services/eks.yml) | 32 | 2 | 1 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
@@ -255,7 +255,7 @@ The following table summarises the AWS APIs.
 | [`ebs`](services/ebs.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 6 | 0 | 0 |
-| [`aps`](services/aps.yml) | 5 | 0 | 5 |
+| [`aps`](services/aps.yml) | 5 | 3 | 5 |
 | [`identitystore`](services/identitystore.yml) | 4 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`s3-outposts`](services/s3-outposts.yml) | 3 | 0 | 29 |
@@ -323,7 +323,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1650 |
+| `List` | 1651 |
 | `Get` | 1472 |
 | `Describe` | 1367 |
 | `Delete` | 1314 |
@@ -331,6 +331,6 @@ Most common action prefixes:
 | `Update` | 982 |
 | `Put` | 323 |
 | `Start` | 202 |
-| `Tag` | 176 |
-| `Untag` | 174 |
+| `Tag` | 177 |
+| `Untag` | 175 |
 
