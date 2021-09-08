@@ -127,6 +127,7 @@ The following table summarises the AWS APIs.
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`networkmanager`](services/networkmanager.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
+| [`datasync`](services/datasync.yml) | 35 | 0 | 0 |
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
 | [`ecr`](services/ecr.yml) | 34 | 0 | 1 |
 | [`athena`](services/athena.yml) | 34 | 0 | 1 |
@@ -137,7 +138,6 @@ The following table summarises the AWS APIs.
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 33 | 0 | 0 |
-| [`datasync`](services/datasync.yml) | 32 | 3 | 0 |
 | [`eks`](services/eks.yml) | 32 | 2 | 1 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`mediatailor`](services/mediatailor.yml) | 32 | 0 | 0 |
