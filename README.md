@@ -13,7 +13,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 282
 * Unique actions: 11264
-* Managed policies: 853
+* Managed policies: 854
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 237 |
 | `arn:aws:iam::aws:policy/Amazon*` | 232 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 171 |
-| `arn:aws:iam::aws:policy/service-role/*` | 126 |
+| `arn:aws:iam::aws:policy/service-role/*` | 127 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 80 |
 
@@ -72,22 +72,22 @@ The following table summarises the AWS APIs.
 | [`comprehend`](services/comprehend.yml) | 61 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 60 | 0 | 0 |
+| [`iotsitewise`](services/iotsitewise.yml) | 59 | 1 | 1 |
 | [`directconnect`](services/directconnect.yml) | 59 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
-| [`iotsitewise`](services/iotsitewise.yml) | 57 | 3 | 1 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`iotwireless`](services/iotwireless.yml) | 57 | 0 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 57 | 0 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 56 | 9 | 3 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
+| [`medialive`](services/medialive.yml) | 56 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 56 | 0 | 0 |
-| [`medialive`](services/medialive.yml) | 55 | 1 | 0 |
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
 | [`workmail`](services/workmail.yml) | 54 | 0 | 51 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`workspaces`](services/workspaces.yml) | 53 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
-| [`personalize`](services/personalize.yml) | 51 | 1 | 0 |
+| [`personalize`](services/personalize.yml) | 52 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 51 | 0 | 9 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 51 | 0 | 0 |
