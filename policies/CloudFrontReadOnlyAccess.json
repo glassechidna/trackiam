@@ -1,18 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:55Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJJZMNYOTZCNQP36LG",
   "PolicyName": "CloudFrontReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-02-19T19:49:16Z",
+    "CreateDate": "2021-09-08T22:10:54Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "acm:ListCertificates",
+            "cloudfront:DescribeFunction",
             "cloudfront:Get*",
             "cloudfront:List*",
             "iam:ListServerCertificates",
@@ -29,7 +30,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-02-19T19:49:16Z"
+  "UpdateDate": "2021-09-08T22:10:54Z"
 }
