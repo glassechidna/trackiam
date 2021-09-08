@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWS_ConfigRole",
   "CreateDate": "2020-09-15T20:30:30Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4PP7QZ4FBG",
   "PolicyName": "AWS_ConfigRole",
   "PolicyVersion": {
-    "CreateDate": "2021-07-27T22:41:23Z",
+    "CreateDate": "2021-09-08T18:09:40Z",
     "Document": {
       "Statement": [
         {
@@ -92,6 +92,7 @@
             "elasticache:DescribeCacheParameterGroups",
             "elasticache:DescribeCacheSubnetGroups",
             "elasticache:DescribeReplicationGroups",
+            "elasticache:DescribeSnapshots",
             "elasticache:ListTagsForResource",
             "elasticfilesystem:DescribeAccessPoints",
             "elasticfilesystem:DescribeBackupPolicy",
@@ -117,6 +118,8 @@
             "elasticmapreduce:ListInstances",
             "elasticmapreduce:ListSecurityConfigurations",
             "elasticmapreduce:ListSteps",
+            "es:DescribeDomain",
+            "es:DescribeDomains",
             "es:DescribeElasticsearchDomain",
             "es:DescribeElasticsearchDomains",
             "es:ListDomainNames",
@@ -191,6 +194,7 @@
             "rds:DescribeDBEngineVersions",
             "rds:DescribeDBInstances",
             "rds:DescribeDBParameterGroups",
+            "rds:DescribeDBParameters",
             "rds:DescribeDBSecurityGroups",
             "rds:DescribeDBSnapshotAttributes",
             "rds:DescribeDBSnapshots",
@@ -304,7 +308,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2021-07-27T22:41:23Z"
+  "UpdateDate": "2021-09-08T18:09:40Z"
 }

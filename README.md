@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 282
-* Unique actions: 11264
+* Unique actions: 11268
 * Managed policies: 856
 
 Most common managed policy name prefixes:
@@ -72,6 +72,7 @@ The following table summarises the AWS APIs.
 | [`comprehend`](services/comprehend.yml) | 61 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 60 | 0 | 0 |
+| [`es`](services/es.yml) | 59 | 4 | 17 |
 | [`iotsitewise`](services/iotsitewise.yml) | 59 | 1 | 1 |
 | [`directconnect`](services/directconnect.yml) | 59 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
@@ -111,7 +112,6 @@ The following table summarises the AWS APIs.
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
 | [`appsync`](services/appsync.yml) | 41 | 0 | 2 |
 | [`wafv2`](services/wafv2.yml) | 40 | 5 | 2 |
-| [`es`](services/es.yml) | 39 | 1 | 37 |
 | [`sns`](services/sns.yml) | 39 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 39 | 0 | 0 |
@@ -145,10 +145,10 @@ The following table summarises the AWS APIs.
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`wellarchitected`](services/wellarchitected.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
+| [`kafka`](services/kafka.yml) | 30 | 1 | 0 |
 | [`ce`](services/ce.yml) | 30 | 0 | 10 |
 | [`profile`](services/profile.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
-| [`kafka`](services/kafka.yml) | 30 | 0 | 0 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
@@ -328,9 +328,9 @@ Most common action prefixes:
 | `Describe` | 1367 |
 | `Delete` | 1314 |
 | `Create` | 1214 |
-| `Update` | 982 |
+| `Update` | 983 |
 | `Put` | 323 |
-| `Start` | 202 |
+| `Start` | 203 |
 | `Tag` | 177 |
 | `Untag` | 175 |
 
