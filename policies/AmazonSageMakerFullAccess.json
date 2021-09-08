@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerFullAccess",
   "CreateDate": "2017-11-29T13:07:59Z",
-  "DefaultVersionId": "v20",
+  "DefaultVersionId": "v21",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJZ5IWYMXO5QDB4QOG",
   "PolicyName": "AmazonSageMakerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-07-16T00:06:59Z",
+    "CreateDate": "2021-09-08T17:12:25Z",
     "Document": {
       "Statement": [
         {
@@ -454,6 +454,7 @@
         {
           "Action": [
             "sns:CreateTopic",
+            "sns:Publish",
             "sns:Subscribe"
           ],
           "Effect": "Allow",
@@ -481,7 +482,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v20"
+    "VersionId": "v21"
   },
-  "UpdateDate": "2021-07-16T00:06:59Z"
+  "UpdateDate": "2021-09-08T17:12:25Z"
 }
