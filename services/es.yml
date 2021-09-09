@@ -4,6 +4,7 @@ Actions:
   - Name: es:AddTags
   - Name: es:AssociatePackage
   - Name: es:CancelElasticsearchServiceSoftwareUpdate
+  - Name: es:CancelServiceSoftwareUpdate
   - Name: es:CreateDomain
   - Name: es:CreateElasticsearchDomain
   - Name: es:CreateOutboundConnection
@@ -18,6 +19,7 @@ Actions:
   - Name: es:DeleteOutboundCrossClusterSearchConnection
   - Name: es:DeletePackage
   - Name: es:DescribeDomain
+  - Name: es:DescribeDomainAutoTunes
   - Name: es:DescribeDomainConfig
   - Name: es:DescribeDomains
   - Name: es:DescribeElasticsearchDomain
@@ -54,17 +56,16 @@ Actions:
   - Name: es:RejectInboundCrossClusterSearchConnection
   - Name: es:RemoveTags
   - Name: es:StartElasticsearchServiceSoftwareUpdate
+  - Name: es:StartServiceSoftwareUpdate
   - Name: es:UpdateDomainConfig
   - Name: es:UpdateElasticsearchDomainConfig
   - Name: es:UpdatePackage
+  - Name: es:UpgradeDomain
   - Name: es:UpgradeElasticsearchDomain
 
   # actions with no corresponding API
-  - Name: es:CreateDataPrepperPipeline
   - Name: es:CreateElasticsearchServiceRole
   - Name: es:CreateServiceRole
-  - Name: es:DeleteDataPrepperPipeline
-  - Name: es:DescribeDataPrepperPipeline
   - Name: es:ESCrossClusterGet
   - Name: es:ESHttpDelete
   - Name: es:ESHttpGet
@@ -72,14 +73,5 @@ Actions:
   - Name: es:ESHttpPatch
   - Name: es:ESHttpPost
   - Name: es:ESHttpPut
-  - Name: es:IngestDataPrepperPipeline
-  - Name: es:ListDataPrepperPipelines
   - Name: es:ListElasticsearchInstanceTypeDetails
   - Name: es:ListInstanceTypes
-  - Name: es:UpdateDataPrepperPipeline
-
-  # APIs without an IAM action
-  - Name: es:CancelServiceSoftwareUpdate
-  - Name: es:DescribeDomainAutoTunes
-  - Name: es:StartServiceSoftwareUpdate
-  - Name: es:UpgradeDomain
