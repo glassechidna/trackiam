@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonOpenSearchServiceRolePolicy",
   "CreateDate": "2021-08-26T09:27:09Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NHHCOTRP6",
   "PolicyName": "AmazonOpenSearchServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-09-01T05:43:03Z",
+    "CreateDate": "2021-09-09T10:43:21Z",
     "Document": {
       "Statement": [
         {
@@ -34,8 +34,7 @@
         },
         {
           "Action": [
-            "ec2:DeleteNetworkInterface",
-            "ec2:ModifyNetworkInterfaceAttribute"
+            "ec2:DeleteNetworkInterface"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -85,6 +84,17 @@
         },
         {
           "Action": [
+            "ec2:ModifyNetworkInterfaceAttribute"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:security-group/*"
+          ],
+          "Sid": "Stmt1480452973165"
+        },
+        {
+          "Action": [
             "elasticloadbalancing:AddListenerCertificates",
             "elasticloadbalancing:RemoveListenerCertificates"
           ],
@@ -98,7 +108,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-09-01T05:43:03Z"
+  "UpdateDate": "2021-09-09T10:43:21Z"
 }
