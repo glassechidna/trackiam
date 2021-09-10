@@ -2,7 +2,10 @@ Actions:
   - Name: aps:CreateWorkspace
   - Name: aps:DeleteWorkspace
   - Name: aps:DescribeWorkspace
+  - Name: aps:ListTagsForResource
   - Name: aps:ListWorkspaces
+  - Name: aps:TagResource
+  - Name: aps:UntagResource
   - Name: aps:UpdateWorkspaceAlias
 
   # actions with no corresponding API
@@ -11,8 +14,3 @@ Actions:
   - Name: aps:GetSeries
   - Name: aps:QueryMetrics
   - Name: aps:RemoteWrite
-
-  # APIs without an IAM action
-  - Name: aps:ListTagsForResource
-  - Name: aps:TagResource
-  - Name: aps:UntagResource
