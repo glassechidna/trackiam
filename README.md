@@ -100,10 +100,10 @@ The following table summarises the AWS APIs.
 | [`geo`](services/geo.yml) | 47 | 3 | 0 |
 | [`kms`](services/kms.yml) | 47 | 1 | 3 |
 | [`appstream`](services/appstream.yml) | 47 | 1 | 1 |
+| [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 46 | 6 | 15 |
-| [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 46 | 1 | 3 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`nimble`](services/nimble.yml) | 45 | 0 | 2 |
 | [`license-manager`](services/license-manager.yml) | 45 | 0 | 0 |
