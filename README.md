@@ -248,8 +248,8 @@ The following table summarises the AWS APIs.
 | [`sms-voice`](services/sms-voice.yml) | 8 | 0 | 0 |
 | [`iotfleethub`](services/iotfleethub.yml) | 8 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
+| [`textract`](services/textract.yml) | 7 | 0 | 0 |
 | [`macie`](services/macie.yml) | 7 | 0 | 0 |
-| [`textract`](services/textract.yml) | 6 | 1 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 6 | 0 | 1 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
