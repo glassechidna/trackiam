@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerAdmin-ServiceCatalogProductsServiceRolePolicy",
   "CreateDate": "2020-11-27T18:48:07Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NAOSKQH4V",
   "PolicyName": "AmazonSageMakerAdmin-ServiceCatalogProductsServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-07-02T06:13:39Z",
+    "CreateDate": "2021-09-15T20:00:26Z",
     "Document": {
       "Statement": [
         {
@@ -377,6 +377,19 @@
         },
         {
           "Action": [
+            "sagemaker:CreateImage",
+            "sagemaker:DeleteImage",
+            "sagemaker:DescribeImage",
+            "sagemaker:ListTags",
+            "sagemaker:UpdateImage"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:image/*"
+          ]
+        },
+        {
+          "Action": [
             "states:CreateStateMachine",
             "states:DeleteStateMachine",
             "states:UpdateStateMachine"
@@ -390,7 +403,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-07-02T06:13:39Z"
+  "UpdateDate": "2021-09-15T20:00:26Z"
 }
