@@ -1,10 +1,8 @@
 Actions:
   - Name: sqs:AddPermission
   - Name: sqs:ChangeMessageVisibility
-  - Name: sqs:ChangeMessageVisibilityBatch
   - Name: sqs:CreateQueue
   - Name: sqs:DeleteMessage
-  - Name: sqs:DeleteMessageBatch
   - Name: sqs:DeleteQueue
   - Name: sqs:GetQueueAttributes
   - Name: sqs:GetQueueUrl
@@ -15,7 +13,11 @@ Actions:
   - Name: sqs:ReceiveMessage
   - Name: sqs:RemovePermission
   - Name: sqs:SendMessage
-  - Name: sqs:SendMessageBatch
   - Name: sqs:SetQueueAttributes
   - Name: sqs:TagQueue
   - Name: sqs:UntagQueue
+
+  # APIs without an IAM action
+  - Name: sqs:ChangeMessageVisibilityBatch
+  - Name: sqs:DeleteMessageBatch
+  - Name: sqs:SendMessageBatch

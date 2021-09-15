@@ -192,7 +192,6 @@ The following table summarises the AWS APIs.
 | [`transfer`](services/transfer.yml) | 20 | 12 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 1 | 0 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 20 | 0 | 1 |
-| [`sqs`](services/sqs.yml) | 20 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
 | [`lookoutvision`](services/lookoutvision.yml) | 19 | 0 | 3 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
@@ -203,6 +202,7 @@ The following table summarises the AWS APIs.
 | [`appflow`](services/appflow.yml) | 18 | 0 | 6 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
+| [`sqs`](services/sqs.yml) | 17 | 3 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`signer`](services/signer.yml) | 17 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 17 | 0 | 0 |
