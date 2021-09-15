@@ -168,6 +168,7 @@ The following table summarises the AWS APIs.
 | [`fms`](services/fms.yml) | 26 | 0 | 0 |
 | [`mgn`](services/mgn.yml) | 25 | 0 | 26 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 25 | 0 | 1 |
+| [`snowball`](services/snowball.yml) | 25 | 0 | 0 |
 | [`mediaconvert`](services/mediaconvert.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
@@ -180,7 +181,6 @@ The following table summarises the AWS APIs.
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
-| [`snowball`](services/snowball.yml) | 22 | 3 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 2 |
 | [`apprunner`](services/apprunner.yml) | 22 | 0 | 1 |
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
