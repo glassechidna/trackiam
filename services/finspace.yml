@@ -1,6 +1,4 @@
 Actions:
-
-  # APIs without an IAM action
   - Name: finspace:CreateEnvironment
   - Name: finspace:DeleteEnvironment
   - Name: finspace:GetEnvironment
@@ -9,3 +7,11 @@ Actions:
   - Name: finspace:TagResource
   - Name: finspace:UntagResource
   - Name: finspace:UpdateEnvironment
+
+  # actions with no corresponding API
+  - Name: finspace:CreateUser
+  - Name: finspace:DeleteUser
+  - Name: finspace:GetLoadSampleDataSetGroupIntoEnvironmentStatus
+  - Name: finspace:GetUser
+  - Name: finspace:ListUsers
+  - Name: finspace:LoadSampleDataSetGroupIntoEnvironment
