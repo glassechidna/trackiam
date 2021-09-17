@@ -107,7 +107,7 @@ The following table summarises the AWS APIs.
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`nimble`](services/nimble.yml) | 45 | 0 | 2 |
 | [`license-manager`](services/license-manager.yml) | 45 | 0 | 0 |
-| [`kendra`](services/kendra.yml) | 42 | 1 | 0 |
+| [`kendra`](services/kendra.yml) | 43 | 0 | 0 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
 | [`appsync`](services/appsync.yml) | 41 | 0 | 2 |
