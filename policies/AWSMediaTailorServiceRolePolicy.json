@@ -1,0 +1,35 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSMediaTailorServiceRolePolicy",
+  "CreateDate": "2021-09-17T22:27:10Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4N46XCSH76",
+  "PolicyName": "AWSMediaTailorServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-09-17T22:27:10Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "logs:PutLogEvents",
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:MediaTailor/*:log-stream:*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogGroups",
+            "logs:DescribeLogStreams"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:MediaTailor/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-09-17T22:27:10Z"
+}
