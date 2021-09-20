@@ -1,19 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSCodeStarServiceRole",
   "CreateDate": "2017-04-19T15:20:50Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIN6D4M2KD3NBOC4M4",
   "PolicyName": "AWSCodeStarServiceRole",
   "PolicyVersion": {
-    "CreateDate": "2021-02-15T22:25:37Z",
+    "CreateDate": "2021-09-20T19:11:03Z",
     "Document": {
       "Statement": [
         {
           "Action": "codestar-connections:PassConnection",
           "Condition": {
-            "ForAnyValue:StringEqualsIfExists": {
+            "StringEqualsIfExists": {
               "codestar-connections:PassedToService": "codepipeline.amazonaws.com"
             }
           },
@@ -64,7 +64,6 @@
             "codepipeline:*",
             "codestar:*",
             "ec2:*",
-            "ec2:RunInstances",
             "elasticbeanstalk:*",
             "elasticloadbalancing:*",
             "iam:ListRoles",
@@ -196,9 +195,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:s3:::aws-codestar-*",
-            "arn:aws:s3:::aws-codestar-*/*",
-            "arn:aws:s3:::elasticbeanstalk-*",
-            "arn:aws:s3:::elasticbeanstalk-*/*"
+            "arn:aws:s3:::elasticbeanstalk-*"
           ],
           "Sid": "ProjectS3Buckets"
         },
@@ -216,7 +213,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2021-02-15T22:25:37Z"
+  "UpdateDate": "2021-09-20T19:11:03Z"
 }
