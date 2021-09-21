@@ -1,20 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSGrafanaConsoleReadOnlyAccess",
   "CreateDate": "2021-02-23T00:10:40Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4OHSWBMKNF",
   "PolicyName": "AWSGrafanaConsoleReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-02-23T00:10:40Z",
+    "CreateDate": "2021-09-21T20:36:14Z",
     "Document": {
       "Statement": [
         {
           "Action": [
-            "grafana:DescribeWorkspace",
-            "grafana:ListPermissions",
-            "grafana:ListWorkspaces"
+            "grafana:Describe*",
+            "grafana:List*"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:grafana:*:*:/workspaces*",
@@ -24,7 +23,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-02-23T00:10:40Z"
+  "UpdateDate": "2021-09-21T20:36:14Z"
 }
