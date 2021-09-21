@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 283
-* Unique actions: 11291
+* Unique actions: 11297
 * Managed policies: 858
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 465 | 0 | 0 |
+| [`ec2`](services/ec2.yml) | 465 | 2 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 248 | 5 | 2 |
 | [`chime`](services/chime.yml) | 190 | 0 | 51 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
@@ -70,7 +70,7 @@ The following table summarises the AWS APIs.
 | [`clouddirectory`](services/clouddirectory.yml) | 63 | 3 | 0 |
 | [`es`](services/es.yml) | 63 | 0 | 11 |
 | [`ds`](services/ds.yml) | 62 | 1 | 6 |
-| [`comprehend`](services/comprehend.yml) | 61 | 0 | 0 |
+| [`comprehend`](services/comprehend.yml) | 61 | 2 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 60 | 0 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 59 | 1 | 1 |
@@ -128,8 +128,8 @@ The following table summarises the AWS APIs.
 | [`networkmanager`](services/networkmanager.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 35 | 0 | 0 |
+| [`ecr`](services/ecr.yml) | 34 | 1 | 1 |
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
-| [`ecr`](services/ecr.yml) | 34 | 0 | 1 |
 | [`athena`](services/athena.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`memorydb`](services/memorydb.yml) | 33 | 2 | 2 |
@@ -268,7 +268,7 @@ The following table summarises the AWS APIs.
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 2 | 0 | 0 |
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
-| [`execute-api`](services/execute-api.yml) | 0 | 244 | 3 |
+| [`execute-api`](services/execute-api.yml) | 0 | 245 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
@@ -324,13 +324,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1656 |
-| `Get` | 1476 |
-| `Describe` | 1370 |
+| `List` | 1658 |
+| `Get` | 1478 |
+| `Describe` | 1371 |
 | `Delete` | 1317 |
 | `Create` | 1219 |
 | `Update` | 984 |
-| `Put` | 323 |
+| `Put` | 324 |
 | `Start` | 203 |
 | `Tag` | 177 |
 | `Untag` | 175 |
