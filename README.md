@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 284
-* Unique actions: 11339
+* Unique actions: 11344
 * Managed policies: 858
 
 Most common managed policy name prefixes:
@@ -53,7 +53,7 @@ The following table summarises the AWS APIs.
 | [`redshift`](services/redshift.yml) | 101 | 15 | 18 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 1 | 0 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
-| [`lex`](services/lex.yml) | 94 | 2 | 4 |
+| [`lex`](services/lex.yml) | 94 | 3 | 4 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`storagegateway`](services/storagegateway.yml) | 89 | 0 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
@@ -104,9 +104,9 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 46 | 6 | 15 |
+| [`license-manager`](services/license-manager.yml) | 45 | 3 | 0 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`nimble`](services/nimble.yml) | 45 | 0 | 2 |
-| [`license-manager`](services/license-manager.yml) | 45 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 43 | 0 | 0 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
@@ -139,8 +139,8 @@ The following table summarises the AWS APIs.
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 33 | 0 | 0 |
 | [`eks`](services/eks.yml) | 32 | 2 | 1 |
+| [`mediatailor`](services/mediatailor.yml) | 32 | 1 | 0 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
-| [`mediatailor`](services/mediatailor.yml) | 32 | 0 | 0 |
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`wellarchitected`](services/wellarchitected.yml) | 31 | 0 | 0 |
@@ -325,11 +325,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1669 |
-| `Get` | 1485 |
+| `List` | 1671 |
+| `Get` | 1486 |
 | `Describe` | 1371 |
 | `Delete` | 1321 |
-| `Create` | 1224 |
+| `Create` | 1225 |
 | `Update` | 989 |
 | `Put` | 326 |
 | `Start` | 203 |
