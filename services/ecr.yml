@@ -8,6 +8,7 @@ Actions:
   - Name: ecr:DeleteRegistryPolicy
   - Name: ecr:DeleteRepository
   - Name: ecr:DeleteRepositoryPolicy
+  - Name: ecr:DescribeImageReplicationStatus
   - Name: ecr:DescribeImageScanFindings
   - Name: ecr:DescribeImages
   - Name: ecr:DescribeRegistry
@@ -36,6 +37,3 @@ Actions:
 
   # actions with no corresponding API
   - Name: ecr:ReplicateImage
-
-  # APIs without an IAM action
-  - Name: ecr:DescribeImageReplicationStatus

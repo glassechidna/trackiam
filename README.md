@@ -125,10 +125,10 @@ The following table summarises the AWS APIs.
 | [`forecast`](services/forecast.yml) | 36 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 36 | 0 | 0 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
+| [`ecr`](services/ecr.yml) | 35 | 0 | 1 |
 | [`networkmanager`](services/networkmanager.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 35 | 0 | 0 |
-| [`ecr`](services/ecr.yml) | 34 | 1 | 1 |
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
 | [`athena`](services/athena.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
