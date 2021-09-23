@@ -97,6 +97,7 @@ The following table summarises the AWS APIs.
 | [`proton`](services/proton.yml) | 49 | 0 | 23 |
 | [`imagebuilder`](services/imagebuilder.yml) | 49 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 10 |
+| [`license-manager`](services/license-manager.yml) | 48 | 0 | 0 |
 | [`geo`](services/geo.yml) | 47 | 3 | 0 |
 | [`kms`](services/kms.yml) | 47 | 1 | 3 |
 | [`appstream`](services/appstream.yml) | 47 | 1 | 1 |
@@ -104,7 +105,6 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 46 | 6 | 15 |
-| [`license-manager`](services/license-manager.yml) | 45 | 3 | 0 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`nimble`](services/nimble.yml) | 45 | 0 | 2 |
 | [`kendra`](services/kendra.yml) | 43 | 0 | 0 |
