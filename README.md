@@ -13,7 +13,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 285
 * Unique actions: 11362
-* Managed policies: 858
+* Managed policies: 859
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 237 |
 | `arn:aws:iam::aws:policy/Amazon*` | 235 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 172 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 173 |
 | `arn:aws:iam::aws:policy/service-role/*` | 127 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 80 |
@@ -97,10 +97,10 @@ The following table summarises the AWS APIs.
 | [`proton`](services/proton.yml) | 49 | 0 | 23 |
 | [`imagebuilder`](services/imagebuilder.yml) | 49 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 10 |
+| [`appstream`](services/appstream.yml) | 48 | 0 | 1 |
 | [`license-manager`](services/license-manager.yml) | 48 | 0 | 0 |
 | [`geo`](services/geo.yml) | 47 | 3 | 0 |
 | [`kms`](services/kms.yml) | 47 | 1 | 3 |
-| [`appstream`](services/appstream.yml) | 47 | 1 | 1 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
