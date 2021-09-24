@@ -1,0 +1,167 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2ReadSharing",
+  "CreateDate": "2021-09-24T14:22:21Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4G5PCICHSV",
+  "PolicyName": "AmazonRedshiftQueryEditorV2ReadSharing",
+  "PolicyVersion": {
+    "CreateDate": "2021-09-24T14:22:21Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "sqlworkbench:TagResource",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "sqlworkbench-resource-owner"
+            },
+            "StringEquals": {
+              "aws:RequestTag/sqlworkbench-resource-owner": "${aws:userid}",
+              "aws:ResourceTag/sqlworkbench-resource-owner": "${aws:userid}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonRedshiftQueryEditorV2TagOnlyUserIdPermissions"
+        },
+        {
+          "Action": "sqlworkbench:TagResource",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "sqlworkbench-team"
+            },
+            "StringEquals": {
+              "aws:RequestTag/sqlworkbench-team": "${aws:PrincipalTag/sqlworkbench-team}",
+              "aws:ResourceTag/sqlworkbench-resource-owner": "${aws:userid}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonRedshiftQueryEditorV2TagOnlyTeamPermissions"
+        },
+        {
+          "Action": "sqlworkbench:UntagResource",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "sqlworkbench-team"
+            },
+            "StringEquals": {
+              "aws:ResourceTag/sqlworkbench-resource-owner": "${aws:userid}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonRedshiftQueryEditorV2UntagOnlyTeamPermissions"
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "secretsmanager:ResourceTag/sqlworkbench-resource-owner": "${aws:userid}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:sqlworkbench!*",
+          "Sid": "SecretsManagerPermissions"
+        },
+        {
+          "Action": [
+            "sqlworkbench:AssociateConnectionWithChart",
+            "sqlworkbench:AssociateConnectionWithTab",
+            "sqlworkbench:AssociateQueryWithTab",
+            "sqlworkbench:DeleteChart",
+            "sqlworkbench:DeleteConnection",
+            "sqlworkbench:DeleteSavedQuery",
+            "sqlworkbench:GetChart",
+            "sqlworkbench:GetConnection",
+            "sqlworkbench:GetSavedQuery",
+            "sqlworkbench:ListSavedQueryVersions",
+            "sqlworkbench:ListTagsForResource",
+            "sqlworkbench:UpdateChart",
+            "sqlworkbench:UpdateConnection",
+            "sqlworkbench:UpdateFileFolder",
+            "sqlworkbench:UpdateSavedQuery"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/sqlworkbench-resource-owner": "${aws:userid}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonRedshiftQueryEditorV2OwnerSpecificPermissions"
+        },
+        {
+          "Action": [
+            "sqlworkbench:CreateChart",
+            "sqlworkbench:CreateConnection",
+            "sqlworkbench:CreateSavedQuery"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/sqlworkbench-resource-owner": "${aws:userid}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonRedshiftQueryEditorV2CreateOwnedResourcePermissions"
+        },
+        {
+          "Action": [
+            "sqlworkbench:GetChart",
+            "sqlworkbench:GetConnection",
+            "sqlworkbench:GetSavedQuery",
+            "sqlworkbench:ListSavedQueryVersions",
+            "sqlworkbench:ListTagsForResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/sqlworkbench-team": "${aws:PrincipalTag/sqlworkbench-team}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonRedshiftQueryEditorV2TeamReadAccessPermissions"
+        },
+        {
+          "Action": "redshift:DescribeClusters",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RedshiftPermissions"
+        },
+        {
+          "Action": [
+            "sqlworkbench:BatchDeleteFolder",
+            "sqlworkbench:CreateFolder",
+            "sqlworkbench:DeleteTab",
+            "sqlworkbench:DriverExecute",
+            "sqlworkbench:GenerateSession",
+            "sqlworkbench:GetAccountInfo",
+            "sqlworkbench:GetUserInfo",
+            "sqlworkbench:GetUserWorkspaceSettings",
+            "sqlworkbench:ListConnections",
+            "sqlworkbench:ListFiles",
+            "sqlworkbench:ListRedshiftClusters",
+            "sqlworkbench:ListTabs",
+            "sqlworkbench:PutTab",
+            "sqlworkbench:PutUserWorkspaceSettings",
+            "sqlworkbench:UpdateFolder"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonRedshiftQueryEditorV2NonResourceLevelPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-09-24T14:22:21Z"
+}
