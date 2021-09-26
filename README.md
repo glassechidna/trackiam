@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 285
-* Unique actions: 11362
+* Unique services: 286
+* Unique actions: 11385
 * Managed policies: 863
 
 Most common managed policy name prefixes:
@@ -282,6 +282,7 @@ The following table summarises the AWS APIs.
 | [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
+| [`voiceid`](services/voiceid.yml) | 0 | 0 | 23 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
@@ -326,14 +327,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1673 |
+| `List` | 1678 |
 | `Get` | 1488 |
-| `Describe` | 1372 |
-| `Delete` | 1322 |
-| `Create` | 1226 |
-| `Update` | 992 |
+| `Describe` | 1378 |
+| `Delete` | 1325 |
+| `Create` | 1227 |
+| `Update` | 993 |
 | `Put` | 328 |
-| `Start` | 204 |
-| `Tag` | 179 |
-| `Untag` | 177 |
+| `Start` | 206 |
+| `Tag` | 180 |
+| `Untag` | 178 |
 
