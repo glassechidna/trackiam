@@ -1,10 +1,13 @@
 Actions:
+  - Name: cloudformation:ActivateType
+  - Name: cloudformation:BatchDescribeTypeConfigurations
   - Name: cloudformation:CancelUpdateStack
   - Name: cloudformation:ContinueUpdateRollback
   - Name: cloudformation:CreateChangeSet
   - Name: cloudformation:CreateStack
   - Name: cloudformation:CreateStackInstances
   - Name: cloudformation:CreateStackSet
+  - Name: cloudformation:DeactivateType
   - Name: cloudformation:DeleteChangeSet
   - Name: cloudformation:DeleteStack
   - Name: cloudformation:DeleteStackInstances
@@ -12,6 +15,7 @@ Actions:
   - Name: cloudformation:DeregisterType
   - Name: cloudformation:DescribeAccountLimits
   - Name: cloudformation:DescribeChangeSet
+  - Name: cloudformation:DescribePublisher
   - Name: cloudformation:DescribeStackDriftDetectionStatus
   - Name: cloudformation:DescribeStackEvents
   - Name: cloudformation:DescribeStackInstance
@@ -44,12 +48,16 @@ Actions:
   - Name: cloudformation:ListTypeRegistrations
   - Name: cloudformation:ListTypeVersions
   - Name: cloudformation:ListTypes
+  - Name: cloudformation:PublishType
   - Name: cloudformation:RecordHandlerProgress
+  - Name: cloudformation:RegisterPublisher
   - Name: cloudformation:RegisterType
   - Name: cloudformation:SetStackPolicy
+  - Name: cloudformation:SetTypeConfiguration
   - Name: cloudformation:SetTypeDefaultVersion
   - Name: cloudformation:SignalResource
   - Name: cloudformation:StopStackSetOperation
+  - Name: cloudformation:TestType
   - Name: cloudformation:UpdateStack
   - Name: cloudformation:UpdateStackInstances
   - Name: cloudformation:UpdateStackSet
@@ -62,12 +70,4 @@ Actions:
   - Name: cloudformation:UntagResource
 
   # APIs without an IAM action
-  - Name: cloudformation:ActivateType
-  - Name: cloudformation:BatchDescribeTypeConfigurations
-  - Name: cloudformation:DeactivateType
-  - Name: cloudformation:DescribePublisher
-  - Name: cloudformation:PublishType
-  - Name: cloudformation:RegisterPublisher
   - Name: cloudformation:RollbackStack
-  - Name: cloudformation:SetTypeConfiguration
-  - Name: cloudformation:TestType

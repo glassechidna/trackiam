@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 286
-* Unique actions: 11388
+* Unique services: 287
+* Unique actions: 11425
 * Managed policies: 864
 
 Most common managed policy name prefixes:
@@ -65,6 +65,7 @@ The following table summarises the AWS APIs.
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
+| [`cloudformation`](services/cloudformation.yml) | 64 | 1 | 3 |
 | [`backup`](services/backup.yml) | 64 | 0 | 2 |
 | [`route53`](services/route53.yml) | 64 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 63 | 3 | 0 |
@@ -80,7 +81,6 @@ The following table summarises the AWS APIs.
 | [`macie2`](services/macie2.yml) | 57 | 0 | 0 |
 | [`iotwireless`](services/iotwireless.yml) | 57 | 0 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 57 | 0 | 0 |
-| [`cloudformation`](services/cloudformation.yml) | 56 | 9 | 3 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
 | [`medialive`](services/medialive.yml) | 56 | 0 | 0 |
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
@@ -188,6 +188,7 @@ The following table summarises the AWS APIs.
 | [`lookoutequipment`](services/lookoutequipment.yml) | 22 | 0 | 0 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 13 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
+| [`voiceid`](services/voiceid.yml) | 21 | 0 | 2 |
 | [`devops-guru`](services/devops-guru.yml) | 21 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 20 | 12 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 1 | 0 |
@@ -237,7 +238,7 @@ The following table summarises the AWS APIs.
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
-| [`app-integrations`](services/app-integrations.yml) | 9 | 0 | 2 |
+| [`app-integrations`](services/app-integrations.yml) | 9 | 6 | 2 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`braket`](services/braket.yml) | 9 | 0 | 0 |
@@ -270,6 +271,7 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 245 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
+| [`wisdom`](services/wisdom.yml) | 0 | 31 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 3 | 0 |
@@ -282,7 +284,6 @@ The following table summarises the AWS APIs.
 | [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
-| [`voiceid`](services/voiceid.yml) | 0 | 0 | 23 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
@@ -327,14 +328,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1678 |
-| `Get` | 1488 |
+| `List` | 1685 |
+| `Get` | 1496 |
 | `Describe` | 1380 |
-| `Delete` | 1325 |
-| `Create` | 1227 |
-| `Update` | 993 |
+| `Delete` | 1330 |
+| `Create` | 1233 |
+| `Update` | 996 |
 | `Put` | 328 |
-| `Start` | 206 |
-| `Tag` | 180 |
-| `Untag` | 178 |
+| `Start` | 207 |
+| `Tag` | 181 |
+| `Untag` | 179 |
 

@@ -1,11 +1,8 @@
 Actions:
-
-  # actions with no corresponding API
   - Name: voiceid:CreateDomain
   - Name: voiceid:DeleteDomain
   - Name: voiceid:DeleteFraudster
   - Name: voiceid:DeleteSpeaker
-  - Name: voiceid:DescribeComplianceConsent
   - Name: voiceid:DescribeDomain
   - Name: voiceid:DescribeFraudster
   - Name: voiceid:DescribeFraudsterRegistrationJob
@@ -18,9 +15,12 @@ Actions:
   - Name: voiceid:ListSpeakers
   - Name: voiceid:ListTagsForResource
   - Name: voiceid:OptOutSpeaker
-  - Name: voiceid:RegisterComplianceConsent
   - Name: voiceid:StartFraudsterRegistrationJob
   - Name: voiceid:StartSpeakerEnrollmentJob
   - Name: voiceid:TagResource
   - Name: voiceid:UntagResource
   - Name: voiceid:UpdateDomain
+
+  # actions with no corresponding API
+  - Name: voiceid:DescribeComplianceConsent
+  - Name: voiceid:RegisterComplianceConsent
