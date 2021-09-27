@@ -1,17 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:40:59Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIZTJ4DXE7G6AGAE6M",
   "PolicyName": "AmazonS3ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2015-02-06T18:40:59Z",
+    "CreateDate": "2021-09-27T20:24:58Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "s3-object-lambda:Get*",
+            "s3-object-lambda:List*",
             "s3:Get*",
             "s3:List*"
           ],
@@ -22,7 +24,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2015-02-06T18:40:59Z"
+  "UpdateDate": "2021-09-27T20:24:58Z"
 }
