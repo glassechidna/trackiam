@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 287
-* Unique actions: 11425
+* Unique actions: 11427
 * Managed policies: 864
 
 Most common managed policy name prefixes:
@@ -211,6 +211,7 @@ The following table summarises the AWS APIs.
 | [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
 | [`resource-groups`](services/resource-groups.yml) | 16 | 0 | 1 |
 | [`detective`](services/detective.yml) | 15 | 0 | 5 |
+| [`app-integrations`](services/app-integrations.yml) | 15 | 0 | 4 |
 | [`emr-containers`](services/emr-containers.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
@@ -238,7 +239,6 @@ The following table summarises the AWS APIs.
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
-| [`app-integrations`](services/app-integrations.yml) | 9 | 6 | 2 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`braket`](services/braket.yml) | 9 | 0 | 0 |
@@ -331,8 +331,8 @@ Most common action prefixes:
 | `List` | 1685 |
 | `Get` | 1496 |
 | `Describe` | 1380 |
-| `Delete` | 1330 |
-| `Create` | 1233 |
+| `Delete` | 1331 |
+| `Create` | 1234 |
 | `Update` | 996 |
 | `Put` | 328 |
 | `Start` | 207 |
