@@ -143,6 +143,7 @@ The following table summarises the AWS APIs.
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
+| [`wisdom`](services/wisdom.yml) | 31 | 0 | 0 |
 | [`wellarchitected`](services/wellarchitected.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 31 | 0 | 0 |
@@ -158,6 +159,7 @@ The following table summarises the AWS APIs.
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 27 | 0 | 5 |
 | [`fsx`](services/fsx.yml) | 27 | 0 | 4 |
+| [`ssm-contacts`](services/ssm-contacts.yml) | 27 | 0 | 3 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
@@ -174,7 +176,6 @@ The following table summarises the AWS APIs.
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 25 | 0 | 0 |
 | [`ram`](services/ram.yml) | 24 | 0 | 0 |
-| [`ssm-contacts`](services/ssm-contacts.yml) | 23 | 4 | 3 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 0 | 0 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
@@ -271,7 +272,6 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 245 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
-| [`wisdom`](services/wisdom.yml) | 0 | 31 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 3 | 0 |
