@@ -205,6 +205,7 @@ The following table summarises the AWS APIs.
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 17 | 3 | 0 |
+| [`aps`](services/aps.yml) | 17 | 0 | 16 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`signer`](services/signer.yml) | 17 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 17 | 0 | 0 |
@@ -245,7 +246,6 @@ The following table summarises the AWS APIs.
 | [`braket`](services/braket.yml) | 9 | 0 | 0 |
 | [`budgets`](services/budgets.yml) | 8 | 14 | 2 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
-| [`aps`](services/aps.yml) | 8 | 0 | 25 |
 | [`finspace`](services/finspace.yml) | 8 | 0 | 6 |
 | [`sts`](services/sts.yml) | 8 | 0 | 3 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
