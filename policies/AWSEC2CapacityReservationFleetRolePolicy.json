@@ -1,0 +1,58 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSEC2CapacityReservationFleetRolePolicy",
+  "CreateDate": "2021-09-29T14:43:09Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4HMH3YJXLU",
+  "PolicyName": "AWSEC2CapacityReservationFleetRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-09-29T14:43:09Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CancelCapacityReservation",
+            "ec2:CreateCapacityReservation",
+            "ec2:ModifyCapacityReservation"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:CapacityReservationFleet": "arn:aws:ec2:*:*:capacity-reservation-fleet/crf-*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:capacity-reservation/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": "CreateCapacityReservation"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:capacity-reservation/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:DescribeCapacityReservations",
+            "ec2:DescribeInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-09-29T14:43:09Z"
+}
