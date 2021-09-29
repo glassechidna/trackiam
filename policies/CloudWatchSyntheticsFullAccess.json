@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchSyntheticsFullAccess",
   "CreateDate": "2019-11-25T17:39:46Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MAGQWEZP4",
   "PolicyName": "CloudWatchSyntheticsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-07-20T15:56:52Z",
+    "CreateDate": "2021-09-29T23:07:11Z",
     "Document": {
       "Statement": [
         {
@@ -29,9 +29,22 @@
         },
         {
           "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": [
+                "s3.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*"
+        },
+        {
+          "Action": [
             "apigateway:GET",
             "iam:ListRoles",
-            "s3:GetBucketLocation",
             "s3:ListAllMyBuckets",
             "xray:BatchGetTraces",
             "xray:GetTraceSummaries"
@@ -88,6 +101,20 @@
         },
         {
           "Action": [
+            "kms:DescribeKey"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*"
+        },
+        {
+          "Action": [
+            "kms:ListAliases"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "lambda:AddPermission",
             "lambda:CreateFunction",
             "lambda:GetFunctionConfiguration",
@@ -120,6 +147,13 @@
           "Resource": [
             "arn:aws:s3:::cw-syn-results-*"
           ]
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*"
         },
         {
           "Action": [
@@ -167,7 +201,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2021-07-20T15:56:52Z"
+  "UpdateDate": "2021-09-29T23:07:11Z"
 }
