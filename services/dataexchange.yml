@@ -1,17 +1,21 @@
 Actions:
   - Name: dataexchange:CancelJob
   - Name: dataexchange:CreateDataSet
+  - Name: dataexchange:CreateEventAction
   - Name: dataexchange:CreateJob
   - Name: dataexchange:CreateRevision
   - Name: dataexchange:DeleteAsset
   - Name: dataexchange:DeleteDataSet
+  - Name: dataexchange:DeleteEventAction
   - Name: dataexchange:DeleteRevision
   - Name: dataexchange:GetAsset
   - Name: dataexchange:GetDataSet
+  - Name: dataexchange:GetEventAction
   - Name: dataexchange:GetJob
   - Name: dataexchange:GetRevision
   - Name: dataexchange:ListDataSetRevisions
   - Name: dataexchange:ListDataSets
+  - Name: dataexchange:ListEventActions
   - Name: dataexchange:ListJobs
   - Name: dataexchange:ListRevisionAssets
   - Name: dataexchange:ListTagsForResource
@@ -20,15 +24,9 @@ Actions:
   - Name: dataexchange:UntagResource
   - Name: dataexchange:UpdateAsset
   - Name: dataexchange:UpdateDataSet
+  - Name: dataexchange:UpdateEventAction
   - Name: dataexchange:UpdateRevision
 
   # actions with no corresponding API
   - Name: dataexchange:CreateAsset
   - Name: dataexchange:PublishDataSet
-
-  # APIs without an IAM action
-  - Name: dataexchange:CreateEventAction
-  - Name: dataexchange:DeleteEventAction
-  - Name: dataexchange:GetEventAction
-  - Name: dataexchange:ListEventActions
-  - Name: dataexchange:UpdateEventAction
