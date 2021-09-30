@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/FMSServiceRolePolicy",
   "CreateDate": "2018-03-28T23:01:12Z",
-  "DefaultVersionId": "v19",
+  "DefaultVersionId": "v20",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAI62NTGYJB446ACUEA",
   "PolicyName": "FMSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-08-12T19:21:06Z",
+    "CreateDate": "2021-09-30T17:12:33Z",
     "Document": {
       "Statement": [
         {
@@ -264,6 +264,7 @@
             "ec2:AuthorizeSecurityGroupEgress",
             "ec2:AuthorizeSecurityGroupIngress",
             "ec2:DeleteSecurityGroup",
+            "ec2:DescribeInstances",
             "ec2:DescribeNetworkInterfaceAttribute",
             "ec2:RevokeSecurityGroupEgress",
             "ec2:RevokeSecurityGroupIngress",
@@ -272,6 +273,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
             "arn:aws:ec2:*:*:network-interface/*",
             "arn:aws:ec2:*:*:security-group/*"
           ]
@@ -350,7 +352,11 @@
         },
         {
           "Action": [
-            "logs:ListLogDeliveries"
+            "logs:CreateLogDelivery",
+            "logs:DeleteLogDelivery",
+            "logs:GetLogDelivery",
+            "logs:ListLogDeliveries",
+            "logs:UpdateLogDelivery"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -364,6 +370,7 @@
             "network-firewall:DeleteResourcePolicy",
             "network-firewall:DescribeFirewall",
             "network-firewall:DescribeFirewallPolicy",
+            "network-firewall:DescribeLoggingConfiguration",
             "network-firewall:DescribeResourcePolicy",
             "network-firewall:DescribeRuleGroup",
             "network-firewall:DisassociateSubnets",
@@ -374,6 +381,7 @@
             "network-firewall:UpdateFirewallDeleteProtection",
             "network-firewall:UpdateFirewallPolicy",
             "network-firewall:UpdateFirewallPolicyChangeProtection",
+            "network-firewall:UpdateLoggingConfiguration",
             "network-firewall:UpdateSubnetChangeProtection"
           ],
           "Effect": "Allow",
@@ -525,7 +533,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v19"
+    "VersionId": "v20"
   },
-  "UpdateDate": "2021-08-12T19:21:06Z"
+  "UpdateDate": "2021-09-30T17:12:33Z"
 }
