@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 287
-* Unique actions: 11446
+* Unique services: 288
+* Unique actions: 11467
 * Managed policies: 865
 
 Most common managed policy name prefixes:
@@ -83,10 +83,10 @@ The following table summarises the AWS APIs.
 | [`frauddetector`](services/frauddetector.yml) | 57 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
 | [`medialive`](services/medialive.yml) | 56 | 0 | 0 |
+| [`workmail`](services/workmail.yml) | 54 | 4 | 51 |
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
-| [`workmail`](services/workmail.yml) | 54 | 0 | 51 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
-| [`workspaces`](services/workspaces.yml) | 53 | 0 | 0 |
+| [`workspaces`](services/workspaces.yml) | 53 | 1 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
 | [`personalize`](services/personalize.yml) | 52 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 51 | 0 | 9 |
@@ -182,7 +182,7 @@ The following table summarises the AWS APIs.
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
-| [`dataexchange`](services/dataexchange.yml) | 22 | 0 | 2 |
+| [`dataexchange`](services/dataexchange.yml) | 22 | 5 | 2 |
 | [`apprunner`](services/apprunner.yml) | 22 | 0 | 1 |
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
@@ -272,8 +272,10 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 245 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
+| [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
+| [`account`](services/account.yml) | 0 | 3 | 3 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 3 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
@@ -311,7 +313,6 @@ The following table summarises the AWS APIs.
 | [`tiros`](services/tiros.yml) | 0 | 0 | 3 |
 | [`resource-explorer`](services/resource-explorer.yml) | 0 | 0 | 3 |
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |
-| [`account`](services/account.yml) | 0 | 0 | 3 |
 | [`sumerian`](services/sumerian.yml) | 0 | 0 | 2 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 2 |
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
@@ -328,13 +329,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1691 |
-| `Get` | 1498 |
+| `List` | 1695 |
+| `Get` | 1503 |
 | `Describe` | 1382 |
-| `Delete` | 1334 |
-| `Create` | 1237 |
-| `Update` | 996 |
-| `Put` | 331 |
+| `Delete` | 1338 |
+| `Create` | 1240 |
+| `Update` | 998 |
+| `Put` | 333 |
 | `Start` | 207 |
 | `Tag` | 181 |
 | `Untag` | 179 |
