@@ -140,6 +140,7 @@ The following table summarises the AWS APIs.
 | [`appconfig`](services/appconfig.yml) | 33 | 0 | 0 |
 | [`eks`](services/eks.yml) | 32 | 2 | 1 |
 | [`mediatailor`](services/mediatailor.yml) | 32 | 1 | 0 |
+| [`transfer`](services/transfer.yml) | 32 | 0 | 0 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
@@ -191,7 +192,6 @@ The following table summarises the AWS APIs.
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`voiceid`](services/voiceid.yml) | 21 | 0 | 2 |
 | [`devops-guru`](services/devops-guru.yml) | 21 | 0 | 0 |
-| [`transfer`](services/transfer.yml) | 20 | 12 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 1 | 0 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 20 | 0 | 1 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
