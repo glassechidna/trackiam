@@ -65,9 +65,17 @@ Actions:
   - Name: cloudformation:ValidateTemplate
 
   # actions with no corresponding API
+  - Name: cloudformation:CancelResourceRequest
+  - Name: cloudformation:CreateResource
   - Name: cloudformation:CreateUploadBucket
+  - Name: cloudformation:DeleteResource
+  - Name: cloudformation:GetResource
+  - Name: cloudformation:GetResourceRequestStatus
+  - Name: cloudformation:ListResourceRequests
+  - Name: cloudformation:ListResources
   - Name: cloudformation:TagResource
   - Name: cloudformation:UntagResource
+  - Name: cloudformation:UpdateResource
 
   # APIs without an IAM action
   - Name: cloudformation:RollbackStack
