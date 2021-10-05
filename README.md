@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 288
-* Unique actions: 11476
+* Unique actions: 11482
 * Managed policies: 867
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 465 | 2 | 0 |
+| [`ec2`](services/ec2.yml) | 465 | 6 | 0 |
 | [`sagemaker`](services/sagemaker.yml) | 248 | 5 | 2 |
 | [`chime`](services/chime.yml) | 190 | 0 | 51 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
@@ -81,9 +81,9 @@ The following table summarises the AWS APIs.
 | [`macie2`](services/macie2.yml) | 57 | 0 | 0 |
 | [`iotwireless`](services/iotwireless.yml) | 57 | 0 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 57 | 0 | 0 |
+| [`workmail`](services/workmail.yml) | 56 | 4 | 51 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
 | [`medialive`](services/medialive.yml) | 56 | 0 | 0 |
-| [`workmail`](services/workmail.yml) | 54 | 4 | 51 |
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`workspaces`](services/workspaces.yml) | 53 | 1 | 0 |
@@ -331,11 +331,11 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1698 |
 | `Get` | 1505 |
-| `Describe` | 1382 |
+| `Describe` | 1384 |
 | `Delete` | 1339 |
-| `Create` | 1241 |
+| `Create` | 1242 |
 | `Update` | 999 |
-| `Put` | 333 |
+| `Put` | 334 |
 | `Start` | 207 |
 | `Tag` | 181 |
 | `Untag` | 179 |
