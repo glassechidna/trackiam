@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/Route53RecoveryReadinessServiceRolePolicy",
   "CreateDate": "2021-07-15T16:06:21Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4J7MSL2FYD",
   "PolicyName": "Route53RecoveryReadinessServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-07-15T16:06:21Z",
+    "CreateDate": "2021-10-06T18:52:33Z",
     "Document": {
       "Statement": [
         {
@@ -54,6 +54,7 @@
             "elasticloadbalancing:DescribeTargetHealth",
             "kafka:DescribeCluster",
             "kafka:DescribeConfigurationRevision",
+            "lambda:ListEventSourceMappings",
             "lambda:ListFunctions",
             "rds:DescribeAccountAttributes",
             "route53:GetHostedZone",
@@ -82,6 +83,17 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:dynamodb:*:*:table/*"
+        },
+        {
+          "Action": [
+            "lambda:GetFunctionConcurrency",
+            "lambda:GetFunctionConfiguration",
+            "lambda:GetProvisionedConcurrencyConfig",
+            "lambda:ListAliases",
+            "lambda:ListVersionsByFunction"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:function:*"
         },
         {
           "Action": [
@@ -139,7 +151,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-07-15T16:06:21Z"
+  "UpdateDate": "2021-10-06T18:52:33Z"
 }
