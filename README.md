@@ -64,9 +64,9 @@ The following table summarises the AWS APIs.
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
+| [`backup`](services/backup.yml) | 66 | 0 | 2 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 64 | 1 | 11 |
-| [`backup`](services/backup.yml) | 64 | 0 | 4 |
 | [`route53`](services/route53.yml) | 64 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 63 | 3 | 0 |
 | [`es`](services/es.yml) | 63 | 0 | 10 |
@@ -236,6 +236,7 @@ The following table summarises the AWS APIs.
 | [`iot`](services/iot.yml) | 11 | 0 | 240 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 28 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 11 | 0 | 0 |
+| [`grafana`](services/grafana.yml) | 11 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`outposts`](services/outposts.yml) | 10 | 1 | 0 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
@@ -294,7 +295,6 @@ The following table summarises the AWS APIs.
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 13 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
-| [`grafana`](services/grafana.yml) | 0 | 0 | 11 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
