@@ -1,0 +1,35 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonMemoryDBFullAccess",
+  "CreateDate": "2021-10-08T19:24:16Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4LGPHLZEWJ",
+  "PolicyName": "AmazonMemoryDBFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-10-08T19:24:16Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "memorydb.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/memorydb.amazonaws.com/AWSServiceRoleForMemoryDB"
+        },
+        {
+          "Action": "memorydb:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-10-08T19:24:16Z"
+}
