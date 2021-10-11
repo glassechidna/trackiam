@@ -1,19 +1,23 @@
 Actions:
   - Name: frauddetector:BatchCreateVariable
   - Name: frauddetector:BatchGetVariable
+  - Name: frauddetector:CancelBatchImportJob
   - Name: frauddetector:CancelBatchPredictionJob
+  - Name: frauddetector:CreateBatchImportJob
   - Name: frauddetector:CreateBatchPredictionJob
   - Name: frauddetector:CreateDetectorVersion
   - Name: frauddetector:CreateModel
   - Name: frauddetector:CreateModelVersion
   - Name: frauddetector:CreateRule
   - Name: frauddetector:CreateVariable
+  - Name: frauddetector:DeleteBatchImportJob
   - Name: frauddetector:DeleteBatchPredictionJob
   - Name: frauddetector:DeleteDetector
   - Name: frauddetector:DeleteDetectorVersion
   - Name: frauddetector:DeleteEntityType
   - Name: frauddetector:DeleteEvent
   - Name: frauddetector:DeleteEventType
+  - Name: frauddetector:DeleteEventsByEventType
   - Name: frauddetector:DeleteExternalModel
   - Name: frauddetector:DeleteLabel
   - Name: frauddetector:DeleteModel
@@ -23,10 +27,13 @@ Actions:
   - Name: frauddetector:DeleteVariable
   - Name: frauddetector:DescribeDetector
   - Name: frauddetector:DescribeModelVersions
+  - Name: frauddetector:GetBatchImportJobs
   - Name: frauddetector:GetBatchPredictionJobs
+  - Name: frauddetector:GetDeleteEventsByEventTypeStatus
   - Name: frauddetector:GetDetectorVersion
   - Name: frauddetector:GetDetectors
   - Name: frauddetector:GetEntityTypes
+  - Name: frauddetector:GetEvent
   - Name: frauddetector:GetEventPrediction
   - Name: frauddetector:GetEventTypes
   - Name: frauddetector:GetExternalModels
@@ -45,25 +52,16 @@ Actions:
   - Name: frauddetector:PutKMSEncryptionKey
   - Name: frauddetector:PutLabel
   - Name: frauddetector:PutOutcome
+  - Name: frauddetector:SendEvent
   - Name: frauddetector:TagResource
   - Name: frauddetector:UntagResource
   - Name: frauddetector:UpdateDetectorVersion
   - Name: frauddetector:UpdateDetectorVersionMetadata
   - Name: frauddetector:UpdateDetectorVersionStatus
+  - Name: frauddetector:UpdateEventLabel
   - Name: frauddetector:UpdateModel
   - Name: frauddetector:UpdateModelVersion
   - Name: frauddetector:UpdateModelVersionStatus
   - Name: frauddetector:UpdateRuleMetadata
   - Name: frauddetector:UpdateRuleVersion
   - Name: frauddetector:UpdateVariable
-
-  # APIs without an IAM action
-  - Name: frauddetector:CancelBatchImportJob
-  - Name: frauddetector:CreateBatchImportJob
-  - Name: frauddetector:DeleteBatchImportJob
-  - Name: frauddetector:DeleteEventsByEventType
-  - Name: frauddetector:GetBatchImportJobs
-  - Name: frauddetector:GetDeleteEventsByEventTypeStatus
-  - Name: frauddetector:GetEvent
-  - Name: frauddetector:SendEvent
-  - Name: frauddetector:UpdateEventLabel
