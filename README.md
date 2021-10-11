@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 288
-* Unique actions: 11487
+* Unique actions: 11497
 * Managed policies: 871
 
 Most common managed policy name prefixes:
@@ -77,13 +77,13 @@ The following table summarises the AWS APIs.
 | [`iotsitewise`](services/iotsitewise.yml) | 59 | 1 | 1 |
 | [`directconnect`](services/directconnect.yml) | 59 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
+| [`frauddetector`](services/frauddetector.yml) | 57 | 9 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`macie2`](services/macie2.yml) | 57 | 0 | 0 |
 | [`iotwireless`](services/iotwireless.yml) | 57 | 0 | 0 |
-| [`frauddetector`](services/frauddetector.yml) | 57 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 56 | 4 | 51 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
-| [`medialive`](services/medialive.yml) | 56 | 0 | 0 |
+| [`medialive`](services/medialive.yml) | 56 | 1 | 0 |
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`workspaces`](services/workspaces.yml) | 53 | 1 | 0 |
@@ -330,11 +330,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1698 |
-| `Get` | 1506 |
+| `Get` | 1509 |
 | `Describe` | 1384 |
-| `Delete` | 1341 |
-| `Create` | 1242 |
-| `Update` | 999 |
+| `Delete` | 1343 |
+| `Create` | 1243 |
+| `Update` | 1000 |
 | `Put` | 336 |
 | `Start` | 207 |
 | `Tag` | 181 |
