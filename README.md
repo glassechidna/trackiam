@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 288
-* Unique actions: 11504
+* Unique actions: 11508
 * Managed policies: 871
 
 Most common managed policy name prefixes:
@@ -138,8 +138,8 @@ The following table summarises the AWS APIs.
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 33 | 0 | 0 |
+| [`mediatailor`](services/mediatailor.yml) | 32 | 5 | 0 |
 | [`eks`](services/eks.yml) | 32 | 2 | 1 |
-| [`mediatailor`](services/mediatailor.yml) | 32 | 1 | 0 |
 | [`transfer`](services/transfer.yml) | 32 | 0 | 0 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |
@@ -329,11 +329,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1698 |
-| `Get` | 1511 |
+| `List` | 1699 |
+| `Get` | 1512 |
 | `Describe` | 1385 |
-| `Delete` | 1343 |
-| `Create` | 1245 |
+| `Delete` | 1344 |
+| `Create` | 1246 |
 | `Update` | 1000 |
 | `Put` | 336 |
 | `Start` | 207 |
