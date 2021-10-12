@@ -13,6 +13,7 @@ Actions:
   - Name: elasticmapreduce:DescribeCluster
   - Name: elasticmapreduce:DescribeJobFlows
   - Name: elasticmapreduce:DescribeNotebookExecution
+  - Name: elasticmapreduce:DescribeReleaseLabel
   - Name: elasticmapreduce:DescribeSecurityConfiguration
   - Name: elasticmapreduce:DescribeStep
   - Name: elasticmapreduce:DescribeStudio
@@ -25,6 +26,7 @@ Actions:
   - Name: elasticmapreduce:ListInstanceGroups
   - Name: elasticmapreduce:ListInstances
   - Name: elasticmapreduce:ListNotebookExecutions
+  - Name: elasticmapreduce:ListReleaseLabels
   - Name: elasticmapreduce:ListSecurityConfigurations
   - Name: elasticmapreduce:ListSteps
   - Name: elasticmapreduce:ListStudioSessionMappings
@@ -47,12 +49,19 @@ Actions:
   - Name: elasticmapreduce:UpdateStudioSessionMapping
 
   # actions with no corresponding API
+  - Name: elasticmapreduce:AttachEditor
   - Name: elasticmapreduce:CreateEditor
+  - Name: elasticmapreduce:CreatePersistentAppUI
   - Name: elasticmapreduce:CreateRepository
+  - Name: elasticmapreduce:CreateStudioPresignedUrl
   - Name: elasticmapreduce:DeleteEditor
   - Name: elasticmapreduce:DeleteRepository
   - Name: elasticmapreduce:DescribeEditor
+  - Name: elasticmapreduce:DescribePersistentAppUI
   - Name: elasticmapreduce:DescribeRepository
+  - Name: elasticmapreduce:DetachEditor
+  - Name: elasticmapreduce:GetOnClusterAppUIPresignedURL
+  - Name: elasticmapreduce:GetPersistentAppUIPresignedURL
   - Name: elasticmapreduce:LinkRepository
   - Name: elasticmapreduce:ListEditors
   - Name: elasticmapreduce:ListRepositories
@@ -64,9 +73,7 @@ Actions:
   - Name: elasticmapreduce:ViewEventsFromAllClustersInConsole
 
   # APIs without an IAM action
-  - Name: elasticmapreduce:DescribeReleaseLabel
   - Name: elasticmapreduce:GetAutoTerminationPolicy
-  - Name: elasticmapreduce:ListReleaseLabels
   - Name: elasticmapreduce:PutAutoTerminationPolicy
   - Name: elasticmapreduce:RemoveAutoTerminationPolicy
   - Name: elasticmapreduce:SetVisibleToAllUsers

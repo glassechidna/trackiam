@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 288
-* Unique actions: 11497
+* Unique actions: 11504
 * Managed policies: 871
 
 Most common managed policy name prefixes:
@@ -97,6 +97,7 @@ The following table summarises the AWS APIs.
 | [`proton`](services/proton.yml) | 49 | 0 | 23 |
 | [`imagebuilder`](services/imagebuilder.yml) | 49 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 10 |
+| [`elasticmapreduce`](services/elasticmapreduce.yml) | 48 | 4 | 22 |
 | [`appstream`](services/appstream.yml) | 48 | 0 | 1 |
 | [`license-manager`](services/license-manager.yml) | 48 | 0 | 0 |
 | [`geo`](services/geo.yml) | 47 | 3 | 0 |
@@ -104,7 +105,6 @@ The following table summarises the AWS APIs.
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
-| [`elasticmapreduce`](services/elasticmapreduce.yml) | 46 | 6 | 15 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`nimble`](services/nimble.yml) | 45 | 0 | 2 |
 | [`kendra`](services/kendra.yml) | 43 | 0 | 0 |
@@ -330,10 +330,10 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1698 |
-| `Get` | 1509 |
-| `Describe` | 1384 |
+| `Get` | 1511 |
+| `Describe` | 1385 |
 | `Delete` | 1343 |
-| `Create` | 1243 |
+| `Create` | 1245 |
 | `Update` | 1000 |
 | `Put` | 336 |
 | `Start` | 207 |
