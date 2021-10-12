@@ -86,7 +86,7 @@ The following table summarises the AWS APIs.
 | [`medialive`](services/medialive.yml) | 56 | 1 | 0 |
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
-| [`workspaces`](services/workspaces.yml) | 53 | 1 | 0 |
+| [`workspaces`](services/workspaces.yml) | 54 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
 | [`personalize`](services/personalize.yml) | 52 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 51 | 0 | 9 |
