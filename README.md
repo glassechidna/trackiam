@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 288
-* Unique actions: 11508
+* Unique actions: 11514
 * Managed policies: 871
 
 Most common managed policy name prefixes:
@@ -55,7 +55,7 @@ The following table summarises the AWS APIs.
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
 | [`lex`](services/lex.yml) | 94 | 3 | 4 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
-| [`storagegateway`](services/storagegateway.yml) | 89 | 0 | 1 |
+| [`storagegateway`](services/storagegateway.yml) | 89 | 1 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 85 | 0 | 1 |
 | [`s3`](services/s3.yml) | 83 | 57 | 42 |
@@ -81,7 +81,7 @@ The following table summarises the AWS APIs.
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`macie2`](services/macie2.yml) | 57 | 0 | 0 |
 | [`iotwireless`](services/iotwireless.yml) | 57 | 0 | 0 |
-| [`workmail`](services/workmail.yml) | 56 | 4 | 51 |
+| [`workmail`](services/workmail.yml) | 56 | 9 | 51 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
 | [`medialive`](services/medialive.yml) | 56 | 1 | 0 |
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
@@ -329,12 +329,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1699 |
-| `Get` | 1512 |
+| `List` | 1700 |
+| `Get` | 1513 |
 | `Describe` | 1385 |
 | `Delete` | 1344 |
 | `Create` | 1246 |
-| `Update` | 1000 |
+| `Update` | 1002 |
 | `Put` | 336 |
 | `Start` | 207 |
 | `Tag` | 181 |
