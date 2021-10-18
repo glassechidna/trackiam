@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 288
-* Unique actions: 11514
+* Unique services: 289
+* Unique actions: 11542
 * Managed policies: 871
 
 Most common managed policy name prefixes:
@@ -45,7 +45,7 @@ The following table summarises the AWS APIs.
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
 | [`rds`](services/rds.yml) | 137 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 134 | 1 | 7 |
-| [`quicksight`](services/quicksight.yml) | 113 | 0 | 19 |
+| [`quicksight`](services/quicksight.yml) | 113 | 2 | 19 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 112 | 5 | 1 |
 | [`connect`](services/connect.yml) | 110 | 0 | 3 |
 | [`servicecatalog`](services/servicecatalog.yml) | 108 | 0 | 0 |
@@ -286,6 +286,7 @@ The following table summarises the AWS APIs.
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
+| [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
@@ -329,14 +330,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1700 |
-| `Get` | 1513 |
-| `Describe` | 1385 |
+| `List` | 1706 |
+| `Get` | 1524 |
+| `Describe` | 1386 |
 | `Delete` | 1344 |
 | `Create` | 1246 |
-| `Update` | 1002 |
-| `Put` | 336 |
-| `Start` | 207 |
+| `Update` | 1005 |
+| `Put` | 337 |
+| `Start` | 210 |
 | `Tag` | 181 |
 | `Untag` | 179 |
 

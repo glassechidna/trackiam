@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchApplicationInsightsFullAccess",
   "CreateDate": "2020-11-24T18:44:14Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MSQN23AKX",
   "PolicyName": "CloudWatchApplicationInsightsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-11-24T18:44:14Z",
+    "CreateDate": "2021-10-18T17:48:51Z",
     "Document": {
       "Statement": [
         {
@@ -28,12 +28,38 @@
           "Action": "applicationinsights:*",
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "apigateway:GET",
+            "autoscaling:DescribeAutoScalingGroups",
+            "dynamodb:ListTables",
+            "ec2:DescribeInstances",
+            "ec2:DescribeVolumes",
+            "ecs:DescribeTaskDefinition",
+            "ecs:ListClusters",
+            "ecs:ListServices",
+            "ecs:ListTasks",
+            "eks:ListClusters",
+            "eks:ListNodegroups",
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "fsx:DescribeFileSystems",
+            "lambda:ListFunctions",
+            "rds:DescribeDBClusters",
+            "rds:DescribeDBInstances",
+            "s3:ListAllMyBuckets",
+            "sns:ListTopics",
+            "sqs:ListQueues",
+            "states:ListStateMachines"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-11-24T18:44:14Z"
+  "UpdateDate": "2021-10-18T17:48:51Z"
 }
