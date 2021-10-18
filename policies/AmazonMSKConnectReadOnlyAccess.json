@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonMSKConnectReadOnlyAccess",
   "CreateDate": "2021-09-20T10:18:43Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NBJ5F5NIS",
   "PolicyName": "AmazonMSKConnectReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-09-20T10:18:43Z",
+    "CreateDate": "2021-10-18T09:16:26Z",
     "Document": {
       "Statement": [
         {
@@ -39,36 +39,18 @@
         },
         {
           "Action": [
-            "kafkaconnect:ListConnectors"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:kafkaconnect:*:*:/*/connectors"
-          ]
-        },
-        {
-          "Action": [
-            "kafkaconnect:ListCustomPlugins"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:kafkaconnect:*:*:/*/custom-plugins"
-          ]
-        },
-        {
-          "Action": [
+            "kafkaconnect:ListConnectors",
+            "kafkaconnect:ListCustomPlugins",
             "kafkaconnect:ListWorkerConfigurations"
           ],
           "Effect": "Allow",
-          "Resource": [
-            "arn:aws:kafkaconnect:*:*:/*/worker-configurations"
-          ]
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-09-20T10:18:43Z"
+  "UpdateDate": "2021-10-18T09:16:26Z"
 }
