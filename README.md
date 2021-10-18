@@ -45,7 +45,7 @@ The following table summarises the AWS APIs.
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
 | [`rds`](services/rds.yml) | 137 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 134 | 1 | 7 |
-| [`quicksight`](services/quicksight.yml) | 113 | 2 | 19 |
+| [`quicksight`](services/quicksight.yml) | 115 | 0 | 19 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 112 | 5 | 1 |
 | [`connect`](services/connect.yml) | 110 | 0 | 3 |
 | [`servicecatalog`](services/servicecatalog.yml) | 108 | 0 | 0 |
@@ -178,6 +178,7 @@ The following table summarises the AWS APIs.
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 25 | 0 | 0 |
 | [`ram`](services/ram.yml) | 24 | 0 | 0 |
+| [`lakeformation`](services/lakeformation.yml) | 23 | 0 | 1 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 0 | 0 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
@@ -222,7 +223,6 @@ The following table summarises the AWS APIs.
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`translate`](services/translate.yml) | 14 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 14 | 0 | 0 |
-| [`lakeformation`](services/lakeformation.yml) | 13 | 10 | 1 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 16 |
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 7 |
 | [`synthetics`](services/synthetics.yml) | 13 | 0 | 0 |
