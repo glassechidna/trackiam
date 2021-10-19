@@ -1,0 +1,65 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSMigrationHubStrategyCollector",
+  "CreateDate": "2021-10-19T20:15:15Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4LHUI3MFF6",
+  "PolicyName": "AWSMigrationHubStrategyCollector",
+  "PolicyVersion": {
+    "CreateDate": "2021-10-19T20:15:15Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "execute-api:Invoke",
+            "execute-api:ManageConnections"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:execute-api:*:*:*/prod/*/put-log-data",
+            "arn:aws:execute-api:*:*:*/prod/*/put-metric-data"
+          ]
+        },
+        {
+          "Action": [
+            "migrationhub-strategy:GetAntiPattern",
+            "migrationhub-strategy:GetMessage",
+            "migrationhub-strategy:ListAntiPatterns",
+            "migrationhub-strategy:ListJarArtifacts",
+            "migrationhub-strategy:RegisterCollector",
+            "migrationhub-strategy:SendMessage"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:migrationhub-strategy:*:*:*"
+        },
+        {
+          "Action": [
+            "s3:GetBucketAcl",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::migrationhub-strategy-*"
+        },
+        {
+          "Action": [
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*"
+        },
+        {
+          "Action": [
+            "secretsmanager:GetSecretValue"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:migrationhub-strategy-*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-10-19T20:15:15Z"
+}
