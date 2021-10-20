@@ -17,6 +17,7 @@ Actions:
   - Name: elasticmapreduce:DescribeSecurityConfiguration
   - Name: elasticmapreduce:DescribeStep
   - Name: elasticmapreduce:DescribeStudio
+  - Name: elasticmapreduce:GetAutoTerminationPolicy
   - Name: elasticmapreduce:GetBlockPublicAccessConfiguration
   - Name: elasticmapreduce:GetManagedScalingPolicy
   - Name: elasticmapreduce:GetStudioSessionMapping
@@ -35,9 +36,11 @@ Actions:
   - Name: elasticmapreduce:ModifyInstanceFleet
   - Name: elasticmapreduce:ModifyInstanceGroups
   - Name: elasticmapreduce:PutAutoScalingPolicy
+  - Name: elasticmapreduce:PutAutoTerminationPolicy
   - Name: elasticmapreduce:PutBlockPublicAccessConfiguration
   - Name: elasticmapreduce:PutManagedScalingPolicy
   - Name: elasticmapreduce:RemoveAutoScalingPolicy
+  - Name: elasticmapreduce:RemoveAutoTerminationPolicy
   - Name: elasticmapreduce:RemoveManagedScalingPolicy
   - Name: elasticmapreduce:RemoveTags
   - Name: elasticmapreduce:RunJobFlow
@@ -73,7 +76,4 @@ Actions:
   - Name: elasticmapreduce:ViewEventsFromAllClustersInConsole
 
   # APIs without an IAM action
-  - Name: elasticmapreduce:GetAutoTerminationPolicy
-  - Name: elasticmapreduce:PutAutoTerminationPolicy
-  - Name: elasticmapreduce:RemoveAutoTerminationPolicy
   - Name: elasticmapreduce:SetVisibleToAllUsers
