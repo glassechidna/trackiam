@@ -1,4 +1,5 @@
 Actions:
+  - Name: chime:AssociateChannelFlow
   - Name: chime:AssociatePhoneNumberWithUser
   - Name: chime:AssociatePhoneNumbersWithVoiceConnector
   - Name: chime:AssociatePhoneNumbersWithVoiceConnectorGroup
@@ -11,6 +12,7 @@ Actions:
   - Name: chime:BatchUnsuspendUser
   - Name: chime:BatchUpdatePhoneNumber
   - Name: chime:BatchUpdateUser
+  - Name: chime:ChannelFlowCallback
   - Name: chime:CreateAccount
   - Name: chime:CreateAppInstance
   - Name: chime:CreateAppInstanceAdmin
@@ -19,6 +21,7 @@ Actions:
   - Name: chime:CreateBot
   - Name: chime:CreateChannel
   - Name: chime:CreateChannelBan
+  - Name: chime:CreateChannelFlow
   - Name: chime:CreateChannelMembership
   - Name: chime:CreateChannelModerator
   - Name: chime:CreateMediaCapturePipeline
@@ -43,6 +46,7 @@ Actions:
   - Name: chime:DeleteAttendee
   - Name: chime:DeleteChannel
   - Name: chime:DeleteChannelBan
+  - Name: chime:DeleteChannelFlow
   - Name: chime:DeleteChannelMembership
   - Name: chime:DeleteChannelMessage
   - Name: chime:DeleteChannelModerator
@@ -68,10 +72,12 @@ Actions:
   - Name: chime:DescribeAppInstanceUser
   - Name: chime:DescribeChannel
   - Name: chime:DescribeChannelBan
+  - Name: chime:DescribeChannelFlow
   - Name: chime:DescribeChannelMembership
   - Name: chime:DescribeChannelMembershipForAppInstanceUser
   - Name: chime:DescribeChannelModeratedByAppInstanceUser
   - Name: chime:DescribeChannelModerator
+  - Name: chime:DisassociateChannelFlow
   - Name: chime:DisassociatePhoneNumberFromUser
   - Name: chime:DisassociatePhoneNumbersFromVoiceConnector
   - Name: chime:DisassociatePhoneNumbersFromVoiceConnectorGroup
@@ -83,6 +89,7 @@ Actions:
   - Name: chime:GetAttendee
   - Name: chime:GetBot
   - Name: chime:GetChannelMessage
+  - Name: chime:GetChannelMessageStatus
   - Name: chime:GetEventsConfiguration
   - Name: chime:GetGlobalSettings
   - Name: chime:GetMediaCapturePipeline
@@ -117,11 +124,13 @@ Actions:
   - Name: chime:ListAttendees
   - Name: chime:ListBots
   - Name: chime:ListChannelBans
+  - Name: chime:ListChannelFlows
   - Name: chime:ListChannelMemberships
   - Name: chime:ListChannelMembershipsForAppInstanceUser
   - Name: chime:ListChannelMessages
   - Name: chime:ListChannelModerators
   - Name: chime:ListChannels
+  - Name: chime:ListChannelsAssociatedWithChannelFlow
   - Name: chime:ListChannelsModeratedByAppInstanceUser
   - Name: chime:ListMediaCapturePipelines
   - Name: chime:ListMeetingTags
@@ -174,6 +183,7 @@ Actions:
   - Name: chime:UpdateAppInstanceUser
   - Name: chime:UpdateBot
   - Name: chime:UpdateChannel
+  - Name: chime:UpdateChannelFlow
   - Name: chime:UpdateChannelMessage
   - Name: chime:UpdateChannelReadMarker
   - Name: chime:UpdateGlobalSettings
@@ -242,15 +252,3 @@ Actions:
   - Name: chime:UpdateSupportedLicenses
   - Name: chime:UpdateUserLicenses
   - Name: chime:ValidateAccountResource
-
-  # APIs without an IAM action
-  - Name: chime:AssociateChannelFlow
-  - Name: chime:ChannelFlowCallback
-  - Name: chime:CreateChannelFlow
-  - Name: chime:DeleteChannelFlow
-  - Name: chime:DescribeChannelFlow
-  - Name: chime:DisassociateChannelFlow
-  - Name: chime:GetChannelMessageStatus
-  - Name: chime:ListChannelFlows
-  - Name: chime:ListChannelsAssociatedWithChannelFlow
-  - Name: chime:UpdateChannelFlow
