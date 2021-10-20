@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 289
-* Unique actions: 11574
+* Unique actions: 11583
 * Managed policies: 876
 
 Most common managed policy name prefixes:
@@ -75,8 +75,8 @@ The following table summarises the AWS APIs.
 | [`ds`](services/ds.yml) | 62 | 1 | 6 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 60 | 0 | 0 |
+| [`directconnect`](services/directconnect.yml) | 59 | 4 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 59 | 1 | 1 |
-| [`directconnect`](services/directconnect.yml) | 59 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`macie2`](services/macie2.yml) | 57 | 0 | 0 |
@@ -89,7 +89,7 @@ The following table summarises the AWS APIs.
 | [`workspaces`](services/workspaces.yml) | 54 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
 | [`personalize`](services/personalize.yml) | 52 | 0 | 0 |
-| [`securityhub`](services/securityhub.yml) | 51 | 0 | 9 |
+| [`securityhub`](services/securityhub.yml) | 51 | 5 | 9 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 51 | 0 | 0 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
@@ -133,6 +133,7 @@ The following table summarises the AWS APIs.
 | [`athena`](services/athena.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`memorydb`](services/memorydb.yml) | 33 | 2 | 2 |
+| [`panorama`](services/panorama.yml) | 33 | 0 | 31 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`shield`](services/shield.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
@@ -279,7 +280,6 @@ The following table summarises the AWS APIs.
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 3 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
-| [`panorama`](services/panorama.yml) | 0 | 0 | 64 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 50 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 42 |
@@ -330,12 +330,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1715 |
-| `Get` | 1525 |
-| `Describe` | 1394 |
-| `Delete` | 1346 |
-| `Create` | 1250 |
-| `Update` | 1006 |
+| `List` | 1716 |
+| `Get` | 1526 |
+| `Describe` | 1396 |
+| `Delete` | 1347 |
+| `Create` | 1251 |
+| `Update` | 1008 |
 | `Put` | 337 |
 | `Start` | 210 |
 | `Tag` | 181 |
