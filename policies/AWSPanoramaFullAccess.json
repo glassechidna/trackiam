@@ -1,27 +1,109 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPanoramaFullAccess",
   "CreateDate": "2020-12-01T13:12:47Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4IAPULBSWQ",
   "PolicyName": "AWSPanoramaFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-12-01T13:12:47Z",
+    "CreateDate": "2021-10-20T12:14:58Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "panorama.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "panorama.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:DeleteObject",
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutObject",
+            "s3:PutObjectAcl"
+          ],
+          "Condition": {
+            "StringLike": {
+              "s3:DataAccessPointArn": "arn:aws:s3:*:*:accesspoint/panorama-*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "iam:ListRoles",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:Describe*",
+            "logs:FilterLogEvents",
+            "logs:Get*",
+            "logs:List*",
+            "logs:StartQuery",
+            "logs:StopQuery",
+            "logs:TestMetricFilter"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/panorama/devices/*",
+            "arn:aws:logs:*:*:log-group:/aws/panorama_device*:log-stream:*"
+          ]
+        },
         {
           "Action": [
             "panorama:*"
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:ListSecretVersionIds",
+            "secretsmanager:PutSecretValue",
+            "secretsmanager:UpdateSecret"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:secretsmanager:*:*:secret:Panorama*",
+            "arn:aws:secretsmanager:*:*:secret:panorama*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-12-01T13:12:47Z"
+  "UpdateDate": "2021-10-20T12:14:58Z"
 }

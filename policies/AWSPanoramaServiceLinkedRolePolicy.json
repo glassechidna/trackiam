@@ -1,0 +1,123 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSPanoramaServiceLinkedRolePolicy",
+  "CreateDate": "2021-10-20T12:12:50Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4BQE5OFSDO",
+  "PolicyName": "AWSPanoramaServiceLinkedRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-10-20T12:12:50Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iot:AttachPolicy",
+            "iot:CreatePolicy",
+            "iot:CreatePolicyVersion"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iot:*:*:policy/panorama*"
+          ],
+          "Sid": "PanoramaIoTCreatePolicyAndVersionAccess"
+        },
+        {
+          "Action": [
+            "iot:AttachPrincipalPolicy",
+            "iot:AttachThingPrincipal",
+            "iot:DeleteCertificate",
+            "iot:DetachPrincipalPolicy",
+            "iot:DetachThingPrincipal",
+            "iot:UpdateCertificate"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iot:*:*:cert/*",
+            "arn:aws:iot:*:*:thing/panorama*"
+          ],
+          "Sid": "PanoramaIoTCertificateAccess"
+        },
+        {
+          "Action": [
+            "iot:CreateJob",
+            "iot:DeleteJob",
+            "iot:DescribeJobExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iot:*:*:job/panorama*",
+            "arn:aws:iot:*:*:thing/panorama*"
+          ],
+          "Sid": "PanoramaIoTJobAccess"
+        },
+        {
+          "Action": [
+            "iot:CreateKeysAndCertificate"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "PanoramaIoTCreateCertificateAccess"
+        },
+        {
+          "Action": [
+            "iot:CreateThing",
+            "iot:DeleteThing",
+            "iot:DeleteThingShadow",
+            "iot:DescribeThing",
+            "iot:GetThingShadow",
+            "iot:UpdateThing",
+            "iot:UpdateThingShadow"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iot:*:*:thing/panorama*"
+          ],
+          "Sid": "PanoramaIoTThingAccess"
+        },
+        {
+          "Action": [
+            "iot:DescribeEndpoint"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "PanoramaIoTEndpointAccess"
+        },
+        {
+          "Action": [
+            "panorama:Describe*",
+            "panorama:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "PanoramaReadOnlyAccess"
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:ListSecretVersionIds"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:secretsmanager:*:*:secret:Panorama*",
+            "arn:aws:secretsmanager:*:*:secret:panorama*"
+          ],
+          "Sid": "SecretsManagerPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-10-20T12:12:50Z"
+}

@@ -1,0 +1,67 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSPanoramaApplianceServiceRolePolicy",
+  "CreateDate": "2021-10-20T12:14:03Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4O5K6UVMRK",
+  "PolicyName": "AWSPanoramaApplianceServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-10-20T12:14:03Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "cloudwatch:PutMetricData",
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "PanoramaDeviceMetrics"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PanoramaDevicePutMetric"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:ListBucket"
+          ],
+          "Condition": {
+            "StringLike": {
+              "s3:DataAccessPointArn": "arn:aws:s3:*:*:accesspoint/panorama*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PanoramaDeviceS3Access"
+        },
+        {
+          "Action": "logs:CreateLogGroup",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/panorama/devices/*",
+            "arn:aws:logs:*:*:log-group:/aws/panorama_device*"
+          ],
+          "Sid": "PanoramaDeviceCreateLogGroup"
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/panorama/devices/*",
+            "arn:aws:logs:*:*:log-group:/aws/panorama_device*:log-stream:*"
+          ],
+          "Sid": "PanoramaDeviceCreateLogStream"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-10-20T12:14:03Z"
+}

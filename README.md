@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 289
-* Unique actions: 11552
-* Managed policies: 874
+* Unique actions: 11574
+* Managed policies: 876
 
 Most common managed policy name prefixes:
 
@@ -21,8 +21,8 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/Amazon*` | 242 |
 | `arn:aws:iam::aws:policy/AWS*` | 241 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 177 |
-| `arn:aws:iam::aws:policy/service-role/*` | 127 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 178 |
+| `arn:aws:iam::aws:policy/service-role/*` | 128 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 80 |
 
@@ -279,10 +279,10 @@ The following table summarises the AWS APIs.
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 3 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
+| [`panorama`](services/panorama.yml) | 0 | 0 | 64 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 50 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 42 |
-| [`panorama`](services/panorama.yml) | 0 | 0 | 42 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
@@ -330,11 +330,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1708 |
+| `List` | 1715 |
 | `Get` | 1525 |
-| `Describe` | 1387 |
-| `Delete` | 1345 |
-| `Create` | 1247 |
+| `Describe` | 1394 |
+| `Delete` | 1346 |
+| `Create` | 1250 |
 | `Update` | 1006 |
 | `Put` | 337 |
 | `Start` | 210 |
