@@ -34,6 +34,7 @@ Actions:
   - Name: ec2:BundleInstance
   - Name: ec2:CancelBundleTask
   - Name: ec2:CancelCapacityReservation
+  - Name: ec2:CancelCapacityReservationFleets
   - Name: ec2:CancelConversionTask
   - Name: ec2:CancelExportTask
   - Name: ec2:CancelImportTask
@@ -45,6 +46,7 @@ Actions:
   - Name: ec2:CopyImage
   - Name: ec2:CopySnapshot
   - Name: ec2:CreateCapacityReservation
+  - Name: ec2:CreateCapacityReservationFleet
   - Name: ec2:CreateCarrierGateway
   - Name: ec2:CreateClientVpnEndpoint
   - Name: ec2:CreateClientVpnRoute
@@ -355,6 +357,8 @@ Actions:
   - Name: ec2:GetTransitGatewayPrefixListReferences
   - Name: ec2:GetTransitGatewayRouteTableAssociations
   - Name: ec2:GetTransitGatewayRouteTablePropagations
+  - Name: ec2:GetVpnConnectionDeviceSampleConfiguration
+  - Name: ec2:GetVpnConnectionDeviceTypes
   - Name: ec2:ImportClientVpnClientCertificateRevocationList
   - Name: ec2:ImportImage
   - Name: ec2:ImportInstance
@@ -364,6 +368,7 @@ Actions:
   - Name: ec2:ModifyAddressAttribute
   - Name: ec2:ModifyAvailabilityZoneGroup
   - Name: ec2:ModifyCapacityReservation
+  - Name: ec2:ModifyCapacityReservationFleet
   - Name: ec2:ModifyClientVpnEndpoint
   - Name: ec2:ModifyDefaultCreditSpecification
   - Name: ec2:ModifyEbsDefaultKmsKeyId
@@ -465,10 +470,8 @@ Actions:
   - Name: ec2:UpdateSecurityGroupRuleDescriptionsIngress
   - Name: ec2:WithdrawByoipCidr
 
+  # actions with no corresponding API
+  - Name: ec2:SendSpotInstanceInterruptions
+
   # APIs without an IAM action
-  - Name: ec2:CancelCapacityReservationFleets
-  - Name: ec2:CreateCapacityReservationFleet
   - Name: ec2:DescribeCapacityReservationFleets
-  - Name: ec2:GetVpnConnectionDeviceSampleConfiguration
-  - Name: ec2:GetVpnConnectionDeviceTypes
-  - Name: ec2:ModifyCapacityReservationFleet
