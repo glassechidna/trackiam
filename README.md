@@ -156,6 +156,7 @@ The following table summarises the AWS APIs.
 | [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`route53domains`](services/route53domains.yml) | 28 | 0 | 0 |
+| [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
@@ -171,7 +172,6 @@ The following table summarises the AWS APIs.
 | [`ivs`](services/ivs.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`fms`](services/fms.yml) | 26 | 0 | 0 |
-| [`mediaconvert`](services/mediaconvert.yml) | 25 | 3 | 0 |
 | [`mgn`](services/mgn.yml) | 25 | 0 | 26 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 25 | 0 | 1 |
 | [`snowball`](services/snowball.yml) | 25 | 0 | 0 |
