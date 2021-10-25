@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 289
-* Unique actions: 11594
+* Unique services: 290
+* Unique actions: 11595
 * Managed policies: 876
 
 Most common managed policy name prefixes:
@@ -42,8 +42,8 @@ The following table summarises the AWS APIs.
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 153 | 0 | 0 |
 | [`glue`](services/glue.yml) | 147 | 19 | 2 |
+| [`rds`](services/rds.yml) | 140 | 0 | 5 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
-| [`rds`](services/rds.yml) | 137 | 3 | 5 |
 | [`ssm`](services/ssm.yml) | 134 | 1 | 7 |
 | [`quicksight`](services/quicksight.yml) | 115 | 0 | 19 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 112 | 5 | 1 |
@@ -58,7 +58,7 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 89 | 1 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 85 | 0 | 1 |
-| [`s3`](services/s3.yml) | 83 | 57 | 42 |
+| [`s3`](services/s3.yml) | 82 | 58 | 42 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
@@ -319,6 +319,7 @@ The following table summarises the AWS APIs.
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
 | [`rds-db`](services/rds-db.yml) | 0 | 0 | 1 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 1 |
+| [`mediaimport`](services/mediaimport.yml) | 0 | 0 | 1 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 1 |
 | [`iq`](services/iq.yml) | 0 | 0 | 1 |
 | [`elemental-support-content`](services/elemental-support-content.yml) | 0 | 0 | 1 |
@@ -334,7 +335,7 @@ Most common action prefixes:
 | `Get` | 1527 |
 | `Describe` | 1396 |
 | `Delete` | 1349 |
-| `Create` | 1252 |
+| `Create` | 1253 |
 | `Update` | 1010 |
 | `Put` | 337 |
 | `Start` | 211 |
