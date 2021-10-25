@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 289
-* Unique actions: 11588
+* Unique actions: 11594
 * Managed policies: 876
 
 Most common managed policy name prefixes:
@@ -43,7 +43,7 @@ The following table summarises the AWS APIs.
 | [`lightsail`](services/lightsail.yml) | 153 | 0 | 0 |
 | [`glue`](services/glue.yml) | 147 | 19 | 2 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
-| [`rds`](services/rds.yml) | 137 | 0 | 5 |
+| [`rds`](services/rds.yml) | 137 | 3 | 5 |
 | [`ssm`](services/ssm.yml) | 134 | 1 | 7 |
 | [`quicksight`](services/quicksight.yml) | 115 | 0 | 19 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 112 | 5 | 1 |
@@ -74,7 +74,7 @@ The following table summarises the AWS APIs.
 | [`comprehend`](services/comprehend.yml) | 63 | 0 | 0 |
 | [`ds`](services/ds.yml) | 62 | 1 | 6 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
-| [`route53resolver`](services/route53resolver.yml) | 60 | 0 | 0 |
+| [`route53resolver`](services/route53resolver.yml) | 60 | 3 | 0 |
 | [`directconnect`](services/directconnect.yml) | 59 | 4 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 59 | 1 | 1 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
@@ -84,6 +84,7 @@ The following table summarises the AWS APIs.
 | [`workmail`](services/workmail.yml) | 56 | 9 | 51 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
 | [`medialive`](services/medialive.yml) | 56 | 1 | 0 |
+| [`auditmanager`](services/auditmanager.yml) | 55 | 0 | 0 |
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`workspaces`](services/workspaces.yml) | 54 | 0 | 0 |
@@ -91,7 +92,6 @@ The following table summarises the AWS APIs.
 | [`personalize`](services/personalize.yml) | 52 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 51 | 5 | 9 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 22 |
-| [`auditmanager`](services/auditmanager.yml) | 51 | 0 | 4 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 51 | 0 | 0 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
@@ -330,12 +330,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1717 |
-| `Get` | 1526 |
+| `List` | 1718 |
+| `Get` | 1527 |
 | `Describe` | 1396 |
-| `Delete` | 1348 |
-| `Create` | 1251 |
-| `Update` | 1009 |
+| `Delete` | 1349 |
+| `Create` | 1252 |
+| `Update` | 1010 |
 | `Put` | 337 |
 | `Start` | 211 |
 | `Tag` | 181 |
