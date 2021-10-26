@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v81",
+  "DefaultVersionId": "v82",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-10-08T19:08:00Z",
+    "CreateDate": "2021-10-26T20:14:30Z",
     "Document": {
       "Statement": [
         {
@@ -171,6 +171,7 @@
             "cloudformation:Estimate*",
             "cloudformation:Get*",
             "cloudformation:List*",
+            "cloudfront:DescribeFunction",
             "cloudfront:Get*",
             "cloudfront:List*",
             "cloudhsm:Describe*",
@@ -1030,6 +1031,7 @@
             "sts:GetAccessKeyInfo",
             "sts:GetCallerIdentity",
             "sts:GetSessionToken",
+            "support:DescribeCases",
             "swf:Count*",
             "swf:Describe*",
             "swf:Get*",
@@ -1079,7 +1081,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v81"
+    "VersionId": "v82"
   },
-  "UpdateDate": "2021-10-08T19:08:00Z"
+  "UpdateDate": "2021-10-26T20:14:30Z"
 }
