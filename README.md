@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 290
-* Unique actions: 11602
+* Unique actions: 11608
 * Managed policies: 877
 
 Most common managed policy name prefixes:
@@ -36,8 +36,8 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 470 | 1 | 1 |
-| [`sagemaker`](services/sagemaker.yml) | 248 | 5 | 2 |
+| [`ec2`](services/ec2.yml) | 470 | 3 | 1 |
+| [`sagemaker`](services/sagemaker.yml) | 248 | 7 | 2 |
 | [`chime`](services/chime.yml) | 200 | 7 | 51 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 153 | 0 | 0 |
@@ -254,7 +254,7 @@ The following table summarises the AWS APIs.
 | [`sms-voice`](services/sms-voice.yml) | 8 | 0 | 0 |
 | [`iotfleethub`](services/iotfleethub.yml) | 8 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
-| [`textract`](services/textract.yml) | 7 | 0 | 0 |
+| [`textract`](services/textract.yml) | 7 | 2 | 0 |
 | [`macie`](services/macie.yml) | 7 | 0 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 6 | 0 | 1 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
@@ -332,13 +332,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1719 |
-| `Get` | 1528 |
+| `Get` | 1531 |
 | `Describe` | 1397 |
 | `Delete` | 1349 |
 | `Create` | 1253 |
-| `Update` | 1011 |
+| `Update` | 1012 |
 | `Put` | 338 |
-| `Start` | 211 |
+| `Start` | 212 |
 | `Tag` | 181 |
 | `Untag` | 179 |
 
