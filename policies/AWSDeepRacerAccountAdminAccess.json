@@ -1,0 +1,35 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSDeepRacerAccountAdminAccess",
+  "CreateDate": "2021-10-28T01:27:13Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4HKQKG3YSU",
+  "PolicyName": "AWSDeepRacerAccountAdminAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-10-28T01:27:13Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "deepracer:*"
+          ],
+          "Condition": {
+            "Null": {
+              "deepracer:UserToken": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "DeepRacerAdminAccessStatement"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-10-28T01:27:13Z"
+}
