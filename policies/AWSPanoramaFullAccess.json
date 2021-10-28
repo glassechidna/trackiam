@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPanoramaFullAccess",
   "CreateDate": "2020-12-01T13:12:47Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4IAPULBSWQ",
   "PolicyName": "AWSPanoramaFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-10-20T12:14:58Z",
+    "CreateDate": "2021-10-28T15:37:05Z",
     "Document": {
       "Statement": [
         {
@@ -42,7 +42,7 @@
           ],
           "Condition": {
             "StringLike": {
-              "s3:DataAccessPointArn": "arn:aws:s3:*:*:accesspoint/panorama-*"
+              "s3:DataAccessPointArn": "arn:aws:s3:*:*:accesspoint/panorama*"
             }
           },
           "Effect": "Allow",
@@ -103,7 +103,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-10-20T12:14:58Z"
+  "UpdateDate": "2021-10-28T15:37:05Z"
 }
