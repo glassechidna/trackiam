@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AutoScalingServiceRolePolicy",
   "CreateDate": "2018-01-08T23:10:55Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIC5D2V7MRWBMHGD7G",
   "PolicyName": "AutoScalingServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-03-29T22:33:25Z",
+    "CreateDate": "2021-10-29T22:06:23Z",
     "Document": {
       "Statement": [
         {
@@ -101,12 +101,20 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "SNSManagement"
+        },
+        {
+          "Action": [
+            "ssm:GetParameters"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SystemsManagerParameterManagement"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2021-03-29T22:33:25Z"
+  "UpdateDate": "2021-10-29T22:06:23Z"
 }
