@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/Route53RecoveryReadinessServiceRolePolicy",
   "CreateDate": "2021-07-15T16:06:21Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4J7MSL2FYD",
   "PolicyName": "Route53RecoveryReadinessServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-10-06T18:52:33Z",
+    "CreateDate": "2021-10-29T07:09:46Z",
     "Document": {
       "Statement": [
         {
@@ -24,6 +24,7 @@
         },
         {
           "Action": [
+            "apigateway:GET",
             "application-autoscaling:DescribeScalableTargets",
             "application-autoscaling:DescribeScalingPolicies",
             "autoscaling:DescribeAccountLimits",
@@ -151,7 +152,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-10-06T18:52:33Z"
+  "UpdateDate": "2021-10-29T07:09:46Z"
 }
