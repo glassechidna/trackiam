@@ -1,0 +1,53 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSCostAndUsageReportAutomationPolicy",
+  "CreateDate": "2021-11-01T21:27:29Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4KVW6KKXOP",
+  "PolicyName": "AWSCostAndUsageReportAutomationPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-11-01T21:27:29Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "cur:DescribeReportDefinitions",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cur:DeleteReportDefinition",
+            "cur:DescribeReportDefinitions",
+            "cur:PutReportDefinition"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cur:*:*:definition/map-migrated-report"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:GetBucketPolicy",
+            "s3:GetBucketTagging",
+            "s3:ListBucket",
+            "s3:PutBucketPolicy",
+            "s3:PutBucketTagging"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::aws-map-cur-bucket-*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-11-01T21:27:29Z"
+}
