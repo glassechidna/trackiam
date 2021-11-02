@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 290
-* Unique actions: 11627
+* Unique actions: 11634
 * Managed policies: 880
 
 Most common managed policy name prefixes:
@@ -57,7 +57,7 @@ The following table summarises the AWS APIs.
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`storagegateway`](services/storagegateway.yml) | 89 | 1 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
-| [`cloudfront`](services/cloudfront.yml) | 85 | 0 | 1 |
+| [`cloudfront`](services/cloudfront.yml) | 85 | 7 | 1 |
 | [`s3`](services/s3.yml) | 82 | 58 | 42 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
@@ -103,10 +103,10 @@ The following table summarises the AWS APIs.
 | [`geo`](services/geo.yml) | 47 | 3 | 0 |
 | [`kms`](services/kms.yml) | 47 | 1 | 3 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
+| [`nimble`](services/nimble.yml) | 47 | 0 | 2 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
-| [`nimble`](services/nimble.yml) | 45 | 0 | 4 |
 | [`wafv2`](services/wafv2.yml) | 44 | 1 | 2 |
 | [`networkmanager`](services/networkmanager.yml) | 43 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 43 | 0 | 0 |
@@ -331,12 +331,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1721 |
-| `Get` | 1537 |
+| `List` | 1723 |
+| `Get` | 1539 |
 | `Describe` | 1398 |
-| `Delete` | 1350 |
-| `Create` | 1254 |
-| `Update` | 1014 |
+| `Delete` | 1351 |
+| `Create` | 1255 |
+| `Update` | 1015 |
 | `Put` | 338 |
 | `Start` | 215 |
 | `Tag` | 181 |
