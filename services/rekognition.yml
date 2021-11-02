@@ -1,15 +1,18 @@
 Actions:
   - Name: rekognition:CompareFaces
   - Name: rekognition:CreateCollection
+  - Name: rekognition:CreateDataset
   - Name: rekognition:CreateProject
   - Name: rekognition:CreateProjectVersion
   - Name: rekognition:CreateStreamProcessor
   - Name: rekognition:DeleteCollection
+  - Name: rekognition:DeleteDataset
   - Name: rekognition:DeleteFaces
   - Name: rekognition:DeleteProject
   - Name: rekognition:DeleteProjectVersion
   - Name: rekognition:DeleteStreamProcessor
   - Name: rekognition:DescribeCollection
+  - Name: rekognition:DescribeDataset
   - Name: rekognition:DescribeProjectVersions
   - Name: rekognition:DescribeProjects
   - Name: rekognition:DescribeStreamProcessor
@@ -19,6 +22,7 @@ Actions:
   - Name: rekognition:DetectModerationLabels
   - Name: rekognition:DetectProtectiveEquipment
   - Name: rekognition:DetectText
+  - Name: rekognition:DistributeDatasetEntries
   - Name: rekognition:GetCelebrityInfo
   - Name: rekognition:GetCelebrityRecognition
   - Name: rekognition:GetContentModeration
@@ -30,6 +34,8 @@ Actions:
   - Name: rekognition:GetTextDetection
   - Name: rekognition:IndexFaces
   - Name: rekognition:ListCollections
+  - Name: rekognition:ListDatasetEntries
+  - Name: rekognition:ListDatasetLabels
   - Name: rekognition:ListFaces
   - Name: rekognition:ListStreamProcessors
   - Name: rekognition:ListTagsForResource
@@ -50,12 +56,4 @@ Actions:
   - Name: rekognition:StopStreamProcessor
   - Name: rekognition:TagResource
   - Name: rekognition:UntagResource
-
-  # APIs without an IAM action
-  - Name: rekognition:CreateDataset
-  - Name: rekognition:DeleteDataset
-  - Name: rekognition:DescribeDataset
-  - Name: rekognition:DistributeDatasetEntries
-  - Name: rekognition:ListDatasetEntries
-  - Name: rekognition:ListDatasetLabels
   - Name: rekognition:UpdateDatasetEntries
