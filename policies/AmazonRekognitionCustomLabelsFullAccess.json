@@ -1,26 +1,36 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRekognitionCustomLabelsFullAccess",
   "CreateDate": "2020-01-08T19:18:34Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4OJEQDEQQQ",
   "PolicyName": "AmazonRekognitionCustomLabelsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-04-17T17:26:10Z",
+    "CreateDate": "2021-11-03T02:53:05Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "rekognition:CreateDataset",
             "rekognition:CreateProject",
             "rekognition:CreateProjectVersion",
+            "rekognition:DeleteDataset",
             "rekognition:DeleteProject",
             "rekognition:DeleteProjectVersion",
+            "rekognition:DescribeDataset",
             "rekognition:DescribeProjectVersions",
             "rekognition:DescribeProjects",
             "rekognition:DetectCustomLabels",
+            "rekognition:DistributeDatasetEntries",
+            "rekognition:ListDatasetEntries",
+            "rekognition:ListDatasetLabels",
+            "rekognition:ListTagsForResource",
             "rekognition:StartProjectVersion",
-            "rekognition:StopProjectVersion"
+            "rekognition:StopProjectVersion",
+            "rekognition:TagResource",
+            "rekognition:UntagResource",
+            "rekognition:UpdateDatasetEntries"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -44,7 +54,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-04-17T17:26:10Z"
+  "UpdateDate": "2021-11-03T02:53:05Z"
 }
