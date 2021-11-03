@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 290
-* Unique actions: 11634
+* Unique actions: 11637
 * Managed policies: 880
 
 Most common managed policy name prefixes:
@@ -52,8 +52,8 @@ The following table summarises the AWS APIs.
 | [`greengrass`](services/greengrass.yml) | 107 | 3 | 1 |
 | [`redshift`](services/redshift.yml) | 101 | 15 | 18 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 1 | 0 |
+| [`lex`](services/lex.yml) | 95 | 2 | 4 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
-| [`lex`](services/lex.yml) | 94 | 3 | 4 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`storagegateway`](services/storagegateway.yml) | 89 | 1 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
@@ -125,10 +125,10 @@ The following table summarises the AWS APIs.
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 36 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 36 | 0 | 0 |
+| [`datasync`](services/datasync.yml) | 35 | 3 | 0 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`ecr`](services/ecr.yml) | 35 | 0 | 1 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
-| [`datasync`](services/datasync.yml) | 35 | 0 | 0 |
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
 | [`athena`](services/athena.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
@@ -333,10 +333,10 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1723 |
 | `Get` | 1539 |
-| `Describe` | 1398 |
+| `Describe` | 1399 |
 | `Delete` | 1351 |
-| `Create` | 1255 |
-| `Update` | 1015 |
+| `Create` | 1256 |
+| `Update` | 1016 |
 | `Put` | 338 |
 | `Start` | 215 |
 | `Tag` | 181 |
