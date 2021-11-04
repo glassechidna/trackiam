@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AdministratorAccess-Amplify",
   "CreateDate": "2020-12-01T19:03:08Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AML23RALR",
   "PolicyName": "AdministratorAccess-Amplify",
   "PolicyVersion": {
-    "CreateDate": "2021-10-13T20:03:40Z",
+    "CreateDate": "2021-11-04T17:51:32Z",
     "Document": {
       "Statement": [
         {
@@ -136,6 +136,8 @@
             "kinesis:CreateStream",
             "kinesis:DeleteStream",
             "kinesis:DescribeStream",
+            "kinesis:DescribeStreamSummary",
+            "kinesis:ListTagsForStream",
             "kinesis:PutRecords",
             "lambda:AddLayerVersionPermission",
             "lambda:AddPermission",
@@ -221,7 +223,9 @@
             "cognito-idp:DescribeIdentityProvider",
             "cognito-idp:DescribeUserPool",
             "cognito-idp:DescribeUserPoolClient",
+            "cognito-idp:GetUserPoolMfaConfig",
             "cognito-idp:ListGroups",
+            "cognito-idp:ListIdentityProviders",
             "cognito-idp:ListUserPoolClients",
             "cognito-idp:ListUserPools",
             "cognito-idp:ListUsers",
@@ -245,8 +249,10 @@
             "lambda:AddPermission",
             "lambda:CreateFunction",
             "lambda:DeleteFunction",
+            "lambda:DeleteLayerVersion",
             "lambda:GetFunction",
             "lambda:InvokeFunction",
+            "lambda:ListLayerVersions",
             "lex:GetBot",
             "lex:GetBuiltinIntent",
             "lex:GetBuiltinIntents",
@@ -382,8 +388,10 @@
             "s3:PutBucketCORS",
             "s3:PutBucketNotification",
             "s3:PutBucketPolicy",
+            "s3:PutBucketVersioning",
             "s3:PutBucketWebsite",
             "s3:PutEncryptionConfiguration",
+            "s3:PutLifecycleConfiguration",
             "s3:PutObject",
             "s3:PutObjectAcl"
           ],
@@ -408,7 +416,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2021-10-13T20:03:40Z"
+  "UpdateDate": "2021-11-04T17:51:32Z"
 }

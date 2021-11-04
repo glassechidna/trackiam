@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchApplicationInsightsFullAccess",
   "CreateDate": "2020-11-24T18:44:14Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MSQN23AKX",
   "PolicyName": "CloudWatchApplicationInsightsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-10-18T17:48:51Z",
+    "CreateDate": "2021-11-04T17:13:25Z",
     "Document": {
       "Statement": [
         {
@@ -43,6 +43,8 @@
             "eks:ListClusters",
             "eks:ListNodegroups",
             "elasticloadbalancing:DescribeLoadBalancers",
+            "elasticloadbalancing:DescribeTargetGroups",
+            "elasticloadbalancing:DescribeTargetHealth",
             "fsx:DescribeFileSystems",
             "lambda:ListFunctions",
             "rds:DescribeDBClusters",
@@ -59,7 +61,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-10-18T17:48:51Z"
+  "UpdateDate": "2021-11-04T17:13:25Z"
 }
