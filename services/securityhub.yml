@@ -6,10 +6,12 @@ Actions:
   - Name: securityhub:BatchImportFindings
   - Name: securityhub:BatchUpdateFindings
   - Name: securityhub:CreateActionTarget
+  - Name: securityhub:CreateFindingAggregator
   - Name: securityhub:CreateInsight
   - Name: securityhub:CreateMembers
   - Name: securityhub:DeclineInvitations
   - Name: securityhub:DeleteActionTarget
+  - Name: securityhub:DeleteFindingAggregator
   - Name: securityhub:DeleteInsight
   - Name: securityhub:DeleteInvitations
   - Name: securityhub:DeleteMembers
@@ -30,6 +32,7 @@ Actions:
   - Name: securityhub:EnableSecurityHub
   - Name: securityhub:GetAdministratorAccount
   - Name: securityhub:GetEnabledStandards
+  - Name: securityhub:GetFindingAggregator
   - Name: securityhub:GetFindings
   - Name: securityhub:GetInsightResults
   - Name: securityhub:GetInsights
@@ -38,6 +41,7 @@ Actions:
   - Name: securityhub:GetMembers
   - Name: securityhub:InviteMembers
   - Name: securityhub:ListEnabledProductsForImport
+  - Name: securityhub:ListFindingAggregators
   - Name: securityhub:ListInvitations
   - Name: securityhub:ListMembers
   - Name: securityhub:ListOrganizationAdminAccounts
@@ -45,6 +49,7 @@ Actions:
   - Name: securityhub:TagResource
   - Name: securityhub:UntagResource
   - Name: securityhub:UpdateActionTarget
+  - Name: securityhub:UpdateFindingAggregator
   - Name: securityhub:UpdateFindings
   - Name: securityhub:UpdateInsight
   - Name: securityhub:UpdateOrganizationConfiguration
@@ -61,10 +66,3 @@ Actions:
   - Name: securityhub:ListControlEvaluationSummaries
   - Name: securityhub:SendFindingEvents
   - Name: securityhub:SendInsightEvents
-
-  # APIs without an IAM action
-  - Name: securityhub:CreateFindingAggregator
-  - Name: securityhub:DeleteFindingAggregator
-  - Name: securityhub:GetFindingAggregator
-  - Name: securityhub:ListFindingAggregators
-  - Name: securityhub:UpdateFindingAggregator

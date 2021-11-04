@@ -85,13 +85,13 @@ The following table summarises the AWS APIs.
 | [`macie2`](services/macie2.yml) | 57 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
 | [`medialive`](services/medialive.yml) | 56 | 1 | 0 |
+| [`securityhub`](services/securityhub.yml) | 56 | 0 | 9 |
 | [`auditmanager`](services/auditmanager.yml) | 55 | 0 | 0 |
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`workspaces`](services/workspaces.yml) | 54 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
 | [`personalize`](services/personalize.yml) | 52 | 0 | 0 |
-| [`securityhub`](services/securityhub.yml) | 51 | 5 | 9 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 22 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
