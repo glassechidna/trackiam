@@ -13,14 +13,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 290
 * Unique actions: 11637
-* Managed policies: 880
+* Managed policies: 881
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
+| `arn:aws:iam::aws:policy/Amazon*` | 243 |
 | `arn:aws:iam::aws:policy/AWS*` | 243 |
-| `arn:aws:iam::aws:policy/Amazon*` | 242 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 179 |
 | `arn:aws:iam::aws:policy/service-role/*` | 129 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -236,10 +236,10 @@ The following table summarises the AWS APIs.
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`iot`](services/iot.yml) | 11 | 0 | 240 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 28 |
+| [`outposts`](services/outposts.yml) | 11 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 11 | 0 | 0 |
 | [`grafana`](services/grafana.yml) | 11 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
-| [`outposts`](services/outposts.yml) | 10 | 1 | 0 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |

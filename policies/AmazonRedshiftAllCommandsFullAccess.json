@@ -1,0 +1,258 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonRedshiftAllCommandsFullAccess",
+  "CreateDate": "2021-11-04T00:48:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4FLN3TI7CS",
+  "PolicyName": "AmazonRedshiftAllCommandsFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-11-04T00:48:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": [
+                "/aws/sagemaker/Endpoints",
+                "/aws/sagemaker/ProcessingJobs",
+                "/aws/sagemaker/TrainingJobs",
+                "/aws/sagemaker/TransformJobs",
+                "SageMaker"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "elasticmapreduce:ListInstances"
+          ],
+          "Condition": {
+            "StringEqualsIgnoreCase": {
+              "elasticmapreduce:ResourceTag/Redshift": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "athena.amazonaws.com",
+                "glue.amazonaws.com",
+                "redshift.amazonaws.com",
+                "sagemaker.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*"
+        },
+        {
+          "Action": [
+            "s3:AbortMultipartUpload",
+            "s3:CreateBucket",
+            "s3:DeleteObject",
+            "s3:GetBucketAcl",
+            "s3:GetBucketCors",
+            "s3:GetBucketLocation",
+            "s3:GetEncryptionConfiguration",
+            "s3:GetObject",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket",
+            "s3:ListBucketMultipartUploads",
+            "s3:ListMultipartUploadParts",
+            "s3:PutBucketAcl",
+            "s3:PutBucketCors",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEqualsIgnoreCase": {
+              "s3:ExistingObjectTag/Redshift": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "secretsmanager:GetRandomPassword",
+            "secretsmanager:ListSecrets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "secretsmanager:ResourceTag/Redshift": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "dynamodb:DescribeTable",
+            "dynamodb:Getitem",
+            "dynamodb:Scan"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:dynamodb:*:*:table/*redshift*",
+            "arn:aws:dynamodb:*:*:table/*redshift*/index/*"
+          ]
+        },
+        {
+          "Action": [
+            "ecr:BatchCheckLayerAvailability",
+            "ecr:BatchGetImage",
+            "ecr:GetAuthorizationToken",
+            "ecr:GetDownloadUrlForLayer"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "elasticmapreduce:ListInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticmapreduce:*:*:cluster/*redshift*"
+          ]
+        },
+        {
+          "Action": [
+            "glue:BatchCreatePartition",
+            "glue:BatchDeletePartition",
+            "glue:BatchDeleteTable",
+            "glue:BatchGetPartition",
+            "glue:CreateDatabase",
+            "glue:CreatePartition",
+            "glue:CreateTable",
+            "glue:DeleteDatabase",
+            "glue:DeletePartition",
+            "glue:DeleteTable",
+            "glue:GetDatabase",
+            "glue:GetDatabases",
+            "glue:GetPartition",
+            "glue:GetPartitions",
+            "glue:GetTable",
+            "glue:GetTables",
+            "glue:UpdateDatabase",
+            "glue:UpdatePartition",
+            "glue:UpdateTable"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:catalog",
+            "arn:aws:glue:*:*:database/*redshift*",
+            "arn:aws:glue:*:*:table/*redshift*/*"
+          ]
+        },
+        {
+          "Action": [
+            "lambda:InvokeFunction"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:function:*redshift*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/sagemaker/Endpoints/*redshift*",
+            "arn:aws:logs:*:*:log-group:/aws/sagemaker/ProcessingJobs/*redshift*",
+            "arn:aws:logs:*:*:log-group:/aws/sagemaker/TrainingJobs/*redshift*",
+            "arn:aws:logs:*:*:log-group:/aws/sagemaker/TransformJobs/*redshift*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:AbortMultipartUpload",
+            "s3:CreateBucket",
+            "s3:DeleteObject",
+            "s3:GetBucketAcl",
+            "s3:GetBucketCors",
+            "s3:GetBucketLocation",
+            "s3:GetEncryptionConfiguration",
+            "s3:GetObject",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket",
+            "s3:ListBucketMultipartUploads",
+            "s3:ListMultipartUploadParts",
+            "s3:PutBucketAcl",
+            "s3:PutBucketCors",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*redshift*",
+            "arn:aws:s3:::*redshift*/*",
+            "arn:aws:s3:::redshift-downloads",
+            "arn:aws:s3:::redshift-downloads/*"
+          ]
+        },
+        {
+          "Action": [
+            "sagemaker:CreateAutoMLJob",
+            "sagemaker:CreateCompilationJob",
+            "sagemaker:CreateEndpoint",
+            "sagemaker:CreateModel",
+            "sagemaker:CreateProcessingJob",
+            "sagemaker:CreateTrainingJob",
+            "sagemaker:DescribeAutoMLJob",
+            "sagemaker:DescribeCompilationJob",
+            "sagemaker:DescribeEndpoint",
+            "sagemaker:DescribeProcessingJob",
+            "sagemaker:DescribeTrainingJob",
+            "sagemaker:DescribeTransformJob",
+            "sagemaker:InvokeEndpoint",
+            "sagemaker:ListCandidatesForAutoMLJob",
+            "sagemaker:StopAutoMLJob",
+            "sagemaker:StopCompilationJob",
+            "sagemaker:StopProcessingJob",
+            "sagemaker:StopTrainingJob"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:automl-job/*redshift*",
+            "arn:aws:sagemaker:*:*:compilation-job/*redshift*",
+            "arn:aws:sagemaker:*:*:endpoint/*redshift*",
+            "arn:aws:sagemaker:*:*:model/*redshift*",
+            "arn:aws:sagemaker:*:*:processing-job/*redshift*",
+            "arn:aws:sagemaker:*:*:training-job/*redshift*",
+            "arn:aws:sagemaker:*:*:transform-job/*redshift*"
+          ]
+        },
+        {
+          "Action": [
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetResourcePolicy",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:ListSecretVersionIds"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:secretsmanager:*:*:secret:*redshift*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-11-04T00:48:08Z"
+}
