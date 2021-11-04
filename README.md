@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 290
-* Unique actions: 11637
+* Unique actions: 11668
 * Managed policies: 881
 
 Most common managed policy name prefixes:
@@ -47,7 +47,7 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 134 | 1 | 7 |
 | [`quicksight`](services/quicksight.yml) | 115 | 0 | 19 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 112 | 5 | 1 |
-| [`connect`](services/connect.yml) | 110 | 2 | 3 |
+| [`connect`](services/connect.yml) | 110 | 7 | 3 |
 | [`servicecatalog`](services/servicecatalog.yml) | 108 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 107 | 3 | 1 |
 | [`redshift`](services/redshift.yml) | 101 | 15 | 18 |
@@ -80,9 +80,9 @@ The following table summarises the AWS APIs.
 | [`iotsitewise`](services/iotsitewise.yml) | 59 | 1 | 1 |
 | [`rekognition`](services/rekognition.yml) | 58 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
+| [`iotwireless`](services/iotwireless.yml) | 57 | 26 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`macie2`](services/macie2.yml) | 57 | 0 | 0 |
-| [`iotwireless`](services/iotwireless.yml) | 57 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
 | [`medialive`](services/medialive.yml) | 56 | 1 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 55 | 0 | 0 |
@@ -331,14 +331,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1723 |
-| `Get` | 1539 |
-| `Describe` | 1399 |
-| `Delete` | 1351 |
-| `Create` | 1256 |
-| `Update` | 1016 |
+| `List` | 1727 |
+| `Get` | 1543 |
+| `Describe` | 1400 |
+| `Delete` | 1354 |
+| `Create` | 1259 |
+| `Update` | 1020 |
 | `Put` | 338 |
-| `Start` | 215 |
+| `Start` | 219 |
 | `Tag` | 181 |
 | `Untag` | 179 |
 
