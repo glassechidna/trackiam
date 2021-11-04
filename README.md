@@ -66,6 +66,7 @@ The following table summarises the AWS APIs.
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
 | [`frauddetector`](services/frauddetector.yml) | 66 | 0 | 0 |
+| [`workmail`](services/workmail.yml) | 65 | 0 | 51 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 64 | 1 | 11 |
 | [`route53`](services/route53.yml) | 64 | 0 | 0 |
@@ -82,7 +83,6 @@ The following table summarises the AWS APIs.
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`macie2`](services/macie2.yml) | 57 | 0 | 0 |
 | [`iotwireless`](services/iotwireless.yml) | 57 | 0 | 0 |
-| [`workmail`](services/workmail.yml) | 56 | 9 | 51 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
 | [`medialive`](services/medialive.yml) | 56 | 1 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 55 | 0 | 0 |
