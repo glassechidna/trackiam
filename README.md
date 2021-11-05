@@ -58,6 +58,7 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 89 | 1 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 85 | 7 | 1 |
+| [`iotwireless`](services/iotwireless.yml) | 83 | 0 | 0 |
 | [`s3`](services/s3.yml) | 82 | 58 | 42 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
@@ -80,7 +81,6 @@ The following table summarises the AWS APIs.
 | [`iotsitewise`](services/iotsitewise.yml) | 59 | 1 | 1 |
 | [`rekognition`](services/rekognition.yml) | 58 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
-| [`iotwireless`](services/iotwireless.yml) | 57 | 26 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`macie2`](services/macie2.yml) | 57 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |

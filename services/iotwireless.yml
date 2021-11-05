@@ -1,10 +1,16 @@
 Actions:
   - Name: iotwireless:AssociateAwsAccountWithPartnerAccount
+  - Name: iotwireless:AssociateMulticastGroupWithFuotaTask
+  - Name: iotwireless:AssociateWirelessDeviceWithFuotaTask
+  - Name: iotwireless:AssociateWirelessDeviceWithMulticastGroup
   - Name: iotwireless:AssociateWirelessDeviceWithThing
   - Name: iotwireless:AssociateWirelessGatewayWithCertificate
   - Name: iotwireless:AssociateWirelessGatewayWithThing
+  - Name: iotwireless:CancelMulticastGroupSession
   - Name: iotwireless:CreateDestination
   - Name: iotwireless:CreateDeviceProfile
+  - Name: iotwireless:CreateFuotaTask
+  - Name: iotwireless:CreateMulticastGroup
   - Name: iotwireless:CreateServiceProfile
   - Name: iotwireless:CreateWirelessDevice
   - Name: iotwireless:CreateWirelessGateway
@@ -12,19 +18,28 @@ Actions:
   - Name: iotwireless:CreateWirelessGatewayTaskDefinition
   - Name: iotwireless:DeleteDestination
   - Name: iotwireless:DeleteDeviceProfile
+  - Name: iotwireless:DeleteFuotaTask
+  - Name: iotwireless:DeleteMulticastGroup
   - Name: iotwireless:DeleteServiceProfile
   - Name: iotwireless:DeleteWirelessDevice
   - Name: iotwireless:DeleteWirelessGateway
   - Name: iotwireless:DeleteWirelessGatewayTask
   - Name: iotwireless:DeleteWirelessGatewayTaskDefinition
   - Name: iotwireless:DisassociateAwsAccountFromPartnerAccount
+  - Name: iotwireless:DisassociateMulticastGroupFromFuotaTask
+  - Name: iotwireless:DisassociateWirelessDeviceFromFuotaTask
+  - Name: iotwireless:DisassociateWirelessDeviceFromMulticastGroup
   - Name: iotwireless:DisassociateWirelessDeviceFromThing
   - Name: iotwireless:DisassociateWirelessGatewayFromCertificate
   - Name: iotwireless:DisassociateWirelessGatewayFromThing
   - Name: iotwireless:GetDestination
   - Name: iotwireless:GetDeviceProfile
+  - Name: iotwireless:GetFuotaTask
   - Name: iotwireless:GetLogLevelsByResourceTypes
+  - Name: iotwireless:GetMulticastGroup
+  - Name: iotwireless:GetMulticastGroupSession
   - Name: iotwireless:GetPartnerAccount
+  - Name: iotwireless:GetResourceEventConfiguration
   - Name: iotwireless:GetResourceLogLevel
   - Name: iotwireless:GetServiceEndpoint
   - Name: iotwireless:GetServiceProfile
@@ -38,6 +53,9 @@ Actions:
   - Name: iotwireless:GetWirelessGatewayTaskDefinition
   - Name: iotwireless:ListDestinations
   - Name: iotwireless:ListDeviceProfiles
+  - Name: iotwireless:ListFuotaTasks
+  - Name: iotwireless:ListMulticastGroups
+  - Name: iotwireless:ListMulticastGroupsByFuotaTask
   - Name: iotwireless:ListPartnerAccounts
   - Name: iotwireless:ListServiceProfiles
   - Name: iotwireless:ListTagsForResource
@@ -47,40 +65,20 @@ Actions:
   - Name: iotwireless:PutResourceLogLevel
   - Name: iotwireless:ResetAllResourceLogLevels
   - Name: iotwireless:ResetResourceLogLevel
-  - Name: iotwireless:SendDataToWirelessDevice
-  - Name: iotwireless:TagResource
-  - Name: iotwireless:TestWirelessDevice
-  - Name: iotwireless:UntagResource
-  - Name: iotwireless:UpdateDestination
-  - Name: iotwireless:UpdateLogLevelsByResourceTypes
-  - Name: iotwireless:UpdatePartnerAccount
-  - Name: iotwireless:UpdateWirelessDevice
-  - Name: iotwireless:UpdateWirelessGateway
-
-  # APIs without an IAM action
-  - Name: iotwireless:AssociateMulticastGroupWithFuotaTask
-  - Name: iotwireless:AssociateWirelessDeviceWithFuotaTask
-  - Name: iotwireless:AssociateWirelessDeviceWithMulticastGroup
-  - Name: iotwireless:CancelMulticastGroupSession
-  - Name: iotwireless:CreateFuotaTask
-  - Name: iotwireless:CreateMulticastGroup
-  - Name: iotwireless:DeleteFuotaTask
-  - Name: iotwireless:DeleteMulticastGroup
-  - Name: iotwireless:DisassociateMulticastGroupFromFuotaTask
-  - Name: iotwireless:DisassociateWirelessDeviceFromFuotaTask
-  - Name: iotwireless:DisassociateWirelessDeviceFromMulticastGroup
-  - Name: iotwireless:GetFuotaTask
-  - Name: iotwireless:GetMulticastGroup
-  - Name: iotwireless:GetMulticastGroupSession
-  - Name: iotwireless:GetResourceEventConfiguration
-  - Name: iotwireless:ListFuotaTasks
-  - Name: iotwireless:ListMulticastGroups
-  - Name: iotwireless:ListMulticastGroupsByFuotaTask
   - Name: iotwireless:SendDataToMulticastGroup
+  - Name: iotwireless:SendDataToWirelessDevice
   - Name: iotwireless:StartBulkAssociateWirelessDeviceWithMulticastGroup
   - Name: iotwireless:StartBulkDisassociateWirelessDeviceFromMulticastGroup
   - Name: iotwireless:StartFuotaTask
   - Name: iotwireless:StartMulticastGroupSession
+  - Name: iotwireless:TagResource
+  - Name: iotwireless:TestWirelessDevice
+  - Name: iotwireless:UntagResource
+  - Name: iotwireless:UpdateDestination
   - Name: iotwireless:UpdateFuotaTask
+  - Name: iotwireless:UpdateLogLevelsByResourceTypes
   - Name: iotwireless:UpdateMulticastGroup
+  - Name: iotwireless:UpdatePartnerAccount
   - Name: iotwireless:UpdateResourceEventConfiguration
+  - Name: iotwireless:UpdateWirelessDevice
+  - Name: iotwireless:UpdateWirelessGateway
