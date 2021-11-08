@@ -73,11 +73,11 @@ The following table summarises the AWS APIs.
 | [`route53`](services/route53.yml) | 64 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 63 | 3 | 0 |
 | [`es`](services/es.yml) | 63 | 0 | 10 |
+| [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 63 | 0 | 0 |
 | [`ds`](services/ds.yml) | 62 | 1 | 6 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 60 | 3 | 0 |
-| [`directconnect`](services/directconnect.yml) | 59 | 4 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 59 | 1 | 1 |
 | [`rekognition`](services/rekognition.yml) | 58 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |

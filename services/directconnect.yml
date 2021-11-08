@@ -10,6 +10,7 @@ Actions:
   - Name: directconnect:AssociateMacSecKey
   - Name: directconnect:AssociateVirtualInterface
   - Name: directconnect:ConfirmConnection
+  - Name: directconnect:ConfirmCustomerAgreement
   - Name: directconnect:ConfirmPrivateVirtualInterface
   - Name: directconnect:ConfirmPublicVirtualInterface
   - Name: directconnect:ConfirmTransitVirtualInterface
@@ -34,6 +35,7 @@ Actions:
   - Name: directconnect:DescribeConnectionLoa
   - Name: directconnect:DescribeConnections
   - Name: directconnect:DescribeConnectionsOnInterconnect
+  - Name: directconnect:DescribeCustomerMetadata
   - Name: directconnect:DescribeDirectConnectGatewayAssociationProposals
   - Name: directconnect:DescribeDirectConnectGatewayAssociations
   - Name: directconnect:DescribeDirectConnectGatewayAttachments
@@ -44,6 +46,7 @@ Actions:
   - Name: directconnect:DescribeLags
   - Name: directconnect:DescribeLoa
   - Name: directconnect:DescribeLocations
+  - Name: directconnect:DescribeRouterConfiguration
   - Name: directconnect:DescribeTags
   - Name: directconnect:DescribeVirtualGateways
   - Name: directconnect:DescribeVirtualInterfaces
@@ -55,12 +58,7 @@ Actions:
   - Name: directconnect:TagResource
   - Name: directconnect:UntagResource
   - Name: directconnect:UpdateConnection
+  - Name: directconnect:UpdateDirectConnectGateway
   - Name: directconnect:UpdateDirectConnectGatewayAssociation
   - Name: directconnect:UpdateLag
   - Name: directconnect:UpdateVirtualInterfaceAttributes
-
-  # APIs without an IAM action
-  - Name: directconnect:ConfirmCustomerAgreement
-  - Name: directconnect:DescribeCustomerMetadata
-  - Name: directconnect:DescribeRouterConfiguration
-  - Name: directconnect:UpdateDirectConnectGateway
