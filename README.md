@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 290
-* Unique actions: 11668
-* Managed policies: 881
+* Unique actions: 11678
+* Managed policies: 882
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
+| `arn:aws:iam::aws:policy/AWS*` | 244 |
 | `arn:aws:iam::aws:policy/Amazon*` | 243 |
-| `arn:aws:iam::aws:policy/AWS*` | 243 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 179 |
 | `arn:aws:iam::aws:policy/service-role/*` | 129 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -172,7 +172,7 @@ The following table summarises the AWS APIs.
 | [`ivs`](services/ivs.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`fms`](services/fms.yml) | 26 | 0 | 0 |
-| [`mgn`](services/mgn.yml) | 25 | 0 | 26 |
+| [`mgn`](services/mgn.yml) | 25 | 0 | 36 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 25 | 0 | 1 |
 | [`snowball`](services/snowball.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
@@ -332,13 +332,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1727 |
-| `Get` | 1543 |
-| `Describe` | 1400 |
-| `Delete` | 1354 |
-| `Create` | 1259 |
-| `Update` | 1020 |
+| `Get` | 1544 |
+| `Describe` | 1401 |
+| `Delete` | 1355 |
+| `Create` | 1260 |
+| `Update` | 1021 |
 | `Put` | 338 |
-| `Start` | 219 |
+| `Start` | 220 |
 | `Tag` | 181 |
 | `Untag` | 179 |
 
