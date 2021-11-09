@@ -1,15 +1,23 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRoute53RecoveryReadinessReadOnlyAccess",
   "CreateDate": "2021-08-18T18:11:33Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4M6P5L3S4F",
   "PolicyName": "AmazonRoute53RecoveryReadinessReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-08-18T18:11:33Z",
+    "CreateDate": "2021-11-09T20:14:51Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "route53-recovery-readiness:GetArchitectureRecommendations",
+            "route53-recovery-readiness:GetCellReadinessSummary"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:route53-recovery-readiness::*:*"
+        },
         {
           "Action": [
             "route53-recovery-readiness:GetCell",
@@ -34,7 +42,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-08-18T18:11:33Z"
+  "UpdateDate": "2021-11-09T20:14:51Z"
 }

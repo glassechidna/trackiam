@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 290
-* Unique actions: 11678
+* Unique actions: 11683
 * Managed policies: 882
 
 Most common managed policy name prefixes:
@@ -197,12 +197,12 @@ The following table summarises the AWS APIs.
 | [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 1 | 0 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 20 | 0 | 1 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
+| [`batch`](services/batch.yml) | 19 | 5 | 0 |
 | [`lookoutvision`](services/lookoutvision.yml) | 19 | 0 | 3 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 19 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 19 | 0 | 0 |
-| [`batch`](services/batch.yml) | 19 | 0 | 0 |
 | [`appflow`](services/appflow.yml) | 18 | 0 | 6 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
 | [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
@@ -331,12 +331,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1727 |
+| `List` | 1728 |
 | `Get` | 1544 |
-| `Describe` | 1401 |
-| `Delete` | 1355 |
-| `Create` | 1260 |
-| `Update` | 1021 |
+| `Describe` | 1402 |
+| `Delete` | 1356 |
+| `Create` | 1261 |
+| `Update` | 1022 |
 | `Put` | 338 |
 | `Start` | 220 |
 | `Tag` | 181 |
