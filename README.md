@@ -114,6 +114,7 @@ The following table summarises the AWS APIs.
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
 | [`appsync`](services/appsync.yml) | 41 | 0 | 2 |
 | [`sns`](services/sns.yml) | 39 | 0 | 0 |
+| [`resiliencehub`](services/resiliencehub.yml) | 39 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
@@ -283,7 +284,6 @@ The following table summarises the AWS APIs.
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 50 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 42 |
-| [`resiliencehub`](services/resiliencehub.yml) | 0 | 0 | 39 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
