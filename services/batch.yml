@@ -2,14 +2,18 @@ Actions:
   - Name: batch:CancelJob
   - Name: batch:CreateComputeEnvironment
   - Name: batch:CreateJobQueue
+  - Name: batch:CreateSchedulingPolicy
   - Name: batch:DeleteComputeEnvironment
   - Name: batch:DeleteJobQueue
+  - Name: batch:DeleteSchedulingPolicy
   - Name: batch:DeregisterJobDefinition
   - Name: batch:DescribeComputeEnvironments
   - Name: batch:DescribeJobDefinitions
   - Name: batch:DescribeJobQueues
   - Name: batch:DescribeJobs
+  - Name: batch:DescribeSchedulingPolicies
   - Name: batch:ListJobs
+  - Name: batch:ListSchedulingPolicies
   - Name: batch:ListTagsForResource
   - Name: batch:RegisterJobDefinition
   - Name: batch:SubmitJob
@@ -18,10 +22,4 @@ Actions:
   - Name: batch:UntagResource
   - Name: batch:UpdateComputeEnvironment
   - Name: batch:UpdateJobQueue
-
-  # APIs without an IAM action
-  - Name: batch:CreateSchedulingPolicy
-  - Name: batch:DeleteSchedulingPolicy
-  - Name: batch:DescribeSchedulingPolicies
-  - Name: batch:ListSchedulingPolicies
   - Name: batch:UpdateSchedulingPolicy

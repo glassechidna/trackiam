@@ -179,6 +179,7 @@ The following table summarises the AWS APIs.
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 25 | 0 | 0 |
 | [`ram`](services/ram.yml) | 24 | 0 | 0 |
+| [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 23 | 0 | 1 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 0 | 0 |
@@ -197,7 +198,6 @@ The following table summarises the AWS APIs.
 | [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 1 | 0 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 20 | 0 | 1 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
-| [`batch`](services/batch.yml) | 19 | 5 | 0 |
 | [`lookoutvision`](services/lookoutvision.yml) | 19 | 0 | 3 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
