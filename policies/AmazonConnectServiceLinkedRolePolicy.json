@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-04-14T00:13:10Z",
+    "CreateDate": "2021-11-11T20:33:20Z",
     "Document": {
       "Statement": [
         {
@@ -47,6 +47,33 @@
         },
         {
           "Action": [
+            "profile:AddProfileKey",
+            "profile:CreateProfile",
+            "profile:SearchProfiles",
+            "profile:UpdateProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:profile:*:*:domains/amazon-connect-*"
+        },
+        {
+          "Action": [
+            "profile:ListAccountIntegrations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "profile:ListProfileObjects"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:profile:*:*:domains/amazon-connect-*/object-types/CTR",
+            "arn:aws:profile:*:*:domains/amazon-connect-*/object-types/_asset"
+          ]
+        },
+        {
+          "Action": [
             "s3:DeleteObject",
             "s3:GetObject",
             "s3:GetObjectAcl",
@@ -72,7 +99,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2021-04-14T00:13:10Z"
+  "UpdateDate": "2021-11-11T20:33:20Z"
 }
