@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 291
-* Unique actions: 11727
+* Unique actions: 11731
 * Managed policies: 882
 
 Most common managed policy name prefixes:
@@ -47,7 +47,7 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 134 | 1 | 7 |
 | [`quicksight`](services/quicksight.yml) | 115 | 0 | 19 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 112 | 5 | 1 |
-| [`connect`](services/connect.yml) | 110 | 7 | 3 |
+| [`connect`](services/connect.yml) | 110 | 11 | 3 |
 | [`greengrass`](services/greengrass.yml) | 110 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 108 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 101 | 15 | 18 |
@@ -173,6 +173,7 @@ The following table summarises the AWS APIs.
 | [`ivs`](services/ivs.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`fms`](services/fms.yml) | 26 | 0 | 0 |
+| [`devops-guru`](services/devops-guru.yml) | 26 | 0 | 0 |
 | [`mgn`](services/mgn.yml) | 25 | 0 | 36 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 25 | 0 | 1 |
 | [`snowball`](services/snowball.yml) | 25 | 0 | 0 |
@@ -194,7 +195,6 @@ The following table summarises the AWS APIs.
 | [`lookoutequipment`](services/lookoutequipment.yml) | 22 | 0 | 0 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 13 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
-| [`devops-guru`](services/devops-guru.yml) | 21 | 0 | 5 |
 | [`voiceid`](services/voiceid.yml) | 21 | 0 | 2 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 1 | 0 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 20 | 0 | 1 |
@@ -332,12 +332,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1744 |
+| `List` | 1745 |
 | `Get` | 1544 |
-| `Describe` | 1411 |
+| `Describe` | 1412 |
 | `Delete` | 1360 |
 | `Create` | 1264 |
-| `Update` | 1024 |
+| `Update` | 1026 |
 | `Put` | 339 |
 | `Start` | 221 |
 | `Tag` | 182 |
