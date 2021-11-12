@@ -15,6 +15,7 @@ Actions:
   - Name: connect:CreateQueue
   - Name: connect:CreateQuickConnect
   - Name: connect:CreateRoutingProfile
+  - Name: connect:CreateSecurityProfile
   - Name: connect:CreateUseCase
   - Name: connect:CreateUser
   - Name: connect:CreateUserHierarchyGroup
@@ -22,10 +23,12 @@ Actions:
   - Name: connect:DeleteInstance
   - Name: connect:DeleteIntegrationAssociation
   - Name: connect:DeleteQuickConnect
+  - Name: connect:DeleteSecurityProfile
   - Name: connect:DeleteUseCase
   - Name: connect:DeleteUser
   - Name: connect:DeleteUserHierarchyGroup
   - Name: connect:DescribeAgentStatus
+  - Name: connect:DescribeContact
   - Name: connect:DescribeContactFlow
   - Name: connect:DescribeHoursOfOperation
   - Name: connect:DescribeInstance
@@ -34,6 +37,7 @@ Actions:
   - Name: connect:DescribeQueue
   - Name: connect:DescribeQuickConnect
   - Name: connect:DescribeRoutingProfile
+  - Name: connect:DescribeSecurityProfile
   - Name: connect:DescribeUser
   - Name: connect:DescribeUserHierarchyGroup
   - Name: connect:DescribeUserHierarchyStructure
@@ -53,6 +57,7 @@ Actions:
   - Name: connect:ListApprovedOrigins
   - Name: connect:ListBots
   - Name: connect:ListContactFlows
+  - Name: connect:ListContactReferences
   - Name: connect:ListHoursOfOperations
   - Name: connect:ListInstanceAttributes
   - Name: connect:ListInstanceStorageConfigs
@@ -69,6 +74,7 @@ Actions:
   - Name: connect:ListRoutingProfileQueues
   - Name: connect:ListRoutingProfiles
   - Name: connect:ListSecurityKeys
+  - Name: connect:ListSecurityProfilePermissions
   - Name: connect:ListSecurityProfiles
   - Name: connect:ListTagsForResource
   - Name: connect:ListUseCases
@@ -85,9 +91,11 @@ Actions:
   - Name: connect:TagResource
   - Name: connect:UntagResource
   - Name: connect:UpdateAgentStatus
+  - Name: connect:UpdateContact
   - Name: connect:UpdateContactAttributes
   - Name: connect:UpdateContactFlowContent
   - Name: connect:UpdateContactFlowName
+  - Name: connect:UpdateContactSchedule
   - Name: connect:UpdateHoursOfOperation
   - Name: connect:UpdateInstanceAttribute
   - Name: connect:UpdateInstanceStorageConfig
@@ -102,6 +110,7 @@ Actions:
   - Name: connect:UpdateRoutingProfileDefaultOutboundQueue
   - Name: connect:UpdateRoutingProfileName
   - Name: connect:UpdateRoutingProfileQueues
+  - Name: connect:UpdateSecurityProfile
   - Name: connect:UpdateUserHierarchy
   - Name: connect:UpdateUserHierarchyGroupName
   - Name: connect:UpdateUserHierarchyStructure
@@ -116,14 +125,5 @@ Actions:
   - Name: connect:GetFederationTokens
 
   # APIs without an IAM action
-  - Name: connect:CreateSecurityProfile
-  - Name: connect:DeleteSecurityProfile
-  - Name: connect:DescribeContact
-  - Name: connect:DescribeSecurityProfile
-  - Name: connect:ListContactReferences
-  - Name: connect:ListSecurityProfilePermissions
   - Name: connect:StartContactStreaming
   - Name: connect:StopContactStreaming
-  - Name: connect:UpdateContact
-  - Name: connect:UpdateContactSchedule
-  - Name: connect:UpdateSecurityProfile
