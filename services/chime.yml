@@ -67,9 +67,11 @@ Actions:
   - Name: chime:DeleteVoiceConnectorStreamingConfiguration
   - Name: chime:DeleteVoiceConnectorTermination
   - Name: chime:DeleteVoiceConnectorTerminationCredentials
+  - Name: chime:DeregisterAppInstanceUserEndpoint
   - Name: chime:DescribeAppInstance
   - Name: chime:DescribeAppInstanceAdmin
   - Name: chime:DescribeAppInstanceUser
+  - Name: chime:DescribeAppInstanceUserEndpoint
   - Name: chime:DescribeChannel
   - Name: chime:DescribeChannelBan
   - Name: chime:DescribeChannelFlow
@@ -88,6 +90,7 @@ Actions:
   - Name: chime:GetAppInstanceStreamingConfigurations
   - Name: chime:GetAttendee
   - Name: chime:GetBot
+  - Name: chime:GetChannelMembershipPreferences
   - Name: chime:GetChannelMessage
   - Name: chime:GetChannelMessageStatus
   - Name: chime:GetEventsConfiguration
@@ -118,6 +121,7 @@ Actions:
   - Name: chime:InviteUsers
   - Name: chime:ListAccounts
   - Name: chime:ListAppInstanceAdmins
+  - Name: chime:ListAppInstanceUserEndpoints
   - Name: chime:ListAppInstanceUsers
   - Name: chime:ListAppInstances
   - Name: chime:ListAttendeeTags
@@ -151,6 +155,7 @@ Actions:
   - Name: chime:LogoutUser
   - Name: chime:PutAppInstanceRetentionSettings
   - Name: chime:PutAppInstanceStreamingConfigurations
+  - Name: chime:PutChannelMembershipPreferences
   - Name: chime:PutEventsConfiguration
   - Name: chime:PutRetentionSettings
   - Name: chime:PutSipMediaApplicationLoggingConfiguration
@@ -165,6 +170,7 @@ Actions:
   - Name: chime:RedactConversationMessage
   - Name: chime:RedactRoomMessage
   - Name: chime:RegenerateSecurityToken
+  - Name: chime:RegisterAppInstanceUserEndpoint
   - Name: chime:ResetPersonalPIN
   - Name: chime:RestorePhoneNumber
   - Name: chime:SearchAvailablePhoneNumbers
@@ -181,6 +187,7 @@ Actions:
   - Name: chime:UpdateAccountSettings
   - Name: chime:UpdateAppInstance
   - Name: chime:UpdateAppInstanceUser
+  - Name: chime:UpdateAppInstanceUserEndpoint
   - Name: chime:UpdateBot
   - Name: chime:UpdateChannel
   - Name: chime:UpdateChannelFlow
@@ -252,12 +259,3 @@ Actions:
   - Name: chime:UpdateSupportedLicenses
   - Name: chime:UpdateUserLicenses
   - Name: chime:ValidateAccountResource
-
-  # APIs without an IAM action
-  - Name: chime:DeregisterAppInstanceUserEndpoint
-  - Name: chime:DescribeAppInstanceUserEndpoint
-  - Name: chime:GetChannelMembershipPreferences
-  - Name: chime:ListAppInstanceUserEndpoints
-  - Name: chime:PutChannelMembershipPreferences
-  - Name: chime:RegisterAppInstanceUserEndpoint
-  - Name: chime:UpdateAppInstanceUserEndpoint
