@@ -197,6 +197,7 @@ The following table summarises the AWS APIs.
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`voiceid`](services/voiceid.yml) | 21 | 0 | 2 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 1 | 0 |
+| [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 20 | 0 | 6 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 20 | 0 | 1 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
 | [`lookoutvision`](services/lookoutvision.yml) | 19 | 0 | 3 |
@@ -287,7 +288,6 @@ The following table summarises the AWS APIs.
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
-| [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 21 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
