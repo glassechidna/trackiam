@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRedshiftServiceLinkedRolePolicy",
   "CreateDate": "2017-09-18T19:19:45Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJPY2VXNRUYOY3SRZS",
   "PolicyName": "AmazonRedshiftServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-09-15T20:44:31Z",
+    "CreateDate": "2021-11-15T06:41:10Z",
     "Document": {
       "Statement": [
         {
@@ -28,12 +28,36 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:PutRetentionPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/redshift/*"
+          ],
+          "Sid": "EnableCreationAndManagementOfRedshiftCloudwatchLogGroups"
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:GetLogEvents",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/redshift/*:log-stream:*"
+          ],
+          "Sid": "EnableCreationAndManagementOfRedshiftCloudwatchLogStreams"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-09-15T20:44:31Z"
+  "UpdateDate": "2021-11-15T06:41:10Z"
 }
