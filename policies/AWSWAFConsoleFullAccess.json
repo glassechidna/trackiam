@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFConsoleFullAccess",
   "CreateDate": "2020-04-06T18:38:38Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AZOTQ7KAT",
   "PolicyName": "AWSWAFConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-10-01T20:13:57Z",
+    "CreateDate": "2021-11-15T19:33:52Z",
     "Document": {
       "Statement": [
         {
@@ -30,13 +30,49 @@
             "wafv2:*"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowUseOfAWSWAF"
+        },
+        {
+          "Action": [
+            "logs:CreateLogDelivery",
+            "logs:DeleteLogDelivery"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:aws-waf-logs-*",
+            "arn:aws:s3:::aws-waf-logs-*"
+          ],
+          "Sid": "AllowLogDeliverySubscription"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogGroups",
+            "logs:DescribeResourcePolicies",
+            "logs:PutResourcePolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:aws-waf-logs-*"
+          ],
+          "Sid": "GrantLogDeliveryPermissionForCloudWatchLogGroup"
+        },
+        {
+          "Action": [
+            "s3:GetBucketPolicy",
+            "s3:PutBucketPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-waf-logs-*"
+          ],
+          "Sid": "GrantLogDeliveryPermissionForS3Bucket"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-10-01T20:13:57Z"
+  "UpdateDate": "2021-11-15T19:33:52Z"
 }
