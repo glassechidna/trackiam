@@ -1,0 +1,65 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonDevOpsGuruOrganizationsAccess",
+  "CreateDate": "2021-11-15T23:50:52Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4M26ELBKR2",
+  "PolicyName": "AmazonDevOpsGuruOrganizationsAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-11-15T23:50:52Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "organizations:DeregisterDelegatedAdministrator",
+            "organizations:DisableAWSServiceAccess",
+            "organizations:EnableAWSServiceAccess",
+            "organizations:ListDelegatedAdministrators",
+            "organizations:RegisterDelegatedAdministrator"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": [
+                "devops-guru.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "OrganizationsAdminDataAccess"
+        },
+        {
+          "Action": [
+            "devops-guru:DescribeOrganizationHealth",
+            "devops-guru:DescribeOrganizationOverview",
+            "devops-guru:DescribeOrganizationResourceCollectionHealth",
+            "devops-guru:ListOrganizationInsights",
+            "devops-guru:SearchOrganizationInsights"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DevOpsGuruOrganizationsAccess"
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListChildren",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListRoots"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:",
+          "Sid": "OrganizationsDataAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-11-15T23:50:52Z"
+}

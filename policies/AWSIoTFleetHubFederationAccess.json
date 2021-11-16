@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSIoTFleetHubFederationAccess",
   "CreateDate": "2020-12-15T08:08:05Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4H4EGQA254",
   "PolicyName": "AWSIoTFleetHubFederationAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-05-24T14:12:59Z",
+    "CreateDate": "2021-11-15T23:28:19Z",
     "Document": {
       "Statement": [
         {
@@ -25,25 +25,32 @@
             "cloudwatch:GetMetricData",
             "cloudwatch:ListMetrics",
             "iot:CancelJob",
+            "iot:CancelJobExecution",
             "iot:CreateFleetMetric",
             "iot:CreateJob",
             "iot:DeleteFleetMetric",
+            "iot:DescribeEndpoint",
             "iot:DescribeFleetMetric",
             "iot:DescribeIndex",
             "iot:DescribeJob",
             "iot:DescribeJobExecution",
             "iot:DescribeJobTemplate",
+            "iot:DescribeSecurityProfile",
             "iot:DescribeThingGroup",
             "iot:GetBucketsAggregation",
             "iot:GetCardinality",
             "iot:GetIndexingConfiguration",
             "iot:GetPercentiles",
             "iot:GetStatistics",
+            "iot:GetThingShadow",
+            "iot:ListActiveViolations",
             "iot:ListFleetMetrics",
             "iot:ListJobExecutionsForJob",
             "iot:ListJobExecutionsForThing",
             "iot:ListJobTemplates",
             "iot:ListJobs",
+            "iot:ListNamedShadowsForThing",
+            "iot:ListSecurityProfiles",
             "iot:ListThingGroups",
             "iot:ListThingsInThingGroup",
             "iot:SearchIndex",
@@ -69,7 +76,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2021-05-24T14:12:59Z"
+  "UpdateDate": "2021-11-15T23:28:19Z"
 }

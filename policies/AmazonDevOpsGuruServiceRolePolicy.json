@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonDevOpsGuruServiceRolePolicy",
   "CreateDate": "2020-12-01T10:24:42Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4LOGPH224B",
   "PolicyName": "AmazonDevOpsGuruServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-11-01T23:24:23Z",
+    "CreateDate": "2021-11-15T23:26:01Z",
     "Document": {
       "Statement": [
         {
@@ -48,6 +48,8 @@
             "organizations:ListChildren",
             "organizations:ListDelegatedAdministrators",
             "organizations:ListRoots",
+            "pi:GetResourceMetrics",
+            "rds:DescribeDBInstances",
             "xray:GetServiceGraph"
           ],
           "Effect": "Allow",
@@ -82,7 +84,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2021-11-01T23:24:23Z"
+  "UpdateDate": "2021-11-15T23:26:01Z"
 }
