@@ -1,0 +1,46 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSElasticDisasterRecoveryReadOnlyAccess",
+  "CreateDate": "2021-11-17T10:50:05Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4AACAUJE3T",
+  "PolicyName": "AWSElasticDisasterRecoveryReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-11-17T10:50:05Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "drs:DescribeJobLogItems",
+            "drs:DescribeJobs",
+            "drs:DescribeRecoveryInstances",
+            "drs:DescribeRecoverySnapshots",
+            "drs:DescribeReplicationConfigurationTemplates",
+            "drs:DescribeSourceServers",
+            "drs:GetFailbackReplicationConfiguration",
+            "drs:GetLaunchConfiguration",
+            "drs:GetReplicationConfiguration",
+            "drs:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstances",
+            "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-11-17T10:50:05Z"
+}

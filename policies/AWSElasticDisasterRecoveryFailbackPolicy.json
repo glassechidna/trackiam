@@ -1,0 +1,60 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticDisasterRecoveryFailbackPolicy",
+  "CreateDate": "2021-11-17T10:41:40Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4FSEIUN7KZ",
+  "PolicyName": "AWSElasticDisasterRecoveryFailbackPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-11-17T10:41:40Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "drs:DescribeRecoveryInstances",
+            "drs:DescribeReplicationServerAssociationsForDrs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "drs:GetChannelCommandsForDrs",
+            "drs:SendChannelCommandResultForDrs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "drs:GetFailbackCommandForDrs",
+            "drs:GetFailbackLaunchRequestedForDrs",
+            "drs:IssueAgentCertificateForDrs",
+            "drs:NotifyAgentAuthenticationForDrs",
+            "drs:NotifyAgentConnectedForDrs",
+            "drs:NotifyAgentDisconnectedForDrs",
+            "drs:NotifyAgentReplicationProgressForDrs",
+            "drs:NotifyConsistencyAttainedForDrs",
+            "drs:UpdateAgentReplicationProcessStateForDrs",
+            "drs:UpdateFailbackClientLastSeenForDrs"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:drs:*:*:recovery-instance/${aws:SourceIdentity}"
+        },
+        {
+          "Action": [
+            "drs:SendClientLogsForDrs",
+            "drs:SendClientMetricsForDrs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-11-17T10:41:40Z"
+}

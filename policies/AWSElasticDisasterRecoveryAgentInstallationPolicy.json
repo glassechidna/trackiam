@@ -1,0 +1,46 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSElasticDisasterRecoveryAgentInstallationPolicy",
+  "CreateDate": "2021-11-17T10:37:54Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4LHPRHPQKB",
+  "PolicyName": "AWSElasticDisasterRecoveryAgentInstallationPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-11-17T10:37:54Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "drs:CreateRecoveryInstanceForDrs",
+            "drs:CreateSourceServerForDrs",
+            "drs:DescribeRecoveryInstances",
+            "drs:GetAgentInstallationAssetsForDrs",
+            "drs:SendClientLogsForDrs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "drs:IssueAgentCertificateForDrs",
+            "drs:TagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:drs:*:*:source-server/*"
+        },
+        {
+          "Action": [
+            "drs:TagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:drs:*:*:recovery-instance/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-11-17T10:37:54Z"
+}
