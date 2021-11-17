@@ -1,0 +1,57 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticDisasterRecoveryRecoveryInstancePolicy",
+  "CreateDate": "2021-11-17T10:20:43Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4NGCMXUFTL",
+  "PolicyName": "AWSElasticDisasterRecoveryRecoveryInstancePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-11-17T10:20:43Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "drs:GetAgentCommandForDrs",
+            "drs:GetAgentConfirmedResumeInfoForDrs",
+            "drs:GetAgentReplicationInfoForDrs",
+            "drs:GetAgentRuntimeConfigurationForDrs",
+            "drs:NotifyReplicationServerAuthenticationForDrs",
+            "drs:SendAgentLogsForDrs",
+            "drs:SendAgentMetricsForDrs",
+            "drs:UpdateAgentBacklogForDrs",
+            "drs:UpdateAgentConversionInfoForDrs",
+            "drs:UpdateAgentReplicationInfoForDrs",
+            "drs:UpdateAgentSourcePropertiesForDrs",
+            "drs:UpdateReplicationCertificateForDrs"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "drs:EC2InstanceARN": "${ec2:SourceInstanceARN}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:drs:*:*:recovery-instance/*"
+        },
+        {
+          "Action": [
+            "drs:DescribeRecoveryInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstanceTypes"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-11-17T10:20:43Z"
+}
