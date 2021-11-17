@@ -1,13 +1,5 @@
 Actions:
-
-  # actions with no corresponding API
-  - Name: drs:AssociateFailbackClientToRecoveryInstanceForDrs
-  - Name: drs:BatchCreateVolumeSnapshotGroupForDrs
-  - Name: drs:BatchDeleteSnapshotRequestForDrs
-  - Name: drs:CreateRecoveryInstanceForDrs
   - Name: drs:CreateReplicationConfigurationTemplate
-  - Name: drs:CreateSessionForDrs
-  - Name: drs:CreateSourceServerForDrs
   - Name: drs:DeleteJob
   - Name: drs:DeleteRecoveryInstance
   - Name: drs:DeleteReplicationConfigurationTemplate
@@ -17,11 +9,35 @@ Actions:
   - Name: drs:DescribeRecoveryInstances
   - Name: drs:DescribeRecoverySnapshots
   - Name: drs:DescribeReplicationConfigurationTemplates
-  - Name: drs:DescribeReplicationServerAssociationsForDrs
-  - Name: drs:DescribeSnapshotRequestsForDrs
   - Name: drs:DescribeSourceServers
   - Name: drs:DisconnectRecoveryInstance
   - Name: drs:DisconnectSourceServer
+  - Name: drs:GetFailbackReplicationConfiguration
+  - Name: drs:GetLaunchConfiguration
+  - Name: drs:GetReplicationConfiguration
+  - Name: drs:InitializeService
+  - Name: drs:ListTagsForResource
+  - Name: drs:RetryDataReplication
+  - Name: drs:StartFailbackLaunch
+  - Name: drs:StartRecovery
+  - Name: drs:StopFailback
+  - Name: drs:TagResource
+  - Name: drs:TerminateRecoveryInstances
+  - Name: drs:UntagResource
+  - Name: drs:UpdateFailbackReplicationConfiguration
+  - Name: drs:UpdateLaunchConfiguration
+  - Name: drs:UpdateReplicationConfiguration
+  - Name: drs:UpdateReplicationConfigurationTemplate
+
+  # actions with no corresponding API
+  - Name: drs:AssociateFailbackClientToRecoveryInstanceForDrs
+  - Name: drs:BatchCreateVolumeSnapshotGroupForDrs
+  - Name: drs:BatchDeleteSnapshotRequestForDrs
+  - Name: drs:CreateRecoveryInstanceForDrs
+  - Name: drs:CreateSessionForDrs
+  - Name: drs:CreateSourceServerForDrs
+  - Name: drs:DescribeReplicationServerAssociationsForDrs
+  - Name: drs:DescribeSnapshotRequestsForDrs
   - Name: drs:GetAgentCommandForDrs
   - Name: drs:GetAgentConfirmedResumeInfoForDrs
   - Name: drs:GetAgentInstallationAssetsForDrs
@@ -31,31 +47,19 @@ Actions:
   - Name: drs:GetChannelCommandsForDrs
   - Name: drs:GetFailbackCommandForDrs
   - Name: drs:GetFailbackLaunchRequestedForDrs
-  - Name: drs:GetFailbackReplicationConfiguration
-  - Name: drs:GetLaunchConfiguration
-  - Name: drs:GetReplicationConfiguration
   - Name: drs:GetSuggestedFailbackClientDeviceMappingForDrs
-  - Name: drs:InitializeService
   - Name: drs:IssueAgentCertificateForDrs
-  - Name: drs:ListTagsForResource
   - Name: drs:NotifyAgentAuthenticationForDrs
   - Name: drs:NotifyAgentConnectedForDrs
   - Name: drs:NotifyAgentDisconnectedForDrs
   - Name: drs:NotifyAgentReplicationProgressForDrs
   - Name: drs:NotifyConsistencyAttainedForDrs
   - Name: drs:NotifyReplicationServerAuthenticationForDrs
-  - Name: drs:RetryDataReplication
   - Name: drs:SendAgentLogsForDrs
   - Name: drs:SendAgentMetricsForDrs
   - Name: drs:SendChannelCommandResultForDrs
   - Name: drs:SendClientLogsForDrs
   - Name: drs:SendClientMetricsForDrs
-  - Name: drs:StartFailbackLaunch
-  - Name: drs:StartRecovery
-  - Name: drs:StopFailback
-  - Name: drs:TagResource
-  - Name: drs:TerminateRecoveryInstances
-  - Name: drs:UntagResource
   - Name: drs:UpdateAgentBacklogForDrs
   - Name: drs:UpdateAgentConversionInfoForDrs
   - Name: drs:UpdateAgentReplicationInfoForDrs
@@ -63,8 +67,4 @@ Actions:
   - Name: drs:UpdateAgentSourcePropertiesForDrs
   - Name: drs:UpdateFailbackClientDeviceMappingForDrs
   - Name: drs:UpdateFailbackClientLastSeenForDrs
-  - Name: drs:UpdateFailbackReplicationConfiguration
-  - Name: drs:UpdateLaunchConfiguration
   - Name: drs:UpdateReplicationCertificateForDrs
-  - Name: drs:UpdateReplicationConfiguration
-  - Name: drs:UpdateReplicationConfigurationTemplate

@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSShieldServiceRolePolicy",
+  "CreateDate": "2021-11-17T19:17:46Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4LW6EWPBMS",
+  "PolicyName": "AWSShieldServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-11-17T19:17:46Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudfront:GetDistribution",
+            "cloudfront:ListDistributions",
+            "wafv2:GetWebACL",
+            "wafv2:GetWebACLForResource",
+            "wafv2:ListResourcesForWebACL",
+            "wafv2:UpdateWebACL"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSShield"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-11-17T19:17:46Z"
+}

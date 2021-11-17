@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 293
-* Unique actions: 11828
-* Managed policies: 894
+* Unique actions: 11837
+* Managed policies: 895
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 248 |
 | `arn:aws:iam::aws:policy/Amazon*` | 244 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 181 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 182 |
 | `arn:aws:iam::aws:policy/service-role/*` | 134 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 80 |
@@ -113,7 +113,7 @@ The following table summarises the AWS APIs.
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
 | [`appsync`](services/appsync.yml) | 41 | 0 | 2 |
-| [`sns`](services/sns.yml) | 39 | 0 | 0 |
+| [`sns`](services/sns.yml) | 39 | 1 | 0 |
 | [`resiliencehub`](services/resiliencehub.yml) | 39 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 39 | 0 | 0 |
@@ -134,12 +134,12 @@ The following table summarises the AWS APIs.
 | [`athena`](services/athena.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`memorydb`](services/memorydb.yml) | 33 | 2 | 2 |
+| [`appconfig`](services/appconfig.yml) | 33 | 2 | 0 |
 | [`panorama`](services/panorama.yml) | 33 | 0 | 31 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`shield`](services/shield.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
-| [`appconfig`](services/appconfig.yml) | 33 | 0 | 0 |
 | [`mediatailor`](services/mediatailor.yml) | 32 | 5 | 0 |
 | [`eks`](services/eks.yml) | 32 | 2 | 1 |
 | [`transfer`](services/transfer.yml) | 32 | 0 | 0 |
@@ -153,6 +153,7 @@ The following table summarises the AWS APIs.
 | [`ce`](services/ce.yml) | 30 | 0 | 10 |
 | [`profile`](services/profile.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
+| [`drs`](services/drs.yml) | 29 | 0 | 38 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
@@ -174,12 +175,12 @@ The following table summarises the AWS APIs.
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`fms`](services/fms.yml) | 26 | 0 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 26 | 0 | 0 |
+| [`amplifybackend`](services/amplifybackend.yml) | 25 | 6 | 0 |
 | [`mgn`](services/mgn.yml) | 25 | 0 | 36 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 25 | 0 | 1 |
 | [`snowball`](services/snowball.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
-| [`amplifybackend`](services/amplifybackend.yml) | 25 | 0 | 0 |
 | [`ram`](services/ram.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 23 | 0 | 1 |
@@ -282,7 +283,6 @@ The following table summarises the AWS APIs.
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 3 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
-| [`drs`](services/drs.yml) | 0 | 0 | 67 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 50 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 42 |
@@ -334,14 +334,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1756 |
-| `Get` | 1560 |
+| `List` | 1757 |
+| `Get` | 1562 |
 | `Describe` | 1421 |
-| `Delete` | 1365 |
-| `Create` | 1270 |
-| `Update` | 1040 |
+| `Delete` | 1366 |
+| `Create` | 1271 |
+| `Update` | 1041 |
 | `Put` | 339 |
-| `Start` | 223 |
+| `Start` | 224 |
 | `Tag` | 184 |
 | `Untag` | 182 |
 
