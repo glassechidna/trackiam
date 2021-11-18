@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 293
-* Unique actions: 11861
+* Unique actions: 11862
 * Managed policies: 897
 
 Most common managed policy name prefixes:
@@ -106,6 +106,7 @@ The following table summarises the AWS APIs.
 | [`nimble`](services/nimble.yml) | 47 | 0 | 2 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
+| [`forecast`](services/forecast.yml) | 45 | 1 | 1 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`wafv2`](services/wafv2.yml) | 44 | 1 | 2 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
@@ -124,7 +125,6 @@ The following table summarises the AWS APIs.
 | [`iotevents`](services/iotevents.yml) | 37 | 0 | 1 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
-| [`forecast`](services/forecast.yml) | 36 | 10 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 36 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 35 | 3 | 0 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
@@ -336,7 +336,7 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1765 |
 | `Get` | 1565 |
-| `Describe` | 1425 |
+| `Describe` | 1426 |
 | `Delete` | 1369 |
 | `Create` | 1275 |
 | `Update` | 1043 |

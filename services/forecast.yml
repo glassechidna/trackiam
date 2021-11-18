@@ -1,7 +1,10 @@
 Actions:
+  - Name: forecast:CreateAutoPredictor
   - Name: forecast:CreateDataset
   - Name: forecast:CreateDatasetGroup
   - Name: forecast:CreateDatasetImportJob
+  - Name: forecast:CreateExplainability
+  - Name: forecast:CreateExplainabilityExport
   - Name: forecast:CreateForecast
   - Name: forecast:CreateForecastExportJob
   - Name: forecast:CreatePredictor
@@ -9,14 +12,18 @@ Actions:
   - Name: forecast:DeleteDataset
   - Name: forecast:DeleteDatasetGroup
   - Name: forecast:DeleteDatasetImportJob
+  - Name: forecast:DeleteExplainability
+  - Name: forecast:DeleteExplainabilityExport
   - Name: forecast:DeleteForecast
   - Name: forecast:DeleteForecastExportJob
   - Name: forecast:DeletePredictor
   - Name: forecast:DeletePredictorBacktestExportJob
   - Name: forecast:DeleteResourceTree
+  - Name: forecast:DescribeAutoPredictor
   - Name: forecast:DescribeDataset
   - Name: forecast:DescribeDatasetGroup
   - Name: forecast:DescribeDatasetImportJob
+  - Name: forecast:DescribeExplainabilityExport
   - Name: forecast:DescribeForecast
   - Name: forecast:DescribeForecastExportJob
   - Name: forecast:DescribePredictor
@@ -25,6 +32,8 @@ Actions:
   - Name: forecast:ListDatasetGroups
   - Name: forecast:ListDatasetImportJobs
   - Name: forecast:ListDatasets
+  - Name: forecast:ListExplainabilities
+  - Name: forecast:ListExplainabilityExports
   - Name: forecast:ListForecastExportJobs
   - Name: forecast:ListForecasts
   - Name: forecast:ListPredictorBacktestExportJobs
@@ -36,14 +45,8 @@ Actions:
   - Name: forecast:UntagResource
   - Name: forecast:UpdateDatasetGroup
 
+  # actions with no corresponding API
+  - Name: forecast:DescribeExplainablity
+
   # APIs without an IAM action
-  - Name: forecast:CreateAutoPredictor
-  - Name: forecast:CreateExplainability
-  - Name: forecast:CreateExplainabilityExport
-  - Name: forecast:DeleteExplainability
-  - Name: forecast:DeleteExplainabilityExport
-  - Name: forecast:DescribeAutoPredictor
   - Name: forecast:DescribeExplainability
-  - Name: forecast:DescribeExplainabilityExport
-  - Name: forecast:ListExplainabilities
-  - Name: forecast:ListExplainabilityExports

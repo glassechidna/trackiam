@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonMSKFullAccess",
   "CreateDate": "2019-01-14T22:07:52Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJERQQQTWI5OMENTQE",
   "PolicyName": "AmazonMSKFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-03-14T00:45:51Z",
+    "CreateDate": "2021-11-18T21:26:51Z",
     "Document": {
       "Statement": [
         {
@@ -33,6 +33,7 @@
         {
           "Action": [
             "S3:GetBucketPolicy",
+            "ec2:DescribeRouteTables",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcs",
@@ -64,7 +65,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-03-14T00:45:51Z"
+  "UpdateDate": "2021-11-18T21:26:51Z"
 }
