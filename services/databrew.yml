@@ -5,17 +5,20 @@ Actions:
   - Name: databrew:CreateProject
   - Name: databrew:CreateRecipe
   - Name: databrew:CreateRecipeJob
+  - Name: databrew:CreateRuleset
   - Name: databrew:CreateSchedule
   - Name: databrew:DeleteDataset
   - Name: databrew:DeleteJob
   - Name: databrew:DeleteProject
   - Name: databrew:DeleteRecipeVersion
+  - Name: databrew:DeleteRuleset
   - Name: databrew:DeleteSchedule
   - Name: databrew:DescribeDataset
   - Name: databrew:DescribeJob
   - Name: databrew:DescribeJobRun
   - Name: databrew:DescribeProject
   - Name: databrew:DescribeRecipe
+  - Name: databrew:DescribeRuleset
   - Name: databrew:DescribeSchedule
   - Name: databrew:ListDatasets
   - Name: databrew:ListJobRuns
@@ -23,6 +26,7 @@ Actions:
   - Name: databrew:ListProjects
   - Name: databrew:ListRecipeVersions
   - Name: databrew:ListRecipes
+  - Name: databrew:ListRulesets
   - Name: databrew:ListSchedules
   - Name: databrew:ListTagsForResource
   - Name: databrew:PublishRecipe
@@ -37,11 +41,5 @@ Actions:
   - Name: databrew:UpdateProject
   - Name: databrew:UpdateRecipe
   - Name: databrew:UpdateRecipeJob
-  - Name: databrew:UpdateSchedule
-
-  # APIs without an IAM action
-  - Name: databrew:CreateRuleset
-  - Name: databrew:DeleteRuleset
-  - Name: databrew:DescribeRuleset
-  - Name: databrew:ListRulesets
   - Name: databrew:UpdateRuleset
+  - Name: databrew:UpdateSchedule

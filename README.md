@@ -108,12 +108,12 @@ The following table summarises the AWS APIs.
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`wafv2`](services/wafv2.yml) | 44 | 1 | 2 |
+| [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`networkmanager`](services/networkmanager.yml) | 43 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 43 | 0 | 0 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
 | [`appsync`](services/appsync.yml) | 41 | 0 | 2 |
-| [`databrew`](services/databrew.yml) | 39 | 5 | 0 |
 | [`sns`](services/sns.yml) | 39 | 1 | 0 |
 | [`resiliencehub`](services/resiliencehub.yml) | 39 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
