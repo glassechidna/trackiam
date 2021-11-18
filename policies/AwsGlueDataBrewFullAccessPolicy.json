@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AwsGlueDataBrewFullAccessPolicy",
   "CreateDate": "2020-11-11T16:51:39Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ACNRIK7M3",
   "PolicyName": "AwsGlueDataBrewFullAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-06-30T18:23:37Z",
+    "CreateDate": "2021-11-18T19:37:52Z",
     "Document": {
       "Statement": [
         {
@@ -37,6 +37,37 @@
           "Resource": [
             "*"
           ]
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "databrew.amazonaws.com"
+              ]
+            },
+            "StringLike": {
+              "secretsmanager:Name": "databrew!default"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:databrew!default-*"
+        },
+        {
+          "Action": [
+            "secretsmanager:GetSecretValue"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "databrew.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:databrew!default-*"
         },
         {
           "Action": [
@@ -117,6 +148,13 @@
         },
         {
           "Action": [
+            "kms:GenerateRandom"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "s3:GetObject",
             "s3:ListBucket"
           ],
@@ -124,12 +162,19 @@
           "Resource": [
             "arn:aws:s3:::databrew-public-datasets-*"
           ]
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:AwsGlueDataBrew-*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2021-06-30T18:23:37Z"
+  "UpdateDate": "2021-11-18T19:37:52Z"
 }

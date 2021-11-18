@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 293
-* Unique actions: 11843
-* Managed policies: 896
+* Unique actions: 11861
+* Managed policies: 897
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 248 |
 | `arn:aws:iam::aws:policy/Amazon*` | 244 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 183 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 184 |
 | `arn:aws:iam::aws:policy/service-role/*` | 134 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 80 |
@@ -78,6 +78,7 @@ The following table summarises the AWS APIs.
 | [`comprehend`](services/comprehend.yml) | 63 | 0 | 0 |
 | [`ds`](services/ds.yml) | 62 | 1 | 6 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
+| [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 59 | 1 | 1 |
 | [`rekognition`](services/rekognition.yml) | 58 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
@@ -86,7 +87,6 @@ The following table summarises the AWS APIs.
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
 | [`medialive`](services/medialive.yml) | 56 | 1 | 0 |
 | [`securityhub`](services/securityhub.yml) | 56 | 0 | 9 |
-| [`auditmanager`](services/auditmanager.yml) | 55 | 0 | 6 |
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`workspaces`](services/workspaces.yml) | 54 | 0 | 0 |
@@ -113,10 +113,10 @@ The following table summarises the AWS APIs.
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
 | [`appsync`](services/appsync.yml) | 41 | 0 | 2 |
+| [`databrew`](services/databrew.yml) | 39 | 5 | 0 |
 | [`sns`](services/sns.yml) | 39 | 1 | 0 |
 | [`resiliencehub`](services/resiliencehub.yml) | 39 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
-| [`databrew`](services/databrew.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
 | [`transcribe`](services/transcribe.yml) | 38 | 3 | 2 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
@@ -124,7 +124,7 @@ The following table summarises the AWS APIs.
 | [`iotevents`](services/iotevents.yml) | 37 | 0 | 1 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
-| [`forecast`](services/forecast.yml) | 36 | 0 | 0 |
+| [`forecast`](services/forecast.yml) | 36 | 10 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 36 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 35 | 3 | 0 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
@@ -144,12 +144,12 @@ The following table summarises the AWS APIs.
 | [`eks`](services/eks.yml) | 32 | 2 | 1 |
 | [`transfer`](services/transfer.yml) | 32 | 0 | 0 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
+| [`kafka`](services/kafka.yml) | 31 | 1 | 0 |
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`wisdom`](services/wisdom.yml) | 31 | 0 | 0 |
 | [`wellarchitected`](services/wellarchitected.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
-| [`kafka`](services/kafka.yml) | 31 | 0 | 0 |
 | [`ce`](services/ce.yml) | 30 | 0 | 10 |
 | [`profile`](services/profile.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
@@ -161,6 +161,7 @@ The following table summarises the AWS APIs.
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 28 | 0 | 0 |
+| [`ivs`](services/ivs.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 27 | 0 | 5 |
 | [`fsx`](services/fsx.yml) | 27 | 0 | 4 |
@@ -171,7 +172,6 @@ The following table summarises the AWS APIs.
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
-| [`ivs`](services/ivs.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`fms`](services/fms.yml) | 26 | 0 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 26 | 0 | 0 |
@@ -334,12 +334,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1761 |
-| `Get` | 1564 |
-| `Describe` | 1421 |
-| `Delete` | 1366 |
-| `Create` | 1271 |
-| `Update` | 1041 |
+| `List` | 1765 |
+| `Get` | 1565 |
+| `Describe` | 1425 |
+| `Delete` | 1369 |
+| `Create` | 1275 |
+| `Update` | 1043 |
 | `Put` | 339 |
 | `Start` | 224 |
 | `Tag` | 184 |
