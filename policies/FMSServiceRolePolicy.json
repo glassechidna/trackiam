@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/FMSServiceRolePolicy",
   "CreateDate": "2018-03-28T23:01:12Z",
-  "DefaultVersionId": "v20",
+  "DefaultVersionId": "v21",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAI62NTGYJB446ACUEA",
   "PolicyName": "FMSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-09-30T17:12:33Z",
+    "CreateDate": "2021-11-18T19:05:49Z",
     "Document": {
       "Statement": [
         {
@@ -335,7 +335,8 @@
         },
         {
           "Action": [
-            "elasticloadbalancing:ApplySecurityGroupsToLoadBalancer"
+            "elasticloadbalancing:ApplySecurityGroupsToLoadBalancer",
+            "elasticloadbalancing:DescribeTags"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -533,7 +534,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v20"
+    "VersionId": "v21"
   },
-  "UpdateDate": "2021-09-30T17:12:33Z"
+  "UpdateDate": "2021-11-18T19:05:49Z"
 }
