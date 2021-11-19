@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 293
-* Unique actions: 11872
+* Unique actions: 11877
 * Managed policies: 897
 
 Most common managed policy name prefixes:
@@ -80,11 +80,12 @@ The following table summarises the AWS APIs.
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 59 | 1 | 1 |
+| [`appstream`](services/appstream.yml) | 58 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 58 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`macie2`](services/macie2.yml) | 57 | 0 | 0 |
-| [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
+| [`lambda`](services/lambda.yml) | 56 | 7 | 4 |
 | [`medialive`](services/medialive.yml) | 56 | 1 | 0 |
 | [`securityhub`](services/securityhub.yml) | 56 | 0 | 9 |
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
@@ -98,7 +99,6 @@ The following table summarises the AWS APIs.
 | [`proton`](services/proton.yml) | 49 | 0 | 23 |
 | [`imagebuilder`](services/imagebuilder.yml) | 49 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 10 |
-| [`appstream`](services/appstream.yml) | 48 | 0 | 11 |
 | [`license-manager`](services/license-manager.yml) | 48 | 0 | 0 |
 | [`geo`](services/geo.yml) | 47 | 3 | 0 |
 | [`kms`](services/kms.yml) | 47 | 1 | 3 |
@@ -144,7 +144,7 @@ The following table summarises the AWS APIs.
 | [`eks`](services/eks.yml) | 32 | 2 | 1 |
 | [`transfer`](services/transfer.yml) | 32 | 0 | 0 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
-| [`kafka`](services/kafka.yml) | 31 | 1 | 0 |
+| [`kafka`](services/kafka.yml) | 32 | 0 | 0 |
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`wisdom`](services/wisdom.yml) | 31 | 0 | 0 |
@@ -334,12 +334,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1765 |
-| `Get` | 1565 |
+| `List` | 1766 |
+| `Get` | 1566 |
 | `Describe` | 1429 |
-| `Delete` | 1371 |
-| `Create` | 1277 |
-| `Update` | 1044 |
+| `Delete` | 1372 |
+| `Create` | 1278 |
+| `Update` | 1045 |
 | `Put` | 339 |
 | `Start` | 224 |
 | `Tag` | 184 |

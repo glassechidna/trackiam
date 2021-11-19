@@ -1,8 +1,11 @@
 Actions:
+  - Name: appstream:AssociateApplicationFleet
   - Name: appstream:AssociateFleet
   - Name: appstream:BatchAssociateUserStack
   - Name: appstream:BatchDisassociateUserStack
   - Name: appstream:CopyImage
+  - Name: appstream:CreateAppBlock
+  - Name: appstream:CreateApplication
   - Name: appstream:CreateDirectoryConfig
   - Name: appstream:CreateFleet
   - Name: appstream:CreateImageBuilder
@@ -12,6 +15,8 @@ Actions:
   - Name: appstream:CreateUpdatedImage
   - Name: appstream:CreateUsageReportSubscription
   - Name: appstream:CreateUser
+  - Name: appstream:DeleteAppBlock
+  - Name: appstream:DeleteApplication
   - Name: appstream:DeleteDirectoryConfig
   - Name: appstream:DeleteFleet
   - Name: appstream:DeleteImage
@@ -20,6 +25,9 @@ Actions:
   - Name: appstream:DeleteStack
   - Name: appstream:DeleteUsageReportSubscription
   - Name: appstream:DeleteUser
+  - Name: appstream:DescribeAppBlocks
+  - Name: appstream:DescribeApplicationFleetAssociations
+  - Name: appstream:DescribeApplications
   - Name: appstream:DescribeDirectoryConfigs
   - Name: appstream:DescribeFleets
   - Name: appstream:DescribeImageBuilders
@@ -31,6 +39,7 @@ Actions:
   - Name: appstream:DescribeUserStackAssociations
   - Name: appstream:DescribeUsers
   - Name: appstream:DisableUser
+  - Name: appstream:DisassociateApplicationFleet
   - Name: appstream:DisassociateFleet
   - Name: appstream:EnableUser
   - Name: appstream:ExpireSession
@@ -43,20 +52,11 @@ Actions:
   - Name: appstream:StopImageBuilder
   - Name: appstream:TagResource
   - Name: appstream:UntagResource
+  - Name: appstream:UpdateApplication
   - Name: appstream:UpdateDirectoryConfig
   - Name: appstream:UpdateFleet
   - Name: appstream:UpdateImagePermissions
   - Name: appstream:UpdateStack
 
   # actions with no corresponding API
-  - Name: appstream:AssociateApplicationFleet
-  - Name: appstream:CreateAppBlock
-  - Name: appstream:CreateApplication
-  - Name: appstream:DeleteAppBlock
-  - Name: appstream:DeleteApplication
-  - Name: appstream:DescribeAppBlocks
-  - Name: appstream:DescribeApplicationFleetAssociations
-  - Name: appstream:DescribeApplications
-  - Name: appstream:DisassociateApplicationFleet
   - Name: appstream:Stream
-  - Name: appstream:UpdateApplication
