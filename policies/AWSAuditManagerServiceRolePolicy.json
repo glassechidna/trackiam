@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSAuditManagerServiceRolePolicy",
   "CreateDate": "2020-12-08T15:12:12Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4C5N52UWST",
   "PolicyName": "AWSAuditManagerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-12-08T15:12:12Z",
+    "CreateDate": "2021-11-22T19:36:39Z",
     "Document": {
       "Statement": [
         {
@@ -15,9 +15,13 @@
             "events:PutRule"
           ],
           "Condition": {
+            "ForAllValues:StringEquals": {
+              "events:source": [
+                "aws.securityhub"
+              ]
+            },
             "StringEquals": {
-              "events:detail-type": "Security Hub Findings - Imported",
-              "events:source": "aws.securityhub"
+              "events:detail-type": "Security Hub Findings - Imported"
             }
           },
           "Effect": "Allow",
@@ -193,7 +197,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-12-08T15:12:12Z"
+  "UpdateDate": "2021-11-22T19:36:39Z"
 }

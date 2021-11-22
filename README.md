@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 293
-* Unique actions: 11877
+* Unique actions: 11900
 * Managed policies: 898
 
 Most common managed policy name prefixes:
@@ -45,7 +45,7 @@ The following table summarises the AWS APIs.
 | [`rds`](services/rds.yml) | 140 | 0 | 5 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
 | [`ssm`](services/ssm.yml) | 134 | 1 | 7 |
-| [`connect`](services/connect.yml) | 119 | 2 | 3 |
+| [`connect`](services/connect.yml) | 119 | 10 | 3 |
 | [`quicksight`](services/quicksight.yml) | 115 | 0 | 19 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 112 | 5 | 1 |
 | [`greengrass`](services/greengrass.yml) | 110 | 0 | 1 |
@@ -246,10 +246,10 @@ The following table summarises the AWS APIs.
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
+| [`braket`](services/braket.yml) | 9 | 4 | 0 |
 | [`textract`](services/textract.yml) | 9 | 0 | 0 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
-| [`braket`](services/braket.yml) | 9 | 0 | 0 |
 | [`budgets`](services/budgets.yml) | 8 | 14 | 2 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
 | [`finspace`](services/finspace.yml) | 8 | 0 | 6 |
@@ -278,10 +278,10 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 245 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
+| [`finspace-api`](services/finspace-api.yml) | 0 | 14 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
-| [`finspace-api`](services/finspace-api.yml) | 0 | 3 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 50 |
@@ -334,12 +334,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1766 |
-| `Get` | 1566 |
-| `Describe` | 1429 |
-| `Delete` | 1372 |
-| `Create` | 1278 |
-| `Update` | 1045 |
+| `List` | 1770 |
+| `Get` | 1570 |
+| `Describe` | 1430 |
+| `Delete` | 1375 |
+| `Create` | 1282 |
+| `Update` | 1050 |
 | `Put` | 339 |
 | `Start` | 224 |
 | `Tag` | 184 |
