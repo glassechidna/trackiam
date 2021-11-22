@@ -1,0 +1,85 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonGrafanaAthenaAccess",
+  "CreateDate": "2021-11-22T17:11:11Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4GXSPM7QQ7",
+  "PolicyName": "AmazonGrafanaAthenaAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-11-22T17:11:11Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "athena:GetQueryExecution",
+            "athena:GetQueryResults",
+            "athena:GetWorkGroup",
+            "athena:StartQueryExecution",
+            "athena:StopQueryExecution"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/GrafanaDataSource": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "athena:GetDataCatalog",
+            "athena:GetDatabase",
+            "athena:GetTableMetadata",
+            "athena:ListDataCatalogs",
+            "athena:ListDatabases",
+            "athena:ListTableMetadata",
+            "athena:ListWorkGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "glue:BatchGetPartition",
+            "glue:GetDatabase",
+            "glue:GetDatabases",
+            "glue:GetPartition",
+            "glue:GetPartitions",
+            "glue:GetTable",
+            "glue:GetTables"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:AbortMultipartUpload",
+            "s3:CreateBucket",
+            "s3:GetBucketLocation",
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:ListBucketMultipartUploads",
+            "s3:ListMultipartUploadParts",
+            "s3:PutBucketPublicAccessBlock",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::grafana-athena-query-results-*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-11-22T17:11:11Z"
+}
