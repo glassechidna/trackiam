@@ -1,15 +1,90 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRedshiftServiceLinkedRolePolicy",
   "CreateDate": "2017-09-18T19:19:45Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJPY2VXNRUYOY3SRZS",
   "PolicyName": "AmazonRedshiftServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-11-15T06:41:10Z",
+    "CreateDate": "2021-11-22T21:08:22Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "CreateInternetGateway",
+                "CreateRouteTable",
+                "CreateSecurityGroup",
+                "CreateSubnet",
+                "CreateVpc"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:internet-gateway/*",
+            "arn:aws:ec2:*:*:route-table/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:AssociateRouteTable",
+            "ec2:AttachInternetGateway",
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CreateRoute",
+            "ec2:CreateRouteTable",
+            "ec2:CreateSecurityGroup",
+            "ec2:CreateSubnet",
+            "ec2:ModifyVpcAttribute",
+            "ec2:ReplaceRouteTableAssociation",
+            "ec2:RevokeSecurityGroupEgress",
+            "ec2:RevokeSecurityGroupIngress",
+            "ec2:UpdateSecurityGroupRuleDescriptionsEgress",
+            "ec2:UpdateSecurityGroupRuleDescriptionsIngress"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/Purpose": "RedshiftMigrateToVpc"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:internet-gateway/*",
+            "arn:aws:ec2:*:*:route-table/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateInternetGateway",
+            "ec2:CreateRouteTable",
+            "ec2:CreateSecurityGroup",
+            "ec2:CreateSubnet",
+            "ec2:CreateVpc"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/Purpose": "RedshiftMigrateToVpc"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:internet-gateway/*",
+            "arn:aws:ec2:*:*:route-table/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ]
+        },
         {
           "Action": [
             "ec2:AssociateAddress",
@@ -25,6 +100,19 @@
             "ec2:DisassociateAddress",
             "ec2:ModifyNetworkInterfaceAttribute",
             "ec2:ModifyVpcEndpoint"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeNetworkAcls",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroupRules",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeVpcAttribute"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -57,7 +145,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2021-11-15T06:41:10Z"
+  "UpdateDate": "2021-11-22T21:08:22Z"
 }
