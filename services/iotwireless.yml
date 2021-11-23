@@ -38,6 +38,7 @@ Actions:
   - Name: iotwireless:GetLogLevelsByResourceTypes
   - Name: iotwireless:GetMulticastGroup
   - Name: iotwireless:GetMulticastGroupSession
+  - Name: iotwireless:GetNetworkAnalyzerConfiguration
   - Name: iotwireless:GetPartnerAccount
   - Name: iotwireless:GetResourceEventConfiguration
   - Name: iotwireless:GetResourceLogLevel
@@ -78,11 +79,11 @@ Actions:
   - Name: iotwireless:UpdateFuotaTask
   - Name: iotwireless:UpdateLogLevelsByResourceTypes
   - Name: iotwireless:UpdateMulticastGroup
+  - Name: iotwireless:UpdateNetworkAnalyzerConfiguration
   - Name: iotwireless:UpdatePartnerAccount
   - Name: iotwireless:UpdateResourceEventConfiguration
   - Name: iotwireless:UpdateWirelessDevice
   - Name: iotwireless:UpdateWirelessGateway
 
-  # APIs without an IAM action
-  - Name: iotwireless:GetNetworkAnalyzerConfiguration
-  - Name: iotwireless:UpdateNetworkAnalyzerConfiguration
+  # actions with no corresponding API
+  - Name: iotwireless:StartNetworkAnalyzerStream

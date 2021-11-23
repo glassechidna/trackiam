@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 295
-* Unique actions: 11928
+* Unique actions: 11936
 * Managed policies: 901
 
 Most common managed policy name prefixes:
@@ -58,7 +58,7 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 89 | 1 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 85 | 7 | 1 |
-| [`iotwireless`](services/iotwireless.yml) | 83 | 2 | 0 |
+| [`iotwireless`](services/iotwireless.yml) | 85 | 0 | 1 |
 | [`s3`](services/s3.yml) | 82 | 58 | 42 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
@@ -98,7 +98,7 @@ The following table summarises the AWS APIs.
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`proton`](services/proton.yml) | 49 | 0 | 23 |
 | [`imagebuilder`](services/imagebuilder.yml) | 49 | 0 | 0 |
-| [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 10 |
+| [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 12 |
 | [`license-manager`](services/license-manager.yml) | 48 | 0 | 0 |
 | [`geo`](services/geo.yml) | 47 | 3 | 0 |
 | [`kms`](services/kms.yml) | 47 | 1 | 3 |
@@ -151,7 +151,7 @@ The following table summarises the AWS APIs.
 | [`wellarchitected`](services/wellarchitected.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`ce`](services/ce.yml) | 30 | 0 | 10 |
-| [`profile`](services/profile.yml) | 30 | 0 | 0 |
+| [`profile`](services/profile.yml) | 30 | 0 | 3 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`drs`](services/drs.yml) | 29 | 0 | 38 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
@@ -295,8 +295,8 @@ The following table summarises the AWS APIs.
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`connect-campaigns`](services/connect-campaigns.yml) | 0 | 0 | 18 |
+| [`backup-gateway`](services/backup-gateway.yml) | 0 | 0 | 18 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
-| [`backup-gateway`](services/backup-gateway.yml) | 0 | 0 | 16 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 13 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
@@ -336,14 +336,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1775 |
-| `Get` | 1574 |
+| `List` | 1776 |
+| `Get` | 1576 |
 | `Describe` | 1432 |
 | `Delete` | 1377 |
 | `Create` | 1283 |
 | `Update` | 1053 |
 | `Put` | 340 |
-| `Start` | 225 |
+| `Start` | 227 |
 | `Tag` | 185 |
 | `Untag` | 183 |
 
