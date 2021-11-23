@@ -1,0 +1,53 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSProtonSyncServiceRolePolicy",
+  "CreateDate": "2021-11-23T21:14:36Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4H6XP2ZY2O",
+  "PolicyName": "AWSProtonSyncServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-11-23T21:14:36Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "codestar-connections:UseConnection"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:codestar-connections:*:*:connection/*",
+          "Sid": "AccessGitRepos"
+        },
+        {
+          "Action": [
+            "proton:CreateEnvironmentTemplate",
+            "proton:CreateEnvironmentTemplateMajorVersion",
+            "proton:CreateEnvironmentTemplateVersion",
+            "proton:CreateServiceTemplate",
+            "proton:CreateServiceTemplateMajorVersion",
+            "proton:CreateServiceTemplateVersion",
+            "proton:DeleteEnvironmentTemplateVersion",
+            "proton:DeleteServiceTemplateVersion",
+            "proton:GetEnvironmentTemplate",
+            "proton:GetEnvironmentTemplateVersion",
+            "proton:GetServiceTemplate",
+            "proton:GetServiceTemplateVersion",
+            "proton:ListEnvironmentTemplateVersions",
+            "proton:ListServiceTemplateVersions",
+            "proton:UpdateEnvironmentTemplate",
+            "proton:UpdateEnvironmentTemplateVersion",
+            "proton:UpdateServiceTemplate",
+            "proton:UpdateServiceTemplateVersion"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SyncToProton"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-11-23T21:14:36Z"
+}
