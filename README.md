@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 293
-* Unique actions: 11900
-* Managed policies: 898
+* Unique actions: 11901
+* Managed policies: 900
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 248 |
+| `arn:aws:iam::aws:policy/AWS*` | 250 |
 | `arn:aws:iam::aws:policy/Amazon*` | 244 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 184 |
 | `arn:aws:iam::aws:policy/service-role/*` | 135 |
@@ -42,12 +42,12 @@ The following table summarises the AWS APIs.
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 153 | 0 | 0 |
 | [`glue`](services/glue.yml) | 147 | 19 | 2 |
-| [`rds`](services/rds.yml) | 140 | 0 | 5 |
+| [`rds`](services/rds.yml) | 140 | 0 | 6 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
 | [`ssm`](services/ssm.yml) | 134 | 1 | 7 |
 | [`connect`](services/connect.yml) | 119 | 10 | 3 |
 | [`quicksight`](services/quicksight.yml) | 115 | 0 | 19 |
-| [`mobiletargeting`](services/mobiletargeting.yml) | 112 | 5 | 1 |
+| [`mobiletargeting`](services/mobiletargeting.yml) | 113 | 4 | 1 |
 | [`greengrass`](services/greengrass.yml) | 110 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 108 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 101 | 15 | 18 |
