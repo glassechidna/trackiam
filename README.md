@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 294
-* Unique actions: 11904
+* Unique actions: 11912
 * Managed policies: 900
 
 Most common managed policy name prefixes:
@@ -36,13 +36,13 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 471 | 2 | 1 |
+| [`ec2`](services/ec2.yml) | 471 | 3 | 1 |
 | [`sagemaker`](services/sagemaker.yml) | 250 | 5 | 2 |
 | [`chime`](services/chime.yml) | 207 | 0 | 51 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 153 | 0 | 0 |
 | [`glue`](services/glue.yml) | 147 | 19 | 2 |
-| [`rds`](services/rds.yml) | 140 | 0 | 6 |
+| [`rds`](services/rds.yml) | 141 | 0 | 5 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
 | [`ssm`](services/ssm.yml) | 134 | 1 | 7 |
 | [`connect`](services/connect.yml) | 119 | 10 | 3 |
@@ -50,7 +50,7 @@ The following table summarises the AWS APIs.
 | [`mobiletargeting`](services/mobiletargeting.yml) | 113 | 4 | 1 |
 | [`greengrass`](services/greengrass.yml) | 110 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 108 | 0 | 0 |
-| [`redshift`](services/redshift.yml) | 101 | 15 | 18 |
+| [`redshift`](services/redshift.yml) | 101 | 17 | 18 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 1 | 0 |
 | [`lex`](services/lex.yml) | 95 | 2 | 4 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
@@ -58,7 +58,7 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 89 | 1 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
 | [`cloudfront`](services/cloudfront.yml) | 85 | 7 | 1 |
-| [`iotwireless`](services/iotwireless.yml) | 83 | 0 | 0 |
+| [`iotwireless`](services/iotwireless.yml) | 83 | 2 | 0 |
 | [`s3`](services/s3.yml) | 82 | 58 | 42 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
@@ -227,11 +227,11 @@ The following table summarises the AWS APIs.
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`translate`](services/translate.yml) | 14 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 14 | 0 | 0 |
+| [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 13 | 1 | 0 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 16 |
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 7 |
 | [`synthetics`](services/synthetics.yml) | 13 | 0 | 0 |
 | [`snow-device-management`](services/snow-device-management.yml) | 13 | 0 | 0 |
-| [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 13 | 0 | 0 |
 | [`health`](services/health.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`honeycode`](services/honeycode.yml) | 12 | 0 | 14 |
@@ -276,7 +276,7 @@ The following table summarises the AWS APIs.
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 2 | 0 | 0 |
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
-| [`execute-api`](services/execute-api.yml) | 0 | 245 | 3 |
+| [`execute-api`](services/execute-api.yml) | 0 | 247 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 14 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
@@ -335,12 +335,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1770 |
-| `Get` | 1571 |
-| `Describe` | 1430 |
+| `List` | 1771 |
+| `Get` | 1574 |
+| `Describe` | 1432 |
 | `Delete` | 1375 |
 | `Create` | 1282 |
-| `Update` | 1050 |
+| `Update` | 1051 |
 | `Put` | 339 |
 | `Start` | 225 |
 | `Tag` | 184 |
