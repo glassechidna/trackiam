@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBackupServiceLinkedRolePolicyForBackup",
   "CreateDate": "2020-06-02T23:08:40Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ONJBD4ZY2",
   "PolicyName": "AWSBackupServiceLinkedRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2021-10-20T18:16:29Z",
+    "CreateDate": "2021-11-23T22:00:49Z",
     "Document": {
       "Statement": [
         {
@@ -181,12 +181,36 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:rds:*:*:snapshot:awsbackup:*"
+        },
+        {
+          "Action": [
+            "backup-gateway:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:backup-gateway:*:*:vm/*",
+          "Sid": "ListTagsForBackupGateway"
+        },
+        {
+          "Action": [
+            "backup-gateway:ListVirtualMachines"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BackupGateway"
+        },
+        {
+          "Action": [
+            "dynamodb:ListTagsOfResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:dynamodb:*:*:table/*",
+          "Sid": "ListTagsForDynamoDBTable"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2021-10-20T18:16:29Z"
+  "UpdateDate": "2021-11-23T22:00:49Z"
 }

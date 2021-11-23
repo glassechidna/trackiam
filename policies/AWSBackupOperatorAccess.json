@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupOperatorAccess",
   "CreateDate": "2019-11-18T22:23:17Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KHXVYMY4O",
   "PolicyName": "AWSBackupOperatorAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-03-10T18:31:50Z",
+    "CreateDate": "2021-11-23T22:00:28Z",
     "Document": {
       "Statement": [
         {
@@ -53,11 +53,20 @@
         },
         {
           "Action": [
+            "backup-gateway:ListGateways",
+            "backup-gateway:ListHypervisors",
+            "backup-gateway:ListTagsForResource",
+            "backup-gateway:ListVirtualMachines"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "backup:CreateBackupSelection",
             "backup:DeleteBackupSelection",
             "backup:Describe*",
             "backup:Get*",
-            "backup:GetRecoveryPointRestoreMetadata",
             "backup:List*",
             "backup:StartBackupJob",
             "backup:StartCopyJob",
@@ -117,7 +126,6 @@
             "rds:DescribeDBSnapshots",
             "rds:ListTagsForResource",
             "rds:describeDBEngineVersions",
-            "rds:describeDBSnapshots",
             "rds:describeDBSubnetGroups",
             "rds:describeOptionGroups",
             "rds:describeOrderableDBInstanceOptions"
@@ -170,7 +178,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2021-03-10T18:31:50Z"
+  "UpdateDate": "2021-11-23T22:00:28Z"
 }

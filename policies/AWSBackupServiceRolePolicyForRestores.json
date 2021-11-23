@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForRestores",
   "CreateDate": "2019-01-12T00:23:54Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJZCCL6F2WPVOUXZKI",
   "PolicyName": "AWSBackupServiceRolePolicyForRestores",
   "PolicyVersion": {
-    "CreateDate": "2021-05-25T00:02:53Z",
+    "CreateDate": "2021-11-23T22:00:41Z",
     "Document": {
       "Statement": [
         {
@@ -193,12 +193,28 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:storagegateway:*:*:*"
+        },
+        {
+          "Action": [
+            "backup-gateway:Restore"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:backup-gateway:*:*:hypervisor/*",
+          "Sid": "GatewayRestorePermissions"
+        },
+        {
+          "Action": [
+            "dynamodb:RestoreTableFromAwsBackup"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:dynamodb:*:*:table/*",
+          "Sid": "DynamoDBRestorePermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2021-05-25T00:02:53Z"
+  "UpdateDate": "2021-11-23T22:00:41Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonConnect_FullAccess",
   "CreateDate": "2020-11-20T19:54:21Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JXAE7KLRO",
   "PolicyName": "AmazonConnect_FullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-07-01T18:41:26Z",
+    "CreateDate": "2021-11-23T22:05:12Z",
     "Document": {
       "Statement": [
         {
@@ -46,11 +46,47 @@
             "lex:ListBotAliases",
             "lex:ListBots",
             "logs:CreateLogGroup",
+            "profile:GetDomain",
+            "profile:GetProfileObjectType",
+            "profile:ListAccountIntegrations",
+            "profile:ListDomains",
+            "profile:ListProfileObjectTypeTemplates",
             "s3:GetBucketLocation",
             "s3:ListAllMyBuckets"
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "profile:AddProfileKey",
+            "profile:CreateDomain",
+            "profile:CreateProfile",
+            "profile:DeleteDomain",
+            "profile:DeleteIntegration",
+            "profile:DeleteProfile",
+            "profile:DeleteProfileKey",
+            "profile:DeleteProfileObject",
+            "profile:DeleteProfileObjectType",
+            "profile:GetIntegration",
+            "profile:GetMatches",
+            "profile:GetProfileObjectType",
+            "profile:ListIntegrations",
+            "profile:ListProfileObjectTypes",
+            "profile:ListProfileObjects",
+            "profile:ListTagsForResource",
+            "profile:MergeProfiles",
+            "profile:PutIntegration",
+            "profile:PutProfileObject",
+            "profile:PutProfileObjectType",
+            "profile:SearchProfiles",
+            "profile:TagResource",
+            "profile:UntagResource",
+            "profile:UpdateDomain",
+            "profile:UpdateProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:profile:*:*:domains/amazon-connect-*"
         },
         {
           "Action": [
@@ -71,7 +107,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-07-01T18:41:26Z"
+  "UpdateDate": "2021-11-23T22:05:12Z"
 }
