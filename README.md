@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 295
-* Unique actions: 11948
+* Unique actions: 11968
 * Managed policies: 902
 
 Most common managed policy name prefixes:
@@ -68,6 +68,7 @@ The following table summarises the AWS APIs.
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
 | [`frauddetector`](services/frauddetector.yml) | 66 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 65 | 0 | 51 |
+| [`iotsitewise`](services/iotsitewise.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 64 | 1 | 11 |
 | [`route53`](services/route53.yml) | 64 | 0 | 0 |
@@ -79,13 +80,12 @@ The following table summarises the AWS APIs.
 | [`ds`](services/ds.yml) | 62 | 1 | 6 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
-| [`iotsitewise`](services/iotsitewise.yml) | 60 | 0 | 6 |
 | [`appstream`](services/appstream.yml) | 58 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 58 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`macie2`](services/macie2.yml) | 57 | 0 | 0 |
-| [`lambda`](services/lambda.yml) | 56 | 7 | 4 |
+| [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
 | [`medialive`](services/medialive.yml) | 56 | 1 | 0 |
 | [`securityhub`](services/securityhub.yml) | 56 | 0 | 9 |
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
@@ -96,7 +96,7 @@ The following table summarises the AWS APIs.
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 22 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
-| [`proton`](services/proton.yml) | 49 | 0 | 23 |
+| [`proton`](services/proton.yml) | 49 | 18 | 23 |
 | [`imagebuilder`](services/imagebuilder.yml) | 49 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 12 |
 | [`license-manager`](services/license-manager.yml) | 48 | 0 | 0 |
@@ -138,6 +138,7 @@ The following table summarises the AWS APIs.
 | [`panorama`](services/panorama.yml) | 33 | 0 | 31 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`shield`](services/shield.yml) | 33 | 0 | 0 |
+| [`profile`](services/profile.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`mediatailor`](services/mediatailor.yml) | 32 | 5 | 0 |
@@ -151,7 +152,6 @@ The following table summarises the AWS APIs.
 | [`wellarchitected`](services/wellarchitected.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`ce`](services/ce.yml) | 30 | 0 | 10 |
-| [`profile`](services/profile.yml) | 30 | 0 | 3 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`drs`](services/drs.yml) | 29 | 0 | 38 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
@@ -215,7 +215,7 @@ The following table summarises the AWS APIs.
 | [`signer`](services/signer.yml) | 17 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
-| [`timestream`](services/timestream.yml) | 16 | 1 | 3 |
+| [`timestream`](services/timestream.yml) | 16 | 8 | 3 |
 | [`resource-groups`](services/resource-groups.yml) | 16 | 0 | 1 |
 | [`detective`](services/detective.yml) | 15 | 0 | 5 |
 | [`app-integrations`](services/app-integrations.yml) | 15 | 0 | 4 |
@@ -336,12 +336,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1778 |
-| `Get` | 1576 |
-| `Describe` | 1435 |
-| `Delete` | 1379 |
-| `Create` | 1284 |
-| `Update` | 1054 |
+| `List` | 1786 |
+| `Get` | 1579 |
+| `Describe` | 1436 |
+| `Delete` | 1381 |
+| `Create` | 1286 |
+| `Update` | 1055 |
 | `Put` | 340 |
 | `Start` | 227 |
 | `Tag` | 185 |

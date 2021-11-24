@@ -1,5 +1,6 @@
 Actions:
   - Name: iotsitewise:AssociateAssets
+  - Name: iotsitewise:AssociateTimeSeriesToAssetProperty
   - Name: iotsitewise:BatchAssociateProjectAssets
   - Name: iotsitewise:BatchDisassociateProjectAssets
   - Name: iotsitewise:BatchPutAssetPropertyValue
@@ -17,6 +18,7 @@ Actions:
   - Name: iotsitewise:DeleteGateway
   - Name: iotsitewise:DeletePortal
   - Name: iotsitewise:DeleteProject
+  - Name: iotsitewise:DeleteTimeSeries
   - Name: iotsitewise:DescribeAccessPolicy
   - Name: iotsitewise:DescribeAsset
   - Name: iotsitewise:DescribeAssetModel
@@ -29,7 +31,9 @@ Actions:
   - Name: iotsitewise:DescribePortal
   - Name: iotsitewise:DescribeProject
   - Name: iotsitewise:DescribeStorageConfiguration
+  - Name: iotsitewise:DescribeTimeSeries
   - Name: iotsitewise:DisassociateAssets
+  - Name: iotsitewise:DisassociateTimeSeriesFromAssetProperty
   - Name: iotsitewise:GetAssetPropertyAggregates
   - Name: iotsitewise:GetAssetPropertyValue
   - Name: iotsitewise:GetAssetPropertyValueHistory
@@ -45,6 +49,7 @@ Actions:
   - Name: iotsitewise:ListProjectAssets
   - Name: iotsitewise:ListProjects
   - Name: iotsitewise:ListTagsForResource
+  - Name: iotsitewise:ListTimeSeries
   - Name: iotsitewise:PutDefaultEncryptionConfiguration
   - Name: iotsitewise:PutLoggingOptions
   - Name: iotsitewise:PutStorageConfiguration
@@ -61,9 +66,4 @@ Actions:
   - Name: iotsitewise:UpdateProject
 
   # actions with no corresponding API
-  - Name: iotsitewise:AssociateTimeSeriesToAssetProperty
-  - Name: iotsitewise:DeleteTimeSeries
-  - Name: iotsitewise:DescribeTimeSeries
-  - Name: iotsitewise:DisassociateTimeSeriesFromAssetProperty
-  - Name: iotsitewise:ListTimeSeries
   - Name: iotsitewise:UpdateAssetModelPropertyRouting
