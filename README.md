@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 295
-* Unique actions: 11942
+* Unique actions: 11948
 * Managed policies: 902
 
 Most common managed policy name prefixes:
@@ -46,7 +46,7 @@ The following table summarises the AWS APIs.
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
 | [`ssm`](services/ssm.yml) | 134 | 1 | 7 |
 | [`connect`](services/connect.yml) | 126 | 3 | 4 |
-| [`quicksight`](services/quicksight.yml) | 115 | 0 | 19 |
+| [`quicksight`](services/quicksight.yml) | 115 | 0 | 23 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 113 | 4 | 1 |
 | [`greengrass`](services/greengrass.yml) | 110 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 108 | 0 | 0 |
@@ -237,7 +237,7 @@ The following table summarises the AWS APIs.
 | [`honeycode`](services/honeycode.yml) | 12 | 0 | 14 |
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
-| [`iot`](services/iot.yml) | 11 | 0 | 240 |
+| [`iot`](services/iot.yml) | 11 | 0 | 242 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 28 |
 | [`outposts`](services/outposts.yml) | 11 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 11 | 0 | 0 |
@@ -336,12 +336,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1777 |
+| `List` | 1778 |
 | `Get` | 1576 |
-| `Describe` | 1433 |
-| `Delete` | 1378 |
-| `Create` | 1283 |
-| `Update` | 1053 |
+| `Describe` | 1435 |
+| `Delete` | 1379 |
+| `Create` | 1284 |
+| `Update` | 1054 |
 | `Put` | 340 |
 | `Start` | 227 |
 | `Tag` | 185 |
