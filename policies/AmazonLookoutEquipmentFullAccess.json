@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLookoutEquipmentFullAccess",
   "CreateDate": "2021-04-08T15:52:08Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KPPCPGNJA",
   "PolicyName": "AmazonLookoutEquipmentFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-05-05T16:46:56Z",
+    "CreateDate": "2021-11-24T21:00:13Z",
     "Document": {
       "Statement": [
         {
@@ -26,9 +26,7 @@
         },
         {
           "Action": [
-            "kms:CreateGrant",
-            "kms:DescribeKey",
-            "kms:RetireGrant"
+            "kms:CreateGrant"
           ],
           "Condition": {
             "StringLike": {
@@ -40,7 +38,8 @@
         },
         {
           "Action": [
-            "kms:DescribeKey"
+            "kms:DescribeKey",
+            "kms:ListAliases"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -56,7 +55,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-05-05T16:46:56Z"
+  "UpdateDate": "2021-11-24T21:00:13Z"
 }
