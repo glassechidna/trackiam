@@ -9,6 +9,7 @@ Actions:
   - Name: connect:AssociateSecurityKey
   - Name: connect:CreateAgentStatus
   - Name: connect:CreateContactFlow
+  - Name: connect:CreateContactFlowModule
   - Name: connect:CreateHoursOfOperation
   - Name: connect:CreateInstance
   - Name: connect:CreateIntegrationAssociation
@@ -19,6 +20,8 @@ Actions:
   - Name: connect:CreateUseCase
   - Name: connect:CreateUser
   - Name: connect:CreateUserHierarchyGroup
+  - Name: connect:DeleteContactFlow
+  - Name: connect:DeleteContactFlowModule
   - Name: connect:DeleteHoursOfOperation
   - Name: connect:DeleteInstance
   - Name: connect:DeleteIntegrationAssociation
@@ -30,6 +33,7 @@ Actions:
   - Name: connect:DescribeAgentStatus
   - Name: connect:DescribeContact
   - Name: connect:DescribeContactFlow
+  - Name: connect:DescribeContactFlowModule
   - Name: connect:DescribeHoursOfOperation
   - Name: connect:DescribeInstance
   - Name: connect:DescribeInstanceAttribute
@@ -56,6 +60,7 @@ Actions:
   - Name: connect:ListAgentStatuses
   - Name: connect:ListApprovedOrigins
   - Name: connect:ListBots
+  - Name: connect:ListContactFlowModules
   - Name: connect:ListContactFlows
   - Name: connect:ListContactReferences
   - Name: connect:ListHoursOfOperations
@@ -94,6 +99,8 @@ Actions:
   - Name: connect:UpdateContact
   - Name: connect:UpdateContactAttributes
   - Name: connect:UpdateContactFlowContent
+  - Name: connect:UpdateContactFlowMetadata
+  - Name: connect:UpdateContactFlowModuleMetadata
   - Name: connect:UpdateContactFlowName
   - Name: connect:UpdateContactSchedule
   - Name: connect:UpdateHoursOfOperation
@@ -123,15 +130,9 @@ Actions:
   - Name: connect:AssociateCustomerProfilesDomain
   - Name: connect:DisassociateCustomerProfilesDomain
   - Name: connect:GetFederationTokens
+  - Name: connect:UpdatedescribeContent
 
   # APIs without an IAM action
-  - Name: connect:CreateContactFlowModule
-  - Name: connect:DeleteContactFlow
-  - Name: connect:DeleteContactFlowModule
-  - Name: connect:DescribeContactFlowModule
-  - Name: connect:ListContactFlowModules
   - Name: connect:StartContactStreaming
   - Name: connect:StopContactStreaming
-  - Name: connect:UpdateContactFlowMetadata
   - Name: connect:UpdateContactFlowModuleContent
-  - Name: connect:UpdateContactFlowModuleMetadata

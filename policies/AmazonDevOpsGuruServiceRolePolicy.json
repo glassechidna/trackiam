@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonDevOpsGuruServiceRolePolicy",
   "CreateDate": "2020-12-01T10:24:42Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4LOGPH224B",
   "PolicyName": "AmazonDevOpsGuruServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-11-15T23:26:01Z",
+    "CreateDate": "2021-11-24T01:23:43Z",
     "Document": {
       "Statement": [
         {
@@ -26,6 +26,8 @@
         },
         {
           "Action": [
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingPolicies",
             "autoscaling:DescribeAutoScalingGroups",
             "cloudformation:DescribeStacks",
             "cloudformation:GetTemplate",
@@ -44,12 +46,31 @@
             "codedeploy:ListDeployments",
             "config:DescribeConfigurationRecorderStatus",
             "config:GetResourceConfigHistory",
+            "dynamodb:DescribeContinuousBackups",
+            "dynamodb:DescribeLimits",
+            "dynamodb:DescribeStream",
+            "dynamodb:DescribeTable",
+            "dynamodb:ListStreams",
+            "ec2:DescribeSubnets",
+            "elasticloadbalancing:DescribeLoadBalancerAttributes",
+            "elasticloadbalancing:DescribeLoadBalancers",
             "events:ListRuleNamesByTarget",
+            "kinesis:DescribeLimits",
+            "kinesis:DescribeStream",
+            "lambda:GetAccountSettings",
+            "lambda:GetFunction",
+            "lambda:GetFunctionConcurrency",
+            "lambda:GetPolicy",
+            "lambda:ListAliases",
+            "lambda:ListEventSourceMappings",
+            "lambda:ListProvisionedConcurrencyConfigs",
             "organizations:ListChildren",
             "organizations:ListDelegatedAdministrators",
             "organizations:ListRoots",
             "pi:GetResourceMetrics",
             "rds:DescribeDBInstances",
+            "sqs:GetQueueAttributes",
+            "tag:GetResources",
             "xray:GetServiceGraph"
           ],
           "Effect": "Allow",
@@ -84,7 +105,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2021-11-15T23:26:01Z"
+  "UpdateDate": "2021-11-24T01:23:43Z"
 }
