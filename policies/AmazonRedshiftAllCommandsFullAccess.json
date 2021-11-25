@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRedshiftAllCommandsFullAccess",
   "CreateDate": "2021-11-04T00:48:08Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FLN3TI7CS",
   "PolicyName": "AmazonRedshiftAllCommandsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-11-04T00:48:08Z",
+    "CreateDate": "2021-11-25T02:27:31Z",
     "Document": {
       "Statement": [
         {
@@ -59,38 +59,11 @@
         },
         {
           "Action": [
-            "s3:AbortMultipartUpload",
-            "s3:CreateBucket",
-            "s3:DeleteObject",
-            "s3:GetBucketAcl",
-            "s3:GetBucketCors",
-            "s3:GetBucketLocation",
-            "s3:GetEncryptionConfiguration",
-            "s3:GetObject",
-            "s3:ListAllMyBuckets",
-            "s3:ListBucket",
-            "s3:ListBucketMultipartUploads",
-            "s3:ListMultipartUploadParts",
-            "s3:PutBucketAcl",
-            "s3:PutBucketCors",
-            "s3:PutObject"
+            "s3:GetObject"
           ],
           "Condition": {
             "StringEqualsIgnoreCase": {
               "s3:ExistingObjectTag/Redshift": "true"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
-            "secretsmanager:GetRandomPassword",
-            "secretsmanager:ListSecrets"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "secretsmanager:ResourceTag/Redshift": "true"
             }
           },
           "Effect": "Allow",
@@ -247,12 +220,20 @@
           "Resource": [
             "arn:aws:secretsmanager:*:*:secret:*redshift*"
           ]
+        },
+        {
+          "Action": [
+            "secretsmanager:GetRandomPassword",
+            "secretsmanager:ListSecrets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-11-04T00:48:08Z"
+  "UpdateDate": "2021-11-25T02:27:31Z"
 }
