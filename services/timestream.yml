@@ -1,18 +1,24 @@
 Actions:
   - Name: timestream:CancelQuery
   - Name: timestream:CreateDatabase
+  - Name: timestream:CreateScheduledQuery
   - Name: timestream:CreateTable
   - Name: timestream:DeleteDatabase
+  - Name: timestream:DeleteScheduledQuery
   - Name: timestream:DeleteTable
   - Name: timestream:DescribeDatabase
   - Name: timestream:DescribeEndpoints
+  - Name: timestream:DescribeScheduledQuery
   - Name: timestream:DescribeTable
+  - Name: timestream:ExecuteScheduledQuery
   - Name: timestream:ListDatabases
+  - Name: timestream:ListScheduledQueries
   - Name: timestream:ListTables
   - Name: timestream:ListTagsForResource
   - Name: timestream:TagResource
   - Name: timestream:UntagResource
   - Name: timestream:UpdateDatabase
+  - Name: timestream:UpdateScheduledQuery
   - Name: timestream:UpdateTable
   - Name: timestream:WriteRecords
 
@@ -22,11 +28,5 @@ Actions:
   - Name: timestream:SelectValues
 
   # APIs without an IAM action
-  - Name: timestream:CreateScheduledQuery
-  - Name: timestream:DeleteScheduledQuery
-  - Name: timestream:DescribeScheduledQuery
-  - Name: timestream:ExecuteScheduledQuery
-  - Name: timestream:ListScheduledQueries
   - Name: timestream:PrepareQuery
   - Name: timestream:Query
-  - Name: timestream:UpdateScheduledQuery

@@ -190,6 +190,7 @@ The following table summarises the AWS APIs.
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
+| [`timestream`](services/timestream.yml) | 22 | 2 | 3 |
 | [`apprunner`](services/apprunner.yml) | 22 | 0 | 1 |
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
@@ -215,7 +216,6 @@ The following table summarises the AWS APIs.
 | [`signer`](services/signer.yml) | 17 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
-| [`timestream`](services/timestream.yml) | 16 | 8 | 3 |
 | [`resource-groups`](services/resource-groups.yml) | 16 | 0 | 1 |
 | [`detective`](services/detective.yml) | 15 | 0 | 5 |
 | [`app-integrations`](services/app-integrations.yml) | 15 | 0 | 4 |

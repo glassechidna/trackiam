@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDevOpsGuruReadOnlyAccess",
   "CreateDate": "2020-12-01T16:34:40Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JK4QO3QK6",
   "PolicyName": "AmazonDevOpsGuruReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-06-14T22:34:43Z",
+    "CreateDate": "2021-11-26T21:05:22Z",
     "Document": {
       "Statement": [
         {
@@ -56,12 +56,20 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "DevOpsGuruReadOnlyAccess"
+        },
+        {
+          "Action": [
+            "rds:DescribeDBInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RDSDescribeDBInstancesAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2021-06-14T22:34:43Z"
+  "UpdateDate": "2021-11-26T21:05:22Z"
 }
