@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 295
-* Unique actions: 11980
-* Managed policies: 903
+* Unique actions: 11988
+* Managed policies: 904
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 250 |
 | `arn:aws:iam::aws:policy/Amazon*` | 245 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 186 |
-| `arn:aws:iam::aws:policy/service-role/*` | 135 |
+| `arn:aws:iam::aws:policy/service-role/*` | 136 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 80 |
 
@@ -147,9 +147,9 @@ The following table summarises the AWS APIs.
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 32 | 0 | 0 |
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |
+| [`wellarchitected`](services/wellarchitected.yml) | 31 | 0 | 8 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`wisdom`](services/wisdom.yml) | 31 | 0 | 0 |
-| [`wellarchitected`](services/wellarchitected.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`ce`](services/ce.yml) | 30 | 0 | 10 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
@@ -336,11 +336,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1788 |
-| `Get` | 1583 |
+| `List` | 1789 |
+| `Get` | 1584 |
 | `Describe` | 1436 |
-| `Delete` | 1381 |
-| `Create` | 1287 |
+| `Delete` | 1383 |
+| `Create` | 1289 |
 | `Update` | 1058 |
 | `Put` | 340 |
 | `Start` | 227 |

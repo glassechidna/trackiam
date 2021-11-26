@@ -1,0 +1,65 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonGrafanaRedshiftAccess",
+  "CreateDate": "2021-11-26T23:15:15Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4GQPUO5JGY",
+  "PolicyName": "AmazonGrafanaRedshiftAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-11-26T23:15:15Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "redshift-data:DescribeTable",
+            "redshift-data:ExecuteStatement",
+            "redshift-data:ListSchemas",
+            "redshift-data:ListTables"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/GrafanaDataSource": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "secretsmanager:GetSecretValue"
+          ],
+          "Condition": {
+            "Null": {
+              "secretsmanager:ResourceTag/RedshiftQueryOwner": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "redshift:GetClusterCredentials",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift:*:*:dbname:*/*",
+            "arn:aws:redshift:*:*:dbuser:*/redshift_data_api_user"
+          ]
+        },
+        {
+          "Action": [
+            "redshift-data:DescribeStatement",
+            "redshift-data:GetStatementResult",
+            "redshift:DescribeClusters",
+            "secretsmanager:ListSecrets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-11-26T23:15:15Z"
+}
