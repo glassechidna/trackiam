@@ -1,15 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonBraketFullAccess",
   "CreateDate": "2020-08-06T20:12:37Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HUAKO7NZO",
   "PolicyName": "AmazonBraketFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-02-18T07:48:38Z",
+    "CreateDate": "2021-11-26T19:32:02Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "cloudwatch:PutMetricData",
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "/aws/braket"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
@@ -19,6 +29,20 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/braket.amazonaws.com/AWSServiceRoleForAmazonBraket*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": [
+                "braket.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AmazonBraketJobsExecutionRole*"
         },
         {
           "Action": [
@@ -41,6 +65,22 @@
         },
         {
           "Action": [
+            "ecr:BatchCheckLayerAvailability",
+            "ecr:BatchGetImage",
+            "ecr:GetDownloadUrlForLayer"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecr:*:*:repository/amazon-braket*"
+        },
+        {
+          "Action": [
+            "ecr:GetAuthorizationToken"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "iam:GetRole",
             "iam:GetRolePolicy",
             "iam:ListAttachedRolePolicies",
@@ -49,6 +89,15 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/braket*"
         },
         {
           "Action": [
@@ -61,12 +110,24 @@
             "logs:TestMetricFilter"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:logs:*:*:log-group:/aws/braket:*"
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/braket*"
         },
         {
           "Action": [
+            "logs:GetQueryResults"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
             "s3:GetObject",
             "s3:ListBucket",
+            "s3:PutBucketPolicy",
+            "s3:PutBucketPublicAccessBlock",
             "s3:PutObject"
           ],
           "Effect": "Allow",
@@ -110,7 +171,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-02-18T07:48:38Z"
+  "UpdateDate": "2021-11-26T19:32:02Z"
 }

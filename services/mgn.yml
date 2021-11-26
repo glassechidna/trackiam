@@ -4,10 +4,12 @@ Actions:
   - Name: mgn:DeleteJob
   - Name: mgn:DeleteReplicationConfigurationTemplate
   - Name: mgn:DeleteSourceServer
+  - Name: mgn:DeleteVcenterClient
   - Name: mgn:DescribeJobLogItems
   - Name: mgn:DescribeJobs
   - Name: mgn:DescribeReplicationConfigurationTemplates
   - Name: mgn:DescribeSourceServers
+  - Name: mgn:DescribeVcenterClients
   - Name: mgn:DisconnectFromService
   - Name: mgn:FinalizeCutover
   - Name: mgn:GetLaunchConfiguration
@@ -17,6 +19,7 @@ Actions:
   - Name: mgn:MarkAsArchived
   - Name: mgn:RetryDataReplication
   - Name: mgn:StartCutover
+  - Name: mgn:StartReplication
   - Name: mgn:StartTest
   - Name: mgn:TagResource
   - Name: mgn:TerminateTargetInstances
@@ -24,15 +27,14 @@ Actions:
   - Name: mgn:UpdateLaunchConfiguration
   - Name: mgn:UpdateReplicationConfiguration
   - Name: mgn:UpdateReplicationConfigurationTemplate
+  - Name: mgn:UpdateSourceServerReplicationType
 
   # actions with no corresponding API
   - Name: mgn:BatchCreateVolumeSnapshotGroupForMgn
   - Name: mgn:BatchDeleteSnapshotRequestForMgn
   - Name: mgn:CreateVcenterClientForMgn
-  - Name: mgn:DeleteVcenterClient
   - Name: mgn:DescribeReplicationServerAssociationsForMgn
   - Name: mgn:DescribeSnapshotRequestsForMgn
-  - Name: mgn:DescribeVcenterClients
   - Name: mgn:GetAgentCommandForMgn
   - Name: mgn:GetAgentConfirmedResumeInfoForMgn
   - Name: mgn:GetAgentInstallationAssetsForMgn
@@ -55,10 +57,8 @@ Actions:
   - Name: mgn:SendVcenterClientCommandResultForMgn
   - Name: mgn:SendVcenterClientLogsForMgn
   - Name: mgn:SendVcenterClientMetricsForMgn
-  - Name: mgn:StartReplication
   - Name: mgn:UpdateAgentBacklogForMgn
   - Name: mgn:UpdateAgentConversionInfoForMgn
   - Name: mgn:UpdateAgentReplicationInfoForMgn
   - Name: mgn:UpdateAgentReplicationProcessStateForMgn
   - Name: mgn:UpdateAgentSourcePropertiesForMgn
-  - Name: mgn:UpdateSourceServerReplicationType

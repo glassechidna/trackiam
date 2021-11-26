@@ -1,0 +1,120 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonBraketJobsExecutionPolicy",
+  "CreateDate": "2021-11-26T19:34:41Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CBFQZHJ3B",
+  "PolicyName": "AmazonBraketJobsExecutionPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-11-26T19:34:41Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "cloudwatch:PutMetricData",
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "/aws/braket"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": [
+                "braket.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AmazonBraketJobsExecutionRole*"
+        },
+        {
+          "Action": [
+            "braket:CancelJob",
+            "braket:CancelQuantumTask",
+            "braket:CreateJob",
+            "braket:CreateQuantumTask",
+            "braket:GetDevice",
+            "braket:GetJob",
+            "braket:GetQuantumTask",
+            "braket:ListTagsForResource",
+            "braket:SearchDevices",
+            "braket:SearchJobs",
+            "braket:SearchQuantumTasks",
+            "braket:TagResource",
+            "braket:UntagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ecr:BatchCheckLayerAvailability",
+            "ecr:BatchGetImage",
+            "ecr:GetDownloadUrlForLayer"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecr:*:*:repository/amazon-braket*"
+        },
+        {
+          "Action": [
+            "ecr:GetAuthorizationToken"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:GetLogEvents",
+            "logs:PutLogEvents",
+            "logs:StartQuery",
+            "logs:StopQuery"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/braket*"
+        },
+        {
+          "Action": [
+            "logs:GetQueryResults"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutBucketPolicy",
+            "s3:PutBucketPublicAccessBlock",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::amazon-braket-*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-11-26T19:34:41Z"
+}

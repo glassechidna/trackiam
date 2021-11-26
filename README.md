@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 295
-* Unique actions: 11968
-* Managed policies: 901
+* Unique actions: 11980
+* Managed policies: 902
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 250 |
-| `arn:aws:iam::aws:policy/Amazon*` | 244 |
+| `arn:aws:iam::aws:policy/Amazon*` | 245 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 185 |
 | `arn:aws:iam::aws:policy/service-role/*` | 135 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -47,7 +47,7 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 134 | 1 | 7 |
 | [`connect`](services/connect.yml) | 126 | 3 | 4 |
 | [`quicksight`](services/quicksight.yml) | 115 | 0 | 23 |
-| [`mobiletargeting`](services/mobiletargeting.yml) | 113 | 4 | 1 |
+| [`mobiletargeting`](services/mobiletargeting.yml) | 113 | 5 | 1 |
 | [`greengrass`](services/greengrass.yml) | 110 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 108 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 101 | 17 | 18 |
@@ -154,6 +154,7 @@ The following table summarises the AWS APIs.
 | [`ce`](services/ce.yml) | 30 | 0 | 10 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`drs`](services/drs.yml) | 29 | 0 | 38 |
+| [`mgn`](services/mgn.yml) | 29 | 0 | 32 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
@@ -176,7 +177,6 @@ The following table summarises the AWS APIs.
 | [`fms`](services/fms.yml) | 26 | 0 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 26 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 25 | 6 | 0 |
-| [`mgn`](services/mgn.yml) | 25 | 0 | 36 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 25 | 0 | 1 |
 | [`snowball`](services/snowball.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
@@ -237,9 +237,9 @@ The following table summarises the AWS APIs.
 | [`honeycode`](services/honeycode.yml) | 12 | 0 | 14 |
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
+| [`outposts`](services/outposts.yml) | 11 | 11 | 0 |
 | [`iot`](services/iot.yml) | 11 | 0 | 242 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 28 |
-| [`outposts`](services/outposts.yml) | 11 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 11 | 0 | 0 |
 | [`grafana`](services/grafana.yml) | 11 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
@@ -336,12 +336,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1786 |
-| `Get` | 1579 |
+| `List` | 1788 |
+| `Get` | 1583 |
 | `Describe` | 1436 |
 | `Delete` | 1381 |
-| `Create` | 1286 |
-| `Update` | 1055 |
+| `Create` | 1287 |
+| `Update` | 1058 |
 | `Put` | 340 |
 | `Start` | 227 |
 | `Tag` | 185 |
