@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonTimestreamConsoleFullAccess",
   "CreateDate": "2020-09-30T21:47:18Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AZJLUKMAZ",
   "PolicyName": "AmazonTimestreamConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-05-20T00:48:09Z",
+    "CreateDate": "2021-11-26T23:43:50Z",
     "Document": {
       "Statement": [
         {
@@ -54,6 +54,13 @@
         },
         {
           "Action": [
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "timestream:*"
           ],
           "Effect": "Allow",
@@ -63,7 +70,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-05-20T00:48:09Z"
+  "UpdateDate": "2021-11-26T23:43:50Z"
 }
