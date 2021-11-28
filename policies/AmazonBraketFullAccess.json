@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonBraketFullAccess",
   "CreateDate": "2020-08-06T20:12:37Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HUAKO7NZO",
   "PolicyName": "AmazonBraketFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-11-26T19:32:02Z",
+    "CreateDate": "2021-11-28T05:31:50Z",
     "Document": {
       "Statement": [
         {
@@ -42,7 +42,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/AmazonBraketJobsExecutionRole*"
+          "Resource": "arn:aws:iam::*:role/service-role/AmazonBraketJobsExecutionRole*"
         },
         {
           "Action": [
@@ -171,7 +171,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2021-11-26T19:32:02Z"
+  "UpdateDate": "2021-11-28T05:31:50Z"
 }
