@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMigrationHubRefactorSpacesFullAccess",
   "CreateDate": "2021-11-29T07:12:55Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4OQKCEGRMK",
   "PolicyName": "AWSMigrationHubRefactorSpacesFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-11-29T07:12:55Z",
+    "CreateDate": "2021-11-29T14:07:52Z",
     "Document": {
       "Statement": [
         {
@@ -15,6 +15,16 @@
           "Condition": {
             "Null": {
               "aws:ResourceTag/refactor-spaces:application-id": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "elasticloadbalancing.amazonaws.com"
             }
           },
           "Effect": "Allow",
@@ -198,6 +208,8 @@
         },
         {
           "Action": [
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeInternetGateways",
             "ec2:DescribeNetworkInterfaces",
             "ec2:DescribeRouteTables",
             "ec2:DescribeSecurityGroups",
@@ -250,7 +262,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-11-29T07:12:55Z"
+  "UpdateDate": "2021-11-29T14:07:52Z"
 }
