@@ -1,0 +1,118 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonCloudWatchEvidentlyFullAccess",
+  "CreateDate": "2021-11-29T15:10:14Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4OBNGJAXBS",
+  "PolicyName": "AmazonCloudWatchEvidentlyFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-11-29T15:10:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudtrail:LookupEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarmHistory",
+            "cloudwatch:DescribeAlarmsForMetric",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:TagResource",
+            "cloudwatch:UnTagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudwatch:*:*:alarm:*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudwatch:PutMetricAlarm"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudwatch:*:*:alarm:Evidently-Alarm-*"
+          ]
+        },
+        {
+          "Action": [
+            "evidently:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:GetRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/service-role/CloudWatchRUMEvidentlyRole-*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*"
+        },
+        {
+          "Action": [
+            "sns:CreateTopic",
+            "sns:ListSubscriptionsByTopic",
+            "sns:Subscribe"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:sns:*:*:Evidently-*"
+          ]
+        },
+        {
+          "Action": [
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-11-29T15:10:14Z"
+}
