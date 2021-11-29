@@ -1,0 +1,48 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonInspector2FullAccess",
+  "CreateDate": "2021-11-29T19:10:15Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CK4E7UETF",
+  "PolicyName": "AmazonInspector2FullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2021-11-29T19:10:15Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "inspector2.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "inspector2:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:EnableAWSServiceAccess",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListDelegatedAdministrators",
+            "organizations:RegisterDelegatedAdministrator"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-11-29T19:10:15Z"
+}
