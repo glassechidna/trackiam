@@ -11,15 +11,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 296
-* Unique actions: 12037
-* Managed policies: 907
+* Unique services: 297
+* Unique actions: 12069
+* Managed policies: 908
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 252 |
+| `arn:aws:iam::aws:policy/AWS*` | 253 |
 | `arn:aws:iam::aws:policy/Amazon*` | 245 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 187 |
 | `arn:aws:iam::aws:policy/service-role/*` | 136 |
@@ -91,8 +91,8 @@ The following table summarises the AWS APIs.
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`workspaces`](services/workspaces.yml) | 54 | 0 | 0 |
+| [`personalize`](services/personalize.yml) | 52 | 8 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
-| [`personalize`](services/personalize.yml) | 52 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 22 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
@@ -185,6 +185,7 @@ The following table summarises the AWS APIs.
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 23 | 0 | 1 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
+| [`refactor-spaces`](services/refactor-spaces.yml) | 23 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 0 | 0 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
@@ -247,7 +248,7 @@ The following table summarises the AWS APIs.
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`braket`](services/braket.yml) | 9 | 4 | 0 |
-| [`textract`](services/textract.yml) | 9 | 0 | 0 |
+| [`textract`](services/textract.yml) | 9 | 1 | 0 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`budgets`](services/budgets.yml) | 8 | 14 | 2 |
@@ -337,14 +338,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1798 |
-| `Get` | 1593 |
-| `Describe` | 1436 |
-| `Delete` | 1395 |
-| `Create` | 1301 |
-| `Update` | 1065 |
-| `Put` | 340 |
+| `List` | 1806 |
+| `Get` | 1598 |
+| `Describe` | 1438 |
+| `Delete` | 1401 |
+| `Create` | 1307 |
+| `Update` | 1066 |
+| `Put` | 341 |
 | `Start` | 227 |
-| `Tag` | 185 |
-| `Untag` | 183 |
+| `Tag` | 186 |
+| `Untag` | 184 |
 
