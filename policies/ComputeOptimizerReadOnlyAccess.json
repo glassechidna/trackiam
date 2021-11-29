@@ -1,27 +1,30 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ComputeOptimizerReadOnlyAccess",
   "CreateDate": "2020-03-07T00:11:02Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FI27MEARJ",
   "PolicyName": "ComputeOptimizerReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-08-26T18:34:10Z",
+    "CreateDate": "2021-11-29T16:03:07Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "autoscaling:DescribeAutoScalingGroups",
+            "autoscaling:DescribeAutoScalingInstances",
             "cloudwatch:GetMetricData",
             "compute-optimizer:DescribeRecommendationExportJobs",
             "compute-optimizer:GetAutoScalingGroupRecommendations",
             "compute-optimizer:GetEBSVolumeRecommendations",
             "compute-optimizer:GetEC2InstanceRecommendations",
             "compute-optimizer:GetEC2RecommendationProjectedMetrics",
+            "compute-optimizer:GetEffectiveRecommendationPreferences",
             "compute-optimizer:GetEnrollmentStatus",
             "compute-optimizer:GetEnrollmentStatusesForOrganization",
             "compute-optimizer:GetLambdaFunctionRecommendations",
+            "compute-optimizer:GetRecommendationPreferences",
             "compute-optimizer:GetRecommendationSummaries",
             "ec2:DescribeInstances",
             "ec2:DescribeVolumes",
@@ -38,7 +41,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2021-08-26T18:34:10Z"
+  "UpdateDate": "2021-11-29T16:03:07Z"
 }

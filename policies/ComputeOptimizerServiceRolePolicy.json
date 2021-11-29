@@ -1,15 +1,24 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/ComputeOptimizerServiceRolePolicy",
   "CreateDate": "2019-12-03T08:45:19Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4HPOQZNRNJ",
   "PolicyName": "ComputeOptimizerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-12-03T08:45:19Z",
+    "CreateDate": "2021-11-29T16:04:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "autoscaling:DescribeAutoScalingGroups",
+            "autoscaling:DescribeAutoScalingInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AutoScalingAccess"
+        },
         {
           "Action": [
             "cloudwatch:GetMetricData"
@@ -42,7 +51,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-12-03T08:45:19Z"
+  "UpdateDate": "2021-11-29T16:04:07Z"
 }
