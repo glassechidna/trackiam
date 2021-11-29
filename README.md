@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 299
-* Unique actions: 12115
+* Unique services: 300
+* Unique actions: 12123
 * Managed policies: 913
 
 Most common managed policy name prefixes:
@@ -307,6 +307,7 @@ The following table summarises the AWS APIs.
 | [`rum`](services/rum.yml) | 0 | 0 | 10 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
+| [`rbin`](services/rbin.yml) | 0 | 0 | 8 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`cassandra`](services/cassandra.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
@@ -340,14 +341,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1812 |
-| `Get` | 1608 |
+| `List` | 1814 |
+| `Get` | 1609 |
 | `Describe` | 1439 |
-| `Delete` | 1408 |
-| `Create` | 1313 |
-| `Update` | 1072 |
+| `Delete` | 1409 |
+| `Create` | 1314 |
+| `Update` | 1073 |
 | `Put` | 344 |
 | `Start` | 229 |
-| `Tag` | 187 |
-| `Untag` | 185 |
+| `Tag` | 188 |
+| `Untag` | 186 |
 
