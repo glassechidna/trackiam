@@ -2,15 +2,19 @@ Actions:
   - Name: ecr:BatchCheckLayerAvailability
   - Name: ecr:BatchDeleteImage
   - Name: ecr:BatchGetImage
+  - Name: ecr:BatchGetRepositoryScanningConfiguration
   - Name: ecr:CompleteLayerUpload
+  - Name: ecr:CreatePullThroughCacheRule
   - Name: ecr:CreateRepository
   - Name: ecr:DeleteLifecyclePolicy
+  - Name: ecr:DeletePullThroughCacheRule
   - Name: ecr:DeleteRegistryPolicy
   - Name: ecr:DeleteRepository
   - Name: ecr:DeleteRepositoryPolicy
   - Name: ecr:DescribeImageReplicationStatus
   - Name: ecr:DescribeImageScanFindings
   - Name: ecr:DescribeImages
+  - Name: ecr:DescribePullThroughCacheRules
   - Name: ecr:DescribeRegistry
   - Name: ecr:DescribeRepositories
   - Name: ecr:GetAuthorizationToken
@@ -18,6 +22,7 @@ Actions:
   - Name: ecr:GetLifecyclePolicy
   - Name: ecr:GetLifecyclePolicyPreview
   - Name: ecr:GetRegistryPolicy
+  - Name: ecr:GetRegistryScanningConfiguration
   - Name: ecr:GetRepositoryPolicy
   - Name: ecr:InitiateLayerUpload
   - Name: ecr:ListImages
@@ -27,6 +32,7 @@ Actions:
   - Name: ecr:PutImageTagMutability
   - Name: ecr:PutLifecyclePolicy
   - Name: ecr:PutRegistryPolicy
+  - Name: ecr:PutRegistryScanningConfiguration
   - Name: ecr:PutReplicationConfiguration
   - Name: ecr:SetRepositoryPolicy
   - Name: ecr:StartImageScan
@@ -36,10 +42,4 @@ Actions:
   - Name: ecr:UploadLayerPart
 
   # actions with no corresponding API
-  - Name: ecr:BatchGetRepositoryScanningConfiguration
-  - Name: ecr:CreatePullThroughCacheRule
-  - Name: ecr:DeletePullThroughCacheRule
-  - Name: ecr:DescribePullThroughCacheRules
-  - Name: ecr:GetRegistryScanningConfiguration
-  - Name: ecr:PutRegistryScanningConfiguration
   - Name: ecr:ReplicateImage
