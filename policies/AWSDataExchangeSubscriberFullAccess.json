@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDataExchangeSubscriberFullAccess",
   "CreateDate": "2019-11-13T19:27:52Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MAWRW4GF7",
   "PolicyName": "AWSDataExchangeSubscriberFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-09-30T21:31:28Z",
+    "CreateDate": "2021-11-29T23:00:06Z",
     "Document": {
       "Statement": [
         {
@@ -56,6 +56,7 @@
           "Action": [
             "dataexchange:CreateEventAction",
             "dataexchange:DeleteEventAction",
+            "dataexchange:SendApiAsset",
             "dataexchange:UpdateEventAction"
           ],
           "Effect": "Allow",
@@ -90,8 +91,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v5"
+    "IsDefaultVersion": true,
+    "VersionId": "v6"
   },
-  "UpdateDate": "2021-09-30T21:31:28Z"
+  "UpdateDate": "2021-11-29T23:00:06Z"
 }

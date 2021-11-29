@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDataExchangeProviderFullAccess",
   "CreateDate": "2019-11-13T19:27:55Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MQSUGZZPZ",
   "PolicyName": "AWSDataExchangeProviderFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-11-01T15:13:01Z",
+    "CreateDate": "2021-11-29T23:01:23Z",
     "Document": {
       "Statement": [
         {
@@ -50,6 +50,7 @@
                 "EXPORT_ASSET_TO_SIGNED_URL",
                 "IMPORT_ASSETS_FROM_REDSHIFT_DATA_SHARES",
                 "IMPORT_ASSETS_FROM_S3",
+                "IMPORT_ASSET_FROM_API_GATEWAY_API",
                 "IMPORT_ASSET_FROM_SIGNED_URL"
               ]
             }
@@ -112,6 +113,7 @@
             "dataexchange:Get*",
             "dataexchange:List*",
             "dataexchange:PublishDataSet",
+            "dataexchange:SendApiAsset",
             "dataexchange:TagResource",
             "dataexchange:UntagResource",
             "dataexchange:Update*",
@@ -151,7 +153,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2021-11-01T15:13:01Z"
+  "UpdateDate": "2021-11-29T23:01:23Z"
 }
