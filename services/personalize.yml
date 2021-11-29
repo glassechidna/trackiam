@@ -1,5 +1,6 @@
 Actions:
   - Name: personalize:CreateBatchInferenceJob
+  - Name: personalize:CreateBatchSegmentJob
   - Name: personalize:CreateCampaign
   - Name: personalize:CreateDataset
   - Name: personalize:CreateDatasetExportJob
@@ -7,6 +8,7 @@ Actions:
   - Name: personalize:CreateDatasetImportJob
   - Name: personalize:CreateEventTracker
   - Name: personalize:CreateFilter
+  - Name: personalize:CreateRecommender
   - Name: personalize:CreateSchema
   - Name: personalize:CreateSolution
   - Name: personalize:CreateSolutionVersion
@@ -15,10 +17,12 @@ Actions:
   - Name: personalize:DeleteDatasetGroup
   - Name: personalize:DeleteEventTracker
   - Name: personalize:DeleteFilter
+  - Name: personalize:DeleteRecommender
   - Name: personalize:DeleteSchema
   - Name: personalize:DeleteSolution
   - Name: personalize:DescribeAlgorithm
   - Name: personalize:DescribeBatchInferenceJob
+  - Name: personalize:DescribeBatchSegmentJob
   - Name: personalize:DescribeCampaign
   - Name: personalize:DescribeDataset
   - Name: personalize:DescribeDatasetExportJob
@@ -28,6 +32,7 @@ Actions:
   - Name: personalize:DescribeFeatureTransformation
   - Name: personalize:DescribeFilter
   - Name: personalize:DescribeRecipe
+  - Name: personalize:DescribeRecommender
   - Name: personalize:DescribeSchema
   - Name: personalize:DescribeSolution
   - Name: personalize:DescribeSolutionVersion
@@ -35,6 +40,7 @@ Actions:
   - Name: personalize:GetRecommendations
   - Name: personalize:GetSolutionMetrics
   - Name: personalize:ListBatchInferenceJobs
+  - Name: personalize:ListBatchSegmentJobs
   - Name: personalize:ListCampaigns
   - Name: personalize:ListDatasetExportJobs
   - Name: personalize:ListDatasetGroups
@@ -43,6 +49,7 @@ Actions:
   - Name: personalize:ListEventTrackers
   - Name: personalize:ListFilters
   - Name: personalize:ListRecipes
+  - Name: personalize:ListRecommenders
   - Name: personalize:ListSchemas
   - Name: personalize:ListSolutionVersions
   - Name: personalize:ListSolutions
@@ -51,13 +58,4 @@ Actions:
   - Name: personalize:PutUsers
   - Name: personalize:StopSolutionVersionCreation
   - Name: personalize:UpdateCampaign
-
-  # APIs without an IAM action
-  - Name: personalize:CreateBatchSegmentJob
-  - Name: personalize:CreateRecommender
-  - Name: personalize:DeleteRecommender
-  - Name: personalize:DescribeBatchSegmentJob
-  - Name: personalize:DescribeRecommender
-  - Name: personalize:ListBatchSegmentJobs
-  - Name: personalize:ListRecommenders
   - Name: personalize:UpdateRecommender

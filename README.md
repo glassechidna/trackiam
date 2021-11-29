@@ -80,6 +80,7 @@ The following table summarises the AWS APIs.
 | [`ds`](services/ds.yml) | 62 | 1 | 6 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
+| [`personalize`](services/personalize.yml) | 60 | 0 | 0 |
 | [`appstream`](services/appstream.yml) | 58 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 58 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
@@ -91,7 +92,6 @@ The following table summarises the AWS APIs.
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`workspaces`](services/workspaces.yml) | 54 | 0 | 0 |
-| [`personalize`](services/personalize.yml) | 52 | 8 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 22 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
