@@ -1,0 +1,156 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSMigrationHubRefactorSpacesServiceRolePolicy",
+  "CreateDate": "2021-11-29T06:50:15Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4KIIHJIPXW",
+  "PolicyName": "AWSMigrationHubRefactorSpacesServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-11-29T06:50:15Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:DeleteVpcEndpointServiceConfigurations",
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/refactor-spaces:application-id": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "apigateway:DELETE",
+            "apigateway:GET",
+            "apigateway:PATCH",
+            "apigateway:POST",
+            "apigateway:PUT"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/refactor-spaces:application-id": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:apigateway:*::/restapis",
+            "arn:aws:apigateway:*::/restapis/*",
+            "arn:aws:apigateway:*::/tags",
+            "arn:aws:apigateway:*::/tags/*",
+            "arn:aws:apigateway:*::/vpclinks/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CreateRoute",
+            "ec2:DeleteRoute",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DeleteTags",
+            "ec2:DeleteTransitGatewayVpcAttachment",
+            "ec2:RevokeSecurityGroupIngress",
+            "ram:AssociateResourceShare",
+            "ram:DeleteResourceShare",
+            "ram:DisassociateResourceShare"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/refactor-spaces:environment-id": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:AddTags",
+            "elasticloadbalancing:CreateListener"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/refactor-spaces:route-id": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:elasticloadbalancing:*:*:loadbalancer/net/refactor-spaces-nlb-*"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:AddTags",
+            "elasticloadbalancing:CreateTargetGroup"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/refactor-spaces:route-id": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:elasticloadbalancing:*:*:targetgroup/refactor-spaces-tg-*"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:CreateListener",
+            "elasticloadbalancing:CreateLoadBalancerListeners",
+            "elasticloadbalancing:DeleteListener",
+            "elasticloadbalancing:DeleteTargetGroup",
+            "elasticloadbalancing:RegisterTargets"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/refactor-spaces:route-id": [
+                "*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "apigateway:GET",
+          "Effect": "Allow",
+          "Resource": "arn:aws:apigateway:*::/vpclinks/*"
+        },
+        {
+          "Action": "elasticloadbalancing:DeleteListener",
+          "Effect": "Allow",
+          "Resource": "arn:*:elasticloadbalancing:*:*:listener/net/refactor-spaces-nlb-*"
+        },
+        {
+          "Action": "elasticloadbalancing:DeleteLoadBalancer",
+          "Effect": "Allow",
+          "Resource": "arn:*:elasticloadbalancing:*:*:loadbalancer/net/refactor-spaces-nlb-*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeTransitGatewayVpcAttachments",
+            "ec2:DescribeVpcEndpointServiceConfigurations",
+            "elasticloadbalancing:DescribeListeners",
+            "elasticloadbalancing:DescribeTargetGroups",
+            "elasticloadbalancing:DescribeTargetHealth",
+            "ram:GetResourceShareAssociations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:DeleteTargetGroup",
+            "elasticloadbalancing:RegisterTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:*:elasticloadbalancing:*:*:targetgroup/refactor-spaces-tg-*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-11-29T06:50:15Z"
+}
