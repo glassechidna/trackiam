@@ -11,15 +11,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 295
-* Unique actions: 11988
-* Managed policies: 904
+* Unique services: 296
+* Unique actions: 12037
+* Managed policies: 906
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 250 |
+| `arn:aws:iam::aws:policy/AWS*` | 252 |
 | `arn:aws:iam::aws:policy/Amazon*` | 245 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 186 |
 | `arn:aws:iam::aws:policy/service-role/*` | 136 |
@@ -285,6 +285,7 @@ The following table summarises the AWS APIs.
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 50 |
+| [`iotroborunner`](services/iotroborunner.yml) | 0 | 0 | 49 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 42 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`inspector2`](services/inspector2.yml) | 0 | 0 | 30 |
@@ -336,12 +337,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1789 |
-| `Get` | 1584 |
+| `List` | 1798 |
+| `Get` | 1593 |
 | `Describe` | 1436 |
-| `Delete` | 1383 |
-| `Create` | 1289 |
-| `Update` | 1058 |
+| `Delete` | 1395 |
+| `Create` | 1301 |
+| `Update` | 1065 |
 | `Put` | 340 |
 | `Start` | 227 |
 | `Tag` | 185 |
