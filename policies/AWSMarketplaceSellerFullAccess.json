@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerFullAccess",
   "CreateDate": "2019-07-02T20:40:09Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JF7OFUANW",
   "PolicyName": "AWSMarketplaceSellerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-10-09T22:23:38Z",
+    "CreateDate": "2021-11-30T19:26:49Z",
     "Document": {
       "Statement": [
         {
@@ -31,7 +31,6 @@
         },
         {
           "Action": [
-            "iam:GetRole",
             "iam:PassRole"
           ],
           "Condition": {
@@ -66,12 +65,19 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:GetRole"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-10-09T22:23:38Z"
+  "UpdateDate": "2021-11-30T19:26:49Z"
 }
