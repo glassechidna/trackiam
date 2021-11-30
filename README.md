@@ -11,16 +11,16 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 300
-* Unique actions: 12135
-* Managed policies: 914
+* Unique services: 301
+* Unique actions: 12179
+* Managed policies: 915
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 253 |
-| `arn:aws:iam::aws:policy/Amazon*` | 250 |
+| `arn:aws:iam::aws:policy/Amazon*` | 251 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 188 |
 | `arn:aws:iam::aws:policy/service-role/*` | 136 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -291,6 +291,7 @@ The following table summarises the AWS APIs.
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 50 |
 | [`iotroborunner`](services/iotroborunner.yml) | 0 | 0 | 49 |
+| [`workspaces-web`](services/workspaces-web.yml) | 0 | 0 | 44 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 42 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
@@ -341,14 +342,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1816 |
-| `Get` | 1609 |
+| `List` | 1824 |
+| `Get` | 1617 |
 | `Describe` | 1440 |
-| `Delete` | 1409 |
-| `Create` | 1314 |
-| `Update` | 1073 |
+| `Delete` | 1415 |
+| `Create` | 1320 |
+| `Update` | 1079 |
 | `Put` | 345 |
 | `Start` | 229 |
-| `Tag` | 189 |
-| `Untag` | 187 |
+| `Tag` | 190 |
+| `Untag` | 188 |
 
