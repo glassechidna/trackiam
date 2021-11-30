@@ -1,0 +1,46 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSIPAMServiceRolePolicy",
+  "CreateDate": "2021-11-30T19:08:11Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4JEQHJ6QN6",
+  "PolicyName": "AWSIPAMServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2021-11-30T19:08:11Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "cloudwatch:PutMetricData",
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/IPAM"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAddresses",
+            "ec2:DescribeByoipCidrs",
+            "ec2:DescribeIpv6Pools",
+            "ec2:DescribePublicIpv4Pools",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2021-11-30T19:08:11Z"
+}
