@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonMSKFullAccess",
   "CreateDate": "2019-01-14T22:07:52Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJERQQQTWI5OMENTQE",
   "PolicyName": "AmazonMSKFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-11-18T21:26:51Z",
+    "CreateDate": "2021-11-30T18:04:10Z",
     "Document": {
       "Statement": [
         {
@@ -32,10 +32,56 @@
         },
         {
           "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": "CreateVpcEndpoint"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:ec2:*:*:vpc-endpoint/*"
+        },
+        {
+          "Action": [
+            "ec2:CreateVpcEndpoint"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/AWSMSKManaged": "true"
+            },
+            "StringLike": {
+              "aws:RequestTag/ClusterArn": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:ec2:*:*:vpc-endpoint/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:DeleteVpcEndpoints"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/AWSMSKManaged": "true"
+            },
+            "StringLike": {
+              "ec2:ResourceTag/ClusterArn": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:ec2:*:*:vpc-endpoint/*"
+        },
+        {
+          "Action": [
             "S3:GetBucketPolicy",
             "ec2:DescribeRouteTables",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeVpcEndpoints",
             "ec2:DescribeVpcs",
             "firehose:TagDeliveryStream",
             "kafka:*",
@@ -55,6 +101,17 @@
         },
         {
           "Action": [
+            "ec2:CreateVpcEndpoint"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:ec2:*:*:security-group/*",
+            "arn:*:ec2:*:*:subnet/*",
+            "arn:*:ec2:*:*:vpc/*"
+          ]
+        },
+        {
+          "Action": [
             "iam:AttachRolePolicy",
             "iam:PutRolePolicy"
           ],
@@ -65,7 +122,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2021-11-18T21:26:51Z"
+  "UpdateDate": "2021-11-30T18:04:10Z"
 }
