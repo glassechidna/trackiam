@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerReadOnly",
   "CreateDate": "2017-11-29T13:07:09Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJTZ2FTFCQ6CFLQA2O",
   "PolicyName": "AmazonSageMakerReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2021-06-10T20:19:55Z",
+    "CreateDate": "2021-12-01T16:29:20Z",
     "Document": {
       "Statement": [
         {
@@ -33,14 +33,18 @@
         },
         {
           "Action": [
+            "sagemaker:BatchDescribeModelPackage",
             "sagemaker:BatchGetMetrics",
             "sagemaker:BatchGetRecord",
             "sagemaker:Describe*",
             "sagemaker:GetDeviceFleetReport",
             "sagemaker:GetDeviceRegistration",
+            "sagemaker:GetLineageGroupPolicy",
+            "sagemaker:GetModelPackageGroupPolicy",
             "sagemaker:GetRecord",
             "sagemaker:GetSearchSuggestions",
             "sagemaker:List*",
+            "sagemaker:QueryLineage",
             "sagemaker:Search"
           ],
           "Effect": "Allow",
@@ -50,7 +54,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2021-06-10T20:19:55Z"
+  "UpdateDate": "2021-12-01T16:29:20Z"
 }
