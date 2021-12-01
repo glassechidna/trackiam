@@ -3,41 +3,44 @@ Actions:
   - Name: fsx:CancelDataRepositoryTask
   - Name: fsx:CopyBackup
   - Name: fsx:CreateBackup
+  - Name: fsx:CreateDataRepositoryAssociation
   - Name: fsx:CreateDataRepositoryTask
   - Name: fsx:CreateFileSystem
   - Name: fsx:CreateFileSystemFromBackup
+  - Name: fsx:CreateSnapshot
   - Name: fsx:CreateStorageVirtualMachine
   - Name: fsx:CreateVolume
   - Name: fsx:CreateVolumeFromBackup
   - Name: fsx:DeleteBackup
+  - Name: fsx:DeleteDataRepositoryAssociation
   - Name: fsx:DeleteFileSystem
+  - Name: fsx:DeleteSnapshot
   - Name: fsx:DeleteStorageVirtualMachine
   - Name: fsx:DeleteVolume
   - Name: fsx:DescribeBackups
+  - Name: fsx:DescribeDataRepositoryAssociations
   - Name: fsx:DescribeDataRepositoryTasks
   - Name: fsx:DescribeFileSystemAliases
   - Name: fsx:DescribeFileSystems
+  - Name: fsx:DescribeSnapshots
   - Name: fsx:DescribeStorageVirtualMachines
   - Name: fsx:DescribeVolumes
   - Name: fsx:DisassociateFileSystemAliases
   - Name: fsx:ListTagsForResource
+  - Name: fsx:RestoreVolumeFromSnapshot
   - Name: fsx:TagResource
   - Name: fsx:UntagResource
+  - Name: fsx:UpdateDataRepositoryAssociation
   - Name: fsx:UpdateFileSystem
+  - Name: fsx:UpdateSnapshot
   - Name: fsx:UpdateStorageVirtualMachine
   - Name: fsx:UpdateVolume
 
   # actions with no corresponding API
   - Name: fsx:AssociateFileGateway
-  - Name: fsx:CreateDataRepositoryAssociation
-  - Name: fsx:CreateSnapshot
-  - Name: fsx:DeleteDataRepositoryAssociation
-  - Name: fsx:DeleteSnapshot
   - Name: fsx:DescribeAssociatedFileGateways
-  - Name: fsx:DescribeDataRepositoryAssociations
-  - Name: fsx:DescribeSnapshots
   - Name: fsx:DisassociateFileGateway
   - Name: fsx:ManageBackupPrincipalAssociations
-  - Name: fsx:RestoreVolumeFromSnapshot
-  - Name: fsx:UpdateDataRepositoryAssociation
-  - Name: fsx:UpdateSnapshot
+
+  # APIs without an IAM action
+  - Name: fsx:ReleaseFileSystemNfsV3Locks
