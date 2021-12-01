@@ -30,6 +30,7 @@ Actions:
   - Name: lex:DescribeBot
   - Name: lex:DescribeBotAlias
   - Name: lex:DescribeBotLocale
+  - Name: lex:DescribeBotRecommendation
   - Name: lex:DescribeBotVersion
   - Name: lex:DescribeExport
   - Name: lex:DescribeImport
@@ -62,6 +63,7 @@ Actions:
   - Name: lex:ListAggregatedUtterances
   - Name: lex:ListBotAliases
   - Name: lex:ListBotLocales
+  - Name: lex:ListBotRecommendations
   - Name: lex:ListBotVersions
   - Name: lex:ListBots
   - Name: lex:ListBuiltInIntents
@@ -69,6 +71,7 @@ Actions:
   - Name: lex:ListExports
   - Name: lex:ListImports
   - Name: lex:ListIntents
+  - Name: lex:ListRecommendedIntents
   - Name: lex:ListSlotTypes
   - Name: lex:ListSlots
   - Name: lex:ListTagsForResource
@@ -81,6 +84,8 @@ Actions:
   - Name: lex:PutSlotType
   - Name: lex:RecognizeText
   - Name: lex:RecognizeUtterance
+  - Name: lex:SearchAssociatedTranscripts
+  - Name: lex:StartBotRecommendation
   - Name: lex:StartConversation
   - Name: lex:StartImport
   - Name: lex:StartMigration
@@ -89,6 +94,7 @@ Actions:
   - Name: lex:UpdateBot
   - Name: lex:UpdateBotAlias
   - Name: lex:UpdateBotLocale
+  - Name: lex:UpdateBotRecommendation
   - Name: lex:UpdateExport
   - Name: lex:UpdateIntent
   - Name: lex:UpdateResourcePolicy
@@ -99,13 +105,7 @@ Actions:
   - Name: lex:CreateBotChannel
   - Name: lex:DeleteBotChannel
   - Name: lex:DescribeBotChannel
-  - Name: lex:DescribeBotRecommendation
   - Name: lex:ListBotChannels
-  - Name: lex:ListBotRecommendations
-  - Name: lex:ListRecommendedIntents
-  - Name: lex:SearchAssociatedTranscripts
-  - Name: lex:StartBotRecommendation
-  - Name: lex:UpdateBotRecommendation
 
   # APIs without an IAM action
   - Name: lex:CreateResourcePolicyStatement

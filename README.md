@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 305
-* Unique actions: 12317
+* Unique actions: 12368
 * Managed policies: 916
 
 Most common managed policy name prefixes:
@@ -36,8 +36,8 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 471 | 8 | 1 |
-| [`sagemaker`](services/sagemaker.yml) | 250 | 5 | 14 |
+| [`ec2`](services/ec2.yml) | 471 | 44 | 1 |
+| [`sagemaker`](services/sagemaker.yml) | 259 | 5 | 5 |
 | [`chime`](services/chime.yml) | 207 | 0 | 51 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 153 | 0 | 0 |
@@ -51,8 +51,8 @@ The following table summarises the AWS APIs.
 | [`greengrass`](services/greengrass.yml) | 110 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 108 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 101 | 17 | 18 |
+| [`lex`](services/lex.yml) | 101 | 2 | 4 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 1 | 0 |
-| [`lex`](services/lex.yml) | 95 | 2 | 10 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`storagegateway`](services/storagegateway.yml) | 89 | 1 | 1 |
@@ -111,8 +111,8 @@ The following table summarises the AWS APIs.
 | [`wafv2`](services/wafv2.yml) | 44 | 1 | 2 |
 | [`workspaces-web`](services/workspaces-web.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
+| [`kendra`](services/kendra.yml) | 43 | 12 | 0 |
 | [`networkmanager`](services/networkmanager.yml) | 43 | 0 | 0 |
-| [`kendra`](services/kendra.yml) | 43 | 0 | 0 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
 | [`appsync`](services/appsync.yml) | 41 | 0 | 2 |
@@ -136,11 +136,11 @@ The following table summarises the AWS APIs.
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
 | [`athena`](services/athena.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
+| [`shield`](services/shield.yml) | 33 | 3 | 0 |
 | [`memorydb`](services/memorydb.yml) | 33 | 2 | 2 |
 | [`appconfig`](services/appconfig.yml) | 33 | 2 | 0 |
 | [`panorama`](services/panorama.yml) | 33 | 0 | 31 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
-| [`shield`](services/shield.yml) | 33 | 0 | 0 |
 | [`profile`](services/profile.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
@@ -346,14 +346,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1853 |
-| `Get` | 1640 |
-| `Describe` | 1447 |
-| `Delete` | 1432 |
-| `Create` | 1338 |
-| `Update` | 1097 |
+| `List` | 1856 |
+| `Get` | 1647 |
+| `Describe` | 1453 |
+| `Delete` | 1439 |
+| `Create` | 1344 |
+| `Update` | 1099 |
 | `Put` | 346 |
-| `Start` | 232 |
+| `Start` | 233 |
 | `Tag` | 192 |
 | `Untag` | 190 |
 
