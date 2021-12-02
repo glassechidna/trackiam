@@ -64,6 +64,7 @@ The following table summarises the AWS APIs.
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
+| [`networkmanager`](services/networkmanager.yml) | 76 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
 | [`frauddetector`](services/frauddetector.yml) | 66 | 0 | 0 |
@@ -112,7 +113,6 @@ The following table summarises the AWS APIs.
 | [`workspaces-web`](services/workspaces-web.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 43 | 12 | 0 |
-| [`networkmanager`](services/networkmanager.yml) | 43 | 0 | 33 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
 | [`appsync`](services/appsync.yml) | 41 | 0 | 2 |
@@ -231,6 +231,7 @@ The following table summarises the AWS APIs.
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`fis`](services/fis.yml) | 14 | 0 | 3 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
+| [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`translate`](services/translate.yml) | 14 | 0 | 0 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 13 | 1 | 0 |
@@ -305,7 +306,6 @@ The following table summarises the AWS APIs.
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`connect-campaigns`](services/connect-campaigns.yml) | 0 | 0 | 18 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
-| [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 0 | 0 | 17 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 13 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
