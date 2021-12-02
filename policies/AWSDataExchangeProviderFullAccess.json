@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDataExchangeProviderFullAccess",
   "CreateDate": "2019-11-13T19:27:55Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MQSUGZZPZ",
   "PolicyName": "AWSDataExchangeProviderFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-11-29T23:01:23Z",
+    "CreateDate": "2021-12-02T16:12:19Z",
     "Document": {
       "Statement": [
         {
@@ -87,6 +87,13 @@
         },
         {
           "Action": [
+            "apigateway:GET"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "aws-marketplace:AcceptAgreementApprovalRequest",
             "aws-marketplace:CancelChangeSet",
             "aws-marketplace:DescribeChangeSet",
@@ -153,7 +160,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2021-11-29T23:01:23Z"
+  "UpdateDate": "2021-12-02T16:12:19Z"
 }
