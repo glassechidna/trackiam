@@ -8,6 +8,7 @@ Actions:
   - Name: ec2:AdvertiseByoipCidr
   - Name: ec2:AllocateAddress
   - Name: ec2:AllocateHosts
+  - Name: ec2:AllocateIpamPoolCidr
   - Name: ec2:ApplySecurityGroupsToClientVpnTargetNetwork
   - Name: ec2:AssignIpv6Addresses
   - Name: ec2:AssignPrivateIpAddresses
@@ -62,6 +63,9 @@ Actions:
   - Name: ec2:CreateInstanceEventWindow
   - Name: ec2:CreateInstanceExportTask
   - Name: ec2:CreateInternetGateway
+  - Name: ec2:CreateIpam
+  - Name: ec2:CreateIpamPool
+  - Name: ec2:CreateIpamScope
   - Name: ec2:CreateKeyPair
   - Name: ec2:CreateLaunchTemplate
   - Name: ec2:CreateLaunchTemplateVersion
@@ -71,10 +75,12 @@ Actions:
   - Name: ec2:CreateNatGateway
   - Name: ec2:CreateNetworkAcl
   - Name: ec2:CreateNetworkAclEntry
+  - Name: ec2:CreateNetworkInsightsAccessScope
   - Name: ec2:CreateNetworkInsightsPath
   - Name: ec2:CreateNetworkInterface
   - Name: ec2:CreateNetworkInterfacePermission
   - Name: ec2:CreatePlacementGroup
+  - Name: ec2:CreatePublicIpv4Pool
   - Name: ec2:CreateReplaceRootVolumeTask
   - Name: ec2:CreateReservedInstancesListing
   - Name: ec2:CreateRestoreImageTask
@@ -121,6 +127,9 @@ Actions:
   - Name: ec2:DeleteFpgaImage
   - Name: ec2:DeleteInstanceEventWindow
   - Name: ec2:DeleteInternetGateway
+  - Name: ec2:DeleteIpam
+  - Name: ec2:DeleteIpamPool
+  - Name: ec2:DeleteIpamScope
   - Name: ec2:DeleteKeyPair
   - Name: ec2:DeleteLaunchTemplate
   - Name: ec2:DeleteLaunchTemplateVersions
@@ -130,11 +139,14 @@ Actions:
   - Name: ec2:DeleteNatGateway
   - Name: ec2:DeleteNetworkAcl
   - Name: ec2:DeleteNetworkAclEntry
+  - Name: ec2:DeleteNetworkInsightsAccessScope
+  - Name: ec2:DeleteNetworkInsightsAccessScopeAnalysis
   - Name: ec2:DeleteNetworkInsightsAnalysis
   - Name: ec2:DeleteNetworkInsightsPath
   - Name: ec2:DeleteNetworkInterface
   - Name: ec2:DeleteNetworkInterfacePermission
   - Name: ec2:DeletePlacementGroup
+  - Name: ec2:DeletePublicIpv4Pool
   - Name: ec2:DeleteQueuedReservedInstances
   - Name: ec2:DeleteRoute
   - Name: ec2:DeleteRouteTable
@@ -167,6 +179,8 @@ Actions:
   - Name: ec2:DeleteVpnConnectionRoute
   - Name: ec2:DeleteVpnGateway
   - Name: ec2:DeprovisionByoipCidr
+  - Name: ec2:DeprovisionIpamPoolCidr
+  - Name: ec2:DeprovisionPublicIpv4PoolCidr
   - Name: ec2:DeregisterImage
   - Name: ec2:DeregisterInstanceEventNotificationAttributes
   - Name: ec2:DeregisterTransitGatewayMulticastGroupMembers
@@ -221,6 +235,9 @@ Actions:
   - Name: ec2:DescribeInstanceTypes
   - Name: ec2:DescribeInstances
   - Name: ec2:DescribeInternetGateways
+  - Name: ec2:DescribeIpamPools
+  - Name: ec2:DescribeIpamScopes
+  - Name: ec2:DescribeIpams
   - Name: ec2:DescribeIpv6Pools
   - Name: ec2:DescribeKeyPairs
   - Name: ec2:DescribeLaunchTemplateVersions
@@ -235,6 +252,8 @@ Actions:
   - Name: ec2:DescribeMovingAddresses
   - Name: ec2:DescribeNatGateways
   - Name: ec2:DescribeNetworkAcls
+  - Name: ec2:DescribeNetworkInsightsAccessScopeAnalyses
+  - Name: ec2:DescribeNetworkInsightsAccessScopes
   - Name: ec2:DescribeNetworkInsightsAnalyses
   - Name: ec2:DescribeNetworkInsightsPaths
   - Name: ec2:DescribeNetworkInterfaceAttribute
@@ -257,6 +276,7 @@ Actions:
   - Name: ec2:DescribeSecurityGroupRules
   - Name: ec2:DescribeSecurityGroups
   - Name: ec2:DescribeSnapshotAttribute
+  - Name: ec2:DescribeSnapshotTierStatus
   - Name: ec2:DescribeSnapshots
   - Name: ec2:DescribeSpotDatafeedSubscription
   - Name: ec2:DescribeSpotFleetInstances
@@ -305,6 +325,7 @@ Actions:
   - Name: ec2:DisableEbsEncryptionByDefault
   - Name: ec2:DisableFastSnapshotRestores
   - Name: ec2:DisableImageDeprecation
+  - Name: ec2:DisableIpamOrganizationAdminAccount
   - Name: ec2:DisableSerialConsoleAccess
   - Name: ec2:DisableTransitGatewayRouteTablePropagation
   - Name: ec2:DisableVgwRoutePropagation
@@ -324,6 +345,7 @@ Actions:
   - Name: ec2:EnableEbsEncryptionByDefault
   - Name: ec2:EnableFastSnapshotRestores
   - Name: ec2:EnableImageDeprecation
+  - Name: ec2:EnableIpamOrganizationAdminAccount
   - Name: ec2:EnableSerialConsoleAccess
   - Name: ec2:EnableTransitGatewayRouteTablePropagation
   - Name: ec2:EnableVgwRoutePropagation
@@ -346,12 +368,20 @@ Actions:
   - Name: ec2:GetFlowLogsIntegrationTemplate
   - Name: ec2:GetGroupsForCapacityReservation
   - Name: ec2:GetHostReservationPurchasePreview
+  - Name: ec2:GetInstanceTypesFromInstanceRequirements
+  - Name: ec2:GetIpamAddressHistory
+  - Name: ec2:GetIpamPoolAllocations
+  - Name: ec2:GetIpamPoolCidrs
+  - Name: ec2:GetIpamResourceCidrs
   - Name: ec2:GetLaunchTemplateData
   - Name: ec2:GetManagedPrefixListAssociations
   - Name: ec2:GetManagedPrefixListEntries
+  - Name: ec2:GetNetworkInsightsAccessScopeAnalysisFindings
+  - Name: ec2:GetNetworkInsightsAccessScopeContent
   - Name: ec2:GetPasswordData
   - Name: ec2:GetReservedInstancesExchangeQuote
   - Name: ec2:GetSerialConsoleAccessStatus
+  - Name: ec2:GetSpotPlacementScores
   - Name: ec2:GetSubnetCidrReservations
   - Name: ec2:GetTransitGatewayAttachmentPropagations
   - Name: ec2:GetTransitGatewayMulticastDomainAssociations
@@ -366,6 +396,7 @@ Actions:
   - Name: ec2:ImportKeyPair
   - Name: ec2:ImportSnapshot
   - Name: ec2:ImportVolume
+  - Name: ec2:ListSnapshotsInRecycleBin
   - Name: ec2:ModifyAddressAttribute
   - Name: ec2:ModifyAvailabilityZoneGroup
   - Name: ec2:ModifyCapacityReservation
@@ -386,12 +417,17 @@ Actions:
   - Name: ec2:ModifyInstanceEventWindow
   - Name: ec2:ModifyInstanceMetadataOptions
   - Name: ec2:ModifyInstancePlacement
+  - Name: ec2:ModifyIpam
+  - Name: ec2:ModifyIpamPool
+  - Name: ec2:ModifyIpamResourceCidr
+  - Name: ec2:ModifyIpamScope
   - Name: ec2:ModifyLaunchTemplate
   - Name: ec2:ModifyManagedPrefixList
   - Name: ec2:ModifyNetworkInterfaceAttribute
   - Name: ec2:ModifyReservedInstances
   - Name: ec2:ModifySecurityGroupRules
   - Name: ec2:ModifySnapshotAttribute
+  - Name: ec2:ModifySnapshotTier
   - Name: ec2:ModifySpotFleetRequest
   - Name: ec2:ModifySubnetAttribute
   - Name: ec2:ModifyTrafficMirrorFilterNetworkServices
@@ -415,7 +451,10 @@ Actions:
   - Name: ec2:ModifyVpnTunnelOptions
   - Name: ec2:MonitorInstances
   - Name: ec2:MoveAddressToVpc
+  - Name: ec2:MoveByoipCidrToIpam
   - Name: ec2:ProvisionByoipCidr
+  - Name: ec2:ProvisionIpamPoolCidr
+  - Name: ec2:ProvisionPublicIpv4PoolCidr
   - Name: ec2:PurchaseHostReservation
   - Name: ec2:PurchaseReservedInstancesOffering
   - Name: ec2:PurchaseScheduledInstances
@@ -431,6 +470,7 @@ Actions:
   - Name: ec2:RejectVpcPeeringConnection
   - Name: ec2:ReleaseAddress
   - Name: ec2:ReleaseHosts
+  - Name: ec2:ReleaseIpamPoolAllocation
   - Name: ec2:ReplaceIamInstanceProfileAssociation
   - Name: ec2:ReplaceNetworkAclAssociation
   - Name: ec2:ReplaceNetworkAclEntry
@@ -449,6 +489,8 @@ Actions:
   - Name: ec2:ResetSnapshotAttribute
   - Name: ec2:RestoreAddressToClassic
   - Name: ec2:RestoreManagedPrefixListVersion
+  - Name: ec2:RestoreSnapshotFromRecycleBin
+  - Name: ec2:RestoreSnapshotTier
   - Name: ec2:RevokeClientVpnIngress
   - Name: ec2:RevokeSecurityGroupEgress
   - Name: ec2:RevokeSecurityGroupIngress
@@ -459,6 +501,7 @@ Actions:
   - Name: ec2:SearchTransitGatewayRoutes
   - Name: ec2:SendDiagnosticInterrupt
   - Name: ec2:StartInstances
+  - Name: ec2:StartNetworkInsightsAccessScopeAnalysis
   - Name: ec2:StartNetworkInsightsAnalysis
   - Name: ec2:StartVpcEndpointServicePrivateDnsVerification
   - Name: ec2:StopInstances
@@ -475,47 +518,4 @@ Actions:
   - Name: ec2:SendSpotInstanceInterruptions
 
   # APIs without an IAM action
-  - Name: ec2:AllocateIpamPoolCidr
-  - Name: ec2:CreateIpam
-  - Name: ec2:CreateIpamPool
-  - Name: ec2:CreateIpamScope
-  - Name: ec2:CreateNetworkInsightsAccessScope
-  - Name: ec2:CreatePublicIpv4Pool
-  - Name: ec2:DeleteIpam
-  - Name: ec2:DeleteIpamPool
-  - Name: ec2:DeleteIpamScope
-  - Name: ec2:DeleteNetworkInsightsAccessScope
-  - Name: ec2:DeleteNetworkInsightsAccessScopeAnalysis
-  - Name: ec2:DeletePublicIpv4Pool
-  - Name: ec2:DeprovisionIpamPoolCidr
-  - Name: ec2:DeprovisionPublicIpv4PoolCidr
-  - Name: ec2:DescribeIpamPools
-  - Name: ec2:DescribeIpamScopes
-  - Name: ec2:DescribeIpams
-  - Name: ec2:DescribeNetworkInsightsAccessScopeAnalyses
-  - Name: ec2:DescribeNetworkInsightsAccessScopes
-  - Name: ec2:DescribeSnapshotTierStatus
-  - Name: ec2:DisableIpamOrganizationAdminAccount
-  - Name: ec2:EnableIpamOrganizationAdminAccount
-  - Name: ec2:GetInstanceTypesFromInstanceRequirements
-  - Name: ec2:GetIpamAddressHistory
-  - Name: ec2:GetIpamPoolAllocations
-  - Name: ec2:GetIpamPoolCidrs
-  - Name: ec2:GetIpamResourceCidrs
-  - Name: ec2:GetNetworkInsightsAccessScopeAnalysisFindings
-  - Name: ec2:GetNetworkInsightsAccessScopeContent
-  - Name: ec2:GetSpotPlacementScores
-  - Name: ec2:ListSnapshotsInRecycleBin
-  - Name: ec2:ModifyIpam
-  - Name: ec2:ModifyIpamPool
-  - Name: ec2:ModifyIpamResourceCidr
-  - Name: ec2:ModifyIpamScope
   - Name: ec2:ModifyPrivateDnsNameOptions
-  - Name: ec2:ModifySnapshotTier
-  - Name: ec2:MoveByoipCidrToIpam
-  - Name: ec2:ProvisionIpamPoolCidr
-  - Name: ec2:ProvisionPublicIpv4PoolCidr
-  - Name: ec2:ReleaseIpamPoolAllocation
-  - Name: ec2:RestoreSnapshotFromRecycleBin
-  - Name: ec2:RestoreSnapshotTier
-  - Name: ec2:StartNetworkInsightsAccessScopeAnalysis
