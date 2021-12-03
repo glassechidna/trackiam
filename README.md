@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 305
-* Unique actions: 12401
+* Unique actions: 12402
 * Managed policies: 916
 
 Most common managed policy name prefixes:
@@ -44,7 +44,7 @@ The following table summarises the AWS APIs.
 | [`glue`](services/glue.yml) | 147 | 19 | 2 |
 | [`rds`](services/rds.yml) | 141 | 0 | 5 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
-| [`ssm`](services/ssm.yml) | 134 | 1 | 7 |
+| [`ssm`](services/ssm.yml) | 134 | 1 | 8 |
 | [`connect`](services/connect.yml) | 126 | 3 | 4 |
 | [`quicksight`](services/quicksight.yml) | 115 | 0 | 23 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 113 | 5 | 1 |
@@ -251,11 +251,11 @@ The following table summarises the AWS APIs.
 | [`kafkaconnect`](services/kafkaconnect.yml) | 11 | 0 | 0 |
 | [`grafana`](services/grafana.yml) | 11 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
+| [`textract`](services/textract.yml) | 10 | 0 | 0 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`rum`](services/rum.yml) | 10 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
-| [`textract`](services/textract.yml) | 9 | 1 | 0 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`budgets`](services/budgets.yml) | 8 | 14 | 2 |
