@@ -1,15 +1,40 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEMRContainersServiceRolePolicy",
   "CreateDate": "2020-12-09T00:38:19Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4P24YZ52G4",
   "PolicyName": "AmazonEMRContainersServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-12-09T00:38:19Z",
+    "CreateDate": "2021-12-03T19:55:44Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "acm:AddTagsToCertificate",
+            "acm:ImportCertificate"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/emr-container:endpoint:managed-certificate": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "acm:DeleteCertificate"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/emr-container:endpoint:managed-certificate": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "ec2:DescribeRouteTables",
@@ -26,7 +51,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-12-09T00:38:19Z"
+  "UpdateDate": "2021-12-03T19:55:44Z"
 }
