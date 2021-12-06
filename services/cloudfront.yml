@@ -13,6 +13,7 @@ Actions:
   - Name: cloudfront:CreateOriginRequestPolicy
   - Name: cloudfront:CreatePublicKey
   - Name: cloudfront:CreateRealtimeLogConfig
+  - Name: cloudfront:CreateResponseHeadersPolicy
   - Name: cloudfront:CreateStreamingDistribution
   - Name: cloudfront:CreateStreamingDistributionWithTags
   - Name: cloudfront:DeleteCachePolicy
@@ -26,6 +27,7 @@ Actions:
   - Name: cloudfront:DeleteOriginRequestPolicy
   - Name: cloudfront:DeletePublicKey
   - Name: cloudfront:DeleteRealtimeLogConfig
+  - Name: cloudfront:DeleteResponseHeadersPolicy
   - Name: cloudfront:DeleteStreamingDistribution
   - Name: cloudfront:DescribeFunction
   - Name: cloudfront:GetCachePolicy
@@ -48,6 +50,8 @@ Actions:
   - Name: cloudfront:GetPublicKey
   - Name: cloudfront:GetPublicKeyConfig
   - Name: cloudfront:GetRealtimeLogConfig
+  - Name: cloudfront:GetResponseHeadersPolicy
+  - Name: cloudfront:GetResponseHeadersPolicyConfig
   - Name: cloudfront:GetStreamingDistribution
   - Name: cloudfront:GetStreamingDistributionConfig
   - Name: cloudfront:ListCachePolicies
@@ -58,6 +62,7 @@ Actions:
   - Name: cloudfront:ListDistributionsByKeyGroup
   - Name: cloudfront:ListDistributionsByOriginRequestPolicyId
   - Name: cloudfront:ListDistributionsByRealtimeLogConfig
+  - Name: cloudfront:ListDistributionsByResponseHeadersPolicyId
   - Name: cloudfront:ListDistributionsByWebACLId
   - Name: cloudfront:ListFieldLevelEncryptionConfigs
   - Name: cloudfront:ListFieldLevelEncryptionProfiles
@@ -67,6 +72,7 @@ Actions:
   - Name: cloudfront:ListOriginRequestPolicies
   - Name: cloudfront:ListPublicKeys
   - Name: cloudfront:ListRealtimeLogConfigs
+  - Name: cloudfront:ListResponseHeadersPolicies
   - Name: cloudfront:ListStreamingDistributions
   - Name: cloudfront:ListTagsForResource
   - Name: cloudfront:PublishFunction
@@ -83,16 +89,8 @@ Actions:
   - Name: cloudfront:UpdateOriginRequestPolicy
   - Name: cloudfront:UpdatePublicKey
   - Name: cloudfront:UpdateRealtimeLogConfig
+  - Name: cloudfront:UpdateResponseHeadersPolicy
   - Name: cloudfront:UpdateStreamingDistribution
 
   # actions with no corresponding API
   - Name: cloudfront:ListDistributionsByLambdaFunction
-
-  # APIs without an IAM action
-  - Name: cloudfront:CreateResponseHeadersPolicy
-  - Name: cloudfront:DeleteResponseHeadersPolicy
-  - Name: cloudfront:GetResponseHeadersPolicy
-  - Name: cloudfront:GetResponseHeadersPolicyConfig
-  - Name: cloudfront:ListDistributionsByResponseHeadersPolicyId
-  - Name: cloudfront:ListResponseHeadersPolicies
-  - Name: cloudfront:UpdateResponseHeadersPolicy
