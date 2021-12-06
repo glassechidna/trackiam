@@ -133,12 +133,12 @@ The following table summarises the AWS APIs.
 | [`datasync`](services/datasync.yml) | 35 | 3 | 0 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
+| [`appconfig`](services/appconfig.yml) | 35 | 0 | 0 |
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
 | [`athena`](services/athena.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`shield`](services/shield.yml) | 33 | 3 | 0 |
 | [`memorydb`](services/memorydb.yml) | 33 | 2 | 2 |
-| [`appconfig`](services/appconfig.yml) | 33 | 2 | 0 |
 | [`panorama`](services/panorama.yml) | 33 | 0 | 31 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`profile`](services/profile.yml) | 33 | 0 | 0 |
