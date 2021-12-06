@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForImageBuilder",
   "CreateDate": "2019-11-29T22:02:13Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NE22WISEW",
   "PolicyName": "AWSServiceRoleForImageBuilder",
   "PolicyVersion": {
-    "CreateDate": "2021-08-11T18:07:10Z",
+    "CreateDate": "2021-12-06T20:55:41Z",
     "Document": {
       "Statement": [
         {
@@ -26,7 +26,8 @@
             "StringEquals": {
               "iam:PassedToService": [
                 "ec2.amazonaws.com",
-                "ec2.amazonaws.com.cn"
+                "ec2.amazonaws.com.cn",
+                "vmie.amazonaws.com"
               ]
             }
           },
@@ -50,6 +51,18 @@
         },
         {
           "Action": [
+            "ec2:CancelExportTask"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:export-image-task/*"
+        },
+        {
+          "Action": [
             "ec2:CreateTags"
           ],
           "Condition": {
@@ -59,6 +72,18 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:ExportImage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::image/*"
         },
         {
           "Action": [
@@ -166,7 +191,9 @@
             "ec2:CreateImage",
             "ec2:CreateLaunchTemplate",
             "ec2:DeregisterImage",
+            "ec2:DescribeExportImageTasks",
             "ec2:DescribeImages",
+            "ec2:DescribeImportImageTasks",
             "ec2:DescribeInstanceAttribute",
             "ec2:DescribeInstanceStatus",
             "ec2:DescribeInstanceTypeOfferings",
@@ -193,7 +220,17 @@
             "ec2:CreateTags"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*::image/*"
+          "Resource": [
+            "arn:aws:ec2:*:*:export-image-task/*",
+            "arn:aws:ec2:*::image/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:ExportImage"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:export-image-task/*"
         },
         {
           "Action": [
@@ -264,7 +301,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2021-08-11T18:07:10Z"
+  "UpdateDate": "2021-12-06T20:55:41Z"
 }
