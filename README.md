@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 305
-* Unique actions: 12402
+* Unique actions: 12411
 * Managed policies: 916
 
 Most common managed policy name prefixes:
@@ -101,7 +101,7 @@ The following table summarises the AWS APIs.
 | [`imagebuilder`](services/imagebuilder.yml) | 49 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 12 |
 | [`license-manager`](services/license-manager.yml) | 48 | 0 | 0 |
-| [`geo`](services/geo.yml) | 47 | 3 | 0 |
+| [`geo`](services/geo.yml) | 47 | 4 | 0 |
 | [`kms`](services/kms.yml) | 47 | 1 | 3 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`nimble`](services/nimble.yml) | 47 | 0 | 2 |
@@ -114,8 +114,8 @@ The following table summarises the AWS APIs.
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 43 | 12 | 0 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
+| [`appsync`](services/appsync.yml) | 41 | 8 | 2 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
-| [`appsync`](services/appsync.yml) | 41 | 0 | 2 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 1 |
 | [`sns`](services/sns.yml) | 39 | 1 | 0 |
 | [`wellarchitected`](services/wellarchitected.yml) | 39 | 0 | 0 |
@@ -346,12 +346,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1860 |
-| `Get` | 1656 |
+| `List` | 1861 |
+| `Get` | 1658 |
 | `Describe` | 1453 |
-| `Delete` | 1444 |
-| `Create` | 1349 |
-| `Update` | 1101 |
+| `Delete` | 1445 |
+| `Create` | 1350 |
+| `Update` | 1102 |
 | `Put` | 348 |
 | `Start` | 233 |
 | `Tag` | 192 |
