@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 305
-* Unique actions: 12411
+* Unique actions: 12420
 * Managed policies: 916
 
 Most common managed policy name prefixes:
@@ -203,11 +203,11 @@ The following table summarises the AWS APIs.
 | [`qldb`](services/qldb.yml) | 21 | 0 | 13 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`voiceid`](services/voiceid.yml) | 21 | 0 | 2 |
-| [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 1 | 0 |
+| [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 6 | 0 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 20 | 0 | 6 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 20 | 0 | 1 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
-| [`lookoutvision`](services/lookoutvision.yml) | 19 | 0 | 3 |
+| [`lookoutvision`](services/lookoutvision.yml) | 19 | 3 | 3 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 19 | 0 | 0 |
@@ -245,7 +245,7 @@ The following table summarises the AWS APIs.
 | [`honeycode`](services/honeycode.yml) | 12 | 0 | 14 |
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
-| [`outposts`](services/outposts.yml) | 11 | 11 | 0 |
+| [`outposts`](services/outposts.yml) | 11 | 12 | 0 |
 | [`iot`](services/iot.yml) | 11 | 0 | 242 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 28 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 11 | 0 | 0 |
@@ -346,14 +346,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1861 |
+| `List` | 1863 |
 | `Get` | 1658 |
-| `Describe` | 1453 |
+| `Describe` | 1455 |
 | `Delete` | 1445 |
 | `Create` | 1350 |
-| `Update` | 1102 |
+| `Update` | 1103 |
 | `Put` | 348 |
-| `Start` | 233 |
+| `Start` | 235 |
 | `Tag` | 192 |
 | `Untag` | 190 |
 
