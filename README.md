@@ -188,6 +188,7 @@ The following table summarises the AWS APIs.
 | [`ram`](services/ram.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 23 | 19 | 1 |
+| [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 23 | 0 | 1 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 23 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 0 | 0 |
@@ -205,7 +206,6 @@ The following table summarises the AWS APIs.
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`voiceid`](services/voiceid.yml) | 21 | 0 | 2 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 6 | 0 |
-| [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 20 | 3 | 1 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 20 | 0 | 6 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
