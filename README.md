@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 305
-* Unique actions: 12422
+* Unique actions: 12426
 * Managed policies: 916
 
 Most common managed policy name prefixes:
@@ -154,15 +154,15 @@ The following table summarises the AWS APIs.
 | [`wisdom`](services/wisdom.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`ce`](services/ce.yml) | 30 | 0 | 10 |
+| [`route53domains`](services/route53domains.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`inspector2`](services/inspector2.yml) | 30 | 0 | 0 |
+| [`network-firewall`](services/network-firewall.yml) | 29 | 1 | 0 |
 | [`drs`](services/drs.yml) | 29 | 0 | 38 |
 | [`mgn`](services/mgn.yml) | 29 | 0 | 32 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
-| [`network-firewall`](services/network-firewall.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`kinesis`](services/kinesis.yml) | 28 | 1 | 0 |
-| [`route53domains`](services/route53domains.yml) | 28 | 0 | 2 |
 | [`dataexchange`](services/dataexchange.yml) | 28 | 0 | 2 |
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
@@ -205,8 +205,8 @@ The following table summarises the AWS APIs.
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`voiceid`](services/voiceid.yml) | 21 | 0 | 2 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 6 | 0 |
+| [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 20 | 3 | 1 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 20 | 0 | 6 |
-| [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 20 | 0 | 1 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
@@ -346,14 +346,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1864 |
+| `List` | 1865 |
 | `Get` | 1658 |
-| `Describe` | 1455 |
+| `Describe` | 1456 |
 | `Delete` | 1446 |
 | `Create` | 1350 |
 | `Update` | 1103 |
 | `Put` | 348 |
 | `Start` | 235 |
-| `Tag` | 192 |
-| `Untag` | 190 |
+| `Tag` | 193 |
+| `Untag` | 191 |
 
