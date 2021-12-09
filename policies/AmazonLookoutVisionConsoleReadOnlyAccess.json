@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLookoutVisionConsoleReadOnlyAccess",
   "CreateDate": "2021-05-11T19:32:02Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CE2DP5IDX",
   "PolicyName": "AmazonLookoutVisionConsoleReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-05-11T19:32:02Z",
+    "CreateDate": "2021-12-09T02:46:29Z",
     "Document": {
       "Statement": [
         {
@@ -23,9 +23,11 @@
           "Action": [
             "lookoutvision:DescribeDataset",
             "lookoutvision:DescribeModel",
+            "lookoutvision:DescribeModelPackagingJob",
             "lookoutvision:DescribeProject",
             "lookoutvision:DescribeTrialDetection",
             "lookoutvision:ListDatasetEntries",
+            "lookoutvision:ListModelPackagingJobs",
             "lookoutvision:ListModels",
             "lookoutvision:ListProjects",
             "lookoutvision:ListTagsForResource",
@@ -56,7 +58,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-05-11T19:32:02Z"
+  "UpdateDate": "2021-12-09T02:46:29Z"
 }
