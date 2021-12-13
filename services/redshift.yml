@@ -8,6 +8,7 @@ Actions:
   - Name: redshift:BatchModifyClusterSnapshots
   - Name: redshift:CancelResize
   - Name: redshift:CopyClusterSnapshot
+  - Name: redshift:CreateAuthenticationProfile
   - Name: redshift:CreateCluster
   - Name: redshift:CreateClusterParameterGroup
   - Name: redshift:CreateClusterSecurityGroup
@@ -22,6 +23,7 @@ Actions:
   - Name: redshift:CreateTags
   - Name: redshift:CreateUsageLimit
   - Name: redshift:DeauthorizeDataShare
+  - Name: redshift:DeleteAuthenticationProfile
   - Name: redshift:DeleteCluster
   - Name: redshift:DeleteClusterParameterGroup
   - Name: redshift:DeleteClusterSecurityGroup
@@ -36,6 +38,7 @@ Actions:
   - Name: redshift:DeleteTags
   - Name: redshift:DeleteUsageLimit
   - Name: redshift:DescribeAccountAttributes
+  - Name: redshift:DescribeAuthenticationProfiles
   - Name: redshift:DescribeClusterDbRevisions
   - Name: redshift:DescribeClusterParameterGroups
   - Name: redshift:DescribeClusterParameters
@@ -75,6 +78,7 @@ Actions:
   - Name: redshift:GetClusterCredentials
   - Name: redshift:GetReservedNodeExchangeOfferings
   - Name: redshift:ModifyAquaConfiguration
+  - Name: redshift:ModifyAuthenticationProfile
   - Name: redshift:ModifyCluster
   - Name: redshift:ModifyClusterDbRevision
   - Name: redshift:ModifyClusterIamRoles
@@ -124,18 +128,14 @@ Actions:
   # APIs without an IAM action
   - Name: redshift:AddPartner
   - Name: redshift:AuthorizeEndpointAccess
-  - Name: redshift:CreateAuthenticationProfile
   - Name: redshift:CreateEndpointAccess
-  - Name: redshift:DeleteAuthenticationProfile
   - Name: redshift:DeleteEndpointAccess
   - Name: redshift:DeletePartner
-  - Name: redshift:DescribeAuthenticationProfiles
   - Name: redshift:DescribeEndpointAccess
   - Name: redshift:DescribeEndpointAuthorization
   - Name: redshift:DescribePartners
   - Name: redshift:DescribeReservedNodeExchangeStatus
   - Name: redshift:GetReservedNodeExchangeConfigurationOptions
-  - Name: redshift:ModifyAuthenticationProfile
   - Name: redshift:ModifyEndpointAccess
   - Name: redshift:RevokeEndpointAccess
   - Name: redshift:UpdatePartnerStatus
