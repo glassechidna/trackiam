@@ -202,6 +202,7 @@ The following table summarises the AWS APIs.
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 22 | 0 | 0 |
+| [`outposts`](services/outposts.yml) | 21 | 2 | 0 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 13 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`voiceid`](services/voiceid.yml) | 21 | 0 | 2 |
@@ -245,7 +246,6 @@ The following table summarises the AWS APIs.
 | [`honeycode`](services/honeycode.yml) | 12 | 0 | 14 |
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
-| [`outposts`](services/outposts.yml) | 11 | 12 | 0 |
 | [`iot`](services/iot.yml) | 11 | 0 | 242 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 28 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 11 | 0 | 0 |
