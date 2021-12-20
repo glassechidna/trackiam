@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 305
-* Unique actions: 12428
+* Unique actions: 12429
 * Managed policies: 918
 
 Most common managed policy name prefixes:
@@ -81,6 +81,7 @@ The following table summarises the AWS APIs.
 | [`ds`](services/ds.yml) | 62 | 1 | 6 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
+| [`proton`](services/proton.yml) | 60 | 7 | 24 |
 | [`personalize`](services/personalize.yml) | 60 | 0 | 0 |
 | [`appstream`](services/appstream.yml) | 58 | 0 | 1 |
 | [`rekognition`](services/rekognition.yml) | 58 | 0 | 0 |
@@ -97,7 +98,6 @@ The following table summarises the AWS APIs.
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 22 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
-| [`proton`](services/proton.yml) | 49 | 18 | 23 |
 | [`imagebuilder`](services/imagebuilder.yml) | 49 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 12 |
 | [`license-manager`](services/license-manager.yml) | 48 | 0 | 0 |
@@ -351,7 +351,7 @@ Most common action prefixes:
 | `Describe` | 1457 |
 | `Delete` | 1446 |
 | `Create` | 1350 |
-| `Update` | 1104 |
+| `Update` | 1105 |
 | `Put` | 348 |
 | `Start` | 235 |
 | `Tag` | 193 |

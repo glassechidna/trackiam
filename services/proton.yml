@@ -7,29 +7,39 @@ Actions:
   - Name: proton:CreateEnvironmentAccountConnection
   - Name: proton:CreateEnvironmentTemplate
   - Name: proton:CreateEnvironmentTemplateVersion
+  - Name: proton:CreateRepository
   - Name: proton:CreateService
   - Name: proton:CreateServiceTemplate
   - Name: proton:CreateServiceTemplateVersion
+  - Name: proton:CreateTemplateSyncConfig
   - Name: proton:DeleteEnvironment
   - Name: proton:DeleteEnvironmentAccountConnection
   - Name: proton:DeleteEnvironmentTemplate
   - Name: proton:DeleteEnvironmentTemplateVersion
+  - Name: proton:DeleteRepository
   - Name: proton:DeleteService
   - Name: proton:DeleteServiceTemplate
   - Name: proton:DeleteServiceTemplateVersion
+  - Name: proton:DeleteTemplateSyncConfig
   - Name: proton:GetAccountSettings
   - Name: proton:GetEnvironment
   - Name: proton:GetEnvironmentAccountConnection
   - Name: proton:GetEnvironmentTemplate
   - Name: proton:GetEnvironmentTemplateVersion
+  - Name: proton:GetRepository
+  - Name: proton:GetRepositorySyncStatus
   - Name: proton:GetService
   - Name: proton:GetServiceInstance
   - Name: proton:GetServiceTemplate
   - Name: proton:GetServiceTemplateVersion
+  - Name: proton:GetTemplateSyncConfig
+  - Name: proton:GetTemplateSyncStatus
   - Name: proton:ListEnvironmentAccountConnections
   - Name: proton:ListEnvironmentTemplateVersions
   - Name: proton:ListEnvironmentTemplates
   - Name: proton:ListEnvironments
+  - Name: proton:ListRepositories
+  - Name: proton:ListRepositorySyncDefinitions
   - Name: proton:ListServiceInstances
   - Name: proton:ListServiceTemplateVersions
   - Name: proton:ListServiceTemplates
@@ -48,6 +58,7 @@ Actions:
   - Name: proton:UpdateServicePipeline
   - Name: proton:UpdateServiceTemplate
   - Name: proton:UpdateServiceTemplateVersion
+  - Name: proton:UpdateTemplateSyncConfig
 
   # actions with no corresponding API
   - Name: proton:CreateEnvironmentTemplateMajorVersion
@@ -71,25 +82,15 @@ Actions:
   - Name: proton:UpdateAccountRoles
   - Name: proton:UpdateEnvironmentTemplateMajorVersion
   - Name: proton:UpdateEnvironmentTemplateMinorVersion
+  - Name: proton:UpdateRepository
   - Name: proton:UpdateServiceTemplateMajorVersion
   - Name: proton:UpdateServiceTemplateMinorVersion
 
   # APIs without an IAM action
-  - Name: proton:CreateRepository
-  - Name: proton:CreateTemplateSyncConfig
-  - Name: proton:DeleteRepository
-  - Name: proton:DeleteTemplateSyncConfig
-  - Name: proton:GetRepository
-  - Name: proton:GetRepositorySyncStatus
-  - Name: proton:GetTemplateSyncConfig
-  - Name: proton:GetTemplateSyncStatus
   - Name: proton:ListEnvironmentOutputs
   - Name: proton:ListEnvironmentProvisionedResources
-  - Name: proton:ListRepositories
-  - Name: proton:ListRepositorySyncDefinitions
   - Name: proton:ListServiceInstanceOutputs
   - Name: proton:ListServiceInstanceProvisionedResources
   - Name: proton:ListServicePipelineOutputs
   - Name: proton:ListServicePipelineProvisionedResources
   - Name: proton:NotifyResourceDeploymentStatusChange
-  - Name: proton:UpdateTemplateSyncConfig
