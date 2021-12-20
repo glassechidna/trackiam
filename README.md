@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 305
-* Unique actions: 12429
+* Unique actions: 12432
 * Managed policies: 918
 
 Most common managed policy name prefixes:
@@ -98,7 +98,7 @@ The following table summarises the AWS APIs.
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 22 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
-| [`imagebuilder`](services/imagebuilder.yml) | 49 | 0 | 0 |
+| [`imagebuilder`](services/imagebuilder.yml) | 49 | 1 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 12 |
 | [`license-manager`](services/license-manager.yml) | 48 | 0 | 0 |
 | [`geo`](services/geo.yml) | 47 | 4 | 0 |
@@ -131,7 +131,7 @@ The following table summarises the AWS APIs.
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`fsx`](services/fsx.yml) | 36 | 1 | 4 |
 | [`cloudwatch`](services/cloudwatch.yml) | 36 | 0 | 0 |
-| [`datasync`](services/datasync.yml) | 35 | 3 | 0 |
+| [`datasync`](services/datasync.yml) | 35 | 5 | 0 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 35 | 0 | 0 |
@@ -348,9 +348,9 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1864 |
 | `Get` | 1657 |
-| `Describe` | 1457 |
+| `Describe` | 1458 |
 | `Delete` | 1446 |
-| `Create` | 1350 |
+| `Create` | 1351 |
 | `Update` | 1105 |
 | `Put` | 348 |
 | `Start` | 235 |
