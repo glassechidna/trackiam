@@ -114,6 +114,7 @@ The following table summarises the AWS APIs.
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 43 | 12 | 0 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
+| [`lakeformation`](services/lakeformation.yml) | 42 | 0 | 1 |
 | [`appsync`](services/appsync.yml) | 41 | 8 | 2 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 1 |
@@ -187,7 +188,6 @@ The following table summarises the AWS APIs.
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
 | [`ram`](services/ram.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
-| [`lakeformation`](services/lakeformation.yml) | 23 | 19 | 1 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 23 | 0 | 1 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 23 | 0 | 0 |
