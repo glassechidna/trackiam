@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/ViewOnlyAccess",
   "CreateDate": "2016-11-10T17:20:15Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAID22R6XPJATWOFDK6",
   "PolicyName": "ViewOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-06-11T19:27:03Z",
+    "CreateDate": "2021-12-21T02:53:03Z",
     "Document": {
       "Statement": [
         {
@@ -82,6 +82,7 @@
             "ec2:DescribeAddresses",
             "ec2:DescribeAvailabilityZones",
             "ec2:DescribeBundleTasks",
+            "ec2:DescribeCarrierGateways",
             "ec2:DescribeClassicLinkInstances",
             "ec2:DescribeConversionTasks",
             "ec2:DescribeCustomerGateways",
@@ -96,6 +97,12 @@
             "ec2:DescribeInstance*",
             "ec2:DescribeInternetGateways",
             "ec2:DescribeKeyPairs",
+            "ec2:DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociations",
+            "ec2:DescribeLocalGatewayRouteTableVpcAssociations",
+            "ec2:DescribeLocalGatewayRouteTables",
+            "ec2:DescribeLocalGatewayVirtualInterfaceGroups",
+            "ec2:DescribeLocalGatewayVirtualInterfaces",
+            "ec2:DescribeLocalGateways",
             "ec2:DescribeMovingAddresses",
             "ec2:DescribeNatGateways",
             "ec2:DescribeNetwork*",
@@ -112,6 +119,7 @@
             "ec2:DescribeVolume*",
             "ec2:DescribeVpc*",
             "ec2:DescribeVpnGateways",
+            "ec2:SearchLocalGatewayRoutes",
             "ecr:DescribeRepositories",
             "ecr:ListImages",
             "ecs:Describe*",
@@ -231,7 +239,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2021-06-11T19:27:03Z"
+  "UpdateDate": "2021-12-21T02:53:03Z"
 }
