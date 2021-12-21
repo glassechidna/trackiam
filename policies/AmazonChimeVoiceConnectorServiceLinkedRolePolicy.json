@@ -1,15 +1,24 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonChimeVoiceConnectorServiceLinkedRolePolicy",
   "CreateDate": "2019-09-30T22:16:42Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4GP44ZBY4P",
   "PolicyName": "AmazonChimeVoiceConnectorServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-09-30T22:16:42Z",
+    "CreateDate": "2021-12-21T00:08:05Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "SNS:Publish"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sns:*:*:ChimeVoiceConnector-Streaming*"
+          ]
+        },
         {
           "Action": [
             "chime:GetVoiceConnector*"
@@ -18,12 +27,43 @@
           "Resource": [
             "*"
           ]
+        },
+        {
+          "Action": [
+            "kinesisvideo:CreateStream",
+            "kinesisvideo:DescribeStream",
+            "kinesisvideo:GetDataEndpoint",
+            "kinesisvideo:PutMedia",
+            "kinesisvideo:UpdateDataRetention"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:kinesisvideo:*:*:stream/ChimeVoiceConnector-*"
+          ]
+        },
+        {
+          "Action": [
+            "kinesisvideo:ListStreams"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "sqs:SendMessage"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sqs:*:*:ChimeVoiceConnector-Streaming*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-09-30T22:16:42Z"
+  "UpdateDate": "2021-12-21T00:08:05Z"
 }
