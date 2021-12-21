@@ -130,6 +130,7 @@ The following table summarises the AWS APIs.
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`fsx`](services/fsx.yml) | 36 | 1 | 4 |
+| [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 36 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 35 | 5 | 0 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
@@ -138,7 +139,6 @@ The following table summarises the AWS APIs.
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
 | [`athena`](services/athena.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
-| [`shield`](services/shield.yml) | 33 | 3 | 0 |
 | [`memorydb`](services/memorydb.yml) | 33 | 2 | 2 |
 | [`panorama`](services/panorama.yml) | 33 | 0 | 31 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
@@ -175,6 +175,7 @@ The following table summarises the AWS APIs.
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
 | [`evidently`](services/evidently.yml) | 26 | 6 | 0 |
+| [`lookoutmetrics`](services/lookoutmetrics.yml) | 26 | 0 | 1 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 26 | 0 | 0 |
@@ -182,7 +183,6 @@ The following table summarises the AWS APIs.
 | [`fms`](services/fms.yml) | 26 | 0 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 26 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 25 | 6 | 0 |
-| [`lookoutmetrics`](services/lookoutmetrics.yml) | 25 | 1 | 1 |
 | [`snowball`](services/snowball.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
