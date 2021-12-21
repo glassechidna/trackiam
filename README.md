@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 305
-* Unique actions: 12433
+* Unique actions: 12437
 * Managed policies: 918
 
 Most common managed policy name prefixes:
@@ -68,7 +68,7 @@ The following table summarises the AWS APIs.
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
 | [`frauddetector`](services/frauddetector.yml) | 66 | 0 | 0 |
-| [`workmail`](services/workmail.yml) | 65 | 0 | 51 |
+| [`workmail`](services/workmail.yml) | 65 | 3 | 51 |
 | [`iotsitewise`](services/iotsitewise.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 64 | 1 | 11 |
@@ -182,7 +182,7 @@ The following table summarises the AWS APIs.
 | [`fms`](services/fms.yml) | 26 | 0 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 26 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 25 | 6 | 0 |
-| [`lookoutmetrics`](services/lookoutmetrics.yml) | 25 | 0 | 1 |
+| [`lookoutmetrics`](services/lookoutmetrics.yml) | 25 | 1 | 1 |
 | [`snowball`](services/snowball.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
@@ -346,13 +346,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1864 |
+| `List` | 1865 |
 | `Get` | 1657 |
-| `Describe` | 1458 |
-| `Delete` | 1446 |
+| `Describe` | 1459 |
+| `Delete` | 1447 |
 | `Create` | 1351 |
 | `Update` | 1105 |
-| `Put` | 349 |
+| `Put` | 350 |
 | `Start` | 235 |
 | `Tag` | 193 |
 | `Untag` | 191 |
