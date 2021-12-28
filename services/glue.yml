@@ -11,6 +11,7 @@ Actions:
   - Name: glue:BatchGetTriggers
   - Name: glue:BatchGetWorkflows
   - Name: glue:BatchStopJobRun
+  - Name: glue:BatchUpdatePartition
   - Name: glue:CancelMLTaskRun
   - Name: glue:CheckSchemaVersionValidity
   - Name: glue:CreateClassifier
@@ -21,6 +22,7 @@ Actions:
   - Name: glue:CreateJob
   - Name: glue:CreateMLTransform
   - Name: glue:CreatePartition
+  - Name: glue:CreatePartitionIndex
   - Name: glue:CreateRegistry
   - Name: glue:CreateSchema
   - Name: glue:CreateScript
@@ -30,6 +32,8 @@ Actions:
   - Name: glue:CreateUserDefinedFunction
   - Name: glue:CreateWorkflow
   - Name: glue:DeleteClassifier
+  - Name: glue:DeleteColumnStatisticsForPartition
+  - Name: glue:DeleteColumnStatisticsForTable
   - Name: glue:DeleteConnection
   - Name: glue:DeleteCrawler
   - Name: glue:DeleteDatabase
@@ -37,6 +41,7 @@ Actions:
   - Name: glue:DeleteJob
   - Name: glue:DeleteMLTransform
   - Name: glue:DeletePartition
+  - Name: glue:DeletePartitionIndex
   - Name: glue:DeleteRegistry
   - Name: glue:DeleteResourcePolicy
   - Name: glue:DeleteSchema
@@ -50,6 +55,8 @@ Actions:
   - Name: glue:GetCatalogImportStatus
   - Name: glue:GetClassifier
   - Name: glue:GetClassifiers
+  - Name: glue:GetColumnStatisticsForPartition
+  - Name: glue:GetColumnStatisticsForTable
   - Name: glue:GetConnection
   - Name: glue:GetConnections
   - Name: glue:GetCrawler
@@ -132,6 +139,8 @@ Actions:
   - Name: glue:TagResource
   - Name: glue:UntagResource
   - Name: glue:UpdateClassifier
+  - Name: glue:UpdateColumnStatisticsForPartition
+  - Name: glue:UpdateColumnStatisticsForTable
   - Name: glue:UpdateConnection
   - Name: glue:UpdateCrawler
   - Name: glue:UpdateCrawlerSchedule
@@ -148,26 +157,26 @@ Actions:
   - Name: glue:UpdateWorkflow
 
   # actions with no corresponding API
+  - Name: glue:CancelStatement
+  - Name: glue:CreateSession
+  - Name: glue:DeleteSession
+  - Name: glue:GetSession
+  - Name: glue:GetStatement
+  - Name: glue:ListSessions
+  - Name: glue:ListStatements
   - Name: glue:NotifyEvent
+  - Name: glue:RunStatement
+  - Name: glue:StopSession
   - Name: glue:UseMLTransforms
 
   # APIs without an IAM action
   - Name: glue:BatchGetBlueprints
-  - Name: glue:BatchUpdatePartition
   - Name: glue:CreateBlueprint
-  - Name: glue:CreatePartitionIndex
   - Name: glue:DeleteBlueprint
-  - Name: glue:DeleteColumnStatisticsForPartition
-  - Name: glue:DeleteColumnStatisticsForTable
-  - Name: glue:DeletePartitionIndex
   - Name: glue:GetBlueprint
   - Name: glue:GetBlueprintRun
   - Name: glue:GetBlueprintRuns
-  - Name: glue:GetColumnStatisticsForPartition
-  - Name: glue:GetColumnStatisticsForTable
   - Name: glue:GetPartitionIndexes
   - Name: glue:ListBlueprints
   - Name: glue:StartBlueprintRun
   - Name: glue:UpdateBlueprint
-  - Name: glue:UpdateColumnStatisticsForPartition
-  - Name: glue:UpdateColumnStatisticsForTable
