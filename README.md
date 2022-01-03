@@ -208,6 +208,7 @@ The following table summarises the AWS APIs.
 | [`voiceid`](services/voiceid.yml) | 21 | 0 | 2 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 20 | 6 | 0 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 20 | 0 | 6 |
+| [`detective`](services/detective.yml) | 20 | 0 | 5 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
@@ -225,7 +226,6 @@ The following table summarises the AWS APIs.
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`backup-gateway`](services/backup-gateway.yml) | 16 | 0 | 2 |
 | [`resource-groups`](services/resource-groups.yml) | 16 | 0 | 1 |
-| [`detective`](services/detective.yml) | 15 | 0 | 10 |
 | [`app-integrations`](services/app-integrations.yml) | 15 | 0 | 4 |
 | [`emr-containers`](services/emr-containers.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
