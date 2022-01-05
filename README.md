@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 305
-* Unique actions: 12446
+* Unique actions: 12470
 * Managed policies: 918
 
 Most common managed policy name prefixes:
@@ -36,11 +36,11 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 514 | 1 | 1 |
+| [`ec2`](services/ec2.yml) | 514 | 2 | 1 |
 | [`sagemaker`](services/sagemaker.yml) | 259 | 5 | 5 |
 | [`chime`](services/chime.yml) | 207 | 0 | 51 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
-| [`glue`](services/glue.yml) | 156 | 10 | 11 |
+| [`glue`](services/glue.yml) | 156 | 13 | 11 |
 | [`lightsail`](services/lightsail.yml) | 153 | 0 | 0 |
 | [`rds`](services/rds.yml) | 141 | 0 | 5 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
@@ -83,7 +83,7 @@ The following table summarises the AWS APIs.
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
 | [`proton`](services/proton.yml) | 60 | 7 | 24 |
 | [`personalize`](services/personalize.yml) | 60 | 0 | 0 |
-| [`appstream`](services/appstream.yml) | 58 | 0 | 1 |
+| [`appstream`](services/appstream.yml) | 58 | 7 | 1 |
 | [`rekognition`](services/rekognition.yml) | 58 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
@@ -113,8 +113,8 @@ The following table summarises the AWS APIs.
 | [`workspaces-web`](services/workspaces-web.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`kendra`](services/kendra.yml) | 43 | 12 | 0 |
+| [`lakeformation`](services/lakeformation.yml) | 42 | 2 | 1 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
-| [`lakeformation`](services/lakeformation.yml) | 42 | 0 | 1 |
 | [`appsync`](services/appsync.yml) | 41 | 8 | 2 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 1 |
@@ -214,10 +214,10 @@ The following table summarises the AWS APIs.
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 19 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 19 | 0 | 0 |
+| [`cloudtrail`](services/cloudtrail.yml) | 18 | 11 | 0 |
 | [`appflow`](services/appflow.yml) | 18 | 0 | 6 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 18 | 0 | 0 |
-| [`cloudtrail`](services/cloudtrail.yml) | 18 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 17 | 3 | 0 |
 | [`aps`](services/aps.yml) | 17 | 0 | 16 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
@@ -346,14 +346,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1867 |
-| `Get` | 1659 |
-| `Describe` | 1459 |
-| `Delete` | 1448 |
-| `Create` | 1352 |
-| `Update` | 1105 |
+| `List` | 1870 |
+| `Get` | 1666 |
+| `Describe` | 1461 |
+| `Delete` | 1450 |
+| `Create` | 1354 |
+| `Update` | 1107 |
 | `Put` | 350 |
-| `Start` | 235 |
+| `Start` | 236 |
 | `Tag` | 193 |
 | `Untag` | 191 |
 
