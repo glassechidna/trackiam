@@ -7,6 +7,7 @@ Actions:
   - Name: appstream:CreateAppBlock
   - Name: appstream:CreateApplication
   - Name: appstream:CreateDirectoryConfig
+  - Name: appstream:CreateEntitlement
   - Name: appstream:CreateFleet
   - Name: appstream:CreateImageBuilder
   - Name: appstream:CreateImageBuilderStreamingURL
@@ -18,6 +19,7 @@ Actions:
   - Name: appstream:DeleteAppBlock
   - Name: appstream:DeleteApplication
   - Name: appstream:DeleteDirectoryConfig
+  - Name: appstream:DeleteEntitlement
   - Name: appstream:DeleteFleet
   - Name: appstream:DeleteImage
   - Name: appstream:DeleteImageBuilder
@@ -29,6 +31,7 @@ Actions:
   - Name: appstream:DescribeApplicationFleetAssociations
   - Name: appstream:DescribeApplications
   - Name: appstream:DescribeDirectoryConfigs
+  - Name: appstream:DescribeEntitlements
   - Name: appstream:DescribeFleets
   - Name: appstream:DescribeImageBuilders
   - Name: appstream:DescribeImagePermissions
@@ -45,6 +48,7 @@ Actions:
   - Name: appstream:ExpireSession
   - Name: appstream:ListAssociatedFleets
   - Name: appstream:ListAssociatedStacks
+  - Name: appstream:ListEntitledApplications
   - Name: appstream:ListTagsForResource
   - Name: appstream:StartFleet
   - Name: appstream:StartImageBuilder
@@ -54,18 +58,16 @@ Actions:
   - Name: appstream:UntagResource
   - Name: appstream:UpdateApplication
   - Name: appstream:UpdateDirectoryConfig
+  - Name: appstream:UpdateEntitlement
   - Name: appstream:UpdateFleet
   - Name: appstream:UpdateImagePermissions
   - Name: appstream:UpdateStack
 
   # actions with no corresponding API
+  - Name: appstream:AssociateApplicatonToEntitlement
+  - Name: appstream:DisassociateApplicatonFromEntitlement
   - Name: appstream:Stream
 
   # APIs without an IAM action
   - Name: appstream:AssociateApplicationToEntitlement
-  - Name: appstream:CreateEntitlement
-  - Name: appstream:DeleteEntitlement
-  - Name: appstream:DescribeEntitlements
   - Name: appstream:DisassociateApplicationFromEntitlement
-  - Name: appstream:ListEntitledApplications
-  - Name: appstream:UpdateEntitlement

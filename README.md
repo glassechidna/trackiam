@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 305
-* Unique actions: 12470
+* Unique actions: 12472
 * Managed policies: 918
 
 Most common managed policy name prefixes:
@@ -74,6 +74,7 @@ The following table summarises the AWS APIs.
 | [`cloudformation`](services/cloudformation.yml) | 64 | 1 | 11 |
 | [`route53`](services/route53.yml) | 64 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 63 | 3 | 0 |
+| [`appstream`](services/appstream.yml) | 63 | 2 | 3 |
 | [`es`](services/es.yml) | 63 | 0 | 10 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
@@ -83,7 +84,6 @@ The following table summarises the AWS APIs.
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
 | [`proton`](services/proton.yml) | 60 | 7 | 24 |
 | [`personalize`](services/personalize.yml) | 60 | 0 | 0 |
-| [`appstream`](services/appstream.yml) | 58 | 7 | 1 |
 | [`rekognition`](services/rekognition.yml) | 58 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
