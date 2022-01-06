@@ -1,19 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonMSKFullAccess",
   "CreateDate": "2019-01-14T22:07:52Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJERQQQTWI5OMENTQE",
   "PolicyName": "AmazonMSKFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-11-30T18:04:10Z",
+    "CreateDate": "2022-01-06T21:18:01Z",
     "Document": {
       "Statement": [
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
-            "StringLike": {
+            "StringEquals": {
               "iam:AWSServiceName": "delivery.logs.amazonaws.com"
             }
           },
@@ -23,7 +23,7 @@
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
-            "StringLike": {
+            "StringEquals": {
               "iam:AWSServiceName": "kafka.amazonaws.com"
             }
           },
@@ -109,20 +109,12 @@
             "arn:*:ec2:*:*:subnet/*",
             "arn:*:ec2:*:*:vpc/*"
           ]
-        },
-        {
-          "Action": [
-            "iam:AttachRolePolicy",
-            "iam:PutRolePolicy"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/aws-service-role/kafka.amazonaws.com/AWSServiceRoleForKafka*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2021-11-30T18:04:10Z"
+  "UpdateDate": "2022-01-06T21:18:01Z"
 }
