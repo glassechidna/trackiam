@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 305
-* Unique actions: 12479
+* Unique actions: 12482
 * Managed policies: 918
 
 Most common managed policy name prefixes:
@@ -277,10 +277,10 @@ The following table summarises the AWS APIs.
 | [`identitystore`](services/identitystore.yml) | 4 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`s3-outposts`](services/s3-outposts.yml) | 3 | 0 | 29 |
+| [`pi`](services/pi.yml) | 3 | 0 | 3 |
 | [`account`](services/account.yml) | 3 | 0 | 3 |
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 3 | 0 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
-| [`pi`](services/pi.yml) | 3 | 0 | 0 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 2 | 0 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 2 | 0 | 0 |
@@ -346,8 +346,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1871 |
-| `Get` | 1666 |
+| `List` | 1873 |
+| `Get` | 1667 |
 | `Describe` | 1463 |
 | `Delete` | 1452 |
 | `Create` | 1355 |

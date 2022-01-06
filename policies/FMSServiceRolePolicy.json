@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/FMSServiceRolePolicy",
   "CreateDate": "2018-03-28T23:01:12Z",
-  "DefaultVersionId": "v21",
+  "DefaultVersionId": "v22",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAI62NTGYJB446ACUEA",
   "PolicyName": "FMSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-11-18T19:05:49Z",
+    "CreateDate": "2022-01-06T21:30:04Z",
     "Document": {
       "Statement": [
         {
@@ -56,7 +56,8 @@
           "Condition": {
             "StringEquals": {
               "iam:AWSServiceName": [
-                "network-firewall.amazonaws.com"
+                "network-firewall.amazonaws.com",
+                "shield.amazonaws.com"
               ]
             }
           },
@@ -183,11 +184,13 @@
             "waf-regional:GetWebACL",
             "waf-regional:ListResourcesForWebACL",
             "waf-regional:ListSubscribedRuleGroups",
+            "waf-regional:ListTagsForResource",
             "waf-regional:UpdateWebACL",
             "waf:DeleteWebACL",
             "waf:GetRuleGroup",
             "waf:GetWebACL",
             "waf:ListSubscribedRuleGroups",
+            "waf:ListTagsForResource",
             "waf:UpdateWebACL"
           ],
           "Effect": "Allow",
@@ -314,9 +317,12 @@
             "shield:DescribeEmergencyContactSettings",
             "shield:DescribeProtection",
             "shield:DescribeSubscription",
+            "shield:DisableApplicationLayerAutomaticResponse",
+            "shield:EnableApplicationLayerAutomaticResponse",
             "shield:GetSubscriptionState",
             "shield:ListAttacks",
             "shield:ListProtections",
+            "shield:UpdateApplicationLayerAutomaticResponse",
             "shield:UpdateEmergencyContactSettings"
           ],
           "Effect": "Allow",
@@ -422,6 +428,7 @@
           "Action": [
             "waf-regional:CreateWebACL",
             "waf-regional:GetChangeToken",
+            "waf-regional:GetWebACLForResource",
             "waf:CreateWebACL",
             "waf:GetChangeToken"
           ],
@@ -534,7 +541,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v21"
+    "VersionId": "v22"
   },
-  "UpdateDate": "2021-11-18T19:05:49Z"
+  "UpdateDate": "2022-01-06T21:30:04Z"
 }
