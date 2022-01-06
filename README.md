@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 305
-* Unique actions: 12472
+* Unique actions: 12474
 * Managed policies: 918
 
 Most common managed policy name prefixes:
@@ -58,7 +58,7 @@ The following table summarises the AWS APIs.
 | [`cloudfront`](services/cloudfront.yml) | 92 | 0 | 1 |
 | [`storagegateway`](services/storagegateway.yml) | 89 | 1 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
-| [`iotwireless`](services/iotwireless.yml) | 85 | 0 | 1 |
+| [`iotwireless`](services/iotwireless.yml) | 85 | 2 | 1 |
 | [`s3`](services/s3.yml) | 82 | 58 | 43 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
@@ -346,10 +346,10 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1870 |
+| `List` | 1871 |
 | `Get` | 1666 |
 | `Describe` | 1461 |
-| `Delete` | 1450 |
+| `Delete` | 1451 |
 | `Create` | 1354 |
 | `Update` | 1107 |
 | `Put` | 350 |
