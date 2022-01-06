@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 305
-* Unique actions: 12474
+* Unique actions: 12479
 * Managed policies: 918
 
 Most common managed policy name prefixes:
@@ -51,7 +51,7 @@ The following table summarises the AWS APIs.
 | [`greengrass`](services/greengrass.yml) | 110 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 108 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 105 | 13 | 18 |
-| [`lex`](services/lex.yml) | 101 | 2 | 4 |
+| [`lex`](services/lex.yml) | 101 | 2 | 9 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 1 | 0 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
@@ -348,10 +348,10 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1871 |
 | `Get` | 1666 |
-| `Describe` | 1461 |
-| `Delete` | 1451 |
-| `Create` | 1354 |
-| `Update` | 1107 |
+| `Describe` | 1463 |
+| `Delete` | 1452 |
+| `Create` | 1355 |
+| `Update` | 1108 |
 | `Put` | 350 |
 | `Start` | 236 |
 | `Tag` | 193 |
