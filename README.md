@@ -162,6 +162,7 @@ The following table summarises the AWS APIs.
 | [`drs`](services/drs.yml) | 29 | 0 | 38 |
 | [`mgn`](services/mgn.yml) | 29 | 0 | 32 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
+| [`cloudtrail`](services/cloudtrail.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`kinesis`](services/kinesis.yml) | 28 | 1 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 28 | 0 | 2 |
@@ -214,7 +215,6 @@ The following table summarises the AWS APIs.
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 19 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 19 | 0 | 0 |
-| [`cloudtrail`](services/cloudtrail.yml) | 18 | 11 | 0 |
 | [`appflow`](services/appflow.yml) | 18 | 0 | 6 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 18 | 0 | 0 |
