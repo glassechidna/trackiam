@@ -156,9 +156,9 @@ The following table summarises the AWS APIs.
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`ce`](services/ce.yml) | 30 | 0 | 10 |
 | [`route53domains`](services/route53domains.yml) | 30 | 0 | 0 |
+| [`network-firewall`](services/network-firewall.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`inspector2`](services/inspector2.yml) | 30 | 0 | 0 |
-| [`network-firewall`](services/network-firewall.yml) | 29 | 1 | 0 |
 | [`drs`](services/drs.yml) | 29 | 0 | 38 |
 | [`mgn`](services/mgn.yml) | 29 | 0 | 32 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
