@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonElasticFileSystemServiceRolePolicy",
   "CreateDate": "2019-11-05T16:52:41Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4FXCJYWBN7",
   "PolicyName": "AmazonElasticFileSystemServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-07-16T19:27:41Z",
+    "CreateDate": "2022-01-10T19:27:33Z",
     "Document": {
       "Statement": [
         {
@@ -15,7 +15,7 @@
             "iam:CreateServiceLinkedRole"
           ],
           "Condition": {
-            "StringLike": {
+            "StringEquals": {
               "iam:AWSServiceName": [
                 "backup.amazonaws.com"
               ]
@@ -74,6 +74,16 @@
         },
         {
           "Action": [
+            "elasticfilesystem:CreateReplicationConfiguration",
+            "elasticfilesystem:DeleteReplicationConfiguration",
+            "elasticfilesystem:DescribeFileSystems",
+            "elasticfilesystem:DescribeReplicationConfigurations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "kms:DescribeKey"
           ],
           "Effect": "Allow",
@@ -83,7 +93,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-07-16T19:27:41Z"
+  "UpdateDate": "2022-01-10T19:27:33Z"
 }

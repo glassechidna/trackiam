@@ -209,6 +209,7 @@ Actions:
   - Name: ec2:DescribeElasticGpus
   - Name: ec2:DescribeExportImageTasks
   - Name: ec2:DescribeExportTasks
+  - Name: ec2:DescribeFastLaunchImages
   - Name: ec2:DescribeFastSnapshotRestores
   - Name: ec2:DescribeFleetHistory
   - Name: ec2:DescribeFleetInstances
@@ -323,6 +324,7 @@ Actions:
   - Name: ec2:DetachVolume
   - Name: ec2:DetachVpnGateway
   - Name: ec2:DisableEbsEncryptionByDefault
+  - Name: ec2:DisableFastLaunch
   - Name: ec2:DisableFastSnapshotRestores
   - Name: ec2:DisableImageDeprecation
   - Name: ec2:DisableIpamOrganizationAdminAccount
@@ -343,6 +345,7 @@ Actions:
   - Name: ec2:DisassociateTrunkInterface
   - Name: ec2:DisassociateVpcCidrBlock
   - Name: ec2:EnableEbsEncryptionByDefault
+  - Name: ec2:EnableFastLaunch
   - Name: ec2:EnableFastSnapshotRestores
   - Name: ec2:EnableImageDeprecation
   - Name: ec2:EnableIpamOrganizationAdminAccount
@@ -517,7 +520,4 @@ Actions:
   - Name: ec2:WithdrawByoipCidr
 
   # actions with no corresponding API
-  - Name: ec2:DescribeFastLaunchImages
-  - Name: ec2:DisableFastLaunch
-  - Name: ec2:EnableFastLaunch
   - Name: ec2:SendSpotInstanceInterruptions
