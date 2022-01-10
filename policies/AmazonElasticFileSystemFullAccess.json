@@ -1,19 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonElasticFileSystemFullAccess",
   "CreateDate": "2015-05-27T16:22:28Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJKXTMNVQGIDNCKPBC",
   "PolicyName": "AmazonElasticFileSystemFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-05-10T14:25:43Z",
+    "CreateDate": "2022-01-10T19:03:16Z",
     "Document": {
       "Statement": [
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
-            "StringLike": {
+            "StringEquals": {
               "iam:AWSServiceName": [
                 "elasticfilesystem.amazonaws.com"
               ]
@@ -40,11 +40,13 @@
             "elasticfilesystem:CreateAccessPoint",
             "elasticfilesystem:CreateFileSystem",
             "elasticfilesystem:CreateMountTarget",
+            "elasticfilesystem:CreateReplicationConfiguration",
             "elasticfilesystem:CreateTags",
             "elasticfilesystem:DeleteAccessPoint",
             "elasticfilesystem:DeleteFileSystem",
             "elasticfilesystem:DeleteFileSystemPolicy",
             "elasticfilesystem:DeleteMountTarget",
+            "elasticfilesystem:DeleteReplicationConfiguration",
             "elasticfilesystem:DeleteTags",
             "elasticfilesystem:DescribeAccessPoints",
             "elasticfilesystem:DescribeAccountPreferences",
@@ -54,6 +56,7 @@
             "elasticfilesystem:DescribeLifecycleConfiguration",
             "elasticfilesystem:DescribeMountTargetSecurityGroups",
             "elasticfilesystem:DescribeMountTargets",
+            "elasticfilesystem:DescribeReplicationConfigurations",
             "elasticfilesystem:DescribeTags",
             "elasticfilesystem:ListTagsForResource",
             "elasticfilesystem:ModifyMountTargetSecurityGroups",
@@ -75,7 +78,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2021-05-10T14:25:43Z"
+  "UpdateDate": "2022-01-10T19:03:16Z"
 }
