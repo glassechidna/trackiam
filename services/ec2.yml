@@ -424,6 +424,7 @@ Actions:
   - Name: ec2:ModifyLaunchTemplate
   - Name: ec2:ModifyManagedPrefixList
   - Name: ec2:ModifyNetworkInterfaceAttribute
+  - Name: ec2:ModifyPrivateDnsNameOptions
   - Name: ec2:ModifyReservedInstances
   - Name: ec2:ModifySecurityGroupRules
   - Name: ec2:ModifySnapshotAttribute
@@ -442,6 +443,7 @@ Actions:
   - Name: ec2:ModifyVpcEndpoint
   - Name: ec2:ModifyVpcEndpointConnectionNotification
   - Name: ec2:ModifyVpcEndpointServiceConfiguration
+  - Name: ec2:ModifyVpcEndpointServicePayerResponsibility
   - Name: ec2:ModifyVpcEndpointServicePermissions
   - Name: ec2:ModifyVpcPeeringConnectionOptions
   - Name: ec2:ModifyVpcTenancy
@@ -515,8 +517,7 @@ Actions:
   - Name: ec2:WithdrawByoipCidr
 
   # actions with no corresponding API
+  - Name: ec2:DescribeFastLaunchImages
+  - Name: ec2:DisableFastLaunch
+  - Name: ec2:EnableFastLaunch
   - Name: ec2:SendSpotInstanceInterruptions
-
-  # APIs without an IAM action
-  - Name: ec2:ModifyPrivateDnsNameOptions
-  - Name: ec2:ModifyVpcEndpointServicePayerResponsibility
