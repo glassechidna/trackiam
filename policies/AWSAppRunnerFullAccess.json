@@ -1,0 +1,46 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSAppRunnerFullAccess",
+  "CreateDate": "2022-01-11T04:02:09Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CI7E7OMBX",
+  "PolicyName": "AWSAppRunnerFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2022-01-11T04:02:09Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "apprunner.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/apprunner.amazonaws.com/AWSServiceRoleForAppRunner"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": "apprunner.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "apprunner:*",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AppRunnerAdminAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-01-11T04:02:09Z"
+}
