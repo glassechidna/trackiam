@@ -1,15 +1,30 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFConsoleFullAccess",
   "CreateDate": "2020-04-06T18:38:38Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AZOTQ7KAT",
   "PolicyName": "AWSWAFConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-11-15T19:33:52Z",
+    "CreateDate": "2022-01-11T19:34:04Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "logs:PutResourcePolicy"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "wafv2.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GrantLogDeliveryPermissionForCloudWatchLogGroup"
+        },
         {
           "Action": [
             "apigateway:GET",
@@ -25,6 +40,9 @@
             "ec2:DescribeRegions",
             "elasticloadbalancing:DescribeLoadBalancers",
             "elasticloadbalancing:SetWebACL",
+            "logs:DescribeLogGroups",
+            "logs:DescribeResourcePolicies",
+            "s3:ListAllMyBuckets",
             "waf-regional:*",
             "waf:*",
             "wafv2:*"
@@ -39,23 +57,8 @@
             "logs:DeleteLogDelivery"
           ],
           "Effect": "Allow",
-          "Resource": [
-            "arn:aws:logs:*:*:aws-waf-logs-*",
-            "arn:aws:s3:::aws-waf-logs-*"
-          ],
+          "Resource": "*",
           "Sid": "AllowLogDeliverySubscription"
-        },
-        {
-          "Action": [
-            "logs:DescribeLogGroups",
-            "logs:DescribeResourcePolicies",
-            "logs:PutResourcePolicy"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:logs:*:*:aws-waf-logs-*"
-          ],
-          "Sid": "GrantLogDeliveryPermissionForCloudWatchLogGroup"
         },
         {
           "Action": [
@@ -72,7 +75,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2021-11-15T19:33:52Z"
+  "UpdateDate": "2022-01-11T19:34:04Z"
 }
