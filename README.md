@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 305
-* Unique actions: 12492
+* Unique actions: 12495
 * Managed policies: 920
 
 Most common managed policy name prefixes:
@@ -51,7 +51,7 @@ The following table summarises the AWS APIs.
 | [`greengrass`](services/greengrass.yml) | 110 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 108 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 105 | 13 | 18 |
-| [`lex`](services/lex.yml) | 101 | 2 | 9 |
+| [`lex`](services/lex.yml) | 103 | 2 | 7 |
 | [`cognito-idp`](services/cognito-idp.yml) | 100 | 1 | 0 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
@@ -243,7 +243,7 @@ The following table summarises the AWS APIs.
 | [`health`](services/health.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`braket`](services/braket.yml) | 13 | 0 | 0 |
-| [`honeycode`](services/honeycode.yml) | 12 | 0 | 14 |
+| [`honeycode`](services/honeycode.yml) | 12 | 3 | 14 |
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`iot`](services/iot.yml) | 11 | 0 | 242 |
@@ -270,6 +270,7 @@ The following table summarises the AWS APIs.
 | [`macie`](services/macie.yml) | 7 | 0 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 6 | 0 | 1 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
+| [`pi`](services/pi.yml) | 6 | 0 | 0 |
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
 | [`ebs`](services/ebs.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
@@ -277,7 +278,6 @@ The following table summarises the AWS APIs.
 | [`identitystore`](services/identitystore.yml) | 4 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`s3-outposts`](services/s3-outposts.yml) | 3 | 0 | 29 |
-| [`pi`](services/pi.yml) | 3 | 0 | 3 |
 | [`account`](services/account.yml) | 3 | 0 | 3 |
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 3 | 0 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
@@ -346,7 +346,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1873 |
+| `List` | 1874 |
 | `Get` | 1667 |
 | `Describe` | 1466 |
 | `Delete` | 1454 |
@@ -354,6 +354,6 @@ Most common action prefixes:
 | `Update` | 1109 |
 | `Put` | 350 |
 | `Start` | 236 |
-| `Tag` | 193 |
-| `Untag` | 191 |
+| `Tag` | 194 |
+| `Untag` | 192 |
 
