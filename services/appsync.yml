@@ -1,7 +1,9 @@
 Actions:
+  - Name: appsync:AssociateApi
   - Name: appsync:CreateApiCache
   - Name: appsync:CreateApiKey
   - Name: appsync:CreateDataSource
+  - Name: appsync:CreateDomainName
   - Name: appsync:CreateFunction
   - Name: appsync:CreateGraphqlApi
   - Name: appsync:CreateResolver
@@ -9,13 +11,17 @@ Actions:
   - Name: appsync:DeleteApiCache
   - Name: appsync:DeleteApiKey
   - Name: appsync:DeleteDataSource
+  - Name: appsync:DeleteDomainName
   - Name: appsync:DeleteFunction
   - Name: appsync:DeleteGraphqlApi
   - Name: appsync:DeleteResolver
   - Name: appsync:DeleteType
+  - Name: appsync:DisassociateApi
   - Name: appsync:FlushApiCache
+  - Name: appsync:GetApiAssociation
   - Name: appsync:GetApiCache
   - Name: appsync:GetDataSource
+  - Name: appsync:GetDomainName
   - Name: appsync:GetFunction
   - Name: appsync:GetGraphqlApi
   - Name: appsync:GetIntrospectionSchema
@@ -24,6 +30,7 @@ Actions:
   - Name: appsync:GetType
   - Name: appsync:ListApiKeys
   - Name: appsync:ListDataSources
+  - Name: appsync:ListDomainNames
   - Name: appsync:ListFunctions
   - Name: appsync:ListGraphqlApis
   - Name: appsync:ListResolvers
@@ -36,6 +43,7 @@ Actions:
   - Name: appsync:UpdateApiCache
   - Name: appsync:UpdateApiKey
   - Name: appsync:UpdateDataSource
+  - Name: appsync:UpdateDomainName
   - Name: appsync:UpdateFunction
   - Name: appsync:UpdateGraphqlApi
   - Name: appsync:UpdateResolver
@@ -44,13 +52,3 @@ Actions:
   # actions with no corresponding API
   - Name: appsync:GraphQL
   - Name: appsync:SetWebACL
-
-  # APIs without an IAM action
-  - Name: appsync:AssociateApi
-  - Name: appsync:CreateDomainName
-  - Name: appsync:DeleteDomainName
-  - Name: appsync:DisassociateApi
-  - Name: appsync:GetApiAssociation
-  - Name: appsync:GetDomainName
-  - Name: appsync:ListDomainNames
-  - Name: appsync:UpdateDomainName

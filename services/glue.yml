@@ -4,6 +4,7 @@ Actions:
   - Name: glue:BatchDeletePartition
   - Name: glue:BatchDeleteTable
   - Name: glue:BatchDeleteTableVersion
+  - Name: glue:BatchGetBlueprints
   - Name: glue:BatchGetCrawlers
   - Name: glue:BatchGetDevEndpoints
   - Name: glue:BatchGetJobs
@@ -14,6 +15,7 @@ Actions:
   - Name: glue:BatchUpdatePartition
   - Name: glue:CancelMLTaskRun
   - Name: glue:CheckSchemaVersionValidity
+  - Name: glue:CreateBlueprint
   - Name: glue:CreateClassifier
   - Name: glue:CreateConnection
   - Name: glue:CreateCrawler
@@ -31,6 +33,7 @@ Actions:
   - Name: glue:CreateTrigger
   - Name: glue:CreateUserDefinedFunction
   - Name: glue:CreateWorkflow
+  - Name: glue:DeleteBlueprint
   - Name: glue:DeleteClassifier
   - Name: glue:DeleteColumnStatisticsForPartition
   - Name: glue:DeleteColumnStatisticsForTable
@@ -52,6 +55,9 @@ Actions:
   - Name: glue:DeleteTrigger
   - Name: glue:DeleteUserDefinedFunction
   - Name: glue:DeleteWorkflow
+  - Name: glue:GetBlueprint
+  - Name: glue:GetBlueprintRun
+  - Name: glue:GetBlueprintRuns
   - Name: glue:GetCatalogImportStatus
   - Name: glue:GetClassifier
   - Name: glue:GetClassifiers
@@ -104,6 +110,7 @@ Actions:
   - Name: glue:GetWorkflowRunProperties
   - Name: glue:GetWorkflowRuns
   - Name: glue:ImportCatalogToGlue
+  - Name: glue:ListBlueprints
   - Name: glue:ListCrawlers
   - Name: glue:ListDevEndpoints
   - Name: glue:ListJobs
@@ -123,6 +130,7 @@ Actions:
   - Name: glue:ResetJobBookmark
   - Name: glue:ResumeWorkflowRun
   - Name: glue:SearchTables
+  - Name: glue:StartBlueprintRun
   - Name: glue:StartCrawler
   - Name: glue:StartCrawlerSchedule
   - Name: glue:StartExportLabelsTaskRun
@@ -138,6 +146,7 @@ Actions:
   - Name: glue:StopWorkflowRun
   - Name: glue:TagResource
   - Name: glue:UntagResource
+  - Name: glue:UpdateBlueprint
   - Name: glue:UpdateClassifier
   - Name: glue:UpdateColumnStatisticsForPartition
   - Name: glue:UpdateColumnStatisticsForTable
@@ -170,16 +179,7 @@ Actions:
   - Name: glue:UseMLTransforms
 
   # APIs without an IAM action
-  - Name: glue:BatchGetBlueprints
-  - Name: glue:CreateBlueprint
-  - Name: glue:DeleteBlueprint
-  - Name: glue:GetBlueprint
-  - Name: glue:GetBlueprintRun
-  - Name: glue:GetBlueprintRuns
   - Name: glue:GetPartitionIndexes
   - Name: glue:GetUnfilteredPartitionMetadata
   - Name: glue:GetUnfilteredPartitionsMetadata
   - Name: glue:GetUnfilteredTableMetadata
-  - Name: glue:ListBlueprints
-  - Name: glue:StartBlueprintRun
-  - Name: glue:UpdateBlueprint

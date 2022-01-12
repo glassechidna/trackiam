@@ -39,8 +39,8 @@ The following table summarises the AWS APIs.
 | [`ec2`](services/ec2.yml) | 519 | 0 | 1 |
 | [`sagemaker`](services/sagemaker.yml) | 259 | 5 | 5 |
 | [`chime`](services/chime.yml) | 207 | 0 | 51 |
+| [`glue`](services/glue.yml) | 165 | 4 | 11 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
-| [`glue`](services/glue.yml) | 156 | 13 | 11 |
 | [`lightsail`](services/lightsail.yml) | 153 | 0 | 0 |
 | [`rds`](services/rds.yml) | 141 | 0 | 5 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
@@ -100,6 +100,7 @@ The following table summarises the AWS APIs.
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`geo`](services/geo.yml) | 51 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 49 | 1 | 0 |
+| [`appsync`](services/appsync.yml) | 49 | 0 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 12 |
 | [`license-manager`](services/license-manager.yml) | 48 | 0 | 0 |
 | [`kms`](services/kms.yml) | 47 | 1 | 3 |
@@ -115,7 +116,6 @@ The following table summarises the AWS APIs.
 | [`kendra`](services/kendra.yml) | 43 | 12 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 42 | 2 | 1 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
-| [`appsync`](services/appsync.yml) | 41 | 8 | 2 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 1 |
 | [`sns`](services/sns.yml) | 39 | 1 | 0 |
