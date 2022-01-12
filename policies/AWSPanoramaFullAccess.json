@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPanoramaFullAccess",
   "CreateDate": "2020-12-01T13:12:47Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4IAPULBSWQ",
   "PolicyName": "AWSPanoramaFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-10-28T15:37:05Z",
+    "CreateDate": "2022-01-12T21:21:04Z",
     "Document": {
       "Statement": [
         {
@@ -80,6 +80,15 @@
         },
         {
           "Action": [
+            "logs:DescribeLogGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:*"
+          ]
+        },
+        {
+          "Action": [
             "panorama:*"
           ],
           "Effect": "Allow",
@@ -103,7 +112,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2021-10-28T15:37:05Z"
+  "UpdateDate": "2022-01-12T21:21:04Z"
 }
