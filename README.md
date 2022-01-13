@@ -137,6 +137,7 @@ The following table summarises the AWS APIs.
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 35 | 0 | 0 |
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
+| [`eks`](services/eks.yml) | 34 | 0 | 1 |
 | [`athena`](services/athena.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`memorydb`](services/memorydb.yml) | 33 | 2 | 2 |
@@ -147,7 +148,6 @@ The following table summarises the AWS APIs.
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`mediatailor`](services/mediatailor.yml) | 32 | 5 | 0 |
 | [`kafka`](services/kafka.yml) | 32 | 3 | 0 |
-| [`eks`](services/eks.yml) | 32 | 2 | 1 |
 | [`transfer`](services/transfer.yml) | 32 | 0 | 0 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |

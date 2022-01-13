@@ -9,6 +9,7 @@ Actions:
   - Name: eks:DeleteCluster
   - Name: eks:DeleteFargateProfile
   - Name: eks:DeleteNodegroup
+  - Name: eks:DeregisterCluster
   - Name: eks:DescribeAddon
   - Name: eks:DescribeAddonVersions
   - Name: eks:DescribeCluster
@@ -24,6 +25,7 @@ Actions:
   - Name: eks:ListNodegroups
   - Name: eks:ListTagsForResource
   - Name: eks:ListUpdates
+  - Name: eks:RegisterCluster
   - Name: eks:TagResource
   - Name: eks:UntagResource
   - Name: eks:UpdateAddon
@@ -34,7 +36,3 @@ Actions:
 
   # actions with no corresponding API
   - Name: eks:AccessKubernetesApi
-
-  # APIs without an IAM action
-  - Name: eks:DeregisterCluster
-  - Name: eks:RegisterCluster
