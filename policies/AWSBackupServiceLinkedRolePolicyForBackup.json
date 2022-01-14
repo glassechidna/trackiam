@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBackupServiceLinkedRolePolicyForBackup",
   "CreateDate": "2020-06-02T23:08:40Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ONJBD4ZY2",
   "PolicyName": "AWSBackupServiceLinkedRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2021-11-23T22:00:49Z",
+    "CreateDate": "2022-01-14T19:17:42Z",
     "Document": {
       "Statement": [
         {
@@ -131,6 +131,14 @@
         },
         {
           "Action": [
+            "dynamodb:DescribeTable",
+            "dynamodb:ListTagsOfResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:dynamodb:*:*:table/*"
+        },
+        {
+          "Action": [
             "dynamodb:ListTables",
             "ec2:DescribeInstances",
             "ec2:DescribeVolumes",
@@ -184,6 +192,14 @@
         },
         {
           "Action": [
+            "storagegateway:DescribeCachediSCSIVolumes",
+            "storagegateway:DescribeStorediSCSIVolumes"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:storagegateway:*:*:gateway/*/volume/*"
+        },
+        {
+          "Action": [
             "backup-gateway:ListTagsForResource"
           ],
           "Effect": "Allow",
@@ -197,20 +213,12 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "BackupGateway"
-        },
-        {
-          "Action": [
-            "dynamodb:ListTagsOfResource"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:dynamodb:*:*:table/*",
-          "Sid": "ListTagsForDynamoDBTable"
         }
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v6"
+    "IsDefaultVersion": true,
+    "VersionId": "v7"
   },
-  "UpdateDate": "2021-11-23T22:00:49Z"
+  "UpdateDate": "2022-01-14T19:17:42Z"
 }
