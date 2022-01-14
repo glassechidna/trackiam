@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 305
-* Unique actions: 12497
+* Unique actions: 12498
 * Managed policies: 921
 
 Most common managed policy name prefixes:
@@ -173,10 +173,10 @@ The following table summarises the AWS APIs.
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 27 | 0 | 8 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 27 | 0 | 3 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
+| [`lookoutmetrics`](services/lookoutmetrics.yml) | 27 | 0 | 1 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
 | [`evidently`](services/evidently.yml) | 26 | 6 | 0 |
-| [`lookoutmetrics`](services/lookoutmetrics.yml) | 26 | 0 | 2 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 26 | 0 | 0 |
@@ -187,7 +187,7 @@ The following table summarises the AWS APIs.
 | [`snowball`](services/snowball.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
-| [`ram`](services/ram.yml) | 24 | 0 | 0 |
+| [`ram`](services/ram.yml) | 24 | 1 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 23 | 0 | 1 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
@@ -346,7 +346,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1874 |
+| `List` | 1875 |
 | `Get` | 1667 |
 | `Describe` | 1466 |
 | `Delete` | 1454 |
