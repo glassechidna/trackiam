@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSCloud9ServiceRolePolicy",
   "CreateDate": "2017-11-30T13:44:08Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJFXGCBXQIZATFZ4YG",
   "PolicyName": "AWSCloud9ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-10-06T12:43:49Z",
+    "CreateDate": "2022-01-17T14:06:15Z",
     "Document": {
       "Statement": [
         {
@@ -87,6 +87,16 @@
         },
         {
           "Action": [
+            "ec2:StartInstances",
+            "ec2:StopInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:license-manager:*:*:license-configuration:*"
+          ]
+        },
+        {
+          "Action": [
             "iam:GetInstanceProfile",
             "iam:ListInstanceProfiles"
           ],
@@ -99,7 +109,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2020-10-06T12:43:49Z"
+  "UpdateDate": "2022-01-17T14:06:15Z"
 }
