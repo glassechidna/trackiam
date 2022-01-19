@@ -52,7 +52,7 @@ The following table summarises the AWS APIs.
 | [`servicecatalog`](services/servicecatalog.yml) | 108 | 0 | 0 |
 | [`redshift`](services/redshift.yml) | 105 | 13 | 18 |
 | [`lex`](services/lex.yml) | 103 | 2 | 7 |
-| [`cognito-idp`](services/cognito-idp.yml) | 100 | 1 | 0 |
+| [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 0 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`cloudfront`](services/cloudfront.yml) | 92 | 0 | 1 |
