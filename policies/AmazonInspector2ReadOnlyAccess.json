@@ -1,0 +1,47 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonInspector2ReadOnlyAccess",
+  "CreateDate": "2022-01-21T14:45:14Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4IASIMCEPM",
+  "PolicyName": "AmazonInspector2ReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2022-01-21T14:45:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "inspector2:BatchGetAccountStatus",
+            "inspector2:BatchGetFreeTrialInfo",
+            "inspector2:DescribeOrganizationConfiguration",
+            "inspector2:GetDelegatedAdminAccount",
+            "inspector2:GetFindingsReportStatus",
+            "inspector2:GetMember",
+            "inspector2:ListAccountPermissions",
+            "inspector2:ListCoverage",
+            "inspector2:ListCoverageStatistics",
+            "inspector2:ListDelegatedAdminAccounts",
+            "inspector2:ListFilters",
+            "inspector2:ListFindingAggregations",
+            "inspector2:ListFindings",
+            "inspector2:ListMembers",
+            "inspector2:ListTagsForResource",
+            "inspector2:ListUsageTotals",
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-01-21T14:45:14Z"
+}
