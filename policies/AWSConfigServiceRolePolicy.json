@@ -1,15 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSConfigServiceRolePolicy",
   "CreateDate": "2018-05-30T23:31:46Z",
-  "DefaultVersionId": "v27",
+  "DefaultVersionId": "v28",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJUCWFHNZER665LLQQ",
   "PolicyName": "AWSConfigServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-09-08T18:12:00Z",
+    "CreateDate": "2022-01-21T18:35:45Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "logs:PutLogEvents",
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/config/*:log-stream:config-rule-evaluation/*"
+        },
         {
           "Action": [
             "access-analyzer:GetAnalyzer",
@@ -303,12 +308,20 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/config/*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v27"
+    "VersionId": "v28"
   },
-  "UpdateDate": "2021-09-08T18:12:00Z"
+  "UpdateDate": "2022-01-21T18:35:45Z"
 }
