@@ -66,9 +66,9 @@ The following table summarises the AWS APIs.
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`networkmanager`](services/networkmanager.yml) | 76 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
+| [`workmail`](services/workmail.yml) | 68 | 0 | 51 |
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
 | [`frauddetector`](services/frauddetector.yml) | 66 | 0 | 0 |
-| [`workmail`](services/workmail.yml) | 65 | 3 | 51 |
 | [`iotsitewise`](services/iotsitewise.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 64 | 1 | 11 |

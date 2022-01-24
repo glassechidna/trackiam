@@ -10,6 +10,7 @@ Actions:
   - Name: workmail:CreateUser
   - Name: workmail:DeleteAccessControlRule
   - Name: workmail:DeleteAlias
+  - Name: workmail:DeleteEmailMonitoringConfiguration
   - Name: workmail:DeleteGroup
   - Name: workmail:DeleteMailboxPermissions
   - Name: workmail:DeleteMobileDeviceAccessOverride
@@ -20,6 +21,7 @@ Actions:
   - Name: workmail:DeleteUser
   - Name: workmail:DeregisterFromWorkMail
   - Name: workmail:DeregisterMailDomain
+  - Name: workmail:DescribeEmailMonitoringConfiguration
   - Name: workmail:DescribeGroup
   - Name: workmail:DescribeInboundDmarcSettings
   - Name: workmail:DescribeMailboxExportJob
@@ -49,6 +51,7 @@ Actions:
   - Name: workmail:ListTagsForResource
   - Name: workmail:ListUsers
   - Name: workmail:PutAccessControlRule
+  - Name: workmail:PutEmailMonitoringConfiguration
   - Name: workmail:PutInboundDmarcSettings
   - Name: workmail:PutMailboxPermissions
   - Name: workmail:PutMobileDeviceAccessOverride
@@ -117,8 +120,3 @@ Actions:
   - Name: workmail:UpdateOutboundMailFlowRule
   - Name: workmail:UpdateSmtpGateway
   - Name: workmail:WipeMobileDevice
-
-  # APIs without an IAM action
-  - Name: workmail:DeleteEmailMonitoringConfiguration
-  - Name: workmail:DescribeEmailMonitoringConfiguration
-  - Name: workmail:PutEmailMonitoringConfiguration
