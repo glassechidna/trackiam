@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 306
-* Unique actions: 12504
+* Unique actions: 12510
 * Managed policies: 922
 
 Most common managed policy name prefixes:
@@ -45,7 +45,7 @@ The following table summarises the AWS APIs.
 | [`rds`](services/rds.yml) | 141 | 0 | 5 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
 | [`ssm`](services/ssm.yml) | 134 | 1 | 8 |
-| [`connect`](services/connect.yml) | 126 | 3 | 4 |
+| [`connect`](services/connect.yml) | 126 | 9 | 4 |
 | [`quicksight`](services/quicksight.yml) | 115 | 0 | 23 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 113 | 6 | 1 |
 | [`greengrass`](services/greengrass.yml) | 110 | 0 | 1 |
@@ -155,6 +155,7 @@ The following table summarises the AWS APIs.
 | [`wisdom`](services/wisdom.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`ce`](services/ce.yml) | 30 | 0 | 10 |
+| [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
 | [`route53domains`](services/route53domains.yml) | 30 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
@@ -170,7 +171,6 @@ The following table summarises the AWS APIs.
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
-| [`elasticfilesystem`](services/elasticfilesystem.yml) | 27 | 0 | 8 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 27 | 0 | 3 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 27 | 0 | 1 |
@@ -347,11 +347,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1875 |
+| `List` | 1876 |
 | `Get` | 1668 |
-| `Describe` | 1466 |
-| `Delete` | 1453 |
-| `Create` | 1357 |
+| `Describe` | 1467 |
+| `Delete` | 1454 |
+| `Create` | 1358 |
 | `Update` | 1110 |
 | `Put` | 352 |
 | `Start` | 236 |
