@@ -1,5 +1,6 @@
 Actions:
   - Name: appstream:AssociateApplicationFleet
+  - Name: appstream:AssociateApplicationToEntitlement
   - Name: appstream:AssociateFleet
   - Name: appstream:BatchAssociateUserStack
   - Name: appstream:BatchDisassociateUserStack
@@ -43,6 +44,7 @@ Actions:
   - Name: appstream:DescribeUsers
   - Name: appstream:DisableUser
   - Name: appstream:DisassociateApplicationFleet
+  - Name: appstream:DisassociateApplicationFromEntitlement
   - Name: appstream:DisassociateFleet
   - Name: appstream:EnableUser
   - Name: appstream:ExpireSession
@@ -64,10 +66,4 @@ Actions:
   - Name: appstream:UpdateStack
 
   # actions with no corresponding API
-  - Name: appstream:AssociateApplicatonToEntitlement
-  - Name: appstream:DisassociateApplicatonFromEntitlement
   - Name: appstream:Stream
-
-  # APIs without an IAM action
-  - Name: appstream:AssociateApplicationToEntitlement
-  - Name: appstream:DisassociateApplicationFromEntitlement
