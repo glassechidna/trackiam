@@ -67,7 +67,7 @@ The following table summarises the AWS APIs.
 | [`networkmanager`](services/networkmanager.yml) | 76 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 68 | 0 | 51 |
-| [`frauddetector`](services/frauddetector.yml) | 66 | 2 | 0 |
+| [`frauddetector`](services/frauddetector.yml) | 68 | 0 | 0 |
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
 | [`iotsitewise`](services/iotsitewise.yml) | 65 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
