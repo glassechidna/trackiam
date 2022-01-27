@@ -2,17 +2,20 @@ Actions:
   - Name: kafka:BatchAssociateScramSecret
   - Name: kafka:BatchDisassociateScramSecret
   - Name: kafka:CreateCluster
+  - Name: kafka:CreateClusterV2
   - Name: kafka:CreateConfiguration
   - Name: kafka:DeleteCluster
   - Name: kafka:DeleteConfiguration
   - Name: kafka:DescribeCluster
   - Name: kafka:DescribeClusterOperation
+  - Name: kafka:DescribeClusterV2
   - Name: kafka:DescribeConfiguration
   - Name: kafka:DescribeConfigurationRevision
   - Name: kafka:GetBootstrapBrokers
   - Name: kafka:GetCompatibleKafkaVersions
   - Name: kafka:ListClusterOperations
   - Name: kafka:ListClusters
+  - Name: kafka:ListClustersV2
   - Name: kafka:ListConfigurationRevisions
   - Name: kafka:ListConfigurations
   - Name: kafka:ListKafkaVersions
@@ -31,8 +34,3 @@ Actions:
   - Name: kafka:UpdateConnectivity
   - Name: kafka:UpdateMonitoring
   - Name: kafka:UpdateSecurity
-
-  # APIs without an IAM action
-  - Name: kafka:CreateClusterV2
-  - Name: kafka:DescribeClusterV2
-  - Name: kafka:ListClustersV2

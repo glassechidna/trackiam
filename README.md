@@ -134,6 +134,7 @@ The following table summarises the AWS APIs.
 | [`cloudwatch`](services/cloudwatch.yml) | 36 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 35 | 5 | 0 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
+| [`kafka`](services/kafka.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 35 | 0 | 0 |
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
@@ -147,7 +148,6 @@ The following table summarises the AWS APIs.
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`mediatailor`](services/mediatailor.yml) | 32 | 5 | 0 |
-| [`kafka`](services/kafka.yml) | 32 | 3 | 0 |
 | [`transfer`](services/transfer.yml) | 32 | 0 | 0 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |
