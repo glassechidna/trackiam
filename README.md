@@ -95,8 +95,8 @@ The following table summarises the AWS APIs.
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
+| [`geo`](services/geo.yml) | 52 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 22 |
-| [`geo`](services/geo.yml) | 51 | 1 | 0 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 49 | 1 | 0 |
