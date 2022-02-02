@@ -1,6 +1,7 @@
 Actions:
   - Name: connect:AssociateApprovedOrigin
   - Name: connect:AssociateBot
+  - Name: connect:AssociateDefaultVocabulary
   - Name: connect:AssociateInstanceStorageConfig
   - Name: connect:AssociateLambdaFunction
   - Name: connect:AssociateLexBot
@@ -20,6 +21,7 @@ Actions:
   - Name: connect:CreateUseCase
   - Name: connect:CreateUser
   - Name: connect:CreateUserHierarchyGroup
+  - Name: connect:CreateVocabulary
   - Name: connect:DeleteContactFlow
   - Name: connect:DeleteContactFlowModule
   - Name: connect:DeleteHoursOfOperation
@@ -30,6 +32,7 @@ Actions:
   - Name: connect:DeleteUseCase
   - Name: connect:DeleteUser
   - Name: connect:DeleteUserHierarchyGroup
+  - Name: connect:DeleteVocabulary
   - Name: connect:DescribeAgentStatus
   - Name: connect:DescribeContact
   - Name: connect:DescribeContactFlow
@@ -45,6 +48,7 @@ Actions:
   - Name: connect:DescribeUser
   - Name: connect:DescribeUserHierarchyGroup
   - Name: connect:DescribeUserHierarchyStructure
+  - Name: connect:DescribeVocabulary
   - Name: connect:DisassociateApprovedOrigin
   - Name: connect:DisassociateBot
   - Name: connect:DisassociateInstanceStorageConfig
@@ -63,6 +67,7 @@ Actions:
   - Name: connect:ListContactFlowModules
   - Name: connect:ListContactFlows
   - Name: connect:ListContactReferences
+  - Name: connect:ListDefaultVocabularies
   - Name: connect:ListHoursOfOperations
   - Name: connect:ListInstanceAttributes
   - Name: connect:ListInstanceStorageConfigs
@@ -86,6 +91,7 @@ Actions:
   - Name: connect:ListUserHierarchyGroups
   - Name: connect:ListUsers
   - Name: connect:ResumeContactRecording
+  - Name: connect:SearchVocabularies
   - Name: connect:StartChatContact
   - Name: connect:StartContactRecording
   - Name: connect:StartOutboundVoiceContact
@@ -133,12 +139,6 @@ Actions:
   - Name: connect:UpdatedescribeContent
 
   # APIs without an IAM action
-  - Name: connect:AssociateDefaultVocabulary
-  - Name: connect:CreateVocabulary
-  - Name: connect:DeleteVocabulary
-  - Name: connect:DescribeVocabulary
-  - Name: connect:ListDefaultVocabularies
-  - Name: connect:SearchVocabularies
   - Name: connect:StartContactStreaming
   - Name: connect:StopContactStreaming
   - Name: connect:UpdateContactFlowModuleContent
