@@ -126,10 +126,10 @@ The following table summarises the AWS APIs.
 | [`transcribe`](services/transcribe.yml) | 38 | 3 | 2 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
+| [`fsx`](services/fsx.yml) | 37 | 0 | 4 |
 | [`iotevents`](services/iotevents.yml) | 37 | 0 | 1 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
-| [`fsx`](services/fsx.yml) | 36 | 1 | 4 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 36 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 35 | 5 | 0 |
