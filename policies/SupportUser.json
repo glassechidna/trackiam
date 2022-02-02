@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/SupportUser",
   "CreateDate": "2016-11-10T17:21:53Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAI3V4GSSN5SJY3P2RO",
   "PolicyName": "SupportUser",
   "PolicyVersion": {
-    "CreateDate": "2021-06-11T19:46:10Z",
+    "CreateDate": "2022-02-02T15:11:42Z",
     "Document": {
       "Statement": [
         {
@@ -53,7 +53,11 @@
             "cognito-identity:Describe*",
             "cognito-identity:List*",
             "cognito-identity:LookupDeveloperIdentity",
-            "cognito-idp:Describe*",
+            "cognito-idp:DescribeResourceServer",
+            "cognito-idp:DescribeRiskConfiguration",
+            "cognito-idp:DescribeUserImportJob",
+            "cognito-idp:DescribeUserPool",
+            "cognito-idp:DescribeUserPoolDomain",
             "cognito-idp:List*",
             "cognito-sync:Describe*",
             "cognito-sync:GetBulkPublishDetails",
@@ -210,7 +214,6 @@
             "workdocs:Describe*",
             "workmail:Describe*",
             "workmail:Get*",
-            "workspaces:Describe*",
             "workspaces:Describe*"
           ],
           "Effect": "Allow",
@@ -220,7 +223,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2021-06-11T19:46:10Z"
+  "UpdateDate": "2022-02-02T15:11:42Z"
 }
