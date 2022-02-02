@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 306
-* Unique actions: 12514
+* Unique actions: 12520
 * Managed policies: 922
 
 Most common managed policy name prefixes:
@@ -75,10 +75,10 @@ The following table summarises the AWS APIs.
 | [`cloudformation`](services/cloudformation.yml) | 64 | 1 | 11 |
 | [`es`](services/es.yml) | 64 | 0 | 10 |
 | [`route53`](services/route53.yml) | 64 | 0 | 0 |
+| [`comprehend`](services/comprehend.yml) | 63 | 4 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 63 | 3 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
-| [`comprehend`](services/comprehend.yml) | 63 | 0 | 0 |
 | [`ds`](services/ds.yml) | 62 | 1 | 6 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
@@ -199,6 +199,7 @@ The following table summarises the AWS APIs.
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 22 | 2 | 3 |
 | [`outposts`](services/outposts.yml) | 22 | 1 | 0 |
+| [`appflow`](services/appflow.yml) | 22 | 0 | 6 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
 | [`apprunner`](services/apprunner.yml) | 22 | 0 | 1 |
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
@@ -215,7 +216,6 @@ The following table summarises the AWS APIs.
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 19 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 19 | 0 | 0 |
-| [`appflow`](services/appflow.yml) | 18 | 0 | 10 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 18 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 17 | 3 | 0 |
@@ -229,8 +229,8 @@ The following table summarises the AWS APIs.
 | [`app-integrations`](services/app-integrations.yml) | 15 | 0 | 4 |
 | [`emr-containers`](services/emr-containers.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
+| [`fis`](services/fis.yml) | 14 | 2 | 3 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
-| [`fis`](services/fis.yml) | 14 | 0 | 3 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
@@ -347,13 +347,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1878 |
-| `Get` | 1669 |
-| `Describe` | 1468 |
-| `Delete` | 1454 |
+| `List` | 1879 |
+| `Get` | 1670 |
+| `Describe` | 1469 |
+| `Delete` | 1455 |
 | `Create` | 1358 |
 | `Update` | 1110 |
-| `Put` | 352 |
+| `Put` | 353 |
 | `Start` | 236 |
 | `Tag` | 194 |
 | `Untag` | 192 |
