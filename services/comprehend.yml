@@ -12,6 +12,7 @@ Actions:
   - Name: comprehend:DeleteDocumentClassifier
   - Name: comprehend:DeleteEndpoint
   - Name: comprehend:DeleteEntityRecognizer
+  - Name: comprehend:DeleteResourcePolicy
   - Name: comprehend:DescribeDocumentClassificationJob
   - Name: comprehend:DescribeDocumentClassifier
   - Name: comprehend:DescribeDominantLanguageDetectionJob
@@ -21,6 +22,7 @@ Actions:
   - Name: comprehend:DescribeEventsDetectionJob
   - Name: comprehend:DescribeKeyPhrasesDetectionJob
   - Name: comprehend:DescribePiiEntitiesDetectionJob
+  - Name: comprehend:DescribeResourcePolicy
   - Name: comprehend:DescribeSentimentDetectionJob
   - Name: comprehend:DescribeTopicsDetectionJob
   - Name: comprehend:DetectDominantLanguage
@@ -29,6 +31,7 @@ Actions:
   - Name: comprehend:DetectPiiEntities
   - Name: comprehend:DetectSentiment
   - Name: comprehend:DetectSyntax
+  - Name: comprehend:ImportModel
   - Name: comprehend:ListDocumentClassificationJobs
   - Name: comprehend:ListDocumentClassifierSummaries
   - Name: comprehend:ListDocumentClassifiers
@@ -43,6 +46,7 @@ Actions:
   - Name: comprehend:ListSentimentDetectionJobs
   - Name: comprehend:ListTagsForResource
   - Name: comprehend:ListTopicsDetectionJobs
+  - Name: comprehend:PutResourcePolicy
   - Name: comprehend:StartDocumentClassificationJob
   - Name: comprehend:StartDominantLanguageDetectionJob
   - Name: comprehend:StartEntitiesDetectionJob
@@ -62,9 +66,3 @@ Actions:
   - Name: comprehend:TagResource
   - Name: comprehend:UntagResource
   - Name: comprehend:UpdateEndpoint
-
-  # APIs without an IAM action
-  - Name: comprehend:DeleteResourcePolicy
-  - Name: comprehend:DescribeResourcePolicy
-  - Name: comprehend:ImportModel
-  - Name: comprehend:PutResourcePolicy
