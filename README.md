@@ -99,7 +99,7 @@ The following table summarises the AWS APIs.
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 22 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
-| [`imagebuilder`](services/imagebuilder.yml) | 49 | 1 | 0 |
+| [`imagebuilder`](services/imagebuilder.yml) | 50 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 49 | 0 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 12 |
 | [`license-manager`](services/license-manager.yml) | 48 | 0 | 0 |
