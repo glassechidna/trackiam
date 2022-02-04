@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AwsGlueDataBrewFullAccessPolicy",
   "CreateDate": "2020-11-11T16:51:39Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ACNRIK7M3",
   "PolicyName": "AwsGlueDataBrewFullAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-11-18T19:37:52Z",
+    "CreateDate": "2022-02-04T18:28:33Z",
     "Document": {
       "Statement": [
         {
@@ -75,7 +75,6 @@
             "appflow:DescribeFlowExecutionRecords",
             "appflow:ListFlows",
             "cloudtrail:LookupEvents",
-            "databrew:*",
             "dataexchange:CreateJob",
             "dataexchange:GetJob",
             "dataexchange:ListDataSetRevisions",
@@ -97,6 +96,7 @@
             "kms:DescribeKey",
             "kms:ListAliases",
             "kms:ListKeys",
+            "redshift-data:DescribeStatement",
             "redshift-data:ListDatabases",
             "redshift-data:ListSchemas",
             "redshift-data:ListTables",
@@ -105,10 +105,63 @@
             "s3:GetBucketCORS",
             "s3:GetBucketLocation",
             "s3:GetEncryptionConfiguration",
+            "s3:GetLifecycleConfiguration",
             "s3:ListAllMyBuckets",
             "secretsmanager:DescribeSecret",
             "secretsmanager:ListSecrets",
             "sts:GetCallerIdentity"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "databrew:BatchDeleteRecipeVersion",
+            "databrew:CreateDataset",
+            "databrew:CreateProfileJob",
+            "databrew:CreateProject",
+            "databrew:CreateRecipe",
+            "databrew:CreateRecipeJob",
+            "databrew:CreateRuleset",
+            "databrew:CreateSchedule",
+            "databrew:DeleteDataset",
+            "databrew:DeleteJob",
+            "databrew:DeleteProject",
+            "databrew:DeleteRecipeVersion",
+            "databrew:DeleteRuleset",
+            "databrew:DeleteSchedule",
+            "databrew:DescribeDataset",
+            "databrew:DescribeJob",
+            "databrew:DescribeJobRun",
+            "databrew:DescribeProject",
+            "databrew:DescribeRecipe",
+            "databrew:DescribeRuleset",
+            "databrew:DescribeSchedule",
+            "databrew:ListDatasets",
+            "databrew:ListJobRuns",
+            "databrew:ListJobs",
+            "databrew:ListProjects",
+            "databrew:ListRecipeVersions",
+            "databrew:ListRecipes",
+            "databrew:ListRulesets",
+            "databrew:ListSchedules",
+            "databrew:ListTagsForResource",
+            "databrew:PublishRecipe",
+            "databrew:SendProjectSessionAction",
+            "databrew:StartJobRun",
+            "databrew:StartProjectSession",
+            "databrew:StopJobRun",
+            "databrew:TagResource",
+            "databrew:UntagResource",
+            "databrew:UpdateDataset",
+            "databrew:UpdateProfileJob",
+            "databrew:UpdateProject",
+            "databrew:UpdateRecipe",
+            "databrew:UpdateRecipeJob",
+            "databrew:UpdateRuleset",
+            "databrew:UpdateSchedule"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -174,7 +227,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2021-11-18T19:37:52Z"
+  "UpdateDate": "2022-02-04T18:28:33Z"
 }
