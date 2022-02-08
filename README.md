@@ -185,9 +185,9 @@ The following table summarises the AWS APIs.
 | [`devops-guru`](services/devops-guru.yml) | 26 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 25 | 6 | 0 |
 | [`snowball`](services/snowball.yml) | 25 | 0 | 0 |
+| [`ram`](services/ram.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
-| [`ram`](services/ram.yml) | 24 | 1 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 23 | 0 | 1 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
