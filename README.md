@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 306
-* Unique actions: 12528
+* Unique actions: 12532
 * Managed policies: 921
 
 Most common managed policy name prefixes:
@@ -197,11 +197,11 @@ The following table summarises the AWS APIs.
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
+| [`apprunner`](services/apprunner.yml) | 22 | 4 | 1 |
 | [`timestream`](services/timestream.yml) | 22 | 2 | 3 |
 | [`outposts`](services/outposts.yml) | 22 | 1 | 0 |
 | [`appflow`](services/appflow.yml) | 22 | 0 | 6 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
-| [`apprunner`](services/apprunner.yml) | 22 | 0 | 1 |
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 22 | 0 | 0 |
@@ -347,11 +347,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1880 |
+| `List` | 1881 |
 | `Get` | 1670 |
-| `Describe` | 1470 |
-| `Delete` | 1457 |
-| `Create` | 1360 |
+| `Describe` | 1471 |
+| `Delete` | 1458 |
+| `Create` | 1361 |
 | `Update` | 1110 |
 | `Put` | 353 |
 | `Start` | 236 |
