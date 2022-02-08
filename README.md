@@ -177,6 +177,7 @@ The following table summarises the AWS APIs.
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
 | [`evidently`](services/evidently.yml) | 26 | 6 | 0 |
+| [`apprunner`](services/apprunner.yml) | 26 | 0 | 1 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 26 | 0 | 0 |
@@ -197,7 +198,6 @@ The following table summarises the AWS APIs.
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
-| [`apprunner`](services/apprunner.yml) | 22 | 4 | 1 |
 | [`timestream`](services/timestream.yml) | 22 | 2 | 3 |
 | [`outposts`](services/outposts.yml) | 22 | 1 | 0 |
 | [`appflow`](services/appflow.yml) | 22 | 0 | 6 |

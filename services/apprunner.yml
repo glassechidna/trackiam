@@ -3,18 +3,22 @@ Actions:
   - Name: apprunner:CreateAutoScalingConfiguration
   - Name: apprunner:CreateConnection
   - Name: apprunner:CreateService
+  - Name: apprunner:CreateVpcConnector
   - Name: apprunner:DeleteAutoScalingConfiguration
   - Name: apprunner:DeleteConnection
   - Name: apprunner:DeleteService
+  - Name: apprunner:DeleteVpcConnector
   - Name: apprunner:DescribeAutoScalingConfiguration
   - Name: apprunner:DescribeCustomDomains
   - Name: apprunner:DescribeService
+  - Name: apprunner:DescribeVpcConnector
   - Name: apprunner:DisassociateCustomDomain
   - Name: apprunner:ListAutoScalingConfigurations
   - Name: apprunner:ListConnections
   - Name: apprunner:ListOperations
   - Name: apprunner:ListServices
   - Name: apprunner:ListTagsForResource
+  - Name: apprunner:ListVpcConnectors
   - Name: apprunner:PauseService
   - Name: apprunner:ResumeService
   - Name: apprunner:StartDeployment
@@ -24,9 +28,3 @@ Actions:
 
   # actions with no corresponding API
   - Name: apprunner:DescribeOperation
-
-  # APIs without an IAM action
-  - Name: apprunner:CreateVpcConnector
-  - Name: apprunner:DeleteVpcConnector
-  - Name: apprunner:DescribeVpcConnector
-  - Name: apprunner:ListVpcConnectors
