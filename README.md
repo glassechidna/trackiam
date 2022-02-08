@@ -44,7 +44,7 @@ The following table summarises the AWS APIs.
 | [`lightsail`](services/lightsail.yml) | 153 | 0 | 0 |
 | [`rds`](services/rds.yml) | 141 | 0 | 5 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
-| [`ssm`](services/ssm.yml) | 134 | 1 | 8 |
+| [`ssm`](services/ssm.yml) | 135 | 0 | 8 |
 | [`connect`](services/connect.yml) | 132 | 3 | 4 |
 | [`quicksight`](services/quicksight.yml) | 115 | 0 | 23 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 113 | 6 | 1 |
@@ -56,7 +56,7 @@ The following table summarises the AWS APIs.
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`cloudfront`](services/cloudfront.yml) | 92 | 0 | 1 |
-| [`storagegateway`](services/storagegateway.yml) | 89 | 1 | 1 |
+| [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
 | [`iotwireless`](services/iotwireless.yml) | 87 | 0 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
 | [`s3`](services/s3.yml) | 82 | 58 | 44 |
