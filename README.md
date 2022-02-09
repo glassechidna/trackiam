@@ -69,6 +69,7 @@ The following table summarises the AWS APIs.
 | [`workmail`](services/workmail.yml) | 68 | 0 | 51 |
 | [`frauddetector`](services/frauddetector.yml) | 68 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 67 | 0 | 0 |
+| [`proton`](services/proton.yml) | 66 | 1 | 24 |
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
 | [`iotsitewise`](services/iotsitewise.yml) | 65 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
@@ -82,7 +83,6 @@ The following table summarises the AWS APIs.
 | [`ds`](services/ds.yml) | 62 | 1 | 6 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
-| [`proton`](services/proton.yml) | 60 | 7 | 24 |
 | [`personalize`](services/personalize.yml) | 60 | 0 | 0 |
 | [`rekognition`](services/rekognition.yml) | 58 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
