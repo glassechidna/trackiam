@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 306
-* Unique actions: 12532
+* Unique actions: 12534
 * Managed policies: 921
 
 Most common managed policy name prefixes:
@@ -73,7 +73,7 @@ The following table summarises the AWS APIs.
 | [`iotsitewise`](services/iotsitewise.yml) | 65 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
-| [`cloudformation`](services/cloudformation.yml) | 64 | 1 | 11 |
+| [`cloudformation`](services/cloudformation.yml) | 64 | 2 | 11 |
 | [`es`](services/es.yml) | 64 | 0 | 10 |
 | [`route53`](services/route53.yml) | 64 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 63 | 3 | 0 |
@@ -163,9 +163,9 @@ The following table summarises the AWS APIs.
 | [`drs`](services/drs.yml) | 29 | 0 | 38 |
 | [`mgn`](services/mgn.yml) | 29 | 0 | 32 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
+| [`kinesis`](services/kinesis.yml) | 29 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
-| [`kinesis`](services/kinesis.yml) | 28 | 1 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 28 | 0 | 2 |
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
@@ -246,7 +246,7 @@ The following table summarises the AWS APIs.
 | [`honeycode`](services/honeycode.yml) | 12 | 3 | 14 |
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
-| [`iot`](services/iot.yml) | 11 | 0 | 242 |
+| [`iot`](services/iot.yml) | 11 | 0 | 243 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 28 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 11 | 0 | 0 |
 | [`grafana`](services/grafana.yml) | 11 | 0 | 0 |
@@ -349,11 +349,11 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1881 |
 | `Get` | 1670 |
-| `Describe` | 1471 |
+| `Describe` | 1472 |
 | `Delete` | 1458 |
 | `Create` | 1361 |
 | `Update` | 1110 |
-| `Put` | 353 |
+| `Put` | 354 |
 | `Start` | 236 |
 | `Tag` | 194 |
 | `Untag` | 192 |
