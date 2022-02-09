@@ -91,6 +91,7 @@ The following table summarises the AWS APIs.
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
 | [`medialive`](services/medialive.yml) | 56 | 1 | 0 |
 | [`securityhub`](services/securityhub.yml) | 56 | 0 | 9 |
+| [`kendra`](services/kendra.yml) | 55 | 0 | 0 |
 | [`workspaces`](services/workspaces.yml) | 54 | 4 | 0 |
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
@@ -113,7 +114,6 @@ The following table summarises the AWS APIs.
 | [`wafv2`](services/wafv2.yml) | 44 | 1 | 2 |
 | [`workspaces-web`](services/workspaces-web.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
-| [`kendra`](services/kendra.yml) | 43 | 12 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 42 | 2 | 1 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |

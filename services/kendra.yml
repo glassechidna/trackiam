@@ -1,29 +1,40 @@
 Actions:
+  - Name: kendra:AssociateEntitiesToExperience
+  - Name: kendra:AssociatePersonasToEntities
   - Name: kendra:BatchDeleteDocument
   - Name: kendra:BatchGetDocumentStatus
   - Name: kendra:BatchPutDocument
   - Name: kendra:ClearQuerySuggestions
   - Name: kendra:CreateDataSource
+  - Name: kendra:CreateExperience
   - Name: kendra:CreateFaq
   - Name: kendra:CreateIndex
   - Name: kendra:CreateQuerySuggestionsBlockList
   - Name: kendra:CreateThesaurus
   - Name: kendra:DeleteDataSource
+  - Name: kendra:DeleteExperience
   - Name: kendra:DeleteFaq
   - Name: kendra:DeleteIndex
   - Name: kendra:DeletePrincipalMapping
   - Name: kendra:DeleteQuerySuggestionsBlockList
   - Name: kendra:DeleteThesaurus
   - Name: kendra:DescribeDataSource
+  - Name: kendra:DescribeExperience
   - Name: kendra:DescribeFaq
   - Name: kendra:DescribeIndex
   - Name: kendra:DescribePrincipalMapping
   - Name: kendra:DescribeQuerySuggestionsBlockList
   - Name: kendra:DescribeQuerySuggestionsConfig
   - Name: kendra:DescribeThesaurus
+  - Name: kendra:DisassociateEntitiesFromExperience
+  - Name: kendra:DisassociatePersonasFromEntities
   - Name: kendra:GetQuerySuggestions
+  - Name: kendra:GetSnapshots
   - Name: kendra:ListDataSourceSyncJobs
   - Name: kendra:ListDataSources
+  - Name: kendra:ListEntityPersonas
+  - Name: kendra:ListExperienceEntities
+  - Name: kendra:ListExperiences
   - Name: kendra:ListFaqs
   - Name: kendra:ListGroupsOlderThanOrderingId
   - Name: kendra:ListIndices
@@ -38,21 +49,8 @@ Actions:
   - Name: kendra:TagResource
   - Name: kendra:UntagResource
   - Name: kendra:UpdateDataSource
+  - Name: kendra:UpdateExperience
   - Name: kendra:UpdateIndex
   - Name: kendra:UpdateQuerySuggestionsBlockList
   - Name: kendra:UpdateQuerySuggestionsConfig
   - Name: kendra:UpdateThesaurus
-
-  # APIs without an IAM action
-  - Name: kendra:AssociateEntitiesToExperience
-  - Name: kendra:AssociatePersonasToEntities
-  - Name: kendra:CreateExperience
-  - Name: kendra:DeleteExperience
-  - Name: kendra:DescribeExperience
-  - Name: kendra:DisassociateEntitiesFromExperience
-  - Name: kendra:DisassociatePersonasFromEntities
-  - Name: kendra:GetSnapshots
-  - Name: kendra:ListEntityPersonas
-  - Name: kendra:ListExperienceEntities
-  - Name: kendra:ListExperiences
-  - Name: kendra:UpdateExperience
