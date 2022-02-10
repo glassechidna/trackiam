@@ -1,27 +1,17 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLaunchWizard_Fullaccess",
   "CreateDate": "2020-08-06T17:47:30Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ABPQ7BLC2",
   "PolicyName": "AmazonLaunchWizard_Fullaccess",
   "PolicyVersion": {
-    "CreateDate": "2021-08-25T17:24:45Z",
+    "CreateDate": "2022-02-10T00:28:41Z",
     "Document": {
       "Statement": [
         {
           "Action": "cloudformation:TagResource",
-          "Condition": {
-            "ForAllValues:StringLike": {
-              "aws:TagKeys": "LaunchWizard*"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": "ssm:SendCommand",
           "Condition": {
             "ForAllValues:StringLike": {
               "aws:TagKeys": "LaunchWizard*"
@@ -205,6 +195,20 @@
           "Resource": [
             "arn:aws:catalog:*:*:*/*",
             "arn:aws:servicecatalog:*:*:*/*"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:SendCommand"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/aws:cloudformation:stack-id": "arn:aws:cloudformation:*:*:stack/LaunchWizard-*/*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
           ]
         },
         {
@@ -546,12 +550,22 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ssm:GetDocument",
+            "ssm:SendCommand"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*::document/AWS-RunShellScript"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2021-08-25T17:24:45Z"
+  "UpdateDate": "2022-02-10T00:28:41Z"
 }
