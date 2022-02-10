@@ -87,9 +87,9 @@ The following table summarises the AWS APIs.
 | [`rekognition`](services/rekognition.yml) | 58 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
+| [`medialive`](services/medialive.yml) | 57 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 57 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
-| [`medialive`](services/medialive.yml) | 56 | 1 | 0 |
 | [`securityhub`](services/securityhub.yml) | 56 | 0 | 9 |
 | [`kendra`](services/kendra.yml) | 55 | 0 | 0 |
 | [`workspaces`](services/workspaces.yml) | 54 | 4 | 0 |
