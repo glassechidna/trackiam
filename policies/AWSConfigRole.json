@@ -1,21 +1,23 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSConfigRole",
   "CreateDate": "2015-04-02T17:36:23Z",
-  "DefaultVersionId": "v41",
+  "DefaultVersionId": "v42",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIQRXRDRGJUA33ELIO",
   "PolicyName": "AWSConfigRole",
   "PolicyVersion": {
-    "CreateDate": "2021-09-08T18:07:39Z",
+    "CreateDate": "2022-02-10T18:33:55Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "access-analyzer:GetAnalyzer",
+            "access-analyzer:GetArchiveRule",
             "access-analyzer:ListAnalyzers",
             "access-analyzer:ListArchiveRules",
             "access-analyzer:ListTagsForResource",
+            "account:GetAlternateContact",
             "acm:DescribeCertificate",
             "acm:ListCertificates",
             "acm:ListTagsForCertificate",
@@ -48,6 +50,7 @@
             "cloudtrail:GetTrailStatus",
             "cloudtrail:ListTags",
             "cloudwatch:DescribeAlarms",
+            "codedeploy:GetDeploymentConfig",
             "codepipeline:GetPipeline",
             "codepipeline:GetPipelineState",
             "codepipeline:ListPipelines",
@@ -71,6 +74,7 @@
             "ec2:GetEbsEncryptionByDefault",
             "ecr-public:DescribeRepositories",
             "ecr-public:GetRepositoryCatalogData",
+            "ecr-public:GetRepositoryPolicy",
             "ecr-public:ListTagsForResource",
             "ecr:DescribeRepositories",
             "ecr:GetLifecyclePolicy",
@@ -83,6 +87,7 @@
             "ecs:ListClusters",
             "ecs:ListServices",
             "ecs:ListTagsForResource",
+            "ecs:ListTaskDefinitionFamilies",
             "ecs:ListTaskDefinitions",
             "eks:DescribeCluster",
             "eks:DescribeNodegroup",
@@ -94,6 +99,8 @@
             "elasticache:DescribeReplicationGroups",
             "elasticache:DescribeSnapshots",
             "elasticache:ListTagsForResource",
+            "elasticbeanstalk:DescribeConfigurationSettings",
+            "elasticbeanstalk:DescribeEnvironments",
             "elasticfilesystem:DescribeAccessPoints",
             "elasticfilesystem:DescribeBackupPolicy",
             "elasticfilesystem:DescribeFileSystemPolicy",
@@ -122,6 +129,8 @@
             "es:DescribeDomains",
             "es:DescribeElasticsearchDomain",
             "es:DescribeElasticsearchDomains",
+            "es:GetCompatibleElasticsearchVersions",
+            "es:GetCompatibleVersions",
             "es:ListDomainNames",
             "es:ListTags",
             "firehose:DescribeDeliveryStream",
@@ -188,6 +197,9 @@
             "network-firewall:DescribeLoggingConfiguration",
             "network-firewall:ListFirewalls",
             "organizations:DescribeOrganization",
+            "organizations:DescribePolicy",
+            "organizations:ListParents",
+            "organizations:ListPoliciesForTarget",
             "rds:DescribeDBClusterSnapshotAttributes",
             "rds:DescribeDBClusterSnapshots",
             "rds:DescribeDBClusters",
@@ -200,6 +212,7 @@
             "rds:DescribeDBSnapshots",
             "rds:DescribeDBSubnetGroups",
             "rds:DescribeEventSubscriptions",
+            "rds:DescribeOptionGroups",
             "rds:ListTagsForResource",
             "redshift:DescribeClusterParameterGroups",
             "redshift:DescribeClusterParameters",
@@ -309,7 +322,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v41"
+    "VersionId": "v42"
   },
-  "UpdateDate": "2021-09-08T18:07:39Z"
+  "UpdateDate": "2022-02-10T18:33:55Z"
 }
