@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 306
-* Unique actions: 12537
+* Unique actions: 12540
 * Managed policies: 921
 
 Most common managed policy name prefixes:
@@ -46,7 +46,7 @@ The following table summarises the AWS APIs.
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
 | [`ssm`](services/ssm.yml) | 135 | 0 | 8 |
 | [`connect`](services/connect.yml) | 132 | 3 | 4 |
-| [`quicksight`](services/quicksight.yml) | 115 | 0 | 23 |
+| [`quicksight`](services/quicksight.yml) | 115 | 0 | 25 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 113 | 6 | 1 |
 | [`greengrass`](services/greengrass.yml) | 110 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 108 | 0 | 0 |
@@ -74,7 +74,7 @@ The following table summarises the AWS APIs.
 | [`iotsitewise`](services/iotsitewise.yml) | 65 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
-| [`cloudformation`](services/cloudformation.yml) | 64 | 2 | 11 |
+| [`cloudformation`](services/cloudformation.yml) | 64 | 2 | 12 |
 | [`es`](services/es.yml) | 64 | 0 | 10 |
 | [`route53`](services/route53.yml) | 64 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 63 | 3 | 0 |
@@ -349,7 +349,7 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1882 |
 | `Get` | 1671 |
-| `Describe` | 1472 |
+| `Describe` | 1473 |
 | `Delete` | 1458 |
 | `Create` | 1361 |
 | `Update` | 1110 |
