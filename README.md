@@ -110,8 +110,8 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 46 | 0 | 0 |
+| [`wafv2`](services/wafv2.yml) | 45 | 3 | 2 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
-| [`wafv2`](services/wafv2.yml) | 44 | 4 | 2 |
 | [`workspaces-web`](services/workspaces-web.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 42 | 2 | 1 |
@@ -193,13 +193,13 @@ The following table summarises the AWS APIs.
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 23 | 0 | 1 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 23 | 0 | 0 |
+| [`outposts`](services/outposts.yml) | 23 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 0 | 0 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 22 | 2 | 3 |
-| [`outposts`](services/outposts.yml) | 22 | 1 | 0 |
 | [`appflow`](services/appflow.yml) | 22 | 0 | 6 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
