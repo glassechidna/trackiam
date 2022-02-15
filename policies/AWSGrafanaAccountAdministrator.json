@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSGrafanaAccountAdministrator",
   "CreateDate": "2021-02-23T00:20:38Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KHVCM25DH",
   "PolicyName": "AWSGrafanaAccountAdministrator",
   "PolicyVersion": {
-    "CreateDate": "2021-10-13T22:13:18Z",
+    "CreateDate": "2022-02-15T22:36:18Z",
     "Document": {
       "Statement": [
         {
@@ -32,7 +32,7 @@
             "grafana:*"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:grafana:*:*:/workspaces*",
+          "Resource": "*",
           "Sid": "AWSGrafanaPermissions"
         },
         {
@@ -47,7 +47,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-10-13T22:13:18Z"
+  "UpdateDate": "2022-02-15T22:36:18Z"
 }
