@@ -1,11 +1,14 @@
 Actions:
+  - Name: mediatailor:ConfigureLogsForPlaybackConfiguration
   - Name: mediatailor:CreateChannel
+  - Name: mediatailor:CreatePrefetchSchedule
   - Name: mediatailor:CreateProgram
   - Name: mediatailor:CreateSourceLocation
   - Name: mediatailor:CreateVodSource
   - Name: mediatailor:DeleteChannel
   - Name: mediatailor:DeleteChannelPolicy
   - Name: mediatailor:DeletePlaybackConfiguration
+  - Name: mediatailor:DeletePrefetchSchedule
   - Name: mediatailor:DeleteProgram
   - Name: mediatailor:DeleteSourceLocation
   - Name: mediatailor:DeleteVodSource
@@ -16,9 +19,11 @@ Actions:
   - Name: mediatailor:GetChannelPolicy
   - Name: mediatailor:GetChannelSchedule
   - Name: mediatailor:GetPlaybackConfiguration
+  - Name: mediatailor:GetPrefetchSchedule
   - Name: mediatailor:ListAlerts
   - Name: mediatailor:ListChannels
   - Name: mediatailor:ListPlaybackConfigurations
+  - Name: mediatailor:ListPrefetchSchedules
   - Name: mediatailor:ListSourceLocations
   - Name: mediatailor:ListTagsForResource
   - Name: mediatailor:ListVodSources
@@ -31,10 +36,3 @@ Actions:
   - Name: mediatailor:UpdateChannel
   - Name: mediatailor:UpdateSourceLocation
   - Name: mediatailor:UpdateVodSource
-
-  # APIs without an IAM action
-  - Name: mediatailor:ConfigureLogsForPlaybackConfiguration
-  - Name: mediatailor:CreatePrefetchSchedule
-  - Name: mediatailor:DeletePrefetchSchedule
-  - Name: mediatailor:GetPrefetchSchedule
-  - Name: mediatailor:ListPrefetchSchedules

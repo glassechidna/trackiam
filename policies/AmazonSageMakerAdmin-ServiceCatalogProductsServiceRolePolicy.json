@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerAdmin-ServiceCatalogProductsServiceRolePolicy",
   "CreateDate": "2020-11-27T18:48:07Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NAOSKQH4V",
   "PolicyName": "AmazonSageMakerAdmin-ServiceCatalogProductsServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-09-15T20:00:26Z",
+    "CreateDate": "2022-02-16T19:52:11Z",
     "Document": {
       "Statement": [
         {
@@ -100,7 +100,8 @@
         },
         {
           "Action": [
-            "cognito-idp:CreateUserPool"
+            "cognito-idp:CreateUserPool",
+            "cognito-idp:TagResource"
           ],
           "Condition": {
             "ForAnyValue:StringLike": {
@@ -340,6 +341,7 @@
             "s3:DeleteBucketPolicy",
             "s3:GetBucketPolicy",
             "s3:PutBucketAcl",
+            "s3:PutBucketCORS",
             "s3:PutBucketLogging",
             "s3:PutBucketNotification",
             "s3:PutBucketPolicy",
@@ -403,7 +405,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2021-09-15T20:00:26Z"
+  "UpdateDate": "2022-02-16T19:52:11Z"
 }
