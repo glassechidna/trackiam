@@ -1,20 +1,23 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForImageBuilder",
   "CreateDate": "2019-11-29T22:02:13Z",
-  "DefaultVersionId": "v14",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NE22WISEW",
   "PolicyName": "AWSServiceRoleForImageBuilder",
   "PolicyVersion": {
-    "CreateDate": "2021-12-06T20:55:41Z",
+    "CreateDate": "2022-02-16T18:01:43Z",
     "Document": {
       "Statement": [
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
             "StringEquals": {
-              "iam:AWSServiceName": "ssm.amazonaws.com"
+              "iam:AWSServiceName": [
+                "ec2fastlaunch.amazonaws.com",
+                "ssm.amazonaws.com"
+              ]
             }
           },
           "Effect": "Allow",
@@ -66,12 +69,52 @@
             "ec2:CreateTags"
           ],
           "Condition": {
-            "ForAnyValue:StringEquals": {
-              "aws:RequestTag/CreatedBy": "EC2 Image Builder"
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": [
+                "EC2 Fast Launch",
+                "EC2 Image Builder"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*::launch-template/*",
+            "arn:aws:ec2:*::snapshot/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": [
+                "EC2 Fast Launch",
+                "EC2 Image Builder"
+              ],
+              "ec2:CreateAction": [
+                "CreateImage",
+                "RunInstances"
+              ]
             }
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:EnableFastLaunch"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*::image/*"
+          ]
         },
         {
           "Action": [
@@ -90,7 +133,7 @@
             "ec2:ModifySnapshotAttribute"
           ],
           "Condition": {
-            "ForAnyValue:StringEquals": {
+            "StringEquals": {
               "ec2:ResourceTag/CreatedBy": "EC2 Image Builder"
             }
           },
@@ -103,7 +146,10 @@
           ],
           "Condition": {
             "StringEquals": {
-              "aws:RequestTag/CreatedBy": "EC2 Image Builder"
+              "aws:RequestTag/CreatedBy": [
+                "EC2 Fast Launch",
+                "EC2 Image Builder"
+              ]
             }
           },
           "Effect": "Allow",
@@ -114,11 +160,12 @@
         },
         {
           "Action": [
+            "ec2:StartInstances",
             "ec2:StopInstances",
             "ec2:TerminateInstances"
           ],
           "Condition": {
-            "ForAnyValue:StringEquals": {
+            "StringEquals": {
               "ec2:ResourceTag/CreatedBy": "EC2 Image Builder"
             }
           },
@@ -128,7 +175,6 @@
         {
           "Action": [
             "kms:Decrypt",
-            "kms:DescribeKey",
             "kms:Encrypt",
             "kms:GenerateDataKeyWithoutPlaintext",
             "kms:ReEncryptFrom",
@@ -151,10 +197,24 @@
         },
         {
           "Action": [
+            "kms:DescribeKey"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": [
+                "ec2.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "ssm:SendCommand"
           ],
           "Condition": {
-            "ForAnyValue:StringEquals": {
+            "StringEquals": {
               "ssm:resourceTag/CreatedBy": [
                 "EC2 Image Builder"
               ]
@@ -199,6 +259,7 @@
             "ec2:DescribeInstanceTypeOfferings",
             "ec2:DescribeInstanceTypes",
             "ec2:DescribeInstances",
+            "ec2:DescribeSnapshots",
             "ec2:DescribeSubnets",
             "ec2:DescribeTags",
             "ec2:ModifyImageAttribute"
@@ -209,6 +270,7 @@
         {
           "Action": [
             "ec2:CreateLaunchTemplateVersion",
+            "ec2:DescribeLaunchTemplateVersions",
             "ec2:DescribeLaunchTemplates",
             "ec2:ModifyLaunchTemplate"
           ],
@@ -239,6 +301,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:key-pair/*",
+            "arn:aws:ec2:*:*:launch-template/*",
             "arn:aws:ec2:*:*:network-interface/*",
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:subnet/*",
@@ -301,7 +364,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v14"
+    "VersionId": "v15"
   },
-  "UpdateDate": "2021-12-06T20:55:41Z"
+  "UpdateDate": "2022-02-16T18:01:43Z"
 }
