@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 306
-* Unique actions: 12540
+* Unique actions: 12541
 * Managed policies: 921
 
 Most common managed policy name prefixes:
@@ -227,6 +227,7 @@ The following table summarises the AWS APIs.
 | [`fis`](services/fis.yml) | 16 | 0 | 3 |
 | [`backup-gateway`](services/backup-gateway.yml) | 16 | 0 | 2 |
 | [`resource-groups`](services/resource-groups.yml) | 16 | 0 | 1 |
+| [`honeycode`](services/honeycode.yml) | 15 | 0 | 15 |
 | [`app-integrations`](services/app-integrations.yml) | 15 | 0 | 4 |
 | [`emr-containers`](services/emr-containers.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
@@ -243,7 +244,6 @@ The following table summarises the AWS APIs.
 | [`health`](services/health.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`braket`](services/braket.yml) | 13 | 0 | 0 |
-| [`honeycode`](services/honeycode.yml) | 12 | 3 | 14 |
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`iot`](services/iot.yml) | 11 | 0 | 243 |
@@ -350,7 +350,7 @@ Most common action prefixes:
 | `List` | 1882 |
 | `Get` | 1671 |
 | `Describe` | 1473 |
-| `Delete` | 1458 |
+| `Delete` | 1459 |
 | `Create` | 1361 |
 | `Update` | 1110 |
 | `Put` | 354 |

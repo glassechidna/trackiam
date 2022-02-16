@@ -9,13 +9,17 @@ Actions:
   - Name: honeycode:ListTableColumns
   - Name: honeycode:ListTableRows
   - Name: honeycode:ListTables
+  - Name: honeycode:ListTagsForResource
   - Name: honeycode:QueryTableRows
   - Name: honeycode:StartTableDataImportJob
+  - Name: honeycode:TagResource
+  - Name: honeycode:UntagResource
 
   # actions with no corresponding API
   - Name: honeycode:ApproveTeamAssociation
   - Name: honeycode:CreateTeam
   - Name: honeycode:CreateTenant
+  - Name: honeycode:DeleteDomains
   - Name: honeycode:DeregisterGroups
   - Name: honeycode:DescribeTeam
   - Name: honeycode:ListDomains
@@ -27,8 +31,3 @@ Actions:
   - Name: honeycode:RejectTeamAssociation
   - Name: honeycode:RestartDomainVerification
   - Name: honeycode:UpdateTeam
-
-  # APIs without an IAM action
-  - Name: honeycode:ListTagsForResource
-  - Name: honeycode:TagResource
-  - Name: honeycode:UntagResource
