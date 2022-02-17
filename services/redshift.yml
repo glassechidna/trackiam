@@ -1,8 +1,10 @@
 Actions:
   - Name: redshift:AcceptReservedNodeExchange
+  - Name: redshift:AddPartner
   - Name: redshift:AssociateDataShareConsumer
   - Name: redshift:AuthorizeClusterSecurityGroupIngress
   - Name: redshift:AuthorizeDataShare
+  - Name: redshift:AuthorizeEndpointAccess
   - Name: redshift:AuthorizeSnapshotAccess
   - Name: redshift:BatchDeleteClusterSnapshots
   - Name: redshift:BatchModifyClusterSnapshots
@@ -14,6 +16,7 @@ Actions:
   - Name: redshift:CreateClusterSecurityGroup
   - Name: redshift:CreateClusterSnapshot
   - Name: redshift:CreateClusterSubnetGroup
+  - Name: redshift:CreateEndpointAccess
   - Name: redshift:CreateEventSubscription
   - Name: redshift:CreateHsmClientCertificate
   - Name: redshift:CreateHsmConfiguration
@@ -29,9 +32,11 @@ Actions:
   - Name: redshift:DeleteClusterSecurityGroup
   - Name: redshift:DeleteClusterSnapshot
   - Name: redshift:DeleteClusterSubnetGroup
+  - Name: redshift:DeleteEndpointAccess
   - Name: redshift:DeleteEventSubscription
   - Name: redshift:DeleteHsmClientCertificate
   - Name: redshift:DeleteHsmConfiguration
+  - Name: redshift:DeletePartner
   - Name: redshift:DeleteScheduledAction
   - Name: redshift:DeleteSnapshotCopyGrant
   - Name: redshift:DeleteSnapshotSchedule
@@ -52,6 +57,8 @@ Actions:
   - Name: redshift:DescribeDataSharesForConsumer
   - Name: redshift:DescribeDataSharesForProducer
   - Name: redshift:DescribeDefaultClusterParameters
+  - Name: redshift:DescribeEndpointAccess
+  - Name: redshift:DescribeEndpointAuthorization
   - Name: redshift:DescribeEventCategories
   - Name: redshift:DescribeEventSubscriptions
   - Name: redshift:DescribeEvents
@@ -60,6 +67,7 @@ Actions:
   - Name: redshift:DescribeLoggingStatus
   - Name: redshift:DescribeNodeConfigurationOptions
   - Name: redshift:DescribeOrderableClusterOptions
+  - Name: redshift:DescribePartners
   - Name: redshift:DescribeReservedNodeOfferings
   - Name: redshift:DescribeReservedNodes
   - Name: redshift:DescribeResize
@@ -87,6 +95,7 @@ Actions:
   - Name: redshift:ModifyClusterSnapshot
   - Name: redshift:ModifyClusterSnapshotSchedule
   - Name: redshift:ModifyClusterSubnetGroup
+  - Name: redshift:ModifyEndpointAccess
   - Name: redshift:ModifyEventSubscription
   - Name: redshift:ModifyScheduledAction
   - Name: redshift:ModifySnapshotCopyRetentionPeriod
@@ -102,8 +111,10 @@ Actions:
   - Name: redshift:RestoreTableFromClusterSnapshot
   - Name: redshift:ResumeCluster
   - Name: redshift:RevokeClusterSecurityGroupIngress
+  - Name: redshift:RevokeEndpointAccess
   - Name: redshift:RevokeSnapshotAccess
   - Name: redshift:RotateEncryptionKey
+  - Name: redshift:UpdatePartnerStatus
 
   # actions with no corresponding API
   - Name: redshift:CancelQuery
@@ -126,16 +137,5 @@ Actions:
   - Name: redshift:ViewQueriesInConsole
 
   # APIs without an IAM action
-  - Name: redshift:AddPartner
-  - Name: redshift:AuthorizeEndpointAccess
-  - Name: redshift:CreateEndpointAccess
-  - Name: redshift:DeleteEndpointAccess
-  - Name: redshift:DeletePartner
-  - Name: redshift:DescribeEndpointAccess
-  - Name: redshift:DescribeEndpointAuthorization
-  - Name: redshift:DescribePartners
   - Name: redshift:DescribeReservedNodeExchangeStatus
   - Name: redshift:GetReservedNodeExchangeConfigurationOptions
-  - Name: redshift:ModifyEndpointAccess
-  - Name: redshift:RevokeEndpointAccess
-  - Name: redshift:UpdatePartnerStatus
