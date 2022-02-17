@@ -68,8 +68,8 @@ The following table summarises the AWS APIs.
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 68 | 0 | 51 |
 | [`frauddetector`](services/frauddetector.yml) | 68 | 0 | 0 |
+| [`proton`](services/proton.yml) | 67 | 0 | 24 |
 | [`comprehend`](services/comprehend.yml) | 67 | 0 | 0 |
-| [`proton`](services/proton.yml) | 66 | 1 | 24 |
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
 | [`iotsitewise`](services/iotsitewise.yml) | 65 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
