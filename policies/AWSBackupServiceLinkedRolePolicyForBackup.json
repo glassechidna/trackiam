@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBackupServiceLinkedRolePolicyForBackup",
   "CreateDate": "2020-06-02T23:08:40Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ONJBD4ZY2",
   "PolicyName": "AWSBackupServiceLinkedRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2022-01-14T19:17:42Z",
+    "CreateDate": "2022-02-18T17:38:21Z",
     "Document": {
       "Statement": [
         {
@@ -146,6 +146,7 @@
             "fsx:DescribeFileSystems",
             "rds:DescribeDBClusters",
             "rds:DescribeDBInstances",
+            "s3:ListAllMyBuckets",
             "storagegateway:ListVolumes",
             "tag:GetResources"
           ],
@@ -218,7 +219,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2022-01-14T19:17:42Z"
+  "UpdateDate": "2022-02-18T17:38:21Z"
 }

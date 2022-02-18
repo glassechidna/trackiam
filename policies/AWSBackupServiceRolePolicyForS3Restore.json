@@ -1,0 +1,66 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSBackupServiceRolePolicyForS3Restore",
+  "CreateDate": "2022-02-18T17:39:37Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4KPHGRYXGS",
+  "PolicyName": "AWSBackupServiceRolePolicyForS3Restore",
+  "PolicyVersion": {
+    "CreateDate": "2022-02-18T17:39:37Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "kms:DescribeKey",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": "s3.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:GetBucketLocation",
+            "s3:GetBucketVersioning",
+            "s3:ListBucket",
+            "s3:ListBucketVersions",
+            "s3:PutBucketVersioning"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:DeleteObject",
+            "s3:GetObject",
+            "s3:GetObjectAcl",
+            "s3:GetObjectTagging",
+            "s3:GetObjectVersion",
+            "s3:GetObjectVersionAcl",
+            "s3:ListMultipartUploadParts",
+            "s3:PutObject",
+            "s3:PutObjectAcl",
+            "s3:PutObjectTagging",
+            "s3:PutObjectVersionAcl"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*/*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-02-18T17:39:37Z"
+}
