@@ -2,7 +2,9 @@ Actions:
   - Name: datasync:CancelTaskExecution
   - Name: datasync:CreateAgent
   - Name: datasync:CreateLocationEfs
+  - Name: datasync:CreateLocationFsxLustre
   - Name: datasync:CreateLocationFsxWindows
+  - Name: datasync:CreateLocationHdfs
   - Name: datasync:CreateLocationNfs
   - Name: datasync:CreateLocationObjectStorage
   - Name: datasync:CreateLocationS3
@@ -13,7 +15,9 @@ Actions:
   - Name: datasync:DeleteTask
   - Name: datasync:DescribeAgent
   - Name: datasync:DescribeLocationEfs
+  - Name: datasync:DescribeLocationFsxLustre
   - Name: datasync:DescribeLocationFsxWindows
+  - Name: datasync:DescribeLocationHdfs
   - Name: datasync:DescribeLocationNfs
   - Name: datasync:DescribeLocationObjectStorage
   - Name: datasync:DescribeLocationS3
@@ -29,15 +33,9 @@ Actions:
   - Name: datasync:TagResource
   - Name: datasync:UntagResource
   - Name: datasync:UpdateAgent
+  - Name: datasync:UpdateLocationHdfs
   - Name: datasync:UpdateLocationNfs
   - Name: datasync:UpdateLocationObjectStorage
   - Name: datasync:UpdateLocationSmb
   - Name: datasync:UpdateTask
   - Name: datasync:UpdateTaskExecution
-
-  # APIs without an IAM action
-  - Name: datasync:CreateLocationFsxLustre
-  - Name: datasync:CreateLocationHdfs
-  - Name: datasync:DescribeLocationFsxLustre
-  - Name: datasync:DescribeLocationHdfs
-  - Name: datasync:UpdateLocationHdfs

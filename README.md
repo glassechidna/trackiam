@@ -118,6 +118,7 @@ The following table summarises the AWS APIs.
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 1 |
+| [`datasync`](services/datasync.yml) | 40 | 0 | 0 |
 | [`sns`](services/sns.yml) | 39 | 1 | 0 |
 | [`wellarchitected`](services/wellarchitected.yml) | 39 | 0 | 0 |
 | [`resiliencehub`](services/resiliencehub.yml) | 39 | 0 | 0 |
@@ -133,7 +134,6 @@ The following table summarises the AWS APIs.
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 36 | 0 | 0 |
-| [`datasync`](services/datasync.yml) | 35 | 5 | 0 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`kafka`](services/kafka.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
