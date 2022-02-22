@@ -1,6 +1,7 @@
 Actions:
   - Name: profile:AddProfileKey
   - Name: profile:CreateDomain
+  - Name: profile:CreateIntegrationWorkflow
   - Name: profile:CreateProfile
   - Name: profile:DeleteDomain
   - Name: profile:DeleteIntegration
@@ -8,6 +9,7 @@ Actions:
   - Name: profile:DeleteProfileKey
   - Name: profile:DeleteProfileObject
   - Name: profile:DeleteProfileObjectType
+  - Name: profile:DeleteWorkflow
   - Name: profile:GetAutoMergingPreview
   - Name: profile:GetDomain
   - Name: profile:GetIdentityResolutionJob
@@ -15,6 +17,8 @@ Actions:
   - Name: profile:GetMatches
   - Name: profile:GetProfileObjectType
   - Name: profile:GetProfileObjectTypeTemplate
+  - Name: profile:GetWorkflow
+  - Name: profile:GetWorkflowSteps
   - Name: profile:ListAccountIntegrations
   - Name: profile:ListDomains
   - Name: profile:ListIdentityResolutionJobs
@@ -23,6 +27,7 @@ Actions:
   - Name: profile:ListProfileObjectTypes
   - Name: profile:ListProfileObjects
   - Name: profile:ListTagsForResource
+  - Name: profile:ListWorkflows
   - Name: profile:MergeProfiles
   - Name: profile:PutIntegration
   - Name: profile:PutProfileObject
@@ -32,10 +37,3 @@ Actions:
   - Name: profile:UntagResource
   - Name: profile:UpdateDomain
   - Name: profile:UpdateProfile
-
-  # APIs without an IAM action
-  - Name: profile:CreateIntegrationWorkflow
-  - Name: profile:DeleteWorkflow
-  - Name: profile:GetWorkflow
-  - Name: profile:GetWorkflowSteps
-  - Name: profile:ListWorkflows

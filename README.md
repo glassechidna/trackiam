@@ -126,6 +126,7 @@ The following table summarises the AWS APIs.
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
 | [`transcribe`](services/transcribe.yml) | 38 | 3 | 2 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
+| [`profile`](services/profile.yml) | 38 | 0 | 0 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`fsx`](services/fsx.yml) | 37 | 0 | 4 |
 | [`iotevents`](services/iotevents.yml) | 37 | 0 | 1 |
@@ -142,7 +143,6 @@ The following table summarises the AWS APIs.
 | [`eks`](services/eks.yml) | 34 | 0 | 1 |
 | [`athena`](services/athena.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
-| [`profile`](services/profile.yml) | 33 | 5 | 0 |
 | [`memorydb`](services/memorydb.yml) | 33 | 2 | 2 |
 | [`panorama`](services/panorama.yml) | 33 | 0 | 31 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
