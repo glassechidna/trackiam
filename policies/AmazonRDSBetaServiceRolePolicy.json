@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSBetaServiceRolePolicy",
   "CreateDate": "2018-05-02T19:41:04Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ36CJAE6OYAR4YEK4",
   "PolicyName": "AmazonRDSBetaServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-11-18T22:40:34Z",
+    "CreateDate": "2022-02-22T20:46:59Z",
     "Document": {
       "Statement": [
         {
@@ -16,7 +16,11 @@
           ],
           "Condition": {
             "StringEquals": {
-              "cloudwatch:namespace": "AWS/RDS"
+              "cloudwatch:namespace": [
+                "AWS/DocDB",
+                "AWS/Neptune",
+                "AWS/RDS"
+              ]
             }
           },
           "Effect": "Allow",
@@ -27,9 +31,13 @@
             "ec2:AllocateAddress",
             "ec2:AssociateAddress",
             "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CreateCoipPoolPermission",
+            "ec2:CreateLocalGatewayRouteTablePermission",
             "ec2:CreateNetworkInterface",
             "ec2:CreateSecurityGroup",
             "ec2:CreateVpcEndpoint",
+            "ec2:DeleteCoipPoolPermission",
+            "ec2:DeleteLocalGatewayRouteTablePermission",
             "ec2:DeleteNetworkInterface",
             "ec2:DeleteSecurityGroup",
             "ec2:DeleteVpcEndpoints",
@@ -37,6 +45,7 @@
             "ec2:DescribeAvailabilityZones",
             "ec2:DescribeCoipPools",
             "ec2:DescribeInternetGateways",
+            "ec2:DescribeLocalGatewayRouteTablePermissions",
             "ec2:DescribeLocalGatewayRouteTableVpcAssociations",
             "ec2:DescribeLocalGatewayRouteTables",
             "ec2:DescribeLocalGateways",
@@ -85,7 +94,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2020-11-18T22:40:34Z"
+  "UpdateDate": "2022-02-22T20:46:59Z"
 }
