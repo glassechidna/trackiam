@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2ReadWriteSharing",
   "CreateDate": "2021-09-24T14:25:37Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LIWZX3BPO",
   "PolicyName": "AmazonRedshiftQueryEditorV2ReadWriteSharing",
   "PolicyVersion": {
-    "CreateDate": "2021-09-24T14:25:37Z",
+    "CreateDate": "2022-02-23T17:02:35Z",
     "Document": {
       "Statement": [
         {
@@ -136,6 +136,19 @@
           "Sid": "AmazonRedshiftQueryEditorV2CreateOwnedResourcePermissions"
         },
         {
+          "Action": [
+            "tag:GetResources"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaLast": "sqlworkbench.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ResourceGroupsTaggingPermissions"
+        },
+        {
           "Action": "redshift:DescribeClusters",
           "Effect": "Allow",
           "Resource": "*",
@@ -155,6 +168,7 @@
             "sqlworkbench:ListFiles",
             "sqlworkbench:ListRedshiftClusters",
             "sqlworkbench:ListTabs",
+            "sqlworkbench:ListTaggedResources",
             "sqlworkbench:PutTab",
             "sqlworkbench:PutUserWorkspaceSettings",
             "sqlworkbench:UpdateFolder"
@@ -167,7 +181,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-09-24T14:25:37Z"
+  "UpdateDate": "2022-02-23T17:02:35Z"
 }
