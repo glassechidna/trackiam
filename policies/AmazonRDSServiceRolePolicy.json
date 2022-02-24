@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSServiceRolePolicy",
   "CreateDate": "2018-01-08T18:17:46Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIPEU5ZOBJWKWHUIBA",
   "PolicyName": "AmazonRDSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-11-21T00:08:24Z",
+    "CreateDate": "2022-02-24T01:07:42Z",
     "Document": {
       "Statement": [
         {
@@ -16,7 +16,11 @@
           ],
           "Condition": {
             "StringEquals": {
-              "cloudwatch:namespace": "AWS/RDS"
+              "cloudwatch:namespace": [
+                "AWS/DocDB",
+                "AWS/Neptune",
+                "AWS/RDS"
+              ]
             }
           },
           "Effect": "Allow",
@@ -28,9 +32,13 @@
             "ec2:AssignPrivateIpAddresses",
             "ec2:AssociateAddress",
             "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CreateCoipPoolPermission",
+            "ec2:CreateLocalGatewayRouteTablePermission",
             "ec2:CreateNetworkInterface",
             "ec2:CreateSecurityGroup",
             "ec2:CreateVpcEndpoint",
+            "ec2:DeleteCoipPoolPermission",
+            "ec2:DeleteLocalGatewayRouteTablePermission",
             "ec2:DeleteNetworkInterface",
             "ec2:DeleteSecurityGroup",
             "ec2:DeleteVpcEndpoints",
@@ -38,6 +46,7 @@
             "ec2:DescribeAvailabilityZones",
             "ec2:DescribeCoipPools",
             "ec2:DescribeInternetGateways",
+            "ec2:DescribeLocalGatewayRouteTablePermissions",
             "ec2:DescribeLocalGatewayRouteTableVpcAssociations",
             "ec2:DescribeLocalGatewayRouteTables",
             "ec2:DescribeLocalGateways",
@@ -114,7 +123,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2020-11-21T00:08:24Z"
+  "UpdateDate": "2022-02-24T01:07:42Z"
 }
