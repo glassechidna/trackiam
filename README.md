@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 306
-* Unique actions: 12549
+* Unique actions: 12551
 * Managed policies: 927
 
 Most common managed policy name prefixes:
@@ -59,7 +59,7 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
 | [`iotwireless`](services/iotwireless.yml) | 87 | 0 | 1 |
 | [`config`](services/config.yml) | 86 | 0 | 0 |
-| [`s3`](services/s3.yml) | 82 | 58 | 46 |
+| [`s3`](services/s3.yml) | 83 | 58 | 45 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
@@ -192,10 +192,10 @@ The following table summarises the AWS APIs.
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 23 | 1 | 3 |
+| [`outposts`](services/outposts.yml) | 23 | 0 | 2 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 23 | 0 | 1 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 23 | 0 | 0 |
-| [`outposts`](services/outposts.yml) | 23 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 0 | 0 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
@@ -348,10 +348,10 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1883 |
-| `Get` | 1675 |
+| `Get` | 1676 |
 | `Describe` | 1474 |
 | `Delete` | 1460 |
-| `Create` | 1362 |
+| `Create` | 1363 |
 | `Update` | 1110 |
 | `Put` | 354 |
 | `Start` | 236 |
