@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupServiceRolePolicyForS3Backup",
   "CreateDate": "2022-02-18T17:40:24Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CGZAHUZ2D",
   "PolicyName": "AWSBackupServiceRolePolicyForS3Backup",
   "PolicyVersion": {
-    "CreateDate": "2022-02-18T17:40:24Z",
+    "CreateDate": "2022-02-26T00:01:09Z",
     "Document": {
       "Statement": [
         {
@@ -57,11 +57,13 @@
         {
           "Action": [
             "s3:GetBucketLocation",
+            "s3:GetBucketNotification",
             "s3:GetBucketTagging",
             "s3:GetBucketVersioning",
             "s3:GetInventoryConfiguration",
             "s3:ListBucket",
             "s3:ListBucketVersions",
+            "s3:PutBucketNotification",
             "s3:PutInventoryConfiguration"
           ],
           "Effect": "Allow",
@@ -83,7 +85,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-02-18T17:40:24Z"
+  "UpdateDate": "2022-02-26T00:01:09Z"
 }
