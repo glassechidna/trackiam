@@ -150,6 +150,7 @@ The following table summarises the AWS APIs.
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 32 | 0 | 0 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
+| [`evidently`](services/evidently.yml) | 32 | 0 | 0 |
 | [`sso`](services/sso.yml) | 31 | 0 | 52 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`wisdom`](services/wisdom.yml) | 31 | 0 | 0 |
@@ -161,7 +162,6 @@ The following table summarises the AWS APIs.
 | [`network-firewall`](services/network-firewall.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`inspector2`](services/inspector2.yml) | 30 | 0 | 0 |
-| [`evidently`](services/evidently.yml) | 29 | 3 | 0 |
 | [`drs`](services/drs.yml) | 29 | 0 | 38 |
 | [`mgn`](services/mgn.yml) | 29 | 0 | 32 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
