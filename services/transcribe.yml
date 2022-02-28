@@ -25,6 +25,7 @@ Actions:
   - Name: transcribe:ListLanguageModels
   - Name: transcribe:ListMedicalTranscriptionJobs
   - Name: transcribe:ListMedicalVocabularies
+  - Name: transcribe:ListTagsForResource
   - Name: transcribe:ListTranscriptionJobs
   - Name: transcribe:ListVocabularies
   - Name: transcribe:ListVocabularyFilters
@@ -33,6 +34,8 @@ Actions:
   - Name: transcribe:StartMedicalTranscriptionJob
   - Name: transcribe:StartStreamTranscription
   - Name: transcribe:StartTranscriptionJob
+  - Name: transcribe:TagResource
+  - Name: transcribe:UntagResource
   - Name: transcribe:UpdateCallAnalyticsCategory
   - Name: transcribe:UpdateMedicalVocabulary
   - Name: transcribe:UpdateVocabulary
@@ -41,8 +44,3 @@ Actions:
   # actions with no corresponding API
   - Name: transcribe:StartMedicalStreamTranscriptionWebSocket
   - Name: transcribe:StartStreamTranscriptionWebSocket
-
-  # APIs without an IAM action
-  - Name: transcribe:ListTagsForResource
-  - Name: transcribe:TagResource
-  - Name: transcribe:UntagResource

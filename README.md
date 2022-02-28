@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 307
-* Unique actions: 12552
+* Unique actions: 12564
 * Managed policies: 928
 
 Most common managed policy name prefixes:
@@ -117,6 +117,7 @@ The following table summarises the AWS APIs.
 | [`lakeformation`](services/lakeformation.yml) | 42 | 2 | 1 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
+| [`transcribe`](services/transcribe.yml) | 41 | 0 | 2 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 1 |
 | [`datasync`](services/datasync.yml) | 40 | 0 | 0 |
 | [`sns`](services/sns.yml) | 39 | 1 | 0 |
@@ -124,7 +125,6 @@ The following table summarises the AWS APIs.
 | [`resiliencehub`](services/resiliencehub.yml) | 39 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
-| [`transcribe`](services/transcribe.yml) | 38 | 3 | 2 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`profile`](services/profile.yml) | 38 | 0 | 0 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
@@ -139,9 +139,9 @@ The following table summarises the AWS APIs.
 | [`kafka`](services/kafka.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 35 | 0 | 0 |
+| [`athena`](services/athena.yml) | 34 | 1 | 1 |
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
 | [`eks`](services/eks.yml) | 34 | 0 | 1 |
-| [`athena`](services/athena.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`memorydb`](services/memorydb.yml) | 33 | 2 | 2 |
 | [`panorama`](services/panorama.yml) | 33 | 0 | 31 |
@@ -287,7 +287,7 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 247 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
-| [`finspace-api`](services/finspace-api.yml) | 0 | 14 | 0 |
+| [`finspace-api`](services/finspace-api.yml) | 0 | 25 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
@@ -348,12 +348,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1883 |
-| `Get` | 1677 |
+| `List` | 1885 |
+| `Get` | 1678 |
 | `Describe` | 1474 |
-| `Delete` | 1460 |
-| `Create` | 1363 |
-| `Update` | 1110 |
+| `Delete` | 1461 |
+| `Create` | 1365 |
+| `Update` | 1113 |
 | `Put` | 354 |
 | `Start` | 236 |
 | `Tag` | 194 |
