@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 307
-* Unique actions: 12570
+* Unique actions: 12581
 * Managed policies: 928
 
 Most common managed policy name prefixes:
@@ -281,6 +281,7 @@ The following table summarises the AWS APIs.
 | [`account`](services/account.yml) | 3 | 0 | 3 |
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 3 | 0 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
+| [`cassandra`](services/cassandra.yml) | 2 | 11 | 6 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 2 | 0 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 2 | 0 | 0 |
@@ -313,7 +314,6 @@ The following table summarises the AWS APIs.
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
-| [`cassandra`](services/cassandra.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 7 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
@@ -348,12 +348,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1885 |
-| `Get` | 1678 |
+| `List` | 1888 |
+| `Get` | 1680 |
 | `Describe` | 1477 |
-| `Delete` | 1462 |
-| `Create` | 1365 |
-| `Update` | 1114 |
+| `Delete` | 1464 |
+| `Create` | 1367 |
+| `Update` | 1115 |
 | `Put` | 354 |
 | `Start` | 236 |
 | `Tag` | 194 |

@@ -1,4 +1,6 @@
 Actions:
+  - Name: cassandra:TagResource
+  - Name: cassandra:UntagResource
 
   # actions with no corresponding API
   - Name: cassandra:Alter
@@ -7,5 +9,16 @@ Actions:
   - Name: cassandra:Modify
   - Name: cassandra:Restore
   - Name: cassandra:Select
-  - Name: cassandra:TagResource
-  - Name: cassandra:UntagResource
+
+  # APIs without an IAM action
+  - Name: cassandra:CreateKeyspace
+  - Name: cassandra:CreateTable
+  - Name: cassandra:DeleteKeyspace
+  - Name: cassandra:DeleteTable
+  - Name: cassandra:GetKeyspace
+  - Name: cassandra:GetTable
+  - Name: cassandra:ListKeyspaces
+  - Name: cassandra:ListTables
+  - Name: cassandra:ListTagsForResource
+  - Name: cassandra:RestoreTable
+  - Name: cassandra:UpdateTable
