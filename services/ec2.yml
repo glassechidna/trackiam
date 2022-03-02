@@ -399,6 +399,7 @@ Actions:
   - Name: ec2:ImportKeyPair
   - Name: ec2:ImportSnapshot
   - Name: ec2:ImportVolume
+  - Name: ec2:ListImagesInRecycleBin
   - Name: ec2:ListSnapshotsInRecycleBin
   - Name: ec2:ModifyAddressAttribute
   - Name: ec2:ModifyAvailabilityZoneGroup
@@ -493,6 +494,7 @@ Actions:
   - Name: ec2:ResetNetworkInterfaceAttribute
   - Name: ec2:ResetSnapshotAttribute
   - Name: ec2:RestoreAddressToClassic
+  - Name: ec2:RestoreImageFromRecycleBin
   - Name: ec2:RestoreManagedPrefixListVersion
   - Name: ec2:RestoreSnapshotFromRecycleBin
   - Name: ec2:RestoreSnapshotTier
@@ -526,7 +528,3 @@ Actions:
   - Name: ec2:DeleteLocalGatewayRouteTablePermission
   - Name: ec2:DescribeLocalGatewayRouteTablePermissions
   - Name: ec2:SendSpotInstanceInterruptions
-
-  # APIs without an IAM action
-  - Name: ec2:ListImagesInRecycleBin
-  - Name: ec2:RestoreImageFromRecycleBin
