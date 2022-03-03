@@ -42,6 +42,7 @@ Actions:
   - Name: sagemaker:CreatePresignedNotebookInstanceUrl
   - Name: sagemaker:CreateProcessingJob
   - Name: sagemaker:CreateProject
+  - Name: sagemaker:CreateStudioLifecycleConfig
   - Name: sagemaker:CreateTrainingJob
   - Name: sagemaker:CreateTransformJob
   - Name: sagemaker:CreateTrial
@@ -82,6 +83,7 @@ Actions:
   - Name: sagemaker:DeletePipeline
   - Name: sagemaker:DeleteProject
   - Name: sagemaker:DeleteRecord
+  - Name: sagemaker:DeleteStudioLifecycleConfig
   - Name: sagemaker:DeleteTags
   - Name: sagemaker:DeleteTrial
   - Name: sagemaker:DeleteTrialComponent
@@ -130,6 +132,7 @@ Actions:
   - Name: sagemaker:DescribePipelineExecution
   - Name: sagemaker:DescribeProcessingJob
   - Name: sagemaker:DescribeProject
+  - Name: sagemaker:DescribeStudioLifecycleConfig
   - Name: sagemaker:DescribeSubscribedWorkteam
   - Name: sagemaker:DescribeTrainingJob
   - Name: sagemaker:DescribeTransformJob
@@ -197,6 +200,7 @@ Actions:
   - Name: sagemaker:ListPipelines
   - Name: sagemaker:ListProcessingJobs
   - Name: sagemaker:ListProjects
+  - Name: sagemaker:ListStudioLifecycleConfigs
   - Name: sagemaker:ListSubscribedWorkteams
   - Name: sagemaker:ListTags
   - Name: sagemaker:ListTrainingJobs
@@ -212,6 +216,7 @@ Actions:
   - Name: sagemaker:QueryLineage
   - Name: sagemaker:RegisterDevices
   - Name: sagemaker:RenderUiTemplate
+  - Name: sagemaker:RetryPipelineExecution
   - Name: sagemaker:Search
   - Name: sagemaker:SendHeartbeat
   - Name: sagemaker:SendPipelineExecutionStepFailure
@@ -265,10 +270,3 @@ Actions:
   - Name: sagemaker:CreateLineageGroupPolicy
   - Name: sagemaker:DeleteLineageGroupPolicy
   - Name: sagemaker:PutLineageGroupPolicy
-
-  # APIs without an IAM action
-  - Name: sagemaker:CreateStudioLifecycleConfig
-  - Name: sagemaker:DeleteStudioLifecycleConfig
-  - Name: sagemaker:DescribeStudioLifecycleConfig
-  - Name: sagemaker:ListStudioLifecycleConfigs
-  - Name: sagemaker:RetryPipelineExecution

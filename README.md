@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 307
-* Unique actions: 12581
+* Unique actions: 12585
 * Managed policies: 928
 
 Most common managed policy name prefixes:
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 521 | 0 | 6 |
-| [`sagemaker`](services/sagemaker.yml) | 259 | 5 | 5 |
+| [`sagemaker`](services/sagemaker.yml) | 264 | 0 | 5 |
 | [`chime`](services/chime.yml) | 207 | 0 | 51 |
 | [`glue`](services/glue.yml) | 166 | 3 | 11 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
@@ -47,7 +47,7 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 135 | 0 | 8 |
 | [`connect`](services/connect.yml) | 134 | 1 | 4 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 119 | 0 | 1 |
-| [`redshift`](services/redshift.yml) | 116 | 2 | 18 |
+| [`redshift`](services/redshift.yml) | 118 | 0 | 18 |
 | [`quicksight`](services/quicksight.yml) | 115 | 0 | 25 |
 | [`greengrass`](services/greengrass.yml) | 110 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 108 | 0 | 0 |
@@ -97,7 +97,7 @@ The following table summarises the AWS APIs.
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
 | [`geo`](services/geo.yml) | 52 | 0 | 0 |
-| [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 22 |
+| [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 26 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 51 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 50 | 0 | 0 |
@@ -348,13 +348,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1888 |
+| `List` | 1889 |
 | `Get` | 1680 |
 | `Describe` | 1477 |
-| `Delete` | 1464 |
+| `Delete` | 1465 |
 | `Create` | 1367 |
-| `Update` | 1115 |
-| `Put` | 354 |
+| `Update` | 1116 |
+| `Put` | 355 |
 | `Start` | 236 |
 | `Tag` | 194 |
 | `Untag` | 192 |
