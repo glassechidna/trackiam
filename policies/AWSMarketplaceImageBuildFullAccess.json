@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceImageBuildFullAccess",
   "CreateDate": "2018-07-31T23:29:49Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAI4QBMJWC3BNHBHN6I",
   "PolicyName": "AWSMarketplaceImageBuildFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2018-08-08T21:11:59Z",
+    "CreateDate": "2022-03-04T17:05:09Z",
     "Document": {
       "Statement": [
         {
@@ -25,8 +25,7 @@
           "Condition": {
             "StringEquals": {
               "iam:PassedToService": [
-                "ec2.amazonaws.com",
-                "ssm.amazonaws.com"
+                "ec2.amazonaws.com"
               ]
             }
           },
@@ -34,6 +33,49 @@
           "Resource": [
             "arn:aws:iam::*:role/*Automation*",
             "arn:aws:iam::*:role/*Instance*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/marketplace-image-build:build-id": "*"
+            },
+            "StringNotEquals": {
+              "ec2:CreateAction": "RunInstances"
+            }
+          },
+          "Effect": "Deny",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:AssociatedResourceARN": [
+                "arn:aws:ssm:ap-northeast-1:340648487307:automation-definition/*",
+                "arn:aws:ssm:ap-southeast-2:362149219987:automation-definition/*",
+                "arn:aws:ssm:eu-central-1:906690553262:automation-definition/*",
+                "arn:aws:ssm:eu-west-1:564714592864:automation-definition/*",
+                "arn:aws:ssm:eu-west-2:587945719687:automation-definition/*",
+                "arn:aws:ssm:us-east-1:058657716661:automation-definition/*",
+                "arn:aws:ssm:us-east-2:134937423163:automation-definition/*",
+                "arn:aws:ssm:us-west-2:243045473901:automation-definition/*"
+              ],
+              "iam:PassedToService": [
+                "ssm.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
           ]
         },
         {
@@ -60,13 +102,9 @@
             "iam:GetInstanceProfile",
             "iam:GetRole",
             "sns:GetTopicAttributes",
-            "ssm:CreateDocument",
             "ssm:DescribeDocument",
             "ssm:GetAutomationExecution",
-            "ssm:ListDocuments",
-            "ssm:StartAutomationExecution",
-            "ssm:UpdateDocument",
-            "ssm:UpdateDocumentDefaultVersion"
+            "ssm:ListDocuments"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -99,12 +137,28 @@
           "Resource": [
             "arn:aws:sns:*:*:*image-build*"
           ]
+        },
+        {
+          "Action": [
+            "ssm:StartAutomationExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:ap-northeast-1:340648487307:automation-definition/*",
+            "arn:aws:ssm:ap-southeast-2:362149219987:automation-definition/*",
+            "arn:aws:ssm:eu-central-1:906690553262:automation-definition/*",
+            "arn:aws:ssm:eu-west-1:564714592864:automation-definition/*",
+            "arn:aws:ssm:eu-west-2:587945719687:automation-definition/*",
+            "arn:aws:ssm:us-east-1:058657716661:automation-definition/*",
+            "arn:aws:ssm:us-east-2:134937423163:automation-definition/*",
+            "arn:aws:ssm:us-west-2:243045473901:automation-definition/*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2018-08-08T21:11:59Z"
+  "UpdateDate": "2022-03-04T17:05:09Z"
 }
