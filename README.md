@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 307
-* Unique actions: 12585
+* Unique actions: 12587
 * Managed policies: 928
 
 Most common managed policy name prefixes:
@@ -178,13 +178,13 @@ The following table summarises the AWS APIs.
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 27 | 0 | 1 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
+| [`devops-guru`](services/devops-guru.yml) | 26 | 0 | 2 |
 | [`apprunner`](services/apprunner.yml) | 26 | 0 | 1 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`fms`](services/fms.yml) | 26 | 0 | 0 |
-| [`devops-guru`](services/devops-guru.yml) | 26 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
 | [`snowball`](services/snowball.yml) | 25 | 0 | 0 |
 | [`ram`](services/ram.yml) | 25 | 0 | 0 |
@@ -350,10 +350,10 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1889 |
 | `Get` | 1680 |
-| `Describe` | 1477 |
+| `Describe` | 1478 |
 | `Delete` | 1465 |
 | `Create` | 1367 |
-| `Update` | 1116 |
+| `Update` | 1117 |
 | `Put` | 355 |
 | `Start` | 236 |
 | `Tag` | 194 |
