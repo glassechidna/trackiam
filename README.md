@@ -71,13 +71,13 @@ The following table summarises the AWS APIs.
 | [`proton`](services/proton.yml) | 67 | 0 | 24 |
 | [`comprehend`](services/comprehend.yml) | 67 | 0 | 0 |
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
+| [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 65 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 64 | 2 | 12 |
 | [`es`](services/es.yml) | 64 | 0 | 10 |
 | [`route53`](services/route53.yml) | 64 | 0 | 0 |
-| [`clouddirectory`](services/clouddirectory.yml) | 63 | 3 | 0 |
 | [`ds`](services/ds.yml) | 63 | 0 | 6 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
