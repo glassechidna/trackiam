@@ -14,9 +14,11 @@ Actions:
   - Name: wafv2:DeleteWebACL
   - Name: wafv2:DescribeManagedRuleGroup
   - Name: wafv2:DisassociateWebACL
+  - Name: wafv2:GenerateMobileSdkReleaseUrl
   - Name: wafv2:GetIPSet
   - Name: wafv2:GetLoggingConfiguration
   - Name: wafv2:GetManagedRuleSet
+  - Name: wafv2:GetMobileSdkRelease
   - Name: wafv2:GetPermissionPolicy
   - Name: wafv2:GetRateBasedStatementManagedKeys
   - Name: wafv2:GetRegexPatternSet
@@ -29,6 +31,7 @@ Actions:
   - Name: wafv2:ListIPSets
   - Name: wafv2:ListLoggingConfigurations
   - Name: wafv2:ListManagedRuleSets
+  - Name: wafv2:ListMobileSdkReleases
   - Name: wafv2:ListRegexPatternSets
   - Name: wafv2:ListResourcesForWebACL
   - Name: wafv2:ListRuleGroups
@@ -48,8 +51,3 @@ Actions:
   # actions with no corresponding API
   - Name: wafv2:DisassociateFirewallManager
   - Name: wafv2:PutFirewallManagerRuleGroups
-
-  # APIs without an IAM action
-  - Name: wafv2:GenerateMobileSdkReleaseUrl
-  - Name: wafv2:GetMobileSdkRelease
-  - Name: wafv2:ListMobileSdkReleases

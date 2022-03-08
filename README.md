@@ -103,6 +103,7 @@ The following table summarises the AWS APIs.
 | [`imagebuilder`](services/imagebuilder.yml) | 50 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 49 | 0 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 12 |
+| [`wafv2`](services/wafv2.yml) | 48 | 0 | 2 |
 | [`license-manager`](services/license-manager.yml) | 48 | 0 | 0 |
 | [`kms`](services/kms.yml) | 47 | 1 | 3 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
@@ -110,7 +111,6 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 46 | 0 | 0 |
-| [`wafv2`](services/wafv2.yml) | 45 | 3 | 2 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`workspaces-web`](services/workspaces-web.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
