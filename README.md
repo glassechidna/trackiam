@@ -245,8 +245,8 @@ The following table summarises the AWS APIs.
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`braket`](services/braket.yml) | 13 | 0 | 0 |
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
+| [`kafkaconnect`](services/kafkaconnect.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
-| [`kafkaconnect`](services/kafkaconnect.yml) | 11 | 1 | 0 |
 | [`iot`](services/iot.yml) | 11 | 0 | 243 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 28 |
 | [`grafana`](services/grafana.yml) | 11 | 0 | 0 |
