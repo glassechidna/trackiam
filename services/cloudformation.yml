@@ -15,6 +15,7 @@ Actions:
   - Name: cloudformation:DeregisterType
   - Name: cloudformation:DescribeAccountLimits
   - Name: cloudformation:DescribeChangeSet
+  - Name: cloudformation:DescribeChangeSetHooks
   - Name: cloudformation:DescribePublisher
   - Name: cloudformation:DescribeStackDriftDetectionStatus
   - Name: cloudformation:DescribeStackEvents
@@ -52,6 +53,7 @@ Actions:
   - Name: cloudformation:RecordHandlerProgress
   - Name: cloudformation:RegisterPublisher
   - Name: cloudformation:RegisterType
+  - Name: cloudformation:RollbackStack
   - Name: cloudformation:SetStackPolicy
   - Name: cloudformation:SetTypeConfiguration
   - Name: cloudformation:SetTypeDefaultVersion
@@ -69,7 +71,6 @@ Actions:
   - Name: cloudformation:CreateResource
   - Name: cloudformation:CreateUploadBucket
   - Name: cloudformation:DeleteResource
-  - Name: cloudformation:DescribeChangeSetHook
   - Name: cloudformation:GetResource
   - Name: cloudformation:GetResourceRequestStatus
   - Name: cloudformation:ListResourceRequests
@@ -77,7 +78,3 @@ Actions:
   - Name: cloudformation:TagResource
   - Name: cloudformation:UntagResource
   - Name: cloudformation:UpdateResource
-
-  # APIs without an IAM action
-  - Name: cloudformation:DescribeChangeSetHooks
-  - Name: cloudformation:RollbackStack
