@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 310
-* Unique actions: 12625
+* Unique actions: 12626
 * Managed policies: 928
 
 Most common managed policy name prefixes:
@@ -162,6 +162,7 @@ The following table summarises the AWS APIs.
 | [`network-firewall`](services/network-firewall.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`inspector2`](services/inspector2.yml) | 30 | 0 | 0 |
+| [`billingconductor`](services/billingconductor.yml) | 29 | 1 | 1 |
 | [`drs`](services/drs.yml) | 29 | 0 | 38 |
 | [`mgn`](services/mgn.yml) | 29 | 0 | 32 |
 | [`dataexchange`](services/dataexchange.yml) | 29 | 0 | 2 |
@@ -288,7 +289,6 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 247 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
-| [`billingconductor`](services/billingconductor.yml) | 0 | 30 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 25 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
@@ -351,7 +351,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1901 |
+| `List` | 1902 |
 | `Get` | 1682 |
 | `Describe` | 1478 |
 | `Delete` | 1469 |
