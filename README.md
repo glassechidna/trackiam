@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 309
-* Unique actions: 12594
+* Unique services: 310
+* Unique actions: 12625
 * Managed policies: 928
 
 Most common managed policy name prefixes:
@@ -277,7 +277,7 @@ The following table summarises the AWS APIs.
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 6 | 0 | 0 |
 | [`identitystore`](services/identitystore.yml) | 4 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
-| [`s3-outposts`](services/s3-outposts.yml) | 3 | 0 | 29 |
+| [`s3-outposts`](services/s3-outposts.yml) | 3 | 1 | 29 |
 | [`account`](services/account.yml) | 3 | 0 | 3 |
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 3 | 0 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
@@ -288,6 +288,7 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 247 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
+| [`billingconductor`](services/billingconductor.yml) | 0 | 30 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 25 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
@@ -350,14 +351,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1890 |
+| `List` | 1901 |
 | `Get` | 1682 |
 | `Describe` | 1478 |
-| `Delete` | 1465 |
-| `Create` | 1367 |
-| `Update` | 1118 |
+| `Delete` | 1469 |
+| `Create` | 1371 |
+| `Update` | 1122 |
 | `Put` | 355 |
 | `Start` | 237 |
-| `Tag` | 194 |
-| `Untag` | 192 |
+| `Tag` | 195 |
+| `Untag` | 193 |
 
