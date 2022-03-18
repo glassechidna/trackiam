@@ -14,6 +14,7 @@ Actions:
   - Name: glue:BatchStopJobRun
   - Name: glue:BatchUpdatePartition
   - Name: glue:CancelMLTaskRun
+  - Name: glue:CancelStatement
   - Name: glue:CheckSchemaVersionValidity
   - Name: glue:CreateBlueprint
   - Name: glue:CreateClassifier
@@ -29,6 +30,7 @@ Actions:
   - Name: glue:CreateSchema
   - Name: glue:CreateScript
   - Name: glue:CreateSecurityConfiguration
+  - Name: glue:CreateSession
   - Name: glue:CreateTable
   - Name: glue:CreateTrigger
   - Name: glue:CreateUserDefinedFunction
@@ -50,6 +52,7 @@ Actions:
   - Name: glue:DeleteSchema
   - Name: glue:DeleteSchemaVersions
   - Name: glue:DeleteSecurityConfiguration
+  - Name: glue:DeleteSession
   - Name: glue:DeleteTable
   - Name: glue:DeleteTableVersion
   - Name: glue:DeleteTrigger
@@ -97,6 +100,8 @@ Actions:
   - Name: glue:GetSchemaVersionsDiff
   - Name: glue:GetSecurityConfiguration
   - Name: glue:GetSecurityConfigurations
+  - Name: glue:GetSession
+  - Name: glue:GetStatement
   - Name: glue:GetTable
   - Name: glue:GetTableVersion
   - Name: glue:GetTableVersions
@@ -119,6 +124,8 @@ Actions:
   - Name: glue:ListRegistries
   - Name: glue:ListSchemaVersions
   - Name: glue:ListSchemas
+  - Name: glue:ListSessions
+  - Name: glue:ListStatements
   - Name: glue:ListTriggers
   - Name: glue:ListWorkflows
   - Name: glue:PutDataCatalogEncryptionSettings
@@ -130,6 +137,7 @@ Actions:
   - Name: glue:RemoveSchemaVersionMetadata
   - Name: glue:ResetJobBookmark
   - Name: glue:ResumeWorkflowRun
+  - Name: glue:RunStatement
   - Name: glue:SearchTables
   - Name: glue:StartBlueprintRun
   - Name: glue:StartCrawler
@@ -143,6 +151,7 @@ Actions:
   - Name: glue:StartWorkflowRun
   - Name: glue:StopCrawler
   - Name: glue:StopCrawlerSchedule
+  - Name: glue:StopSession
   - Name: glue:StopTrigger
   - Name: glue:StopWorkflowRun
   - Name: glue:TagResource
@@ -167,16 +176,7 @@ Actions:
   - Name: glue:UpdateWorkflow
 
   # actions with no corresponding API
-  - Name: glue:CancelStatement
-  - Name: glue:CreateSession
-  - Name: glue:DeleteSession
-  - Name: glue:GetSession
-  - Name: glue:GetStatement
-  - Name: glue:ListSessions
-  - Name: glue:ListStatements
   - Name: glue:NotifyEvent
-  - Name: glue:RunStatement
-  - Name: glue:StopSession
   - Name: glue:UseMLTransforms
 
   # APIs without an IAM action
