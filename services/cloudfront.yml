@@ -3,7 +3,6 @@ Actions:
   - Name: cloudfront:CreateCachePolicy
   - Name: cloudfront:CreateCloudFrontOriginAccessIdentity
   - Name: cloudfront:CreateDistribution
-  - Name: cloudfront:CreateDistributionWithTags
   - Name: cloudfront:CreateFieldLevelEncryptionConfig
   - Name: cloudfront:CreateFieldLevelEncryptionProfile
   - Name: cloudfront:CreateFunction
@@ -94,3 +93,6 @@ Actions:
 
   # actions with no corresponding API
   - Name: cloudfront:ListDistributionsByLambdaFunction
+
+  # APIs without an IAM action
+  - Name: cloudfront:CreateDistributionWithTags
