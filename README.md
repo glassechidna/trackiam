@@ -145,6 +145,7 @@ The following table summarises the AWS APIs.
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`memorydb`](services/memorydb.yml) | 33 | 2 | 2 |
 | [`panorama`](services/panorama.yml) | 33 | 0 | 31 |
+| [`ce`](services/ce.yml) | 33 | 0 | 10 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
@@ -156,7 +157,6 @@ The following table summarises the AWS APIs.
 | [`wisdom`](services/wisdom.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
-| [`ce`](services/ce.yml) | 30 | 0 | 13 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
 | [`route53domains`](services/route53domains.yml) | 30 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 30 | 0 | 0 |
