@@ -277,9 +277,9 @@ The following table summarises the AWS APIs.
 | [`ebs`](services/ebs.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 6 | 0 | 0 |
+| [`s3-outposts`](services/s3-outposts.yml) | 4 | 0 | 29 |
 | [`identitystore`](services/identitystore.yml) | 4 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
-| [`s3-outposts`](services/s3-outposts.yml) | 3 | 1 | 29 |
 | [`account`](services/account.yml) | 3 | 0 | 3 |
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 3 | 0 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
