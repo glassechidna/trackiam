@@ -1,0 +1,44 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonSageMakerServiceCatalogProductsApiGatewayServiceRolePolicy",
+  "CreateDate": "2022-03-25T04:25:36Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4PMOKIK2TP",
+  "PolicyName": "AmazonSageMakerServiceCatalogProductsApiGatewayServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2022-03-25T04:25:36Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogDelivery",
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DeleteLogDelivery",
+            "logs:DescribeDestinations",
+            "logs:DescribeExportTasks",
+            "logs:DescribeLogGroups",
+            "logs:DescribeLogStreams",
+            "logs:DescribeMetricFilters",
+            "logs:DescribeQueries",
+            "logs:DescribeQueryDefinitions",
+            "logs:DescribeResourcePolicies",
+            "logs:DescribeSubscriptionFilters",
+            "logs:GetLogDelivery",
+            "logs:GetLogEvents",
+            "logs:PutLogEvents",
+            "logs:PutResourcePolicy",
+            "logs:UpdateLogDelivery"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/apigateway/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-03-25T04:25:36Z"
+}
