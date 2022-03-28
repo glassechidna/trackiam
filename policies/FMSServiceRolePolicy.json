@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/FMSServiceRolePolicy",
   "CreateDate": "2018-03-28T23:01:12Z",
-  "DefaultVersionId": "v23",
+  "DefaultVersionId": "v24",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAI62NTGYJB446ACUEA",
   "PolicyName": "FMSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-02-16T18:35:29Z",
+    "CreateDate": "2022-03-28T21:09:12Z",
     "Document": {
       "Statement": [
         {
@@ -40,6 +40,38 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*:*:route-table/*"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "FMManaged",
+                "Name"
+              ]
+            },
+            "StringEquals": {
+              "ec2:CreateAction": "CreateVpcEndpoint"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:vpc-endpoint/*"
+          ]
+        },
+        {
+          "Action": "ec2:CreateVpcEndpoint",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/FMManaged": [
+                "true"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:vpc-endpoint/*"
+          ]
         },
         {
           "Action": "ec2:DeleteRouteTable",
@@ -81,6 +113,18 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DeleteVpcEndpoints"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/FMManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-endpoint/*"
         },
         {
           "Action": [
@@ -166,6 +210,14 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:route53resolver:*:*:firewall-rule-group-association/*"
+        },
+        {
+          "Action": "ec2:CreateVpcEndpoint",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ]
         },
         {
           "Action": "iam:GetRole",
@@ -542,7 +594,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v23"
+    "VersionId": "v24"
   },
-  "UpdateDate": "2022-02-16T18:35:29Z"
+  "UpdateDate": "2022-03-28T21:09:12Z"
 }
