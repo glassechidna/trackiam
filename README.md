@@ -96,9 +96,9 @@ The following table summarises the AWS APIs.
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
+| [`organizations`](services/organizations.yml) | 52 | 0 | 0 |
 | [`geo`](services/geo.yml) | 52 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 26 |
-| [`organizations`](services/organizations.yml) | 51 | 1 | 0 |
 | [`events`](services/events.yml) | 51 | 0 | 1 |
 | [`imagebuilder`](services/imagebuilder.yml) | 50 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 49 | 0 | 2 |
@@ -136,10 +136,10 @@ The following table summarises the AWS APIs.
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 36 | 0 | 0 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
+| [`athena`](services/athena.yml) | 35 | 0 | 1 |
 | [`kafka`](services/kafka.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 35 | 0 | 0 |
-| [`athena`](services/athena.yml) | 34 | 1 | 1 |
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
 | [`eks`](services/eks.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
