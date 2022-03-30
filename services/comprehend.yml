@@ -24,6 +24,7 @@ Actions:
   - Name: comprehend:DescribePiiEntitiesDetectionJob
   - Name: comprehend:DescribeResourcePolicy
   - Name: comprehend:DescribeSentimentDetectionJob
+  - Name: comprehend:DescribeTargetedSentimentDetectionJob
   - Name: comprehend:DescribeTopicsDetectionJob
   - Name: comprehend:DetectDominantLanguage
   - Name: comprehend:DetectEntities
@@ -45,6 +46,7 @@ Actions:
   - Name: comprehend:ListPiiEntitiesDetectionJobs
   - Name: comprehend:ListSentimentDetectionJobs
   - Name: comprehend:ListTagsForResource
+  - Name: comprehend:ListTargetedSentimentDetectionJobs
   - Name: comprehend:ListTopicsDetectionJobs
   - Name: comprehend:PutResourcePolicy
   - Name: comprehend:StartDocumentClassificationJob
@@ -54,6 +56,7 @@ Actions:
   - Name: comprehend:StartKeyPhrasesDetectionJob
   - Name: comprehend:StartPiiEntitiesDetectionJob
   - Name: comprehend:StartSentimentDetectionJob
+  - Name: comprehend:StartTargetedSentimentDetectionJob
   - Name: comprehend:StartTopicsDetectionJob
   - Name: comprehend:StopDominantLanguageDetectionJob
   - Name: comprehend:StopEntitiesDetectionJob
@@ -61,14 +64,9 @@ Actions:
   - Name: comprehend:StopKeyPhrasesDetectionJob
   - Name: comprehend:StopPiiEntitiesDetectionJob
   - Name: comprehend:StopSentimentDetectionJob
+  - Name: comprehend:StopTargetedSentimentDetectionJob
   - Name: comprehend:StopTrainingDocumentClassifier
   - Name: comprehend:StopTrainingEntityRecognizer
   - Name: comprehend:TagResource
   - Name: comprehend:UntagResource
   - Name: comprehend:UpdateEndpoint
-
-  # APIs without an IAM action
-  - Name: comprehend:DescribeTargetedSentimentDetectionJob
-  - Name: comprehend:ListTargetedSentimentDetectionJobs
-  - Name: comprehend:StartTargetedSentimentDetectionJob
-  - Name: comprehend:StopTargetedSentimentDetectionJob

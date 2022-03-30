@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 312
-* Unique actions: 12683
+* Unique actions: 12688
 * Managed policies: 933
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 521 | 0 | 9 |
+| [`ec2`](services/ec2.yml) | 521 | 1 | 9 |
 | [`sagemaker`](services/sagemaker.yml) | 264 | 0 | 5 |
 | [`chime`](services/chime.yml) | 207 | 0 | 51 |
 | [`glue`](services/glue.yml) | 175 | 3 | 2 |
@@ -66,9 +66,9 @@ The following table summarises the AWS APIs.
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`networkmanager`](services/networkmanager.yml) | 76 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
+| [`comprehend`](services/comprehend.yml) | 71 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 68 | 0 | 51 |
 | [`frauddetector`](services/frauddetector.yml) | 68 | 0 | 0 |
-| [`comprehend`](services/comprehend.yml) | 67 | 4 | 0 |
 | [`proton`](services/proton.yml) | 67 | 0 | 24 |
 | [`cloudformation`](services/cloudformation.yml) | 66 | 0 | 11 |
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
@@ -181,12 +181,12 @@ The following table summarises the AWS APIs.
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 27 | 0 | 1 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
+| [`fms`](services/fms.yml) | 26 | 4 | 0 |
 | [`apprunner`](services/apprunner.yml) | 26 | 0 | 1 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
-| [`fms`](services/fms.yml) | 26 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
 | [`snowball`](services/snowball.yml) | 25 | 0 | 0 |
 | [`ram`](services/ram.yml) | 25 | 0 | 0 |
@@ -353,8 +353,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1912 |
-| `Get` | 1696 |
+| `List` | 1913 |
+| `Get` | 1697 |
 | `Describe` | 1479 |
 | `Delete` | 1475 |
 | `Create` | 1377 |
