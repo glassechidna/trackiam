@@ -104,6 +104,7 @@ The following table summarises the AWS APIs.
 | [`appsync`](services/appsync.yml) | 49 | 0 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 12 |
 | [`wafv2`](services/wafv2.yml) | 48 | 0 | 2 |
+| [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
 | [`license-manager`](services/license-manager.yml) | 48 | 0 | 0 |
 | [`kms`](services/kms.yml) | 47 | 1 | 3 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
@@ -260,7 +261,6 @@ The following table summarises the AWS APIs.
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
-| [`sms-voice`](services/sms-voice.yml) | 8 | 40 | 0 |
 | [`budgets`](services/budgets.yml) | 8 | 15 | 2 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
 | [`finspace`](services/finspace.yml) | 8 | 0 | 7 |
