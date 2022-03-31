@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 312
-* Unique actions: 12689
+* Unique actions: 12735
 * Managed policies: 933
 
 Most common managed policy name prefixes:
@@ -84,7 +84,7 @@ The following table summarises the AWS APIs.
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 60 | 0 | 0 |
-| [`workspaces`](services/workspaces.yml) | 58 | 0 | 0 |
+| [`workspaces`](services/workspaces.yml) | 58 | 3 | 0 |
 | [`rekognition`](services/rekognition.yml) | 58 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
@@ -249,9 +249,9 @@ The following table summarises the AWS APIs.
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
+| [`grafana`](services/grafana.yml) | 11 | 3 | 0 |
 | [`iot`](services/iot.yml) | 11 | 0 | 243 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 28 |
-| [`grafana`](services/grafana.yml) | 11 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`textract`](services/textract.yml) | 10 | 0 | 0 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
@@ -260,12 +260,12 @@ The following table summarises the AWS APIs.
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
+| [`sms-voice`](services/sms-voice.yml) | 8 | 40 | 0 |
 | [`budgets`](services/budgets.yml) | 8 | 15 | 2 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
 | [`finspace`](services/finspace.yml) | 8 | 0 | 7 |
 | [`sts`](services/sts.yml) | 8 | 0 | 3 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
-| [`sms-voice`](services/sms-voice.yml) | 8 | 0 | 0 |
 | [`rbin`](services/rbin.yml) | 8 | 0 | 0 |
 | [`iotfleethub`](services/iotfleethub.yml) | 8 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
@@ -278,10 +278,10 @@ The following table summarises the AWS APIs.
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 6 | 0 | 0 |
 | [`s3-outposts`](services/s3-outposts.yml) | 4 | 0 | 29 |
+| [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 4 | 0 | 0 |
 | [`identitystore`](services/identitystore.yml) | 4 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`account`](services/account.yml) | 3 | 0 | 3 |
-| [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 3 | 0 | 1 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
 | [`cassandra`](services/cassandra.yml) | 2 | 11 | 6 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 2 | 0 | 0 |
@@ -353,14 +353,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1914 |
+| `List` | 1917 |
 | `Get` | 1697 |
-| `Describe` | 1479 |
-| `Delete` | 1475 |
-| `Create` | 1377 |
-| `Update` | 1127 |
-| `Put` | 356 |
+| `Describe` | 1490 |
+| `Delete` | 1485 |
+| `Create` | 1380 |
+| `Update` | 1130 |
+| `Put` | 358 |
 | `Start` | 240 |
-| `Tag` | 197 |
-| `Untag` | 195 |
+| `Tag` | 199 |
+| `Untag` | 197 |
 
