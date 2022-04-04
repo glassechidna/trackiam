@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 312
-* Unique actions: 12739
-* Managed policies: 935
+* Unique actions: 12741
+* Managed policies: 936
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 259 |
 | `arn:aws:iam::aws:policy/Amazon*` | 253 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 192 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 193 |
 | `arn:aws:iam::aws:policy/service-role/*` | 144 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 80 |
@@ -45,7 +45,7 @@ The following table summarises the AWS APIs.
 | [`rds`](services/rds.yml) | 141 | 0 | 5 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
 | [`ssm`](services/ssm.yml) | 135 | 0 | 8 |
-| [`connect`](services/connect.yml) | 135 | 0 | 4 |
+| [`connect`](services/connect.yml) | 135 | 0 | 6 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 119 | 0 | 1 |
 | [`redshift`](services/redshift.yml) | 118 | 0 | 18 |
 | [`quicksight`](services/quicksight.yml) | 117 | 0 | 25 |
