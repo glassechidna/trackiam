@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 312
-* Unique actions: 12735
-* Managed policies: 934
+* Unique actions: 12738
+* Managed policies: 935
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 259 |
 | `arn:aws:iam::aws:policy/Amazon*` | 253 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 192 |
-| `arn:aws:iam::aws:policy/service-role/*` | 143 |
+| `arn:aws:iam::aws:policy/service-role/*` | 144 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 80 |
 
@@ -91,7 +91,7 @@ The following table summarises the AWS APIs.
 | [`medialive`](services/medialive.yml) | 57 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 57 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 56 | 2 | 4 |
-| [`securityhub`](services/securityhub.yml) | 56 | 0 | 9 |
+| [`securityhub`](services/securityhub.yml) | 56 | 0 | 12 |
 | [`kendra`](services/kendra.yml) | 55 | 0 | 0 |
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
@@ -353,7 +353,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1917 |
+| `List` | 1918 |
 | `Get` | 1697 |
 | `Describe` | 1490 |
 | `Delete` | 1485 |

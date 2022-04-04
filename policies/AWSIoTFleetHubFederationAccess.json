@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSIoTFleetHubFederationAccess",
   "CreateDate": "2020-12-15T08:08:05Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4H4EGQA254",
   "PolicyName": "AWSIoTFleetHubFederationAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-11-15T23:28:19Z",
+    "CreateDate": "2022-04-04T18:03:01Z",
     "Document": {
       "Statement": [
         {
@@ -29,6 +29,7 @@
             "iot:CreateFleetMetric",
             "iot:CreateJob",
             "iot:DeleteFleetMetric",
+            "iot:DescribeCustomMetric",
             "iot:DescribeEndpoint",
             "iot:DescribeFleetMetric",
             "iot:DescribeIndex",
@@ -44,11 +45,14 @@
             "iot:GetStatistics",
             "iot:GetThingShadow",
             "iot:ListActiveViolations",
+            "iot:ListCustomMetrics",
+            "iot:ListDimensions",
             "iot:ListFleetMetrics",
             "iot:ListJobExecutionsForJob",
             "iot:ListJobExecutionsForThing",
             "iot:ListJobTemplates",
             "iot:ListJobs",
+            "iot:ListMetricValues",
             "iot:ListNamedShadowsForThing",
             "iot:ListSecurityProfiles",
             "iot:ListThingGroups",
@@ -76,7 +80,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2021-11-15T23:28:19Z"
+  "UpdateDate": "2022-04-04T18:03:01Z"
 }

@@ -1,0 +1,160 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy",
+  "CreateDate": "2022-04-04T17:24:29Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4IV6FHD2UE",
+  "PolicyName": "AmazonEBSCSIDriverPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2022-04-04T17:24:29Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "CreateSnapshot",
+                "CreateVolume"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:snapshot/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateVolume"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/CSIVolumeName": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateVolume"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/ebs.csi.aws.com/cluster": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateVolume"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/kubernetes.io/cluster/*": "owned"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DeleteSnapshot"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/CSIVolumeSnapshotName": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DeleteSnapshot"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/ebs.csi.aws.com/cluster": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DeleteVolume"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/CSIVolumeName": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DeleteVolume"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/ebs.csi.aws.com/cluster": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DeleteVolume"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/kubernetes.io/cluster/*": "owned"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:AttachVolume",
+            "ec2:CreateSnapshot",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeInstances",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeTags",
+            "ec2:DescribeVolumes",
+            "ec2:DescribeVolumesModifications",
+            "ec2:DetachVolume",
+            "ec2:ModifyVolume"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DeleteTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:snapshot/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-04-04T17:24:29Z"
+}

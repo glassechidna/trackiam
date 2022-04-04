@@ -1,17 +1,18 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSecurityHubReadOnlyAccess",
   "CreateDate": "2018-11-28T01:34:29Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIEBAQNOFUCLFJ3UHG",
   "PolicyName": "AWSSecurityHubReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-06-25T22:45:52Z",
+    "CreateDate": "2022-04-04T17:46:51Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "securityhub:BatchGet*",
             "securityhub:Describe*",
             "securityhub:Get*",
             "securityhub:List*"
@@ -23,7 +24,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-06-25T22:45:52Z"
+  "UpdateDate": "2022-04-04T17:46:51Z"
 }
