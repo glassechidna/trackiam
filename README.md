@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 312
-* Unique actions: 12738
+* Unique actions: 12739
 * Managed policies: 935
 
 Most common managed policy name prefixes:
@@ -81,10 +81,10 @@ The following table summarises the AWS APIs.
 | [`ds`](services/ds.yml) | 63 | 0 | 6 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
+| [`workspaces`](services/workspaces.yml) | 61 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 60 | 0 | 0 |
-| [`workspaces`](services/workspaces.yml) | 58 | 3 | 0 |
 | [`rekognition`](services/rekognition.yml) | 58 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
@@ -288,7 +288,7 @@ The following table summarises the AWS APIs.
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 2 | 0 | 0 |
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
-| [`execute-api`](services/execute-api.yml) | 0 | 247 | 3 |
+| [`execute-api`](services/execute-api.yml) | 0 | 248 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 25 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
@@ -353,7 +353,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1918 |
+| `List` | 1919 |
 | `Get` | 1697 |
 | `Describe` | 1490 |
 | `Delete` | 1485 |

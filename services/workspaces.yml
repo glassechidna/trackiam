@@ -10,6 +10,7 @@ Actions:
   - Name: workspaces:CreateUpdatedWorkspaceImage
   - Name: workspaces:CreateWorkspaceBundle
   - Name: workspaces:CreateWorkspaces
+  - Name: workspaces:DeleteClientBranding
   - Name: workspaces:DeleteConnectClientAddIn
   - Name: workspaces:DeleteConnectionAlias
   - Name: workspaces:DeleteIpGroup
@@ -19,6 +20,7 @@ Actions:
   - Name: workspaces:DeregisterWorkspaceDirectory
   - Name: workspaces:DescribeAccount
   - Name: workspaces:DescribeAccountModifications
+  - Name: workspaces:DescribeClientBranding
   - Name: workspaces:DescribeClientProperties
   - Name: workspaces:DescribeConnectClientAddIns
   - Name: workspaces:DescribeConnectionAliasPermissions
@@ -34,6 +36,7 @@ Actions:
   - Name: workspaces:DescribeWorkspacesConnectionStatus
   - Name: workspaces:DisassociateConnectionAlias
   - Name: workspaces:DisassociateIpGroups
+  - Name: workspaces:ImportClientBranding
   - Name: workspaces:ImportWorkspaceImage
   - Name: workspaces:ListAvailableManagementCidrRanges
   - Name: workspaces:MigrateWorkspace
@@ -57,8 +60,3 @@ Actions:
   - Name: workspaces:UpdateRulesOfIpGroup
   - Name: workspaces:UpdateWorkspaceBundle
   - Name: workspaces:UpdateWorkspaceImagePermission
-
-  # APIs without an IAM action
-  - Name: workspaces:DeleteClientBranding
-  - Name: workspaces:DescribeClientBranding
-  - Name: workspaces:ImportClientBranding
