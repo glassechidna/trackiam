@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonWorkSpacesWebServiceRolePolicy",
   "CreateDate": "2021-11-30T13:15:53Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4JW4G4DATC",
   "PolicyName": "AmazonWorkSpacesWebServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-11-30T13:15:53Z",
+    "CreateDate": "2022-04-05T22:01:09Z",
     "Document": {
       "Statement": [
         {
@@ -16,7 +16,10 @@
           ],
           "Condition": {
             "StringEquals": {
-              "cloudwatch:namespace": "AWS/WorkSpacesWeb"
+              "cloudwatch:namespace": [
+                "AWS/Usage",
+                "AWS/WorkSpacesWeb"
+              ]
             }
           },
           "Effect": "Allow",
@@ -43,7 +46,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-11-30T13:15:53Z"
+  "UpdateDate": "2022-04-05T22:01:09Z"
 }
