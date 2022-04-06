@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 312
-* Unique actions: 12749
+* Unique actions: 12750
 * Managed policies: 937
 
 Most common managed policy name prefixes:
@@ -81,6 +81,7 @@ The following table summarises the AWS APIs.
 | [`ds`](services/ds.yml) | 63 | 0 | 6 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
+| [`lambda`](services/lambda.yml) | 61 | 2 | 5 |
 | [`workspaces`](services/workspaces.yml) | 61 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
@@ -90,7 +91,6 @@ The following table summarises the AWS APIs.
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`medialive`](services/medialive.yml) | 57 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 57 | 0 | 0 |
-| [`lambda`](services/lambda.yml) | 56 | 7 | 4 |
 | [`securityhub`](services/securityhub.yml) | 56 | 0 | 12 |
 | [`kendra`](services/kendra.yml) | 55 | 0 | 0 |
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |

@@ -5,6 +5,7 @@ Actions:
   - Name: lambda:CreateCodeSigningConfig
   - Name: lambda:CreateEventSourceMapping
   - Name: lambda:CreateFunction
+  - Name: lambda:CreateFunctionUrlConfig
   - Name: lambda:DeleteAlias
   - Name: lambda:DeleteCodeSigningConfig
   - Name: lambda:DeleteEventSourceMapping
@@ -12,6 +13,7 @@ Actions:
   - Name: lambda:DeleteFunctionCodeSigningConfig
   - Name: lambda:DeleteFunctionConcurrency
   - Name: lambda:DeleteFunctionEventInvokeConfig
+  - Name: lambda:DeleteFunctionUrlConfig
   - Name: lambda:DeleteLayerVersion
   - Name: lambda:DeleteProvisionedConcurrencyConfig
   - Name: lambda:GetAccountSettings
@@ -23,6 +25,7 @@ Actions:
   - Name: lambda:GetFunctionConcurrency
   - Name: lambda:GetFunctionConfiguration
   - Name: lambda:GetFunctionEventInvokeConfig
+  - Name: lambda:GetFunctionUrlConfig
   - Name: lambda:GetLayerVersion
   - Name: lambda:GetLayerVersionPolicy
   - Name: lambda:GetPolicy
@@ -32,6 +35,7 @@ Actions:
   - Name: lambda:ListCodeSigningConfigs
   - Name: lambda:ListEventSourceMappings
   - Name: lambda:ListFunctionEventInvokeConfigs
+  - Name: lambda:ListFunctionUrlConfigs
   - Name: lambda:ListFunctions
   - Name: lambda:ListFunctionsByCodeSigningConfig
   - Name: lambda:ListLayerVersions
@@ -55,18 +59,15 @@ Actions:
   - Name: lambda:UpdateFunctionCode
   - Name: lambda:UpdateFunctionConfiguration
   - Name: lambda:UpdateFunctionEventInvokeConfig
+  - Name: lambda:UpdateFunctionUrlConfig
 
   # actions with no corresponding API
   - Name: lambda:DisableReplication
   - Name: lambda:EnableReplication
   - Name: lambda:InvokeFunction
+  - Name: lambda:InvokeFunctionUrl
   - Name: lambda:UpdateFunctionCodeSigningConfig
 
   # APIs without an IAM action
-  - Name: lambda:CreateFunctionUrlConfig
-  - Name: lambda:DeleteFunctionUrlConfig
-  - Name: lambda:GetFunctionUrlConfig
   - Name: lambda:GetLayerVersionByArn
   - Name: lambda:Invoke
-  - Name: lambda:ListFunctionUrlConfigs
-  - Name: lambda:UpdateFunctionUrlConfig
