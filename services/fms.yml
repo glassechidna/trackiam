@@ -1,10 +1,12 @@
 Actions:
   - Name: fms:AssociateAdminAccount
+  - Name: fms:AssociateThirdPartyFirewall
   - Name: fms:DeleteAppsList
   - Name: fms:DeleteNotificationChannel
   - Name: fms:DeletePolicy
   - Name: fms:DeleteProtocolsList
   - Name: fms:DisassociateAdminAccount
+  - Name: fms:DisassociateThirdPartyFirewall
   - Name: fms:GetAdminAccount
   - Name: fms:GetAppsList
   - Name: fms:GetComplianceDetail
@@ -12,6 +14,7 @@ Actions:
   - Name: fms:GetPolicy
   - Name: fms:GetProtectionStatus
   - Name: fms:GetProtocolsList
+  - Name: fms:GetThirdPartyFirewallAssociationStatus
   - Name: fms:GetViolationDetails
   - Name: fms:ListAppsLists
   - Name: fms:ListComplianceStatus
@@ -19,15 +22,10 @@ Actions:
   - Name: fms:ListPolicies
   - Name: fms:ListProtocolsLists
   - Name: fms:ListTagsForResource
+  - Name: fms:ListThirdPartyFirewallFirewallPolicies
   - Name: fms:PutAppsList
   - Name: fms:PutNotificationChannel
   - Name: fms:PutPolicy
   - Name: fms:PutProtocolsList
   - Name: fms:TagResource
   - Name: fms:UntagResource
-
-  # APIs without an IAM action
-  - Name: fms:AssociateThirdPartyFirewall
-  - Name: fms:DisassociateThirdPartyFirewall
-  - Name: fms:GetThirdPartyFirewallAssociationStatus
-  - Name: fms:ListThirdPartyFirewallFirewallPolicies

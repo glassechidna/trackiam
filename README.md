@@ -164,6 +164,7 @@ The following table summarises the AWS APIs.
 | [`network-firewall`](services/network-firewall.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`inspector2`](services/inspector2.yml) | 30 | 0 | 0 |
+| [`fms`](services/fms.yml) | 30 | 0 | 0 |
 | [`billingconductor`](services/billingconductor.yml) | 29 | 1 | 1 |
 | [`drs`](services/drs.yml) | 29 | 0 | 38 |
 | [`mgn`](services/mgn.yml) | 29 | 0 | 32 |
@@ -182,7 +183,6 @@ The following table summarises the AWS APIs.
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 27 | 0 | 1 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
-| [`fms`](services/fms.yml) | 26 | 4 | 0 |
 | [`apprunner`](services/apprunner.yml) | 26 | 0 | 1 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
