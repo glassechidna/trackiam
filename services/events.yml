@@ -4,6 +4,7 @@ Actions:
   - Name: events:CreateApiDestination
   - Name: events:CreateArchive
   - Name: events:CreateConnection
+  - Name: events:CreateEndpoint
   - Name: events:CreateEventBus
   - Name: events:CreatePartnerEventSource
   - Name: events:DeactivateEventSource
@@ -11,12 +12,14 @@ Actions:
   - Name: events:DeleteApiDestination
   - Name: events:DeleteArchive
   - Name: events:DeleteConnection
+  - Name: events:DeleteEndpoint
   - Name: events:DeleteEventBus
   - Name: events:DeletePartnerEventSource
   - Name: events:DeleteRule
   - Name: events:DescribeApiDestination
   - Name: events:DescribeArchive
   - Name: events:DescribeConnection
+  - Name: events:DescribeEndpoint
   - Name: events:DescribeEventBus
   - Name: events:DescribeEventSource
   - Name: events:DescribePartnerEventSource
@@ -27,6 +30,7 @@ Actions:
   - Name: events:ListApiDestinations
   - Name: events:ListArchives
   - Name: events:ListConnections
+  - Name: events:ListEndpoints
   - Name: events:ListEventBuses
   - Name: events:ListEventSources
   - Name: events:ListPartnerEventSourceAccounts
@@ -50,13 +54,7 @@ Actions:
   - Name: events:UpdateApiDestination
   - Name: events:UpdateArchive
   - Name: events:UpdateConnection
+  - Name: events:UpdateEndpoint
 
   # actions with no corresponding API
   - Name: events:InvokeApiDestination
-
-  # APIs without an IAM action
-  - Name: events:CreateEndpoint
-  - Name: events:DeleteEndpoint
-  - Name: events:DescribeEndpoint
-  - Name: events:ListEndpoints
-  - Name: events:UpdateEndpoint

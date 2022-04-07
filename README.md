@@ -92,13 +92,13 @@ The following table summarises the AWS APIs.
 | [`medialive`](services/medialive.yml) | 57 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 57 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 56 | 0 | 12 |
+| [`events`](services/events.yml) | 56 | 0 | 1 |
 | [`kendra`](services/kendra.yml) | 55 | 0 | 0 |
 | [`dms`](services/dms.yml) | 54 | 1 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
 | [`organizations`](services/organizations.yml) | 52 | 0 | 0 |
 | [`geo`](services/geo.yml) | 52 | 0 | 0 |
-| [`events`](services/events.yml) | 51 | 5 | 1 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 26 |
 | [`imagebuilder`](services/imagebuilder.yml) | 50 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 49 | 0 | 2 |
