@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 312
-* Unique actions: 12751
+* Unique actions: 12759
 * Managed policies: 937
 
 Most common managed policy name prefixes:
@@ -85,7 +85,7 @@ The following table summarises the AWS APIs.
 | [`workspaces`](services/workspaces.yml) | 61 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
-| [`personalize`](services/personalize.yml) | 60 | 0 | 0 |
+| [`personalize`](services/personalize.yml) | 60 | 3 | 0 |
 | [`rekognition`](services/rekognition.yml) | 58 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
@@ -98,8 +98,8 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
 | [`organizations`](services/organizations.yml) | 52 | 0 | 0 |
 | [`geo`](services/geo.yml) | 52 | 0 | 0 |
+| [`events`](services/events.yml) | 51 | 5 | 1 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 26 |
-| [`events`](services/events.yml) | 51 | 0 | 1 |
 | [`imagebuilder`](services/imagebuilder.yml) | 50 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 49 | 0 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 12 |
@@ -353,14 +353,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1921 |
+| `List` | 1923 |
 | `Get` | 1698 |
-| `Describe` | 1491 |
-| `Delete` | 1486 |
-| `Create` | 1382 |
-| `Update` | 1131 |
+| `Describe` | 1492 |
+| `Delete` | 1487 |
+| `Create` | 1383 |
+| `Update` | 1132 |
 | `Put` | 358 |
 | `Start` | 240 |
-| `Tag` | 199 |
-| `Untag` | 197 |
+| `Tag` | 200 |
+| `Untag` | 198 |
 
