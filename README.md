@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 312
-* Unique actions: 12759
+* Unique actions: 12763
 * Managed policies: 937
 
 Most common managed policy name prefixes:
@@ -308,9 +308,9 @@ The following table summarises the AWS APIs.
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`connect-campaigns`](services/connect-campaigns.yml) | 0 | 0 | 18 |
+| [`chatbot`](services/chatbot.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
-| [`chatbot`](services/chatbot.yml) | 0 | 0 | 13 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
@@ -354,11 +354,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1923 |
-| `Get` | 1698 |
-| `Describe` | 1492 |
-| `Delete` | 1487 |
+| `Get` | 1699 |
+| `Describe` | 1493 |
+| `Delete` | 1488 |
 | `Create` | 1383 |
-| `Update` | 1132 |
+| `Update` | 1133 |
 | `Put` | 358 |
 | `Start` | 240 |
 | `Tag` | 200 |
