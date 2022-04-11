@@ -117,10 +117,10 @@ The following table summarises the AWS APIs.
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 42 | 2 | 1 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
+| [`datasync`](services/datasync.yml) | 42 | 0 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
 | [`transcribe`](services/transcribe.yml) | 41 | 0 | 2 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
-| [`datasync`](services/datasync.yml) | 40 | 2 | 0 |
 | [`sns`](services/sns.yml) | 39 | 1 | 0 |
 | [`wellarchitected`](services/wellarchitected.yml) | 39 | 0 | 0 |
 | [`resiliencehub`](services/resiliencehub.yml) | 39 | 0 | 0 |
