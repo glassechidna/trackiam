@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 312
-* Unique actions: 12767
+* Unique actions: 12768
 * Managed policies: 938
 
 Most common managed policy name prefixes:
@@ -172,12 +172,12 @@ The following table summarises the AWS APIs.
 | [`dataexchange`](services/dataexchange.yml) | 29 | 0 | 2 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 29 | 0 | 0 |
+| [`devops-guru`](services/devops-guru.yml) | 29 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 28 | 0 | 0 |
-| [`devops-guru`](services/devops-guru.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 27 | 0 | 3 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
@@ -356,7 +356,7 @@ Most common action prefixes:
 | `List` | 1924 |
 | `Get` | 1699 |
 | `Describe` | 1494 |
-| `Delete` | 1489 |
+| `Delete` | 1490 |
 | `Create` | 1384 |
 | `Update` | 1133 |
 | `Put` | 358 |
