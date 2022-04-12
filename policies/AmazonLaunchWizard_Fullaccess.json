@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLaunchWizard_Fullaccess",
   "CreateDate": "2020-08-06T17:47:30Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ABPQ7BLC2",
   "PolicyName": "AmazonLaunchWizard_Fullaccess",
   "PolicyVersion": {
-    "CreateDate": "2022-02-10T00:28:41Z",
+    "CreateDate": "2022-04-12T19:16:27Z",
     "Document": {
       "Statement": [
         {
@@ -212,6 +212,19 @@
           ]
         },
         {
+          "Action": [
+            "ssm:StartAutomationExecution",
+            "ssm:StopAutomationExecution"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "launchwizard.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:automation-definition/LaunchWizard-*:*"
+        },
+        {
           "Action": "applicationinsights:*",
           "Effect": "Allow",
           "Resource": "*"
@@ -313,8 +326,6 @@
             "ssm:ListDocument*",
             "ssm:ListInstanceAssociations",
             "ssm:SendAutomationSignal",
-            "ssm:StartAutomationExecution",
-            "ssm:StopAutomationExecution",
             "tag:Get*"
           ],
           "Effect": "Allow",
@@ -565,7 +576,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2022-02-10T00:28:41Z"
+  "UpdateDate": "2022-04-12T19:16:27Z"
 }
