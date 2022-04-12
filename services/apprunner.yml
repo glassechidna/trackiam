@@ -2,23 +2,19 @@ Actions:
   - Name: apprunner:AssociateCustomDomain
   - Name: apprunner:CreateAutoScalingConfiguration
   - Name: apprunner:CreateConnection
-  - Name: apprunner:CreateObservabilityConfiguration
   - Name: apprunner:CreateService
   - Name: apprunner:CreateVpcConnector
   - Name: apprunner:DeleteAutoScalingConfiguration
   - Name: apprunner:DeleteConnection
-  - Name: apprunner:DeleteObservabilityConfiguration
   - Name: apprunner:DeleteService
   - Name: apprunner:DeleteVpcConnector
   - Name: apprunner:DescribeAutoScalingConfiguration
   - Name: apprunner:DescribeCustomDomains
-  - Name: apprunner:DescribeObservabilityConfiguration
   - Name: apprunner:DescribeService
   - Name: apprunner:DescribeVpcConnector
   - Name: apprunner:DisassociateCustomDomain
   - Name: apprunner:ListAutoScalingConfigurations
   - Name: apprunner:ListConnections
-  - Name: apprunner:ListObservabilityConfigurations
   - Name: apprunner:ListOperations
   - Name: apprunner:ListServices
   - Name: apprunner:ListTagsForResource
@@ -32,3 +28,9 @@ Actions:
 
   # actions with no corresponding API
   - Name: apprunner:DescribeOperation
+
+  # APIs without an IAM action
+  - Name: apprunner:CreateObservabilityConfiguration
+  - Name: apprunner:DeleteObservabilityConfiguration
+  - Name: apprunner:DescribeObservabilityConfiguration
+  - Name: apprunner:ListObservabilityConfigurations

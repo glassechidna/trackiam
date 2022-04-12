@@ -160,7 +160,6 @@ The following table summarises the AWS APIs.
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
-| [`apprunner`](services/apprunner.yml) | 30 | 0 | 1 |
 | [`route53domains`](services/route53domains.yml) | 30 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
@@ -184,6 +183,7 @@ The following table summarises the AWS APIs.
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 27 | 0 | 1 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
+| [`apprunner`](services/apprunner.yml) | 26 | 4 | 1 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 26 | 0 | 0 |
