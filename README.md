@@ -172,9 +172,9 @@ The following table summarises the AWS APIs.
 | [`dataexchange`](services/dataexchange.yml) | 29 | 0 | 2 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 29 | 0 | 0 |
+| [`devops-guru`](services/devops-guru.yml) | 29 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
-| [`devops-guru`](services/devops-guru.yml) | 28 | 1 | 0 |
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 28 | 0 | 0 |
