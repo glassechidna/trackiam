@@ -11,15 +11,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 312
-* Unique actions: 12768
-* Managed policies: 938
+* Unique services: 313
+* Unique actions: 12796
+* Managed policies: 940
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 259 |
+| `arn:aws:iam::aws:policy/AWS*` | 261 |
 | `arn:aws:iam::aws:policy/Amazon*` | 254 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 193 |
 | `arn:aws:iam::aws:policy/service-role/*` | 144 |
@@ -302,6 +302,7 @@ The following table summarises the AWS APIs.
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 39 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
+| [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 0 | 0 | 28 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 26 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
@@ -353,14 +354,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1924 |
-| `Get` | 1699 |
+| `List` | 1931 |
+| `Get` | 1706 |
 | `Describe` | 1494 |
-| `Delete` | 1490 |
-| `Create` | 1384 |
-| `Update` | 1133 |
+| `Delete` | 1493 |
+| `Create` | 1387 |
+| `Update` | 1136 |
 | `Put` | 358 |
-| `Start` | 240 |
+| `Start` | 241 |
 | `Tag` | 200 |
 | `Untag` | 198 |
 
