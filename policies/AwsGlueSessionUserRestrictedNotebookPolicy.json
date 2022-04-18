@@ -1,0 +1,103 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AwsGlueSessionUserRestrictedNotebookPolicy",
+  "CreateDate": "2022-04-18T15:24:56Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4BZZRVUUJU",
+  "PolicyName": "AwsGlueSessionUserRestrictedNotebookPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2022-04-18T15:24:56Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "glue:CancelStatement",
+            "glue:DeleteSession",
+            "glue:GetSession",
+            "glue:GetStatement",
+            "glue:ListStatements",
+            "glue:RunStatement",
+            "glue:StopSession"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/owner": "${aws:PrincipalTag/owner}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:session/*"
+          ]
+        },
+        {
+          "Action": [
+            "glue:CreateSession"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": [
+                "owner"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/owner": "${aws:PrincipalTag/owner}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:session/*"
+          ]
+        },
+        {
+          "Action": [
+            "glue:TagResource",
+            "glue:UntagResource",
+            "tag:TagResources",
+            "tag:UntagResources"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": [
+                "owner"
+              ]
+            }
+          },
+          "Effect": "Deny",
+          "Resource": [
+            "arn:aws:glue:*:*:session/*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": [
+                "glue.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/service-role/AwsGlueSessionServiceRoleUserRestrictedForNotebook*"
+          ]
+        },
+        {
+          "Action": [
+            "glue:ListSessions"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-04-18T15:24:56Z"
+}
