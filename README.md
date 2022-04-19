@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 313
-* Unique actions: 12797
+* Unique actions: 12796
 * Managed policies: 944
 
 Most common managed policy name prefixes:
@@ -69,7 +69,7 @@ The following table summarises the AWS APIs.
 | [`comprehend`](services/comprehend.yml) | 71 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 68 | 0 | 51 |
 | [`frauddetector`](services/frauddetector.yml) | 68 | 0 | 0 |
-| [`proton`](services/proton.yml) | 67 | 0 | 24 |
+| [`proton`](services/proton.yml) | 67 | 0 | 23 |
 | [`cloudformation`](services/cloudformation.yml) | 66 | 0 | 11 |
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
@@ -101,12 +101,12 @@ The following table summarises the AWS APIs.
 | [`geo`](services/geo.yml) | 52 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 26 |
 | [`imagebuilder`](services/imagebuilder.yml) | 50 | 0 | 0 |
+| [`kms`](services/kms.yml) | 49 | 1 | 3 |
 | [`appsync`](services/appsync.yml) | 49 | 0 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 12 |
 | [`wafv2`](services/wafv2.yml) | 48 | 0 | 2 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
 | [`license-manager`](services/license-manager.yml) | 48 | 0 | 0 |
-| [`kms`](services/kms.yml) | 47 | 3 | 3 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`nimble`](services/nimble.yml) | 47 | 0 | 2 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
@@ -359,7 +359,7 @@ Most common action prefixes:
 | `Describe` | 1492 |
 | `Delete` | 1491 |
 | `Create` | 1386 |
-| `Update` | 1137 |
+| `Update` | 1136 |
 | `Put` | 358 |
 | `Start` | 242 |
 | `Tag` | 201 |

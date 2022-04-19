@@ -21,6 +21,7 @@ Actions:
   - Name: kms:GenerateDataKeyPair
   - Name: kms:GenerateDataKeyPairWithoutPlaintext
   - Name: kms:GenerateDataKeyWithoutPlaintext
+  - Name: kms:GenerateMac
   - Name: kms:GenerateRandom
   - Name: kms:GetKeyPolicy
   - Name: kms:GetKeyRotationStatus
@@ -46,6 +47,7 @@ Actions:
   - Name: kms:UpdateKeyDescription
   - Name: kms:UpdatePrimaryRegion
   - Name: kms:Verify
+  - Name: kms:VerifyMac
 
   # actions with no corresponding API
   - Name: kms:ReEncryptFrom
@@ -53,6 +55,4 @@ Actions:
   - Name: kms:SynchronizeMultiRegionKey
 
   # APIs without an IAM action
-  - Name: kms:GenerateMac
   - Name: kms:ReEncrypt
-  - Name: kms:VerifyMac
