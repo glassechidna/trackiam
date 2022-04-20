@@ -1,0 +1,122 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSMigrationHubOrchestratorServiceRolePolicy",
+  "CreateDate": "2022-04-20T02:24:04Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4LSN7AHAZR",
+  "PolicyName": "AWSMigrationHubOrchestratorServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2022-04-20T02:24:04Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateLaunchTemplateVersion",
+            "ec2:ModifyLaunchTemplate"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AWSApplicationMigrationServiceManaged": "mgn.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "discovery:DescribeConfigurations",
+            "discovery:ListConfigurations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:DescribeRule",
+            "events:PutRule",
+            "events:PutTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/MigrationHubOrchestratorManagedRule*"
+        },
+        {
+          "Action": [
+            "launchwizard:DescribeProvisionedApp",
+            "launchwizard:ListProvisionedApps"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "mgh:GetHomeRegion"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "mgn:ChangeServerLifeCycleState",
+            "mgn:DescribeSourceServers",
+            "mgn:FinalizeCutover",
+            "mgn:GetLaunchConfiguration",
+            "mgn:GetReplicationConfiguration",
+            "mgn:MarkAsArchived",
+            "mgn:StartCutover",
+            "mgn:StartTest",
+            "mgn:UpdateReplicationConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::migrationhub-orchestrator-*",
+            "arn:aws:s3:::migrationhub-orchestrator-*/*"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:CancelCommand",
+            "ssm:GetCommandInvocation",
+            "ssm:SendCommand"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:s3:::aws-migrationhub-orchestrator-*",
+            "arn:aws:s3:::migrationhub-orchestrator-*",
+            "arn:aws:ssm:*::document/AWS-RunRemoteScript"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:DescribeInstanceInformation",
+            "ssm:GetCommandInvocation"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-04-20T02:24:04Z"
+}
