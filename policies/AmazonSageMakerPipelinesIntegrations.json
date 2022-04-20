@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerPipelinesIntegrations",
   "CreateDate": "2021-07-30T16:35:10Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FK53JOAN3",
   "PolicyName": "AmazonSageMakerPipelinesIntegrations",
   "PolicyVersion": {
-    "CreateDate": "2021-07-30T16:35:10Z",
+    "CreateDate": "2022-04-20T18:39:06Z",
     "Document": {
       "Statement": [
         {
@@ -26,8 +26,31 @@
         },
         {
           "Action": [
+            "elasticmapreduce:AddJobFlowSteps",
+            "elasticmapreduce:CancelSteps",
+            "elasticmapreduce:DescribeStep"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticmapreduce:*:*:cluster/*"
+          ]
+        },
+        {
+          "Action": [
+            "events:DescribeRule",
+            "events:PutRule",
+            "events:PutTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:events:*:*:rule/SageMakerPipelineExecutionEMRStepStatusUpdateRule"
+          ]
+        },
+        {
+          "Action": [
             "lambda:CreateFunction",
             "lambda:DeleteFunction",
+            "lambda:GetFunction",
             "lambda:InvokeFunction",
             "lambda:UpdateFunctionCode"
           ],
@@ -54,7 +77,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-07-30T16:35:10Z"
+  "UpdateDate": "2022-04-20T18:39:06Z"
 }

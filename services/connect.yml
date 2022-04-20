@@ -5,9 +5,11 @@ Actions:
   - Name: connect:AssociateInstanceStorageConfig
   - Name: connect:AssociateLambdaFunction
   - Name: connect:AssociateLexBot
+  - Name: connect:AssociatePhoneNumberContactFlow
   - Name: connect:AssociateQueueQuickConnects
   - Name: connect:AssociateRoutingProfileQueues
   - Name: connect:AssociateSecurityKey
+  - Name: connect:ClaimPhoneNumber
   - Name: connect:CreateAgentStatus
   - Name: connect:CreateContactFlow
   - Name: connect:CreateContactFlowModule
@@ -41,6 +43,7 @@ Actions:
   - Name: connect:DescribeInstance
   - Name: connect:DescribeInstanceAttribute
   - Name: connect:DescribeInstanceStorageConfig
+  - Name: connect:DescribePhoneNumber
   - Name: connect:DescribeQueue
   - Name: connect:DescribeQuickConnect
   - Name: connect:DescribeRoutingProfile
@@ -54,6 +57,7 @@ Actions:
   - Name: connect:DisassociateInstanceStorageConfig
   - Name: connect:DisassociateLambdaFunction
   - Name: connect:DisassociateLexBot
+  - Name: connect:DisassociatePhoneNumberContactFlow
   - Name: connect:DisassociateQueueQuickConnects
   - Name: connect:DisassociateRoutingProfileQueues
   - Name: connect:DisassociateSecurityKey
@@ -76,6 +80,7 @@ Actions:
   - Name: connect:ListLambdaFunctions
   - Name: connect:ListLexBots
   - Name: connect:ListPhoneNumbers
+  - Name: connect:ListPhoneNumbersV2
   - Name: connect:ListPrompts
   - Name: connect:ListQueueQuickConnects
   - Name: connect:ListQueues
@@ -90,7 +95,9 @@ Actions:
   - Name: connect:ListUseCases
   - Name: connect:ListUserHierarchyGroups
   - Name: connect:ListUsers
+  - Name: connect:ReleasePhoneNumber
   - Name: connect:ResumeContactRecording
+  - Name: connect:SearchAvailablePhoneNumbers
   - Name: connect:SearchVocabularies
   - Name: connect:StartChatContact
   - Name: connect:StartContactRecording
@@ -115,6 +122,7 @@ Actions:
   - Name: connect:UpdateHoursOfOperation
   - Name: connect:UpdateInstanceAttribute
   - Name: connect:UpdateInstanceStorageConfig
+  - Name: connect:UpdatePhoneNumber
   - Name: connect:UpdateQueueHoursOfOperation
   - Name: connect:UpdateQueueMaxContacts
   - Name: connect:UpdateQueueName
@@ -137,16 +145,8 @@ Actions:
 
   # actions with no corresponding API
   - Name: connect:AssociateCustomerProfilesDomain
-  - Name: connect:AssociatePhoneNumberContactFlow
   - Name: connect:BatchAssociateAnalyticsDataSet
   - Name: connect:BatchDisassociateAnalyticsDataSet
-  - Name: connect:ClaimPhoneNumber
-  - Name: connect:DescribePhoneNumber
   - Name: connect:DisassociateCustomerProfilesDomain
-  - Name: connect:DisassociatePhoneNumberContactFlow
   - Name: connect:GetFederationTokens
-  - Name: connect:ListPhoneNumbersV2
-  - Name: connect:ReleasePhoneNumber
-  - Name: connect:SearchAvailablePhoneNumbers
-  - Name: connect:UpdatePhoneNumber
   - Name: connect:UpdatedescribeContent

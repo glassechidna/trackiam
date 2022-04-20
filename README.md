@@ -42,8 +42,8 @@ The following table summarises the AWS APIs.
 | [`glue`](services/glue.yml) | 175 | 3 | 2 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 153 | 0 | 0 |
+| [`connect`](services/connect.yml) | 143 | 0 | 6 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
-| [`connect`](services/connect.yml) | 135 | 0 | 14 |
 | [`ssm`](services/ssm.yml) | 135 | 0 | 8 |
 | [`rds`](services/rds.yml) | 135 | 0 | 5 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 119 | 0 | 1 |
