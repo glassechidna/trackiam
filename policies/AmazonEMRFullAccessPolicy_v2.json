@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEMRFullAccessPolicy_v2",
   "CreateDate": "2021-03-12T01:50:29Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BK4MMWW4W",
   "PolicyName": "AmazonEMRFullAccessPolicy_v2",
   "PolicyVersion": {
-    "CreateDate": "2021-03-23T16:57:10Z",
+    "CreateDate": "2022-04-21T22:31:45Z",
     "Document": {
       "Statement": [
         {
@@ -54,7 +54,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/EMR_DefaultRole",
+          "Resource": "arn:aws:iam::*:role/EMR_DefaultRole_V2",
           "Sid": "PassRoleForElasticMapReduce"
         },
         {
@@ -111,8 +111,10 @@
             "elasticmapreduce:DescribeCluster",
             "elasticmapreduce:DescribeEditor",
             "elasticmapreduce:DescribeJobFlows",
+            "elasticmapreduce:DescribeReleaseLabel",
             "elasticmapreduce:DescribeSecurityConfiguration",
             "elasticmapreduce:DescribeStep",
+            "elasticmapreduce:GetAutoTerminationPolicy",
             "elasticmapreduce:GetBlockPublicAccessConfiguration",
             "elasticmapreduce:GetManagedScalingPolicy",
             "elasticmapreduce:ListBootstrapActions",
@@ -147,7 +149,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-03-23T16:57:10Z"
+  "UpdateDate": "2022-04-21T22:31:45Z"
 }
