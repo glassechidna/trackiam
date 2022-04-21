@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 314
-* Unique actions: 12808
+* Unique actions: 12822
 * Managed policies: 948
 
 Most common managed policy name prefixes:
@@ -39,7 +39,7 @@ The following table summarises the AWS APIs.
 | [`ec2`](services/ec2.yml) | 522 | 0 | 9 |
 | [`sagemaker`](services/sagemaker.yml) | 264 | 0 | 5 |
 | [`chime`](services/chime.yml) | 207 | 0 | 51 |
-| [`glue`](services/glue.yml) | 175 | 3 | 2 |
+| [`glue`](services/glue.yml) | 175 | 8 | 2 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 153 | 0 | 0 |
 | [`connect`](services/connect.yml) | 143 | 0 | 6 |
@@ -73,7 +73,7 @@ The following table summarises the AWS APIs.
 | [`cloudformation`](services/cloudformation.yml) | 66 | 0 | 11 |
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
-| [`iotsitewise`](services/iotsitewise.yml) | 65 | 0 | 1 |
+| [`iotsitewise`](services/iotsitewise.yml) | 65 | 3 | 1 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`es`](services/es.yml) | 64 | 0 | 10 |
@@ -128,10 +128,10 @@ The following table summarises the AWS APIs.
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`profile`](services/profile.yml) | 38 | 0 | 0 |
+| [`mediatailor`](services/mediatailor.yml) | 37 | 5 | 0 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`fsx`](services/fsx.yml) | 37 | 0 | 4 |
 | [`iotevents`](services/iotevents.yml) | 37 | 0 | 1 |
-| [`mediatailor`](services/mediatailor.yml) | 37 | 0 | 0 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
@@ -179,9 +179,9 @@ The following table summarises the AWS APIs.
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
+| [`lookoutmetrics`](services/lookoutmetrics.yml) | 27 | 1 | 1 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 27 | 0 | 3 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 0 | 3 |
-| [`lookoutmetrics`](services/lookoutmetrics.yml) | 27 | 0 | 1 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
@@ -355,12 +355,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1932 |
-| `Get` | 1707 |
-| `Describe` | 1494 |
-| `Delete` | 1491 |
-| `Create` | 1386 |
-| `Update` | 1138 |
+| `List` | 1934 |
+| `Get` | 1708 |
+| `Describe` | 1495 |
+| `Delete` | 1493 |
+| `Create` | 1388 |
+| `Update` | 1139 |
 | `Put` | 358 |
 | `Start` | 243 |
 | `Tag` | 201 |
