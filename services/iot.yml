@@ -1,14 +1,11 @@
 Actions:
   - Name: iot:DeleteThingShadow
   - Name: iot:DescribeJobExecution
-  - Name: iot:GetPendingJobExecutions
   - Name: iot:GetRetainedMessage
   - Name: iot:GetThingShadow
   - Name: iot:ListNamedShadowsForThing
   - Name: iot:ListRetainedMessages
   - Name: iot:Publish
-  - Name: iot:StartNextPendingJobExecution
-  - Name: iot:UpdateJobExecution
   - Name: iot:UpdateThingShadow
 
   # actions with no corresponding API
@@ -256,3 +253,8 @@ Actions:
   - Name: iot:UpdateThingGroupsForThing
   - Name: iot:UpdateTopicRuleDestination
   - Name: iot:ValidateSecurityProfileBehaviors
+
+  # APIs without an IAM action
+  - Name: iot:GetPendingJobExecutions
+  - Name: iot:StartNextPendingJobExecution
+  - Name: iot:UpdateJobExecution

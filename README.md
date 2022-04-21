@@ -251,7 +251,6 @@ The following table summarises the AWS APIs.
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
-| [`iot`](services/iot.yml) | 11 | 0 | 244 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 28 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`textract`](services/textract.yml) | 10 | 0 | 0 |
@@ -262,6 +261,7 @@ The following table summarises the AWS APIs.
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`budgets`](services/budgets.yml) | 8 | 15 | 2 |
+| [`iot`](services/iot.yml) | 8 | 3 | 244 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
 | [`finspace`](services/finspace.yml) | 8 | 0 | 7 |
 | [`sts`](services/sts.yml) | 8 | 0 | 3 |
