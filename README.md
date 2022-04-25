@@ -81,11 +81,11 @@ The following table summarises the AWS APIs.
 | [`ds`](services/ds.yml) | 63 | 0 | 6 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
+| [`personalize`](services/personalize.yml) | 62 | 3 | 0 |
 | [`lambda`](services/lambda.yml) | 61 | 2 | 5 |
 | [`workspaces`](services/workspaces.yml) | 61 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
-| [`personalize`](services/personalize.yml) | 60 | 5 | 0 |
 | [`rekognition`](services/rekognition.yml) | 58 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
