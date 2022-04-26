@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 314
-* Unique actions: 12824
+* Unique services: 315
+* Unique actions: 12838
 * Managed policies: 947
 
 Most common managed policy name prefixes:
@@ -41,7 +41,7 @@ The following table summarises the AWS APIs.
 | [`chime`](services/chime.yml) | 207 | 0 | 51 |
 | [`glue`](services/glue.yml) | 175 | 8 | 2 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
-| [`lightsail`](services/lightsail.yml) | 153 | 0 | 0 |
+| [`lightsail`](services/lightsail.yml) | 153 | 1 | 0 |
 | [`connect`](services/connect.yml) | 144 | 0 | 6 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
 | [`ssm`](services/ssm.yml) | 135 | 0 | 8 |
@@ -159,10 +159,10 @@ The following table summarises the AWS APIs.
 | [`wisdom`](services/wisdom.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
+| [`network-firewall`](services/network-firewall.yml) | 30 | 1 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
 | [`apprunner`](services/apprunner.yml) | 30 | 0 | 1 |
 | [`route53domains`](services/route53domains.yml) | 30 | 0 | 0 |
-| [`network-firewall`](services/network-firewall.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`inspector2`](services/inspector2.yml) | 30 | 0 | 0 |
 | [`fms`](services/fms.yml) | 30 | 0 | 0 |
@@ -250,6 +250,7 @@ The following table summarises the AWS APIs.
 | [`braket`](services/braket.yml) | 13 | 0 | 0 |
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 12 | 0 | 0 |
+| [`ivschat`](services/ivschat.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 28 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
@@ -355,14 +356,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1935 |
-| `Get` | 1708 |
+| `List` | 1937 |
+| `Get` | 1710 |
 | `Describe` | 1495 |
-| `Delete` | 1493 |
-| `Create` | 1388 |
-| `Update` | 1139 |
+| `Delete` | 1495 |
+| `Create` | 1390 |
+| `Update` | 1141 |
 | `Put` | 358 |
 | `Start` | 243 |
-| `Tag` | 201 |
-| `Untag` | 199 |
+| `Tag` | 202 |
+| `Untag` | 200 |
 
