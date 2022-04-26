@@ -6,6 +6,7 @@ Actions:
   - Name: glue:BatchDeleteTableVersion
   - Name: glue:BatchGetBlueprints
   - Name: glue:BatchGetCrawlers
+  - Name: glue:BatchGetCustomEntityTypes
   - Name: glue:BatchGetDevEndpoints
   - Name: glue:BatchGetJobs
   - Name: glue:BatchGetPartition
@@ -20,6 +21,7 @@ Actions:
   - Name: glue:CreateClassifier
   - Name: glue:CreateConnection
   - Name: glue:CreateCrawler
+  - Name: glue:CreateCustomEntityType
   - Name: glue:CreateDatabase
   - Name: glue:CreateDevEndpoint
   - Name: glue:CreateJob
@@ -41,6 +43,7 @@ Actions:
   - Name: glue:DeleteColumnStatisticsForTable
   - Name: glue:DeleteConnection
   - Name: glue:DeleteCrawler
+  - Name: glue:DeleteCustomEntityType
   - Name: glue:DeleteDatabase
   - Name: glue:DeleteDevEndpoint
   - Name: glue:DeleteJob
@@ -71,6 +74,7 @@ Actions:
   - Name: glue:GetCrawler
   - Name: glue:GetCrawlerMetrics
   - Name: glue:GetCrawlers
+  - Name: glue:GetCustomEntityType
   - Name: glue:GetDataCatalogEncryptionSettings
   - Name: glue:GetDatabase
   - Name: glue:GetDatabases
@@ -118,6 +122,7 @@ Actions:
   - Name: glue:ImportCatalogToGlue
   - Name: glue:ListBlueprints
   - Name: glue:ListCrawlers
+  - Name: glue:ListCustomEntityTypes
   - Name: glue:ListDevEndpoints
   - Name: glue:ListJobs
   - Name: glue:ListMLTransforms
@@ -180,11 +185,6 @@ Actions:
   - Name: glue:UseMLTransforms
 
   # APIs without an IAM action
-  - Name: glue:BatchGetCustomEntityTypes
-  - Name: glue:CreateCustomEntityType
-  - Name: glue:DeleteCustomEntityType
-  - Name: glue:GetCustomEntityType
   - Name: glue:GetUnfilteredPartitionMetadata
   - Name: glue:GetUnfilteredPartitionsMetadata
   - Name: glue:GetUnfilteredTableMetadata
-  - Name: glue:ListCustomEntityTypes
