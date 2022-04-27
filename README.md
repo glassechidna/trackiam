@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 315
-* Unique actions: 12838
+* Unique actions: 12845
 * Managed policies: 947
 
 Most common managed policy name prefixes:
@@ -57,7 +57,7 @@ The following table summarises the AWS APIs.
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`cloudfront`](services/cloudfront.yml) | 91 | 1 | 1 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
-| [`iotwireless`](services/iotwireless.yml) | 87 | 0 | 1 |
+| [`iotwireless`](services/iotwireless.yml) | 87 | 6 | 1 |
 | [`config`](services/config.yml) | 86 | 2 | 0 |
 | [`s3`](services/s3.yml) | 83 | 58 | 45 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
@@ -86,7 +86,7 @@ The following table summarises the AWS APIs.
 | [`workspaces`](services/workspaces.yml) | 61 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
-| [`rekognition`](services/rekognition.yml) | 58 | 0 | 0 |
+| [`rekognition`](services/rekognition.yml) | 58 | 1 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`medialive`](services/medialive.yml) | 57 | 0 | 0 |
@@ -200,13 +200,13 @@ The following table summarises the AWS APIs.
 | [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 23 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 0 | 0 |
+| [`lookoutequipment`](services/lookoutequipment.yml) | 23 | 0 | 0 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
 | [`appflow`](services/appflow.yml) | 22 | 0 | 6 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
-| [`lookoutequipment`](services/lookoutequipment.yml) | 22 | 0 | 1 |
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 13 |
@@ -356,12 +356,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1937 |
-| `Get` | 1710 |
+| `List` | 1939 |
+| `Get` | 1711 |
+| `Delete` | 1496 |
 | `Describe` | 1495 |
-| `Delete` | 1495 |
-| `Create` | 1390 |
-| `Update` | 1141 |
+| `Create` | 1391 |
+| `Update` | 1143 |
 | `Put` | 358 |
 | `Start` | 243 |
 | `Tag` | 202 |
