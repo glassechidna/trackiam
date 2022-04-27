@@ -11,6 +11,7 @@ Actions:
   - Name: iotwireless:CreateDeviceProfile
   - Name: iotwireless:CreateFuotaTask
   - Name: iotwireless:CreateMulticastGroup
+  - Name: iotwireless:CreateNetworkAnalyzerConfiguration
   - Name: iotwireless:CreateServiceProfile
   - Name: iotwireless:CreateWirelessDevice
   - Name: iotwireless:CreateWirelessGateway
@@ -20,6 +21,7 @@ Actions:
   - Name: iotwireless:DeleteDeviceProfile
   - Name: iotwireless:DeleteFuotaTask
   - Name: iotwireless:DeleteMulticastGroup
+  - Name: iotwireless:DeleteNetworkAnalyzerConfiguration
   - Name: iotwireless:DeleteQueuedMessages
   - Name: iotwireless:DeleteServiceProfile
   - Name: iotwireless:DeleteWirelessDevice
@@ -55,9 +57,11 @@ Actions:
   - Name: iotwireless:GetWirelessGatewayTaskDefinition
   - Name: iotwireless:ListDestinations
   - Name: iotwireless:ListDeviceProfiles
+  - Name: iotwireless:ListEventConfigurations
   - Name: iotwireless:ListFuotaTasks
   - Name: iotwireless:ListMulticastGroups
   - Name: iotwireless:ListMulticastGroupsByFuotaTask
+  - Name: iotwireless:ListNetworkAnalyzerConfigurations
   - Name: iotwireless:ListPartnerAccounts
   - Name: iotwireless:ListQueuedMessages
   - Name: iotwireless:ListServiceProfiles
@@ -88,12 +92,10 @@ Actions:
   - Name: iotwireless:UpdateWirelessGateway
 
   # actions with no corresponding API
+  - Name: iotwireless:GetEventConfigurationsByResourceTypes
   - Name: iotwireless:StartNetworkAnalyzerStream
+  - Name: iotwireless:UpdateEventConfigurationsByResourceTypes
 
   # APIs without an IAM action
-  - Name: iotwireless:CreateNetworkAnalyzerConfiguration
-  - Name: iotwireless:DeleteNetworkAnalyzerConfiguration
   - Name: iotwireless:GetEventConfigurationByResourceTypes
-  - Name: iotwireless:ListEventConfigurations
-  - Name: iotwireless:ListNetworkAnalyzerConfigurations
   - Name: iotwireless:UpdateEventConfigurationByResourceTypes
