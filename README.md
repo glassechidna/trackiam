@@ -117,6 +117,7 @@ The following table summarises the AWS APIs.
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 42 | 2 | 1 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
+| [`mediatailor`](services/mediatailor.yml) | 42 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 42 | 0 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
 | [`transcribe`](services/transcribe.yml) | 41 | 0 | 2 |
@@ -128,7 +129,6 @@ The following table summarises the AWS APIs.
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`profile`](services/profile.yml) | 38 | 0 | 0 |
-| [`mediatailor`](services/mediatailor.yml) | 37 | 5 | 0 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`fsx`](services/fsx.yml) | 37 | 0 | 4 |
 | [`iotevents`](services/iotevents.yml) | 37 | 0 | 1 |

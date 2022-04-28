@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLexReadOnly",
   "CreateDate": "2017-04-11T23:13:33Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJGBI5LSMAJNDGBNAM",
   "PolicyName": "AmazonLexReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2021-07-26T22:04:56Z",
+    "CreateDate": "2022-04-27T23:43:22Z",
     "Document": {
       "Statement": [
         {
@@ -16,6 +16,7 @@
             "lex:DescribeBotAlias",
             "lex:DescribeBotChannel",
             "lex:DescribeBotLocale",
+            "lex:DescribeBotRecommendation",
             "lex:DescribeBotVersion",
             "lex:DescribeExport",
             "lex:DescribeImport",
@@ -43,6 +44,7 @@
             "lex:ListBotAliases",
             "lex:ListBotChannels",
             "lex:ListBotLocales",
+            "lex:ListBotRecommendations",
             "lex:ListBotVersions",
             "lex:ListBots",
             "lex:ListBuiltInIntents",
@@ -50,9 +52,11 @@
             "lex:ListExports",
             "lex:ListImports",
             "lex:ListIntents",
+            "lex:ListRecommendedIntents",
             "lex:ListSlotTypes",
             "lex:ListSlots",
-            "lex:ListTagsForResource"
+            "lex:ListTagsForResource",
+            "lex:SearchAssociatedTranscripts"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -61,7 +65,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-07-26T22:04:56Z"
+  "UpdateDate": "2022-04-27T23:43:22Z"
 }
