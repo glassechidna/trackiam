@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerGroundTruthExecution",
   "CreateDate": "2020-07-09T19:30:20Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FYNFSJXO3",
   "PolicyName": "AmazonSageMakerGroundTruthExecution",
   "PolicyVersion": {
-    "CreateDate": "2022-04-11T21:22:37Z",
+    "CreateDate": "2022-04-29T20:49:54Z",
     "Document": {
       "Statement": [
         {
@@ -44,6 +44,24 @@
             "arn:aws:sns:*:*:*sagemaker*"
           ],
           "Sid": "StreamingTopicSubscribe"
+        },
+        {
+          "Action": [
+            "ec2:CreateVpcEndpoint",
+            "ec2:DeleteVpcEndpoints",
+            "ec2:DescribeVpcEndpoints"
+          ],
+          "Condition": {
+            "StringLikeIfExists": {
+              "ec2:VpceServiceName": [
+                "*sagemaker-task-resources*",
+                "aws.sagemaker*labeling*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "WorkforceVPC"
         },
         {
           "Action": [
@@ -138,7 +156,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-04-11T21:22:37Z"
+  "UpdateDate": "2022-04-29T20:49:54Z"
 }
