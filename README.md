@@ -13,7 +13,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 315
 * Unique actions: 12849
-* Managed policies: 947
+* Managed policies: 948
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 264 |
 | `arn:aws:iam::aws:policy/Amazon*` | 254 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 194 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 195 |
 | `arn:aws:iam::aws:policy/service-role/*` | 145 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 83 |
@@ -193,9 +193,9 @@ The following table summarises the AWS APIs.
 | [`ram`](services/ram.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
+| [`outposts`](services/outposts.yml) | 24 | 0 | 2 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 23 | 1 | 3 |
-| [`outposts`](services/outposts.yml) | 23 | 1 | 2 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 23 | 0 | 1 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 23 | 0 | 0 |
