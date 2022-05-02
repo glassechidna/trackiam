@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerFullAccess",
   "CreateDate": "2017-11-29T13:07:59Z",
-  "DefaultVersionId": "v21",
+  "DefaultVersionId": "v22",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJZ5IWYMXO5QDB4QOG",
   "PolicyName": "AmazonSageMakerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-09-08T17:12:25Z",
+    "CreateDate": "2022-05-02T06:19:13Z",
     "Document": {
       "Statement": [
         {
@@ -258,6 +258,13 @@
         },
         {
           "Action": [
+            "cloudformation:ListStackResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/SC-*"
+        },
+        {
+          "Action": [
             "codebuild:BatchGetBuilds",
             "codebuild:StartBuild"
           ],
@@ -482,7 +489,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v21"
+    "VersionId": "v22"
   },
-  "UpdateDate": "2021-09-08T17:12:25Z"
+  "UpdateDate": "2022-05-02T06:19:13Z"
 }
