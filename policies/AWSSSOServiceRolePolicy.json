@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSSOServiceRolePolicy",
   "CreateDate": "2017-12-05T18:36:15Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIJ52KSWOD4GI54XP2",
   "PolicyName": "AWSSSOServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-11-19T00:02:00Z",
+    "CreateDate": "2022-05-03T16:12:15Z",
     "Document": {
       "Statement": [
         {
@@ -50,7 +50,8 @@
           "Action": [
             "organizations:DescribeAccount",
             "organizations:DescribeOrganization",
-            "organizations:ListAccounts"
+            "organizations:ListAccounts",
+            "organizations:ListDelegatedAdministrators"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -144,7 +145,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2020-11-19T00:02:00Z"
+  "UpdateDate": "2022-05-03T16:12:15Z"
 }
