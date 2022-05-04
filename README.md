@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 315
-* Unique actions: 12855
+* Unique actions: 12856
 * Managed policies: 948
 
 Most common managed policy name prefixes:
@@ -293,7 +293,7 @@ The following table summarises the AWS APIs.
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 25 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
-| [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 7 | 0 |
+| [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
