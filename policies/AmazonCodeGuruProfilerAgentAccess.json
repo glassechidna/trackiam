@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonCodeGuruProfilerAgentAccess",
   "CreateDate": "2021-02-05T22:11:56Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NJEGTVMFC",
   "PolicyName": "AmazonCodeGuruProfilerAgentAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-04-02T23:21:37Z",
+    "CreateDate": "2022-05-05T18:11:03Z",
     "Document": {
       "Statement": [
         {
@@ -17,13 +17,13 @@
             "codeguru-profiler:PostAgentProfile"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "arn:aws:codeguru-profiler:*:*:profilingGroup/*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-04-02T23:21:37Z"
+  "UpdateDate": "2022-05-05T18:11:03Z"
 }
