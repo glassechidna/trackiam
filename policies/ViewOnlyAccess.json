@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/ViewOnlyAccess",
   "CreateDate": "2016-11-10T17:20:15Z",
-  "DefaultVersionId": "v14",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAID22R6XPJATWOFDK6",
   "PolicyName": "ViewOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-05-04T18:10:49Z",
+    "CreateDate": "2022-05-06T21:01:44Z",
     "Document": {
       "Statement": [
         {
@@ -45,6 +45,8 @@
             "cognito-identity:ListIdentityPools",
             "cognito-idp:List*",
             "cognito-sync:ListDatasets",
+            "comprehend:Describe*",
+            "comprehend:List*",
             "config:Describe*",
             "config:List*",
             "connect:List*",
@@ -124,6 +126,10 @@
             "ecr:ListImages",
             "ecs:Describe*",
             "ecs:List*",
+            "elastic-inference:DescribeAcceleratorOfferings",
+            "elastic-inference:DescribeAcceleratorTypes",
+            "elastic-inference:DescribeAccelerators",
+            "elastic-inference:ListTagsForResource",
             "elasticache:Describe*",
             "elasticbeanstalk:DescribeApplicationVersions",
             "elasticbeanstalk:DescribeApplications",
@@ -246,7 +252,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v14"
+    "VersionId": "v15"
   },
-  "UpdateDate": "2022-05-04T18:10:49Z"
+  "UpdateDate": "2022-05-06T21:01:44Z"
 }
