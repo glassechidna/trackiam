@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSGlueDataBrewServiceRole",
   "CreateDate": "2020-12-04T21:26:50Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4HSXDEANHC",
   "PolicyName": "AWSGlueDataBrewServiceRole",
   "PolicyVersion": {
-    "CreateDate": "2021-11-18T19:44:16Z",
+    "CreateDate": "2022-05-09T23:06:36Z",
     "Document": {
       "Statement": [
         {
@@ -49,6 +49,15 @@
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcAttribute",
             "ec2:DescribeVpcEndpoints"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "glue:BatchGetCustomEntityTypes"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -107,7 +116,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-11-18T19:44:16Z"
+  "UpdateDate": "2022-05-09T23:06:36Z"
 }
