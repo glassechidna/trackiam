@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 315
-* Unique actions: 12858
+* Unique actions: 12857
 * Managed policies: 948
 
 Most common managed policy name prefixes:
@@ -147,7 +147,6 @@ The following table summarises the AWS APIs.
 | [`memorydb`](services/memorydb.yml) | 33 | 2 | 2 |
 | [`panorama`](services/panorama.yml) | 33 | 0 | 31 |
 | [`ce`](services/ce.yml) | 33 | 0 | 10 |
-| [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`gamesparks`](services/gamesparks.yml) | 33 | 0 | 1 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
@@ -291,6 +290,7 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 248 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
+| [`worklink`](services/worklink.yml) | 0 | 33 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 25 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
