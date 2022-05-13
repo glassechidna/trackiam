@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupFullAccess",
   "CreateDate": "2019-11-18T22:21:52Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LL52EIPJX",
   "PolicyName": "AWSBackupFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-11-23T22:00:22Z",
+    "CreateDate": "2022-05-13T17:52:29Z",
     "Document": {
       "Statement": [
         {
@@ -131,6 +131,16 @@
           "Action": "fsx:DescribeFileSystems",
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": "fsx:DescribeStorageVirtualMachines",
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:storage-virtual-machine/*/*"
+        },
+        {
+          "Action": "fsx:DescribeVolumes",
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:volume/*/*"
         },
         {
           "Action": "organizations:DescribeOrganization",
@@ -280,7 +290,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2021-11-23T22:00:22Z"
+  "UpdateDate": "2022-05-13T17:52:29Z"
 }
