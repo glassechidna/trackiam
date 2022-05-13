@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 315
-* Unique actions: 12857
+* Unique actions: 12859
 * Managed policies: 948
 
 Most common managed policy name prefixes:
@@ -233,13 +233,13 @@ The following table summarises the AWS APIs.
 | [`app-integrations`](services/app-integrations.yml) | 15 | 0 | 4 |
 | [`emr-containers`](services/emr-containers.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
+| [`grafana`](services/grafana.yml) | 14 | 2 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`translate`](services/translate.yml) | 14 | 0 | 0 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 14 | 0 | 0 |
-| [`grafana`](services/grafana.yml) | 14 | 0 | 0 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 16 |
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 7 |
 | [`synthetics`](services/synthetics.yml) | 13 | 0 | 0 |
@@ -359,8 +359,8 @@ Most common action prefixes:
 | `List` | 1940 |
 | `Get` | 1714 |
 | `Describe` | 1497 |
-| `Delete` | 1496 |
-| `Create` | 1391 |
+| `Delete` | 1497 |
+| `Create` | 1392 |
 | `Update` | 1147 |
 | `Put` | 359 |
 | `Start` | 243 |
