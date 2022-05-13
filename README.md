@@ -230,11 +230,11 @@ The following table summarises the AWS APIs.
 | [`fis`](services/fis.yml) | 16 | 0 | 3 |
 | [`backup-gateway`](services/backup-gateway.yml) | 16 | 0 | 2 |
 | [`resource-groups`](services/resource-groups.yml) | 16 | 0 | 1 |
+| [`grafana`](services/grafana.yml) | 16 | 0 | 0 |
 | [`honeycode`](services/honeycode.yml) | 15 | 0 | 15 |
 | [`app-integrations`](services/app-integrations.yml) | 15 | 0 | 4 |
 | [`emr-containers`](services/emr-containers.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
-| [`grafana`](services/grafana.yml) | 14 | 2 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 14 | 0 | 3 |

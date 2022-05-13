@@ -1,7 +1,9 @@
 Actions:
   - Name: grafana:AssociateLicense
   - Name: grafana:CreateWorkspace
+  - Name: grafana:CreateWorkspaceApiKey
   - Name: grafana:DeleteWorkspace
+  - Name: grafana:DeleteWorkspaceApiKey
   - Name: grafana:DescribeWorkspace
   - Name: grafana:DescribeWorkspaceAuthentication
   - Name: grafana:DisassociateLicense
@@ -13,7 +15,3 @@ Actions:
   - Name: grafana:UpdatePermissions
   - Name: grafana:UpdateWorkspace
   - Name: grafana:UpdateWorkspaceAuthentication
-
-  # APIs without an IAM action
-  - Name: grafana:CreateWorkspaceApiKey
-  - Name: grafana:DeleteWorkspaceApiKey
