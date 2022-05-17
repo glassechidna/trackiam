@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
   "CreateDate": "2019-01-10T21:01:28Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIOOYZSLZZXWFJJ5N2",
   "PolicyName": "AWSBackupServiceRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2021-11-23T22:00:34Z",
+    "CreateDate": "2022-05-17T17:31:44Z",
     "Document": {
       "Statement": [
         {
@@ -67,7 +67,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:fsx:*:*:backup/*",
-            "arn:aws:fsx:*:*:file-system/*"
+            "arn:aws:fsx:*:*:file-system/*",
+            "arn:aws:fsx:*:*:volume/*"
           ]
         },
         {
@@ -86,9 +87,17 @@
           "Resource": "arn:aws:fsx:*:*:file-system/*"
         },
         {
+          "Action": "fsx:DescribeVolumes",
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:volume/*"
+        },
+        {
           "Action": "fsx:ListTagsForResource",
           "Effect": "Allow",
-          "Resource": "arn:aws:fsx:*:*:file-system/*"
+          "Resource": [
+            "arn:aws:fsx:*:*:file-system/*",
+            "arn:aws:fsx:*:*:volume/*"
+          ]
         },
         {
           "Action": "kms:DescribeKey",
@@ -307,7 +316,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2021-11-23T22:00:34Z"
+  "UpdateDate": "2022-05-17T17:31:44Z"
 }
