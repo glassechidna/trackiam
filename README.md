@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 315
-* Unique actions: 12862
+* Unique actions: 12863
 * Managed policies: 948
 
 Most common managed policy name prefixes:
@@ -47,9 +47,9 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 135 | 0 | 8 |
 | [`rds`](services/rds.yml) | 135 | 0 | 5 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 119 | 0 | 1 |
+| [`quicksight`](services/quicksight.yml) | 118 | 0 | 25 |
 | [`redshift`](services/redshift.yml) | 118 | 0 | 18 |
-| [`quicksight`](services/quicksight.yml) | 117 | 0 | 26 |
-| [`greengrass`](services/greengrass.yml) | 110 | 0 | 1 |
+| [`greengrass`](services/greengrass.yml) | 110 | 1 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 108 | 0 | 0 |
 | [`lex`](services/lex.yml) | 103 | 2 | 7 |
 | [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 0 |
@@ -127,11 +127,11 @@ The following table summarises the AWS APIs.
 | [`resiliencehub`](services/resiliencehub.yml) | 39 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
+| [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`profile`](services/profile.yml) | 38 | 0 | 0 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`fsx`](services/fsx.yml) | 37 | 0 | 4 |
-| [`iotevents`](services/iotevents.yml) | 37 | 0 | 2 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
@@ -358,8 +358,8 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 1940 |
 | `Get` | 1714 |
+| `Delete` | 1498 |
 | `Describe` | 1497 |
-| `Delete` | 1497 |
 | `Create` | 1392 |
 | `Update` | 1148 |
 | `Put` | 359 |
