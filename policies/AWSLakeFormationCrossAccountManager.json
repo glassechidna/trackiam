@@ -1,15 +1,33 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSLakeFormationCrossAccountManager",
   "CreateDate": "2020-08-04T20:59:46Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HPT7Y7QL3",
   "PolicyName": "AWSLakeFormationCrossAccountManager",
   "PolicyVersion": {
-    "CreateDate": "2020-12-07T23:11:36Z",
+    "CreateDate": "2022-05-20T22:19:37Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "ram:AssociateResourceShare",
+            "ram:DeleteResourceShare",
+            "ram:DisassociateResourceShare",
+            "ram:GetResourceShares",
+            "ram:UpdateResourceShare"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ram:ResourceShareName": [
+                "LakeFormation*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "ram:CreateResourceShare"
@@ -20,21 +38,6 @@
                 "glue:Catalog",
                 "glue:Database",
                 "glue:Table"
-              ]
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
-            "ram:DeleteResourceShare",
-            "ram:UpdateResourceShare"
-          ],
-          "Condition": {
-            "StringLike": {
-              "ram:ResourceShareName": [
-                "LakeFormation*"
               ]
             }
           },
@@ -66,7 +69,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-12-07T23:11:36Z"
+  "UpdateDate": "2022-05-20T22:19:37Z"
 }
