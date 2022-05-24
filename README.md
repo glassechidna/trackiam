@@ -61,10 +61,10 @@ The following table summarises the AWS APIs.
 | [`config`](services/config.yml) | 86 | 2 | 0 |
 | [`s3`](services/s3.yml) | 83 | 58 | 45 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
+| [`networkmanager`](services/networkmanager.yml) | 78 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
-| [`networkmanager`](services/networkmanager.yml) | 76 | 0 | 2 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 71 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 68 | 0 | 51 |
