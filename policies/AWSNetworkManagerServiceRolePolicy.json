@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSNetworkManagerServiceRolePolicy",
   "CreateDate": "2019-12-03T14:03:35Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4B346KOB7I",
   "PolicyName": "AWSNetworkManagerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-11-23T21:38:47Z",
+    "CreateDate": "2022-05-24T14:42:03Z",
     "Document": {
       "Statement": [
         {
@@ -28,7 +28,12 @@
             "ec2:DescribeVpcs",
             "ec2:DescribeVpnConnections",
             "ec2:GetTransitGatewayRouteTableAssociations",
-            "ec2:SearchTransitGatewayRoutes"
+            "ec2:SearchTransitGatewayRoutes",
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListDelegatedAdministrators"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -37,7 +42,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2021-11-23T21:38:47Z"
+  "UpdateDate": "2022-05-24T14:42:03Z"
 }
