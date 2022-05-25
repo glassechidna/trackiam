@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRedshiftServiceLinkedRolePolicy",
   "CreateDate": "2017-09-18T19:19:45Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJPY2VXNRUYOY3SRZS",
   "PolicyName": "AmazonRedshiftServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-11-22T21:08:22Z",
+    "CreateDate": "2022-05-25T05:09:53Z",
     "Document": {
       "Statement": [
         {
@@ -15,6 +15,7 @@
           "Condition": {
             "StringEquals": {
               "ec2:CreateAction": [
+                "AllocateAddress",
                 "CreateInternetGateway",
                 "CreateRouteTable",
                 "CreateSecurityGroup",
@@ -30,6 +31,34 @@
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:subnet/*",
             "arn:aws:ec2:*:*:vpc/*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": [
+                "AWS/Redshift-Serverless"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:AllocateAddress"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/Redshift": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:elastic-ip/*"
           ]
         },
         {
@@ -78,11 +107,26 @@
           },
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:ec2:*:*:elastic-ip/*",
             "arn:aws:ec2:*:*:internet-gateway/*",
             "arn:aws:ec2:*:*:route-table/*",
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:subnet/*",
             "arn:aws:ec2:*:*:vpc/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:ReleaseAddress"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/Redshift": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:elastic-ip/*"
           ]
         },
         {
@@ -145,7 +189,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2021-11-22T21:08:22Z"
+  "UpdateDate": "2022-05-25T05:09:53Z"
 }
