@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 315
-* Unique actions: 12871
-* Managed policies: 950
+* Unique actions: 12875
+* Managed policies: 951
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 265 |
 | `arn:aws:iam::aws:policy/Amazon*` | 254 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 196 |
-| `arn:aws:iam::aws:policy/service-role/*` | 145 |
+| `arn:aws:iam::aws:policy/service-role/*` | 146 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 83 |
 
@@ -167,7 +167,7 @@ The following table summarises the AWS APIs.
 | [`inspector2`](services/inspector2.yml) | 30 | 0 | 0 |
 | [`fms`](services/fms.yml) | 30 | 0 | 0 |
 | [`billingconductor`](services/billingconductor.yml) | 30 | 0 | 0 |
-| [`drs`](services/drs.yml) | 29 | 0 | 38 |
+| [`drs`](services/drs.yml) | 29 | 0 | 42 |
 | [`mgn`](services/mgn.yml) | 29 | 0 | 32 |
 | [`dataexchange`](services/dataexchange.yml) | 29 | 0 | 2 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
@@ -356,11 +356,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1943 |
+| `List` | 1945 |
 | `Get` | 1714 |
 | `Delete` | 1499 |
 | `Describe` | 1498 |
-| `Create` | 1393 |
+| `Create` | 1395 |
 | `Update` | 1148 |
 | `Put` | 359 |
 | `Start` | 244 |
