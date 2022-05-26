@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 315
-* Unique actions: 12875
+* Unique services: 316
+* Unique actions: 12890
 * Managed policies: 952
 
 Most common managed policy name prefixes:
@@ -189,10 +189,10 @@ The following table summarises the AWS APIs.
 | [`iottwinmaker`](services/iottwinmaker.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
+| [`discovery`](services/discovery.yml) | 25 | 0 | 1 |
 | [`snowball`](services/snowball.yml) | 25 | 0 | 0 |
 | [`ram`](services/ram.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
-| [`discovery`](services/discovery.yml) | 25 | 0 | 0 |
 | [`outposts`](services/outposts.yml) | 24 | 0 | 2 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 23 | 1 | 3 |
@@ -292,6 +292,7 @@ The following table summarises the AWS APIs.
 | [`execute-api`](services/execute-api.yml) | 0 | 248 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 25 | 0 |
+| [`emr-serverless`](services/emr-serverless.yml) | 0 | 14 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
@@ -356,14 +357,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1945 |
-| `Get` | 1714 |
-| `Delete` | 1499 |
+| `List` | 1948 |
+| `Get` | 1717 |
+| `Delete` | 1500 |
 | `Describe` | 1498 |
-| `Create` | 1395 |
-| `Update` | 1148 |
+| `Create` | 1396 |
+| `Update` | 1149 |
 | `Put` | 359 |
-| `Start` | 244 |
-| `Tag` | 202 |
-| `Untag` | 200 |
+| `Start` | 246 |
+| `Tag` | 203 |
+| `Untag` | 201 |
 
