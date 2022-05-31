@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSLicenseManagerMasterAccountRolePolicy",
   "CreateDate": "2018-11-26T19:03:51Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIJE2NOZW2BDEHYUH2",
   "PolicyName": "AWSLicenseManagerMasterAccountRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-11-18T02:02:15Z",
+    "CreateDate": "2022-05-31T20:50:26Z",
     "Document": {
       "Statement": [
         {
@@ -60,6 +60,21 @@
             "*"
           ],
           "Sid": "RAMPermissions2"
+        },
+        {
+          "Action": [
+            "resource-groups:PutGroupPolicy"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "ram.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RGPermissions"
         },
         {
           "Action": [
@@ -200,7 +215,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2021-11-18T02:02:15Z"
+  "UpdateDate": "2022-05-31T20:50:26Z"
 }
