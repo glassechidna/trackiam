@@ -1,15 +1,93 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSApplicationMigrationFullAccess",
   "CreateDate": "2021-04-07T06:56:05Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HPQNMM2HL",
   "PolicyName": "AWSApplicationMigrationFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-05-01T08:31:14Z",
+    "CreateDate": "2022-05-31T21:14:49Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "StringEquals": {
+              "iam:PassedToService": "ec2.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/service-role/AWSApplicationMigrationLaunchInstanceWithDrsRole",
+            "arn:aws:iam::*:role/service-role/AWSApplicationMigrationLaunchInstanceWithSsmRole"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:DescribeDocument"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/AWSDisasterRecovery-InstallDRAgentOnInstance",
+            "arn:aws:ssm:*:*:document/AWSMigration-ConvertCentOsToRockyLinuxDistribution",
+            "arn:aws:ssm:*:*:document/AWSMigration-ReplaceSuseSubscriptionWithAwsSubscription"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:DescribeInstanceInformation",
+            "ssm:GetCommandInvocation"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ssm:SendCommand"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/AWSDisasterRecovery-InstallDRAgentOnInstance",
+            "arn:aws:ssm:*:*:document/AWSMigration-ConvertCentOsToRockyLinuxDistribution",
+            "arn:aws:ssm:*:*:document/AWSMigration-ReplaceSuseSubscriptionWithAwsSubscription"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:SendCommand"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "Null": {
+              "aws:ResourceTag/AWSApplicationMigrationServiceManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ]
+        },
         {
           "Action": "elasticloadbalancing:DescribeLoadBalancers",
           "Effect": "Allow",
@@ -22,6 +100,13 @@
         },
         {
           "Action": "license-manager:ListLicenseConfigurations",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "drs:DescribeSourceServers"
+          ],
           "Effect": "Allow",
           "Resource": "*"
         },
@@ -72,12 +157,27 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ssm:GetParameter",
+            "ssm:PutParameter"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:parameter/ManagedByAWSApplicationMigrationService-*"
+        },
+        {
+          "Action": [
+            "ssm:ListCommandInvocations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2022-05-01T08:31:14Z"
+  "UpdateDate": "2022-05-31T21:14:49Z"
 }
