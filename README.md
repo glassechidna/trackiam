@@ -151,6 +151,7 @@ The following table summarises the AWS APIs.
 | [`gamesparks`](services/gamesparks.yml) | 33 | 0 | 1 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
+| [`drs`](services/drs.yml) | 32 | 0 | 39 |
 | [`transfer`](services/transfer.yml) | 32 | 0 | 0 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`evidently`](services/evidently.yml) | 32 | 0 | 0 |
@@ -167,7 +168,6 @@ The following table summarises the AWS APIs.
 | [`inspector2`](services/inspector2.yml) | 30 | 0 | 0 |
 | [`fms`](services/fms.yml) | 30 | 0 | 0 |
 | [`billingconductor`](services/billingconductor.yml) | 30 | 0 | 0 |
-| [`drs`](services/drs.yml) | 29 | 0 | 42 |
 | [`mgn`](services/mgn.yml) | 29 | 0 | 32 |
 | [`dataexchange`](services/dataexchange.yml) | 29 | 0 | 2 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
