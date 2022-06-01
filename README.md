@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 316
-* Unique actions: 12892
+* Unique actions: 12900
 * Managed policies: 952
 
 Most common managed policy name prefixes:
@@ -38,7 +38,7 @@ The following table summarises the AWS APIs.
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 522 | 1 | 9 |
 | [`sagemaker`](services/sagemaker.yml) | 264 | 0 | 5 |
-| [`chime`](services/chime.yml) | 207 | 0 | 51 |
+| [`chime`](services/chime.yml) | 207 | 2 | 51 |
 | [`glue`](services/glue.yml) | 180 | 3 | 2 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 153 | 1 | 0 |
@@ -76,8 +76,8 @@ The following table summarises the AWS APIs.
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
+| [`route53`](services/route53.yml) | 64 | 6 | 0 |
 | [`es`](services/es.yml) | 64 | 0 | 10 |
-| [`route53`](services/route53.yml) | 64 | 0 | 0 |
 | [`ds`](services/ds.yml) | 63 | 0 | 6 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
@@ -220,6 +220,7 @@ The following table summarises the AWS APIs.
 | [`opsworks-cm`](services/opsworks-cm.yml) | 19 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 19 | 0 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
+| [`backup-gateway`](services/backup-gateway.yml) | 18 | 0 | 2 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 18 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 17 | 3 | 0 |
 | [`aps`](services/aps.yml) | 17 | 0 | 16 |
@@ -227,7 +228,6 @@ The following table summarises the AWS APIs.
 | [`signer`](services/signer.yml) | 17 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
-| [`backup-gateway`](services/backup-gateway.yml) | 16 | 0 | 4 |
 | [`fis`](services/fis.yml) | 16 | 0 | 3 |
 | [`resource-groups`](services/resource-groups.yml) | 16 | 0 | 1 |
 | [`grafana`](services/grafana.yml) | 16 | 0 | 0 |
@@ -357,12 +357,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1948 |
+| `List` | 1951 |
 | `Get` | 1718 |
-| `Delete` | 1500 |
+| `Delete` | 1501 |
 | `Describe` | 1498 |
-| `Create` | 1396 |
-| `Update` | 1150 |
+| `Create` | 1397 |
+| `Update` | 1151 |
 | `Put` | 359 |
 | `Start` | 246 |
 | `Tag` | 203 |
