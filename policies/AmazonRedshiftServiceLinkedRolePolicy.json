@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRedshiftServiceLinkedRolePolicy",
   "CreateDate": "2017-09-18T19:19:45Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJPY2VXNRUYOY3SRZS",
   "PolicyName": "AmazonRedshiftServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-05-25T05:09:53Z",
+    "CreateDate": "2022-06-01T00:34:09Z",
     "Document": {
       "Statement": [
         {
@@ -26,6 +26,7 @@
           },
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:ec2:*:*:elastic-ip/*",
             "arn:aws:ec2:*:*:internet-gateway/*",
             "arn:aws:ec2:*:*:route-table/*",
             "arn:aws:ec2:*:*:security-group/*",
@@ -107,7 +108,6 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:ec2:*:*:elastic-ip/*",
             "arn:aws:ec2:*:*:internet-gateway/*",
             "arn:aws:ec2:*:*:route-table/*",
             "arn:aws:ec2:*:*:security-group/*",
@@ -189,7 +189,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2022-05-25T05:09:53Z"
+  "UpdateDate": "2022-06-01T00:34:09Z"
 }
