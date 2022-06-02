@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 316
-* Unique actions: 12900
+* Unique actions: 12914
 * Managed policies: 952
 
 Most common managed policy name prefixes:
@@ -42,7 +42,7 @@ The following table summarises the AWS APIs.
 | [`glue`](services/glue.yml) | 180 | 3 | 2 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 153 | 1 | 0 |
-| [`connect`](services/connect.yml) | 145 | 0 | 6 |
+| [`connect`](services/connect.yml) | 145 | 6 | 6 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
 | [`ssm`](services/ssm.yml) | 135 | 0 | 8 |
 | [`rds`](services/rds.yml) | 135 | 0 | 5 |
@@ -70,7 +70,7 @@ The following table summarises the AWS APIs.
 | [`workmail`](services/workmail.yml) | 68 | 0 | 51 |
 | [`iotsitewise`](services/iotsitewise.yml) | 68 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 68 | 0 | 0 |
-| [`proton`](services/proton.yml) | 67 | 0 | 23 |
+| [`proton`](services/proton.yml) | 67 | 8 | 23 |
 | [`cloudformation`](services/cloudformation.yml) | 66 | 0 | 11 |
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
@@ -357,12 +357,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1951 |
-| `Get` | 1718 |
-| `Delete` | 1501 |
+| `List` | 1955 |
+| `Get` | 1720 |
+| `Delete` | 1503 |
 | `Describe` | 1498 |
-| `Create` | 1397 |
-| `Update` | 1151 |
+| `Create` | 1399 |
+| `Update` | 1153 |
 | `Put` | 359 |
 | `Start` | 246 |
 | `Tag` | 203 |
