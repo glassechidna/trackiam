@@ -20,6 +20,7 @@ Actions:
   - Name: connect:CreateQuickConnect
   - Name: connect:CreateRoutingProfile
   - Name: connect:CreateSecurityProfile
+  - Name: connect:CreateTaskTemplate
   - Name: connect:CreateUseCase
   - Name: connect:CreateUser
   - Name: connect:CreateUserHierarchyGroup
@@ -31,6 +32,7 @@ Actions:
   - Name: connect:DeleteIntegrationAssociation
   - Name: connect:DeleteQuickConnect
   - Name: connect:DeleteSecurityProfile
+  - Name: connect:DeleteTaskTemplate
   - Name: connect:DeleteUseCase
   - Name: connect:DeleteUser
   - Name: connect:DeleteUserHierarchyGroup
@@ -65,6 +67,7 @@ Actions:
   - Name: connect:GetCurrentMetricData
   - Name: connect:GetFederationToken
   - Name: connect:GetMetricData
+  - Name: connect:GetTaskTemplate
   - Name: connect:ListAgentStatuses
   - Name: connect:ListApprovedOrigins
   - Name: connect:ListBots
@@ -92,6 +95,7 @@ Actions:
   - Name: connect:ListSecurityProfilePermissions
   - Name: connect:ListSecurityProfiles
   - Name: connect:ListTagsForResource
+  - Name: connect:ListTaskTemplates
   - Name: connect:ListUseCases
   - Name: connect:ListUserHierarchyGroups
   - Name: connect:ListUsers
@@ -111,6 +115,7 @@ Actions:
   - Name: connect:StopContactStreaming
   - Name: connect:SuspendContactRecording
   - Name: connect:TagResource
+  - Name: connect:TransferContact
   - Name: connect:UntagResource
   - Name: connect:UpdateAgentStatus
   - Name: connect:UpdateContact
@@ -137,6 +142,7 @@ Actions:
   - Name: connect:UpdateRoutingProfileName
   - Name: connect:UpdateRoutingProfileQueues
   - Name: connect:UpdateSecurityProfile
+  - Name: connect:UpdateTaskTemplate
   - Name: connect:UpdateUserHierarchy
   - Name: connect:UpdateUserHierarchyGroupName
   - Name: connect:UpdateUserHierarchyStructure
@@ -152,11 +158,3 @@ Actions:
   - Name: connect:DisassociateCustomerProfilesDomain
   - Name: connect:GetFederationTokens
   - Name: connect:UpdatedescribeContent
-
-  # APIs without an IAM action
-  - Name: connect:CreateTaskTemplate
-  - Name: connect:DeleteTaskTemplate
-  - Name: connect:GetTaskTemplate
-  - Name: connect:ListTaskTemplates
-  - Name: connect:TransferContact
-  - Name: connect:UpdateTaskTemplate
