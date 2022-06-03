@@ -67,6 +67,7 @@ The following table summarises the AWS APIs.
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 71 | 0 | 0 |
+| [`route53`](services/route53.yml) | 70 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 68 | 0 | 51 |
 | [`iotsitewise`](services/iotsitewise.yml) | 68 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 68 | 0 | 0 |
@@ -76,7 +77,6 @@ The following table summarises the AWS APIs.
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
-| [`route53`](services/route53.yml) | 64 | 6 | 0 |
 | [`es`](services/es.yml) | 64 | 0 | 10 |
 | [`ds`](services/ds.yml) | 63 | 0 | 6 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |

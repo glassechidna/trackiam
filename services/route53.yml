@@ -1,8 +1,10 @@
 Actions:
   - Name: route53:ActivateKeySigningKey
   - Name: route53:AssociateVPCWithHostedZone
+  - Name: route53:ChangeCidrCollection
   - Name: route53:ChangeResourceRecordSets
   - Name: route53:ChangeTagsForResource
+  - Name: route53:CreateCidrCollection
   - Name: route53:CreateHealthCheck
   - Name: route53:CreateHostedZone
   - Name: route53:CreateKeySigningKey
@@ -13,6 +15,7 @@ Actions:
   - Name: route53:CreateTrafficPolicyVersion
   - Name: route53:CreateVPCAssociationAuthorization
   - Name: route53:DeactivateKeySigningKey
+  - Name: route53:DeleteCidrCollection
   - Name: route53:DeleteHealthCheck
   - Name: route53:DeleteHostedZone
   - Name: route53:DeleteKeySigningKey
@@ -42,6 +45,9 @@ Actions:
   - Name: route53:GetTrafficPolicy
   - Name: route53:GetTrafficPolicyInstance
   - Name: route53:GetTrafficPolicyInstanceCount
+  - Name: route53:ListCidrBlocks
+  - Name: route53:ListCidrCollections
+  - Name: route53:ListCidrLocations
   - Name: route53:ListGeoLocations
   - Name: route53:ListHealthChecks
   - Name: route53:ListHostedZones
@@ -63,11 +69,3 @@ Actions:
   - Name: route53:UpdateHostedZoneComment
   - Name: route53:UpdateTrafficPolicyComment
   - Name: route53:UpdateTrafficPolicyInstance
-
-  # APIs without an IAM action
-  - Name: route53:ChangeCidrCollection
-  - Name: route53:CreateCidrCollection
-  - Name: route53:DeleteCidrCollection
-  - Name: route53:ListCidrBlocks
-  - Name: route53:ListCidrCollections
-  - Name: route53:ListCidrLocations
