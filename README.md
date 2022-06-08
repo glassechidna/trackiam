@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 316
-* Unique actions: 12926
+* Unique services: 317
+* Unique actions: 12958
 * Managed policies: 954
 
 Most common managed policy name prefixes:
@@ -303,6 +303,7 @@ The following table summarises the AWS APIs.
 | [`iotfleetwise`](services/iotfleetwise.yml) | 0 | 0 | 43 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 40 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
+| [`m2`](services/m2.yml) | 0 | 0 | 32 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 0 | 0 | 31 |
 | [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 26 |
@@ -357,14 +358,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1956 |
-| `Get` | 1721 |
-| `Delete` | 1504 |
+| `List` | 1966 |
+| `Get` | 1728 |
+| `Delete` | 1507 |
 | `Describe` | 1499 |
-| `Create` | 1400 |
-| `Update` | 1155 |
+| `Create` | 1404 |
+| `Update` | 1157 |
 | `Put` | 359 |
-| `Start` | 247 |
-| `Tag` | 203 |
-| `Untag` | 201 |
+| `Start` | 249 |
+| `Tag` | 204 |
+| `Untag` | 202 |
 
