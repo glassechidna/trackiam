@@ -37,6 +37,7 @@ Actions:
   - Name: iotwireless:DisassociateWirelessGatewayFromThing
   - Name: iotwireless:GetDestination
   - Name: iotwireless:GetDeviceProfile
+  - Name: iotwireless:GetEventConfigurationByResourceTypes
   - Name: iotwireless:GetFuotaTask
   - Name: iotwireless:GetLogLevelsByResourceTypes
   - Name: iotwireless:GetMulticastGroup
@@ -82,6 +83,7 @@ Actions:
   - Name: iotwireless:TestWirelessDevice
   - Name: iotwireless:UntagResource
   - Name: iotwireless:UpdateDestination
+  - Name: iotwireless:UpdateEventConfigurationByResourceTypes
   - Name: iotwireless:UpdateFuotaTask
   - Name: iotwireless:UpdateLogLevelsByResourceTypes
   - Name: iotwireless:UpdateMulticastGroup
@@ -92,10 +94,4 @@ Actions:
   - Name: iotwireless:UpdateWirelessGateway
 
   # actions with no corresponding API
-  - Name: iotwireless:GetEventConfigurationsByResourceTypes
   - Name: iotwireless:StartNetworkAnalyzerStream
-  - Name: iotwireless:UpdateEventConfigurationsByResourceTypes
-
-  # APIs without an IAM action
-  - Name: iotwireless:GetEventConfigurationByResourceTypes
-  - Name: iotwireless:UpdateEventConfigurationByResourceTypes
