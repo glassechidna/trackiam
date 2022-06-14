@@ -171,12 +171,12 @@ The following table summarises the AWS APIs.
 | [`billingconductor`](services/billingconductor.yml) | 30 | 0 | 0 |
 | [`mgn`](services/mgn.yml) | 29 | 0 | 38 |
 | [`dataexchange`](services/dataexchange.yml) | 29 | 0 | 2 |
+| [`lookoutmetrics`](services/lookoutmetrics.yml) | 29 | 0 | 1 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 29 | 0 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 29 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
-| [`lookoutmetrics`](services/lookoutmetrics.yml) | 28 | 1 | 1 |
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 28 | 0 | 0 |
