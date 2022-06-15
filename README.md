@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 317
-* Unique actions: 12975
+* Unique actions: 12985
 * Managed policies: 956
 
 Most common managed policy name prefixes:
@@ -50,7 +50,7 @@ The following table summarises the AWS APIs.
 | [`redshift`](services/redshift.yml) | 118 | 1 | 18 |
 | [`quicksight`](services/quicksight.yml) | 118 | 0 | 25 |
 | [`greengrass`](services/greengrass.yml) | 110 | 1 | 1 |
-| [`servicecatalog`](services/servicecatalog.yml) | 108 | 0 | 0 |
+| [`servicecatalog`](services/servicecatalog.yml) | 109 | 0 | 0 |
 | [`lex`](services/lex.yml) | 103 | 2 | 7 |
 | [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 0 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
@@ -86,8 +86,8 @@ The following table summarises the AWS APIs.
 | [`workspaces`](services/workspaces.yml) | 61 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
+| [`guardduty`](services/guardduty.yml) | 58 | 4 | 0 |
 | [`rekognition`](services/rekognition.yml) | 58 | 1 | 0 |
-| [`guardduty`](services/guardduty.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`medialive`](services/medialive.yml) | 57 | 0 | 2 |
 | [`macie2`](services/macie2.yml) | 57 | 0 | 0 |
@@ -293,7 +293,7 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 248 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
-| [`finspace-api`](services/finspace-api.yml) | 0 | 25 | 0 |
+| [`finspace-api`](services/finspace-api.yml) | 0 | 30 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
@@ -358,8 +358,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1965 |
-| `Get` | 1733 |
+| `List` | 1968 |
+| `Get` | 1736 |
 | `Delete` | 1511 |
 | `Describe` | 1504 |
 | `Create` | 1405 |

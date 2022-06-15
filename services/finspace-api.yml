@@ -1,6 +1,7 @@
 Actions:
 
   # APIs without an IAM action
+  - Name: finspace-api:AssociateUserToPermissionGroup
   - Name: finspace-api:CreateChangeset
   - Name: finspace-api:CreateDataView
   - Name: finspace-api:CreateDataset
@@ -9,10 +10,12 @@ Actions:
   - Name: finspace-api:DeleteDataset
   - Name: finspace-api:DeletePermissionGroup
   - Name: finspace-api:DisableUser
+  - Name: finspace-api:DisassociateUserFromPermissionGroup
   - Name: finspace-api:EnableUser
   - Name: finspace-api:GetChangeset
   - Name: finspace-api:GetDataView
   - Name: finspace-api:GetDataset
+  - Name: finspace-api:GetPermissionGroup
   - Name: finspace-api:GetProgrammaticAccessCredentials
   - Name: finspace-api:GetUser
   - Name: finspace-api:GetWorkingLocation
@@ -20,7 +23,9 @@ Actions:
   - Name: finspace-api:ListDataViews
   - Name: finspace-api:ListDatasets
   - Name: finspace-api:ListPermissionGroups
+  - Name: finspace-api:ListPermissionGroupsByUser
   - Name: finspace-api:ListUsers
+  - Name: finspace-api:ListUsersByPermissionGroup
   - Name: finspace-api:ResetUserPassword
   - Name: finspace-api:UpdateChangeset
   - Name: finspace-api:UpdateDataset
