@@ -1,0 +1,47 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSApplicationMigrationAgentInstallationPolicy",
+  "CreateDate": "2022-06-19T07:51:04Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CCKR37CNT",
+  "PolicyName": "AWSApplicationMigrationAgentInstallationPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2022-06-19T07:51:04Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "mgn:TagResource",
+          "Condition": {
+            "StringEquals": {
+              "mgn:CreateAction": "RegisterAgentForMgn"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:mgn:*:*:source-server/*"
+        },
+        {
+          "Action": [
+            "mgn:GetAgentInstallationAssetsForMgn",
+            "mgn:RegisterAgentForMgn",
+            "mgn:SendClientLogsForMgn",
+            "mgn:VerifyClientRoleForMgn"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "mgn:IssueClientCertificateForMgn"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:mgn:*:*:source-server/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-06-19T07:51:04Z"
+}
