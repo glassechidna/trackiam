@@ -1,20 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSControlTowerServiceRolePolicy",
   "CreateDate": "2019-05-03T18:19:11Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4MW35THVLF",
   "PolicyName": "AWSControlTowerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-06-04T23:00:46Z",
+    "CreateDate": "2022-06-20T21:45:54Z",
     "Document": {
       "Statement": [
         {
-          "Action": "organizations:EnableAWSServiceAccess",
+          "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
-            "StringLike": {
-              "organizations:ServicePrincipal": "config.amazonaws.com"
+            "StringEquals": {
+              "iam:AWSServiceName": "cloudtrail.amazonaws.com"
             }
           },
           "Effect": "Allow",
@@ -29,6 +29,22 @@
           "Condition": {
             "StringEquals": {
               "aws:ResourceTag/aws-control-tower": "managed-by-control-tower"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "organizations:DisableAWSServiceAccess",
+            "organizations:EnableAWSServiceAccess"
+          ],
+          "Condition": {
+            "StringLike": {
+              "organizations:ServicePrincipal": [
+                "cloudtrail.amazonaws.com",
+                "config.amazonaws.com"
+              ]
             }
           },
           "Effect": "Allow",
@@ -172,7 +188,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2021-06-04T23:00:46Z"
+  "UpdateDate": "2022-06-20T21:45:54Z"
 }
