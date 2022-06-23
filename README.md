@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 318
-* Unique actions: 13025
+* Unique actions: 13026
 * Managed policies: 957
 
 Most common managed policy name prefixes:
@@ -146,6 +146,7 @@ The following table summarises the AWS APIs.
 | [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
 | [`eks`](services/eks.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
+| [`mgn`](services/mgn.yml) | 33 | 0 | 34 |
 | [`panorama`](services/panorama.yml) | 33 | 0 | 31 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`gamesparks`](services/gamesparks.yml) | 33 | 0 | 1 |
@@ -169,7 +170,6 @@ The following table summarises the AWS APIs.
 | [`inspector2`](services/inspector2.yml) | 30 | 0 | 0 |
 | [`fms`](services/fms.yml) | 30 | 0 | 0 |
 | [`billingconductor`](services/billingconductor.yml) | 30 | 0 | 0 |
-| [`mgn`](services/mgn.yml) | 29 | 0 | 38 |
 | [`dataexchange`](services/dataexchange.yml) | 29 | 0 | 2 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 29 | 0 | 1 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
@@ -195,13 +195,13 @@ The following table summarises the AWS APIs.
 | [`snowball`](services/snowball.yml) | 25 | 0 | 0 |
 | [`ram`](services/ram.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
+| [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 23 | 1 | 3 |
+| [`lookoutequipment`](services/lookoutequipment.yml) | 23 | 1 | 0 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 23 | 0 | 1 |
-| [`refactor-spaces`](services/refactor-spaces.yml) | 23 | 0 | 1 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 0 | 0 |
-| [`lookoutequipment`](services/lookoutequipment.yml) | 23 | 0 | 0 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
@@ -359,7 +359,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1975 |
+| `List` | 1976 |
 | `Get` | 1744 |
 | `Delete` | 1517 |
 | `Describe` | 1505 |
