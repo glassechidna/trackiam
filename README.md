@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 318
-* Unique actions: 13026
+* Unique services: 317
+* Unique actions: 12989
 * Managed policies: 957
 
 Most common managed policy name prefixes:
@@ -293,7 +293,6 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 248 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
-| [`redshift-serverless`](services/redshift-serverless.yml) | 0 | 37 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 30 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
@@ -359,14 +358,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1976 |
-| `Get` | 1744 |
-| `Delete` | 1517 |
+| `List` | 1969 |
+| `Get` | 1736 |
+| `Delete` | 1511 |
 | `Describe` | 1505 |
-| `Create` | 1410 |
-| `Update` | 1165 |
-| `Put` | 360 |
+| `Create` | 1405 |
+| `Update` | 1160 |
+| `Put` | 359 |
 | `Start` | 251 |
-| `Tag` | 205 |
-| `Untag` | 203 |
+| `Tag` | 204 |
+| `Untag` | 202 |
 
