@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSupportServiceRolePolicy",
   "CreateDate": "2018-04-19T18:04:44Z",
-  "DefaultVersionId": "v23",
+  "DefaultVersionId": "v24",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ7W6266ELXF5MISDS",
   "PolicyName": "AWSSupportServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-04-27T22:37:55Z",
+    "CreateDate": "2022-06-24T16:27:09Z",
     "Document": {
       "Statement": [
         {
@@ -1008,6 +1008,17 @@
             "imagebuilder:listImages",
             "imagebuilder:listInfrastructureConfigurations",
             "imagebuilder:listTagsForResource",
+            "inspector2:batchGetAccountStatus",
+            "inspector2:batchGetFreeTrialInfo",
+            "inspector2:describeOrganizationConfiguration",
+            "inspector2:getDelegatedAdminAccount",
+            "inspector2:getMember",
+            "inspector2:listCoverage",
+            "inspector2:listDelegatedAdminAccounts",
+            "inspector2:listFilters",
+            "inspector2:listFindings",
+            "inspector2:listMembers",
+            "inspector2:listUsageTotals",
             "inspector:describeAssessmentRuns",
             "inspector:describeAssessmentTargets",
             "inspector:describeAssessmentTemplates",
@@ -1112,6 +1123,9 @@
             "iotwireless:listWirelessDevices",
             "iotwireless:listWirelessGatewayTaskDefinitions",
             "iotwireless:listWirelessGateways",
+            "ivs:listChannels",
+            "ivs:listStreamSessions",
+            "ivs:listStreams",
             "kafka:describeCluster",
             "kafka:getBootstrapBrokers",
             "kafka:listClusters",
@@ -1249,6 +1263,8 @@
             "logs:describeQueries",
             "logs:describeResourcePolicies",
             "logs:describeSubscriptionFilters",
+            "logs:getLogDelivery",
+            "logs:listLogDeliveries",
             "logs:testMetricFilter",
             "lookoutmetrics:describeAlert",
             "lookoutmetrics:describeAnomalyDetectionExecutions",
@@ -1938,7 +1954,6 @@
             "ssm:getPatchBaseline",
             "ssm:getPatchBaselineForPatchGroup",
             "ssm:getServiceSetting",
-            "ssm:labelParameterVersion",
             "ssm:listAssociationVersions",
             "ssm:listAssociations",
             "ssm:listCommandInvocations",
@@ -2066,19 +2081,6 @@
             "workdocs:checkAlias",
             "workdocs:describeAvailableDirectories",
             "workdocs:describeInstances",
-            "worklink:describeAuditStreamConfiguration",
-            "worklink:describeCompanyNetworkConfiguration",
-            "worklink:describeDevice",
-            "worklink:describeDevicePolicyConfiguration",
-            "worklink:describeDomain",
-            "worklink:describeFleetMetadata",
-            "worklink:describeIdentityProviderConfiguration",
-            "worklink:describeWebsiteCertificateAuthority",
-            "worklink:listDevices",
-            "worklink:listDomains",
-            "worklink:listFleets",
-            "worklink:listWebsiteAuthorizationProviders",
-            "worklink:listWebsiteCertificateAuthorities",
             "workmail:describeGroup",
             "workmail:describeOrganization",
             "workmail:describeResource",
@@ -2187,7 +2189,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v23"
+    "VersionId": "v24"
   },
-  "UpdateDate": "2022-04-27T22:37:55Z"
+  "UpdateDate": "2022-06-24T16:27:09Z"
 }
