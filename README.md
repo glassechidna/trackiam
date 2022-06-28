@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 317
-* Unique actions: 12989
+* Unique actions: 12992
 * Managed policies: 957
 
 Most common managed policy name prefixes:
@@ -116,9 +116,9 @@ The following table summarises the AWS APIs.
 | [`workspaces-web`](services/workspaces-web.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 42 | 2 | 1 |
+| [`datasync`](services/datasync.yml) | 42 | 2 | 0 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`mediatailor`](services/mediatailor.yml) | 42 | 0 | 0 |
-| [`datasync`](services/datasync.yml) | 42 | 0 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
 | [`transcribe`](services/transcribe.yml) | 41 | 0 | 2 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
@@ -293,7 +293,7 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 248 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
-| [`finspace-api`](services/finspace-api.yml) | 0 | 30 | 0 |
+| [`finspace-api`](services/finspace-api.yml) | 0 | 31 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`macie`](services/macie.yml) | 0 | 7 | 0 |
@@ -359,10 +359,10 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 1970 |
-| `Get` | 1736 |
+| `Get` | 1737 |
 | `Delete` | 1511 |
-| `Describe` | 1505 |
-| `Create` | 1404 |
+| `Describe` | 1506 |
+| `Create` | 1405 |
 | `Update` | 1160 |
 | `Put` | 359 |
 | `Start` | 251 |
