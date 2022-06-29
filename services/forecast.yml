@@ -7,6 +7,7 @@ Actions:
   - Name: forecast:CreateExplainabilityExport
   - Name: forecast:CreateForecast
   - Name: forecast:CreateForecastExportJob
+  - Name: forecast:CreateMonitor
   - Name: forecast:CreatePredictor
   - Name: forecast:CreatePredictorBacktestExportJob
   - Name: forecast:DeleteDataset
@@ -16,6 +17,7 @@ Actions:
   - Name: forecast:DeleteExplainabilityExport
   - Name: forecast:DeleteForecast
   - Name: forecast:DeleteForecastExportJob
+  - Name: forecast:DeleteMonitor
   - Name: forecast:DeletePredictor
   - Name: forecast:DeletePredictorBacktestExportJob
   - Name: forecast:DeleteResourceTree
@@ -27,6 +29,7 @@ Actions:
   - Name: forecast:DescribeExplainabilityExport
   - Name: forecast:DescribeForecast
   - Name: forecast:DescribeForecastExportJob
+  - Name: forecast:DescribeMonitor
   - Name: forecast:DescribePredictor
   - Name: forecast:DescribePredictorBacktestExportJob
   - Name: forecast:GetAccuracyMetrics
@@ -37,19 +40,14 @@ Actions:
   - Name: forecast:ListExplainabilityExports
   - Name: forecast:ListForecastExportJobs
   - Name: forecast:ListForecasts
+  - Name: forecast:ListMonitorEvaluations
+  - Name: forecast:ListMonitors
   - Name: forecast:ListPredictorBacktestExportJobs
   - Name: forecast:ListPredictors
   - Name: forecast:ListTagsForResource
   - Name: forecast:QueryForecast
+  - Name: forecast:ResumeResource
   - Name: forecast:StopResource
   - Name: forecast:TagResource
   - Name: forecast:UntagResource
   - Name: forecast:UpdateDatasetGroup
-
-  # APIs without an IAM action
-  - Name: forecast:CreateMonitor
-  - Name: forecast:DeleteMonitor
-  - Name: forecast:DescribeMonitor
-  - Name: forecast:ListMonitorEvaluations
-  - Name: forecast:ListMonitors
-  - Name: forecast:ResumeResource

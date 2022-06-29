@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerFullAccess",
   "CreateDate": "2017-11-29T13:07:59Z",
-  "DefaultVersionId": "v22",
+  "DefaultVersionId": "v23",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJZ5IWYMXO5QDB4QOG",
   "PolicyName": "AmazonSageMakerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-05-02T06:19:13Z",
+    "CreateDate": "2022-06-29T18:30:43Z",
     "Document": {
       "Statement": [
         {
@@ -354,6 +354,17 @@
         },
         {
           "Action": [
+            "glue:UpdateTable"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:catalog",
+            "arn:aws:glue:*:*:database/sagemaker_featurestore",
+            "arn:aws:glue:*:*:table/sagemaker_featurestore/*"
+          ]
+        },
+        {
+          "Action": [
             "lambda:InvokeFunction"
           ],
           "Effect": "Allow",
@@ -489,7 +500,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v22"
+    "VersionId": "v23"
   },
-  "UpdateDate": "2022-05-02T06:19:13Z"
+  "UpdateDate": "2022-06-29T18:30:43Z"
 }
