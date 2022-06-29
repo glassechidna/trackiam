@@ -109,6 +109,7 @@ Actions:
   - Name: sagemaker:DescribeEndpointConfig
   - Name: sagemaker:DescribeExperiment
   - Name: sagemaker:DescribeFeatureGroup
+  - Name: sagemaker:DescribeFeatureMetadata
   - Name: sagemaker:DescribeFlowDefinition
   - Name: sagemaker:DescribeHumanLoop
   - Name: sagemaker:DescribeHumanTaskUi
@@ -249,6 +250,8 @@ Actions:
   - Name: sagemaker:UpdateEndpoint
   - Name: sagemaker:UpdateEndpointWeightsAndCapacities
   - Name: sagemaker:UpdateExperiment
+  - Name: sagemaker:UpdateFeatureGroup
+  - Name: sagemaker:UpdateFeatureMetadata
   - Name: sagemaker:UpdateImage
   - Name: sagemaker:UpdateModelPackage
   - Name: sagemaker:UpdateMonitoringSchedule
@@ -270,8 +273,3 @@ Actions:
   - Name: sagemaker:CreateLineageGroupPolicy
   - Name: sagemaker:DeleteLineageGroupPolicy
   - Name: sagemaker:PutLineageGroupPolicy
-
-  # APIs without an IAM action
-  - Name: sagemaker:DescribeFeatureMetadata
-  - Name: sagemaker:UpdateFeatureGroup
-  - Name: sagemaker:UpdateFeatureMetadata
