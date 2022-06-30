@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 319
-* Unique actions: 13040
+* Unique actions: 13047
 * Managed policies: 957
 
 Most common managed policy name prefixes:
@@ -68,7 +68,7 @@ The following table summarises the AWS APIs.
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 71 | 0 | 0 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
-| [`workmail`](services/workmail.yml) | 68 | 0 | 51 |
+| [`workmail`](services/workmail.yml) | 68 | 5 | 51 |
 | [`iotsitewise`](services/iotsitewise.yml) | 68 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 68 | 0 | 0 |
 | [`proton`](services/proton.yml) | 67 | 8 | 23 |
@@ -122,8 +122,8 @@ The following table summarises the AWS APIs.
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
 | [`transcribe`](services/transcribe.yml) | 41 | 0 | 2 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
+| [`wellarchitected`](services/wellarchitected.yml) | 40 | 0 | 0 |
 | [`sns`](services/sns.yml) | 39 | 1 | 0 |
-| [`wellarchitected`](services/wellarchitected.yml) | 39 | 0 | 0 |
 | [`resiliencehub`](services/resiliencehub.yml) | 39 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
@@ -136,9 +136,9 @@ The following table summarises the AWS APIs.
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 36 | 0 | 0 |
+| [`athena`](services/athena.yml) | 35 | 1 | 1 |
 | [`ce`](services/ce.yml) | 35 | 0 | 10 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
-| [`athena`](services/athena.yml) | 35 | 0 | 1 |
 | [`memorydb`](services/memorydb.yml) | 35 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
@@ -360,12 +360,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1980 |
+| `List` | 1981 |
 | `Get` | 1747 |
-| `Delete` | 1518 |
+| `Delete` | 1519 |
 | `Describe` | 1507 |
-| `Create` | 1411 |
-| `Update` | 1168 |
+| `Create` | 1412 |
+| `Update` | 1170 |
 | `Put` | 360 |
 | `Start` | 251 |
 | `Tag` | 205 |
