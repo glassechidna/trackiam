@@ -1,15 +1,40 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticDisasterRecoveryAgentInstallationPolicy",
   "CreateDate": "2021-11-17T10:37:54Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LHPRHPQKB",
   "PolicyName": "AWSElasticDisasterRecoveryAgentInstallationPolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-11-17T10:37:54Z",
+    "CreateDate": "2022-07-03T09:11:23Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "drs:TagResource",
+          "Condition": {
+            "StringEquals": {
+              "drs:CreateAction": "CreateRecoveryInstanceForDrs"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:drs:*:*:recovery-instance/*"
+        },
+        {
+          "Action": "drs:TagResource",
+          "Condition": {
+            "StringEquals": {
+              "drs:CreateAction": "CreateSourceServerForDrs"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:drs:*:*:source-server/*"
+        },
+        {
+          "Action": "drs:IssueAgentCertificateForDrs",
+          "Effect": "Allow",
+          "Resource": "arn:aws:drs:*:*:source-server/*"
+        },
         {
           "Action": [
             "drs:CreateRecoveryInstanceForDrs",
@@ -20,27 +45,12 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
-        },
-        {
-          "Action": [
-            "drs:IssueAgentCertificateForDrs",
-            "drs:TagResource"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:drs:*:*:source-server/*"
-        },
-        {
-          "Action": [
-            "drs:TagResource"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:drs:*:*:recovery-instance/*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-11-17T10:37:54Z"
+  "UpdateDate": "2022-07-03T09:11:23Z"
 }
