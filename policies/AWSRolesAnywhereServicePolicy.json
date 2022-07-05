@@ -1,0 +1,43 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSRolesAnywhereServicePolicy",
+  "CreateDate": "2022-07-05T15:26:11Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4L542JDEGK",
+  "PolicyName": "AWSRolesAnywhereServicePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2022-07-05T15:26:11Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": [
+                "AWS/RolesAnywhere",
+                "AWS/Usage"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "acm-pca:DescribeCertificateAuthority",
+            "acm-pca:GetCertificateAuthorityCertificate"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:acm-pca:*:*:*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-07-05T15:26:11Z"
+}
