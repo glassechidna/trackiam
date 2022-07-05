@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 319
-* Unique actions: 13047
+* Unique services: 320
+* Unique actions: 13075
 * Managed policies: 958
 
 Most common managed policy name prefixes:
@@ -47,8 +47,8 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 135 | 0 | 10 |
 | [`rds`](services/rds.yml) | 135 | 0 | 5 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 119 | 0 | 1 |
+| [`quicksight`](services/quicksight.yml) | 118 | 2 | 25 |
 | [`redshift`](services/redshift.yml) | 118 | 1 | 18 |
-| [`quicksight`](services/quicksight.yml) | 118 | 0 | 25 |
 | [`greengrass`](services/greengrass.yml) | 110 | 1 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 109 | 0 | 0 |
 | [`lex`](services/lex.yml) | 103 | 2 | 7 |
@@ -295,6 +295,7 @@ The following table summarises the AWS APIs.
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 0 | 37 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 31 | 0 |
+| [`rolesanywhere`](services/rolesanywhere.yml) | 0 | 26 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`macie`](services/macie.yml) | 0 | 7 | 0 |
@@ -360,14 +361,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1981 |
-| `Get` | 1747 |
-| `Delete` | 1519 |
-| `Describe` | 1507 |
-| `Create` | 1412 |
-| `Update` | 1170 |
+| `List` | 1986 |
+| `Get` | 1751 |
+| `Delete` | 1522 |
+| `Describe` | 1508 |
+| `Create` | 1415 |
+| `Update` | 1173 |
 | `Put` | 360 |
 | `Start` | 251 |
-| `Tag` | 205 |
-| `Untag` | 203 |
+| `Tag` | 206 |
+| `Untag` | 204 |
 
