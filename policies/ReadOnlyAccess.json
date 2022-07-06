@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v87",
+  "DefaultVersionId": "v88",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-05-23T20:16:18Z",
+    "CreateDate": "2022-07-06T17:26:50Z",
     "Document": {
       "Statement": [
         {
@@ -384,6 +384,8 @@
             "drs:GetFailbackReplicationConfiguration",
             "drs:GetLaunchConfiguration",
             "drs:GetReplicationConfiguration",
+            "drs:ListExtensibleSourceServers",
+            "drs:ListStagingAccounts",
             "drs:ListTagsForResource",
             "ds:Check*",
             "ds:Describe*",
@@ -614,6 +616,7 @@
             "glue:ListTriggers",
             "glue:ListWorkflows",
             "glue:QuerySchemaVersionMetadata",
+            "glue:SearchTables",
             "grafana:ListWorkspaces",
             "greengrass:DescribeComponent",
             "greengrass:Get*",
@@ -936,8 +939,6 @@
             "macie2:ListOrganizationAdminAccounts",
             "macie2:ListTagsForResource",
             "macie2:SearchResources",
-            "macie:ListMemberAccounts",
-            "macie:ListS3Resources",
             "managedblockchain:GetMember",
             "managedblockchain:GetNetwork",
             "managedblockchain:GetNode",
@@ -960,6 +961,26 @@
             "mediaconvert:DescribeEndpoints",
             "mediaconvert:Get*",
             "mediaconvert:List*",
+            "medialive:DescribeChannel",
+            "medialive:DescribeInput",
+            "medialive:DescribeInputDevice",
+            "medialive:DescribeInputDeviceThumbnail",
+            "medialive:DescribeInputSecurityGroup",
+            "medialive:DescribeMultiplex",
+            "medialive:DescribeMultiplexProgram",
+            "medialive:DescribeOffering",
+            "medialive:DescribeReservation",
+            "medialive:DescribeSchedule",
+            "medialive:ListChannels",
+            "medialive:ListInputDeviceTransfers",
+            "medialive:ListInputDevices",
+            "medialive:ListInputSecurityGroups",
+            "medialive:ListInputs",
+            "medialive:ListMultiplexPrograms",
+            "medialive:ListMultiplexes",
+            "medialive:ListOfferings",
+            "medialive:ListReservations",
+            "medialive:ListTagsForResource",
             "mediapackage-vod:Describe*",
             "mediapackage-vod:List*",
             "mediapackage:Describe*",
@@ -1341,7 +1362,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v87"
+    "VersionId": "v88"
   },
-  "UpdateDate": "2022-05-23T20:16:18Z"
+  "UpdateDate": "2022-07-06T17:26:50Z"
 }
