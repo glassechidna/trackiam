@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 320
-* Unique actions: 13088
+* Unique actions: 13089
 * Managed policies: 957
 
 Most common managed policy name prefixes:
@@ -53,8 +53,8 @@ The following table summarises the AWS APIs.
 | [`servicecatalog`](services/servicecatalog.yml) | 109 | 0 | 0 |
 | [`lex`](services/lex.yml) | 103 | 2 | 7 |
 | [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 0 |
+| [`iotwireless`](services/iotwireless.yml) | 98 | 0 | 1 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
-| [`iotwireless`](services/iotwireless.yml) | 93 | 0 | 6 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`cloudfront`](services/cloudfront.yml) | 91 | 1 | 1 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
@@ -94,7 +94,7 @@ The following table summarises the AWS APIs.
 | [`securityhub`](services/securityhub.yml) | 56 | 0 | 12 |
 | [`events`](services/events.yml) | 56 | 0 | 1 |
 | [`kendra`](services/kendra.yml) | 55 | 0 | 0 |
-| [`dms`](services/dms.yml) | 54 | 10 | 0 |
+| [`dms`](services/dms.yml) | 54 | 11 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
 | [`organizations`](services/organizations.yml) | 52 | 0 | 0 |
@@ -366,7 +366,7 @@ Most common action prefixes:
 | `Delete` | 1523 |
 | `Describe` | 1508 |
 | `Create` | 1416 |
-| `Update` | 1174 |
+| `Update` | 1175 |
 | `Put` | 361 |
 | `Start` | 251 |
 | `Tag` | 206 |
