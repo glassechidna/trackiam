@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSAuditManagerServiceRolePolicy",
   "CreateDate": "2020-12-08T15:12:12Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4C5N52UWST",
   "PolicyName": "AWSAuditManagerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-05-20T16:26:09Z",
+    "CreateDate": "2022-07-07T22:26:07Z",
     "Document": {
       "Statement": [
         {
@@ -67,12 +67,22 @@
         },
         {
           "Action": [
+            "dynamodb:DescribeTable",
+            "dynamodb:ListTables"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DynamoDBAccess"
+        },
+        {
+          "Action": [
             "ec2:DescribeFlowLogs",
             "ec2:DescribeInstances",
             "ec2:DescribeNetworkAcls",
             "ec2:DescribeRouteTables",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSnapshots",
+            "ec2:DescribeVolumes",
             "ec2:DescribeVpcEndpoints",
             "ec2:DescribeVpcs"
           ],
@@ -139,7 +149,10 @@
         {
           "Action": [
             "kms:DescribeKey",
+            "kms:GetKeyPolicy",
+            "kms:GetKeyRotationStatus",
             "kms:ListGrants",
+            "kms:ListKeyPolicies",
             "kms:ListKeys"
           ],
           "Effect": "Allow",
@@ -167,6 +180,22 @@
         },
         {
           "Action": [
+            "rds:DescribeDBInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RDSAccess"
+        },
+        {
+          "Action": [
+            "redshift:DescribeClusters"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RedshiftAccess"
+        },
+        {
+          "Action": [
             "route53:GetQueryLoggingConfig"
           ],
           "Effect": "Allow",
@@ -175,7 +204,9 @@
         },
         {
           "Action": [
-            "s3:GetLifecycleConfiguration"
+            "s3:GetEncryptionConfiguration",
+            "s3:GetLifecycleConfiguration",
+            "s3:ListAllMyBuckets"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -201,7 +232,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2022-05-20T16:26:09Z"
+  "UpdateDate": "2022-07-07T22:26:07Z"
 }
