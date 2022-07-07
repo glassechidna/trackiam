@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonKeyspacesFullAccess",
   "CreateDate": "2020-04-23T17:06:37Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HMS72N6JG",
   "PolicyName": "AmazonKeyspacesFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-06-01T19:31:39Z",
+    "CreateDate": "2022-07-07T15:02:41Z",
     "Document": {
       "Statement": [
         {
@@ -49,6 +49,7 @@
           "Action": [
             "cloudwatch:DeleteAlarms",
             "cloudwatch:DescribeAlarms",
+            "cloudwatch:GetMetricData",
             "cloudwatch:PutMetricAlarm"
           ],
           "Effect": "Allow",
@@ -58,7 +59,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-06-01T19:31:39Z"
+  "UpdateDate": "2022-07-07T15:02:41Z"
 }
