@@ -187,6 +187,7 @@ The following table summarises the AWS APIs.
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
 | [`outposts`](services/outposts.yml) | 26 | 0 | 2 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
+| [`rolesanywhere`](services/rolesanywhere.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
@@ -295,7 +296,6 @@ The following table summarises the AWS APIs.
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 0 | 37 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 31 | 0 |
-| [`rolesanywhere`](services/rolesanywhere.yml) | 0 | 26 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`macie`](services/macie.yml) | 0 | 7 | 0 |
