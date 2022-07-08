@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonDevOpsGuruServiceRolePolicy",
   "CreateDate": "2020-12-01T10:24:42Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4LOGPH224B",
   "PolicyName": "AmazonDevOpsGuruServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-02-07T19:30:10Z",
+    "CreateDate": "2022-07-08T18:03:05Z",
     "Document": {
       "Statement": [
         {
@@ -26,6 +26,19 @@
           "Effect": "Allow",
           "Resource": "arn:aws:events:*:*:rule/DevOpsGuruManagedRule*",
           "Sid": "AllowOtherOperationsOnManagedRule"
+        },
+        {
+          "Action": [
+            "logs:FilterLogEvents"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/DevOps-Guru-Analysis": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:*",
+          "Sid": "AllowTagBasedFilterLogEvents"
         },
         {
           "Action": [
@@ -81,6 +94,8 @@
             "lambda:ListAliases",
             "lambda:ListEventSourceMappings",
             "lambda:ListProvisionedConcurrencyConfigs",
+            "logs:DescribeLogGroups",
+            "logs:DescribeLogStreams",
             "organizations:ListChildren",
             "organizations:ListDelegatedAdministrators",
             "organizations:ListRoots",
@@ -142,7 +157,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2022-02-07T19:30:10Z"
+  "UpdateDate": "2022-07-08T18:03:05Z"
 }
