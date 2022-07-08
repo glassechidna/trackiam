@@ -75,10 +75,10 @@ The following table summarises the AWS APIs.
 | [`cloudformation`](services/cloudformation.yml) | 66 | 0 | 11 |
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
+| [`ds`](services/ds.yml) | 65 | 0 | 6 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`es`](services/es.yml) | 64 | 0 | 10 |
-| [`ds`](services/ds.yml) | 63 | 2 | 6 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 62 | 3 | 0 |
