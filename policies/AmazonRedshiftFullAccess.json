@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRedshiftFullAccess",
   "CreateDate": "2015-02-06T18:40:50Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAISEKCHH4YDB46B5ZO",
   "PolicyName": "AmazonRedshiftFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-09-09T19:51:19Z",
+    "CreateDate": "2022-07-07T23:31:13Z",
     "Document": {
       "Statement": [
         {
@@ -50,6 +50,7 @@
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcs",
+            "redshift-serverless:*",
             "redshift:*",
             "sns:CreateTopic",
             "sns:Get*",
@@ -91,7 +92,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-09-09T19:51:19Z"
+  "UpdateDate": "2022-07-07T23:31:13Z"
 }
