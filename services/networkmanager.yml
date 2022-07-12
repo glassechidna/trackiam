@@ -13,6 +13,8 @@ Actions:
   - Name: networkmanager:CreateLink
   - Name: networkmanager:CreateSite
   - Name: networkmanager:CreateSiteToSiteVpnAttachment
+  - Name: networkmanager:CreateTransitGatewayPeering
+  - Name: networkmanager:CreateTransitGatewayRouteTableAttachment
   - Name: networkmanager:CreateVpcAttachment
   - Name: networkmanager:DeleteAttachment
   - Name: networkmanager:DeleteConnectPeer
@@ -22,6 +24,7 @@ Actions:
   - Name: networkmanager:DeleteDevice
   - Name: networkmanager:DeleteGlobalNetwork
   - Name: networkmanager:DeleteLink
+  - Name: networkmanager:DeletePeering
   - Name: networkmanager:DeleteResourcePolicy
   - Name: networkmanager:DeleteSite
   - Name: networkmanager:DeregisterTransitGateway
@@ -36,6 +39,7 @@ Actions:
   - Name: networkmanager:GetConnectPeerAssociations
   - Name: networkmanager:GetConnections
   - Name: networkmanager:GetCoreNetwork
+  - Name: networkmanager:GetCoreNetworkChangeEvents
   - Name: networkmanager:GetCoreNetworkChangeSet
   - Name: networkmanager:GetCoreNetworkPolicy
   - Name: networkmanager:GetCustomerGatewayAssociations
@@ -52,13 +56,16 @@ Actions:
   - Name: networkmanager:GetSiteToSiteVpnAttachment
   - Name: networkmanager:GetSites
   - Name: networkmanager:GetTransitGatewayConnectPeerAssociations
+  - Name: networkmanager:GetTransitGatewayPeering
   - Name: networkmanager:GetTransitGatewayRegistrations
+  - Name: networkmanager:GetTransitGatewayRouteTableAttachment
   - Name: networkmanager:GetVpcAttachment
   - Name: networkmanager:ListAttachments
   - Name: networkmanager:ListConnectPeers
   - Name: networkmanager:ListCoreNetworkPolicyVersions
   - Name: networkmanager:ListCoreNetworks
   - Name: networkmanager:ListOrganizationServiceAccessStatus
+  - Name: networkmanager:ListPeerings
   - Name: networkmanager:ListTagsForResource
   - Name: networkmanager:PutCoreNetworkPolicy
   - Name: networkmanager:PutResourcePolicy
@@ -77,12 +84,3 @@ Actions:
   - Name: networkmanager:UpdateNetworkResourceMetadata
   - Name: networkmanager:UpdateSite
   - Name: networkmanager:UpdateVpcAttachment
-
-  # APIs without an IAM action
-  - Name: networkmanager:CreateTransitGatewayPeering
-  - Name: networkmanager:CreateTransitGatewayRouteTableAttachment
-  - Name: networkmanager:DeletePeering
-  - Name: networkmanager:GetCoreNetworkChangeEvents
-  - Name: networkmanager:GetTransitGatewayPeering
-  - Name: networkmanager:GetTransitGatewayRouteTableAttachment
-  - Name: networkmanager:ListPeerings
