@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 320
-* Unique actions: 13127
+* Unique services: 321
+* Unique actions: 13144
 * Managed policies: 957
 
 Most common managed policy name prefixes:
@@ -162,20 +162,20 @@ The following table summarises the AWS APIs.
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`wisdom`](services/wisdom.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
+| [`network-firewall`](services/network-firewall.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
 | [`inspector2`](services/inspector2.yml) | 30 | 2 | 0 |
-| [`network-firewall`](services/network-firewall.yml) | 30 | 1 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
 | [`apprunner`](services/apprunner.yml) | 30 | 0 | 1 |
 | [`route53domains`](services/route53domains.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`fms`](services/fms.yml) | 30 | 0 | 0 |
 | [`billingconductor`](services/billingconductor.yml) | 30 | 0 | 0 |
+| [`devops-guru`](services/devops-guru.yml) | 29 | 0 | 2 |
 | [`dataexchange`](services/dataexchange.yml) | 29 | 0 | 2 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 29 | 0 | 1 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 29 | 0 | 0 |
-| [`devops-guru`](services/devops-guru.yml) | 29 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
@@ -316,6 +316,7 @@ The following table summarises the AWS APIs.
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
+| [`simscape`](services/simscape.yml) | 0 | 0 | 15 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
@@ -361,14 +362,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1994 |
+| `List` | 1999 |
 | `Get` | 1762 |
-| `Delete` | 1529 |
-| `Describe` | 1512 |
+| `Delete` | 1531 |
+| `Describe` | 1514 |
 | `Create` | 1423 |
 | `Update` | 1179 |
 | `Put` | 362 |
-| `Start` | 251 |
-| `Tag` | 206 |
-| `Untag` | 204 |
+| `Start` | 254 |
+| `Tag` | 207 |
+| `Untag` | 205 |
 
