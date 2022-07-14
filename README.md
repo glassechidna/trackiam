@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 320
-* Unique actions: 13118
+* Unique actions: 13127
 * Managed policies: 957
 
 Most common managed policy name prefixes:
@@ -93,7 +93,7 @@ The following table summarises the AWS APIs.
 | [`macie2`](services/macie2.yml) | 57 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 56 | 0 | 12 |
 | [`events`](services/events.yml) | 56 | 0 | 1 |
-| [`kendra`](services/kendra.yml) | 55 | 0 | 0 |
+| [`kendra`](services/kendra.yml) | 55 | 5 | 0 |
 | [`dms`](services/dms.yml) | 54 | 11 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
@@ -144,7 +144,7 @@ The following table summarises the AWS APIs.
 | [`memorydb`](services/memorydb.yml) | 35 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
-| [`codeartifact`](services/codeartifact.yml) | 34 | 0 | 4 |
+| [`codeartifact`](services/codeartifact.yml) | 34 | 2 | 4 |
 | [`eks`](services/eks.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`mgn`](services/mgn.yml) | 33 | 0 | 34 |
@@ -163,12 +163,12 @@ The following table summarises the AWS APIs.
 | [`wisdom`](services/wisdom.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
+| [`inspector2`](services/inspector2.yml) | 30 | 2 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 30 | 1 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
 | [`apprunner`](services/apprunner.yml) | 30 | 0 | 1 |
 | [`route53domains`](services/route53domains.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
-| [`inspector2`](services/inspector2.yml) | 30 | 0 | 0 |
 | [`fms`](services/fms.yml) | 30 | 0 | 0 |
 | [`billingconductor`](services/billingconductor.yml) | 30 | 0 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 29 | 0 | 2 |
@@ -361,13 +361,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 1993 |
-| `Get` | 1761 |
-| `Delete` | 1528 |
-| `Describe` | 1510 |
-| `Create` | 1422 |
-| `Update` | 1177 |
-| `Put` | 361 |
+| `List` | 1994 |
+| `Get` | 1762 |
+| `Delete` | 1529 |
+| `Describe` | 1512 |
+| `Create` | 1423 |
+| `Update` | 1179 |
+| `Put` | 362 |
 | `Start` | 251 |
 | `Tag` | 206 |
 | `Untag` | 204 |
