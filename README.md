@@ -13,14 +13,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 320
 * Unique actions: 13118
-* Managed policies: 959
+* Managed policies: 957
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 266 |
-| `arn:aws:iam::aws:policy/Amazon*` | 254 |
+| `arn:aws:iam::aws:policy/Amazon*` | 252 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 201 |
 | `arn:aws:iam::aws:policy/service-role/*` | 148 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -38,7 +38,7 @@ The following table summarises the AWS APIs.
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 523 | 10 | 9 |
 | [`sagemaker`](services/sagemaker.yml) | 267 | 0 | 5 |
-| [`chime`](services/chime.yml) | 208 | 2 | 50 |
+| [`chime`](services/chime.yml) | 210 | 0 | 50 |
 | [`glue`](services/glue.yml) | 180 | 4 | 2 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 154 | 0 | 0 |
@@ -86,8 +86,8 @@ The following table summarises the AWS APIs.
 | [`workspaces`](services/workspaces.yml) | 61 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
+| [`rekognition`](services/rekognition.yml) | 59 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 4 | 0 |
-| [`rekognition`](services/rekognition.yml) | 58 | 1 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`medialive`](services/medialive.yml) | 57 | 0 | 2 |
 | [`macie2`](services/macie2.yml) | 57 | 0 | 0 |
