@@ -1,8 +1,10 @@
 Actions:
   - Name: proton:AcceptEnvironmentAccountConnection
+  - Name: proton:CancelComponentDeployment
   - Name: proton:CancelEnvironmentDeployment
   - Name: proton:CancelServiceInstanceDeployment
   - Name: proton:CancelServicePipelineDeployment
+  - Name: proton:CreateComponent
   - Name: proton:CreateEnvironment
   - Name: proton:CreateEnvironmentAccountConnection
   - Name: proton:CreateEnvironmentTemplate
@@ -12,6 +14,7 @@ Actions:
   - Name: proton:CreateServiceTemplate
   - Name: proton:CreateServiceTemplateVersion
   - Name: proton:CreateTemplateSyncConfig
+  - Name: proton:DeleteComponent
   - Name: proton:DeleteEnvironment
   - Name: proton:DeleteEnvironmentAccountConnection
   - Name: proton:DeleteEnvironmentTemplate
@@ -22,6 +25,7 @@ Actions:
   - Name: proton:DeleteServiceTemplateVersion
   - Name: proton:DeleteTemplateSyncConfig
   - Name: proton:GetAccountSettings
+  - Name: proton:GetComponent
   - Name: proton:GetEnvironment
   - Name: proton:GetEnvironmentAccountConnection
   - Name: proton:GetEnvironmentTemplate
@@ -34,6 +38,9 @@ Actions:
   - Name: proton:GetServiceTemplateVersion
   - Name: proton:GetTemplateSyncConfig
   - Name: proton:GetTemplateSyncStatus
+  - Name: proton:ListComponentOutputs
+  - Name: proton:ListComponentProvisionedResources
+  - Name: proton:ListComponents
   - Name: proton:ListEnvironmentAccountConnections
   - Name: proton:ListEnvironmentOutputs
   - Name: proton:ListEnvironmentProvisionedResources
@@ -56,6 +63,7 @@ Actions:
   - Name: proton:TagResource
   - Name: proton:UntagResource
   - Name: proton:UpdateAccountSettings
+  - Name: proton:UpdateComponent
   - Name: proton:UpdateEnvironment
   - Name: proton:UpdateEnvironmentAccountConnection
   - Name: proton:UpdateEnvironmentTemplate
@@ -91,13 +99,3 @@ Actions:
   - Name: proton:UpdateEnvironmentTemplateMinorVersion
   - Name: proton:UpdateServiceTemplateMajorVersion
   - Name: proton:UpdateServiceTemplateMinorVersion
-
-  # APIs without an IAM action
-  - Name: proton:CancelComponentDeployment
-  - Name: proton:CreateComponent
-  - Name: proton:DeleteComponent
-  - Name: proton:GetComponent
-  - Name: proton:ListComponentOutputs
-  - Name: proton:ListComponentProvisionedResources
-  - Name: proton:ListComponents
-  - Name: proton:UpdateComponent
