@@ -11,7 +11,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 322
+* Unique services: 321
 * Unique actions: 13168
 * Managed policies: 956
 
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 523 | 10 | 9 |
-| [`sagemaker`](services/sagemaker.yml) | 267 | 0 | 5 |
+| [`sagemaker`](services/sagemaker.yml) | 267 | 9 | 5 |
 | [`chime`](services/chime.yml) | 210 | 0 | 50 |
 | [`glue`](services/glue.yml) | 180 | 4 | 2 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
@@ -158,7 +158,7 @@ The following table summarises the AWS APIs.
 | [`transfer`](services/transfer.yml) | 32 | 0 | 0 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`m2`](services/m2.yml) | 32 | 0 | 0 |
-| [`sso`](services/sso.yml) | 31 | 0 | 52 |
+| [`sso`](services/sso.yml) | 31 | 6 | 52 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`wisdom`](services/wisdom.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
@@ -317,7 +317,6 @@ The following table summarises the AWS APIs.
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
-| [`simscape`](services/simscape.yml) | 0 | 0 | 15 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
@@ -364,13 +363,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2006 |
-| `Get` | 1768 |
-| `Delete` | 1533 |
-| `Describe` | 1514 |
-| `Create` | 1426 |
+| `Get` | 1769 |
+| `Delete` | 1534 |
+| `Describe` | 1513 |
+| `Create` | 1428 |
 | `Update` | 1180 |
-| `Put` | 362 |
-| `Start` | 254 |
-| `Tag` | 207 |
-| `Untag` | 205 |
+| `Put` | 363 |
+| `Start` | 252 |
+| `Tag` | 206 |
+| `Untag` | 204 |
 
