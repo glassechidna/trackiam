@@ -1,4 +1,5 @@
 Actions:
+  - Name: sso:AttachCustomerManagedPolicyReferenceToPermissionSet
   - Name: sso:AttachManagedPolicyToPermissionSet
   - Name: sso:CreateAccountAssignment
   - Name: sso:CreateInstanceAccessControlAttributeConfiguration
@@ -7,17 +8,21 @@ Actions:
   - Name: sso:DeleteInlinePolicyFromPermissionSet
   - Name: sso:DeleteInstanceAccessControlAttributeConfiguration
   - Name: sso:DeletePermissionSet
+  - Name: sso:DeletePermissionsBoundaryFromPermissionSet
   - Name: sso:DescribeAccountAssignmentCreationStatus
   - Name: sso:DescribeAccountAssignmentDeletionStatus
   - Name: sso:DescribeInstanceAccessControlAttributeConfiguration
   - Name: sso:DescribePermissionSet
   - Name: sso:DescribePermissionSetProvisioningStatus
+  - Name: sso:DetachCustomerManagedPolicyReferenceFromPermissionSet
   - Name: sso:DetachManagedPolicyFromPermissionSet
   - Name: sso:GetInlinePolicyForPermissionSet
+  - Name: sso:GetPermissionsBoundaryForPermissionSet
   - Name: sso:ListAccountAssignmentCreationStatus
   - Name: sso:ListAccountAssignmentDeletionStatus
   - Name: sso:ListAccountAssignments
   - Name: sso:ListAccountsForProvisionedPermissionSet
+  - Name: sso:ListCustomerManagedPolicyReferencesInPermissionSet
   - Name: sso:ListInstances
   - Name: sso:ListManagedPoliciesInPermissionSet
   - Name: sso:ListPermissionSetProvisioningStatus
@@ -26,6 +31,7 @@ Actions:
   - Name: sso:ListTagsForResource
   - Name: sso:ProvisionPermissionSet
   - Name: sso:PutInlinePolicyToPermissionSet
+  - Name: sso:PutPermissionsBoundaryToPermissionSet
   - Name: sso:TagResource
   - Name: sso:UntagResource
   - Name: sso:UpdateInstanceAccessControlAttributeConfiguration
@@ -84,11 +90,3 @@ Actions:
   - Name: sso:UpdateProfile
   - Name: sso:UpdateSSOConfiguration
   - Name: sso:UpdateTrust
-
-  # APIs without an IAM action
-  - Name: sso:AttachCustomerManagedPolicyReferenceToPermissionSet
-  - Name: sso:DeletePermissionsBoundaryFromPermissionSet
-  - Name: sso:DetachCustomerManagedPolicyReferenceFromPermissionSet
-  - Name: sso:GetPermissionsBoundaryForPermissionSet
-  - Name: sso:ListCustomerManagedPolicyReferencesInPermissionSet
-  - Name: sso:PutPermissionsBoundaryToPermissionSet

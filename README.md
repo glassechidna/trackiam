@@ -130,6 +130,7 @@ The following table summarises the AWS APIs.
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`profile`](services/profile.yml) | 38 | 0 | 0 |
+| [`sso`](services/sso.yml) | 37 | 0 | 52 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`fsx`](services/fsx.yml) | 37 | 0 | 4 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 37 | 0 | 0 |
@@ -158,7 +159,6 @@ The following table summarises the AWS APIs.
 | [`transfer`](services/transfer.yml) | 32 | 0 | 0 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`m2`](services/m2.yml) | 32 | 0 | 0 |
-| [`sso`](services/sso.yml) | 31 | 6 | 52 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`wisdom`](services/wisdom.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
