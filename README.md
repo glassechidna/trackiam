@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 321
-* Unique actions: 13169
+* Unique actions: 13170
 * Managed policies: 956
 
 Most common managed policy name prefixes:
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 523 | 10 | 9 |
-| [`sagemaker`](services/sagemaker.yml) | 267 | 9 | 5 |
+| [`sagemaker`](services/sagemaker.yml) | 267 | 10 | 5 |
 | [`chime`](services/chime.yml) | 210 | 0 | 50 |
 | [`glue`](services/glue.yml) | 180 | 4 | 2 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
@@ -163,6 +163,7 @@ The following table summarises the AWS APIs.
 | [`wisdom`](services/wisdom.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 31 | 0 | 0 |
+| [`devops-guru`](services/devops-guru.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
 | [`inspector2`](services/inspector2.yml) | 30 | 2 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
@@ -171,7 +172,6 @@ The following table summarises the AWS APIs.
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`fms`](services/fms.yml) | 30 | 0 | 0 |
 | [`billingconductor`](services/billingconductor.yml) | 30 | 0 | 0 |
-| [`devops-guru`](services/devops-guru.yml) | 29 | 0 | 2 |
 | [`dataexchange`](services/dataexchange.yml) | 29 | 0 | 2 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 29 | 0 | 1 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
@@ -363,7 +363,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2006 |
-| `Get` | 1769 |
+| `Get` | 1770 |
 | `Delete` | 1534 |
 | `Describe` | 1513 |
 | `Create` | 1428 |
