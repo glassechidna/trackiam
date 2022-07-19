@@ -1,20 +1,23 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonGuardDutyFullAccess",
   "CreateDate": "2017-11-28T22:31:30Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIKUTKSN4KC63VDQUM",
   "PolicyName": "AmazonGuardDutyFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-02-16T23:39:53Z",
+    "CreateDate": "2022-07-19T20:36:51Z",
     "Document": {
       "Statement": [
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
             "StringLike": {
-              "iam:AWSServiceName": "guardduty.amazonaws.com"
+              "iam:AWSServiceName": [
+                "guardduty.amazonaws.com",
+                "malware-protection.guardduty.amazonaws.com"
+              ]
             }
           },
           "Effect": "Allow",
@@ -24,6 +27,11 @@
           "Action": "guardduty:*",
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": "iam:GetRole",
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/*guardduty.amazonaws.com/*"
         },
         {
           "Action": [
@@ -42,7 +50,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-02-16T23:39:53Z"
+  "UpdateDate": "2022-07-19T20:36:51Z"
 }
