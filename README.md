@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 321
-* Unique actions: 13170
+* Unique actions: 13173
 * Managed policies: 957
 
 Most common managed policy name prefixes:
@@ -156,6 +156,7 @@ The following table summarises the AWS APIs.
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`evidently`](services/evidently.yml) | 32 | 6 | 0 |
 | [`drs`](services/drs.yml) | 32 | 0 | 41 |
+| [`kinesisvideo`](services/kinesisvideo.yml) | 32 | 0 | 3 |
 | [`transfer`](services/transfer.yml) | 32 | 0 | 0 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`m2`](services/m2.yml) | 32 | 0 | 0 |
@@ -182,7 +183,6 @@ The following table summarises the AWS APIs.
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
-| [`kinesisvideo`](services/kinesisvideo.yml) | 27 | 5 | 3 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 27 | 0 | 3 |
 | [`xray`](services/xray.yml) | 27 | 0 | 0 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
@@ -257,7 +257,7 @@ The following table summarises the AWS APIs.
 | [`kafkaconnect`](services/kafkaconnect.yml) | 12 | 0 | 0 |
 | [`ivschat`](services/ivschat.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 28 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 31 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`textract`](services/textract.yml) | 10 | 0 | 0 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
@@ -366,7 +366,7 @@ Most common action prefixes:
 | `Get` | 1770 |
 | `Delete` | 1534 |
 | `Describe` | 1513 |
-| `Create` | 1428 |
+| `Create` | 1429 |
 | `Update` | 1181 |
 | `Put` | 363 |
 | `Start` | 252 |
