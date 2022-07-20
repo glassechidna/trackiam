@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForRestores",
   "CreateDate": "2019-01-12T00:23:54Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJZCCL6F2WPVOUXZKI",
   "PolicyName": "AWSBackupServiceRolePolicyForRestores",
   "PolicyVersion": {
-    "CreateDate": "2022-05-17T17:36:12Z",
+    "CreateDate": "2022-07-19T23:22:51Z",
     "Document": {
       "Statement": [
         {
@@ -252,6 +252,13 @@
         },
         {
           "Action": [
+            "rds:CreateDBInstance"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:rds:*:*:db:*"
+        },
+        {
+          "Action": [
             "storagegateway:CreateCachediSCSIVolume",
             "storagegateway:CreateStorediSCSIVolume",
             "storagegateway:DescribeGatewayInformation"
@@ -295,7 +302,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2022-05-17T17:36:12Z"
+  "UpdateDate": "2022-07-19T23:22:51Z"
 }
