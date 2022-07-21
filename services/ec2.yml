@@ -21,6 +21,7 @@ Actions:
   - Name: ec2:AssociateRouteTable
   - Name: ec2:AssociateSubnetCidrBlock
   - Name: ec2:AssociateTransitGatewayMulticastDomain
+  - Name: ec2:AssociateTransitGatewayPolicyTable
   - Name: ec2:AssociateTransitGatewayRouteTable
   - Name: ec2:AssociateTrunkInterface
   - Name: ec2:AssociateVpcCidrBlock
@@ -103,9 +104,11 @@ Actions:
   - Name: ec2:CreateTransitGatewayConnectPeer
   - Name: ec2:CreateTransitGatewayMulticastDomain
   - Name: ec2:CreateTransitGatewayPeeringAttachment
+  - Name: ec2:CreateTransitGatewayPolicyTable
   - Name: ec2:CreateTransitGatewayPrefixListReference
   - Name: ec2:CreateTransitGatewayRoute
   - Name: ec2:CreateTransitGatewayRouteTable
+  - Name: ec2:CreateTransitGatewayRouteTableAnnouncement
   - Name: ec2:CreateTransitGatewayVpcAttachment
   - Name: ec2:CreateVolume
   - Name: ec2:CreateVpc
@@ -165,9 +168,11 @@ Actions:
   - Name: ec2:DeleteTransitGatewayConnectPeer
   - Name: ec2:DeleteTransitGatewayMulticastDomain
   - Name: ec2:DeleteTransitGatewayPeeringAttachment
+  - Name: ec2:DeleteTransitGatewayPolicyTable
   - Name: ec2:DeleteTransitGatewayPrefixListReference
   - Name: ec2:DeleteTransitGatewayRoute
   - Name: ec2:DeleteTransitGatewayRouteTable
+  - Name: ec2:DeleteTransitGatewayRouteTableAnnouncement
   - Name: ec2:DeleteTransitGatewayVpcAttachment
   - Name: ec2:DeleteVolume
   - Name: ec2:DeleteVpc
@@ -297,6 +302,8 @@ Actions:
   - Name: ec2:DescribeTransitGatewayConnects
   - Name: ec2:DescribeTransitGatewayMulticastDomains
   - Name: ec2:DescribeTransitGatewayPeeringAttachments
+  - Name: ec2:DescribeTransitGatewayPolicyTables
+  - Name: ec2:DescribeTransitGatewayRouteTableAnnouncements
   - Name: ec2:DescribeTransitGatewayRouteTables
   - Name: ec2:DescribeTransitGatewayVpcAttachments
   - Name: ec2:DescribeTransitGateways
@@ -341,6 +348,7 @@ Actions:
   - Name: ec2:DisassociateRouteTable
   - Name: ec2:DisassociateSubnetCidrBlock
   - Name: ec2:DisassociateTransitGatewayMulticastDomain
+  - Name: ec2:DisassociateTransitGatewayPolicyTable
   - Name: ec2:DisassociateTransitGatewayRouteTable
   - Name: ec2:DisassociateTrunkInterface
   - Name: ec2:DisassociateVpcCidrBlock
@@ -389,6 +397,8 @@ Actions:
   - Name: ec2:GetSubnetCidrReservations
   - Name: ec2:GetTransitGatewayAttachmentPropagations
   - Name: ec2:GetTransitGatewayMulticastDomainAssociations
+  - Name: ec2:GetTransitGatewayPolicyTableAssociations
+  - Name: ec2:GetTransitGatewayPolicyTableEntries
   - Name: ec2:GetTransitGatewayPrefixListReferences
   - Name: ec2:GetTransitGatewayRouteTableAssociations
   - Name: ec2:GetTransitGatewayRouteTablePropagations
@@ -533,15 +543,3 @@ Actions:
   - Name: ec2:GetResourcePolicy
   - Name: ec2:PutResourcePolicy
   - Name: ec2:SendSpotInstanceInterruptions
-
-  # APIs without an IAM action
-  - Name: ec2:AssociateTransitGatewayPolicyTable
-  - Name: ec2:CreateTransitGatewayPolicyTable
-  - Name: ec2:CreateTransitGatewayRouteTableAnnouncement
-  - Name: ec2:DeleteTransitGatewayPolicyTable
-  - Name: ec2:DeleteTransitGatewayRouteTableAnnouncement
-  - Name: ec2:DescribeTransitGatewayPolicyTables
-  - Name: ec2:DescribeTransitGatewayRouteTableAnnouncements
-  - Name: ec2:DisassociateTransitGatewayPolicyTable
-  - Name: ec2:GetTransitGatewayPolicyTableAssociations
-  - Name: ec2:GetTransitGatewayPolicyTableEntries
