@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 321
-* Unique actions: 13173
+* Unique actions: 13177
 * Managed policies: 957
 
 Most common managed policy name prefixes:
@@ -70,7 +70,7 @@ The following table summarises the AWS APIs.
 | [`comprehend`](services/comprehend.yml) | 71 | 0 | 0 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 68 | 5 | 51 |
-| [`iotsitewise`](services/iotsitewise.yml) | 68 | 0 | 1 |
+| [`iotsitewise`](services/iotsitewise.yml) | 68 | 3 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 68 | 0 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 66 | 0 | 11 |
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
@@ -139,7 +139,7 @@ The following table summarises the AWS APIs.
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 36 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 35 | 10 | 0 |
-| [`athena`](services/athena.yml) | 35 | 1 | 1 |
+| [`athena`](services/athena.yml) | 35 | 2 | 1 |
 | [`ce`](services/ce.yml) | 35 | 0 | 10 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`memorydb`](services/memorydb.yml) | 35 | 0 | 0 |
@@ -362,11 +362,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2006 |
-| `Get` | 1770 |
+| `List` | 2007 |
+| `Get` | 1771 |
 | `Delete` | 1534 |
-| `Describe` | 1513 |
-| `Create` | 1429 |
+| `Describe` | 1514 |
+| `Create` | 1430 |
 | `Update` | 1181 |
 | `Put` | 363 |
 | `Start` | 252 |
