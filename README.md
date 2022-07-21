@@ -137,6 +137,7 @@ The following table summarises the AWS APIs.
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`athena`](services/athena.yml) | 36 | 1 | 1 |
+| [`codeartifact`](services/codeartifact.yml) | 36 | 0 | 4 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 36 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 35 | 10 | 0 |
@@ -145,7 +146,6 @@ The following table summarises the AWS APIs.
 | [`memorydb`](services/memorydb.yml) | 35 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 35 | 0 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
-| [`codeartifact`](services/codeartifact.yml) | 34 | 2 | 4 |
 | [`eks`](services/eks.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`mgn`](services/mgn.yml) | 33 | 0 | 34 |

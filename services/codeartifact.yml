@@ -9,6 +9,7 @@ Actions:
   - Name: codeartifact:DeleteRepository
   - Name: codeartifact:DeleteRepositoryPermissionsPolicy
   - Name: codeartifact:DescribeDomain
+  - Name: codeartifact:DescribePackage
   - Name: codeartifact:DescribePackageVersion
   - Name: codeartifact:DescribeRepository
   - Name: codeartifact:DisassociateExternalConnection
@@ -28,6 +29,7 @@ Actions:
   - Name: codeartifact:ListRepositoriesInDomain
   - Name: codeartifact:ListTagsForResource
   - Name: codeartifact:PutDomainPermissionsPolicy
+  - Name: codeartifact:PutPackageOriginConfiguration
   - Name: codeartifact:PutRepositoryPermissionsPolicy
   - Name: codeartifact:TagResource
   - Name: codeartifact:UntagResource
@@ -39,7 +41,3 @@ Actions:
   - Name: codeartifact:PublishPackageVersion
   - Name: codeartifact:PutPackageMetadata
   - Name: codeartifact:ReadFromRepository
-
-  # APIs without an IAM action
-  - Name: codeartifact:DescribePackage
-  - Name: codeartifact:PutPackageOriginConfiguration
