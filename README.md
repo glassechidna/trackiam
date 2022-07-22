@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 321
-* Unique actions: 13179
+* Unique actions: 13181
 * Managed policies: 957
 
 Most common managed policy name prefixes:
@@ -44,8 +44,8 @@ The following table summarises the AWS APIs.
 | [`lightsail`](services/lightsail.yml) | 154 | 0 | 0 |
 | [`connect`](services/connect.yml) | 152 | 0 | 6 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
+| [`rds`](services/rds.yml) | 136 | 0 | 6 |
 | [`ssm`](services/ssm.yml) | 135 | 0 | 10 |
-| [`rds`](services/rds.yml) | 135 | 0 | 7 |
 | [`quicksight`](services/quicksight.yml) | 120 | 0 | 25 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 119 | 0 | 1 |
 | [`redshift`](services/redshift.yml) | 118 | 1 | 18 |
@@ -87,9 +87,9 @@ The following table summarises the AWS APIs.
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
 | [`rekognition`](services/rekognition.yml) | 59 | 0 | 0 |
+| [`medialive`](services/medialive.yml) | 59 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 58 | 4 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
-| [`medialive`](services/medialive.yml) | 57 | 0 | 2 |
 | [`macie2`](services/macie2.yml) | 57 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 56 | 0 | 12 |
 | [`events`](services/events.yml) | 56 | 0 | 1 |
@@ -286,7 +286,7 @@ The following table summarises the AWS APIs.
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 4 | 0 | 0 |
 | [`identitystore`](services/identitystore.yml) | 4 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
-| [`account`](services/account.yml) | 3 | 0 | 3 |
+| [`account`](services/account.yml) | 3 | 2 | 3 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
 | [`cassandra`](services/cassandra.yml) | 2 | 11 | 7 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 2 | 0 | 0 |
@@ -363,12 +363,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2007 |
-| `Get` | 1771 |
+| `Get` | 1772 |
 | `Delete` | 1534 |
 | `Describe` | 1514 |
 | `Create` | 1430 |
 | `Update` | 1181 |
-| `Put` | 363 |
+| `Put` | 364 |
 | `Start` | 252 |
 | `Tag` | 206 |
 | `Untag` | 204 |
