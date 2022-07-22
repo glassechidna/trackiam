@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 321
-* Unique actions: 13181
+* Unique actions: 13211
 * Managed policies: 957
 
 Most common managed policy name prefixes:
@@ -307,6 +307,7 @@ The following table summarises the AWS APIs.
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 43 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 0 | 0 | 43 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
+| [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 31 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 0 | 0 | 31 |
 | [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 26 |
@@ -349,7 +350,6 @@ The following table summarises the AWS APIs.
 | [`serviceextract`](services/serviceextract.yml) | 0 | 0 | 1 |
 | [`rhelkb`](services/rhelkb.yml) | 0 | 0 | 1 |
 | [`rds-db`](services/rds-db.yml) | 0 | 0 | 1 |
-| [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 1 |
 | [`mediaimport`](services/mediaimport.yml) | 0 | 0 | 1 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 1 |
 | [`iq`](services/iq.yml) | 0 | 0 | 1 |
@@ -362,14 +362,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2007 |
-| `Get` | 1772 |
-| `Delete` | 1534 |
+| `List` | 2012 |
+| `Get` | 1781 |
+| `Delete` | 1537 |
 | `Describe` | 1514 |
-| `Create` | 1430 |
+| `Create` | 1431 |
 | `Update` | 1181 |
 | `Put` | 364 |
-| `Start` | 252 |
+| `Start` | 256 |
 | `Tag` | 206 |
 | `Untag` | 204 |
 
