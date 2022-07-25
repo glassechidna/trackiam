@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v88",
+  "DefaultVersionId": "v89",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-07-06T17:26:50Z",
+    "CreateDate": "2022-07-25T21:19:31Z",
     "Document": {
       "Statement": [
         {
@@ -30,6 +30,7 @@
             "access-analyzer:ListPolicyGenerations",
             "access-analyzer:ListTagsForResource",
             "access-analyzer:ValidatePolicy",
+            "account:GetAlternateContact",
             "acm-pca:Describe*",
             "acm-pca:Get*",
             "acm-pca:List*",
@@ -345,6 +346,8 @@
             "deepcomposer:ListModels",
             "deepcomposer:ListSampleModels",
             "deepcomposer:ListTrainingTopics",
+            "detective:BatchGetGraphMemberDatasources",
+            "detective:BatchGetMembershipDatasources",
             "detective:Get*",
             "detective:List*",
             "detective:SearchGraph",
@@ -485,19 +488,27 @@
             "fms:ListPolicies",
             "fms:ListProtocolsLists",
             "fms:ListTagsForResource",
+            "forecast:DescribeAutoPredictor",
             "forecast:DescribeDataset",
             "forecast:DescribeDatasetGroup",
             "forecast:DescribeDatasetImportJob",
+            "forecast:DescribeExplainability",
+            "forecast:DescribeExplainabilityExport",
             "forecast:DescribeForecast",
             "forecast:DescribeForecastExportJob",
+            "forecast:DescribeMonitor",
             "forecast:DescribePredictor",
             "forecast:DescribePredictorBacktestExportJob",
             "forecast:GetAccuracyMetrics",
             "forecast:ListDatasetGroups",
             "forecast:ListDatasetImportJobs",
             "forecast:ListDatasets",
+            "forecast:ListExplainabilities",
+            "forecast:ListExplainabilityExports",
             "forecast:ListForecastExportJobs",
             "forecast:ListForecasts",
+            "forecast:ListMonitorEvaluations",
+            "forecast:ListMonitors",
             "forecast:ListPredictorBacktestExportJobs",
             "forecast:ListPredictors",
             "forecast:QueryForecast",
@@ -1362,7 +1373,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v88"
+    "VersionId": "v89"
   },
-  "UpdateDate": "2022-07-06T17:26:50Z"
+  "UpdateDate": "2022-07-25T21:19:31Z"
 }
