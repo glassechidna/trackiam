@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 321
-* Unique actions: 13242
+* Unique actions: 13245
 * Managed policies: 961
 
 Most common managed policy name prefixes:
@@ -82,14 +82,14 @@ The following table summarises the AWS APIs.
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 62 | 3 | 0 |
+| [`guardduty`](services/guardduty.yml) | 61 | 4 | 0 |
 | [`lambda`](services/lambda.yml) | 61 | 2 | 5 |
 | [`workspaces`](services/workspaces.yml) | 61 | 0 | 0 |
+| [`macie2`](services/macie2.yml) | 61 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
 | [`rekognition`](services/rekognition.yml) | 59 | 0 | 0 |
 | [`medialive`](services/medialive.yml) | 59 | 0 | 0 |
-| [`guardduty`](services/guardduty.yml) | 58 | 4 | 3 |
-| [`macie2`](services/macie2.yml) | 57 | 0 | 4 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`securityhub`](services/securityhub.yml) | 56 | 0 | 12 |
 | [`events`](services/events.yml) | 56 | 0 | 1 |
@@ -100,10 +100,11 @@ The following table summarises the AWS APIs.
 | [`organizations`](services/organizations.yml) | 52 | 0 | 0 |
 | [`geo`](services/geo.yml) | 52 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 52 | 0 | 0 |
+| [`transfer`](services/transfer.yml) | 51 | 2 | 1 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 26 |
 | [`imagebuilder`](services/imagebuilder.yml) | 50 | 0 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
-| [`appsync`](services/appsync.yml) | 49 | 0 | 2 |
+| [`appsync`](services/appsync.yml) | 49 | 1 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 12 |
 | [`wafv2`](services/wafv2.yml) | 48 | 0 | 2 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
@@ -156,7 +157,6 @@ The following table summarises the AWS APIs.
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`evidently`](services/evidently.yml) | 32 | 6 | 0 |
 | [`drs`](services/drs.yml) | 32 | 0 | 41 |
-| [`transfer`](services/transfer.yml) | 32 | 0 | 20 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 32 | 0 | 3 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`m2`](services/m2.yml) | 32 | 0 | 0 |
@@ -197,6 +197,7 @@ The following table summarises the AWS APIs.
 | [`snowball`](services/snowball.yml) | 25 | 0 | 0 |
 | [`ram`](services/ram.yml) | 25 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 0 | 0 |
+| [`detective`](services/detective.yml) | 24 | 0 | 5 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 23 | 1 | 3 |
@@ -216,7 +217,6 @@ The following table summarises the AWS APIs.
 | [`qldb`](services/qldb.yml) | 21 | 0 | 13 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`voiceid`](services/voiceid.yml) | 21 | 0 | 2 |
-| [`detective`](services/detective.yml) | 20 | 0 | 9 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 20 | 0 | 6 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
@@ -365,11 +365,11 @@ Most common action prefixes:
 | `List` | 2017 |
 | `Get` | 1785 |
 | `Delete` | 1541 |
-| `Describe` | 1519 |
+| `Describe` | 1520 |
 | `Create` | 1434 |
 | `Update` | 1188 |
 | `Put` | 364 |
-| `Start` | 256 |
+| `Start` | 257 |
 | `Tag` | 206 |
 | `Untag` | 204 |
 

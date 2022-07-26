@@ -1,5 +1,7 @@
 Actions:
   - Name: detective:AcceptInvitation
+  - Name: detective:BatchGetGraphMemberDatasources
+  - Name: detective:BatchGetMembershipDatasources
   - Name: detective:CreateGraph
   - Name: detective:CreateMembers
   - Name: detective:DeleteGraph
@@ -9,6 +11,7 @@ Actions:
   - Name: detective:DisassociateMembership
   - Name: detective:EnableOrganizationAdminAccount
   - Name: detective:GetMembers
+  - Name: detective:ListDatasourcePackages
   - Name: detective:ListGraphs
   - Name: detective:ListInvitations
   - Name: detective:ListMembers
@@ -18,15 +21,12 @@ Actions:
   - Name: detective:StartMonitoringMember
   - Name: detective:TagResource
   - Name: detective:UntagResource
+  - Name: detective:UpdateDatasourcePackages
   - Name: detective:UpdateOrganizationConfiguration
 
   # actions with no corresponding API
-  - Name: detective:BatchGetGraphMemberDatasources
-  - Name: detective:BatchGetMembershipDatasources
   - Name: detective:GetFreeTrialEligibility
   - Name: detective:GetGraphIngestState
   - Name: detective:GetPricingInformation
   - Name: detective:GetUsageInformation
-  - Name: detective:ListDatasourcePackages
   - Name: detective:SearchGraph
-  - Name: detective:UpdateDatasourcePackages

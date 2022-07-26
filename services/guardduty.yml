@@ -16,6 +16,7 @@ Actions:
   - Name: guardduty:DeleteMembers
   - Name: guardduty:DeletePublishingDestination
   - Name: guardduty:DeleteThreatIntelSet
+  - Name: guardduty:DescribeMalwareScans
   - Name: guardduty:DescribeOrganizationConfiguration
   - Name: guardduty:DescribePublishingDestination
   - Name: guardduty:DisableOrganizationAdminAccount
@@ -28,6 +29,7 @@ Actions:
   - Name: guardduty:GetFindingsStatistics
   - Name: guardduty:GetIPSet
   - Name: guardduty:GetInvitationsCount
+  - Name: guardduty:GetMalwareScanSettings
   - Name: guardduty:GetMasterAccount
   - Name: guardduty:GetMemberDetectors
   - Name: guardduty:GetMembers
@@ -53,15 +55,11 @@ Actions:
   - Name: guardduty:UpdateFilter
   - Name: guardduty:UpdateFindingsFeedback
   - Name: guardduty:UpdateIPSet
+  - Name: guardduty:UpdateMalwareScanSettings
   - Name: guardduty:UpdateMemberDetectors
   - Name: guardduty:UpdateOrganizationConfiguration
   - Name: guardduty:UpdatePublishingDestination
   - Name: guardduty:UpdateThreatIntelSet
-
-  # actions with no corresponding API
-  - Name: guardduty:DescribeMalwareScans
-  - Name: guardduty:GetMalwareScanSettings
-  - Name: guardduty:UpdateMalwareScanSettings
 
   # APIs without an IAM action
   - Name: guardduty:AcceptAdministratorInvitation
