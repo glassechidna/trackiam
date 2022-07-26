@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/ConfigConformsServiceRolePolicy",
   "CreateDate": "2019-07-25T21:38:05Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4BCH3IIJPN",
   "PolicyName": "ConfigConformsServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-11-13T18:29:21Z",
+    "CreateDate": "2022-07-26T00:33:20Z",
     "Document": {
       "Statement": [
         {
@@ -25,6 +25,18 @@
           "Condition": {
             "StringEquals": {
               "iam:PassedToService": "ssm.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/Config"
             }
           },
           "Effect": "Allow",
@@ -102,7 +114,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2019-11-13T18:29:21Z"
+  "UpdateDate": "2022-07-26T00:33:20Z"
 }
