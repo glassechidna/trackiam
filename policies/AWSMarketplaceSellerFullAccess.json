@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerFullAccess",
   "CreateDate": "2019-07-02T20:40:09Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JF7OFUANW",
   "PolicyName": "AWSMarketplaceSellerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-11-30T19:26:49Z",
+    "CreateDate": "2022-07-26T15:06:13Z",
     "Document": {
       "Statement": [
         {
@@ -72,12 +72,24 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/*"
+        },
+        {
+          "Action": [
+            "vendor-insights:GetDataSource",
+            "vendor-insights:GetSecurityProfile",
+            "vendor-insights:GetSecurityProfileSnapshot",
+            "vendor-insights:ListDataSources",
+            "vendor-insights:ListSecurityProfileSnapshots",
+            "vendor-insights:ListSecurityProfiles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v5"
+    "IsDefaultVersion": true,
+    "VersionId": "v6"
   },
-  "UpdateDate": "2021-11-30T19:26:49Z"
+  "UpdateDate": "2022-07-26T15:06:13Z"
 }
