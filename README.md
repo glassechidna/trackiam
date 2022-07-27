@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 321
-* Unique actions: 13245
+* Unique actions: 13248
 * Managed policies: 961
 
 Most common managed policy name prefixes:
@@ -38,7 +38,7 @@ The following table summarises the AWS APIs.
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 533 | 0 | 9 |
 | [`sagemaker`](services/sagemaker.yml) | 267 | 10 | 5 |
-| [`chime`](services/chime.yml) | 210 | 0 | 50 |
+| [`chime`](services/chime.yml) | 210 | 1 | 50 |
 | [`glue`](services/glue.yml) | 180 | 4 | 2 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 154 | 0 | 0 |
@@ -58,7 +58,7 @@ The following table summarises the AWS APIs.
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`cloudfront`](services/cloudfront.yml) | 91 | 1 | 1 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
-| [`config`](services/config.yml) | 86 | 2 | 0 |
+| [`config`](services/config.yml) | 86 | 3 | 0 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 0 |
 | [`s3`](services/s3.yml) | 83 | 58 | 45 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
@@ -84,7 +84,7 @@ The following table summarises the AWS APIs.
 | [`personalize`](services/personalize.yml) | 62 | 3 | 0 |
 | [`guardduty`](services/guardduty.yml) | 61 | 4 | 0 |
 | [`lambda`](services/lambda.yml) | 61 | 2 | 5 |
-| [`workspaces`](services/workspaces.yml) | 61 | 0 | 0 |
+| [`workspaces`](services/workspaces.yml) | 61 | 1 | 0 |
 | [`macie2`](services/macie2.yml) | 61 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
@@ -114,6 +114,7 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
+| [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
 | [`workspaces-web`](services/workspaces-web.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 42 | 2 | 1 |
@@ -141,7 +142,6 @@ The following table summarises the AWS APIs.
 | [`codeartifact`](services/codeartifact.yml) | 36 | 0 | 4 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 36 | 0 | 0 |
-| [`appconfig`](services/appconfig.yml) | 35 | 10 | 0 |
 | [`ce`](services/ce.yml) | 35 | 0 | 10 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`memorydb`](services/memorydb.yml) | 35 | 0 | 0 |
@@ -362,11 +362,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2017 |
+| `List` | 2018 |
 | `Get` | 1785 |
 | `Delete` | 1541 |
 | `Describe` | 1520 |
-| `Create` | 1434 |
+| `Create` | 1435 |
 | `Update` | 1188 |
 | `Put` | 364 |
 | `Start` | 257 |
