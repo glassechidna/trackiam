@@ -102,9 +102,9 @@ The following table summarises the AWS APIs.
 | [`forecast`](services/forecast.yml) | 52 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 51 | 2 | 1 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 26 |
+| [`appsync`](services/appsync.yml) | 50 | 0 | 2 |
 | [`imagebuilder`](services/imagebuilder.yml) | 50 | 0 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
-| [`appsync`](services/appsync.yml) | 49 | 1 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 12 |
 | [`wafv2`](services/wafv2.yml) | 48 | 0 | 2 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
