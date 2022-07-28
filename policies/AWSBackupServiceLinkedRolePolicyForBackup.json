@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBackupServiceLinkedRolePolicyForBackup",
   "CreateDate": "2020-06-02T23:08:40Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ONJBD4ZY2",
   "PolicyName": "AWSBackupServiceLinkedRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2022-05-17T17:21:50Z",
+    "CreateDate": "2022-07-28T17:29:44Z",
     "Document": {
       "Statement": [
         {
@@ -125,6 +125,11 @@
           "Resource": "arn:aws:ec2:*::snapshot/*"
         },
         {
+          "Action": "events:ListRules",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
           "Action": "kms:DescribeKey",
           "Effect": "Allow",
           "Resource": "*"
@@ -167,6 +172,22 @@
         },
         {
           "Action": [
+            "events:DeleteRule",
+            "events:DescribeRule",
+            "events:DisableRule",
+            "events:EnableRule",
+            "events:ListTargetsByRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:events:*:*:rule/AwsBackupManagedRule*"
+          ]
+        },
+        {
+          "Action": [
             "fsx:CopyBackup",
             "fsx:DeleteBackup",
             "fsx:DescribeBackups",
@@ -203,6 +224,13 @@
         },
         {
           "Action": [
+            "sysops-sap:GetOperation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "backup-gateway:ListTagsForResource"
           ],
           "Effect": "Allow",
@@ -221,7 +249,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2022-05-17T17:21:50Z"
+  "UpdateDate": "2022-07-28T17:29:44Z"
 }
