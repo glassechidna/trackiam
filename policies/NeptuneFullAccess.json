@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/NeptuneFullAccess",
   "CreateDate": "2018-05-30T19:17:31Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIXSDEYRCNJRC6ITFK",
   "PolicyName": "NeptuneFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-09-02T17:24:56Z",
+    "CreateDate": "2022-07-28T19:58:27Z",
     "Document": {
       "Statement": [
         {
@@ -75,6 +75,15 @@
         },
         {
           "Action": [
+            "neptune-db:*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
             "rds:AddRoleToDBCluster",
             "rds:AddSourceIdentifierToSubscription",
             "rds:AddTagsToResource",
@@ -82,20 +91,25 @@
             "rds:CopyDBClusterParameterGroup",
             "rds:CopyDBClusterSnapshot",
             "rds:CopyDBParameterGroup",
+            "rds:CreateDBClusterEndpoint",
             "rds:CreateDBClusterParameterGroup",
             "rds:CreateDBClusterSnapshot",
             "rds:CreateDBParameterGroup",
             "rds:CreateDBSubnetGroup",
             "rds:CreateEventSubscription",
+            "rds:CreateGlobalCluster",
             "rds:DeleteDBCluster",
+            "rds:DeleteDBClusterEndpoint",
             "rds:DeleteDBClusterParameterGroup",
             "rds:DeleteDBClusterSnapshot",
             "rds:DeleteDBInstance",
             "rds:DeleteDBParameterGroup",
             "rds:DeleteDBSubnetGroup",
             "rds:DeleteEventSubscription",
+            "rds:DeleteGlobalCluster",
             "rds:DescribeAccountAttributes",
             "rds:DescribeCertificates",
+            "rds:DescribeDBClusterEndpoints",
             "rds:DescribeDBClusterParameterGroups",
             "rds:DescribeDBClusterParameters",
             "rds:DescribeDBClusterSnapshotAttributes",
@@ -113,29 +127,36 @@
             "rds:DescribeEventCategories",
             "rds:DescribeEventSubscriptions",
             "rds:DescribeEvents",
+            "rds:DescribeGlobalClusters",
             "rds:DescribeOptionGroups",
             "rds:DescribeOrderableDBInstanceOptions",
             "rds:DescribePendingMaintenanceActions",
             "rds:DescribeValidDBInstanceModifications",
             "rds:DownloadDBLogFilePortion",
             "rds:FailoverDBCluster",
+            "rds:FailoverGlobalCluster",
             "rds:ListTagsForResource",
             "rds:ModifyDBCluster",
+            "rds:ModifyDBClusterEndpoint",
             "rds:ModifyDBClusterParameterGroup",
             "rds:ModifyDBClusterSnapshotAttribute",
             "rds:ModifyDBInstance",
             "rds:ModifyDBParameterGroup",
             "rds:ModifyDBSubnetGroup",
             "rds:ModifyEventSubscription",
+            "rds:ModifyGlobalCluster",
             "rds:PromoteReadReplicaDBCluster",
             "rds:RebootDBInstance",
+            "rds:RemoveFromGlobalCluster",
             "rds:RemoveRoleFromDBCluster",
             "rds:RemoveSourceIdentifierFromSubscription",
             "rds:RemoveTagsFromResource",
             "rds:ResetDBClusterParameterGroup",
             "rds:ResetDBParameterGroup",
             "rds:RestoreDBClusterFromSnapshot",
-            "rds:RestoreDBClusterToPointInTime"
+            "rds:RestoreDBClusterToPointInTime",
+            "rds:StartDBCluster",
+            "rds:StopDBCluster"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -146,7 +167,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2020-09-02T17:24:56Z"
+  "UpdateDate": "2022-07-28T19:58:27Z"
 }
