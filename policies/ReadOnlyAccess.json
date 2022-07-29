@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v89",
+  "DefaultVersionId": "v90",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-07-25T21:19:31Z",
+    "CreateDate": "2022-07-29T19:19:00Z",
     "Document": {
       "Statement": [
         {
@@ -214,6 +214,7 @@
             "cloudwatch:Get*",
             "cloudwatch:List*",
             "codeartifact:DescribeDomain",
+            "codeartifact:DescribePackage",
             "codeartifact:DescribePackageVersion",
             "codeartifact:DescribeRepository",
             "codeartifact:GetAuthorizationToken",
@@ -645,8 +646,7 @@
             "groundstation:ListMissionProfiles",
             "groundstation:ListSatellites",
             "groundstation:ListTagsForResource",
-            "guardduty:DescribeOrganizationConfiguration",
-            "guardduty:DescribePublishingDestination",
+            "guardduty:Describe*",
             "guardduty:Get*",
             "guardduty:List*",
             "health:Describe*",
@@ -1373,7 +1373,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v89"
+    "VersionId": "v90"
   },
-  "UpdateDate": "2022-07-25T21:19:31Z"
+  "UpdateDate": "2022-07-29T19:19:00Z"
 }
