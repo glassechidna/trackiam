@@ -10,6 +10,7 @@ Actions:
   - Name: iotsitewise:CreateAccessPolicy
   - Name: iotsitewise:CreateAsset
   - Name: iotsitewise:CreateAssetModel
+  - Name: iotsitewise:CreateBulkImportJob
   - Name: iotsitewise:CreateDashboard
   - Name: iotsitewise:CreateGateway
   - Name: iotsitewise:CreatePortal
@@ -26,6 +27,7 @@ Actions:
   - Name: iotsitewise:DescribeAsset
   - Name: iotsitewise:DescribeAssetModel
   - Name: iotsitewise:DescribeAssetProperty
+  - Name: iotsitewise:DescribeBulkImportJob
   - Name: iotsitewise:DescribeDashboard
   - Name: iotsitewise:DescribeDefaultEncryptionConfiguration
   - Name: iotsitewise:DescribeGateway
@@ -69,9 +71,8 @@ Actions:
   - Name: iotsitewise:UpdateProject
 
   # actions with no corresponding API
+  - Name: iotsitewise:ListBulkImportJob
   - Name: iotsitewise:UpdateAssetModelPropertyRouting
 
   # APIs without an IAM action
-  - Name: iotsitewise:CreateBulkImportJob
-  - Name: iotsitewise:DescribeBulkImportJob
   - Name: iotsitewise:ListBulkImportJobs
