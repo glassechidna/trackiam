@@ -116,9 +116,9 @@ The following table summarises the AWS APIs.
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
 | [`workspaces-web`](services/workspaces-web.yml) | 44 | 0 | 0 |
+| [`datasync`](services/datasync.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 42 | 2 | 1 |
-| [`datasync`](services/datasync.yml) | 42 | 2 | 0 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`mediatailor`](services/mediatailor.yml) | 42 | 0 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
