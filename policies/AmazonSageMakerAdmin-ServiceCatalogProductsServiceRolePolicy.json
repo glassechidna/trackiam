@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerAdmin-ServiceCatalogProductsServiceRolePolicy",
   "CreateDate": "2020-11-27T18:48:07Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NAOSKQH4V",
   "PolicyName": "AmazonSageMakerAdmin-ServiceCatalogProductsServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-07-14T19:36:42Z",
+    "CreateDate": "2022-08-02T19:12:55Z",
     "Document": {
       "Statement": [
         {
@@ -126,6 +126,27 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "sagemaker:AddTags"
+          ],
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": [
+                "sagemaker:*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:endpoint-config/*",
+            "arn:aws:sagemaker:*:*:endpoint/*",
+            "arn:aws:sagemaker:*:*:model-package/*",
+            "arn:aws:sagemaker:*:*:model/*",
+            "arn:aws:sagemaker:*:*:pipeline/*",
+            "arn:aws:sagemaker:*:*:project/*"
+          ]
         },
         {
           "Action": "s3:GetObject",
@@ -420,7 +441,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2022-07-14T19:36:42Z"
+  "UpdateDate": "2022-08-02T19:12:55Z"
 }
