@@ -1,15 +1,23 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonElasticsearchServiceRolePolicy",
   "CreateDate": "2017-07-07T00:15:31Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJFEWZPHXKLCVHEUIC",
   "PolicyName": "AmazonElasticsearchServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-08-31T10:30:23Z",
+    "CreateDate": "2022-08-02T15:31:35Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "acm:DescribeCertificate"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Stmt1480452973135"
+        },
         {
           "Action": [
             "ec2:CreateNetworkInterface",
@@ -30,7 +38,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-08-31T10:30:23Z"
+  "UpdateDate": "2022-08-02T15:31:35Z"
 }
