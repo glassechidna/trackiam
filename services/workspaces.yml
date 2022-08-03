@@ -9,6 +9,7 @@ Actions:
   - Name: workspaces:CreateTags
   - Name: workspaces:CreateUpdatedWorkspaceImage
   - Name: workspaces:CreateWorkspaceBundle
+  - Name: workspaces:CreateWorkspaceImage
   - Name: workspaces:CreateWorkspaces
   - Name: workspaces:DeleteClientBranding
   - Name: workspaces:DeleteConnectClientAddIn
@@ -42,6 +43,7 @@ Actions:
   - Name: workspaces:MigrateWorkspace
   - Name: workspaces:ModifyAccount
   - Name: workspaces:ModifyClientProperties
+  - Name: workspaces:ModifySamlProperties
   - Name: workspaces:ModifySelfservicePermissions
   - Name: workspaces:ModifyWorkspaceAccessProperties
   - Name: workspaces:ModifyWorkspaceCreationProperties
@@ -61,6 +63,5 @@ Actions:
   - Name: workspaces:UpdateWorkspaceBundle
   - Name: workspaces:UpdateWorkspaceImagePermission
 
-  # APIs without an IAM action
-  - Name: workspaces:CreateWorkspaceImage
-  - Name: workspaces:ModifySamlProperties
+  # actions with no corresponding API
+  - Name: workspaces:Stream
