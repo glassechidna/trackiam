@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/NeptuneReadOnlyAccess",
   "CreateDate": "2018-05-30T19:16:37Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJS5OQ5RXULC66WTGQ",
   "PolicyName": "NeptuneReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2018-05-30T19:16:37Z",
+    "CreateDate": "2022-08-03T18:53:32Z",
     "Document": {
       "Statement": [
         {
@@ -54,6 +54,17 @@
         },
         {
           "Action": [
+            "neptune-db:Get*",
+            "neptune-db:List*",
+            "neptune-db:Read*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
             "rds:DescribeAccountAttributes",
             "rds:DescribeCertificates",
             "rds:DescribeDBClusterParameterGroups",
@@ -70,6 +81,7 @@
             "rds:DescribeEventCategories",
             "rds:DescribeEventSubscriptions",
             "rds:DescribeEvents",
+            "rds:DescribeGlobalClusters",
             "rds:DescribeOrderableDBInstanceOptions",
             "rds:DescribePendingMaintenanceActions",
             "rds:DownloadDBLogFilePortion",
@@ -82,7 +94,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2018-05-30T19:16:37Z"
+  "UpdateDate": "2022-08-03T18:53:32Z"
 }
