@@ -1,17 +1,18 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCompromisedKeyQuarantineV2",
   "CreateDate": "2021-04-21T22:30:59Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4PFYMROIMI",
   "PolicyName": "AWSCompromisedKeyQuarantineV2",
   "PolicyVersion": {
-    "CreateDate": "2021-11-11T21:32:48Z",
+    "CreateDate": "2022-08-10T21:15:53Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "cloudtrail:LookupEvents",
             "ec2:RequestSpotInstances",
             "ec2:RunInstances",
             "ec2:StartInstances",
@@ -77,7 +78,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-11-11T21:32:48Z"
+  "UpdateDate": "2022-08-10T21:15:53Z"
 }
