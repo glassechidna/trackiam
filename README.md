@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 324
-* Unique actions: 13319
+* Unique actions: 13326
 * Managed policies: 962
 
 Most common managed policy name prefixes:
@@ -52,7 +52,7 @@ The following table summarises the AWS APIs.
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 109 | 0 | 0 |
 | [`lex`](services/lex.yml) | 103 | 2 | 7 |
-| [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 0 |
+| [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 4 |
 | [`iotwireless`](services/iotwireless.yml) | 98 | 0 | 1 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
@@ -312,9 +312,9 @@ The following table summarises the AWS APIs.
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 31 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 0 | 0 | 31 |
+| [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 29 |
 | [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
 | [`cases`](services/cases.yml) | 0 | 0 | 27 |
-| [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 26 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
@@ -365,12 +365,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2035 |
-| `Get` | 1797 |
-| `Delete` | 1543 |
-| `Describe` | 1520 |
+| `List` | 2036 |
+| `Get` | 1798 |
+| `Delete` | 1544 |
+| `Describe` | 1521 |
 | `Create` | 1443 |
-| `Update` | 1193 |
+| `Update` | 1194 |
 | `Put` | 367 |
 | `Start` | 259 |
 | `Tag` | 208 |
