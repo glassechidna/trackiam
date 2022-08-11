@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSApplicationMigrationFullAccess",
   "CreateDate": "2021-04-07T06:56:05Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HPQNMM2HL",
   "PolicyName": "AWSApplicationMigrationFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-05-31T21:14:49Z",
+    "CreateDate": "2022-08-11T16:08:08Z",
     "Document": {
       "Statement": [
         {
@@ -25,6 +25,21 @@
             "arn:aws:iam::*:role/service-role/AWSApplicationMigrationLaunchInstanceWithDrsRole",
             "arn:aws:iam::*:role/service-role/AWSApplicationMigrationLaunchInstanceWithSsmRole"
           ]
+        },
+        {
+          "Action": [
+            "drs:DisconnectSourceServer"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "Null": {
+              "aws:ResourceTag/AWSApplicationMigrationServiceConfiguredDR": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:drs:*:*:source-server/*"
         },
         {
           "Action": [
@@ -177,7 +192,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2022-05-31T21:14:49Z"
+  "UpdateDate": "2022-08-11T16:08:08Z"
 }
