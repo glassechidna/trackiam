@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 323
-* Unique actions: 13292
+* Unique services: 324
+* Unique actions: 13319
 * Managed policies: 962
 
 Most common managed policy name prefixes:
@@ -313,6 +313,7 @@ The following table summarises the AWS APIs.
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 31 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 0 | 0 | 31 |
 | [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
+| [`cases`](services/cases.yml) | 0 | 0 | 27 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 26 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
@@ -364,14 +365,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2030 |
-| `Get` | 1792 |
+| `List` | 2035 |
+| `Get` | 1797 |
 | `Delete` | 1543 |
 | `Describe` | 1520 |
-| `Create` | 1437 |
-| `Update` | 1189 |
-| `Put` | 366 |
+| `Create` | 1443 |
+| `Update` | 1193 |
+| `Put` | 367 |
 | `Start` | 259 |
-| `Tag` | 207 |
-| `Untag` | 205 |
+| `Tag` | 208 |
+| `Untag` | 206 |
 
