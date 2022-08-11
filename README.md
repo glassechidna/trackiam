@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 322
-* Unique actions: 13258
+* Unique services: 323
+* Unique actions: 13292
 * Managed policies: 962
 
 Most common managed policy name prefixes:
@@ -297,6 +297,8 @@ The following table summarises the AWS APIs.
 | [`execute-api`](services/execute-api.yml) | 0 | 248 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 31 | 0 |
+| [`private-networks`](services/private-networks.yml) | 0 | 25 | 0 |
+| [`backup-storage`](services/backup-storage.yml) | 0 | 9 | 1 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`macie`](services/macie.yml) | 0 | 7 | 0 |
@@ -356,21 +358,20 @@ The following table summarises the AWS APIs.
 | [`iq`](services/iq.yml) | 0 | 0 | 1 |
 | [`elemental-support-content`](services/elemental-support-content.yml) | 0 | 0 | 1 |
 | [`codeguru`](services/codeguru.yml) | 0 | 0 | 1 |
-| [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 1 |
 | [`arsenal`](services/arsenal.yml) | 0 | 0 | 1 |
 
 Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2022 |
-| `Get` | 1785 |
-| `Delete` | 1540 |
+| `List` | 2030 |
+| `Get` | 1792 |
+| `Delete` | 1543 |
 | `Describe` | 1520 |
-| `Create` | 1435 |
-| `Update` | 1187 |
-| `Put` | 364 |
-| `Start` | 258 |
-| `Tag` | 206 |
-| `Untag` | 204 |
+| `Create` | 1437 |
+| `Update` | 1189 |
+| `Put` | 366 |
+| `Start` | 259 |
+| `Tag` | 207 |
+| `Untag` | 205 |
 
