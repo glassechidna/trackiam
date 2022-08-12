@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 324
-* Unique actions: 13330
+* Unique actions: 13331
 * Managed policies: 962
 
 Most common managed policy name prefixes:
@@ -38,7 +38,7 @@ The following table summarises the AWS APIs.
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 533 | 0 | 9 |
 | [`sagemaker`](services/sagemaker.yml) | 267 | 10 | 5 |
-| [`chime`](services/chime.yml) | 210 | 1 | 50 |
+| [`chime`](services/chime.yml) | 210 | 2 | 50 |
 | [`glue`](services/glue.yml) | 180 | 4 | 2 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 154 | 0 | 0 |
@@ -215,6 +215,7 @@ The following table summarises the AWS APIs.
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 0 |
 | [`private-networks`](services/private-networks.yml) | 21 | 4 | 0 |
+| [`aps`](services/aps.yml) | 21 | 0 | 16 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 13 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`voiceid`](services/voiceid.yml) | 21 | 0 | 2 |
@@ -229,7 +230,6 @@ The following table summarises the AWS APIs.
 | [`backup-gateway`](services/backup-gateway.yml) | 18 | 0 | 2 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 18 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 17 | 3 | 0 |
-| [`aps`](services/aps.yml) | 17 | 0 | 20 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`signer`](services/signer.yml) | 17 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 17 | 0 | 0 |
@@ -365,7 +365,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2036 |
+| `List` | 2037 |
 | `Get` | 1798 |
 | `Delete` | 1545 |
 | `Describe` | 1522 |
