@@ -1,0 +1,85 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSTrustedAdvisorPriorityFullAccess",
+  "CreateDate": "2022-08-16T16:08:24Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4LJLEVDMJO",
+  "PolicyName": "AWSTrustedAdvisorPriorityFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2022-08-16T16:08:24Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "reporting.trustedadvisor.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/reporting.trustedadvisor.amazonaws.com/AWSServiceRoleForTrustedAdvisorReporting"
+        },
+        {
+          "Action": [
+            "organizations:DeregisterDelegatedAdministrator",
+            "organizations:RegisterDelegatedAdministrator"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": [
+                "reporting.trustedadvisor.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:*"
+        },
+        {
+          "Action": [
+            "organizations:DisableAWSServiceAccess",
+            "organizations:EnableAWSServiceAccess",
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": [
+                "reporting.trustedadvisor.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "trustedadvisor:DeleteNotificationConfigurationForDelegatedAdmin",
+            "trustedadvisor:DescribeAccount*",
+            "trustedadvisor:DescribeNotificationConfigurations",
+            "trustedadvisor:DescribeOrganization",
+            "trustedadvisor:DescribeRisk*",
+            "trustedadvisor:DownloadRisk",
+            "trustedadvisor:SetOrganizationAccess",
+            "trustedadvisor:UpdateNotificationConfigurations",
+            "trustedadvisor:UpdateRiskStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-08-16T16:08:24Z"
+}
