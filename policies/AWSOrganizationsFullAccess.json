@@ -1,15 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSOrganizationsFullAccess",
   "CreateDate": "2018-11-06T20:31:57Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJZXBNRCJKNLQHSB5M",
   "PolicyName": "AWSOrganizationsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-02-07T18:26:04Z",
+    "CreateDate": "2022-08-16T20:42:36Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "organizations.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": "organizations:*",
           "Effect": "Allow",
@@ -28,7 +38,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-02-07T18:26:04Z"
+  "UpdateDate": "2022-08-16T20:42:36Z"
 }

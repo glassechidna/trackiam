@@ -1,5 +1,6 @@
 Actions:
   - Name: rekognition:CompareFaces
+  - Name: rekognition:CopyProjectVersion
   - Name: rekognition:CreateCollection
   - Name: rekognition:CreateDataset
   - Name: rekognition:CreateProject
@@ -9,6 +10,7 @@ Actions:
   - Name: rekognition:DeleteDataset
   - Name: rekognition:DeleteFaces
   - Name: rekognition:DeleteProject
+  - Name: rekognition:DeleteProjectPolicy
   - Name: rekognition:DeleteProjectVersion
   - Name: rekognition:DeleteStreamProcessor
   - Name: rekognition:DescribeCollection
@@ -37,8 +39,10 @@ Actions:
   - Name: rekognition:ListDatasetEntries
   - Name: rekognition:ListDatasetLabels
   - Name: rekognition:ListFaces
+  - Name: rekognition:ListProjectPolicies
   - Name: rekognition:ListStreamProcessors
   - Name: rekognition:ListTagsForResource
+  - Name: rekognition:PutProjectPolicy
   - Name: rekognition:RecognizeCelebrities
   - Name: rekognition:SearchFaces
   - Name: rekognition:SearchFacesByImage
@@ -58,9 +62,3 @@ Actions:
   - Name: rekognition:UntagResource
   - Name: rekognition:UpdateDatasetEntries
   - Name: rekognition:UpdateStreamProcessor
-
-  # APIs without an IAM action
-  - Name: rekognition:CopyProjectVersion
-  - Name: rekognition:DeleteProjectPolicy
-  - Name: rekognition:ListProjectPolicies
-  - Name: rekognition:PutProjectPolicy
