@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 324
-* Unique actions: 13339
+* Unique actions: 13338
 * Managed policies: 965
 
 Most common managed policy name prefixes:
@@ -96,11 +96,11 @@ The following table summarises the AWS APIs.
 | [`kendra`](services/kendra.yml) | 55 | 5 | 0 |
 | [`dms`](services/dms.yml) | 54 | 11 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
+| [`transfer`](services/transfer.yml) | 52 | 1 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
 | [`organizations`](services/organizations.yml) | 52 | 0 | 0 |
 | [`geo`](services/geo.yml) | 52 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 52 | 0 | 0 |
-| [`transfer`](services/transfer.yml) | 51 | 2 | 1 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 26 |
 | [`appsync`](services/appsync.yml) | 50 | 0 | 2 |
 | [`imagebuilder`](services/imagebuilder.yml) | 50 | 0 | 0 |
@@ -368,7 +368,7 @@ Most common action prefixes:
 | `List` | 2039 |
 | `Get` | 1799 |
 | `Delete` | 1546 |
-| `Describe` | 1522 |
+| `Describe` | 1521 |
 | `Create` | 1444 |
 | `Update` | 1195 |
 | `Put` | 369 |
