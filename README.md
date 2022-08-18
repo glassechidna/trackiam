@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 324
-* Unique actions: 13338
+* Unique actions: 13348
 * Managed policies: 965
 
 Most common managed policy name prefixes:
@@ -38,7 +38,7 @@ The following table summarises the AWS APIs.
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 533 | 0 | 9 |
 | [`sagemaker`](services/sagemaker.yml) | 267 | 10 | 5 |
-| [`chime`](services/chime.yml) | 210 | 2 | 50 |
+| [`chime`](services/chime.yml) | 210 | 7 | 50 |
 | [`glue`](services/glue.yml) | 180 | 4 | 2 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 154 | 0 | 0 |
@@ -105,7 +105,7 @@ The following table summarises the AWS APIs.
 | [`appsync`](services/appsync.yml) | 50 | 0 | 2 |
 | [`imagebuilder`](services/imagebuilder.yml) | 50 | 0 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
-| [`dynamodb`](services/dynamodb.yml) | 48 | 6 | 12 |
+| [`dynamodb`](services/dynamodb.yml) | 48 | 9 | 12 |
 | [`wafv2`](services/wafv2.yml) | 48 | 0 | 2 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
 | [`license-manager`](services/license-manager.yml) | 48 | 0 | 0 |
@@ -139,9 +139,9 @@ The following table summarises the AWS APIs.
 | [`redshift-serverless`](services/redshift-serverless.yml) | 37 | 0 | 0 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
+| [`cloudwatch`](services/cloudwatch.yml) | 36 | 2 | 0 |
 | [`codeartifact`](services/codeartifact.yml) | 36 | 0 | 4 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
-| [`cloudwatch`](services/cloudwatch.yml) | 36 | 0 | 0 |
 | [`ce`](services/ce.yml) | 35 | 0 | 10 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`memorydb`](services/memorydb.yml) | 35 | 0 | 0 |
@@ -365,13 +365,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2039 |
-| `Get` | 1799 |
-| `Delete` | 1546 |
-| `Describe` | 1521 |
-| `Create` | 1444 |
+| `List` | 2042 |
+| `Get` | 1800 |
+| `Delete` | 1547 |
+| `Describe` | 1522 |
+| `Create` | 1446 |
 | `Update` | 1195 |
-| `Put` | 369 |
+| `Put` | 370 |
 | `Start` | 259 |
 | `Tag` | 208 |
 | `Untag` | 206 |
