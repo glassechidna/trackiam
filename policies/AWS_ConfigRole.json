@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWS_ConfigRole",
   "CreateDate": "2020-09-15T20:30:30Z",
-  "DefaultVersionId": "v14",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4PP7QZ4FBG",
   "PolicyName": "AWS_ConfigRole",
   "PolicyVersion": {
-    "CreateDate": "2022-07-15T01:37:13Z",
+    "CreateDate": "2022-08-19T22:05:27Z",
     "Document": {
       "Statement": [
         {
@@ -106,7 +106,10 @@
             "datasync:DescribeLocationS3",
             "datasync:DescribeLocationSmb",
             "datasync:DescribeTask",
+            "datasync:ListAgents",
+            "datasync:ListLocations",
             "datasync:ListTagsForResource",
+            "datasync:ListTasks",
             "dax:DescribeClusters",
             "dax:DescribeParameterGroups",
             "dax:DescribeParameters",
@@ -432,6 +435,8 @@
             "servicediscovery:GetInstance",
             "servicediscovery:GetNamespace",
             "servicediscovery:GetService",
+            "servicediscovery:ListNamespaces",
+            "servicediscovery:ListServices",
             "servicediscovery:ListTagsForResource",
             "ses:DescribeReceiptRule",
             "ses:DescribeReceiptRuleSet",
@@ -441,6 +446,7 @@
             "ses:GetEmailTemplate",
             "ses:GetTemplate",
             "ses:ListConfigurationSets",
+            "ses:ListContactLists",
             "shield:DescribeDRTAccess",
             "shield:DescribeProtection",
             "shield:DescribeSubscription",
@@ -502,8 +508,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v14"
+    "IsDefaultVersion": true,
+    "VersionId": "v15"
   },
-  "UpdateDate": "2022-07-15T01:37:13Z"
+  "UpdateDate": "2022-08-19T22:05:27Z"
 }
