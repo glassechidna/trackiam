@@ -101,11 +101,11 @@ The following table summarises the AWS APIs.
 | [`organizations`](services/organizations.yml) | 52 | 0 | 0 |
 | [`geo`](services/geo.yml) | 52 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 52 | 0 | 0 |
+| [`dynamodb`](services/dynamodb.yml) | 51 | 6 | 12 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 26 |
 | [`appsync`](services/appsync.yml) | 50 | 0 | 2 |
 | [`imagebuilder`](services/imagebuilder.yml) | 50 | 0 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
-| [`dynamodb`](services/dynamodb.yml) | 48 | 9 | 12 |
 | [`wafv2`](services/wafv2.yml) | 48 | 0 | 2 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
 | [`license-manager`](services/license-manager.yml) | 48 | 0 | 0 |

@@ -13,6 +13,7 @@ Actions:
   - Name: dynamodb:DescribeExport
   - Name: dynamodb:DescribeGlobalTable
   - Name: dynamodb:DescribeGlobalTableSettings
+  - Name: dynamodb:DescribeImport
   - Name: dynamodb:DescribeKinesisStreamingDestination
   - Name: dynamodb:DescribeLimits
   - Name: dynamodb:DescribeStream
@@ -25,10 +26,12 @@ Actions:
   - Name: dynamodb:GetItem
   - Name: dynamodb:GetRecords
   - Name: dynamodb:GetShardIterator
+  - Name: dynamodb:ImportTable
   - Name: dynamodb:ListBackups
   - Name: dynamodb:ListContributorInsights
   - Name: dynamodb:ListExports
   - Name: dynamodb:ListGlobalTables
+  - Name: dynamodb:ListImports
   - Name: dynamodb:ListStreams
   - Name: dynamodb:ListTables
   - Name: dynamodb:ListTagsOfResource
@@ -65,10 +68,7 @@ Actions:
   # APIs without an IAM action
   - Name: dynamodb:BatchExecuteStatement
   - Name: dynamodb:DescribeEndpoints
-  - Name: dynamodb:DescribeImport
   - Name: dynamodb:ExecuteStatement
   - Name: dynamodb:ExecuteTransaction
-  - Name: dynamodb:ImportTable
-  - Name: dynamodb:ListImports
   - Name: dynamodb:TransactGetItems
   - Name: dynamodb:TransactWriteItems
