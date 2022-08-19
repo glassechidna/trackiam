@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 324
-* Unique actions: 13348
+* Unique actions: 13349
 * Managed policies: 965
 
 Most common managed policy name prefixes:
@@ -42,7 +42,7 @@ The following table summarises the AWS APIs.
 | [`glue`](services/glue.yml) | 180 | 4 | 2 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 154 | 0 | 0 |
-| [`connect`](services/connect.yml) | 152 | 0 | 6 |
+| [`connect`](services/connect.yml) | 152 | 1 | 6 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
 | [`rds`](services/rds.yml) | 136 | 0 | 6 |
 | [`ssm`](services/ssm.yml) | 135 | 0 | 10 |
@@ -171,10 +171,10 @@ The following table summarises the AWS APIs.
 | [`apprunner`](services/apprunner.yml) | 30 | 0 | 1 |
 | [`route53domains`](services/route53domains.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
+| [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
 | [`fms`](services/fms.yml) | 30 | 0 | 0 |
 | [`billingconductor`](services/billingconductor.yml) | 30 | 0 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 29 | 0 | 2 |
-| [`lookoutmetrics`](services/lookoutmetrics.yml) | 29 | 0 | 1 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 29 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 29 | 0 | 0 |
