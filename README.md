@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 324
-* Unique actions: 13349
+* Unique services: 325
+* Unique actions: 13372
 * Managed policies: 967
 
 Most common managed policy name prefixes:
@@ -51,7 +51,7 @@ The following table summarises the AWS APIs.
 | [`redshift`](services/redshift.yml) | 118 | 1 | 18 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 109 | 0 | 0 |
-| [`lex`](services/lex.yml) | 103 | 2 | 7 |
+| [`lex`](services/lex.yml) | 103 | 3 | 7 |
 | [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 4 |
 | [`iotwireless`](services/iotwireless.yml) | 98 | 0 | 1 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
@@ -96,11 +96,11 @@ The following table summarises the AWS APIs.
 | [`kendra`](services/kendra.yml) | 55 | 5 | 0 |
 | [`dms`](services/dms.yml) | 54 | 11 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
+| [`forecast`](services/forecast.yml) | 52 | 13 | 0 |
 | [`transfer`](services/transfer.yml) | 52 | 1 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
 | [`organizations`](services/organizations.yml) | 52 | 0 | 0 |
 | [`geo`](services/geo.yml) | 52 | 0 | 0 |
-| [`forecast`](services/forecast.yml) | 52 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 51 | 6 | 12 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 26 |
 | [`appsync`](services/appsync.yml) | 50 | 0 | 2 |
@@ -299,6 +299,7 @@ The following table summarises the AWS APIs.
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 31 | 0 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 9 | 1 |
+| [`supportapp`](services/supportapp.yml) | 0 | 9 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`macie`](services/macie.yml) | 0 | 7 | 0 |
@@ -365,13 +366,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2042 |
-| `Get` | 1800 |
-| `Delete` | 1547 |
-| `Describe` | 1522 |
-| `Create` | 1446 |
-| `Update` | 1195 |
-| `Put` | 370 |
+| `List` | 2047 |
+| `Get` | 1801 |
+| `Delete` | 1553 |
+| `Describe` | 1525 |
+| `Create` | 1450 |
+| `Update` | 1196 |
+| `Put` | 371 |
 | `Start` | 259 |
 | `Tag` | 208 |
 | `Untag` | 206 |
