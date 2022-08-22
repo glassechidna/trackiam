@@ -1,15 +1,29 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSSOMemberAccountAdministrator",
   "CreateDate": "2018-06-27T20:45:42Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIQYHEY7KJWXZFNDPY",
   "PolicyName": "AWSSSOMemberAccountAdministrator",
   "PolicyVersion": {
-    "CreateDate": "2022-04-28T18:53:46Z",
+    "CreateDate": "2022-08-22T17:18:20Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "organizations:DeregisterDelegatedAdministrator",
+            "organizations:RegisterDelegatedAdministrator"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": "sso.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSSSOManageDelegatedAdministrator"
+        },
         {
           "Action": [
             "access-analyzer:ValidatePolicy",
@@ -26,6 +40,7 @@
             "organizations:ListAccounts",
             "organizations:ListAccountsForParent",
             "organizations:ListChildren",
+            "organizations:ListDelegatedAdministrators",
             "organizations:ListOrganizationalUnitsForParent",
             "organizations:ListParents",
             "organizations:ListRoots",
@@ -40,7 +55,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2022-04-28T18:53:46Z"
+  "UpdateDate": "2022-08-22T17:18:20Z"
 }
