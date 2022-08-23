@@ -51,7 +51,7 @@ The following table summarises the AWS APIs.
 | [`redshift`](services/redshift.yml) | 118 | 1 | 18 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 109 | 0 | 0 |
-| [`lex`](services/lex.yml) | 103 | 3 | 7 |
+| [`lex`](services/lex.yml) | 104 | 2 | 7 |
 | [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 4 |
 | [`iotwireless`](services/iotwireless.yml) | 98 | 0 | 1 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
