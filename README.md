@@ -44,7 +44,7 @@ The following table summarises the AWS APIs.
 | [`lightsail`](services/lightsail.yml) | 154 | 0 | 0 |
 | [`connect`](services/connect.yml) | 153 | 0 | 6 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
-| [`rds`](services/rds.yml) | 136 | 0 | 6 |
+| [`rds`](services/rds.yml) | 137 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 135 | 0 | 10 |
 | [`quicksight`](services/quicksight.yml) | 120 | 0 | 25 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 119 | 0 | 1 |
