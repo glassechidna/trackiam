@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupOperatorAccess",
   "CreateDate": "2019-11-18T22:23:17Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KHXVYMY4O",
   "PolicyName": "AWSBackupOperatorAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-06-01T17:35:31Z",
+    "CreateDate": "2022-08-24T22:03:30Z",
     "Document": {
       "Statement": [
         {
@@ -27,6 +27,11 @@
           "Action": "backup-gateway:GetGateway",
           "Effect": "Allow",
           "Resource": "arn:aws:backup-gateway:*:*:gateway/*"
+        },
+        {
+          "Action": "cloudwatch:GetMetricData",
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": "ds:DescribeDirectories",
@@ -194,7 +199,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2022-06-01T17:35:31Z"
+  "UpdateDate": "2022-08-24T22:03:30Z"
 }

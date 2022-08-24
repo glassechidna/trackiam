@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupFullAccess",
   "CreateDate": "2019-11-18T22:21:52Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LL52EIPJX",
   "PolicyName": "AWSBackupFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-06-01T17:36:04Z",
+    "CreateDate": "2022-08-24T22:03:13Z",
     "Document": {
       "Statement": [
         {
@@ -119,6 +119,11 @@
         },
         {
           "Action": "backup:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "cloudwatch:GetMetricData",
           "Effect": "Allow",
           "Resource": "*"
         },
@@ -296,7 +301,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2022-06-01T17:36:04Z"
+  "UpdateDate": "2022-08-24T22:03:13Z"
 }
