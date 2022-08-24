@@ -1,0 +1,40 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonSageMakerCanvasForecastAccess",
+  "CreateDate": "2022-08-24T20:04:20Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4NXKPWTG5T",
+  "PolicyName": "AmazonSageMakerCanvasForecastAccess",
+  "PolicyVersion": {
+    "CreateDate": "2022-08-24T20:04:20Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::sagemaker-*/Canvas*",
+            "arn:aws:s3:::sagemaker-*/canvas*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::sagemaker-*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-08-24T20:04:20Z"
+}
