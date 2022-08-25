@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFConsoleReadOnlyAccess",
   "CreateDate": "2020-04-06T18:43:24Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NCJLTIT64",
   "PolicyName": "AWSWAFConsoleReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-10-01T20:13:54Z",
+    "CreateDate": "2022-08-25T20:13:55Z",
     "Document": {
       "Statement": [
         {
@@ -19,6 +19,9 @@
             "cloudwatch:GetMetricData",
             "cloudwatch:GetMetricStatistics",
             "cloudwatch:ListMetrics",
+            "cognito-idp:GetWebACLForResource",
+            "cognito-idp:ListResourcesForWebACL",
+            "cognito-idp:ListUserPools",
             "ec2:DescribeRegions",
             "elasticloadbalancing:DescribeLoadBalancers",
             "waf-regional:Get*",
@@ -37,7 +40,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-10-01T20:13:54Z"
+  "UpdateDate": "2022-08-25T20:13:55Z"
 }
