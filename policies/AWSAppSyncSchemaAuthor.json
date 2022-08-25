@@ -1,22 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSAppSyncSchemaAuthor",
   "CreateDate": "2018-03-20T21:21:06Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIUCF5WVTOFQXFKY5E",
   "PolicyName": "AWSAppSyncSchemaAuthor",
   "PolicyVersion": {
-    "CreateDate": "2018-03-20T21:21:06Z",
+    "CreateDate": "2022-08-25T17:18:23Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "appsync:CreateFunction",
             "appsync:CreateResolver",
             "appsync:CreateType",
+            "appsync:DeleteFunction",
             "appsync:DeleteResolver",
             "appsync:DeleteType",
+            "appsync:EvaluateMappingTemplate",
             "appsync:GetDataSource",
+            "appsync:GetFunction",
             "appsync:GetGraphqlApi",
             "appsync:GetIntrospectionSchema",
             "appsync:GetResolver",
@@ -25,10 +29,16 @@
             "appsync:GraphQL",
             "appsync:ListApiKeys",
             "appsync:ListDataSources",
+            "appsync:ListFunctions",
             "appsync:ListGraphqlApis",
             "appsync:ListResolvers",
+            "appsync:ListResolversByFunction",
+            "appsync:ListTagsForResource",
             "appsync:ListTypes",
             "appsync:StartSchemaCreation",
+            "appsync:TagResource",
+            "appsync:UntagResource",
+            "appsync:UpdateFunction",
             "appsync:UpdateResolver",
             "appsync:UpdateType"
           ],
@@ -39,7 +49,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2018-03-20T21:21:06Z"
+  "UpdateDate": "2022-08-25T17:18:23Z"
 }
