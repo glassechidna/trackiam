@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 325
-* Unique actions: 13397
+* Unique actions: 13402
 * Managed policies: 972
 
 Most common managed policy name prefixes:
@@ -76,6 +76,7 @@ The following table summarises the AWS APIs.
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`ds`](services/ds.yml) | 65 | 0 | 6 |
+| [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`es`](services/es.yml) | 64 | 0 | 10 |
@@ -96,7 +97,6 @@ The following table summarises the AWS APIs.
 | [`kendra`](services/kendra.yml) | 55 | 5 | 0 |
 | [`dms`](services/dms.yml) | 54 | 11 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
-| [`forecast`](services/forecast.yml) | 52 | 13 | 0 |
 | [`transfer`](services/transfer.yml) | 52 | 1 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
 | [`organizations`](services/organizations.yml) | 52 | 0 | 0 |
@@ -367,10 +367,10 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2050 |
-| `Get` | 1805 |
-| `Delete` | 1557 |
-| `Describe` | 1525 |
-| `Create` | 1455 |
+| `Get` | 1806 |
+| `Delete` | 1558 |
+| `Describe` | 1526 |
+| `Create` | 1456 |
 | `Update` | 1200 |
 | `Put` | 371 |
 | `Start` | 259 |

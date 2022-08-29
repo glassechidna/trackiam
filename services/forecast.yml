@@ -10,6 +10,9 @@ Actions:
   - Name: forecast:CreateMonitor
   - Name: forecast:CreatePredictor
   - Name: forecast:CreatePredictorBacktestExportJob
+  - Name: forecast:CreateWhatIfAnalysis
+  - Name: forecast:CreateWhatIfForecast
+  - Name: forecast:CreateWhatIfForecastExport
   - Name: forecast:DeleteDataset
   - Name: forecast:DeleteDatasetGroup
   - Name: forecast:DeleteDatasetImportJob
@@ -21,6 +24,9 @@ Actions:
   - Name: forecast:DeletePredictor
   - Name: forecast:DeletePredictorBacktestExportJob
   - Name: forecast:DeleteResourceTree
+  - Name: forecast:DeleteWhatIfAnalysis
+  - Name: forecast:DeleteWhatIfForecast
+  - Name: forecast:DeleteWhatIfForecastExport
   - Name: forecast:DescribeAutoPredictor
   - Name: forecast:DescribeDataset
   - Name: forecast:DescribeDatasetGroup
@@ -32,6 +38,9 @@ Actions:
   - Name: forecast:DescribeMonitor
   - Name: forecast:DescribePredictor
   - Name: forecast:DescribePredictorBacktestExportJob
+  - Name: forecast:DescribeWhatIfAnalysis
+  - Name: forecast:DescribeWhatIfForecast
+  - Name: forecast:DescribeWhatIfForecastExport
   - Name: forecast:GetAccuracyMetrics
   - Name: forecast:ListDatasetGroups
   - Name: forecast:ListDatasetImportJobs
@@ -45,24 +54,20 @@ Actions:
   - Name: forecast:ListPredictorBacktestExportJobs
   - Name: forecast:ListPredictors
   - Name: forecast:ListTagsForResource
+  - Name: forecast:ListWhatIfAnalyses
+  - Name: forecast:ListWhatIfForecastExports
+  - Name: forecast:ListWhatIfForecasts
   - Name: forecast:QueryForecast
+  - Name: forecast:QueryWhatIfForecast
   - Name: forecast:ResumeResource
   - Name: forecast:StopResource
   - Name: forecast:TagResource
   - Name: forecast:UntagResource
   - Name: forecast:UpdateDatasetGroup
 
-  # APIs without an IAM action
-  - Name: forecast:CreateWhatIfAnalysis
-  - Name: forecast:CreateWhatIfForecast
-  - Name: forecast:CreateWhatIfForecastExport
-  - Name: forecast:DeleteWhatIfAnalysis
-  - Name: forecast:DeleteWhatIfForecast
-  - Name: forecast:DeleteWhatIfForecastExport
-  - Name: forecast:DescribeWhatIfAnalysis
-  - Name: forecast:DescribeWhatIfForecast
-  - Name: forecast:DescribeWhatIfForecastExport
-  - Name: forecast:ListWhatIfAnalyses
-  - Name: forecast:ListWhatIfForecastExports
-  - Name: forecast:ListWhatIfForecasts
-  - Name: forecast:QueryWhatIfForecast
+  # actions with no corresponding API
+  - Name: forecast:CreateForecastEndpoint
+  - Name: forecast:DeleteForecastEndpoint
+  - Name: forecast:DescribeForecastEndpoint
+  - Name: forecast:GetRecentForecastContext
+  - Name: forecast:InvokeForecastEndpoint
