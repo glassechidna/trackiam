@@ -1,0 +1,61 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSSMManagedEC2InstanceDefaultPolicy",
+  "CreateDate": "2022-08-30T20:54:27Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4LVDRKUQFG",
+  "PolicyName": "AmazonSSMManagedEC2InstanceDefaultPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2022-08-30T20:54:27Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2messages:AcknowledgeMessage",
+            "ec2messages:DeleteMessage",
+            "ec2messages:FailMessage",
+            "ec2messages:GetEndpoint",
+            "ec2messages:GetMessages",
+            "ec2messages:SendReply"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ssm:DescribeAssociation",
+            "ssm:DescribeDocument",
+            "ssm:GetDeployablePatchSnapshotForInstance",
+            "ssm:GetDocument",
+            "ssm:GetManifest",
+            "ssm:ListAssociations",
+            "ssm:ListInstanceAssociations",
+            "ssm:PutComplianceItems",
+            "ssm:PutConfigurePackageResult",
+            "ssm:PutInventory",
+            "ssm:UpdateAssociationStatus",
+            "ssm:UpdateInstanceAssociationStatus",
+            "ssm:UpdateInstanceInformation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ssmmessages:CreateControlChannel",
+            "ssmmessages:CreateDataChannel",
+            "ssmmessages:OpenControlChannel",
+            "ssmmessages:OpenDataChannel"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-08-30T20:54:27Z"
+}

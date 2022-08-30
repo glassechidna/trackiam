@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 325
-* Unique actions: 13402
-* Managed policies: 972
+* Unique actions: 13416
+* Managed policies: 973
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 275 |
-| `arn:aws:iam::aws:policy/Amazon*` | 253 |
+| `arn:aws:iam::aws:policy/Amazon*` | 254 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 203 |
 | `arn:aws:iam::aws:policy/service-role/*` | 149 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -85,9 +85,9 @@ The following table summarises the AWS APIs.
 | [`rekognition`](services/rekognition.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 62 | 3 | 0 |
+| [`macie2`](services/macie2.yml) | 61 | 5 | 0 |
 | [`guardduty`](services/guardduty.yml) | 61 | 4 | 0 |
 | [`lambda`](services/lambda.yml) | 61 | 2 | 5 |
-| [`macie2`](services/macie2.yml) | 61 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
 | [`medialive`](services/medialive.yml) | 59 | 0 | 0 |
@@ -200,8 +200,8 @@ The following table summarises the AWS APIs.
 | [`detective`](services/detective.yml) | 24 | 0 | 5 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
+| [`lookoutequipment`](services/lookoutequipment.yml) | 23 | 10 | 0 |
 | [`timestream`](services/timestream.yml) | 23 | 1 | 3 |
-| [`lookoutequipment`](services/lookoutequipment.yml) | 23 | 1 | 0 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 23 | 0 | 1 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 0 | 0 |
@@ -366,12 +366,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2050 |
-| `Get` | 1806 |
-| `Delete` | 1558 |
-| `Describe` | 1526 |
-| `Create` | 1456 |
-| `Update` | 1200 |
+| `List` | 2053 |
+| `Get` | 1807 |
+| `Delete` | 1561 |
+| `Describe` | 1528 |
+| `Create` | 1459 |
+| `Update` | 1202 |
 | `Put` | 371 |
 | `Start` | 259 |
 | `Tag` | 208 |
