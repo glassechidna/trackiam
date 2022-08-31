@@ -1,6 +1,7 @@
 Actions:
   - Name: macie2:AcceptInvitation
   - Name: macie2:BatchGetCustomDataIdentifiers
+  - Name: macie2:CreateAllowList
   - Name: macie2:CreateClassificationJob
   - Name: macie2:CreateCustomDataIdentifier
   - Name: macie2:CreateFindingsFilter
@@ -8,6 +9,7 @@ Actions:
   - Name: macie2:CreateMember
   - Name: macie2:CreateSampleFindings
   - Name: macie2:DeclineInvitations
+  - Name: macie2:DeleteAllowList
   - Name: macie2:DeleteCustomDataIdentifier
   - Name: macie2:DeleteFindingsFilter
   - Name: macie2:DeleteInvitations
@@ -23,6 +25,7 @@ Actions:
   - Name: macie2:EnableMacie
   - Name: macie2:EnableOrganizationAdminAccount
   - Name: macie2:GetAdministratorAccount
+  - Name: macie2:GetAllowList
   - Name: macie2:GetBucketStatistics
   - Name: macie2:GetClassificationExportConfiguration
   - Name: macie2:GetCustomDataIdentifier
@@ -39,6 +42,7 @@ Actions:
   - Name: macie2:GetSensitiveDataOccurrencesAvailability
   - Name: macie2:GetUsageStatistics
   - Name: macie2:GetUsageTotals
+  - Name: macie2:ListAllowLists
   - Name: macie2:ListClassificationJobs
   - Name: macie2:ListCustomDataIdentifiers
   - Name: macie2:ListFindings
@@ -54,16 +58,10 @@ Actions:
   - Name: macie2:TagResource
   - Name: macie2:TestCustomDataIdentifier
   - Name: macie2:UntagResource
+  - Name: macie2:UpdateAllowList
   - Name: macie2:UpdateClassificationJob
   - Name: macie2:UpdateFindingsFilter
   - Name: macie2:UpdateMacieSession
   - Name: macie2:UpdateMemberSession
   - Name: macie2:UpdateOrganizationConfiguration
   - Name: macie2:UpdateRevealConfiguration
-
-  # APIs without an IAM action
-  - Name: macie2:CreateAllowList
-  - Name: macie2:DeleteAllowList
-  - Name: macie2:GetAllowList
-  - Name: macie2:ListAllowLists
-  - Name: macie2:UpdateAllowList

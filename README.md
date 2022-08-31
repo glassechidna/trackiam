@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 325
-* Unique actions: 13431
+* Unique actions: 13432
 * Managed policies: 973
 
 Most common managed policy name prefixes:
@@ -46,7 +46,7 @@ The following table summarises the AWS APIs.
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
 | [`rds`](services/rds.yml) | 137 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 135 | 0 | 10 |
-| [`quicksight`](services/quicksight.yml) | 120 | 0 | 25 |
+| [`quicksight`](services/quicksight.yml) | 120 | 0 | 26 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 119 | 0 | 1 |
 | [`redshift`](services/redshift.yml) | 118 | 1 | 18 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
@@ -74,6 +74,7 @@ The following table summarises the AWS APIs.
 | [`frauddetector`](services/frauddetector.yml) | 68 | 0 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 66 | 0 | 11 |
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
+| [`macie2`](services/macie2.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`ds`](services/ds.yml) | 65 | 0 | 6 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
@@ -85,7 +86,6 @@ The following table summarises the AWS APIs.
 | [`rekognition`](services/rekognition.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 62 | 3 | 0 |
-| [`macie2`](services/macie2.yml) | 61 | 5 | 0 |
 | [`guardduty`](services/guardduty.yml) | 61 | 4 | 0 |
 | [`lambda`](services/lambda.yml) | 61 | 2 | 5 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
@@ -371,7 +371,7 @@ Most common action prefixes:
 | `Delete` | 1564 |
 | `Describe` | 1529 |
 | `Create` | 1462 |
-| `Update` | 1204 |
+| `Update` | 1205 |
 | `Put` | 371 |
 | `Start` | 259 |
 | `Tag` | 208 |
