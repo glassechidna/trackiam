@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 325
-* Unique actions: 13432
+* Unique actions: 13436
 * Managed policies: 973
 
 Most common managed policy name prefixes:
@@ -303,6 +303,7 @@ The following table summarises the AWS APIs.
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`macie`](services/macie.yml) | 0 | 7 | 0 |
+| [`controltower`](services/controltower.yml) | 0 | 4 | 29 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 64 |
@@ -314,7 +315,6 @@ The following table summarises the AWS APIs.
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 31 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 0 | 0 | 31 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 29 |
-| [`controltower`](services/controltower.yml) | 0 | 0 | 29 |
 | [`cases`](services/cases.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
@@ -366,8 +366,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2055 |
-| `Get` | 1810 |
+| `List` | 2056 |
+| `Get` | 1811 |
 | `Delete` | 1564 |
 | `Describe` | 1529 |
 | `Create` | 1462 |
