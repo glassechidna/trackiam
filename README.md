@@ -287,6 +287,7 @@ The following table summarises the AWS APIs.
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 6 | 0 | 0 |
 | [`account`](services/account.yml) | 5 | 0 | 3 |
 | [`s3-outposts`](services/s3-outposts.yml) | 4 | 0 | 29 |
+| [`controltower`](services/controltower.yml) | 4 | 0 | 29 |
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 4 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
@@ -303,7 +304,6 @@ The following table summarises the AWS APIs.
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`macie`](services/macie.yml) | 0 | 7 | 0 |
-| [`controltower`](services/controltower.yml) | 0 | 4 | 29 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 64 |
