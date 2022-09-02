@@ -41,8 +41,8 @@ The following table summarises the AWS APIs.
 | [`chime`](services/chime.yml) | 210 | 7 | 50 |
 | [`glue`](services/glue.yml) | 180 | 4 | 2 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
+| [`connect`](services/connect.yml) | 155 | 0 | 6 |
 | [`lightsail`](services/lightsail.yml) | 154 | 0 | 0 |
-| [`connect`](services/connect.yml) | 153 | 2 | 6 |
 | [`ses`](services/ses.yml) | 138 | 0 | 0 |
 | [`rds`](services/rds.yml) | 137 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 135 | 0 | 10 |
@@ -79,13 +79,13 @@ The following table summarises the AWS APIs.
 | [`ds`](services/ds.yml) | 65 | 0 | 6 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
+| [`personalize`](services/personalize.yml) | 65 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`es`](services/es.yml) | 64 | 0 | 10 |
 | [`workspaces`](services/workspaces.yml) | 63 | 0 | 1 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`rekognition`](services/rekognition.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
-| [`personalize`](services/personalize.yml) | 62 | 3 | 0 |
 | [`guardduty`](services/guardduty.yml) | 61 | 4 | 0 |
 | [`lambda`](services/lambda.yml) | 61 | 2 | 5 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
