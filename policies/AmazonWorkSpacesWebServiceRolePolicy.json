@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonWorkSpacesWebServiceRolePolicy",
   "CreateDate": "2021-11-30T13:15:53Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4JW4G4DATC",
   "PolicyName": "AmazonWorkSpacesWebServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-04-05T22:01:09Z",
+    "CreateDate": "2022-09-06T20:46:50Z",
     "Document": {
       "Statement": [
         {
@@ -24,6 +24,23 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "WorkSpacesWebManaged"
+              ]
+            },
+            "StringEquals": {
+              "ec2:CreateAction": "CreateNetworkInterface"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*"
         },
         {
           "Action": [
@@ -46,7 +63,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-04-05T22:01:09Z"
+  "UpdateDate": "2022-09-06T20:46:50Z"
 }
