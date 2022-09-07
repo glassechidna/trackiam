@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 326
-* Unique actions: 13439
+* Unique actions: 13445
 * Managed policies: 973
 
 Most common managed policy name prefixes:
@@ -125,7 +125,7 @@ The following table summarises the AWS APIs.
 | [`transcribe`](services/transcribe.yml) | 41 | 0 | 2 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
 | [`wellarchitected`](services/wellarchitected.yml) | 40 | 0 | 0 |
-| [`sns`](services/sns.yml) | 39 | 1 | 0 |
+| [`sns`](services/sns.yml) | 39 | 3 | 0 |
 | [`resiliencehub`](services/resiliencehub.yml) | 39 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
@@ -326,12 +326,12 @@ The following table summarises the AWS APIs.
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
+| [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 11 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
-| [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 7 |
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 7 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
@@ -367,14 +367,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2057 |
-| `Get` | 1811 |
+| `List` | 2059 |
+| `Get` | 1812 |
 | `Delete` | 1564 |
 | `Describe` | 1529 |
 | `Create` | 1462 |
 | `Update` | 1205 |
-| `Put` | 371 |
-| `Start` | 259 |
+| `Put` | 372 |
+| `Start` | 261 |
 | `Tag` | 208 |
 | `Untag` | 206 |
 
