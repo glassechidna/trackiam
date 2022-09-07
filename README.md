@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 326
-* Unique actions: 13445
+* Unique actions: 13446
 * Managed policies: 973
 
 Most common managed policy name prefixes:
@@ -339,11 +339,11 @@ The following table summarises the AWS APIs.
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 5 |
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 5 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 5 |
+| [`tiros`](services/tiros.yml) | 0 | 0 | 4 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
 | [`artifact`](services/artifact.yml) | 0 | 0 | 4 |
-| [`tiros`](services/tiros.yml) | 0 | 0 | 3 |
 | [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 3 |
 | [`resource-explorer`](services/resource-explorer.yml) | 0 | 0 | 3 |
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |

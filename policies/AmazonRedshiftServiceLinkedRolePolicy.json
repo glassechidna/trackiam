@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRedshiftServiceLinkedRolePolicy",
   "CreateDate": "2017-09-18T19:19:45Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJPY2VXNRUYOY3SRZS",
   "PolicyName": "AmazonRedshiftServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-06-01T00:34:09Z",
+    "CreateDate": "2022-09-07T20:27:51Z",
     "Document": {
       "Statement": [
         {
@@ -41,6 +41,7 @@
           "Condition": {
             "StringEquals": {
               "cloudwatch:namespace": [
+                "AWS/Redshift",
                 "AWS/Redshift-Serverless"
               ]
             }
@@ -189,7 +190,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2022-06-01T00:34:09Z"
+  "UpdateDate": "2022-09-07T20:27:51Z"
 }
