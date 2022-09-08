@@ -121,11 +121,11 @@ The following table summarises the AWS APIs.
 | [`lakeformation`](services/lakeformation.yml) | 42 | 3 | 1 |
 | [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`mediatailor`](services/mediatailor.yml) | 42 | 0 | 0 |
+| [`sns`](services/sns.yml) | 41 | 1 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
 | [`transcribe`](services/transcribe.yml) | 41 | 0 | 2 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
 | [`wellarchitected`](services/wellarchitected.yml) | 40 | 0 | 0 |
-| [`sns`](services/sns.yml) | 39 | 3 | 0 |
 | [`resiliencehub`](services/resiliencehub.yml) | 39 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
