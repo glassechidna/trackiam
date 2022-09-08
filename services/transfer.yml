@@ -39,6 +39,7 @@ Actions:
   - Name: transfer:ListUsers
   - Name: transfer:ListWorkflows
   - Name: transfer:SendWorkflowStepState
+  - Name: transfer:StartFileTransfer
   - Name: transfer:StartServer
   - Name: transfer:StopServer
   - Name: transfer:TagResource
@@ -52,5 +53,9 @@ Actions:
   - Name: transfer:UpdateServer
   - Name: transfer:UpdateUser
 
-  # APIs without an IAM action
-  - Name: transfer:StartFileTransfer
+  # actions with no corresponding API
+  - Name: transfer:DeleteHostKey
+  - Name: transfer:DescribeHostKey
+  - Name: transfer:ImportHostKey
+  - Name: transfer:ListHostKeys
+  - Name: transfer:UpdateHostKey
