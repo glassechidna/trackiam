@@ -26,6 +26,8 @@ Actions:
   - Name: chime:CreateChannelMembership
   - Name: chime:CreateChannelModerator
   - Name: chime:CreateMediaCapturePipeline
+  - Name: chime:CreateMediaConcatenationPipeline
+  - Name: chime:CreateMediaLiveConnectorPipeline
   - Name: chime:CreateMeeting
   - Name: chime:CreateMeetingDialOut
   - Name: chime:CreateMeetingWithAttendees
@@ -53,6 +55,7 @@ Actions:
   - Name: chime:DeleteChannelModerator
   - Name: chime:DeleteEventsConfiguration
   - Name: chime:DeleteMediaCapturePipeline
+  - Name: chime:DeleteMediaPipeline
   - Name: chime:DeleteMeeting
   - Name: chime:DeletePhoneNumber
   - Name: chime:DeleteProxySession
@@ -97,6 +100,7 @@ Actions:
   - Name: chime:GetEventsConfiguration
   - Name: chime:GetGlobalSettings
   - Name: chime:GetMediaCapturePipeline
+  - Name: chime:GetMediaPipeline
   - Name: chime:GetMeeting
   - Name: chime:GetMessagingSessionEndpoint
   - Name: chime:GetPhoneNumber
@@ -138,6 +142,7 @@ Actions:
   - Name: chime:ListChannelsAssociatedWithChannelFlow
   - Name: chime:ListChannelsModeratedByAppInstanceUser
   - Name: chime:ListMediaCapturePipelines
+  - Name: chime:ListMediaPipelines
   - Name: chime:ListMeetingTags
   - Name: chime:ListMeetings
   - Name: chime:ListPhoneNumberOrders
@@ -147,6 +152,7 @@ Actions:
   - Name: chime:ListRooms
   - Name: chime:ListSipMediaApplications
   - Name: chime:ListSipRules
+  - Name: chime:ListSubChannels
   - Name: chime:ListSupportedPhoneNumberCountries
   - Name: chime:ListTagsForResource
   - Name: chime:ListUsers
@@ -263,10 +269,4 @@ Actions:
   - Name: chime:ValidateAccountResource
 
   # APIs without an IAM action
-  - Name: chime:CreateMediaConcatenationPipeline
-  - Name: chime:CreateMediaLiveConnectorPipeline
-  - Name: chime:DeleteMediaPipeline
-  - Name: chime:GetMediaPipeline
-  - Name: chime:ListMediaPipelines
-  - Name: chime:ListSubChannels
   - Name: chime:ValidateE911Address
