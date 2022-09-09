@@ -1,0 +1,221 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerCanvasFullAccess",
+  "CreateDate": "2022-09-09T00:44:25Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4LG6L7ZJCN",
+  "PolicyName": "AmazonSageMakerCanvasFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2022-09-09T00:44:25Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "forecast.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "sagemaker.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*"
+        },
+        {
+          "Action": [
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "secretsmanager:ResourceTag/SageMaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateVpcEndpoint",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcEndpointServices",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ecr:BatchGetImage",
+            "ecr:GetAuthorizationToken",
+            "ecr:GetDownloadUrlForLayer"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "forecast:CreateAutoPredictor",
+            "forecast:CreateDataset",
+            "forecast:CreateDatasetGroup",
+            "forecast:CreateDatasetImportJob",
+            "forecast:CreateExplainability",
+            "forecast:CreateExplainabilityExport",
+            "forecast:CreateForecast",
+            "forecast:CreateForecastEndpoint",
+            "forecast:CreateForecastExportJob",
+            "forecast:CreatePredictor",
+            "forecast:CreatePredictorBacktestExportJob",
+            "forecast:DescribeAutoPredictor",
+            "forecast:DescribeDataset",
+            "forecast:DescribeDatasetImportJob",
+            "forecast:DescribeExplainability",
+            "forecast:DescribeExplainabilityExport",
+            "forecast:DescribeForecast",
+            "forecast:DescribeForecastEndpoint",
+            "forecast:DescribeForecastExportJob",
+            "forecast:DescribePredictor",
+            "forecast:DescribePredictorBacktestExportJob",
+            "forecast:GetAccuracyMetrics",
+            "forecast:GetRecentForecastContext",
+            "forecast:InvokeForecastEndpoint",
+            "forecast:TagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:forecast:*:*:*Canvas*"
+          ]
+        },
+        {
+          "Action": [
+            "iam:GetRole"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/sagemaker/*"
+        },
+        {
+          "Action": [
+            "redshift-data:CancelStatement",
+            "redshift-data:DescribeStatement",
+            "redshift-data:DescribeTable",
+            "redshift-data:ExecuteStatement",
+            "redshift-data:GetStatementResult",
+            "redshift-data:ListSchemas",
+            "redshift-data:ListTables"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "redshift:GetClusterCredentials"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift:*:*:dbname:*",
+            "arn:aws:redshift:*:*:dbuser:*/sagemaker_access*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:DeleteObject",
+            "s3:GetBucketCors",
+            "s3:GetBucketLocation",
+            "s3:GetObject",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*SageMaker*",
+            "arn:aws:s3:::*Sagemaker*",
+            "arn:aws:s3:::*sagemaker*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sagemaker:AddTags",
+            "sagemaker:CreateAutoMLJob",
+            "sagemaker:CreateCompilationJob",
+            "sagemaker:CreateEndpoint",
+            "sagemaker:CreateEndpointConfig",
+            "sagemaker:CreateModel",
+            "sagemaker:CreateProcessingJob",
+            "sagemaker:DeleteApp",
+            "sagemaker:DeleteEndpoint",
+            "sagemaker:DescribeAutoMLJob",
+            "sagemaker:DescribeCompilationJob",
+            "sagemaker:DescribeEndpoint",
+            "sagemaker:DescribeEndpointConfig",
+            "sagemaker:DescribeModel",
+            "sagemaker:DescribeProcessingJob",
+            "sagemaker:ListCandidatesForAutoMLJob"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:*Canvas*",
+            "arn:aws:sagemaker:*:*:*canvas*",
+            "arn:aws:sagemaker:*:*:*model-compilation-*"
+          ]
+        },
+        {
+          "Action": [
+            "sagemaker:DescribeDomain",
+            "sagemaker:DescribeUserProfile",
+            "sagemaker:ListTags"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:PutResourcePolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:secretsmanager:*:*:secret:AmazonSageMaker-*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-09-09T00:44:25Z"
+}
