@@ -10,6 +10,7 @@ Actions:
   - Name: transfer:DeleteAgreement
   - Name: transfer:DeleteCertificate
   - Name: transfer:DeleteConnector
+  - Name: transfer:DeleteHostKey
   - Name: transfer:DeleteProfile
   - Name: transfer:DeleteServer
   - Name: transfer:DeleteSshPublicKey
@@ -20,18 +21,21 @@ Actions:
   - Name: transfer:DescribeCertificate
   - Name: transfer:DescribeConnector
   - Name: transfer:DescribeExecution
+  - Name: transfer:DescribeHostKey
   - Name: transfer:DescribeProfile
   - Name: transfer:DescribeSecurityPolicy
   - Name: transfer:DescribeServer
   - Name: transfer:DescribeUser
   - Name: transfer:DescribeWorkflow
   - Name: transfer:ImportCertificate
+  - Name: transfer:ImportHostKey
   - Name: transfer:ImportSshPublicKey
   - Name: transfer:ListAccesses
   - Name: transfer:ListAgreements
   - Name: transfer:ListCertificates
   - Name: transfer:ListConnectors
   - Name: transfer:ListExecutions
+  - Name: transfer:ListHostKeys
   - Name: transfer:ListProfiles
   - Name: transfer:ListSecurityPolicies
   - Name: transfer:ListServers
@@ -49,13 +53,7 @@ Actions:
   - Name: transfer:UpdateAgreement
   - Name: transfer:UpdateCertificate
   - Name: transfer:UpdateConnector
+  - Name: transfer:UpdateHostKey
   - Name: transfer:UpdateProfile
   - Name: transfer:UpdateServer
   - Name: transfer:UpdateUser
-
-  # actions with no corresponding API
-  - Name: transfer:DeleteHostKey
-  - Name: transfer:DescribeHostKey
-  - Name: transfer:ImportHostKey
-  - Name: transfer:ListHostKeys
-  - Name: transfer:UpdateHostKey

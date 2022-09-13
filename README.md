@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 326
-* Unique actions: 13458
+* Unique actions: 13459
 * Managed policies: 974
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 533 | 0 | 9 |
+| [`ec2`](services/ec2.yml) | 533 | 1 | 9 |
 | [`sagemaker`](services/sagemaker.yml) | 267 | 10 | 5 |
 | [`chime`](services/chime.yml) | 216 | 1 | 50 |
 | [`glue`](services/glue.yml) | 180 | 4 | 2 |
@@ -91,13 +91,13 @@ The following table summarises the AWS APIs.
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
 | [`medialive`](services/medialive.yml) | 59 | 0 | 0 |
+| [`transfer`](services/transfer.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`securityhub`](services/securityhub.yml) | 56 | 0 | 12 |
 | [`events`](services/events.yml) | 56 | 0 | 1 |
 | [`kendra`](services/kendra.yml) | 55 | 5 | 0 |
 | [`dms`](services/dms.yml) | 54 | 11 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
-| [`transfer`](services/transfer.yml) | 53 | 0 | 5 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
 | [`organizations`](services/organizations.yml) | 52 | 0 | 0 |
 | [`geo`](services/geo.yml) | 52 | 0 | 0 |
