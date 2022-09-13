@@ -1,0 +1,73 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonCloudWatchEvidentlyServiceRolePolicy",
+  "CreateDate": "2022-09-13T17:25:36Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4LFONJYLB3",
+  "PolicyName": "AmazonCloudWatchEvidentlyServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2022-09-13T17:25:36Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "appconfig:StartDeployment",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/DeployedBy": "Evidently"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:appconfig:*:*:application/*",
+            "arn:aws:appconfig:*:*:deploymentstrategy/*"
+          ]
+        },
+        {
+          "Action": "appconfig:StartDeployment",
+          "Condition": {
+            "StringNotEquals": {
+              "aws:ResourceTag/Owner": "Evidently"
+            }
+          },
+          "Effect": "Deny",
+          "Resource": "arn:aws:appconfig:*:*:application/*/configurationprofile/*"
+        },
+        {
+          "Action": "appconfig:StopDeployment",
+          "Condition": {
+            "StringNotEquals": {
+              "aws:ResourceTag/DeployedBy": "Evidently"
+            }
+          },
+          "Effect": "Deny",
+          "Resource": "arn:aws:appconfig:*:*:application/*/environment/*/deployment/*"
+        },
+        {
+          "Action": "appconfig:TagResource",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/DeployedBy": "Evidently"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:appconfig:*:*:application/*/environment/*/deployment/*"
+        },
+        {
+          "Action": "appconfig:ListDeployments",
+          "Effect": "Allow",
+          "Resource": "arn:aws:appconfig:*:*:application/*"
+        },
+        {
+          "Action": "appconfig:StopDeployment",
+          "Effect": "Allow",
+          "Resource": "arn:aws:appconfig:*:*:application/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-09-13T17:25:36Z"
+}

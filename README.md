@@ -13,7 +13,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 326
 * Unique actions: 13458
-* Managed policies: 973
+* Managed policies: 974
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 274 |
 | `arn:aws:iam::aws:policy/Amazon*` | 255 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 203 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 204 |
 | `arn:aws:iam::aws:policy/service-role/*` | 149 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 85 |
@@ -156,6 +156,7 @@ The following table summarises the AWS APIs.
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`evidently`](services/evidently.yml) | 32 | 6 | 0 |
+| [`lookoutequipment`](services/lookoutequipment.yml) | 32 | 1 | 0 |
 | [`drs`](services/drs.yml) | 32 | 0 | 41 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 32 | 0 | 3 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
@@ -200,7 +201,6 @@ The following table summarises the AWS APIs.
 | [`detective`](services/detective.yml) | 24 | 0 | 5 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
-| [`lookoutequipment`](services/lookoutequipment.yml) | 23 | 10 | 0 |
 | [`timestream`](services/timestream.yml) | 23 | 1 | 3 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 23 | 0 | 1 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
@@ -370,7 +370,7 @@ Most common action prefixes:
 | `List` | 2062 |
 | `Get` | 1814 |
 | `Delete` | 1566 |
-| `Describe` | 1530 |
+| `Describe` | 1529 |
 | `Create` | 1463 |
 | `Update` | 1207 |
 | `Put` | 372 |
