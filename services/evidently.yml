@@ -4,20 +4,25 @@ Actions:
   - Name: evidently:CreateFeature
   - Name: evidently:CreateLaunch
   - Name: evidently:CreateProject
+  - Name: evidently:CreateSegment
   - Name: evidently:DeleteExperiment
   - Name: evidently:DeleteFeature
   - Name: evidently:DeleteLaunch
   - Name: evidently:DeleteProject
+  - Name: evidently:DeleteSegment
   - Name: evidently:EvaluateFeature
   - Name: evidently:GetExperiment
   - Name: evidently:GetExperimentResults
   - Name: evidently:GetFeature
   - Name: evidently:GetLaunch
   - Name: evidently:GetProject
+  - Name: evidently:GetSegment
   - Name: evidently:ListExperiments
   - Name: evidently:ListFeatures
   - Name: evidently:ListLaunches
   - Name: evidently:ListProjects
+  - Name: evidently:ListSegmentReferences
+  - Name: evidently:ListSegments
   - Name: evidently:ListTagsForResource
   - Name: evidently:PutProjectEvents
   - Name: evidently:StartExperiment
@@ -25,17 +30,10 @@ Actions:
   - Name: evidently:StopExperiment
   - Name: evidently:StopLaunch
   - Name: evidently:TagResource
+  - Name: evidently:TestSegmentPattern
   - Name: evidently:UntagResource
   - Name: evidently:UpdateExperiment
   - Name: evidently:UpdateFeature
   - Name: evidently:UpdateLaunch
   - Name: evidently:UpdateProject
   - Name: evidently:UpdateProjectDataDelivery
-
-  # APIs without an IAM action
-  - Name: evidently:CreateSegment
-  - Name: evidently:DeleteSegment
-  - Name: evidently:GetSegment
-  - Name: evidently:ListSegmentReferences
-  - Name: evidently:ListSegments
-  - Name: evidently:TestSegmentPattern

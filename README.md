@@ -132,6 +132,7 @@ The following table summarises the AWS APIs.
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`profile`](services/profile.yml) | 38 | 0 | 0 |
+| [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 0 |
 | [`sso`](services/sso.yml) | 37 | 0 | 52 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
@@ -155,7 +156,6 @@ The following table summarises the AWS APIs.
 | [`gamesparks`](services/gamesparks.yml) | 33 | 0 | 1 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
-| [`evidently`](services/evidently.yml) | 32 | 6 | 0 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 32 | 1 | 0 |
 | [`drs`](services/drs.yml) | 32 | 0 | 41 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 32 | 0 | 3 |
