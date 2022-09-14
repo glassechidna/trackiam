@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 326
-* Unique actions: 13459
+* Unique actions: 13475
 * Managed policies: 974
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 533 | 1 | 9 |
+| [`ec2`](services/ec2.yml) | 533 | 9 | 9 |
 | [`sagemaker`](services/sagemaker.yml) | 267 | 10 | 5 |
 | [`chime`](services/chime.yml) | 216 | 1 | 50 |
 | [`glue`](services/glue.yml) | 180 | 4 | 2 |
@@ -243,9 +243,9 @@ The following table summarises the AWS APIs.
 | [`translate`](services/translate.yml) | 15 | 0 | 0 |
 | [`emr-containers`](services/emr-containers.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
+| [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 14 | 8 | 3 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
-| [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 14 | 0 | 0 |
 | [`emr-serverless`](services/emr-serverless.yml) | 14 | 0 | 0 |
@@ -367,13 +367,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2062 |
-| `Get` | 1814 |
-| `Delete` | 1566 |
+| `List` | 2063 |
+| `Get` | 1816 |
+| `Delete` | 1571 |
 | `Describe` | 1529 |
-| `Create` | 1463 |
-| `Update` | 1207 |
-| `Put` | 372 |
+| `Create` | 1468 |
+| `Update` | 1208 |
+| `Put` | 373 |
 | `Start` | 261 |
 | `Tag` | 208 |
 | `Untag` | 206 |
