@@ -16,6 +16,8 @@ Actions:
   - Name: sagemaker:CreateDataQualityJobDefinition
   - Name: sagemaker:CreateDeviceFleet
   - Name: sagemaker:CreateDomain
+  - Name: sagemaker:CreateEdgeDeploymentPlan
+  - Name: sagemaker:CreateEdgeDeploymentStage
   - Name: sagemaker:CreateEdgePackagingJob
   - Name: sagemaker:CreateEndpoint
   - Name: sagemaker:CreateEndpointConfig
@@ -61,6 +63,8 @@ Actions:
   - Name: sagemaker:DeleteDataQualityJobDefinition
   - Name: sagemaker:DeleteDeviceFleet
   - Name: sagemaker:DeleteDomain
+  - Name: sagemaker:DeleteEdgeDeploymentPlan
+  - Name: sagemaker:DeleteEdgeDeploymentStage
   - Name: sagemaker:DeleteEndpoint
   - Name: sagemaker:DeleteEndpointConfig
   - Name: sagemaker:DeleteExperiment
@@ -104,6 +108,7 @@ Actions:
   - Name: sagemaker:DescribeDevice
   - Name: sagemaker:DescribeDeviceFleet
   - Name: sagemaker:DescribeDomain
+  - Name: sagemaker:DescribeEdgeDeploymentPlan
   - Name: sagemaker:DescribeEdgePackagingJob
   - Name: sagemaker:DescribeEndpoint
   - Name: sagemaker:DescribeEndpointConfig
@@ -169,6 +174,7 @@ Actions:
   - Name: sagemaker:ListDeviceFleets
   - Name: sagemaker:ListDevices
   - Name: sagemaker:ListDomains
+  - Name: sagemaker:ListEdgeDeploymentPlans
   - Name: sagemaker:ListEdgePackagingJobs
   - Name: sagemaker:ListEndpointConfigs
   - Name: sagemaker:ListEndpoints
@@ -201,6 +207,7 @@ Actions:
   - Name: sagemaker:ListPipelines
   - Name: sagemaker:ListProcessingJobs
   - Name: sagemaker:ListProjects
+  - Name: sagemaker:ListStageDevices
   - Name: sagemaker:ListStudioLifecycleConfigs
   - Name: sagemaker:ListSubscribedWorkteams
   - Name: sagemaker:ListTags
@@ -222,12 +229,14 @@ Actions:
   - Name: sagemaker:SendHeartbeat
   - Name: sagemaker:SendPipelineExecutionStepFailure
   - Name: sagemaker:SendPipelineExecutionStepSuccess
+  - Name: sagemaker:StartEdgeDeploymentStage
   - Name: sagemaker:StartHumanLoop
   - Name: sagemaker:StartMonitoringSchedule
   - Name: sagemaker:StartNotebookInstance
   - Name: sagemaker:StartPipelineExecution
   - Name: sagemaker:StopAutoMLJob
   - Name: sagemaker:StopCompilationJob
+  - Name: sagemaker:StopEdgeDeploymentStage
   - Name: sagemaker:StopEdgePackagingJob
   - Name: sagemaker:StopHumanLoop
   - Name: sagemaker:StopHyperParameterTuningJob
@@ -275,13 +284,4 @@ Actions:
   - Name: sagemaker:PutLineageGroupPolicy
 
   # APIs without an IAM action
-  - Name: sagemaker:CreateEdgeDeploymentPlan
-  - Name: sagemaker:CreateEdgeDeploymentStage
-  - Name: sagemaker:DeleteEdgeDeploymentPlan
-  - Name: sagemaker:DeleteEdgeDeploymentStage
-  - Name: sagemaker:DescribeEdgeDeploymentPlan
   - Name: sagemaker:GetDeployments
-  - Name: sagemaker:ListEdgeDeploymentPlans
-  - Name: sagemaker:ListStageDevices
-  - Name: sagemaker:StartEdgeDeploymentStage
-  - Name: sagemaker:StopEdgeDeploymentStage
