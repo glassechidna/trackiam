@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 326
-* Unique actions: 13480
+* Unique actions: 13481
 * Managed policies: 974
 
 Most common managed policy name prefixes:
@@ -312,7 +312,7 @@ The following table summarises the AWS APIs.
 | [`iotroborunner`](services/iotroborunner.yml) | 0 | 0 | 49 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 0 | 0 | 43 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
-| [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 31 |
+| [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 32 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 0 | 0 | 31 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 29 |
 | [`cases`](services/cases.yml) | 0 | 0 | 27 |
