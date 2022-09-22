@@ -1,18 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonFSxConsoleReadOnlyAccess",
   "CreateDate": "2018-11-28T16:35:24Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJQUISIZNHGLA6YQFM",
   "PolicyName": "AmazonFSxConsoleReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-06-08T12:21:09Z",
+    "CreateDate": "2022-09-22T14:07:26Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "cloudwatch:DescribeAlarms",
+            "cloudwatch:GetMetricData",
             "ds:DescribeDirectories",
             "ec2:DescribeNetworkInterfaceAttribute",
             "ec2:DescribeSecurityGroups",
@@ -31,7 +32,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2021-06-08T12:21:09Z"
+  "UpdateDate": "2022-09-22T14:07:26Z"
 }
