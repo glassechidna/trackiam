@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 326
-* Unique actions: 13494
+* Unique services: 327
+* Unique actions: 13497
 * Managed policies: 976
 
 Most common managed policy name prefixes:
@@ -344,6 +344,7 @@ The following table summarises the AWS APIs.
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
 | [`artifact`](services/artifact.yml) | 0 | 0 | 4 |
+| [`supportplans`](services/supportplans.yml) | 0 | 0 | 3 |
 | [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 3 |
 | [`resource-explorer`](services/resource-explorer.yml) | 0 | 0 | 3 |
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |
@@ -368,13 +369,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2066 |
-| `Get` | 1820 |
+| `Get` | 1822 |
 | `Delete` | 1571 |
 | `Describe` | 1529 |
 | `Create` | 1468 |
 | `Update` | 1210 |
 | `Put` | 374 |
-| `Start` | 262 |
+| `Start` | 263 |
 | `Tag` | 209 |
 | `Untag` | 207 |
 
