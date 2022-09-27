@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 327
-* Unique actions: 13497
-* Managed policies: 976
+* Unique actions: 13498
+* Managed policies: 978
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 274 |
+| `arn:aws:iam::aws:policy/AWS*` | 276 |
 | `arn:aws:iam::aws:policy/Amazon*` | 255 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 206 |
 | `arn:aws:iam::aws:policy/service-role/*` | 149 |
@@ -98,9 +98,9 @@ The following table summarises the AWS APIs.
 | [`dms`](services/dms.yml) | 55 | 10 | 0 |
 | [`kendra`](services/kendra.yml) | 55 | 5 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
+| [`geo`](services/geo.yml) | 52 | 1 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
 | [`organizations`](services/organizations.yml) | 52 | 0 | 0 |
-| [`geo`](services/geo.yml) | 52 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 51 | 6 | 12 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 26 |
 | [`appsync`](services/appsync.yml) | 50 | 0 | 2 |
@@ -369,7 +369,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2066 |
-| `Get` | 1822 |
+| `Get` | 1823 |
 | `Delete` | 1571 |
 | `Describe` | 1529 |
 | `Create` | 1468 |
