@@ -162,13 +162,13 @@ The following table summarises the AWS APIs.
 | [`kinesisvideo`](services/kinesisvideo.yml) | 32 | 0 | 3 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`m2`](services/m2.yml) | 32 | 0 | 0 |
+| [`inspector2`](services/inspector2.yml) | 32 | 0 | 0 |
 | [`wisdom`](services/wisdom.yml) | 31 | 1 | 0 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 31 | 0 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
-| [`inspector2`](services/inspector2.yml) | 30 | 2 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
 | [`apprunner`](services/apprunner.yml) | 30 | 0 | 1 |
 | [`route53domains`](services/route53domains.yml) | 30 | 0 | 0 |
