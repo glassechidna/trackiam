@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 327
-* Unique actions: 13498
+* Unique actions: 13506
 * Managed policies: 978
 
 Most common managed policy name prefixes:
@@ -135,9 +135,9 @@ The following table summarises the AWS APIs.
 | [`profile`](services/profile.yml) | 38 | 0 | 0 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 0 |
+| [`fsx`](services/fsx.yml) | 37 | 4 | 4 |
 | [`sso`](services/sso.yml) | 37 | 0 | 52 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
-| [`fsx`](services/fsx.yml) | 37 | 0 | 4 |
 | [`athena`](services/athena.yml) | 37 | 0 | 1 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 37 | 0 | 0 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
@@ -181,6 +181,7 @@ The following table summarises the AWS APIs.
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
+| [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 28 | 0 | 3 |
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 28 | 0 | 0 |
@@ -239,17 +240,17 @@ The following table summarises the AWS APIs.
 | [`fis`](services/fis.yml) | 16 | 0 | 3 |
 | [`resource-groups`](services/resource-groups.yml) | 16 | 0 | 1 |
 | [`grafana`](services/grafana.yml) | 16 | 0 | 0 |
+| [`translate`](services/translate.yml) | 15 | 3 | 0 |
 | [`honeycode`](services/honeycode.yml) | 15 | 0 | 15 |
 | [`app-integrations`](services/app-integrations.yml) | 15 | 0 | 4 |
-| [`translate`](services/translate.yml) | 15 | 0 | 0 |
 | [`emr-containers`](services/emr-containers.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 14 | 8 | 3 |
+| [`emr-serverless`](services/emr-serverless.yml) | 14 | 1 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 14 | 0 | 0 |
-| [`emr-serverless`](services/emr-serverless.yml) | 14 | 0 | 0 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 16 |
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 7 |
 | [`snow-device-management`](services/snow-device-management.yml) | 13 | 0 | 0 |
@@ -313,7 +314,6 @@ The following table summarises the AWS APIs.
 | [`iotroborunner`](services/iotroborunner.yml) | 0 | 0 | 49 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 32 |
-| [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 0 | 0 | 31 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 29 |
 | [`cases`](services/cases.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
@@ -368,14 +368,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2066 |
-| `Get` | 1823 |
-| `Delete` | 1571 |
-| `Describe` | 1529 |
-| `Create` | 1468 |
-| `Update` | 1210 |
+| `List` | 2067 |
+| `Get` | 1824 |
+| `Delete` | 1572 |
+| `Describe` | 1530 |
+| `Create` | 1469 |
+| `Update` | 1211 |
 | `Put` | 374 |
 | `Start` | 263 |
-| `Tag` | 209 |
-| `Untag` | 207 |
+| `Tag` | 210 |
+| `Untag` | 208 |
 
