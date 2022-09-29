@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 327
-* Unique actions: 13506
+* Unique actions: 13508
 * Managed policies: 978
 
 Most common managed policy name prefixes:
@@ -124,6 +124,7 @@ The following table summarises the AWS APIs.
 | [`mediatailor`](services/mediatailor.yml) | 42 | 0 | 0 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 11 |
+| [`fsx`](services/fsx.yml) | 41 | 0 | 4 |
 | [`transcribe`](services/transcribe.yml) | 41 | 0 | 2 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
 | [`wellarchitected`](services/wellarchitected.yml) | 40 | 0 | 0 |
@@ -135,7 +136,6 @@ The following table summarises the AWS APIs.
 | [`profile`](services/profile.yml) | 38 | 0 | 0 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 0 |
-| [`fsx`](services/fsx.yml) | 37 | 4 | 4 |
 | [`sso`](services/sso.yml) | 37 | 0 | 52 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`athena`](services/athena.yml) | 37 | 0 | 1 |
@@ -315,7 +315,7 @@ The following table summarises the AWS APIs.
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 32 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 29 |
-| [`cases`](services/cases.yml) | 0 | 0 | 27 |
+| [`cases`](services/cases.yml) | 0 | 0 | 29 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
@@ -368,7 +368,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2067 |
+| `List` | 2069 |
 | `Get` | 1824 |
 | `Delete` | 1572 |
 | `Describe` | 1530 |

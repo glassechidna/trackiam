@@ -5,6 +5,7 @@ Actions:
   - Name: fsx:CreateBackup
   - Name: fsx:CreateDataRepositoryAssociation
   - Name: fsx:CreateDataRepositoryTask
+  - Name: fsx:CreateFileCache
   - Name: fsx:CreateFileSystem
   - Name: fsx:CreateFileSystemFromBackup
   - Name: fsx:CreateSnapshot
@@ -13,6 +14,7 @@ Actions:
   - Name: fsx:CreateVolumeFromBackup
   - Name: fsx:DeleteBackup
   - Name: fsx:DeleteDataRepositoryAssociation
+  - Name: fsx:DeleteFileCache
   - Name: fsx:DeleteFileSystem
   - Name: fsx:DeleteSnapshot
   - Name: fsx:DeleteStorageVirtualMachine
@@ -20,6 +22,7 @@ Actions:
   - Name: fsx:DescribeBackups
   - Name: fsx:DescribeDataRepositoryAssociations
   - Name: fsx:DescribeDataRepositoryTasks
+  - Name: fsx:DescribeFileCaches
   - Name: fsx:DescribeFileSystemAliases
   - Name: fsx:DescribeFileSystems
   - Name: fsx:DescribeSnapshots
@@ -32,6 +35,7 @@ Actions:
   - Name: fsx:TagResource
   - Name: fsx:UntagResource
   - Name: fsx:UpdateDataRepositoryAssociation
+  - Name: fsx:UpdateFileCache
   - Name: fsx:UpdateFileSystem
   - Name: fsx:UpdateSnapshot
   - Name: fsx:UpdateStorageVirtualMachine
@@ -42,9 +46,3 @@ Actions:
   - Name: fsx:DescribeAssociatedFileGateways
   - Name: fsx:DisassociateFileGateway
   - Name: fsx:ManageBackupPrincipalAssociations
-
-  # APIs without an IAM action
-  - Name: fsx:CreateFileCache
-  - Name: fsx:DeleteFileCache
-  - Name: fsx:DescribeFileCaches
-  - Name: fsx:UpdateFileCache
