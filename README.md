@@ -243,10 +243,10 @@ The following table summarises the AWS APIs.
 | [`translate`](services/translate.yml) | 15 | 3 | 0 |
 | [`honeycode`](services/honeycode.yml) | 15 | 0 | 15 |
 | [`app-integrations`](services/app-integrations.yml) | 15 | 0 | 4 |
+| [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 0 |
 | [`emr-containers`](services/emr-containers.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 14 | 8 | 3 |
-| [`emr-serverless`](services/emr-serverless.yml) | 14 | 1 | 0 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
