@@ -1,0 +1,79 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AppIntegrationsServiceLinkedRolePolicy",
+  "CreateDate": "2022-09-30T19:42:56Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4GMGEUNFL5",
+  "PolicyName": "AppIntegrationsServiceLinkedRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2022-09-30T19:42:56Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "appflow:DeleteFlow",
+            "appflow:DescribeFlow",
+            "appflow:DescribeFlowExecutionRecords",
+            "appflow:StartFlow",
+            "appflow:StopFlow",
+            "appflow:UpdateFlow"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AppIntegrationsManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:appflow:*:*:flow/FlowCreatedByAppIntegrations-*"
+        },
+        {
+          "Action": [
+            "appflow:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "AppIntegrationsManaged"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:appflow:*:*:flow/FlowCreatedByAppIntegrations-*"
+        },
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/AppIntegrations"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "appflow:DescribeConnectorEntity",
+            "appflow:ListConnectorEntities"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "appflow:DescribeConnectorProfiles",
+            "appflow:UseConnectorProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:appflow:*:*:connector-profile/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-09-30T19:42:56Z"
+}
