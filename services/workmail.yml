@@ -3,6 +3,7 @@ Actions:
   - Name: workmail:AssociateMemberToGroup
   - Name: workmail:CancelMailboxExportJob
   - Name: workmail:CreateAlias
+  - Name: workmail:CreateAvailabilityConfiguration
   - Name: workmail:CreateGroup
   - Name: workmail:CreateMobileDeviceAccessRule
   - Name: workmail:CreateOrganization
@@ -10,6 +11,7 @@ Actions:
   - Name: workmail:CreateUser
   - Name: workmail:DeleteAccessControlRule
   - Name: workmail:DeleteAlias
+  - Name: workmail:DeleteAvailabilityConfiguration
   - Name: workmail:DeleteEmailMonitoringConfiguration
   - Name: workmail:DeleteGroup
   - Name: workmail:DeleteMailboxPermissions
@@ -38,6 +40,7 @@ Actions:
   - Name: workmail:GetMobileDeviceAccessOverride
   - Name: workmail:ListAccessControlRules
   - Name: workmail:ListAliases
+  - Name: workmail:ListAvailabilityConfigurations
   - Name: workmail:ListGroupMembers
   - Name: workmail:ListGroups
   - Name: workmail:ListMailDomains
@@ -61,7 +64,9 @@ Actions:
   - Name: workmail:ResetPassword
   - Name: workmail:StartMailboxExportJob
   - Name: workmail:TagResource
+  - Name: workmail:TestAvailabilityConfiguration
   - Name: workmail:UntagResource
+  - Name: workmail:UpdateAvailabilityConfiguration
   - Name: workmail:UpdateDefaultMailDomain
   - Name: workmail:UpdateMailboxQuota
   - Name: workmail:UpdateMobileDeviceAccessRule
@@ -120,10 +125,3 @@ Actions:
   - Name: workmail:UpdateOutboundMailFlowRule
   - Name: workmail:UpdateSmtpGateway
   - Name: workmail:WipeMobileDevice
-
-  # APIs without an IAM action
-  - Name: workmail:CreateAvailabilityConfiguration
-  - Name: workmail:DeleteAvailabilityConfiguration
-  - Name: workmail:ListAvailabilityConfigurations
-  - Name: workmail:TestAvailabilityConfiguration
-  - Name: workmail:UpdateAvailabilityConfiguration
