@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v91",
+  "DefaultVersionId": "v92",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-08-24T20:17:43Z",
+    "CreateDate": "2022-10-04T21:21:06Z",
     "Document": {
       "Statement": [
         {
@@ -940,6 +940,8 @@
             "macie2:GetInvitationsCount",
             "macie2:GetMacieSession",
             "macie2:GetMember",
+            "macie2:GetRevealConfiguration",
+            "macie2:GetSensitiveDataOccurrencesAvailability",
             "macie2:GetUsageStatistics",
             "macie2:GetUsageTotals",
             "macie2:ListClassificationJobs",
@@ -1048,6 +1050,7 @@
             "networkmanager:GetConnectPeerAssociations",
             "networkmanager:GetConnections",
             "networkmanager:GetCoreNetwork",
+            "networkmanager:GetCoreNetworkChangeEvents",
             "networkmanager:GetCoreNetworkChangeSet",
             "networkmanager:GetCoreNetworkPolicy",
             "networkmanager:GetCustomerGatewayAssociations",
@@ -1064,12 +1067,15 @@
             "networkmanager:GetSiteToSiteVpnAttachment",
             "networkmanager:GetSites",
             "networkmanager:GetTransitGatewayConnectPeerAssociations",
+            "networkmanager:GetTransitGatewayPeering",
             "networkmanager:GetTransitGatewayRegistrations",
+            "networkmanager:GetTransitGatewayRouteTableAttachment",
             "networkmanager:GetVpcAttachment",
             "networkmanager:ListAttachments",
             "networkmanager:ListConnectPeers",
             "networkmanager:ListCoreNetworkPolicyVersions",
             "networkmanager:ListCoreNetworks",
+            "networkmanager:ListPeerings",
             "networkmanager:ListTagsForResource",
             "nimble:GetEula",
             "nimble:GetFeatureMap",
@@ -1223,6 +1229,10 @@
             "s3:DescribeJob",
             "s3:Get*",
             "s3:List*",
+            "sagemaker-groundtruth-synthetic:GetBatch",
+            "sagemaker-groundtruth-synthetic:GetProject",
+            "sagemaker-groundtruth-synthetic:ListBatchSummaries",
+            "sagemaker-groundtruth-synthetic:ListProjectSummaries",
             "sagemaker:Describe*",
             "sagemaker:GetSearchSuggestions",
             "sagemaker:List*",
@@ -1378,8 +1388,6 @@
             "workdocs:CheckAlias",
             "workdocs:Describe*",
             "workdocs:Get*",
-            "worklink:Describe*",
-            "worklink:List*",
             "workmail:Describe*",
             "workmail:Get*",
             "workmail:List*",
@@ -1395,7 +1403,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v91"
+    "VersionId": "v92"
   },
-  "UpdateDate": "2022-08-24T20:17:43Z"
+  "UpdateDate": "2022-10-04T21:21:06Z"
 }
