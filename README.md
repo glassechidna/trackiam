@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 327
-* Unique actions: 13508
+* Unique actions: 13515
 * Managed policies: 978
 
 Most common managed policy name prefixes:
@@ -67,7 +67,7 @@ The following table summarises the AWS APIs.
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`proton`](services/proton.yml) | 75 | 0 | 23 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
-| [`workmail`](services/workmail.yml) | 73 | 0 | 51 |
+| [`workmail`](services/workmail.yml) | 73 | 7 | 51 |
 | [`comprehend`](services/comprehend.yml) | 73 | 0 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 71 | 0 | 1 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
@@ -180,6 +180,7 @@ The following table summarises the AWS APIs.
 | [`dataexchange`](services/dataexchange.yml) | 29 | 0 | 2 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 29 | 0 | 0 |
+| [`cases`](services/cases.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 28 | 0 | 3 |
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
@@ -315,7 +316,6 @@ The following table summarises the AWS APIs.
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 32 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 29 |
-| [`cases`](services/cases.yml) | 0 | 0 | 29 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
@@ -368,12 +368,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2069 |
-| `Get` | 1824 |
-| `Delete` | 1572 |
+| `List` | 2070 |
+| `Get` | 1826 |
+| `Delete` | 1573 |
 | `Describe` | 1530 |
-| `Create` | 1469 |
-| `Update` | 1211 |
+| `Create` | 1470 |
+| `Update` | 1212 |
 | `Put` | 374 |
 | `Start` | 263 |
 | `Tag` | 210 |
