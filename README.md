@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 327
-* Unique actions: 13515
+* Unique actions: 13516
 * Managed policies: 978
 
 Most common managed policy name prefixes:
@@ -335,11 +335,11 @@ The following table summarises the AWS APIs.
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 7 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
+| [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 5 |
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 5 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 5 |
-| [`tiros`](services/tiros.yml) | 0 | 0 | 4 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
@@ -369,7 +369,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2070 |
-| `Get` | 1826 |
+| `Get` | 1827 |
 | `Delete` | 1573 |
 | `Describe` | 1530 |
 | `Create` | 1470 |
