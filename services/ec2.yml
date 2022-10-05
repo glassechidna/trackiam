@@ -52,6 +52,8 @@ Actions:
   - Name: ec2:CreateCarrierGateway
   - Name: ec2:CreateClientVpnEndpoint
   - Name: ec2:CreateClientVpnRoute
+  - Name: ec2:CreateCoipCidr
+  - Name: ec2:CreateCoipPool
   - Name: ec2:CreateCustomerGateway
   - Name: ec2:CreateDefaultSubnet
   - Name: ec2:CreateDefaultVpc
@@ -71,6 +73,8 @@ Actions:
   - Name: ec2:CreateLaunchTemplate
   - Name: ec2:CreateLaunchTemplateVersion
   - Name: ec2:CreateLocalGatewayRoute
+  - Name: ec2:CreateLocalGatewayRouteTable
+  - Name: ec2:CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation
   - Name: ec2:CreateLocalGatewayRouteTableVpcAssociation
   - Name: ec2:CreateManagedPrefixList
   - Name: ec2:CreateNatGateway
@@ -122,6 +126,8 @@ Actions:
   - Name: ec2:DeleteCarrierGateway
   - Name: ec2:DeleteClientVpnEndpoint
   - Name: ec2:DeleteClientVpnRoute
+  - Name: ec2:DeleteCoipCidr
+  - Name: ec2:DeleteCoipPool
   - Name: ec2:DeleteCustomerGateway
   - Name: ec2:DeleteDhcpOptions
   - Name: ec2:DeleteEgressOnlyInternetGateway
@@ -137,6 +143,8 @@ Actions:
   - Name: ec2:DeleteLaunchTemplate
   - Name: ec2:DeleteLaunchTemplateVersions
   - Name: ec2:DeleteLocalGatewayRoute
+  - Name: ec2:DeleteLocalGatewayRouteTable
+  - Name: ec2:DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation
   - Name: ec2:DeleteLocalGatewayRouteTableVpcAssociation
   - Name: ec2:DeleteManagedPrefixList
   - Name: ec2:DeleteNatGateway
@@ -544,13 +552,3 @@ Actions:
   - Name: ec2:GetResourcePolicy
   - Name: ec2:PutResourcePolicy
   - Name: ec2:SendSpotInstanceInterruptions
-
-  # APIs without an IAM action
-  - Name: ec2:CreateCoipCidr
-  - Name: ec2:CreateCoipPool
-  - Name: ec2:CreateLocalGatewayRouteTable
-  - Name: ec2:CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation
-  - Name: ec2:DeleteCoipCidr
-  - Name: ec2:DeleteCoipPool
-  - Name: ec2:DeleteLocalGatewayRouteTable
-  - Name: ec2:DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation
