@@ -226,11 +226,11 @@ The following table summarises the AWS APIs.
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 20 | 0 | 8 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
+| [`backup-gateway`](services/backup-gateway.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 19 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 19 | 0 | 0 |
 | [`identitystore`](services/identitystore.yml) | 19 | 0 | 0 |
-| [`backup-gateway`](services/backup-gateway.yml) | 18 | 1 | 2 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 18 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 17 | 3 | 0 |
