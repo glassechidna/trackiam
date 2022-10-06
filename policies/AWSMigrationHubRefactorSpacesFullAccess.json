@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMigrationHubRefactorSpacesFullAccess",
   "CreateDate": "2021-11-29T07:12:55Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4OQKCEGRMK",
   "PolicyName": "AWSMigrationHubRefactorSpacesFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-03-21T17:41:49Z",
+    "CreateDate": "2022-10-06T19:05:50Z",
     "Document": {
       "Statement": [
         {
@@ -127,6 +127,19 @@
         {
           "Action": [
             "elasticloadbalancing:AddTags",
+            "elasticloadbalancing:CreateLoadBalancer"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/refactor-spaces:application-id": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:elasticloadbalancing:*:*:loadbalancer/net/refactor-spaces-nlb-*"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:AddTags",
             "elasticloadbalancing:CreateTargetGroup"
           ],
           "Condition": {
@@ -150,18 +163,6 @@
               "aws:ResourceTag/refactor-spaces:route-id": [
                 "*"
               ]
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
-            "elasticloadbalancing:CreateLoadBalancer"
-          ],
-          "Condition": {
-            "Null": {
-              "aws:RequestTag/refactor-spaces:application-id": "false"
             }
           },
           "Effect": "Allow",
@@ -210,7 +211,6 @@
             "ec2:DescribeTags",
             "ec2:DescribeTransitGatewayVpcAttachments",
             "ec2:DescribeTransitGateways",
-            "ec2:DescribeTransitGateways",
             "ec2:DescribeVpcEndpointServiceConfigurations",
             "ec2:DescribeVpcs"
           ],
@@ -255,7 +255,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2022-03-21T17:41:49Z"
+  "UpdateDate": "2022-10-06T19:05:50Z"
 }
