@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForRestores",
   "CreateDate": "2019-01-12T00:23:54Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJZCCL6F2WPVOUXZKI",
   "PolicyName": "AWSBackupServiceRolePolicyForRestores",
   "PolicyVersion": {
-    "CreateDate": "2022-07-19T23:22:51Z",
+    "CreateDate": "2022-10-12T22:12:43Z",
     "Document": {
       "Statement": [
         {
@@ -20,7 +20,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*::snapshot/*"
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*::snapshot/*"
+          ]
         },
         {
           "Action": "kms:CreateGrant",
@@ -102,7 +105,8 @@
                 "dynamodb.*.amazonaws.com",
                 "ec2.*.amazonaws.com",
                 "elasticfilesystem.*.amazonaws.com",
-                "rds.*.amazonaws.com"
+                "rds.*.amazonaws.com",
+                "redshift.*.amazonaws.com"
               ]
             }
           },
@@ -123,6 +127,14 @@
           "Action": "kms:DescribeKey",
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudformation:CreateChangeSet",
+            "cloudformation:DescribeChangeSet"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/*/*"
         },
         {
           "Action": [
@@ -164,6 +176,19 @@
             "arn:aws:ec2:*:*:volume/*",
             "arn:aws:ec2:*::snapshot/*"
           ]
+        },
+        {
+          "Action": [
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAddresses",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": [
@@ -259,6 +284,33 @@
         },
         {
           "Action": [
+            "redshift:DescribeClusters"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift:*:*:cluster:*"
+          ]
+        },
+        {
+          "Action": [
+            "redshift:DescribeTableRestoreStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "redshift:RestoreFromClusterSnapshot",
+            "redshift:RestoreTableFromClusterSnapshot"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift:*:*:cluster:*",
+            "arn:aws:redshift:*:*:snapshot:*/*"
+          ]
+        },
+        {
+          "Action": [
             "storagegateway:CreateCachediSCSIVolume",
             "storagegateway:CreateStorediSCSIVolume",
             "storagegateway:DescribeGatewayInformation"
@@ -302,7 +354,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2022-07-19T23:22:51Z"
+  "UpdateDate": "2022-10-12T22:12:43Z"
 }

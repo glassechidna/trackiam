@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
   "CreateDate": "2019-01-10T21:01:28Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIOOYZSLZZXWFJJ5N2",
   "PolicyName": "AWSBackupServiceRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2022-05-17T17:31:44Z",
+    "CreateDate": "2022-10-12T22:14:45Z",
     "Document": {
       "Statement": [
         {
@@ -126,6 +126,15 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:backup:*:*:backup-vault:*"
+        },
+        {
+          "Action": [
+            "cloudformation:DescribeStacks",
+            "cloudformation:GetTemplate",
+            "cloudformation:ListStackResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/*/*"
         },
         {
           "Action": [
@@ -273,6 +282,45 @@
         },
         {
           "Action": [
+            "redshift:CreateClusterSnapshot",
+            "redshift:DescribeClusterSnapshots",
+            "redshift:DescribeTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift:*:*:cluster:*",
+            "arn:aws:redshift:*:*:snapshot:*/*"
+          ]
+        },
+        {
+          "Action": [
+            "redshift:CreateTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift:*:*:snapshot:*/*"
+          ]
+        },
+        {
+          "Action": [
+            "redshift:DeleteClusterSnapshot"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift:*:*:snapshot:*/*"
+          ]
+        },
+        {
+          "Action": [
+            "redshift:DescribeClusters"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift:*:*:cluster:*"
+          ]
+        },
+        {
+          "Action": [
             "ssm:CancelCommand",
             "ssm:GetCommandInvocation"
           ],
@@ -316,7 +364,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2022-05-17T17:31:44Z"
+  "UpdateDate": "2022-10-12T22:14:45Z"
 }
