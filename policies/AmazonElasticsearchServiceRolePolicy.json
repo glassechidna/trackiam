@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonElasticsearchServiceRolePolicy",
   "CreateDate": "2017-07-07T00:15:31Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJFEWZPHXKLCVHEUIC",
   "PolicyName": "AmazonElasticsearchServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-09-12T15:01:51Z",
+    "CreateDate": "2022-10-13T13:45:16Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,44 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "Stmt1480452973136"
+        },
+        {
+          "Action": "ec2:CreateVpcEndpoint",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/OpenSearchManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-endpoint/*",
+          "Sid": "Stmt1480452973199"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": "CreateVpcEndpoint"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-endpoint/*",
+          "Sid": "Stmt1480452973202"
+        },
+        {
+          "Action": [
+            "ec2:DeleteVpcEndpoints",
+            "ec2:ModifyVpcEndpoint"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/OpenSearchManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-endpoint/*",
+          "Sid": "Stmt1480452973200"
         },
         {
           "Action": [
@@ -44,12 +82,34 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "Stmt1480452973134"
+        },
+        {
+          "Action": [
+            "ec2:CreateVpcEndpoint",
+            "ec2:ModifyVpcEndpoint"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:route-table/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ],
+          "Sid": "Stmt1480452973198"
+        },
+        {
+          "Action": [
+            "ec2:DescribeVpcEndpoints"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Stmt1480452973201"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2022-09-12T15:01:51Z"
+  "UpdateDate": "2022-10-13T13:45:16Z"
 }
