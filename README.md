@@ -232,6 +232,7 @@ The following table summarises the AWS APIs.
 | [`mediapackage`](services/mediapackage.yml) | 19 | 0 | 0 |
 | [`identitystore`](services/identitystore.yml) | 19 | 0 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
+| [`translate`](services/translate.yml) | 18 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 18 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 17 | 3 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
@@ -241,7 +242,6 @@ The following table summarises the AWS APIs.
 | [`fis`](services/fis.yml) | 16 | 0 | 3 |
 | [`resource-groups`](services/resource-groups.yml) | 16 | 0 | 1 |
 | [`grafana`](services/grafana.yml) | 16 | 0 | 0 |
-| [`translate`](services/translate.yml) | 15 | 3 | 0 |
 | [`honeycode`](services/honeycode.yml) | 15 | 0 | 15 |
 | [`app-integrations`](services/app-integrations.yml) | 15 | 0 | 4 |
 | [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 0 |
