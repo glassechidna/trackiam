@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 327
-* Unique actions: 13518
+* Unique actions: 13520
 * Managed policies: 977
 
 Most common managed policy name prefixes:
@@ -76,7 +76,7 @@ The following table summarises the AWS APIs.
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
 | [`macie2`](services/macie2.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
-| [`ds`](services/ds.yml) | 65 | 0 | 6 |
+| [`ds`](services/ds.yml) | 65 | 2 | 6 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
 | [`personalize`](services/personalize.yml) | 65 | 0 | 0 |
@@ -151,8 +151,8 @@ The following table summarises the AWS APIs.
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`eks`](services/eks.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
+| [`panorama`](services/panorama.yml) | 33 | 1 | 31 |
 | [`mgn`](services/mgn.yml) | 33 | 0 | 34 |
-| [`panorama`](services/panorama.yml) | 33 | 0 | 31 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`gamesparks`](services/gamesparks.yml) | 33 | 0 | 1 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
@@ -163,8 +163,8 @@ The following table summarises the AWS APIs.
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`m2`](services/m2.yml) | 32 | 0 | 0 |
 | [`inspector2`](services/inspector2.yml) | 32 | 0 | 0 |
-| [`wisdom`](services/wisdom.yml) | 31 | 1 | 0 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
+| [`wisdom`](services/wisdom.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 31 | 0 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 31 | 0 | 0 |
@@ -371,10 +371,10 @@ Most common action prefixes:
 | `List` | 2070 |
 | `Get` | 1827 |
 | `Delete` | 1573 |
-| `Describe` | 1530 |
+| `Describe` | 1531 |
 | `Create` | 1470 |
-| `Update` | 1214 |
-| `Put` | 374 |
+| `Update` | 1215 |
+| `Put` | 373 |
 | `Start` | 263 |
 | `Tag` | 210 |
 | `Untag` | 208 |
