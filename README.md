@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 327
-* Unique actions: 13523
+* Unique actions: 13529
 * Managed policies: 977
 
 Most common managed policy name prefixes:
@@ -54,9 +54,9 @@ The following table summarises the AWS APIs.
 | [`lex`](services/lex.yml) | 104 | 2 | 7 |
 | [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 4 |
 | [`iotwireless`](services/iotwireless.yml) | 98 | 0 | 1 |
+| [`cloudfront`](services/cloudfront.yml) | 97 | 1 | 7 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
-| [`cloudfront`](services/cloudfront.yml) | 91 | 7 | 1 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
 | [`config`](services/config.yml) | 86 | 3 | 0 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 0 |
@@ -368,12 +368,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2070 |
-| `Get` | 1827 |
+| `List` | 2073 |
+| `Get` | 1828 |
 | `Delete` | 1574 |
 | `Describe` | 1532 |
-| `Create` | 1470 |
-| `Update` | 1215 |
+| `Create` | 1471 |
+| `Update` | 1216 |
 | `Put` | 373 |
 | `Start` | 263 |
 | `Tag` | 210 |

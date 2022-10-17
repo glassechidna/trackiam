@@ -9,6 +9,7 @@ Actions:
   - Name: cloudfront:CreateInvalidation
   - Name: cloudfront:CreateKeyGroup
   - Name: cloudfront:CreateMonitoringSubscription
+  - Name: cloudfront:CreateOriginAccessControl
   - Name: cloudfront:CreateOriginRequestPolicy
   - Name: cloudfront:CreatePublicKey
   - Name: cloudfront:CreateRealtimeLogConfig
@@ -23,6 +24,7 @@ Actions:
   - Name: cloudfront:DeleteFunction
   - Name: cloudfront:DeleteKeyGroup
   - Name: cloudfront:DeleteMonitoringSubscription
+  - Name: cloudfront:DeleteOriginAccessControl
   - Name: cloudfront:DeleteOriginRequestPolicy
   - Name: cloudfront:DeletePublicKey
   - Name: cloudfront:DeleteRealtimeLogConfig
@@ -44,6 +46,8 @@ Actions:
   - Name: cloudfront:GetKeyGroup
   - Name: cloudfront:GetKeyGroupConfig
   - Name: cloudfront:GetMonitoringSubscription
+  - Name: cloudfront:GetOriginAccessControl
+  - Name: cloudfront:GetOriginAccessControlConfig
   - Name: cloudfront:GetOriginRequestPolicy
   - Name: cloudfront:GetOriginRequestPolicyConfig
   - Name: cloudfront:GetPublicKey
@@ -68,6 +72,7 @@ Actions:
   - Name: cloudfront:ListFunctions
   - Name: cloudfront:ListInvalidations
   - Name: cloudfront:ListKeyGroups
+  - Name: cloudfront:ListOriginAccessControls
   - Name: cloudfront:ListOriginRequestPolicies
   - Name: cloudfront:ListPublicKeys
   - Name: cloudfront:ListRealtimeLogConfigs
@@ -85,6 +90,7 @@ Actions:
   - Name: cloudfront:UpdateFieldLevelEncryptionProfile
   - Name: cloudfront:UpdateFunction
   - Name: cloudfront:UpdateKeyGroup
+  - Name: cloudfront:UpdateOriginAccessControl
   - Name: cloudfront:UpdateOriginRequestPolicy
   - Name: cloudfront:UpdatePublicKey
   - Name: cloudfront:UpdateRealtimeLogConfig
@@ -92,13 +98,13 @@ Actions:
   - Name: cloudfront:UpdateStreamingDistribution
 
   # actions with no corresponding API
+  - Name: cloudfront:CreateSavingsPlan
+  - Name: cloudfront:GetSavingsPlan
   - Name: cloudfront:ListDistributionsByLambdaFunction
+  - Name: cloudfront:ListRateCards
+  - Name: cloudfront:ListSavingsPlans
+  - Name: cloudfront:ListUsages
+  - Name: cloudfront:UpdateSavingsPlan
 
   # APIs without an IAM action
   - Name: cloudfront:CreateDistributionWithTags
-  - Name: cloudfront:CreateOriginAccessControl
-  - Name: cloudfront:DeleteOriginAccessControl
-  - Name: cloudfront:GetOriginAccessControl
-  - Name: cloudfront:GetOriginAccessControlConfig
-  - Name: cloudfront:ListOriginAccessControls
-  - Name: cloudfront:UpdateOriginAccessControl
