@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2ReadSharing",
   "CreateDate": "2021-09-24T14:22:21Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4G5PCICHSV",
   "PolicyName": "AmazonRedshiftQueryEditorV2ReadSharing",
   "PolicyVersion": {
-    "CreateDate": "2022-08-31T04:02:10Z",
+    "CreateDate": "2022-10-17T17:29:34Z",
     "Document": {
       "Statement": [
         {
@@ -75,17 +75,34 @@
             "sqlworkbench:AssociateConnectionWithChart",
             "sqlworkbench:AssociateConnectionWithTab",
             "sqlworkbench:AssociateQueryWithTab",
+            "sqlworkbench:BatchGetNotebookCell",
+            "sqlworkbench:CreateNotebookCell",
+            "sqlworkbench:CreateNotebookFromVersion",
+            "sqlworkbench:CreateNotebookVersion",
             "sqlworkbench:DeleteChart",
             "sqlworkbench:DeleteConnection",
+            "sqlworkbench:DeleteNotebook",
+            "sqlworkbench:DeleteNotebookCell",
+            "sqlworkbench:DeleteNotebookVersion",
             "sqlworkbench:DeleteSavedQuery",
+            "sqlworkbench:DuplicateNotebook",
+            "sqlworkbench:ExportNotebook",
             "sqlworkbench:GetChart",
             "sqlworkbench:GetConnection",
+            "sqlworkbench:GetNotebook",
+            "sqlworkbench:GetNotebookVersion",
             "sqlworkbench:GetSavedQuery",
+            "sqlworkbench:ImportNotebook",
+            "sqlworkbench:ListNotebookVersions",
             "sqlworkbench:ListSavedQueryVersions",
             "sqlworkbench:ListTagsForResource",
+            "sqlworkbench:RestoreNotebookVersion",
             "sqlworkbench:UpdateChart",
             "sqlworkbench:UpdateConnection",
             "sqlworkbench:UpdateFileFolder",
+            "sqlworkbench:UpdateNotebook",
+            "sqlworkbench:UpdateNotebookCellContent",
+            "sqlworkbench:UpdateNotebookCellLayout",
             "sqlworkbench:UpdateSavedQuery"
           ],
           "Condition": {
@@ -100,9 +117,16 @@
         {
           "Action": [
             "sqlworkbench:AssociateQueryWithTab",
+            "sqlworkbench:BatchGetNotebookCell",
+            "sqlworkbench:CreateNotebookFromVersion",
+            "sqlworkbench:DuplicateNotebook",
+            "sqlworkbench:ExportNotebook",
             "sqlworkbench:GetChart",
             "sqlworkbench:GetConnection",
+            "sqlworkbench:GetNotebook",
+            "sqlworkbench:GetNotebookVersion",
             "sqlworkbench:GetSavedQuery",
+            "sqlworkbench:ListNotebookVersions",
             "sqlworkbench:ListSavedQueryVersions",
             "sqlworkbench:ListTagsForResource"
           ],
@@ -119,7 +143,11 @@
           "Action": [
             "sqlworkbench:CreateChart",
             "sqlworkbench:CreateConnection",
-            "sqlworkbench:CreateSavedQuery"
+            "sqlworkbench:CreateNotebook",
+            "sqlworkbench:CreateNotebookFromVersion",
+            "sqlworkbench:CreateSavedQuery",
+            "sqlworkbench:DuplicateNotebook",
+            "sqlworkbench:ImportNotebook"
           ],
           "Condition": {
             "StringEquals": {
@@ -163,6 +191,7 @@
             "sqlworkbench:GetUserWorkspaceSettings",
             "sqlworkbench:ListConnections",
             "sqlworkbench:ListFiles",
+            "sqlworkbench:ListNotebooks",
             "sqlworkbench:ListQueryExecutionHistory",
             "sqlworkbench:ListRedshiftClusters",
             "sqlworkbench:ListTabs",
@@ -179,7 +208,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2022-08-31T04:02:10Z"
+  "UpdateDate": "2022-10-17T17:29:34Z"
 }
