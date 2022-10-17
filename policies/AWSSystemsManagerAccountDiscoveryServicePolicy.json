@@ -1,25 +1,27 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSystemsManagerAccountDiscoveryServicePolicy",
   "CreateDate": "2019-10-24T17:21:05Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4BPDSHIWK5",
   "PolicyName": "AWSSystemsManagerAccountDiscoveryServicePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-05-27T18:04:51Z",
+    "CreateDate": "2022-10-17T20:25:02Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "organizations:DescribeAccount",
             "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
             "organizations:ListAWSServiceAccessForOrganization",
             "organizations:ListAccounts",
             "organizations:ListChildren",
             "organizations:ListDelegatedAdministrators",
             "organizations:ListDelegatedServicesForAccount",
-            "organizations:ListParents"
+            "organizations:ListParents",
+            "organizations:ListRoots"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -28,7 +30,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-05-27T18:04:51Z"
+  "UpdateDate": "2022-10-17T20:25:02Z"
 }
