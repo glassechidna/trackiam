@@ -1,10 +1,12 @@
 Actions:
   - Name: workmail:AssociateDelegateToResource
   - Name: workmail:AssociateMemberToGroup
+  - Name: workmail:AssumeImpersonationRole
   - Name: workmail:CancelMailboxExportJob
   - Name: workmail:CreateAlias
   - Name: workmail:CreateAvailabilityConfiguration
   - Name: workmail:CreateGroup
+  - Name: workmail:CreateImpersonationRole
   - Name: workmail:CreateMobileDeviceAccessRule
   - Name: workmail:CreateOrganization
   - Name: workmail:CreateResource
@@ -14,6 +16,7 @@ Actions:
   - Name: workmail:DeleteAvailabilityConfiguration
   - Name: workmail:DeleteEmailMonitoringConfiguration
   - Name: workmail:DeleteGroup
+  - Name: workmail:DeleteImpersonationRole
   - Name: workmail:DeleteMailboxPermissions
   - Name: workmail:DeleteMobileDeviceAccessOverride
   - Name: workmail:DeleteMobileDeviceAccessRule
@@ -34,6 +37,8 @@ Actions:
   - Name: workmail:DisassociateMemberFromGroup
   - Name: workmail:GetAccessControlEffect
   - Name: workmail:GetDefaultRetentionPolicy
+  - Name: workmail:GetImpersonationRole
+  - Name: workmail:GetImpersonationRoleEffect
   - Name: workmail:GetMailDomain
   - Name: workmail:GetMailboxDetails
   - Name: workmail:GetMobileDeviceAccessEffect
@@ -43,6 +48,7 @@ Actions:
   - Name: workmail:ListAvailabilityConfigurations
   - Name: workmail:ListGroupMembers
   - Name: workmail:ListGroups
+  - Name: workmail:ListImpersonationRoles
   - Name: workmail:ListMailDomains
   - Name: workmail:ListMailboxExportJobs
   - Name: workmail:ListMailboxPermissions
@@ -68,6 +74,7 @@ Actions:
   - Name: workmail:UntagResource
   - Name: workmail:UpdateAvailabilityConfiguration
   - Name: workmail:UpdateDefaultMailDomain
+  - Name: workmail:UpdateImpersonationRole
   - Name: workmail:UpdateMailboxQuota
   - Name: workmail:UpdateMobileDeviceAccessRule
   - Name: workmail:UpdatePrimaryEmailAddress
@@ -125,12 +132,3 @@ Actions:
   - Name: workmail:UpdateOutboundMailFlowRule
   - Name: workmail:UpdateSmtpGateway
   - Name: workmail:WipeMobileDevice
-
-  # APIs without an IAM action
-  - Name: workmail:AssumeImpersonationRole
-  - Name: workmail:CreateImpersonationRole
-  - Name: workmail:DeleteImpersonationRole
-  - Name: workmail:GetImpersonationRole
-  - Name: workmail:GetImpersonationRoleEffect
-  - Name: workmail:ListImpersonationRoles
-  - Name: workmail:UpdateImpersonationRole
