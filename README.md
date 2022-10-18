@@ -72,11 +72,11 @@ The following table summarises the AWS APIs.
 | [`iotsitewise`](services/iotsitewise.yml) | 71 | 0 | 1 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 68 | 0 | 0 |
+| [`ds`](services/ds.yml) | 67 | 0 | 6 |
 | [`cloudformation`](services/cloudformation.yml) | 66 | 0 | 11 |
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
 | [`macie2`](services/macie2.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
-| [`ds`](services/ds.yml) | 65 | 2 | 6 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
 | [`personalize`](services/personalize.yml) | 65 | 0 | 0 |
