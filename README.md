@@ -43,7 +43,7 @@ The following table summarises the AWS APIs.
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`connect`](services/connect.yml) | 155 | 0 | 6 |
 | [`lightsail`](services/lightsail.yml) | 155 | 0 | 0 |
-| [`ses`](services/ses.yml) | 138 | 1 | 0 |
+| [`ses`](services/ses.yml) | 139 | 0 | 0 |
 | [`rds`](services/rds.yml) | 137 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 135 | 0 | 10 |
 | [`quicksight`](services/quicksight.yml) | 120 | 0 | 26 |
