@@ -122,6 +122,7 @@ Actions:
   - Name: glue:ImportCatalogToGlue
   - Name: glue:ListBlueprints
   - Name: glue:ListCrawlers
+  - Name: glue:ListCrawls
   - Name: glue:ListCustomEntityTypes
   - Name: glue:ListDevEndpoints
   - Name: glue:ListJobs
@@ -182,12 +183,12 @@ Actions:
 
   # actions with no corresponding API
   - Name: glue:NotifyEvent
+  - Name: glue:UseGlueStudio
   - Name: glue:UseMLTransforms
 
   # APIs without an IAM action
   - Name: glue:GetUnfilteredPartitionMetadata
   - Name: glue:GetUnfilteredPartitionsMetadata
   - Name: glue:GetUnfilteredTableMetadata
-  - Name: glue:ListCrawls
   - Name: glue:UpdateJobFromSourceControl
   - Name: glue:UpdateSourceControlFromJob
