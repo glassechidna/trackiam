@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 327
-* Unique actions: 13538
+* Unique actions: 13550
 * Managed policies: 977
 
 Most common managed policy name prefixes:
@@ -41,7 +41,7 @@ The following table summarises the AWS APIs.
 | [`chime`](services/chime.yml) | 216 | 1 | 50 |
 | [`glue`](services/glue.yml) | 181 | 5 | 3 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
-| [`connect`](services/connect.yml) | 155 | 0 | 6 |
+| [`connect`](services/connect.yml) | 155 | 7 | 6 |
 | [`lightsail`](services/lightsail.yml) | 155 | 0 | 0 |
 | [`ses`](services/ses.yml) | 139 | 0 | 0 |
 | [`rds`](services/rds.yml) | 137 | 0 | 5 |
@@ -103,6 +103,7 @@ The following table summarises the AWS APIs.
 | [`organizations`](services/organizations.yml) | 52 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 51 | 6 | 12 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 26 |
+| [`workspaces-web`](services/workspaces-web.yml) | 51 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 50 | 0 | 2 |
 | [`imagebuilder`](services/imagebuilder.yml) | 50 | 0 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
@@ -116,7 +117,6 @@ The following table summarises the AWS APIs.
 | [`globalaccelerator`](services/globalaccelerator.yml) | 47 | 0 | 0 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
-| [`workspaces-web`](services/workspaces-web.yml) | 44 | 0 | 7 |
 | [`datasync`](services/datasync.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 42 | 3 | 1 |
@@ -204,10 +204,10 @@ The following table summarises the AWS APIs.
 | [`detective`](services/detective.yml) | 24 | 0 | 5 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
+| [`managedblockchain`](services/managedblockchain.yml) | 23 | 4 | 0 |
 | [`timestream`](services/timestream.yml) | 23 | 1 | 3 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 23 | 0 | 1 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
-| [`managedblockchain`](services/managedblockchain.yml) | 23 | 0 | 0 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
@@ -302,8 +302,8 @@ The following table summarises the AWS APIs.
 | [`execute-api`](services/execute-api.yml) | 0 | 248 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 31 | 0 |
+| [`supportapp`](services/supportapp.yml) | 0 | 10 | 0 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 9 | 1 |
-| [`supportapp`](services/supportapp.yml) | 0 | 9 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`macie`](services/macie.yml) | 0 | 7 | 0 |
@@ -368,12 +368,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2074 |
-| `Get` | 1830 |
-| `Delete` | 1575 |
-| `Describe` | 1532 |
-| `Create` | 1472 |
-| `Update` | 1217 |
+| `List` | 2076 |
+| `Get` | 1832 |
+| `Delete` | 1577 |
+| `Describe` | 1533 |
+| `Create` | 1474 |
+| `Update` | 1218 |
 | `Put` | 373 |
 | `Start` | 263 |
 | `Tag` | 210 |
