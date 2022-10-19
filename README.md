@@ -40,8 +40,8 @@ The following table summarises the AWS APIs.
 | [`sagemaker`](services/sagemaker.yml) | 276 | 1 | 5 |
 | [`chime`](services/chime.yml) | 216 | 1 | 50 |
 | [`glue`](services/glue.yml) | 181 | 5 | 3 |
+| [`connect`](services/connect.yml) | 162 | 0 | 6 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
-| [`connect`](services/connect.yml) | 155 | 7 | 6 |
 | [`lightsail`](services/lightsail.yml) | 155 | 0 | 0 |
 | [`ses`](services/ses.yml) | 139 | 0 | 0 |
 | [`rds`](services/rds.yml) | 137 | 0 | 5 |
@@ -265,6 +265,7 @@ The following table summarises the AWS APIs.
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 31 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`textract`](services/textract.yml) | 10 | 0 | 0 |
+| [`supportapp`](services/supportapp.yml) | 10 | 0 | 0 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`rum`](services/rum.yml) | 10 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
@@ -302,7 +303,6 @@ The following table summarises the AWS APIs.
 | [`execute-api`](services/execute-api.yml) | 0 | 248 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 31 | 0 |
-| [`supportapp`](services/supportapp.yml) | 0 | 10 | 0 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 9 | 1 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
