@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 328
-* Unique actions: 13563
+* Unique services: 329
+* Unique actions: 13566
 * Managed policies: 977
 
 Most common managed policy name prefixes:
@@ -348,6 +348,7 @@ The following table summarises the AWS APIs.
 | [`supportplans`](services/supportplans.yml) | 0 | 0 | 3 |
 | [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 3 |
 | [`resource-explorer`](services/resource-explorer.yml) | 0 | 0 | 3 |
+| [`identitystore-auth`](services/identitystore-auth.yml) | 0 | 0 | 3 |
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |
 | [`tax`](services/tax.yml) | 0 | 0 | 2 |
 | [`sumerian`](services/sumerian.yml) | 0 | 0 | 2 |
@@ -369,7 +370,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2077 |
+| `List` | 2078 |
 | `Get` | 1834 |
 | `Delete` | 1578 |
 | `Describe` | 1533 |
