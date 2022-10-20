@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSSOServiceRolePolicy",
   "CreateDate": "2017-12-05T18:36:15Z",
-  "DefaultVersionId": "v16",
+  "DefaultVersionId": "v17",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIJ52KSWOD4GI54XP2",
   "PolicyName": "AWSSSOServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-06-28T20:08:47Z",
+    "CreateDate": "2022-10-20T20:05:47Z",
     "Document": {
       "Statement": [
         {
@@ -34,8 +34,7 @@
         },
         {
           "Action": [
-            "iam:CreateSAMLProvider",
-            "iam:UpdateSAMLProvider"
+            "iam:CreateSAMLProvider"
           ],
           "Condition": {
             "StringNotEquals": {
@@ -46,7 +45,7 @@
           "Resource": [
             "arn:aws:iam::*:saml-provider/AWSSSO_*"
           ],
-          "Sid": "IAMSAMLProviderProvisioningActions"
+          "Sid": "IAMSAMLProviderCreationAction"
         },
         {
           "Action": [
@@ -133,6 +132,16 @@
         },
         {
           "Action": [
+            "iam:UpdateSAMLProvider"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:saml-provider/AWSSSO_*"
+          ],
+          "Sid": "IAMSAMLProviderUpdateAction"
+        },
+        {
+          "Action": [
             "identitystore:DescribeGroup",
             "identitystore:DescribeUser",
             "identitystore:ListGroups",
@@ -148,7 +157,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v16"
+    "VersionId": "v17"
   },
-  "UpdateDate": "2022-06-28T20:08:47Z"
+  "UpdateDate": "2022-10-20T20:05:47Z"
 }
