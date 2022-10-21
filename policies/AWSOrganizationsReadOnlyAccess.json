@@ -1,18 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSOrganizationsReadOnlyAccess",
   "CreateDate": "2018-11-06T20:32:38Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJY5RQATUV77PEPVOM",
   "PolicyName": "AWSOrganizationsReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-02-07T18:17:19Z",
+    "CreateDate": "2022-10-21T17:31:21Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "account:GetAlternateContact"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "account:GetContactInformation"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -29,7 +36,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-02-07T18:17:19Z"
+  "UpdateDate": "2022-10-21T17:31:21Z"
 }
