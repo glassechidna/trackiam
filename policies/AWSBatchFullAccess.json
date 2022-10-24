@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBatchFullAccess",
   "CreateDate": "2016-12-06T19:35:42Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ7K2KIWB3HZVK3CUO",
   "PolicyName": "AWSBatchFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-03-10T07:02:45Z",
+    "CreateDate": "2022-10-24T16:09:09Z",
     "Document": {
       "Statement": [
         {
@@ -36,6 +36,8 @@
             "ecs:Describe*",
             "ecs:DescribeClusters",
             "ecs:List*",
+            "eks:DescribeCluster",
+            "eks:ListClusters",
             "iam:ListInstanceProfiles",
             "iam:ListRoles",
             "logs:Describe*",
@@ -65,7 +67,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2021-03-10T07:02:45Z"
+  "UpdateDate": "2022-10-24T16:09:09Z"
 }
