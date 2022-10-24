@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonAppStreamPCAAccess",
+  "CreateDate": "2022-10-24T17:05:03Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4HXOSULL5E",
+  "PolicyName": "AmazonAppStreamPCAAccess",
+  "PolicyVersion": {
+    "CreateDate": "2022-10-24T17:05:03Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "acm-pca:DescribeCertificateAuthority",
+            "acm-pca:GetCertificate",
+            "acm-pca:IssueCertificate"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/euc-private-ca": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:acm-pca:*:*:*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-10-24T17:05:03Z"
+}
