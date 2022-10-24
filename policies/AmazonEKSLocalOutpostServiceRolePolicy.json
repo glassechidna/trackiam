@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEKSLocalOutpostServiceRolePolicy",
   "CreateDate": "2022-08-23T21:53:02Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4A6PGOGKJI",
   "PolicyName": "AmazonEKSLocalOutpostServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-08-23T21:53:02Z",
+    "CreateDate": "2022-10-24T16:24:51Z",
     "Document": {
       "Statement": [
         {
@@ -45,10 +45,21 @@
           "Resource": "arn:aws:ec2:*:*:instance/*"
         },
         {
+          "Action": "secretsmanager:DeleteSecret",
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/eks-local:controlplane-name": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:eks-local.cluster.x-k8s.io/*"
+        },
+        {
           "Action": [
             "ec2:AuthorizeSecurityGroupIngress",
             "ec2:DeleteNetworkInterface",
             "ec2:DeleteSecurityGroup",
+            "ec2:GetConsoleOutput",
             "ec2:RevokeSecurityGroupIngress",
             "ec2:TerminateInstances"
           ],
@@ -126,18 +137,6 @@
         },
         {
           "Action": [
-            "secretsmanager:DeleteSecret"
-          ],
-          "Condition": {
-            "StringLike": {
-              "aws:ResourceTag/eks-local:controlplane-name": "*"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:secretsmanager:*:*:secret:eks-local.cluster.x-k8s.io/*"
-        },
-        {
-          "Action": [
             "secretsmanager:TagResource"
           ],
           "Condition": {
@@ -170,10 +169,16 @@
             "arn:aws:ec2:*:*:image/*",
             "arn:aws:ec2:*:*:launch-template/*",
             "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:placement-group/*",
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:subnet/*",
             "arn:aws:ec2:*:*:volume/*"
           ]
+        },
+        {
+          "Action": "secretsmanager:DescribeSecret",
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:eks-local.cluster.x-k8s.io/*"
         },
         {
           "Action": [
@@ -199,9 +204,11 @@
             "ec2:DescribeInstances",
             "ec2:DescribeNetworkInterfaceAttribute",
             "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribePlacementGroups",
             "ec2:DescribeRouteTables",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
+            "ec2:DescribeVpcAttribute",
             "ec2:DescribeVpcs"
           ],
           "Effect": "Allow",
@@ -242,7 +249,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-08-23T21:53:02Z"
+  "UpdateDate": "2022-10-24T16:24:51Z"
 }
