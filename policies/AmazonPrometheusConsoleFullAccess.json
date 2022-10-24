@@ -1,24 +1,27 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonPrometheusConsoleFullAccess",
   "CreateDate": "2020-12-15T18:11:10Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4P7IR2JZ6H",
   "PolicyName": "AmazonPrometheusConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-09-29T15:29:28Z",
+    "CreateDate": "2022-10-24T22:25:39Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "aps:CreateAlertManagerDefinition",
+            "aps:CreateLoggingConfiguration",
             "aps:CreateRuleGroupsNamespace",
             "aps:CreateWorkspace",
             "aps:DeleteAlertManagerDefinition",
+            "aps:DeleteLoggingConfiguration",
             "aps:DeleteRuleGroupsNamespace",
             "aps:DeleteWorkspace",
             "aps:DescribeAlertManagerDefinition",
+            "aps:DescribeLoggingConfiguration",
             "aps:DescribeRuleGroupsNamespace",
             "aps:DescribeWorkspace",
             "aps:ListRuleGroupsNamespaces",
@@ -27,6 +30,7 @@
             "aps:PutRuleGroupsNamespace",
             "aps:TagResource",
             "aps:UntagResource",
+            "aps:UpdateLoggingConfiguration",
             "aps:UpdateWorkspaceAlias"
           ],
           "Effect": "Allow",
@@ -44,7 +48,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-09-29T15:29:28Z"
+  "UpdateDate": "2022-10-24T22:25:39Z"
 }
