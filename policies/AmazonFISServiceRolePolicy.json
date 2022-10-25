@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonFISServiceRolePolicy",
   "CreateDate": "2020-12-21T21:18:19Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4JLZR2TQJD",
   "PolicyName": "AmazonFISServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-07-06T11:03:20Z",
+    "CreateDate": "2022-10-25T09:05:23Z",
     "Document": {
       "Statement": [
         {
@@ -38,6 +38,7 @@
         {
           "Action": [
             "ec2:DescribeInstances",
+            "ec2:DescribeSubnets",
             "ecs:DescribeClusters",
             "ecs:DescribeTasks",
             "ecs:ListTasks",
@@ -74,7 +75,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2022-07-06T11:03:20Z"
+  "UpdateDate": "2022-10-25T09:05:23Z"
 }
