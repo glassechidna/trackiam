@@ -1,21 +1,27 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AccessAnalyzerServiceRolePolicy",
   "CreateDate": "2019-12-02T17:13:10Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4CAIXDDRI2",
   "PolicyName": "AccessAnalyzerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-04-06T20:18:51Z",
+    "CreateDate": "2022-10-25T16:50:52Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "ec2:DescribeAddresses",
             "ec2:DescribeByoipCidrs",
+            "ec2:DescribeSnapshotAttribute",
+            "ec2:DescribeSnapshots",
             "ec2:DescribeVpcEndpoints",
             "ec2:DescribeVpcs",
+            "ecr:DescribeRepositories",
+            "ecr:GetRepositoryPolicy",
+            "elasticfilesystem:DescribeFileSystemPolicy",
+            "elasticfilesystem:DescribeFileSystems",
             "iam:GetRole",
             "iam:ListRoles",
             "kms:DescribeKey",
@@ -42,6 +48,10 @@
             "organizations:ListOrganizationalUnitsForParent",
             "organizations:ListParents",
             "organizations:ListRoots",
+            "rds:DescribeDBClusterSnapshotAttributes",
+            "rds:DescribeDBClusterSnapshots",
+            "rds:DescribeDBSnapshotAttributes",
+            "rds:DescribeDBSnapshots",
             "s3:DescribeMultiRegionAccessPointOperation",
             "s3:GetAccessPoint",
             "s3:GetAccessPointPolicy",
@@ -73,7 +83,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2022-04-06T20:18:51Z"
+  "UpdateDate": "2022-10-25T16:50:52Z"
 }
