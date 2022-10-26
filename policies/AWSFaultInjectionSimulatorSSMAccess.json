@@ -1,0 +1,49 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSFaultInjectionSimulatorSSMAccess",
+  "CreateDate": "2022-10-26T15:33:44Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4LYOCAYKDJ",
+  "PolicyName": "AWSFaultInjectionSimulatorSSMAccess",
+  "PolicyVersion": {
+    "CreateDate": "2022-10-26T15:33:44Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "ssm.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*"
+        },
+        {
+          "Action": [
+            "ssm:GetAutomationExecution",
+            "ssm:StopAutomationExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:automation-execution/*"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:StartAutomationExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:automation-definition/*:*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-10-26T15:33:44Z"
+}
