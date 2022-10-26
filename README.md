@@ -237,6 +237,7 @@ The following table summarises the AWS APIs.
 | [`sqs`](services/sqs.yml) | 17 | 3 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`signer`](services/signer.yml) | 17 | 0 | 0 |
+| [`rum`](services/rum.yml) | 17 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`fis`](services/fis.yml) | 16 | 0 | 3 |
@@ -264,7 +265,6 @@ The following table summarises the AWS APIs.
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 31 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
-| [`rum`](services/rum.yml) | 10 | 7 | 0 |
 | [`textract`](services/textract.yml) | 10 | 0 | 0 |
 | [`supportapp`](services/supportapp.yml) | 10 | 0 | 0 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
