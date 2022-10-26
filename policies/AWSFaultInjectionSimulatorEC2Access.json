@@ -1,0 +1,64 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSFaultInjectionSimulatorEC2Access",
+  "CreateDate": "2022-10-26T20:39:26Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4JRMRLWKEY",
+  "PolicyName": "AWSFaultInjectionSimulatorEC2Access",
+  "PolicyVersion": {
+    "CreateDate": "2022-10-26T20:39:26Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "kms:CreateGrant"
+          ],
+          "Condition": {
+            "Bool": {
+              "kms:GrantIsForAWSResource": "true"
+            },
+            "StringLike": {
+              "kms:ViaService": "ec2.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:kms:*:*:key/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:RebootInstances",
+            "ec2:SendSpotInstanceInterruptions",
+            "ec2:StartInstances",
+            "ec2:StopInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*"
+        },
+        {
+          "Action": [
+            "ssm:CancelCommand",
+            "ssm:ListCommands"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ssm:SendCommand"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-10-26T20:39:26Z"
+}
