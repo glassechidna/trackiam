@@ -1,0 +1,85 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSFaultInjectionSimulatorNetworkAccess",
+  "CreateDate": "2022-10-26T20:32:50Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4AXEXMENON",
+  "PolicyName": "AWSFaultInjectionSimulatorNetworkAccess",
+  "PolicyVersion": {
+    "CreateDate": "2022-10-26T20:32:50Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:CreateNetworkAcl",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/managedByFIS": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-acl/*"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/managedByFIS": "true",
+              "ec2:CreateAction": "CreateNetworkAcl"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-acl/*"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkAclEntry",
+            "ec2:DeleteNetworkAcl"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/managedByFIS": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-acl/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ]
+        },
+        {
+          "Action": "ec2:CreateNetworkAcl",
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc/*"
+        },
+        {
+          "Action": "ec2:GetManagedPrefixListEntries",
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:prefix-list/*"
+        },
+        {
+          "Action": "ec2:ReplaceNetworkAclAssociation",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-acl/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:DescribeManagedPrefixLists",
+            "ec2:DescribeNetworkAcls",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-10-26T20:32:50Z"
+}
