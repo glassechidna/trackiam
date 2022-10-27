@@ -144,7 +144,7 @@ The following table summarises the AWS APIs.
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`codeartifact`](services/codeartifact.yml) | 36 | 0 | 4 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
-| [`kafka`](services/kafka.yml) | 35 | 1 | 0 |
+| [`kafka`](services/kafka.yml) | 36 | 0 | 0 |
 | [`ce`](services/ce.yml) | 35 | 0 | 10 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`memorydb`](services/memorydb.yml) | 35 | 0 | 0 |
