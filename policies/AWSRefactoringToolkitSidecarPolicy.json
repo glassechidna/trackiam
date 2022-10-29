@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSRefactoringToolkitSidecarPolicy",
   "CreateDate": "2022-10-25T16:41:12Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LC67532NW",
   "PolicyName": "AWSRefactoringToolkitSidecarPolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-10-25T16:41:12Z",
+    "CreateDate": "2022-10-29T22:15:51Z",
     "Document": {
       "Statement": [
         {
@@ -34,7 +34,9 @@
         {
           "Action": [
             "ssmmessages:CreateControlChannel",
-            "ssmmessages:OpenControlChannel"
+            "ssmmessages:CreateDataChannel",
+            "ssmmessages:OpenControlChannel",
+            "ssmmessages:OpenDataChannel"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -44,7 +46,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-10-25T16:41:12Z"
+  "UpdateDate": "2022-10-29T22:15:51Z"
 }
