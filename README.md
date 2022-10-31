@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 329
-* Unique actions: 13569
+* Unique actions: 13586
 * Managed policies: 987
 
 Most common managed policy name prefixes:
@@ -36,14 +36,14 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 542 | 0 | 9 |
+| [`ec2`](services/ec2.yml) | 542 | 4 | 9 |
 | [`sagemaker`](services/sagemaker.yml) | 277 | 1 | 5 |
 | [`chime`](services/chime.yml) | 216 | 1 | 50 |
 | [`glue`](services/glue.yml) | 181 | 5 | 3 |
-| [`connect`](services/connect.yml) | 162 | 0 | 6 |
+| [`connect`](services/connect.yml) | 162 | 1 | 6 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 155 | 0 | 0 |
-| [`ses`](services/ses.yml) | 139 | 0 | 0 |
+| [`ses`](services/ses.yml) | 139 | 4 | 0 |
 | [`rds`](services/rds.yml) | 137 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 135 | 0 | 10 |
 | [`quicksight`](services/quicksight.yml) | 120 | 0 | 26 |
@@ -119,8 +119,8 @@ The following table summarises the AWS APIs.
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
+| [`logs`](services/logs.yml) | 42 | 3 | 5 |
 | [`lakeformation`](services/lakeformation.yml) | 42 | 3 | 1 |
-| [`logs`](services/logs.yml) | 42 | 0 | 5 |
 | [`mediatailor`](services/mediatailor.yml) | 42 | 0 | 0 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
 | [`workdocs`](services/workdocs.yml) | 41 | 0 | 14 |
@@ -169,8 +169,8 @@ The following table summarises the AWS APIs.
 | [`network-firewall`](services/network-firewall.yml) | 31 | 0 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
+| [`apprunner`](services/apprunner.yml) | 30 | 5 | 1 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
-| [`apprunner`](services/apprunner.yml) | 30 | 0 | 1 |
 | [`route53domains`](services/route53domains.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
@@ -370,14 +370,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2079 |
+| `List` | 2082 |
 | `Get` | 1835 |
-| `Delete` | 1578 |
-| `Describe` | 1533 |
-| `Create` | 1474 |
-| `Update` | 1220 |
-| `Put` | 374 |
+| `Delete` | 1579 |
+| `Describe` | 1535 |
+| `Create` | 1475 |
+| `Update` | 1221 |
+| `Put` | 376 |
 | `Start` | 265 |
-| `Tag` | 210 |
-| `Untag` | 208 |
+| `Tag` | 211 |
+| `Untag` | 209 |
 
