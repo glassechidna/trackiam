@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSResourceExplorerServiceRolePolicy",
   "CreateDate": "2022-10-25T20:35:29Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4K2H54PAUL",
   "PolicyName": "AWSResourceExplorerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-10-25T20:35:29Z",
+    "CreateDate": "2022-10-31T17:23:15Z",
     "Document": {
       "Statement": [
         {
@@ -109,6 +109,7 @@
             "iam:ListUsers",
             "kinesis:ListStreamConsumers",
             "kinesis:ListStreams",
+            "lambda:ListFunctions",
             "logs:DescribeDestinations",
             "logs:DescribeLogGroups",
             "logs:DescribeLogStreams",
@@ -140,6 +141,7 @@
             "resource-explorer-2:GetIndex",
             "resource-explorer-2:ListIndexes",
             "resource-explorer-2:ListViews",
+            "s3:GetBucketLocation",
             "s3:ListAccessPoints",
             "s3:ListAllMyBuckets",
             "s3:ListStorageLensConfigurations",
@@ -174,7 +176,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-10-25T20:35:29Z"
+  "UpdateDate": "2022-10-31T17:23:15Z"
 }
