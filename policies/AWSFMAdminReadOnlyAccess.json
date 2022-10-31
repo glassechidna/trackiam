@@ -1,33 +1,75 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSFMAdminReadOnlyAccess",
   "CreateDate": "2018-05-09T20:07:39Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJA3UKVVBN62QFIKLW",
   "PolicyName": "AWSFMAdminReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2018-05-09T20:07:39Z",
+    "CreateDate": "2022-10-31T22:42:13Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": [
+                "fms.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeRegions",
+            "firehose:ListDeliveryStreams",
             "fms:Get*",
             "fms:List*",
+            "network-firewall:DescribeRuleGroup",
+            "network-firewall:DescribeRuleGroupMetadata",
+            "network-firewall:ListRuleGroups",
+            "organizations:DescribeAccount",
             "organizations:DescribeOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListAccountsForParent",
+            "organizations:ListChildren",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListRoots",
+            "route53resolver:GetFirewallRuleGroup",
+            "route53resolver:ListFirewallRuleGroups",
+            "shield:GetSubscriptionState",
             "waf-regional:Get*",
             "waf-regional:List*",
             "waf:Get*",
-            "waf:List*"
+            "waf:List*",
+            "wafv2:CheckCapacity",
+            "wafv2:ListAvailableManagedRuleGroupVersions",
+            "wafv2:ListAvailableManagedRuleGroups",
+            "wafv2:ListRuleGroups"
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetBucketPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-waf-logs-*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2018-05-09T20:07:39Z"
+  "UpdateDate": "2022-10-31T22:42:13Z"
 }
