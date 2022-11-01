@@ -149,7 +149,6 @@ The following table summarises the AWS APIs.
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`apprunner`](services/apprunner.yml) | 35 | 0 | 1 |
 | [`memorydb`](services/memorydb.yml) | 35 | 0 | 0 |
-| [`iotthingsgraph`](services/iotthingsgraph.yml) | 35 | 0 | 0 |
 | [`eks`](services/eks.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`panorama`](services/panorama.yml) | 33 | 1 | 31 |
@@ -302,6 +301,7 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`execute-api`](services/execute-api.yml) | 0 | 248 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
+| [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 31 | 0 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 9 | 1 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
