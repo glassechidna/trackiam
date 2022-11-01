@@ -5,16 +5,19 @@ Actions:
   - Name: apprunner:CreateObservabilityConfiguration
   - Name: apprunner:CreateService
   - Name: apprunner:CreateVpcConnector
+  - Name: apprunner:CreateVpcIngressConnection
   - Name: apprunner:DeleteAutoScalingConfiguration
   - Name: apprunner:DeleteConnection
   - Name: apprunner:DeleteObservabilityConfiguration
   - Name: apprunner:DeleteService
   - Name: apprunner:DeleteVpcConnector
+  - Name: apprunner:DeleteVpcIngressConnection
   - Name: apprunner:DescribeAutoScalingConfiguration
   - Name: apprunner:DescribeCustomDomains
   - Name: apprunner:DescribeObservabilityConfiguration
   - Name: apprunner:DescribeService
   - Name: apprunner:DescribeVpcConnector
+  - Name: apprunner:DescribeVpcIngressConnection
   - Name: apprunner:DisassociateCustomDomain
   - Name: apprunner:ListAutoScalingConfigurations
   - Name: apprunner:ListConnections
@@ -23,19 +26,14 @@ Actions:
   - Name: apprunner:ListServices
   - Name: apprunner:ListTagsForResource
   - Name: apprunner:ListVpcConnectors
+  - Name: apprunner:ListVpcIngressConnections
   - Name: apprunner:PauseService
   - Name: apprunner:ResumeService
   - Name: apprunner:StartDeployment
   - Name: apprunner:TagResource
   - Name: apprunner:UntagResource
   - Name: apprunner:UpdateService
+  - Name: apprunner:UpdateVpcIngressConnection
 
   # actions with no corresponding API
   - Name: apprunner:DescribeOperation
-
-  # APIs without an IAM action
-  - Name: apprunner:CreateVpcIngressConnection
-  - Name: apprunner:DeleteVpcIngressConnection
-  - Name: apprunner:DescribeVpcIngressConnection
-  - Name: apprunner:ListVpcIngressConnections
-  - Name: apprunner:UpdateVpcIngressConnection
