@@ -1,4 +1,5 @@
 Actions:
+  - Name: ses:BatchGetMetricData
   - Name: ses:CloneReceiptRuleSet
   - Name: ses:CreateConfigurationSet
   - Name: ses:CreateConfigurationSetEventDestination
@@ -80,6 +81,7 @@ Actions:
   - Name: ses:ListImportJobs
   - Name: ses:ListReceiptFilters
   - Name: ses:ListReceiptRuleSets
+  - Name: ses:ListRecommendations
   - Name: ses:ListSuppressedDestinations
   - Name: ses:ListTagsForResource
   - Name: ses:ListTemplates
@@ -88,11 +90,13 @@ Actions:
   - Name: ses:PutAccountDetails
   - Name: ses:PutAccountSendingAttributes
   - Name: ses:PutAccountSuppressionAttributes
+  - Name: ses:PutAccountVdmAttributes
   - Name: ses:PutConfigurationSetDeliveryOptions
   - Name: ses:PutConfigurationSetReputationOptions
   - Name: ses:PutConfigurationSetSendingOptions
   - Name: ses:PutConfigurationSetSuppressionOptions
   - Name: ses:PutConfigurationSetTrackingOptions
+  - Name: ses:PutConfigurationSetVdmOptions
   - Name: ses:PutDedicatedIpInPool
   - Name: ses:PutDedicatedIpWarmupAttributes
   - Name: ses:PutDeliverabilityDashboardOption
@@ -138,9 +142,3 @@ Actions:
   - Name: ses:VerifyDomainIdentity
   - Name: ses:VerifyEmailAddress
   - Name: ses:VerifyEmailIdentity
-
-  # APIs without an IAM action
-  - Name: ses:BatchGetMetricData
-  - Name: ses:ListRecommendations
-  - Name: ses:PutAccountVdmAttributes
-  - Name: ses:PutConfigurationSetVdmOptions
