@@ -1,20 +1,21 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonWorkSpacesWebReadOnly",
   "CreateDate": "2021-11-30T14:20:36Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HIYKYJQEQ",
   "PolicyName": "AmazonWorkSpacesWebReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2021-11-30T14:20:36Z",
+    "CreateDate": "2022-11-02T20:20:44Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
-            "ec2:DescribeVpcs"
+            "ec2:DescribeVpcs",
+            "kinesis:ListStreams"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -28,6 +29,7 @@
             "workspaces-web:GetPortalServiceProviderMetadata",
             "workspaces-web:GetTrustStore",
             "workspaces-web:GetTrustStoreCertificate",
+            "workspaces-web:GetUserAccessLoggingSettings",
             "workspaces-web:GetUserSettings",
             "workspaces-web:ListBrowserSettings",
             "workspaces-web:ListIdentityProviders",
@@ -36,6 +38,7 @@
             "workspaces-web:ListTagsForResource",
             "workspaces-web:ListTrustStoreCertificates",
             "workspaces-web:ListTrustStores",
+            "workspaces-web:ListUserAccessLoggingSettings",
             "workspaces-web:ListUserSettings"
           ],
           "Effect": "Allow",
@@ -44,8 +47,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v1"
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-11-30T14:20:36Z"
+  "UpdateDate": "2022-11-02T20:20:44Z"
 }
