@@ -47,8 +47,8 @@ The following table summarises the AWS APIs.
 | [`rds`](services/rds.yml) | 137 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 135 | 0 | 10 |
 | [`quicksight`](services/quicksight.yml) | 120 | 0 | 26 |
+| [`redshift`](services/redshift.yml) | 119 | 0 | 18 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 119 | 0 | 1 |
-| [`redshift`](services/redshift.yml) | 118 | 1 | 18 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 109 | 0 | 0 |
 | [`lex`](services/lex.yml) | 104 | 2 | 7 |
