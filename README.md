@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 329
-* Unique actions: 13592
+* Unique actions: 13597
 * Managed policies: 987
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 542 | 4 | 9 |
+| [`ec2`](services/ec2.yml) | 542 | 5 | 9 |
 | [`sagemaker`](services/sagemaker.yml) | 277 | 1 | 5 |
 | [`chime`](services/chime.yml) | 216 | 1 | 50 |
 | [`glue`](services/glue.yml) | 181 | 5 | 3 |
@@ -230,6 +230,7 @@ The following table summarises the AWS APIs.
 | [`opsworks-cm`](services/opsworks-cm.yml) | 19 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 19 | 0 | 0 |
 | [`identitystore`](services/identitystore.yml) | 19 | 0 | 0 |
+| [`emr-containers`](services/emr-containers.yml) | 19 | 0 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
 | [`translate`](services/translate.yml) | 18 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 18 | 0 | 0 |
@@ -245,7 +246,6 @@ The following table summarises the AWS APIs.
 | [`honeycode`](services/honeycode.yml) | 15 | 0 | 15 |
 | [`app-integrations`](services/app-integrations.yml) | 15 | 0 | 4 |
 | [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 0 |
-| [`emr-containers`](services/emr-containers.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 14 | 8 | 3 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
@@ -370,11 +370,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2084 |
+| `List` | 2085 |
 | `Get` | 1836 |
-| `Delete` | 1579 |
-| `Describe` | 1536 |
-| `Create` | 1475 |
+| `Delete` | 1580 |
+| `Describe` | 1537 |
+| `Create` | 1476 |
 | `Update` | 1221 |
 | `Put` | 376 |
 | `Start` | 265 |
