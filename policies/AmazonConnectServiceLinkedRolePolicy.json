@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-06-27T19:35:06Z",
+    "CreateDate": "2022-11-07T19:01:31Z",
     "Document": {
       "Statement": [
         {
@@ -59,6 +59,7 @@
           "Action": [
             "profile:AddProfileKey",
             "profile:CreateProfile",
+            "profile:ListProfileObjectTypes",
             "profile:SearchProfiles",
             "profile:UpdateProfile"
           ],
@@ -67,19 +68,28 @@
         },
         {
           "Action": [
-            "profile:ListAccountIntegrations"
-          ],
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
+            "profile:GetProfileObjectType",
             "profile:ListProfileObjects"
           ],
           "Effect": "Allow",
           "Resource": [
             "arn:aws:profile:*:*:domains/amazon-connect-*/object-types/*"
           ]
+        },
+        {
+          "Action": [
+            "profile:GetProfileObjectTypeTemplate",
+            "profile:ListProfileObjectTypeTemplates"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:profile:*:*:/templates*"
+        },
+        {
+          "Action": [
+            "profile:ListAccountIntegrations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": [
@@ -108,7 +118,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2022-06-27T19:35:06Z"
+  "UpdateDate": "2022-11-07T19:01:31Z"
 }
