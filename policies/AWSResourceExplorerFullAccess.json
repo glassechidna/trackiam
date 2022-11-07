@@ -1,0 +1,43 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSResourceExplorerFullAccess",
+  "CreateDate": "2022-11-07T20:01:20Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4MZIYCHOML",
+  "PolicyName": "AWSResourceExplorerFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2022-11-07T20:01:20Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "resource-explorer-2.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeRegions",
+            "ram:ListResources",
+            "resource-explorer-2:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-11-07T20:01:20Z"
+}
