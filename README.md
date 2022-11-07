@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 329
-* Unique actions: 13607
+* Unique actions: 13615
 * Managed policies: 987
 
 Most common managed policy name prefixes:
@@ -51,7 +51,7 @@ The following table summarises the AWS APIs.
 | [`mobiletargeting`](services/mobiletargeting.yml) | 119 | 0 | 1 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 109 | 0 | 0 |
-| [`lex`](services/lex.yml) | 104 | 2 | 7 |
+| [`lex`](services/lex.yml) | 104 | 6 | 7 |
 | [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 4 |
 | [`iotwireless`](services/iotwireless.yml) | 98 | 0 | 1 |
 | [`cloudfront`](services/cloudfront.yml) | 97 | 1 | 7 |
@@ -127,7 +127,7 @@ The following table summarises the AWS APIs.
 | [`fsx`](services/fsx.yml) | 41 | 0 | 4 |
 | [`transcribe`](services/transcribe.yml) | 41 | 0 | 2 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
-| [`wellarchitected`](services/wellarchitected.yml) | 40 | 0 | 0 |
+| [`wellarchitected`](services/wellarchitected.yml) | 40 | 2 | 0 |
 | [`resiliencehub`](services/resiliencehub.yml) | 39 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
@@ -175,7 +175,7 @@ The following table summarises the AWS APIs.
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
 | [`fms`](services/fms.yml) | 30 | 0 | 0 |
 | [`billingconductor`](services/billingconductor.yml) | 30 | 0 | 0 |
-| [`cloudtrail`](services/cloudtrail.yml) | 29 | 7 | 5 |
+| [`cloudtrail`](services/cloudtrail.yml) | 29 | 9 | 5 |
 | [`dataexchange`](services/dataexchange.yml) | 29 | 0 | 2 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 29 | 0 | 0 |
@@ -370,7 +370,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2085 |
+| `List` | 2088 |
 | `Get` | 1842 |
 | `Delete` | 1580 |
 | `Describe` | 1537 |
