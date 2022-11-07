@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 329
-* Unique actions: 13597
+* Unique actions: 13607
 * Managed policies: 987
 
 Most common managed policy name prefixes:
@@ -321,6 +321,7 @@ The following table summarises the AWS APIs.
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 18 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
+| [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 17 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
@@ -332,7 +333,6 @@ The following table summarises the AWS APIs.
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
-| [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 7 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
@@ -371,13 +371,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2085 |
-| `Get` | 1836 |
+| `Get` | 1842 |
 | `Delete` | 1580 |
 | `Describe` | 1537 |
-| `Create` | 1476 |
+| `Create` | 1477 |
 | `Update` | 1221 |
 | `Put` | 376 |
-| `Start` | 265 |
+| `Start` | 266 |
 | `Tag` | 211 |
 | `Untag` | 209 |
 
