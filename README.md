@@ -169,9 +169,9 @@ The following table summarises the AWS APIs.
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 31 | 0 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 31 | 0 | 0 |
+| [`billingconductor`](services/billingconductor.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
 | [`fms`](services/fms.yml) | 30 | 8 | 0 |
-| [`billingconductor`](services/billingconductor.yml) | 30 | 1 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
 | [`route53domains`](services/route53domains.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
