@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonWorkspacesPCAAccess",
+  "CreateDate": "2022-11-08T00:25:55Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4EYKDVYFZC",
+  "PolicyName": "AmazonWorkspacesPCAAccess",
+  "PolicyVersion": {
+    "CreateDate": "2022-11-08T00:25:55Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "acm-pca:DescribeCertificateAuthority",
+            "acm-pca:GetCertificate",
+            "acm-pca:IssueCertificate"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/euc-private-ca": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:acm-pca:*:*:*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-11-08T00:25:55Z"
+}
