@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 330
-* Unique actions: 13634
+* Unique actions: 13652
 * Managed policies: 990
 
 Most common managed policy name prefixes:
@@ -81,7 +81,7 @@ The following table summarises the AWS APIs.
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
 | [`personalize`](services/personalize.yml) | 65 | 0 | 0 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
-| [`es`](services/es.yml) | 64 | 0 | 10 |
+| [`es`](services/es.yml) | 64 | 9 | 10 |
 | [`workspaces`](services/workspaces.yml) | 63 | 0 | 1 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`rekognition`](services/rekognition.yml) | 63 | 0 | 0 |
@@ -170,12 +170,12 @@ The following table summarises the AWS APIs.
 | [`network-firewall`](services/network-firewall.yml) | 31 | 0 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
+| [`fms`](services/fms.yml) | 30 | 8 | 0 |
+| [`billingconductor`](services/billingconductor.yml) | 30 | 1 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
 | [`route53domains`](services/route53domains.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
-| [`fms`](services/fms.yml) | 30 | 0 | 0 |
-| [`billingconductor`](services/billingconductor.yml) | 30 | 0 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 29 | 0 | 2 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 29 | 0 | 0 |
@@ -227,6 +227,7 @@ The following table summarises the AWS APIs.
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`backup-gateway`](services/backup-gateway.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
+| [`resource-explorer-2`](services/resource-explorer-2.yml) | 19 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 19 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 19 | 0 | 0 |
 | [`identitystore`](services/identitystore.yml) | 19 | 0 | 0 |
@@ -318,7 +319,6 @@ The following table summarises the AWS APIs.
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 29 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
-| [`resource-explorer-2`](services/resource-explorer-2.yml) | 0 | 0 | 19 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 18 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
@@ -371,13 +371,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2092 |
-| `Get` | 1845 |
-| `Delete` | 1582 |
-| `Describe` | 1537 |
-| `Create` | 1479 |
-| `Update` | 1223 |
-| `Put` | 376 |
+| `List` | 2099 |
+| `Get` | 1846 |
+| `Delete` | 1584 |
+| `Describe` | 1538 |
+| `Create` | 1480 |
+| `Update` | 1224 |
+| `Put` | 377 |
 | `Start` | 266 |
 | `Tag` | 212 |
 | `Untag` | 210 |
