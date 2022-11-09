@@ -1,0 +1,58 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSProtonCodeBuildProvisioningServiceRolePolicy",
+  "CreateDate": "2022-11-09T21:32:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4CY5VKNVD7",
+  "PolicyName": "AWSProtonCodeBuildProvisioningServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2022-11-09T21:32:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEqualsIfExists": {
+              "iam:PassedToService": "codebuild.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudformation:CreateChangeSet",
+            "cloudformation:CreateStack",
+            "cloudformation:DeleteChangeSet",
+            "cloudformation:DeleteStack",
+            "cloudformation:DescribeStackEvents",
+            "cloudformation:DescribeStacks",
+            "cloudformation:ListStackResources"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/AWSProton-CodeBuild-*"
+          ]
+        },
+        {
+          "Action": [
+            "codebuild:BatchGetBuilds",
+            "codebuild:BatchGetProjects",
+            "codebuild:CreateProject",
+            "codebuild:DeleteProject",
+            "codebuild:RetryBuild",
+            "codebuild:StartBuild",
+            "codebuild:StopBuild"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:codebuild:*:*:project/AWSProton*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-11-09T21:32:06Z"
+}
