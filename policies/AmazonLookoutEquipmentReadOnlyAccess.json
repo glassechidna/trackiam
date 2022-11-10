@@ -1,28 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLookoutEquipmentReadOnlyAccess",
   "CreateDate": "2021-05-05T16:47:55Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DNIMPJYBT",
   "PolicyName": "AmazonLookoutEquipmentReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-06-30T18:33:42Z",
+    "CreateDate": "2022-11-10T22:04:33Z",
     "Document": {
       "Statement": [
         {
           "Action": [
-            "lookoutequipment:DescribeDataIngestionJob",
-            "lookoutequipment:DescribeDataset",
-            "lookoutequipment:DescribeInferenceScheduler",
-            "lookoutequipment:DescribeModel",
-            "lookoutequipment:ListDataIngestionJobs",
-            "lookoutequipment:ListDatasets",
-            "lookoutequipment:ListInferenceExecutions",
-            "lookoutequipment:ListInferenceSchedulers",
-            "lookoutequipment:ListModels",
-            "lookoutequipment:ListSensorStatistics",
-            "lookoutequipment:ListTagsForResource"
+            "lookoutequipment:Describe*",
+            "lookoutequipment:List*"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -31,7 +22,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-06-30T18:33:42Z"
+  "UpdateDate": "2022-11-10T22:04:33Z"
 }
