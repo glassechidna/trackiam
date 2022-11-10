@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 331
-* Unique actions: 13669
+* Unique actions: 13671
 * Managed policies: 995
 
 Most common managed policy name prefixes:
@@ -98,8 +98,8 @@ The following table summarises the AWS APIs.
 | [`dms`](services/dms.yml) | 55 | 10 | 0 |
 | [`kendra`](services/kendra.yml) | 55 | 5 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
+| [`ecs`](services/ecs.yml) | 52 | 2 | 2 |
 | [`geo`](services/geo.yml) | 52 | 1 | 0 |
-| [`ecs`](services/ecs.yml) | 52 | 0 | 2 |
 | [`organizations`](services/organizations.yml) | 52 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 51 | 6 | 12 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 26 |
@@ -260,6 +260,7 @@ The following table summarises the AWS APIs.
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`braket`](services/braket.yml) | 13 | 0 | 0 |
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
+| [`scheduler`](services/scheduler.yml) | 12 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 12 | 0 | 0 |
 | [`ivschat`](services/ivschat.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
@@ -326,7 +327,6 @@ The following table summarises the AWS APIs.
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
-| [`scheduler`](services/scheduler.yml) | 0 | 0 | 12 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
@@ -373,11 +373,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2103 |
-| `Get` | 1848 |
+| `Get` | 1849 |
 | `Delete` | 1587 |
 | `Describe` | 1539 |
 | `Create` | 1483 |
-| `Update` | 1226 |
+| `Update` | 1227 |
 | `Put` | 377 |
 | `Start` | 266 |
 | `Tag` | 213 |
