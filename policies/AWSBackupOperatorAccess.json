@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupOperatorAccess",
   "CreateDate": "2019-11-18T22:23:17Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KHXVYMY4O",
   "PolicyName": "AWSBackupOperatorAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-08-24T22:03:30Z",
+    "CreateDate": "2022-11-10T22:52:47Z",
     "Document": {
       "Statement": [
         {
@@ -97,6 +97,15 @@
         },
         {
           "Action": [
+            "cloudformation:ListStacks"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/*"
+          ]
+        },
+        {
+          "Action": [
             "dynamodb:ListBackups",
             "dynamodb:ListTables"
           ],
@@ -106,6 +115,7 @@
         {
           "Action": [
             "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAddresses",
             "ec2:DescribeImages",
             "ec2:DescribeInstanceTypes",
             "ec2:DescribeInstances",
@@ -156,6 +166,54 @@
         },
         {
           "Action": [
+            "redshift:DescribeClusterParameterGroups",
+            "redshift:DescribeClusterTracks",
+            "redshift:DescribeNodeConfigurationOptions",
+            "redshift:DescribeOrderableClusterOptions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "redshift:DescribeClusterSnapshots",
+            "redshift:DescribeClusterSubnetGroups",
+            "redshift:DescribeClusters",
+            "redshift:DescribeSnapshotSchedules"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift:*:*:cluster:*",
+            "arn:aws:redshift:*:*:snapshot:*/*",
+            "arn:aws:redshift:*:*:snapshotschedule:*",
+            "arn:aws:redshift:*:*:subnetgroup:*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*"
+        },
+        {
+          "Action": [
+            "ssm-sap:GetDatabase",
+            "ssm-sap:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm-sap:*:*:*"
+        },
+        {
+          "Action": [
+            "ssm-sap:GetOperation",
+            "ssm-sap:ListDatabases"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "ssm:CancelCommand",
             "ssm:GetCommandInvocation"
           ],
@@ -194,12 +252,30 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "timestream:DescribeEndpoints"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "timestream:ListDatabases",
+            "timestream:ListTables"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:timestream:*:*:database/*",
+            "arn:aws:timestream:*:*:database/*/table/*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2022-08-24T22:03:30Z"
+  "UpdateDate": "2022-11-10T22:52:47Z"
 }

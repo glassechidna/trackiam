@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupFullAccess",
   "CreateDate": "2019-11-18T22:21:52Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LL52EIPJX",
   "PolicyName": "AWSBackupFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-08-24T22:03:13Z",
+    "CreateDate": "2022-11-10T22:47:21Z",
     "Document": {
       "Statement": [
         {
@@ -189,6 +189,15 @@
         },
         {
           "Action": [
+            "cloudformation:ListStacks"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/*"
+          ]
+        },
+        {
+          "Action": [
             "dynamodb:ListBackups",
             "dynamodb:ListTables"
           ],
@@ -209,6 +218,13 @@
             "ec2:DescribeVpcEndpoints",
             "ec2:DescribeVpcs",
             "ec2:describeAvailabilityZones"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAddresses"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -258,6 +274,54 @@
         },
         {
           "Action": [
+            "redshift:DescribeClusterParameterGroups",
+            "redshift:DescribeClusterTracks",
+            "redshift:DescribeNodeConfigurationOptions",
+            "redshift:DescribeOrderableClusterOptions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "redshift:DescribeClusterSnapshots",
+            "redshift:DescribeClusterSubnetGroups",
+            "redshift:DescribeClusters",
+            "redshift:DescribeSnapshotSchedules"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift:*:*:cluster:*",
+            "arn:aws:redshift:*:*:snapshot:*/*",
+            "arn:aws:redshift:*:*:snapshotschedule:*",
+            "arn:aws:redshift:*:*:subnetgroup:*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*"
+        },
+        {
+          "Action": [
+            "ssm-sap:GetDatabase",
+            "ssm-sap:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm-sap:*:*:*"
+        },
+        {
+          "Action": [
+            "ssm-sap:GetOperation",
+            "ssm-sap:ListDatabases"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "ssm:CancelCommand",
             "ssm:GetCommandInvocation"
           ],
@@ -296,12 +360,30 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "timestream:DescribeEndpoints"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "timestream:ListDatabases",
+            "timestream:ListTables"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:timestream:*:*:database/*",
+            "arn:aws:timestream:*:*:database/*/table/*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2022-08-24T22:03:13Z"
+  "UpdateDate": "2022-11-10T22:47:21Z"
 }
