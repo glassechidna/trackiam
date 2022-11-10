@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 331
-* Unique actions: 13671
+* Unique actions: 13677
 * Managed policies: 995
 
 Most common managed policy name prefixes:
@@ -277,6 +277,7 @@ The following table summarises the AWS APIs.
 | [`budgets`](services/budgets.yml) | 8 | 15 | 2 |
 | [`iot`](services/iot.yml) | 8 | 3 | 245 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
+| [`backup-storage`](services/backup-storage.yml) | 8 | 1 | 7 |
 | [`finspace`](services/finspace.yml) | 8 | 0 | 7 |
 | [`sts`](services/sts.yml) | 8 | 0 | 3 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
@@ -305,7 +306,6 @@ The following table summarises the AWS APIs.
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 31 | 0 |
-| [`backup-storage`](services/backup-storage.yml) | 0 | 9 | 1 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`macie`](services/macie.yml) | 0 | 7 | 0 |
@@ -373,11 +373,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2103 |
-| `Get` | 1849 |
-| `Delete` | 1587 |
-| `Describe` | 1539 |
+| `Get` | 1851 |
+| `Delete` | 1588 |
+| `Describe` | 1540 |
 | `Create` | 1483 |
-| `Update` | 1227 |
+| `Update` | 1228 |
 | `Put` | 377 |
 | `Start` | 266 |
 | `Tag` | 213 |
