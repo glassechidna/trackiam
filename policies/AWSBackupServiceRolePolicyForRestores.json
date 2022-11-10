@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForRestores",
   "CreateDate": "2019-01-12T00:23:54Z",
-  "DefaultVersionId": "v14",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJZCCL6F2WPVOUXZKI",
   "PolicyName": "AWSBackupServiceRolePolicyForRestores",
   "PolicyVersion": {
-    "CreateDate": "2022-10-12T22:12:43Z",
+    "CreateDate": "2022-11-10T22:45:54Z",
     "Document": {
       "Statement": [
         {
@@ -336,6 +336,31 @@
         },
         {
           "Action": [
+            "timestream:DescribeDatabase",
+            "timestream:DescribeTable",
+            "timestream:GetAwsRestoreStatus",
+            "timestream:ListDatabases",
+            "timestream:ListTables",
+            "timestream:ListTagsForResource",
+            "timestream:StartAwsRestoreJob"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:timestream:*:*:database/*",
+            "arn:aws:timestream:*:*:database/*/table/*"
+          ]
+        },
+        {
+          "Action": [
+            "timestream:DescribeEndpoints"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
             "backup-gateway:Restore"
           ],
           "Effect": "Allow",
@@ -354,7 +379,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v14"
+    "VersionId": "v15"
   },
-  "UpdateDate": "2022-10-12T22:12:43Z"
+  "UpdateDate": "2022-11-10T22:45:54Z"
 }

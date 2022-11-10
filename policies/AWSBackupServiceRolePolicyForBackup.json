@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
   "CreateDate": "2019-01-10T21:01:28Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIOOYZSLZZXWFJJ5N2",
   "PolicyName": "AWSBackupServiceRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2022-10-12T22:14:45Z",
+    "CreateDate": "2022-11-10T22:38:14Z",
     "Document": {
       "Statement": [
         {
@@ -321,6 +321,24 @@
         },
         {
           "Action": [
+            "ssm-sap:BackupDatabase",
+            "ssm-sap:GetDatabase",
+            "ssm-sap:ListTagsForResource",
+            "ssm-sap:UpdateHanaBackupSettings"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm-sap:*:*:*"
+        },
+        {
+          "Action": [
+            "ssm-sap:GetOperation",
+            "ssm-sap:ListDatabases"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "ssm:CancelCommand",
             "ssm:GetCommandInvocation"
           ],
@@ -338,6 +356,29 @@
         {
           "Action": [
             "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "timestream:DescribeDatabase",
+            "timestream:DescribeTable",
+            "timestream:GetAwsBackupStatus",
+            "timestream:ListDatabases",
+            "timestream:ListTables",
+            "timestream:ListTagsForResource",
+            "timestream:StartAwsBackupJob"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:timestream:*:*:database/*",
+            "arn:aws:timestream:*:*:database/*/table/*"
+          ]
+        },
+        {
+          "Action": [
+            "timestream:DescribeEndpoints"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -364,7 +405,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2022-10-12T22:14:45Z"
+  "UpdateDate": "2022-11-10T22:38:14Z"
 }
