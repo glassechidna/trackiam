@@ -53,12 +53,15 @@ Actions:
   - Name: config:GetComplianceSummaryByResourceType
   - Name: config:GetConformancePackComplianceDetails
   - Name: config:GetConformancePackComplianceSummary
+  - Name: config:GetCustomRulePolicy
   - Name: config:GetDiscoveredResourceCounts
   - Name: config:GetOrganizationConfigRuleDetailedStatus
   - Name: config:GetOrganizationConformancePackDetailedStatus
+  - Name: config:GetOrganizationCustomRulePolicy
   - Name: config:GetResourceConfigHistory
   - Name: config:GetStoredQuery
   - Name: config:ListAggregateDiscoveredResources
+  - Name: config:ListConformancePackComplianceScores
   - Name: config:ListDiscoveredResources
   - Name: config:ListStoredQueries
   - Name: config:ListTagsForResource
@@ -85,8 +88,3 @@ Actions:
   - Name: config:StopConfigurationRecorder
   - Name: config:TagResource
   - Name: config:UntagResource
-
-  # APIs without an IAM action
-  - Name: config:GetCustomRulePolicy
-  - Name: config:GetOrganizationCustomRulePolicy
-  - Name: config:ListConformancePackComplianceScores

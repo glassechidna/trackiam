@@ -58,7 +58,7 @@ The following table summarises the AWS APIs.
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
-| [`config`](services/config.yml) | 86 | 3 | 0 |
+| [`config`](services/config.yml) | 89 | 0 | 0 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 0 |
 | [`s3`](services/s3.yml) | 83 | 58 | 45 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
