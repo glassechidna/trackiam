@@ -11,16 +11,16 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 330
-* Unique actions: 13657
-* Managed policies: 993
+* Unique services: 331
+* Unique actions: 13669
+* Managed policies: 994
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 281 |
-| `arn:aws:iam::aws:policy/Amazon*` | 256 |
+| `arn:aws:iam::aws:policy/Amazon*` | 257 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 210 |
 | `arn:aws:iam::aws:policy/service-role/*` | 154 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -326,6 +326,7 @@ The following table summarises the AWS APIs.
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
+| [`scheduler`](services/scheduler.yml) | 0 | 0 | 12 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
@@ -371,14 +372,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2100 |
-| `Get` | 1846 |
-| `Delete` | 1585 |
+| `List` | 2103 |
+| `Get` | 1848 |
+| `Delete` | 1587 |
 | `Describe` | 1539 |
-| `Create` | 1481 |
-| `Update` | 1225 |
+| `Create` | 1483 |
+| `Update` | 1226 |
 | `Put` | 377 |
 | `Start` | 266 |
-| `Tag` | 212 |
-| `Untag` | 210 |
+| `Tag` | 213 |
+| `Untag` | 211 |
 
