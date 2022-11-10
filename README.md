@@ -98,8 +98,8 @@ The following table summarises the AWS APIs.
 | [`dms`](services/dms.yml) | 55 | 10 | 0 |
 | [`kendra`](services/kendra.yml) | 55 | 5 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
+| [`geo`](services/geo.yml) | 53 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 52 | 2 | 2 |
-| [`geo`](services/geo.yml) | 52 | 1 | 0 |
 | [`organizations`](services/organizations.yml) | 52 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 51 | 6 | 12 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 26 |
