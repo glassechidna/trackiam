@@ -1,18 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSXrayReadOnlyAccess",
   "CreateDate": "2016-12-01T18:27:02Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIH4OFXWPS6ZX6OPGQ",
   "PolicyName": "AWSXrayReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-09-03T22:19:40Z",
+    "CreateDate": "2022-11-11T19:46:21Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "xray:BatchGetTraceSummaryById",
             "xray:BatchGetTraces",
+            "xray:GetDistinctTraceGraphs",
             "xray:GetGroup",
             "xray:GetGroups",
             "xray:GetInsight",
@@ -37,7 +39,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2020-09-03T22:19:40Z"
+  "UpdateDate": "2022-11-11T19:46:21Z"
 }
