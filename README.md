@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 331
-* Unique actions: 13679
+* Unique actions: 13681
 * Managed policies: 997
 
 Most common managed policy name prefixes:
@@ -200,10 +200,10 @@ The following table summarises the AWS APIs.
 | [`discovery`](services/discovery.yml) | 25 | 0 | 1 |
 | [`snowball`](services/snowball.yml) | 25 | 0 | 0 |
 | [`ram`](services/ram.yml) | 25 | 0 | 0 |
-| [`detective`](services/detective.yml) | 24 | 0 | 5 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 4 | 0 |
+| [`detective`](services/detective.yml) | 23 | 1 | 7 |
 | [`timestream`](services/timestream.yml) | 23 | 1 | 3 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 23 | 0 | 1 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
@@ -372,7 +372,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2103 |
+| `List` | 2105 |
 | `Get` | 1852 |
 | `Delete` | 1588 |
 | `Describe` | 1540 |
