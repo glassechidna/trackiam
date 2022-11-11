@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 331
-* Unique actions: 13681
+* Unique actions: 13687
 * Managed policies: 997
 
 Most common managed policy name prefixes:
@@ -108,10 +108,10 @@ The following table summarises the AWS APIs.
 | [`imagebuilder`](services/imagebuilder.yml) | 50 | 0 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 49 | 0 | 0 |
+| [`license-manager`](services/license-manager.yml) | 48 | 2 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 48 | 2 | 0 |
 | [`wafv2`](services/wafv2.yml) | 48 | 0 | 2 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
-| [`license-manager`](services/license-manager.yml) | 48 | 0 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`nimble`](services/nimble.yml) | 47 | 0 | 2 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
@@ -264,7 +264,7 @@ The following table summarises the AWS APIs.
 | [`kafkaconnect`](services/kafkaconnect.yml) | 12 | 0 | 0 |
 | [`ivschat`](services/ivschat.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 0 | 31 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 3 | 31 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`supportapp`](services/supportapp.yml) | 10 | 0 | 3 |
 | [`textract`](services/textract.yml) | 10 | 0 | 0 |
@@ -302,7 +302,7 @@ The following table summarises the AWS APIs.
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 2 | 0 | 0 |
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
-| [`execute-api`](services/execute-api.yml) | 0 | 248 | 3 |
+| [`execute-api`](services/execute-api.yml) | 0 | 249 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 31 | 0 |
@@ -372,7 +372,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2105 |
+| `List` | 2109 |
 | `Get` | 1852 |
 | `Delete` | 1588 |
 | `Describe` | 1540 |
@@ -380,6 +380,6 @@ Most common action prefixes:
 | `Update` | 1228 |
 | `Put` | 377 |
 | `Start` | 266 |
-| `Tag` | 213 |
-| `Untag` | 211 |
+| `Tag` | 214 |
+| `Untag` | 212 |
 
