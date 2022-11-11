@@ -105,10 +105,10 @@ The following table summarises the AWS APIs.
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 26 |
 | [`workspaces-web`](services/workspaces-web.yml) | 51 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 50 | 0 | 2 |
+| [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 50 | 0 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 49 | 0 | 0 |
-| [`license-manager`](services/license-manager.yml) | 48 | 2 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 48 | 2 | 0 |
 | [`wafv2`](services/wafv2.yml) | 48 | 0 | 2 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
