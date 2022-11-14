@@ -249,6 +249,7 @@ The following table summarises the AWS APIs.
 | [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 14 | 8 | 3 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 14 | 0 | 31 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
@@ -264,7 +265,6 @@ The following table summarises the AWS APIs.
 | [`kafkaconnect`](services/kafkaconnect.yml) | 12 | 0 | 0 |
 | [`ivschat`](services/ivschat.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 11 | 3 | 31 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`supportapp`](services/supportapp.yml) | 10 | 0 | 3 |
 | [`textract`](services/textract.yml) | 10 | 0 | 0 |

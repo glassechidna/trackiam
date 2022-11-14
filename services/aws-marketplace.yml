@@ -6,10 +6,13 @@ Actions:
   - Name: aws-marketplace:GetEntitlements
   - Name: aws-marketplace:ListChangeSets
   - Name: aws-marketplace:ListEntities
+  - Name: aws-marketplace:ListTagsForResource
   - Name: aws-marketplace:MeterUsage
   - Name: aws-marketplace:RegisterUsage
   - Name: aws-marketplace:ResolveCustomer
   - Name: aws-marketplace:StartChangeSet
+  - Name: aws-marketplace:TagResource
+  - Name: aws-marketplace:UntagResource
 
   # actions with no corresponding API
   - Name: aws-marketplace:AcceptAgreementApprovalRequest
@@ -43,8 +46,3 @@ Actions:
   - Name: aws-marketplace:UpdateAgreementApprovalRequest
   - Name: aws-marketplace:UpdateTask
   - Name: aws-marketplace:ViewSubscriptions
-
-  # APIs without an IAM action
-  - Name: aws-marketplace:ListTagsForResource
-  - Name: aws-marketplace:TagResource
-  - Name: aws-marketplace:UntagResource
