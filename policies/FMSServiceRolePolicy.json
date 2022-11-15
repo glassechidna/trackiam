@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/FMSServiceRolePolicy",
   "CreateDate": "2018-03-28T23:01:12Z",
-  "DefaultVersionId": "v25",
+  "DefaultVersionId": "v26",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAI62NTGYJB446ACUEA",
   "PolicyName": "FMSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-06-24T20:29:28Z",
+    "CreateDate": "2022-11-15T20:51:43Z",
     "Document": {
       "Statement": [
         {
@@ -348,8 +348,6 @@
             "ec2:AuthorizeSecurityGroupEgress",
             "ec2:AuthorizeSecurityGroupIngress",
             "ec2:DeleteSecurityGroup",
-            "ec2:DescribeInstances",
-            "ec2:DescribeNetworkInterfaceAttribute",
             "ec2:RevokeSecurityGroupEgress",
             "ec2:RevokeSecurityGroupIngress",
             "ec2:UpdateSecurityGroupRuleDescriptionsEgress",
@@ -408,6 +406,14 @@
             "ec2:DescribeSubnets",
             "ec2:DescribeTags",
             "ec2:DescribeVpcEndpoints"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstances",
+            "ec2:DescribeNetworkInterfaceAttribute"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -614,7 +620,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v25"
+    "VersionId": "v26"
   },
-  "UpdateDate": "2022-06-24T20:29:28Z"
+  "UpdateDate": "2022-11-15T20:51:43Z"
 }
