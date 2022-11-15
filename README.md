@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 331
-* Unique actions: 13689
+* Unique actions: 13693
 * Managed policies: 997
 
 Most common managed policy name prefixes:
@@ -336,6 +336,7 @@ The following table summarises the AWS APIs.
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
+| [`tax`](services/tax.yml) | 0 | 0 | 6 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
@@ -352,7 +353,6 @@ The following table summarises the AWS APIs.
 | [`resource-explorer`](services/resource-explorer.yml) | 0 | 0 | 3 |
 | [`identitystore-auth`](services/identitystore-auth.yml) | 0 | 0 | 3 |
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |
-| [`tax`](services/tax.yml) | 0 | 0 | 2 |
 | [`sumerian`](services/sumerian.yml) | 0 | 0 | 2 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 2 |
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
@@ -373,12 +373,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2109 |
-| `Get` | 1852 |
+| `Get` | 1854 |
 | `Delete` | 1589 |
 | `Describe` | 1540 |
 | `Create` | 1483 |
 | `Update` | 1228 |
-| `Put` | 377 |
+| `Put` | 379 |
 | `Start` | 266 |
 | `Tag` | 214 |
 | `Untag` | 212 |
