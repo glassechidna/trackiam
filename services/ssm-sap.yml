@@ -1,6 +1,4 @@
 Actions:
-
-  # APIs without an IAM action
   - Name: ssm-sap:DeleteResourcePermission
   - Name: ssm-sap:DeregisterApplication
   - Name: ssm-sap:GetApplication
@@ -17,3 +15,9 @@ Actions:
   - Name: ssm-sap:TagResource
   - Name: ssm-sap:UntagResource
   - Name: ssm-sap:UpdateApplicationSettings
+
+  # actions with no corresponding API
+  - Name: ssm-sap:BackupDatabase
+  - Name: ssm-sap:ListOperations
+  - Name: ssm-sap:RestoreDatabase
+  - Name: ssm-sap:UpdateHANABackupSettings

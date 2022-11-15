@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 332
-* Unique actions: 13713
+* Unique actions: 13717
 * Managed policies: 998
 
 Most common managed policy name prefixes:
@@ -241,6 +241,7 @@ The following table summarises the AWS APIs.
 | [`rum`](services/rum.yml) | 17 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
+| [`ssm-sap`](services/ssm-sap.yml) | 16 | 0 | 4 |
 | [`fis`](services/fis.yml) | 16 | 0 | 3 |
 | [`resource-groups`](services/resource-groups.yml) | 16 | 0 | 1 |
 | [`grafana`](services/grafana.yml) | 16 | 0 | 0 |
@@ -306,7 +307,6 @@ The following table summarises the AWS APIs.
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 0 | 31 | 0 |
-| [`ssm-sap`](services/ssm-sap.yml) | 0 | 16 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`macie`](services/macie.yml) | 0 | 7 | 0 |
@@ -373,12 +373,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2114 |
+| `List` | 2115 |
 | `Get` | 1859 |
 | `Delete` | 1591 |
 | `Describe` | 1540 |
 | `Create` | 1483 |
-| `Update` | 1229 |
+| `Update` | 1230 |
 | `Put` | 381 |
 | `Start` | 266 |
 | `Tag` | 215 |
