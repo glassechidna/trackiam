@@ -1,17 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSSODirectoryReadOnly",
   "CreateDate": "2018-10-31T23:49:32Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJDPMQELJXZD2NC6JG",
   "PolicyName": "AWSSSODirectoryReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2022-03-25T20:57:20Z",
+    "CreateDate": "2022-11-16T18:17:48Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "identitystore-auth:BatchGetSession",
+            "identitystore-auth:ListSessions",
             "identitystore:Describe*",
             "identitystore:List*",
             "sso-directory:Describe*",
@@ -27,7 +29,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2022-03-25T20:57:20Z"
+  "UpdateDate": "2022-11-16T18:17:48Z"
 }
