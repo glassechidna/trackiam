@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 332
-* Unique actions: 13717
+* Unique actions: 13725
 * Managed policies: 999
 
 Most common managed policy name prefixes:
@@ -40,12 +40,12 @@ The following table summarises the AWS APIs.
 | [`sagemaker`](services/sagemaker.yml) | 277 | 1 | 5 |
 | [`chime`](services/chime.yml) | 216 | 1 | 50 |
 | [`glue`](services/glue.yml) | 181 | 5 | 3 |
-| [`connect`](services/connect.yml) | 162 | 1 | 6 |
+| [`connect`](services/connect.yml) | 162 | 2 | 6 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 155 | 0 | 0 |
 | [`ses`](services/ses.yml) | 143 | 0 | 0 |
 | [`rds`](services/rds.yml) | 137 | 0 | 5 |
-| [`ssm`](services/ssm.yml) | 135 | 0 | 10 |
+| [`ssm`](services/ssm.yml) | 135 | 3 | 10 |
 | [`quicksight`](services/quicksight.yml) | 120 | 0 | 26 |
 | [`redshift`](services/redshift.yml) | 119 | 0 | 18 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 119 | 0 | 1 |
@@ -78,9 +78,9 @@ The following table summarises the AWS APIs.
 | [`macie2`](services/macie2.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
+| [`elasticache`](services/elasticache.yml) | 65 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
 | [`personalize`](services/personalize.yml) | 65 | 0 | 0 |
-| [`elasticache`](services/elasticache.yml) | 65 | 0 | 0 |
 | [`es`](services/es.yml) | 64 | 9 | 10 |
 | [`workspaces`](services/workspaces.yml) | 63 | 1 | 1 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
@@ -116,10 +116,10 @@ The following table summarises the AWS APIs.
 | [`nimble`](services/nimble.yml) | 47 | 0 | 2 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
+| [`logs`](services/logs.yml) | 45 | 0 | 5 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
-| [`logs`](services/logs.yml) | 42 | 3 | 5 |
 | [`lakeformation`](services/lakeformation.yml) | 42 | 3 | 1 |
 | [`wellarchitected`](services/wellarchitected.yml) | 42 | 0 | 0 |
 | [`mediatailor`](services/mediatailor.yml) | 42 | 0 | 0 |
@@ -173,6 +173,7 @@ The following table summarises the AWS APIs.
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
 | [`fms`](services/fms.yml) | 30 | 8 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
+| [`xray`](services/xray.yml) | 30 | 0 | 2 |
 | [`route53domains`](services/route53domains.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
@@ -186,14 +187,13 @@ The following table summarises the AWS APIs.
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
-| [`xray`](services/xray.yml) | 27 | 0 | 5 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 27 | 0 | 1 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
+| [`iottwinmaker`](services/iottwinmaker.yml) | 26 | 3 | 0 |
 | [`outposts`](services/outposts.yml) | 26 | 0 | 2 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
 | [`rolesanywhere`](services/rolesanywhere.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
-| [`iottwinmaker`](services/iottwinmaker.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 5 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
@@ -374,12 +374,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2115 |
-| `Get` | 1859 |
-| `Delete` | 1591 |
+| `Get` | 1861 |
+| `Delete` | 1592 |
 | `Describe` | 1540 |
 | `Create` | 1483 |
-| `Update` | 1230 |
-| `Put` | 381 |
+| `Update` | 1231 |
+| `Put` | 382 |
 | `Start` | 266 |
 | `Tag` | 215 |
 | `Untag` | 213 |

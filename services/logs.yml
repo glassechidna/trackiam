@@ -27,6 +27,7 @@ Actions:
   - Name: logs:GetLogGroupFields
   - Name: logs:GetLogRecord
   - Name: logs:GetQueryResults
+  - Name: logs:ListTagsForResource
   - Name: logs:ListTagsLogGroup
   - Name: logs:PutDestination
   - Name: logs:PutDestinationPolicy
@@ -39,8 +40,10 @@ Actions:
   - Name: logs:StartQuery
   - Name: logs:StopQuery
   - Name: logs:TagLogGroup
+  - Name: logs:TagResource
   - Name: logs:TestMetricFilter
   - Name: logs:UntagLogGroup
+  - Name: logs:UntagResource
 
   # actions with no corresponding API
   - Name: logs:CreateLogDelivery
@@ -48,8 +51,3 @@ Actions:
   - Name: logs:GetLogDelivery
   - Name: logs:ListLogDeliveries
   - Name: logs:UpdateLogDelivery
-
-  # APIs without an IAM action
-  - Name: logs:ListTagsForResource
-  - Name: logs:TagResource
-  - Name: logs:UntagResource
