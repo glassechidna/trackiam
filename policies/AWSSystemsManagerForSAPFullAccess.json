@@ -1,0 +1,41 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSSystemsManagerForSAPFullAccess",
+  "CreateDate": "2022-11-17T02:11:09Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4HXSMPOKVI",
+  "PolicyName": "AWSSystemsManagerForSAPFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2022-11-17T02:11:09Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "ssm-sap.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/ssm-sap.amazonaws.com/AWSServiceRoleForSSMForSAP"
+          ]
+        },
+        {
+          "Action": [
+            "ssm-sap:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:*:ssm-sap:*:*:*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-11-17T02:11:09Z"
+}
