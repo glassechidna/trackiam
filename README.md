@@ -13,13 +13,13 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 333
 * Unique actions: 13729
-* Managed policies: 1001
+* Managed policies: 1000
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 285 |
+| `arn:aws:iam::aws:policy/AWS*` | 284 |
 | `arn:aws:iam::aws:policy/Amazon*` | 258 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 212 |
 | `arn:aws:iam::aws:policy/service-role/*` | 154 |
@@ -180,6 +180,7 @@ The following table summarises the AWS APIs.
 | [`dataexchange`](services/dataexchange.yml) | 29 | 0 | 2 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 29 | 0 | 0 |
+| [`iottwinmaker`](services/iottwinmaker.yml) | 29 | 0 | 0 |
 | [`cases`](services/cases.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 28 | 0 | 3 |
@@ -189,7 +190,6 @@ The following table summarises the AWS APIs.
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 27 | 0 | 1 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
-| [`iottwinmaker`](services/iottwinmaker.yml) | 26 | 3 | 0 |
 | [`outposts`](services/outposts.yml) | 26 | 0 | 2 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
 | [`rolesanywhere`](services/rolesanywhere.yml) | 26 | 0 | 0 |
