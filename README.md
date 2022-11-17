@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 333
-* Unique actions: 13731
+* Unique actions: 13744
 * Managed policies: 999
 
 Most common managed policy name prefixes:
@@ -50,7 +50,7 @@ The following table summarises the AWS APIs.
 | [`redshift`](services/redshift.yml) | 119 | 0 | 18 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 119 | 0 | 1 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
-| [`servicecatalog`](services/servicecatalog.yml) | 109 | 0 | 2 |
+| [`servicecatalog`](services/servicecatalog.yml) | 111 | 0 | 0 |
 | [`lex`](services/lex.yml) | 104 | 6 | 7 |
 | [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 4 |
 | [`iotwireless`](services/iotwireless.yml) | 98 | 0 | 1 |
@@ -77,12 +77,12 @@ The following table summarises the AWS APIs.
 | [`backup`](services/backup.yml) | 66 | 0 | 2 |
 | [`macie2`](services/macie2.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
+| [`personalize`](services/personalize.yml) | 65 | 6 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
-| [`personalize`](services/personalize.yml) | 65 | 0 | 0 |
 | [`es`](services/es.yml) | 64 | 9 | 10 |
-| [`workspaces`](services/workspaces.yml) | 63 | 1 | 1 |
+| [`workspaces`](services/workspaces.yml) | 63 | 2 | 1 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`rekognition`](services/rekognition.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
@@ -104,7 +104,7 @@ The following table summarises the AWS APIs.
 | [`dynamodb`](services/dynamodb.yml) | 51 | 6 | 12 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 26 |
 | [`workspaces-web`](services/workspaces-web.yml) | 51 | 0 | 0 |
-| [`appsync`](services/appsync.yml) | 50 | 0 | 2 |
+| [`appsync`](services/appsync.yml) | 50 | 1 | 2 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 50 | 0 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
@@ -240,6 +240,7 @@ The following table summarises the AWS APIs.
 | [`signer`](services/signer.yml) | 17 | 0 | 0 |
 | [`rum`](services/rum.yml) | 17 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 17 | 0 | 0 |
+| [`ivschat`](services/ivschat.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`ssm-sap`](services/ssm-sap.yml) | 16 | 0 | 4 |
 | [`fis`](services/fis.yml) | 16 | 0 | 3 |
@@ -264,7 +265,6 @@ The following table summarises the AWS APIs.
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
 | [`scheduler`](services/scheduler.yml) | 12 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 12 | 0 | 0 |
-| [`ivschat`](services/ivschat.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`supportapp`](services/supportapp.yml) | 10 | 0 | 3 |
@@ -374,12 +374,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2116 |
-| `Get` | 1864 |
-| `Delete` | 1592 |
-| `Describe` | 1540 |
-| `Create` | 1484 |
-| `Update` | 1231 |
+| `List` | 2119 |
+| `Get` | 1865 |
+| `Delete` | 1594 |
+| `Describe` | 1541 |
+| `Create` | 1487 |
+| `Update` | 1233 |
 | `Put` | 383 |
 | `Start` | 266 |
 | `Tag` | 215 |
