@@ -120,10 +120,10 @@ The following table summarises the AWS APIs.
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
+| [`workdocs`](services/workdocs.yml) | 43 | 0 | 14 |
 | [`lakeformation`](services/lakeformation.yml) | 42 | 3 | 1 |
 | [`wellarchitected`](services/wellarchitected.yml) | 42 | 0 | 0 |
 | [`mediatailor`](services/mediatailor.yml) | 42 | 0 | 0 |
-| [`workdocs`](services/workdocs.yml) | 41 | 2 | 14 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
 | [`fsx`](services/fsx.yml) | 41 | 0 | 4 |
 | [`transcribe`](services/transcribe.yml) | 41 | 0 | 2 |
