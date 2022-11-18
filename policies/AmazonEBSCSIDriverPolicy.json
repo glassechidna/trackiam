@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy",
   "CreateDate": "2022-04-04T17:24:29Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4IV6FHD2UE",
   "PolicyName": "AmazonEBSCSIDriverPolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-04-04T17:24:29Z",
+    "CreateDate": "2022-11-18T14:42:46Z",
     "Document": {
       "Statement": [
         {
@@ -47,18 +47,6 @@
           "Condition": {
             "StringLike": {
               "aws:RequestTag/ebs.csi.aws.com/cluster": "true"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
-            "ec2:CreateVolume"
-          ],
-          "Condition": {
-            "StringLike": {
-              "aws:RequestTag/kubernetes.io/cluster/*": "owned"
             }
           },
           "Effect": "Allow",
@@ -118,7 +106,7 @@
           ],
           "Condition": {
             "StringLike": {
-              "ec2:ResourceTag/kubernetes.io/cluster/*": "owned"
+              "ec2:ResourceTag/kubernetes.io/created-for/pvc/name": "*"
             }
           },
           "Effect": "Allow",
@@ -154,7 +142,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-04-04T17:24:29Z"
+  "UpdateDate": "2022-11-18T14:42:46Z"
 }
