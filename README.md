@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 333
-* Unique actions: 13744
+* Unique services: 332
+* Unique actions: 13745
 * Managed policies: 1000
 
 Most common managed policy name prefixes:
@@ -40,7 +40,7 @@ The following table summarises the AWS APIs.
 | [`sagemaker`](services/sagemaker.yml) | 277 | 1 | 5 |
 | [`chime`](services/chime.yml) | 216 | 1 | 50 |
 | [`glue`](services/glue.yml) | 181 | 5 | 3 |
-| [`connect`](services/connect.yml) | 162 | 2 | 6 |
+| [`connect`](services/connect.yml) | 163 | 1 | 9 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 155 | 0 | 0 |
 | [`ses`](services/ses.yml) | 143 | 0 | 0 |
@@ -354,7 +354,6 @@ The following table summarises the AWS APIs.
 | [`resource-explorer`](services/resource-explorer.yml) | 0 | 0 | 3 |
 | [`identitystore-auth`](services/identitystore-auth.yml) | 0 | 0 | 3 |
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |
-| [`wickr`](services/wickr.yml) | 0 | 0 | 2 |
 | [`sumerian`](services/sumerian.yml) | 0 | 0 | 2 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 2 |
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
@@ -374,14 +373,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2119 |
+| `List` | 2118 |
 | `Get` | 1865 |
 | `Delete` | 1594 |
-| `Describe` | 1541 |
-| `Create` | 1487 |
+| `Describe` | 1542 |
+| `Create` | 1486 |
 | `Update` | 1233 |
 | `Put` | 383 |
-| `Start` | 266 |
+| `Start` | 267 |
 | `Tag` | 215 |
 | `Untag` | 213 |
 
