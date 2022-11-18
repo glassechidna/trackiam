@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 332
-* Unique actions: 13745
+* Unique actions: 13759
 * Managed policies: 1000
 
 Most common managed policy name prefixes:
@@ -38,7 +38,7 @@ The following table summarises the AWS APIs.
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 547 | 0 | 9 |
 | [`sagemaker`](services/sagemaker.yml) | 277 | 1 | 5 |
-| [`chime`](services/chime.yml) | 216 | 1 | 50 |
+| [`chime`](services/chime.yml) | 216 | 4 | 50 |
 | [`glue`](services/glue.yml) | 181 | 5 | 3 |
 | [`connect`](services/connect.yml) | 163 | 1 | 9 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
@@ -46,7 +46,7 @@ The following table summarises the AWS APIs.
 | [`ses`](services/ses.yml) | 143 | 0 | 0 |
 | [`rds`](services/rds.yml) | 137 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 135 | 3 | 10 |
-| [`quicksight`](services/quicksight.yml) | 120 | 0 | 26 |
+| [`quicksight`](services/quicksight.yml) | 120 | 3 | 26 |
 | [`redshift`](services/redshift.yml) | 119 | 0 | 18 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 119 | 0 | 1 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
@@ -54,7 +54,7 @@ The following table summarises the AWS APIs.
 | [`lex`](services/lex.yml) | 104 | 6 | 7 |
 | [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 4 |
 | [`iotwireless`](services/iotwireless.yml) | 98 | 0 | 1 |
-| [`cloudfront`](services/cloudfront.yml) | 97 | 1 | 7 |
+| [`cloudfront`](services/cloudfront.yml) | 97 | 8 | 7 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
@@ -211,7 +211,7 @@ The following table summarises the AWS APIs.
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
-| [`appflow`](services/appflow.yml) | 22 | 0 | 6 |
+| [`appflow`](services/appflow.yml) | 22 | 1 | 6 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
@@ -222,6 +222,7 @@ The following table summarises the AWS APIs.
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`voiceid`](services/voiceid.yml) | 21 | 0 | 2 |
 | [`synthetics`](services/synthetics.yml) | 21 | 0 | 0 |
+| [`iotroborunner`](services/iotroborunner.yml) | 20 | 0 | 29 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 20 | 0 | 8 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
@@ -315,7 +316,6 @@ The following table summarises the AWS APIs.
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 64 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 50 |
-| [`iotroborunner`](services/iotroborunner.yml) | 0 | 0 | 49 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 32 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 29 |
@@ -373,13 +373,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2118 |
-| `Get` | 1865 |
-| `Delete` | 1594 |
+| `List` | 2120 |
+| `Get` | 1868 |
+| `Delete` | 1596 |
 | `Describe` | 1542 |
-| `Create` | 1486 |
-| `Update` | 1233 |
-| `Put` | 383 |
+| `Create` | 1487 |
+| `Update` | 1235 |
+| `Put` | 384 |
 | `Start` | 267 |
 | `Tag` | 215 |
 | `Untag` | 213 |
