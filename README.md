@@ -46,7 +46,7 @@ The following table summarises the AWS APIs.
 | [`ses`](services/ses.yml) | 143 | 0 | 0 |
 | [`rds`](services/rds.yml) | 137 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 135 | 3 | 10 |
-| [`quicksight`](services/quicksight.yml) | 120 | 3 | 26 |
+| [`quicksight`](services/quicksight.yml) | 123 | 0 | 26 |
 | [`redshift`](services/redshift.yml) | 119 | 0 | 18 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 119 | 0 | 1 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
@@ -205,13 +205,13 @@ The following table summarises the AWS APIs.
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 4 | 0 |
 | [`detective`](services/detective.yml) | 23 | 1 | 7 |
 | [`timestream`](services/timestream.yml) | 23 | 1 | 3 |
+| [`appflow`](services/appflow.yml) | 23 | 0 | 6 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 23 | 0 | 1 |
 | [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
-| [`appflow`](services/appflow.yml) | 22 | 1 | 6 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
