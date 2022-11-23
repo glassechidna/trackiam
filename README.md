@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 332
-* Unique actions: 13759
+* Unique actions: 13761
 * Managed policies: 1001
 
 Most common managed policy name prefixes:
@@ -282,8 +282,8 @@ The following table summarises the AWS APIs.
 | [`backup-storage`](services/backup-storage.yml) | 8 | 1 | 7 |
 | [`finspace`](services/finspace.yml) | 8 | 0 | 7 |
 | [`sts`](services/sts.yml) | 8 | 0 | 3 |
+| [`rbin`](services/rbin.yml) | 8 | 0 | 2 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
-| [`rbin`](services/rbin.yml) | 8 | 0 | 0 |
 | [`iotfleethub`](services/iotfleethub.yml) | 8 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 6 | 0 | 1 |
