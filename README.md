@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 332
-* Unique actions: 13761
+* Unique actions: 13763
 * Managed policies: 1001
 
 Most common managed policy name prefixes:
@@ -243,10 +243,10 @@ The following table summarises the AWS APIs.
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 17 | 0 | 0 |
 | [`ivschat`](services/ivschat.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
+| [`grafana`](services/grafana.yml) | 16 | 2 | 0 |
 | [`ssm-sap`](services/ssm-sap.yml) | 16 | 0 | 4 |
 | [`fis`](services/fis.yml) | 16 | 0 | 3 |
 | [`resource-groups`](services/resource-groups.yml) | 16 | 0 | 1 |
-| [`grafana`](services/grafana.yml) | 16 | 0 | 0 |
 | [`honeycode`](services/honeycode.yml) | 15 | 0 | 15 |
 | [`app-integrations`](services/app-integrations.yml) | 15 | 0 | 4 |
 | [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 0 |
@@ -272,6 +272,7 @@ The following table summarises the AWS APIs.
 | [`textract`](services/textract.yml) | 10 | 0 | 0 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
+| [`rbin`](services/rbin.yml) | 10 | 0 | 0 |
 | [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
@@ -282,7 +283,6 @@ The following table summarises the AWS APIs.
 | [`backup-storage`](services/backup-storage.yml) | 8 | 1 | 7 |
 | [`finspace`](services/finspace.yml) | 8 | 0 | 7 |
 | [`sts`](services/sts.yml) | 8 | 0 | 3 |
-| [`rbin`](services/rbin.yml) | 8 | 0 | 2 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
 | [`iotfleethub`](services/iotfleethub.yml) | 8 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
@@ -376,9 +376,9 @@ Most common action prefixes:
 | `List` | 2120 |
 | `Get` | 1868 |
 | `Delete` | 1596 |
-| `Describe` | 1542 |
+| `Describe` | 1543 |
 | `Create` | 1487 |
-| `Update` | 1235 |
+| `Update` | 1236 |
 | `Put` | 384 |
 | `Start` | 267 |
 | `Tag` | 215 |
