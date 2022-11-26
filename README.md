@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 333
-* Unique actions: 13778
+* Unique actions: 13785
 * Managed policies: 1002
 
 Most common managed policy name prefixes:
@@ -115,8 +115,8 @@ The following table summarises the AWS APIs.
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`nimble`](services/nimble.yml) | 47 | 0 | 2 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
+| [`logs`](services/logs.yml) | 45 | 0 | 10 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
-| [`logs`](services/logs.yml) | 45 | 0 | 5 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
@@ -132,10 +132,10 @@ The following table summarises the AWS APIs.
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
+| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 1 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`profile`](services/profile.yml) | 38 | 0 | 0 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
-| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 0 |
 | [`sso`](services/sso.yml) | 37 | 0 | 52 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`athena`](services/athena.yml) | 37 | 0 | 1 |
@@ -173,7 +173,7 @@ The following table summarises the AWS APIs.
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
 | [`fms`](services/fms.yml) | 30 | 8 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
-| [`xray`](services/xray.yml) | 30 | 0 | 2 |
+| [`xray`](services/xray.yml) | 30 | 0 | 3 |
 | [`route53domains`](services/route53domains.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
@@ -375,12 +375,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2124 |
-| `Get` | 1871 |
-| `Delete` | 1598 |
+| `Get` | 1872 |
+| `Delete` | 1599 |
 | `Describe` | 1543 |
 | `Create` | 1489 |
 | `Update` | 1237 |
-| `Put` | 385 |
+| `Put` | 386 |
 | `Start` | 267 |
 | `Tag` | 216 |
 | `Untag` | 214 |
