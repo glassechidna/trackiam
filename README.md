@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 333
-* Unique actions: 13785
+* Unique actions: 13810
 * Managed policies: 1002
 
 Most common managed policy name prefixes:
@@ -152,13 +152,13 @@ The following table summarises the AWS APIs.
 | [`eks`](services/eks.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`panorama`](services/panorama.yml) | 33 | 1 | 31 |
-| [`mgn`](services/mgn.yml) | 33 | 0 | 34 |
+| [`mgn`](services/mgn.yml) | 33 | 0 | 56 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`gamesparks`](services/gamesparks.yml) | 33 | 0 | 1 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
-| [`drs`](services/drs.yml) | 32 | 0 | 41 |
+| [`drs`](services/drs.yml) | 32 | 0 | 44 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 32 | 0 | 3 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`m2`](services/m2.yml) | 32 | 0 | 0 |
@@ -374,14 +374,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2124 |
+| `List` | 2128 |
 | `Get` | 1872 |
-| `Delete` | 1599 |
+| `Delete` | 1601 |
 | `Describe` | 1543 |
-| `Create` | 1489 |
-| `Update` | 1237 |
-| `Put` | 386 |
-| `Start` | 267 |
+| `Create` | 1491 |
+| `Update` | 1239 |
+| `Put` | 388 |
+| `Start` | 268 |
 | `Tag` | 216 |
 | `Untag` | 214 |
 
