@@ -1,0 +1,48 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSXrayCrossAccountSharingConfiguration",
+  "CreateDate": "2022-11-27T13:46:35Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4HNLJFUIQJ",
+  "PolicyName": "AWSXrayCrossAccountSharingConfiguration",
+  "PolicyVersion": {
+    "CreateDate": "2022-11-27T13:46:35Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "oam:CreateLink",
+            "oam:UpdateLink"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:oam:*:*:link/*",
+            "arn:aws:oam:*:*:sink/*"
+          ]
+        },
+        {
+          "Action": [
+            "oam:DeleteLink",
+            "oam:GetLink",
+            "oam:TagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:oam:*:*:link/*"
+        },
+        {
+          "Action": [
+            "oam:ListLinks",
+            "xray:Link"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-11-27T13:46:35Z"
+}
