@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchFullAccess",
   "CreateDate": "2015-02-06T18:40:00Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIKEABORKUXN6DEAZU",
   "PolicyName": "CloudWatchFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2018-08-09T19:10:43Z",
+    "CreateDate": "2022-11-27T13:23:49Z",
     "Document": {
       "Statement": [
         {
@@ -28,16 +28,24 @@
             "iam:GetPolicyVersion",
             "iam:GetRole",
             "logs:*",
+            "oam:ListSinks",
             "sns:*"
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "oam:ListAttachedLinks"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:oam:*:*:sink/*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2018-08-09T19:10:43Z"
+  "UpdateDate": "2022-11-27T13:23:49Z"
 }
