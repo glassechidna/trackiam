@@ -1,0 +1,48 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CloudWatchCrossAccountSharingConfiguration",
+  "CreateDate": "2022-11-27T14:01:10Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4PJS4RPZHS",
+  "PolicyName": "CloudWatchCrossAccountSharingConfiguration",
+  "PolicyVersion": {
+    "CreateDate": "2022-11-27T14:01:10Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:Link",
+            "oam:ListLinks"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "oam:CreateLink",
+            "oam:UpdateLink"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:oam:*:*:link/*",
+            "arn:aws:oam:*:*:sink/*"
+          ]
+        },
+        {
+          "Action": [
+            "oam:DeleteLink",
+            "oam:GetLink",
+            "oam:TagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:oam:*:*:link/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-11-27T14:01:10Z"
+}
