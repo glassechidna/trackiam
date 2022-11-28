@@ -4,6 +4,7 @@ Actions:
   - Name: logs:CreateExportTask
   - Name: logs:CreateLogGroup
   - Name: logs:CreateLogStream
+  - Name: logs:DeleteDataProtectionPolicy
   - Name: logs:DeleteDestination
   - Name: logs:DeleteLogGroup
   - Name: logs:DeleteLogStream
@@ -23,12 +24,14 @@ Actions:
   - Name: logs:DescribeSubscriptionFilters
   - Name: logs:DisassociateKmsKey
   - Name: logs:FilterLogEvents
+  - Name: logs:GetDataProtectionPolicy
   - Name: logs:GetLogEvents
   - Name: logs:GetLogGroupFields
   - Name: logs:GetLogRecord
   - Name: logs:GetQueryResults
   - Name: logs:ListTagsForResource
   - Name: logs:ListTagsLogGroup
+  - Name: logs:PutDataProtectionPolicy
   - Name: logs:PutDestination
   - Name: logs:PutDestinationPolicy
   - Name: logs:PutLogEvents
@@ -47,12 +50,9 @@ Actions:
 
   # actions with no corresponding API
   - Name: logs:CreateLogDelivery
-  - Name: logs:DeleteDataProtectionPolicy
   - Name: logs:DeleteLogDelivery
-  - Name: logs:GetDataProtectionPolicy
   - Name: logs:GetLogDelivery
   - Name: logs:Link
   - Name: logs:ListLogDeliveries
-  - Name: logs:PutDataProtectionPolicy
   - Name: logs:Unmask
   - Name: logs:UpdateLogDelivery

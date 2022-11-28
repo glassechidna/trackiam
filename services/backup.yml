@@ -1,8 +1,10 @@
 Actions:
+  - Name: backup:CancelLegalHold
   - Name: backup:CreateBackupPlan
   - Name: backup:CreateBackupSelection
   - Name: backup:CreateBackupVault
   - Name: backup:CreateFramework
+  - Name: backup:CreateLegalHold
   - Name: backup:CreateReportPlan
   - Name: backup:DeleteBackupPlan
   - Name: backup:DeleteBackupSelection
@@ -25,6 +27,7 @@ Actions:
   - Name: backup:DescribeReportPlan
   - Name: backup:DescribeRestoreJob
   - Name: backup:DisassociateRecoveryPoint
+  - Name: backup:DisassociateRecoveryPointFromParent
   - Name: backup:ExportBackupPlanTemplate
   - Name: backup:GetBackupPlan
   - Name: backup:GetBackupPlanFromJSON
@@ -32,6 +35,7 @@ Actions:
   - Name: backup:GetBackupSelection
   - Name: backup:GetBackupVaultAccessPolicy
   - Name: backup:GetBackupVaultNotifications
+  - Name: backup:GetLegalHold
   - Name: backup:GetRecoveryPointRestoreMetadata
   - Name: backup:GetSupportedResourceTypes
   - Name: backup:ListBackupJobs
@@ -42,8 +46,10 @@ Actions:
   - Name: backup:ListBackupVaults
   - Name: backup:ListCopyJobs
   - Name: backup:ListFrameworks
+  - Name: backup:ListLegalHolds
   - Name: backup:ListProtectedResources
   - Name: backup:ListRecoveryPointsByBackupVault
+  - Name: backup:ListRecoveryPointsByLegalHold
   - Name: backup:ListRecoveryPointsByResource
   - Name: backup:ListReportJobs
   - Name: backup:ListReportPlans
@@ -67,11 +73,5 @@ Actions:
   - Name: backup:UpdateReportPlan
 
   # actions with no corresponding API
-  - Name: backup:CancelLegalHold
   - Name: backup:CopyFromBackupVault
   - Name: backup:CopyIntoBackupVault
-  - Name: backup:CreateLegalHold
-  - Name: backup:DisassociateRecoveryPointFromParent
-  - Name: backup:GetLegalHold
-  - Name: backup:ListLegalHolds
-  - Name: backup:ListRecoveryPointsByLegalHold
