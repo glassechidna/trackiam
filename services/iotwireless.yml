@@ -46,8 +46,10 @@ Actions:
   - Name: iotwireless:GetPartnerAccount
   - Name: iotwireless:GetPosition
   - Name: iotwireless:GetPositionConfiguration
+  - Name: iotwireless:GetPositionEstimate
   - Name: iotwireless:GetResourceEventConfiguration
   - Name: iotwireless:GetResourceLogLevel
+  - Name: iotwireless:GetResourcePosition
   - Name: iotwireless:GetServiceEndpoint
   - Name: iotwireless:GetServiceProfile
   - Name: iotwireless:GetWirelessDevice
@@ -95,13 +97,9 @@ Actions:
   - Name: iotwireless:UpdatePartnerAccount
   - Name: iotwireless:UpdatePosition
   - Name: iotwireless:UpdateResourceEventConfiguration
+  - Name: iotwireless:UpdateResourcePosition
   - Name: iotwireless:UpdateWirelessDevice
   - Name: iotwireless:UpdateWirelessGateway
 
   # actions with no corresponding API
   - Name: iotwireless:StartNetworkAnalyzerStream
-
-  # APIs without an IAM action
-  - Name: iotwireless:GetPositionEstimate
-  - Name: iotwireless:GetResourcePosition
-  - Name: iotwireless:UpdateResourcePosition

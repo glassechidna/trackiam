@@ -53,7 +53,7 @@ The following table summarises the AWS APIs.
 | [`servicecatalog`](services/servicecatalog.yml) | 111 | 0 | 0 |
 | [`lex`](services/lex.yml) | 104 | 6 | 7 |
 | [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 4 |
-| [`iotwireless`](services/iotwireless.yml) | 98 | 3 | 1 |
+| [`iotwireless`](services/iotwireless.yml) | 101 | 0 | 1 |
 | [`cloudfront`](services/cloudfront.yml) | 97 | 8 | 7 |
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
