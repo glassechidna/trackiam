@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 335
-* Unique actions: 13874
+* Unique actions: 13875
 * Managed policies: 1010
 
 Most common managed policy name prefixes:
@@ -271,10 +271,10 @@ The following table summarises the AWS APIs.
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`textract`](services/textract.yml) | 10 | 3 | 0 |
 | [`supportapp`](services/supportapp.yml) | 10 | 0 | 3 |
+| [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 10 | 0 | 1 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
 | [`rbin`](services/rbin.yml) | 10 | 0 | 0 |
-| [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
@@ -381,7 +381,7 @@ Most common action prefixes:
 | `Delete` | 1607 |
 | `Describe` | 1545 |
 | `Create` | 1498 |
-| `Update` | 1245 |
+| `Update` | 1246 |
 | `Put` | 389 |
 | `Start` | 276 |
 | `Tag` | 217 |
