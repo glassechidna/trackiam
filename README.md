@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 337
-* Unique actions: 13962
+* Unique actions: 13973
 * Managed policies: 1012
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 547 | 0 | 9 |
+| [`ec2`](services/ec2.yml) | 547 | 5 | 9 |
 | [`sagemaker`](services/sagemaker.yml) | 277 | 1 | 5 |
 | [`chime`](services/chime.yml) | 216 | 4 | 50 |
 | [`glue`](services/glue.yml) | 181 | 5 | 3 |
@@ -46,7 +46,7 @@ The following table summarises the AWS APIs.
 | [`ses`](services/ses.yml) | 143 | 0 | 0 |
 | [`rds`](services/rds.yml) | 141 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 135 | 3 | 10 |
-| [`quicksight`](services/quicksight.yml) | 123 | 0 | 26 |
+| [`quicksight`](services/quicksight.yml) | 123 | 3 | 26 |
 | [`redshift`](services/redshift.yml) | 119 | 0 | 18 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 119 | 0 | 1 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
@@ -58,11 +58,12 @@ The following table summarises the AWS APIs.
 | [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
-| [`config`](services/config.yml) | 89 | 0 | 0 |
+| [`config`](services/config.yml) | 89 | 3 | 0 |
+| [`s3`](services/s3.yml) | 85 | 58 | 45 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 0 |
-| [`s3`](services/s3.yml) | 83 | 58 | 47 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 80 | 0 | 51 |
+| [`macie2`](services/macie2.yml) | 79 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
@@ -74,7 +75,6 @@ The following table summarises the AWS APIs.
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 68 | 0 | 0 |
 | [`ds`](services/ds.yml) | 67 | 0 | 6 |
-| [`macie2`](services/macie2.yml) | 66 | 0 | 13 |
 | [`cloudformation`](services/cloudformation.yml) | 66 | 0 | 11 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 65 | 6 | 0 |
@@ -268,10 +268,10 @@ The following table summarises the AWS APIs.
 | [`scheduler`](services/scheduler.yml) | 12 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
+| [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 11 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`textract`](services/textract.yml) | 10 | 3 | 0 |
 | [`supportapp`](services/supportapp.yml) | 10 | 0 | 3 |
-| [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 10 | 0 | 1 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
 | [`rbin`](services/rbin.yml) | 10 | 0 | 0 |
@@ -293,6 +293,7 @@ The following table summarises the AWS APIs.
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
 | [`ebs`](services/ebs.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
+| [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 6 | 0 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 6 | 0 | 0 |
 | [`account`](services/account.yml) | 5 | 0 | 3 |
 | [`s3-outposts`](services/s3-outposts.yml) | 4 | 0 | 29 |
@@ -342,7 +343,6 @@ The following table summarises the AWS APIs.
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
 | [`tax`](services/tax.yml) | 0 | 0 | 6 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
-| [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 5 |
@@ -378,14 +378,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2166 |
-| `Get` | 1904 |
+| `List` | 2167 |
+| `Get` | 1906 |
 | `Delete` | 1615 |
-| `Describe` | 1545 |
+| `Describe` | 1549 |
 | `Create` | 1504 |
 | `Update` | 1256 |
 | `Put` | 389 |
-| `Start` | 284 |
+| `Start` | 285 |
 | `Tag` | 218 |
 | `Untag` | 216 |
 

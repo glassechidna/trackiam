@@ -26,8 +26,10 @@ Actions:
   - Name: macie2:EnableOrganizationAdminAccount
   - Name: macie2:GetAdministratorAccount
   - Name: macie2:GetAllowList
+  - Name: macie2:GetAutomatedDiscoveryConfiguration
   - Name: macie2:GetBucketStatistics
   - Name: macie2:GetClassificationExportConfiguration
+  - Name: macie2:GetClassificationScope
   - Name: macie2:GetCustomDataIdentifier
   - Name: macie2:GetFindingStatistics
   - Name: macie2:GetFindings
@@ -37,13 +39,16 @@ Actions:
   - Name: macie2:GetMacieSession
   - Name: macie2:GetMasterAccount
   - Name: macie2:GetMember
+  - Name: macie2:GetResourceProfile
   - Name: macie2:GetRevealConfiguration
   - Name: macie2:GetSensitiveDataOccurrences
   - Name: macie2:GetSensitiveDataOccurrencesAvailability
+  - Name: macie2:GetSensitivityInspectionTemplate
   - Name: macie2:GetUsageStatistics
   - Name: macie2:GetUsageTotals
   - Name: macie2:ListAllowLists
   - Name: macie2:ListClassificationJobs
+  - Name: macie2:ListClassificationScopes
   - Name: macie2:ListCustomDataIdentifiers
   - Name: macie2:ListFindings
   - Name: macie2:ListFindingsFilters
@@ -51,6 +56,9 @@ Actions:
   - Name: macie2:ListManagedDataIdentifiers
   - Name: macie2:ListMembers
   - Name: macie2:ListOrganizationAdminAccounts
+  - Name: macie2:ListResourceProfileArtifacts
+  - Name: macie2:ListResourceProfileDetections
+  - Name: macie2:ListSensitivityInspectionTemplates
   - Name: macie2:ListTagsForResource
   - Name: macie2:PutClassificationExportConfiguration
   - Name: macie2:PutFindingsPublicationConfiguration
@@ -59,24 +67,14 @@ Actions:
   - Name: macie2:TestCustomDataIdentifier
   - Name: macie2:UntagResource
   - Name: macie2:UpdateAllowList
+  - Name: macie2:UpdateAutomatedDiscoveryConfiguration
   - Name: macie2:UpdateClassificationJob
+  - Name: macie2:UpdateClassificationScope
   - Name: macie2:UpdateFindingsFilter
   - Name: macie2:UpdateMacieSession
   - Name: macie2:UpdateMemberSession
   - Name: macie2:UpdateOrganizationConfiguration
-  - Name: macie2:UpdateRevealConfiguration
-
-  # actions with no corresponding API
-  - Name: macie2:GetAutomatedDiscoveryConfiguration
-  - Name: macie2:GetClassificationScope
-  - Name: macie2:GetResourceProfile
-  - Name: macie2:GetSensitivityInspectionTemplate
-  - Name: macie2:ListClassificationScopes
-  - Name: macie2:ListResourceProfileArtifacts
-  - Name: macie2:ListResourceProfileDetections
-  - Name: macie2:ListSensitivityInspectionTemplates
-  - Name: macie2:UpdateAutomatedDiscoveryConfiguration
-  - Name: macie2:UpdateClassificationScope
   - Name: macie2:UpdateResourceProfile
   - Name: macie2:UpdateResourceProfileDetections
+  - Name: macie2:UpdateRevealConfiguration
   - Name: macie2:UpdateSensitivityInspectionTemplate
