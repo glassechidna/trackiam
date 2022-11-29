@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 339
-* Unique actions: 14035
+* Unique services: 340
+* Unique actions: 14050
 * Managed policies: 1014
 
 Most common managed policy name prefixes:
@@ -332,6 +332,7 @@ The following table summarises the AWS APIs.
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 17 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
+| [`simspaceweaver`](services/simspaceweaver.yml) | 0 | 0 | 15 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
@@ -380,14 +381,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2176 |
+| `List` | 2179 |
 | `Get` | 1918 |
-| `Delete` | 1628 |
-| `Describe` | 1549 |
+| `Delete` | 1630 |
+| `Describe` | 1551 |
 | `Create` | 1517 |
 | `Update` | 1267 |
 | `Put` | 389 |
-| `Start` | 285 |
-| `Tag` | 219 |
-| `Untag` | 217 |
+| `Start` | 288 |
+| `Tag` | 220 |
+| `Untag` | 218 |
 
