@@ -24,14 +24,18 @@ Actions:
   - Name: sagemaker:CreateExperiment
   - Name: sagemaker:CreateFeatureGroup
   - Name: sagemaker:CreateFlowDefinition
+  - Name: sagemaker:CreateHub
   - Name: sagemaker:CreateHumanTaskUi
   - Name: sagemaker:CreateHyperParameterTuningJob
   - Name: sagemaker:CreateImage
   - Name: sagemaker:CreateImageVersion
+  - Name: sagemaker:CreateInferenceExperiment
   - Name: sagemaker:CreateInferenceRecommendationsJob
   - Name: sagemaker:CreateLabelingJob
   - Name: sagemaker:CreateModel
   - Name: sagemaker:CreateModelBiasJobDefinition
+  - Name: sagemaker:CreateModelCard
+  - Name: sagemaker:CreateModelCardExportJob
   - Name: sagemaker:CreateModelExplainabilityJobDefinition
   - Name: sagemaker:CreateModelPackage
   - Name: sagemaker:CreateModelPackageGroup
@@ -44,6 +48,7 @@ Actions:
   - Name: sagemaker:CreatePresignedNotebookInstanceUrl
   - Name: sagemaker:CreateProcessingJob
   - Name: sagemaker:CreateProject
+  - Name: sagemaker:CreateSpace
   - Name: sagemaker:CreateStudioLifecycleConfig
   - Name: sagemaker:CreateTrainingJob
   - Name: sagemaker:CreateTransformJob
@@ -70,12 +75,16 @@ Actions:
   - Name: sagemaker:DeleteExperiment
   - Name: sagemaker:DeleteFeatureGroup
   - Name: sagemaker:DeleteFlowDefinition
+  - Name: sagemaker:DeleteHub
+  - Name: sagemaker:DeleteHubContent
   - Name: sagemaker:DeleteHumanLoop
   - Name: sagemaker:DeleteHumanTaskUi
   - Name: sagemaker:DeleteImage
   - Name: sagemaker:DeleteImageVersion
+  - Name: sagemaker:DeleteInferenceExperiment
   - Name: sagemaker:DeleteModel
   - Name: sagemaker:DeleteModelBiasJobDefinition
+  - Name: sagemaker:DeleteModelCard
   - Name: sagemaker:DeleteModelExplainabilityJobDefinition
   - Name: sagemaker:DeleteModelPackage
   - Name: sagemaker:DeleteModelPackageGroup
@@ -87,6 +96,7 @@ Actions:
   - Name: sagemaker:DeletePipeline
   - Name: sagemaker:DeleteProject
   - Name: sagemaker:DeleteRecord
+  - Name: sagemaker:DeleteSpace
   - Name: sagemaker:DeleteStudioLifecycleConfig
   - Name: sagemaker:DeleteTags
   - Name: sagemaker:DeleteTrial
@@ -116,16 +126,21 @@ Actions:
   - Name: sagemaker:DescribeFeatureGroup
   - Name: sagemaker:DescribeFeatureMetadata
   - Name: sagemaker:DescribeFlowDefinition
+  - Name: sagemaker:DescribeHub
+  - Name: sagemaker:DescribeHubContent
   - Name: sagemaker:DescribeHumanLoop
   - Name: sagemaker:DescribeHumanTaskUi
   - Name: sagemaker:DescribeHyperParameterTuningJob
   - Name: sagemaker:DescribeImage
   - Name: sagemaker:DescribeImageVersion
+  - Name: sagemaker:DescribeInferenceExperiment
   - Name: sagemaker:DescribeInferenceRecommendationsJob
   - Name: sagemaker:DescribeLabelingJob
   - Name: sagemaker:DescribeLineageGroup
   - Name: sagemaker:DescribeModel
   - Name: sagemaker:DescribeModelBiasJobDefinition
+  - Name: sagemaker:DescribeModelCard
+  - Name: sagemaker:DescribeModelCardExportJob
   - Name: sagemaker:DescribeModelExplainabilityJobDefinition
   - Name: sagemaker:DescribeModelPackage
   - Name: sagemaker:DescribeModelPackageGroup
@@ -138,6 +153,7 @@ Actions:
   - Name: sagemaker:DescribePipelineExecution
   - Name: sagemaker:DescribeProcessingJob
   - Name: sagemaker:DescribeProject
+  - Name: sagemaker:DescribeSpace
   - Name: sagemaker:DescribeStudioLifecycleConfig
   - Name: sagemaker:DescribeSubscribedWorkteam
   - Name: sagemaker:DescribeTrainingJob
@@ -157,6 +173,7 @@ Actions:
   - Name: sagemaker:GetRecord
   - Name: sagemaker:GetSagemakerServicecatalogPortfolioStatus
   - Name: sagemaker:GetSearchSuggestions
+  - Name: sagemaker:ImportHubContent
   - Name: sagemaker:InvokeEndpoint
   - Name: sagemaker:InvokeEndpointAsync
   - Name: sagemaker:ListActions
@@ -181,23 +198,32 @@ Actions:
   - Name: sagemaker:ListExperiments
   - Name: sagemaker:ListFeatureGroups
   - Name: sagemaker:ListFlowDefinitions
+  - Name: sagemaker:ListHubContentVersions
+  - Name: sagemaker:ListHubContents
+  - Name: sagemaker:ListHubs
   - Name: sagemaker:ListHumanLoops
   - Name: sagemaker:ListHumanTaskUis
   - Name: sagemaker:ListHyperParameterTuningJobs
   - Name: sagemaker:ListImageVersions
   - Name: sagemaker:ListImages
+  - Name: sagemaker:ListInferenceExperiments
   - Name: sagemaker:ListInferenceRecommendationsJobSteps
   - Name: sagemaker:ListInferenceRecommendationsJobs
   - Name: sagemaker:ListLabelingJobs
   - Name: sagemaker:ListLabelingJobsForWorkteam
   - Name: sagemaker:ListLineageGroups
   - Name: sagemaker:ListModelBiasJobDefinitions
+  - Name: sagemaker:ListModelCardExportJobs
+  - Name: sagemaker:ListModelCardVersions
+  - Name: sagemaker:ListModelCards
   - Name: sagemaker:ListModelExplainabilityJobDefinitions
   - Name: sagemaker:ListModelMetadata
   - Name: sagemaker:ListModelPackageGroups
   - Name: sagemaker:ListModelPackages
   - Name: sagemaker:ListModelQualityJobDefinitions
   - Name: sagemaker:ListModels
+  - Name: sagemaker:ListMonitoringAlertHistory
+  - Name: sagemaker:ListMonitoringAlerts
   - Name: sagemaker:ListMonitoringExecutions
   - Name: sagemaker:ListMonitoringSchedules
   - Name: sagemaker:ListNotebookInstanceLifecycleConfigs
@@ -208,6 +234,7 @@ Actions:
   - Name: sagemaker:ListPipelines
   - Name: sagemaker:ListProcessingJobs
   - Name: sagemaker:ListProjects
+  - Name: sagemaker:ListSpaces
   - Name: sagemaker:ListStageDevices
   - Name: sagemaker:ListStudioLifecycleConfigs
   - Name: sagemaker:ListSubscribedWorkteams
@@ -232,6 +259,7 @@ Actions:
   - Name: sagemaker:SendPipelineExecutionStepSuccess
   - Name: sagemaker:StartEdgeDeploymentStage
   - Name: sagemaker:StartHumanLoop
+  - Name: sagemaker:StartInferenceExperiment
   - Name: sagemaker:StartMonitoringSchedule
   - Name: sagemaker:StartNotebookInstance
   - Name: sagemaker:StartPipelineExecution
@@ -241,6 +269,7 @@ Actions:
   - Name: sagemaker:StopEdgePackagingJob
   - Name: sagemaker:StopHumanLoop
   - Name: sagemaker:StopHyperParameterTuningJob
+  - Name: sagemaker:StopInferenceExperiment
   - Name: sagemaker:StopInferenceRecommendationsJob
   - Name: sagemaker:StopLabelingJob
   - Name: sagemaker:StopMonitoringSchedule
@@ -262,14 +291,19 @@ Actions:
   - Name: sagemaker:UpdateExperiment
   - Name: sagemaker:UpdateFeatureGroup
   - Name: sagemaker:UpdateFeatureMetadata
+  - Name: sagemaker:UpdateHub
   - Name: sagemaker:UpdateImage
+  - Name: sagemaker:UpdateInferenceExperiment
+  - Name: sagemaker:UpdateModelCard
   - Name: sagemaker:UpdateModelPackage
+  - Name: sagemaker:UpdateMonitoringAlert
   - Name: sagemaker:UpdateMonitoringSchedule
   - Name: sagemaker:UpdateNotebookInstance
   - Name: sagemaker:UpdateNotebookInstanceLifecycleConfig
   - Name: sagemaker:UpdatePipeline
   - Name: sagemaker:UpdatePipelineExecution
   - Name: sagemaker:UpdateProject
+  - Name: sagemaker:UpdateSpace
   - Name: sagemaker:UpdateTrainingJob
   - Name: sagemaker:UpdateTrial
   - Name: sagemaker:UpdateTrialComponent
@@ -280,43 +314,9 @@ Actions:
   # actions with no corresponding API
   - Name: sagemaker:BatchGetMetrics
   - Name: sagemaker:BatchPutMetrics
-  - Name: sagemaker:CreateHub
-  - Name: sagemaker:CreateInferenceExperiment
   - Name: sagemaker:CreateLineageGroupPolicy
-  - Name: sagemaker:CreateModelCard
-  - Name: sagemaker:CreateModelCardExportJob
-  - Name: sagemaker:CreateSpace
-  - Name: sagemaker:DeleteHub
-  - Name: sagemaker:DeleteHubContent
-  - Name: sagemaker:DeleteInferenceExperiment
   - Name: sagemaker:DeleteLineageGroupPolicy
-  - Name: sagemaker:DeleteModelCard
-  - Name: sagemaker:DeleteSpace
-  - Name: sagemaker:DescribeHub
-  - Name: sagemaker:DescribeHubContent
-  - Name: sagemaker:DescribeInferenceExperiment
-  - Name: sagemaker:DescribeModelCard
-  - Name: sagemaker:DescribeModelCardExportJob
-  - Name: sagemaker:DescribeSpace
-  - Name: sagemaker:ImportHubContent
-  - Name: sagemaker:ListHubContentVersions
-  - Name: sagemaker:ListHubContents
-  - Name: sagemaker:ListHubs
-  - Name: sagemaker:ListInferenceExperiments
-  - Name: sagemaker:ListModelCardExportJobs
-  - Name: sagemaker:ListModelCardVersions
-  - Name: sagemaker:ListModelCards
-  - Name: sagemaker:ListMonitoringAlertHistory
-  - Name: sagemaker:ListMonitoringAlerts
-  - Name: sagemaker:ListSpaces
   - Name: sagemaker:PutLineageGroupPolicy
-  - Name: sagemaker:StartInferenceExperiment
-  - Name: sagemaker:StopInferenceExperiment
-  - Name: sagemaker:UpdateHub
-  - Name: sagemaker:UpdateInferenceExperiment
-  - Name: sagemaker:UpdateModelCard
-  - Name: sagemaker:UpdateMonitoringAlert
-  - Name: sagemaker:UpdateSpace
 
   # APIs without an IAM action
   - Name: sagemaker:GetDeployments

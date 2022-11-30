@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 342
-* Unique actions: 14185
+* Unique actions: 14186
 * Managed policies: 1018
 
 Most common managed policy name prefixes:
@@ -37,9 +37,9 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 547 | 29 | 9 |
-| [`sagemaker`](services/sagemaker.yml) | 277 | 1 | 39 |
+| [`sagemaker`](services/sagemaker.yml) | 311 | 1 | 5 |
 | [`chime`](services/chime.yml) | 216 | 4 | 50 |
-| [`glue`](services/glue.yml) | 181 | 5 | 25 |
+| [`glue`](services/glue.yml) | 196 | 6 | 10 |
 | [`connect`](services/connect.yml) | 164 | 0 | 9 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 155 | 0 | 0 |
@@ -91,6 +91,7 @@ The following table summarises the AWS APIs.
 | [`lambda`](services/lambda.yml) | 61 | 2 | 5 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
+| [`athena`](services/athena.yml) | 60 | 0 | 1 |
 | [`medialive`](services/medialive.yml) | 59 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
@@ -139,7 +140,6 @@ The following table summarises the AWS APIs.
 | [`profile`](services/profile.yml) | 38 | 0 | 0 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
 | [`sso`](services/sso.yml) | 37 | 0 | 52 |
-| [`athena`](services/athena.yml) | 37 | 0 | 24 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 37 | 0 | 0 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
@@ -231,6 +231,7 @@ The following table summarises the AWS APIs.
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`backup-gateway`](services/backup-gateway.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
+| [`sagemaker-geospatial`](services/sagemaker-geospatial.yml) | 19 | 0 | 0 |
 | [`resource-explorer-2`](services/resource-explorer-2.yml) | 19 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 19 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 19 | 0 | 0 |
@@ -266,6 +267,7 @@ The following table summarises the AWS APIs.
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 7 |
 | [`snow-device-management`](services/snow-device-management.yml) | 13 | 0 | 0 |
 | [`health`](services/health.yml) | 13 | 0 | 0 |
+| [`docdb-elastic`](services/docdb-elastic.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`braket`](services/braket.yml) | 13 | 0 | 0 |
 | [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
@@ -327,14 +329,12 @@ The following table summarises the AWS APIs.
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 29 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
-| [`sagemaker-geospatial`](services/sagemaker-geospatial.yml) | 0 | 0 | 19 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 18 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 17 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
-| [`docdb-elastic`](services/docdb-elastic.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |

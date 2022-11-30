@@ -14,6 +14,8 @@ Actions:
   - Name: glue:BatchGetWorkflows
   - Name: glue:BatchStopJobRun
   - Name: glue:BatchUpdatePartition
+  - Name: glue:CancelDataQualityRuleRecommendationRun
+  - Name: glue:CancelDataQualityRulesetEvaluationRun
   - Name: glue:CancelMLTaskRun
   - Name: glue:CancelStatement
   - Name: glue:CheckSchemaVersionValidity
@@ -22,6 +24,7 @@ Actions:
   - Name: glue:CreateConnection
   - Name: glue:CreateCrawler
   - Name: glue:CreateCustomEntityType
+  - Name: glue:CreateDataQualityRuleset
   - Name: glue:CreateDatabase
   - Name: glue:CreateDevEndpoint
   - Name: glue:CreateJob
@@ -44,6 +47,7 @@ Actions:
   - Name: glue:DeleteConnection
   - Name: glue:DeleteCrawler
   - Name: glue:DeleteCustomEntityType
+  - Name: glue:DeleteDataQualityRuleset
   - Name: glue:DeleteDatabase
   - Name: glue:DeleteDevEndpoint
   - Name: glue:DeleteJob
@@ -76,6 +80,10 @@ Actions:
   - Name: glue:GetCrawlers
   - Name: glue:GetCustomEntityType
   - Name: glue:GetDataCatalogEncryptionSettings
+  - Name: glue:GetDataQualityResult
+  - Name: glue:GetDataQualityRuleRecommendationRun
+  - Name: glue:GetDataQualityRuleset
+  - Name: glue:GetDataQualityRulesetEvaluationRun
   - Name: glue:GetDatabase
   - Name: glue:GetDatabases
   - Name: glue:GetDataflowGraph
@@ -124,6 +132,10 @@ Actions:
   - Name: glue:ListCrawlers
   - Name: glue:ListCrawls
   - Name: glue:ListCustomEntityTypes
+  - Name: glue:ListDataQualityResults
+  - Name: glue:ListDataQualityRuleRecommendationRuns
+  - Name: glue:ListDataQualityRulesetEvaluationRuns
+  - Name: glue:ListDataQualityRulesets
   - Name: glue:ListDevEndpoints
   - Name: glue:ListJobs
   - Name: glue:ListMLTransforms
@@ -148,6 +160,8 @@ Actions:
   - Name: glue:StartBlueprintRun
   - Name: glue:StartCrawler
   - Name: glue:StartCrawlerSchedule
+  - Name: glue:StartDataQualityRuleRecommendationRun
+  - Name: glue:StartDataQualityRulesetEvaluationRun
   - Name: glue:StartExportLabelsTaskRun
   - Name: glue:StartImportLabelsTaskRun
   - Name: glue:StartJobRun
@@ -169,6 +183,7 @@ Actions:
   - Name: glue:UpdateConnection
   - Name: glue:UpdateCrawler
   - Name: glue:UpdateCrawlerSchedule
+  - Name: glue:UpdateDataQualityRuleset
   - Name: glue:UpdateDatabase
   - Name: glue:UpdateDevEndpoint
   - Name: glue:UpdateJob
@@ -182,33 +197,19 @@ Actions:
   - Name: glue:UpdateWorkflow
 
   # actions with no corresponding API
-  - Name: glue:CancelDataQualityRuleRecommendationRun
-  - Name: glue:CancelDataQualityRulesetEvaluationRun
-  - Name: glue:CreateDataQualityRuleset
-  - Name: glue:DeleteDataQualityRuleset
   - Name: glue:DeregisterDataPreview
-  - Name: glue:GetDataQualityResult
-  - Name: glue:GetDataQualityRuleRecommendationRun
-  - Name: glue:GetDataQualityRuleset
-  - Name: glue:GetDataQualityRulesetEvaluationRun
   - Name: glue:GetNotebookInstanceStatus
   - Name: glue:GlueNotebookAuthorize
   - Name: glue:GlueNotebookRefreshCredentials
-  - Name: glue:ListDataQualityResults
-  - Name: glue:ListDataQualityRuleRecommendationRuns
-  - Name: glue:ListDataQualityRulesetEvaluationRuns
-  - Name: glue:ListDataQualityRulesets
   - Name: glue:NotifyEvent
   - Name: glue:PublishDataQuality
-  - Name: glue:StartDataQualityRuleRecommendationRun
-  - Name: glue:StartDataQualityRulesetEvaluationRun
   - Name: glue:StartNotebook
   - Name: glue:TerminateNotebook
-  - Name: glue:UpdateDataQualityRuleset
   - Name: glue:UseGlueStudio
   - Name: glue:UseMLTransforms
 
   # APIs without an IAM action
+  - Name: glue:BatchGetDataQualityResult
   - Name: glue:GetUnfilteredPartitionMetadata
   - Name: glue:GetUnfilteredPartitionsMetadata
   - Name: glue:GetUnfilteredTableMetadata
