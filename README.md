@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 344
-* Unique actions: 14238
+* Unique actions: 14242
 * Managed policies: 1019
 
 Most common managed policy name prefixes:
@@ -345,6 +345,7 @@ The following table summarises the AWS APIs.
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
+| [`artifact`](services/artifact.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
 | [`tax`](services/tax.yml) | 0 | 0 | 6 |
@@ -357,7 +358,6 @@ The following table summarises the AWS APIs.
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
-| [`artifact`](services/artifact.yml) | 0 | 0 | 4 |
 | [`a2c`](services/a2c.yml) | 0 | 0 | 4 |
 | [`supportplans`](services/supportplans.yml) | 0 | 0 | 3 |
 | [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 3 |
@@ -385,8 +385,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2216 |
-| `Get` | 1947 |
+| `List` | 2217 |
+| `Get` | 1950 |
 | `Delete` | 1655 |
 | `Describe` | 1562 |
 | `Create` | 1539 |
