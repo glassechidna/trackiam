@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 342
-* Unique actions: 14186
+* Unique services: 344
+* Unique actions: 14238
 * Managed policies: 1019
 
 Most common managed policy name prefixes:
@@ -323,6 +323,7 @@ The following table summarises the AWS APIs.
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 64 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
+| [`vpc-lattice`](services/vpc-lattice.yml) | 0 | 0 | 51 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 50 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 32 |
@@ -367,6 +368,7 @@ The following table summarises the AWS APIs.
 | [`sumerian`](services/sumerian.yml) | 0 | 0 | 2 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 2 |
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
+| [`vpc-lattice-svcs`](services/vpc-lattice-svcs.yml) | 0 | 0 | 1 |
 | [`sustainability`](services/sustainability.yml) | 0 | 0 | 1 |
 | [`serviceextract`](services/serviceextract.yml) | 0 | 0 | 1 |
 | [`rhelkb`](services/rhelkb.yml) | 0 | 0 | 1 |
@@ -383,14 +385,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2206 |
-| `Get` | 1937 |
-| `Delete` | 1645 |
+| `List` | 2216 |
+| `Get` | 1947 |
+| `Delete` | 1655 |
 | `Describe` | 1562 |
-| `Create` | 1531 |
-| `Update` | 1276 |
-| `Put` | 389 |
+| `Create` | 1539 |
+| `Update` | 1283 |
+| `Put` | 391 |
 | `Start` | 296 |
-| `Tag` | 222 |
-| `Untag` | 220 |
+| `Tag` | 223 |
+| `Untag` | 221 |
 
