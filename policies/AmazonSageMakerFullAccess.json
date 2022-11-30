@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerFullAccess",
   "CreateDate": "2017-11-29T13:07:59Z",
-  "DefaultVersionId": "v23",
+  "DefaultVersionId": "v24",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJZ5IWYMXO5QDB4QOG",
   "PolicyName": "AmazonSageMakerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-06-29T18:30:43Z",
+    "CreateDate": "2022-11-30T17:14:54Z",
     "Document": {
       "Statement": [
         {
@@ -83,7 +83,9 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": [
+            "arn:aws:s3:::*"
+          ]
         },
         {
           "Action": [
@@ -95,7 +97,9 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": [
+            "arn:aws:s3:::*"
+          ]
         },
         {
           "Action": [
@@ -125,6 +129,7 @@
         },
         {
           "Action": [
+            "sagemaker-geospatial:*",
             "sagemaker:*"
           ],
           "Effect": "Allow",
@@ -132,6 +137,7 @@
             "arn:aws:sagemaker:*:*:app/*",
             "arn:aws:sagemaker:*:*:domain/*",
             "arn:aws:sagemaker:*:*:flow-definition/*",
+            "arn:aws:sagemaker:*:*:space/*",
             "arn:aws:sagemaker:*:*:user-profile/*"
           ]
         },
@@ -443,13 +449,33 @@
             "sagemaker:*App",
             "sagemaker:CreatePresignedDomainUrl",
             "sagemaker:DescribeDomain",
+            "sagemaker:DescribeSpace",
             "sagemaker:DescribeUserProfile",
             "sagemaker:ListApps",
             "sagemaker:ListDomains",
+            "sagemaker:ListSpaces",
             "sagemaker:ListUserProfiles"
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "sagemaker:AddTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:app/*"
+          ]
+        },
+        {
+          "Action": [
+            "sagemaker:ListTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:user-profile/*"
+          ]
         },
         {
           "Action": [
@@ -500,7 +526,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v23"
+    "VersionId": "v24"
   },
-  "UpdateDate": "2022-06-29T18:30:43Z"
+  "UpdateDate": "2022-11-30T17:14:54Z"
 }
