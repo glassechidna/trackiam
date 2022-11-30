@@ -1,0 +1,84 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerModelGovernanceUseAccess",
+  "CreateDate": "2022-11-30T08:58:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4JWBD7BEKI",
+  "PolicyName": "AmazonSageMakerModelGovernanceUseAccess",
+  "PolicyVersion": {
+    "CreateDate": "2022-11-30T08:58:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "kms:ListAliases"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:GetBucketLocation",
+            "s3:GetObject",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*SageMaker*",
+            "arn:aws:s3:::*Sagemaker*",
+            "arn:aws:s3:::*sagemaker*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sagemaker:AddTags",
+            "sagemaker:DeleteTags",
+            "sagemaker:DescribeModel",
+            "sagemaker:DescribeTrainingJob",
+            "sagemaker:ListModels",
+            "sagemaker:ListTags",
+            "sagemaker:ListTrainingJobs",
+            "sagemaker:Search"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateModelCard",
+            "sagemaker:CreateModelCardExportJob",
+            "sagemaker:DeleteModelCard",
+            "sagemaker:DescribeModelCard",
+            "sagemaker:DescribeModelCardExportJob",
+            "sagemaker:ListModelCardExportJobs",
+            "sagemaker:ListModelCardVersions",
+            "sagemaker:ListModelCards",
+            "sagemaker:ListMonitoringAlertHistory",
+            "sagemaker:ListMonitoringAlerts",
+            "sagemaker:ListMonitoringExecutions",
+            "sagemaker:StartMonitoringSchedule",
+            "sagemaker:StopMonitoringSchedule",
+            "sagemaker:UpdateModelCard",
+            "sagemaker:UpdateMonitoringAlert"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-11-30T08:58:19Z"
+}
