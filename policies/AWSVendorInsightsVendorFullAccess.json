@@ -1,21 +1,23 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSVendorInsightsVendorFullAccess",
   "CreateDate": "2022-07-26T15:05:27Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CLYN576GG",
   "PolicyName": "AWSVendorInsightsVendorFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-07-26T15:05:27Z",
+    "CreateDate": "2022-12-01T00:49:35Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "aws-marketplace:AcceptAgreementApprovalRequest",
+            "aws-marketplace:CancelAgreement",
             "aws-marketplace:GetAgreementApprovalRequest",
             "aws-marketplace:ListAgreementApprovalRequests",
-            "aws-marketplace:RejectAgreementApprovalRequest"
+            "aws-marketplace:RejectAgreementApprovalRequest",
+            "aws-marketplace:SearchAgreements"
           ],
           "Condition": {
             "ForAnyValue:StringEquals": {
@@ -37,6 +39,16 @@
         },
         {
           "Action": [
+            "artifact:GetReport",
+            "artifact:GetReportMetadata",
+            "artifact:GetTermForReport",
+            "artifact:ListReports"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:artifact:*::report/*"
+        },
+        {
+          "Action": [
             "vendor-insights:ActivateSecurityProfile",
             "vendor-insights:AssociateDataSource",
             "vendor-insights:CreateDataSource",
@@ -50,7 +62,12 @@
             "vendor-insights:ListDataSources",
             "vendor-insights:ListSecurityProfileSnapshots",
             "vendor-insights:ListSecurityProfiles",
-            "vendor-insights:UpdateSecurityProfile"
+            "vendor-insights:ListTagsForResource",
+            "vendor-insights:TagResource",
+            "vendor-insights:UntagResource",
+            "vendor-insights:UpdateSecurityProfile",
+            "vendor-insights:UpdateSecurityProfileSnapshotCreationConfiguration",
+            "vendor-insights:UpdateSecurityProfileSnapshotReleaseConfiguration"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -59,7 +76,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-07-26T15:05:27Z"
+  "UpdateDate": "2022-12-01T00:49:35Z"
 }
