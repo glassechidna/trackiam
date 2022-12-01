@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 345
-* Unique actions: 14257
+* Unique actions: 14269
 * Managed policies: 1022
 
 Most common managed policy name prefixes:
@@ -55,7 +55,7 @@ The following table summarises the AWS APIs.
 | [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 4 |
 | [`iotwireless`](services/iotwireless.yml) | 101 | 0 | 1 |
 | [`cloudfront`](services/cloudfront.yml) | 97 | 8 | 7 |
-| [`gamelift`](services/gamelift.yml) | 95 | 0 | 0 |
+| [`gamelift`](services/gamelift.yml) | 95 | 9 | 0 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
 | [`config`](services/config.yml) | 89 | 3 | 0 |
@@ -206,11 +206,11 @@ The following table summarises the AWS APIs.
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 4 | 0 |
+| [`states`](services/states.yml) | 23 | 3 | 0 |
 | [`detective`](services/detective.yml) | 23 | 1 | 7 |
 | [`timestream`](services/timestream.yml) | 23 | 1 | 3 |
 | [`appflow`](services/appflow.yml) | 23 | 0 | 6 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 23 | 0 | 1 |
-| [`states`](services/states.yml) | 23 | 0 | 0 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
@@ -281,6 +281,7 @@ The following table summarises the AWS APIs.
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
 | [`rbin`](services/rbin.yml) | 10 | 0 | 0 |
+| [`pipes`](services/pipes.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
@@ -341,7 +342,6 @@ The following table summarises the AWS APIs.
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
-| [`pipes`](services/pipes.yml) | 0 | 0 | 10 |
 | [`internetmonitor`](services/internetmonitor.yml) | 0 | 0 | 10 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
@@ -386,12 +386,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2220 |
-| `Get` | 1950 |
-| `Delete` | 1656 |
-| `Describe` | 1563 |
-| `Create` | 1540 |
-| `Update` | 1286 |
+| `List` | 2223 |
+| `Get` | 1952 |
+| `Delete` | 1657 |
+| `Describe` | 1565 |
+| `Create` | 1541 |
+| `Update` | 1287 |
 | `Put` | 391 |
 | `Start` | 297 |
 | `Tag` | 225 |
