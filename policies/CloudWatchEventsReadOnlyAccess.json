@@ -1,33 +1,67 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchEventsReadOnlyAccess",
   "CreateDate": "2016-01-14T18:27:18Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIILJPXXA6F7GYLYBS",
   "PolicyName": "CloudWatchEventsReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2017-08-10T17:25:34Z",
+    "CreateDate": "2022-12-01T16:29:31Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "events:DescribeApiDestination",
+            "events:DescribeArchive",
+            "events:DescribeConnection",
+            "events:DescribeEndpoint",
             "events:DescribeEventBus",
+            "events:DescribeEventSource",
+            "events:DescribeReplay",
             "events:DescribeRule",
+            "events:ListApiDestinations",
+            "events:ListArchives",
+            "events:ListConnections",
+            "events:ListEndpoints",
+            "events:ListEventBuses",
+            "events:ListEventSources",
+            "events:ListReplays",
             "events:ListRuleNamesByTarget",
             "events:ListRules",
             "events:ListTargetsByRule",
-            "events:TestEventPattern"
+            "events:TestEventPattern",
+            "pipes:DescribePipe",
+            "pipes:ListPipes",
+            "pipes:ListTagsForResource",
+            "scheduler:GetSchedule",
+            "scheduler:GetScheduleGroup",
+            "scheduler:ListScheduleGroups",
+            "scheduler:ListSchedules",
+            "scheduler:ListTagsForResource",
+            "schemas:DescribeCodeBinding",
+            "schemas:DescribeDiscoverer",
+            "schemas:DescribeRegistry",
+            "schemas:DescribeSchema",
+            "schemas:ExportSchema",
+            "schemas:GetCodeBindingSource",
+            "schemas:GetDiscoveredSchema",
+            "schemas:GetResourcePolicy",
+            "schemas:ListDiscoverers",
+            "schemas:ListRegistries",
+            "schemas:ListSchemaVersions",
+            "schemas:ListSchemas",
+            "schemas:ListTagsForResource",
+            "schemas:SearchSchemas"
           ],
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "CloudWatchEventsReadOnlyAccess"
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2017-08-10T17:25:34Z"
+  "UpdateDate": "2022-12-01T16:29:31Z"
 }
