@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSVendorInsightsVendorReadOnly",
   "CreateDate": "2022-07-26T15:05:34Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NHHAIIJR5",
   "PolicyName": "AWSVendorInsightsVendorReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2022-07-26T15:05:34Z",
+    "CreateDate": "2022-12-01T00:54:38Z",
     "Document": {
       "Statement": [
         {
@@ -22,12 +22,23 @@
         },
         {
           "Action": [
+            "artifact:GetReport",
+            "artifact:GetReportMetadata",
+            "artifact:GetTermForReport",
+            "artifact:ListReports"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:artifact:*::report/*"
+        },
+        {
+          "Action": [
             "vendor-insights:GetDataSource",
             "vendor-insights:GetSecurityProfile",
             "vendor-insights:GetSecurityProfileSnapshot",
             "vendor-insights:ListDataSources",
             "vendor-insights:ListSecurityProfileSnapshots",
-            "vendor-insights:ListSecurityProfiles"
+            "vendor-insights:ListSecurityProfiles",
+            "vendor-insights:ListTagsForResource"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -35,8 +46,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v1"
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-07-26T15:05:34Z"
+  "UpdateDate": "2022-12-01T00:54:38Z"
 }
