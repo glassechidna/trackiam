@@ -5,12 +5,14 @@ Actions:
   - Name: states:DeleteStateMachine
   - Name: states:DescribeActivity
   - Name: states:DescribeExecution
+  - Name: states:DescribeMapRun
   - Name: states:DescribeStateMachine
   - Name: states:DescribeStateMachineForExecution
   - Name: states:GetActivityTask
   - Name: states:GetExecutionHistory
   - Name: states:ListActivities
   - Name: states:ListExecutions
+  - Name: states:ListMapRuns
   - Name: states:ListStateMachines
   - Name: states:ListTagsForResource
   - Name: states:SendTaskFailure
@@ -21,9 +23,5 @@ Actions:
   - Name: states:StopExecution
   - Name: states:TagResource
   - Name: states:UntagResource
-  - Name: states:UpdateStateMachine
-
-  # APIs without an IAM action
-  - Name: states:DescribeMapRun
-  - Name: states:ListMapRuns
   - Name: states:UpdateMapRun
+  - Name: states:UpdateStateMachine

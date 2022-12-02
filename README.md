@@ -51,7 +51,7 @@ The following table summarises the AWS APIs.
 | [`mobiletargeting`](services/mobiletargeting.yml) | 119 | 0 | 1 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 111 | 0 | 0 |
-| [`lex`](services/lex.yml) | 104 | 6 | 7 |
+| [`lex`](services/lex.yml) | 108 | 2 | 7 |
 | [`gamelift`](services/gamelift.yml) | 104 | 0 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 4 |
 | [`iotwireless`](services/iotwireless.yml) | 101 | 0 | 1 |
@@ -194,6 +194,7 @@ The following table summarises the AWS APIs.
 | [`ssm-contacts`](services/ssm-contacts.yml) | 27 | 0 | 1 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
 | [`outposts`](services/outposts.yml) | 26 | 0 | 2 |
+| [`states`](services/states.yml) | 26 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
 | [`rolesanywhere`](services/rolesanywhere.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
@@ -206,7 +207,6 @@ The following table summarises the AWS APIs.
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 4 | 0 |
-| [`states`](services/states.yml) | 23 | 3 | 0 |
 | [`detective`](services/detective.yml) | 23 | 1 | 7 |
 | [`timestream`](services/timestream.yml) | 23 | 1 | 3 |
 | [`appflow`](services/appflow.yml) | 23 | 0 | 6 |
