@@ -8,6 +8,7 @@ Actions:
   - Name: gamelift:CreateGameServerGroup
   - Name: gamelift:CreateGameSession
   - Name: gamelift:CreateGameSessionQueue
+  - Name: gamelift:CreateLocation
   - Name: gamelift:CreateMatchmakingConfiguration
   - Name: gamelift:CreateMatchmakingRuleSet
   - Name: gamelift:CreatePlayerSession
@@ -21,15 +22,18 @@ Actions:
   - Name: gamelift:DeleteFleetLocations
   - Name: gamelift:DeleteGameServerGroup
   - Name: gamelift:DeleteGameSessionQueue
+  - Name: gamelift:DeleteLocation
   - Name: gamelift:DeleteMatchmakingConfiguration
   - Name: gamelift:DeleteMatchmakingRuleSet
   - Name: gamelift:DeleteScalingPolicy
   - Name: gamelift:DeleteScript
   - Name: gamelift:DeleteVpcPeeringAuthorization
   - Name: gamelift:DeleteVpcPeeringConnection
+  - Name: gamelift:DeregisterCompute
   - Name: gamelift:DeregisterGameServer
   - Name: gamelift:DescribeAlias
   - Name: gamelift:DescribeBuild
+  - Name: gamelift:DescribeCompute
   - Name: gamelift:DescribeEC2InstanceLimits
   - Name: gamelift:DescribeFleetAttributes
   - Name: gamelift:DescribeFleetCapacity
@@ -56,16 +60,21 @@ Actions:
   - Name: gamelift:DescribeScript
   - Name: gamelift:DescribeVpcPeeringAuthorizations
   - Name: gamelift:DescribeVpcPeeringConnections
+  - Name: gamelift:GetComputeAccess
+  - Name: gamelift:GetComputeAuthToken
   - Name: gamelift:GetGameSessionLogUrl
   - Name: gamelift:GetInstanceAccess
   - Name: gamelift:ListAliases
   - Name: gamelift:ListBuilds
+  - Name: gamelift:ListCompute
   - Name: gamelift:ListFleets
   - Name: gamelift:ListGameServerGroups
   - Name: gamelift:ListGameServers
+  - Name: gamelift:ListLocations
   - Name: gamelift:ListScripts
   - Name: gamelift:ListTagsForResource
   - Name: gamelift:PutScalingPolicy
+  - Name: gamelift:RegisterCompute
   - Name: gamelift:RegisterGameServer
   - Name: gamelift:RequestUploadCredentials
   - Name: gamelift:ResolveAlias
@@ -94,14 +103,3 @@ Actions:
   - Name: gamelift:UpdateRuntimeConfiguration
   - Name: gamelift:UpdateScript
   - Name: gamelift:ValidateMatchmakingRuleSet
-
-  # APIs without an IAM action
-  - Name: gamelift:CreateLocation
-  - Name: gamelift:DeleteLocation
-  - Name: gamelift:DeregisterCompute
-  - Name: gamelift:DescribeCompute
-  - Name: gamelift:GetComputeAccess
-  - Name: gamelift:GetComputeAuthToken
-  - Name: gamelift:ListCompute
-  - Name: gamelift:ListLocations
-  - Name: gamelift:RegisterCompute
