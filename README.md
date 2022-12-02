@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 345
-* Unique actions: 14269
+* Unique actions: 14272
 * Managed policies: 1022
 
 Most common managed policy name prefixes:
@@ -139,9 +139,9 @@ The following table summarises the AWS APIs.
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`profile`](services/profile.yml) | 38 | 0 | 0 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
+| [`redshift-serverless`](services/redshift-serverless.yml) | 37 | 3 | 0 |
 | [`sso`](services/sso.yml) | 37 | 0 | 52 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
-| [`redshift-serverless`](services/redshift-serverless.yml) | 37 | 0 | 0 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`codeartifact`](services/codeartifact.yml) | 36 | 0 | 4 |
@@ -386,8 +386,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2223 |
-| `Get` | 1952 |
+| `List` | 2224 |
+| `Get` | 1953 |
 | `Delete` | 1657 |
 | `Describe` | 1565 |
 | `Create` | 1541 |
