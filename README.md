@@ -265,6 +265,7 @@ The following table summarises the AWS APIs.
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 14 | 0 | 0 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 16 |
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 7 |
+| [`textract`](services/textract.yml) | 13 | 0 | 0 |
 | [`snow-device-management`](services/snow-device-management.yml) | 13 | 0 | 0 |
 | [`health`](services/health.yml) | 13 | 0 | 0 |
 | [`docdb-elastic`](services/docdb-elastic.yml) | 13 | 0 | 0 |
@@ -276,7 +277,6 @@ The following table summarises the AWS APIs.
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 11 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
-| [`textract`](services/textract.yml) | 10 | 3 | 0 |
 | [`supportapp`](services/supportapp.yml) | 10 | 0 | 3 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
