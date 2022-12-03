@@ -101,8 +101,8 @@ The following table summarises the AWS APIs.
 | [`kendra`](services/kendra.yml) | 55 | 5 | 0 |
 | [`mgn`](services/mgn.yml) | 55 | 0 | 34 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
+| [`ecs`](services/ecs.yml) | 53 | 2 | 2 |
 | [`geo`](services/geo.yml) | 53 | 0 | 0 |
-| [`ecs`](services/ecs.yml) | 52 | 3 | 2 |
 | [`organizations`](services/organizations.yml) | 52 | 3 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 51 | 6 | 12 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 1 | 26 |
