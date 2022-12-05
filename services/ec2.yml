@@ -29,6 +29,7 @@ Actions:
   - Name: ec2:AttachClassicLinkVpc
   - Name: ec2:AttachInternetGateway
   - Name: ec2:AttachNetworkInterface
+  - Name: ec2:AttachVerifiedAccessTrustProvider
   - Name: ec2:AttachVolume
   - Name: ec2:AttachVpnGateway
   - Name: ec2:AuthorizeClientVpnIngress
@@ -116,6 +117,10 @@ Actions:
   - Name: ec2:CreateTransitGatewayRouteTable
   - Name: ec2:CreateTransitGatewayRouteTableAnnouncement
   - Name: ec2:CreateTransitGatewayVpcAttachment
+  - Name: ec2:CreateVerifiedAccessEndpoint
+  - Name: ec2:CreateVerifiedAccessGroup
+  - Name: ec2:CreateVerifiedAccessInstance
+  - Name: ec2:CreateVerifiedAccessTrustProvider
   - Name: ec2:CreateVolume
   - Name: ec2:CreateVpc
   - Name: ec2:CreateVpcEndpoint
@@ -184,6 +189,10 @@ Actions:
   - Name: ec2:DeleteTransitGatewayRouteTable
   - Name: ec2:DeleteTransitGatewayRouteTableAnnouncement
   - Name: ec2:DeleteTransitGatewayVpcAttachment
+  - Name: ec2:DeleteVerifiedAccessEndpoint
+  - Name: ec2:DeleteVerifiedAccessGroup
+  - Name: ec2:DeleteVerifiedAccessInstance
+  - Name: ec2:DeleteVerifiedAccessTrustProvider
   - Name: ec2:DeleteVolume
   - Name: ec2:DeleteVpc
   - Name: ec2:DeleteVpcEndpointConnectionNotifications
@@ -206,6 +215,7 @@ Actions:
   - Name: ec2:DescribeAddressesAttribute
   - Name: ec2:DescribeAggregateIdFormat
   - Name: ec2:DescribeAvailabilityZones
+  - Name: ec2:DescribeAwsNetworkPerformanceMetricSubscriptions
   - Name: ec2:DescribeBundleTasks
   - Name: ec2:DescribeByoipCidrs
   - Name: ec2:DescribeCapacityReservationFleets
@@ -319,6 +329,11 @@ Actions:
   - Name: ec2:DescribeTransitGatewayVpcAttachments
   - Name: ec2:DescribeTransitGateways
   - Name: ec2:DescribeTrunkInterfaceAssociations
+  - Name: ec2:DescribeVerifiedAccessEndpoints
+  - Name: ec2:DescribeVerifiedAccessGroups
+  - Name: ec2:DescribeVerifiedAccessInstanceLoggingConfigurations
+  - Name: ec2:DescribeVerifiedAccessInstances
+  - Name: ec2:DescribeVerifiedAccessTrustProviders
   - Name: ec2:DescribeVolumeAttribute
   - Name: ec2:DescribeVolumeStatus
   - Name: ec2:DescribeVolumes
@@ -339,9 +354,11 @@ Actions:
   - Name: ec2:DetachClassicLinkVpc
   - Name: ec2:DetachInternetGateway
   - Name: ec2:DetachNetworkInterface
+  - Name: ec2:DetachVerifiedAccessTrustProvider
   - Name: ec2:DetachVolume
   - Name: ec2:DetachVpnGateway
   - Name: ec2:DisableAddressTransfer
+  - Name: ec2:DisableAwsNetworkPerformanceMetricSubscription
   - Name: ec2:DisableEbsEncryptionByDefault
   - Name: ec2:DisableFastLaunch
   - Name: ec2:DisableFastSnapshotRestores
@@ -365,11 +382,13 @@ Actions:
   - Name: ec2:DisassociateTrunkInterface
   - Name: ec2:DisassociateVpcCidrBlock
   - Name: ec2:EnableAddressTransfer
+  - Name: ec2:EnableAwsNetworkPerformanceMetricSubscription
   - Name: ec2:EnableEbsEncryptionByDefault
   - Name: ec2:EnableFastLaunch
   - Name: ec2:EnableFastSnapshotRestores
   - Name: ec2:EnableImageDeprecation
   - Name: ec2:EnableIpamOrganizationAdminAccount
+  - Name: ec2:EnableReachabilityAnalyzerOrganizationSharing
   - Name: ec2:EnableSerialConsoleAccess
   - Name: ec2:EnableTransitGatewayRouteTablePropagation
   - Name: ec2:EnableVgwRoutePropagation
@@ -382,6 +401,7 @@ Actions:
   - Name: ec2:ExportTransitGatewayRoutes
   - Name: ec2:GetAssociatedEnclaveCertificateIamRoles
   - Name: ec2:GetAssociatedIpv6PoolCidrs
+  - Name: ec2:GetAwsNetworkPerformanceData
   - Name: ec2:GetCapacityReservationUsage
   - Name: ec2:GetCoipPoolUsage
   - Name: ec2:GetConsoleOutput
@@ -415,6 +435,8 @@ Actions:
   - Name: ec2:GetTransitGatewayPrefixListReferences
   - Name: ec2:GetTransitGatewayRouteTableAssociations
   - Name: ec2:GetTransitGatewayRouteTablePropagations
+  - Name: ec2:GetVerifiedAccessEndpointPolicy
+  - Name: ec2:GetVerifiedAccessGroupPolicy
   - Name: ec2:GetVpnConnectionDeviceSampleConfiguration
   - Name: ec2:GetVpnConnectionDeviceTypes
   - Name: ec2:ImportClientVpnClientCertificateRevocationList
@@ -467,6 +489,13 @@ Actions:
   - Name: ec2:ModifyTransitGateway
   - Name: ec2:ModifyTransitGatewayPrefixListReference
   - Name: ec2:ModifyTransitGatewayVpcAttachment
+  - Name: ec2:ModifyVerifiedAccessEndpoint
+  - Name: ec2:ModifyVerifiedAccessEndpointPolicy
+  - Name: ec2:ModifyVerifiedAccessGroup
+  - Name: ec2:ModifyVerifiedAccessGroupPolicy
+  - Name: ec2:ModifyVerifiedAccessInstance
+  - Name: ec2:ModifyVerifiedAccessInstanceLoggingConfiguration
+  - Name: ec2:ModifyVerifiedAccessTrustProvider
   - Name: ec2:ModifyVolume
   - Name: ec2:ModifyVolumeAttribute
   - Name: ec2:ModifyVpcAttribute
@@ -557,34 +586,3 @@ Actions:
   - Name: ec2:GetResourcePolicy
   - Name: ec2:PutResourcePolicy
   - Name: ec2:SendSpotInstanceInterruptions
-
-  # APIs without an IAM action
-  - Name: ec2:AttachVerifiedAccessTrustProvider
-  - Name: ec2:CreateVerifiedAccessEndpoint
-  - Name: ec2:CreateVerifiedAccessGroup
-  - Name: ec2:CreateVerifiedAccessInstance
-  - Name: ec2:CreateVerifiedAccessTrustProvider
-  - Name: ec2:DeleteVerifiedAccessEndpoint
-  - Name: ec2:DeleteVerifiedAccessGroup
-  - Name: ec2:DeleteVerifiedAccessInstance
-  - Name: ec2:DeleteVerifiedAccessTrustProvider
-  - Name: ec2:DescribeAwsNetworkPerformanceMetricSubscriptions
-  - Name: ec2:DescribeVerifiedAccessEndpoints
-  - Name: ec2:DescribeVerifiedAccessGroups
-  - Name: ec2:DescribeVerifiedAccessInstanceLoggingConfigurations
-  - Name: ec2:DescribeVerifiedAccessInstances
-  - Name: ec2:DescribeVerifiedAccessTrustProviders
-  - Name: ec2:DetachVerifiedAccessTrustProvider
-  - Name: ec2:DisableAwsNetworkPerformanceMetricSubscription
-  - Name: ec2:EnableAwsNetworkPerformanceMetricSubscription
-  - Name: ec2:EnableReachabilityAnalyzerOrganizationSharing
-  - Name: ec2:GetAwsNetworkPerformanceData
-  - Name: ec2:GetVerifiedAccessEndpointPolicy
-  - Name: ec2:GetVerifiedAccessGroupPolicy
-  - Name: ec2:ModifyVerifiedAccessEndpoint
-  - Name: ec2:ModifyVerifiedAccessEndpointPolicy
-  - Name: ec2:ModifyVerifiedAccessGroup
-  - Name: ec2:ModifyVerifiedAccessGroupPolicy
-  - Name: ec2:ModifyVerifiedAccessInstance
-  - Name: ec2:ModifyVerifiedAccessInstanceLoggingConfiguration
-  - Name: ec2:ModifyVerifiedAccessTrustProvider
