@@ -1,15 +1,27 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerFeatureStoreAccess",
   "CreateDate": "2020-12-01T16:24:05Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FO5MQNGJU",
   "PolicyName": "AmazonSageMakerFeatureStoreAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-02-24T02:18:50Z",
+    "CreateDate": "2022-12-05T14:19:58Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "glue:GetTable",
+            "glue:UpdateTable"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:catalog",
+            "arn:aws:glue:*:*:database/sagemaker_featurestore",
+            "arn:aws:glue:*:*:table/sagemaker_featurestore/*"
+          ]
+        },
         {
           "Action": [
             "s3:GetBucketAcl",
@@ -22,12 +34,23 @@
             "arn:aws:s3:::*Sagemaker*",
             "arn:aws:s3:::*sagemaker*"
           ]
+        },
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*SageMaker*/metadata/*",
+            "arn:aws:s3:::*Sagemaker*/metadata/*",
+            "arn:aws:s3:::*sagemaker*/metadata/*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v2"
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-02-24T02:18:50Z"
+  "UpdateDate": "2022-12-05T14:19:58Z"
 }
