@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 346
-* Unique actions: 14277
+* Unique actions: 14275
 * Managed policies: 1022
 
 Most common managed policy name prefixes:
@@ -142,12 +142,12 @@ The following table summarises the AWS APIs.
 | [`redshift-serverless`](services/redshift-serverless.yml) | 37 | 3 | 0 |
 | [`sso`](services/sso.yml) | 37 | 0 | 52 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
+| [`ce`](services/ce.yml) | 37 | 0 | 10 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`codeartifact`](services/codeartifact.yml) | 36 | 0 | 4 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 36 | 0 | 0 |
-| [`ce`](services/ce.yml) | 35 | 2 | 10 |
 | [`drs`](services/drs.yml) | 35 | 0 | 40 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`apprunner`](services/apprunner.yml) | 35 | 0 | 1 |
@@ -225,6 +225,7 @@ The following table summarises the AWS APIs.
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`voiceid`](services/voiceid.yml) | 21 | 0 | 2 |
 | [`synthetics`](services/synthetics.yml) | 21 | 0 | 0 |
+| [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 20 | 2 | 1 |
 | [`iotroborunner`](services/iotroborunner.yml) | 20 | 0 | 29 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 20 | 0 | 8 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
@@ -257,7 +258,6 @@ The following table summarises the AWS APIs.
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
 | [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
-| [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 14 | 8 | 3 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 14 | 0 | 31 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
@@ -387,7 +387,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2226 |
+| `List` | 2225 |
 | `Get` | 1953 |
 | `Delete` | 1657 |
 | `Describe` | 1565 |
@@ -395,6 +395,6 @@ Most common action prefixes:
 | `Update` | 1288 |
 | `Put` | 391 |
 | `Start` | 298 |
-| `Tag` | 225 |
-| `Untag` | 223 |
+| `Tag` | 224 |
+| `Untag` | 222 |
 
