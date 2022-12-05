@@ -6,6 +6,7 @@ Actions:
   - Name: workspaces:CreateConnectClientAddIn
   - Name: workspaces:CreateConnectionAlias
   - Name: workspaces:CreateIpGroup
+  - Name: workspaces:CreateStandbyWorkspaces
   - Name: workspaces:CreateTags
   - Name: workspaces:CreateUpdatedWorkspaceImage
   - Name: workspaces:CreateWorkspaceBundle
@@ -42,6 +43,7 @@ Actions:
   - Name: workspaces:ListAvailableManagementCidrRanges
   - Name: workspaces:MigrateWorkspace
   - Name: workspaces:ModifyAccount
+  - Name: workspaces:ModifyCertificateBasedAuthProperties
   - Name: workspaces:ModifyClientProperties
   - Name: workspaces:ModifySamlProperties
   - Name: workspaces:ModifySelfservicePermissions
@@ -65,7 +67,3 @@ Actions:
 
   # actions with no corresponding API
   - Name: workspaces:Stream
-
-  # APIs without an IAM action
-  - Name: workspaces:CreateStandbyWorkspaces
-  - Name: workspaces:ModifyCertificateBasedAuthProperties

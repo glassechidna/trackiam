@@ -80,10 +80,10 @@ The following table summarises the AWS APIs.
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 65 | 6 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
+| [`workspaces`](services/workspaces.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
 | [`es`](services/es.yml) | 64 | 9 | 10 |
-| [`workspaces`](services/workspaces.yml) | 63 | 2 | 1 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`rekognition`](services/rekognition.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
