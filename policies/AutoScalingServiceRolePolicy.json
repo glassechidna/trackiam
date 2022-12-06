@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AutoScalingServiceRolePolicy",
   "CreateDate": "2018-01-08T23:10:55Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIC5D2V7MRWBMHGD7G",
   "PolicyName": "AutoScalingServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-10-29T22:06:23Z",
+    "CreateDate": "2022-12-06T20:15:29Z",
     "Document": {
       "Statement": [
         {
@@ -109,12 +109,24 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "SystemsManagerParameterManagement"
+        },
+        {
+          "Action": [
+            "vpc-lattice:DeregisterTargets",
+            "vpc-lattice:GetTargetGroup",
+            "vpc-lattice:ListTargetGroups",
+            "vpc-lattice:ListTargets",
+            "vpc-lattice:RegisterTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "VpcLatticeManagement"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2021-10-29T22:06:23Z"
+  "UpdateDate": "2022-12-06T20:15:29Z"
 }
