@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 346
-* Unique actions: 14280
+* Unique actions: 14282
 * Managed policies: 1022
 
 Most common managed policy name prefixes:
@@ -55,7 +55,7 @@ The following table summarises the AWS APIs.
 | [`gamelift`](services/gamelift.yml) | 104 | 0 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 4 |
 | [`iotwireless`](services/iotwireless.yml) | 101 | 0 | 1 |
-| [`cloudfront`](services/cloudfront.yml) | 97 | 8 | 7 |
+| [`cloudfront`](services/cloudfront.yml) | 97 | 9 | 7 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
 | [`config`](services/config.yml) | 89 | 3 | 0 |
@@ -152,7 +152,7 @@ The following table summarises the AWS APIs.
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`apprunner`](services/apprunner.yml) | 35 | 0 | 1 |
 | [`memorydb`](services/memorydb.yml) | 35 | 0 | 0 |
-| [`eks`](services/eks.yml) | 34 | 0 | 1 |
+| [`eks`](services/eks.yml) | 34 | 1 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`panorama`](services/panorama.yml) | 33 | 1 | 31 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
@@ -390,9 +390,9 @@ Most common action prefixes:
 | `List` | 2226 |
 | `Get` | 1953 |
 | `Delete` | 1658 |
-| `Describe` | 1566 |
+| `Describe` | 1567 |
 | `Create` | 1542 |
-| `Update` | 1289 |
+| `Update` | 1290 |
 | `Put` | 391 |
 | `Start` | 298 |
 | `Tag` | 224 |
