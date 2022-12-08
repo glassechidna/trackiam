@@ -153,6 +153,7 @@ The following table summarises the AWS APIs.
 | [`apprunner`](services/apprunner.yml) | 35 | 0 | 1 |
 | [`memorydb`](services/memorydb.yml) | 35 | 0 | 0 |
 | [`eks`](services/eks.yml) | 34 | 1 | 1 |
+| [`iottwinmaker`](services/iottwinmaker.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`panorama`](services/panorama.yml) | 33 | 1 | 31 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
@@ -180,7 +181,6 @@ The following table summarises the AWS APIs.
 | [`route53domains`](services/route53domains.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
-| [`iottwinmaker`](services/iottwinmaker.yml) | 29 | 5 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 29 | 0 | 2 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 29 | 0 | 0 |
