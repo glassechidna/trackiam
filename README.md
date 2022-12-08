@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 346
-* Unique actions: 14282
+* Unique actions: 14290
 * Managed policies: 1022
 
 Most common managed policy name prefixes:
@@ -88,8 +88,8 @@ The following table summarises the AWS APIs.
 | [`rekognition`](services/rekognition.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 61 | 4 | 0 |
+| [`autoscaling`](services/autoscaling.yml) | 61 | 3 | 0 |
 | [`lambda`](services/lambda.yml) | 61 | 2 | 5 |
-| [`autoscaling`](services/autoscaling.yml) | 61 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
 | [`athena`](services/athena.yml) | 60 | 0 | 1 |
 | [`medialive`](services/medialive.yml) | 59 | 0 | 0 |
@@ -180,10 +180,10 @@ The following table summarises the AWS APIs.
 | [`route53domains`](services/route53domains.yml) | 30 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
+| [`iottwinmaker`](services/iottwinmaker.yml) | 29 | 5 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 29 | 0 | 2 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 29 | 0 | 0 |
-| [`iottwinmaker`](services/iottwinmaker.yml) | 29 | 0 | 0 |
 | [`cases`](services/cases.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 28 | 0 | 3 |
@@ -223,11 +223,11 @@ The following table summarises the AWS APIs.
 | [`aps`](services/aps.yml) | 21 | 0 | 16 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
+| [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 21 | 0 | 7 |
 | [`voiceid`](services/voiceid.yml) | 21 | 0 | 2 |
 | [`synthetics`](services/synthetics.yml) | 21 | 0 | 0 |
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 20 | 2 | 1 |
 | [`iotroborunner`](services/iotroborunner.yml) | 20 | 0 | 29 |
-| [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 20 | 0 | 8 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`backup-gateway`](services/backup-gateway.yml) | 19 | 0 | 2 |
@@ -387,11 +387,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2226 |
-| `Get` | 1953 |
-| `Delete` | 1658 |
-| `Describe` | 1567 |
-| `Create` | 1542 |
+| `List` | 2228 |
+| `Get` | 1954 |
+| `Delete` | 1659 |
+| `Describe` | 1568 |
+| `Create` | 1543 |
 | `Update` | 1290 |
 | `Put` | 391 |
 | `Start` | 298 |
