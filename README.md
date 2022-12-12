@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 346
-* Unique actions: 14290
+* Unique actions: 14292
 * Managed policies: 1022
 
 Most common managed policy name prefixes:
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 576 | 0 | 9 |
-| [`sagemaker`](services/sagemaker.yml) | 311 | 1 | 5 |
+| [`sagemaker`](services/sagemaker.yml) | 312 | 1 | 4 |
 | [`chime`](services/chime.yml) | 216 | 4 | 50 |
 | [`glue`](services/glue.yml) | 196 | 6 | 10 |
 | [`connect`](services/connect.yml) | 164 | 5 | 9 |
@@ -161,7 +161,7 @@ The following table summarises the AWS APIs.
 | [`lookoutequipment`](services/lookoutequipment.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
-| [`kinesisvideo`](services/kinesisvideo.yml) | 32 | 0 | 3 |
+| [`kinesisvideo`](services/kinesisvideo.yml) | 32 | 2 | 3 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`m2`](services/m2.yml) | 32 | 0 | 0 |
 | [`inspector2`](services/inspector2.yml) | 32 | 0 | 0 |
@@ -390,11 +390,11 @@ Most common action prefixes:
 | `List` | 2228 |
 | `Get` | 1954 |
 | `Delete` | 1659 |
-| `Describe` | 1568 |
+| `Describe` | 1569 |
 | `Create` | 1543 |
 | `Update` | 1290 |
 | `Put` | 391 |
-| `Start` | 298 |
+| `Start` | 299 |
 | `Tag` | 224 |
 | `Untag` | 222 |
 
