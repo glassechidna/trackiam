@@ -1,10 +1,13 @@
 Actions:
   - Name: fms:AssociateAdminAccount
   - Name: fms:AssociateThirdPartyFirewall
+  - Name: fms:BatchAssociateResource
+  - Name: fms:BatchDisassociateResource
   - Name: fms:DeleteAppsList
   - Name: fms:DeleteNotificationChannel
   - Name: fms:DeletePolicy
   - Name: fms:DeleteProtocolsList
+  - Name: fms:DeleteResourceSet
   - Name: fms:DisassociateAdminAccount
   - Name: fms:DisassociateThirdPartyFirewall
   - Name: fms:GetAdminAccount
@@ -14,28 +17,23 @@ Actions:
   - Name: fms:GetPolicy
   - Name: fms:GetProtectionStatus
   - Name: fms:GetProtocolsList
+  - Name: fms:GetResourceSet
   - Name: fms:GetThirdPartyFirewallAssociationStatus
   - Name: fms:GetViolationDetails
   - Name: fms:ListAppsLists
   - Name: fms:ListComplianceStatus
+  - Name: fms:ListDiscoveredResources
   - Name: fms:ListMemberAccounts
   - Name: fms:ListPolicies
   - Name: fms:ListProtocolsLists
+  - Name: fms:ListResourceSetResources
+  - Name: fms:ListResourceSets
   - Name: fms:ListTagsForResource
   - Name: fms:ListThirdPartyFirewallFirewallPolicies
   - Name: fms:PutAppsList
   - Name: fms:PutNotificationChannel
   - Name: fms:PutPolicy
   - Name: fms:PutProtocolsList
+  - Name: fms:PutResourceSet
   - Name: fms:TagResource
   - Name: fms:UntagResource
-
-  # APIs without an IAM action
-  - Name: fms:BatchAssociateResource
-  - Name: fms:BatchDisassociateResource
-  - Name: fms:DeleteResourceSet
-  - Name: fms:GetResourceSet
-  - Name: fms:ListDiscoveredResources
-  - Name: fms:ListResourceSetResources
-  - Name: fms:ListResourceSets
-  - Name: fms:PutResourceSet

@@ -138,6 +138,7 @@ The following table summarises the AWS APIs.
 | [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 1 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`profile`](services/profile.yml) | 38 | 0 | 0 |
+| [`fms`](services/fms.yml) | 38 | 0 | 0 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 37 | 3 | 0 |
 | [`sso`](services/sso.yml) | 37 | 0 | 52 |
@@ -174,7 +175,6 @@ The following table summarises the AWS APIs.
 | [`billingconductor`](services/billingconductor.yml) | 31 | 0 | 0 |
 | [`aoss`](services/aoss.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
-| [`fms`](services/fms.yml) | 30 | 8 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
 | [`xray`](services/xray.yml) | 30 | 0 | 3 |
 | [`securitylake`](services/securitylake.yml) | 30 | 0 | 1 |
