@@ -1,15 +1,31 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSPreviewServiceRolePolicy",
   "CreateDate": "2018-05-31T18:02:00Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIZHJJBU3675JOUEMQ",
   "PolicyName": "AmazonRDSPreviewServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-06-07T16:55:33Z",
+    "CreateDate": "2022-12-13T15:53:59Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "secretsmanager:TagResource",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "aws:rds:primaryDBClusterArn",
+                "aws:rds:primaryDBInstanceArn"
+              ]
+            },
+            "StringLike": {
+              "secretsmanager:ResourceTag/aws:secretsmanager:owningService": "rds-preview-us-east-2"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:rds-preview-us-east-2!*"
+        },
         {
           "Action": [
             "cloudwatch:PutMetricData"
@@ -26,6 +42,26 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:ListSecretVersionIds",
+            "secretsmanager:PutSecretValue",
+            "secretsmanager:RotateSecret",
+            "secretsmanager:UpdateSecret",
+            "secretsmanager:UpdateSecretVersionStage"
+          ],
+          "Condition": {
+            "StringLike": {
+              "secretsmanager:ResourceTag/aws:secretsmanager:owningService": "rds-preview-us-east-2"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:secretsmanager:*:*:secret:rds-preview-us-east-2!*"
+          ]
         },
         {
           "Action": [
@@ -89,6 +125,13 @@
         },
         {
           "Action": [
+            "secretsmanager:GetRandomPassword"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "sns:Publish"
           ],
           "Effect": "Allow",
@@ -98,7 +141,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2022-06-07T16:55:33Z"
+  "UpdateDate": "2022-12-13T15:53:59Z"
 }
