@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 346
-* Unique actions: 14300
+* Unique actions: 14306
 * Managed policies: 1023
 
 Most common managed policy name prefixes:
@@ -229,8 +229,8 @@ The following table summarises the AWS APIs.
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 20 | 2 | 1 |
 | [`iotroborunner`](services/iotroborunner.yml) | 20 | 0 | 29 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
+| [`backup-gateway`](services/backup-gateway.yml) | 19 | 6 | 2 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
-| [`backup-gateway`](services/backup-gateway.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
 | [`sagemaker-geospatial`](services/sagemaker-geospatial.yml) | 19 | 0 | 0 |
 | [`resource-explorer-2`](services/resource-explorer-2.yml) | 19 | 0 | 0 |
@@ -388,13 +388,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2231 |
-| `Get` | 1955 |
+| `Get` | 1958 |
 | `Delete` | 1659 |
 | `Describe` | 1570 |
 | `Create` | 1544 |
 | `Update` | 1291 |
-| `Put` | 391 |
-| `Start` | 299 |
+| `Put` | 393 |
+| `Start` | 300 |
 | `Tag` | 224 |
 | `Untag` | 222 |
 
