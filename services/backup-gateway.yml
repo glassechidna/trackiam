@@ -4,14 +4,20 @@ Actions:
   - Name: backup-gateway:DeleteGateway
   - Name: backup-gateway:DeleteHypervisor
   - Name: backup-gateway:DisassociateGatewayFromServer
+  - Name: backup-gateway:GetBandwidthRateLimitSchedule
   - Name: backup-gateway:GetGateway
+  - Name: backup-gateway:GetHypervisor
+  - Name: backup-gateway:GetHypervisorPropertyMappings
   - Name: backup-gateway:GetVirtualMachine
   - Name: backup-gateway:ImportHypervisorConfiguration
   - Name: backup-gateway:ListGateways
   - Name: backup-gateway:ListHypervisors
   - Name: backup-gateway:ListTagsForResource
   - Name: backup-gateway:ListVirtualMachines
+  - Name: backup-gateway:PutBandwidthRateLimitSchedule
+  - Name: backup-gateway:PutHypervisorPropertyMappings
   - Name: backup-gateway:PutMaintenanceStartTime
+  - Name: backup-gateway:StartVirtualMachinesMetadataSync
   - Name: backup-gateway:TagResource
   - Name: backup-gateway:TestHypervisorConfiguration
   - Name: backup-gateway:UntagResource
@@ -22,11 +28,3 @@ Actions:
   # actions with no corresponding API
   - Name: backup-gateway:Backup
   - Name: backup-gateway:Restore
-
-  # APIs without an IAM action
-  - Name: backup-gateway:GetBandwidthRateLimitSchedule
-  - Name: backup-gateway:GetHypervisor
-  - Name: backup-gateway:GetHypervisorPropertyMappings
-  - Name: backup-gateway:PutBandwidthRateLimitSchedule
-  - Name: backup-gateway:PutHypervisorPropertyMappings
-  - Name: backup-gateway:StartVirtualMachinesMetadataSync

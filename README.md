@@ -201,6 +201,7 @@ The following table summarises the AWS APIs.
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 5 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
+| [`backup-gateway`](services/backup-gateway.yml) | 25 | 0 | 2 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 1 |
 | [`snowball`](services/snowball.yml) | 25 | 0 | 0 |
 | [`ram`](services/ram.yml) | 25 | 0 | 0 |
@@ -229,7 +230,6 @@ The following table summarises the AWS APIs.
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 20 | 2 | 1 |
 | [`iotroborunner`](services/iotroborunner.yml) | 20 | 0 | 29 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
-| [`backup-gateway`](services/backup-gateway.yml) | 19 | 6 | 2 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
 | [`sagemaker-geospatial`](services/sagemaker-geospatial.yml) | 19 | 0 | 0 |
