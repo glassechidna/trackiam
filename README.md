@@ -205,6 +205,7 @@ The following table summarises the AWS APIs.
 | [`discovery`](services/discovery.yml) | 25 | 0 | 1 |
 | [`snowball`](services/snowball.yml) | 25 | 0 | 0 |
 | [`ram`](services/ram.yml) | 25 | 0 | 0 |
+| [`private-networks`](services/private-networks.yml) | 25 | 0 | 0 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`managedblockchain`](services/managedblockchain.yml) | 23 | 4 | 0 |
@@ -220,7 +221,6 @@ The following table summarises the AWS APIs.
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 0 |
-| [`private-networks`](services/private-networks.yml) | 21 | 4 | 0 |
 | [`aps`](services/aps.yml) | 21 | 0 | 16 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
