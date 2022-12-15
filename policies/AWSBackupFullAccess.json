@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupFullAccess",
   "CreateDate": "2019-11-18T22:21:52Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LL52EIPJX",
   "PolicyName": "AWSBackupFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-11-10T22:47:21Z",
+    "CreateDate": "2022-12-15T20:15:51Z",
     "Document": {
       "Statement": [
         {
@@ -108,11 +108,6 @@
           "Resource": "*"
         },
         {
-          "Action": "backup-gateway:GetGateway",
-          "Effect": "Allow",
-          "Resource": "arn:aws:backup-gateway:*:*:gateway/*"
-        },
-        {
           "Action": "backup-storage:*",
           "Effect": "Allow",
           "Resource": "*"
@@ -186,6 +181,32 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "backup-gateway:GetBandwidthRateLimitSchedule",
+            "backup-gateway:GetGateway",
+            "backup-gateway:PutBandwidthRateLimitSchedule"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:backup-gateway:*:*:gateway/*"
+        },
+        {
+          "Action": [
+            "backup-gateway:GetHypervisor",
+            "backup-gateway:GetHypervisorPropertyMappings",
+            "backup-gateway:PutHypervisorPropertyMappings",
+            "backup-gateway:StartVirtualMachinesMetadataSync"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:backup-gateway:*:*:hypervisor/*"
+        },
+        {
+          "Action": [
+            "backup-gateway:GetVirtualMachine"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:backup-gateway:*:*:vm/*"
         },
         {
           "Action": [
@@ -383,7 +404,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2022-11-10T22:47:21Z"
+  "UpdateDate": "2022-12-15T20:15:51Z"
 }
