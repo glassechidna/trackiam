@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonWorkSpacesWebServiceRolePolicy",
   "CreateDate": "2021-11-30T13:15:53Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4JW4G4DATC",
   "PolicyName": "AmazonWorkSpacesWebServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-10-17T16:43:45Z",
+    "CreateDate": "2022-12-15T22:46:33Z",
     "Document": {
       "Statement": [
         {
@@ -24,6 +24,18 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/WorkSpacesWebManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*"
         },
         {
           "Action": [
@@ -44,9 +56,19 @@
         },
         {
           "Action": [
+            "ec2:DeleteNetworkInterface"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/WorkSpacesWebManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*"
+        },
+        {
+          "Action": [
             "ec2:AssociateAddress",
-            "ec2:CreateNetworkInterface",
-            "ec2:DeleteNetworkInterface",
             "ec2:DescribeAvailabilityZones",
             "ec2:DescribeNetworkInterfaces",
             "ec2:DescribeRouteTables",
@@ -61,6 +83,16 @@
         },
         {
           "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ]
+        },
+        {
+          "Action": [
             "kinesis:DescribeStreamSummary",
             "kinesis:PutRecord",
             "kinesis:PutRecords"
@@ -72,7 +104,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2022-10-17T16:43:45Z"
+  "UpdateDate": "2022-12-15T22:46:33Z"
 }
