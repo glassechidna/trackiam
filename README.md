@@ -154,6 +154,7 @@ The following table summarises the AWS APIs.
 | [`apprunner`](services/apprunner.yml) | 35 | 0 | 1 |
 | [`memorydb`](services/memorydb.yml) | 35 | 0 | 0 |
 | [`eks`](services/eks.yml) | 34 | 1 | 1 |
+| [`kinesisvideo`](services/kinesisvideo.yml) | 34 | 0 | 3 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`panorama`](services/panorama.yml) | 33 | 1 | 31 |
@@ -162,7 +163,6 @@ The following table summarises the AWS APIs.
 | [`lookoutequipment`](services/lookoutequipment.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
-| [`kinesisvideo`](services/kinesisvideo.yml) | 32 | 2 | 3 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`m2`](services/m2.yml) | 32 | 0 | 0 |
 | [`inspector2`](services/inspector2.yml) | 32 | 0 | 0 |
