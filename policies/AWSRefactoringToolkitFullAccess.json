@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSRefactoringToolkitFullAccess",
   "CreateDate": "2022-10-25T16:41:15Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BNNXRNIF7",
   "PolicyName": "AWSRefactoringToolkitFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-10-25T16:41:15Z",
+    "CreateDate": "2022-12-16T23:26:55Z",
     "Document": {
       "Statement": [
         {
@@ -176,6 +176,46 @@
         },
         {
           "Action": [
+            "logs:CreateLogGroup",
+            "logs:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "a2c-generated"
+              ]
+            },
+            "Null": {
+              "aws:RequestTag/a2c-generated": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/codebuild/*:*",
+            "arn:aws:logs:*:*:log-group:/aws/ecs/container-logs/*:*",
+            "arn:aws:logs:*:*:log-group:/aws/ecs/containerinsights/*:*"
+          ],
+          "Sid": "CloudwatchCreateAccess"
+        },
+        {
+          "Action": [
+            "logs:GetLogEvents"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/a2c-generated": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/codebuild/*:*",
+            "arn:aws:logs:*:*:log-group:/aws/ecs/container-logs/*:*",
+            "arn:aws:logs:*:*:log-group:/aws/ecs/containerinsights/*:*"
+          ],
+          "Sid": "CloudwatchGetAccess"
+        },
+        {
+          "Action": [
             "s3:ListBucket"
           ],
           "Condition": {
@@ -272,19 +312,6 @@
         },
         {
           "Action": [
-            "logs:CreateLogGroup",
-            "logs:GetLogEvents"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:logs:*:*:log-group:/aws/codebuild/*:*",
-            "arn:aws:logs:*:*:log-group:/aws/ecs/container-logs/*:*",
-            "arn:aws:logs:*:*:log-group:/aws/ecs/containerinsights/*:*"
-          ],
-          "Sid": "CloudwatchAccess"
-        },
-        {
-          "Action": [
             "s3:DeleteObject",
             "s3:GetObject",
             "s3:PutObject"
@@ -334,7 +361,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-10-25T16:41:15Z"
+  "UpdateDate": "2022-12-16T23:26:55Z"
 }
