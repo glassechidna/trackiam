@@ -1,0 +1,75 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSManagedServices_DetectiveControlsConfig_ServiceRolePolicy",
+  "CreateDate": "2022-12-19T23:11:17Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4NFMIIYFDV",
+  "PolicyName": "AWSManagedServices_DetectiveControlsConfig_ServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2022-12-19T23:11:17Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudformation:CreateChangeSet",
+            "cloudformation:CreateStack",
+            "cloudformation:DeleteStack",
+            "cloudformation:DescribeChangeSet",
+            "cloudformation:DescribeStackResources",
+            "cloudformation:DescribeStacks",
+            "cloudformation:ExecuteChangeSet",
+            "cloudformation:GetTemplateSummary",
+            "cloudformation:UpdateTermination*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/ams-detective-controls-config-recorder",
+            "arn:aws:cloudformation:*:*:stack/ams-detective-controls-config-rules-cdk",
+            "arn:aws:cloudformation:*:*:stack/ams-detective-controls-infrastructure-cdk"
+          ]
+        },
+        {
+          "Action": [
+            "config:DescribeAggregationAuthorizations",
+            "config:PutAggregationAuthorization",
+            "config:PutConfigRule",
+            "config:TagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:config:*:*::config-rule/*",
+            "arn:aws:config:*:*:aggregation-authorization/540708452589/*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:DeleteBucket",
+            "s3:DeleteBucketPolicy",
+            "s3:DeleteObject",
+            "s3:GetBucketAcl",
+            "s3:GetBucketPolicy",
+            "s3:ListBucket",
+            "s3:ListBucketVersions",
+            "s3:PutBucketAcl",
+            "s3:PutBucketLogging",
+            "s3:PutBucketObjectLockConfiguration",
+            "s3:PutBucketPolicy",
+            "s3:PutBucketPublicAccessBlock",
+            "s3:PutBucketTagging",
+            "s3:PutBucketVersioning",
+            "s3:PutEncryptionConfiguration",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::ams-config-record-bucket-*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2022-12-19T23:11:17Z"
+}
