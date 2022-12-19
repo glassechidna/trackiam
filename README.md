@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 346
-* Unique actions: 14310
+* Unique actions: 14317
 * Managed policies: 1024
 
 Most common managed policy name prefixes:
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 576 | 0 | 9 |
-| [`sagemaker`](services/sagemaker.yml) | 312 | 1 | 11 |
+| [`sagemaker`](services/sagemaker.yml) | 312 | 3 | 11 |
 | [`chime`](services/chime.yml) | 216 | 4 | 50 |
 | [`glue`](services/glue.yml) | 196 | 6 | 10 |
 | [`connect`](services/connect.yml) | 164 | 5 | 9 |
@@ -153,8 +153,8 @@ The following table summarises the AWS APIs.
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`apprunner`](services/apprunner.yml) | 35 | 0 | 1 |
 | [`memorydb`](services/memorydb.yml) | 35 | 0 | 0 |
+| [`kinesisvideo`](services/kinesisvideo.yml) | 34 | 5 | 3 |
 | [`eks`](services/eks.yml) | 34 | 1 | 1 |
-| [`kinesisvideo`](services/kinesisvideo.yml) | 34 | 0 | 3 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`panorama`](services/panorama.yml) | 33 | 1 | 31 |
@@ -387,12 +387,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2231 |
+| `List` | 2232 |
 | `Get` | 1960 |
 | `Delete` | 1659 |
-| `Describe` | 1570 |
+| `Describe` | 1572 |
 | `Create` | 1544 |
-| `Update` | 1291 |
+| `Update` | 1293 |
 | `Put` | 393 |
 | `Start` | 302 |
 | `Tag` | 224 |
