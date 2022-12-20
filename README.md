@@ -111,12 +111,12 @@ The following table summarises the AWS APIs.
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 50 | 0 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
+| [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 49 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 48 | 2 | 0 |
 | [`logs`](services/logs.yml) | 48 | 0 | 7 |
 | [`wafv2`](services/wafv2.yml) | 48 | 0 | 2 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
-| [`nimble`](services/nimble.yml) | 47 | 0 | 4 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
@@ -155,6 +155,7 @@ The following table summarises the AWS APIs.
 | [`memorydb`](services/memorydb.yml) | 35 | 0 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 34 | 5 | 3 |
 | [`eks`](services/eks.yml) | 34 | 1 | 1 |
+| [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`panorama`](services/panorama.yml) | 33 | 1 | 31 |
@@ -176,7 +177,6 @@ The following table summarises the AWS APIs.
 | [`aoss`](services/aoss.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
-| [`route53domains`](services/route53domains.yml) | 30 | 0 | 4 |
 | [`xray`](services/xray.yml) | 30 | 0 | 3 |
 | [`securitylake`](services/securitylake.yml) | 30 | 0 | 1 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
