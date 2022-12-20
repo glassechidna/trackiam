@@ -19,6 +19,7 @@ Actions:
   - Name: connect:CreateQueue
   - Name: connect:CreateQuickConnect
   - Name: connect:CreateRoutingProfile
+  - Name: connect:CreateRule
   - Name: connect:CreateSecurityProfile
   - Name: connect:CreateTaskTemplate
   - Name: connect:CreateTrafficDistributionGroup
@@ -32,6 +33,7 @@ Actions:
   - Name: connect:DeleteInstance
   - Name: connect:DeleteIntegrationAssociation
   - Name: connect:DeleteQuickConnect
+  - Name: connect:DeleteRule
   - Name: connect:DeleteSecurityProfile
   - Name: connect:DeleteTaskTemplate
   - Name: connect:DeleteTrafficDistributionGroup
@@ -51,6 +53,7 @@ Actions:
   - Name: connect:DescribeQueue
   - Name: connect:DescribeQuickConnect
   - Name: connect:DescribeRoutingProfile
+  - Name: connect:DescribeRule
   - Name: connect:DescribeSecurityProfile
   - Name: connect:DescribeTrafficDistributionGroup
   - Name: connect:DescribeUser
@@ -153,6 +156,7 @@ Actions:
   - Name: connect:UpdateRoutingProfileDefaultOutboundQueue
   - Name: connect:UpdateRoutingProfileName
   - Name: connect:UpdateRoutingProfileQueues
+  - Name: connect:UpdateRule
   - Name: connect:UpdateSecurityProfile
   - Name: connect:UpdateTaskTemplate
   - Name: connect:UpdateTrafficDistribution
@@ -171,13 +175,10 @@ Actions:
   - Name: connect:DescribeForecastingPlanningSchedulingIntegration
   - Name: connect:DisassociateCustomerProfilesDomain
   - Name: connect:GetFederationTokens
+  - Name: connect:ListRule
   - Name: connect:StartForecastingPlanningSchedulingIntegration
   - Name: connect:StopForecastingPlanningSchedulingIntegration
   - Name: connect:UpdatedescribeContent
 
   # APIs without an IAM action
-  - Name: connect:CreateRule
-  - Name: connect:DeleteRule
-  - Name: connect:DescribeRule
   - Name: connect:ListRules
-  - Name: connect:UpdateRule
