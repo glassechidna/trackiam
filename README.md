@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 346
-* Unique actions: 14322
+* Unique services: 347
+* Unique actions: 14328
 * Managed policies: 1026
 
 Most common managed policy name prefixes:
@@ -116,8 +116,8 @@ The following table summarises the AWS APIs.
 | [`logs`](services/logs.yml) | 48 | 0 | 7 |
 | [`wafv2`](services/wafv2.yml) | 48 | 0 | 2 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
+| [`nimble`](services/nimble.yml) | 47 | 0 | 4 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
-| [`nimble`](services/nimble.yml) | 47 | 0 | 2 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
@@ -357,6 +357,7 @@ The following table summarises the AWS APIs.
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 5 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 5 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
+| [`license-manager-linux-subscriptions`](services/license-manager-linux-subscriptions.yml) | 0 | 0 | 4 |
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 4 |
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
@@ -387,12 +388,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2233 |
-| `Get` | 1960 |
+| `List` | 2236 |
+| `Get` | 1962 |
 | `Delete` | 1659 |
 | `Describe` | 1572 |
 | `Create` | 1544 |
-| `Update` | 1293 |
+| `Update` | 1294 |
 | `Put` | 393 |
 | `Start` | 302 |
 | `Tag` | 224 |
