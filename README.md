@@ -306,6 +306,7 @@ The following table summarises the AWS APIs.
 | [`s3-outposts`](services/s3-outposts.yml) | 4 | 0 | 29 |
 | [`controltower`](services/controltower.yml) | 4 | 0 | 29 |
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 4 | 0 | 0 |
+| [`license-manager-linux-subscriptions`](services/license-manager-linux-subscriptions.yml) | 4 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 0 | 0 |
 | [`pricing`](services/pricing.yml) | 3 | 0 | 0 |
 | [`cassandra`](services/cassandra.yml) | 2 | 11 | 7 |
@@ -358,7 +359,6 @@ The following table summarises the AWS APIs.
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 5 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 5 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
-| [`license-manager-linux-subscriptions`](services/license-manager-linux-subscriptions.yml) | 0 | 0 | 4 |
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 4 |
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
