@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 347
-* Unique actions: 14328
+* Unique services: 348
+* Unique actions: 14339
 * Managed policies: 1026
 
 Most common managed policy name prefixes:
@@ -342,6 +342,7 @@ The following table summarises the AWS APIs.
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
+| [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 11 |
 | [`internetmonitor`](services/internetmonitor.yml) | 0 | 0 | 10 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
@@ -388,13 +389,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2236 |
-| `Get` | 1962 |
-| `Delete` | 1659 |
+| `List` | 2238 |
+| `Get` | 1965 |
+| `Delete` | 1660 |
 | `Describe` | 1572 |
 | `Create` | 1544 |
 | `Update` | 1294 |
-| `Put` | 393 |
+| `Put` | 394 |
 | `Start` | 302 |
 | `Tag` | 224 |
 | `Untag` | 222 |
