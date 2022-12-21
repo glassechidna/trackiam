@@ -1,15 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSMigrationHubOrchestratorServiceRolePolicy",
   "CreateDate": "2022-04-20T02:24:04Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4LSN7AHAZR",
   "PolicyName": "AWSMigrationHubOrchestratorServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-04-20T02:24:04Z",
+    "CreateDate": "2022-12-21T18:48:26Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "s3:ListBucket",
+          "Condition": {
+            "StringLike": {
+              "s3:prefix": "migrationhub-orchestrator-vmie-*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*"
+        },
         {
           "Action": [
             "ec2:CreateLaunchTemplateVersion",
@@ -33,6 +43,13 @@
         },
         {
           "Action": [
+            "ec2:DescribeImportImageTasks"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "ec2:DescribeInstances"
           ],
           "Effect": "Allow",
@@ -43,7 +60,8 @@
             "events:DeleteRule",
             "events:DescribeRule",
             "events:PutRule",
-            "events:PutTargets"
+            "events:PutTargets",
+            "events:RemoveTargets"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:events:*:*:rule/MigrationHubOrchestratorManagedRule*"
@@ -116,7 +134,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-04-20T02:24:04Z"
+  "UpdateDate": "2022-12-21T18:48:26Z"
 }
