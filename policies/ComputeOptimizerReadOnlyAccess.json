@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ComputeOptimizerReadOnlyAccess",
   "CreateDate": "2020-03-07T00:11:02Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FI27MEARJ",
   "PolicyName": "ComputeOptimizerReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-11-29T16:03:07Z",
+    "CreateDate": "2022-12-22T17:34:19Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,8 @@
             "compute-optimizer:GetEBSVolumeRecommendations",
             "compute-optimizer:GetEC2InstanceRecommendations",
             "compute-optimizer:GetEC2RecommendationProjectedMetrics",
+            "compute-optimizer:GetECSServiceRecommendationProjectedMetrics",
+            "compute-optimizer:GetECSServiceRecommendations",
             "compute-optimizer:GetEffectiveRecommendationPreferences",
             "compute-optimizer:GetEnrollmentStatus",
             "compute-optimizer:GetEnrollmentStatusesForOrganization",
@@ -28,6 +30,8 @@
             "compute-optimizer:GetRecommendationSummaries",
             "ec2:DescribeInstances",
             "ec2:DescribeVolumes",
+            "ecs:ListClusters",
+            "ecs:ListServices",
             "lambda:ListFunctions",
             "lambda:ListProvisionedConcurrencyConfigs",
             "organizations:DescribeAccount",
@@ -41,7 +45,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2021-11-29T16:03:07Z"
+  "UpdateDate": "2022-12-22T17:34:19Z"
 }
