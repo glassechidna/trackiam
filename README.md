@@ -40,7 +40,7 @@ The following table summarises the AWS APIs.
 | [`sagemaker`](services/sagemaker.yml) | 312 | 3 | 11 |
 | [`chime`](services/chime.yml) | 216 | 4 | 50 |
 | [`glue`](services/glue.yml) | 196 | 6 | 10 |
-| [`connect`](services/connect.yml) | 168 | 1 | 10 |
+| [`connect`](services/connect.yml) | 168 | 2 | 10 |
 | [`iam`](services/iam.yml) | 158 | 0 | 1 |
 | [`lightsail`](services/lightsail.yml) | 155 | 0 | 0 |
 | [`ses`](services/ses.yml) | 143 | 0 | 0 |
@@ -153,7 +153,7 @@ The following table summarises the AWS APIs.
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`apprunner`](services/apprunner.yml) | 35 | 0 | 1 |
 | [`memorydb`](services/memorydb.yml) | 35 | 0 | 0 |
-| [`kinesisvideo`](services/kinesisvideo.yml) | 34 | 5 | 3 |
+| [`kinesisvideo`](services/kinesisvideo.yml) | 34 | 4 | 3 |
 | [`eks`](services/eks.yml) | 34 | 1 | 1 |
 | [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 34 | 0 | 0 |
@@ -227,6 +227,7 @@ The following table summarises the AWS APIs.
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 21 | 0 | 7 |
 | [`voiceid`](services/voiceid.yml) | 21 | 0 | 2 |
 | [`synthetics`](services/synthetics.yml) | 21 | 0 | 0 |
+| [`compute-optimizer`](services/compute-optimizer.yml) | 21 | 0 | 0 |
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 20 | 2 | 1 |
 | [`iotroborunner`](services/iotroborunner.yml) | 20 | 0 | 29 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
@@ -239,7 +240,6 @@ The following table summarises the AWS APIs.
 | [`identitystore`](services/identitystore.yml) | 19 | 0 | 0 |
 | [`emr-containers`](services/emr-containers.yml) | 19 | 0 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
-| [`compute-optimizer`](services/compute-optimizer.yml) | 18 | 0 | 3 |
 | [`translate`](services/translate.yml) | 18 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 17 | 3 | 0 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
@@ -394,7 +394,7 @@ Most common action prefixes:
 | `Delete` | 1660 |
 | `Describe` | 1572 |
 | `Create` | 1544 |
-| `Update` | 1294 |
+| `Update` | 1295 |
 | `Put` | 395 |
 | `Start` | 302 |
 | `Tag` | 224 |
