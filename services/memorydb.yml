@@ -19,6 +19,8 @@ Actions:
   - Name: memorydb:DescribeEvents
   - Name: memorydb:DescribeParameterGroups
   - Name: memorydb:DescribeParameters
+  - Name: memorydb:DescribeReservedNodes
+  - Name: memorydb:DescribeReservedNodesOfferings
   - Name: memorydb:DescribeServiceUpdates
   - Name: memorydb:DescribeSnapshots
   - Name: memorydb:DescribeSubnetGroups
@@ -26,6 +28,7 @@ Actions:
   - Name: memorydb:FailoverShard
   - Name: memorydb:ListAllowedNodeTypeUpdates
   - Name: memorydb:ListTags
+  - Name: memorydb:PurchaseReservedNodesOffering
   - Name: memorydb:ResetParameterGroup
   - Name: memorydb:TagResource
   - Name: memorydb:UntagResource
@@ -34,8 +37,3 @@ Actions:
   - Name: memorydb:UpdateParameterGroup
   - Name: memorydb:UpdateSubnetGroup
   - Name: memorydb:UpdateUser
-
-  # actions with no corresponding API
-  - Name: memorydb:DescribeReservedNodes
-  - Name: memorydb:DescribeReservedNodesOfferings
-  - Name: memorydb:PurchaseReservedNodesOffering
