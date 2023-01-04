@@ -69,6 +69,7 @@ The following table summarises the AWS APIs.
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`proton`](services/proton.yml) | 75 | 0 | 25 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
+| [`es`](services/es.yml) | 73 | 0 | 10 |
 | [`comprehend`](services/comprehend.yml) | 73 | 0 | 0 |
 | [`backup`](services/backup.yml) | 72 | 0 | 2 |
 | [`iotsitewise`](services/iotsitewise.yml) | 71 | 2 | 1 |
@@ -83,7 +84,6 @@ The following table summarises the AWS APIs.
 | [`workspaces`](services/workspaces.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
-| [`es`](services/es.yml) | 64 | 9 | 10 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`rekognition`](services/rekognition.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
