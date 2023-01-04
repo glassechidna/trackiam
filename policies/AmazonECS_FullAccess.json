@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonECS_FullAccess",
   "CreateDate": "2017-11-07T21:36:54Z",
-  "DefaultVersionId": "v19",
+  "DefaultVersionId": "v20",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ7S7AN6YQPTJC7IFS",
   "PolicyName": "AmazonECS_FullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-10-12T21:02:23Z",
+    "CreateDate": "2023-01-04T16:26:05Z",
     "Document": {
       "Statement": [
         {
@@ -84,6 +84,23 @@
           "Resource": [
             "*"
           ]
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:AddTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "elasticloadbalancing:CreateAction": [
+                "CreateListener",
+                "CreateLoadBalancer",
+                "CreateRule",
+                "CreateTargetGroup"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": [
@@ -220,7 +237,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v19"
+    "VersionId": "v20"
   },
-  "UpdateDate": "2020-10-12T21:02:23Z"
+  "UpdateDate": "2023-01-04T16:26:05Z"
 }

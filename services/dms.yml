@@ -4,6 +4,7 @@ Actions:
   - Name: dms:CancelReplicationTaskAssessmentRun
   - Name: dms:CreateEndpoint
   - Name: dms:CreateEventSubscription
+  - Name: dms:CreateFleetAdvisorCollector
   - Name: dms:CreateReplicationInstance
   - Name: dms:CreateReplicationSubnetGroup
   - Name: dms:CreateReplicationTask
@@ -11,6 +12,8 @@ Actions:
   - Name: dms:DeleteConnection
   - Name: dms:DeleteEndpoint
   - Name: dms:DeleteEventSubscription
+  - Name: dms:DeleteFleetAdvisorCollector
+  - Name: dms:DeleteFleetAdvisorDatabases
   - Name: dms:DeleteReplicationInstance
   - Name: dms:DeleteReplicationSubnetGroup
   - Name: dms:DeleteReplicationTask
@@ -25,6 +28,11 @@ Actions:
   - Name: dms:DescribeEventCategories
   - Name: dms:DescribeEventSubscriptions
   - Name: dms:DescribeEvents
+  - Name: dms:DescribeFleetAdvisorCollectors
+  - Name: dms:DescribeFleetAdvisorDatabases
+  - Name: dms:DescribeFleetAdvisorLsaAnalysis
+  - Name: dms:DescribeFleetAdvisorSchemaObjectSummary
+  - Name: dms:DescribeFleetAdvisorSchemas
   - Name: dms:DescribeOrderableReplicationInstances
   - Name: dms:DescribePendingMaintenanceActions
   - Name: dms:DescribeRefreshSchemasStatus
@@ -49,6 +57,7 @@ Actions:
   - Name: dms:RefreshSchemas
   - Name: dms:ReloadTables
   - Name: dms:RemoveTagsFromResource
+  - Name: dms:RunFleetAdvisorLsaAnalysis
   - Name: dms:StartReplicationTask
   - Name: dms:StartReplicationTaskAssessment
   - Name: dms:StartReplicationTaskAssessmentRun
@@ -77,6 +86,8 @@ Actions:
   - Name: dms:ListMetadataModelConversions
   - Name: dms:ListMetadataModelExports
   - Name: dms:ListMigrationProjects
+  - Name: dms:ModifyFleetAdvisorCollector
+  - Name: dms:ModifyFleetAdvisorCollectorStatuses
   - Name: dms:StartMetadataModelAssessment
   - Name: dms:StartMetadataModelConversion
   - Name: dms:StartMetadataModelExportAsScripts
@@ -86,15 +97,7 @@ Actions:
   - Name: dms:UpdateDataProvider
   - Name: dms:UpdateInstanceProfile
   - Name: dms:UpdateMigrationProject
+  - Name: dms:UploadFileMetadataList
 
   # APIs without an IAM action
-  - Name: dms:CreateFleetAdvisorCollector
-  - Name: dms:DeleteFleetAdvisorCollector
-  - Name: dms:DeleteFleetAdvisorDatabases
-  - Name: dms:DescribeFleetAdvisorCollectors
-  - Name: dms:DescribeFleetAdvisorDatabases
-  - Name: dms:DescribeFleetAdvisorLsaAnalysis
-  - Name: dms:DescribeFleetAdvisorSchemaObjectSummary
-  - Name: dms:DescribeFleetAdvisorSchemas
-  - Name: dms:RunFleetAdvisorLsaAnalysis
   - Name: dms:UpdateSubscriptionsToEventBridge
