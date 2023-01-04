@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 348
-* Unique actions: 14321
-* Managed policies: 1026
+* Unique actions: 14323
+* Managed policies: 1027
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 286 |
+| `arn:aws:iam::aws:policy/AWS*` | 287 |
 | `arn:aws:iam::aws:policy/Amazon*` | 264 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 223 |
 | `arn:aws:iam::aws:policy/service-role/*` | 157 |
@@ -142,7 +142,7 @@ The following table summarises the AWS APIs.
 | [`fms`](services/fms.yml) | 38 | 0 | 0 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 37 | 3 | 0 |
-| [`sso`](services/sso.yml) | 37 | 0 | 53 |
+| [`sso`](services/sso.yml) | 37 | 0 | 55 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`ce`](services/ce.yml) | 37 | 0 | 10 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
@@ -392,7 +392,7 @@ Most common action prefixes:
 | `List` | 2233 |
 | `Get` | 1963 |
 | `Delete` | 1652 |
-| `Describe` | 1574 |
+| `Describe` | 1576 |
 | `Create` | 1536 |
 | `Update` | 1292 |
 | `Put` | 395 |
