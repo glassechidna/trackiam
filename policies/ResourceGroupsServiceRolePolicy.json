@@ -1,0 +1,29 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/ResourceGroupsServiceRolePolicy",
+  "CreateDate": "2023-01-05T16:57:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4CED7JM5AD",
+  "PolicyName": "ResourceGroupsServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-01-05T16:57:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudformation:DescribeStacks",
+            "cloudformation:ListStackResources",
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-01-05T16:57:08Z"
+}
