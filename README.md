@@ -285,6 +285,7 @@ The following table summarises the AWS APIs.
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
+| [`kendra-ranking`](services/kendra-ranking.yml) | 9 | 0 | 0 |
 | [`budgets`](services/budgets.yml) | 8 | 15 | 2 |
 | [`iot`](services/iot.yml) | 8 | 3 | 245 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
@@ -346,7 +347,6 @@ The following table summarises the AWS APIs.
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 11 |
 | [`internetmonitor`](services/internetmonitor.yml) | 0 | 0 | 10 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
-| [`kendra-ranking`](services/kendra-ranking.yml) | 0 | 0 | 9 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`artifact`](services/artifact.yml) | 0 | 0 | 8 |
