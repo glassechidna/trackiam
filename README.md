@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 349
-* Unique actions: 14332
+* Unique services: 350
+* Unique actions: 14362
 * Managed policies: 1029
 
 Most common managed policy name prefixes:
@@ -303,7 +303,7 @@ The following table summarises the AWS APIs.
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 6 | 0 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 6 | 0 | 0 |
-| [`account`](services/account.yml) | 5 | 0 | 3 |
+| [`account`](services/account.yml) | 5 | 0 | 7 |
 | [`s3-outposts`](services/s3-outposts.yml) | 4 | 0 | 29 |
 | [`controltower`](services/controltower.yml) | 4 | 0 | 29 |
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 4 | 0 | 0 |
@@ -340,6 +340,7 @@ The following table summarises the AWS APIs.
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
+| [`billing`](services/billing.yml) | 0 | 0 | 13 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
@@ -347,10 +348,12 @@ The following table summarises the AWS APIs.
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 11 |
 | [`internetmonitor`](services/internetmonitor.yml) | 0 | 0 | 10 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
+| [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 9 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`artifact`](services/artifact.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
+| [`payments`](services/payments.yml) | 0 | 0 | 7 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
 | [`tax`](services/tax.yml) | 0 | 0 | 6 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
@@ -371,7 +374,6 @@ The following table summarises the AWS APIs.
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 2 |
 | [`sumerian`](services/sumerian.yml) | 0 | 0 | 2 |
-| [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 2 |
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
 | [`vpc-lattice-svcs`](services/vpc-lattice-svcs.yml) | 0 | 0 | 1 |
 | [`sustainability`](services/sustainability.yml) | 0 | 0 | 1 |
@@ -383,20 +385,19 @@ The following table summarises the AWS APIs.
 | [`iq`](services/iq.yml) | 0 | 0 | 1 |
 | [`elemental-support-content`](services/elemental-support-content.yml) | 0 | 0 | 1 |
 | [`codeguru`](services/codeguru.yml) | 0 | 0 | 1 |
-| [`billing`](services/billing.yml) | 0 | 0 | 1 |
 | [`arsenal`](services/arsenal.yml) | 0 | 0 | 1 |
 
 Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2235 |
-| `Get` | 1963 |
-| `Delete` | 1653 |
+| `List` | 2238 |
+| `Get` | 1976 |
+| `Delete` | 1655 |
 | `Describe` | 1577 |
-| `Create` | 1537 |
-| `Update` | 1293 |
-| `Put` | 395 |
+| `Create` | 1538 |
+| `Update` | 1298 |
+| `Put` | 397 |
 | `Start` | 302 |
 | `Tag` | 225 |
 | `Untag` | 223 |
