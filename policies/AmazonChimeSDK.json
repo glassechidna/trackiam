@@ -1,27 +1,36 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonChimeSDK",
   "CreateDate": "2020-02-04T21:53:37Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ACM6EA4B7",
   "PolicyName": "AmazonChimeSDK",
   "PolicyVersion": {
-    "CreateDate": "2021-10-21T18:04:27Z",
+    "CreateDate": "2023-01-10T18:05:12Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "chime:BatchCreateAttendee",
             "chime:CreateAttendee",
+            "chime:CreateMediaCapturePipeline",
+            "chime:CreateMediaConcatenationPipeline",
+            "chime:CreateMediaLiveConnectorPipeline",
             "chime:CreateMeeting",
             "chime:CreateMeetingWithAttendees",
             "chime:DeleteAttendee",
+            "chime:DeleteMediaCapturePipeline",
+            "chime:DeleteMediaPipeline",
             "chime:DeleteMeeting",
             "chime:GetAttendee",
+            "chime:GetMediaCapturePipeline",
+            "chime:GetMediaPipeline",
             "chime:GetMeeting",
             "chime:ListAttendeeTags",
             "chime:ListAttendees",
+            "chime:ListMediaCapturePipelines",
+            "chime:ListMediaPipelines",
             "chime:ListMeetingTags",
             "chime:ListMeetings",
             "chime:ListTagsForResource",
@@ -41,7 +50,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2021-10-21T18:04:27Z"
+  "UpdateDate": "2023-01-10T18:05:12Z"
 }
