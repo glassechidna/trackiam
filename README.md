@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 350
-* Unique actions: 14362
+* Unique services: 352
+* Unique actions: 14375
 * Managed policies: 1029
 
 Most common managed policy name prefixes:
@@ -341,6 +341,7 @@ The following table summarises the AWS APIs.
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`billing`](services/billing.yml) | 0 | 0 | 13 |
+| [`tax`](services/tax.yml) | 0 | 0 | 12 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
@@ -355,7 +356,6 @@ The following table summarises the AWS APIs.
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`payments`](services/payments.yml) | 0 | 0 | 7 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
-| [`tax`](services/tax.yml) | 0 | 0 | 6 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
@@ -364,6 +364,7 @@ The following table summarises the AWS APIs.
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 5 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
+| [`invoicing`](services/invoicing.yml) | 0 | 0 | 4 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 4 |
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
 | [`a2c`](services/a2c.yml) | 0 | 0 | 4 |
@@ -371,6 +372,7 @@ The following table summarises the AWS APIs.
 | [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 3 |
 | [`resource-explorer`](services/resource-explorer.yml) | 0 | 0 | 3 |
 | [`identitystore-auth`](services/identitystore-auth.yml) | 0 | 0 | 3 |
+| [`freetierservice`](services/freetierservice.yml) | 0 | 0 | 3 |
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 2 |
 | [`sumerian`](services/sumerian.yml) | 0 | 0 | 2 |
@@ -391,13 +393,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2238 |
-| `Get` | 1976 |
-| `Delete` | 1655 |
+| `List` | 2240 |
+| `Get` | 1982 |
+| `Delete` | 1656 |
 | `Describe` | 1577 |
 | `Create` | 1538 |
 | `Update` | 1298 |
-| `Put` | 397 |
+| `Put` | 400 |
 | `Start` | 302 |
 | `Tag` | 225 |
 | `Untag` | 223 |
