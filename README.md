@@ -372,7 +372,7 @@ The following table summarises the AWS APIs.
 | [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 3 |
 | [`resource-explorer`](services/resource-explorer.yml) | 0 | 0 | 3 |
 | [`identitystore-auth`](services/identitystore-auth.yml) | 0 | 0 | 3 |
-| [`freetierservice`](services/freetierservice.yml) | 0 | 0 | 3 |
+| [`freetier`](services/freetier.yml) | 0 | 0 | 3 |
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 2 |
 | [`sumerian`](services/sumerian.yml) | 0 | 0 | 2 |
