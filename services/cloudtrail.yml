@@ -8,13 +8,18 @@ Actions:
   - Name: cloudtrail:DeregisterOrganizationDelegatedAdmin
   - Name: cloudtrail:DescribeQuery
   - Name: cloudtrail:DescribeTrails
+  - Name: cloudtrail:GetChannel
   - Name: cloudtrail:GetEventDataStore
   - Name: cloudtrail:GetEventSelectors
+  - Name: cloudtrail:GetImport
   - Name: cloudtrail:GetInsightSelectors
   - Name: cloudtrail:GetQueryResults
   - Name: cloudtrail:GetTrail
   - Name: cloudtrail:GetTrailStatus
+  - Name: cloudtrail:ListChannels
   - Name: cloudtrail:ListEventDataStores
+  - Name: cloudtrail:ListImportFailures
+  - Name: cloudtrail:ListImports
   - Name: cloudtrail:ListPublicKeys
   - Name: cloudtrail:ListQueries
   - Name: cloudtrail:ListTags
@@ -25,8 +30,10 @@ Actions:
   - Name: cloudtrail:RegisterOrganizationDelegatedAdmin
   - Name: cloudtrail:RemoveTags
   - Name: cloudtrail:RestoreEventDataStore
+  - Name: cloudtrail:StartImport
   - Name: cloudtrail:StartLogging
   - Name: cloudtrail:StartQuery
+  - Name: cloudtrail:StopImport
   - Name: cloudtrail:StopLogging
   - Name: cloudtrail:UpdateEventDataStore
   - Name: cloudtrail:UpdateTrail
@@ -37,12 +44,3 @@ Actions:
   - Name: cloudtrail:GetServiceLinkedChannel
   - Name: cloudtrail:ListServiceLinkedChannels
   - Name: cloudtrail:UpdateServiceLinkedChannel
-
-  # APIs without an IAM action
-  - Name: cloudtrail:GetChannel
-  - Name: cloudtrail:GetImport
-  - Name: cloudtrail:ListChannels
-  - Name: cloudtrail:ListImportFailures
-  - Name: cloudtrail:ListImports
-  - Name: cloudtrail:StartImport
-  - Name: cloudtrail:StopImport
