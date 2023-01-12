@@ -106,8 +106,8 @@ The following table summarises the AWS APIs.
 | [`organizations`](services/organizations.yml) | 52 | 3 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 51 | 6 | 12 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 51 | 2 | 26 |
+| [`appsync`](services/appsync.yml) | 51 | 0 | 2 |
 | [`workspaces-web`](services/workspaces-web.yml) | 51 | 0 | 0 |
-| [`appsync`](services/appsync.yml) | 50 | 1 | 2 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 50 | 0 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
