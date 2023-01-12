@@ -1,0 +1,62 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCleanRoomsReadOnlyAccess",
+  "CreateDate": "2023-01-12T16:10:48Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4FRFM45XQJ",
+  "PolicyName": "AWSCleanRoomsReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-01-12T16:10:48Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cleanrooms:BatchGet*",
+            "cleanrooms:Get*",
+            "cleanrooms:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CleanRoomsRead"
+        },
+        {
+          "Action": [
+            "glue:BatchGetPartition",
+            "glue:GetDatabase",
+            "glue:GetDatabases",
+            "glue:GetPartition",
+            "glue:GetPartitions",
+            "glue:GetSchema",
+            "glue:GetSchemaVersion",
+            "glue:GetTable",
+            "glue:GetTables"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ConsoleDisplayTables"
+        },
+        {
+          "Action": [
+            "logs:GetQueryResults"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ConsoleLogSummaryObtainLogs"
+        },
+        {
+          "Action": [
+            "logs:StartQuery"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/cleanrooms*",
+          "Sid": "ConsoleLogSummaryQueryLogs"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-01-12T16:10:48Z"
+}
