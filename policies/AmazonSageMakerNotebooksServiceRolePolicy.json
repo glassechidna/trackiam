@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonSageMakerNotebooksServiceRolePolicy",
   "CreateDate": "2019-10-18T20:27:37Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4MYB7OEJED",
   "PolicyName": "AmazonSageMakerNotebooksServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-08-28T22:39:39Z",
+    "CreateDate": "2023-01-12T20:01:49Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "elasticfilesystem:CreateAccessPoint",
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/ManagedByAmazonSageMakerResource": "*",
+              "aws:ResourceTag/ManagedByAmazonSageMakerResource": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticfilesystem:*:*:file-system/*"
+        },
         {
           "Action": "elasticfilesystem:CreateFileSystem",
           "Condition": {
@@ -51,6 +62,19 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "elasticfilesystem:DeleteAccessPoint",
+            "elasticfilesystem:DescribeAccessPoints"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/ManagedByAmazonSageMakerResource": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticfilesystem:*:*:access-point/*"
         },
         {
           "Action": "ec2:CreateTags",
@@ -104,7 +128,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2020-08-28T22:39:39Z"
+  "UpdateDate": "2023-01-12T20:01:49Z"
 }
