@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 353
-* Unique actions: 14382
+* Unique services: 354
+* Unique actions: 14416
 * Managed policies: 1029
 
 Most common managed policy name prefixes:
@@ -329,6 +329,7 @@ The following table summarises the AWS APIs.
 | [`vpc-lattice`](services/vpc-lattice.yml) | 0 | 0 | 51 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 50 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
+| [`cleanrooms`](services/cleanrooms.yml) | 0 | 0 | 34 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 32 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 29 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
@@ -394,14 +395,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2241 |
-| `Get` | 1986 |
-| `Delete` | 1656 |
+| `List` | 2248 |
+| `Get` | 1994 |
+| `Delete` | 1662 |
 | `Describe` | 1577 |
-| `Create` | 1538 |
-| `Update` | 1298 |
+| `Create` | 1543 |
+| `Update` | 1304 |
 | `Put` | 401 |
-| `Start` | 302 |
+| `Start` | 303 |
 | `Tag` | 225 |
 | `Untag` | 223 |
 
