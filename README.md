@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 354
-* Unique actions: 14427
+* Unique actions: 14429
 * Managed policies: 1033
 
 Most common managed policy name prefixes:
@@ -249,10 +249,10 @@ The following table summarises the AWS APIs.
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 17 | 0 | 0 |
 | [`ivschat`](services/ivschat.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
+| [`resource-groups`](services/resource-groups.yml) | 16 | 2 | 1 |
 | [`grafana`](services/grafana.yml) | 16 | 2 | 0 |
 | [`ssm-sap`](services/ssm-sap.yml) | 16 | 0 | 4 |
 | [`fis`](services/fis.yml) | 16 | 0 | 3 |
-| [`resource-groups`](services/resource-groups.yml) | 16 | 0 | 1 |
 | [`honeycode`](services/honeycode.yml) | 15 | 0 | 15 |
 | [`app-integrations`](services/app-integrations.yml) | 15 | 0 | 4 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 15 | 0 | 0 |
@@ -396,11 +396,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2250 |
-| `Get` | 1997 |
+| `Get` | 1998 |
 | `Delete` | 1663 |
 | `Describe` | 1577 |
 | `Create` | 1543 |
-| `Update` | 1307 |
+| `Update` | 1308 |
 | `Put` | 401 |
 | `Start` | 303 |
 | `Tag` | 225 |
