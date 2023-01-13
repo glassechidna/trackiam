@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLaunchWizard_Fullaccess",
   "CreateDate": "2020-08-06T17:47:30Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ABPQ7BLC2",
   "PolicyName": "AmazonLaunchWizard_Fullaccess",
   "PolicyVersion": {
-    "CreateDate": "2022-04-12T19:16:27Z",
+    "CreateDate": "2023-01-12T23:55:29Z",
     "Document": {
       "Statement": [
         {
@@ -151,7 +151,9 @@
               "iam:AWSServiceName": [
                 "application-insights.amazonaws.com",
                 "autoscaling.amazonaws.com",
-                "events.amazonaws.com"
+                "autoscaling.amazonaws.com.cn",
+                "events.amazonaws.com",
+                "events.amazonaws.com.cn"
               ]
             }
           },
@@ -166,6 +168,7 @@
             "StringEqualsIfExists": {
               "iam:PassedToService": [
                 "ec2.amazonaws.com",
+                "ec2.amazonaws.com.cn",
                 "lambda.amazonaws.com"
               ]
             }
@@ -179,12 +182,27 @@
         },
         {
           "Action": [
+            "logs:TagResource",
+            "logs:UntagResource"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "launchwizard.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:LaunchWizard*"
+        },
+        {
+          "Action": [
             "servicecatalog:AssociatePrincipalWithPortfolio",
             "servicecatalog:CreateConstraint",
             "servicecatalog:CreatePortfolio",
             "servicecatalog:CreateProduct",
             "servicecatalog:CreateProvisioningArtifact",
-            "servicecatalog:DescribePortfolio"
+            "servicecatalog:DescribePortfolio",
+            "servicecatalog:TagResource",
+            "servicecatalog:UntagResource"
           ],
           "Condition": {
             "ForAnyValue:StringEquals": {
@@ -223,6 +241,20 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:ssm:*:*:automation-definition/LaunchWizard-*:*"
+        },
+        {
+          "Action": [
+            "ssm:CreateAssociation",
+            "ssm:DeleteAssociation"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "launchwizard.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:document/AWS-ConfigureAWSPackage",
+          "Sid": "VisualEditor0"
         },
         {
           "Action": "applicationinsights:*",
@@ -576,7 +608,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2022-04-12T19:16:27Z"
+  "UpdateDate": "2023-01-12T23:55:29Z"
 }
