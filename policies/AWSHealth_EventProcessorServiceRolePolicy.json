@@ -1,0 +1,43 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSHealth_EventProcessorServiceRolePolicy",
+  "CreateDate": "2023-01-13T19:24:56Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4BVDKRWPHJ",
+  "PolicyName": "AWSHealth_EventProcessorServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-01-13T19:24:56Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "events:ManagedBy": "event-processor.health.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "events:DescribeRule",
+            "events:ListTargetsByRule"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-01-13T19:24:56Z"
+}
