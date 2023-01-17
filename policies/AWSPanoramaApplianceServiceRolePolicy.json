@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSPanoramaApplianceServiceRolePolicy",
   "CreateDate": "2021-10-20T12:14:03Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4O5K6UVMRK",
   "PolicyName": "AWSPanoramaApplianceServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-10-20T12:14:03Z",
+    "CreateDate": "2023-01-17T21:32:36Z",
     "Document": {
       "Statement": [
         {
@@ -24,6 +24,7 @@
         {
           "Action": [
             "s3:GetObject",
+            "s3:GetObjectVersion",
             "s3:ListBucket"
           ],
           "Condition": {
@@ -32,7 +33,11 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*",
+          "Resource": [
+            "arn:aws:s3:*:*:accesspoint/panorama*",
+            "arn:aws:s3:::*-application-payload-store-*",
+            "arn:aws:s3:::*-nodepackage-store-*"
+          ],
           "Sid": "PanoramaDeviceS3Access"
         },
         {
@@ -61,7 +66,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-10-20T12:14:03Z"
+  "UpdateDate": "2023-01-17T21:32:36Z"
 }
