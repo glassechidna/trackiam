@@ -1,0 +1,59 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonDetectiveInvestigatorAccess",
+  "CreateDate": "2023-01-17T15:24:26Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4KOT67VSLJ",
+  "PolicyName": "AmazonDetectiveInvestigatorAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-01-17T15:24:26Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "detective:BatchGetGraphMemberDatasources",
+            "detective:BatchGetMembershipDatasources",
+            "detective:DescribeOrganizationConfiguration",
+            "detective:GetFreeTrialEligibility",
+            "detective:GetGraphIngestState",
+            "detective:GetMembers",
+            "detective:GetPricingInformation",
+            "detective:GetUsageInformation",
+            "detective:ListDatasourcePackages",
+            "detective:ListGraphs",
+            "detective:ListHighDegreeEntities",
+            "detective:ListInvitations",
+            "detective:ListMembers",
+            "detective:ListOrganizationAdminAccount",
+            "detective:ListTagsForResource",
+            "detective:SearchGraph"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "guardduty:ArchiveFindings",
+            "guardduty:GetFindings",
+            "guardduty:ListDetectors"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:ListAccounts"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-01-17T15:24:26Z"
+}
