@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 354
-* Unique actions: 14429
+* Unique actions: 14430
 * Managed policies: 1035
 
 Most common managed policy name prefixes:
@@ -325,7 +325,7 @@ The following table summarises the AWS APIs.
 | [`macie`](services/macie.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
-| [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 64 |
+| [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 65 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 0 | 0 | 51 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 50 |
