@@ -85,10 +85,10 @@ The following table summarises the AWS APIs.
 | [`workspaces`](services/workspaces.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
+| [`guardduty`](services/guardduty.yml) | 65 | 0 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`rekognition`](services/rekognition.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
-| [`guardduty`](services/guardduty.yml) | 61 | 4 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 61 | 3 | 0 |
 | [`lambda`](services/lambda.yml) | 61 | 2 | 5 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |

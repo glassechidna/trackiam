@@ -1,4 +1,5 @@
 Actions:
+  - Name: guardduty:AcceptAdministratorInvitation
   - Name: guardduty:AcceptInvitation
   - Name: guardduty:ArchiveFindings
   - Name: guardduty:CreateDetector
@@ -20,9 +21,11 @@ Actions:
   - Name: guardduty:DescribeOrganizationConfiguration
   - Name: guardduty:DescribePublishingDestination
   - Name: guardduty:DisableOrganizationAdminAccount
+  - Name: guardduty:DisassociateFromAdministratorAccount
   - Name: guardduty:DisassociateFromMasterAccount
   - Name: guardduty:DisassociateMembers
   - Name: guardduty:EnableOrganizationAdminAccount
+  - Name: guardduty:GetAdministratorAccount
   - Name: guardduty:GetDetector
   - Name: guardduty:GetFilter
   - Name: guardduty:GetFindings
@@ -33,6 +36,7 @@ Actions:
   - Name: guardduty:GetMasterAccount
   - Name: guardduty:GetMemberDetectors
   - Name: guardduty:GetMembers
+  - Name: guardduty:GetRemainingFreeTrialDays
   - Name: guardduty:GetThreatIntelSet
   - Name: guardduty:GetUsageStatistics
   - Name: guardduty:InviteMembers
@@ -60,9 +64,3 @@ Actions:
   - Name: guardduty:UpdateOrganizationConfiguration
   - Name: guardduty:UpdatePublishingDestination
   - Name: guardduty:UpdateThreatIntelSet
-
-  # APIs without an IAM action
-  - Name: guardduty:AcceptAdministratorInvitation
-  - Name: guardduty:DisassociateFromAdministratorAccount
-  - Name: guardduty:GetAdministratorAccount
-  - Name: guardduty:GetRemainingFreeTrialDays
