@@ -17,18 +17,21 @@ Actions:
   - Name: redshift-serverless:GetRecoveryPoint
   - Name: redshift-serverless:GetResourcePolicy
   - Name: redshift-serverless:GetSnapshot
+  - Name: redshift-serverless:GetTableRestoreStatus
   - Name: redshift-serverless:GetUsageLimit
   - Name: redshift-serverless:GetWorkgroup
   - Name: redshift-serverless:ListEndpointAccess
   - Name: redshift-serverless:ListNamespaces
   - Name: redshift-serverless:ListRecoveryPoints
   - Name: redshift-serverless:ListSnapshots
+  - Name: redshift-serverless:ListTableRestoreStatus
   - Name: redshift-serverless:ListTagsForResource
   - Name: redshift-serverless:ListUsageLimits
   - Name: redshift-serverless:ListWorkgroups
   - Name: redshift-serverless:PutResourcePolicy
   - Name: redshift-serverless:RestoreFromRecoveryPoint
   - Name: redshift-serverless:RestoreFromSnapshot
+  - Name: redshift-serverless:RestoreTableFromSnapshot
   - Name: redshift-serverless:TagResource
   - Name: redshift-serverless:UntagResource
   - Name: redshift-serverless:UpdateEndpointAccess
@@ -36,8 +39,3 @@ Actions:
   - Name: redshift-serverless:UpdateSnapshot
   - Name: redshift-serverless:UpdateUsageLimit
   - Name: redshift-serverless:UpdateWorkgroup
-
-  # APIs without an IAM action
-  - Name: redshift-serverless:GetTableRestoreStatus
-  - Name: redshift-serverless:ListTableRestoreStatus
-  - Name: redshift-serverless:RestoreTableFromSnapshot

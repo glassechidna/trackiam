@@ -131,6 +131,7 @@ The following table summarises the AWS APIs.
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
 | [`fsx`](services/fsx.yml) | 41 | 0 | 4 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
+| [`redshift-serverless`](services/redshift-serverless.yml) | 40 | 0 | 0 |
 | [`resiliencehub`](services/resiliencehub.yml) | 39 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
@@ -142,7 +143,6 @@ The following table summarises the AWS APIs.
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 0 |
 | [`fms`](services/fms.yml) | 38 | 0 | 0 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
-| [`redshift-serverless`](services/redshift-serverless.yml) | 37 | 3 | 0 |
 | [`sso`](services/sso.yml) | 37 | 0 | 55 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`ce`](services/ce.yml) | 37 | 0 | 10 |
