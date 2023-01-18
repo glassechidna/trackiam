@@ -59,10 +59,12 @@ Actions:
   - Name: config:GetOrganizationConformancePackDetailedStatus
   - Name: config:GetOrganizationCustomRulePolicy
   - Name: config:GetResourceConfigHistory
+  - Name: config:GetResourceEvaluationSummary
   - Name: config:GetStoredQuery
   - Name: config:ListAggregateDiscoveredResources
   - Name: config:ListConformancePackComplianceScores
   - Name: config:ListDiscoveredResources
+  - Name: config:ListResourceEvaluations
   - Name: config:ListStoredQueries
   - Name: config:ListTagsForResource
   - Name: config:PutAggregationAuthorization
@@ -85,11 +87,7 @@ Actions:
   - Name: config:StartConfigRulesEvaluation
   - Name: config:StartConfigurationRecorder
   - Name: config:StartRemediationExecution
+  - Name: config:StartResourceEvaluation
   - Name: config:StopConfigurationRecorder
   - Name: config:TagResource
   - Name: config:UntagResource
-
-  # APIs without an IAM action
-  - Name: config:GetResourceEvaluationSummary
-  - Name: config:ListResourceEvaluations
-  - Name: config:StartResourceEvaluation

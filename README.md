@@ -57,8 +57,8 @@ The following table summarises the AWS APIs.
 | [`iotwireless`](services/iotwireless.yml) | 101 | 0 | 1 |
 | [`cloudfront`](services/cloudfront.yml) | 97 | 9 | 7 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
+| [`config`](services/config.yml) | 92 | 0 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
-| [`config`](services/config.yml) | 89 | 3 | 0 |
 | [`s3`](services/s3.yml) | 85 | 58 | 45 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
