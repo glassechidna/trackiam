@@ -68,8 +68,8 @@ The following table summarises the AWS APIs.
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`proton`](services/proton.yml) | 75 | 0 | 25 |
+| [`es`](services/es.yml) | 74 | 0 | 10 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
-| [`es`](services/es.yml) | 73 | 0 | 11 |
 | [`comprehend`](services/comprehend.yml) | 73 | 0 | 0 |
 | [`backup`](services/backup.yml) | 72 | 0 | 2 |
 | [`iotsitewise`](services/iotsitewise.yml) | 71 | 2 | 1 |
