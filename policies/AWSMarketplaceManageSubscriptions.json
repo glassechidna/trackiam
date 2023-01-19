@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceManageSubscriptions",
   "CreateDate": "2015-02-06T18:40:32Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJRDW2WIFN7QLUAKBQ",
   "PolicyName": "AWSMarketplaceManageSubscriptions",
   "PolicyVersion": {
-    "CreateDate": "2019-10-28T21:49:43Z",
+    "CreateDate": "2023-01-19T23:45:29Z",
     "Document": {
       "Statement": [
         {
@@ -15,6 +15,13 @@
             "aws-marketplace:CreatePrivateMarketplaceRequests",
             "aws-marketplace:DescribePrivateMarketplaceRequests",
             "aws-marketplace:ListPrivateMarketplaceRequests"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "aws-marketplace:ListPrivateListings"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -32,7 +39,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-10-28T21:49:43Z"
+  "UpdateDate": "2023-01-19T23:45:29Z"
 }
