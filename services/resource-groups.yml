@@ -1,6 +1,7 @@
 Actions:
   - Name: resource-groups:CreateGroup
   - Name: resource-groups:DeleteGroup
+  - Name: resource-groups:GetAccountSettings
   - Name: resource-groups:GetGroup
   - Name: resource-groups:GetGroupConfiguration
   - Name: resource-groups:GetGroupQuery
@@ -13,12 +14,9 @@ Actions:
   - Name: resource-groups:Tag
   - Name: resource-groups:UngroupResources
   - Name: resource-groups:Untag
+  - Name: resource-groups:UpdateAccountSettings
   - Name: resource-groups:UpdateGroup
   - Name: resource-groups:UpdateGroupQuery
 
   # actions with no corresponding API
   - Name: resource-groups:PutGroupPolicy
-
-  # APIs without an IAM action
-  - Name: resource-groups:GetAccountSettings
-  - Name: resource-groups:UpdateAccountSettings
