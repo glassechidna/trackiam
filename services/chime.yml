@@ -110,6 +110,7 @@ Actions:
   - Name: chime:GetRetentionSettings
   - Name: chime:GetRoom
   - Name: chime:GetSipMediaApplication
+  - Name: chime:GetSipMediaApplicationAlexaSkillConfiguration
   - Name: chime:GetSipMediaApplicationLoggingConfiguration
   - Name: chime:GetSipRule
   - Name: chime:GetUser
@@ -131,6 +132,7 @@ Actions:
   - Name: chime:ListAppInstances
   - Name: chime:ListAttendeeTags
   - Name: chime:ListAttendees
+  - Name: chime:ListAvailableVoiceConnectorRegions
   - Name: chime:ListBots
   - Name: chime:ListChannelBans
   - Name: chime:ListChannelFlows
@@ -165,6 +167,7 @@ Actions:
   - Name: chime:PutChannelMembershipPreferences
   - Name: chime:PutEventsConfiguration
   - Name: chime:PutRetentionSettings
+  - Name: chime:PutSipMediaApplicationAlexaSkillConfiguration
   - Name: chime:PutSipMediaApplicationLoggingConfiguration
   - Name: chime:PutVoiceConnectorEmergencyCallingConfiguration
   - Name: chime:PutVoiceConnectorLoggingConfiguration
@@ -215,6 +218,7 @@ Actions:
   - Name: chime:UpdateUserSettings
   - Name: chime:UpdateVoiceConnector
   - Name: chime:UpdateVoiceConnectorGroup
+  - Name: chime:ValidateE911Address
 
   # actions with no corresponding API
   - Name: chime:AcceptDelegate
@@ -267,9 +271,3 @@ Actions:
   - Name: chime:UpdateSupportedLicenses
   - Name: chime:UpdateUserLicenses
   - Name: chime:ValidateAccountResource
-
-  # APIs without an IAM action
-  - Name: chime:GetSipMediaApplicationAlexaSkillConfiguration
-  - Name: chime:ListAvailableVoiceConnectorRegions
-  - Name: chime:PutSipMediaApplicationAlexaSkillConfiguration
-  - Name: chime:ValidateE911Address
