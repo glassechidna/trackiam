@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "CreateDate": "2018-12-01T16:22:12Z",
-  "DefaultVersionId": "v22",
+  "DefaultVersionId": "v23",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJH3SHQERZRQMQOQ44",
   "PolicyName": "CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-01-04T19:28:35Z",
+    "CreateDate": "2023-01-23T21:38:30Z",
     "Document": {
       "Statement": [
         {
@@ -274,6 +274,8 @@
           "Action": [
             "route53:GetHealthCheck",
             "route53:GetHostedZone",
+            "route53:ListHealthChecks",
+            "route53:ListHostedZones",
             "route53:ListQueryLoggingConfigs"
           ],
           "Effect": "Allow",
@@ -288,8 +290,10 @@
             "route53resolver:GetResolverEndpoint",
             "route53resolver:GetResolverQueryLogConfig",
             "route53resolver:ListFirewallRuleGroupAssociations",
+            "route53resolver:ListFirewallRuleGroups",
             "route53resolver:ListResolverEndpoints",
-            "route53resolver:ListResolverQueryLogConfigAssociations"
+            "route53resolver:ListResolverQueryLogConfigAssociations",
+            "route53resolver:ListResolverQueryLogConfigs"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -422,7 +426,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v22"
+    "VersionId": "v23"
   },
-  "UpdateDate": "2023-01-04T19:28:35Z"
+  "UpdateDate": "2023-01-23T21:38:30Z"
 }

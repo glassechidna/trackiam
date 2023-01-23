@@ -73,13 +73,13 @@ The following table summarises the AWS APIs.
 | [`comprehend`](services/comprehend.yml) | 73 | 0 | 0 |
 | [`backup`](services/backup.yml) | 72 | 0 | 2 |
 | [`iotsitewise`](services/iotsitewise.yml) | 71 | 2 | 1 |
+| [`personalize`](services/personalize.yml) | 71 | 0 | 0 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 68 | 0 | 0 |
 | [`ds`](services/ds.yml) | 67 | 0 | 6 |
 | [`cloudformation`](services/cloudformation.yml) | 66 | 0 | 11 |
 | [`omics`](services/omics.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
-| [`personalize`](services/personalize.yml) | 65 | 6 | 0 |
 | [`dms`](services/dms.yml) | 65 | 0 | 33 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`workspaces`](services/workspaces.yml) | 65 | 0 | 1 |
@@ -153,9 +153,9 @@ The following table summarises the AWS APIs.
 | [`kafka`](services/kafka.yml) | 36 | 0 | 0 |
 | [`drs`](services/drs.yml) | 35 | 0 | 40 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
+| [`eks`](services/eks.yml) | 35 | 0 | 1 |
 | [`apprunner`](services/apprunner.yml) | 35 | 0 | 1 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 34 | 4 | 3 |
-| [`eks`](services/eks.yml) | 34 | 1 | 1 |
 | [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |

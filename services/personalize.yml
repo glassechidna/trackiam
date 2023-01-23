@@ -8,6 +8,7 @@ Actions:
   - Name: personalize:CreateDatasetImportJob
   - Name: personalize:CreateEventTracker
   - Name: personalize:CreateFilter
+  - Name: personalize:CreateMetricAttribution
   - Name: personalize:CreateRecommender
   - Name: personalize:CreateSchema
   - Name: personalize:CreateSolution
@@ -17,6 +18,7 @@ Actions:
   - Name: personalize:DeleteDatasetGroup
   - Name: personalize:DeleteEventTracker
   - Name: personalize:DeleteFilter
+  - Name: personalize:DeleteMetricAttribution
   - Name: personalize:DeleteRecommender
   - Name: personalize:DeleteSchema
   - Name: personalize:DeleteSolution
@@ -31,6 +33,7 @@ Actions:
   - Name: personalize:DescribeEventTracker
   - Name: personalize:DescribeFeatureTransformation
   - Name: personalize:DescribeFilter
+  - Name: personalize:DescribeMetricAttribution
   - Name: personalize:DescribeRecipe
   - Name: personalize:DescribeRecommender
   - Name: personalize:DescribeSchema
@@ -48,6 +51,8 @@ Actions:
   - Name: personalize:ListDatasets
   - Name: personalize:ListEventTrackers
   - Name: personalize:ListFilters
+  - Name: personalize:ListMetricAttributionMetrics
+  - Name: personalize:ListMetricAttributions
   - Name: personalize:ListRecipes
   - Name: personalize:ListRecommenders
   - Name: personalize:ListSchemas
@@ -63,12 +68,5 @@ Actions:
   - Name: personalize:TagResource
   - Name: personalize:UntagResource
   - Name: personalize:UpdateCampaign
-  - Name: personalize:UpdateRecommender
-
-  # APIs without an IAM action
-  - Name: personalize:CreateMetricAttribution
-  - Name: personalize:DeleteMetricAttribution
-  - Name: personalize:DescribeMetricAttribution
-  - Name: personalize:ListMetricAttributionMetrics
-  - Name: personalize:ListMetricAttributions
   - Name: personalize:UpdateMetricAttribution
+  - Name: personalize:UpdateRecommender
