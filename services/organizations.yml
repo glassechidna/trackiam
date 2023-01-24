@@ -12,6 +12,7 @@ Actions:
   - Name: organizations:DeleteOrganization
   - Name: organizations:DeleteOrganizationalUnit
   - Name: organizations:DeletePolicy
+  - Name: organizations:DeleteResourcePolicy
   - Name: organizations:DeregisterDelegatedAdministrator
   - Name: organizations:DescribeAccount
   - Name: organizations:DescribeCreateAccountStatus
@@ -20,6 +21,7 @@ Actions:
   - Name: organizations:DescribeOrganization
   - Name: organizations:DescribeOrganizationalUnit
   - Name: organizations:DescribePolicy
+  - Name: organizations:DescribeResourcePolicy
   - Name: organizations:DetachPolicy
   - Name: organizations:DisableAWSServiceAccess
   - Name: organizations:DisablePolicyType
@@ -45,14 +47,10 @@ Actions:
   - Name: organizations:ListTagsForResource
   - Name: organizations:ListTargetsForPolicy
   - Name: organizations:MoveAccount
+  - Name: organizations:PutResourcePolicy
   - Name: organizations:RegisterDelegatedAdministrator
   - Name: organizations:RemoveAccountFromOrganization
   - Name: organizations:TagResource
   - Name: organizations:UntagResource
   - Name: organizations:UpdateOrganizationalUnit
   - Name: organizations:UpdatePolicy
-
-  # APIs without an IAM action
-  - Name: organizations:DeleteResourcePolicy
-  - Name: organizations:DescribeResourcePolicy
-  - Name: organizations:PutResourcePolicy
