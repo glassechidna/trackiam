@@ -13,7 +13,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 354
 * Unique actions: 14435
-* Managed policies: 1035
+* Managed policies: 1036
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 290 |
 | `arn:aws:iam::aws:policy/Amazon*` | 266 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 225 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 226 |
 | `arn:aws:iam::aws:policy/service-role/*` | 158 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 89 |
@@ -70,9 +70,9 @@ The following table summarises the AWS APIs.
 | [`proton`](services/proton.yml) | 75 | 0 | 25 |
 | [`es`](services/es.yml) | 74 | 0 | 10 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
+| [`iotsitewise`](services/iotsitewise.yml) | 73 | 0 | 1 |
 | [`comprehend`](services/comprehend.yml) | 73 | 0 | 0 |
 | [`backup`](services/backup.yml) | 72 | 0 | 2 |
-| [`iotsitewise`](services/iotsitewise.yml) | 71 | 2 | 1 |
 | [`personalize`](services/personalize.yml) | 71 | 0 | 0 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
 | [`frauddetector`](services/frauddetector.yml) | 68 | 0 | 0 |

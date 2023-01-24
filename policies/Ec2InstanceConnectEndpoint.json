@@ -1,0 +1,98 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/Ec2InstanceConnectEndpoint",
+  "CreateDate": "2023-01-24T20:19:21Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4PP6VJFZS6",
+  "PolicyName": "Ec2InstanceConnectEndpoint",
+  "PolicyVersion": {
+    "CreateDate": "2023-01-24T20:19:21Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "InstanceConnectEndpointId"
+              ]
+            },
+            "Null": {
+              "aws:RequestTag/InstanceConnectEndpointId": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "InstanceConnectEndpointId"
+              ]
+            },
+            "Null": {
+              "aws:RequestTag/InstanceConnectEndpointId": "false"
+            },
+            "StringEquals": {
+              "ec2:CreateAction": "CreateNetworkInterface"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*"
+        },
+        {
+          "Action": [
+            "ec2:DeleteNetworkInterface"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/InstanceConnectEndpointId": [
+                "eice-*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:ModifyNetworkInterfaceAttribute"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/InstanceConnectEndpointId": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:subnet/*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeNetworkInterfaces"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-01-24T20:19:21Z"
+}
