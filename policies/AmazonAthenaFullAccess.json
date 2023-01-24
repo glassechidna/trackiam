@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonAthenaFullAccess",
   "CreateDate": "2016-11-30T16:46:01Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIPJMLMD4C7RYZ6XCK",
   "PolicyName": "AmazonAthenaFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-11-14T21:05:56Z",
+    "CreateDate": "2023-01-24T16:59:23Z",
     "Document": {
       "Statement": [
         {
@@ -69,6 +69,15 @@
         },
         {
           "Action": [
+            "pricing:GetProducts"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
             "s3:AbortMultipartUpload",
             "s3:CreateBucket",
             "s3:GetBucketLocation",
@@ -119,7 +128,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2022-11-14T21:05:56Z"
+  "UpdateDate": "2023-01-24T16:59:23Z"
 }
