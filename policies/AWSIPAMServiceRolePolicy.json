@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSIPAMServiceRolePolicy",
   "CreateDate": "2021-11-30T19:08:11Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4JEQHJ6QN6",
   "PolicyName": "AWSIPAMServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-11-30T19:08:11Z",
+    "CreateDate": "2023-01-25T20:13:08Z",
     "Document": {
       "Statement": [
         {
@@ -28,6 +28,8 @@
             "ec2:DescribePublicIpv4Pools",
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcs",
+            "ec2:GetIpamDiscoveredAccounts",
+            "ec2:GetIpamDiscoveredResourceCidrs",
             "organizations:DescribeAccount",
             "organizations:DescribeOrganization",
             "organizations:ListAccounts",
@@ -40,7 +42,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-11-30T19:08:11Z"
+  "UpdateDate": "2023-01-25T20:13:08Z"
 }
