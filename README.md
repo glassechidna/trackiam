@@ -52,10 +52,10 @@ The following table summarises the AWS APIs.
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 111 | 0 | 0 |
 | [`lex`](services/lex.yml) | 108 | 2 | 7 |
+| [`cloudfront`](services/cloudfront.yml) | 105 | 1 | 7 |
 | [`gamelift`](services/gamelift.yml) | 104 | 0 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 4 |
 | [`iotwireless`](services/iotwireless.yml) | 101 | 0 | 1 |
-| [`cloudfront`](services/cloudfront.yml) | 97 | 9 | 7 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`config`](services/config.yml) | 92 | 0 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |

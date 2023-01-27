@@ -1,7 +1,9 @@
 Actions:
   - Name: cloudfront:AssociateAlias
+  - Name: cloudfront:CopyDistribution
   - Name: cloudfront:CreateCachePolicy
   - Name: cloudfront:CreateCloudFrontOriginAccessIdentity
+  - Name: cloudfront:CreateContinuousDeploymentPolicy
   - Name: cloudfront:CreateDistribution
   - Name: cloudfront:CreateFieldLevelEncryptionConfig
   - Name: cloudfront:CreateFieldLevelEncryptionProfile
@@ -18,6 +20,7 @@ Actions:
   - Name: cloudfront:CreateStreamingDistributionWithTags
   - Name: cloudfront:DeleteCachePolicy
   - Name: cloudfront:DeleteCloudFrontOriginAccessIdentity
+  - Name: cloudfront:DeleteContinuousDeploymentPolicy
   - Name: cloudfront:DeleteDistribution
   - Name: cloudfront:DeleteFieldLevelEncryptionConfig
   - Name: cloudfront:DeleteFieldLevelEncryptionProfile
@@ -35,6 +38,8 @@ Actions:
   - Name: cloudfront:GetCachePolicyConfig
   - Name: cloudfront:GetCloudFrontOriginAccessIdentity
   - Name: cloudfront:GetCloudFrontOriginAccessIdentityConfig
+  - Name: cloudfront:GetContinuousDeploymentPolicy
+  - Name: cloudfront:GetContinuousDeploymentPolicyConfig
   - Name: cloudfront:GetDistribution
   - Name: cloudfront:GetDistributionConfig
   - Name: cloudfront:GetFieldLevelEncryption
@@ -60,6 +65,7 @@ Actions:
   - Name: cloudfront:ListCachePolicies
   - Name: cloudfront:ListCloudFrontOriginAccessIdentities
   - Name: cloudfront:ListConflictingAliases
+  - Name: cloudfront:ListContinuousDeploymentPolicies
   - Name: cloudfront:ListDistributions
   - Name: cloudfront:ListDistributionsByCachePolicyId
   - Name: cloudfront:ListDistributionsByKeyGroup
@@ -85,7 +91,9 @@ Actions:
   - Name: cloudfront:UntagResource
   - Name: cloudfront:UpdateCachePolicy
   - Name: cloudfront:UpdateCloudFrontOriginAccessIdentity
+  - Name: cloudfront:UpdateContinuousDeploymentPolicy
   - Name: cloudfront:UpdateDistribution
+  - Name: cloudfront:UpdateDistributionWithStagingConfig
   - Name: cloudfront:UpdateFieldLevelEncryptionConfig
   - Name: cloudfront:UpdateFieldLevelEncryptionProfile
   - Name: cloudfront:UpdateFunction
@@ -107,12 +115,4 @@ Actions:
   - Name: cloudfront:UpdateSavingsPlan
 
   # APIs without an IAM action
-  - Name: cloudfront:CopyDistribution
-  - Name: cloudfront:CreateContinuousDeploymentPolicy
   - Name: cloudfront:CreateDistributionWithTags
-  - Name: cloudfront:DeleteContinuousDeploymentPolicy
-  - Name: cloudfront:GetContinuousDeploymentPolicy
-  - Name: cloudfront:GetContinuousDeploymentPolicyConfig
-  - Name: cloudfront:ListContinuousDeploymentPolicies
-  - Name: cloudfront:UpdateContinuousDeploymentPolicy
-  - Name: cloudfront:UpdateDistributionWithStagingConfig
