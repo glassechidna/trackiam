@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSManagedServicesDeploymentToolkitPolicy",
   "CreateDate": "2022-06-09T18:33:03Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AJVRS2BUS",
   "PolicyName": "AWSManagedServicesDeploymentToolkitPolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-06-09T18:33:03Z",
+    "CreateDate": "2023-01-30T22:10:28Z",
     "Document": {
       "Statement": [
         {
@@ -30,7 +30,13 @@
             "s3:DeleteBucket",
             "s3:DeleteBucketPolicy",
             "s3:DeleteObject*",
+            "s3:GetBucketLocation",
+            "s3:GetBucketLogging",
             "s3:GetBucketPolicy",
+            "s3:GetBucketVersioning",
+            "s3:GetLifecycleConfiguration",
+            "s3:GetObject*",
+            "s3:ListBucket",
             "s3:ListBucketVersions",
             "s3:PutBucketAcl",
             "s3:PutBucketLogging",
@@ -39,7 +45,8 @@
             "s3:PutBucketPublicAccessBlock",
             "s3:PutBucketTagging",
             "s3:PutBucketVersioning",
-            "s3:PutEncryptionConfiguration"
+            "s3:PutEncryptionConfiguration",
+            "s3:PutLifecycleConfiguration"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:s3:::ams-cdktoolkit*"
@@ -48,7 +55,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-06-09T18:33:03Z"
+  "UpdateDate": "2023-01-30T22:10:28Z"
 }
