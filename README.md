@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 354
-* Unique actions: 14454
+* Unique services: 355
+* Unique actions: 14462
 * Managed policies: 1036
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 576 | 9 | 9 |
+| [`ec2`](services/ec2.yml) | 576 | 13 | 9 |
 | [`sagemaker`](services/sagemaker.yml) | 312 | 3 | 11 |
 | [`chime`](services/chime.yml) | 220 | 0 | 50 |
 | [`glue`](services/glue.yml) | 198 | 4 | 10 |
@@ -121,6 +121,7 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
+| [`cloudtrail`](services/cloudtrail.yml) | 44 | 0 | 5 |
 | [`datasync`](services/datasync.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`workdocs`](services/workdocs.yml) | 43 | 0 | 14 |
@@ -135,7 +136,6 @@ The following table summarises the AWS APIs.
 | [`resiliencehub`](services/resiliencehub.yml) | 39 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
-| [`cloudtrail`](services/cloudtrail.yml) | 38 | 0 | 11 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
 | [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 1 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
@@ -146,9 +146,9 @@ The following table summarises the AWS APIs.
 | [`sso`](services/sso.yml) | 37 | 0 | 55 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`ce`](services/ce.yml) | 37 | 0 | 10 |
+| [`codeartifact`](services/codeartifact.yml) | 37 | 0 | 4 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
-| [`codeartifact`](services/codeartifact.yml) | 36 | 0 | 5 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 36 | 0 | 0 |
 | [`drs`](services/drs.yml) | 35 | 0 | 40 |
@@ -200,7 +200,7 @@ The following table summarises the AWS APIs.
 | [`rolesanywhere`](services/rolesanywhere.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
-| [`groundstation`](services/groundstation.yml) | 25 | 5 | 0 |
+| [`groundstation`](services/groundstation.yml) | 25 | 8 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
 | [`backup-gateway`](services/backup-gateway.yml) | 25 | 0 | 2 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 1 |
@@ -325,6 +325,7 @@ The following table summarises the AWS APIs.
 | [`macie`](services/macie.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
+| [`cloudtrail-data`](services/cloudtrail-data.yml) | 0 | 1 | 0 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 65 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 0 | 0 | 51 |
@@ -396,12 +397,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2253 |
-| `Get` | 2002 |
+| `Get` | 2003 |
 | `Delete` | 1667 |
 | `Describe` | 1580 |
 | `Create` | 1545 |
-| `Update` | 1310 |
-| `Put` | 403 |
+| `Update` | 1311 |
+| `Put` | 404 |
 | `Start` | 303 |
 | `Tag` | 225 |
 | `Untag` | 223 |

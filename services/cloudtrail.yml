@@ -1,9 +1,12 @@
 Actions:
   - Name: cloudtrail:AddTags
   - Name: cloudtrail:CancelQuery
+  - Name: cloudtrail:CreateChannel
   - Name: cloudtrail:CreateEventDataStore
   - Name: cloudtrail:CreateTrail
+  - Name: cloudtrail:DeleteChannel
   - Name: cloudtrail:DeleteEventDataStore
+  - Name: cloudtrail:DeleteResourcePolicy
   - Name: cloudtrail:DeleteTrail
   - Name: cloudtrail:DeregisterOrganizationDelegatedAdmin
   - Name: cloudtrail:DescribeQuery
@@ -14,6 +17,7 @@ Actions:
   - Name: cloudtrail:GetImport
   - Name: cloudtrail:GetInsightSelectors
   - Name: cloudtrail:GetQueryResults
+  - Name: cloudtrail:GetResourcePolicy
   - Name: cloudtrail:GetTrail
   - Name: cloudtrail:GetTrailStatus
   - Name: cloudtrail:ListChannels
@@ -27,6 +31,7 @@ Actions:
   - Name: cloudtrail:LookupEvents
   - Name: cloudtrail:PutEventSelectors
   - Name: cloudtrail:PutInsightSelectors
+  - Name: cloudtrail:PutResourcePolicy
   - Name: cloudtrail:RegisterOrganizationDelegatedAdmin
   - Name: cloudtrail:RemoveTags
   - Name: cloudtrail:RestoreEventDataStore
@@ -35,18 +40,13 @@ Actions:
   - Name: cloudtrail:StartQuery
   - Name: cloudtrail:StopImport
   - Name: cloudtrail:StopLogging
+  - Name: cloudtrail:UpdateChannel
   - Name: cloudtrail:UpdateEventDataStore
   - Name: cloudtrail:UpdateTrail
 
   # actions with no corresponding API
-  - Name: cloudtrail:CreateChannel
   - Name: cloudtrail:CreateServiceLinkedChannel
-  - Name: cloudtrail:DeleteChannel
-  - Name: cloudtrail:DeleteResourcePolicy
   - Name: cloudtrail:DeleteServiceLinkedChannel
-  - Name: cloudtrail:GetResourcePolicy
   - Name: cloudtrail:GetServiceLinkedChannel
   - Name: cloudtrail:ListServiceLinkedChannels
-  - Name: cloudtrail:PutResourcePolicy
-  - Name: cloudtrail:UpdateChannel
   - Name: cloudtrail:UpdateServiceLinkedChannel
