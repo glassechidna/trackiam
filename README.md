@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 354
-* Unique actions: 14448
+* Unique actions: 14454
 * Managed policies: 1036
 
 Most common managed policy name prefixes:
@@ -135,7 +135,7 @@ The following table summarises the AWS APIs.
 | [`resiliencehub`](services/resiliencehub.yml) | 39 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
-| [`cloudtrail`](services/cloudtrail.yml) | 38 | 0 | 5 |
+| [`cloudtrail`](services/cloudtrail.yml) | 38 | 0 | 11 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
 | [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 1 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
@@ -396,12 +396,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2253 |
-| `Get` | 2001 |
-| `Delete` | 1665 |
+| `Get` | 2002 |
+| `Delete` | 1667 |
 | `Describe` | 1580 |
-| `Create` | 1544 |
-| `Update` | 1309 |
-| `Put` | 402 |
+| `Create` | 1545 |
+| `Update` | 1310 |
+| `Put` | 403 |
 | `Start` | 303 |
 | `Tag` | 225 |
 | `Untag` | 223 |
