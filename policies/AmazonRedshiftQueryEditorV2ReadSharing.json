@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2ReadSharing",
   "CreateDate": "2021-09-24T14:22:21Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4G5PCICHSV",
   "PolicyName": "AmazonRedshiftQueryEditorV2ReadSharing",
   "PolicyVersion": {
-    "CreateDate": "2022-10-17T17:29:34Z",
+    "CreateDate": "2023-02-01T20:09:28Z",
     "Document": {
       "Statement": [
         {
@@ -74,6 +74,7 @@
           "Action": [
             "sqlworkbench:AssociateConnectionWithChart",
             "sqlworkbench:AssociateConnectionWithTab",
+            "sqlworkbench:AssociateNotebookWithTab",
             "sqlworkbench:AssociateQueryWithTab",
             "sqlworkbench:BatchGetNotebookCell",
             "sqlworkbench:CreateNotebookCell",
@@ -116,6 +117,7 @@
         },
         {
           "Action": [
+            "sqlworkbench:AssociateNotebookWithTab",
             "sqlworkbench:AssociateQueryWithTab",
             "sqlworkbench:BatchGetNotebookCell",
             "sqlworkbench:CreateNotebookFromVersion",
@@ -208,7 +210,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2022-10-17T17:29:34Z"
+  "UpdateDate": "2023-02-01T20:09:28Z"
 }
