@@ -243,6 +243,7 @@ The following table summarises the AWS APIs.
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
 | [`resource-groups`](services/resource-groups.yml) | 18 | 0 | 1 |
 | [`translate`](services/translate.yml) | 18 | 0 | 0 |
+| [`grafana`](services/grafana.yml) | 18 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 17 | 3 | 0 |
 | [`ssm-sap`](services/ssm-sap.yml) | 17 | 0 | 3 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
@@ -251,7 +252,6 @@ The following table summarises the AWS APIs.
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 17 | 0 | 0 |
 | [`ivschat`](services/ivschat.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
-| [`grafana`](services/grafana.yml) | 16 | 2 | 0 |
 | [`fis`](services/fis.yml) | 16 | 0 | 3 |
 | [`honeycode`](services/honeycode.yml) | 15 | 0 | 15 |
 | [`app-integrations`](services/app-integrations.yml) | 15 | 0 | 4 |
