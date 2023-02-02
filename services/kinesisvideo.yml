@@ -5,6 +5,8 @@ Actions:
   - Name: kinesisvideo:DeleteStream
   - Name: kinesisvideo:DescribeEdgeConfiguration
   - Name: kinesisvideo:DescribeImageGenerationConfiguration
+  - Name: kinesisvideo:DescribeMappedResourceConfiguration
+  - Name: kinesisvideo:DescribeMediaStorageConfiguration
   - Name: kinesisvideo:DescribeNotificationConfiguration
   - Name: kinesisvideo:DescribeSignalingChannel
   - Name: kinesisvideo:DescribeStream
@@ -17,6 +19,7 @@ Actions:
   - Name: kinesisvideo:GetMedia
   - Name: kinesisvideo:GetMediaForFragmentList
   - Name: kinesisvideo:GetSignalingChannelEndpoint
+  - Name: kinesisvideo:JoinStorageSession
   - Name: kinesisvideo:ListFragments
   - Name: kinesisvideo:ListSignalingChannels
   - Name: kinesisvideo:ListStreams
@@ -30,6 +33,7 @@ Actions:
   - Name: kinesisvideo:UntagStream
   - Name: kinesisvideo:UpdateDataRetention
   - Name: kinesisvideo:UpdateImageGenerationConfiguration
+  - Name: kinesisvideo:UpdateMediaStorageConfiguration
   - Name: kinesisvideo:UpdateNotificationConfiguration
   - Name: kinesisvideo:UpdateSignalingChannel
   - Name: kinesisvideo:UpdateStream
@@ -38,9 +42,3 @@ Actions:
   - Name: kinesisvideo:ConnectAsMaster
   - Name: kinesisvideo:ConnectAsViewer
   - Name: kinesisvideo:PutMedia
-
-  # APIs without an IAM action
-  - Name: kinesisvideo:DescribeMappedResourceConfiguration
-  - Name: kinesisvideo:DescribeMediaStorageConfiguration
-  - Name: kinesisvideo:JoinStorageSession
-  - Name: kinesisvideo:UpdateMediaStorageConfiguration
