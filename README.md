@@ -67,7 +67,7 @@ The following table summarises the AWS APIs.
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
-| [`proton`](services/proton.yml) | 75 | 0 | 25 |
+| [`proton`](services/proton.yml) | 76 | 0 | 24 |
 | [`es`](services/es.yml) | 74 | 0 | 10 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 73 | 0 | 1 |
