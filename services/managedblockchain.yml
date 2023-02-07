@@ -1,14 +1,18 @@
 Actions:
+  - Name: managedblockchain:CreateAccessor
   - Name: managedblockchain:CreateMember
   - Name: managedblockchain:CreateNetwork
   - Name: managedblockchain:CreateNode
   - Name: managedblockchain:CreateProposal
+  - Name: managedblockchain:DeleteAccessor
   - Name: managedblockchain:DeleteMember
   - Name: managedblockchain:DeleteNode
+  - Name: managedblockchain:GetAccessor
   - Name: managedblockchain:GetMember
   - Name: managedblockchain:GetNetwork
   - Name: managedblockchain:GetNode
   - Name: managedblockchain:GetProposal
+  - Name: managedblockchain:ListAccessors
   - Name: managedblockchain:ListInvitations
   - Name: managedblockchain:ListMembers
   - Name: managedblockchain:ListNetworks
@@ -23,8 +27,7 @@ Actions:
   - Name: managedblockchain:UpdateNode
   - Name: managedblockchain:VoteOnProposal
 
-  # APIs without an IAM action
-  - Name: managedblockchain:CreateAccessor
-  - Name: managedblockchain:DeleteAccessor
-  - Name: managedblockchain:GetAccessor
-  - Name: managedblockchain:ListAccessors
+  # actions with no corresponding API
+  - Name: managedblockchain:GET
+  - Name: managedblockchain:Invoke
+  - Name: managedblockchain:POST

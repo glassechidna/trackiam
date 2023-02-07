@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 355
-* Unique actions: 14463
+* Unique actions: 14466
 * Managed policies: 1038
 
 Most common managed policy name prefixes:
@@ -192,6 +192,7 @@ The following table summarises the AWS APIs.
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
+| [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 3 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 27 | 0 | 1 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
 | [`outposts`](services/outposts.yml) | 26 | 0 | 2 |
@@ -209,7 +210,6 @@ The following table summarises the AWS APIs.
 | [`private-networks`](services/private-networks.yml) | 25 | 0 | 0 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
-| [`managedblockchain`](services/managedblockchain.yml) | 23 | 4 | 0 |
 | [`timestream`](services/timestream.yml) | 23 | 1 | 7 |
 | [`detective`](services/detective.yml) | 23 | 1 | 7 |
 | [`appflow`](services/appflow.yml) | 23 | 0 | 6 |
