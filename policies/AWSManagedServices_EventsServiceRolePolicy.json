@@ -1,0 +1,43 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSManagedServices_EventsServiceRolePolicy",
+  "CreateDate": "2023-02-07T18:41:22Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4GFF34B234",
+  "PolicyName": "AWSManagedServices_EventsServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-02-07T18:41:22Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "events:ManagedBy": "events.managedservices.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "events:DescribeRule",
+            "events:ListTargetsByRule"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-02-07T18:41:22Z"
+}
