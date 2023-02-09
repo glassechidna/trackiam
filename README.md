@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 355
-* Unique actions: 14466
+* Unique actions: 14526
 * Managed policies: 1038
 
 Most common managed policy name prefixes:
@@ -327,6 +327,7 @@ The following table summarises the AWS APIs.
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 65 |
+| [`iq`](services/iq.yml) | 0 | 0 | 54 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 0 | 0 | 51 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 50 |
@@ -354,6 +355,7 @@ The following table summarises the AWS APIs.
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 9 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
+| [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 8 |
 | [`artifact`](services/artifact.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`payments`](services/payments.yml) | 0 | 0 | 7 |
@@ -386,8 +388,6 @@ The following table summarises the AWS APIs.
 | [`rhelkb`](services/rhelkb.yml) | 0 | 0 | 1 |
 | [`rds-db`](services/rds-db.yml) | 0 | 0 | 1 |
 | [`mediaimport`](services/mediaimport.yml) | 0 | 0 | 1 |
-| [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 1 |
-| [`iq`](services/iq.yml) | 0 | 0 | 1 |
 | [`elemental-support-content`](services/elemental-support-content.yml) | 0 | 0 | 1 |
 | [`codeguru`](services/codeguru.yml) | 0 | 0 | 1 |
 | [`arsenal`](services/arsenal.yml) | 0 | 0 | 1 |
@@ -396,12 +396,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2253 |
-| `Get` | 2003 |
-| `Delete` | 1667 |
+| `List` | 2260 |
+| `Get` | 2017 |
+| `Delete` | 1668 |
 | `Describe` | 1580 |
-| `Create` | 1545 |
-| `Update` | 1312 |
+| `Create` | 1555 |
+| `Update` | 1317 |
 | `Put` | 404 |
 | `Start` | 303 |
 | `Tag` | 225 |
