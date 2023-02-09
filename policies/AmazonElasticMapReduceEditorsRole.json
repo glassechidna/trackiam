@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceEditorsRole",
   "CreateDate": "2018-11-16T21:55:25Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIBI5CIE6OHUIGLYVG",
   "PolicyName": "AmazonElasticMapReduceEditorsRole",
   "PolicyVersion": {
-    "CreateDate": "2018-11-16T21:55:25Z",
+    "CreateDate": "2023-02-09T22:39:29Z",
     "Document": {
       "Statement": [
         {
@@ -37,10 +37,12 @@
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
             "ec2:DescribeTags",
+            "ec2:DescribeVpcs",
             "ec2:ModifyNetworkInterfaceAttribute",
             "ec2:RevokeSecurityGroupEgress",
             "elasticmapreduce:DescribeCluster",
-            "elasticmapreduce:ListInstances"
+            "elasticmapreduce:ListInstances",
+            "elasticmapreduce:ListSteps"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -49,7 +51,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2018-11-16T21:55:25Z"
+  "UpdateDate": "2023-02-09T22:39:29Z"
 }
