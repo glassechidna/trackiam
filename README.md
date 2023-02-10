@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 355
-* Unique actions: 14526
+* Unique actions: 14527
 * Managed policies: 1038
 
 Most common managed policy name prefixes:
@@ -90,7 +90,7 @@ The following table summarises the AWS APIs.
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`rekognition`](services/rekognition.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
-| [`autoscaling`](services/autoscaling.yml) | 61 | 3 | 0 |
+| [`autoscaling`](services/autoscaling.yml) | 61 | 4 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
 | [`athena`](services/athena.yml) | 60 | 0 | 1 |
 | [`medialive`](services/medialive.yml) | 59 | 0 | 0 |
@@ -109,11 +109,11 @@ The following table summarises the AWS APIs.
 | [`appsync`](services/appsync.yml) | 51 | 0 | 2 |
 | [`workspaces-web`](services/workspaces-web.yml) | 51 | 0 | 0 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
+| [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 50 | 0 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 49 | 0 | 0 |
-| [`iotfleetwise`](services/iotfleetwise.yml) | 48 | 2 | 0 |
 | [`logs`](services/logs.yml) | 48 | 0 | 7 |
 | [`wafv2`](services/wafv2.yml) | 48 | 0 | 2 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
