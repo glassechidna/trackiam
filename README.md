@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 355
-* Unique actions: 14527
+* Unique actions: 14529
 * Managed policies: 1038
 
 Most common managed policy name prefixes:
@@ -202,10 +202,10 @@ The following table summarises the AWS APIs.
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 25 | 8 | 0 |
+| [`snowball`](services/snowball.yml) | 25 | 1 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
 | [`backup-gateway`](services/backup-gateway.yml) | 25 | 0 | 2 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 1 |
-| [`snowball`](services/snowball.yml) | 25 | 0 | 0 |
 | [`ram`](services/ram.yml) | 25 | 0 | 0 |
 | [`private-networks`](services/private-networks.yml) | 25 | 0 | 0 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
@@ -291,6 +291,7 @@ The following table summarises the AWS APIs.
 | [`iot`](services/iot.yml) | 8 | 3 | 246 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
 | [`backup-storage`](services/backup-storage.yml) | 8 | 1 | 7 |
+| [`account`](services/account.yml) | 8 | 1 | 4 |
 | [`finspace`](services/finspace.yml) | 8 | 0 | 7 |
 | [`sts`](services/sts.yml) | 8 | 0 | 3 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
@@ -304,7 +305,6 @@ The following table summarises the AWS APIs.
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 6 | 0 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 6 | 0 | 0 |
-| [`account`](services/account.yml) | 5 | 0 | 7 |
 | [`s3-outposts`](services/s3-outposts.yml) | 4 | 0 | 29 |
 | [`controltower`](services/controltower.yml) | 4 | 0 | 29 |
 | [`cur`](services/cur.yml) | 4 | 0 | 5 |
@@ -396,8 +396,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2260 |
-| `Get` | 2017 |
+| `List` | 2261 |
+| `Get` | 2018 |
 | `Delete` | 1668 |
 | `Describe` | 1580 |
 | `Create` | 1555 |

@@ -1,15 +1,18 @@
 Actions:
   - Name: account:DeleteAlternateContact
+  - Name: account:DisableRegion
+  - Name: account:EnableRegion
   - Name: account:GetAlternateContact
   - Name: account:GetContactInformation
+  - Name: account:ListRegions
   - Name: account:PutAlternateContact
   - Name: account:PutContactInformation
 
   # actions with no corresponding API
   - Name: account:CloseAccount
-  - Name: account:DisableRegion
-  - Name: account:EnableRegion
   - Name: account:GetAccountInformation
   - Name: account:GetChallengeQuestions
-  - Name: account:ListRegions
   - Name: account:PutChallengeQuestions
+
+  # APIs without an IAM action
+  - Name: account:GetRegionOptStatus
