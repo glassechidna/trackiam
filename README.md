@@ -284,6 +284,7 @@ The following table summarises the AWS APIs.
 | [`rbin`](services/rbin.yml) | 10 | 0 | 0 |
 | [`pipes`](services/pipes.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
+| [`account`](services/account.yml) | 9 | 0 | 4 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`kendra-ranking`](services/kendra-ranking.yml) | 9 | 0 | 0 |
@@ -291,7 +292,6 @@ The following table summarises the AWS APIs.
 | [`iot`](services/iot.yml) | 8 | 3 | 246 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
 | [`backup-storage`](services/backup-storage.yml) | 8 | 1 | 7 |
-| [`account`](services/account.yml) | 8 | 1 | 4 |
 | [`finspace`](services/finspace.yml) | 8 | 0 | 7 |
 | [`sts`](services/sts.yml) | 8 | 0 | 3 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
