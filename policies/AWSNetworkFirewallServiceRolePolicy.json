@@ -1,15 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSNetworkFirewallServiceRolePolicy",
   "CreateDate": "2020-11-17T17:17:26Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4DF6QQZAL3",
   "PolicyName": "AWSNetworkFirewallServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-11-17T17:17:26Z",
+    "CreateDate": "2023-02-14T17:09:19Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "tag:GetResources",
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaLast": "resource-groups.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "ec2:CreateTags"
@@ -36,8 +46,15 @@
           "Resource": "*"
         },
         {
+          "Action": "resource-groups:ListGroupResources",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
           "Action": [
             "ec2:CreateVpcEndpoint",
+            "ec2:DescribeInstances",
+            "ec2:DescribeNetworkInterfaces",
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcEndpoints",
             "ec2:DescribeVpcs"
@@ -49,7 +66,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-11-17T17:17:26Z"
+  "UpdateDate": "2023-02-14T17:09:19Z"
 }
