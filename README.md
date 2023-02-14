@@ -177,6 +177,7 @@ The following table summarises the AWS APIs.
 | [`billingconductor`](services/billingconductor.yml) | 31 | 0 | 0 |
 | [`aoss`](services/aoss.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
+| [`groundstation`](services/groundstation.yml) | 30 | 3 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
 | [`xray`](services/xray.yml) | 30 | 0 | 3 |
 | [`securitylake`](services/securitylake.yml) | 30 | 0 | 1 |
@@ -201,7 +202,6 @@ The following table summarises the AWS APIs.
 | [`rolesanywhere`](services/rolesanywhere.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
-| [`groundstation`](services/groundstation.yml) | 25 | 8 | 0 |
 | [`snowball`](services/snowball.yml) | 25 | 1 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
 | [`backup-gateway`](services/backup-gateway.yml) | 25 | 0 | 2 |
