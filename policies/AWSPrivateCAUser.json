@@ -1,0 +1,64 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSPrivateCAUser",
+  "CreateDate": "2023-02-14T18:16:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4GKEATZA7L",
+  "PolicyName": "AWSPrivateCAUser",
+  "PolicyVersion": {
+    "CreateDate": "2023-02-14T18:16:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "acm-pca:IssueCertificate"
+          ],
+          "Condition": {
+            "StringLike": {
+              "acm-pca:TemplateArn": [
+                "arn:aws:acm-pca:::template/EndEntityCertificate/V*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:acm-pca:*:*:certificate-authority/*"
+        },
+        {
+          "Action": [
+            "acm-pca:IssueCertificate"
+          ],
+          "Condition": {
+            "StringNotLike": {
+              "acm-pca:TemplateArn": [
+                "arn:aws:acm-pca:::template/EndEntityCertificate/V*"
+              ]
+            }
+          },
+          "Effect": "Deny",
+          "Resource": "arn:aws:acm-pca:*:*:certificate-authority/*"
+        },
+        {
+          "Action": [
+            "acm-pca:GetCertificate",
+            "acm-pca:ListPermissions",
+            "acm-pca:RevokeCertificate"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:acm-pca:*:*:certificate-authority/*"
+        },
+        {
+          "Action": [
+            "acm-pca:ListCertificateAuthorities"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-02-14T18:16:08Z"
+}
