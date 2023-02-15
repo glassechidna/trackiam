@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSCustomPreviewServiceRolePolicy",
   "CreateDate": "2021-10-08T21:44:15Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4D6BEPON2G",
   "PolicyName": "AmazonRDSCustomPreviewServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-11-08T18:01:22Z",
+    "CreateDate": "2023-02-14T23:58:11Z",
     "Document": {
       "Statement": [
         {
@@ -574,6 +574,14 @@
         },
         {
           "Action": [
+            "servicequotas:GetServiceQuota"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "servicequota1"
+        },
+        {
+          "Action": [
             "ssm:DescribeInstanceInformation",
             "ssm:GetCommandInvocation",
             "ssm:GetConnectionStatus"
@@ -586,7 +594,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-11-08T18:01:22Z"
+  "UpdateDate": "2023-02-14T23:58:11Z"
 }
