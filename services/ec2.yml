@@ -19,6 +19,7 @@ Actions:
   - Name: ec2:AssociateEnclaveCertificateIamRole
   - Name: ec2:AssociateIamInstanceProfile
   - Name: ec2:AssociateInstanceEventWindow
+  - Name: ec2:AssociateIpamResourceDiscovery
   - Name: ec2:AssociateRouteTable
   - Name: ec2:AssociateSubnetCidrBlock
   - Name: ec2:AssociateTransitGatewayMulticastDomain
@@ -71,6 +72,7 @@ Actions:
   - Name: ec2:CreateInternetGateway
   - Name: ec2:CreateIpam
   - Name: ec2:CreateIpamPool
+  - Name: ec2:CreateIpamResourceDiscovery
   - Name: ec2:CreateIpamScope
   - Name: ec2:CreateKeyPair
   - Name: ec2:CreateLaunchTemplate
@@ -145,6 +147,7 @@ Actions:
   - Name: ec2:DeleteInternetGateway
   - Name: ec2:DeleteIpam
   - Name: ec2:DeleteIpamPool
+  - Name: ec2:DeleteIpamResourceDiscovery
   - Name: ec2:DeleteIpamScope
   - Name: ec2:DeleteKeyPair
   - Name: ec2:DeleteLaunchTemplate
@@ -263,6 +266,8 @@ Actions:
   - Name: ec2:DescribeInstances
   - Name: ec2:DescribeInternetGateways
   - Name: ec2:DescribeIpamPools
+  - Name: ec2:DescribeIpamResourceDiscoveries
+  - Name: ec2:DescribeIpamResourceDiscoveryAssociations
   - Name: ec2:DescribeIpamScopes
   - Name: ec2:DescribeIpams
   - Name: ec2:DescribeIpv6Pools
@@ -374,6 +379,7 @@ Actions:
   - Name: ec2:DisassociateEnclaveCertificateIamRole
   - Name: ec2:DisassociateIamInstanceProfile
   - Name: ec2:DisassociateInstanceEventWindow
+  - Name: ec2:DisassociateIpamResourceDiscovery
   - Name: ec2:DisassociateRouteTable
   - Name: ec2:DisassociateSubnetCidrBlock
   - Name: ec2:DisassociateTransitGatewayMulticastDomain
@@ -415,6 +421,8 @@ Actions:
   - Name: ec2:GetInstanceTypesFromInstanceRequirements
   - Name: ec2:GetInstanceUefiData
   - Name: ec2:GetIpamAddressHistory
+  - Name: ec2:GetIpamDiscoveredAccounts
+  - Name: ec2:GetIpamDiscoveredResourceCidrs
   - Name: ec2:GetIpamPoolAllocations
   - Name: ec2:GetIpamPoolCidrs
   - Name: ec2:GetIpamResourceCidrs
@@ -471,6 +479,7 @@ Actions:
   - Name: ec2:ModifyIpam
   - Name: ec2:ModifyIpamPool
   - Name: ec2:ModifyIpamResourceCidr
+  - Name: ec2:ModifyIpamResourceDiscovery
   - Name: ec2:ModifyIpamScope
   - Name: ec2:ModifyLaunchTemplate
   - Name: ec2:ModifyLocalGatewayRoute
@@ -584,20 +593,12 @@ Actions:
   - Name: ec2:DeleteResourcePolicy
   - Name: ec2:DescribeLocalGatewayRouteTablePermissions
   - Name: ec2:GetResourcePolicy
+  - Name: ec2:PauseVolumeIO
   - Name: ec2:PutResourcePolicy
   - Name: ec2:SendSpotInstanceInterruptions
 
   # APIs without an IAM action
   - Name: ec2:AssignPrivateNatGatewayAddress
-  - Name: ec2:AssociateIpamResourceDiscovery
   - Name: ec2:AssociateNatGatewayAddress
-  - Name: ec2:CreateIpamResourceDiscovery
-  - Name: ec2:DeleteIpamResourceDiscovery
-  - Name: ec2:DescribeIpamResourceDiscoveries
-  - Name: ec2:DescribeIpamResourceDiscoveryAssociations
-  - Name: ec2:DisassociateIpamResourceDiscovery
   - Name: ec2:DisassociateNatGatewayAddress
-  - Name: ec2:GetIpamDiscoveredAccounts
-  - Name: ec2:GetIpamDiscoveredResourceCidrs
-  - Name: ec2:ModifyIpamResourceDiscovery
   - Name: ec2:UnassignPrivateNatGatewayAddress
