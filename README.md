@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 355
-* Unique actions: 14530
+* Unique actions: 14536
 * Managed policies: 1043
 
 Most common managed policy name prefixes:
@@ -75,7 +75,7 @@ The following table summarises the AWS APIs.
 | [`backup`](services/backup.yml) | 72 | 0 | 2 |
 | [`personalize`](services/personalize.yml) | 71 | 0 | 0 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
-| [`frauddetector`](services/frauddetector.yml) | 68 | 0 | 0 |
+| [`frauddetector`](services/frauddetector.yml) | 68 | 5 | 0 |
 | [`ds`](services/ds.yml) | 67 | 0 | 6 |
 | [`cloudformation`](services/cloudformation.yml) | 66 | 0 | 11 |
 | [`omics`](services/omics.yml) | 66 | 0 | 0 |
@@ -203,11 +203,11 @@ The following table summarises the AWS APIs.
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`snowball`](services/snowball.yml) | 25 | 1 | 0 |
+| [`private-networks`](services/private-networks.yml) | 25 | 1 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
 | [`backup-gateway`](services/backup-gateway.yml) | 25 | 0 | 2 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 1 |
 | [`ram`](services/ram.yml) | 25 | 0 | 0 |
-| [`private-networks`](services/private-networks.yml) | 25 | 0 | 0 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 23 | 1 | 7 |
@@ -397,13 +397,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2261 |
-| `Get` | 2018 |
-| `Delete` | 1668 |
+| `Get` | 2020 |
+| `Delete` | 1669 |
 | `Describe` | 1580 |
-| `Create` | 1555 |
-| `Update` | 1317 |
+| `Create` | 1556 |
+| `Update` | 1318 |
 | `Put` | 404 |
-| `Start` | 303 |
+| `Start` | 304 |
 | `Tag` | 225 |
 | `Untag` | 223 |
 
