@@ -315,12 +315,12 @@ The following table summarises the AWS APIs.
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 2 | 0 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 2 | 0 | 0 |
+| [`finspace-api`](services/finspace-api.yml) | 1 | 30 | 0 |
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`cloudtrail-data`](services/cloudtrail-data.yml) | 1 | 0 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 249 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
-| [`finspace-api`](services/finspace-api.yml) | 0 | 31 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`macie`](services/macie.yml) | 0 | 7 | 0 |
