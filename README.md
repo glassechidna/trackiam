@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 355
-* Unique actions: 14535
+* Unique services: 356
+* Unique actions: 14545
 * Managed policies: 1043
 
 Most common managed policy name prefixes:
@@ -350,6 +350,7 @@ The following table summarises the AWS APIs.
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 11 |
+| [`scn`](services/scn.yml) | 0 | 0 | 10 |
 | [`internetmonitor`](services/internetmonitor.yml) | 0 | 0 | 10 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 9 |
@@ -396,12 +397,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2260 |
+| `List` | 2262 |
 | `Get` | 2020 |
-| `Delete` | 1669 |
-| `Describe` | 1580 |
-| `Create` | 1556 |
-| `Update` | 1318 |
+| `Delete` | 1671 |
+| `Describe` | 1581 |
+| `Create` | 1558 |
+| `Update` | 1319 |
 | `Put` | 404 |
 | `Start` | 304 |
 | `Tag` | 225 |
