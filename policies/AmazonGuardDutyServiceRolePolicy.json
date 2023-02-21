@@ -1,15 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonGuardDutyServiceRolePolicy",
   "CreateDate": "2017-11-28T20:12:59Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIHZREZOWNSSA6FWQO",
   "PolicyName": "AmazonGuardDutyServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-08-03T23:14:07Z",
+    "CreateDate": "2023-02-21T16:56:23Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "malware-protection.guardduty.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "ec2:DescribeImages",
@@ -36,7 +46,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2021-08-03T23:14:07Z"
+  "UpdateDate": "2023-02-21T16:56:23Z"
 }
