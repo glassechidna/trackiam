@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 356
-* Unique actions: 14545
+* Unique services: 357
+* Unique actions: 14591
 * Managed policies: 1044
 
 Most common managed policy name prefixes:
@@ -133,7 +133,7 @@ The following table summarises the AWS APIs.
 | [`fsx`](services/fsx.yml) | 41 | 0 | 4 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 40 | 0 | 0 |
-| [`resiliencehub`](services/resiliencehub.yml) | 39 | 0 | 0 |
+| [`resiliencehub`](services/resiliencehub.yml) | 39 | 13 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 38 | 0 | 3 |
@@ -321,6 +321,7 @@ The following table summarises the AWS APIs.
 | [`execute-api`](services/execute-api.yml) | 0 | 249 | 3 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
+| [`tnb`](services/tnb.yml) | 0 | 33 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`macie`](services/macie.yml) | 0 | 7 | 0 |
@@ -397,14 +398,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2262 |
-| `Get` | 2020 |
-| `Delete` | 1671 |
-| `Describe` | 1581 |
-| `Create` | 1558 |
-| `Update` | 1319 |
-| `Put` | 404 |
+| `List` | 2270 |
+| `Get` | 2029 |
+| `Delete` | 1677 |
+| `Describe` | 1584 |
+| `Create` | 1563 |
+| `Update` | 1325 |
+| `Put` | 406 |
 | `Start` | 304 |
-| `Tag` | 225 |
-| `Untag` | 223 |
+| `Tag` | 226 |
+| `Untag` | 224 |
 
