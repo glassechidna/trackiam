@@ -86,11 +86,11 @@ The following table summarises the AWS APIs.
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
 | [`guardduty`](services/guardduty.yml) | 65 | 0 | 0 |
+| [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 63 | 2 | 5 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`rekognition`](services/rekognition.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
-| [`autoscaling`](services/autoscaling.yml) | 62 | 3 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
 | [`athena`](services/athena.yml) | 60 | 0 | 1 |
 | [`medialive`](services/medialive.yml) | 59 | 0 | 0 |

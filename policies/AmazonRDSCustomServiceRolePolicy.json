@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSCustomServiceRolePolicy",
   "CreateDate": "2021-10-08T21:39:12Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4F2M3XYA7J",
   "PolicyName": "AmazonRDSCustomServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-11-09T22:17:08Z",
+    "CreateDate": "2023-02-21T23:14:53Z",
     "Document": {
       "Statement": [
         {
@@ -574,6 +574,14 @@
         },
         {
           "Action": [
+            "servicequotas:GetServiceQuota"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "servicequota1"
+        },
+        {
+          "Action": [
             "ssm:DescribeInstanceInformation",
             "ssm:GetCommandInvocation",
             "ssm:GetConnectionStatus"
@@ -586,7 +594,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-11-09T22:17:08Z"
+  "UpdateDate": "2023-02-21T23:14:53Z"
 }

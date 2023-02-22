@@ -2,6 +2,7 @@ Actions:
   - Name: autoscaling:AttachInstances
   - Name: autoscaling:AttachLoadBalancerTargetGroups
   - Name: autoscaling:AttachLoadBalancers
+  - Name: autoscaling:AttachTrafficSources
   - Name: autoscaling:BatchDeleteScheduledAction
   - Name: autoscaling:BatchPutScheduledUpdateGroupAction
   - Name: autoscaling:CancelInstanceRefresh
@@ -36,10 +37,12 @@ Actions:
   - Name: autoscaling:DescribeScheduledActions
   - Name: autoscaling:DescribeTags
   - Name: autoscaling:DescribeTerminationPolicyTypes
+  - Name: autoscaling:DescribeTrafficSources
   - Name: autoscaling:DescribeWarmPool
   - Name: autoscaling:DetachInstances
   - Name: autoscaling:DetachLoadBalancerTargetGroups
   - Name: autoscaling:DetachLoadBalancers
+  - Name: autoscaling:DetachTrafficSources
   - Name: autoscaling:DisableMetricsCollection
   - Name: autoscaling:EnableMetricsCollection
   - Name: autoscaling:EnterStandby
@@ -61,8 +64,3 @@ Actions:
   - Name: autoscaling:SuspendProcesses
   - Name: autoscaling:TerminateInstanceInAutoScalingGroup
   - Name: autoscaling:UpdateAutoScalingGroup
-
-  # APIs without an IAM action
-  - Name: autoscaling:AttachTrafficSources
-  - Name: autoscaling:DescribeTrafficSources
-  - Name: autoscaling:DetachTrafficSources
