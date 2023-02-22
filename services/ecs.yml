@@ -20,6 +20,7 @@ Actions:
   - Name: ecs:DescribeTasks
   - Name: ecs:DiscoverPollEndpoint
   - Name: ecs:ExecuteCommand
+  - Name: ecs:GetTaskProtection
   - Name: ecs:ListAccountSettings
   - Name: ecs:ListAttributes
   - Name: ecs:ListClusters
@@ -51,12 +52,9 @@ Actions:
   - Name: ecs:UpdateContainerInstancesState
   - Name: ecs:UpdateService
   - Name: ecs:UpdateServicePrimaryTaskSet
+  - Name: ecs:UpdateTaskProtection
   - Name: ecs:UpdateTaskSet
 
   # actions with no corresponding API
   - Name: ecs:Poll
   - Name: ecs:StartTelemetrySession
-
-  # APIs without an IAM action
-  - Name: ecs:GetTaskProtection
-  - Name: ecs:UpdateTaskProtection
