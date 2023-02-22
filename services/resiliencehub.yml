@@ -1,14 +1,22 @@
 Actions:
   - Name: resiliencehub:AddDraftAppVersionResourceMappings
   - Name: resiliencehub:CreateApp
+  - Name: resiliencehub:CreateAppVersionAppComponent
+  - Name: resiliencehub:CreateAppVersionResource
   - Name: resiliencehub:CreateRecommendationTemplate
   - Name: resiliencehub:CreateResiliencyPolicy
   - Name: resiliencehub:DeleteApp
   - Name: resiliencehub:DeleteAppAssessment
+  - Name: resiliencehub:DeleteAppInputSource
+  - Name: resiliencehub:DeleteAppVersionAppComponent
+  - Name: resiliencehub:DeleteAppVersionResource
   - Name: resiliencehub:DeleteRecommendationTemplate
   - Name: resiliencehub:DeleteResiliencyPolicy
   - Name: resiliencehub:DescribeApp
   - Name: resiliencehub:DescribeAppAssessment
+  - Name: resiliencehub:DescribeAppVersion
+  - Name: resiliencehub:DescribeAppVersionAppComponent
+  - Name: resiliencehub:DescribeAppVersionResource
   - Name: resiliencehub:DescribeAppVersionResourcesResolutionStatus
   - Name: resiliencehub:DescribeAppVersionTemplate
   - Name: resiliencehub:DescribeDraftAppVersionResourcesImportStatus
@@ -18,6 +26,8 @@ Actions:
   - Name: resiliencehub:ListAppAssessments
   - Name: resiliencehub:ListAppComponentCompliances
   - Name: resiliencehub:ListAppComponentRecommendations
+  - Name: resiliencehub:ListAppInputSources
+  - Name: resiliencehub:ListAppVersionAppComponents
   - Name: resiliencehub:ListAppVersionResourceMappings
   - Name: resiliencehub:ListAppVersionResources
   - Name: resiliencehub:ListAppVersions
@@ -37,19 +47,7 @@ Actions:
   - Name: resiliencehub:TagResource
   - Name: resiliencehub:UntagResource
   - Name: resiliencehub:UpdateApp
-  - Name: resiliencehub:UpdateResiliencyPolicy
-
-  # APIs without an IAM action
-  - Name: resiliencehub:CreateAppVersionAppComponent
-  - Name: resiliencehub:CreateAppVersionResource
-  - Name: resiliencehub:DeleteAppInputSource
-  - Name: resiliencehub:DeleteAppVersionAppComponent
-  - Name: resiliencehub:DeleteAppVersionResource
-  - Name: resiliencehub:DescribeAppVersion
-  - Name: resiliencehub:DescribeAppVersionAppComponent
-  - Name: resiliencehub:DescribeAppVersionResource
-  - Name: resiliencehub:ListAppInputSources
-  - Name: resiliencehub:ListAppVersionAppComponents
   - Name: resiliencehub:UpdateAppVersion
   - Name: resiliencehub:UpdateAppVersionAppComponent
   - Name: resiliencehub:UpdateAppVersionResource
+  - Name: resiliencehub:UpdateResiliencyPolicy

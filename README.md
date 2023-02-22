@@ -106,6 +106,7 @@ The following table summarises the AWS APIs.
 | [`geo`](services/geo.yml) | 53 | 0 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 52 | 5 | 13 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 52 | 1 | 26 |
+| [`resiliencehub`](services/resiliencehub.yml) | 52 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 51 | 0 | 2 |
 | [`workspaces-web`](services/workspaces-web.yml) | 51 | 0 | 0 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
@@ -133,7 +134,6 @@ The following table summarises the AWS APIs.
 | [`fsx`](services/fsx.yml) | 41 | 0 | 4 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 40 | 0 | 0 |
-| [`resiliencehub`](services/resiliencehub.yml) | 39 | 13 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 38 | 0 | 3 |
