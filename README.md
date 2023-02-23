@@ -97,9 +97,9 @@ The following table summarises the AWS APIs.
 | [`transfer`](services/transfer.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`securityhub`](services/securityhub.yml) | 56 | 0 | 12 |
+| [`ecs`](services/ecs.yml) | 56 | 0 | 2 |
 | [`events`](services/events.yml) | 56 | 0 | 1 |
 | [`kendra`](services/kendra.yml) | 55 | 5 | 0 |
-| [`ecs`](services/ecs.yml) | 55 | 1 | 2 |
 | [`mgn`](services/mgn.yml) | 55 | 0 | 34 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
