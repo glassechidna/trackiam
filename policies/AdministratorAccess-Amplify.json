@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AdministratorAccess-Amplify",
   "CreateDate": "2020-12-01T19:03:08Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AML23RALR",
   "PolicyName": "AdministratorAccess-Amplify",
   "PolicyVersion": {
-    "CreateDate": "2022-08-30T23:24:53Z",
+    "CreateDate": "2023-02-24T20:14:32Z",
     "Document": {
       "Statement": [
         {
@@ -47,6 +47,7 @@
             "appsync:ListTypes",
             "appsync:StartSchemaCreation",
             "appsync:TagResource",
+            "appsync:UntagResource",
             "appsync:UpdateApiKey",
             "appsync:UpdateDataSource",
             "appsync:UpdateFunction",
@@ -97,6 +98,7 @@
             "dynamodb:ListTagsOfResource",
             "dynamodb:PutItem",
             "dynamodb:TagResource",
+            "dynamodb:UntagResource",
             "dynamodb:UpdateContinuousBackups",
             "dynamodb:UpdateItem",
             "dynamodb:UpdateTable",
@@ -105,6 +107,7 @@
             "es:CreateElasticsearchDomain",
             "es:DeleteElasticsearchDomain",
             "es:DescribeElasticsearchDomain",
+            "es:UpdateElasticsearchDomainConfig",
             "events:DeleteRule",
             "events:DescribeRule",
             "events:ListRuleNamesByTarget",
@@ -131,6 +134,7 @@
             "iam:PutRolePermissionsBoundary",
             "iam:PutRolePolicy",
             "iam:TagRole",
+            "iam:UntagRole",
             "iam:UpdateRole",
             "kinesis:AddTagsToStream",
             "kinesis:CreateStream",
@@ -170,6 +174,7 @@
             "s3:PutBucketCORS",
             "s3:PutBucketNotification",
             "s3:PutBucketPolicy",
+            "s3:PutBucketPublicAccessBlock",
             "s3:PutBucketWebsite",
             "s3:PutEncryptionConfiguration",
             "s3:PutObjectAcl"
@@ -206,8 +211,11 @@
             "appsync:GraphQL",
             "appsync:ListApiKeys",
             "appsync:UpdateApiKey",
+            "cloudformation:DescribeStacks",
             "cloudformation:GetTemplateSummary",
             "cloudformation:ListStacks",
+            "cloudfront:GetCloudFrontOriginAccessIdentity",
+            "cloudfront:GetCloudFrontOriginAccessIdentityConfig",
             "codecommit:GitPull",
             "cognito-identity:CreateIdentityPool",
             "cognito-identity:DeleteIdentityPool",
@@ -274,6 +282,7 @@
             "logs:DescribeLogStreams",
             "logs:GetLogEvents",
             "mobiletargeting:*",
+            "polly:DescribeVoices",
             "rekognition:DescribeCollection",
             "sns:CreateSMSSandboxPhoneNumber",
             "sns:DeleteSMSSandboxPhoneNumber",
@@ -369,6 +378,7 @@
             "cloudformation:ExecuteChangeSet",
             "cloudformation:GetTemplate",
             "cloudformation:ListStackResources",
+            "cloudformation:ListStacks",
             "cloudformation:UpdateStack",
             "cloudformation:UpdateStackSet"
           ],
@@ -440,7 +450,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2022-08-30T23:24:53Z"
+  "UpdateDate": "2023-02-24T20:14:32Z"
 }

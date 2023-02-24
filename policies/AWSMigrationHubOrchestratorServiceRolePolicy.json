@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSMigrationHubOrchestratorServiceRolePolicy",
   "CreateDate": "2022-04-20T02:24:04Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4LSN7AHAZR",
   "PolicyName": "AWSMigrationHubOrchestratorServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-12-21T18:48:26Z",
+    "CreateDate": "2023-02-24T20:28:36Z",
     "Document": {
       "Statement": [
         {
@@ -51,6 +51,13 @@
         {
           "Action": [
             "ec2:DescribeInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeLaunchTemplates"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -134,7 +141,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-12-21T18:48:26Z"
+  "UpdateDate": "2023-02-24T20:28:36Z"
 }

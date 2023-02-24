@@ -184,7 +184,7 @@ The following table summarises the AWS APIs.
 | [`securitylake`](services/securitylake.yml) | 30 | 0 | 1 |
 | [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
-| [`cases`](services/cases.yml) | 29 | 1 | 0 |
+| [`cases`](services/cases.yml) | 30 | 0 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 29 | 0 | 2 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 29 | 0 | 0 |
