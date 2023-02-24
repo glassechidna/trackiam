@@ -1,15 +1,39 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonInspector2ServiceRolePolicy",
   "CreateDate": "2021-11-16T20:27:48Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4BINOILVQW",
   "PolicyName": "AmazonInspector2ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-02-15T17:01:23Z",
+    "CreateDate": "2023-02-24T17:57:17Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "iam:GetPolicy",
+            "iam:GetPolicyVersion",
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListPolicies",
+            "iam:ListPolicyVersions",
+            "lambda:ListVersionsByFunction"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "codeguru-security.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "CodeGuruCodeVulnerabilityScanning"
+        },
         {
           "Action": [
             "cloudwatch:GetMetricData",
@@ -20,6 +44,20 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "LambdaPackageVulnerabilityScanning"
+        },
+        {
+          "Action": [
+            "codeguru-security:BatchGetFindings",
+            "codeguru-security:CreateScan",
+            "codeguru-security:DeleteScansByCategory",
+            "codeguru-security:GetScan",
+            "codeguru-security:ListFindings"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "LambdaCodeVulnerabilityScanning"
         },
         {
           "Action": [
@@ -152,7 +190,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2023-02-15T17:01:23Z"
+  "UpdateDate": "2023-02-24T17:57:17Z"
 }
