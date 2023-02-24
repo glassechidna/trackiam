@@ -3,8 +3,10 @@ Actions:
   - Name: securityhub:AcceptInvitation
   - Name: securityhub:BatchDisableStandards
   - Name: securityhub:BatchEnableStandards
+  - Name: securityhub:BatchGetStandardsControlAssociations
   - Name: securityhub:BatchImportFindings
   - Name: securityhub:BatchUpdateFindings
+  - Name: securityhub:BatchUpdateStandardsControlAssociations
   - Name: securityhub:CreateActionTarget
   - Name: securityhub:CreateFindingAggregator
   - Name: securityhub:CreateInsight
@@ -45,6 +47,7 @@ Actions:
   - Name: securityhub:ListInvitations
   - Name: securityhub:ListMembers
   - Name: securityhub:ListOrganizationAdminAccounts
+  - Name: securityhub:ListSecurityControlDefinitions
   - Name: securityhub:ListTagsForResource
   - Name: securityhub:TagResource
   - Name: securityhub:UntagResource
@@ -57,8 +60,6 @@ Actions:
   - Name: securityhub:UpdateStandardsControl
 
   # actions with no corresponding API
-  - Name: securityhub:BatchGetStandardsControlAssociations
-  - Name: securityhub:BatchUpdateStandardsControlAssociations
   - Name: securityhub:GetAdhocInsightResults
   - Name: securityhub:GetControlFindingSummary
   - Name: securityhub:GetFreeTrialEndDate
@@ -66,6 +67,9 @@ Actions:
   - Name: securityhub:GetInsightFindingTrend
   - Name: securityhub:GetUsage
   - Name: securityhub:ListControlEvaluationSummaries
-  - Name: securityhub:ListSecurityControlDefinitions
   - Name: securityhub:SendFindingEvents
   - Name: securityhub:SendInsightEvents
+
+  # APIs without an IAM action
+  - Name: securityhub:BatchGetSecurityControls
+  - Name: securityhub:ListStandardsControlAssociations
