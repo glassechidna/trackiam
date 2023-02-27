@@ -9,16 +9,19 @@ Actions:
   - Name: geo:CalculateRoute
   - Name: geo:CalculateRouteMatrix
   - Name: geo:CreateGeofenceCollection
+  - Name: geo:CreateKey
   - Name: geo:CreateMap
   - Name: geo:CreatePlaceIndex
   - Name: geo:CreateRouteCalculator
   - Name: geo:CreateTracker
   - Name: geo:DeleteGeofenceCollection
+  - Name: geo:DeleteKey
   - Name: geo:DeleteMap
   - Name: geo:DeletePlaceIndex
   - Name: geo:DeleteRouteCalculator
   - Name: geo:DeleteTracker
   - Name: geo:DescribeGeofenceCollection
+  - Name: geo:DescribeKey
   - Name: geo:DescribeMap
   - Name: geo:DescribePlaceIndex
   - Name: geo:DescribeRouteCalculator
@@ -35,6 +38,7 @@ Actions:
   - Name: geo:ListDevicePositions
   - Name: geo:ListGeofenceCollections
   - Name: geo:ListGeofences
+  - Name: geo:ListKeys
   - Name: geo:ListMaps
   - Name: geo:ListPlaceIndexes
   - Name: geo:ListRouteCalculators
@@ -48,14 +52,8 @@ Actions:
   - Name: geo:TagResource
   - Name: geo:UntagResource
   - Name: geo:UpdateGeofenceCollection
+  - Name: geo:UpdateKey
   - Name: geo:UpdateMap
   - Name: geo:UpdatePlaceIndex
   - Name: geo:UpdateRouteCalculator
   - Name: geo:UpdateTracker
-
-  # APIs without an IAM action
-  - Name: geo:CreateKey
-  - Name: geo:DeleteKey
-  - Name: geo:DescribeKey
-  - Name: geo:ListKeys
-  - Name: geo:UpdateKey

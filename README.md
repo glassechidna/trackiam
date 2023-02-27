@@ -96,6 +96,7 @@ The following table summarises the AWS APIs.
 | [`securityhub`](services/securityhub.yml) | 59 | 2 | 9 |
 | [`medialive`](services/medialive.yml) | 59 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 58 | 0 | 0 |
+| [`geo`](services/geo.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 2 |
 | [`events`](services/events.yml) | 56 | 0 | 1 |
@@ -103,7 +104,6 @@ The following table summarises the AWS APIs.
 | [`mgn`](services/mgn.yml) | 55 | 0 | 34 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
-| [`geo`](services/geo.yml) | 53 | 5 | 0 |
 | [`dynamodb`](services/dynamodb.yml) | 52 | 5 | 13 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 52 | 1 | 26 |
 | [`resiliencehub`](services/resiliencehub.yml) | 52 | 0 | 0 |
