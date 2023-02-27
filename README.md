@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 357
-* Unique actions: 14576
+* Unique actions: 14580
 * Managed policies: 1045
 
 Most common managed policy name prefixes:
@@ -211,7 +211,7 @@ The following table summarises the AWS APIs.
 | [`ram`](services/ram.yml) | 25 | 0 | 0 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
-| [`timestream`](services/timestream.yml) | 23 | 1 | 7 |
+| [`timestream`](services/timestream.yml) | 23 | 5 | 7 |
 | [`detective`](services/detective.yml) | 23 | 1 | 7 |
 | [`appflow`](services/appflow.yml) | 23 | 0 | 6 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 23 | 0 | 1 |
@@ -284,6 +284,7 @@ The following table summarises the AWS APIs.
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
 | [`rbin`](services/rbin.yml) | 10 | 0 | 0 |
 | [`pipes`](services/pipes.yml) | 10 | 0 | 0 |
+| [`internetmonitor`](services/internetmonitor.yml) | 10 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`account`](services/account.yml) | 9 | 0 | 4 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
@@ -352,7 +353,6 @@ The following table summarises the AWS APIs.
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 11 |
 | [`scn`](services/scn.yml) | 0 | 0 | 10 |
-| [`internetmonitor`](services/internetmonitor.yml) | 0 | 0 | 10 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 9 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
@@ -398,11 +398,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2267 |
+| `List` | 2268 |
 | `Get` | 2029 |
 | `Delete` | 1676 |
-| `Describe` | 1580 |
-| `Create` | 1556 |
+| `Describe` | 1581 |
+| `Create` | 1557 |
 | `Update` | 1324 |
 | `Put` | 406 |
 | `Start` | 304 |
