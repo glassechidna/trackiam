@@ -7,13 +7,17 @@ Actions:
   - Name: comprehend:BatchDetectTargetedSentiment
   - Name: comprehend:ClassifyDocument
   - Name: comprehend:ContainsPiiEntities
+  - Name: comprehend:CreateDataset
   - Name: comprehend:CreateDocumentClassifier
   - Name: comprehend:CreateEndpoint
   - Name: comprehend:CreateEntityRecognizer
+  - Name: comprehend:CreateFlywheel
   - Name: comprehend:DeleteDocumentClassifier
   - Name: comprehend:DeleteEndpoint
   - Name: comprehend:DeleteEntityRecognizer
+  - Name: comprehend:DeleteFlywheel
   - Name: comprehend:DeleteResourcePolicy
+  - Name: comprehend:DescribeDataset
   - Name: comprehend:DescribeDocumentClassificationJob
   - Name: comprehend:DescribeDocumentClassifier
   - Name: comprehend:DescribeDominantLanguageDetectionJob
@@ -21,6 +25,8 @@ Actions:
   - Name: comprehend:DescribeEntitiesDetectionJob
   - Name: comprehend:DescribeEntityRecognizer
   - Name: comprehend:DescribeEventsDetectionJob
+  - Name: comprehend:DescribeFlywheel
+  - Name: comprehend:DescribeFlywheelIteration
   - Name: comprehend:DescribeKeyPhrasesDetectionJob
   - Name: comprehend:DescribePiiEntitiesDetectionJob
   - Name: comprehend:DescribeResourcePolicy
@@ -35,6 +41,7 @@ Actions:
   - Name: comprehend:DetectSyntax
   - Name: comprehend:DetectTargetedSentiment
   - Name: comprehend:ImportModel
+  - Name: comprehend:ListDatasets
   - Name: comprehend:ListDocumentClassificationJobs
   - Name: comprehend:ListDocumentClassifierSummaries
   - Name: comprehend:ListDocumentClassifiers
@@ -44,6 +51,8 @@ Actions:
   - Name: comprehend:ListEntityRecognizerSummaries
   - Name: comprehend:ListEntityRecognizers
   - Name: comprehend:ListEventsDetectionJobs
+  - Name: comprehend:ListFlywheelIterationHistory
+  - Name: comprehend:ListFlywheels
   - Name: comprehend:ListKeyPhrasesDetectionJobs
   - Name: comprehend:ListPiiEntitiesDetectionJobs
   - Name: comprehend:ListSentimentDetectionJobs
@@ -55,6 +64,7 @@ Actions:
   - Name: comprehend:StartDominantLanguageDetectionJob
   - Name: comprehend:StartEntitiesDetectionJob
   - Name: comprehend:StartEventsDetectionJob
+  - Name: comprehend:StartFlywheelIteration
   - Name: comprehend:StartKeyPhrasesDetectionJob
   - Name: comprehend:StartPiiEntitiesDetectionJob
   - Name: comprehend:StartSentimentDetectionJob
@@ -72,16 +82,4 @@ Actions:
   - Name: comprehend:TagResource
   - Name: comprehend:UntagResource
   - Name: comprehend:UpdateEndpoint
-
-  # APIs without an IAM action
-  - Name: comprehend:CreateDataset
-  - Name: comprehend:CreateFlywheel
-  - Name: comprehend:DeleteFlywheel
-  - Name: comprehend:DescribeDataset
-  - Name: comprehend:DescribeFlywheel
-  - Name: comprehend:DescribeFlywheelIteration
-  - Name: comprehend:ListDatasets
-  - Name: comprehend:ListFlywheelIterationHistory
-  - Name: comprehend:ListFlywheels
-  - Name: comprehend:StartFlywheelIteration
   - Name: comprehend:UpdateFlywheel
