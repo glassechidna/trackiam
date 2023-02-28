@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 358
-* Unique actions: 14588
+* Unique actions: 14603
 * Managed policies: 1045
 
 Most common managed policy name prefixes:
@@ -42,7 +42,7 @@ The following table summarises the AWS APIs.
 | [`glue`](services/glue.yml) | 198 | 4 | 10 |
 | [`connect`](services/connect.yml) | 170 | 0 | 9 |
 | [`iam`](services/iam.yml) | 158 | 0 | 12 |
-| [`lightsail`](services/lightsail.yml) | 155 | 0 | 0 |
+| [`lightsail`](services/lightsail.yml) | 155 | 4 | 0 |
 | [`ses`](services/ses.yml) | 143 | 0 | 0 |
 | [`rds`](services/rds.yml) | 141 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 135 | 3 | 10 |
@@ -70,9 +70,9 @@ The following table summarises the AWS APIs.
 | [`proton`](services/proton.yml) | 76 | 0 | 24 |
 | [`es`](services/es.yml) | 74 | 2 | 10 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
+| [`comprehend`](services/comprehend.yml) | 73 | 11 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 73 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 0 |
-| [`comprehend`](services/comprehend.yml) | 73 | 0 | 0 |
 | [`backup`](services/backup.yml) | 72 | 0 | 2 |
 | [`personalize`](services/personalize.yml) | 71 | 0 | 0 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
@@ -399,14 +399,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2270 |
-| `Get` | 2030 |
-| `Delete` | 1677 |
-| `Describe` | 1581 |
-| `Create` | 1559 |
-| `Update` | 1325 |
+| `List` | 2273 |
+| `Get` | 2031 |
+| `Delete` | 1678 |
+| `Describe` | 1584 |
+| `Create` | 1562 |
+| `Update` | 1326 |
 | `Put` | 406 |
-| `Start` | 304 |
+| `Start` | 306 |
 | `Tag` | 226 |
 | `Untag` | 224 |
 
