@@ -1,21 +1,25 @@
 Actions:
   - Name: timestream:CancelQuery
+  - Name: timestream:CreateBatchLoadTask
   - Name: timestream:CreateDatabase
   - Name: timestream:CreateScheduledQuery
   - Name: timestream:CreateTable
   - Name: timestream:DeleteDatabase
   - Name: timestream:DeleteScheduledQuery
   - Name: timestream:DeleteTable
+  - Name: timestream:DescribeBatchLoadTask
   - Name: timestream:DescribeDatabase
   - Name: timestream:DescribeEndpoints
   - Name: timestream:DescribeScheduledQuery
   - Name: timestream:DescribeTable
   - Name: timestream:ExecuteScheduledQuery
+  - Name: timestream:ListBatchLoadTasks
   - Name: timestream:ListDatabases
   - Name: timestream:ListScheduledQueries
   - Name: timestream:ListTables
   - Name: timestream:ListTagsForResource
   - Name: timestream:PrepareQuery
+  - Name: timestream:ResumeBatchLoadTask
   - Name: timestream:TagResource
   - Name: timestream:UntagResource
   - Name: timestream:UpdateDatabase
@@ -33,8 +37,4 @@ Actions:
   - Name: timestream:StartAwsRestoreJob
 
   # APIs without an IAM action
-  - Name: timestream:CreateBatchLoadTask
-  - Name: timestream:DescribeBatchLoadTask
-  - Name: timestream:ListBatchLoadTasks
   - Name: timestream:Query
-  - Name: timestream:ResumeBatchLoadTask
