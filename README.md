@@ -307,12 +307,12 @@ The following table summarises the AWS APIs.
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 6 | 0 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 6 | 0 | 0 |
+| [`pricing`](services/pricing.yml) | 5 | 0 | 0 |
 | [`s3-outposts`](services/s3-outposts.yml) | 4 | 1 | 29 |
 | [`controltower`](services/controltower.yml) | 4 | 0 | 29 |
 | [`cur`](services/cur.yml) | 4 | 0 | 5 |
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 4 | 0 | 0 |
 | [`license-manager-linux-subscriptions`](services/license-manager-linux-subscriptions.yml) | 4 | 0 | 0 |
-| [`pricing`](services/pricing.yml) | 3 | 2 | 0 |
 | [`cassandra`](services/cassandra.yml) | 2 | 11 | 7 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 2 | 0 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
