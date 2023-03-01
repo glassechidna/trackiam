@@ -1,0 +1,211 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSSupplyChainFederationAdminAccess",
+  "CreateDate": "2023-03-01T18:54:25Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4ILSYMTZA7",
+  "PolicyName": "AWSSupplyChainFederationAdminAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-03-01T18:54:25Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "secretsmanager:CreateSecret",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "appflow.amazonaws.com"
+              ]
+            },
+            "StringLike": {
+              "secretsmanager:Name": "appflow!*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:*"
+        },
+        {
+          "Action": [
+            "chime:BatchCreateChannelMembership",
+            "chime:Connect",
+            "chime:CreateAppInstanceUser",
+            "chime:CreateChannel",
+            "chime:CreateChannelMembership",
+            "chime:CreateChannelModerator",
+            "chime:DeleteChannelMembership",
+            "chime:DeleteChannelModerator",
+            "chime:DescribeChannelMembershipForAppInstanceUser",
+            "chime:GetChannelMembershipPreferences",
+            "chime:ListChannelMemberships",
+            "chime:ListChannelMembershipsForAppInstanceUser",
+            "chime:ListChannelMessages",
+            "chime:ListChannelModerators",
+            "chime:PutChannelMembershipPreferences",
+            "chime:SendChannelMessage",
+            "chime:TagResource",
+            "chime:UpdateAppInstanceUser",
+            "chime:UpdateChannelReadMarker"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/SCNInstanceId": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:chime:*:*:app-instance/*"
+          ]
+        },
+        {
+          "Action": [
+            "kms:CreateGrant"
+          ],
+          "Condition": {
+            "Bool": {
+              "kms:GrantIsForAWSResource": "true"
+            },
+            "StringEquals": {
+              "aws:ResourceTag/aws-supply-chain-access": "true"
+            },
+            "StringLike": {
+              "kms:ViaService": "appflow.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey",
+            "kms:ListGrants"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/aws-supply-chain-access": "true"
+            },
+            "StringLike": {
+              "kms:ViaService": "appflow.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*"
+        },
+        {
+          "Action": [
+            "secretsmanager:PutResourcePolicy"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "appflow.amazonaws.com"
+              ]
+            },
+            "StringEqualsIgnoreCase": {
+              "secretsmanager:ResourceTag/aws:secretsmanager:owningService": "appflow"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:*"
+        },
+        {
+          "Action": [
+            "appflow:CreateConnectorProfile",
+            "appflow:DeleteConnectorProfile",
+            "appflow:UpdateConnectorProfile",
+            "appflow:UseConnectorProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:appflow:*:*:connectorprofile/scn-*"
+          ]
+        },
+        {
+          "Action": [
+            "appflow:CreateFlow",
+            "appflow:DeleteFlow",
+            "appflow:DescribeFlow",
+            "appflow:DescribeFlowExecutionRecords",
+            "appflow:ListFlows",
+            "appflow:StartFlow",
+            "appflow:StopFlow",
+            "appflow:TagResource",
+            "appflow:UntagResource",
+            "appflow:UpdateFlow"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:appflow:*:*:flow/scn-*"
+          ]
+        },
+        {
+          "Action": [
+            "chime:DescribeChannel"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:chime:*:*:app-instance/*"
+          ]
+        },
+        {
+          "Action": [
+            "chime:GetMessagingSessionEndpoint"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "kms:ListAliases",
+            "kms:ListKeys"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:GetBucketPolicy",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-supply-chain-data-*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "scn:*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:scn:*:*:instance/*"
+          ]
+        },
+        {
+          "Action": [
+            "sso:AssociateProfile",
+            "sso:DisassociateProfile",
+            "sso:GetManagedApplicationInstance",
+            "sso:GetProfile",
+            "sso:ListDirectoryAssociations",
+            "sso:ListProfiles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-03-01T18:54:25Z"
+}
