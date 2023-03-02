@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMigrationHubStrategyCollector",
   "CreateDate": "2021-10-19T20:15:15Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LHUI3MFF6",
   "PolicyName": "AWSMigrationHubStrategyCollector",
   "PolicyVersion": {
-    "CreateDate": "2022-09-28T00:06:57Z",
+    "CreateDate": "2023-03-02T22:08:23Z",
     "Document": {
       "Statement": [
         {
@@ -37,6 +37,7 @@
         {
           "Action": [
             "s3:GetBucketAcl",
+            "s3:GetObject",
             "s3:PutObject"
           ],
           "Effect": "Allow",
@@ -60,7 +61,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-09-28T00:06:57Z"
+  "UpdateDate": "2023-03-02T22:08:23Z"
 }
