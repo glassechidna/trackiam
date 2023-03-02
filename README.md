@@ -200,11 +200,11 @@ The following table summarises the AWS APIs.
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
 | [`outposts`](services/outposts.yml) | 26 | 0 | 2 |
 | [`states`](services/states.yml) | 26 | 0 | 0 |
+| [`snowball`](services/snowball.yml) | 26 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
 | [`rolesanywhere`](services/rolesanywhere.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
-| [`snowball`](services/snowball.yml) | 25 | 1 | 0 |
 | [`private-networks`](services/private-networks.yml) | 25 | 1 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
 | [`backup-gateway`](services/backup-gateway.yml) | 25 | 0 | 2 |
