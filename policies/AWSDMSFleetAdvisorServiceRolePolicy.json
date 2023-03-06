@@ -1,0 +1,28 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSDMSFleetAdvisorServiceRolePolicy",
+  "CreateDate": "2023-03-06T09:10:42Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4O7FM552GO",
+  "PolicyName": "AWSDMSFleetAdvisorServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-03-06T09:10:42Z",
+    "Document": {
+      "Statement": {
+        "Action": "cloudwatch:PutMetricData",
+        "Condition": {
+          "StringEquals": {
+            "cloudwatch:namespace": "AWS/DMS/FleetAdvisor"
+          }
+        },
+        "Effect": "Allow",
+        "Resource": "*"
+      },
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-03-06T09:10:42Z"
+}

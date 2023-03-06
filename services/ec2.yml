@@ -13,6 +13,7 @@ Actions:
   - Name: ec2:ApplySecurityGroupsToClientVpnTargetNetwork
   - Name: ec2:AssignIpv6Addresses
   - Name: ec2:AssignPrivateIpAddresses
+  - Name: ec2:AssignPrivateNatGatewayAddress
   - Name: ec2:AssociateAddress
   - Name: ec2:AssociateClientVpnTargetNetwork
   - Name: ec2:AssociateDhcpOptions
@@ -20,6 +21,7 @@ Actions:
   - Name: ec2:AssociateIamInstanceProfile
   - Name: ec2:AssociateInstanceEventWindow
   - Name: ec2:AssociateIpamResourceDiscovery
+  - Name: ec2:AssociateNatGatewayAddress
   - Name: ec2:AssociateRouteTable
   - Name: ec2:AssociateSubnetCidrBlock
   - Name: ec2:AssociateTransitGatewayMulticastDomain
@@ -380,6 +382,7 @@ Actions:
   - Name: ec2:DisassociateIamInstanceProfile
   - Name: ec2:DisassociateInstanceEventWindow
   - Name: ec2:DisassociateIpamResourceDiscovery
+  - Name: ec2:DisassociateNatGatewayAddress
   - Name: ec2:DisassociateRouteTable
   - Name: ec2:DisassociateSubnetCidrBlock
   - Name: ec2:DisassociateTransitGatewayMulticastDomain
@@ -580,6 +583,7 @@ Actions:
   - Name: ec2:TerminateInstances
   - Name: ec2:UnassignIpv6Addresses
   - Name: ec2:UnassignPrivateIpAddresses
+  - Name: ec2:UnassignPrivateNatGatewayAddress
   - Name: ec2:UnmonitorInstances
   - Name: ec2:UpdateSecurityGroupRuleDescriptionsEgress
   - Name: ec2:UpdateSecurityGroupRuleDescriptionsIngress
@@ -596,9 +600,3 @@ Actions:
   - Name: ec2:PauseVolumeIO
   - Name: ec2:PutResourcePolicy
   - Name: ec2:SendSpotInstanceInterruptions
-
-  # APIs without an IAM action
-  - Name: ec2:AssignPrivateNatGatewayAddress
-  - Name: ec2:AssociateNatGatewayAddress
-  - Name: ec2:DisassociateNatGatewayAddress
-  - Name: ec2:UnassignPrivateNatGatewayAddress
