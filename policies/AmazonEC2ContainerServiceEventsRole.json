@@ -1,15 +1,27 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceEventsRole",
   "CreateDate": "2017-05-30T16:51:35Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAITKFNIUAG27VSYNZ4",
   "PolicyName": "AmazonEC2ContainerServiceEventsRole",
   "PolicyVersion": {
-    "CreateDate": "2018-05-22T19:13:11Z",
+    "CreateDate": "2023-03-06T22:25:12Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ecs:TagResource",
+          "Condition": {
+            "StringEquals": {
+              "ecs:CreateAction": [
+                "RunTask"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": "iam:PassRole",
           "Condition": {
@@ -35,7 +47,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2018-05-22T19:13:11Z"
+  "UpdateDate": "2023-03-06T22:25:12Z"
 }
