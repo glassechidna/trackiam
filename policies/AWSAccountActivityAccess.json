@@ -1,15 +1,30 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSAccountActivityAccess",
   "CreateDate": "2015-02-06T18:41:18Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJQRYCWMFX5J3E333K",
   "PolicyName": "AWSAccountActivityAccess",
   "PolicyVersion": {
-    "CreateDate": "2015-02-06T18:41:18Z",
+    "CreateDate": "2023-03-07T17:02:30Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "account:GetAccountInformation",
+            "account:GetAlternateContact",
+            "account:GetChallengeQuestions",
+            "account:GetContactInformation",
+            "account:GetRegionOptStatus",
+            "account:ListRegions",
+            "billing:GetIAMAccessPreference",
+            "billing:GetSellerOfRecord",
+            "payments:ListPaymentPreferences"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "aws-portal:ViewBilling"
@@ -20,8 +35,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v1"
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
   },
-  "UpdateDate": "2015-02-06T18:41:18Z"
+  "UpdateDate": "2023-03-07T17:02:30Z"
 }
