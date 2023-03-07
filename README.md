@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 358
-* Unique actions: 14619
+* Unique actions: 14628
 * Managed policies: 1049
 
 Most common managed policy name prefixes:
@@ -72,7 +72,7 @@ The following table summarises the AWS APIs.
 | [`es`](services/es.yml) | 74 | 2 | 10 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 73 | 0 | 1 |
-| [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 0 |
+| [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
 | [`backup`](services/backup.yml) | 72 | 0 | 2 |
 | [`personalize`](services/personalize.yml) | 71 | 0 | 0 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
@@ -307,8 +307,8 @@ The following table summarises the AWS APIs.
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 6 | 0 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 6 | 0 | 0 |
+| [`s3-outposts`](services/s3-outposts.yml) | 5 | 0 | 37 |
 | [`pricing`](services/pricing.yml) | 5 | 0 | 0 |
-| [`s3-outposts`](services/s3-outposts.yml) | 4 | 1 | 29 |
 | [`controltower`](services/controltower.yml) | 4 | 0 | 38 |
 | [`cur`](services/cur.yml) | 4 | 0 | 5 |
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 4 | 0 | 0 |
@@ -399,13 +399,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2278 |
-| `Get` | 2034 |
-| `Delete` | 1679 |
+| `List` | 2279 |
+| `Get` | 2038 |
+| `Delete` | 1681 |
 | `Describe` | 1588 |
 | `Create` | 1562 |
 | `Update` | 1326 |
-| `Put` | 406 |
+| `Put` | 408 |
 | `Start` | 307 |
 | `Tag` | 226 |
 | `Untag` | 224 |

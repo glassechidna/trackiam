@@ -2,6 +2,7 @@ Actions:
   - Name: s3-outposts:CreateEndpoint
   - Name: s3-outposts:DeleteEndpoint
   - Name: s3-outposts:ListEndpoints
+  - Name: s3-outposts:ListOutpostsWithS3
   - Name: s3-outposts:ListSharedEndpoints
 
   # actions with no corresponding API
@@ -14,26 +15,31 @@ Actions:
   - Name: s3-outposts:DeleteBucketPolicy
   - Name: s3-outposts:DeleteObject
   - Name: s3-outposts:DeleteObjectTagging
+  - Name: s3-outposts:DeleteObjectVersion
+  - Name: s3-outposts:DeleteObjectVersionTagging
   - Name: s3-outposts:GetAccessPoint
   - Name: s3-outposts:GetAccessPointPolicy
   - Name: s3-outposts:GetBucket
   - Name: s3-outposts:GetBucketPolicy
   - Name: s3-outposts:GetBucketTagging
+  - Name: s3-outposts:GetBucketVersioning
   - Name: s3-outposts:GetLifecycleConfiguration
   - Name: s3-outposts:GetObject
   - Name: s3-outposts:GetObjectTagging
+  - Name: s3-outposts:GetObjectVersion
+  - Name: s3-outposts:GetObjectVersionTagging
   - Name: s3-outposts:ListAccessPoints
   - Name: s3-outposts:ListBucket
   - Name: s3-outposts:ListBucketMultipartUploads
+  - Name: s3-outposts:ListBucketVersions
   - Name: s3-outposts:ListMultipartUploadParts
   - Name: s3-outposts:ListRegionalBuckets
   - Name: s3-outposts:PutAccessPointPolicy
   - Name: s3-outposts:PutBucketPolicy
   - Name: s3-outposts:PutBucketTagging
+  - Name: s3-outposts:PutBucketVersioning
   - Name: s3-outposts:PutLifecycleConfiguration
   - Name: s3-outposts:PutObject
   - Name: s3-outposts:PutObjectAcl
   - Name: s3-outposts:PutObjectTagging
-
-  # APIs without an IAM action
-  - Name: s3-outposts:ListOutpostsWithS3
+  - Name: s3-outposts:PutObjectVersionTagging
