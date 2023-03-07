@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonConnect_FullAccess",
   "CreateDate": "2020-11-20T19:54:21Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JXAE7KLRO",
   "PolicyName": "AmazonConnect_FullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-11-23T22:05:12Z",
+    "CreateDate": "2023-03-07T14:49:25Z",
     "Document": {
       "Statement": [
         {
@@ -19,6 +19,16 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "profile.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/profile.amazonaws.com/*"
         },
         {
           "Action": "iam:DeleteServiceLinkedRole",
@@ -107,7 +117,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2021-11-23T22:05:12Z"
+  "UpdateDate": "2023-03-07T14:49:25Z"
 }
