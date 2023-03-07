@@ -1,19 +1,32 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPurchaseOrdersServiceRolePolicy",
   "CreateDate": "2020-05-06T18:15:47Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KQXTYO5FP",
   "PolicyName": "AWSPurchaseOrdersServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-11-22T20:06:47Z",
+    "CreateDate": "2023-03-07T22:32:54Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "account:GetAccountInformation",
+            "account:GetContactInformation",
             "aws-portal:*Billing",
-            "purchase-orders:*PurchaseOrders"
+            "payments:GetPaymentInstrument",
+            "payments:ListPaymentPreferences",
+            "purchase-orders:AddPurchaseOrder",
+            "purchase-orders:DeletePurchaseOrder",
+            "purchase-orders:GetPurchaseOrder",
+            "purchase-orders:ListPurchaseOrderInvoices",
+            "purchase-orders:ListPurchaseOrders",
+            "purchase-orders:ModifyPurchaseOrders",
+            "purchase-orders:UpdatePurchaseOrder",
+            "purchase-orders:UpdatePurchaseOrderStatus",
+            "purchase-orders:ViewPurchaseOrders",
+            "tax:ListTaxRegistrations"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -22,7 +35,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-11-22T20:06:47Z"
+  "UpdateDate": "2023-03-07T22:32:54Z"
 }

@@ -1,0 +1,39 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/CustomerProfilesServiceLinkedRolePolicy",
+  "CreateDate": "2023-03-07T22:56:52Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4GN7CNQPYF",
+  "PolicyName": "CustomerProfilesServiceLinkedRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-03-07T22:56:52Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/CustomerProfiles"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:DeleteRole"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/profile.amazonaws.com/AWSServiceRoleForProfile_*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-03-07T22:56:52Z"
+}

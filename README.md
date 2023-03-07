@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 358
-* Unique actions: 14629
-* Managed policies: 1049
+* Unique actions: 14634
+* Managed policies: 1050
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 295 |
 | `arn:aws:iam::aws:policy/Amazon*` | 269 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 230 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 231 |
 | `arn:aws:iam::aws:policy/service-role/*` | 159 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 89 |
@@ -361,6 +361,7 @@ The following table summarises the AWS APIs.
 | [`codeguru-security`](services/codeguru-security.yml) | 0 | 0 | 8 |
 | [`artifact`](services/artifact.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
+| [`wickr`](services/wickr.yml) | 0 | 0 | 7 |
 | [`payments`](services/payments.yml) | 0 | 0 | 7 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
@@ -381,7 +382,6 @@ The following table summarises the AWS APIs.
 | [`identitystore-auth`](services/identitystore-auth.yml) | 0 | 0 | 3 |
 | [`freetier`](services/freetier.yml) | 0 | 0 | 3 |
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |
-| [`wickr`](services/wickr.yml) | 0 | 0 | 2 |
 | [`sumerian`](services/sumerian.yml) | 0 | 0 | 2 |
 | [`consolidatedbilling`](services/consolidatedbilling.yml) | 0 | 0 | 2 |
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
@@ -399,14 +399,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2279 |
+| `List` | 2280 |
 | `Get` | 2038 |
 | `Delete` | 1681 |
 | `Describe` | 1589 |
-| `Create` | 1562 |
-| `Update` | 1326 |
+| `Create` | 1563 |
+| `Update` | 1327 |
 | `Put` | 408 |
 | `Start` | 307 |
-| `Tag` | 226 |
-| `Untag` | 224 |
+| `Tag` | 227 |
+| `Untag` | 225 |
 
