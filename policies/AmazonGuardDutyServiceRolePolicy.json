@@ -1,15 +1,87 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonGuardDutyServiceRolePolicy",
   "CreateDate": "2017-11-28T20:12:59Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIHZREZOWNSSA6FWQO",
   "PolicyName": "AmazonGuardDutyServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-02-21T16:56:23Z",
+    "CreateDate": "2023-03-08T19:59:16Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ec2:CreateSecurityGroup",
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/GuardDutyManaged": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": "GuardDutyManaged"
+            },
+            "StringEquals": {
+              "ec2:CreateAction": "CreateSecurityGroup"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": "GuardDutyManaged"
+            },
+            "StringEquals": {
+              "ec2:CreateAction": "CreateVpcEndpoint"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-endpoint/*"
+        },
+        {
+          "Action": "ec2:CreateVpcEndpoint",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": "GuardDutyManaged"
+            },
+            "StringLike": {
+              "ec2:VpceServiceName": [
+                "com.amazonaws.*.guardduty-data",
+                "com.amazonaws.*.guardduty-data-fips"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-endpoint/*"
+        },
+        {
+          "Action": "eks:CreateAddon",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": "GuardDutyManaged"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:cluster/*"
+        },
+        {
+          "Action": "eks:TagResource",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": "GuardDutyManaged"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:cluster/*"
+        },
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
@@ -22,12 +94,64 @@
         },
         {
           "Action": [
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:DeleteSecurityGroup",
+            "ec2:RevokeSecurityGroupEgress",
+            "ec2:RevokeSecurityGroupIngress"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/GuardDutyManaged": false
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*"
+        },
+        {
+          "Action": [
+            "ec2:DeleteVpcEndpoints",
+            "ec2:ModifyVpcEndpoint"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/GuardDutyManaged": false
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-endpoint/*"
+        },
+        {
+          "Action": "ec2:CreateSecurityGroup",
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc/*"
+        },
+        {
+          "Action": [
+            "ec2:CreateVpcEndpoint",
+            "ec2:ModifyVpcEndpoint"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ]
+        },
+        {
+          "Action": [
             "ec2:DescribeImages",
             "ec2:DescribeInstances",
+            "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
             "ec2:DescribeTransitGatewayAttachments",
+            "ec2:DescribeVpcEndpointServices",
             "ec2:DescribeVpcEndpoints",
             "ec2:DescribeVpcPeeringConnections",
+            "eks:DescribeCluster",
+            "eks:ListClusters",
+            "lambda:GetFunctionConfiguration",
+            "lambda:ListTags",
             "organizations:DescribeAccount",
             "organizations:ListAccounts",
             "s3:GetAccountPublicAccessBlock",
@@ -41,12 +165,21 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "eks:DeleteAddon",
+            "eks:DescribeAddon",
+            "eks:UpdateAddon"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:addon/*/aws-guardduty-agent/*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2023-02-21T16:56:23Z"
+  "UpdateDate": "2023-03-08T19:59:16Z"
 }
