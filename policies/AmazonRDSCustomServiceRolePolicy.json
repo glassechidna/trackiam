@@ -1,15 +1,30 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSCustomServiceRolePolicy",
   "CreateDate": "2021-10-08T21:39:12Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4F2M3XYA7J",
   "PolicyName": "AmazonRDSCustomServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-02-21T23:14:53Z",
+    "CreateDate": "2023-03-08T23:32:54Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ec2:CreateSnapshot",
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/AWSRDSCustom": [
+                "custom-sqlserver"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "eccSnapshot4"
+        },
         {
           "Action": "ec2:CreateSnapshots",
           "Condition": {
@@ -41,6 +56,7 @@
                 "AllocateAddress",
                 "CopySnapshot",
                 "CreateKeyPair",
+                "CreateSnapshot",
                 "CreateSnapshots",
                 "CreateVolume",
                 "RunInstances"
@@ -250,6 +266,7 @@
         {
           "Action": [
             "ec2:CopySnapshot",
+            "ec2:CreateSnapshot",
             "ec2:CreateSnapshots"
           ],
           "Condition": {
@@ -459,6 +476,41 @@
         },
         {
           "Action": [
+            "sqs:CreateQueue",
+            "sqs:TagQueue"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/AWSRDSCustom": [
+                "custom-sqlserver"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sqs:*:*:do-not-delete-rds-custom-*",
+          "Sid": "sqs1"
+        },
+        {
+          "Action": [
+            "sqs:DeleteMessage",
+            "sqs:DeleteQueue",
+            "sqs:GetQueueAttributes",
+            "sqs:ReceiveMessage",
+            "sqs:SendMessage"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/AWSRDSCustom": [
+                "custom-sqlserver"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sqs:*:*:do-not-delete-rds-custom-*",
+          "Sid": "sqs2"
+        },
+        {
+          "Action": [
             "ssm:AddTagsToResource",
             "ssm:PutParameter"
           ],
@@ -594,7 +646,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-02-21T23:14:53Z"
+  "UpdateDate": "2023-03-08T23:32:54Z"
 }
