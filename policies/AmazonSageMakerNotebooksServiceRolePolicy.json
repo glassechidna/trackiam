@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonSageMakerNotebooksServiceRolePolicy",
   "CreateDate": "2019-10-18T20:27:37Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4MYB7OEJED",
   "PolicyName": "AmazonSageMakerNotebooksServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-01-12T20:01:49Z",
+    "CreateDate": "2023-03-09T18:20:35Z",
     "Document": {
       "Statement": [
         {
@@ -30,6 +30,19 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": "elasticfilesystem:TagResource",
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/ManagedByAmazonSageMakerResource": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticfilesystem:*:*:access-point/*",
+            "arn:aws:elasticfilesystem:*:*:file-system/*"
+          ]
         },
         {
           "Action": [
@@ -65,8 +78,7 @@
         },
         {
           "Action": [
-            "elasticfilesystem:DeleteAccessPoint",
-            "elasticfilesystem:DescribeAccessPoints"
+            "elasticfilesystem:DeleteAccessPoint"
           ],
           "Condition": {
             "StringLike": {
@@ -101,6 +113,7 @@
         },
         {
           "Action": [
+            "elasticfilesystem:DescribeAccessPoints",
             "elasticfilesystem:DescribeFileSystems",
             "elasticfilesystem:DescribeMountTargets"
           ],
@@ -128,7 +141,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2023-01-12T20:01:49Z"
+  "UpdateDate": "2023-03-09T18:20:35Z"
 }
