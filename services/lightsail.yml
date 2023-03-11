@@ -21,6 +21,7 @@ Actions:
   - Name: lightsail:CreateDistribution
   - Name: lightsail:CreateDomain
   - Name: lightsail:CreateDomainEntry
+  - Name: lightsail:CreateGUISessionAccessDetails
   - Name: lightsail:CreateInstanceSnapshot
   - Name: lightsail:CreateInstances
   - Name: lightsail:CreateInstancesFromSnapshot
@@ -78,6 +79,7 @@ Actions:
   - Name: lightsail:GetContainerServiceMetricData
   - Name: lightsail:GetContainerServicePowers
   - Name: lightsail:GetContainerServices
+  - Name: lightsail:GetCostEstimate
   - Name: lightsail:GetDisk
   - Name: lightsail:GetDiskSnapshot
   - Name: lightsail:GetDiskSnapshots
@@ -136,8 +138,10 @@ Actions:
   - Name: lightsail:SendContactMethodVerification
   - Name: lightsail:SetIpAddressType
   - Name: lightsail:SetResourceAccessForBucket
+  - Name: lightsail:StartGUISession
   - Name: lightsail:StartInstance
   - Name: lightsail:StartRelationalDatabase
+  - Name: lightsail:StopGUISession
   - Name: lightsail:StopInstance
   - Name: lightsail:StopRelationalDatabase
   - Name: lightsail:TagResource
@@ -154,9 +158,3 @@ Actions:
   - Name: lightsail:UpdateLoadBalancerAttribute
   - Name: lightsail:UpdateRelationalDatabase
   - Name: lightsail:UpdateRelationalDatabaseParameters
-
-  # APIs without an IAM action
-  - Name: lightsail:CreateGUISessionAccessDetails
-  - Name: lightsail:GetCostEstimate
-  - Name: lightsail:StartGUISession
-  - Name: lightsail:StopGUISession
