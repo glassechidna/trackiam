@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForImageBuilder",
   "CreateDate": "2019-11-29T22:02:13Z",
-  "DefaultVersionId": "v17",
+  "DefaultVersionId": "v18",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NE22WISEW",
   "PolicyName": "AWSServiceRoleForImageBuilder",
   "PolicyVersion": {
-    "CreateDate": "2022-06-16T00:09:27Z",
+    "CreateDate": "2023-03-13T20:33:11Z",
     "Document": {
       "Statement": [
         {
@@ -174,6 +174,42 @@
         },
         {
           "Action": [
+            "ecr:BatchDeleteImage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ecr:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecr:*:*:repository/image-builder-*"
+        },
+        {
+          "Action": [
+            "ecr:CreateRepository"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ecr:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecr:*:*:repository/image-builder-*"
+        },
+        {
+          "Action": [
             "kms:Decrypt",
             "kms:Encrypt",
             "kms:GenerateDataKeyWithoutPlaintext",
@@ -312,6 +348,27 @@
         },
         {
           "Action": [
+            "events:DeleteRule",
+            "events:DescribeRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:events:*:*:rule/ImageBuilder-*"
+          ]
+        },
+        {
+          "Action": [
+            "inspector2:ListCoverage",
+            "inspector2:ListFindings"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "license-manager:UpdateLicenseSpecificationsForResource"
           ],
           "Effect": "Allow",
@@ -365,7 +422,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v17"
+    "VersionId": "v18"
   },
-  "UpdateDate": "2022-06-16T00:09:27Z"
+  "UpdateDate": "2023-03-13T20:33:11Z"
 }
