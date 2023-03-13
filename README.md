@@ -40,7 +40,7 @@ The following table summarises the AWS APIs.
 | [`sagemaker`](services/sagemaker.yml) | 315 | 0 | 11 |
 | [`chime`](services/chime.yml) | 220 | 0 | 50 |
 | [`glue`](services/glue.yml) | 198 | 4 | 10 |
-| [`connect`](services/connect.yml) | 170 | 1 | 9 |
+| [`connect`](services/connect.yml) | 171 | 0 | 9 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
 | [`iam`](services/iam.yml) | 158 | 0 | 12 |
 | [`ses`](services/ses.yml) | 143 | 0 | 0 |
