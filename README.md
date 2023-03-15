@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 358
-* Unique actions: 14639
+* Unique actions: 14650
 * Managed policies: 1050
 
 Most common managed policy name prefixes:
@@ -336,13 +336,13 @@ The following table summarises the AWS APIs.
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 33 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 30 |
+| [`chatbot`](services/chatbot.yml) | 0 | 0 | 28 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 23 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 17 |
-| [`chatbot`](services/chatbot.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`billing`](services/billing.yml) | 0 | 0 | 13 |
@@ -399,12 +399,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2280 |
-| `Get` | 2041 |
-| `Delete` | 1681 |
+| `List` | 2283 |
+| `Get` | 2043 |
+| `Delete` | 1684 |
 | `Describe` | 1589 |
-| `Create` | 1563 |
-| `Update` | 1328 |
+| `Create` | 1564 |
+| `Update` | 1329 |
 | `Put` | 408 |
 | `Start` | 307 |
 | `Tag` | 227 |
