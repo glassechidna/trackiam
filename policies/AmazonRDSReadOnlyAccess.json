@@ -1,18 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess",
   "CreateDate": "2015-02-06T18:40:53Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJKTTTYV2IIHKLZ346",
   "PolicyName": "AmazonRDSReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-12-19T20:44:13Z",
+    "CreateDate": "2023-03-15T14:02:16Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics",
             "devops-guru:GetResourceCollection",
             "logs:DescribeLogStreams",
             "logs:GetLogEvents"
@@ -39,7 +40,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2022-12-19T20:44:13Z"
+  "UpdateDate": "2023-03-15T14:02:16Z"
 }
