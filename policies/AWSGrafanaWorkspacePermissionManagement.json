@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSGrafanaWorkspacePermissionManagement",
   "CreateDate": "2021-02-23T00:15:54Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4G37QQNGZW",
   "PolicyName": "AWSGrafanaWorkspacePermissionManagement",
   "PolicyVersion": {
-    "CreateDate": "2022-12-20T20:27:55Z",
+    "CreateDate": "2023-03-15T22:17:26Z",
     "Document": {
       "Statement": [
         {
@@ -24,6 +24,8 @@
         },
         {
           "Action": [
+            "sso-directory:DescribeGroup",
+            "sso-directory:DescribeUser",
             "sso:AssociateProfile",
             "sso:DescribeRegisteredRegions",
             "sso:DisassociateProfile",
@@ -42,7 +44,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2022-12-20T20:27:55Z"
+  "UpdateDate": "2023-03-15T22:17:26Z"
 }
