@@ -1,18 +1,21 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCompromisedKeyQuarantineV2",
   "CreateDate": "2021-04-21T22:30:59Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4PFYMROIMI",
   "PolicyName": "AWSCompromisedKeyQuarantineV2",
   "PolicyVersion": {
-    "CreateDate": "2022-08-10T21:15:53Z",
+    "CreateDate": "2023-03-16T00:20:25Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "cloudtrail:LookupEvents",
+            "ec2:AcceptReservedInstancesExchangeQuote",
+            "ec2:CreateReservedInstancesListing",
+            "ec2:PurchaseReservedInstancesOffering",
             "ec2:RequestSpotInstances",
             "ec2:RunInstances",
             "ec2:StartInstances",
@@ -67,7 +70,8 @@
             "s3:PutBucketAcl",
             "s3:PutBucketOwnershipControls",
             "s3:PutBucketPolicy",
-            "s3:PutLifecycleConfiguration"
+            "s3:PutLifecycleConfiguration",
+            "savingsplans:CreateSavingsPlan"
           ],
           "Effect": "Deny",
           "Resource": [
@@ -78,7 +82,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2022-08-10T21:15:53Z"
+  "UpdateDate": "2023-03-16T00:20:25Z"
 }
