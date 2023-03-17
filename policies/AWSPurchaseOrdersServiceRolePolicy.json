@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPurchaseOrdersServiceRolePolicy",
   "CreateDate": "2020-05-06T18:15:47Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KQXTYO5FP",
   "PolicyName": "AWSPurchaseOrdersServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-03-07T22:32:54Z",
+    "CreateDate": "2023-03-17T19:07:53Z",
     "Document": {
       "Statement": [
         {
@@ -15,6 +15,8 @@
             "account:GetAccountInformation",
             "account:GetContactInformation",
             "aws-portal:*Billing",
+            "consolidatedbilling:GetAccountBillingRole",
+            "invoicing:GetInvoicePDF",
             "payments:GetPaymentInstrument",
             "payments:ListPaymentPreferences",
             "purchase-orders:AddPurchaseOrder",
@@ -35,7 +37,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-03-07T22:32:54Z"
+  "UpdateDate": "2023-03-17T19:07:53Z"
 }
