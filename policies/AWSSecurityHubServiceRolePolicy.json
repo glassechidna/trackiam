@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSecurityHubServiceRolePolicy",
   "CreateDate": "2018-11-27T23:47:51Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJQPCESDDYDLLSOGYO",
   "PolicyName": "AWSSecurityHubServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-07-14T20:32:48Z",
+    "CreateDate": "2023-03-17T23:50:43Z",
     "Document": {
       "Statement": [
         {
@@ -18,6 +18,7 @@
             "cloudwatch:DescribeAlarms",
             "cloudwatch:DescribeAlarmsForMetric",
             "config:BatchGetResourceConfig",
+            "config:DescribeConfigRuleEvaluationStatus",
             "config:DescribeConfigRules",
             "config:DescribeConfigurationRecorderStatus",
             "config:DescribeConfigurationRecorders",
@@ -37,7 +38,6 @@
         {
           "Action": [
             "config:DeleteConfigRule",
-            "config:DescribeConfigRuleEvaluationStatus",
             "config:GetComplianceDetailsByConfigRule",
             "config:PutConfigRule"
           ],
@@ -48,7 +48,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2021-07-14T20:32:48Z"
+  "UpdateDate": "2023-03-17T23:50:43Z"
 }
