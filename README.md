@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 358
-* Unique actions: 14660
+* Unique actions: 14661
 * Managed policies: 1050
 
 Most common managed policy name prefixes:
@@ -104,8 +104,8 @@ The following table summarises the AWS APIs.
 | [`mgn`](services/mgn.yml) | 55 | 0 | 40 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
+| [`elasticmapreduce`](services/elasticmapreduce.yml) | 53 | 0 | 26 |
 | [`dynamodb`](services/dynamodb.yml) | 52 | 5 | 13 |
-| [`elasticmapreduce`](services/elasticmapreduce.yml) | 52 | 1 | 26 |
 | [`resiliencehub`](services/resiliencehub.yml) | 52 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 51 | 0 | 2 |
 | [`workspaces-web`](services/workspaces-web.yml) | 51 | 0 | 0 |
@@ -328,7 +328,7 @@ The following table summarises the AWS APIs.
 | [`macie`](services/macie.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
-| [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 65 |
+| [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 66 |
 | [`iq`](services/iq.yml) | 0 | 0 | 54 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 0 | 0 | 51 |
@@ -400,7 +400,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2288 |
-| `Get` | 2043 |
+| `Get` | 2044 |
 | `Delete` | 1684 |
 | `Describe` | 1590 |
 | `Create` | 1564 |
