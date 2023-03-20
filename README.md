@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 358
-* Unique actions: 14661
+* Unique actions: 14665
 * Managed policies: 1050
 
 Most common managed policy name prefixes:
@@ -127,7 +127,7 @@ The following table summarises the AWS APIs.
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
-| [`workdocs`](services/workdocs.yml) | 43 | 0 | 14 |
+| [`workdocs`](services/workdocs.yml) | 43 | 1 | 14 |
 | [`transcribe`](services/transcribe.yml) | 42 | 0 | 3 |
 | [`wellarchitected`](services/wellarchitected.yml) | 42 | 0 | 0 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
@@ -203,9 +203,9 @@ The following table summarises the AWS APIs.
 | [`snowball`](services/snowball.yml) | 26 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
 | [`rolesanywhere`](services/rolesanywhere.yml) | 26 | 0 | 0 |
+| [`private-networks`](services/private-networks.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
-| [`private-networks`](services/private-networks.yml) | 25 | 1 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
 | [`backup-gateway`](services/backup-gateway.yml) | 25 | 0 | 2 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 1 |
@@ -279,13 +279,13 @@ The following table summarises the AWS APIs.
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 11 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
+| [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 3 | 0 |
 | [`supportapp`](services/supportapp.yml) | 10 | 0 | 3 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
 | [`rbin`](services/rbin.yml) | 10 | 0 | 0 |
 | [`pipes`](services/pipes.yml) | 10 | 0 | 0 |
 | [`internetmonitor`](services/internetmonitor.yml) | 10 | 0 | 0 |
-| [`application-autoscaling`](services/application-autoscaling.yml) | 10 | 0 | 0 |
 | [`account`](services/account.yml) | 9 | 0 | 4 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
@@ -399,7 +399,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2288 |
+| `List` | 2289 |
 | `Get` | 2044 |
 | `Delete` | 1684 |
 | `Describe` | 1590 |
@@ -407,6 +407,6 @@ Most common action prefixes:
 | `Update` | 1329 |
 | `Put` | 408 |
 | `Start` | 309 |
-| `Tag` | 227 |
-| `Untag` | 225 |
+| `Tag` | 228 |
+| `Untag` | 226 |
 
