@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSApplicationMigrationFullAccess",
   "CreateDate": "2021-04-07T06:56:05Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HPQNMM2HL",
   "PolicyName": "AWSApplicationMigrationFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-08-11T16:08:08Z",
+    "CreateDate": "2023-03-20T10:43:04Z",
     "Document": {
       "Statement": [
         {
@@ -43,7 +43,8 @@
         },
         {
           "Action": [
-            "ssm:DescribeDocument"
+            "ssm:DescribeDocument",
+            "ssm:SendCommand"
           ],
           "Condition": {
             "Bool": {
@@ -53,8 +54,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ssm:*:*:document/AWSDisasterRecovery-InstallDRAgentOnInstance",
-            "arn:aws:ssm:*:*:document/AWSMigration-ConvertCentOsToRockyLinuxDistribution",
-            "arn:aws:ssm:*:*:document/AWSMigration-ReplaceSuseSubscriptionWithAwsSubscription"
+            "arn:aws:ssm:*:*:document/AWSMigration-*"
           ]
         },
         {
@@ -72,19 +72,15 @@
         },
         {
           "Action": [
-            "ssm:SendCommand"
+            "ssm:GetParameters"
           ],
           "Condition": {
-            "Bool": {
-              "aws:ViaAWSService": "true"
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "ssm.amazonaws.com"
             }
           },
           "Effect": "Allow",
-          "Resource": [
-            "arn:aws:ssm:*:*:document/AWSDisasterRecovery-InstallDRAgentOnInstance",
-            "arn:aws:ssm:*:*:document/AWSMigration-ConvertCentOsToRockyLinuxDistribution",
-            "arn:aws:ssm:*:*:document/AWSMigration-ReplaceSuseSubscriptionWithAwsSubscription"
-          ]
+          "Resource": "arn:aws:ssm:*:*:parameter/ManagedByAWSApplicationMigrationService-*"
         },
         {
           "Action": [
@@ -102,6 +98,18 @@
           "Resource": [
             "arn:aws:ec2:*:*:instance/*"
           ]
+        },
+        {
+          "Action": [
+            "ssm:StartAutomationExecution"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "mgn.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:automation-definition/AWSMigration-*:$DEFAULT"
         },
         {
           "Action": "elasticloadbalancing:DescribeLoadBalancers",
@@ -175,6 +183,23 @@
         },
         {
           "Action": [
+            "ssm:GetAutomationExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:automation-execution/*"
+        },
+        {
+          "Action": [
+            "ssm:GetDocument"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/AWSDisasterRecovery-InstallDRAgentOnInstance",
+            "arn:aws:ssm:*:*:document/AWSMigration-*"
+          ]
+        },
+        {
+          "Action": [
             "ssm:GetParameter",
             "ssm:PutParameter"
           ],
@@ -192,7 +217,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2022-08-11T16:08:08Z"
+  "UpdateDate": "2023-03-20T10:43:04Z"
 }
