@@ -1,0 +1,54 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSDataSyncDiscoveryServiceRolePolicy",
+  "CreateDate": "2023-03-20T22:19:51Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4JEPXXLDSV",
+  "PolicyName": "AWSDataSyncDiscoveryServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-03-20T22:19:51Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "secretsmanager:GetSecretValue"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "secretsmanager:ResourceTag/aws:secretsmanager:owningService": "datasync"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:secretsmanager:*:*:secret:datasync!*"
+          ]
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:logs:*:*:log-group:/aws/datasync*"
+          ]
+        },
+        {
+          "Action": [
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:logs:*:*:log-group:/aws/datasync:log-stream:*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-03-20T22:19:51Z"
+}
