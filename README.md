@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 358
-* Unique actions: 14668
+* Unique actions: 14671
 * Managed policies: 1053
 
 Most common managed policy name prefixes:
@@ -38,7 +38,7 @@ The following table summarises the AWS APIs.
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 589 | 0 | 10 |
 | [`sagemaker`](services/sagemaker.yml) | 315 | 0 | 11 |
-| [`chime`](services/chime.yml) | 220 | 0 | 50 |
+| [`chime`](services/chime.yml) | 220 | 3 | 50 |
 | [`glue`](services/glue.yml) | 198 | 4 | 10 |
 | [`connect`](services/connect.yml) | 171 | 0 | 9 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
@@ -91,6 +91,7 @@ The following table summarises the AWS APIs.
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`rekognition`](services/rekognition.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
+| [`mgn`](services/mgn.yml) | 61 | 0 | 34 |
 | [`securityhub`](services/securityhub.yml) | 61 | 0 | 9 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
 | [`athena`](services/athena.yml) | 60 | 0 | 1 |
@@ -101,7 +102,6 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 56 | 0 | 2 |
 | [`events`](services/events.yml) | 56 | 0 | 1 |
 | [`kendra`](services/kendra.yml) | 55 | 5 | 0 |
-| [`mgn`](services/mgn.yml) | 55 | 0 | 40 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 53 | 0 | 26 |
@@ -149,6 +149,7 @@ The following table summarises the AWS APIs.
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`ce`](services/ce.yml) | 37 | 0 | 10 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
+| [`cleanrooms`](services/cleanrooms.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 36 | 0 | 0 |
@@ -156,7 +157,6 @@ The following table summarises the AWS APIs.
 | [`apprunner`](services/apprunner.yml) | 35 | 0 | 5 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`eks`](services/eks.yml) | 35 | 0 | 1 |
-| [`cleanrooms`](services/cleanrooms.yml) | 34 | 0 | 3 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
 | [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 34 | 0 | 0 |
@@ -400,12 +400,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2290 |
-| `Get` | 2044 |
-| `Delete` | 1684 |
+| `Get` | 2045 |
+| `Delete` | 1685 |
 | `Describe` | 1590 |
 | `Create` | 1564 |
 | `Update` | 1329 |
-| `Put` | 408 |
+| `Put` | 409 |
 | `Start` | 309 |
 | `Tag` | 229 |
 | `Untag` | 227 |
