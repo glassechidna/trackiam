@@ -1,0 +1,30 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/MediaConnectGatewayInstanceRolePolicy",
+  "CreateDate": "2023-03-22T20:43:25Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4HUF2QANLS",
+  "PolicyName": "MediaConnectGatewayInstanceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-03-22T20:43:25Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "mediaconnect:DiscoverGatewayPollEndpoint",
+            "mediaconnect:PollGateway",
+            "mediaconnect:SubmitGatewayStateChange"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MediaConnectGateway"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-03-22T20:43:25Z"
+}
