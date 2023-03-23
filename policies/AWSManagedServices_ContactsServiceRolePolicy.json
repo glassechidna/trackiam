@@ -1,0 +1,44 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSManagedServices_ContactsServiceRolePolicy",
+  "CreateDate": "2023-03-23T17:07:46Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4OWIC4KQFJ",
+  "PolicyName": "AWSManagedServices_ContactsServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-03-23T17:07:46Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "s3:GetBucketTagging",
+          "Condition": {
+            "NumericGreaterThanEquals": {
+              "s3:TlsVersion": "1.2"
+            },
+            "StringEquals": {
+              "s3:authType": "REST-HEADER",
+              "s3:signatureversion": "AWS4-HMAC-SHA256"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeTags",
+            "iam:ListRoleTags",
+            "iam:ListUserTags",
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-03-23T17:07:46Z"
+}
