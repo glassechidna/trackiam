@@ -17,6 +17,7 @@ Actions:
   - Name: chime:CreateAccount
   - Name: chime:CreateAppInstance
   - Name: chime:CreateAppInstanceAdmin
+  - Name: chime:CreateAppInstanceBot
   - Name: chime:CreateAppInstanceUser
   - Name: chime:CreateAttendee
   - Name: chime:CreateBot
@@ -27,6 +28,8 @@ Actions:
   - Name: chime:CreateChannelModerator
   - Name: chime:CreateMediaCapturePipeline
   - Name: chime:CreateMediaConcatenationPipeline
+  - Name: chime:CreateMediaInsightsPipeline
+  - Name: chime:CreateMediaInsightsPipelineConfiguration
   - Name: chime:CreateMediaLiveConnectorPipeline
   - Name: chime:CreateMeeting
   - Name: chime:CreateMeetingDialOut
@@ -41,9 +44,12 @@ Actions:
   - Name: chime:CreateUser
   - Name: chime:CreateVoiceConnector
   - Name: chime:CreateVoiceConnectorGroup
+  - Name: chime:CreateVoiceProfile
+  - Name: chime:CreateVoiceProfileDomain
   - Name: chime:DeleteAccount
   - Name: chime:DeleteAppInstance
   - Name: chime:DeleteAppInstanceAdmin
+  - Name: chime:DeleteAppInstanceBot
   - Name: chime:DeleteAppInstanceStreamingConfigurations
   - Name: chime:DeleteAppInstanceUser
   - Name: chime:DeleteAttendee
@@ -55,8 +61,10 @@ Actions:
   - Name: chime:DeleteChannelModerator
   - Name: chime:DeleteEventsConfiguration
   - Name: chime:DeleteMediaCapturePipeline
+  - Name: chime:DeleteMediaInsightsPipelineConfiguration
   - Name: chime:DeleteMediaPipeline
   - Name: chime:DeleteMeeting
+  - Name: chime:DeleteMessagingStreamingConfigurations
   - Name: chime:DeletePhoneNumber
   - Name: chime:DeleteProxySession
   - Name: chime:DeleteRoom
@@ -71,9 +79,12 @@ Actions:
   - Name: chime:DeleteVoiceConnectorStreamingConfiguration
   - Name: chime:DeleteVoiceConnectorTermination
   - Name: chime:DeleteVoiceConnectorTerminationCredentials
+  - Name: chime:DeleteVoiceProfile
+  - Name: chime:DeleteVoiceProfileDomain
   - Name: chime:DeregisterAppInstanceUserEndpoint
   - Name: chime:DescribeAppInstance
   - Name: chime:DescribeAppInstanceAdmin
+  - Name: chime:DescribeAppInstanceBot
   - Name: chime:DescribeAppInstanceUser
   - Name: chime:DescribeAppInstanceUserEndpoint
   - Name: chime:DescribeChannel
@@ -100,9 +111,11 @@ Actions:
   - Name: chime:GetEventsConfiguration
   - Name: chime:GetGlobalSettings
   - Name: chime:GetMediaCapturePipeline
+  - Name: chime:GetMediaInsightsPipelineConfiguration
   - Name: chime:GetMediaPipeline
   - Name: chime:GetMeeting
   - Name: chime:GetMessagingSessionEndpoint
+  - Name: chime:GetMessagingStreamingConfigurations
   - Name: chime:GetPhoneNumber
   - Name: chime:GetPhoneNumberOrder
   - Name: chime:GetPhoneNumberSettings
@@ -113,6 +126,7 @@ Actions:
   - Name: chime:GetSipMediaApplicationAlexaSkillConfiguration
   - Name: chime:GetSipMediaApplicationLoggingConfiguration
   - Name: chime:GetSipRule
+  - Name: chime:GetSpeakerSearchTask
   - Name: chime:GetUser
   - Name: chime:GetUserSettings
   - Name: chime:GetVoiceConnector
@@ -124,9 +138,13 @@ Actions:
   - Name: chime:GetVoiceConnectorStreamingConfiguration
   - Name: chime:GetVoiceConnectorTermination
   - Name: chime:GetVoiceConnectorTerminationHealth
+  - Name: chime:GetVoiceProfile
+  - Name: chime:GetVoiceProfileDomain
+  - Name: chime:GetVoiceToneAnalysisTask
   - Name: chime:InviteUsers
   - Name: chime:ListAccounts
   - Name: chime:ListAppInstanceAdmins
+  - Name: chime:ListAppInstanceBots
   - Name: chime:ListAppInstanceUserEndpoints
   - Name: chime:ListAppInstanceUsers
   - Name: chime:ListAppInstances
@@ -144,6 +162,7 @@ Actions:
   - Name: chime:ListChannelsAssociatedWithChannelFlow
   - Name: chime:ListChannelsModeratedByAppInstanceUser
   - Name: chime:ListMediaCapturePipelines
+  - Name: chime:ListMediaInsightsPipelineConfigurations
   - Name: chime:ListMediaPipelines
   - Name: chime:ListMeetingTags
   - Name: chime:ListMeetings
@@ -161,11 +180,16 @@ Actions:
   - Name: chime:ListVoiceConnectorGroups
   - Name: chime:ListVoiceConnectorTerminationCredentials
   - Name: chime:ListVoiceConnectors
+  - Name: chime:ListVoiceProfileDomains
+  - Name: chime:ListVoiceProfiles
   - Name: chime:LogoutUser
   - Name: chime:PutAppInstanceRetentionSettings
   - Name: chime:PutAppInstanceStreamingConfigurations
+  - Name: chime:PutAppInstanceUserExpirationSettings
+  - Name: chime:PutChannelExpirationSettings
   - Name: chime:PutChannelMembershipPreferences
   - Name: chime:PutEventsConfiguration
+  - Name: chime:PutMessagingStreamingConfigurations
   - Name: chime:PutRetentionSettings
   - Name: chime:PutSipMediaApplicationAlexaSkillConfiguration
   - Name: chime:PutSipMediaApplicationLoggingConfiguration
@@ -187,7 +211,11 @@ Actions:
   - Name: chime:SearchChannels
   - Name: chime:SendChannelMessage
   - Name: chime:StartMeetingTranscription
+  - Name: chime:StartSpeakerSearchTask
+  - Name: chime:StartVoiceToneAnalysisTask
   - Name: chime:StopMeetingTranscription
+  - Name: chime:StopSpeakerSearchTask
+  - Name: chime:StopVoiceToneAnalysisTask
   - Name: chime:TagAttendee
   - Name: chime:TagMeeting
   - Name: chime:TagResource
@@ -197,6 +225,7 @@ Actions:
   - Name: chime:UpdateAccount
   - Name: chime:UpdateAccountSettings
   - Name: chime:UpdateAppInstance
+  - Name: chime:UpdateAppInstanceBot
   - Name: chime:UpdateAppInstanceUser
   - Name: chime:UpdateAppInstanceUserEndpoint
   - Name: chime:UpdateAttendeeCapabilities
@@ -206,6 +235,8 @@ Actions:
   - Name: chime:UpdateChannelMessage
   - Name: chime:UpdateChannelReadMarker
   - Name: chime:UpdateGlobalSettings
+  - Name: chime:UpdateMediaInsightsPipelineConfiguration
+  - Name: chime:UpdateMediaInsightsPipelineStatus
   - Name: chime:UpdatePhoneNumber
   - Name: chime:UpdatePhoneNumberSettings
   - Name: chime:UpdateProxySession
@@ -218,6 +249,8 @@ Actions:
   - Name: chime:UpdateUserSettings
   - Name: chime:UpdateVoiceConnector
   - Name: chime:UpdateVoiceConnectorGroup
+  - Name: chime:UpdateVoiceProfile
+  - Name: chime:UpdateVoiceProfileDomain
   - Name: chime:ValidateE911Address
 
   # actions with no corresponding API
@@ -271,8 +304,3 @@ Actions:
   - Name: chime:UpdateSupportedLicenses
   - Name: chime:UpdateUserLicenses
   - Name: chime:ValidateAccountResource
-
-  # APIs without an IAM action
-  - Name: chime:DeleteMessagingStreamingConfigurations
-  - Name: chime:GetMessagingStreamingConfigurations
-  - Name: chime:PutMessagingStreamingConfigurations

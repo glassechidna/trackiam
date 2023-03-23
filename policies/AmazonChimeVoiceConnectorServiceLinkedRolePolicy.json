@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonChimeVoiceConnectorServiceLinkedRolePolicy",
   "CreateDate": "2019-09-30T22:16:42Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4GP44ZBY4P",
   "PolicyName": "AmazonChimeVoiceConnectorServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-03-17T16:18:11Z",
+    "CreateDate": "2023-03-23T19:39:40Z",
     "Document": {
       "Statement": [
         {
@@ -17,6 +17,15 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:sns:*:*:ChimeVoiceConnector-Streaming*"
+          ]
+        },
+        {
+          "Action": [
+            "chime:CreateMediaInsightsPipeline"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
           ]
         },
         {
@@ -72,7 +81,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2022-03-17T16:18:11Z"
+  "UpdateDate": "2023-03-23T19:39:40Z"
 }

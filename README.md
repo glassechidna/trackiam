@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 358
-* Unique actions: 14680
+* Unique actions: 14712
 * Managed policies: 1055
 
 Most common managed policy name prefixes:
@@ -37,8 +37,8 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 589 | 0 | 10 |
-| [`sagemaker`](services/sagemaker.yml) | 315 | 0 | 11 |
-| [`chime`](services/chime.yml) | 220 | 3 | 50 |
+| [`sagemaker`](services/sagemaker.yml) | 315 | 2 | 11 |
+| [`chime`](services/chime.yml) | 253 | 0 | 50 |
 | [`glue`](services/glue.yml) | 198 | 4 | 12 |
 | [`connect`](services/connect.yml) | 171 | 0 | 9 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
@@ -157,6 +157,7 @@ The following table summarises the AWS APIs.
 | [`apprunner`](services/apprunner.yml) | 35 | 0 | 5 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`eks`](services/eks.yml) | 35 | 0 | 1 |
+| [`ivs`](services/ivs.yml) | 35 | 0 | 0 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
 | [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 34 | 0 | 0 |
@@ -189,7 +190,6 @@ The following table summarises the AWS APIs.
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
-| [`ivs`](services/ivs.yml) | 28 | 0 | 7 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 28 | 0 | 3 |
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
@@ -399,14 +399,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2291 |
-| `Get` | 2047 |
-| `Delete` | 1686 |
-| `Describe` | 1590 |
-| `Create` | 1566 |
-| `Update` | 1330 |
-| `Put` | 409 |
-| `Start` | 309 |
+| `List` | 2295 |
+| `Get` | 2052 |
+| `Delete` | 1690 |
+| `Describe` | 1592 |
+| `Create` | 1572 |
+| `Update` | 1335 |
+| `Put` | 411 |
+| `Start` | 311 |
 | `Tag` | 229 |
 | `Untag` | 227 |
 

@@ -2,15 +2,20 @@ Actions:
   - Name: ivs:BatchGetChannel
   - Name: ivs:BatchGetStreamKey
   - Name: ivs:CreateChannel
+  - Name: ivs:CreateParticipantToken
   - Name: ivs:CreateRecordingConfiguration
+  - Name: ivs:CreateStage
   - Name: ivs:CreateStreamKey
   - Name: ivs:DeleteChannel
   - Name: ivs:DeletePlaybackKeyPair
   - Name: ivs:DeleteRecordingConfiguration
+  - Name: ivs:DeleteStage
   - Name: ivs:DeleteStreamKey
+  - Name: ivs:DisconnectParticipant
   - Name: ivs:GetChannel
   - Name: ivs:GetPlaybackKeyPair
   - Name: ivs:GetRecordingConfiguration
+  - Name: ivs:GetStage
   - Name: ivs:GetStream
   - Name: ivs:GetStreamKey
   - Name: ivs:GetStreamSession
@@ -18,6 +23,7 @@ Actions:
   - Name: ivs:ListChannels
   - Name: ivs:ListPlaybackKeyPairs
   - Name: ivs:ListRecordingConfigurations
+  - Name: ivs:ListStages
   - Name: ivs:ListStreamKeys
   - Name: ivs:ListStreamSessions
   - Name: ivs:ListStreams
@@ -27,12 +33,4 @@ Actions:
   - Name: ivs:TagResource
   - Name: ivs:UntagResource
   - Name: ivs:UpdateChannel
-
-  # actions with no corresponding API
-  - Name: ivs:CreateParticipantToken
-  - Name: ivs:CreateStage
-  - Name: ivs:DeleteStage
-  - Name: ivs:DisconnectParticipant
-  - Name: ivs:GetStage
-  - Name: ivs:ListStages
   - Name: ivs:UpdateStage
