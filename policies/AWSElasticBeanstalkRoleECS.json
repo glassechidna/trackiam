@@ -1,15 +1,31 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkRoleECS",
   "CreateDate": "2020-06-05T21:47:27Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4ORP4E3ZEZ",
   "PolicyName": "AWSElasticBeanstalkRoleECS",
   "PolicyVersion": {
-    "CreateDate": "2020-06-05T21:47:27Z",
+    "CreateDate": "2023-03-23T22:43:56Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "ecs:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ecs:CreateAction": [
+                "CreateCluster",
+                "RegisterTaskDefinition"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowECSTagResource"
+        },
         {
           "Action": [
             "ecs:CreateCluster",
@@ -27,7 +43,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-06-05T21:47:27Z"
+  "UpdateDate": "2023-03-23T22:43:56Z"
 }

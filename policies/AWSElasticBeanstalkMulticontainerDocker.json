@@ -1,15 +1,31 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticBeanstalkMulticontainerDocker",
   "CreateDate": "2016-02-08T23:15:29Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ45SBYG72SD6SHJEY",
   "PolicyName": "AWSElasticBeanstalkMulticontainerDocker",
   "PolicyVersion": {
-    "CreateDate": "2016-06-06T23:45:37Z",
+    "CreateDate": "2023-03-23T22:04:20Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "ecs:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ecs:CreateAction": [
+                "RegisterContainerInstance",
+                "StartTask"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowECSTagResource"
+        },
         {
           "Action": [
             "ecs:DeregisterContainerInstance",
@@ -31,7 +47,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2016-06-06T23:45:37Z"
+  "UpdateDate": "2023-03-23T22:04:20Z"
 }

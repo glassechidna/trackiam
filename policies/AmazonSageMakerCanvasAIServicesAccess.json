@@ -1,0 +1,54 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerCanvasAIServicesAccess",
+  "CreateDate": "2023-03-23T22:36:43Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4IA6MZINCJ",
+  "PolicyName": "AmazonSageMakerCanvasAIServicesAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-03-23T22:36:43Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "comprehend:BatchDetectDominantLanguage",
+            "comprehend:BatchDetectEntities",
+            "comprehend:BatchDetectSentiment",
+            "comprehend:DetectDominantLanguage",
+            "comprehend:DetectEntities",
+            "comprehend:DetectPiiEntities",
+            "comprehend:DetectSentiment"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "rekognition:DetectLabels",
+            "rekognition:DetectText"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "textract:AnalyzeDocument",
+            "textract:AnalyzeExpense",
+            "textract:AnalyzeID",
+            "textract:GetDocumentAnalysis",
+            "textract:GetExpenseAnalysis",
+            "textract:StartDocumentAnalysis",
+            "textract:StartExpenseAnalysis"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-03-23T22:36:43Z"
+}
