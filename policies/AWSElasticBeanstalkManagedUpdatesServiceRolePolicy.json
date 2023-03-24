@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSElasticBeanstalkManagedUpdatesServiceRolePolicy",
   "CreateDate": "2019-11-21T22:35:06Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4HVFNJB4NR",
   "PolicyName": "AWSElasticBeanstalkManagedUpdatesServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-01-27T20:23:38Z",
+    "CreateDate": "2023-03-24T00:18:43Z",
     "Document": {
       "Statement": [
         {
@@ -54,6 +54,21 @@
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*:*:instance/*",
           "Sid": "EC2"
+        },
+        {
+          "Action": [
+            "ecs:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ecs:CreateAction": [
+                "RegisterTaskDefinition"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowECSTagResource"
         },
         {
           "Action": [
@@ -219,7 +234,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2023-01-27T20:23:38Z"
+  "UpdateDate": "2023-03-24T00:18:43Z"
 }
