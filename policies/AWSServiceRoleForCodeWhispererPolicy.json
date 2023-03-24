@@ -1,0 +1,73 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForCodeWhispererPolicy",
+  "CreateDate": "2023-03-24T19:39:12Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4MTPH2EDJ3",
+  "PolicyName": "AWSServiceRoleForCodeWhispererPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-03-24T19:39:12Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": [
+                "AWS/CodeWhisperer"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "codeguru-security:CreateScan",
+            "codeguru-security:GetScan",
+            "codeguru-security:ListFindings"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:codeguru-security:*:*:scans/CodeWhisperer-*"
+          ]
+        },
+        {
+          "Action": [
+            "codeguru-security:CreateUploadUrl"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "sso-directory:ListMembersInGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "sso:ListProfileAssociations",
+            "sso:ListProfiles"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-03-24T19:39:12Z"
+}
