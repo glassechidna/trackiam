@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerCanvasFullAccess",
   "CreateDate": "2022-09-09T00:44:25Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LG6L7ZJCN",
   "PolicyName": "AmazonSageMakerCanvasFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-12-06T23:10:32Z",
+    "CreateDate": "2023-03-24T15:28:26Z",
     "Document": {
       "Statement": [
         {
@@ -46,6 +46,15 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": "glue:SearchTables",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:catalog",
+            "arn:aws:glue:*:*:database/*",
+            "arn:aws:glue:*:*:table/*/*"
+          ]
         },
         {
           "Action": [
@@ -169,6 +178,7 @@
           "Action": [
             "sagemaker:AddTags",
             "sagemaker:CreateAutoMLJob",
+            "sagemaker:CreateAutoMLJobV2",
             "sagemaker:CreateCompilationJob",
             "sagemaker:CreateEndpoint",
             "sagemaker:CreateEndpointConfig",
@@ -177,6 +187,7 @@
             "sagemaker:DeleteApp",
             "sagemaker:DeleteEndpoint",
             "sagemaker:DescribeAutoMLJob",
+            "sagemaker:DescribeAutoMLJobV2",
             "sagemaker:DescribeCompilationJob",
             "sagemaker:DescribeEndpoint",
             "sagemaker:DescribeEndpointConfig",
@@ -216,7 +227,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-12-06T23:10:32Z"
+  "UpdateDate": "2023-03-24T15:28:26Z"
 }
