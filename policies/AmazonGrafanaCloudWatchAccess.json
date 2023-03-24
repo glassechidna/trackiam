@@ -1,0 +1,67 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonGrafanaCloudWatchAccess",
+  "CreateDate": "2023-03-24T22:41:53Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4NIUWOK5KU",
+  "PolicyName": "AmazonGrafanaCloudWatchAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-03-24T22:41:53Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "tag:GetResources",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarmHistory",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:DescribeAlarmsForMetric",
+            "cloudwatch:GetInsightRuleReport",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstances",
+            "ec2:DescribeRegions",
+            "ec2:DescribeTags"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogGroups",
+            "logs:GetLogEvents",
+            "logs:GetLogGroupFields",
+            "logs:GetQueryResults",
+            "logs:StartQuery",
+            "logs:StopQuery"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "oam:ListAttachedLinks",
+            "oam:ListSinks"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-03-24T22:41:53Z"
+}
