@@ -166,6 +166,7 @@ The following table summarises the AWS APIs.
 | [`gamesparks`](services/gamesparks.yml) | 33 | 0 | 1 |
 | [`tnb`](services/tnb.yml) | 33 | 0 | 0 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 33 | 0 | 0 |
+| [`groundstation`](services/groundstation.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`inspector2`](services/inspector2.yml) | 32 | 0 | 1 |
@@ -179,7 +180,6 @@ The following table summarises the AWS APIs.
 | [`billingconductor`](services/billingconductor.yml) | 31 | 0 | 0 |
 | [`aoss`](services/aoss.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
-| [`groundstation`](services/groundstation.yml) | 30 | 3 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
 | [`xray`](services/xray.yml) | 30 | 0 | 3 |
 | [`securitylake`](services/securitylake.yml) | 30 | 0 | 1 |
