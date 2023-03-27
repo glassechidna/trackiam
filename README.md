@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 358
-* Unique actions: 14719
+* Unique actions: 14728
 * Managed policies: 1059
 
 Most common managed policy name prefixes:
@@ -52,9 +52,9 @@ The following table summarises the AWS APIs.
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 111 | 0 | 0 |
 | [`lex`](services/lex.yml) | 108 | 2 | 7 |
+| [`iotwireless`](services/iotwireless.yml) | 108 | 1 | 1 |
 | [`cloudfront`](services/cloudfront.yml) | 105 | 1 | 7 |
 | [`gamelift`](services/gamelift.yml) | 104 | 0 | 0 |
-| [`iotwireless`](services/iotwireless.yml) | 101 | 0 | 8 |
 | [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 4 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`config`](services/config.yml) | 92 | 0 | 0 |
@@ -223,11 +223,11 @@ The following table summarises the AWS APIs.
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
 | [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 0 |
+| [`voiceid`](services/voiceid.yml) | 21 | 8 | 2 |
 | [`aps`](services/aps.yml) | 21 | 0 | 16 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 21 | 0 | 7 |
-| [`voiceid`](services/voiceid.yml) | 21 | 0 | 2 |
 | [`synthetics`](services/synthetics.yml) | 21 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 21 | 0 | 0 |
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 20 | 2 | 1 |
@@ -399,12 +399,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2297 |
+| `List` | 2299 |
 | `Get` | 2053 |
-| `Delete` | 1691 |
-| `Describe` | 1592 |
-| `Create` | 1572 |
-| `Update` | 1336 |
+| `Delete` | 1692 |
+| `Describe` | 1593 |
+| `Create` | 1573 |
+| `Update` | 1337 |
 | `Put` | 411 |
 | `Start` | 313 |
 | `Tag` | 229 |

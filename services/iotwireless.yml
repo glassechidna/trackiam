@@ -25,6 +25,7 @@ Actions:
   - Name: iotwireless:DeleteQueuedMessages
   - Name: iotwireless:DeleteServiceProfile
   - Name: iotwireless:DeleteWirelessDevice
+  - Name: iotwireless:DeleteWirelessDeviceImportTask
   - Name: iotwireless:DeleteWirelessGateway
   - Name: iotwireless:DeleteWirelessGatewayTask
   - Name: iotwireless:DeleteWirelessGatewayTaskDefinition
@@ -53,6 +54,7 @@ Actions:
   - Name: iotwireless:GetServiceEndpoint
   - Name: iotwireless:GetServiceProfile
   - Name: iotwireless:GetWirelessDevice
+  - Name: iotwireless:GetWirelessDeviceImportTask
   - Name: iotwireless:GetWirelessDeviceStatistics
   - Name: iotwireless:GetWirelessGateway
   - Name: iotwireless:GetWirelessGatewayCertificate
@@ -62,6 +64,7 @@ Actions:
   - Name: iotwireless:GetWirelessGatewayTaskDefinition
   - Name: iotwireless:ListDestinations
   - Name: iotwireless:ListDeviceProfiles
+  - Name: iotwireless:ListDevicesForWirelessDeviceImportTask
   - Name: iotwireless:ListEventConfigurations
   - Name: iotwireless:ListFuotaTasks
   - Name: iotwireless:ListMulticastGroups
@@ -72,6 +75,7 @@ Actions:
   - Name: iotwireless:ListQueuedMessages
   - Name: iotwireless:ListServiceProfiles
   - Name: iotwireless:ListTagsForResource
+  - Name: iotwireless:ListWirelessDeviceImportTasks
   - Name: iotwireless:ListWirelessDevices
   - Name: iotwireless:ListWirelessGatewayTaskDefinitions
   - Name: iotwireless:ListWirelessGateways
@@ -85,6 +89,8 @@ Actions:
   - Name: iotwireless:StartBulkDisassociateWirelessDeviceFromMulticastGroup
   - Name: iotwireless:StartFuotaTask
   - Name: iotwireless:StartMulticastGroupSession
+  - Name: iotwireless:StartSingleWirelessDeviceImportTask
+  - Name: iotwireless:StartWirelessDeviceImportTask
   - Name: iotwireless:TagResource
   - Name: iotwireless:TestWirelessDevice
   - Name: iotwireless:UntagResource
@@ -99,14 +105,11 @@ Actions:
   - Name: iotwireless:UpdateResourceEventConfiguration
   - Name: iotwireless:UpdateResourcePosition
   - Name: iotwireless:UpdateWirelessDevice
+  - Name: iotwireless:UpdateWirelessDeviceImportTask
   - Name: iotwireless:UpdateWirelessGateway
 
   # actions with no corresponding API
-  - Name: iotwireless:DeleteWirelessDeviceImportTask
-  - Name: iotwireless:GetWirelessDeviceImportTask
-  - Name: iotwireless:ListDevicesForWirelessDeviceImportTask
-  - Name: iotwireless:ListWirelessDeviceImportTasks
   - Name: iotwireless:StartNetworkAnalyzerStream
-  - Name: iotwireless:StartSingleWirelessDeviceImportTask
-  - Name: iotwireless:StartWirelessDeviceImportTask
-  - Name: iotwireless:UpdateWirelessDeviceImportTask
+
+  # APIs without an IAM action
+  - Name: iotwireless:DeregisterWirelessDevice
