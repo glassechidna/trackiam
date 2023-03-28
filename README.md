@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 358
-* Unique actions: 14730
+* Unique services: 360
+* Unique actions: 14764
 * Managed policies: 1059
 
 Most common managed policy name prefixes:
@@ -336,6 +336,7 @@ The following table summarises the AWS APIs.
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 33 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 30 |
+| [`datazonecontrol`](services/datazonecontrol.yml) | 0 | 0 | 29 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 28 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
@@ -369,6 +370,7 @@ The following table summarises the AWS APIs.
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 5 |
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 5 |
+| [`datazone`](services/datazone.yml) | 0 | 0 | 5 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 5 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
@@ -399,14 +401,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2299 |
-| `Get` | 2054 |
-| `Delete` | 1692 |
+| `List` | 2312 |
+| `Get` | 2063 |
+| `Delete` | 1694 |
 | `Describe` | 1593 |
-| `Create` | 1573 |
-| `Update` | 1338 |
+| `Create` | 1576 |
+| `Update` | 1341 |
 | `Put` | 411 |
 | `Start` | 313 |
-| `Tag` | 229 |
-| `Untag` | 227 |
+| `Tag` | 230 |
+| `Untag` | 228 |
 
