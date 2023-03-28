@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeStarFullAccess",
   "CreateDate": "2017-04-19T16:23:19Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIXI233TFUGLZOJBEC",
   "PolicyName": "AWSCodeStarFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2018-01-10T21:54:06Z",
+    "CreateDate": "2023-03-28T00:06:28Z",
     "Document": {
       "Statement": [
         {
@@ -26,7 +26,8 @@
         {
           "Action": [
             "cloudformation:DescribeStack*",
-            "cloudformation:GetTemplateSummary"
+            "cloudformation:GetTemplateSummary",
+            "cloudformation:ListStacks*"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -37,8 +38,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v2"
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
   },
-  "UpdateDate": "2018-01-10T21:54:06Z"
+  "UpdateDate": "2023-03-28T00:06:28Z"
 }
