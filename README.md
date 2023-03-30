@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 360
-* Unique actions: 14776
+* Unique actions: 14784
 * Managed policies: 1064
 
 Most common managed policy name prefixes:
@@ -172,10 +172,10 @@ The following table summarises the AWS APIs.
 | [`inspector2`](services/inspector2.yml) | 32 | 0 | 1 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`m2`](services/m2.yml) | 32 | 0 | 0 |
+| [`network-firewall`](services/network-firewall.yml) | 31 | 0 | 5 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`wisdom`](services/wisdom.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
-| [`network-firewall`](services/network-firewall.yml) | 31 | 0 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 31 | 0 | 0 |
 | [`billingconductor`](services/billingconductor.yml) | 31 | 0 | 0 |
 | [`aoss`](services/aoss.yml) | 31 | 0 | 0 |
@@ -345,6 +345,7 @@ The following table summarises the AWS APIs.
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
+| [`scn`](services/scn.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`billing`](services/billing.yml) | 0 | 0 | 13 |
 | [`tax`](services/tax.yml) | 0 | 0 | 12 |
@@ -353,7 +354,6 @@ The following table summarises the AWS APIs.
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 11 |
-| [`scn`](services/scn.yml) | 0 | 0 | 10 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 9 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
@@ -401,14 +401,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2317 |
+| `List` | 2319 |
 | `Get` | 2065 |
-| `Delete` | 1696 |
-| `Describe` | 1593 |
-| `Create` | 1578 |
-| `Update` | 1342 |
+| `Delete` | 1697 |
+| `Describe` | 1594 |
+| `Create` | 1579 |
+| `Update` | 1343 |
 | `Put` | 411 |
 | `Start` | 313 |
-| `Tag` | 230 |
-| `Untag` | 228 |
+| `Tag` | 231 |
+| `Untag` | 229 |
 
