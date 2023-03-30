@@ -1,18 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFConsoleReadOnlyAccess",
   "CreateDate": "2020-04-06T18:43:24Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NCJLTIT64",
   "PolicyName": "AWSWAFConsoleReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-08-25T20:13:55Z",
+    "CreateDate": "2023-03-30T20:59:06Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "apigateway:GET",
+            "apprunner:DescribeWebAclForService",
+            "apprunner:ListServices",
             "appsync:ListGraphqlApis",
             "cloudfront:ListDistributions",
             "cloudfront:ListDistributionsByWebACLId",
@@ -40,7 +42,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2022-08-25T20:13:55Z"
+  "UpdateDate": "2023-03-30T20:59:06Z"
 }
