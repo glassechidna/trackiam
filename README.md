@@ -86,6 +86,7 @@ The following table summarises the AWS APIs.
 | [`workspaces`](services/workspaces.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
+| [`kendra`](services/kendra.yml) | 65 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 63 | 2 | 5 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
@@ -101,7 +102,6 @@ The following table summarises the AWS APIs.
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 2 |
 | [`events`](services/events.yml) | 56 | 0 | 1 |
-| [`kendra`](services/kendra.yml) | 55 | 10 | 0 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 53 | 0 | 26 |
@@ -129,7 +129,7 @@ The following table summarises the AWS APIs.
 | [`datasync`](services/datasync.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`workdocs`](services/workdocs.yml) | 43 | 1 | 14 |
-| [`wellarchitected`](services/wellarchitected.yml) | 42 | 1 | 0 |
+| [`wellarchitected`](services/wellarchitected.yml) | 43 | 0 | 0 |
 | [`transcribe`](services/transcribe.yml) | 42 | 0 | 3 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
 | [`fsx`](services/fsx.yml) | 41 | 0 | 4 |

@@ -2,15 +2,19 @@ Actions:
   - Name: kendra:AssociateEntitiesToExperience
   - Name: kendra:AssociatePersonasToEntities
   - Name: kendra:BatchDeleteDocument
+  - Name: kendra:BatchDeleteFeaturedResultsSet
   - Name: kendra:BatchGetDocumentStatus
   - Name: kendra:BatchPutDocument
   - Name: kendra:ClearQuerySuggestions
+  - Name: kendra:CreateAccessControlConfiguration
   - Name: kendra:CreateDataSource
   - Name: kendra:CreateExperience
   - Name: kendra:CreateFaq
+  - Name: kendra:CreateFeaturedResultsSet
   - Name: kendra:CreateIndex
   - Name: kendra:CreateQuerySuggestionsBlockList
   - Name: kendra:CreateThesaurus
+  - Name: kendra:DeleteAccessControlConfiguration
   - Name: kendra:DeleteDataSource
   - Name: kendra:DeleteExperience
   - Name: kendra:DeleteFaq
@@ -18,9 +22,11 @@ Actions:
   - Name: kendra:DeletePrincipalMapping
   - Name: kendra:DeleteQuerySuggestionsBlockList
   - Name: kendra:DeleteThesaurus
+  - Name: kendra:DescribeAccessControlConfiguration
   - Name: kendra:DescribeDataSource
   - Name: kendra:DescribeExperience
   - Name: kendra:DescribeFaq
+  - Name: kendra:DescribeFeaturedResultsSet
   - Name: kendra:DescribeIndex
   - Name: kendra:DescribePrincipalMapping
   - Name: kendra:DescribeQuerySuggestionsBlockList
@@ -30,12 +36,14 @@ Actions:
   - Name: kendra:DisassociatePersonasFromEntities
   - Name: kendra:GetQuerySuggestions
   - Name: kendra:GetSnapshots
+  - Name: kendra:ListAccessControlConfigurations
   - Name: kendra:ListDataSourceSyncJobs
   - Name: kendra:ListDataSources
   - Name: kendra:ListEntityPersonas
   - Name: kendra:ListExperienceEntities
   - Name: kendra:ListExperiences
   - Name: kendra:ListFaqs
+  - Name: kendra:ListFeaturedResultsSets
   - Name: kendra:ListGroupsOlderThanOrderingId
   - Name: kendra:ListIndices
   - Name: kendra:ListQuerySuggestionsBlockLists
@@ -48,21 +56,11 @@ Actions:
   - Name: kendra:SubmitFeedback
   - Name: kendra:TagResource
   - Name: kendra:UntagResource
+  - Name: kendra:UpdateAccessControlConfiguration
   - Name: kendra:UpdateDataSource
   - Name: kendra:UpdateExperience
+  - Name: kendra:UpdateFeaturedResultsSet
   - Name: kendra:UpdateIndex
   - Name: kendra:UpdateQuerySuggestionsBlockList
   - Name: kendra:UpdateQuerySuggestionsConfig
   - Name: kendra:UpdateThesaurus
-
-  # APIs without an IAM action
-  - Name: kendra:BatchDeleteFeaturedResultsSet
-  - Name: kendra:CreateAccessControlConfiguration
-  - Name: kendra:CreateFeaturedResultsSet
-  - Name: kendra:DeleteAccessControlConfiguration
-  - Name: kendra:DescribeAccessControlConfiguration
-  - Name: kendra:DescribeFeaturedResultsSet
-  - Name: kendra:ListAccessControlConfigurations
-  - Name: kendra:ListFeaturedResultsSets
-  - Name: kendra:UpdateAccessControlConfiguration
-  - Name: kendra:UpdateFeaturedResultsSet
