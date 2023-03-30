@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRDSFullAccess",
   "CreateDate": "2015-02-06T18:40:52Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAI3R4QMOG6Q5A4VWVG",
   "PolicyName": "AmazonRDSFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-03-15T13:44:54Z",
+    "CreateDate": "2023-03-30T12:05:22Z",
     "Document": {
       "Statement": [
         {
@@ -18,6 +18,24 @@
                 "rds.amazonaws.com",
                 "rds.application-autoscaling.amazonaws.com"
               ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "devops-guru:ListAnomaliesForInsight",
+            "devops-guru:SearchInsights"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "devops-guru:ServiceNames": [
+                "RDS"
+              ]
+            },
+            "Null": {
+              "devops-guru:ServiceNames": "false"
             }
           },
           "Effect": "Allow",
@@ -71,7 +89,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2023-03-15T13:44:54Z"
+  "UpdateDate": "2023-03-30T12:05:22Z"
 }
