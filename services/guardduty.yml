@@ -26,6 +26,7 @@ Actions:
   - Name: guardduty:DisassociateMembers
   - Name: guardduty:EnableOrganizationAdminAccount
   - Name: guardduty:GetAdministratorAccount
+  - Name: guardduty:GetCoverageStatistics
   - Name: guardduty:GetDetector
   - Name: guardduty:GetFilter
   - Name: guardduty:GetFindings
@@ -40,6 +41,7 @@ Actions:
   - Name: guardduty:GetThreatIntelSet
   - Name: guardduty:GetUsageStatistics
   - Name: guardduty:InviteMembers
+  - Name: guardduty:ListCoverage
   - Name: guardduty:ListDetectors
   - Name: guardduty:ListFilters
   - Name: guardduty:ListFindings
@@ -65,6 +67,5 @@ Actions:
   - Name: guardduty:UpdatePublishingDestination
   - Name: guardduty:UpdateThreatIntelSet
 
-  # APIs without an IAM action
-  - Name: guardduty:GetCoverageStatistics
-  - Name: guardduty:ListCoverage
+  # actions with no corresponding API
+  - Name: guardduty:SendSecurityTelemetry
