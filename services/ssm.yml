@@ -22,6 +22,7 @@ Actions:
   - Name: ssm:DeleteParameters
   - Name: ssm:DeletePatchBaseline
   - Name: ssm:DeleteResourceDataSync
+  - Name: ssm:DeleteResourcePolicy
   - Name: ssm:DeregisterManagedInstance
   - Name: ssm:DeregisterPatchBaselineForPatchGroup
   - Name: ssm:DeregisterTargetFromMaintenanceWindow
@@ -82,6 +83,7 @@ Actions:
   - Name: ssm:GetParametersByPath
   - Name: ssm:GetPatchBaseline
   - Name: ssm:GetPatchBaselineForPatchGroup
+  - Name: ssm:GetResourcePolicies
   - Name: ssm:GetServiceSetting
   - Name: ssm:LabelParameterVersion
   - Name: ssm:ListAssociationVersions
@@ -104,6 +106,7 @@ Actions:
   - Name: ssm:PutComplianceItems
   - Name: ssm:PutInventory
   - Name: ssm:PutParameter
+  - Name: ssm:PutResourcePolicy
   - Name: ssm:RegisterDefaultPatchBaseline
   - Name: ssm:RegisterPatchBaselineForPatchGroup
   - Name: ssm:RegisterTargetWithMaintenanceWindow
@@ -144,10 +147,4 @@ Actions:
   - Name: ssm:PutCalendar
   - Name: ssm:PutConfigurePackageResult
   - Name: ssm:RegisterManagedInstance
-  - Name: ssm:UpdateInstanceAssociationStatus
   - Name: ssm:UpdateInstanceInformation
-
-  # APIs without an IAM action
-  - Name: ssm:DeleteResourcePolicy
-  - Name: ssm:GetResourcePolicies
-  - Name: ssm:PutResourcePolicy
