@@ -137,6 +137,7 @@ The following table summarises the AWS APIs.
 | [`redshift-serverless`](services/redshift-serverless.yml) | 40 | 0 | 0 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
+| [`ssm-contacts`](services/ssm-contacts.yml) | 38 | 1 | 1 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 38 | 0 | 3 |
 | [`codeartifact`](services/codeartifact.yml) | 38 | 0 | 3 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
@@ -196,7 +197,6 @@ The following table summarises the AWS APIs.
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
-| [`ssm-contacts`](services/ssm-contacts.yml) | 27 | 12 | 1 |
 | [`timestream`](services/timestream.yml) | 27 | 1 | 7 |
 | [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 3 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 0 |
