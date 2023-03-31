@@ -102,6 +102,7 @@ The following table summarises the AWS APIs.
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 2 |
 | [`events`](services/events.yml) | 56 | 0 | 1 |
+| [`imagebuilder`](services/imagebuilder.yml) | 56 | 0 | 0 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 53 | 0 | 26 |
@@ -110,7 +111,6 @@ The following table summarises the AWS APIs.
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
 | [`appsync`](services/appsync.yml) | 51 | 0 | 2 |
 | [`workspaces-web`](services/workspaces-web.yml) | 51 | 0 | 0 |
-| [`imagebuilder`](services/imagebuilder.yml) | 50 | 6 | 0 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 0 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |

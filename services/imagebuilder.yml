@@ -25,6 +25,8 @@ Actions:
   - Name: imagebuilder:GetImageRecipe
   - Name: imagebuilder:GetImageRecipePolicy
   - Name: imagebuilder:GetInfrastructureConfiguration
+  - Name: imagebuilder:GetWorkflowExecution
+  - Name: imagebuilder:GetWorkflowStepExecution
   - Name: imagebuilder:ImportComponent
   - Name: imagebuilder:ImportVmImage
   - Name: imagebuilder:ListComponentBuildVersions
@@ -36,9 +38,13 @@ Actions:
   - Name: imagebuilder:ListImagePipelineImages
   - Name: imagebuilder:ListImagePipelines
   - Name: imagebuilder:ListImageRecipes
+  - Name: imagebuilder:ListImageScanFindingAggregations
+  - Name: imagebuilder:ListImageScanFindings
   - Name: imagebuilder:ListImages
   - Name: imagebuilder:ListInfrastructureConfigurations
   - Name: imagebuilder:ListTagsForResource
+  - Name: imagebuilder:ListWorkflowExecutions
+  - Name: imagebuilder:ListWorkflowStepExecutions
   - Name: imagebuilder:PutComponentPolicy
   - Name: imagebuilder:PutContainerRecipePolicy
   - Name: imagebuilder:PutImagePolicy
@@ -49,11 +55,3 @@ Actions:
   - Name: imagebuilder:UpdateDistributionConfiguration
   - Name: imagebuilder:UpdateImagePipeline
   - Name: imagebuilder:UpdateInfrastructureConfiguration
-
-  # APIs without an IAM action
-  - Name: imagebuilder:GetWorkflowExecution
-  - Name: imagebuilder:GetWorkflowStepExecution
-  - Name: imagebuilder:ListImageScanFindingAggregations
-  - Name: imagebuilder:ListImageScanFindings
-  - Name: imagebuilder:ListWorkflowExecutions
-  - Name: imagebuilder:ListWorkflowStepExecutions
