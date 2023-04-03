@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 360
-* Unique actions: 14805
+* Unique actions: 14814
 * Managed policies: 1064
 
 Most common managed policy name prefixes:
@@ -49,7 +49,7 @@ The following table summarises the AWS APIs.
 | [`quicksight`](services/quicksight.yml) | 123 | 3 | 26 |
 | [`redshift`](services/redshift.yml) | 119 | 0 | 18 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 119 | 0 | 4 |
-| [`servicecatalog`](services/servicecatalog.yml) | 111 | 0 | 3 |
+| [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`lex`](services/lex.yml) | 108 | 2 | 7 |
 | [`iotwireless`](services/iotwireless.yml) | 108 | 1 | 1 |
@@ -341,6 +341,7 @@ The following table summarises the AWS APIs.
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 23 |
+| [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 17 |
@@ -352,7 +353,6 @@ The following table summarises the AWS APIs.
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
-| [`freertos`](services/freertos.yml) | 0 | 0 | 11 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 11 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 9 |
@@ -401,12 +401,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2325 |
-| `Get` | 2070 |
+| `List` | 2328 |
+| `Get` | 2072 |
 | `Delete` | 1697 |
-| `Describe` | 1595 |
-| `Create` | 1580 |
-| `Update` | 1343 |
+| `Describe` | 1596 |
+| `Create` | 1581 |
+| `Update` | 1344 |
 | `Put` | 411 |
 | `Start` | 313 |
 | `Tag` | 231 |
