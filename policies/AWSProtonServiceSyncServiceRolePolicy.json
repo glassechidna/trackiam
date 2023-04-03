@@ -1,0 +1,42 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSProtonServiceSyncServiceRolePolicy",
+  "CreateDate": "2023-04-03T20:40:05Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4HXAVEYJOW",
+  "PolicyName": "AWSProtonServiceSyncServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-04-03T20:40:05Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "proton:CreateComponent",
+            "proton:CreateEnvironment",
+            "proton:CreateServiceInstance",
+            "proton:GetComponent",
+            "proton:GetEnvironment",
+            "proton:GetService",
+            "proton:GetServiceInstance",
+            "proton:ListComponents",
+            "proton:ListEnvironments",
+            "proton:ListServiceInstances",
+            "proton:UpdateComponent",
+            "proton:UpdateEnvironment",
+            "proton:UpdateService",
+            "proton:UpdateServiceInstance",
+            "proton:UpdateServicePipeline"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ProtonServiceSync"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-04-03T20:40:05Z"
+}
