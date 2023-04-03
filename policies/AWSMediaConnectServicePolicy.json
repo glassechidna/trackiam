@@ -1,0 +1,64 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSMediaConnectServicePolicy",
+  "CreateDate": "2023-04-03T22:11:40Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4HLQANTOAO",
+  "PolicyName": "AWSMediaConnectServicePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-04-03T22:11:40Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ecs:CreateService",
+            "ecs:DeleteAttributes",
+            "ecs:DeleteService",
+            "ecs:DescribeContainerInstances",
+            "ecs:DescribeServices",
+            "ecs:DescribeTasks",
+            "ecs:ListTasks",
+            "ecs:PutAttributes",
+            "ecs:RunTask",
+            "ecs:StartTask",
+            "ecs:StopTask",
+            "ecs:UpdateContainerInstancesState",
+            "ecs:UpdateService"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "ecs:cluster": "arn:aws:ecs:*:*:cluster/MediaConnectGateway"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ecs:CreateCluster",
+            "ecs:RegisterTaskDefinition"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ecs:DeregisterContainerInstance",
+            "ecs:DescribeClusters",
+            "ecs:ListAttributes",
+            "ecs:ListContainerInstances",
+            "ecs:UpdateCluster",
+            "ecs:UpdateClusterSettings"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecs:*:*:cluster/MediaConnectGateway"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-04-03T22:11:40Z"
+}
