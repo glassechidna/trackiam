@@ -1,0 +1,42 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSProtonServiceGitSyncServiceRolePolicy",
+  "CreateDate": "2023-04-04T15:55:48Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4IW3HEEQND",
+  "PolicyName": "AWSProtonServiceGitSyncServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-04-04T15:55:48Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "proton:CreateComponent",
+            "proton:CreateEnvironment",
+            "proton:CreateServiceInstance",
+            "proton:GetComponent",
+            "proton:GetEnvironment",
+            "proton:GetService",
+            "proton:GetServiceInstance",
+            "proton:ListComponents",
+            "proton:ListEnvironments",
+            "proton:ListServiceInstances",
+            "proton:UpdateComponent",
+            "proton:UpdateEnvironment",
+            "proton:UpdateService",
+            "proton:UpdateServiceInstance",
+            "proton:UpdateServicePipeline"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ProtonServiceSync"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-04-04T15:55:48Z"
+}
