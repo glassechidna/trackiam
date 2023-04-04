@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDataZoneProjectDeploymentPermissionsBoundary",
   "CreateDate": "2023-03-21T02:54:30Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4OQ4O7Q263",
   "PolicyName": "AmazonDataZoneProjectDeploymentPermissionsBoundary",
   "PolicyVersion": {
-    "CreateDate": "2023-03-21T02:54:30Z",
+    "CreateDate": "2023-04-04T02:48:38Z",
     "Document": {
       "Statement": [
         {
@@ -38,9 +38,12 @@
             "athena:DeleteWorkGroup",
             "ec2:AuthorizeSecurityGroupEgress",
             "ec2:AuthorizeSecurityGroupIngress",
+            "kms:Decrypt",
             "kms:DescribeKey",
             "kms:DisableKeyRotation",
             "kms:EnableKeyRotation",
+            "kms:Encrypt",
+            "kms:GenerateDataKey",
             "kms:ScheduleKeyDeletion"
           ],
           "Condition": {
@@ -350,7 +353,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-03-21T02:54:30Z"
+  "UpdateDate": "2023-04-04T02:48:38Z"
 }
