@@ -11,6 +11,8 @@ Actions:
   - Name: proton:CreateEnvironmentTemplateVersion
   - Name: proton:CreateRepository
   - Name: proton:CreateService
+  - Name: proton:CreateServiceInstance
+  - Name: proton:CreateServiceSyncConfig
   - Name: proton:CreateServiceTemplate
   - Name: proton:CreateServiceTemplateVersion
   - Name: proton:CreateTemplateSyncConfig
@@ -21,6 +23,7 @@ Actions:
   - Name: proton:DeleteEnvironmentTemplateVersion
   - Name: proton:DeleteRepository
   - Name: proton:DeleteService
+  - Name: proton:DeleteServiceSyncConfig
   - Name: proton:DeleteServiceTemplate
   - Name: proton:DeleteServiceTemplateVersion
   - Name: proton:DeleteTemplateSyncConfig
@@ -35,6 +38,9 @@ Actions:
   - Name: proton:GetResourcesSummary
   - Name: proton:GetService
   - Name: proton:GetServiceInstance
+  - Name: proton:GetServiceInstanceSyncStatus
+  - Name: proton:GetServiceSyncBlockerSummary
+  - Name: proton:GetServiceSyncConfig
   - Name: proton:GetServiceTemplate
   - Name: proton:GetServiceTemplateVersion
   - Name: proton:GetTemplateSyncConfig
@@ -72,6 +78,8 @@ Actions:
   - Name: proton:UpdateService
   - Name: proton:UpdateServiceInstance
   - Name: proton:UpdateServicePipeline
+  - Name: proton:UpdateServiceSyncBlocker
+  - Name: proton:UpdateServiceSyncConfig
   - Name: proton:UpdateServiceTemplate
   - Name: proton:UpdateServiceTemplateVersion
   - Name: proton:UpdateTemplateSyncConfig
@@ -79,23 +87,17 @@ Actions:
   # actions with no corresponding API
   - Name: proton:CreateEnvironmentTemplateMajorVersion
   - Name: proton:CreateEnvironmentTemplateMinorVersion
-  - Name: proton:CreateServiceInstance
-  - Name: proton:CreateServiceSyncConfig
   - Name: proton:CreateServiceTemplateMajorVersion
   - Name: proton:CreateServiceTemplateMinorVersion
   - Name: proton:DeleteAccountRoles
   - Name: proton:DeleteEnvironmentTemplateMajorVersion
   - Name: proton:DeleteEnvironmentTemplateMinorVersion
-  - Name: proton:DeleteServiceSyncConfig
   - Name: proton:DeleteServiceTemplateMajorVersion
   - Name: proton:DeleteServiceTemplateMinorVersion
   - Name: proton:GetAccountRoles
   - Name: proton:GetEnvironmentTemplateMajorVersion
   - Name: proton:GetEnvironmentTemplateMinorVersion
   - Name: proton:GetResourceTemplateVersionStatusCounts
-  - Name: proton:GetServiceInstanceSyncStatus
-  - Name: proton:GetServiceSyncBlockerSummary
-  - Name: proton:GetServiceSyncConfig
   - Name: proton:GetServiceTemplateMajorVersion
   - Name: proton:GetServiceTemplateMinorVersion
   - Name: proton:ListEnvironmentTemplateMajorVersions
@@ -105,7 +107,5 @@ Actions:
   - Name: proton:UpdateAccountRoles
   - Name: proton:UpdateEnvironmentTemplateMajorVersion
   - Name: proton:UpdateEnvironmentTemplateMinorVersion
-  - Name: proton:UpdateServiceSyncBlocker
-  - Name: proton:UpdateServiceSyncConfig
   - Name: proton:UpdateServiceTemplateMajorVersion
   - Name: proton:UpdateServiceTemplateMinorVersion

@@ -61,6 +61,7 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
 | [`s3`](services/s3.yml) | 85 | 58 | 45 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 0 |
+| [`proton`](services/proton.yml) | 84 | 0 | 24 |
 | [`comprehend`](services/comprehend.yml) | 84 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 80 | 0 | 51 |
@@ -68,7 +69,6 @@ The following table summarises the AWS APIs.
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
-| [`proton`](services/proton.yml) | 76 | 0 | 32 |
 | [`es`](services/es.yml) | 76 | 0 | 10 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 73 | 0 | 1 |
