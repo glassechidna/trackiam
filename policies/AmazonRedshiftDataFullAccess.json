@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRedshiftDataFullAccess",
   "CreateDate": "2020-09-09T19:23:55Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4PX5LA5SG6",
   "PolicyName": "AmazonRedshiftDataFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-07-12T03:34:16Z",
+    "CreateDate": "2023-04-07T18:18:32Z",
     "Document": {
       "Statement": [
         {
@@ -29,7 +29,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*",
+          "Resource": "arn:aws:redshift-serverless:*:*:workgroup/*",
           "Sid": "GetCredentialsForServerless"
         },
         {
@@ -42,7 +42,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:*",
           "Sid": "SecretsManagerPermissions"
         },
         {
@@ -61,6 +61,12 @@
             "arn:aws:redshift:*:*:dbuser:*/redshift_data_api_user"
           ],
           "Sid": "GetCredentialsForAPIUser"
+        },
+        {
+          "Action": "redshift:GetClusterCredentialsWithIAM",
+          "Effect": "Allow",
+          "Resource": "arn:aws:redshift:*:*:dbname:*/*",
+          "Sid": "GetCredentialsWithFederatedIAMCredentials"
         },
         {
           "Action": [
@@ -83,7 +89,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2022-07-12T03:34:16Z"
+  "UpdateDate": "2023-04-07T18:18:32Z"
 }

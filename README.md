@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 359
-* Unique actions: 14834
+* Unique actions: 14843
 * Managed policies: 1067
 
 Most common managed policy name prefixes:
@@ -46,7 +46,7 @@ The following table summarises the AWS APIs.
 | [`ses`](services/ses.yml) | 143 | 0 | 0 |
 | [`rds`](services/rds.yml) | 141 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 138 | 0 | 10 |
-| [`quicksight`](services/quicksight.yml) | 123 | 3 | 26 |
+| [`quicksight`](services/quicksight.yml) | 123 | 11 | 26 |
 | [`redshift`](services/redshift.yml) | 119 | 0 | 18 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 119 | 0 | 4 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
@@ -88,7 +88,7 @@ The following table summarises the AWS APIs.
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
 | [`kendra`](services/kendra.yml) | 65 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
-| [`lambda`](services/lambda.yml) | 63 | 2 | 5 |
+| [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`rekognition`](services/rekognition.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
@@ -400,13 +400,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2332 |
+| `List` | 2333 |
 | `Get` | 2078 |
-| `Delete` | 1698 |
-| `Describe` | 1596 |
-| `Create` | 1586 |
-| `Update` | 1348 |
-| `Put` | 411 |
+| `Delete` | 1700 |
+| `Describe` | 1598 |
+| `Create` | 1587 |
+| `Update` | 1349 |
+| `Put` | 412 |
 | `Start` | 313 |
 | `Tag` | 232 |
 | `Untag` | 230 |
