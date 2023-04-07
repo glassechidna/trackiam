@@ -13,6 +13,7 @@ Actions:
   - Name: quicksight:CreateIAMPolicyAssignment
   - Name: quicksight:CreateIngestion
   - Name: quicksight:CreateNamespace
+  - Name: quicksight:CreateRefreshSchedule
   - Name: quicksight:CreateTemplate
   - Name: quicksight:CreateTemplateAlias
   - Name: quicksight:CreateTheme
@@ -22,6 +23,7 @@ Actions:
   - Name: quicksight:DeleteAnalysis
   - Name: quicksight:DeleteDashboard
   - Name: quicksight:DeleteDataSet
+  - Name: quicksight:DeleteDataSetRefreshProperties
   - Name: quicksight:DeleteDataSource
   - Name: quicksight:DeleteFolder
   - Name: quicksight:DeleteFolderMembership
@@ -29,6 +31,7 @@ Actions:
   - Name: quicksight:DeleteGroupMembership
   - Name: quicksight:DeleteIAMPolicyAssignment
   - Name: quicksight:DeleteNamespace
+  - Name: quicksight:DeleteRefreshSchedule
   - Name: quicksight:DeleteTemplate
   - Name: quicksight:DeleteTemplateAlias
   - Name: quicksight:DeleteTheme
@@ -44,6 +47,7 @@ Actions:
   - Name: quicksight:DescribeDashboardPermissions
   - Name: quicksight:DescribeDataSet
   - Name: quicksight:DescribeDataSetPermissions
+  - Name: quicksight:DescribeDataSetRefreshProperties
   - Name: quicksight:DescribeDataSource
   - Name: quicksight:DescribeDataSourcePermissions
   - Name: quicksight:DescribeFolder
@@ -55,6 +59,7 @@ Actions:
   - Name: quicksight:DescribeIngestion
   - Name: quicksight:DescribeIpRestriction
   - Name: quicksight:DescribeNamespace
+  - Name: quicksight:DescribeRefreshSchedule
   - Name: quicksight:DescribeTemplate
   - Name: quicksight:DescribeTemplateAlias
   - Name: quicksight:DescribeTemplatePermissions
@@ -79,6 +84,7 @@ Actions:
   - Name: quicksight:ListIAMPolicyAssignmentsForUser
   - Name: quicksight:ListIngestions
   - Name: quicksight:ListNamespaces
+  - Name: quicksight:ListRefreshSchedules
   - Name: quicksight:ListTagsForResource
   - Name: quicksight:ListTemplateAliases
   - Name: quicksight:ListTemplateVersions
@@ -88,6 +94,7 @@ Actions:
   - Name: quicksight:ListThemes
   - Name: quicksight:ListUserGroups
   - Name: quicksight:ListUsers
+  - Name: quicksight:PutDataSetRefreshProperties
   - Name: quicksight:RegisterUser
   - Name: quicksight:RestoreAnalysis
   - Name: quicksight:SearchAnalyses
@@ -115,6 +122,7 @@ Actions:
   - Name: quicksight:UpdateIAMPolicyAssignment
   - Name: quicksight:UpdateIpRestriction
   - Name: quicksight:UpdatePublicSharingSettings
+  - Name: quicksight:UpdateRefreshSchedule
   - Name: quicksight:UpdateTemplate
   - Name: quicksight:UpdateTemplateAlias
   - Name: quicksight:UpdateTemplatePermissions
@@ -152,14 +160,6 @@ Actions:
   - Name: quicksight:UpdateResourcePermissions
 
   # APIs without an IAM action
-  - Name: quicksight:CreateRefreshSchedule
-  - Name: quicksight:DeleteDataSetRefreshProperties
-  - Name: quicksight:DeleteRefreshSchedule
   - Name: quicksight:DescribeAnalysisDefinition
   - Name: quicksight:DescribeDashboardDefinition
-  - Name: quicksight:DescribeDataSetRefreshProperties
-  - Name: quicksight:DescribeRefreshSchedule
   - Name: quicksight:DescribeTemplateDefinition
-  - Name: quicksight:ListRefreshSchedules
-  - Name: quicksight:PutDataSetRefreshProperties
-  - Name: quicksight:UpdateRefreshSchedule
