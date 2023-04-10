@@ -3,6 +3,7 @@ Actions:
   - Name: rekognition:CopyProjectVersion
   - Name: rekognition:CreateCollection
   - Name: rekognition:CreateDataset
+  - Name: rekognition:CreateFaceLivenessSession
   - Name: rekognition:CreateProject
   - Name: rekognition:CreateProjectVersion
   - Name: rekognition:CreateStreamProcessor
@@ -29,6 +30,7 @@ Actions:
   - Name: rekognition:GetCelebrityRecognition
   - Name: rekognition:GetContentModeration
   - Name: rekognition:GetFaceDetection
+  - Name: rekognition:GetFaceLivenessSessionResults
   - Name: rekognition:GetFaceSearch
   - Name: rekognition:GetLabelDetection
   - Name: rekognition:GetPersonTracking
@@ -63,6 +65,5 @@ Actions:
   - Name: rekognition:UpdateDatasetEntries
   - Name: rekognition:UpdateStreamProcessor
 
-  # APIs without an IAM action
-  - Name: rekognition:CreateFaceLivenessSession
-  - Name: rekognition:GetFaceLivenessSessionResults
+  # actions with no corresponding API
+  - Name: rekognition:StartFaceLivenessSession

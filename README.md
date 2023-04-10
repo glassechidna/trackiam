@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 359
-* Unique actions: 14856
-* Managed policies: 1066
+* Unique actions: 14857
+* Managed policies: 1067
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 297 |
 | `arn:aws:iam::aws:policy/Amazon*` | 273 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 236 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 237 |
 | `arn:aws:iam::aws:policy/service-role/*` | 160 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 93 |
@@ -84,12 +84,12 @@ The following table summarises the AWS APIs.
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`workspaces`](services/workspaces.yml) | 65 | 0 | 1 |
+| [`rekognition`](services/rekognition.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
 | [`kendra`](services/kendra.yml) | 65 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
-| [`rekognition`](services/rekognition.yml) | 63 | 2 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
 | [`mgn`](services/mgn.yml) | 61 | 0 | 34 |
@@ -407,7 +407,7 @@ Most common action prefixes:
 | `Create` | 1588 |
 | `Update` | 1350 |
 | `Put` | 414 |
-| `Start` | 313 |
+| `Start` | 314 |
 | `Tag` | 232 |
 | `Untag` | 230 |
 
