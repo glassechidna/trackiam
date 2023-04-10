@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 359
-* Unique actions: 14843
+* Unique actions: 14856
 * Managed policies: 1066
 
 Most common managed policy name prefixes:
@@ -89,8 +89,8 @@ The following table summarises the AWS APIs.
 | [`kendra`](services/kendra.yml) | 65 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
+| [`rekognition`](services/rekognition.yml) | 63 | 2 | 0 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
-| [`rekognition`](services/rekognition.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
 | [`mgn`](services/mgn.yml) | 61 | 0 | 34 |
 | [`securityhub`](services/securityhub.yml) | 61 | 0 | 9 |
@@ -261,7 +261,7 @@ The following table summarises the AWS APIs.
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
 | [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 14 | 0 | 34 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 14 | 3 | 34 |
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
@@ -308,7 +308,7 @@ The following table summarises the AWS APIs.
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 6 | 0 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 6 | 0 | 0 |
-| [`s3-outposts`](services/s3-outposts.yml) | 5 | 0 | 37 |
+| [`s3-outposts`](services/s3-outposts.yml) | 5 | 0 | 43 |
 | [`pricing`](services/pricing.yml) | 5 | 0 | 0 |
 | [`controltower`](services/controltower.yml) | 4 | 0 | 38 |
 | [`cur`](services/cur.yml) | 4 | 0 | 5 |
@@ -354,8 +354,8 @@ The following table summarises the AWS APIs.
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
+| [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 11 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
-| [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 9 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 8 |
@@ -401,12 +401,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2333 |
-| `Get` | 2078 |
-| `Delete` | 1700 |
+| `Get` | 2083 |
+| `Delete` | 1701 |
 | `Describe` | 1598 |
-| `Create` | 1587 |
-| `Update` | 1349 |
-| `Put` | 412 |
+| `Create` | 1588 |
+| `Update` | 1350 |
+| `Put` | 414 |
 | `Start` | 313 |
 | `Tag` | 232 |
 | `Untag` | 230 |
