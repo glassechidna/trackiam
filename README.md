@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 359
-* Unique actions: 14857
+* Unique actions: 14859
 * Managed policies: 1067
 
 Most common managed policy name prefixes:
@@ -357,6 +357,7 @@ The following table summarises the AWS APIs.
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 11 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
+| [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 8 |
 | [`codeguru-security`](services/codeguru-security.yml) | 0 | 0 | 8 |
@@ -364,7 +365,6 @@ The following table summarises the AWS APIs.
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 7 |
 | [`payments`](services/payments.yml) | 0 | 0 | 7 |
-| [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 7 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
@@ -401,11 +401,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2333 |
-| `Get` | 2083 |
+| `Get` | 2084 |
 | `Delete` | 1701 |
 | `Describe` | 1598 |
 | `Create` | 1588 |
-| `Update` | 1350 |
+| `Update` | 1351 |
 | `Put` | 414 |
 | `Start` | 314 |
 | `Tag` | 232 |
