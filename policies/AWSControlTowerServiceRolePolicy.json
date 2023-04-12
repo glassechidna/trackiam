@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSControlTowerServiceRolePolicy",
   "CreateDate": "2019-05-03T18:19:11Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4MW35THVLF",
   "PolicyName": "AWSControlTowerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-10-31T19:12:41Z",
+    "CreateDate": "2023-04-12T19:15:51Z",
     "Document": {
       "Statement": [
         {
@@ -47,6 +47,15 @@
               ]
             }
           },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "account:EnableRegion",
+            "account:GetRegionOptStatus",
+            "account:ListRegions"
+          ],
           "Effect": "Allow",
           "Resource": "*"
         },
@@ -189,7 +198,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2022-10-31T19:12:41Z"
+  "UpdateDate": "2023-04-12T19:15:51Z"
 }
