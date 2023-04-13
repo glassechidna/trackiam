@@ -1,0 +1,138 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerModelRegistryFullAccess",
+  "CreateDate": "2023-04-13T05:20:48Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4AQTREA5Z7",
+  "PolicyName": "AmazonSageMakerModelRegistryFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-04-13T05:20:48Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "resource-groups:DeleteGroup",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/sagemaker:collection": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:resource-groups:*:*:group/*"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "sagemaker.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*"
+        },
+        {
+          "Action": [
+            "resource-groups:CreateGroup",
+            "resource-groups:Tag"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": "sagemaker:collection"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:resource-groups:*:*:group/*"
+        },
+        {
+          "Action": [
+            "ecr:BatchGetImage",
+            "ecr:DescribeImages"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "resource-groups:GetGroupQuery"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:resource-groups:*:*:group/*"
+        },
+        {
+          "Action": [
+            "resource-groups:ListGroupResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*SageMaker*",
+            "arn:aws:s3:::*Sagemaker*",
+            "arn:aws:s3:::*sagemaker*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sagemaker:AddTags",
+            "sagemaker:CreateEndpoint",
+            "sagemaker:CreateEndpointConfig",
+            "sagemaker:CreateInferenceRecommendationsJob",
+            "sagemaker:CreateModel",
+            "sagemaker:CreateModelPackage",
+            "sagemaker:CreateModelPackageGroup",
+            "sagemaker:DeleteModelPackage",
+            "sagemaker:DeleteModelPackageGroup",
+            "sagemaker:DeleteTags",
+            "sagemaker:UpdateModelPackage"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sagemaker:DescribeAction",
+            "sagemaker:DescribeInferenceRecommendationsJob",
+            "sagemaker:DescribeModelPackage",
+            "sagemaker:DescribeModelPackageGroup",
+            "sagemaker:DescribePipeline",
+            "sagemaker:DescribePipelineExecution",
+            "sagemaker:GetSearchSuggestions",
+            "sagemaker:ListArtifacts",
+            "sagemaker:ListAssociations",
+            "sagemaker:ListModelMetadata",
+            "sagemaker:ListModelPackages",
+            "sagemaker:Search"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-04-13T05:20:48Z"
+}
