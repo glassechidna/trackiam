@@ -1,20 +1,35 @@
 Actions:
+  - Name: mediaconnect:AddBridgeOutputs
+  - Name: mediaconnect:AddBridgeSources
   - Name: mediaconnect:AddFlowMediaStreams
   - Name: mediaconnect:AddFlowOutputs
   - Name: mediaconnect:AddFlowSources
   - Name: mediaconnect:AddFlowVpcInterfaces
+  - Name: mediaconnect:CreateBridge
   - Name: mediaconnect:CreateFlow
+  - Name: mediaconnect:CreateGateway
+  - Name: mediaconnect:DeleteBridge
   - Name: mediaconnect:DeleteFlow
+  - Name: mediaconnect:DeleteGateway
+  - Name: mediaconnect:DeregisterGatewayInstance
+  - Name: mediaconnect:DescribeBridge
   - Name: mediaconnect:DescribeFlow
+  - Name: mediaconnect:DescribeGateway
+  - Name: mediaconnect:DescribeGatewayInstance
   - Name: mediaconnect:DescribeOffering
   - Name: mediaconnect:DescribeReservation
   - Name: mediaconnect:GrantFlowEntitlements
+  - Name: mediaconnect:ListBridges
   - Name: mediaconnect:ListEntitlements
   - Name: mediaconnect:ListFlows
+  - Name: mediaconnect:ListGatewayInstances
+  - Name: mediaconnect:ListGateways
   - Name: mediaconnect:ListOfferings
   - Name: mediaconnect:ListReservations
   - Name: mediaconnect:ListTagsForResource
   - Name: mediaconnect:PurchaseOffering
+  - Name: mediaconnect:RemoveBridgeOutput
+  - Name: mediaconnect:RemoveBridgeSource
   - Name: mediaconnect:RemoveFlowMediaStream
   - Name: mediaconnect:RemoveFlowOutput
   - Name: mediaconnect:RemoveFlowSource
@@ -24,8 +39,20 @@ Actions:
   - Name: mediaconnect:StopFlow
   - Name: mediaconnect:TagResource
   - Name: mediaconnect:UntagResource
+  - Name: mediaconnect:UpdateBridge
+  - Name: mediaconnect:UpdateBridgeOutput
+  - Name: mediaconnect:UpdateBridgeSource
+  - Name: mediaconnect:UpdateBridgeState
   - Name: mediaconnect:UpdateFlow
   - Name: mediaconnect:UpdateFlowEntitlement
   - Name: mediaconnect:UpdateFlowMediaStream
   - Name: mediaconnect:UpdateFlowOutput
   - Name: mediaconnect:UpdateFlowSource
+
+  # actions with no corresponding API
+  - Name: mediaconnect:DiscoverGatewayPollEndpoint
+  - Name: mediaconnect:PollGateway
+  - Name: mediaconnect:SubmitGatewayStateChange
+
+  # APIs without an IAM action
+  - Name: mediaconnect:UpdateGatewayInstance

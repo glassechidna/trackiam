@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 359
-* Unique actions: 14859
+* Unique actions: 14882
 * Managed policies: 1068
 
 Most common managed policy name prefixes:
@@ -113,6 +113,7 @@ The following table summarises the AWS APIs.
 | [`workspaces-web`](services/workspaces-web.yml) | 51 | 0 | 0 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 0 | 0 |
+| [`mediaconnect`](services/mediaconnect.yml) | 49 | 1 | 3 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 49 | 0 | 0 |
@@ -185,7 +186,6 @@ The following table summarises the AWS APIs.
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
 | [`xray`](services/xray.yml) | 30 | 0 | 3 |
 | [`securitylake`](services/securitylake.yml) | 30 | 0 | 1 |
-| [`mediaconnect`](services/mediaconnect.yml) | 30 | 0 | 0 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
 | [`cases`](services/cases.yml) | 30 | 0 | 0 |
 | [`voiceid`](services/voiceid.yml) | 29 | 0 | 2 |
@@ -400,12 +400,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2333 |
+| `List` | 2336 |
 | `Get` | 2084 |
-| `Delete` | 1701 |
-| `Describe` | 1598 |
-| `Create` | 1588 |
-| `Update` | 1351 |
+| `Delete` | 1703 |
+| `Describe` | 1601 |
+| `Create` | 1590 |
+| `Update` | 1356 |
 | `Put` | 414 |
 | `Start` | 314 |
 | `Tag` | 232 |
