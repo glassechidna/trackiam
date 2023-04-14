@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonInspector2ServiceRolePolicy",
   "CreateDate": "2021-11-16T20:27:48Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4BINOILVQW",
   "PolicyName": "AmazonInspector2ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-02-24T17:57:17Z",
+    "CreateDate": "2023-04-14T14:12:30Z",
     "Document": {
       "Statement": [
         {
@@ -33,6 +33,23 @@
             "*"
           ],
           "Sid": "CodeGuruCodeVulnerabilityScanning"
+        },
+        {
+          "Action": [
+            "ssm:DeleteParameter",
+            "ssm:GetParameters",
+            "ssm:PutParameter"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:ssm:*:*:parameter/inspector-aws/service/inspector-linux-application-paths"
+          ],
+          "Sid": "Ec2DeepInspection"
         },
         {
           "Action": [
@@ -190,7 +207,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2023-02-24T17:57:17Z"
+  "UpdateDate": "2023-04-14T14:12:30Z"
 }
