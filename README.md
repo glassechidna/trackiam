@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 359
-* Unique actions: 14888
+* Unique actions: 14892
 * Managed policies: 1068
 
 Most common managed policy name prefixes:
@@ -360,6 +360,7 @@ The following table summarises the AWS APIs.
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 8 |
+| [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 8 |
 | [`codeguru-security`](services/codeguru-security.yml) | 0 | 0 | 8 |
 | [`artifact`](services/artifact.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
@@ -375,7 +376,6 @@ The following table summarises the AWS APIs.
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
 | [`invoicing`](services/invoicing.yml) | 0 | 0 | 4 |
-| [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 4 |
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
 | [`a2c`](services/a2c.yml) | 0 | 0 | 4 |
 | [`supportplans`](services/supportplans.yml) | 0 | 0 | 3 |
@@ -400,14 +400,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2336 |
+| `List` | 2337 |
 | `Get` | 2085 |
-| `Delete` | 1703 |
+| `Delete` | 1704 |
 | `Describe` | 1602 |
 | `Create` | 1590 |
 | `Update` | 1358 |
 | `Put` | 414 |
 | `Start` | 314 |
-| `Tag` | 232 |
-| `Untag` | 230 |
+| `Tag` | 233 |
+| `Untag` | 231 |
 
