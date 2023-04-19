@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonBraketFullAccess",
   "CreateDate": "2020-08-06T20:12:37Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HUAKO7NZO",
   "PolicyName": "AmazonBraketFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-03-31T19:03:33Z",
+    "CreateDate": "2023-04-19T16:25:29Z",
     "Document": {
       "Statement": [
         {
@@ -60,6 +60,15 @@
         },
         {
           "Action": "braket:*",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:GetMetricData",
+            "s3:ListAllMyBuckets",
+            "servicequotas:GetServiceQuota"
+          ],
           "Effect": "Allow",
           "Resource": "*"
         },
@@ -135,13 +144,6 @@
         },
         {
           "Action": [
-            "s3:ListAllMyBuckets"
-          ],
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
             "sagemaker:AddTags",
             "sagemaker:CreateNotebookInstance",
             "sagemaker:CreatePresignedNotebookInstanceUrl",
@@ -178,7 +180,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2022-03-31T19:03:33Z"
+  "UpdateDate": "2023-04-19T16:25:29Z"
 }
