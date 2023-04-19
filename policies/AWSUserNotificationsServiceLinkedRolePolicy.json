@@ -1,0 +1,44 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSUserNotificationsServiceLinkedRolePolicy",
+  "CreateDate": "2023-04-19T13:28:34Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4JMXN6GOLB",
+  "PolicyName": "AWSUserNotificationsServiceLinkedRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-04-19T13:28:34Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "cloudwatch:PutMetricData",
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/Notifications"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:DescribeRule",
+            "events:ListTargetsByRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:events:*:*:rule/AWSUserNotificationsManagedRule-*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-04-19T13:28:34Z"
+}
