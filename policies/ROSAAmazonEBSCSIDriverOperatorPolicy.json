@@ -1,0 +1,138 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/ROSAAmazonEBSCSIDriverOperatorPolicy",
+  "CreateDate": "2023-04-20T22:36:00Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4F2443B4WJ",
+  "PolicyName": "ROSAAmazonEBSCSIDriverOperatorPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-04-20T22:36:00Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:AttachVolume",
+            "ec2:DetachVolume"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "CreateSnapshot",
+                "CreateVolume"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:snapshot/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateVolume"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:volume/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:DeleteSnapshot"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:snapshot/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:DeleteVolume",
+            "ec2:ModifyVolume"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:volume/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshot"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:snapshot/*"
+          ],
+          "Sid": "CreateSnapshotRequestTag"
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshot"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "CreateSnapshotResourceTag"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstances",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeTags",
+            "ec2:DescribeVolumes",
+            "ec2:DescribeVolumesModifications"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-04-20T22:36:00Z"
+}
