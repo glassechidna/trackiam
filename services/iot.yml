@@ -1,14 +1,4 @@
 Actions:
-  - Name: iot:DeleteThingShadow
-  - Name: iot:DescribeJobExecution
-  - Name: iot:GetRetainedMessage
-  - Name: iot:GetThingShadow
-  - Name: iot:ListNamedShadowsForThing
-  - Name: iot:ListRetainedMessages
-  - Name: iot:Publish
-  - Name: iot:UpdateThingShadow
-
-  # actions with no corresponding API
   - Name: iot:AcceptCertificateTransfer
   - Name: iot:AddThingToBillingGroup
   - Name: iot:AddThingToThingGroup
@@ -24,9 +14,7 @@ Actions:
   - Name: iot:CancelJob
   - Name: iot:CancelJobExecution
   - Name: iot:ClearDefaultAuthorizer
-  - Name: iot:CloseTunnel
   - Name: iot:ConfirmTopicRuleDestination
-  - Name: iot:Connect
   - Name: iot:CreateAuditSuppression
   - Name: iot:CreateAuthorizer
   - Name: iot:CreateBillingGroup
@@ -82,6 +70,7 @@ Actions:
   - Name: iot:DeleteStream
   - Name: iot:DeleteThing
   - Name: iot:DeleteThingGroup
+  - Name: iot:DeleteThingShadow
   - Name: iot:DeleteThingType
   - Name: iot:DeleteTopicRule
   - Name: iot:DeleteTopicRuleDestination
@@ -106,6 +95,7 @@ Actions:
   - Name: iot:DescribeFleetMetric
   - Name: iot:DescribeIndex
   - Name: iot:DescribeJob
+  - Name: iot:DescribeJobExecution
   - Name: iot:DescribeJobTemplate
   - Name: iot:DescribeManagedJobTemplate
   - Name: iot:DescribeMitigationAction
@@ -119,7 +109,6 @@ Actions:
   - Name: iot:DescribeThingGroup
   - Name: iot:DescribeThingRegistrationTask
   - Name: iot:DescribeThingType
-  - Name: iot:DescribeTunnel
   - Name: iot:DetachPolicy
   - Name: iot:DetachPrincipalPolicy
   - Name: iot:DetachSecurityProfile
@@ -138,7 +127,9 @@ Actions:
   - Name: iot:GetPolicy
   - Name: iot:GetPolicyVersion
   - Name: iot:GetRegistrationCode
+  - Name: iot:GetRetainedMessage
   - Name: iot:GetStatistics
+  - Name: iot:GetThingShadow
   - Name: iot:GetTopicRule
   - Name: iot:GetTopicRuleDestination
   - Name: iot:GetV2LoggingOptions
@@ -168,6 +159,7 @@ Actions:
   - Name: iot:ListManagedJobTemplates
   - Name: iot:ListMetricValues
   - Name: iot:ListMitigationActions
+  - Name: iot:ListNamedShadowsForThing
   - Name: iot:ListOTAUpdates
   - Name: iot:ListOutgoingCertificates
   - Name: iot:ListPolicies
@@ -178,6 +170,7 @@ Actions:
   - Name: iot:ListProvisioningTemplateVersions
   - Name: iot:ListProvisioningTemplates
   - Name: iot:ListRelatedResourcesForAuditFinding
+  - Name: iot:ListRetainedMessages
   - Name: iot:ListRoleAliases
   - Name: iot:ListScheduledAudits
   - Name: iot:ListSecurityProfiles
@@ -197,12 +190,10 @@ Actions:
   - Name: iot:ListThingsInThingGroup
   - Name: iot:ListTopicRuleDestinations
   - Name: iot:ListTopicRules
-  - Name: iot:ListTunnels
   - Name: iot:ListV2LoggingLevels
   - Name: iot:ListViolationEvents
-  - Name: iot:OpenTunnel
+  - Name: iot:Publish
   - Name: iot:PutVerificationStateOnViolation
-  - Name: iot:Receive
   - Name: iot:RegisterCACertificate
   - Name: iot:RegisterCertificate
   - Name: iot:RegisterCertificateWithoutCA
@@ -211,8 +202,6 @@ Actions:
   - Name: iot:RemoveThingFromBillingGroup
   - Name: iot:RemoveThingFromThingGroup
   - Name: iot:ReplaceTopicRule
-  - Name: iot:RetainPublish
-  - Name: iot:RotateTunnelAccessToken
   - Name: iot:SearchIndex
   - Name: iot:SetDefaultAuthorizer
   - Name: iot:SetDefaultPolicyVersion
@@ -224,7 +213,6 @@ Actions:
   - Name: iot:StartOnDemandAuditTask
   - Name: iot:StartThingRegistrationTask
   - Name: iot:StopThingRegistrationTask
-  - Name: iot:Subscribe
   - Name: iot:TagResource
   - Name: iot:TestAuthorization
   - Name: iot:TestInvokeAuthorizer
@@ -253,8 +241,20 @@ Actions:
   - Name: iot:UpdateThing
   - Name: iot:UpdateThingGroup
   - Name: iot:UpdateThingGroupsForThing
+  - Name: iot:UpdateThingShadow
   - Name: iot:UpdateTopicRuleDestination
   - Name: iot:ValidateSecurityProfileBehaviors
+
+  # actions with no corresponding API
+  - Name: iot:CloseTunnel
+  - Name: iot:Connect
+  - Name: iot:DescribeTunnel
+  - Name: iot:ListTunnels
+  - Name: iot:OpenTunnel
+  - Name: iot:Receive
+  - Name: iot:RetainPublish
+  - Name: iot:RotateTunnelAccessToken
+  - Name: iot:Subscribe
 
   # APIs without an IAM action
   - Name: iot:GetPendingJobExecutions
