@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 359
-* Unique actions: 14670
+* Unique services: 362
+* Unique actions: 14702
 * Managed policies: 1072
 
 Most common managed policy name prefixes:
@@ -341,6 +341,7 @@ The following table summarises the AWS APIs.
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 23 |
+| [`notifications`](services/notifications.yml) | 0 | 0 | 21 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
@@ -356,6 +357,7 @@ The following table summarises the AWS APIs.
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 11 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
+| [`notifications-contacts`](services/notifications-contacts.yml) | 0 | 0 | 9 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 9 |
 | [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
@@ -385,6 +387,7 @@ The following table summarises the AWS APIs.
 | [`freetier`](services/freetier.yml) | 0 | 0 | 3 |
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |
 | [`consolidatedbilling`](services/consolidatedbilling.yml) | 0 | 0 | 2 |
+| [`consoleapp`](services/consoleapp.yml) | 0 | 0 | 2 |
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
 | [`vpc-lattice-svcs`](services/vpc-lattice-svcs.yml) | 0 | 0 | 1 |
 | [`sustainability`](services/sustainability.yml) | 0 | 0 | 1 |
@@ -400,14 +403,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2283 |
-| `Get` | 2070 |
-| `Delete` | 1676 |
+| `List` | 2292 |
+| `Get` | 2075 |
+| `Delete` | 1679 |
 | `Describe` | 1570 |
-| `Create` | 1566 |
-| `Update` | 1335 |
+| `Create` | 1569 |
+| `Update` | 1337 |
 | `Put` | 413 |
 | `Start` | 310 |
-| `Tag` | 232 |
-| `Untag` | 230 |
+| `Tag` | 234 |
+| `Untag` | 232 |
 
