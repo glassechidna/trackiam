@@ -13,14 +13,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 359
 * Unique actions: 14905
-* Managed policies: 1070
+* Managed policies: 1072
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 297 |
-| `arn:aws:iam::aws:policy/Amazon*` | 274 |
+| `arn:aws:iam::aws:policy/Amazon*` | 276 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 238 |
 | `arn:aws:iam::aws:policy/service-role/*` | 161 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -164,6 +164,7 @@ The following table summarises the AWS APIs.
 | [`ivs`](services/ivs.yml) | 35 | 0 | 0 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
 | [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
+| [`ram`](services/ram.yml) | 34 | 0 | 0 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
@@ -208,7 +209,6 @@ The following table summarises the AWS APIs.
 | [`private-networks`](services/private-networks.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
-| [`ram`](services/ram.yml) | 25 | 9 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
 | [`backup-gateway`](services/backup-gateway.yml) | 25 | 0 | 2 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 1 |
