@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/FMSServiceRolePolicy",
   "CreateDate": "2018-03-28T23:01:12Z",
-  "DefaultVersionId": "v27",
+  "DefaultVersionId": "v28",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAI62NTGYJB446ACUEA",
   "PolicyName": "FMSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-02-03T23:53:37Z",
+    "CreateDate": "2023-04-21T18:33:58Z",
     "Document": {
       "Statement": [
         {
@@ -304,13 +304,30 @@
         {
           "Action": [
             "config:DeleteConfigRule",
-            "config:DescribeComplianceByConfigRule",
             "config:GetComplianceDetailsByConfigRule",
             "config:PutConfigRule",
             "config:StartConfigRulesEvaluation"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:config:*:*:config-rule/aws-service-rule/fms.amazonaws.com/*"
+        },
+        {
+          "Action": [
+            "config:DescribeComplianceByConfigRule",
+            "config:DescribeConfigurationRecorderStatus",
+            "config:DescribeConfigurationRecorders",
+            "config:DescribeDeliveryChannelStatus",
+            "config:DescribeDeliveryChannels",
+            "config:GetComplianceSummaryByConfigRule",
+            "config:GetDiscoveredResourceCounts",
+            "config:PutConfigurationRecorder",
+            "config:PutDeliveryChannel",
+            "config:PutEvaluations",
+            "config:SelectResourceConfig",
+            "config:StartConfigurationRecorder"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": [
@@ -330,23 +347,6 @@
           "Resource": [
             "*"
           ]
-        },
-        {
-          "Action": [
-            "config:DescribeConfigurationRecorderStatus",
-            "config:DescribeConfigurationRecorders",
-            "config:DescribeDeliveryChannelStatus",
-            "config:DescribeDeliveryChannels",
-            "config:GetComplianceSummaryByConfigRule",
-            "config:GetDiscoveredResourceCounts",
-            "config:PutConfigurationRecorder",
-            "config:PutDeliveryChannel",
-            "config:PutEvaluations",
-            "config:SelectResourceConfig",
-            "config:StartConfigurationRecorder"
-          ],
-          "Effect": "Allow",
-          "Resource": "*"
         },
         {
           "Action": [
@@ -620,7 +620,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v27"
+    "VersionId": "v28"
   },
-  "UpdateDate": "2023-02-03T23:53:37Z"
+  "UpdateDate": "2023-04-21T18:33:58Z"
 }

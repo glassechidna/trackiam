@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 362
-* Unique actions: 14702
+* Unique actions: 14707
 * Managed policies: 1076
 
 Most common managed policy name prefixes:
@@ -41,7 +41,7 @@ The following table summarises the AWS APIs.
 | [`chime`](services/chime.yml) | 253 | 0 | 50 |
 | [`iot`](services/iot.yml) | 245 | 3 | 9 |
 | [`glue`](services/glue.yml) | 198 | 4 | 12 |
-| [`connect`](services/connect.yml) | 171 | 0 | 9 |
+| [`connect`](services/connect.yml) | 171 | 1 | 9 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
 | [`iam`](services/iam.yml) | 158 | 0 | 12 |
 | [`ses`](services/ses.yml) | 143 | 0 | 0 |
@@ -141,6 +141,7 @@ The following table summarises the AWS APIs.
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
+| [`fms`](services/fms.yml) | 38 | 4 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 38 | 0 | 3 |
 | [`codeartifact`](services/codeartifact.yml) | 38 | 0 | 3 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
@@ -148,7 +149,6 @@ The following table summarises the AWS APIs.
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`profile`](services/profile.yml) | 38 | 0 | 0 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 0 |
-| [`fms`](services/fms.yml) | 38 | 0 | 0 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
 | [`sso`](services/sso.yml) | 37 | 0 | 55 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
@@ -403,13 +403,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2292 |
-| `Get` | 2075 |
+| `List` | 2294 |
+| `Get` | 2076 |
 | `Delete` | 1679 |
 | `Describe` | 1570 |
-| `Create` | 1569 |
+| `Create` | 1570 |
 | `Update` | 1337 |
-| `Put` | 413 |
+| `Put` | 414 |
 | `Start` | 310 |
 | `Tag` | 234 |
 | `Untag` | 232 |
