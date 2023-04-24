@@ -1,13 +1,16 @@
 Actions:
   - Name: aws-marketplace:BatchMeterUsage
   - Name: aws-marketplace:CancelChangeSet
+  - Name: aws-marketplace:DeleteResourcePolicy
   - Name: aws-marketplace:DescribeChangeSet
   - Name: aws-marketplace:DescribeEntity
   - Name: aws-marketplace:GetEntitlements
+  - Name: aws-marketplace:GetResourcePolicy
   - Name: aws-marketplace:ListChangeSets
   - Name: aws-marketplace:ListEntities
   - Name: aws-marketplace:ListTagsForResource
   - Name: aws-marketplace:MeterUsage
+  - Name: aws-marketplace:PutResourcePolicy
   - Name: aws-marketplace:RegisterUsage
   - Name: aws-marketplace:ResolveCustomer
   - Name: aws-marketplace:StartChangeSet
@@ -49,8 +52,3 @@ Actions:
   - Name: aws-marketplace:UpdateAgreementApprovalRequest
   - Name: aws-marketplace:UpdateTask
   - Name: aws-marketplace:ViewSubscriptions
-
-  # APIs without an IAM action
-  - Name: aws-marketplace:DeleteResourcePolicy
-  - Name: aws-marketplace:GetResourcePolicy
-  - Name: aws-marketplace:PutResourcePolicy
