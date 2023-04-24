@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 362
-* Unique actions: 14707
+* Unique actions: 14719
 * Managed policies: 1076
 
 Most common managed policy name prefixes:
@@ -342,6 +342,7 @@ The following table summarises the AWS APIs.
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 23 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 21 |
+| [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 20 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
@@ -360,7 +361,6 @@ The following table summarises the AWS APIs.
 | [`notifications-contacts`](services/notifications-contacts.yml) | 0 | 0 | 9 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 9 |
-| [`launchwizard`](services/launchwizard.yml) | 0 | 0 | 8 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 8 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 8 |
 | [`codeguru-security`](services/codeguru-security.yml) | 0 | 0 | 8 |
@@ -403,12 +403,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2294 |
-| `Get` | 2076 |
-| `Delete` | 1679 |
-| `Describe` | 1570 |
-| `Create` | 1570 |
-| `Update` | 1337 |
+| `List` | 2298 |
+| `Get` | 2077 |
+| `Delete` | 1681 |
+| `Describe` | 1572 |
+| `Create` | 1572 |
+| `Update` | 1338 |
 | `Put` | 414 |
 | `Start` | 310 |
 | `Tag` | 234 |
