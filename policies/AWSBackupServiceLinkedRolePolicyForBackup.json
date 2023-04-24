@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBackupServiceLinkedRolePolicyForBackup",
   "CreateDate": "2020-06-02T23:08:40Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ONJBD4ZY2",
   "PolicyName": "AWSBackupServiceLinkedRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2022-11-10T22:51:20Z",
+    "CreateDate": "2023-04-24T21:22:45Z",
     "Document": {
       "Statement": [
         {
@@ -136,6 +136,15 @@
         },
         {
           "Action": [
+            "cloudformation:ListStacks"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/*"
+          ]
+        },
+        {
+          "Action": [
             "dynamodb:DescribeTable",
             "dynamodb:ListTagsOfResource"
           ],
@@ -246,7 +255,7 @@
         {
           "Action": [
             "ssm-sap:GetOperation",
-            "sysops-sap:GetOperation"
+            "ssm-sap:UpdateHANABackupSettings"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -271,8 +280,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:timestream:*:*:database/*",
-            "arn:aws:timestream:*:*:database/*/table/*"
+            "arn:aws:timestream:*:*:database/*"
           ]
         },
         {
@@ -302,7 +310,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2022-11-10T22:51:20Z"
+  "UpdateDate": "2023-04-24T21:22:45Z"
 }

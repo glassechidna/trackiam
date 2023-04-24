@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForRestores",
   "CreateDate": "2019-01-12T00:23:54Z",
-  "DefaultVersionId": "v16",
+  "DefaultVersionId": "v17",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJZCCL6F2WPVOUXZKI",
   "PolicyName": "AWSBackupServiceRolePolicyForRestores",
   "PolicyVersion": {
-    "CreateDate": "2023-03-28T23:32:58Z",
+    "CreateDate": "2023-04-24T21:24:51Z",
     "Document": {
       "Statement": [
         {
@@ -34,6 +34,24 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "ForAnyValue:StringLike": {
+              "ec2:CreateAction": [
+                "CreateVolume",
+                "RunInstances"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ]
         },
         {
           "Action": [
@@ -132,10 +150,11 @@
         {
           "Action": [
             "cloudformation:CreateChangeSet",
-            "cloudformation:DescribeChangeSet"
+            "cloudformation:DescribeChangeSet",
+            "cloudformation:TagResource"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:cloudformation:*:*:stack/*/*"
+          "Resource": "arn:aws:cloudformation:*:*:*/*/*"
         },
         {
           "Action": [
@@ -220,7 +239,8 @@
             "elasticfilesystem:CreateFilesystem",
             "elasticfilesystem:DeleteFilesystem",
             "elasticfilesystem:DescribeFilesystems",
-            "elasticfilesystem:Restore"
+            "elasticfilesystem:Restore",
+            "elasticfilesystem:TagResource"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:elasticfilesystem:*:*:file-system/*"
@@ -237,12 +257,14 @@
         },
         {
           "Action": [
-            "fsx:CreateVolumeFromBackup"
+            "fsx:CreateVolumeFromBackup",
+            "fsx:TagResource"
           ],
           "Effect": "Allow",
           "Resource": [
             "arn:aws:fsx:*:*:backup/*",
-            "arn:aws:fsx:*:*:storage-virtual-machine/*"
+            "arn:aws:fsx:*:*:storage-virtual-machine/*",
+            "arn:aws:fsx:*:*:volume/*"
           ]
         },
         {
@@ -312,21 +334,22 @@
         },
         {
           "Action": [
-            "storagegateway:CreateCachediSCSIVolume",
-            "storagegateway:CreateStorediSCSIVolume",
-            "storagegateway:DescribeGatewayInformation"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:storagegateway:*:*:gateway/*"
-        },
-        {
-          "Action": [
+            "storagegateway:AddTagsToResource",
             "storagegateway:DeleteVolume",
             "storagegateway:DescribeCachediSCSIVolumes",
             "storagegateway:DescribeStorediSCSIVolumes"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:storagegateway:*:*:gateway/*/volume/*"
+        },
+        {
+          "Action": [
+            "storagegateway:CreateCachediSCSIVolume",
+            "storagegateway:CreateStorediSCSIVolume",
+            "storagegateway:DescribeGatewayInformation"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:storagegateway:*:*:gateway/*"
         },
         {
           "Action": [
@@ -347,8 +370,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:timestream:*:*:database/*",
-            "arn:aws:timestream:*:*:database/*/table/*"
+            "arn:aws:timestream:*:*:database/*"
           ]
         },
         {
@@ -380,7 +402,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v16"
+    "VersionId": "v17"
   },
-  "UpdateDate": "2023-03-28T23:32:58Z"
+  "UpdateDate": "2023-04-24T21:24:51Z"
 }
