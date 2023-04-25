@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 362
-* Unique actions: 14719
+* Unique actions: 14746
 * Managed policies: 1077
 
 Most common managed policy name prefixes:
@@ -41,15 +41,15 @@ The following table summarises the AWS APIs.
 | [`chime`](services/chime.yml) | 253 | 0 | 50 |
 | [`iot`](services/iot.yml) | 245 | 3 | 9 |
 | [`glue`](services/glue.yml) | 198 | 4 | 12 |
-| [`connect`](services/connect.yml) | 172 | 0 | 9 |
+| [`connect`](services/connect.yml) | 172 | 14 | 9 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
 | [`iam`](services/iam.yml) | 158 | 0 | 12 |
 | [`ses`](services/ses.yml) | 143 | 0 | 0 |
 | [`rds`](services/rds.yml) | 141 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 138 | 0 | 10 |
 | [`quicksight`](services/quicksight.yml) | 131 | 3 | 26 |
+| [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`redshift`](services/redshift.yml) | 119 | 0 | 18 |
-| [`mobiletargeting`](services/mobiletargeting.yml) | 119 | 0 | 4 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`iotwireless`](services/iotwireless.yml) | 109 | 0 | 1 |
@@ -125,11 +125,11 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
+| [`datasync`](services/datasync.yml) | 44 | 13 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 44 | 3 | 1 |
 | [`workdocs`](services/workdocs.yml) | 44 | 0 | 14 |
 | [`cloudtrail`](services/cloudtrail.yml) | 44 | 0 | 5 |
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
-| [`datasync`](services/datasync.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`wellarchitected`](services/wellarchitected.yml) | 43 | 0 | 0 |
 | [`transcribe`](services/transcribe.yml) | 42 | 0 | 3 |
@@ -403,14 +403,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2298 |
+| `List` | 2303 |
 | `Get` | 2077 |
-| `Delete` | 1681 |
-| `Describe` | 1572 |
-| `Create` | 1572 |
-| `Update` | 1338 |
+| `Delete` | 1683 |
+| `Describe` | 1578 |
+| `Create` | 1573 |
+| `Update` | 1342 |
 | `Put` | 414 |
-| `Start` | 310 |
+| `Start` | 312 |
 | `Tag` | 234 |
 | `Untag` | 232 |
 
