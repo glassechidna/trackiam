@@ -11,17 +11,17 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 362
-* Unique actions: 14746
-* Managed policies: 1077
+* Unique services: 363
+* Unique actions: 14761
+* Managed policies: 1080
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 297 |
-| `arn:aws:iam::aws:policy/Amazon*` | 276 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 238 |
+| `arn:aws:iam::aws:policy/Amazon*` | 278 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 239 |
 | `arn:aws:iam::aws:policy/service-role/*` | 166 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 93 |
@@ -266,6 +266,7 @@ The following table summarises the AWS APIs.
 | [`support`](services/support.yml) | 14 | 0 | 8 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
+| [`osis`](services/osis.yml) | 14 | 0 | 1 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 14 | 0 | 0 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 16 |
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 7 |
@@ -403,14 +404,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2303 |
-| `Get` | 2077 |
-| `Delete` | 1683 |
+| `List` | 2306 |
+| `Get` | 2080 |
+| `Delete` | 1684 |
 | `Describe` | 1578 |
-| `Create` | 1573 |
-| `Update` | 1342 |
+| `Create` | 1574 |
+| `Update` | 1343 |
 | `Put` | 414 |
-| `Start` | 312 |
-| `Tag` | 234 |
-| `Untag` | 232 |
+| `Start` | 313 |
+| `Tag` | 235 |
+| `Untag` | 233 |
 

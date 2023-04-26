@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonOpenSearchIngestionReadOnlyAccess",
+  "CreateDate": "2023-04-26T18:09:52Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4G7EWDJ7DQ",
+  "PolicyName": "AmazonOpenSearchIngestionReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-04-26T18:09:52Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "osis:GetPipeline",
+            "osis:GetPipelineBlueprint",
+            "osis:GetPipelineChangeProgress",
+            "osis:ListPipelineBlueprints",
+            "osis:ListPipelines",
+            "osis:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-04-26T18:09:52Z"
+}
