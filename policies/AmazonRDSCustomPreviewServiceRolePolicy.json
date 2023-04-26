@@ -1,15 +1,28 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSCustomPreviewServiceRolePolicy",
   "CreateDate": "2021-10-08T21:44:15Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4D6BEPON2G",
   "PolicyName": "AmazonRDSCustomPreviewServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-02-14T23:58:11Z",
+    "CreateDate": "2023-04-26T02:01:02Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ec2:CreateNetworkInterface",
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/AWSRDSCustom": [
+                "custom-oracle-rac"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "eccNetworkInterface1"
+        },
         {
           "Action": "ec2:CreateSnapshots",
           "Condition": {
@@ -41,6 +54,7 @@
                 "AllocateAddress",
                 "CopySnapshot",
                 "CreateKeyPair",
+                "CreateNetworkInterface",
                 "CreateSnapshots",
                 "CreateVolume",
                 "RunInstances"
@@ -65,6 +79,19 @@
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*:*:volume/*",
           "Sid": "eccVolume2"
+        },
+        {
+          "Action": "ec2:DeleteNetworkInterface",
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/AWSRDSCustom": [
+                "custom-oracle-rac"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "eccNetworkInterface3"
         },
         {
           "Action": "ec2:RunInstances",
@@ -181,6 +208,21 @@
             "*"
           ],
           "Sid": "ecc1scoping"
+        },
+        {
+          "Action": [
+            "ec2:AssignPrivateIpAddresses"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/AWSRDSCustom": [
+                "custom-oracle-rac"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "ecc1scoping3"
         },
         {
           "Action": [
@@ -489,6 +531,15 @@
           "Sid": "ssm5"
         },
         {
+          "Action": "ec2:CreateNetworkInterface",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "eccNetworkInterface2"
+        },
+        {
           "Action": "ssm:SendCommand",
           "Effect": "Allow",
           "Resource": "arn:aws:ssm:*:*:document/*",
@@ -594,7 +645,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-02-14T23:58:11Z"
+  "UpdateDate": "2023-04-26T02:01:02Z"
 }
