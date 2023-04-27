@@ -1,0 +1,139 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/ROSAKubeControllerPolicy",
+  "CreateDate": "2023-04-27T20:09:29Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4JWF64Q542",
+  "PolicyName": "ROSAKubeControllerPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-04-27T20:09:29Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:DeleteSecurityGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*"
+          ],
+          "Sid": "ModifySecurityGroup"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*"
+          ],
+          "Sid": "CreateSecurityGroup"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": "CreateSecurityGroup"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*"
+          ],
+          "Sid": "CreateTagsSecurityGroups"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:CreateLoadBalancer"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticloadbalancing:*:*:loadbalancer/*"
+          ],
+          "Sid": "CreateLoadBalancer"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "KMSDescribeKey"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:vpc/*"
+          ],
+          "Sid": "CreateSecurityGroupVpc"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstances",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "elasticloadbalancing:DescribeLoadBalancerAttributes",
+            "elasticloadbalancing:DescribeLoadBalancers"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "ReadPermissions"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:AddTags",
+            "elasticloadbalancing:ConfigureHealthCheck",
+            "elasticloadbalancing:CreateLoadBalancerPolicy",
+            "elasticloadbalancing:DeleteLoadBalancer",
+            "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
+            "elasticloadbalancing:ModifyLoadBalancerAttributes",
+            "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
+            "elasticloadbalancing:SetLoadBalancerPoliciesForBackendServer"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "LoadBalanacerManagement"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-04-27T20:09:29Z"
+}

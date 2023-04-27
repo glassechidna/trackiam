@@ -13,7 +13,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 363
 * Unique actions: 14772
-* Managed policies: 1080
+* Managed policies: 1083
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 297 |
 | `arn:aws:iam::aws:policy/Amazon*` | 278 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 239 |
-| `arn:aws:iam::aws:policy/service-role/*` | 166 |
+| `arn:aws:iam::aws:policy/service-role/*` | 169 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 93 |
 
@@ -41,7 +41,7 @@ The following table summarises the AWS APIs.
 | [`chime`](services/chime.yml) | 253 | 0 | 50 |
 | [`iot`](services/iot.yml) | 245 | 3 | 9 |
 | [`glue`](services/glue.yml) | 198 | 4 | 12 |
-| [`connect`](services/connect.yml) | 172 | 14 | 9 |
+| [`connect`](services/connect.yml) | 186 | 0 | 9 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
 | [`iam`](services/iam.yml) | 158 | 0 | 12 |
 | [`ses`](services/ses.yml) | 143 | 0 | 0 |

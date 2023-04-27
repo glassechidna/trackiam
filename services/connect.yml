@@ -1,4 +1,5 @@
 Actions:
+  - Name: connect:ActivateEvaluationForm
   - Name: connect:AssociateApprovedOrigin
   - Name: connect:AssociateBot
   - Name: connect:AssociateDefaultVocabulary
@@ -13,6 +14,7 @@ Actions:
   - Name: connect:CreateAgentStatus
   - Name: connect:CreateContactFlow
   - Name: connect:CreateContactFlowModule
+  - Name: connect:CreateEvaluationForm
   - Name: connect:CreateHoursOfOperation
   - Name: connect:CreateInstance
   - Name: connect:CreateIntegrationAssociation
@@ -28,8 +30,11 @@ Actions:
   - Name: connect:CreateUser
   - Name: connect:CreateUserHierarchyGroup
   - Name: connect:CreateVocabulary
+  - Name: connect:DeactivateEvaluationForm
+  - Name: connect:DeleteContactEvaluation
   - Name: connect:DeleteContactFlow
   - Name: connect:DeleteContactFlowModule
+  - Name: connect:DeleteEvaluationForm
   - Name: connect:DeleteHoursOfOperation
   - Name: connect:DeleteInstance
   - Name: connect:DeleteIntegrationAssociation
@@ -44,8 +49,10 @@ Actions:
   - Name: connect:DeleteVocabulary
   - Name: connect:DescribeAgentStatus
   - Name: connect:DescribeContact
+  - Name: connect:DescribeContactEvaluation
   - Name: connect:DescribeContactFlow
   - Name: connect:DescribeContactFlowModule
+  - Name: connect:DescribeEvaluationForm
   - Name: connect:DescribeHoursOfOperation
   - Name: connect:DescribeInstance
   - Name: connect:DescribeInstanceAttribute
@@ -82,10 +89,13 @@ Actions:
   - Name: connect:ListAgentStatuses
   - Name: connect:ListApprovedOrigins
   - Name: connect:ListBots
+  - Name: connect:ListContactEvaluations
   - Name: connect:ListContactFlowModules
   - Name: connect:ListContactFlows
   - Name: connect:ListContactReferences
   - Name: connect:ListDefaultVocabularies
+  - Name: connect:ListEvaluationFormVersions
+  - Name: connect:ListEvaluationForms
   - Name: connect:ListHoursOfOperations
   - Name: connect:ListInstanceAttributes
   - Name: connect:ListInstanceStorageConfigs
@@ -124,6 +134,7 @@ Actions:
   - Name: connect:SearchUsers
   - Name: connect:SearchVocabularies
   - Name: connect:StartChatContact
+  - Name: connect:StartContactEvaluation
   - Name: connect:StartContactRecording
   - Name: connect:StartContactStreaming
   - Name: connect:StartOutboundVoiceContact
@@ -131,6 +142,7 @@ Actions:
   - Name: connect:StopContact
   - Name: connect:StopContactRecording
   - Name: connect:StopContactStreaming
+  - Name: connect:SubmitContactEvaluation
   - Name: connect:SuspendContactRecording
   - Name: connect:TagResource
   - Name: connect:TransferContact
@@ -138,12 +150,14 @@ Actions:
   - Name: connect:UpdateAgentStatus
   - Name: connect:UpdateContact
   - Name: connect:UpdateContactAttributes
+  - Name: connect:UpdateContactEvaluation
   - Name: connect:UpdateContactFlowContent
   - Name: connect:UpdateContactFlowMetadata
   - Name: connect:UpdateContactFlowModuleContent
   - Name: connect:UpdateContactFlowModuleMetadata
   - Name: connect:UpdateContactFlowName
   - Name: connect:UpdateContactSchedule
+  - Name: connect:UpdateEvaluationForm
   - Name: connect:UpdateHoursOfOperation
   - Name: connect:UpdateInstanceAttribute
   - Name: connect:UpdateInstanceStorageConfig
@@ -182,19 +196,3 @@ Actions:
   - Name: connect:StartForecastingPlanningSchedulingIntegration
   - Name: connect:StopForecastingPlanningSchedulingIntegration
   - Name: connect:UpdatedescribeContent
-
-  # APIs without an IAM action
-  - Name: connect:ActivateEvaluationForm
-  - Name: connect:CreateEvaluationForm
-  - Name: connect:DeactivateEvaluationForm
-  - Name: connect:DeleteContactEvaluation
-  - Name: connect:DeleteEvaluationForm
-  - Name: connect:DescribeContactEvaluation
-  - Name: connect:DescribeEvaluationForm
-  - Name: connect:ListContactEvaluations
-  - Name: connect:ListEvaluationFormVersions
-  - Name: connect:ListEvaluationForms
-  - Name: connect:StartContactEvaluation
-  - Name: connect:SubmitContactEvaluation
-  - Name: connect:UpdateContactEvaluation
-  - Name: connect:UpdateEvaluationForm
