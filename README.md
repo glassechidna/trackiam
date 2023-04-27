@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 363
-* Unique actions: 14761
+* Unique actions: 14772
 * Managed policies: 1080
 
 Most common managed policy name prefixes:
@@ -78,8 +78,8 @@ The following table summarises the AWS APIs.
 | [`personalize`](services/personalize.yml) | 71 | 0 | 0 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
 | [`dms`](services/dms.yml) | 69 | 0 | 33 |
+| [`guardduty`](services/guardduty.yml) | 67 | 1 | 1 |
 | [`ds`](services/ds.yml) | 67 | 0 | 6 |
-| [`guardduty`](services/guardduty.yml) | 67 | 0 | 1 |
 | [`cloudformation`](services/cloudformation.yml) | 66 | 0 | 11 |
 | [`omics`](services/omics.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
@@ -156,9 +156,9 @@ The following table summarises the AWS APIs.
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`cleanrooms`](services/cleanrooms.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
+| [`kafka`](services/kafka.yml) | 36 | 9 | 0 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 0 |
-| [`kafka`](services/kafka.yml) | 36 | 0 | 0 |
 | [`apprunner`](services/apprunner.yml) | 35 | 0 | 5 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`eks`](services/eks.yml) | 35 | 0 | 1 |
@@ -235,6 +235,7 @@ The following table summarises the AWS APIs.
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 20 | 2 | 1 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
 | [`iotroborunner`](services/iotroborunner.yml) | 20 | 0 | 0 |
+| [`emr-containers`](services/emr-containers.yml) | 19 | 1 | 0 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
 | [`sagemaker-geospatial`](services/sagemaker-geospatial.yml) | 19 | 0 | 0 |
@@ -242,7 +243,6 @@ The following table summarises the AWS APIs.
 | [`opsworks-cm`](services/opsworks-cm.yml) | 19 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 19 | 0 | 0 |
 | [`identitystore`](services/identitystore.yml) | 19 | 0 | 0 |
-| [`emr-containers`](services/emr-containers.yml) | 19 | 0 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
 | [`resource-groups`](services/resource-groups.yml) | 18 | 0 | 1 |
 | [`translate`](services/translate.yml) | 18 | 0 | 0 |
@@ -404,14 +404,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2306 |
-| `Get` | 2080 |
-| `Delete` | 1684 |
-| `Describe` | 1578 |
-| `Create` | 1574 |
+| `List` | 2308 |
+| `Get` | 2082 |
+| `Delete` | 1686 |
+| `Describe` | 1579 |
+| `Create` | 1575 |
 | `Update` | 1343 |
-| `Put` | 414 |
-| `Start` | 313 |
+| `Put` | 415 |
+| `Start` | 314 |
 | `Tag` | 235 |
 | `Untag` | 233 |
 
