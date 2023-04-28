@@ -4,15 +4,21 @@ Actions:
   - Name: kafka:CreateCluster
   - Name: kafka:CreateClusterV2
   - Name: kafka:CreateConfiguration
+  - Name: kafka:CreateVpcConnection
   - Name: kafka:DeleteCluster
+  - Name: kafka:DeleteClusterPolicy
   - Name: kafka:DeleteConfiguration
+  - Name: kafka:DeleteVpcConnection
   - Name: kafka:DescribeCluster
   - Name: kafka:DescribeClusterOperation
   - Name: kafka:DescribeClusterV2
   - Name: kafka:DescribeConfiguration
   - Name: kafka:DescribeConfigurationRevision
+  - Name: kafka:DescribeVpcConnection
   - Name: kafka:GetBootstrapBrokers
+  - Name: kafka:GetClusterPolicy
   - Name: kafka:GetCompatibleKafkaVersions
+  - Name: kafka:ListClientVpcConnections
   - Name: kafka:ListClusterOperations
   - Name: kafka:ListClusters
   - Name: kafka:ListClustersV2
@@ -22,7 +28,10 @@ Actions:
   - Name: kafka:ListNodes
   - Name: kafka:ListScramSecrets
   - Name: kafka:ListTagsForResource
+  - Name: kafka:ListVpcConnections
+  - Name: kafka:PutClusterPolicy
   - Name: kafka:RebootBroker
+  - Name: kafka:RejectClientVpcConnection
   - Name: kafka:TagResource
   - Name: kafka:UntagResource
   - Name: kafka:UpdateBrokerCount
@@ -35,14 +44,3 @@ Actions:
   - Name: kafka:UpdateMonitoring
   - Name: kafka:UpdateSecurity
   - Name: kafka:UpdateStorage
-
-  # APIs without an IAM action
-  - Name: kafka:CreateVpcConnection
-  - Name: kafka:DeleteClusterPolicy
-  - Name: kafka:DeleteVpcConnection
-  - Name: kafka:DescribeVpcConnection
-  - Name: kafka:GetClusterPolicy
-  - Name: kafka:ListClientVpcConnections
-  - Name: kafka:ListVpcConnections
-  - Name: kafka:PutClusterPolicy
-  - Name: kafka:RejectClientVpcConnection

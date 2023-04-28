@@ -124,6 +124,7 @@ The following table summarises the AWS APIs.
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
+| [`kafka`](services/kafka.yml) | 45 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 44 | 13 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 44 | 3 | 1 |
@@ -156,7 +157,6 @@ The following table summarises the AWS APIs.
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`cleanrooms`](services/cleanrooms.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
-| [`kafka`](services/kafka.yml) | 36 | 9 | 0 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 0 |
 | [`apprunner`](services/apprunner.yml) | 35 | 0 | 5 |

@@ -1,15 +1,31 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/KafkaServiceRolePolicy",
   "CreateDate": "2018-11-15T23:31:48Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJUXPRZ76MAP2EVQJU",
   "PolicyName": "KafkaServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-08-26T20:40:53Z",
+    "CreateDate": "2023-04-28T00:39:35Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "ec2:DeleteVpcEndpoints",
+            "ec2:ModifyVpcEndpoint"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/AWSMSKManaged": "true"
+            },
+            "StringLike": {
+              "ec2:ResourceTag/ClusterArn": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:ec2:*:*:vpc-endpoint/*"
+        },
         {
           "Action": [
             "secretsmanager:DeleteResourcePolicy",
@@ -33,17 +49,25 @@
             "ec2:CreateNetworkInterfacePermission",
             "ec2:DeleteNetworkInterface",
             "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeVpcEndpoints",
             "ec2:DetachNetworkInterface",
             "secretsmanager:ListSecrets"
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:ModifyVpcEndpoint"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:*:ec2:*:*:subnet/*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-08-26T20:40:53Z"
+  "UpdateDate": "2023-04-28T00:39:35Z"
 }
