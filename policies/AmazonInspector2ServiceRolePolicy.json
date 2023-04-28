@@ -1,15 +1,46 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonInspector2ServiceRolePolicy",
   "CreateDate": "2021-11-16T20:27:48Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4BINOILVQW",
   "PolicyName": "AmazonInspector2ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-04-14T14:12:30Z",
+    "CreateDate": "2023-04-28T18:13:17Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "cloudtrail:CreateServiceLinkedChannel",
+            "cloudtrail:DeleteServiceLinkedChannel"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:cloudtrail:*:*:channel/aws-service-channel/inspector2/*"
+          ],
+          "Sid": "AllowManagementOfServiceLinkedChannel"
+        },
+        {
+          "Action": [
+            "cloudtrail:ListServiceLinkedChannels"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowListServiceLinkedChannels"
+        },
         {
           "Action": [
             "iam:GetPolicy",
@@ -207,7 +238,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2023-04-14T14:12:30Z"
+  "UpdateDate": "2023-04-28T18:13:17Z"
 }

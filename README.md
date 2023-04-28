@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 363
-* Unique actions: 14780
+* Unique actions: 14781
 * Managed policies: 1083
 
 Most common managed policy name prefixes:
@@ -80,6 +80,7 @@ The following table summarises the AWS APIs.
 | [`dms`](services/dms.yml) | 69 | 0 | 33 |
 | [`guardduty`](services/guardduty.yml) | 68 | 0 | 1 |
 | [`ds`](services/ds.yml) | 67 | 0 | 6 |
+| [`athena`](services/athena.yml) | 67 | 0 | 1 |
 | [`cloudformation`](services/cloudformation.yml) | 66 | 0 | 11 |
 | [`omics`](services/omics.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
@@ -96,7 +97,6 @@ The following table summarises the AWS APIs.
 | [`mgn`](services/mgn.yml) | 61 | 0 | 34 |
 | [`securityhub`](services/securityhub.yml) | 61 | 0 | 9 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
-| [`athena`](services/athena.yml) | 60 | 0 | 8 |
 | [`medialive`](services/medialive.yml) | 59 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 58 | 0 | 0 |
 | [`geo`](services/geo.yml) | 58 | 0 | 0 |
@@ -257,9 +257,9 @@ The following table summarises the AWS APIs.
 | [`ivschat`](services/ivschat.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`fis`](services/fis.yml) | 16 | 0 | 3 |
+| [`simspaceweaver`](services/simspaceweaver.yml) | 15 | 1 | 0 |
 | [`honeycode`](services/honeycode.yml) | 15 | 0 | 15 |
 | [`app-integrations`](services/app-integrations.yml) | 15 | 0 | 4 |
-| [`simspaceweaver`](services/simspaceweaver.yml) | 15 | 0 | 0 |
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
 | [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
@@ -408,7 +408,7 @@ Most common action prefixes:
 | `Get` | 2084 |
 | `Delete` | 1686 |
 | `Describe` | 1580 |
-| `Create` | 1576 |
+| `Create` | 1577 |
 | `Update` | 1344 |
 | `Put` | 416 |
 | `Start` | 314 |

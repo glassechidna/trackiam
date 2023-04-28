@@ -2,6 +2,8 @@ Actions:
   - Name: athena:BatchGetNamedQuery
   - Name: athena:BatchGetPreparedStatement
   - Name: athena:BatchGetQueryExecution
+  - Name: athena:CancelCapacityReservation
+  - Name: athena:CreateCapacityReservation
   - Name: athena:CreateDataCatalog
   - Name: athena:CreateNamedQuery
   - Name: athena:CreateNotebook
@@ -17,6 +19,8 @@ Actions:
   - Name: athena:GetCalculationExecution
   - Name: athena:GetCalculationExecutionCode
   - Name: athena:GetCalculationExecutionStatus
+  - Name: athena:GetCapacityAssignmentConfiguration
+  - Name: athena:GetCapacityReservation
   - Name: athena:GetDataCatalog
   - Name: athena:GetDatabase
   - Name: athena:GetNamedQuery
@@ -32,6 +36,7 @@ Actions:
   - Name: athena:ImportNotebook
   - Name: athena:ListApplicationDPUSizes
   - Name: athena:ListCalculationExecutions
+  - Name: athena:ListCapacityReservations
   - Name: athena:ListDataCatalogs
   - Name: athena:ListDatabases
   - Name: athena:ListEngineVersions
@@ -45,6 +50,7 @@ Actions:
   - Name: athena:ListTableMetadata
   - Name: athena:ListTagsForResource
   - Name: athena:ListWorkGroups
+  - Name: athena:PutCapacityAssignmentConfiguration
   - Name: athena:StartCalculationExecution
   - Name: athena:StartQueryExecution
   - Name: athena:StartSession
@@ -53,6 +59,7 @@ Actions:
   - Name: athena:TagResource
   - Name: athena:TerminateSession
   - Name: athena:UntagResource
+  - Name: athena:UpdateCapacityReservation
   - Name: athena:UpdateDataCatalog
   - Name: athena:UpdateNamedQuery
   - Name: athena:UpdateNotebook
@@ -61,11 +68,4 @@ Actions:
   - Name: athena:UpdateWorkGroup
 
   # actions with no corresponding API
-  - Name: athena:CancelCapacityReservation
-  - Name: athena:CreateCapacityReservation
-  - Name: athena:GetCapacityAssignmentConfiguration
-  - Name: athena:GetCapacityReservation
   - Name: athena:GetQueryResultsStream
-  - Name: athena:ListCapacityReservations
-  - Name: athena:PutCapacityAssignmentConfiguration
-  - Name: athena:UpdateCapacityReservation
