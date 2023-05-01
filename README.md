@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 363
-* Unique actions: 14783
+* Unique actions: 14791
 * Managed policies: 1084
 
 Most common managed policy name prefixes:
@@ -315,7 +315,7 @@ The following table summarises the AWS APIs.
 | [`cur`](services/cur.yml) | 4 | 0 | 5 |
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 4 | 0 | 0 |
 | [`license-manager-linux-subscriptions`](services/license-manager-linux-subscriptions.yml) | 4 | 0 | 0 |
-| [`cassandra`](services/cassandra.yml) | 2 | 11 | 7 |
+| [`cassandra`](services/cassandra.yml) | 2 | 11 | 15 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 2 | 0 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 2 | 0 | 0 |
@@ -408,10 +408,10 @@ Most common action prefixes:
 | `Get` | 2084 |
 | `Delete` | 1686 |
 | `Describe` | 1580 |
-| `Create` | 1577 |
+| `Create` | 1578 |
 | `Update` | 1344 |
 | `Put` | 416 |
 | `Start` | 314 |
-| `Tag` | 235 |
+| `Tag` | 236 |
 | `Untag` | 233 |
 
