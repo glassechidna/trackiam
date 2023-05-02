@@ -1,0 +1,30 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/KeyspacesReplicationServiceRolePolicy",
+  "CreateDate": "2023-05-02T16:15:49Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4C2B6EEBHZ",
+  "PolicyName": "KeyspacesReplicationServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-05-02T16:15:49Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cassandra:Modify",
+            "cassandra:ModifyMultiRegionResource",
+            "cassandra:Select",
+            "cassandra:SelectMultiRegionResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-05-02T16:15:49Z"
+}
