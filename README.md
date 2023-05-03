@@ -67,10 +67,10 @@ The following table summarises the AWS APIs.
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 80 | 0 | 51 |
 | [`macie2`](services/macie2.yml) | 79 | 0 | 0 |
+| [`es`](services/es.yml) | 77 | 0 | 11 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
-| [`es`](services/es.yml) | 76 | 0 | 12 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 73 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
@@ -113,9 +113,9 @@ The following table summarises the AWS APIs.
 | [`wafv2`](services/wafv2.yml) | 51 | 0 | 2 |
 | [`appsync`](services/appsync.yml) | 51 | 0 | 2 |
 | [`workspaces-web`](services/workspaces-web.yml) | 51 | 0 | 0 |
+| [`mediaconnect`](services/mediaconnect.yml) | 50 | 0 | 3 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 0 | 0 |
-| [`mediaconnect`](services/mediaconnect.yml) | 49 | 1 | 3 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 49 | 0 | 0 |
@@ -154,6 +154,7 @@ The following table summarises the AWS APIs.
 | [`sso`](services/sso.yml) | 37 | 0 | 55 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`ce`](services/ce.yml) | 37 | 0 | 12 |
+| [`inspector2`](services/inspector2.yml) | 37 | 0 | 1 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`cleanrooms`](services/cleanrooms.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
@@ -175,7 +176,6 @@ The following table summarises the AWS APIs.
 | [`groundstation`](services/groundstation.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
-| [`inspector2`](services/inspector2.yml) | 32 | 0 | 6 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`m2`](services/m2.yml) | 32 | 0 | 0 |
 | [`aoss`](services/aoss.yml) | 31 | 0 | 2 |
