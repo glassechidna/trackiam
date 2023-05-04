@@ -18,6 +18,7 @@ Actions:
   - Name: quicksight:CreateTemplateAlias
   - Name: quicksight:CreateTheme
   - Name: quicksight:CreateThemeAlias
+  - Name: quicksight:CreateVPCConnection
   - Name: quicksight:DeleteAccountCustomization
   - Name: quicksight:DeleteAccountSubscription
   - Name: quicksight:DeleteAnalysis
@@ -38,6 +39,7 @@ Actions:
   - Name: quicksight:DeleteThemeAlias
   - Name: quicksight:DeleteUser
   - Name: quicksight:DeleteUserByPrincipalId
+  - Name: quicksight:DeleteVPCConnection
   - Name: quicksight:DescribeAccountCustomization
   - Name: quicksight:DescribeAccountSettings
   - Name: quicksight:DescribeAccountSubscription
@@ -138,10 +140,8 @@ Actions:
   - Name: quicksight:CreateEmailCustomizationTemplate
   - Name: quicksight:CreateReader
   - Name: quicksight:CreateUser
-  - Name: quicksight:CreateVPCConnection
   - Name: quicksight:DeleteCustomPermissions
   - Name: quicksight:DeleteEmailCustomizationTemplate
-  - Name: quicksight:DeleteVPCConnection
   - Name: quicksight:DescribeCustomPermissions
   - Name: quicksight:DescribeEmailCustomizationTemplate
   - Name: quicksight:GetAnonymousUserEmbedUrl
@@ -160,6 +160,22 @@ Actions:
   - Name: quicksight:UpdateResourcePermissions
 
   # APIs without an IAM action
+  - Name: quicksight:CreateTopic
+  - Name: quicksight:CreateTopicRefreshSchedule
+  - Name: quicksight:DeleteTopic
+  - Name: quicksight:DeleteTopicRefreshSchedule
   - Name: quicksight:DescribeAnalysisDefinition
   - Name: quicksight:DescribeDashboardDefinition
   - Name: quicksight:DescribeTemplateDefinition
+  - Name: quicksight:DescribeTopic
+  - Name: quicksight:DescribeTopicPermissions
+  - Name: quicksight:DescribeTopicRefresh
+  - Name: quicksight:DescribeTopicRefreshSchedule
+  - Name: quicksight:DescribeVPCConnection
+  - Name: quicksight:ListTopicRefreshSchedules
+  - Name: quicksight:ListTopics
+  - Name: quicksight:ListVPCConnections
+  - Name: quicksight:UpdateTopic
+  - Name: quicksight:UpdateTopicPermissions
+  - Name: quicksight:UpdateTopicRefreshSchedule
+  - Name: quicksight:UpdateVPCConnection

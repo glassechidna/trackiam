@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 363
-* Unique actions: 14792
+* Unique actions: 14809
 * Managed policies: 1085
 
 Most common managed policy name prefixes:
@@ -47,7 +47,7 @@ The following table summarises the AWS APIs.
 | [`ses`](services/ses.yml) | 143 | 0 | 0 |
 | [`rds`](services/rds.yml) | 141 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 138 | 0 | 10 |
-| [`quicksight`](services/quicksight.yml) | 131 | 3 | 26 |
+| [`quicksight`](services/quicksight.yml) | 133 | 19 | 24 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`redshift`](services/redshift.yml) | 119 | 0 | 18 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
@@ -67,7 +67,7 @@ The following table summarises the AWS APIs.
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 80 | 0 | 51 |
 | [`macie2`](services/macie2.yml) | 79 | 0 | 0 |
-| [`es`](services/es.yml) | 77 | 0 | 11 |
+| [`es`](services/es.yml) | 78 | 0 | 10 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
@@ -94,8 +94,8 @@ The following table summarises the AWS APIs.
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
+| [`securityhub`](services/securityhub.yml) | 61 | 1 | 9 |
 | [`mgn`](services/mgn.yml) | 61 | 0 | 34 |
-| [`securityhub`](services/securityhub.yml) | 61 | 0 | 9 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
 | [`medialive`](services/medialive.yml) | 59 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 58 | 0 | 0 |
@@ -404,12 +404,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2309 |
-| `Get` | 2084 |
-| `Delete` | 1686 |
-| `Describe` | 1580 |
-| `Create` | 1578 |
-| `Update` | 1344 |
+| `List` | 2312 |
+| `Get` | 2085 |
+| `Delete` | 1688 |
+| `Describe` | 1585 |
+| `Create` | 1580 |
+| `Update` | 1348 |
 | `Put` | 416 |
 | `Start` | 314 |
 | `Tag` | 236 |
