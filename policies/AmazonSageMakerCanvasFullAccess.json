@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerCanvasFullAccess",
   "CreateDate": "2022-09-09T00:44:25Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LG6L7ZJCN",
   "PolicyName": "AmazonSageMakerCanvasFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-03-24T15:28:26Z",
+    "CreateDate": "2023-05-04T17:03:12Z",
     "Document": {
       "Statement": [
         {
@@ -204,8 +204,23 @@
         },
         {
           "Action": [
+            "sagemaker:CreateModelPackage",
+            "sagemaker:CreateModelPackageGroup",
+            "sagemaker:DescribeModelPackage",
+            "sagemaker:DescribeModelPackageGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:model-package-group/*",
+            "arn:aws:sagemaker:*:*:model-package/*"
+          ]
+        },
+        {
+          "Action": [
             "sagemaker:DescribeDomain",
             "sagemaker:DescribeUserProfile",
+            "sagemaker:ListModelPackageGroups",
+            "sagemaker:ListModelPackages",
             "sagemaker:ListTags"
           ],
           "Effect": "Allow",
@@ -226,8 +241,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v3"
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-03-24T15:28:26Z"
+  "UpdateDate": "2023-05-04T17:03:12Z"
 }
