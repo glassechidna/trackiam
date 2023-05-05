@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 363
-* Unique actions: 14809
+* Unique actions: 14810
 * Managed policies: 1085
 
 Most common managed policy name prefixes:
@@ -47,7 +47,7 @@ The following table summarises the AWS APIs.
 | [`ses`](services/ses.yml) | 143 | 0 | 0 |
 | [`rds`](services/rds.yml) | 141 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 138 | 0 | 10 |
-| [`quicksight`](services/quicksight.yml) | 133 | 19 | 24 |
+| [`quicksight`](services/quicksight.yml) | 136 | 16 | 24 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`redshift`](services/redshift.yml) | 119 | 0 | 18 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
@@ -94,7 +94,7 @@ The following table summarises the AWS APIs.
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
-| [`securityhub`](services/securityhub.yml) | 61 | 1 | 9 |
+| [`securityhub`](services/securityhub.yml) | 62 | 0 | 10 |
 | [`mgn`](services/mgn.yml) | 61 | 0 | 34 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
 | [`medialive`](services/medialive.yml) | 59 | 0 | 0 |

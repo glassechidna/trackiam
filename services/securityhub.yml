@@ -36,6 +36,7 @@ Actions:
   - Name: securityhub:GetAdministratorAccount
   - Name: securityhub:GetEnabledStandards
   - Name: securityhub:GetFindingAggregator
+  - Name: securityhub:GetFindingHistory
   - Name: securityhub:GetFindings
   - Name: securityhub:GetInsightResults
   - Name: securityhub:GetInsights
@@ -62,6 +63,7 @@ Actions:
   - Name: securityhub:UpdateStandardsControl
 
   # actions with no corresponding API
+  - Name: securityhub:BatchGetControlEvaluations
   - Name: securityhub:GetAdhocInsightResults
   - Name: securityhub:GetControlFindingSummary
   - Name: securityhub:GetFreeTrialEndDate
@@ -71,6 +73,3 @@ Actions:
   - Name: securityhub:ListControlEvaluationSummaries
   - Name: securityhub:SendFindingEvents
   - Name: securityhub:SendInsightEvents
-
-  # APIs without an IAM action
-  - Name: securityhub:GetFindingHistory
