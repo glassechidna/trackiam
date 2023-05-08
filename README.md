@@ -146,12 +146,12 @@ The following table summarises the AWS APIs.
 | [`kinesisvideo`](services/kinesisvideo.yml) | 38 | 0 | 3 |
 | [`codeartifact`](services/codeartifact.yml) | 38 | 0 | 3 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
+| [`inspector2`](services/inspector2.yml) | 38 | 0 | 1 |
 | [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 1 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`profile`](services/profile.yml) | 38 | 0 | 0 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 0 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
-| [`inspector2`](services/inspector2.yml) | 37 | 1 | 1 |
 | [`sso`](services/sso.yml) | 37 | 0 | 55 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`ce`](services/ce.yml) | 37 | 0 | 12 |
