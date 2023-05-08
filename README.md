@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 363
-* Unique actions: 14811
+* Unique actions: 14812
 * Managed policies: 1085
 
 Most common managed policy name prefixes:
@@ -376,12 +376,12 @@ The following table summarises the AWS APIs.
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 5 |
 | [`datazone`](services/datazone.yml) | 0 | 0 | 5 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 5 |
+| [`supportplans`](services/supportplans.yml) | 0 | 0 | 4 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
 | [`invoicing`](services/invoicing.yml) | 0 | 0 | 4 |
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
 | [`a2c`](services/a2c.yml) | 0 | 0 | 4 |
-| [`supportplans`](services/supportplans.yml) | 0 | 0 | 3 |
 | [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 3 |
 | [`resource-explorer`](services/resource-explorer.yml) | 0 | 0 | 3 |
 | [`identitystore-auth`](services/identitystore-auth.yml) | 0 | 0 | 3 |
@@ -408,7 +408,7 @@ Most common action prefixes:
 | `Get` | 2085 |
 | `Delete` | 1688 |
 | `Describe` | 1585 |
-| `Create` | 1580 |
+| `Create` | 1581 |
 | `Update` | 1348 |
 | `Put` | 416 |
 | `Start` | 314 |
