@@ -13,14 +13,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 364
 * Unique actions: 14816
-* Managed policies: 1086
+* Managed policies: 1087
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 297 |
-| `arn:aws:iam::aws:policy/Amazon*` | 280 |
+| `arn:aws:iam::aws:policy/Amazon*` | 281 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 240 |
 | `arn:aws:iam::aws:policy/service-role/*` | 169 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -257,7 +257,7 @@ The following table summarises the AWS APIs.
 | [`ivschat`](services/ivschat.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`fis`](services/fis.yml) | 16 | 0 | 3 |
-| [`simspaceweaver`](services/simspaceweaver.yml) | 15 | 1 | 0 |
+| [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
 | [`honeycode`](services/honeycode.yml) | 15 | 0 | 15 |
 | [`app-integrations`](services/app-integrations.yml) | 15 | 0 | 4 |
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
