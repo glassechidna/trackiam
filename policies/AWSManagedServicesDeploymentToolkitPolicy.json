@@ -1,41 +1,78 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSManagedServicesDeploymentToolkitPolicy",
   "CreateDate": "2022-06-09T18:33:03Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AJVRS2BUS",
   "PolicyName": "AWSManagedServicesDeploymentToolkitPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-01-30T22:10:28Z",
+    "CreateDate": "2023-05-10T17:48:44Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "cloudformation:CreateChangeSet",
+            "cloudformation:DeleteChangeSet",
             "cloudformation:DeleteStack",
             "cloudformation:DescribeChangeSet",
+            "cloudformation:DescribeStackEvents",
             "cloudformation:DescribeStackResources",
             "cloudformation:DescribeStacks",
             "cloudformation:ExecuteChangeSet",
+            "cloudformation:GetTemplate",
             "cloudformation:GetTemplateSummary",
-            "cloudformation:UpdateTermination*"
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource",
+            "cloudformation:UpdateTerminationProtection"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:cloudformation:*:*:stack/ams-cdk-toolkit*"
         },
         {
           "Action": [
+            "ecr:CreateRepository",
+            "ecr:DeleteLifecyclePolicy",
+            "ecr:DeleteRepository",
+            "ecr:DeleteRepositoryPolicy",
+            "ecr:DescribeRepositories",
+            "ecr:GetLifecyclePolicy",
+            "ecr:ListTagsForResource",
+            "ecr:PutImageTagMutability",
+            "ecr:PutLifecyclePolicy",
+            "ecr:SetRepositoryPolicy",
+            "ecr:TagResource",
+            "ecr:UntagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecr:*:*:repository/ams-cdktoolkit*"
+        },
+        {
+          "Action": [
             "s3:CreateBucket",
             "s3:DeleteBucket",
             "s3:DeleteBucketPolicy",
-            "s3:DeleteObject*",
+            "s3:DeleteObject",
+            "s3:DeleteObjectTagging",
+            "s3:DeleteObjectVersion",
+            "s3:DeleteObjectVersionTagging",
             "s3:GetBucketLocation",
             "s3:GetBucketLogging",
             "s3:GetBucketPolicy",
             "s3:GetBucketVersioning",
             "s3:GetLifecycleConfiguration",
-            "s3:GetObject*",
+            "s3:GetObject",
+            "s3:GetObjectAcl",
+            "s3:GetObjectAttributes",
+            "s3:GetObjectLegalHold",
+            "s3:GetObjectRetention",
+            "s3:GetObjectTagging",
+            "s3:GetObjectVersion",
+            "s3:GetObjectVersionAcl",
+            "s3:GetObjectVersionAttributes",
+            "s3:GetObjectVersionForReplication",
+            "s3:GetObjectVersionTagging",
+            "s3:GetObjectVersionTorrent",
             "s3:ListBucket",
             "s3:ListBucketVersions",
             "s3:PutBucketAcl",
@@ -55,7 +92,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-01-30T22:10:28Z"
+  "UpdateDate": "2023-05-10T17:48:44Z"
 }

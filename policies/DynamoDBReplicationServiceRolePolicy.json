@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/DynamoDBReplicationServiceRolePolicy",
   "CreateDate": "2017-11-09T23:55:34Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJCUNRXL4BWASNJED2",
   "PolicyName": "DynamoDBReplicationServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-09-09T18:43:04Z",
+    "CreateDate": "2023-05-10T17:04:21Z",
     "Document": {
       "Statement": [
         {
@@ -26,6 +26,7 @@
         },
         {
           "Action": [
+            "account:ListRegions",
             "application-autoscaling:DescribeScalableTargets",
             "application-autoscaling:DescribeScalingPolicies",
             "application-autoscaling:PutScalingPolicy",
@@ -51,7 +52,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2020-09-09T18:43:04Z"
+  "UpdateDate": "2023-05-10T17:04:21Z"
 }
