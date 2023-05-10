@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 365
-* Unique actions: 14817
+* Unique actions: 14818
 * Managed policies: 1087
 
 Most common managed policy name prefixes:
@@ -145,12 +145,12 @@ The following table summarises the AWS APIs.
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 38 | 0 | 3 |
 | [`codeartifact`](services/codeartifact.yml) | 38 | 0 | 3 |
+| [`memorydb`](services/memorydb.yml) | 38 | 0 | 1 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
 | [`inspector2`](services/inspector2.yml) | 38 | 0 | 1 |
 | [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 1 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`profile`](services/profile.yml) | 38 | 0 | 0 |
-| [`memorydb`](services/memorydb.yml) | 38 | 0 | 0 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
 | [`sso`](services/sso.yml) | 37 | 0 | 55 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
