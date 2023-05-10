@@ -18,6 +18,8 @@ Actions:
   - Name: quicksight:CreateTemplateAlias
   - Name: quicksight:CreateTheme
   - Name: quicksight:CreateThemeAlias
+  - Name: quicksight:CreateTopic
+  - Name: quicksight:CreateTopicRefreshSchedule
   - Name: quicksight:CreateVPCConnection
   - Name: quicksight:DeleteAccountCustomization
   - Name: quicksight:DeleteAccountSubscription
@@ -37,6 +39,8 @@ Actions:
   - Name: quicksight:DeleteTemplateAlias
   - Name: quicksight:DeleteTheme
   - Name: quicksight:DeleteThemeAlias
+  - Name: quicksight:DeleteTopic
+  - Name: quicksight:DeleteTopicRefreshSchedule
   - Name: quicksight:DeleteUser
   - Name: quicksight:DeleteUserByPrincipalId
   - Name: quicksight:DeleteVPCConnection
@@ -68,6 +72,10 @@ Actions:
   - Name: quicksight:DescribeTheme
   - Name: quicksight:DescribeThemeAlias
   - Name: quicksight:DescribeThemePermissions
+  - Name: quicksight:DescribeTopic
+  - Name: quicksight:DescribeTopicPermissions
+  - Name: quicksight:DescribeTopicRefresh
+  - Name: quicksight:DescribeTopicRefreshSchedule
   - Name: quicksight:DescribeUser
   - Name: quicksight:DescribeVPCConnection
   - Name: quicksight:GenerateEmbedUrlForAnonymousUser
@@ -95,6 +103,8 @@ Actions:
   - Name: quicksight:ListThemeAliases
   - Name: quicksight:ListThemeVersions
   - Name: quicksight:ListThemes
+  - Name: quicksight:ListTopicRefreshSchedules
+  - Name: quicksight:ListTopics
   - Name: quicksight:ListUserGroups
   - Name: quicksight:ListUsers
   - Name: quicksight:ListVPCConnections
@@ -133,6 +143,9 @@ Actions:
   - Name: quicksight:UpdateTheme
   - Name: quicksight:UpdateThemeAlias
   - Name: quicksight:UpdateThemePermissions
+  - Name: quicksight:UpdateTopic
+  - Name: quicksight:UpdateTopicPermissions
+  - Name: quicksight:UpdateTopicRefreshSchedule
   - Name: quicksight:UpdateUser
   - Name: quicksight:UpdateVPCConnection
 
@@ -163,19 +176,6 @@ Actions:
   - Name: quicksight:UpdateResourcePermissions
 
   # APIs without an IAM action
-  - Name: quicksight:CreateTopic
-  - Name: quicksight:CreateTopicRefreshSchedule
-  - Name: quicksight:DeleteTopic
-  - Name: quicksight:DeleteTopicRefreshSchedule
   - Name: quicksight:DescribeAnalysisDefinition
   - Name: quicksight:DescribeDashboardDefinition
   - Name: quicksight:DescribeTemplateDefinition
-  - Name: quicksight:DescribeTopic
-  - Name: quicksight:DescribeTopicPermissions
-  - Name: quicksight:DescribeTopicRefresh
-  - Name: quicksight:DescribeTopicRefreshSchedule
-  - Name: quicksight:ListTopicRefreshSchedules
-  - Name: quicksight:ListTopics
-  - Name: quicksight:UpdateTopic
-  - Name: quicksight:UpdateTopicPermissions
-  - Name: quicksight:UpdateTopicRefreshSchedule

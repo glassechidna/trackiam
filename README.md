@@ -44,10 +44,10 @@ The following table summarises the AWS APIs.
 | [`connect`](services/connect.yml) | 186 | 0 | 8 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
 | [`iam`](services/iam.yml) | 158 | 0 | 12 |
+| [`quicksight`](services/quicksight.yml) | 149 | 3 | 24 |
 | [`ses`](services/ses.yml) | 143 | 0 | 0 |
 | [`rds`](services/rds.yml) | 141 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 138 | 0 | 10 |
-| [`quicksight`](services/quicksight.yml) | 136 | 16 | 24 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`redshift`](services/redshift.yml) | 119 | 0 | 18 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
