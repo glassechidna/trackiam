@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkService",
   "CreateDate": "2016-04-11T20:27:23Z",
-  "DefaultVersionId": "v16",
+  "DefaultVersionId": "v17",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJKQ5SN74ZQ4WASXBM",
   "PolicyName": "AWSElasticBeanstalkService",
   "PolicyVersion": {
-    "CreateDate": "2019-06-14T23:18:46Z",
+    "CreateDate": "2023-05-10T19:29:34Z",
     "Document": {
       "Statement": [
         {
@@ -23,9 +23,41 @@
         },
         {
           "Action": [
+            "ecs:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ecs:CreateAction": [
+                "CreateCluster",
+                "RegisterTaskDefinition"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowECSTagResource"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:AddTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "elasticloadbalancing:CreateAction": [
+                "CreateLoadBalancer"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowELBAddTags"
+        },
+        {
+          "Action": [
             "autoscaling:AttachInstances",
             "autoscaling:CreateAutoScalingGroup",
             "autoscaling:CreateLaunchConfiguration",
+            "autoscaling:CreateOrUpdateTags",
             "autoscaling:DeleteAutoScalingGroup",
             "autoscaling:DeleteLaunchConfiguration",
             "autoscaling:DeletePolicy",
@@ -159,7 +191,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v16"
+    "VersionId": "v17"
   },
-  "UpdateDate": "2019-06-14T23:18:46Z"
+  "UpdateDate": "2023-05-10T19:29:34Z"
 }
