@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 365
-* Unique actions: 14818
+* Unique actions: 14832
 * Managed policies: 1087
 
 Most common managed policy name prefixes:
@@ -81,8 +81,8 @@ The following table summarises the AWS APIs.
 | [`guardduty`](services/guardduty.yml) | 68 | 0 | 1 |
 | [`ds`](services/ds.yml) | 67 | 0 | 6 |
 | [`athena`](services/athena.yml) | 67 | 0 | 1 |
+| [`omics`](services/omics.yml) | 66 | 6 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 66 | 0 | 11 |
-| [`omics`](services/omics.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`workspaces`](services/workspaces.yml) | 65 | 0 | 1 |
@@ -160,10 +160,10 @@ The following table summarises the AWS APIs.
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 0 |
+| [`ivs`](services/ivs.yml) | 35 | 5 | 0 |
 | [`apprunner`](services/apprunner.yml) | 35 | 0 | 5 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`eks`](services/eks.yml) | 35 | 0 | 1 |
-| [`ivs`](services/ivs.yml) | 35 | 0 | 0 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
 | [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
 | [`ram`](services/ram.yml) | 34 | 0 | 0 |
@@ -223,8 +223,8 @@ The following table summarises the AWS APIs.
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
+| [`mq`](services/mq.yml) | 22 | 0 | 1 |
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
-| [`mq`](services/mq.yml) | 22 | 0 | 0 |
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 0 |
 | [`aps`](services/aps.yml) | 21 | 0 | 16 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
@@ -263,7 +263,7 @@ The following table summarises the AWS APIs.
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
 | [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
-| [`support`](services/support.yml) | 14 | 0 | 8 |
+| [`support`](services/support.yml) | 14 | 2 | 8 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`osis`](services/osis.yml) | 14 | 0 | 1 |
@@ -406,11 +406,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2312 |
-| `Get` | 2088 |
+| `List` | 2317 |
+| `Get` | 2090 |
 | `Delete` | 1688 |
-| `Describe` | 1585 |
-| `Create` | 1582 |
+| `Describe` | 1587 |
+| `Create` | 1584 |
 | `Update` | 1349 |
 | `Put` | 416 |
 | `Start` | 314 |
