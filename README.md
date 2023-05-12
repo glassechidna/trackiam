@@ -235,7 +235,7 @@ The following table summarises the AWS APIs.
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 20 | 2 | 1 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
 | [`iotroborunner`](services/iotroborunner.yml) | 20 | 0 | 0 |
-| [`emr-containers`](services/emr-containers.yml) | 19 | 1 | 0 |
+| [`emr-containers`](services/emr-containers.yml) | 20 | 0 | 0 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
 | [`sagemaker-geospatial`](services/sagemaker-geospatial.yml) | 19 | 0 | 0 |
