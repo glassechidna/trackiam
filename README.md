@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 365
-* Unique actions: 14832
-* Managed policies: 1087
+* Unique actions: 14833
+* Managed policies: 1088
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 297 |
 | `arn:aws:iam::aws:policy/Amazon*` | 281 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 240 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 241 |
 | `arn:aws:iam::aws:policy/service-role/*` | 169 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 93 |
@@ -199,7 +199,7 @@ The following table summarises the AWS APIs.
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
-| [`timestream`](services/timestream.yml) | 27 | 1 | 7 |
+| [`timestream`](services/timestream.yml) | 27 | 1 | 8 |
 | [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 3 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 1 |
 | [`outposts`](services/outposts.yml) | 26 | 0 | 2 |
