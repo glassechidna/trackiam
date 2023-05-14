@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticDisasterRecoveryEc2InstancePolicy",
   "CreateDate": "2022-05-26T12:30:18Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4DUAC4ANEW",
   "PolicyName": "AWSElasticDisasterRecoveryEc2InstancePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-05-26T12:30:18Z",
+    "CreateDate": "2023-05-14T07:27:48Z",
     "Document": {
       "Statement": [
         {
@@ -21,6 +21,24 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:drs:*:*:source-server/*"
+        },
+        {
+          "Action": [
+            "sts:AssumeRole",
+            "sts:TagSession"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "sts:TransitiveTagKeys": "SourceInstanceARN"
+            },
+            "StringLike": {
+              "aws:RequestTag/SourceInstanceARN": "${ec2:SourceInstanceARN}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/service-role/DRSCrossAccountAgentAuthorizedRole_*"
+          ]
         },
         {
           "Action": [
@@ -51,7 +69,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-05-26T12:30:18Z"
+  "UpdateDate": "2023-05-14T07:27:48Z"
 }
