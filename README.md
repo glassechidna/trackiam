@@ -75,13 +75,13 @@ The following table summarises the AWS APIs.
 | [`iotsitewise`](services/iotsitewise.yml) | 73 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
 | [`backup`](services/backup.yml) | 72 | 0 | 2 |
+| [`omics`](services/omics.yml) | 72 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 71 | 0 | 0 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
 | [`dms`](services/dms.yml) | 69 | 0 | 33 |
 | [`guardduty`](services/guardduty.yml) | 68 | 0 | 1 |
 | [`ds`](services/ds.yml) | 67 | 0 | 6 |
 | [`athena`](services/athena.yml) | 67 | 0 | 1 |
-| [`omics`](services/omics.yml) | 66 | 6 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 66 | 0 | 11 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |

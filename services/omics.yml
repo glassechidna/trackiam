@@ -1,9 +1,12 @@
 Actions:
+  - Name: omics:AbortMultipartReadSetUpload
   - Name: omics:BatchDeleteReadSet
   - Name: omics:CancelAnnotationImportJob
   - Name: omics:CancelRun
   - Name: omics:CancelVariantImportJob
+  - Name: omics:CompleteMultipartReadSetUpload
   - Name: omics:CreateAnnotationStore
+  - Name: omics:CreateMultipartReadSetUpload
   - Name: omics:CreateReferenceStore
   - Name: omics:CreateRunGroup
   - Name: omics:CreateSequenceStore
@@ -37,9 +40,11 @@ Actions:
   - Name: omics:GetWorkflow
   - Name: omics:ListAnnotationImportJobs
   - Name: omics:ListAnnotationStores
+  - Name: omics:ListMultipartReadSetUploads
   - Name: omics:ListReadSetActivationJobs
   - Name: omics:ListReadSetExportJobs
   - Name: omics:ListReadSetImportJobs
+  - Name: omics:ListReadSetUploadParts
   - Name: omics:ListReadSets
   - Name: omics:ListReferenceImportJobs
   - Name: omics:ListReferenceStores
@@ -65,11 +70,4 @@ Actions:
   - Name: omics:UpdateRunGroup
   - Name: omics:UpdateVariantStore
   - Name: omics:UpdateWorkflow
-
-  # APIs without an IAM action
-  - Name: omics:AbortMultipartReadSetUpload
-  - Name: omics:CompleteMultipartReadSetUpload
-  - Name: omics:CreateMultipartReadSetUpload
-  - Name: omics:ListMultipartReadSetUploads
-  - Name: omics:ListReadSetUploadParts
   - Name: omics:UploadReadSetPart
