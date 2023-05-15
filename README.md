@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 365
-* Unique actions: 14833
+* Unique actions: 14835
 * Managed policies: 1089
 
 Most common managed policy name prefixes:
@@ -202,11 +202,11 @@ The following table summarises the AWS APIs.
 | [`timestream`](services/timestream.yml) | 27 | 1 | 8 |
 | [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 3 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 1 |
+| [`rolesanywhere`](services/rolesanywhere.yml) | 26 | 2 | 0 |
 | [`outposts`](services/outposts.yml) | 26 | 0 | 2 |
 | [`states`](services/states.yml) | 26 | 0 | 0 |
 | [`snowball`](services/snowball.yml) | 26 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
-| [`rolesanywhere`](services/rolesanywhere.yml) | 26 | 0 | 0 |
 | [`private-networks`](services/private-networks.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
@@ -412,7 +412,7 @@ Most common action prefixes:
 | `Describe` | 1587 |
 | `Create` | 1584 |
 | `Update` | 1349 |
-| `Put` | 416 |
+| `Put` | 417 |
 | `Start` | 314 |
 | `Tag` | 236 |
 | `Untag` | 233 |
