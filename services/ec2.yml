@@ -450,6 +450,7 @@ Actions:
   - Name: ec2:GetVerifiedAccessGroupPolicy
   - Name: ec2:GetVpnConnectionDeviceSampleConfiguration
   - Name: ec2:GetVpnConnectionDeviceTypes
+  - Name: ec2:GetVpnTunnelReplacementStatus
   - Name: ec2:ImportClientVpnClientCertificateRevocationList
   - Name: ec2:ImportImage
   - Name: ec2:ImportInstance
@@ -550,6 +551,7 @@ Actions:
   - Name: ec2:ReplaceRoute
   - Name: ec2:ReplaceRouteTableAssociation
   - Name: ec2:ReplaceTransitGatewayRoute
+  - Name: ec2:ReplaceVpnTunnel
   - Name: ec2:ReportInstanceStatus
   - Name: ec2:RequestSpotFleet
   - Name: ec2:RequestSpotInstances
@@ -590,17 +592,18 @@ Actions:
   - Name: ec2:WithdrawByoipCidr
 
   # actions with no corresponding API
+  - Name: ec2:AssociateVerifiedAccessInstanceWebAcl
   - Name: ec2:CreateCoipPoolPermission
   - Name: ec2:CreateLocalGatewayRouteTablePermission
   - Name: ec2:DeleteCoipPoolPermission
   - Name: ec2:DeleteLocalGatewayRouteTablePermission
   - Name: ec2:DeleteResourcePolicy
   - Name: ec2:DescribeLocalGatewayRouteTablePermissions
+  - Name: ec2:DescribeVerifiedAccessInstanceWebAclAssociations
+  - Name: ec2:DisassociateVerifiedAccessInstanceWebAcl
   - Name: ec2:GetResourcePolicy
+  - Name: ec2:GetVerifiedAccessInstanceWebAcl
+  - Name: ec2:ImportByoipCidrToIpam
   - Name: ec2:PauseVolumeIO
   - Name: ec2:PutResourcePolicy
   - Name: ec2:SendSpotInstanceInterruptions
-
-  # APIs without an IAM action
-  - Name: ec2:GetVpnTunnelReplacementStatus
-  - Name: ec2:ReplaceVpnTunnel
