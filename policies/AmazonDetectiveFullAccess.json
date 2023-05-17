@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDetectiveFullAccess",
   "CreateDate": "2020-04-30T17:57:15Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4IRLX3QVOO",
   "PolicyName": "AmazonDetectiveFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-01-17T14:35:33Z",
+    "CreateDate": "2023-05-17T19:39:57Z",
     "Document": {
       "Statement": [
         {
@@ -33,12 +33,19 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "securityHub:GetFindings"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-01-17T14:35:33Z"
+  "UpdateDate": "2023-05-17T19:39:57Z"
 }
