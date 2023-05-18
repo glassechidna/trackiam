@@ -19,6 +19,7 @@ Actions:
   - Name: connect:CreateInstance
   - Name: connect:CreateIntegrationAssociation
   - Name: connect:CreateParticipant
+  - Name: connect:CreatePrompt
   - Name: connect:CreateQueue
   - Name: connect:CreateQuickConnect
   - Name: connect:CreateRoutingProfile
@@ -38,6 +39,7 @@ Actions:
   - Name: connect:DeleteHoursOfOperation
   - Name: connect:DeleteInstance
   - Name: connect:DeleteIntegrationAssociation
+  - Name: connect:DeletePrompt
   - Name: connect:DeleteQuickConnect
   - Name: connect:DeleteRule
   - Name: connect:DeleteSecurityProfile
@@ -58,6 +60,7 @@ Actions:
   - Name: connect:DescribeInstanceAttribute
   - Name: connect:DescribeInstanceStorageConfig
   - Name: connect:DescribePhoneNumber
+  - Name: connect:DescribePrompt
   - Name: connect:DescribeQueue
   - Name: connect:DescribeQuickConnect
   - Name: connect:DescribeRoutingProfile
@@ -84,6 +87,7 @@ Actions:
   - Name: connect:GetFederationToken
   - Name: connect:GetMetricData
   - Name: connect:GetMetricDataV2
+  - Name: connect:GetPromptFile
   - Name: connect:GetTaskTemplate
   - Name: connect:GetTrafficDistribution
   - Name: connect:ListAgentStatuses
@@ -163,6 +167,7 @@ Actions:
   - Name: connect:UpdateInstanceStorageConfig
   - Name: connect:UpdateParticipantRoleConfig
   - Name: connect:UpdatePhoneNumber
+  - Name: connect:UpdatePrompt
   - Name: connect:UpdateQueueHoursOfOperation
   - Name: connect:UpdateQueueMaxContacts
   - Name: connect:UpdateQueueName
@@ -195,10 +200,3 @@ Actions:
   - Name: connect:GetFederationTokens
   - Name: connect:StartForecastingPlanningSchedulingIntegration
   - Name: connect:StopForecastingPlanningSchedulingIntegration
-
-  # APIs without an IAM action
-  - Name: connect:CreatePrompt
-  - Name: connect:DeletePrompt
-  - Name: connect:DescribePrompt
-  - Name: connect:GetPromptFile
-  - Name: connect:UpdatePrompt

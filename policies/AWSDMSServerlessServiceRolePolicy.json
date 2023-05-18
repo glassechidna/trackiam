@@ -1,0 +1,74 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSDMSServerlessServiceRolePolicy",
+  "CreateDate": "2023-05-18T20:28:05Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4AIKMNBTIJ",
+  "PolicyName": "AWSDMSServerlessServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-05-18T20:28:05Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "dms:CreateReplicationInstance",
+            "dms:CreateReplicationTask"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "dms:req-tag/ResourceCreatedBy": "DMSServerless"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "id0"
+        },
+        {
+          "Action": [
+            "dms:DeleteReplicationInstance",
+            "dms:DeleteReplicationTask",
+            "dms:StartReplicationTask",
+            "dms:StopReplicationTask"
+          ],
+          "Condition": {
+            "StringEqualsIgnoreCase": {
+              "aws:ResourceTag/ResourceCreatedBy": "DMSServerless"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:dms:*:*:rep:*",
+            "arn:aws:dms:*:*:task:*"
+          ],
+          "Sid": "id2"
+        },
+        {
+          "Action": [
+            "dms:DeleteConnection",
+            "dms:TestConnection"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:dms:*:*:endpoint:*",
+            "arn:aws:dms:*:*:rep:*"
+          ],
+          "Sid": "id3"
+        },
+        {
+          "Action": [
+            "dms:DescribeReplicationInstances",
+            "dms:DescribeReplicationTasks"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "id1"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-05-18T20:28:05Z"
+}
