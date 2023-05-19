@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSGlobalAcceleratorSLRPolicy",
   "CreateDate": "2019-04-05T19:39:13Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4EJ5ZEQR2C",
   "PolicyName": "AWSGlobalAcceleratorSLRPolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-11-02T18:33:56Z",
+    "CreateDate": "2023-05-19T20:41:25Z",
     "Document": {
       "Statement": [
         {
@@ -22,7 +22,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "EC2Action2"
         },
         {
           "Action": "ec2:CreateTags",
@@ -30,17 +31,14 @@
           "Resource": [
             "arn:aws:ec2:*:*:network-interface/*",
             "arn:aws:ec2:*:*:security-group/*"
-          ]
-        },
-        {
-          "Action": "elasticloadbalancing:DescribeLoadBalancers",
-          "Effect": "Allow",
-          "Resource": "*"
+          ],
+          "Sid": "EC2Action4"
         },
         {
           "Action": [
             "ec2:CreateNetworkInterface",
             "ec2:DeleteNetworkInterface",
+            "ec2:DescribeAddresses",
             "ec2:DescribeInstances",
             "ec2:DescribeInternetGateways",
             "ec2:DescribeNetworkInterfaces",
@@ -49,7 +47,8 @@
             "ec2:ModifyNetworkInterfaceAttribute"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "EC2Action1"
         },
         {
           "Action": [
@@ -57,13 +56,23 @@
             "ec2:DescribeSecurityGroups"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "EC2Action3"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:DescribeListeners",
+            "elasticloadbalancing:DescribeLoadBalancers"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ElbAction1"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2021-11-02T18:33:56Z"
+  "UpdateDate": "2023-05-19T20:41:25Z"
 }
