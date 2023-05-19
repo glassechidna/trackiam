@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 365
-* Unique actions: 14846
+* Unique services: 366
+* Unique actions: 14871
 * Managed policies: 1090
 
 Most common managed policy name prefixes:
@@ -45,7 +45,7 @@ The following table summarises the AWS APIs.
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
 | [`iam`](services/iam.yml) | 158 | 0 | 12 |
 | [`quicksight`](services/quicksight.yml) | 149 | 3 | 24 |
-| [`ses`](services/ses.yml) | 143 | 0 | 0 |
+| [`ses`](services/ses.yml) | 143 | 1 | 0 |
 | [`rds`](services/rds.yml) | 141 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 138 | 0 | 10 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
@@ -324,6 +324,7 @@ The following table summarises the AWS APIs.
 | [`cloudtrail-data`](services/cloudtrail-data.yml) | 1 | 0 | 0 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
+| [`mediapackagev2`](services/mediapackagev2.yml) | 0 | 24 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 11 | 3 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
@@ -406,14 +407,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2317 |
-| `Get` | 2093 |
-| `Delete` | 1689 |
+| `List` | 2321 |
+| `Get` | 2098 |
+| `Delete` | 1694 |
 | `Describe` | 1589 |
-| `Create` | 1585 |
-| `Update` | 1350 |
-| `Put` | 417 |
+| `Create` | 1588 |
+| `Update` | 1353 |
+| `Put` | 420 |
 | `Start` | 314 |
-| `Tag` | 236 |
-| `Untag` | 233 |
+| `Tag` | 237 |
+| `Untag` | 234 |
 
