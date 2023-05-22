@@ -1,4 +1,5 @@
 Actions:
+  - Name: datasync:AddStorageSystem
   - Name: datasync:CancelTaskExecution
   - Name: datasync:CreateAgent
   - Name: datasync:CreateLocationEfs
@@ -16,6 +17,7 @@ Actions:
   - Name: datasync:DeleteLocation
   - Name: datasync:DeleteTask
   - Name: datasync:DescribeAgent
+  - Name: datasync:DescribeDiscoveryJob
   - Name: datasync:DescribeLocationEfs
   - Name: datasync:DescribeLocationFsxLustre
   - Name: datasync:DescribeLocationFsxOntap
@@ -26,14 +28,23 @@ Actions:
   - Name: datasync:DescribeLocationObjectStorage
   - Name: datasync:DescribeLocationS3
   - Name: datasync:DescribeLocationSmb
+  - Name: datasync:DescribeStorageSystem
+  - Name: datasync:DescribeStorageSystemResourceMetrics
+  - Name: datasync:DescribeStorageSystemResources
   - Name: datasync:DescribeTask
   - Name: datasync:DescribeTaskExecution
+  - Name: datasync:GenerateRecommendations
   - Name: datasync:ListAgents
+  - Name: datasync:ListDiscoveryJobs
   - Name: datasync:ListLocations
+  - Name: datasync:ListStorageSystems
   - Name: datasync:ListTagsForResource
   - Name: datasync:ListTaskExecutions
   - Name: datasync:ListTasks
+  - Name: datasync:RemoveStorageSystem
+  - Name: datasync:StartDiscoveryJob
   - Name: datasync:StartTaskExecution
+  - Name: datasync:StopDiscoveryJob
   - Name: datasync:TagResource
   - Name: datasync:UntagResource
   - Name: datasync:UpdateAgent
@@ -41,20 +52,9 @@ Actions:
   - Name: datasync:UpdateLocationNfs
   - Name: datasync:UpdateLocationObjectStorage
   - Name: datasync:UpdateLocationSmb
+  - Name: datasync:UpdateStorageSystem
   - Name: datasync:UpdateTask
   - Name: datasync:UpdateTaskExecution
 
   # APIs without an IAM action
-  - Name: datasync:AddStorageSystem
-  - Name: datasync:DescribeDiscoveryJob
-  - Name: datasync:DescribeStorageSystem
-  - Name: datasync:DescribeStorageSystemResourceMetrics
-  - Name: datasync:DescribeStorageSystemResources
-  - Name: datasync:GenerateRecommendations
-  - Name: datasync:ListDiscoveryJobs
-  - Name: datasync:ListStorageSystems
-  - Name: datasync:RemoveStorageSystem
-  - Name: datasync:StartDiscoveryJob
-  - Name: datasync:StopDiscoveryJob
   - Name: datasync:UpdateDiscoveryJob
-  - Name: datasync:UpdateStorageSystem

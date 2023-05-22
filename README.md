@@ -101,6 +101,7 @@ The following table summarises the AWS APIs.
 | [`transfer`](services/transfer.yml) | 58 | 0 | 0 |
 | [`geo`](services/geo.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
+| [`datasync`](services/datasync.yml) | 56 | 1 | 0 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 2 |
 | [`events`](services/events.yml) | 56 | 0 | 1 |
 | [`imagebuilder`](services/imagebuilder.yml) | 56 | 0 | 0 |
@@ -126,7 +127,6 @@ The following table summarises the AWS APIs.
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`kafka`](services/kafka.yml) | 45 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
-| [`datasync`](services/datasync.yml) | 44 | 13 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 44 | 3 | 1 |
 | [`workdocs`](services/workdocs.yml) | 44 | 0 | 14 |
 | [`cloudtrail`](services/cloudtrail.yml) | 44 | 0 | 5 |
