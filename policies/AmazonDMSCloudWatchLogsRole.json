@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonDMSCloudWatchLogsRole",
   "CreateDate": "2016-01-07T23:44:53Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJBG7UXZZXUJD3TDJE",
   "PolicyName": "AmazonDMSCloudWatchLogsRole",
   "PolicyVersion": {
-    "CreateDate": "2016-01-07T23:44:53Z",
+    "CreateDate": "2023-05-23T21:32:57Z",
     "Document": {
       "Statement": [
         {
@@ -16,9 +16,10 @@
           ],
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:logs:*:*:log-group:dms-serverless-replication-*:log-stream:",
             "arn:aws:logs:*:*:log-group:dms-tasks-*"
           ],
-          "Sid": "AllowCreationOfDmsTasksLogGroups"
+          "Sid": "AllowCreationOfDmsLogGroups"
         },
         {
           "Action": [
@@ -26,9 +27,10 @@
           ],
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:logs:*:*:log-group:dms-serverless-replication-*:log-stream:dms-serverless-*",
             "arn:aws:logs:*:*:log-group:dms-tasks-*:log-stream:dms-task-*"
           ],
-          "Sid": "AllowCreationOfDmsTaskLogStream"
+          "Sid": "AllowCreationOfDmsLogStream"
         },
         {
           "Action": [
@@ -46,6 +48,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:logs:*:*:log-group:dms-serverless-replication-*",
             "arn:aws:logs:*:*:log-group:dms-tasks-*"
           ],
           "Sid": "AllowDescribeOfAllLogStreamsOnDmsTasksLogGroup"
@@ -56,15 +59,16 @@
           ],
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:logs:*:*:log-group:dms-serverless-replication-*:log-stream:dms-serverless-*",
             "arn:aws:logs:*:*:log-group:dms-tasks-*:log-stream:dms-task-*"
           ],
-          "Sid": "AllowUploadOfLogEventsToDmsTaskLogStream"
+          "Sid": "AllowUploadOfLogEventsToDmsLogStream"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2016-01-07T23:44:53Z"
+  "UpdateDate": "2023-05-23T21:32:57Z"
 }
