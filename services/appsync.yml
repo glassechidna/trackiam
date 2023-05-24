@@ -1,5 +1,7 @@
 Actions:
   - Name: appsync:AssociateApi
+  - Name: appsync:AssociateMergedGraphqlApi
+  - Name: appsync:AssociateSourceGraphqlApi
   - Name: appsync:CreateApiCache
   - Name: appsync:CreateApiKey
   - Name: appsync:CreateDataSource
@@ -17,6 +19,8 @@ Actions:
   - Name: appsync:DeleteResolver
   - Name: appsync:DeleteType
   - Name: appsync:DisassociateApi
+  - Name: appsync:DisassociateMergedGraphqlApi
+  - Name: appsync:DisassociateSourceGraphqlApi
   - Name: appsync:EvaluateCode
   - Name: appsync:EvaluateMappingTemplate
   - Name: appsync:FlushApiCache
@@ -29,6 +33,7 @@ Actions:
   - Name: appsync:GetIntrospectionSchema
   - Name: appsync:GetResolver
   - Name: appsync:GetSchemaCreationStatus
+  - Name: appsync:GetSourceApiAssociation
   - Name: appsync:GetType
   - Name: appsync:ListApiKeys
   - Name: appsync:ListDataSources
@@ -37,9 +42,12 @@ Actions:
   - Name: appsync:ListGraphqlApis
   - Name: appsync:ListResolvers
   - Name: appsync:ListResolversByFunction
+  - Name: appsync:ListSourceApiAssociations
   - Name: appsync:ListTagsForResource
   - Name: appsync:ListTypes
+  - Name: appsync:ListTypesByAssociation
   - Name: appsync:StartSchemaCreation
+  - Name: appsync:StartSchemaMerge
   - Name: appsync:TagResource
   - Name: appsync:UntagResource
   - Name: appsync:UpdateApiCache
@@ -49,19 +57,13 @@ Actions:
   - Name: appsync:UpdateFunction
   - Name: appsync:UpdateGraphqlApi
   - Name: appsync:UpdateResolver
+  - Name: appsync:UpdateSourceApiAssociation
   - Name: appsync:UpdateType
 
   # actions with no corresponding API
+  - Name: appsync:DeleteResourcePolicy
+  - Name: appsync:GetResourcePolicy
   - Name: appsync:GraphQL
+  - Name: appsync:PutResourcePolicy
   - Name: appsync:SetWebACL
-
-  # APIs without an IAM action
-  - Name: appsync:AssociateMergedGraphqlApi
-  - Name: appsync:AssociateSourceGraphqlApi
-  - Name: appsync:DisassociateMergedGraphqlApi
-  - Name: appsync:DisassociateSourceGraphqlApi
-  - Name: appsync:GetSourceApiAssociation
-  - Name: appsync:ListSourceApiAssociations
-  - Name: appsync:ListTypesByAssociation
-  - Name: appsync:StartSchemaMerge
-  - Name: appsync:UpdateSourceApiAssociation
+  - Name: appsync:SourceGraphQL
