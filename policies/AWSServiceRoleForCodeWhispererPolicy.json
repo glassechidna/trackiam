@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForCodeWhispererPolicy",
   "CreateDate": "2023-03-24T19:39:12Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4MTPH2EDJ3",
   "PolicyName": "AWSServiceRoleForCodeWhispererPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-03-24T19:39:12Z",
+    "CreateDate": "2023-05-26T18:27:32Z",
     "Document": {
       "Statement": [
         {
@@ -55,6 +55,9 @@
         },
         {
           "Action": [
+            "sso:DescribeRegisteredRegions",
+            "sso:GetProfile",
+            "sso:ListDirectoryAssociations",
             "sso:ListProfileAssociations",
             "sso:ListProfiles"
           ],
@@ -67,7 +70,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-03-24T19:39:12Z"
+  "UpdateDate": "2023-05-26T18:27:32Z"
 }
