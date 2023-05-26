@@ -1,6 +1,4 @@
 Actions:
-
-  # APIs without an IAM action
   - Name: mediapackagev2:CreateChannel
   - Name: mediapackagev2:CreateChannelGroup
   - Name: mediapackagev2:CreateOriginEndpoint
@@ -25,3 +23,8 @@ Actions:
   - Name: mediapackagev2:UpdateChannel
   - Name: mediapackagev2:UpdateChannelGroup
   - Name: mediapackagev2:UpdateOriginEndpoint
+
+  # actions with no corresponding API
+  - Name: mediapackagev2:GetHeadObject
+  - Name: mediapackagev2:GetObject
+  - Name: mediapackagev2:PutObject

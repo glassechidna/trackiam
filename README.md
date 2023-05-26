@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 366
-* Unique actions: 14893
+* Unique actions: 14896
 * Managed policies: 1090
 
 Most common managed policy name prefixes:
@@ -213,6 +213,7 @@ The following table summarises the AWS APIs.
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
 | [`backup-gateway`](services/backup-gateway.yml) | 25 | 0 | 2 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 1 |
+| [`mediapackagev2`](services/mediapackagev2.yml) | 24 | 0 | 3 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`detective`](services/detective.yml) | 23 | 1 | 7 |
@@ -324,7 +325,6 @@ The following table summarises the AWS APIs.
 | [`cloudtrail-data`](services/cloudtrail-data.yml) | 1 | 0 | 0 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
-| [`mediapackagev2`](services/mediapackagev2.yml) | 0 | 24 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 11 | 3 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
@@ -408,12 +408,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2325 |
-| `Get` | 2101 |
+| `Get` | 2103 |
 | `Delete` | 1695 |
 | `Describe` | 1591 |
 | `Create` | 1588 |
 | `Update` | 1354 |
-| `Put` | 421 |
+| `Put` | 422 |
 | `Start` | 317 |
 | `Tag` | 237 |
 | `Untag` | 234 |
