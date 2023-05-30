@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 366
-* Unique actions: 14913
-* Managed policies: 1090
+* Unique actions: 14896
+* Managed policies: 1091
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 297 |
-| `arn:aws:iam::aws:policy/Amazon*` | 281 |
+| `arn:aws:iam::aws:policy/Amazon*` | 282 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 242 |
 | `arn:aws:iam::aws:policy/service-role/*` | 170 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -195,6 +195,7 @@ The following table summarises the AWS APIs.
 | [`kinesis`](services/kinesis.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 28 | 0 | 3 |
+| [`securitylake`](services/securitylake.yml) | 28 | 0 | 0 |
 | [`rolesanywhere`](services/rolesanywhere.yml) | 28 | 0 | 0 |
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
@@ -263,7 +264,6 @@ The following table summarises the AWS APIs.
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
 | [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
-| [`securitylake`](services/securitylake.yml) | 14 | 14 | 17 |
 | [`support`](services/support.yml) | 14 | 2 | 8 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
@@ -408,11 +408,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2327 |
-| `Get` | 2107 |
-| `Delete` | 1698 |
+| `Get` | 2101 |
+| `Delete` | 1694 |
 | `Describe` | 1591 |
-| `Create` | 1591 |
-| `Update` | 1356 |
+| `Create` | 1587 |
+| `Update` | 1353 |
 | `Put` | 422 |
 | `Start` | 317 |
 | `Tag` | 237 |
