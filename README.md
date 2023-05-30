@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 366
-* Unique actions: 14899
+* Unique actions: 14913
 * Managed policies: 1090
 
 Most common managed policy name prefixes:
@@ -187,7 +187,6 @@ The following table summarises the AWS APIs.
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
 | [`xray`](services/xray.yml) | 30 | 0 | 3 |
-| [`securitylake`](services/securitylake.yml) | 30 | 0 | 1 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
 | [`cases`](services/cases.yml) | 30 | 0 | 0 |
 | [`voiceid`](services/voiceid.yml) | 29 | 0 | 2 |
@@ -264,6 +263,7 @@ The following table summarises the AWS APIs.
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
 | [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
+| [`securitylake`](services/securitylake.yml) | 14 | 14 | 17 |
 | [`support`](services/support.yml) | 14 | 2 | 8 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
@@ -407,12 +407,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2326 |
-| `Get` | 2104 |
-| `Delete` | 1695 |
+| `List` | 2327 |
+| `Get` | 2107 |
+| `Delete` | 1698 |
 | `Describe` | 1591 |
-| `Create` | 1588 |
-| `Update` | 1354 |
+| `Create` | 1591 |
+| `Update` | 1356 |
 | `Put` | 422 |
 | `Start` | 317 |
 | `Tag` | 237 |

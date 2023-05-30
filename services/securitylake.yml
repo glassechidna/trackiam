@@ -2,33 +2,49 @@ Actions:
   - Name: securitylake:CreateAwsLogSource
   - Name: securitylake:CreateCustomLogSource
   - Name: securitylake:CreateDatalake
-  - Name: securitylake:CreateDatalakeAutoEnable
-  - Name: securitylake:CreateDatalakeDelegatedAdmin
-  - Name: securitylake:CreateDatalakeExceptionsSubscription
   - Name: securitylake:CreateSubscriber
-  - Name: securitylake:CreateSubscriptionNotificationConfiguration
   - Name: securitylake:DeleteAwsLogSource
   - Name: securitylake:DeleteCustomLogSource
   - Name: securitylake:DeleteDatalake
+  - Name: securitylake:DeleteSubscriber
+  - Name: securitylake:GetSubscriber
+  - Name: securitylake:ListDatalakeExceptions
+  - Name: securitylake:ListLogSources
+  - Name: securitylake:ListSubscribers
+  - Name: securitylake:UpdateDatalake
+  - Name: securitylake:UpdateSubscriber
+
+  # actions with no corresponding API
+  - Name: securitylake:CreateDatalakeAutoEnable
+  - Name: securitylake:CreateDatalakeDelegatedAdmin
+  - Name: securitylake:CreateDatalakeExceptionsSubscription
+  - Name: securitylake:CreateSubscriptionNotificationConfiguration
   - Name: securitylake:DeleteDatalakeAutoEnable
   - Name: securitylake:DeleteDatalakeDelegatedAdmin
   - Name: securitylake:DeleteDatalakeExceptionsSubscription
-  - Name: securitylake:DeleteSubscriber
   - Name: securitylake:DeleteSubscriptionNotificationConfiguration
   - Name: securitylake:GetDatalake
   - Name: securitylake:GetDatalakeAutoEnable
   - Name: securitylake:GetDatalakeExceptionsExpiry
   - Name: securitylake:GetDatalakeExceptionsSubscription
   - Name: securitylake:GetDatalakeStatus
-  - Name: securitylake:GetSubscriber
-  - Name: securitylake:ListDatalakeExceptions
-  - Name: securitylake:ListLogSources
-  - Name: securitylake:ListSubscribers
-  - Name: securitylake:UpdateDatalake
+  - Name: securitylake:GetSubscriptionNotificationConfiguration
   - Name: securitylake:UpdateDatalakeExceptionsExpiry
   - Name: securitylake:UpdateDatalakeExceptionsSubscription
-  - Name: securitylake:UpdateSubscriber
   - Name: securitylake:UpdateSubscriptionNotificationConfiguration
 
-  # actions with no corresponding API
-  - Name: securitylake:GetSubscriptionNotificationConfiguration
+  # APIs without an IAM action
+  - Name: securitylake:CreateDataLakeExceptionSubscription
+  - Name: securitylake:CreateDataLakeOrganizationConfiguration
+  - Name: securitylake:CreateSubscriberNotification
+  - Name: securitylake:DeleteDataLakeExceptionSubscription
+  - Name: securitylake:DeleteDataLakeOrganizationConfiguration
+  - Name: securitylake:DeleteSubscriberNotification
+  - Name: securitylake:DeregisterDataLakeDelegatedAdministrator
+  - Name: securitylake:GetDataLakeExceptionSubscription
+  - Name: securitylake:GetDataLakeOrganizationConfiguration
+  - Name: securitylake:GetDataLakeSources
+  - Name: securitylake:ListDataLakes
+  - Name: securitylake:RegisterDataLakeDelegatedAdministrator
+  - Name: securitylake:UpdateDataLakeExceptionSubscription
+  - Name: securitylake:UpdateSubscriberNotification
