@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFFullAccess",
   "CreateDate": "2015-10-06T20:44:00Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJMIKIAFXZEGOLRH7C",
   "PolicyName": "AWSWAFFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-03-30T20:24:20Z",
+    "CreateDate": "2023-05-31T19:08:18Z",
     "Document": {
       "Statement": [
         {
@@ -37,6 +37,10 @@
             "cognito-idp:DisassociateWebACL",
             "cognito-idp:GetWebACLForResource",
             "cognito-idp:ListResourcesForWebACL",
+            "ec2:AssociateVerifiedAccessInstanceWebAcl",
+            "ec2:DescribeVerifiedAccessInstanceWebAclAssociations",
+            "ec2:DisassociateVerifiedAccessInstanceWebAcl",
+            "ec2:GetVerifiedAccessInstanceWebAcl",
             "elasticloadbalancing:SetWebACL",
             "logs:DescribeLogGroups",
             "logs:DescribeResourcePolicies",
@@ -72,7 +76,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2023-03-30T20:24:20Z"
+  "UpdateDate": "2023-05-31T19:08:18Z"
 }

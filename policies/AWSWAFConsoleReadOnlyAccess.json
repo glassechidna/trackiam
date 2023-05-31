@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFConsoleReadOnlyAccess",
   "CreateDate": "2020-04-06T18:43:24Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NCJLTIT64",
   "PolicyName": "AWSWAFConsoleReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-03-30T20:59:06Z",
+    "CreateDate": "2023-05-31T19:12:04Z",
     "Document": {
       "Statement": [
         {
@@ -25,6 +25,8 @@
             "cognito-idp:ListResourcesForWebACL",
             "cognito-idp:ListUserPools",
             "ec2:DescribeRegions",
+            "ec2:DescribeVerifiedAccessInstanceWebAclAssociations",
+            "ec2:GetVerifiedAccessInstanceWebAcl",
             "elasticloadbalancing:DescribeLoadBalancers",
             "waf-regional:Get*",
             "waf-regional:List*",
@@ -42,7 +44,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2023-03-30T20:59:06Z"
+  "UpdateDate": "2023-05-31T19:12:04Z"
 }

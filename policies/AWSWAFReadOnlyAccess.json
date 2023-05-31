@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFReadOnlyAccess",
   "CreateDate": "2015-10-06T20:43:45Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAINZVDMX2SBF7EU2OC",
   "PolicyName": "AWSWAFReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-03-30T20:53:00Z",
+    "CreateDate": "2023-05-31T19:12:30Z",
     "Document": {
       "Statement": [
         {
@@ -16,6 +16,8 @@
             "apprunner:ListServices",
             "cognito-idp:GetWebACLForResource",
             "cognito-idp:ListResourcesForWebACL",
+            "ec2:DescribeVerifiedAccessInstanceWebAclAssociations",
+            "ec2:GetVerifiedAccessInstanceWebAcl",
             "waf-regional:Get*",
             "waf-regional:List*",
             "waf:Get*",
@@ -32,7 +34,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2023-03-30T20:53:00Z"
+  "UpdateDate": "2023-05-31T19:12:30Z"
 }
