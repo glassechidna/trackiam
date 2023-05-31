@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 366
-* Unique actions: 14896
+* Unique actions: 14903
 * Managed policies: 1091
 
 Most common managed policy name prefixes:
@@ -111,9 +111,9 @@ The following table summarises the AWS APIs.
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 53 | 0 | 26 |
 | [`dynamodb`](services/dynamodb.yml) | 52 | 5 | 13 |
 | [`resiliencehub`](services/resiliencehub.yml) | 52 | 0 | 0 |
+| [`workspaces-web`](services/workspaces-web.yml) | 51 | 7 | 0 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
 | [`wafv2`](services/wafv2.yml) | 51 | 0 | 2 |
-| [`workspaces-web`](services/workspaces-web.yml) | 51 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 50 | 0 | 3 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 0 | 0 |
@@ -407,12 +407,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2327 |
-| `Get` | 2101 |
-| `Delete` | 1694 |
+| `List` | 2328 |
+| `Get` | 2102 |
+| `Delete` | 1695 |
 | `Describe` | 1591 |
-| `Create` | 1587 |
-| `Update` | 1353 |
+| `Create` | 1588 |
+| `Update` | 1354 |
 | `Put` | 422 |
 | `Start` | 317 |
 | `Tag` | 237 |

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonInspector2ServiceRolePolicy",
   "CreateDate": "2021-11-16T20:27:48Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4BINOILVQW",
   "PolicyName": "AmazonInspector2ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-04-28T18:13:17Z",
+    "CreateDate": "2023-05-31T18:30:12Z",
     "Document": {
       "Statement": [
         {
@@ -50,6 +50,7 @@
             "iam:ListAttachedRolePolicies",
             "iam:ListPolicies",
             "iam:ListPolicyVersions",
+            "iam:ListRolePolicies",
             "lambda:ListVersionsByFunction"
           ],
           "Condition": {
@@ -98,6 +99,8 @@
             "codeguru-security:BatchGetFindings",
             "codeguru-security:CreateScan",
             "codeguru-security:DeleteScansByCategory",
+            "codeguru-security:GetAccountConfiguration",
+            "codeguru-security:GetFindings",
             "codeguru-security:GetScan",
             "codeguru-security:ListFindings"
           ],
@@ -238,7 +241,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2023-04-28T18:13:17Z"
+  "UpdateDate": "2023-05-31T18:30:12Z"
 }
