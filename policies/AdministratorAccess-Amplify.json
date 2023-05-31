@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AdministratorAccess-Amplify",
   "CreateDate": "2020-12-01T19:03:08Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AML23RALR",
   "PolicyName": "AdministratorAccess-Amplify",
   "PolicyVersion": {
-    "CreateDate": "2023-02-24T20:14:32Z",
+    "CreateDate": "2023-05-31T17:08:15Z",
     "Document": {
       "Statement": [
         {
@@ -390,6 +390,14 @@
         },
         {
           "Action": [
+            "ecr:DescribeRepositories"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmplifyEcrSDKCalls"
+        },
+        {
+          "Action": [
             "geo:*"
           ],
           "Effect": "Allow",
@@ -450,7 +458,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2023-02-24T20:14:32Z"
+  "UpdateDate": "2023-05-31T17:08:15Z"
 }
