@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 366
-* Unique actions: 14903
+* Unique actions: 14911
 * Managed policies: 1092
 
 Most common managed policy name prefixes:
@@ -354,6 +354,7 @@ The following table summarises the AWS APIs.
 | [`scn`](services/scn.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`billing`](services/billing.yml) | 0 | 0 | 13 |
+| [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
 | [`tax`](services/tax.yml) | 0 | 0 | 12 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
@@ -376,7 +377,6 @@ The following table summarises the AWS APIs.
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 5 |
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 5 |
 | [`datazone`](services/datazone.yml) | 0 | 0 | 5 |
-| [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 5 |
 | [`supportplans`](services/supportplans.yml) | 0 | 0 | 4 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
@@ -408,12 +408,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2328 |
-| `Get` | 2102 |
+| `Get` | 2106 |
 | `Delete` | 1695 |
 | `Describe` | 1591 |
 | `Create` | 1588 |
 | `Update` | 1354 |
-| `Put` | 422 |
+| `Put` | 426 |
 | `Start` | 317 |
 | `Tag` | 237 |
 | `Untag` | 234 |
