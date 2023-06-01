@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 366
-* Unique actions: 14911
+* Unique actions: 14918
 * Managed policies: 1092
 
 Most common managed policy name prefixes:
@@ -143,6 +143,7 @@ The following table summarises the AWS APIs.
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
+| [`profile`](services/profile.yml) | 38 | 7 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 38 | 0 | 3 |
 | [`codeartifact`](services/codeartifact.yml) | 38 | 0 | 3 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 1 |
@@ -150,7 +151,6 @@ The following table summarises the AWS APIs.
 | [`inspector2`](services/inspector2.yml) | 38 | 0 | 1 |
 | [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 1 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
-| [`profile`](services/profile.yml) | 38 | 0 | 0 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
 | [`sso`](services/sso.yml) | 37 | 0 | 55 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
@@ -407,12 +407,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2328 |
-| `Get` | 2106 |
-| `Delete` | 1695 |
+| `List` | 2330 |
+| `Get` | 2108 |
+| `Delete` | 1696 |
 | `Describe` | 1591 |
-| `Create` | 1588 |
-| `Update` | 1354 |
+| `Create` | 1589 |
+| `Update` | 1355 |
 | `Put` | 426 |
 | `Start` | 317 |
 | `Tag` | 237 |
