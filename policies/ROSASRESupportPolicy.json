@@ -1,0 +1,219 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/ROSASRESupportPolicy",
+  "CreateDate": "2023-06-01T14:36:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4J4WC2J4K2",
+  "PolicyName": "ROSASRESupportPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-06-01T14:36:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:DescribeSpotFleetInstances",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:spot-fleet-request/*",
+          "Sid": "DescribeSpotFleetInstances"
+        },
+        {
+          "Action": "ec2:DescribeVolumeAttribute",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "DescribeVolumeAttribute"
+        },
+        {
+          "Action": [
+            "ec2:RebootInstances",
+            "ec2:StartInstances",
+            "ec2:StopInstances",
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "ManageInstanceLifecycle"
+        },
+        {
+          "Action": [
+            "iam:GetInstanceProfile"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "DescribeInstance"
+        },
+        {
+          "Action": "ec2:DescribeAddressesAttribute",
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:elastic-ip/*",
+          "Sid": "DescribeAddressesAttribute"
+        },
+        {
+          "Action": [
+            "cloudtrail:DescribeTrails",
+            "cloudtrail:LookupEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "Cloudtrail"
+        },
+        {
+          "Action": [
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "Cloudwatch"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeRegions",
+            "sts:DecodeAuthorizationMessage"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReadPermissions"
+        },
+        {
+          "Action": [
+            "ec2:DescribeDhcpOptions",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSubnets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "VPCNetwork"
+        },
+        {
+          "Action": [
+            "ec2:DescribeIamInstanceProfileAssociations",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstances",
+            "ec2:DescribeReservedInstances",
+            "ec2:DescribeScheduledInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "EC2DescribeInstance"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSecurityGroupReferences",
+            "ec2:DescribeSecurityGroupRules",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeStaleSecurityGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group*/*",
+          "Sid": "DescribeSecurityGroups"
+        },
+        {
+          "Action": [
+            "ec2:DescribeVolumeStatus",
+            "ec2:DescribeVolumes",
+            "ec2:DescribeVolumesModifications"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "DescribeVolumes"
+        },
+        {
+          "Action": [
+            "ec2:DescribeVpcEndpointConnections",
+            "ec2:DescribeVpcEndpoints"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "DescribeVPC"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:DescribeAccountLimits",
+            "elasticloadbalancing:DescribeInstanceHealth",
+            "elasticloadbalancing:DescribeListenerCertificates",
+            "elasticloadbalancing:DescribeListeners",
+            "elasticloadbalancing:DescribeLoadBalancerAttributes",
+            "elasticloadbalancing:DescribeLoadBalancerPolicies",
+            "elasticloadbalancing:DescribeLoadBalancerPolicyTypes",
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "elasticloadbalancing:DescribeRules",
+            "elasticloadbalancing:DescribeSSLPolicies",
+            "elasticloadbalancing:DescribeTags",
+            "elasticloadbalancing:DescribeTargetGroupAttributes",
+            "elasticloadbalancing:DescribeTargetGroups",
+            "elasticloadbalancing:DescribeTargetHealth"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "DescribeLoadBalancers"
+        },
+        {
+          "Action": [
+            "iam:GetRole",
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "DecribeIAMRoles"
+        },
+        {
+          "Action": [
+            "route53:GetHostedZone",
+            "route53:GetHostedZoneCount",
+            "route53:ListHostedZones",
+            "route53:ListHostedZonesByName",
+            "route53:ListResourceRecordSets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "Route53"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-06-01T14:36:06Z"
+}
