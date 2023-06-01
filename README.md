@@ -99,6 +99,7 @@ The following table summarises the AWS APIs.
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 60 | 0 | 6 |
 | [`medialive`](services/medialive.yml) | 59 | 0 | 0 |
+| [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 58 | 0 | 0 |
 | [`geo`](services/geo.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
@@ -111,7 +112,6 @@ The following table summarises the AWS APIs.
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 53 | 0 | 26 |
 | [`dynamodb`](services/dynamodb.yml) | 52 | 5 | 13 |
 | [`resiliencehub`](services/resiliencehub.yml) | 52 | 0 | 0 |
-| [`workspaces-web`](services/workspaces-web.yml) | 51 | 7 | 0 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
 | [`wafv2`](services/wafv2.yml) | 51 | 0 | 2 |
 | [`mediaconnect`](services/mediaconnect.yml) | 50 | 0 | 3 |
@@ -213,11 +213,11 @@ The following table summarises the AWS APIs.
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
 | [`backup-gateway`](services/backup-gateway.yml) | 25 | 0 | 2 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 1 |
+| [`appflow`](services/appflow.yml) | 24 | 0 | 6 |
 | [`mediapackagev2`](services/mediapackagev2.yml) | 24 | 0 | 3 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`detective`](services/detective.yml) | 23 | 1 | 7 |
-| [`appflow`](services/appflow.yml) | 23 | 1 | 6 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 23 | 0 | 1 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
