@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSVPCVerifiedAccessServiceRolePolicy",
   "CreateDate": "2022-11-29T03:35:11Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4FVJMSTHCL",
   "PolicyName": "AWSVPCVerifiedAccessServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-11-29T03:35:11Z",
+    "CreateDate": "2023-06-01T16:28:50Z",
     "Document": {
       "Statement": [
         {
@@ -52,7 +52,10 @@
             "ec2:CreateNetworkInterface"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:subnet/*"
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ]
         },
         {
           "Action": [
@@ -65,7 +68,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-11-29T03:35:11Z"
+  "UpdateDate": "2023-06-01T16:28:50Z"
 }
