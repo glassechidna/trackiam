@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSFaultInjectionSimulatorEC2Access",
   "CreateDate": "2022-10-26T20:39:26Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4JRMRLWKEY",
   "PolicyName": "AWSFaultInjectionSimulatorEC2Access",
   "PolicyVersion": {
-    "CreateDate": "2022-10-26T20:39:26Z",
+    "CreateDate": "2023-06-02T23:01:50Z",
     "Document": {
       "Statement": [
         {
@@ -32,7 +32,8 @@
             "ec2:RebootInstances",
             "ec2:SendSpotInstanceInterruptions",
             "ec2:StartInstances",
-            "ec2:StopInstances"
+            "ec2:StopInstances",
+            "ec2:TerminateInstances"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*:*:instance/*"
@@ -51,6 +52,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
             "arn:aws:ssm:*:*:document/*"
           ]
         }
@@ -58,7 +60,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-10-26T20:39:26Z"
+  "UpdateDate": "2023-06-02T23:01:50Z"
 }

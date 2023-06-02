@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSFaultInjectionSimulatorSSMAccess",
   "CreateDate": "2022-10-26T15:33:44Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4LYOCAYKDJ",
   "PolicyName": "AWSFaultInjectionSimulatorSSMAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-10-26T15:33:44Z",
+    "CreateDate": "2023-06-02T22:55:18Z",
     "Document": {
       "Statement": [
         {
@@ -19,6 +19,22 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/*"
+        },
+        {
+          "Action": "ssm:SendCommand",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ssm:*:*:document/*"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:CancelCommand",
+            "ssm:ListCommands"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": [
@@ -43,7 +59,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-10-26T15:33:44Z"
+  "UpdateDate": "2023-06-02T22:55:18Z"
 }
