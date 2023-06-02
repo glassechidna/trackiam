@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 366
-* Unique actions: 14933
+* Unique actions: 14938
 * Managed policies: 1092
 
 Most common managed policy name prefixes:
@@ -80,8 +80,8 @@ The following table summarises the AWS APIs.
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
 | [`dms`](services/dms.yml) | 69 | 0 | 48 |
 | [`guardduty`](services/guardduty.yml) | 68 | 0 | 1 |
+| [`athena`](services/athena.yml) | 68 | 0 | 1 |
 | [`ds`](services/ds.yml) | 67 | 0 | 6 |
-| [`athena`](services/athena.yml) | 67 | 0 | 1 |
 | [`cloudformation`](services/cloudformation.yml) | 66 | 0 | 11 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
@@ -112,8 +112,8 @@ The following table summarises the AWS APIs.
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 53 | 0 | 26 |
 | [`dynamodb`](services/dynamodb.yml) | 52 | 5 | 13 |
 | [`resiliencehub`](services/resiliencehub.yml) | 52 | 0 | 0 |
+| [`wafv2`](services/wafv2.yml) | 51 | 2 | 2 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
-| [`wafv2`](services/wafv2.yml) | 51 | 0 | 2 |
 | [`mediaconnect`](services/mediaconnect.yml) | 50 | 0 | 3 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 0 | 0 |
@@ -128,8 +128,8 @@ The following table summarises the AWS APIs.
 | [`kafka`](services/kafka.yml) | 45 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 44 | 3 | 1 |
+| [`cloudtrail`](services/cloudtrail.yml) | 44 | 2 | 5 |
 | [`workdocs`](services/workdocs.yml) | 44 | 0 | 14 |
-| [`cloudtrail`](services/cloudtrail.yml) | 44 | 0 | 5 |
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`wellarchitected`](services/wellarchitected.yml) | 43 | 0 | 0 |
@@ -409,12 +409,12 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 2330 |
 | `Get` | 2108 |
-| `Delete` | 1698 |
-| `Describe` | 1595 |
+| `Delete` | 1699 |
+| `Describe` | 1597 |
 | `Create` | 1591 |
 | `Update` | 1355 |
 | `Put` | 426 |
-| `Start` | 319 |
+| `Start` | 320 |
 | `Tag` | 237 |
 | `Untag` | 234 |
 
