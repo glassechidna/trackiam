@@ -35,9 +35,11 @@ Actions:
   - Name: cloudtrail:RegisterOrganizationDelegatedAdmin
   - Name: cloudtrail:RemoveTags
   - Name: cloudtrail:RestoreEventDataStore
+  - Name: cloudtrail:StartEventDataStoreIngestion
   - Name: cloudtrail:StartImport
   - Name: cloudtrail:StartLogging
   - Name: cloudtrail:StartQuery
+  - Name: cloudtrail:StopEventDataStoreIngestion
   - Name: cloudtrail:StopImport
   - Name: cloudtrail:StopLogging
   - Name: cloudtrail:UpdateChannel
@@ -50,7 +52,3 @@ Actions:
   - Name: cloudtrail:GetServiceLinkedChannel
   - Name: cloudtrail:ListServiceLinkedChannels
   - Name: cloudtrail:UpdateServiceLinkedChannel
-
-  # APIs without an IAM action
-  - Name: cloudtrail:StartEventDataStoreIngestion
-  - Name: cloudtrail:StopEventDataStoreIngestion

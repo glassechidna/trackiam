@@ -124,11 +124,11 @@ The following table summarises the AWS APIs.
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
+| [`cloudtrail`](services/cloudtrail.yml) | 46 | 0 | 5 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`kafka`](services/kafka.yml) | 45 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 44 | 3 | 1 |
-| [`cloudtrail`](services/cloudtrail.yml) | 44 | 2 | 5 |
 | [`workdocs`](services/workdocs.yml) | 44 | 0 | 14 |
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
