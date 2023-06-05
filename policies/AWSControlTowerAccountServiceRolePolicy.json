@@ -1,0 +1,84 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSControlTowerAccountServiceRolePolicy",
+  "CreateDate": "2023-06-05T22:04:50Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4ITRUSWZXG",
+  "PolicyName": "AWSControlTowerAccountServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-06-05T22:04:50Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "events:PutRule",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "events:source": "aws.securityhub"
+            },
+            "Null": {
+              "events:detail-type": "false"
+            },
+            "StringEquals": {
+              "events:ManagedBy": "controltower.amazonaws.com",
+              "events:detail-type": "Security Hub Findings - Imported"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/*ControlTower*",
+          "Sid": "AllowPutRuleOnSpecificSourcesAndDetailTypes"
+        },
+        {
+          "Action": "sns:publish",
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalAccount": "${aws:ResourceAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sns:*:*:aws-controltower-AggregateSecurityNotifications",
+          "Sid": "AllowControlTowerToPublishSecurityNotifications"
+        },
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:DisableRule",
+            "events:EnableRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "events:ManagedBy": "controltower.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/*ControlTower*",
+          "Sid": "AllowOtherOperationsOnRulesManagedByControlTower"
+        },
+        {
+          "Action": [
+            "events:DescribeRule",
+            "events:ListTargetsByRule"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/*ControlTower*",
+          "Sid": "AllowDescribeOperationsOnRulesManagedByControlTower"
+        },
+        {
+          "Action": [
+            "securityhub:DescribeStandardsControls",
+            "securityhub:GetEnabledStandards"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:securityhub:*:*:hub/default",
+          "Sid": "AllowActionsForSecurityHubIntegration"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-06-05T22:04:50Z"
+}
