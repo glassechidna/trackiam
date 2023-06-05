@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 366
-* Unique actions: 14938
+* Unique actions: 14967
 * Managed policies: 1093
 
 Most common managed policy name prefixes:
@@ -82,7 +82,7 @@ The following table summarises the AWS APIs.
 | [`guardduty`](services/guardduty.yml) | 68 | 0 | 1 |
 | [`athena`](services/athena.yml) | 68 | 0 | 1 |
 | [`ds`](services/ds.yml) | 67 | 0 | 6 |
-| [`cloudformation`](services/cloudformation.yml) | 66 | 0 | 11 |
+| [`cloudformation`](services/cloudformation.yml) | 66 | 3 | 11 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`workspaces`](services/workspaces.yml) | 65 | 0 | 1 |
@@ -294,10 +294,10 @@ The following table summarises the AWS APIs.
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`kendra-ranking`](services/kendra-ranking.yml) | 9 | 0 | 0 |
+| [`finspace`](services/finspace.yml) | 8 | 26 | 7 |
 | [`budgets`](services/budgets.yml) | 8 | 15 | 2 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
 | [`backup-storage`](services/backup-storage.yml) | 8 | 1 | 7 |
-| [`finspace`](services/finspace.yml) | 8 | 0 | 7 |
 | [`sts`](services/sts.yml) | 8 | 0 | 3 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
 | [`iotfleethub`](services/iotfleethub.yml) | 8 | 0 | 0 |
@@ -407,12 +407,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2330 |
-| `Get` | 2108 |
-| `Delete` | 1699 |
-| `Describe` | 1597 |
-| `Create` | 1591 |
-| `Update` | 1355 |
+| `List` | 2336 |
+| `Get` | 2114 |
+| `Delete` | 1703 |
+| `Describe` | 1598 |
+| `Create` | 1596 |
+| `Update` | 1360 |
 | `Put` | 426 |
 | `Start` | 320 |
 | `Tag` | 237 |
