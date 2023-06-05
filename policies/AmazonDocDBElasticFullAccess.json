@@ -1,0 +1,137 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonDocDBElasticFullAccess",
+  "CreateDate": "2023-06-05T13:51:04Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4PPVFACKZC",
+  "PolicyName": "AmazonDocDBElasticFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-06-05T13:51:04Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "docdb-elastic.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/docdb-elastic.amazonaws.com/AWSServiceRoleForDocDB-Elastic"
+        },
+        {
+          "Action": [
+            "ec2:CreateVpcEndpoint",
+            "ec2:DeleteVpcEndpoints",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs",
+            "ec2:ModifyVpcEndpoint",
+            "secretsmanager:ListSecrets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaFirst": "docdb-elastic.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "kms:CreateGrant"
+          ],
+          "Condition": {
+            "Bool": {
+              "kms:GrantIsForAWSResource": true
+            },
+            "StringLike": {
+              "aws:ResourceTag/DocDBElasticFullAccess": "*",
+              "kms:ViaService": [
+                "docdb-elastic.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:DescribeKey",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/DocDBElasticFullAccess": "*",
+              "kms:ViaService": [
+                "docdb-elastic.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetResourcePolicy",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:ListSecretVersionIds"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaFirst": "docdb-elastic.amazonaws.com"
+            },
+            "StringLike": {
+              "secretsmanager:ResourceTag/DocDBElasticFullAccess": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
+            "docdb-elastic:CreateCluster",
+            "docdb-elastic:CreateClusterSnapshot",
+            "docdb-elastic:DeleteCluster",
+            "docdb-elastic:DeleteClusterSnapshot",
+            "docdb-elastic:GetCluster",
+            "docdb-elastic:GetClusterSnapshot",
+            "docdb-elastic:ListClusterSnapshots",
+            "docdb-elastic:ListClusters",
+            "docdb-elastic:ListTagsForResource",
+            "docdb-elastic:RestoreClusterFromSnapshot",
+            "docdb-elastic:TagResource",
+            "docdb-elastic:UntagResource",
+            "docdb-elastic:UpdateCluster"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-06-05T13:51:04Z"
+}
