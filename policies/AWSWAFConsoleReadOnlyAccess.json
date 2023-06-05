@@ -1,19 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFConsoleReadOnlyAccess",
   "CreateDate": "2020-04-06T18:43:24Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NCJLTIT64",
   "PolicyName": "AWSWAFConsoleReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-05-31T19:12:04Z",
+    "CreateDate": "2023-06-05T20:56:51Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "apigateway:GET",
             "apprunner:DescribeWebAclForService",
+            "apprunner:ListAssociatedServicesForWebAcl",
             "apprunner:ListServices",
             "appsync:ListGraphqlApis",
             "cloudfront:ListDistributions",
@@ -26,6 +27,7 @@
             "cognito-idp:ListUserPools",
             "ec2:DescribeRegions",
             "ec2:DescribeVerifiedAccessInstanceWebAclAssociations",
+            "ec2:DescribeVerifiedAccessInstances",
             "ec2:GetVerifiedAccessInstanceWebAcl",
             "elasticloadbalancing:DescribeLoadBalancers",
             "waf-regional:Get*",
@@ -44,7 +46,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2023-05-31T19:12:04Z"
+  "UpdateDate": "2023-06-05T20:56:51Z"
 }
