@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchLogsReadOnlyAccess",
   "CreateDate": "2015-02-06T18:40:03Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ2YIYDYSNNEHK3VKW",
   "PolicyName": "CloudWatchLogsReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-01-14T19:32:45Z",
+    "CreateDate": "2023-06-06T17:16:08Z",
     "Document": {
       "Statement": [
         {
@@ -16,7 +16,9 @@
             "logs:FilterLogEvents",
             "logs:Get*",
             "logs:List*",
+            "logs:StartLiveTail",
             "logs:StartQuery",
+            "logs:StopLiveTail",
             "logs:StopQuery",
             "logs:TestMetricFilter"
           ],
@@ -27,7 +29,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2019-01-14T19:32:45Z"
+  "UpdateDate": "2023-06-06T17:16:08Z"
 }
