@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 366
-* Unique actions: 14969
+* Unique actions: 15000
 * Managed policies: 1094
 
 Most common managed policy name prefixes:
@@ -38,8 +38,8 @@ The following table summarises the AWS APIs.
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 591 | 0 | 15 |
 | [`sagemaker`](services/sagemaker.yml) | 317 | 0 | 11 |
+| [`iot`](services/iot.yml) | 257 | 3 | 9 |
 | [`chime`](services/chime.yml) | 253 | 0 | 50 |
-| [`iot`](services/iot.yml) | 245 | 3 | 9 |
 | [`glue`](services/glue.yml) | 198 | 4 | 13 |
 | [`connect`](services/connect.yml) | 191 | 0 | 8 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
@@ -53,7 +53,7 @@ The following table summarises the AWS APIs.
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`iotwireless`](services/iotwireless.yml) | 109 | 0 | 1 |
-| [`lex`](services/lex.yml) | 108 | 2 | 7 |
+| [`lex`](services/lex.yml) | 108 | 16 | 7 |
 | [`cloudfront`](services/cloudfront.yml) | 105 | 1 | 7 |
 | [`gamelift`](services/gamelift.yml) | 104 | 0 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 4 |
@@ -239,6 +239,7 @@ The following table summarises the AWS APIs.
 | [`emr-containers`](services/emr-containers.yml) | 20 | 0 | 0 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`translate`](services/translate.yml) | 19 | 0 | 0 |
+| [`signer`](services/signer.yml) | 19 | 0 | 0 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
 | [`sagemaker-geospatial`](services/sagemaker-geospatial.yml) | 19 | 0 | 0 |
 | [`resource-explorer-2`](services/resource-explorer-2.yml) | 19 | 0 | 0 |
@@ -248,11 +249,10 @@ The following table summarises the AWS APIs.
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
 | [`resource-groups`](services/resource-groups.yml) | 18 | 0 | 1 |
 | [`grafana`](services/grafana.yml) | 18 | 0 | 0 |
-| [`sqs`](services/sqs.yml) | 17 | 3 | 0 |
+| [`sqs`](services/sqs.yml) | 17 | 6 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 17 | 0 | 34 |
 | [`ssm-sap`](services/ssm-sap.yml) | 17 | 0 | 3 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
-| [`signer`](services/signer.yml) | 17 | 0 | 0 |
 | [`rum`](services/rum.yml) | 17 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 17 | 0 | 0 |
 | [`ivschat`](services/ivschat.yml) | 17 | 0 | 0 |
@@ -407,14 +407,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2336 |
-| `Get` | 2114 |
-| `Delete` | 1703 |
-| `Describe` | 1598 |
-| `Create` | 1596 |
-| `Update` | 1360 |
+| `List` | 2343 |
+| `Get` | 2119 |
+| `Delete` | 1706 |
+| `Describe` | 1602 |
+| `Create` | 1599 |
+| `Update` | 1364 |
 | `Put` | 426 |
-| `Start` | 321 |
+| `Start` | 324 |
 | `Tag` | 237 |
 | `Untag` | 234 |
 
