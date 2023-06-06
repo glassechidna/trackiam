@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 366
-* Unique actions: 15000
+* Unique actions: 15002
 * Managed policies: 1094
 
 Most common managed policy name prefixes:
@@ -164,6 +164,7 @@ The following table summarises the AWS APIs.
 | [`apprunner`](services/apprunner.yml) | 35 | 0 | 5 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`eks`](services/eks.yml) | 35 | 0 | 1 |
+| [`finspace`](services/finspace.yml) | 34 | 0 | 9 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
 | [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
 | [`ram`](services/ram.yml) | 34 | 0 | 0 |
@@ -294,7 +295,6 @@ The following table summarises the AWS APIs.
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`kendra-ranking`](services/kendra-ranking.yml) | 9 | 0 | 0 |
-| [`finspace`](services/finspace.yml) | 8 | 26 | 7 |
 | [`budgets`](services/budgets.yml) | 8 | 15 | 2 |
 | [`mobilehub`](services/mobilehub.yml) | 8 | 1 | 15 |
 | [`backup-storage`](services/backup-storage.yml) | 8 | 1 | 7 |
