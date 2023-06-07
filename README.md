@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 366
-* Unique actions: 15002
+* Unique actions: 15009
 * Managed policies: 1095
 
 Most common managed policy name prefixes:
@@ -120,7 +120,7 @@ The following table summarises the AWS APIs.
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 49 | 0 | 0 |
-| [`logs`](services/logs.yml) | 48 | 0 | 9 |
+| [`logs`](services/logs.yml) | 48 | 3 | 9 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
@@ -143,7 +143,7 @@ The following table summarises the AWS APIs.
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
-| [`profile`](services/profile.yml) | 38 | 7 | 0 |
+| [`profile`](services/profile.yml) | 38 | 11 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 38 | 0 | 3 |
 | [`codeartifact`](services/codeartifact.yml) | 38 | 0 | 3 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 1 |
@@ -407,13 +407,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2343 |
-| `Get` | 2119 |
-| `Delete` | 1706 |
-| `Describe` | 1602 |
-| `Create` | 1599 |
+| `List` | 2344 |
+| `Get` | 2120 |
+| `Delete` | 1708 |
+| `Describe` | 1603 |
+| `Create` | 1600 |
 | `Update` | 1364 |
-| `Put` | 426 |
+| `Put` | 427 |
 | `Start` | 324 |
 | `Tag` | 237 |
 | `Untag` | 234 |
