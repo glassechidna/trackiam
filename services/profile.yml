@@ -1,9 +1,13 @@
 Actions:
   - Name: profile:AddProfileKey
+  - Name: profile:CreateCalculatedAttributeDefinition
   - Name: profile:CreateDomain
+  - Name: profile:CreateEventStream
   - Name: profile:CreateIntegrationWorkflow
   - Name: profile:CreateProfile
+  - Name: profile:DeleteCalculatedAttributeDefinition
   - Name: profile:DeleteDomain
+  - Name: profile:DeleteEventStream
   - Name: profile:DeleteIntegration
   - Name: profile:DeleteProfile
   - Name: profile:DeleteProfileKey
@@ -11,7 +15,10 @@ Actions:
   - Name: profile:DeleteProfileObjectType
   - Name: profile:DeleteWorkflow
   - Name: profile:GetAutoMergingPreview
+  - Name: profile:GetCalculatedAttributeDefinition
+  - Name: profile:GetCalculatedAttributeForProfile
   - Name: profile:GetDomain
+  - Name: profile:GetEventStream
   - Name: profile:GetIdentityResolutionJob
   - Name: profile:GetIntegration
   - Name: profile:GetMatches
@@ -20,7 +27,10 @@ Actions:
   - Name: profile:GetWorkflow
   - Name: profile:GetWorkflowSteps
   - Name: profile:ListAccountIntegrations
+  - Name: profile:ListCalculatedAttributeDefinitions
+  - Name: profile:ListCalculatedAttributesForProfile
   - Name: profile:ListDomains
+  - Name: profile:ListEventStreams
   - Name: profile:ListIdentityResolutionJobs
   - Name: profile:ListIntegrations
   - Name: profile:ListProfileObjectTypeTemplates
@@ -35,18 +45,6 @@ Actions:
   - Name: profile:SearchProfiles
   - Name: profile:TagResource
   - Name: profile:UntagResource
+  - Name: profile:UpdateCalculatedAttributeDefinition
   - Name: profile:UpdateDomain
   - Name: profile:UpdateProfile
-
-  # APIs without an IAM action
-  - Name: profile:CreateCalculatedAttributeDefinition
-  - Name: profile:CreateEventStream
-  - Name: profile:DeleteCalculatedAttributeDefinition
-  - Name: profile:DeleteEventStream
-  - Name: profile:GetCalculatedAttributeDefinition
-  - Name: profile:GetCalculatedAttributeForProfile
-  - Name: profile:GetEventStream
-  - Name: profile:ListCalculatedAttributeDefinitions
-  - Name: profile:ListCalculatedAttributesForProfile
-  - Name: profile:ListEventStreams
-  - Name: profile:UpdateCalculatedAttributeDefinition

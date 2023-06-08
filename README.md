@@ -119,6 +119,7 @@ The following table summarises the AWS APIs.
 | [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 0 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
+| [`profile`](services/profile.yml) | 49 | 0 | 0 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 49 | 0 | 0 |
 | [`logs`](services/logs.yml) | 48 | 3 | 9 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
@@ -143,7 +144,6 @@ The following table summarises the AWS APIs.
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
-| [`profile`](services/profile.yml) | 38 | 11 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 38 | 0 | 3 |
 | [`codeartifact`](services/codeartifact.yml) | 38 | 0 | 3 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 1 |
@@ -234,6 +234,7 @@ The following table summarises the AWS APIs.
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 21 | 0 | 7 |
 | [`synthetics`](services/synthetics.yml) | 21 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 21 | 0 | 0 |
+| [`sqs`](services/sqs.yml) | 20 | 3 | 0 |
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 20 | 2 | 1 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
 | [`iotroborunner`](services/iotroborunner.yml) | 20 | 0 | 0 |
@@ -250,7 +251,6 @@ The following table summarises the AWS APIs.
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
 | [`resource-groups`](services/resource-groups.yml) | 18 | 0 | 1 |
 | [`grafana`](services/grafana.yml) | 18 | 0 | 0 |
-| [`sqs`](services/sqs.yml) | 17 | 6 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 17 | 0 | 34 |
 | [`ssm-sap`](services/ssm-sap.yml) | 17 | 0 | 3 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
