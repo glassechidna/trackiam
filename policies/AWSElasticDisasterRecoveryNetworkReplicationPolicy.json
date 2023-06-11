@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticDisasterRecoveryNetworkReplicationPolicy",
+  "CreateDate": "2023-06-11T12:36:48Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4OACCBBQLR",
+  "PolicyName": "AWSElasticDisasterRecoveryNetworkReplicationPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-06-11T12:36:48Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeDhcpOptions",
+            "ec2:DescribeInstances",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeNetworkAcls",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-06-11T12:36:48Z"
+}
