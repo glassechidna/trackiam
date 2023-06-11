@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticDisasterRecoveryConsoleFullAccess",
   "CreateDate": "2021-11-17T10:46:29Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LCQTK3F7W",
   "PolicyName": "AWSElasticDisasterRecoveryConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-04-19T09:52:11Z",
+    "CreateDate": "2023-06-11T08:37:09Z",
     "Document": {
       "Statement": [
         {
@@ -312,6 +312,14 @@
         },
         {
           "Action": [
+            "cloudformation:DescribeStacks",
+            "cloudformation:ListStacks"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "drs:*"
           ],
           "Effect": "Allow",
@@ -357,12 +365,20 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-04-19T09:52:11Z"
+  "UpdateDate": "2023-06-11T08:37:09Z"
 }
