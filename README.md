@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 367
-* Unique actions: 15048
+* Unique actions: 15064
 * Managed policies: 1098
 
 Most common managed policy name prefixes:
@@ -84,9 +84,9 @@ The following table summarises the AWS APIs.
 | [`ds`](services/ds.yml) | 67 | 0 | 6 |
 | [`cloudformation`](services/cloudformation.yml) | 66 | 3 | 11 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
+| [`rekognition`](services/rekognition.yml) | 65 | 7 | 1 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`workspaces`](services/workspaces.yml) | 65 | 0 | 1 |
-| [`rekognition`](services/rekognition.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
 | [`kendra`](services/kendra.yml) | 65 | 0 | 0 |
@@ -144,11 +144,11 @@ The following table summarises the AWS APIs.
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
+| [`inspector2`](services/inspector2.yml) | 38 | 0 | 7 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 38 | 0 | 3 |
 | [`codeartifact`](services/codeartifact.yml) | 38 | 0 | 3 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 1 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
-| [`inspector2`](services/inspector2.yml) | 38 | 0 | 1 |
 | [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 1 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
@@ -234,8 +234,8 @@ The following table summarises the AWS APIs.
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 21 | 0 | 7 |
 | [`synthetics`](services/synthetics.yml) | 21 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 21 | 0 | 0 |
+| [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 20 | 5 | 1 |
 | [`sqs`](services/sqs.yml) | 20 | 3 | 0 |
-| [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 20 | 2 | 1 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
 | [`iotroborunner`](services/iotroborunner.yml) | 20 | 0 | 0 |
 | [`emr-containers`](services/emr-containers.yml) | 20 | 0 | 0 |
@@ -408,14 +408,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2349 |
-| `Get` | 2126 |
-| `Delete` | 1710 |
+| `List` | 2351 |
+| `Get` | 2129 |
+| `Delete` | 1711 |
+| `Create` | 1604 |
 | `Describe` | 1603 |
-| `Create` | 1602 |
-| `Update` | 1365 |
+| `Update` | 1366 |
 | `Put` | 427 |
-| `Start` | 325 |
+| `Start` | 326 |
 | `Tag` | 239 |
 | `Untag` | 236 |
 
