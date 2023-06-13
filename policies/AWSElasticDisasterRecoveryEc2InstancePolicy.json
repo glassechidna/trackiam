@@ -1,15 +1,27 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticDisasterRecoveryEc2InstancePolicy",
   "CreateDate": "2022-05-26T12:30:18Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4DUAC4ANEW",
   "PolicyName": "AWSElasticDisasterRecoveryEc2InstancePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-05-14T07:27:48Z",
+    "CreateDate": "2023-06-13T16:30:14Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "drs:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "drs:CreateAction": "CreateSourceNetwork"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:drs:*:*:source-network/*"
+        },
         {
           "Action": [
             "drs:TagResource"
@@ -42,6 +54,7 @@
         },
         {
           "Action": [
+            "drs:CreateSourceNetwork",
             "drs:CreateSourceServerForDrs",
             "drs:GetAgentInstallationAssetsForDrs",
             "drs:SendClientLogsForDrs"
@@ -69,7 +82,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-05-14T07:27:48Z"
+  "UpdateDate": "2023-06-13T16:30:14Z"
 }
