@@ -1,11 +1,14 @@
 Actions:
+  - Name: drs:AssociateSourceNetworkStack
   - Name: drs:CreateExtendedSourceServer
   - Name: drs:CreateLaunchConfigurationTemplate
   - Name: drs:CreateReplicationConfigurationTemplate
+  - Name: drs:CreateSourceNetwork
   - Name: drs:DeleteJob
   - Name: drs:DeleteLaunchConfigurationTemplate
   - Name: drs:DeleteRecoveryInstance
   - Name: drs:DeleteReplicationConfigurationTemplate
+  - Name: drs:DeleteSourceNetwork
   - Name: drs:DeleteSourceServer
   - Name: drs:DescribeJobLogItems
   - Name: drs:DescribeJobs
@@ -13,9 +16,11 @@ Actions:
   - Name: drs:DescribeRecoveryInstances
   - Name: drs:DescribeRecoverySnapshots
   - Name: drs:DescribeReplicationConfigurationTemplates
+  - Name: drs:DescribeSourceNetworks
   - Name: drs:DescribeSourceServers
   - Name: drs:DisconnectRecoveryInstance
   - Name: drs:DisconnectSourceServer
+  - Name: drs:ExportSourceNetworkCfnTemplate
   - Name: drs:GetFailbackReplicationConfiguration
   - Name: drs:GetLaunchConfiguration
   - Name: drs:GetReplicationConfiguration
@@ -28,8 +33,11 @@ Actions:
   - Name: drs:StartFailbackLaunch
   - Name: drs:StartRecovery
   - Name: drs:StartReplication
+  - Name: drs:StartSourceNetworkRecovery
+  - Name: drs:StartSourceNetworkReplication
   - Name: drs:StopFailback
   - Name: drs:StopReplication
+  - Name: drs:StopSourceNetworkReplication
   - Name: drs:TagResource
   - Name: drs:TerminateRecoveryInstances
   - Name: drs:UntagResource
@@ -41,18 +49,13 @@ Actions:
 
   # actions with no corresponding API
   - Name: drs:AssociateFailbackClientToRecoveryInstanceForDrs
-  - Name: drs:AssociateSourceNetworkStack
   - Name: drs:BatchCreateVolumeSnapshotGroupForDrs
   - Name: drs:BatchDeleteSnapshotRequestForDrs
   - Name: drs:CreateConvertedSnapshotForDrs
   - Name: drs:CreateRecoveryInstanceForDrs
-  - Name: drs:CreateSourceNetwork
   - Name: drs:CreateSourceServerForDrs
-  - Name: drs:DeleteSourceNetwork
   - Name: drs:DescribeReplicationServerAssociationsForDrs
   - Name: drs:DescribeSnapshotRequestsForDrs
-  - Name: drs:DescribeSourceNetworks
-  - Name: drs:ExportSourceNetworkCfnTemplate
   - Name: drs:GetAgentCommandForDrs
   - Name: drs:GetAgentConfirmedResumeInfoForDrs
   - Name: drs:GetAgentInstallationAssetsForDrs
@@ -77,9 +80,6 @@ Actions:
   - Name: drs:SendClientLogsForDrs
   - Name: drs:SendClientMetricsForDrs
   - Name: drs:SendVolumeStatsForDrs
-  - Name: drs:StartSourceNetworkRecovery
-  - Name: drs:StartSourceNetworkReplication
-  - Name: drs:StopSourceNetworkReplication
   - Name: drs:UpdateAgentBacklogForDrs
   - Name: drs:UpdateAgentConversionInfoForDrs
   - Name: drs:UpdateAgentReplicationInfoForDrs

@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 368
-* Unique actions: 15109
+* Unique actions: 15117
 * Managed policies: 1098
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 591 | 0 | 15 |
+| [`ec2`](services/ec2.yml) | 591 | 3 | 15 |
 | [`sagemaker`](services/sagemaker.yml) | 317 | 0 | 11 |
 | [`iot`](services/iot.yml) | 257 | 3 | 9 |
 | [`chime`](services/chime.yml) | 253 | 0 | 50 |
@@ -81,6 +81,7 @@ The following table summarises the AWS APIs.
 | [`dms`](services/dms.yml) | 69 | 0 | 48 |
 | [`guardduty`](services/guardduty.yml) | 68 | 0 | 1 |
 | [`athena`](services/athena.yml) | 68 | 0 | 1 |
+| [`securityhub`](services/securityhub.yml) | 67 | 0 | 10 |
 | [`ds`](services/ds.yml) | 67 | 0 | 6 |
 | [`cloudformation`](services/cloudformation.yml) | 66 | 3 | 11 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
@@ -94,7 +95,6 @@ The following table summarises the AWS APIs.
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
-| [`securityhub`](services/securityhub.yml) | 62 | 0 | 10 |
 | [`mgn`](services/mgn.yml) | 61 | 0 | 34 |
 | [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 60 | 0 | 6 |
@@ -106,6 +106,7 @@ The following table summarises the AWS APIs.
 | [`datasync`](services/datasync.yml) | 56 | 1 | 0 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 2 |
 | [`events`](services/events.yml) | 56 | 0 | 1 |
+| [`wellarchitected`](services/wellarchitected.yml) | 56 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 56 | 0 | 0 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
@@ -123,6 +124,7 @@ The following table summarises the AWS APIs.
 | [`globalaccelerator`](services/globalaccelerator.yml) | 49 | 0 | 0 |
 | [`logs`](services/logs.yml) | 48 | 3 | 9 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
+| [`drs`](services/drs.yml) | 47 | 0 | 40 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`cloudtrail`](services/cloudtrail.yml) | 46 | 0 | 5 |
@@ -133,14 +135,12 @@ The following table summarises the AWS APIs.
 | [`workdocs`](services/workdocs.yml) | 44 | 0 | 14 |
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
-| [`wellarchitected`](services/wellarchitected.yml) | 43 | 0 | 13 |
 | [`transcribe`](services/transcribe.yml) | 42 | 0 | 3 |
 | [`fms`](services/fms.yml) | 42 | 0 | 0 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
 | [`fsx`](services/fsx.yml) | 41 | 0 | 4 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 40 | 0 | 0 |
-| [`drs`](services/drs.yml) | 39 | 0 | 48 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
@@ -216,6 +216,7 @@ The following table summarises the AWS APIs.
 | [`discovery`](services/discovery.yml) | 25 | 0 | 1 |
 | [`appflow`](services/appflow.yml) | 24 | 0 | 6 |
 | [`mediapackagev2`](services/mediapackagev2.yml) | 24 | 0 | 3 |
+| [`verifiedpermissions`](services/verifiedpermissions.yml) | 24 | 0 | 0 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`detective`](services/detective.yml) | 23 | 1 | 7 |
@@ -272,6 +273,7 @@ The following table summarises the AWS APIs.
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 14 | 0 | 0 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 17 |
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 7 |
+| [`codeguru-security`](services/codeguru-security.yml) | 13 | 0 | 2 |
 | [`textract`](services/textract.yml) | 13 | 0 | 0 |
 | [`snow-device-management`](services/snow-device-management.yml) | 13 | 0 | 0 |
 | [`health`](services/health.yml) | 13 | 0 | 0 |
@@ -342,7 +344,6 @@ The following table summarises the AWS APIs.
 | [`datazonecontrol`](services/datazonecontrol.yml) | 0 | 0 | 29 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 28 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
-| [`verifiedpermissions`](services/verifiedpermissions.yml) | 0 | 0 | 24 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 23 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 21 |
@@ -352,7 +353,6 @@ The following table summarises the AWS APIs.
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
-| [`codeguru-security`](services/codeguru-security.yml) | 0 | 0 | 15 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 14 |
 | [`scn`](services/scn.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
@@ -409,11 +409,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2358 |
+| `List` | 2359 |
 | `Get` | 2136 |
-| `Delete` | 1718 |
-| `Create` | 1611 |
-| `Describe` | 1604 |
+| `Delete` | 1719 |
+| `Create` | 1613 |
+| `Describe` | 1605 |
 | `Update` | 1371 |
 | `Put` | 428 |
 | `Start` | 328 |
