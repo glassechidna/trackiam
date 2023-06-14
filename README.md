@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 368
-* Unique actions: 15117
+* Unique actions: 15118
 * Managed policies: 1098
 
 Most common managed policy name prefixes:
@@ -319,9 +319,9 @@ The following table summarises the AWS APIs.
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 4 | 0 | 0 |
 | [`license-manager-linux-subscriptions`](services/license-manager-linux-subscriptions.yml) | 4 | 0 | 0 |
 | [`cassandra`](services/cassandra.yml) | 2 | 11 | 15 |
+| [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 2 | 0 | 1 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 2 | 0 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
-| [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 2 | 0 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 1 | 30 | 0 |
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`cloudtrail-data`](services/cloudtrail-data.yml) | 1 | 0 | 0 |
