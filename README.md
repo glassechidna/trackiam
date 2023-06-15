@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 368
-* Unique actions: 15118
+* Unique actions: 15123
 * Managed policies: 1099
 
 Most common managed policy name prefixes:
@@ -44,7 +44,7 @@ The following table summarises the AWS APIs.
 | [`connect`](services/connect.yml) | 194 | 0 | 8 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
 | [`iam`](services/iam.yml) | 158 | 0 | 12 |
-| [`quicksight`](services/quicksight.yml) | 155 | 3 | 24 |
+| [`quicksight`](services/quicksight.yml) | 155 | 3 | 28 |
 | [`ses`](services/ses.yml) | 144 | 0 | 0 |
 | [`rds`](services/rds.yml) | 141 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 138 | 0 | 10 |
@@ -95,8 +95,8 @@ The following table summarises the AWS APIs.
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
+| [`auditmanager`](services/auditmanager.yml) | 61 | 1 | 0 |
 | [`mgn`](services/mgn.yml) | 61 | 0 | 34 |
-| [`auditmanager`](services/auditmanager.yml) | 61 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 60 | 0 | 6 |
 | [`medialive`](services/medialive.yml) | 59 | 0 | 0 |
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 0 |
@@ -409,8 +409,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2359 |
-| `Get` | 2136 |
+| `List` | 2361 |
+| `Get` | 2137 |
 | `Delete` | 1719 |
 | `Create` | 1613 |
 | `Describe` | 1605 |
