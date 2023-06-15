@@ -1,4 +1,5 @@
 Actions:
+  - Name: rekognition:AssociateFaces
   - Name: rekognition:CompareFaces
   - Name: rekognition:CopyProjectVersion
   - Name: rekognition:CreateCollection
@@ -7,6 +8,7 @@ Actions:
   - Name: rekognition:CreateProject
   - Name: rekognition:CreateProjectVersion
   - Name: rekognition:CreateStreamProcessor
+  - Name: rekognition:CreateUser
   - Name: rekognition:DeleteCollection
   - Name: rekognition:DeleteDataset
   - Name: rekognition:DeleteFaces
@@ -14,6 +16,7 @@ Actions:
   - Name: rekognition:DeleteProjectPolicy
   - Name: rekognition:DeleteProjectVersion
   - Name: rekognition:DeleteStreamProcessor
+  - Name: rekognition:DeleteUser
   - Name: rekognition:DescribeCollection
   - Name: rekognition:DescribeDataset
   - Name: rekognition:DescribeProjectVersions
@@ -25,6 +28,7 @@ Actions:
   - Name: rekognition:DetectModerationLabels
   - Name: rekognition:DetectProtectiveEquipment
   - Name: rekognition:DetectText
+  - Name: rekognition:DisassociateFaces
   - Name: rekognition:DistributeDatasetEntries
   - Name: rekognition:GetCelebrityInfo
   - Name: rekognition:GetCelebrityRecognition
@@ -44,10 +48,13 @@ Actions:
   - Name: rekognition:ListProjectPolicies
   - Name: rekognition:ListStreamProcessors
   - Name: rekognition:ListTagsForResource
+  - Name: rekognition:ListUsers
   - Name: rekognition:PutProjectPolicy
   - Name: rekognition:RecognizeCelebrities
   - Name: rekognition:SearchFaces
   - Name: rekognition:SearchFacesByImage
+  - Name: rekognition:SearchUsers
+  - Name: rekognition:SearchUsersByImage
   - Name: rekognition:StartCelebrityRecognition
   - Name: rekognition:StartContentModeration
   - Name: rekognition:StartFaceDetection
@@ -67,12 +74,3 @@ Actions:
 
   # actions with no corresponding API
   - Name: rekognition:StartFaceLivenessSession
-
-  # APIs without an IAM action
-  - Name: rekognition:AssociateFaces
-  - Name: rekognition:CreateUser
-  - Name: rekognition:DeleteUser
-  - Name: rekognition:DisassociateFaces
-  - Name: rekognition:ListUsers
-  - Name: rekognition:SearchUsers
-  - Name: rekognition:SearchUsersByImage

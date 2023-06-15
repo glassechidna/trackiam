@@ -75,6 +75,7 @@ The following table summarises the AWS APIs.
 | [`iotsitewise`](services/iotsitewise.yml) | 73 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
 | [`backup`](services/backup.yml) | 72 | 0 | 2 |
+| [`rekognition`](services/rekognition.yml) | 72 | 0 | 1 |
 | [`omics`](services/omics.yml) | 72 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 71 | 0 | 0 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
@@ -85,7 +86,6 @@ The following table summarises the AWS APIs.
 | [`ds`](services/ds.yml) | 67 | 0 | 6 |
 | [`cloudformation`](services/cloudformation.yml) | 66 | 3 | 11 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
-| [`rekognition`](services/rekognition.yml) | 65 | 7 | 1 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`workspaces`](services/workspaces.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 1 |
