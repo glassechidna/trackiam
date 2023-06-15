@@ -103,7 +103,7 @@ The following table summarises the AWS APIs.
 | [`transfer`](services/transfer.yml) | 58 | 0 | 0 |
 | [`geo`](services/geo.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
-| [`datasync`](services/datasync.yml) | 56 | 1 | 0 |
+| [`datasync`](services/datasync.yml) | 57 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 2 |
 | [`events`](services/events.yml) | 56 | 0 | 1 |
 | [`wellarchitected`](services/wellarchitected.yml) | 56 | 0 | 0 |
