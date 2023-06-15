@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSQSReadOnlyAccess",
   "CreateDate": "2015-02-06T18:41:08Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIUGSSQY362XGCM6KW",
   "PolicyName": "AmazonSQSReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2018-08-20T23:35:49Z",
+    "CreateDate": "2023-06-15T15:37:35Z",
     "Document": {
       "Statement": [
         {
@@ -15,6 +15,7 @@
             "sqs:GetQueueAttributes",
             "sqs:GetQueueUrl",
             "sqs:ListDeadLetterSourceQueues",
+            "sqs:ListMessageMoveTasks",
             "sqs:ListQueues"
           ],
           "Effect": "Allow",
@@ -24,7 +25,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2018-08-20T23:35:49Z"
+  "UpdateDate": "2023-06-15T15:37:35Z"
 }
