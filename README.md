@@ -183,6 +183,7 @@ The following table summarises the AWS APIs.
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`wisdom`](services/wisdom.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
+| [`payment-cryptography`](services/payment-cryptography.yml) | 31 | 0 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 31 | 0 | 0 |
 | [`billingconductor`](services/billingconductor.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
@@ -327,7 +328,6 @@ The following table summarises the AWS APIs.
 | [`cloudtrail-data`](services/cloudtrail-data.yml) | 1 | 0 | 0 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
-| [`payment-cryptography`](services/payment-cryptography.yml) | 0 | 31 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 11 | 3 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
