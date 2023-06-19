@@ -4,6 +4,7 @@ Actions:
   - Name: logs:CreateExportTask
   - Name: logs:CreateLogGroup
   - Name: logs:CreateLogStream
+  - Name: logs:DeleteAccountPolicy
   - Name: logs:DeleteDataProtectionPolicy
   - Name: logs:DeleteDestination
   - Name: logs:DeleteLogGroup
@@ -13,6 +14,7 @@ Actions:
   - Name: logs:DeleteResourcePolicy
   - Name: logs:DeleteRetentionPolicy
   - Name: logs:DeleteSubscriptionFilter
+  - Name: logs:DescribeAccountPolicies
   - Name: logs:DescribeDestinations
   - Name: logs:DescribeExportTasks
   - Name: logs:DescribeLogGroups
@@ -31,6 +33,7 @@ Actions:
   - Name: logs:GetQueryResults
   - Name: logs:ListTagsForResource
   - Name: logs:ListTagsLogGroup
+  - Name: logs:PutAccountPolicy
   - Name: logs:PutDataProtectionPolicy
   - Name: logs:PutDestination
   - Name: logs:PutDestinationPolicy
@@ -58,8 +61,3 @@ Actions:
   - Name: logs:StopLiveTail
   - Name: logs:Unmask
   - Name: logs:UpdateLogDelivery
-
-  # APIs without an IAM action
-  - Name: logs:DeleteAccountPolicy
-  - Name: logs:DescribeAccountPolicies
-  - Name: logs:PutAccountPolicy

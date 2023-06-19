@@ -115,6 +115,7 @@ The following table summarises the AWS APIs.
 | [`dynamodb`](services/dynamodb.yml) | 52 | 5 | 13 |
 | [`resiliencehub`](services/resiliencehub.yml) | 52 | 0 | 0 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
+| [`logs`](services/logs.yml) | 51 | 0 | 9 |
 | [`mediaconnect`](services/mediaconnect.yml) | 50 | 0 | 3 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 0 | 0 |
@@ -122,7 +123,6 @@ The following table summarises the AWS APIs.
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`profile`](services/profile.yml) | 49 | 0 | 0 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 49 | 0 | 0 |
-| [`logs`](services/logs.yml) | 48 | 3 | 9 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
 | [`drs`](services/drs.yml) | 47 | 0 | 40 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
