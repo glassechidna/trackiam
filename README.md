@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 368
-* Unique actions: 15146
+* Unique actions: 15151
 * Managed policies: 1102
 
 Most common managed policy name prefixes:
@@ -49,7 +49,7 @@ The following table summarises the AWS APIs.
 | [`rds`](services/rds.yml) | 141 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 138 | 0 | 10 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
-| [`redshift`](services/redshift.yml) | 119 | 0 | 18 |
+| [`redshift`](services/redshift.yml) | 119 | 4 | 18 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`iotwireless`](services/iotwireless.yml) | 109 | 0 | 1 |
@@ -95,7 +95,7 @@ The following table summarises the AWS APIs.
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
-| [`auditmanager`](services/auditmanager.yml) | 61 | 1 | 0 |
+| [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
 | [`mgn`](services/mgn.yml) | 61 | 0 | 38 |
 | [`appsync`](services/appsync.yml) | 60 | 0 | 6 |
 | [`medialive`](services/medialive.yml) | 59 | 0 | 0 |
@@ -215,7 +215,7 @@ The following table summarises the AWS APIs.
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
 | [`backup-gateway`](services/backup-gateway.yml) | 25 | 0 | 2 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 1 |
-| [`appflow`](services/appflow.yml) | 24 | 0 | 6 |
+| [`appflow`](services/appflow.yml) | 24 | 1 | 6 |
 | [`mediapackagev2`](services/mediapackagev2.yml) | 24 | 0 | 3 |
 | [`verifiedpermissions`](services/verifiedpermissions.yml) | 24 | 0 | 0 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
@@ -411,9 +411,9 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 2363 |
 | `Get` | 2137 |
-| `Delete` | 1719 |
-| `Describe` | 1615 |
-| `Create` | 1613 |
+| `Delete` | 1720 |
+| `Describe` | 1616 |
+| `Create` | 1614 |
 | `Update` | 1371 |
 | `Put` | 428 |
 | `Start` | 330 |
