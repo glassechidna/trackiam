@@ -1,12 +1,15 @@
 Actions:
   - Name: inspector2:AssociateMember
   - Name: inspector2:BatchGetAccountStatus
+  - Name: inspector2:BatchGetCodeSnippet
   - Name: inspector2:BatchGetFreeTrialInfo
   - Name: inspector2:BatchGetMemberEc2DeepInspectionStatus
   - Name: inspector2:BatchUpdateMemberEc2DeepInspectionStatus
   - Name: inspector2:CancelFindingsReport
+  - Name: inspector2:CancelSbomExport
   - Name: inspector2:CreateFilter
   - Name: inspector2:CreateFindingsReport
+  - Name: inspector2:CreateSbomExport
   - Name: inspector2:DeleteFilter
   - Name: inspector2:DescribeOrganizationConfiguration
   - Name: inspector2:Disable
@@ -17,8 +20,10 @@ Actions:
   - Name: inspector2:GetConfiguration
   - Name: inspector2:GetDelegatedAdminAccount
   - Name: inspector2:GetEc2DeepInspectionConfiguration
+  - Name: inspector2:GetEncryptionKey
   - Name: inspector2:GetFindingsReportStatus
   - Name: inspector2:GetMember
+  - Name: inspector2:GetSbomExport
   - Name: inspector2:ListAccountPermissions
   - Name: inspector2:ListCoverage
   - Name: inspector2:ListCoverageStatistics
@@ -29,20 +34,13 @@ Actions:
   - Name: inspector2:ListMembers
   - Name: inspector2:ListTagsForResource
   - Name: inspector2:ListUsageTotals
+  - Name: inspector2:ResetEncryptionKey
   - Name: inspector2:SearchVulnerabilities
   - Name: inspector2:TagResource
   - Name: inspector2:UntagResource
   - Name: inspector2:UpdateConfiguration
   - Name: inspector2:UpdateEc2DeepInspectionConfiguration
+  - Name: inspector2:UpdateEncryptionKey
   - Name: inspector2:UpdateFilter
   - Name: inspector2:UpdateOrgEc2DeepInspectionConfiguration
   - Name: inspector2:UpdateOrganizationConfiguration
-
-  # actions with no corresponding API
-  - Name: inspector2:BatchGetCodeSnippet
-  - Name: inspector2:CancelSbomExport
-  - Name: inspector2:CreateSbomExport
-  - Name: inspector2:GetEncryptionKey
-  - Name: inspector2:GetSbomExport
-  - Name: inspector2:ResetEncryptionKey
-  - Name: inspector2:UpdateEncryptionKey
