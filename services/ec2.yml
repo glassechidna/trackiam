@@ -69,6 +69,7 @@ Actions:
   - Name: ec2:CreateFlowLogs
   - Name: ec2:CreateFpgaImage
   - Name: ec2:CreateImage
+  - Name: ec2:CreateInstanceConnectEndpoint
   - Name: ec2:CreateInstanceEventWindow
   - Name: ec2:CreateInstanceExportTask
   - Name: ec2:CreateInternetGateway
@@ -145,6 +146,7 @@ Actions:
   - Name: ec2:DeleteFleets
   - Name: ec2:DeleteFlowLogs
   - Name: ec2:DeleteFpgaImage
+  - Name: ec2:DeleteInstanceConnectEndpoint
   - Name: ec2:DeleteInstanceEventWindow
   - Name: ec2:DeleteInternetGateway
   - Name: ec2:DeleteIpam
@@ -259,6 +261,7 @@ Actions:
   - Name: ec2:DescribeImportImageTasks
   - Name: ec2:DescribeImportSnapshotTasks
   - Name: ec2:DescribeInstanceAttribute
+  - Name: ec2:DescribeInstanceConnectEndpoints
   - Name: ec2:DescribeInstanceCreditSpecifications
   - Name: ec2:DescribeInstanceEventNotificationAttributes
   - Name: ec2:DescribeInstanceEventWindows
@@ -607,8 +610,3 @@ Actions:
   - Name: ec2:PauseVolumeIO
   - Name: ec2:PutResourcePolicy
   - Name: ec2:SendSpotInstanceInterruptions
-
-  # APIs without an IAM action
-  - Name: ec2:CreateInstanceConnectEndpoint
-  - Name: ec2:DeleteInstanceConnectEndpoint
-  - Name: ec2:DescribeInstanceConnectEndpoints
