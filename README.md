@@ -260,6 +260,7 @@ The following table summarises the AWS APIs.
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 17 | 0 | 0 |
 | [`ivschat`](services/ivschat.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
+| [`support`](services/support.yml) | 16 | 0 | 8 |
 | [`fis`](services/fis.yml) | 16 | 0 | 3 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
 | [`honeycode`](services/honeycode.yml) | 15 | 0 | 15 |
@@ -267,7 +268,6 @@ The following table summarises the AWS APIs.
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
 | [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
-| [`support`](services/support.yml) | 14 | 2 | 8 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`osis`](services/osis.yml) | 14 | 0 | 1 |
