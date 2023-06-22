@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 368
-* Unique actions: 15154
+* Unique actions: 15162
 * Managed policies: 1102
 
 Most common managed policy name prefixes:
@@ -85,10 +85,10 @@ The following table summarises the AWS APIs.
 | [`securityhub`](services/securityhub.yml) | 67 | 0 | 10 |
 | [`ds`](services/ds.yml) | 67 | 0 | 6 |
 | [`cloudformation`](services/cloudformation.yml) | 66 | 3 | 11 |
+| [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`workspaces`](services/workspaces.yml) | 65 | 0 | 1 |
-| [`kendra`](services/kendra.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
@@ -205,8 +205,8 @@ The following table summarises the AWS APIs.
 | [`timestream`](services/timestream.yml) | 27 | 1 | 8 |
 | [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 3 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 1 |
+| [`states`](services/states.yml) | 26 | 8 | 0 |
 | [`outposts`](services/outposts.yml) | 26 | 0 | 2 |
-| [`states`](services/states.yml) | 26 | 0 | 0 |
 | [`snowball`](services/snowball.yml) | 26 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
 | [`private-networks`](services/private-networks.yml) | 26 | 0 | 0 |
@@ -409,12 +409,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2364 |
+| `List` | 2366 |
 | `Get` | 2137 |
-| `Delete` | 1720 |
-| `Describe` | 1616 |
-| `Create` | 1614 |
-| `Update` | 1371 |
+| `Delete` | 1722 |
+| `Describe` | 1617 |
+| `Create` | 1615 |
+| `Update` | 1372 |
 | `Put` | 428 |
 | `Start` | 330 |
 | `Tag` | 240 |
