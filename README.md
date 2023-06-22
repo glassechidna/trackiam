@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 368
-* Unique actions: 15153
+* Unique actions: 15154
 * Managed policies: 1102
 
 Most common managed policy name prefixes:
@@ -88,9 +88,9 @@ The following table summarises the AWS APIs.
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`workspaces`](services/workspaces.yml) | 65 | 0 | 1 |
+| [`kendra`](services/kendra.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 65 | 0 | 1 |
-| [`kendra`](services/kendra.yml) | 65 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
 | [`route53resolver`](services/route53resolver.yml) | 63 | 0 | 0 |
