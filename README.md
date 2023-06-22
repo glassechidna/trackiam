@@ -166,6 +166,7 @@ The following table summarises the AWS APIs.
 | [`eks`](services/eks.yml) | 35 | 0 | 1 |
 | [`finspace`](services/finspace.yml) | 34 | 0 | 9 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
+| [`states`](services/states.yml) | 34 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
 | [`ram`](services/ram.yml) | 34 | 0 | 0 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 34 | 0 | 0 |
@@ -205,7 +206,6 @@ The following table summarises the AWS APIs.
 | [`timestream`](services/timestream.yml) | 27 | 1 | 8 |
 | [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 3 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 1 |
-| [`states`](services/states.yml) | 26 | 8 | 0 |
 | [`outposts`](services/outposts.yml) | 26 | 0 | 2 |
 | [`snowball`](services/snowball.yml) | 26 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |

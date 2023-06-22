@@ -1,20 +1,27 @@
 Actions:
   - Name: states:CreateActivity
   - Name: states:CreateStateMachine
+  - Name: states:CreateStateMachineAlias
   - Name: states:DeleteActivity
   - Name: states:DeleteStateMachine
+  - Name: states:DeleteStateMachineAlias
+  - Name: states:DeleteStateMachineVersion
   - Name: states:DescribeActivity
   - Name: states:DescribeExecution
   - Name: states:DescribeMapRun
   - Name: states:DescribeStateMachine
+  - Name: states:DescribeStateMachineAlias
   - Name: states:DescribeStateMachineForExecution
   - Name: states:GetActivityTask
   - Name: states:GetExecutionHistory
   - Name: states:ListActivities
   - Name: states:ListExecutions
   - Name: states:ListMapRuns
+  - Name: states:ListStateMachineAliases
+  - Name: states:ListStateMachineVersions
   - Name: states:ListStateMachines
   - Name: states:ListTagsForResource
+  - Name: states:PublishStateMachineVersion
   - Name: states:SendTaskFailure
   - Name: states:SendTaskHeartbeat
   - Name: states:SendTaskSuccess
@@ -25,13 +32,4 @@ Actions:
   - Name: states:UntagResource
   - Name: states:UpdateMapRun
   - Name: states:UpdateStateMachine
-
-  # APIs without an IAM action
-  - Name: states:CreateStateMachineAlias
-  - Name: states:DeleteStateMachineAlias
-  - Name: states:DeleteStateMachineVersion
-  - Name: states:DescribeStateMachineAlias
-  - Name: states:ListStateMachineAliases
-  - Name: states:ListStateMachineVersions
-  - Name: states:PublishStateMachineVersion
   - Name: states:UpdateStateMachineAlias
