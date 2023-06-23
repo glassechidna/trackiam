@@ -14,6 +14,7 @@ Actions:
   - Name: lex:CreateSlot
   - Name: lex:CreateSlotType
   - Name: lex:CreateSlotTypeVersion
+  - Name: lex:CreateTestSetDiscrepancyReport
   - Name: lex:CreateUploadUrl
   - Name: lex:DeleteBot
   - Name: lex:DeleteBotAlias
@@ -30,6 +31,7 @@ Actions:
   - Name: lex:DeleteSlot
   - Name: lex:DeleteSlotType
   - Name: lex:DeleteSlotTypeVersion
+  - Name: lex:DeleteTestSet
   - Name: lex:DeleteUtterances
   - Name: lex:DescribeBot
   - Name: lex:DescribeBotAlias
@@ -43,6 +45,10 @@ Actions:
   - Name: lex:DescribeResourcePolicy
   - Name: lex:DescribeSlot
   - Name: lex:DescribeSlotType
+  - Name: lex:DescribeTestExecution
+  - Name: lex:DescribeTestSet
+  - Name: lex:DescribeTestSetDiscrepancyReport
+  - Name: lex:DescribeTestSetGeneration
   - Name: lex:GetBot
   - Name: lex:GetBotAlias
   - Name: lex:GetBotAliases
@@ -64,6 +70,7 @@ Actions:
   - Name: lex:GetSlotType
   - Name: lex:GetSlotTypeVersions
   - Name: lex:GetSlotTypes
+  - Name: lex:GetTestExecutionArtifactsUrl
   - Name: lex:GetUtterancesView
   - Name: lex:ListAggregatedUtterances
   - Name: lex:ListBotAliases
@@ -81,6 +88,10 @@ Actions:
   - Name: lex:ListSlotTypes
   - Name: lex:ListSlots
   - Name: lex:ListTagsForResource
+  - Name: lex:ListTestExecutionResultItems
+  - Name: lex:ListTestExecutions
+  - Name: lex:ListTestSetRecords
+  - Name: lex:ListTestSets
   - Name: lex:PostContent
   - Name: lex:PostText
   - Name: lex:PutBot
@@ -95,6 +106,8 @@ Actions:
   - Name: lex:StartConversation
   - Name: lex:StartImport
   - Name: lex:StartMigration
+  - Name: lex:StartTestExecution
+  - Name: lex:StartTestSetGeneration
   - Name: lex:StopBotRecommendation
   - Name: lex:TagResource
   - Name: lex:UntagResource
@@ -107,10 +120,12 @@ Actions:
   - Name: lex:UpdateResourcePolicy
   - Name: lex:UpdateSlot
   - Name: lex:UpdateSlotType
+  - Name: lex:UpdateTestSet
 
   # actions with no corresponding API
   - Name: lex:CreateBotChannel
   - Name: lex:CreateCustomVocabulary
+  - Name: lex:CreateTestSet
   - Name: lex:DeleteBotChannel
   - Name: lex:DescribeBotChannel
   - Name: lex:DescribeCustomVocabulary
@@ -119,18 +134,4 @@ Actions:
 
   # APIs without an IAM action
   - Name: lex:CreateResourcePolicyStatement
-  - Name: lex:CreateTestSetDiscrepancyReport
   - Name: lex:DeleteResourcePolicyStatement
-  - Name: lex:DeleteTestSet
-  - Name: lex:DescribeTestExecution
-  - Name: lex:DescribeTestSet
-  - Name: lex:DescribeTestSetDiscrepancyReport
-  - Name: lex:DescribeTestSetGeneration
-  - Name: lex:GetTestExecutionArtifactsUrl
-  - Name: lex:ListTestExecutionResultItems
-  - Name: lex:ListTestExecutions
-  - Name: lex:ListTestSetRecords
-  - Name: lex:ListTestSets
-  - Name: lex:StartTestExecution
-  - Name: lex:StartTestSetGeneration
-  - Name: lex:UpdateTestSet
