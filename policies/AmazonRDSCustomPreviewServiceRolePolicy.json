@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSCustomPreviewServiceRolePolicy",
   "CreateDate": "2021-10-08T21:44:15Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4D6BEPON2G",
   "PolicyName": "AmazonRDSCustomPreviewServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-04-26T02:01:02Z",
+    "CreateDate": "2023-06-23T00:24:50Z",
     "Document": {
       "Statement": [
         {
@@ -409,6 +409,7 @@
           "Condition": {
             "StringLike": {
               "aws:ResourceTag/AWSRDSCustom": [
+                "custom-oracle",
                 "custom-oracle-rac"
               ]
             }
@@ -645,7 +646,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2023-04-26T02:01:02Z"
+  "UpdateDate": "2023-06-23T00:24:50Z"
 }
