@@ -1,18 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonInspector2ReadOnlyAccess",
   "CreateDate": "2022-01-21T14:45:14Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4IASIMCEPM",
   "PolicyName": "AmazonInspector2ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-06-05T21:54:19Z",
+    "CreateDate": "2023-06-23T20:12:39Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "codeguru-security:BatchGetFindings",
+            "codeguru-security:GetAccountConfiguration",
             "inspector2:BatchGetAccountStatus",
             "inspector2:BatchGetCodeSnippet",
             "inspector2:BatchGetFreeTrialInfo",
@@ -20,8 +21,10 @@
             "inspector2:DescribeOrganizationConfiguration",
             "inspector2:GetDelegatedAdminAccount",
             "inspector2:GetEc2DeepInspectionConfiguration",
+            "inspector2:GetEncryptionKey",
             "inspector2:GetFindingsReportStatus",
             "inspector2:GetMember",
+            "inspector2:GetSbomExport",
             "inspector2:ListAccountPermissions",
             "inspector2:ListCoverage",
             "inspector2:ListCoverageStatistics",
@@ -46,7 +49,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-06-05T21:54:19Z"
+  "UpdateDate": "2023-06-23T20:12:39Z"
 }
