@@ -1,0 +1,59 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSAppFabricServiceRolePolicy",
+  "CreateDate": "2023-06-26T21:07:45Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4CYFYQT65N",
+  "PolicyName": "AWSAppFabricServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-06-26T21:07:45Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/AppFabric"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchEmitMetric"
+        },
+        {
+          "Action": [
+            "firehose:PutRecordBatch"
+          ],
+          "Condition": {
+            "StringEqualsIgnoreCase": {
+              "aws:ResourceTag/AWSAppFabricManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:firehose:*:*:deliverystream/*",
+          "Sid": "FirehosePutRecord"
+        },
+        {
+          "Action": [
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "s3:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*/AWSAppFabric/*",
+          "Sid": "S3PutObject"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-06-26T21:07:45Z"
+}
