@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 369
-* Unique actions: 15192
+* Unique actions: 15196
 * Managed policies: 1104
 
 Most common managed policy name prefixes:
@@ -141,12 +141,12 @@ The following table summarises the AWS APIs.
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
 | [`fsx`](services/fsx.yml) | 41 | 0 | 4 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
+| [`ivs`](services/ivs.yml) | 40 | 2 | 0 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 40 | 0 | 0 |
-| [`ivs`](services/ivs.yml) | 40 | 0 | 0 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
-| [`kinesisvideo`](services/kinesisvideo.yml) | 38 | 0 | 3 |
+| [`kinesisvideo`](services/kinesisvideo.yml) | 38 | 2 | 3 |
 | [`codeartifact`](services/codeartifact.yml) | 38 | 0 | 3 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 1 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
@@ -212,6 +212,7 @@ The following table summarises the AWS APIs.
 | [`private-networks`](services/private-networks.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
+| [`appfabric`](services/appfabric.yml) | 26 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
 | [`appflow`](services/appflow.yml) | 25 | 0 | 6 |
 | [`backup-gateway`](services/backup-gateway.yml) | 25 | 0 | 2 |
@@ -344,7 +345,6 @@ The following table summarises the AWS APIs.
 | [`datazonecontrol`](services/datazonecontrol.yml) | 0 | 0 | 29 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 28 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
-| [`appfabric`](services/appfabric.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 23 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 21 |
@@ -410,14 +410,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2372 |
+| `List` | 2373 |
 | `Get` | 2142 |
-| `Delete` | 1726 |
+| `Delete` | 1727 |
 | `Create` | 1620 |
 | `Describe` | 1617 |
 | `Update` | 1374 |
 | `Put` | 428 |
-| `Start` | 332 |
+| `Start` | 333 |
 | `Tag` | 241 |
 | `Untag` | 238 |
 
