@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 368
-* Unique actions: 15166
+* Unique services: 369
+* Unique actions: 15192
 * Managed policies: 1104
 
 Most common managed policy name prefixes:
@@ -344,6 +344,7 @@ The following table summarises the AWS APIs.
 | [`datazonecontrol`](services/datazonecontrol.yml) | 0 | 0 | 29 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 28 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
+| [`appfabric`](services/appfabric.yml) | 0 | 0 | 26 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 23 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 21 |
@@ -409,14 +410,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2367 |
-| `Get` | 2138 |
-| `Delete` | 1722 |
+| `List` | 2372 |
+| `Get` | 2142 |
+| `Delete` | 1726 |
+| `Create` | 1620 |
 | `Describe` | 1617 |
-| `Create` | 1616 |
-| `Update` | 1372 |
+| `Update` | 1374 |
 | `Put` | 428 |
-| `Start` | 330 |
-| `Tag` | 240 |
-| `Untag` | 237 |
+| `Start` | 332 |
+| `Tag` | 241 |
+| `Untag` | 238 |
 
