@@ -1,0 +1,35 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSAppFabricReadOnlyAccess",
+  "CreateDate": "2023-06-27T19:52:02Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4IJ77M5WNE",
+  "PolicyName": "AWSAppFabricReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-06-27T19:52:02Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "appfabric:GetAppAuthorization",
+            "appfabric:GetAppBundle",
+            "appfabric:GetIngestion",
+            "appfabric:GetIngestionDestination",
+            "appfabric:ListAppAuthorizations",
+            "appfabric:ListAppBundles",
+            "appfabric:ListIngestionDestinations",
+            "appfabric:ListIngestions",
+            "appfabric:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-06-27T19:52:02Z"
+}
