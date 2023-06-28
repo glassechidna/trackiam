@@ -142,11 +142,11 @@ The following table summarises the AWS APIs.
 | [`fsx`](services/fsx.yml) | 41 | 0 | 4 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
 | [`ivs`](services/ivs.yml) | 40 | 2 | 0 |
+| [`kinesisvideo`](services/kinesisvideo.yml) | 40 | 0 | 3 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 40 | 0 | 0 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
-| [`kinesisvideo`](services/kinesisvideo.yml) | 38 | 2 | 3 |
 | [`codeartifact`](services/codeartifact.yml) | 38 | 0 | 3 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 1 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
