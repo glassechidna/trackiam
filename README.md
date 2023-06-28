@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 369
-* Unique actions: 15196
+* Unique actions: 15202
 * Managed policies: 1106
 
 Most common managed policy name prefixes:
@@ -336,7 +336,7 @@ The following table summarises the AWS APIs.
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 66 |
-| [`iq`](services/iq.yml) | 0 | 0 | 57 |
+| [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 50 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 40 |
@@ -410,8 +410,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2373 |
-| `Get` | 2142 |
+| `List` | 2374 |
+| `Get` | 2143 |
 | `Delete` | 1727 |
 | `Create` | 1620 |
 | `Describe` | 1617 |
