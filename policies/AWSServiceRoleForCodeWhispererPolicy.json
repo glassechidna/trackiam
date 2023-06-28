@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForCodeWhispererPolicy",
   "CreateDate": "2023-03-24T19:39:12Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4MTPH2EDJ3",
   "PolicyName": "AWSServiceRoleForCodeWhispererPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-05-26T18:27:32Z",
+    "CreateDate": "2023-06-28T16:57:20Z",
     "Document": {
       "Statement": [
         {
@@ -27,6 +27,7 @@
         {
           "Action": [
             "codeguru-security:CreateScan",
+            "codeguru-security:GetFindings",
             "codeguru-security:GetScan",
             "codeguru-security:ListFindings"
           ],
@@ -56,6 +57,7 @@
         {
           "Action": [
             "sso:DescribeRegisteredRegions",
+            "sso:GetManagedApplicationInstance",
             "sso:GetProfile",
             "sso:ListDirectoryAssociations",
             "sso:ListProfileAssociations",
@@ -70,7 +72,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-05-26T18:27:32Z"
+  "UpdateDate": "2023-06-28T16:57:20Z"
 }
