@@ -1,4 +1,5 @@
 Actions:
+  - Name: appstream:AssociateAppBlockBuilderAppBlock
   - Name: appstream:AssociateApplicationFleet
   - Name: appstream:AssociateApplicationToEntitlement
   - Name: appstream:AssociateFleet
@@ -6,6 +7,8 @@ Actions:
   - Name: appstream:BatchDisassociateUserStack
   - Name: appstream:CopyImage
   - Name: appstream:CreateAppBlock
+  - Name: appstream:CreateAppBlockBuilder
+  - Name: appstream:CreateAppBlockBuilderStreamingURL
   - Name: appstream:CreateApplication
   - Name: appstream:CreateDirectoryConfig
   - Name: appstream:CreateEntitlement
@@ -18,6 +21,7 @@ Actions:
   - Name: appstream:CreateUsageReportSubscription
   - Name: appstream:CreateUser
   - Name: appstream:DeleteAppBlock
+  - Name: appstream:DeleteAppBlockBuilder
   - Name: appstream:DeleteApplication
   - Name: appstream:DeleteDirectoryConfig
   - Name: appstream:DeleteEntitlement
@@ -28,6 +32,8 @@ Actions:
   - Name: appstream:DeleteStack
   - Name: appstream:DeleteUsageReportSubscription
   - Name: appstream:DeleteUser
+  - Name: appstream:DescribeAppBlockBuilderAppBlockAssociations
+  - Name: appstream:DescribeAppBlockBuilders
   - Name: appstream:DescribeAppBlocks
   - Name: appstream:DescribeApplicationFleetAssociations
   - Name: appstream:DescribeApplications
@@ -43,6 +49,7 @@ Actions:
   - Name: appstream:DescribeUserStackAssociations
   - Name: appstream:DescribeUsers
   - Name: appstream:DisableUser
+  - Name: appstream:DisassociateAppBlockBuilderAppBlock
   - Name: appstream:DisassociateApplicationFleet
   - Name: appstream:DisassociateApplicationFromEntitlement
   - Name: appstream:DisassociateFleet
@@ -52,12 +59,15 @@ Actions:
   - Name: appstream:ListAssociatedStacks
   - Name: appstream:ListEntitledApplications
   - Name: appstream:ListTagsForResource
+  - Name: appstream:StartAppBlockBuilder
   - Name: appstream:StartFleet
   - Name: appstream:StartImageBuilder
+  - Name: appstream:StopAppBlockBuilder
   - Name: appstream:StopFleet
   - Name: appstream:StopImageBuilder
   - Name: appstream:TagResource
   - Name: appstream:UntagResource
+  - Name: appstream:UpdateAppBlockBuilder
   - Name: appstream:UpdateApplication
   - Name: appstream:UpdateDirectoryConfig
   - Name: appstream:UpdateEntitlement
@@ -67,15 +77,3 @@ Actions:
 
   # actions with no corresponding API
   - Name: appstream:Stream
-
-  # APIs without an IAM action
-  - Name: appstream:AssociateAppBlockBuilderAppBlock
-  - Name: appstream:CreateAppBlockBuilder
-  - Name: appstream:CreateAppBlockBuilderStreamingURL
-  - Name: appstream:DeleteAppBlockBuilder
-  - Name: appstream:DescribeAppBlockBuilderAppBlockAssociations
-  - Name: appstream:DescribeAppBlockBuilders
-  - Name: appstream:DisassociateAppBlockBuilderAppBlock
-  - Name: appstream:StartAppBlockBuilder
-  - Name: appstream:StopAppBlockBuilder
-  - Name: appstream:UpdateAppBlockBuilder
