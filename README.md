@@ -109,8 +109,8 @@ The following table summarises the AWS APIs.
 | [`wellarchitected`](services/wellarchitected.yml) | 56 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 56 | 0 | 0 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
+| [`elasticmapreduce`](services/elasticmapreduce.yml) | 54 | 0 | 26 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
-| [`elasticmapreduce`](services/elasticmapreduce.yml) | 53 | 1 | 26 |
 | [`wafv2`](services/wafv2.yml) | 53 | 0 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 52 | 5 | 13 |
 | [`resiliencehub`](services/resiliencehub.yml) | 52 | 0 | 0 |
