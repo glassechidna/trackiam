@@ -16,6 +16,7 @@ Actions:
   - Name: redshift:CreateClusterSecurityGroup
   - Name: redshift:CreateClusterSnapshot
   - Name: redshift:CreateClusterSubnetGroup
+  - Name: redshift:CreateCustomDomainAssociation
   - Name: redshift:CreateEndpointAccess
   - Name: redshift:CreateEventSubscription
   - Name: redshift:CreateHsmClientCertificate
@@ -32,6 +33,7 @@ Actions:
   - Name: redshift:DeleteClusterSecurityGroup
   - Name: redshift:DeleteClusterSnapshot
   - Name: redshift:DeleteClusterSubnetGroup
+  - Name: redshift:DeleteCustomDomainAssociation
   - Name: redshift:DeleteEndpointAccess
   - Name: redshift:DeleteEventSubscription
   - Name: redshift:DeleteHsmClientCertificate
@@ -53,6 +55,7 @@ Actions:
   - Name: redshift:DescribeClusterTracks
   - Name: redshift:DescribeClusterVersions
   - Name: redshift:DescribeClusters
+  - Name: redshift:DescribeCustomDomainAssociations
   - Name: redshift:DescribeDataShares
   - Name: redshift:DescribeDataSharesForConsumer
   - Name: redshift:DescribeDataSharesForProducer
@@ -98,6 +101,7 @@ Actions:
   - Name: redshift:ModifyClusterSnapshot
   - Name: redshift:ModifyClusterSnapshotSchedule
   - Name: redshift:ModifyClusterSubnetGroup
+  - Name: redshift:ModifyCustomDomainAssociation
   - Name: redshift:ModifyEndpointAccess
   - Name: redshift:ModifyEventSubscription
   - Name: redshift:ModifyScheduledAction
@@ -138,9 +142,3 @@ Actions:
   - Name: redshift:ModifySavedQuery
   - Name: redshift:ViewQueriesFromConsole
   - Name: redshift:ViewQueriesInConsole
-
-  # APIs without an IAM action
-  - Name: redshift:CreateCustomDomainAssociation
-  - Name: redshift:DeleteCustomDomainAssociation
-  - Name: redshift:DescribeCustomDomainAssociations
-  - Name: redshift:ModifyCustomDomainAssociation
