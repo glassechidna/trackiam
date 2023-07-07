@@ -6,6 +6,7 @@ Actions:
   - Name: dms:CreateEndpoint
   - Name: dms:CreateEventSubscription
   - Name: dms:CreateFleetAdvisorCollector
+  - Name: dms:CreateReplicationConfig
   - Name: dms:CreateReplicationInstance
   - Name: dms:CreateReplicationSubnetGroup
   - Name: dms:CreateReplicationTask
@@ -15,6 +16,7 @@ Actions:
   - Name: dms:DeleteEventSubscription
   - Name: dms:DeleteFleetAdvisorCollector
   - Name: dms:DeleteFleetAdvisorDatabases
+  - Name: dms:DeleteReplicationConfig
   - Name: dms:DeleteReplicationInstance
   - Name: dms:DeleteReplicationSubnetGroup
   - Name: dms:DeleteReplicationTask
@@ -39,32 +41,39 @@ Actions:
   - Name: dms:DescribeRecommendationLimitations
   - Name: dms:DescribeRecommendations
   - Name: dms:DescribeRefreshSchemasStatus
+  - Name: dms:DescribeReplicationConfigs
   - Name: dms:DescribeReplicationInstanceTaskLogs
   - Name: dms:DescribeReplicationInstances
   - Name: dms:DescribeReplicationSubnetGroups
+  - Name: dms:DescribeReplicationTableStatistics
   - Name: dms:DescribeReplicationTaskAssessmentResults
   - Name: dms:DescribeReplicationTaskAssessmentRuns
   - Name: dms:DescribeReplicationTaskIndividualAssessments
   - Name: dms:DescribeReplicationTasks
+  - Name: dms:DescribeReplications
   - Name: dms:DescribeSchemas
   - Name: dms:DescribeTableStatistics
   - Name: dms:ImportCertificate
   - Name: dms:ListTagsForResource
   - Name: dms:ModifyEndpoint
   - Name: dms:ModifyEventSubscription
+  - Name: dms:ModifyReplicationConfig
   - Name: dms:ModifyReplicationInstance
   - Name: dms:ModifyReplicationSubnetGroup
   - Name: dms:ModifyReplicationTask
   - Name: dms:MoveReplicationTask
   - Name: dms:RebootReplicationInstance
   - Name: dms:RefreshSchemas
+  - Name: dms:ReloadReplicationTables
   - Name: dms:ReloadTables
   - Name: dms:RemoveTagsFromResource
   - Name: dms:RunFleetAdvisorLsaAnalysis
   - Name: dms:StartRecommendations
+  - Name: dms:StartReplication
   - Name: dms:StartReplicationTask
   - Name: dms:StartReplicationTaskAssessment
   - Name: dms:StartReplicationTaskAssessmentRun
+  - Name: dms:StopReplication
   - Name: dms:StopReplicationTask
   - Name: dms:TestConnection
   - Name: dms:UpdateSubscriptionsToEventBridge
@@ -78,12 +87,10 @@ Actions:
   - Name: dms:CreateDataProvider
   - Name: dms:CreateInstanceProfile
   - Name: dms:CreateMigrationProject
-  - Name: dms:CreateReplicationConfig
   - Name: dms:DeleteDataMigration
   - Name: dms:DeleteDataProvider
   - Name: dms:DeleteInstanceProfile
   - Name: dms:DeleteMigrationProject
-  - Name: dms:DeleteReplicationConfig
   - Name: dms:DescribeConversionConfiguration
   - Name: dms:DescribeDataMigrations
   - Name: dms:DescribeDataProviders
@@ -95,9 +102,6 @@ Actions:
   - Name: dms:DescribeMetadataModelExportsToTarget
   - Name: dms:DescribeMetadataModelImports
   - Name: dms:DescribeMigrationProjects
-  - Name: dms:DescribeReplicationConfigs
-  - Name: dms:DescribeReplicationTableStatistics
-  - Name: dms:DescribeReplications
   - Name: dms:DisassociateExtensionPack
   - Name: dms:ExportMetadataModelAssessment
   - Name: dms:GetMetadataModel
@@ -116,8 +120,6 @@ Actions:
   - Name: dms:ModifyFleetAdvisorCollectorStatuses
   - Name: dms:ModifyInstanceProfile
   - Name: dms:ModifyMigrationProject
-  - Name: dms:ModifyReplicationConfig
-  - Name: dms:ReloadReplicationTables
   - Name: dms:StartDataMigration
   - Name: dms:StartExtensionPackAssociation
   - Name: dms:StartMetadataModelAssessment
@@ -126,9 +128,7 @@ Actions:
   - Name: dms:StartMetadataModelExportAsScripts
   - Name: dms:StartMetadataModelExportToTarget
   - Name: dms:StartMetadataModelImport
-  - Name: dms:StartReplication
   - Name: dms:StopDataMigration
-  - Name: dms:StopReplication
   - Name: dms:UpdateConversionConfiguration
   - Name: dms:UpdateDataProvider
   - Name: dms:UpdateInstanceProfile

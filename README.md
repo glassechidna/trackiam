@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 369
-* Unique actions: 15212
+* Unique actions: 15215
 * Managed policies: 1106
 
 Most common managed policy name prefixes:
@@ -67,6 +67,7 @@ The following table summarises the AWS APIs.
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 80 | 0 | 51 |
 | [`macie2`](services/macie2.yml) | 79 | 0 | 0 |
+| [`dms`](services/dms.yml) | 78 | 0 | 55 |
 | [`es`](services/es.yml) | 78 | 0 | 10 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
@@ -80,7 +81,6 @@ The following table summarises the AWS APIs.
 | [`omics`](services/omics.yml) | 72 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 71 | 0 | 0 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
-| [`dms`](services/dms.yml) | 69 | 0 | 64 |
 | [`cloudformation`](services/cloudformation.yml) | 69 | 0 | 12 |
 | [`guardduty`](services/guardduty.yml) | 68 | 0 | 1 |
 | [`athena`](services/athena.yml) | 68 | 0 | 1 |
@@ -98,7 +98,7 @@ The following table summarises the AWS APIs.
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 60 | 0 | 6 |
-| [`medialive`](services/medialive.yml) | 59 | 0 | 0 |
+| [`medialive`](services/medialive.yml) | 59 | 3 | 0 |
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 58 | 0 | 0 |
 | [`geo`](services/geo.yml) | 58 | 0 | 0 |
@@ -414,8 +414,8 @@ Most common action prefixes:
 | `Get` | 2143 |
 | `Delete` | 1728 |
 | `Create` | 1622 |
-| `Describe` | 1619 |
-| `Update` | 1375 |
+| `Describe` | 1621 |
+| `Update` | 1376 |
 | `Put` | 428 |
 | `Start` | 334 |
 | `Tag` | 241 |
