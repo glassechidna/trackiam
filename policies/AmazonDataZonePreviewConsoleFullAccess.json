@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDataZonePreviewConsoleFullAccess",
   "CreateDate": "2023-03-28T15:16:04Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KCFGJTNUM",
   "PolicyName": "AmazonDataZonePreviewConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-03-28T15:16:04Z",
+    "CreateDate": "2023-07-13T18:01:12Z",
     "Document": {
       "Statement": [
         {
@@ -25,6 +25,14 @@
             "arn:aws:iam::*:role/service-role/AmazonDataZoneBootstrapRole",
             "arn:aws:iam::*:role/service-role/AmazonDataZoneDomainExecutionRole",
             "arn:aws:iam::*:role/service-role/AmazonDataZoneServiceRole*"
+          ]
+        },
+        {
+          "Action": "iam:GetPolicy",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:policy/service-role/AmazonDataZoneBootstrapServicePolicy-AmazonDataZoneBootstrapRole",
+            "arn:aws:iam::*:policy/service-role/AmazonDataZoneServicePolicy-AmazonDataZoneServiceRole"
           ]
         },
         {
@@ -74,7 +82,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-03-28T15:16:04Z"
+  "UpdateDate": "2023-07-13T18:01:12Z"
 }
