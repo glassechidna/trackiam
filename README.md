@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 369
-* Unique actions: 15215
+* Unique actions: 15222
 * Managed policies: 1106
 
 Most common managed policy name prefixes:
@@ -41,7 +41,7 @@ The following table summarises the AWS APIs.
 | [`iot`](services/iot.yml) | 257 | 3 | 9 |
 | [`chime`](services/chime.yml) | 253 | 0 | 50 |
 | [`glue`](services/glue.yml) | 198 | 4 | 13 |
-| [`connect`](services/connect.yml) | 195 | 0 | 8 |
+| [`connect`](services/connect.yml) | 197 | 0 | 8 |
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 155 | 3 | 28 |
@@ -62,7 +62,7 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
 | [`s3`](services/s3.yml) | 85 | 58 | 45 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 0 |
-| [`proton`](services/proton.yml) | 84 | 0 | 24 |
+| [`proton`](services/proton.yml) | 84 | 3 | 24 |
 | [`comprehend`](services/comprehend.yml) | 84 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 80 | 0 | 51 |
@@ -79,7 +79,7 @@ The following table summarises the AWS APIs.
 | [`backup`](services/backup.yml) | 72 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 72 | 0 | 1 |
 | [`omics`](services/omics.yml) | 72 | 0 | 0 |
-| [`personalize`](services/personalize.yml) | 71 | 0 | 0 |
+| [`personalize`](services/personalize.yml) | 71 | 1 | 0 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 69 | 0 | 12 |
 | [`guardduty`](services/guardduty.yml) | 68 | 0 | 1 |
@@ -139,7 +139,7 @@ The following table summarises the AWS APIs.
 | [`transcribe`](services/transcribe.yml) | 42 | 0 | 3 |
 | [`fms`](services/fms.yml) | 42 | 0 | 0 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
-| [`fsx`](services/fsx.yml) | 41 | 0 | 4 |
+| [`fsx`](services/fsx.yml) | 41 | 0 | 5 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
 | [`ivs`](services/ivs.yml) | 40 | 2 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 40 | 0 | 3 |
@@ -410,12 +410,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2374 |
-| `Get` | 2143 |
-| `Delete` | 1728 |
+| `List` | 2375 |
+| `Get` | 2144 |
+| `Delete` | 1731 |
 | `Create` | 1622 |
 | `Describe` | 1621 |
-| `Update` | 1376 |
+| `Update` | 1377 |
 | `Put` | 428 |
 | `Start` | 334 |
 | `Tag` | 241 |

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonFSxFullAccess",
   "CreateDate": "2018-11-28T16:34:43Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIEUV6Z2X4VNZRVB5I",
   "PolicyName": "AmazonFSxFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-04-19T20:43:42Z",
+    "CreateDate": "2023-07-13T18:41:47Z",
     "Document": {
       "Statement": [
         {
@@ -72,8 +72,7 @@
         },
         {
           "Action": [
-            "ds:DescribeDirectories",
-            "fsx:*"
+            "ds:DescribeDirectories"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -86,6 +85,57 @@
           "Resource": [
             "arn:aws:firehose:*:*:deliverystream/aws-fsx-*"
           ]
+        },
+        {
+          "Action": [
+            "fsx:AssociateFileGateway",
+            "fsx:AssociateFileSystemAliases",
+            "fsx:CancelDataRepositoryTask",
+            "fsx:CopyBackup",
+            "fsx:CreateBackup",
+            "fsx:CreateDataRepositoryAssociation",
+            "fsx:CreateDataRepositoryTask",
+            "fsx:CreateFileCache",
+            "fsx:CreateFileSystem",
+            "fsx:CreateFileSystemFromBackup",
+            "fsx:CreateSnapshot",
+            "fsx:CreateStorageVirtualMachine",
+            "fsx:CreateVolume",
+            "fsx:CreateVolumeFromBackup",
+            "fsx:DeleteBackup",
+            "fsx:DeleteDataRepositoryAssociation",
+            "fsx:DeleteFileCache",
+            "fsx:DeleteFileSystem",
+            "fsx:DeleteSnapshot",
+            "fsx:DeleteStorageVirtualMachine",
+            "fsx:DeleteVolume",
+            "fsx:DescribeAssociatedFileGateways",
+            "fsx:DescribeBackups",
+            "fsx:DescribeDataRepositoryAssociations",
+            "fsx:DescribeDataRepositoryTasks",
+            "fsx:DescribeFileCaches",
+            "fsx:DescribeFileSystemAliases",
+            "fsx:DescribeFileSystems",
+            "fsx:DescribeSnapshots",
+            "fsx:DescribeStorageVirtualMachines",
+            "fsx:DescribeVolumes",
+            "fsx:DisassociateFileGateway",
+            "fsx:DisassociateFileSystemAliases",
+            "fsx:ListTagsForResource",
+            "fsx:ManageBackupPrincipalAssociations",
+            "fsx:ReleaseFileSystemNfsV3Locks",
+            "fsx:RestoreVolumeFromSnapshot",
+            "fsx:TagResource",
+            "fsx:UntagResource",
+            "fsx:UpdateDataRepositoryAssociation",
+            "fsx:UpdateFileCache",
+            "fsx:UpdateFileSystem",
+            "fsx:UpdateSnapshot",
+            "fsx:UpdateStorageVirtualMachine",
+            "fsx:UpdateVolume"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": [
@@ -102,7 +152,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2023-04-19T20:43:42Z"
+  "UpdateDate": "2023-07-13T18:41:47Z"
 }
