@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSGlueConsoleFullAccess",
   "CreateDate": "2017-08-14T13:37:39Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJNZGDEOD7MISOVSVI",
   "PolicyName": "AWSGlueConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-03-30T15:58:41Z",
+    "CreateDate": "2023-07-14T14:37:54Z",
     "Document": {
       "Statement": [
         {
@@ -83,48 +83,6 @@
         },
         {
           "Action": [
-            "cloudformation:DescribeStacks",
-            "cloudformation:GetTemplateSummary",
-            "cloudformation:ListStacks",
-            "cloudwatch:GetMetricData",
-            "cloudwatch:ListDashboards",
-            "dynamodb:ListTables",
-            "ec2:DescribeImages",
-            "ec2:DescribeInstances",
-            "ec2:DescribeKeyPairs",
-            "ec2:DescribeRouteTables",
-            "ec2:DescribeSecurityGroups",
-            "ec2:DescribeSubnets",
-            "ec2:DescribeVpcAttribute",
-            "ec2:DescribeVpcEndpoints",
-            "ec2:DescribeVpcs",
-            "glue:*",
-            "iam:GetRole",
-            "iam:GetRolePolicy",
-            "iam:ListAttachedRolePolicies",
-            "iam:ListGroups",
-            "iam:ListRolePolicies",
-            "iam:ListRoles",
-            "iam:ListUsers",
-            "kms:DescribeKey",
-            "kms:ListAliases",
-            "rds:DescribeDBClusters",
-            "rds:DescribeDBInstances",
-            "rds:DescribeDBSubnetGroups",
-            "redshift:DescribeClusterSubnetGroups",
-            "redshift:DescribeClusters",
-            "s3:GetBucketAcl",
-            "s3:GetBucketLocation",
-            "s3:ListAllMyBuckets",
-            "s3:ListBucket"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "*"
-          ]
-        },
-        {
-          "Action": [
             "ec2:RunInstances"
           ],
           "Effect": "Allow",
@@ -176,12 +134,58 @@
           "Resource": [
             "*"
           ]
+        },
+        {
+          "Action": [
+            "cloudformation:DescribeStacks",
+            "cloudformation:GetTemplateSummary",
+            "cloudformation:ListStacks",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:ListDashboards",
+            "databrew:DescribeRecipe",
+            "databrew:ListRecipeVersions",
+            "databrew:ListRecipes",
+            "dynamodb:ListTables",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstances",
+            "ec2:DescribeKeyPairs",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs",
+            "glue:*",
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListGroups",
+            "iam:ListRolePolicies",
+            "iam:ListRoles",
+            "iam:ListUsers",
+            "kms:DescribeKey",
+            "kms:ListAliases",
+            "rds:DescribeDBClusters",
+            "rds:DescribeDBInstances",
+            "rds:DescribeDBSubnetGroups",
+            "redshift:DescribeClusterSubnetGroups",
+            "redshift:DescribeClusters",
+            "s3:GetBucketAcl",
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "BaseAppPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2023-03-30T15:58:41Z"
+  "UpdateDate": "2023-07-14T14:37:54Z"
 }
