@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 369
-* Unique actions: 15225
+* Unique services: 370
+* Unique actions: 15242
 * Managed policies: 1106
 
 Most common managed policy name prefixes:
@@ -354,6 +354,7 @@ The following table summarises the AWS APIs.
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
+| [`bedrock`](services/bedrock.yml) | 0 | 0 | 17 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 14 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 14 |
 | [`scn`](services/scn.yml) | 0 | 0 | 13 |
@@ -410,14 +411,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2375 |
-| `Get` | 2147 |
-| `Delete` | 1731 |
-| `Create` | 1622 |
+| `List` | 2380 |
+| `Get` | 2150 |
+| `Delete` | 1733 |
+| `Create` | 1623 |
 | `Describe` | 1621 |
-| `Update` | 1377 |
+| `Update` | 1378 |
 | `Put` | 428 |
 | `Start` | 334 |
-| `Tag` | 241 |
-| `Untag` | 238 |
+| `Tag` | 242 |
+| `Untag` | 239 |
 
