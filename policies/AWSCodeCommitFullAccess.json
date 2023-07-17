@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeCommitFullAccess",
   "CreateDate": "2015-07-09T17:02:19Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAI4VCZ3XPIZLQ5NZV2",
   "PolicyName": "AWSCodeCommitFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-07-30T23:17:35Z",
+    "CreateDate": "2023-07-17T21:50:11Z",
     "Document": {
       "Statement": [
         {
@@ -64,7 +64,8 @@
         },
         {
           "Action": [
-            "chatbot:DescribeSlackChannelConfigurations"
+            "chatbot:DescribeSlackChannelConfigurations",
+            "chatbot:ListMicrosoftTeamsChannelConfigurations"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -202,7 +203,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2020-07-30T23:17:35Z"
+  "UpdateDate": "2023-07-17T21:50:11Z"
 }
