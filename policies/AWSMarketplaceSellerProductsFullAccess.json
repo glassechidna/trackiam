@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerProductsFullAccess",
   "CreateDate": "2019-07-02T21:06:25Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DS2YFEG4N",
   "PolicyName": "AWSMarketplaceSellerProductsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-11-19T00:15:09Z",
+    "CreateDate": "2023-07-18T22:19:58Z",
     "Document": {
       "Statement": [
         {
@@ -44,6 +44,15 @@
         },
         {
           "Action": [
+            "aws-marketplace:DeleteResourcePolicy",
+            "aws-marketplace:GetResourcePolicy",
+            "aws-marketplace:PutResourcePolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace/*"
+        },
+        {
+          "Action": [
             "aws-marketplace:ListTagsForResource",
             "aws-marketplace:TagResource",
             "aws-marketplace:UntagResource"
@@ -74,7 +83,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2022-11-19T00:15:09Z"
+  "UpdateDate": "2023-07-18T22:19:58Z"
 }
