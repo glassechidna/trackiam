@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 370
-* Unique actions: 15252
+* Unique services: 371
+* Unique actions: 15271
 * Managed policies: 1106
 
 Most common managed policy name prefixes:
@@ -251,11 +251,11 @@ The following table summarises the AWS APIs.
 | [`opsworks-cm`](services/opsworks-cm.yml) | 19 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 19 | 0 | 0 |
 | [`identitystore`](services/identitystore.yml) | 19 | 0 | 0 |
+| [`grafana`](services/grafana.yml) | 19 | 0 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
 | [`resource-groups`](services/resource-groups.yml) | 18 | 0 | 1 |
-| [`grafana`](services/grafana.yml) | 18 | 0 | 1 |
+| [`ssm-sap`](services/ssm-sap.yml) | 17 | 1 | 3 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 17 | 0 | 34 |
-| [`ssm-sap`](services/ssm-sap.yml) | 17 | 0 | 3 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`rum`](services/rum.yml) | 17 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 17 | 0 | 0 |
@@ -329,6 +329,7 @@ The following table summarises the AWS APIs.
 | [`cloudtrail-data`](services/cloudtrail-data.yml) | 1 | 0 | 0 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
+| [`medical-imaging`](services/medical-imaging.yml) | 0 | 18 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 11 | 3 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
@@ -411,14 +412,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2389 |
-| `Get` | 2151 |
-| `Delete` | 1733 |
-| `Create` | 1623 |
+| `List` | 2393 |
+| `Get` | 2156 |
+| `Delete` | 1735 |
+| `Create` | 1624 |
 | `Describe` | 1621 |
-| `Update` | 1378 |
+| `Update` | 1379 |
 | `Put` | 428 |
-| `Start` | 334 |
-| `Tag` | 242 |
-| `Untag` | 239 |
+| `Start` | 336 |
+| `Tag` | 243 |
+| `Untag` | 240 |
 
