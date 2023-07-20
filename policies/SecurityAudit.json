@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SecurityAudit",
   "CreateDate": "2015-02-06T18:41:01Z",
-  "DefaultVersionId": "v38",
+  "DefaultVersionId": "v39",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIX2T3QCXHR2OGGCTO",
   "PolicyName": "SecurityAudit",
   "PolicyVersion": {
-    "CreateDate": "2023-06-07T18:56:25Z",
+    "CreateDate": "2023-07-20T19:34:47Z",
     "Document": {
       "Statement": [
         {
@@ -22,6 +22,7 @@
             "access-analyzer:ListArchiveRules",
             "access-analyzer:ListFindings",
             "access-analyzer:ListTagsForResource",
+            "account:GetAlternateContact",
             "acm-pca:DescribeCertificateAuthority",
             "acm-pca:DescribeCertificateAuthorityAuditReport",
             "acm-pca:GetPolicy",
@@ -95,6 +96,8 @@
             "cloudtrail:ListTags",
             "cloudtrail:LookupEvents",
             "cloudwatch:Describe*",
+            "cloudwatch:GetDashboard",
+            "cloudwatch:ListDashboards",
             "cloudwatch:ListTagsForResource",
             "codeartifact:GetDomainPermissionsPolicy",
             "codeartifact:GetRepositoryPermissionsPolicy",
@@ -215,6 +218,7 @@
             "eks:ListClusters",
             "eks:ListFargateProfiles",
             "eks:ListNodeGroups",
+            "eks:ListUpdates",
             "elastic-inference:DescribeAccelerators",
             "elasticache:Describe*",
             "elasticache:ListTagsForResource",
@@ -662,7 +666,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v38"
+    "VersionId": "v39"
   },
-  "UpdateDate": "2023-06-07T18:56:25Z"
+  "UpdateDate": "2023-07-20T19:34:47Z"
 }
