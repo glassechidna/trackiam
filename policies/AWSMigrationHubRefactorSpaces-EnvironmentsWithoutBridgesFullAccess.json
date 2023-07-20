@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMigrationHubRefactorSpaces-EnvironmentsWithoutBridgesFullAccess",
   "CreateDate": "2023-04-03T20:09:48Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4G56CGGW2F",
   "PolicyName": "AWSMigrationHubRefactorSpaces-EnvironmentsWithoutBridgesFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-04-03T20:09:48Z",
+    "CreateDate": "2023-07-20T15:39:19Z",
     "Document": {
       "Statement": [
         {
@@ -87,7 +87,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:*:elasticloadbalancing:*:*:loadbalancer/net/refactor-spaces-nlb-*"
+          "Resource": [
+            "arn:*:elasticloadbalancing:*:*:listener/net/refactor-spaces-nlb-*",
+            "arn:*:elasticloadbalancing:*:*:loadbalancer/net/refactor-spaces-nlb-*"
+          ]
         },
         {
           "Action": [
@@ -215,7 +218,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-04-03T20:09:48Z"
+  "UpdateDate": "2023-07-20T15:39:19Z"
 }
