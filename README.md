@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 371
-* Unique actions: 15281
+* Unique actions: 15285
 * Managed policies: 1107
 
 Most common managed policy name prefixes:
@@ -44,7 +44,7 @@ The following table summarises the AWS APIs.
 | [`connect`](services/connect.yml) | 197 | 0 | 8 |
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
-| [`quicksight`](services/quicksight.yml) | 155 | 3 | 28 |
+| [`quicksight`](services/quicksight.yml) | 155 | 6 | 28 |
 | [`ses`](services/ses.yml) | 144 | 0 | 0 |
 | [`rds`](services/rds.yml) | 141 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 138 | 0 | 10 |
@@ -80,8 +80,8 @@ The following table summarises the AWS APIs.
 | [`rekognition`](services/rekognition.yml) | 72 | 0 | 1 |
 | [`omics`](services/omics.yml) | 72 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 71 | 1 | 0 |
+| [`cloudformation`](services/cloudformation.yml) | 70 | 0 | 11 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
-| [`cloudformation`](services/cloudformation.yml) | 69 | 0 | 12 |
 | [`guardduty`](services/guardduty.yml) | 68 | 0 | 1 |
 | [`athena`](services/athena.yml) | 68 | 0 | 1 |
 | [`securityhub`](services/securityhub.yml) | 67 | 0 | 10 |
@@ -153,9 +153,9 @@ The following table summarises the AWS APIs.
 | [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 1 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
+| [`ce`](services/ce.yml) | 37 | 1 | 12 |
 | [`sso`](services/sso.yml) | 37 | 0 | 55 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
-| [`ce`](services/ce.yml) | 37 | 0 | 12 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`cleanrooms`](services/cleanrooms.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
@@ -413,13 +413,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2396 |
-| `Get` | 2157 |
+| `Get` | 2158 |
 | `Delete` | 1736 |
 | `Create` | 1625 |
-| `Describe` | 1621 |
+| `Describe` | 1623 |
 | `Update` | 1381 |
 | `Put` | 428 |
-| `Start` | 336 |
+| `Start` | 337 |
 | `Tag` | 244 |
 | `Untag` | 241 |
 
