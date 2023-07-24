@@ -78,8 +78,8 @@ The following table summarises the AWS APIs.
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
 | [`backup`](services/backup.yml) | 72 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 72 | 0 | 1 |
+| [`personalize`](services/personalize.yml) | 72 | 0 | 0 |
 | [`omics`](services/omics.yml) | 72 | 0 | 0 |
-| [`personalize`](services/personalize.yml) | 71 | 1 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 70 | 0 | 11 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 68 | 0 | 1 |
