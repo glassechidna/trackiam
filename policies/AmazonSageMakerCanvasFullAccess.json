@@ -1,15 +1,29 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerCanvasFullAccess",
   "CreateDate": "2022-09-09T00:44:25Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LG6L7ZJCN",
   "PolicyName": "AmazonSageMakerCanvasFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-05-04T17:03:12Z",
+    "CreateDate": "2023-07-24T23:16:37Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "application-autoscaling:PutScalingPolicy",
+            "application-autoscaling:RegisterScalableTarget"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "application-autoscaling:scalable-dimension": "sagemaker:variant:DesiredInstanceCount",
+              "application-autoscaling:service-namespace": "sagemaker"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:application-autoscaling:*:*:scalable-target/*"
+        },
         {
           "Action": [
             "iam:PassRole"
@@ -242,7 +256,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2023-05-04T17:03:12Z"
+  "UpdateDate": "2023-07-24T23:16:37Z"
 }
