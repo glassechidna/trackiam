@@ -253,9 +253,9 @@ The following table summarises the AWS APIs.
 | [`identitystore`](services/identitystore.yml) | 19 | 0 | 0 |
 | [`grafana`](services/grafana.yml) | 19 | 0 | 0 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
+| [`ssm-sap`](services/ssm-sap.yml) | 18 | 0 | 3 |
 | [`resource-groups`](services/resource-groups.yml) | 18 | 0 | 1 |
 | [`medical-imaging`](services/medical-imaging.yml) | 18 | 0 | 0 |
-| [`ssm-sap`](services/ssm-sap.yml) | 17 | 1 | 3 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 17 | 0 | 34 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`rum`](services/rum.yml) | 17 | 0 | 0 |
