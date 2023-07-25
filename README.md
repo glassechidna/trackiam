@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 371
-* Unique actions: 15285
+* Unique actions: 15286
 * Managed policies: 1107
 
 Most common managed policy name prefixes:
@@ -99,8 +99,8 @@ The following table summarises the AWS APIs.
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 60 | 0 | 6 |
 | [`medialive`](services/medialive.yml) | 59 | 3 | 0 |
+| [`transfer`](services/transfer.yml) | 58 | 0 | 1 |
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 0 |
-| [`transfer`](services/transfer.yml) | 58 | 0 | 0 |
 | [`geo`](services/geo.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`datasync`](services/datasync.yml) | 57 | 0 | 0 |
