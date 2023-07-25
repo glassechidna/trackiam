@@ -1,0 +1,77 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonEFSCSIDriverPolicy",
+  "CreateDate": "2023-07-25T20:10:04Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4A6XN3COYF",
+  "PolicyName": "AmazonEFSCSIDriverPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-07-25T20:10:04Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "elasticfilesystem:DeleteAccessPoint",
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/efs.csi.aws.com/cluster": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowDeleteAccessPoint"
+        },
+        {
+          "Action": [
+            "elasticfilesystem:CreateAccessPoint"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "efs.csi.aws.com/cluster"
+            },
+            "Null": {
+              "aws:RequestTag/efs.csi.aws.com/cluster": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowCreateAccessPoint"
+        },
+        {
+          "Action": [
+            "elasticfilesystem:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "efs.csi.aws.com/cluster"
+            },
+            "Null": {
+              "aws:RequestTag/efs.csi.aws.com/cluster": "false"
+            },
+            "StringEquals": {
+              "elasticfilesystem:CreateAction": "CreateAccessPoint"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowTagNewAccessPoints"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "elasticfilesystem:DescribeAccessPoints",
+            "elasticfilesystem:DescribeFileSystems",
+            "elasticfilesystem:DescribeMountTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowDescribe"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-07-25T20:10:04Z"
+}

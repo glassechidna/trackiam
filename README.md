@@ -13,16 +13,16 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 371
 * Unique actions: 15291
-* Managed policies: 1107
+* Managed policies: 1110
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 300 |
+| `arn:aws:iam::aws:policy/AWS*` | 302 |
 | `arn:aws:iam::aws:policy/Amazon*` | 288 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 245 |
-| `arn:aws:iam::aws:policy/service-role/*` | 174 |
+| `arn:aws:iam::aws:policy/service-role/*` | 175 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 93 |
 
@@ -116,10 +116,10 @@ The following table summarises the AWS APIs.
 | [`resiliencehub`](services/resiliencehub.yml) | 52 | 0 | 0 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
 | [`logs`](services/logs.yml) | 51 | 0 | 9 |
+| [`profile`](services/profile.yml) | 51 | 0 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 50 | 0 | 3 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 0 | 0 |
-| [`profile`](services/profile.yml) | 49 | 2 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 49 | 0 | 0 |
