@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 371
-* Unique actions: 15286
+* Unique actions: 15291
 * Managed policies: 1107
 
 Most common managed policy name prefixes:
@@ -99,11 +99,11 @@ The following table summarises the AWS APIs.
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 60 | 0 | 6 |
 | [`medialive`](services/medialive.yml) | 59 | 3 | 0 |
-| [`transfer`](services/transfer.yml) | 58 | 0 | 1 |
+| [`transfer`](services/transfer.yml) | 59 | 0 | 0 |
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 0 |
 | [`geo`](services/geo.yml) | 58 | 0 | 0 |
+| [`datasync`](services/datasync.yml) | 57 | 3 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
-| [`datasync`](services/datasync.yml) | 57 | 0 | 0 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 2 |
 | [`events`](services/events.yml) | 56 | 0 | 1 |
 | [`wellarchitected`](services/wellarchitected.yml) | 56 | 0 | 0 |
@@ -119,9 +119,9 @@ The following table summarises the AWS APIs.
 | [`mediaconnect`](services/mediaconnect.yml) | 50 | 0 | 3 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 0 | 0 |
+| [`profile`](services/profile.yml) | 49 | 2 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
-| [`profile`](services/profile.yml) | 49 | 0 | 0 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 49 | 0 | 0 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
 | [`drs`](services/drs.yml) | 47 | 0 | 40 |
@@ -412,12 +412,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2396 |
-| `Get` | 2158 |
+| `List` | 2397 |
+| `Get` | 2159 |
 | `Delete` | 1736 |
-| `Create` | 1625 |
-| `Describe` | 1623 |
-| `Update` | 1381 |
+| `Create` | 1626 |
+| `Describe` | 1624 |
+| `Update` | 1382 |
 | `Put` | 428 |
 | `Start` | 337 |
 | `Tag` | 244 |
