@@ -84,6 +84,7 @@ The following table summarises the AWS APIs.
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 68 | 0 | 1 |
 | [`athena`](services/athena.yml) | 68 | 0 | 1 |
+| [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 67 | 0 | 10 |
 | [`ds`](services/ds.yml) | 67 | 0 | 7 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
@@ -93,7 +94,6 @@ The following table summarises the AWS APIs.
 | [`workspaces`](services/workspaces.yml) | 65 | 0 | 1 |
 | [`elasticache`](services/elasticache.yml) | 65 | 0 | 1 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
-| [`route53resolver`](services/route53resolver.yml) | 63 | 5 | 0 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |

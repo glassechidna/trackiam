@@ -6,12 +6,14 @@ Actions:
   - Name: route53resolver:CreateFirewallDomainList
   - Name: route53resolver:CreateFirewallRule
   - Name: route53resolver:CreateFirewallRuleGroup
+  - Name: route53resolver:CreateOutpostResolver
   - Name: route53resolver:CreateResolverEndpoint
   - Name: route53resolver:CreateResolverQueryLogConfig
   - Name: route53resolver:CreateResolverRule
   - Name: route53resolver:DeleteFirewallDomainList
   - Name: route53resolver:DeleteFirewallRule
   - Name: route53resolver:DeleteFirewallRuleGroup
+  - Name: route53resolver:DeleteOutpostResolver
   - Name: route53resolver:DeleteResolverEndpoint
   - Name: route53resolver:DeleteResolverQueryLogConfig
   - Name: route53resolver:DeleteResolverRule
@@ -24,6 +26,7 @@ Actions:
   - Name: route53resolver:GetFirewallRuleGroup
   - Name: route53resolver:GetFirewallRuleGroupAssociation
   - Name: route53resolver:GetFirewallRuleGroupPolicy
+  - Name: route53resolver:GetOutpostResolver
   - Name: route53resolver:GetResolverConfig
   - Name: route53resolver:GetResolverDnssecConfig
   - Name: route53resolver:GetResolverEndpoint
@@ -40,6 +43,7 @@ Actions:
   - Name: route53resolver:ListFirewallRuleGroupAssociations
   - Name: route53resolver:ListFirewallRuleGroups
   - Name: route53resolver:ListFirewallRules
+  - Name: route53resolver:ListOutpostResolvers
   - Name: route53resolver:ListResolverConfigs
   - Name: route53resolver:ListResolverDnssecConfigs
   - Name: route53resolver:ListResolverEndpointIpAddresses
@@ -58,14 +62,8 @@ Actions:
   - Name: route53resolver:UpdateFirewallDomains
   - Name: route53resolver:UpdateFirewallRule
   - Name: route53resolver:UpdateFirewallRuleGroupAssociation
+  - Name: route53resolver:UpdateOutpostResolver
   - Name: route53resolver:UpdateResolverConfig
   - Name: route53resolver:UpdateResolverDnssecConfig
   - Name: route53resolver:UpdateResolverEndpoint
   - Name: route53resolver:UpdateResolverRule
-
-  # APIs without an IAM action
-  - Name: route53resolver:CreateOutpostResolver
-  - Name: route53resolver:DeleteOutpostResolver
-  - Name: route53resolver:GetOutpostResolver
-  - Name: route53resolver:ListOutpostResolvers
-  - Name: route53resolver:UpdateOutpostResolver
