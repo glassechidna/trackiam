@@ -1,0 +1,35 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSHealthImagingReadOnlyAccess",
+  "CreateDate": "2023-07-25T23:40:40Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4FVIFGT2GZ",
+  "PolicyName": "AWSHealthImagingReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-07-25T23:40:40Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "medical-imaging:GetDICOMImportJob",
+            "medical-imaging:GetDatastore",
+            "medical-imaging:GetImageFrame",
+            "medical-imaging:GetImageSet",
+            "medical-imaging:GetImageSetMetadata",
+            "medical-imaging:ListDICOMImportJobs",
+            "medical-imaging:ListDatastores",
+            "medical-imaging:ListImageSetVersions",
+            "medical-imaging:SearchImageSets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-07-25T23:40:40Z"
+}
