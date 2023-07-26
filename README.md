@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 373
-* Unique actions: 15314
+* Unique actions: 15316
 * Managed policies: 1112
 
 Most common managed policy name prefixes:
@@ -204,7 +204,7 @@ The following table summarises the AWS APIs.
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 27 | 1 | 8 |
-| [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 3 |
+| [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 5 |
 | [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 1 |
 | [`snowball`](services/snowball.yml) | 26 | 1 | 0 |
 | [`outposts`](services/outposts.yml) | 26 | 0 | 2 |
@@ -265,6 +265,7 @@ The following table summarises the AWS APIs.
 | [`support`](services/support.yml) | 16 | 0 | 8 |
 | [`fis`](services/fis.yml) | 16 | 0 | 3 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
+| [`entityresolution`](services/entityresolution.yml) | 16 | 0 | 0 |
 | [`honeycode`](services/honeycode.yml) | 15 | 0 | 15 |
 | [`app-integrations`](services/app-integrations.yml) | 15 | 0 | 4 |
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
@@ -310,6 +311,7 @@ The following table summarises the AWS APIs.
 | [`elastic-inference`](services/elastic-inference.yml) | 6 | 0 | 1 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
 | [`pi`](services/pi.yml) | 6 | 0 | 0 |
+| [`managedblockchain-query`](services/managedblockchain-query.yml) | 6 | 0 | 0 |
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
 | [`ebs`](services/ebs.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
@@ -356,7 +358,6 @@ The following table summarises the AWS APIs.
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`bedrock`](services/bedrock.yml) | 0 | 0 | 17 |
-| [`entityresolution`](services/entityresolution.yml) | 0 | 0 | 16 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 14 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 14 |
 | [`scn`](services/scn.yml) | 0 | 0 | 13 |
@@ -377,7 +378,6 @@ The following table summarises the AWS APIs.
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 7 |
 | [`payments`](services/payments.yml) | 0 | 0 | 7 |
-| [`managedblockchain-query`](services/managedblockchain-query.yml) | 0 | 0 | 6 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
