@@ -1,15 +1,29 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonFSxServiceRolePolicy",
   "CreateDate": "2018-11-28T10:38:37Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIVQ24YKVRBV5IYQ5G",
   "PolicyName": "AmazonFSxServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-08-20T12:51:29Z",
+    "CreateDate": "2023-07-26T17:57:34Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/FSx"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
         {
           "Action": [
             "ec2:AssignPrivateIpAddresses",
@@ -61,7 +75,6 @@
         },
         {
           "Action": [
-            "cloudwatch:PutMetricData",
             "ds:AuthorizeApplication",
             "ds:GetAuthorizedApplicationDetails",
             "ds:UnauthorizeApplication",
@@ -103,7 +116,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2021-08-20T12:51:29Z"
+  "UpdateDate": "2023-07-26T17:57:34Z"
 }
