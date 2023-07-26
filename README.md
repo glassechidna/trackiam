@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 372
-* Unique actions: 15308
+* Unique services: 373
+* Unique actions: 15314
 * Managed policies: 1112
 
 Most common managed policy name prefixes:
@@ -137,11 +137,11 @@ The following table summarises the AWS APIs.
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`transcribe`](services/transcribe.yml) | 42 | 0 | 3 |
+| [`ivs`](services/ivs.yml) | 42 | 0 | 0 |
 | [`fms`](services/fms.yml) | 42 | 0 | 0 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
 | [`fsx`](services/fsx.yml) | 41 | 0 | 5 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
-| [`ivs`](services/ivs.yml) | 40 | 2 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 40 | 0 | 3 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 40 | 0 | 0 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
@@ -377,6 +377,7 @@ The following table summarises the AWS APIs.
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 7 |
 | [`payments`](services/payments.yml) | 0 | 0 | 7 |
+| [`managedblockchain-query`](services/managedblockchain-query.yml) | 0 | 0 | 6 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
@@ -413,8 +414,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2401 |
-| `Get` | 2163 |
+| `List` | 2404 |
+| `Get` | 2165 |
 | `Delete` | 1738 |
 | `Create` | 1628 |
 | `Describe` | 1624 |
