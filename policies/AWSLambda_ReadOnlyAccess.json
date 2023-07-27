@@ -1,19 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSLambda_ReadOnlyAccess",
   "CreateDate": "2020-11-17T21:10:32Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4IERNVMNPE",
   "PolicyName": "AWSLambda_ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-11-17T21:10:32Z",
+    "CreateDate": "2023-07-27T17:32:05Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "cloudformation:DescribeStacks",
             "cloudformation:ListStackResources",
+            "cloudformation:ListStacks",
             "cloudwatch:GetMetricData",
             "cloudwatch:ListMetrics",
             "ec2:DescribeSecurityGroups",
@@ -42,8 +43,14 @@
         {
           "Action": [
             "logs:DescribeLogStreams",
+            "logs:DescribeQueries",
             "logs:FilterLogEvents",
-            "logs:GetLogEvents"
+            "logs:GetLogEvents",
+            "logs:GetLogGroupFields",
+            "logs:GetLogRecord",
+            "logs:GetQueryResults",
+            "logs:StartQuery",
+            "logs:StopQuery"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:logs:*:*:log-group:/aws/lambda/*"
@@ -52,7 +59,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-11-17T21:10:32Z"
+  "UpdateDate": "2023-07-27T17:32:05Z"
 }
