@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 373
-* Unique actions: 15319
+* Unique actions: 15325
 * Managed policies: 1112
 
 Most common managed policy name prefixes:
@@ -127,9 +127,9 @@ The following table summarises the AWS APIs.
 | [`drs`](services/drs.yml) | 47 | 0 | 40 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
+| [`kafka`](services/kafka.yml) | 47 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 46 | 0 | 5 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
-| [`kafka`](services/kafka.yml) | 45 | 0 | 2 |
 | [`inspector2`](services/inspector2.yml) | 45 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 44 | 3 | 1 |
@@ -203,9 +203,9 @@ The following table summarises the AWS APIs.
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
+| [`applicationinsights`](services/applicationinsights.yml) | 27 | 6 | 1 |
 | [`timestream`](services/timestream.yml) | 27 | 1 | 8 |
 | [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 5 |
-| [`applicationinsights`](services/applicationinsights.yml) | 27 | 0 | 1 |
 | [`snowball`](services/snowball.yml) | 26 | 1 | 0 |
 | [`outposts`](services/outposts.yml) | 26 | 0 | 2 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
@@ -414,12 +414,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2405 |
+| `List` | 2406 |
 | `Get` | 2165 |
 | `Delete` | 1738 |
 | `Create` | 1628 |
-| `Describe` | 1625 |
-| `Update` | 1384 |
+| `Describe` | 1626 |
+| `Update` | 1386 |
 | `Put` | 428 |
 | `Start` | 338 |
 | `Tag` | 245 |
