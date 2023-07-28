@@ -17,6 +17,7 @@ Actions:
   - Name: proton:CreateServiceTemplateVersion
   - Name: proton:CreateTemplateSyncConfig
   - Name: proton:DeleteComponent
+  - Name: proton:DeleteDeployment
   - Name: proton:DeleteEnvironment
   - Name: proton:DeleteEnvironmentAccountConnection
   - Name: proton:DeleteEnvironmentTemplate
@@ -29,6 +30,7 @@ Actions:
   - Name: proton:DeleteTemplateSyncConfig
   - Name: proton:GetAccountSettings
   - Name: proton:GetComponent
+  - Name: proton:GetDeployment
   - Name: proton:GetEnvironment
   - Name: proton:GetEnvironmentAccountConnection
   - Name: proton:GetEnvironmentTemplate
@@ -48,6 +50,7 @@ Actions:
   - Name: proton:ListComponentOutputs
   - Name: proton:ListComponentProvisionedResources
   - Name: proton:ListComponents
+  - Name: proton:ListDeployments
   - Name: proton:ListEnvironmentAccountConnections
   - Name: proton:ListEnvironmentOutputs
   - Name: proton:ListEnvironmentProvisionedResources
@@ -109,8 +112,3 @@ Actions:
   - Name: proton:UpdateEnvironmentTemplateMinorVersion
   - Name: proton:UpdateServiceTemplateMajorVersion
   - Name: proton:UpdateServiceTemplateMinorVersion
-
-  # APIs without an IAM action
-  - Name: proton:DeleteDeployment
-  - Name: proton:GetDeployment
-  - Name: proton:ListDeployments
