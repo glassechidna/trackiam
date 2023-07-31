@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 373
-* Unique actions: 15334
+* Unique actions: 15343
 * Managed policies: 1112
 
 Most common managed policy name prefixes:
@@ -129,8 +129,9 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`kafka`](services/kafka.yml) | 47 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 46 | 0 | 5 |
+| [`inspector2`](services/inspector2.yml) | 45 | 1 | 0 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
-| [`inspector2`](services/inspector2.yml) | 45 | 0 | 0 |
+| [`cleanrooms`](services/cleanrooms.yml) | 45 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 44 | 3 | 1 |
 | [`workdocs`](services/workdocs.yml) | 44 | 0 | 15 |
@@ -156,7 +157,6 @@ The following table summarises the AWS APIs.
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
 | [`sso`](services/sso.yml) | 37 | 0 | 55 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
-| [`cleanrooms`](services/cleanrooms.yml) | 37 | 0 | 8 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
@@ -171,10 +171,10 @@ The following table summarises the AWS APIs.
 | [`ram`](services/ram.yml) | 34 | 0 | 0 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
+| [`lookoutequipment`](services/lookoutequipment.yml) | 33 | 8 | 0 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`gamesparks`](services/gamesparks.yml) | 33 | 0 | 1 |
 | [`tnb`](services/tnb.yml) | 33 | 0 | 0 |
-| [`lookoutequipment`](services/lookoutequipment.yml) | 33 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
@@ -414,13 +414,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2408 |
+| `List` | 2409 |
 | `Get` | 2167 |
-| `Delete` | 1739 |
+| `Delete` | 1740 |
 | `Create` | 1629 |
-| `Describe` | 1626 |
-| `Update` | 1388 |
-| `Put` | 428 |
+| `Describe` | 1628 |
+| `Update` | 1389 |
+| `Put` | 429 |
 | `Start` | 338 |
 | `Tag` | 245 |
 | `Untag` | 242 |
