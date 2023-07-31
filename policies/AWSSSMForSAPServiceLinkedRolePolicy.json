@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSSMForSAPServiceLinkedRolePolicy",
   "CreateDate": "2022-11-16T01:18:21Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AONIU2LID",
   "PolicyName": "AWSSSMForSAPServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-01-06T02:41:02Z",
+    "CreateDate": "2023-07-31T22:33:25Z",
     "Document": {
       "Statement": [
         {
@@ -34,6 +34,46 @@
           "Resource": "arn:*:iam::*:role/aws-service-role/servicecatalog-appregistry.amazonaws.com/AWSServiceRoleForAWSServiceCatalogAppRegistry"
         },
         {
+          "Action": "resource-groups:DeleteGroup",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/SSMForSAPCreated": "True"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:resource-groups:*:*:group/SystemsManagerForSAP-*"
+        },
+        {
+          "Action": "servicecatalog:CreateAttributeGroup",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/SSMForSAPCreated": "True"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:servicecatalog:*:*:/attribute-groups/*"
+        },
+        {
+          "Action": "servicecatalog:DeleteApplication",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/SSMForSAPCreated": "True"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:servicecatalog:*:*:*"
+        },
+        {
+          "Action": "servicecatalog:DeleteAttributeGroup",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/SSMForSAPCreated": "True"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:servicecatalog:*:*:/attribute-groups/*"
+        },
+        {
           "Action": "ssm:SendCommand",
           "Condition": {
             "StringEqualsIgnoreCase": {
@@ -49,6 +89,37 @@
         },
         {
           "Action": [
+            "resource-groups:CreateGroup",
+            "resource-groups:Tag"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "SSMForSAPCreated"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceTag/SSMForSAPCreated": "True"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:resource-groups:*:*:group/SystemsManagerForSAP-*"
+        },
+        {
+          "Action": [
+            "servicecatalog:AssociateAttributeGroup",
+            "servicecatalog:DisassociateAttributeGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/SSMForSAPCreated": "True"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:servicecatalog:*:*:*"
+        },
+        {
+          "Action": [
             "servicecatalog:CreateApplication",
             "servicecatalog:TagResource"
           ],
@@ -61,7 +132,17 @@
           "Resource": "arn:*:servicecatalog:*:*:*"
         },
         {
-          "Action": "servicecatalog:GetApplication",
+          "Action": "resource-groups:GetGroup",
+          "Effect": "Allow",
+          "Resource": "arn:*:resource-groups:*:*:group/SystemsManagerForSAP-*"
+        },
+        {
+          "Action": "servicecatalog:GetAttributeGroup",
+          "Effect": "Allow",
+          "Resource": "arn:*:servicecatalog:*:*:/attribute-groups/*"
+        },
+        {
+          "Action": "servicecatalog:ListAssociatedAttributeGroups",
           "Effect": "Allow",
           "Resource": "arn:*:servicecatalog:*:*:*"
         },
@@ -89,6 +170,13 @@
         },
         {
           "Action": [
+            "servicecatalog:GetApplication"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:*:servicecatalog:*:*:*"
+        },
+        {
+          "Action": [
             "ssm:DescribeDocument",
             "ssm:SendCommand"
           ],
@@ -103,7 +191,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-01-06T02:41:02Z"
+  "UpdateDate": "2023-07-31T22:33:25Z"
 }
