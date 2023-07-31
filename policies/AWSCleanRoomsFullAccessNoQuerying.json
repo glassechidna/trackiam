@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCleanRoomsFullAccessNoQuerying",
   "CreateDate": "2023-01-12T16:12:31Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4J64DFI2ZH",
   "PolicyName": "AWSCleanRoomsFullAccessNoQuerying",
   "PolicyVersion": {
-    "CreateDate": "2023-03-21T16:47:14Z",
+    "CreateDate": "2023-07-31T20:03:50Z",
     "Document": {
       "Statement": [
         {
@@ -82,19 +82,24 @@
         },
         {
           "Action": [
+            "cleanrooms:BatchGetCollaborationAnalysisTemplate",
             "cleanrooms:BatchGetSchema",
+            "cleanrooms:CreateAnalysisTemplate",
             "cleanrooms:CreateCollaboration",
             "cleanrooms:CreateConfiguredTable",
             "cleanrooms:CreateConfiguredTableAnalysisRule",
             "cleanrooms:CreateConfiguredTableAssociation",
             "cleanrooms:CreateMembership",
+            "cleanrooms:DeleteAnalysisTemplate",
             "cleanrooms:DeleteCollaboration",
             "cleanrooms:DeleteConfiguredTable",
             "cleanrooms:DeleteConfiguredTableAnalysisRule",
             "cleanrooms:DeleteConfiguredTableAssociation",
             "cleanrooms:DeleteMember",
             "cleanrooms:DeleteMembership",
+            "cleanrooms:GetAnalysisTemplate",
             "cleanrooms:GetCollaboration",
+            "cleanrooms:GetCollaborationAnalysisTemplate",
             "cleanrooms:GetConfiguredTable",
             "cleanrooms:GetConfiguredTableAnalysisRule",
             "cleanrooms:GetConfiguredTableAssociation",
@@ -102,6 +107,8 @@
             "cleanrooms:GetProtectedQuery",
             "cleanrooms:GetSchema",
             "cleanrooms:GetSchemaAnalysisRule",
+            "cleanrooms:ListAnalysisTemplates",
+            "cleanrooms:ListCollaborationAnalysisTemplates",
             "cleanrooms:ListCollaborations",
             "cleanrooms:ListConfiguredTableAssociations",
             "cleanrooms:ListConfiguredTables",
@@ -112,6 +119,7 @@
             "cleanrooms:ListTagsForResource",
             "cleanrooms:TagResource",
             "cleanrooms:UntagResource",
+            "cleanrooms:UpdateAnalysisTemplate",
             "cleanrooms:UpdateCollaboration",
             "cleanrooms:UpdateConfiguredTable",
             "cleanrooms:UpdateConfiguredTableAnalysisRule",
@@ -202,7 +210,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-03-21T16:47:14Z"
+  "UpdateDate": "2023-07-31T20:03:50Z"
 }
