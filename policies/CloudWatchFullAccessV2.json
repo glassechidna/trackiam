@@ -1,0 +1,60 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CloudWatchFullAccessV2",
+  "CreateDate": "2023-08-01T11:32:57Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4K5ELCXZSW",
+  "PolicyName": "CloudWatchFullAccessV2",
+  "PolicyVersion": {
+    "CreateDate": "2023-08-01T11:32:57Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "events.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/events.amazonaws.com/AWSServiceRoleForCloudWatchEvents*",
+          "Sid": "EventsServicePermissions"
+        },
+        {
+          "Action": [
+            "application-autoscaling:DescribeScalingPolicies",
+            "autoscaling:DescribeAutoScalingGroups",
+            "autoscaling:DescribePolicies",
+            "cloudwatch:*",
+            "iam:GetPolicy",
+            "iam:GetPolicyVersion",
+            "iam:GetRole",
+            "logs:*",
+            "oam:ListSinks",
+            "sns:CreateTopic",
+            "sns:ListSubscriptions",
+            "sns:ListSubscriptionsByTopic",
+            "sns:ListTopics",
+            "sns:Subscribe"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchFullAccessPermissions"
+        },
+        {
+          "Action": [
+            "oam:ListAttachedLinks"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:oam:*:*:sink/*",
+          "Sid": "OAMReadPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-08-01T11:32:57Z"
+}
