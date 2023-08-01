@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess",
   "CreateDate": "2016-12-01T19:04:44Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJQJGIOIE3CD2TQXDS",
   "PolicyName": "AWSCodeBuildAdminAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-09-14T16:03:39Z",
+    "CreateDate": "2023-07-31T23:06:23Z",
     "Document": {
       "Statement": [
         {
@@ -27,6 +27,15 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "CodeStarNotificationsReadWriteAccess"
+        },
+        {
+          "Action": [
+            "chatbot:DescribeSlackChannelConfigurations",
+            "chatbot:ListMicrosoftTeamsChannelConfigurations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsChatbotAccess"
         },
         {
           "Action": [
@@ -57,36 +66,8 @@
             "s3:ListAllMyBuckets"
           ],
           "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
-            "logs:DeleteLogGroup"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:logs:*:*:log-group:/aws/codebuild/*:log-stream:*"
-        },
-        {
-          "Action": [
-            "ssm:PutParameter"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:parameter/CodeBuild/*"
-        },
-        {
-          "Action": [
-            "ssm:StartSession"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:ecs:*:*:task/*/*"
-        },
-        {
-          "Action": [
-            "chatbot:DescribeSlackChannelConfigurations"
-          ],
-          "Effect": "Allow",
           "Resource": "*",
-          "Sid": "CodeStarNotificationsChatbotAccess"
+          "Sid": "AWSServicesAccess"
         },
         {
           "Action": [
@@ -122,6 +103,14 @@
         },
         {
           "Action": [
+            "logs:DeleteLogGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/codebuild/*:log-stream:*",
+          "Sid": "CWLDeleteLogGroupAccess"
+        },
+        {
+          "Action": [
             "sns:CreateTopic",
             "sns:SetTopicAttributes"
           ],
@@ -137,12 +126,28 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "SNSTopicListAccess"
+        },
+        {
+          "Action": [
+            "ssm:PutParameter"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:parameter/CodeBuild/*",
+          "Sid": "SSMParameterWriteAccess"
+        },
+        {
+          "Action": [
+            "ssm:StartSession"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecs:*:*:task/*/*",
+          "Sid": "SSMStartSessionAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2020-09-14T16:03:39Z"
+  "UpdateDate": "2023-07-31T23:06:23Z"
 }

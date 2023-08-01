@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeBuildDeveloperAccess",
   "CreateDate": "2016-12-01T19:02:32Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIMKTMR34XSBQW45HS",
   "PolicyName": "AWSCodeBuildDeveloperAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-09-14T16:03:44Z",
+    "CreateDate": "2023-07-31T23:06:10Z",
     "Document": {
       "Statement": [
         {
@@ -26,6 +26,15 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "CodeStarNotificationsReadWriteAccess"
+        },
+        {
+          "Action": [
+            "chatbot:DescribeSlackChannelConfigurations",
+            "chatbot:ListMicrosoftTeamsChannelConfigurations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsChatbotAccess"
         },
         {
           "Action": [
@@ -53,29 +62,8 @@
             "s3:ListAllMyBuckets"
           ],
           "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
-            "ssm:PutParameter"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:parameter/CodeBuild/*"
-        },
-        {
-          "Action": [
-            "ssm:StartSession"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:ecs:*:*:task/*/*"
-        },
-        {
-          "Action": [
-            "chatbot:DescribeSlackChannelConfigurations"
-          ],
-          "Effect": "Allow",
           "Resource": "*",
-          "Sid": "CodeStarNotificationsChatbotAccess"
+          "Sid": "AWSServicesAccess"
         },
         {
           "Action": [
@@ -105,12 +93,28 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "SNSTopicListAccess"
+        },
+        {
+          "Action": [
+            "ssm:PutParameter"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:parameter/CodeBuild/*",
+          "Sid": "SSMParameterWriteAccess"
+        },
+        {
+          "Action": [
+            "ssm:StartSession"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecs:*:*:task/*/*",
+          "Sid": "SSMStartSessionAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2020-09-14T16:03:44Z"
+  "UpdateDate": "2023-07-31T23:06:10Z"
 }
