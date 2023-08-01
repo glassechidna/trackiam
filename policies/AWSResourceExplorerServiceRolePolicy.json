@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSResourceExplorerServiceRolePolicy",
   "CreateDate": "2022-10-25T20:35:29Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4K2H54PAUL",
   "PolicyName": "AWSResourceExplorerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-01-26T14:43:30Z",
+    "CreateDate": "2023-08-01T19:33:28Z",
     "Document": {
       "Statement": [
         {
@@ -23,6 +23,10 @@
             "cloudwatch:DescribeInsightRules",
             "cloudwatch:ListDashboards",
             "cloudwatch:ListMetricStreams",
+            "codebuild:ListProjects",
+            "codepipeline:ListPipelines",
+            "cognito-identity:ListIdentityPools",
+            "cognito-idp:ListUserPools",
             "dynamodb:ListStreams",
             "dynamodb:ListTables",
             "ec2:DescribeAddresses",
@@ -87,6 +91,7 @@
             "ec2:DescribeVpnConnections",
             "ec2:DescribeVpnGateways",
             "ec2:GetSubnetCidrReservations",
+            "ecr:DescribeRepositories",
             "ecs:DescribeCapacityProviders",
             "ecs:DescribeServices",
             "ecs:ListClusters",
@@ -103,6 +108,10 @@
             "elasticache:DescribeSnapshots",
             "elasticache:DescribeUserGroups",
             "elasticache:DescribeUsers",
+            "elasticbeanstalk:DescribeApplicationVersions",
+            "elasticbeanstalk:DescribeApplications",
+            "elasticbeanstalk:DescribeEnvironments",
+            "elasticfilesystem:DescribeFileSystems",
             "elasticloadbalancing:DescribeListeners",
             "elasticloadbalancing:DescribeLoadBalancers",
             "elasticloadbalancing:DescribeRules",
@@ -116,6 +125,8 @@
             "iam:ListSAMLProviders",
             "iam:ListServerCertificates",
             "iam:ListUsers",
+            "iot:ListPolicies",
+            "iot:ListTopicRules",
             "kinesis:ListStreamConsumers",
             "kinesis:ListStreams",
             "lambda:ListCodeSigningConfigs",
@@ -155,6 +166,7 @@
             "s3:GetBucketLocation",
             "s3:ListAccessPoints",
             "s3:ListAllMyBuckets",
+            "s3:ListBucket",
             "s3:ListStorageLensConfigurations",
             "servicecatalog:ListApplications",
             "servicecatalog:ListAttributeGroups",
@@ -168,7 +180,8 @@
             "ssm:DescribeParameters",
             "ssm:DescribePatchBaselines",
             "ssm:ListAssociations",
-            "ssm:ListDocuments"
+            "ssm:ListDocuments",
+            "states:ListStateMachines"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -188,7 +201,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-01-26T14:43:30Z"
+  "UpdateDate": "2023-08-01T19:33:28Z"
 }
