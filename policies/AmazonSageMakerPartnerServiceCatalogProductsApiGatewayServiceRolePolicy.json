@@ -1,0 +1,48 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonSageMakerPartnerServiceCatalogProductsApiGatewayServiceRolePolicy",
+  "CreateDate": "2023-08-01T15:06:24Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4AFYFTZOZX",
+  "PolicyName": "AmazonSageMakerPartnerServiceCatalogProductsApiGatewayServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-08-01T15:06:24Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "lambda:InvokeFunction",
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/sagemaker:partner": "false",
+              "aws:ResourceTag/sagemaker:project-name": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:function:sagemaker-*"
+        },
+        {
+          "Action": "sagemaker:InvokeEndpoint",
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/sagemaker:partner": "false",
+              "aws:ResourceTag/sagemaker:project-name": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:endpoint/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-08-01T15:06:24Z"
+}

@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonSageMakerPartnerServiceCatalogProductsLambdaServiceRolePolicy",
+  "CreateDate": "2023-08-01T15:05:51Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4C4IBKGBZL",
+  "PolicyName": "AmazonSageMakerPartnerServiceCatalogProductsLambdaServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-08-01T15:05:51Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "secretsmanager:GetSecretValue",
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/sagemaker:partner": false
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-08-01T15:05:51Z"
+}
