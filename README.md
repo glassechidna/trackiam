@@ -129,7 +129,7 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`kafka`](services/kafka.yml) | 47 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 46 | 0 | 5 |
-| [`inspector2`](services/inspector2.yml) | 45 | 1 | 0 |
+| [`inspector2`](services/inspector2.yml) | 46 | 0 | 0 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`cleanrooms`](services/cleanrooms.yml) | 45 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
