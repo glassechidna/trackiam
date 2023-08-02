@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCloud9Administrator",
   "CreateDate": "2017-11-30T16:17:28Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIQ4KWP455WDTCBGWK",
   "PolicyName": "AWSCloud9Administrator",
   "PolicyVersion": {
-    "CreateDate": "2020-07-29T06:28:54Z",
+    "CreateDate": "2023-08-02T08:54:40Z",
     "Document": {
       "Statement": [
         {
@@ -38,6 +38,8 @@
         {
           "Action": [
             "cloud9:*",
+            "ec2:DescribeInstanceTypeOfferings",
+            "ec2:DescribeRouteTables",
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcs",
             "iam:GetUser",
@@ -59,7 +61,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-07-29T06:28:54Z"
+  "UpdateDate": "2023-08-02T08:54:40Z"
 }
