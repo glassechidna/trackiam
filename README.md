@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 373
-* Unique actions: 15346
+* Unique actions: 15351
 * Managed policies: 1116
 
 Most common managed policy name prefixes:
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 594 | 0 | 15 |
-| [`sagemaker`](services/sagemaker.yml) | 317 | 1 | 12 |
+| [`sagemaker`](services/sagemaker.yml) | 317 | 2 | 12 |
 | [`iot`](services/iot.yml) | 257 | 3 | 9 |
 | [`chime`](services/chime.yml) | 253 | 0 | 50 |
 | [`glue`](services/glue.yml) | 198 | 4 | 13 |
@@ -56,7 +56,7 @@ The following table summarises the AWS APIs.
 | [`iotwireless`](services/iotwireless.yml) | 109 | 0 | 1 |
 | [`cloudfront`](services/cloudfront.yml) | 104 | 2 | 7 |
 | [`gamelift`](services/gamelift.yml) | 104 | 0 | 0 |
-| [`cognito-idp`](services/cognito-idp.yml) | 101 | 0 | 4 |
+| [`cognito-idp`](services/cognito-idp.yml) | 101 | 2 | 4 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`config`](services/config.yml) | 92 | 0 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
@@ -113,7 +113,7 @@ The following table summarises the AWS APIs.
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`wafv2`](services/wafv2.yml) | 53 | 0 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 52 | 5 | 13 |
-| [`resiliencehub`](services/resiliencehub.yml) | 52 | 0 | 0 |
+| [`resiliencehub`](services/resiliencehub.yml) | 52 | 2 | 0 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
 | [`logs`](services/logs.yml) | 51 | 0 | 9 |
 | [`profile`](services/profile.yml) | 51 | 0 | 0 |
@@ -414,8 +414,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2409 |
-| `Get` | 2167 |
+| `List` | 2410 |
+| `Get` | 2169 |
 | `Delete` | 1741 |
 | `Describe` | 1630 |
 | `Create` | 1629 |
