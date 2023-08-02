@@ -175,10 +175,10 @@ The following table summarises the AWS APIs.
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`gamesparks`](services/gamesparks.yml) | 33 | 0 | 1 |
 | [`tnb`](services/tnb.yml) | 33 | 0 | 0 |
+| [`m2`](services/m2.yml) | 33 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
-| [`m2`](services/m2.yml) | 32 | 1 | 0 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`aoss`](services/aoss.yml) | 31 | 0 | 2 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
