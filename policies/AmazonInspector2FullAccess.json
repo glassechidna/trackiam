@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonInspector2FullAccess",
   "CreateDate": "2021-11-29T19:10:15Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CK4E7UETF",
   "PolicyName": "AmazonInspector2FullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-04-19T21:33:48Z",
+    "CreateDate": "2023-08-03T19:28:59Z",
     "Document": {
       "Statement": [
         {
@@ -21,12 +21,15 @@
           "Resource": "*"
         },
         {
-          "Action": "codeguru-security:BatchGetFindings",
+          "Action": "inspector2:*",
           "Effect": "Allow",
           "Resource": "*"
         },
         {
-          "Action": "inspector2:*",
+          "Action": [
+            "codeguru-security:BatchGetFindings",
+            "codeguru-security:GetAccountConfiguration"
+          ],
           "Effect": "Allow",
           "Resource": "*"
         },
@@ -47,7 +50,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-04-19T21:33:48Z"
+  "UpdateDate": "2023-08-03T19:28:59Z"
 }
