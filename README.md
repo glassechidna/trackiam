@@ -46,7 +46,7 @@ The following table summarises the AWS APIs.
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 158 | 3 | 29 |
 | [`ses`](services/ses.yml) | 144 | 0 | 0 |
-| [`rds`](services/rds.yml) | 141 | 2 | 5 |
+| [`rds`](services/rds.yml) | 143 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 138 | 0 | 10 |
 | [`lex`](services/lex.yml) | 127 | 4 | 8 |
 | [`redshift`](services/redshift.yml) | 123 | 0 | 18 |
@@ -54,6 +54,7 @@ The following table summarises the AWS APIs.
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`iotwireless`](services/iotwireless.yml) | 109 | 0 | 1 |
+| [`dms`](services/dms.yml) | 105 | 1 | 28 |
 | [`cloudfront`](services/cloudfront.yml) | 104 | 2 | 7 |
 | [`gamelift`](services/gamelift.yml) | 104 | 0 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 101 | 2 | 4 |
@@ -67,7 +68,6 @@ The following table summarises the AWS APIs.
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 80 | 0 | 51 |
 | [`macie2`](services/macie2.yml) | 79 | 0 | 0 |
-| [`dms`](services/dms.yml) | 78 | 1 | 55 |
 | [`es`](services/es.yml) | 78 | 0 | 10 |
 | [`codecommit`](services/codecommit.yml) | 77 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
@@ -99,10 +99,10 @@ The following table summarises the AWS APIs.
 | [`medialive`](services/medialive.yml) | 62 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 60 | 0 | 6 |
+| [`datasync`](services/datasync.yml) | 60 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 59 | 0 | 0 |
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 0 |
 | [`geo`](services/geo.yml) | 58 | 0 | 0 |
-| [`datasync`](services/datasync.yml) | 57 | 3 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 2 |
 | [`events`](services/events.yml) | 56 | 0 | 1 |

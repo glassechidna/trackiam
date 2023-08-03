@@ -3,19 +3,25 @@ Actions:
   - Name: dms:ApplyPendingMaintenanceAction
   - Name: dms:BatchStartRecommendations
   - Name: dms:CancelReplicationTaskAssessmentRun
+  - Name: dms:CreateDataProvider
   - Name: dms:CreateEndpoint
   - Name: dms:CreateEventSubscription
   - Name: dms:CreateFleetAdvisorCollector
+  - Name: dms:CreateInstanceProfile
+  - Name: dms:CreateMigrationProject
   - Name: dms:CreateReplicationConfig
   - Name: dms:CreateReplicationInstance
   - Name: dms:CreateReplicationSubnetGroup
   - Name: dms:CreateReplicationTask
   - Name: dms:DeleteCertificate
   - Name: dms:DeleteConnection
+  - Name: dms:DeleteDataProvider
   - Name: dms:DeleteEndpoint
   - Name: dms:DeleteEventSubscription
   - Name: dms:DeleteFleetAdvisorCollector
   - Name: dms:DeleteFleetAdvisorDatabases
+  - Name: dms:DeleteInstanceProfile
+  - Name: dms:DeleteMigrationProject
   - Name: dms:DeleteReplicationConfig
   - Name: dms:DeleteReplicationInstance
   - Name: dms:DeleteReplicationSubnetGroup
@@ -25,17 +31,27 @@ Actions:
   - Name: dms:DescribeApplicableIndividualAssessments
   - Name: dms:DescribeCertificates
   - Name: dms:DescribeConnections
+  - Name: dms:DescribeConversionConfiguration
+  - Name: dms:DescribeDataProviders
   - Name: dms:DescribeEndpointSettings
   - Name: dms:DescribeEndpointTypes
   - Name: dms:DescribeEndpoints
   - Name: dms:DescribeEventCategories
   - Name: dms:DescribeEventSubscriptions
   - Name: dms:DescribeEvents
+  - Name: dms:DescribeExtensionPackAssociations
   - Name: dms:DescribeFleetAdvisorCollectors
   - Name: dms:DescribeFleetAdvisorDatabases
   - Name: dms:DescribeFleetAdvisorLsaAnalysis
   - Name: dms:DescribeFleetAdvisorSchemaObjectSummary
   - Name: dms:DescribeFleetAdvisorSchemas
+  - Name: dms:DescribeInstanceProfiles
+  - Name: dms:DescribeMetadataModelAssessments
+  - Name: dms:DescribeMetadataModelConversions
+  - Name: dms:DescribeMetadataModelExportsAsScript
+  - Name: dms:DescribeMetadataModelExportsToTarget
+  - Name: dms:DescribeMetadataModelImports
+  - Name: dms:DescribeMigrationProjects
   - Name: dms:DescribeOrderableReplicationInstances
   - Name: dms:DescribePendingMaintenanceActions
   - Name: dms:DescribeRecommendationLimitations
@@ -53,10 +69,15 @@ Actions:
   - Name: dms:DescribeReplications
   - Name: dms:DescribeSchemas
   - Name: dms:DescribeTableStatistics
+  - Name: dms:ExportMetadataModelAssessment
   - Name: dms:ImportCertificate
   - Name: dms:ListTagsForResource
+  - Name: dms:ModifyConversionConfiguration
+  - Name: dms:ModifyDataProvider
   - Name: dms:ModifyEndpoint
   - Name: dms:ModifyEventSubscription
+  - Name: dms:ModifyInstanceProfile
+  - Name: dms:ModifyMigrationProject
   - Name: dms:ModifyReplicationConfig
   - Name: dms:ModifyReplicationInstance
   - Name: dms:ModifyReplicationSubnetGroup
@@ -68,6 +89,12 @@ Actions:
   - Name: dms:ReloadTables
   - Name: dms:RemoveTagsFromResource
   - Name: dms:RunFleetAdvisorLsaAnalysis
+  - Name: dms:StartExtensionPackAssociation
+  - Name: dms:StartMetadataModelAssessment
+  - Name: dms:StartMetadataModelConversion
+  - Name: dms:StartMetadataModelExportAsScript
+  - Name: dms:StartMetadataModelExportToTarget
+  - Name: dms:StartMetadataModelImport
   - Name: dms:StartRecommendations
   - Name: dms:StartReplication
   - Name: dms:StartReplicationTask
@@ -84,26 +111,9 @@ Actions:
   - Name: dms:CancelMetadataModelConversion
   - Name: dms:CancelMetadataModelExport
   - Name: dms:CreateDataMigration
-  - Name: dms:CreateDataProvider
-  - Name: dms:CreateInstanceProfile
-  - Name: dms:CreateMigrationProject
   - Name: dms:DeleteDataMigration
-  - Name: dms:DeleteDataProvider
-  - Name: dms:DeleteInstanceProfile
-  - Name: dms:DeleteMigrationProject
-  - Name: dms:DescribeConversionConfiguration
   - Name: dms:DescribeDataMigrations
-  - Name: dms:DescribeDataProviders
-  - Name: dms:DescribeExtensionPackAssociations
-  - Name: dms:DescribeInstanceProfiles
-  - Name: dms:DescribeMetadataModelAssessments
-  - Name: dms:DescribeMetadataModelConversions
-  - Name: dms:DescribeMetadataModelExportsAsScript
-  - Name: dms:DescribeMetadataModelExportsToTarget
-  - Name: dms:DescribeMetadataModelImports
-  - Name: dms:DescribeMigrationProjects
   - Name: dms:DisassociateExtensionPack
-  - Name: dms:ExportMetadataModelAssessment
   - Name: dms:GetMetadataModel
   - Name: dms:ListDataProviders
   - Name: dms:ListExtensionPacks
@@ -113,21 +123,11 @@ Actions:
   - Name: dms:ListMetadataModelConversions
   - Name: dms:ListMetadataModelExports
   - Name: dms:ListMigrationProjects
-  - Name: dms:ModifyConversionConfiguration
   - Name: dms:ModifyDataMigration
-  - Name: dms:ModifyDataProvider
   - Name: dms:ModifyFleetAdvisorCollector
   - Name: dms:ModifyFleetAdvisorCollectorStatuses
-  - Name: dms:ModifyInstanceProfile
-  - Name: dms:ModifyMigrationProject
   - Name: dms:StartDataMigration
-  - Name: dms:StartExtensionPackAssociation
-  - Name: dms:StartMetadataModelAssessment
-  - Name: dms:StartMetadataModelConversion
-  - Name: dms:StartMetadataModelExportAsScript
   - Name: dms:StartMetadataModelExportAsScripts
-  - Name: dms:StartMetadataModelExportToTarget
-  - Name: dms:StartMetadataModelImport
   - Name: dms:StopDataMigration
   - Name: dms:UpdateConversionConfiguration
   - Name: dms:UpdateDataProvider
