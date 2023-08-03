@@ -111,9 +111,9 @@ The following table summarises the AWS APIs.
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 54 | 0 | 26 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
+| [`resiliencehub`](services/resiliencehub.yml) | 54 | 0 | 0 |
 | [`wafv2`](services/wafv2.yml) | 53 | 0 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 52 | 5 | 13 |
-| [`resiliencehub`](services/resiliencehub.yml) | 52 | 2 | 0 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
 | [`logs`](services/logs.yml) | 51 | 0 | 9 |
 | [`profile`](services/profile.yml) | 51 | 0 | 0 |
