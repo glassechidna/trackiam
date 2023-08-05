@@ -174,6 +174,7 @@ The following table summarises the AWS APIs.
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`gamesparks`](services/gamesparks.yml) | 33 | 0 | 1 |
+| [`applicationinsights`](services/applicationinsights.yml) | 33 | 0 | 1 |
 | [`tnb`](services/tnb.yml) | 33 | 0 | 0 |
 | [`m2`](services/m2.yml) | 33 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 33 | 0 | 0 |
@@ -203,7 +204,6 @@ The following table summarises the AWS APIs.
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
-| [`applicationinsights`](services/applicationinsights.yml) | 27 | 6 | 1 |
 | [`timestream`](services/timestream.yml) | 27 | 1 | 8 |
 | [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 5 |
 | [`snowball`](services/snowball.yml) | 26 | 1 | 0 |

@@ -1,4 +1,5 @@
 Actions:
+  - Name: applicationinsights:AddWorkload
   - Name: applicationinsights:CreateApplication
   - Name: applicationinsights:CreateComponent
   - Name: applicationinsights:CreateLogPattern
@@ -13,6 +14,7 @@ Actions:
   - Name: applicationinsights:DescribeObservation
   - Name: applicationinsights:DescribeProblem
   - Name: applicationinsights:DescribeProblemObservations
+  - Name: applicationinsights:DescribeWorkload
   - Name: applicationinsights:ListApplications
   - Name: applicationinsights:ListComponents
   - Name: applicationinsights:ListConfigurationHistory
@@ -20,20 +22,16 @@ Actions:
   - Name: applicationinsights:ListLogPatterns
   - Name: applicationinsights:ListProblems
   - Name: applicationinsights:ListTagsForResource
+  - Name: applicationinsights:ListWorkloads
+  - Name: applicationinsights:RemoveWorkload
   - Name: applicationinsights:TagResource
   - Name: applicationinsights:UntagResource
   - Name: applicationinsights:UpdateApplication
   - Name: applicationinsights:UpdateComponent
   - Name: applicationinsights:UpdateComponentConfiguration
   - Name: applicationinsights:UpdateLogPattern
+  - Name: applicationinsights:UpdateProblem
+  - Name: applicationinsights:UpdateWorkload
 
   # actions with no corresponding API
   - Name: applicationinsights:Link
-
-  # APIs without an IAM action
-  - Name: applicationinsights:AddWorkload
-  - Name: applicationinsights:DescribeWorkload
-  - Name: applicationinsights:ListWorkloads
-  - Name: applicationinsights:RemoveWorkload
-  - Name: applicationinsights:UpdateProblem
-  - Name: applicationinsights:UpdateWorkload
