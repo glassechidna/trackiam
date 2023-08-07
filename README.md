@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 373
-* Unique actions: 15353
+* Unique actions: 15355
 * Managed policies: 1116
 
 Most common managed policy name prefixes:
@@ -369,12 +369,12 @@ The following table summarises the AWS APIs.
 | [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
+| [`artifact`](services/artifact.yml) | 0 | 0 | 10 |
 | [`notifications-contacts`](services/notifications-contacts.yml) | 0 | 0 | 9 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 9 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 9 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 8 |
-| [`artifact`](services/artifact.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 7 |
 | [`payments`](services/payments.yml) | 0 | 0 | 7 |
@@ -415,12 +415,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2410 |
-| `Get` | 2169 |
+| `Get` | 2170 |
 | `Delete` | 1741 |
 | `Describe` | 1630 |
 | `Create` | 1629 |
 | `Update` | 1390 |
-| `Put` | 429 |
+| `Put` | 430 |
 | `Start` | 338 |
 | `Tag` | 245 |
 | `Untag` | 242 |
