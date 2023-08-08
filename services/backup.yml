@@ -5,6 +5,7 @@ Actions:
   - Name: backup:CreateBackupVault
   - Name: backup:CreateFramework
   - Name: backup:CreateLegalHold
+  - Name: backup:CreateLogicallyAirGappedBackupVault
   - Name: backup:CreateReportPlan
   - Name: backup:DeleteBackupPlan
   - Name: backup:DeleteBackupSelection
@@ -48,6 +49,7 @@ Actions:
   - Name: backup:ListFrameworks
   - Name: backup:ListLegalHolds
   - Name: backup:ListProtectedResources
+  - Name: backup:ListProtectedResourcesByBackupVault
   - Name: backup:ListRecoveryPointsByBackupVault
   - Name: backup:ListRecoveryPointsByLegalHold
   - Name: backup:ListRecoveryPointsByResource
@@ -75,3 +77,6 @@ Actions:
   # actions with no corresponding API
   - Name: backup:CopyFromBackupVault
   - Name: backup:CopyIntoBackupVault
+  - Name: backup:DeleteBackupVaultSharingPolicy
+  - Name: backup:GetBackupVaultSharingPolicy
+  - Name: backup:PutBackupVaultSharingPolicy

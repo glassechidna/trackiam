@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 373
-* Unique actions: 15355
+* Unique actions: 15361
 * Managed policies: 1116
 
 Most common managed policy name prefixes:
@@ -73,10 +73,10 @@ The following table summarises the AWS APIs.
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`appstream`](services/appstream.yml) | 75 | 0 | 1 |
+| [`backup`](services/backup.yml) | 74 | 0 | 5 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 73 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
-| [`backup`](services/backup.yml) | 72 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 72 | 0 | 1 |
 | [`personalize`](services/personalize.yml) | 72 | 0 | 0 |
 | [`omics`](services/omics.yml) | 72 | 0 | 0 |
@@ -89,10 +89,10 @@ The following table summarises the AWS APIs.
 | [`ds`](services/ds.yml) | 67 | 0 | 7 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
+| [`elasticache`](services/elasticache.yml) | 65 | 1 | 1 |
 | [`mgn`](services/mgn.yml) | 65 | 0 | 34 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`workspaces`](services/workspaces.yml) | 65 | 0 | 1 |
-| [`elasticache`](services/elasticache.yml) | 65 | 0 | 1 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
@@ -414,13 +414,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2410 |
-| `Get` | 2170 |
-| `Delete` | 1741 |
+| `List` | 2411 |
+| `Get` | 2171 |
+| `Delete` | 1742 |
 | `Describe` | 1630 |
-| `Create` | 1629 |
+| `Create` | 1630 |
 | `Update` | 1390 |
-| `Put` | 430 |
+| `Put` | 431 |
 | `Start` | 338 |
 | `Tag` | 245 |
 | `Untag` | 242 |
