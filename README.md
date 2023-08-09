@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 373
-* Unique actions: 15361
+* Unique actions: 15377
 * Managed policies: 1116
 
 Most common managed policy name prefixes:
@@ -345,6 +345,7 @@ The following table summarises the AWS APIs.
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 41 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 33 |
+| [`bedrock`](services/bedrock.yml) | 0 | 0 | 33 |
 | [`datazonecontrol`](services/datazonecontrol.yml) | 0 | 0 | 29 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 28 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
@@ -357,7 +358,6 @@ The following table summarises the AWS APIs.
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
-| [`bedrock`](services/bedrock.yml) | 0 | 0 | 17 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 14 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 14 |
 | [`scn`](services/scn.yml) | 0 | 0 | 13 |
@@ -414,12 +414,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2411 |
-| `Get` | 2171 |
+| `List` | 2415 |
+| `Get` | 2175 |
 | `Delete` | 1742 |
+| `Create` | 1634 |
 | `Describe` | 1630 |
-| `Create` | 1630 |
-| `Update` | 1390 |
+| `Update` | 1393 |
 | `Put` | 431 |
 | `Start` | 338 |
 | `Tag` | 245 |
