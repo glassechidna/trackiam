@@ -206,7 +206,7 @@ The following table summarises the AWS APIs.
 | [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 27 | 1 | 8 |
 | [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 5 |
-| [`snowball`](services/snowball.yml) | 26 | 1 | 0 |
+| [`snowball`](services/snowball.yml) | 27 | 0 | 0 |
 | [`outposts`](services/outposts.yml) | 26 | 0 | 2 |
 | [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
 | [`private-networks`](services/private-networks.yml) | 26 | 0 | 0 |
