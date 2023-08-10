@@ -1,0 +1,68 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSMigrationHubRefactorSpaces-SSMAutomationPolicy",
+  "CreateDate": "2023-08-10T15:08:14Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4OMS6PFTEQ",
+  "PolicyName": "AWSMigrationHubRefactorSpaces-SSMAutomationPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-08-10T15:08:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateTags",
+            "ec2:DeleteTags"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "refactor-spaces:ssm:environment-id"
+            },
+            "StringEquals": {
+              "aws:ResourceTag/refactor-spaces:ssm:optin": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*"
+        },
+        {
+          "Action": [
+            "ec2:ModifyInstanceAttribute"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/refactor-spaces:ssm:optin": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*"
+        },
+        {
+          "Action": "ssm:GetParameters",
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:parameter/ManagedByAWSApplicationMigrationService-*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:ModifyInstanceAttribute"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-08-10T15:08:14Z"
+}
