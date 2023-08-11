@@ -87,9 +87,9 @@ The following table summarises the AWS APIs.
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 67 | 0 | 10 |
 | [`ds`](services/ds.yml) | 67 | 0 | 7 |
+| [`elasticache`](services/elasticache.yml) | 66 | 0 | 1 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
-| [`elasticache`](services/elasticache.yml) | 65 | 1 | 1 |
 | [`mgn`](services/mgn.yml) | 65 | 0 | 34 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`workspaces`](services/workspaces.yml) | 65 | 0 | 1 |
