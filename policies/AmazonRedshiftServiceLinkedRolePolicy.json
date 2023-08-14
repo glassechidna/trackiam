@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRedshiftServiceLinkedRolePolicy",
   "CreateDate": "2017-09-18T19:19:45Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJPY2VXNRUYOY3SRZS",
   "PolicyName": "AmazonRedshiftServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-05-08T18:57:44Z",
+    "CreateDate": "2023-08-14T10:46:23Z",
     "Document": {
       "Statement": [
         {
@@ -112,6 +112,26 @@
         },
         {
           "Action": [
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:PutSecretValue",
+            "secretsmanager:RotateSecret",
+            "secretsmanager:UpdateSecret",
+            "secretsmanager:UpdateSecretVersionStage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "secretsmanager:ResourceTag/aws:secretsmanager:owningService": "redshift"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:secretsmanager:*:*:secret:redshift!*"
+          ]
+        },
+        {
+          "Action": [
             "ec2:AssociateAddress",
             "ec2:CreateNetworkInterface",
             "ec2:CreateVpcEndpoint",
@@ -153,6 +173,13 @@
         },
         {
           "Action": [
+            "secretsmanager:GetRandomPassword"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "logs:CreateLogGroup",
             "logs:PutRetentionPolicy"
           ],
@@ -179,7 +206,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2023-05-08T18:57:44Z"
+  "UpdateDate": "2023-08-14T10:46:23Z"
 }
