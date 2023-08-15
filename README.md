@@ -280,6 +280,7 @@ The following table summarises the AWS APIs.
 | [`codeguru-security`](services/codeguru-security.yml) | 13 | 0 | 2 |
 | [`textract`](services/textract.yml) | 13 | 0 | 0 |
 | [`snow-device-management`](services/snow-device-management.yml) | 13 | 0 | 0 |
+| [`pi`](services/pi.yml) | 13 | 0 | 0 |
 | [`health`](services/health.yml) | 13 | 0 | 0 |
 | [`docdb-elastic`](services/docdb-elastic.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
@@ -308,7 +309,6 @@ The following table summarises the AWS APIs.
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
 | [`iotfleethub`](services/iotfleethub.yml) | 8 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
-| [`pi`](services/pi.yml) | 6 | 0 | 7 |
 | [`elastic-inference`](services/elastic-inference.yml) | 6 | 0 | 1 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
 | [`managedblockchain-query`](services/managedblockchain-query.yml) | 6 | 0 | 0 |
