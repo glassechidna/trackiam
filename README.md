@@ -221,6 +221,7 @@ The following table summarises the AWS APIs.
 | [`verifiedpermissions`](services/verifiedpermissions.yml) | 24 | 0 | 0 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
+| [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 23 | 2 | 1 |
 | [`detective`](services/detective.yml) | 23 | 1 | 7 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 23 | 0 | 1 |
 | [`mq`](services/mq.yml) | 23 | 0 | 1 |
@@ -237,7 +238,6 @@ The following table summarises the AWS APIs.
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 21 | 0 | 7 |
 | [`synthetics`](services/synthetics.yml) | 21 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 21 | 0 | 0 |
-| [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 20 | 5 | 1 |
 | [`sqs`](services/sqs.yml) | 20 | 3 | 0 |
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
 | [`iotroborunner`](services/iotroborunner.yml) | 20 | 0 | 0 |
