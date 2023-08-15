@@ -1,27 +1,33 @@
 Actions:
   - Name: omics:AbortMultipartReadSetUpload
+  - Name: omics:AcceptShare
   - Name: omics:BatchDeleteReadSet
   - Name: omics:CancelAnnotationImportJob
   - Name: omics:CancelRun
   - Name: omics:CancelVariantImportJob
   - Name: omics:CompleteMultipartReadSetUpload
   - Name: omics:CreateAnnotationStore
+  - Name: omics:CreateAnnotationStoreVersion
   - Name: omics:CreateMultipartReadSetUpload
   - Name: omics:CreateReferenceStore
   - Name: omics:CreateRunGroup
   - Name: omics:CreateSequenceStore
+  - Name: omics:CreateShare
   - Name: omics:CreateVariantStore
   - Name: omics:CreateWorkflow
   - Name: omics:DeleteAnnotationStore
+  - Name: omics:DeleteAnnotationStoreVersions
   - Name: omics:DeleteReference
   - Name: omics:DeleteReferenceStore
   - Name: omics:DeleteRun
   - Name: omics:DeleteRunGroup
   - Name: omics:DeleteSequenceStore
+  - Name: omics:DeleteShare
   - Name: omics:DeleteVariantStore
   - Name: omics:DeleteWorkflow
   - Name: omics:GetAnnotationImportJob
   - Name: omics:GetAnnotationStore
+  - Name: omics:GetAnnotationStoreVersion
   - Name: omics:GetReadSet
   - Name: omics:GetReadSetActivationJob
   - Name: omics:GetReadSetExportJob
@@ -35,10 +41,12 @@ Actions:
   - Name: omics:GetRunGroup
   - Name: omics:GetRunTask
   - Name: omics:GetSequenceStore
+  - Name: omics:GetShare
   - Name: omics:GetVariantImportJob
   - Name: omics:GetVariantStore
   - Name: omics:GetWorkflow
   - Name: omics:ListAnnotationImportJobs
+  - Name: omics:ListAnnotationStoreVersions
   - Name: omics:ListAnnotationStores
   - Name: omics:ListMultipartReadSetUploads
   - Name: omics:ListReadSetActivationJobs
@@ -53,6 +61,7 @@ Actions:
   - Name: omics:ListRunTasks
   - Name: omics:ListRuns
   - Name: omics:ListSequenceStores
+  - Name: omics:ListShares
   - Name: omics:ListTagsForResource
   - Name: omics:ListVariantImportJobs
   - Name: omics:ListVariantStores
@@ -67,19 +76,8 @@ Actions:
   - Name: omics:TagResource
   - Name: omics:UntagResource
   - Name: omics:UpdateAnnotationStore
+  - Name: omics:UpdateAnnotationStoreVersion
   - Name: omics:UpdateRunGroup
   - Name: omics:UpdateVariantStore
   - Name: omics:UpdateWorkflow
   - Name: omics:UploadReadSetPart
-
-  # APIs without an IAM action
-  - Name: omics:AcceptShare
-  - Name: omics:CreateAnnotationStoreVersion
-  - Name: omics:CreateShare
-  - Name: omics:DeleteAnnotationStoreVersions
-  - Name: omics:DeleteShare
-  - Name: omics:GetAnnotationStoreVersion
-  - Name: omics:GetShare
-  - Name: omics:ListAnnotationStoreVersions
-  - Name: omics:ListShares
-  - Name: omics:UpdateAnnotationStoreVersion

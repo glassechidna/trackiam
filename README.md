@@ -65,6 +65,7 @@ The following table summarises the AWS APIs.
 | [`s3`](services/s3.yml) | 85 | 58 | 45 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 84 | 0 | 0 |
+| [`omics`](services/omics.yml) | 82 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 80 | 0 | 51 |
 | [`macie2`](services/macie2.yml) | 79 | 0 | 0 |
@@ -77,7 +78,6 @@ The following table summarises the AWS APIs.
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 73 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
-| [`omics`](services/omics.yml) | 72 | 10 | 0 |
 | [`rekognition`](services/rekognition.yml) | 72 | 0 | 1 |
 | [`personalize`](services/personalize.yml) | 72 | 0 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 70 | 0 | 11 |
