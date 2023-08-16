@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRDSPerformanceInsightsReadOnly",
   "CreateDate": "2022-04-05T00:02:08Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4M2AUBSW6R",
   "PolicyName": "AmazonRDSPerformanceInsightsReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2022-04-05T00:02:08Z",
+    "CreateDate": "2023-08-16T18:42:54Z",
     "Document": {
       "Statement": [
         {
@@ -19,6 +19,11 @@
           "Action": "pi:GetDimensionKeyDetails",
           "Effect": "Allow",
           "Resource": "arn:aws:pi:*:*:metrics/rds/*"
+        },
+        {
+          "Action": "pi:GetPerformanceAnalysisReport",
+          "Effect": "Allow",
+          "Resource": "arn:aws:pi:*:*:perf-reports/rds/*/*"
         },
         {
           "Action": "pi:GetResourceMetadata",
@@ -41,6 +46,16 @@
           "Resource": "arn:aws:pi:*:*:metrics/rds/*"
         },
         {
+          "Action": "pi:ListPerformanceAnalysisReports",
+          "Effect": "Allow",
+          "Resource": "arn:aws:pi:*:*:perf-reports/rds/*/*"
+        },
+        {
+          "Action": "pi:ListTagsForResource",
+          "Effect": "Allow",
+          "Resource": "arn:aws:pi:*:*:*/rds/*"
+        },
+        {
           "Action": "rds:DescribeDBClusters",
           "Effect": "Allow",
           "Resource": "*"
@@ -54,7 +69,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-04-05T00:02:08Z"
+  "UpdateDate": "2023-08-16T18:42:54Z"
 }
