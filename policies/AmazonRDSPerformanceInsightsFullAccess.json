@@ -1,0 +1,68 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonRDSPerformanceInsightsFullAccess",
+  "CreateDate": "2023-08-15T23:41:34Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4AOEG27H7E",
+  "PolicyName": "AmazonRDSPerformanceInsightsFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-08-15T23:41:34Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "pi:CreatePerformanceAnalysisReport",
+            "pi:DeletePerformanceAnalysisReport",
+            "pi:GetPerformanceAnalysisReport",
+            "pi:ListPerformanceAnalysisReports"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:pi:*:*:perf-reports/rds/*/*"
+        },
+        {
+          "Action": [
+            "pi:DescribeDimensionKeys",
+            "pi:GetDimensionKeyDetails",
+            "pi:GetResourceMetadata",
+            "pi:GetResourceMetrics",
+            "pi:ListAvailableResourceDimensions",
+            "pi:ListAvailableResourceMetrics"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:pi:*:*:metrics/rds/*"
+        },
+        {
+          "Action": [
+            "pi:ListTagsForResource",
+            "pi:TagResource",
+            "pi:UntagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:pi:*:*:*/rds/*"
+        },
+        {
+          "Action": [
+            "rds:DescribeDBClusters",
+            "rds:DescribeDBInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-08-15T23:41:34Z"
+}
