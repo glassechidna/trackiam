@@ -1,0 +1,106 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSEntityResolutionConsoleFullAccess",
+  "CreateDate": "2023-08-17T17:54:14Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4HPFJ6XDUE",
+  "PolicyName": "AWSEntityResolutionConsoleFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-08-17T17:54:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "entityresolution.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*entityresolution*",
+          "Sid": "PassRoleToEntityResolutionService"
+        },
+        {
+          "Action": [
+            "entityresolution:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EntityResolutionAccess"
+        },
+        {
+          "Action": [
+            "glue:GetDatabase",
+            "glue:GetDatabases",
+            "glue:GetSchema",
+            "glue:GetSchemaByDefinition",
+            "glue:GetSchemaVersion",
+            "glue:GetSchemaVersionsDiff",
+            "glue:GetTable",
+            "glue:GetTableVersion",
+            "glue:GetTableVersions",
+            "glue:GetTables",
+            "glue:SearchTables"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GlueSourcesConsoleDisplay"
+        },
+        {
+          "Action": [
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListRolesToPickRoleForPassing"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey",
+            "kms:ListAliases"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "KMSConsoleDisplay"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:GetBucketVersioning",
+            "s3:ListBucket",
+            "s3:ListBucketVersions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "S3SourcesConsoleDisplay"
+        },
+        {
+          "Action": [
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "S3BucketsConsoleDisplay"
+        },
+        {
+          "Action": [
+            "tag:GetTagKeys",
+            "tag:GetTagValues"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TaggingConsoleDisplay"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-08-17T17:54:14Z"
+}
