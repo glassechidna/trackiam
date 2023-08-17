@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRDSFullAccess",
   "CreateDate": "2015-02-06T18:40:52Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAI3R4QMOG6Q5A4VWVG",
   "PolicyName": "AmazonRDSFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-04-14T12:27:01Z",
+    "CreateDate": "2023-08-17T23:00:17Z",
     "Document": {
       "Statement": [
         {
@@ -44,7 +44,10 @@
         {
           "Action": "pi:*",
           "Effect": "Allow",
-          "Resource": "arn:aws:pi:*:*:metrics/rds/*"
+          "Resource": [
+            "arn:aws:pi:*:*:metrics/rds/*",
+            "arn:aws:pi:*:*:perf-reports/rds/*"
+          ]
         },
         {
           "Action": [
@@ -90,7 +93,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2023-04-14T12:27:01Z"
+  "UpdateDate": "2023-08-17T23:00:17Z"
 }
