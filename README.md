@@ -57,7 +57,7 @@ The following table summarises the AWS APIs.
 | [`dms`](services/dms.yml) | 105 | 1 | 28 |
 | [`cloudfront`](services/cloudfront.yml) | 104 | 2 | 7 |
 | [`gamelift`](services/gamelift.yml) | 104 | 0 | 0 |
-| [`cognito-idp`](services/cognito-idp.yml) | 101 | 2 | 4 |
+| [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 4 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`config`](services/config.yml) | 92 | 0 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
