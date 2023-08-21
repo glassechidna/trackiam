@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 374
-* Unique actions: 15403
-* Managed policies: 1120
+* Unique actions: 15407
+* Managed policies: 1121
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 306 |
 | `arn:aws:iam::aws:policy/Amazon*` | 289 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 245 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 246 |
 | `arn:aws:iam::aws:policy/service-role/*` | 179 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 94 |
@@ -78,8 +78,8 @@ The following table summarises the AWS APIs.
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 73 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
+| [`personalize`](services/personalize.yml) | 72 | 0 | 4 |
 | [`rekognition`](services/rekognition.yml) | 72 | 0 | 1 |
-| [`personalize`](services/personalize.yml) | 72 | 0 | 0 |
 | [`cloudformation`](services/cloudformation.yml) | 70 | 0 | 11 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 68 | 0 | 1 |
@@ -415,11 +415,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2424 |
-| `Get` | 2178 |
+| `List` | 2425 |
+| `Get` | 2179 |
 | `Delete` | 1745 |
-| `Create` | 1637 |
-| `Describe` | 1630 |
+| `Create` | 1638 |
+| `Describe` | 1631 |
 | `Update` | 1395 |
 | `Put` | 431 |
 | `Start` | 338 |

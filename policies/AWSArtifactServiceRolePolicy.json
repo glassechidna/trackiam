@@ -1,0 +1,30 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSArtifactServiceRolePolicy",
+  "CreateDate": "2023-08-21T20:27:31Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4JDUWQCCQA",
+  "PolicyName": "AWSArtifactServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-08-21T20:27:31Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-08-21T20:27:31Z"
+}
