@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 375
-* Unique actions: 15432
+* Unique actions: 15428
 * Managed policies: 1122
 
 Most common managed policy name prefixes:
@@ -345,8 +345,8 @@ The following table summarises the AWS APIs.
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 41 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 33 |
-| [`bedrock`](services/bedrock.yml) | 0 | 0 | 33 |
 | [`datazonecontrol`](services/datazonecontrol.yml) | 0 | 0 | 29 |
+| [`bedrock`](services/bedrock.yml) | 0 | 0 | 29 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 28 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`pca-connector-ad`](services/pca-connector-ad.yml) | 0 | 0 | 25 |
@@ -416,12 +416,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2431 |
-| `Get` | 2184 |
-| `Delete` | 1750 |
+| `List` | 2430 |
+| `Get` | 2183 |
+| `Delete` | 1749 |
 | `Create` | 1643 |
 | `Describe` | 1631 |
-| `Update` | 1397 |
+| `Update` | 1396 |
 | `Put` | 431 |
 | `Start` | 338 |
 | `Tag` | 247 |
