@@ -226,13 +226,13 @@ The following table summarises the AWS APIs.
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 23 | 0 | 1 |
 | [`mq`](services/mq.yml) | 23 | 0 | 1 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
+| [`compute-optimizer`](services/compute-optimizer.yml) | 23 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 0 |
-| [`compute-optimizer`](services/compute-optimizer.yml) | 21 | 2 | 0 |
 | [`aps`](services/aps.yml) | 21 | 0 | 16 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
