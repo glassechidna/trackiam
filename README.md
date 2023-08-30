@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 375
-* Unique actions: 15435
+* Unique actions: 15459
 * Managed policies: 1122
 
 Most common managed policy name prefixes:
@@ -217,6 +217,7 @@ The following table summarises the AWS APIs.
 | [`appflow`](services/appflow.yml) | 25 | 0 | 6 |
 | [`backup-gateway`](services/backup-gateway.yml) | 25 | 0 | 2 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 1 |
+| [`pca-connector-ad`](services/pca-connector-ad.yml) | 25 | 0 | 0 |
 | [`mediapackagev2`](services/mediapackagev2.yml) | 24 | 0 | 3 |
 | [`verifiedpermissions`](services/verifiedpermissions.yml) | 24 | 0 | 0 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
@@ -262,6 +263,7 @@ The following table summarises the AWS APIs.
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 17 | 0 | 0 |
 | [`ivschat`](services/ivschat.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
+| [`neptune-db`](services/neptune-db.yml) | 16 | 24 | 17 |
 | [`support`](services/support.yml) | 16 | 0 | 8 |
 | [`fis`](services/fis.yml) | 16 | 0 | 3 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
@@ -344,12 +346,10 @@ The following table summarises the AWS APIs.
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 50 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 41 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
-| [`neptune-db`](services/neptune-db.yml) | 0 | 0 | 33 |
 | [`datazonecontrol`](services/datazonecontrol.yml) | 0 | 0 | 29 |
 | [`bedrock`](services/bedrock.yml) | 0 | 0 | 29 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 28 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
-| [`pca-connector-ad`](services/pca-connector-ad.yml) | 0 | 0 | 25 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 21 |
@@ -416,9 +416,9 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2431 |
-| `Get` | 2186 |
-| `Delete` | 1749 |
+| `List` | 2433 |
+| `Get` | 2197 |
+| `Delete` | 1751 |
 | `Create` | 1644 |
 | `Describe` | 1631 |
 | `Update` | 1396 |

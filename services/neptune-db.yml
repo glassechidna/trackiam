@@ -1,16 +1,25 @@
 Actions:
-
-  # actions with no corresponding API
   - Name: neptune-db:CancelLoaderJob
   - Name: neptune-db:CancelMLDataProcessingJob
   - Name: neptune-db:CancelMLModelTrainingJob
   - Name: neptune-db:CancelMLModelTransformJob
-  - Name: neptune-db:CancelQuery
   - Name: neptune-db:CreateMLEndpoint
-  - Name: neptune-db:DeleteDataViaQuery
   - Name: neptune-db:DeleteMLEndpoint
-  - Name: neptune-db:DeleteStatistics
   - Name: neptune-db:GetEngineStatus
+  - Name: neptune-db:ListLoaderJobs
+  - Name: neptune-db:ListMLDataProcessingJobs
+  - Name: neptune-db:ListMLEndpoints
+  - Name: neptune-db:ListMLModelTrainingJobs
+  - Name: neptune-db:ListMLModelTransformJobs
+  - Name: neptune-db:StartLoaderJob
+  - Name: neptune-db:StartMLDataProcessingJob
+  - Name: neptune-db:StartMLModelTrainingJob
+  - Name: neptune-db:StartMLModelTransformJob
+
+  # actions with no corresponding API
+  - Name: neptune-db:CancelQuery
+  - Name: neptune-db:DeleteDataViaQuery
+  - Name: neptune-db:DeleteStatistics
   - Name: neptune-db:GetGraphSummary
   - Name: neptune-db:GetLoaderJobStatus
   - Name: neptune-db:GetMLDataProcessingJobStatus
@@ -20,17 +29,34 @@ Actions:
   - Name: neptune-db:GetQueryStatus
   - Name: neptune-db:GetStatisticsStatus
   - Name: neptune-db:GetStreamRecords
-  - Name: neptune-db:ListLoaderJobs
-  - Name: neptune-db:ListMLDataProcessingJobs
-  - Name: neptune-db:ListMLEndpoints
-  - Name: neptune-db:ListMLModelTrainingJobs
-  - Name: neptune-db:ListMLModelTransformJobs
   - Name: neptune-db:ManageStatistics
   - Name: neptune-db:ReadDataViaQuery
   - Name: neptune-db:ResetDatabase
-  - Name: neptune-db:StartLoaderJob
-  - Name: neptune-db:StartMLDataProcessingJob
-  - Name: neptune-db:StartMLModelTrainingJob
-  - Name: neptune-db:StartMLModelTransformJob
   - Name: neptune-db:WriteDataViaQuery
   - Name: neptune-db:connect
+
+  # APIs without an IAM action
+  - Name: neptune-db:CancelGremlinQuery
+  - Name: neptune-db:CancelOpenCypherQuery
+  - Name: neptune-db:DeletePropertygraphStatistics
+  - Name: neptune-db:DeleteSparqlStatistics
+  - Name: neptune-db:ExecuteFastReset
+  - Name: neptune-db:ExecuteGremlinExplainQuery
+  - Name: neptune-db:ExecuteGremlinProfileQuery
+  - Name: neptune-db:ExecuteGremlinQuery
+  - Name: neptune-db:ExecuteOpenCypherExplainQuery
+  - Name: neptune-db:GetGremlinQueryStatus
+  - Name: neptune-db:GetMLDataProcessingJob
+  - Name: neptune-db:GetMLEndpoint
+  - Name: neptune-db:GetMLModelTrainingJob
+  - Name: neptune-db:GetMLModelTransformJob
+  - Name: neptune-db:GetOpenCypherQueryStatus
+  - Name: neptune-db:GetPropertygraphStatistics
+  - Name: neptune-db:GetPropertygraphSummary
+  - Name: neptune-db:GetRDFGraphSummary
+  - Name: neptune-db:GetSparqlStatistics
+  - Name: neptune-db:GetSparqlStream
+  - Name: neptune-db:ListGremlinQueries
+  - Name: neptune-db:ListOpenCypherQueries
+  - Name: neptune-db:ManagePropertygraphStatistics
+  - Name: neptune-db:ManageSparqlStatistics
