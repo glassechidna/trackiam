@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 375
-* Unique actions: 15459
+* Unique actions: 15462
 * Managed policies: 1122
 
 Most common managed policy name prefixes:
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 594 | 0 | 15 |
-| [`sagemaker`](services/sagemaker.yml) | 318 | 1 | 12 |
+| [`sagemaker`](services/sagemaker.yml) | 318 | 2 | 12 |
 | [`iot`](services/iot.yml) | 257 | 3 | 9 |
 | [`chime`](services/chime.yml) | 253 | 0 | 50 |
 | [`connect`](services/connect.yml) | 201 | 0 | 8 |
@@ -277,13 +277,13 @@ The following table summarises the AWS APIs.
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`osis`](services/osis.yml) | 14 | 0 | 1 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 14 | 0 | 0 |
+| [`health`](services/health.yml) | 13 | 1 | 0 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 17 |
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 7 |
 | [`codeguru-security`](services/codeguru-security.yml) | 13 | 0 | 2 |
 | [`textract`](services/textract.yml) | 13 | 0 | 0 |
 | [`snow-device-management`](services/snow-device-management.yml) | 13 | 0 | 0 |
 | [`pi`](services/pi.yml) | 13 | 0 | 0 |
-| [`health`](services/health.yml) | 13 | 0 | 0 |
 | [`docdb-elastic`](services/docdb-elastic.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`braket`](services/braket.yml) | 13 | 0 | 0 |
@@ -334,7 +334,7 @@ The following table summarises the AWS APIs.
 | [`cloudtrail-data`](services/cloudtrail-data.yml) | 1 | 0 | 0 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
-| [`execute-api`](services/execute-api.yml) | 0 | 11 | 3 |
+| [`execute-api`](services/execute-api.yml) | 0 | 12 | 3 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`macie`](services/macie.yml) | 0 | 7 | 0 |
@@ -420,7 +420,7 @@ Most common action prefixes:
 | `Get` | 2197 |
 | `Delete` | 1751 |
 | `Create` | 1644 |
-| `Describe` | 1631 |
+| `Describe` | 1633 |
 | `Update` | 1396 |
 | `Put` | 431 |
 | `Start` | 338 |
