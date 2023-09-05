@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 375
-* Unique actions: 15471
+* Unique actions: 15475
 * Managed policies: 1123
 
 Most common managed policy name prefixes:
@@ -45,7 +45,7 @@ The following table summarises the AWS APIs.
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 158 | 3 | 29 |
-| [`ses`](services/ses.yml) | 144 | 5 | 0 |
+| [`ses`](services/ses.yml) | 149 | 0 | 0 |
 | [`rds`](services/rds.yml) | 143 | 1 | 5 |
 | [`ssm`](services/ssm.yml) | 138 | 0 | 10 |
 | [`lex`](services/lex.yml) | 127 | 4 | 8 |
@@ -294,12 +294,12 @@ The following table summarises the AWS APIs.
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 11 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
+| [`internetmonitor`](services/internetmonitor.yml) | 10 | 0 | 4 |
 | [`supportapp`](services/supportapp.yml) | 10 | 0 | 3 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
 | [`rbin`](services/rbin.yml) | 10 | 0 | 0 |
 | [`pipes`](services/pipes.yml) | 10 | 0 | 0 |
-| [`internetmonitor`](services/internetmonitor.yml) | 10 | 0 | 0 |
 | [`account`](services/account.yml) | 9 | 0 | 4 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
@@ -417,13 +417,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2435 |
-| `Get` | 2197 |
+| `Get` | 2199 |
 | `Delete` | 1753 |
 | `Create` | 1646 |
 | `Describe` | 1634 |
 | `Update` | 1398 |
 | `Put` | 431 |
-| `Start` | 338 |
+| `Start` | 339 |
 | `Tag` | 247 |
 | `Untag` | 244 |
 

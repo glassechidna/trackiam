@@ -1,5 +1,6 @@
 Actions:
   - Name: ses:BatchGetMetricData
+  - Name: ses:CancelExportJob
   - Name: ses:CloneReceiptRuleSet
   - Name: ses:CreateConfigurationSet
   - Name: ses:CreateConfigurationSetEventDestination
@@ -12,6 +13,7 @@ Actions:
   - Name: ses:CreateEmailIdentity
   - Name: ses:CreateEmailIdentityPolicy
   - Name: ses:CreateEmailTemplate
+  - Name: ses:CreateExportJob
   - Name: ses:CreateImportJob
   - Name: ses:CreateReceiptFilter
   - Name: ses:CreateReceiptRule
@@ -57,12 +59,14 @@ Actions:
   - Name: ses:GetEmailIdentity
   - Name: ses:GetEmailIdentityPolicies
   - Name: ses:GetEmailTemplate
+  - Name: ses:GetExportJob
   - Name: ses:GetIdentityDkimAttributes
   - Name: ses:GetIdentityMailFromDomainAttributes
   - Name: ses:GetIdentityNotificationAttributes
   - Name: ses:GetIdentityPolicies
   - Name: ses:GetIdentityVerificationAttributes
   - Name: ses:GetImportJob
+  - Name: ses:GetMessageInsights
   - Name: ses:GetSendQuota
   - Name: ses:GetSendStatistics
   - Name: ses:GetSuppressedDestination
@@ -76,6 +80,7 @@ Actions:
   - Name: ses:ListDomainDeliverabilityCampaigns
   - Name: ses:ListEmailIdentities
   - Name: ses:ListEmailTemplates
+  - Name: ses:ListExportJobs
   - Name: ses:ListIdentities
   - Name: ses:ListIdentityPolicies
   - Name: ses:ListImportJobs
@@ -143,10 +148,3 @@ Actions:
   - Name: ses:VerifyDomainIdentity
   - Name: ses:VerifyEmailAddress
   - Name: ses:VerifyEmailIdentity
-
-  # APIs without an IAM action
-  - Name: ses:CancelExportJob
-  - Name: ses:CreateExportJob
-  - Name: ses:GetExportJob
-  - Name: ses:GetMessageInsights
-  - Name: ses:ListExportJobs
