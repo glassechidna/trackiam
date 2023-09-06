@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForRestores",
   "CreateDate": "2019-01-12T00:23:54Z",
-  "DefaultVersionId": "v17",
+  "DefaultVersionId": "v18",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJZCCL6F2WPVOUXZKI",
   "PolicyName": "AWSBackupServiceRolePolicyForRestores",
   "PolicyVersion": {
-    "CreateDate": "2023-04-24T21:24:51Z",
+    "CreateDate": "2023-09-06T20:41:44Z",
     "Document": {
       "Statement": [
         {
@@ -287,11 +287,13 @@
             "rds:AddTagsToResource",
             "rds:DeleteDBCluster",
             "rds:DeleteDBInstance",
+            "rds:DescribeDBClusterSnapshots",
             "rds:DescribeDBClusters",
             "rds:DescribeDBInstances",
             "rds:DescribeDBSnapshots",
             "rds:ListTagsForResource",
             "rds:RestoreDBClusterFromSnapshot",
+            "rds:RestoreDBClusterToPointInTime",
             "rds:RestoreDBInstanceFromDBSnapshot",
             "rds:RestoreDBInstanceToPointInTime"
           ],
@@ -402,7 +404,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v17"
+    "VersionId": "v18"
   },
-  "UpdateDate": "2023-04-24T21:24:51Z"
+  "UpdateDate": "2023-09-06T20:41:44Z"
 }

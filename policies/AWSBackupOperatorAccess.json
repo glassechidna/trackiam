@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupOperatorAccess",
   "CreateDate": "2019-11-18T22:23:17Z",
-  "DefaultVersionId": "v14",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KHXVYMY4O",
   "PolicyName": "AWSBackupOperatorAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-08-08T18:19:48Z",
+    "CreateDate": "2023-09-06T20:45:05Z",
     "Document": {
       "Statement": [
         {
@@ -173,6 +173,7 @@
         },
         {
           "Action": [
+            "rds:DescribeDBClusterAutomatedBackups",
             "rds:DescribeDBClusterParameterGroups",
             "rds:DescribeDBClusterSnapshots",
             "rds:DescribeDBClusters",
@@ -299,7 +300,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v14"
+    "VersionId": "v15"
   },
-  "UpdateDate": "2023-08-08T18:19:48Z"
+  "UpdateDate": "2023-09-06T20:45:05Z"
 }
