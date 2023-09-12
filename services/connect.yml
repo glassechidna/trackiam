@@ -31,6 +31,8 @@ Actions:
   - Name: connect:CreateUseCase
   - Name: connect:CreateUser
   - Name: connect:CreateUserHierarchyGroup
+  - Name: connect:CreateView
+  - Name: connect:CreateViewVersion
   - Name: connect:CreateVocabulary
   - Name: connect:DeactivateEvaluationForm
   - Name: connect:DeleteContactEvaluation
@@ -51,6 +53,8 @@ Actions:
   - Name: connect:DeleteUseCase
   - Name: connect:DeleteUser
   - Name: connect:DeleteUserHierarchyGroup
+  - Name: connect:DeleteView
+  - Name: connect:DeleteViewVersion
   - Name: connect:DeleteVocabulary
   - Name: connect:DescribeAgentStatus
   - Name: connect:DescribeContact
@@ -73,6 +77,7 @@ Actions:
   - Name: connect:DescribeUser
   - Name: connect:DescribeUserHierarchyGroup
   - Name: connect:DescribeUserHierarchyStructure
+  - Name: connect:DescribeView
   - Name: connect:DescribeVocabulary
   - Name: connect:DisassociateApprovedOrigin
   - Name: connect:DisassociateBot
@@ -131,6 +136,8 @@ Actions:
   - Name: connect:ListUseCases
   - Name: connect:ListUserHierarchyGroups
   - Name: connect:ListUsers
+  - Name: connect:ListViewVersions
+  - Name: connect:ListViews
   - Name: connect:MonitorContact
   - Name: connect:PutUserStatus
   - Name: connect:ReleasePhoneNumber
@@ -200,6 +207,8 @@ Actions:
   - Name: connect:UpdateUserPhoneConfig
   - Name: connect:UpdateUserRoutingProfile
   - Name: connect:UpdateUserSecurityProfiles
+  - Name: connect:UpdateViewContent
+  - Name: connect:UpdateViewMetadata
 
   # actions with no corresponding API
   - Name: connect:AssociateCustomerProfilesDomain
@@ -210,14 +219,3 @@ Actions:
   - Name: connect:GetFederationTokens
   - Name: connect:StartForecastingPlanningSchedulingIntegration
   - Name: connect:StopForecastingPlanningSchedulingIntegration
-
-  # APIs without an IAM action
-  - Name: connect:CreateView
-  - Name: connect:CreateViewVersion
-  - Name: connect:DeleteView
-  - Name: connect:DeleteViewVersion
-  - Name: connect:DescribeView
-  - Name: connect:ListViewVersions
-  - Name: connect:ListViews
-  - Name: connect:UpdateViewContent
-  - Name: connect:UpdateViewMetadata
