@@ -1,0 +1,49 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonKeyspacesReadOnlyAccess_v2",
+  "CreateDate": "2023-09-12T17:01:45Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4N6YWPPLRH",
+  "PolicyName": "AmazonKeyspacesReadOnlyAccess_v2",
+  "PolicyVersion": {
+    "CreateDate": "2023-09-12T17:01:45Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingActivities",
+            "application-autoscaling:DescribeScalingPolicies",
+            "application-autoscaling:DescribeScheduledActions",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:GetMetricData",
+            "kms:DescribeKey",
+            "kms:ListAliases"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "cassandra:Select"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeVpcEndpoints"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-09-12T17:01:45Z"
+}
