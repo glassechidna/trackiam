@@ -1,17 +1,39 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticDisasterRecoveryReadOnlyAccess",
   "CreateDate": "2021-11-17T10:50:05Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AACAUJE3T",
   "PolicyName": "AWSElasticDisasterRecoveryReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-05-29T08:27:37Z",
+    "CreateDate": "2023-09-13T07:42:45Z",
     "Document": {
       "Statement": [
         {
+          "Action": [
+            "ssm:GetAutomationExecution"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:automation-execution/*"
+        },
+        {
           "Action": "iam:ListRoles",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "ssm:GetParameter",
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:parameter/ManagedByAWSElasticDisasterRecovery-*"
+        },
+        {
+          "Action": "ssm:ListCommandInvocations",
           "Effect": "Allow",
           "Resource": "*"
         },
@@ -27,6 +49,7 @@
             "drs:GetLaunchConfiguration",
             "drs:GetReplicationConfiguration",
             "drs:ListExtensibleSourceServers",
+            "drs:ListLaunchActions",
             "drs:ListStagingAccounts",
             "drs:ListTagsForResource"
           ],
@@ -42,12 +65,24 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ssm:DescribeDocument",
+            "ssm:GetDocument"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/AWS-CreateImage",
+            "arn:aws:ssm:*:*:document/AWSEC2-ApplicationInsightsCloudwatchAgentInstallAndConfigure",
+            "arn:aws:ssm:*:*:document/AWSMigration-LinuxTimeSyncSetting"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-05-29T08:27:37Z"
+  "UpdateDate": "2023-09-13T07:42:45Z"
 }
