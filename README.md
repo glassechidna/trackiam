@@ -117,6 +117,7 @@ The following table summarises the AWS APIs.
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
 | [`logs`](services/logs.yml) | 51 | 0 | 9 |
 | [`profile`](services/profile.yml) | 51 | 0 | 0 |
+| [`drs`](services/drs.yml) | 50 | 0 | 40 |
 | [`mediaconnect`](services/mediaconnect.yml) | 50 | 0 | 3 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 0 | 0 |
@@ -124,7 +125,6 @@ The following table summarises the AWS APIs.
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 49 | 0 | 0 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
-| [`drs`](services/drs.yml) | 47 | 0 | 43 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`kafka`](services/kafka.yml) | 47 | 0 | 0 |
