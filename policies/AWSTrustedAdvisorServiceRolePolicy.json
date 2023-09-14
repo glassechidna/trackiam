@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSTrustedAdvisorServiceRolePolicy",
   "CreateDate": "2018-02-22T21:24:25Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJH4QJ2WMHBOB47BUE",
   "PolicyName": "AWSTrustedAdvisorServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-08-10T22:41:30Z",
+    "CreateDate": "2023-09-14T18:02:41Z",
     "Document": {
       "Statement": [
         {
@@ -36,6 +36,7 @@
             "ec2:DescribeReservedInstancesOfferings",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSnapshots",
+            "ec2:DescribeSubnets",
             "ec2:DescribeVolumes",
             "ec2:DescribeVpcs",
             "ec2:DescribeVpnConnections",
@@ -53,6 +54,8 @@
             "iam:GetCredentialReport",
             "iam:GetServerCertificate",
             "iam:ListServerCertificates",
+            "kafka:ListClustersV2",
+            "kafka:ListNodes",
             "kinesis:DescribeLimits",
             "rds:DescribeAccountAttributes",
             "rds:DescribeDBClusters",
@@ -81,6 +84,8 @@
             "route53:ListHostedZones",
             "route53:ListHostedZonesByName",
             "route53:ListResourceRecordSets",
+            "route53resolver:ListResolverEndpointIpAddresses",
+            "route53resolver:ListResolverEndpoints",
             "s3:GetAccountPublicAccessBlock",
             "s3:GetBucketAcl",
             "s3:GetBucketLocation",
@@ -100,8 +105,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v9"
+    "IsDefaultVersion": true,
+    "VersionId": "v10"
   },
-  "UpdateDate": "2021-08-10T22:41:30Z"
+  "UpdateDate": "2023-09-14T18:02:41Z"
 }
