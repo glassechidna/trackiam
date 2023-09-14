@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDataZoneEnvironmentRolePermissionsBoundary",
   "CreateDate": "2023-09-11T23:38:22Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4C3KB6Q3VE",
   "PolicyName": "AmazonDataZoneEnvironmentRolePermissionsBoundary",
   "PolicyVersion": {
-    "CreateDate": "2023-09-11T23:38:22Z",
+    "CreateDate": "2023-09-14T19:33:50Z",
     "Document": {
       "Statement": [
         {
@@ -154,8 +154,11 @@
             "s3:ListBucket"
           ],
           "Condition": {
-            "StringEquals": {
-              "s3:prefix": "datazone/"
+            "StringLike": {
+              "s3:prefix": [
+                "*/datazone/*",
+                "datazone/*"
+              ]
             }
           },
           "Effect": "Allow",
@@ -305,7 +308,8 @@
             "redshift:DescribeDataShares",
             "redshift:GetClusterCredentials",
             "redshift:JoinGroup",
-            "secretsmanager:ListSecrets"
+            "secretsmanager:ListSecrets",
+            "tag:GetResources"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -496,7 +500,8 @@
             "secretsmanager:CreateSecret",
             "secretsmanager:ListSecrets",
             "secretsmanager:TagResource",
-            "sqlworkbench:*"
+            "sqlworkbench:*",
+            "tag:GetResources"
           ],
           "Resource": [
             "*"
@@ -506,7 +511,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-09-11T23:38:22Z"
+  "UpdateDate": "2023-09-14T19:33:50Z"
 }
