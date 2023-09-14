@@ -1,17 +1,18 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess",
   "CreateDate": "2015-02-06T18:40:01Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJN23PDQP7SZQAE3QE",
   "PolicyName": "CloudWatchReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-06-06T17:33:13Z",
+    "CreateDate": "2023-09-14T11:15:56Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "application-autoscaling:DescribeScalingPolicies",
             "autoscaling:Describe*",
             "cloudwatch:Describe*",
             "cloudwatch:Get*",
@@ -43,7 +44,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2023-06-06T17:33:13Z"
+  "UpdateDate": "2023-09-14T11:15:56Z"
 }
