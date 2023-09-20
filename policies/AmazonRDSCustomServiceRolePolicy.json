@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSCustomServiceRolePolicy",
   "CreateDate": "2021-10-08T21:39:12Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4F2M3XYA7J",
   "PolicyName": "AmazonRDSCustomServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-06-22T23:12:48Z",
+    "CreateDate": "2023-09-20T19:16:42Z",
     "Document": {
       "Statement": [
         {
@@ -463,6 +463,40 @@
         },
         {
           "Action": [
+            "events:DeleteRule",
+            "events:DisableRule",
+            "events:EnableRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Condition": {
+            "StringLike": {
+              "events:ManagedBy": [
+                "custom.rds.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/do-not-delete-rds-custom-*",
+          "Sid": "eb4"
+        },
+        {
+          "Action": [
+            "events:PutRule"
+          ],
+          "Condition": {
+            "StringLike": {
+              "events:ManagedBy": [
+                "custom.rds.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/do-not-delete-rds-custom-*",
+          "Sid": "eb3"
+        },
+        {
+          "Action": [
             "events:PutRule",
             "events:TagResource"
           ],
@@ -663,6 +697,15 @@
         },
         {
           "Action": [
+            "events:DescribeRule",
+            "events:ListTargetsByRule"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/do-not-delete-rds-custom-*",
+          "Sid": "eb5"
+        },
+        {
+          "Action": [
             "iam:GetInstanceProfile",
             "iam:GetPolicy",
             "iam:GetPolicyVersion",
@@ -698,7 +741,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2023-06-22T23:12:48Z"
+  "UpdateDate": "2023-09-20T19:16:42Z"
 }

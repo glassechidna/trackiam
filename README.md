@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 375
-* Unique actions: 15479
+* Unique actions: 15482
 * Managed policies: 1125
 
 Most common managed policy name prefixes:
@@ -162,7 +162,7 @@ The following table summarises the AWS APIs.
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 0 |
-| [`apprunner`](services/apprunner.yml) | 35 | 0 | 5 |
+| [`apprunner`](services/apprunner.yml) | 35 | 2 | 5 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`eks`](services/eks.yml) | 35 | 0 | 1 |
 | [`finspace`](services/finspace.yml) | 34 | 0 | 9 |
@@ -207,8 +207,8 @@ The following table summarises the AWS APIs.
 | [`timestream`](services/timestream.yml) | 27 | 1 | 8 |
 | [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 5 |
 | [`snowball`](services/snowball.yml) | 27 | 0 | 0 |
+| [`servicediscovery`](services/servicediscovery.yml) | 26 | 1 | 0 |
 | [`outposts`](services/outposts.yml) | 26 | 0 | 2 |
-| [`servicediscovery`](services/servicediscovery.yml) | 26 | 0 | 0 |
 | [`private-networks`](services/private-networks.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
@@ -416,12 +416,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2434 |
+| `List` | 2435 |
 | `Get` | 2197 |
 | `Delete` | 1754 |
 | `Create` | 1646 |
 | `Describe` | 1636 |
-| `Update` | 1402 |
+| `Update` | 1403 |
 | `Put` | 432 |
 | `Start` | 341 |
 | `Tag` | 247 |
