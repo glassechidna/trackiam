@@ -372,6 +372,7 @@ Actions:
   - Name: ec2:DisableEbsEncryptionByDefault
   - Name: ec2:DisableFastLaunch
   - Name: ec2:DisableFastSnapshotRestores
+  - Name: ec2:DisableImageBlockPublicAccess
   - Name: ec2:DisableImageDeprecation
   - Name: ec2:DisableIpamOrganizationAdminAccount
   - Name: ec2:DisableSerialConsoleAccess
@@ -398,6 +399,7 @@ Actions:
   - Name: ec2:EnableEbsEncryptionByDefault
   - Name: ec2:EnableFastLaunch
   - Name: ec2:EnableFastSnapshotRestores
+  - Name: ec2:EnableImageBlockPublicAccess
   - Name: ec2:EnableImageDeprecation
   - Name: ec2:EnableIpamOrganizationAdminAccount
   - Name: ec2:EnableReachabilityAnalyzerOrganizationSharing
@@ -424,6 +426,7 @@ Actions:
   - Name: ec2:GetFlowLogsIntegrationTemplate
   - Name: ec2:GetGroupsForCapacityReservation
   - Name: ec2:GetHostReservationPurchasePreview
+  - Name: ec2:GetImageBlockPublicAccessState
   - Name: ec2:GetInstanceTypesFromInstanceRequirements
   - Name: ec2:GetInstanceUefiData
   - Name: ec2:GetIpamAddressHistory
@@ -610,8 +613,3 @@ Actions:
   - Name: ec2:PauseVolumeIO
   - Name: ec2:PutResourcePolicy
   - Name: ec2:SendSpotInstanceInterruptions
-
-  # APIs without an IAM action
-  - Name: ec2:DisableImageBlockPublicAccess
-  - Name: ec2:EnableImageBlockPublicAccess
-  - Name: ec2:GetImageBlockPublicAccessState
