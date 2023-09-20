@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSCustomPreviewServiceRolePolicy",
   "CreateDate": "2021-10-08T21:44:15Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4D6BEPON2G",
   "PolicyName": "AmazonRDSCustomPreviewServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-06-23T00:24:50Z",
+    "CreateDate": "2023-09-20T17:48:39Z",
     "Document": {
       "Statement": [
         {
@@ -446,6 +446,40 @@
         },
         {
           "Action": [
+            "events:DeleteRule",
+            "events:DisableRule",
+            "events:EnableRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Condition": {
+            "StringLike": {
+              "events:ManagedBy": [
+                "custom.rds-preview.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/do-not-delete-rds-custom-*",
+          "Sid": "eb4"
+        },
+        {
+          "Action": [
+            "events:PutRule"
+          ],
+          "Condition": {
+            "StringLike": {
+              "events:ManagedBy": [
+                "custom.rds-preview.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/do-not-delete-rds-custom-*",
+          "Sid": "eb3"
+        },
+        {
+          "Action": [
             "events:PutRule",
             "events:TagResource"
           ],
@@ -611,6 +645,15 @@
         },
         {
           "Action": [
+            "events:DescribeRule",
+            "events:ListTargetsByRule"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/do-not-delete-rds-custom-*",
+          "Sid": "eb5"
+        },
+        {
+          "Action": [
             "iam:GetInstanceProfile",
             "iam:GetPolicy",
             "iam:GetPolicyVersion",
@@ -646,7 +689,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2023-06-23T00:24:50Z"
+  "UpdateDate": "2023-09-20T17:48:39Z"
 }
