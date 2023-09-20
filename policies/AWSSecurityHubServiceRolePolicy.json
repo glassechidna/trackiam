@@ -1,15 +1,29 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSecurityHubServiceRolePolicy",
   "CreateDate": "2018-11-27T23:47:51Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJQPCESDDYDLLSOGYO",
   "PolicyName": "AWSSecurityHubServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-03-17T23:50:43Z",
+    "CreateDate": "2023-09-20T20:43:57Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": [
+                "securityhub.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "cloudtrail:DescribeTrails",
@@ -29,7 +43,28 @@
             "logs:DescribeMetricFilters",
             "organizations:DescribeAccount",
             "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:ListAWSServiceAccessForOrganization",
             "organizations:ListAccounts",
+            "organizations:ListChildren",
+            "securityhub:BatchDisableStandards",
+            "securityhub:BatchEnableStandards",
+            "securityhub:BatchUpdateStandardsControlAssociations",
+            "securityhub:CreateMembers",
+            "securityhub:DeleteMembers",
+            "securityhub:DescribeHub",
+            "securityhub:DescribeOrganizationConfiguration",
+            "securityhub:DescribeStandards",
+            "securityhub:DescribeStandardsControls",
+            "securityhub:DisableSecurityHub",
+            "securityhub:DisassociateMembers",
+            "securityhub:EnableSecurityHub",
+            "securityhub:GetEnabledStandards",
+            "securityhub:ListSecurityControlDefinitions",
+            "securityhub:ListStandardsControlAssociations",
+            "securityhub:UpdateOrganizationConfiguration",
+            "securityhub:UpdateSecurityHubConfiguration",
+            "securityhub:UpdateStandardsControl",
             "sns:ListSubscriptionsByTopic"
           ],
           "Effect": "Allow",
@@ -48,7 +83,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2023-03-17T23:50:43Z"
+  "UpdateDate": "2023-09-20T20:43:57Z"
 }

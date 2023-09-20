@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSSupplyChainFederationAdminAccess",
   "CreateDate": "2023-03-01T18:54:25Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4ILSYMTZA7",
   "PolicyName": "AWSSupplyChainFederationAdminAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-03-01T18:54:25Z",
+    "CreateDate": "2023-09-20T20:11:53Z",
     "Document": {
       "Statement": [
         {
@@ -90,6 +90,21 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:kms:*:*:key/*"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-supply-chain-data-*"
+          ]
         },
         {
           "Action": [
@@ -205,7 +220,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-03-01T18:54:25Z"
+  "UpdateDate": "2023-09-20T20:11:53Z"
 }
