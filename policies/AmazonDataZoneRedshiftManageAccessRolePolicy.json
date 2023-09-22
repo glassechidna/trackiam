@@ -1,0 +1,103 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonDataZoneRedshiftManageAccessRolePolicy",
+  "CreateDate": "2023-09-22T20:15:14Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4K6KUTPP6X",
+  "PolicyName": "AmazonDataZoneRedshiftManageAccessRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-09-22T20:15:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "redshift-serverless:GetNamespace",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift-serverless:*:*:namespace/*"
+          ]
+        },
+        {
+          "Action": "redshift-serverless:GetWorkgroup",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift-serverless:*:*:workgroup/*"
+          ]
+        },
+        {
+          "Action": "redshift:AssociateDataShareConsumer",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceOrgID": "${aws:PrincipalOrgID}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:redshift:*:*:datashare:*/datazone*"
+        },
+        {
+          "Action": [
+            "redshift-data:BatchExecuteStatement",
+            "redshift-data:DescribeTable",
+            "redshift-data:ExecuteStatement",
+            "redshift-data:ListDatabases",
+            "redshift-data:ListSchemas",
+            "redshift-data:ListTables"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift-serverless:*:*:workgroup/*",
+            "arn:aws:redshift:*:*:cluster:*"
+          ]
+        },
+        {
+          "Action": [
+            "redshift:AuthorizeDataShare",
+            "redshift:DescribeDataShares"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift:*:*:datashare:*/datazone*"
+          ]
+        },
+        {
+          "Action": "secretsmanager:ListSecrets",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "redshift-data:DescribeStatement",
+            "redshift-data:GetStatementResult",
+            "redshift:DescribeClusters"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-09-22T20:15:14Z"
+}
