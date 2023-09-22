@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonNimbleStudio-StudioUser",
   "CreateDate": "2021-04-28T04:48:11Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CA37MTXJV",
   "PolicyName": "AmazonNimbleStudio-StudioUser",
   "PolicyVersion": {
-    "CreateDate": "2022-12-20T19:31:23Z",
+    "CreateDate": "2023-09-22T17:45:14Z",
     "Document": {
       "Statement": [
         {
@@ -67,6 +67,18 @@
         },
         {
           "Action": [
+            "identitystore:DescribeUser",
+            "identitystore:ListUsers",
+            "sso-directory:DescribeUsers",
+            "sso-directory:SearchUsers"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
+        {
+          "Action": [
             "nimble:GetFeatureMap",
             "nimble:GetStudioMember",
             "nimble:ListEulaAcceptances",
@@ -76,22 +88,12 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
-        },
-        {
-          "Action": [
-            "sso-directory:DescribeUsers",
-            "sso-directory:SearchUsers"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "*"
-          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2022-12-20T19:31:23Z"
+  "UpdateDate": "2023-09-22T17:45:14Z"
 }
