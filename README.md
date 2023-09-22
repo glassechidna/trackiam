@@ -123,6 +123,7 @@ The following table summarises the AWS APIs.
 | [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 0 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
+| [`lookoutequipment`](services/lookoutequipment.yml) | 49 | 0 | 0 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 49 | 0 | 0 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
@@ -140,7 +141,6 @@ The following table summarises the AWS APIs.
 | [`transcribe`](services/transcribe.yml) | 42 | 0 | 3 |
 | [`ivs`](services/ivs.yml) | 42 | 0 | 0 |
 | [`fms`](services/fms.yml) | 42 | 0 | 0 |
-| [`lookoutequipment`](services/lookoutequipment.yml) | 41 | 8 | 0 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
 | [`fsx`](services/fsx.yml) | 41 | 0 | 5 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
