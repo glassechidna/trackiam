@@ -64,10 +64,10 @@ The following table summarises the AWS APIs.
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
 | [`s3`](services/s3.yml) | 85 | 58 | 45 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 0 |
+| [`workmail`](services/workmail.yml) | 84 | 0 | 51 |
 | [`comprehend`](services/comprehend.yml) | 84 | 0 | 0 |
 | [`omics`](services/omics.yml) | 82 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
-| [`workmail`](services/workmail.yml) | 80 | 4 | 51 |
 | [`macie2`](services/macie2.yml) | 79 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 78 | 0 | 11 |
 | [`es`](services/es.yml) | 78 | 0 | 10 |

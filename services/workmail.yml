@@ -27,6 +27,7 @@ Actions:
   - Name: workmail:DeregisterFromWorkMail
   - Name: workmail:DeregisterMailDomain
   - Name: workmail:DescribeEmailMonitoringConfiguration
+  - Name: workmail:DescribeEntity
   - Name: workmail:DescribeGroup
   - Name: workmail:DescribeInboundDmarcSettings
   - Name: workmail:DescribeMailboxExportJob
@@ -48,6 +49,7 @@ Actions:
   - Name: workmail:ListAvailabilityConfigurations
   - Name: workmail:ListGroupMembers
   - Name: workmail:ListGroups
+  - Name: workmail:ListGroupsForEntity
   - Name: workmail:ListImpersonationRoles
   - Name: workmail:ListMailDomains
   - Name: workmail:ListMailboxExportJobs
@@ -74,11 +76,13 @@ Actions:
   - Name: workmail:UntagResource
   - Name: workmail:UpdateAvailabilityConfiguration
   - Name: workmail:UpdateDefaultMailDomain
+  - Name: workmail:UpdateGroup
   - Name: workmail:UpdateImpersonationRole
   - Name: workmail:UpdateMailboxQuota
   - Name: workmail:UpdateMobileDeviceAccessRule
   - Name: workmail:UpdatePrimaryEmailAddress
   - Name: workmail:UpdateResource
+  - Name: workmail:UpdateUser
 
   # actions with no corresponding API
   - Name: workmail:AddMembersToGroup
@@ -132,9 +136,3 @@ Actions:
   - Name: workmail:UpdateOutboundMailFlowRule
   - Name: workmail:UpdateSmtpGateway
   - Name: workmail:WipeMobileDevice
-
-  # APIs without an IAM action
-  - Name: workmail:DescribeEntity
-  - Name: workmail:ListGroupsForEntity
-  - Name: workmail:UpdateGroup
-  - Name: workmail:UpdateUser
