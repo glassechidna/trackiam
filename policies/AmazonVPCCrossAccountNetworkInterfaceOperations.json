@@ -1,15 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonVPCCrossAccountNetworkInterfaceOperations",
   "CreateDate": "2017-07-18T20:47:16Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ53Y4ZY5OHP4CNRJC",
   "PolicyName": "AmazonVPCCrossAccountNetworkInterfaceOperations",
   "PolicyVersion": {
-    "CreateDate": "2020-06-16T14:16:49Z",
+    "CreateDate": "2023-09-25T15:12:17Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "ec2:AssignIpv6Addresses",
+            "ec2:UnassignIpv6Addresses"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
+        },
         {
           "Action": [
             "ec2:AssignPrivateIpAddresses",
@@ -56,7 +66,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-06-16T14:16:49Z"
+  "UpdateDate": "2023-09-25T15:12:17Z"
 }
