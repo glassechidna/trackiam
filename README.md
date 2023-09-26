@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 375
-* Unique actions: 15517
+* Unique services: 374
+* Unique actions: 15601
 * Managed policies: 1130
 
 Most common managed policy name prefixes:
@@ -340,6 +340,7 @@ The following table summarises the AWS APIs.
 | [`macie`](services/macie.yml) | 0 | 7 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`awsssooidc`](services/awsssooidc.yml) | 0 | 3 | 0 |
+| [`datazone`](services/datazone.yml) | 0 | 0 | 118 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 68 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
@@ -347,7 +348,6 @@ The following table summarises the AWS APIs.
 | [`bedrock`](services/bedrock.yml) | 0 | 0 | 50 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 41 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
-| [`datazonecontrol`](services/datazonecontrol.yml) | 0 | 0 | 29 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 28 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
@@ -384,7 +384,6 @@ The following table summarises the AWS APIs.
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 5 |
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 5 |
-| [`datazone`](services/datazone.yml) | 0 | 0 | 5 |
 | [`supportplans`](services/supportplans.yml) | 0 | 0 | 4 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
@@ -416,14 +415,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2443 |
-| `Get` | 2204 |
-| `Delete` | 1758 |
-| `Create` | 1652 |
+| `List` | 2450 |
+| `Get` | 2220 |
+| `Delete` | 1774 |
+| `Create` | 1668 |
 | `Describe` | 1636 |
-| `Update` | 1408 |
-| `Put` | 432 |
-| `Start` | 342 |
+| `Update` | 1420 |
+| `Put` | 434 |
+| `Start` | 343 |
 | `Tag` | 247 |
 | `Untag` | 244 |
 
