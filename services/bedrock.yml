@@ -1,4 +1,18 @@
 Actions:
+  - Name: bedrock:CreateModelCustomizationJob
+  - Name: bedrock:DeleteCustomModel
+  - Name: bedrock:GetCustomModel
+  - Name: bedrock:GetFoundationModel
+  - Name: bedrock:GetModelCustomizationJob
+  - Name: bedrock:InvokeModel
+  - Name: bedrock:InvokeModelWithResponseStream
+  - Name: bedrock:ListCustomModels
+  - Name: bedrock:ListFoundationModels
+  - Name: bedrock:ListModelCustomizationJobs
+  - Name: bedrock:ListTagsForResource
+  - Name: bedrock:StopModelCustomizationJob
+  - Name: bedrock:TagResource
+  - Name: bedrock:UntagResource
 
   # actions with no corresponding API
   - Name: bedrock:AssociateAgentKnowledgeBase
@@ -9,8 +23,6 @@ Actions:
   - Name: bedrock:CreateAgentDraftSnapshot
   - Name: bedrock:CreateDataSource
   - Name: bedrock:CreateKnowledgeBase
-  - Name: bedrock:CreateModelCustomizationJob
-  - Name: bedrock:DeleteCustomModel
   - Name: bedrock:DeleteDataSource
   - Name: bedrock:DeleteKnowledgeBase
   - Name: bedrock:DisassociateAgentKnowledgeBase
@@ -19,35 +31,28 @@ Actions:
   - Name: bedrock:GetAgentAlias
   - Name: bedrock:GetAgentKnowledgeBase
   - Name: bedrock:GetAgentVersion
-  - Name: bedrock:GetCustomModel
   - Name: bedrock:GetDataSource
-  - Name: bedrock:GetFoundationModel
   - Name: bedrock:GetIngestionJob
   - Name: bedrock:GetKnowledgeBase
-  - Name: bedrock:GetModelCustomizationJob
   - Name: bedrock:InvokeAgent
-  - Name: bedrock:InvokeModel
-  - Name: bedrock:InvokeModelWithResponseStream
   - Name: bedrock:ListAgentActionGroups
   - Name: bedrock:ListAgentAliases
   - Name: bedrock:ListAgentKnowledgeBases
   - Name: bedrock:ListAgentVersions
   - Name: bedrock:ListAgents
-  - Name: bedrock:ListCustomModels
   - Name: bedrock:ListDataSources
-  - Name: bedrock:ListFoundationModels
   - Name: bedrock:ListIngestionJobs
   - Name: bedrock:ListKnowledgeBases
-  - Name: bedrock:ListModelCustomizationJobs
-  - Name: bedrock:ListTagsForResource
   - Name: bedrock:QueryKnowledgeBase
   - Name: bedrock:StartIngestionJob
-  - Name: bedrock:StopModelCustomizationJob
-  - Name: bedrock:TagResource
-  - Name: bedrock:UntagResource
   - Name: bedrock:UpdateAgent
   - Name: bedrock:UpdateAgentActionGroup
   - Name: bedrock:UpdateAgentAlias
   - Name: bedrock:UpdateAgentKnowledgeBase
   - Name: bedrock:UpdateDataSource
   - Name: bedrock:UpdateKnowledgeBase
+
+  # APIs without an IAM action
+  - Name: bedrock:DeleteModelInvocationLoggingConfiguration
+  - Name: bedrock:GetModelInvocationLoggingConfiguration
+  - Name: bedrock:PutModelInvocationLoggingConfiguration

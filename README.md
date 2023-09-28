@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 374
-* Unique actions: 15606
+* Unique actions: 15611
 * Managed policies: 1131
 
 Most common managed policy name prefixes:
@@ -117,10 +117,10 @@ The following table summarises the AWS APIs.
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
 | [`logs`](services/logs.yml) | 51 | 0 | 9 |
 | [`profile`](services/profile.yml) | 51 | 0 | 0 |
+| [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 2 | 0 |
 | [`drs`](services/drs.yml) | 50 | 0 | 40 |
 | [`mediaconnect`](services/mediaconnect.yml) | 50 | 0 | 3 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
-| [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 0 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 49 | 0 | 0 |
@@ -273,6 +273,7 @@ The following table summarises the AWS APIs.
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
 | [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
+| [`bedrock`](services/bedrock.yml) | 14 | 3 | 36 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`osis`](services/osis.yml) | 14 | 0 | 1 |
@@ -345,7 +346,6 @@ The following table summarises the AWS APIs.
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 50 |
-| [`bedrock`](services/bedrock.yml) | 0 | 0 | 50 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 0 | 41 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 28 |
@@ -416,12 +416,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2451 |
-| `Get` | 2220 |
-| `Delete` | 1775 |
+| `Get` | 2222 |
+| `Delete` | 1776 |
 | `Create` | 1669 |
 | `Describe` | 1636 |
 | `Update` | 1422 |
-| `Put` | 434 |
+| `Put` | 436 |
 | `Start` | 343 |
 | `Tag` | 247 |
 | `Untag` | 244 |
