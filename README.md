@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 374
-* Unique actions: 15611
+* Unique actions: 15623
 * Managed policies: 1131
 
 Most common managed policy name prefixes:
@@ -257,6 +257,7 @@ The following table summarises the AWS APIs.
 | [`ssm-sap`](services/ssm-sap.yml) | 18 | 0 | 3 |
 | [`resource-groups`](services/resource-groups.yml) | 18 | 0 | 1 |
 | [`medical-imaging`](services/medical-imaging.yml) | 18 | 0 | 0 |
+| [`bedrock`](services/bedrock.yml) | 17 | 0 | 48 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 17 | 0 | 34 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`rum`](services/rum.yml) | 17 | 0 | 0 |
@@ -273,7 +274,6 @@ The following table summarises the AWS APIs.
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
 | [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
-| [`bedrock`](services/bedrock.yml) | 14 | 3 | 36 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`osis`](services/osis.yml) | 14 | 0 | 1 |
@@ -415,13 +415,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2451 |
-| `Get` | 2222 |
-| `Delete` | 1776 |
-| `Create` | 1669 |
+| `List` | 2453 |
+| `Get` | 2225 |
+| `Delete` | 1778 |
+| `Create` | 1671 |
 | `Describe` | 1636 |
-| `Update` | 1422 |
-| `Put` | 436 |
+| `Update` | 1423 |
+| `Put` | 438 |
 | `Start` | 343 |
 | `Tag` | 247 |
 | `Untag` | 244 |

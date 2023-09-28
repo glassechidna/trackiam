@@ -1,15 +1,18 @@
 Actions:
   - Name: bedrock:CreateModelCustomizationJob
   - Name: bedrock:DeleteCustomModel
+  - Name: bedrock:DeleteModelInvocationLoggingConfiguration
   - Name: bedrock:GetCustomModel
   - Name: bedrock:GetFoundationModel
   - Name: bedrock:GetModelCustomizationJob
+  - Name: bedrock:GetModelInvocationLoggingConfiguration
   - Name: bedrock:InvokeModel
   - Name: bedrock:InvokeModelWithResponseStream
   - Name: bedrock:ListCustomModels
   - Name: bedrock:ListFoundationModels
   - Name: bedrock:ListModelCustomizationJobs
   - Name: bedrock:ListTagsForResource
+  - Name: bedrock:PutModelInvocationLoggingConfiguration
   - Name: bedrock:StopModelCustomizationJob
   - Name: bedrock:TagResource
   - Name: bedrock:UntagResource
@@ -22,9 +25,13 @@ Actions:
   - Name: bedrock:CreateAgentAlias
   - Name: bedrock:CreateAgentDraftSnapshot
   - Name: bedrock:CreateDataSource
+  - Name: bedrock:CreateFoundationModelAgreement
   - Name: bedrock:CreateKnowledgeBase
+  - Name: bedrock:CreateProvisionedModelThroughput
   - Name: bedrock:DeleteDataSource
+  - Name: bedrock:DeleteFoundationModelAgreement
   - Name: bedrock:DeleteKnowledgeBase
+  - Name: bedrock:DeleteProvisionedModelThroughput
   - Name: bedrock:DisassociateAgentKnowledgeBase
   - Name: bedrock:GetAgent
   - Name: bedrock:GetAgentActionGroup
@@ -32,8 +39,11 @@ Actions:
   - Name: bedrock:GetAgentKnowledgeBase
   - Name: bedrock:GetAgentVersion
   - Name: bedrock:GetDataSource
+  - Name: bedrock:GetFoundationModelAvailability
   - Name: bedrock:GetIngestionJob
   - Name: bedrock:GetKnowledgeBase
+  - Name: bedrock:GetProvisionedModelThroughput
+  - Name: bedrock:GetUseCaseForModelAccess
   - Name: bedrock:InvokeAgent
   - Name: bedrock:ListAgentActionGroups
   - Name: bedrock:ListAgentAliases
@@ -41,8 +51,12 @@ Actions:
   - Name: bedrock:ListAgentVersions
   - Name: bedrock:ListAgents
   - Name: bedrock:ListDataSources
+  - Name: bedrock:ListFoundationModelAgreementOffers
   - Name: bedrock:ListIngestionJobs
   - Name: bedrock:ListKnowledgeBases
+  - Name: bedrock:ListProvisionedModelThroughputs
+  - Name: bedrock:PutFoundationModelEntitlement
+  - Name: bedrock:PutUseCaseForModelAccess
   - Name: bedrock:QueryKnowledgeBase
   - Name: bedrock:StartIngestionJob
   - Name: bedrock:UpdateAgent
@@ -51,8 +65,4 @@ Actions:
   - Name: bedrock:UpdateAgentKnowledgeBase
   - Name: bedrock:UpdateDataSource
   - Name: bedrock:UpdateKnowledgeBase
-
-  # APIs without an IAM action
-  - Name: bedrock:DeleteModelInvocationLoggingConfiguration
-  - Name: bedrock:GetModelInvocationLoggingConfiguration
-  - Name: bedrock:PutModelInvocationLoggingConfiguration
+  - Name: bedrock:UpdateProvisionedModelThroughput
