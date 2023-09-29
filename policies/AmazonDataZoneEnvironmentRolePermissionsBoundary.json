@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDataZoneEnvironmentRolePermissionsBoundary",
   "CreateDate": "2023-09-11T23:38:22Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4C3KB6Q3VE",
   "PolicyName": "AmazonDataZoneEnvironmentRolePermissionsBoundary",
   "PolicyVersion": {
-    "CreateDate": "2023-09-14T19:33:50Z",
+    "CreateDate": "2023-09-29T05:12:51Z",
     "Document": {
       "Statement": [
         {
@@ -25,7 +25,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:network-interface/*"
-          ]
+          ],
+          "Sid": "CreateGlueConnection"
         },
         {
           "Action": [
@@ -101,7 +102,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "GlueOperations"
         },
         {
           "Action": [
@@ -115,7 +117,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/datazone*"
-          ]
+          ],
+          "Sid": "PassRole"
         },
         {
           "Action": [
@@ -133,7 +136,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "KmsOperationsWithResourceTag"
         },
         {
           "Action": [
@@ -147,7 +151,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "SameAccountKmsOperations"
         },
         {
           "Action": [
@@ -164,7 +169,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "ListDataZoneS3Bucket"
         },
         {
           "Action": [
@@ -187,7 +193,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:secretsmanager:*:*:secret:AmazonDataZone-*"
+          "Resource": "arn:aws:secretsmanager:*:*:secret:AmazonDataZone-*",
+          "Sid": "SecretsManagerOperationsWithTagKeys"
         },
         {
           "Action": [
@@ -204,14 +211,22 @@
             "athena:ExportNotebook",
             "athena:GetDataCatalog",
             "athena:GetDatabase",
+            "athena:GetNamedQuery",
+            "athena:GetPreparedStatement",
             "athena:GetQueryExecution",
             "athena:GetQueryResults",
+            "athena:GetQueryRuntimeStatistics",
             "athena:GetTableMetadata",
             "athena:GetWorkGroup",
             "athena:ImportNotebook",
             "athena:ListDataCatalogs",
             "athena:ListDatabases",
+            "athena:ListEngineVersions",
+            "athena:ListNamedQueries",
+            "athena:ListPreparedStatements",
+            "athena:ListQueryExecutions",
             "athena:ListTableMetadata",
+            "athena:ListTagsForResource",
             "athena:ListWorkGroups",
             "athena:StartCalculationExecution",
             "athena:StartQueryExecution",
@@ -231,6 +246,7 @@
             "glue:BatchDeleteTable",
             "glue:BatchDeleteTableVersion",
             "glue:BatchGetJobs",
+            "glue:BatchGetPartition",
             "glue:BatchGetWorkflows",
             "glue:BatchUpdatePartition",
             "glue:CreateBlueprint",
@@ -307,12 +323,14 @@
             "redshift:DescribeClusters",
             "redshift:DescribeDataShares",
             "redshift:GetClusterCredentials",
+            "redshift:GetClusterCredentialsWithIAM",
             "redshift:JoinGroup",
             "secretsmanager:ListSecrets",
             "tag:GetResources"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "QueryOperations"
         },
         {
           "Action": [
@@ -320,25 +338,33 @@
             "sqlworkbench:*"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AnalyticsOperations"
         },
         {
           "Action": [
             "s3:AbortMultipartUpload",
+            "s3:DeleteObject",
+            "s3:DeleteObjectVersion",
             "s3:GetObject",
-            "s3:PutObject"
+            "s3:PutObject",
+            "s3:PutObjectRetention",
+            "s3:ReplicateObject",
+            "s3:RestoreObject"
           ],
           "Effect": "Allow",
           "Resource": [
             "arn:aws:s3:::*/datazone/*"
-          ]
+          ],
+          "Sid": "DataZoneS3Buckets"
         },
         {
           "Action": [
             "s3:GetBucketLocation"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DataZoneS3BucketLocation"
         },
         {
           "Effect": "Deny",
@@ -356,14 +382,22 @@
             "athena:ExportNotebook",
             "athena:GetDataCatalog",
             "athena:GetDatabase",
+            "athena:GetNamedQuery",
+            "athena:GetPreparedStatement",
             "athena:GetQueryExecution",
             "athena:GetQueryResults",
+            "athena:GetQueryRuntimeStatistics",
             "athena:GetTableMetadata",
             "athena:GetWorkGroup",
             "athena:ImportNotebook",
             "athena:ListDataCatalogs",
             "athena:ListDatabases",
+            "athena:ListEngineVersions",
+            "athena:ListNamedQueries",
+            "athena:ListPreparedStatements",
+            "athena:ListQueryExecutions",
             "athena:ListTableMetadata",
+            "athena:ListTagsForResource",
             "athena:ListWorkGroups",
             "athena:StartCalculationExecution",
             "athena:StartQueryExecution",
@@ -388,6 +422,7 @@
             "glue:BatchDeleteTable",
             "glue:BatchDeleteTableVersion",
             "glue:BatchGetJobs",
+            "glue:BatchGetPartition",
             "glue:BatchGetWorkflows",
             "glue:BatchStopJobRun",
             "glue:BatchUpdatePartition",
@@ -491,12 +526,18 @@
             "redshift:DescribeClusters",
             "redshift:DescribeDataShares",
             "redshift:GetClusterCredentials",
+            "redshift:GetClusterCredentialsWithIAM",
             "redshift:JoinGroup",
             "s3:AbortMultipartUpload",
+            "s3:DeleteObject",
+            "s3:DeleteObjectVersion",
             "s3:GetBucketLocation",
             "s3:GetObject",
             "s3:ListBucket",
             "s3:PutObject",
+            "s3:PutObjectRetention",
+            "s3:ReplicateObject",
+            "s3:RestoreObject",
             "secretsmanager:CreateSecret",
             "secretsmanager:ListSecrets",
             "secretsmanager:TagResource",
@@ -505,13 +546,14 @@
           ],
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "NotDeniedOperations"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-09-14T19:33:50Z"
+  "UpdateDate": "2023-09-29T05:12:51Z"
 }
