@@ -158,11 +158,11 @@ The following table summarises the AWS APIs.
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
 | [`sso`](services/sso.yml) | 37 | 0 | 55 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
+| [`apprunner`](services/apprunner.yml) | 37 | 0 | 5 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 0 |
-| [`apprunner`](services/apprunner.yml) | 35 | 2 | 5 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`eks`](services/eks.yml) | 35 | 0 | 1 |
 | [`finspace`](services/finspace.yml) | 34 | 0 | 9 |

@@ -24,6 +24,7 @@ Actions:
   - Name: apprunner:ListObservabilityConfigurations
   - Name: apprunner:ListOperations
   - Name: apprunner:ListServices
+  - Name: apprunner:ListServicesForAutoScalingConfiguration
   - Name: apprunner:ListTagsForResource
   - Name: apprunner:ListVpcConnectors
   - Name: apprunner:ListVpcIngressConnections
@@ -32,6 +33,7 @@ Actions:
   - Name: apprunner:StartDeployment
   - Name: apprunner:TagResource
   - Name: apprunner:UntagResource
+  - Name: apprunner:UpdateDefaultAutoScalingConfiguration
   - Name: apprunner:UpdateService
   - Name: apprunner:UpdateVpcIngressConnection
 
@@ -41,7 +43,3 @@ Actions:
   - Name: apprunner:DescribeWebAclForService
   - Name: apprunner:DisassociateWebAcl
   - Name: apprunner:ListAssociatedServicesForWebAcl
-
-  # APIs without an IAM action
-  - Name: apprunner:ListServicesForAutoScalingConfiguration
-  - Name: apprunner:UpdateDefaultAutoScalingConfiguration
