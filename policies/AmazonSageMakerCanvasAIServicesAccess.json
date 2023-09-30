@@ -1,15 +1,23 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerCanvasAIServicesAccess",
   "CreateDate": "2023-03-23T22:36:43Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4IA6MZINCJ",
   "PolicyName": "AmazonSageMakerCanvasAIServicesAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-03-23T22:36:43Z",
+    "CreateDate": "2023-09-30T00:15:02Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "bedrock:InvokeModel",
+            "bedrock:ListFoundationModels"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "comprehend:BatchDetectDominantLanguage",
@@ -48,7 +56,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-03-23T22:36:43Z"
+  "UpdateDate": "2023-09-30T00:15:02Z"
 }

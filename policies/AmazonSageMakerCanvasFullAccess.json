@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerCanvasFullAccess",
   "CreateDate": "2022-09-09T00:44:25Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LG6L7ZJCN",
   "PolicyName": "AmazonSageMakerCanvasFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-08-29T19:06:22Z",
+    "CreateDate": "2023-09-30T00:15:42Z",
     "Document": {
       "Statement": [
         {
@@ -22,7 +22,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:application-autoscaling:*:*:scalable-target/*"
+          "Resource": "arn:aws:application-autoscaling:*:*:scalable-target/*",
+          "Sid": "AutoscalingOperations"
         },
         {
           "Action": [
@@ -34,7 +35,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/*"
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "IAMPassOperationForForecast"
         },
         {
           "Action": [
@@ -46,7 +48,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/*"
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "IAMPassOperation"
         },
         {
           "Action": [
@@ -59,7 +62,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "SecretManagerTagBasedOperation"
         },
         {
           "Action": "glue:SearchTables",
@@ -68,12 +72,31 @@
             "arn:aws:glue:*:*:catalog",
             "arn:aws:glue:*:*:database/*",
             "arn:aws:glue:*:*:table/*/*"
-          ]
+          ],
+          "Sid": "GlueOperations"
         },
         {
           "Action": "rds:DescribeDBInstances",
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "RDSOperation"
+        },
+        {
+          "Action": "s3:GetObject",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::jumpstart-cache-prod-ap-northeast-1/*",
+            "arn:aws:s3:::jumpstart-cache-prod-ap-northeast-2/*",
+            "arn:aws:s3:::jumpstart-cache-prod-ap-south-1/*",
+            "arn:aws:s3:::jumpstart-cache-prod-ap-southeast-1/*",
+            "arn:aws:s3:::jumpstart-cache-prod-ap-southeast-2/*",
+            "arn:aws:s3:::jumpstart-cache-prod-eu-central-1/*",
+            "arn:aws:s3:::jumpstart-cache-prod-eu-west-1/*",
+            "arn:aws:s3:::jumpstart-cache-prod-us-east-1/*",
+            "arn:aws:s3:::jumpstart-cache-prod-us-east-2/*",
+            "arn:aws:s3:::jumpstart-cache-prod-us-west-2/*"
+          ],
+          "Sid": "ReadSageMakerJumpstartArtifacts"
         },
         {
           "Action": [
@@ -85,7 +108,8 @@
             "ec2:DescribeVpcs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "EC2VPCOperation"
         },
         {
           "Action": [
@@ -94,7 +118,8 @@
             "ecr:GetDownloadUrlForLayer"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ECROperations"
         },
         {
           "Action": [
@@ -128,14 +153,16 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:forecast:*:*:*Canvas*"
-          ]
+          ],
+          "Sid": "ForecastOperations"
         },
         {
           "Action": [
             "iam:GetRole"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/*"
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "IAMGetOperations"
         },
         {
           "Action": [
@@ -144,7 +171,8 @@
             "logs:PutLogEvents"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:logs:*:*:log-group:/aws/sagemaker/*"
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/sagemaker/*",
+          "Sid": "LoggingOperation"
         },
         {
           "Action": [
@@ -157,7 +185,8 @@
             "redshift-data:ListTables"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "RedshiftOperations"
         },
         {
           "Action": [
@@ -167,7 +196,8 @@
           "Resource": [
             "arn:aws:redshift:*:*:dbname:*",
             "arn:aws:redshift:*:*:dbuser:*/sagemaker_access*"
-          ]
+          ],
+          "Sid": "RedshiftGetCredentialsOperation"
         },
         {
           "Action": [
@@ -183,7 +213,8 @@
             "arn:aws:s3:::*SageMaker*",
             "arn:aws:s3:::*Sagemaker*",
             "arn:aws:s3:::*sagemaker*"
-          ]
+          ],
+          "Sid": "S3Operations"
         },
         {
           "Action": [
@@ -191,7 +222,8 @@
             "s3:ListBucket"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "S3ListOperations"
         },
         {
           "Action": [
@@ -219,7 +251,8 @@
             "arn:aws:sagemaker:*:*:*Canvas*",
             "arn:aws:sagemaker:*:*:*canvas*",
             "arn:aws:sagemaker:*:*:*model-compilation-*"
-          ]
+          ],
+          "Sid": "SageMakerTrainingOperations"
         },
         {
           "Action": [
@@ -232,7 +265,21 @@
           "Resource": [
             "arn:aws:sagemaker:*:*:model-package-group/*",
             "arn:aws:sagemaker:*:*:model-package/*"
-          ]
+          ],
+          "Sid": "SageMakerPackageGroupOperations"
+        },
+        {
+          "Action": [
+            "sagemaker:DeleteEndpointConfig",
+            "sagemaker:DeleteModel",
+            "sagemaker:InvokeEndpoint"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:*Canvas*",
+            "arn:aws:sagemaker:*:*:*canvas*"
+          ],
+          "Sid": "SageMakerHostingOperations"
         },
         {
           "Action": [
@@ -243,7 +290,8 @@
             "sagemaker:ListTags"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "SageMakerUserDetailsAndPackageOperations"
         },
         {
           "Action": [
@@ -255,13 +303,14 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:secretsmanager:*:*:secret:AmazonSageMaker-*"
-          ]
+          ],
+          "Sid": "SecretsManagerARNBasedOperation"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2023-08-29T19:06:22Z"
+  "UpdateDate": "2023-09-30T00:15:42Z"
 }
