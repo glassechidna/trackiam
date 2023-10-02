@@ -231,6 +231,7 @@ The following table summarises the AWS APIs.
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
+| [`bedrock`](services/bedrock.yml) | 22 | 0 | 43 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 0 |
@@ -257,7 +258,6 @@ The following table summarises the AWS APIs.
 | [`ssm-sap`](services/ssm-sap.yml) | 18 | 0 | 3 |
 | [`resource-groups`](services/resource-groups.yml) | 18 | 0 | 1 |
 | [`medical-imaging`](services/medical-imaging.yml) | 18 | 0 | 0 |
-| [`bedrock`](services/bedrock.yml) | 17 | 0 | 48 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 17 | 0 | 34 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`rum`](services/rum.yml) | 17 | 0 | 0 |
