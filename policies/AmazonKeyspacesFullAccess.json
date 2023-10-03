@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonKeyspacesFullAccess",
   "CreateDate": "2020-04-23T17:06:37Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HMS72N6JG",
   "PolicyName": "AmazonKeyspacesFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-06-05T15:21:18Z",
+    "CreateDate": "2023-10-03T19:12:30Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/aws-service-role/cassandra.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_CassandraTable"
+          "Resource": "arn:aws:iam::*:role/aws-service-role/cassandra.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_CassandraTable",
+          "Sid": "ApplicationAutoscalingServiceLinkedRole"
         },
         {
           "Action": "iam:CreateServiceLinkedRole",
@@ -28,7 +29,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/aws-service-role/replication.cassandra.amazonaws.com/AWSServiceRoleForKeyspacesReplication"
+          "Resource": "arn:aws:iam::*:role/aws-service-role/replication.cassandra.amazonaws.com/AWSServiceRoleForKeyspacesReplication",
+          "Sid": "KeyspacesReplicationServiceLinkedRole"
         },
         {
           "Action": [
@@ -46,14 +48,16 @@
             "kms:ListAliases"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ApplicationAutoscalingFullAccess"
         },
         {
           "Action": [
             "cassandra:*"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "CassandraFullAccess"
         },
         {
           "Action": [
@@ -63,13 +67,23 @@
             "cloudwatch:PutMetricAlarm"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "CloudwatchAlarmsFullAccess"
+        },
+        {
+          "Action": [
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeVpcEndpoints"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Ec2VpcReadAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2023-06-05T15:21:18Z"
+  "UpdateDate": "2023-10-03T19:12:30Z"
 }
