@@ -81,6 +81,7 @@ The following table summarises the AWS APIs.
 | [`personalize`](services/personalize.yml) | 72 | 0 | 4 |
 | [`rekognition`](services/rekognition.yml) | 72 | 0 | 1 |
 | [`cloudformation`](services/cloudformation.yml) | 70 | 0 | 11 |
+| [`wellarchitected`](services/wellarchitected.yml) | 70 | 0 | 0 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 68 | 0 | 1 |
 | [`athena`](services/athena.yml) | 68 | 0 | 1 |
@@ -104,7 +105,6 @@ The following table summarises the AWS APIs.
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 0 |
 | [`geo`](services/geo.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
-| [`wellarchitected`](services/wellarchitected.yml) | 56 | 14 | 0 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 2 |
 | [`events`](services/events.yml) | 56 | 0 | 1 |
 | [`imagebuilder`](services/imagebuilder.yml) | 56 | 0 | 0 |
