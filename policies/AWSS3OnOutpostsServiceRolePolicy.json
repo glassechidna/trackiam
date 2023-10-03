@@ -1,0 +1,124 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSS3OnOutpostsServiceRolePolicy",
+  "CreateDate": "2023-10-03T20:32:36Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4PIWKEWQEU",
+  "PolicyName": "AWSS3OnOutpostsServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-10-03T20:32:36Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:AllocateAddress"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "S3 On Outposts"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:elastic-ip/*"
+          ],
+          "Sid": "CreateTagsForAllocateIpAddress"
+        },
+        {
+          "Action": [
+            "ec2:AssociateAddress",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission",
+            "ec2:DisassociateAddress",
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "ec2:ReleaseAddress"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "S3 On Outposts"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReleaseVpcResources"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "S3 On Outposts"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*"
+          ],
+          "Sid": "CreateTagsForCreateNetworkInterface"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": [
+                "S3 On Outposts"
+              ],
+              "ec2:CreateAction": [
+                "AllocateAddress",
+                "CreateNetworkInterface"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CreateTags"
+        },
+        {
+          "Action": [
+            "ec2:AllocateAddress"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:ipv4pool-ec2/*"
+          ],
+          "Sid": "AllocateIpAddress"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "CreateNetworkInterface"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAddresses",
+            "ec2:DescribeCoipPools",
+            "ec2:DescribeLocalGatewayRouteTableVpcAssociations",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "ec2:GetCoipPoolUsage"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeVpcResources"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-10-03T20:32:36Z"
+}
