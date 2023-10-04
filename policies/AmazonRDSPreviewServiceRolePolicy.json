@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSPreviewServiceRolePolicy",
   "CreateDate": "2018-05-31T18:02:00Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIZHJJBU3675JOUEMQ",
   "PolicyName": "AmazonRDSPreviewServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-12-13T15:53:59Z",
+    "CreateDate": "2023-10-04T19:01:52Z",
     "Document": {
       "Statement": [
         {
@@ -33,9 +33,9 @@
           "Condition": {
             "StringEquals": {
               "cloudwatch:namespace": [
-                "AWS/DocDB",
-                "AWS/Neptune",
-                "AWS/RDS",
+                "AWS/DocDB-Preview",
+                "AWS/Neptune-Preview",
+                "AWS/RDS-Preview",
                 "AWS/Usage"
               ]
             }
@@ -141,7 +141,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2022-12-13T15:53:59Z"
+  "UpdateDate": "2023-10-04T19:01:52Z"
 }

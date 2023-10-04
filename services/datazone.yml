@@ -1,6 +1,4 @@
 Actions:
-
-  # actions with no corresponding API
   - Name: datazone:AcceptPredictions
   - Name: datazone:AcceptSubscriptionRequest
   - Name: datazone:CancelSubscription
@@ -10,7 +8,6 @@ Actions:
   - Name: datazone:CreateDataSource
   - Name: datazone:CreateDomain
   - Name: datazone:CreateEnvironment
-  - Name: datazone:CreateEnvironmentBlueprint
   - Name: datazone:CreateEnvironmentProfile
   - Name: datazone:CreateFormType
   - Name: datazone:CreateGlossary
@@ -27,9 +24,7 @@ Actions:
   - Name: datazone:DeleteAssetType
   - Name: datazone:DeleteDataSource
   - Name: datazone:DeleteDomain
-  - Name: datazone:DeleteDomainSharingPolicy
   - Name: datazone:DeleteEnvironment
-  - Name: datazone:DeleteEnvironmentBlueprint
   - Name: datazone:DeleteEnvironmentBlueprintConfiguration
   - Name: datazone:DeleteEnvironmentProfile
   - Name: datazone:DeleteFormType
@@ -46,12 +41,9 @@ Actions:
   - Name: datazone:GetDataSource
   - Name: datazone:GetDataSourceRun
   - Name: datazone:GetDomain
-  - Name: datazone:GetDomainSharingPolicy
   - Name: datazone:GetEnvironment
-  - Name: datazone:GetEnvironmentActionLink
   - Name: datazone:GetEnvironmentBlueprint
   - Name: datazone:GetEnvironmentBlueprintConfiguration
-  - Name: datazone:GetEnvironmentCredentials
   - Name: datazone:GetEnvironmentProfile
   - Name: datazone:GetFormType
   - Name: datazone:GetGlossary
@@ -61,12 +53,10 @@ Actions:
   - Name: datazone:GetListing
   - Name: datazone:GetProject
   - Name: datazone:GetSubscription
-  - Name: datazone:GetSubscriptionEligibility
   - Name: datazone:GetSubscriptionGrant
   - Name: datazone:GetSubscriptionRequestDetails
   - Name: datazone:GetSubscriptionTarget
   - Name: datazone:GetUserProfile
-  - Name: datazone:ListAccountEnvironments
   - Name: datazone:ListAssetRevisions
   - Name: datazone:ListDataSourceRunActivities
   - Name: datazone:ListDataSourceRuns
@@ -76,7 +66,6 @@ Actions:
   - Name: datazone:ListEnvironmentBlueprints
   - Name: datazone:ListEnvironmentProfiles
   - Name: datazone:ListEnvironments
-  - Name: datazone:ListGroupsForUser
   - Name: datazone:ListNotifications
   - Name: datazone:ListProjectMemberships
   - Name: datazone:ListProjects
@@ -85,11 +74,7 @@ Actions:
   - Name: datazone:ListSubscriptionTargets
   - Name: datazone:ListSubscriptions
   - Name: datazone:ListTagsForResource
-  - Name: datazone:ListWarehouseMetadata
-  - Name: datazone:ProvisionDomain
-  - Name: datazone:PutDomainSharingPolicy
   - Name: datazone:PutEnvironmentBlueprintConfiguration
-  - Name: datazone:RefreshToken
   - Name: datazone:RejectPredictions
   - Name: datazone:RejectSubscriptionRequest
   - Name: datazone:RevokeSubscription
@@ -98,17 +83,12 @@ Actions:
   - Name: datazone:SearchListings
   - Name: datazone:SearchTypes
   - Name: datazone:SearchUserProfiles
-  - Name: datazone:SsoLogin
-  - Name: datazone:SsoLogout
   - Name: datazone:StartDataSourceRun
   - Name: datazone:TagResource
   - Name: datazone:UntagResource
   - Name: datazone:UpdateDataSource
   - Name: datazone:UpdateDomain
   - Name: datazone:UpdateEnvironment
-  - Name: datazone:UpdateEnvironmentBlueprint
-  - Name: datazone:UpdateEnvironmentConfiguration
-  - Name: datazone:UpdateEnvironmentDeploymentStatus
   - Name: datazone:UpdateEnvironmentProfile
   - Name: datazone:UpdateGlossary
   - Name: datazone:UpdateGlossaryTerm
@@ -118,4 +98,24 @@ Actions:
   - Name: datazone:UpdateSubscriptionRequest
   - Name: datazone:UpdateSubscriptionTarget
   - Name: datazone:UpdateUserProfile
+
+  # actions with no corresponding API
+  - Name: datazone:CreateEnvironmentBlueprint
+  - Name: datazone:DeleteDomainSharingPolicy
+  - Name: datazone:DeleteEnvironmentBlueprint
+  - Name: datazone:GetDomainSharingPolicy
+  - Name: datazone:GetEnvironmentActionLink
+  - Name: datazone:GetEnvironmentCredentials
+  - Name: datazone:GetSubscriptionEligibility
+  - Name: datazone:ListAccountEnvironments
+  - Name: datazone:ListGroupsForUser
+  - Name: datazone:ListWarehouseMetadata
+  - Name: datazone:ProvisionDomain
+  - Name: datazone:PutDomainSharingPolicy
+  - Name: datazone:RefreshToken
+  - Name: datazone:SsoLogin
+  - Name: datazone:SsoLogout
+  - Name: datazone:UpdateEnvironmentBlueprint
+  - Name: datazone:UpdateEnvironmentConfiguration
+  - Name: datazone:UpdateEnvironmentDeploymentStatus
   - Name: datazone:ValidatePassRole

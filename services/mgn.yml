@@ -5,10 +5,12 @@ Actions:
   - Name: mgn:AssociateSourceServers
   - Name: mgn:ChangeServerLifeCycleState
   - Name: mgn:CreateApplication
+  - Name: mgn:CreateConnector
   - Name: mgn:CreateLaunchConfigurationTemplate
   - Name: mgn:CreateReplicationConfigurationTemplate
   - Name: mgn:CreateWave
   - Name: mgn:DeleteApplication
+  - Name: mgn:DeleteConnector
   - Name: mgn:DeleteJob
   - Name: mgn:DeleteLaunchConfigurationTemplate
   - Name: mgn:DeleteReplicationConfigurationTemplate
@@ -29,6 +31,7 @@ Actions:
   - Name: mgn:GetReplicationConfiguration
   - Name: mgn:InitializeService
   - Name: mgn:ListApplications
+  - Name: mgn:ListConnectors
   - Name: mgn:ListExportErrors
   - Name: mgn:ListExports
   - Name: mgn:ListImportErrors
@@ -58,19 +61,19 @@ Actions:
   - Name: mgn:UnarchiveWave
   - Name: mgn:UntagResource
   - Name: mgn:UpdateApplication
+  - Name: mgn:UpdateConnector
   - Name: mgn:UpdateLaunchConfiguration
   - Name: mgn:UpdateLaunchConfigurationTemplate
   - Name: mgn:UpdateReplicationConfiguration
   - Name: mgn:UpdateReplicationConfigurationTemplate
+  - Name: mgn:UpdateSourceServer
   - Name: mgn:UpdateSourceServerReplicationType
   - Name: mgn:UpdateWave
 
   # actions with no corresponding API
   - Name: mgn:BatchCreateVolumeSnapshotGroupForMgn
   - Name: mgn:BatchDeleteSnapshotRequestForMgn
-  - Name: mgn:CreateConnector
   - Name: mgn:CreateVcenterClientForMgn
-  - Name: mgn:DeleteConnector
   - Name: mgn:DescribeReplicationServerAssociationsForMgn
   - Name: mgn:DescribeSnapshotRequestsForMgn
   - Name: mgn:GetAgentCommandForMgn
@@ -82,7 +85,6 @@ Actions:
   - Name: mgn:GetChannelCommandsForMgn
   - Name: mgn:GetVcenterClientCommandsForMgn
   - Name: mgn:IssueClientCertificateForMgn
-  - Name: mgn:ListConnectors
   - Name: mgn:NotifyAgentAuthenticationForMgn
   - Name: mgn:NotifyAgentConnectedForMgn
   - Name: mgn:NotifyAgentDisconnectedForMgn
@@ -102,6 +104,4 @@ Actions:
   - Name: mgn:UpdateAgentReplicationInfoForMgn
   - Name: mgn:UpdateAgentReplicationProcessStateForMgn
   - Name: mgn:UpdateAgentSourcePropertiesForMgn
-  - Name: mgn:UpdateConnector
-  - Name: mgn:UpdateSourceServer
   - Name: mgn:VerifyClientRoleForMgn
