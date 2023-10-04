@@ -1,24 +1,37 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSQuickSightSageMakerPolicy",
   "CreateDate": "2020-01-17T17:18:13Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4MCLBVDT2I",
   "PolicyName": "AWSQuickSightSageMakerPolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-01-17T17:18:13Z",
+    "CreateDate": "2023-10-03T23:22:22Z",
     "Document": {
       "Statement": [
         {
-          "Action": "s3:GetObject",
+          "Action": "s3:PutObject",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
           "Effect": "Allow",
-          "Resource": "arn:aws:s3:::quicksight-ml.*"
+          "Resource": "arn:aws:s3:::sagemaker*"
         },
         {
-          "Action": "sagemaker:ListModels",
+          "Action": "s3:GetObject",
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": [
+            "arn:aws:s3:::quicksight-ml.*",
+            "arn:aws:s3:::sagemaker*"
+          ]
+        },
+        {
+          "Action": "s3:ListBucket",
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::sagemaker*"
         },
         {
           "Action": [
@@ -28,12 +41,20 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:sagemaker:*:*:transform-job/quicksight-auto-generated-*"
+        },
+        {
+          "Action": [
+            "sagemaker:DescribeModel",
+            "sagemaker:ListModels"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-01-17T17:18:13Z"
+  "UpdateDate": "2023-10-03T23:22:22Z"
 }
