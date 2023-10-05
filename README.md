@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 374
-* Unique actions: 15645
+* Unique actions: 15648
 * Managed policies: 1130
 
 Most common managed policy name prefixes:
@@ -77,6 +77,7 @@ The following table summarises the AWS APIs.
 | [`appstream`](services/appstream.yml) | 75 | 0 | 1 |
 | [`backup`](services/backup.yml) | 74 | 0 | 5 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
+| [`workspaces`](services/workspaces.yml) | 73 | 0 | 1 |
 | [`iotsitewise`](services/iotsitewise.yml) | 73 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
 | [`personalize`](services/personalize.yml) | 72 | 0 | 4 |
@@ -89,11 +90,10 @@ The following table summarises the AWS APIs.
 | [`athena`](services/athena.yml) | 68 | 0 | 1 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 67 | 0 | 10 |
-| [`ds`](services/ds.yml) | 67 | 0 | 7 |
+| [`ds`](services/ds.yml) | 67 | 0 | 10 |
 | [`elasticache`](services/elasticache.yml) | 66 | 0 | 1 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
-| [`workspaces`](services/workspaces.yml) | 65 | 8 | 1 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
@@ -420,7 +420,7 @@ Most common action prefixes:
 | `Delete` | 1780 |
 | `Create` | 1673 |
 | `Describe` | 1641 |
-| `Update` | 1426 |
+| `Update` | 1427 |
 | `Put` | 438 |
 | `Start` | 343 |
 | `Tag` | 247 |

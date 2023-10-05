@@ -1,6 +1,7 @@
 Actions:
   - Name: workspaces:AssociateConnectionAlias
   - Name: workspaces:AssociateIpGroups
+  - Name: workspaces:AssociateWorkspaceApplication
   - Name: workspaces:AuthorizeIpRules
   - Name: workspaces:CopyWorkspaceImage
   - Name: workspaces:CreateConnectClientAddIn
@@ -19,16 +20,22 @@ Actions:
   - Name: workspaces:DeleteTags
   - Name: workspaces:DeleteWorkspaceBundle
   - Name: workspaces:DeleteWorkspaceImage
+  - Name: workspaces:DeployWorkspaceApplications
   - Name: workspaces:DeregisterWorkspaceDirectory
   - Name: workspaces:DescribeAccount
   - Name: workspaces:DescribeAccountModifications
+  - Name: workspaces:DescribeApplicationAssociations
+  - Name: workspaces:DescribeApplications
+  - Name: workspaces:DescribeBundleAssociations
   - Name: workspaces:DescribeClientBranding
   - Name: workspaces:DescribeClientProperties
   - Name: workspaces:DescribeConnectClientAddIns
   - Name: workspaces:DescribeConnectionAliasPermissions
   - Name: workspaces:DescribeConnectionAliases
+  - Name: workspaces:DescribeImageAssociations
   - Name: workspaces:DescribeIpGroups
   - Name: workspaces:DescribeTags
+  - Name: workspaces:DescribeWorkspaceAssociations
   - Name: workspaces:DescribeWorkspaceBundles
   - Name: workspaces:DescribeWorkspaceDirectories
   - Name: workspaces:DescribeWorkspaceImagePermissions
@@ -38,6 +45,7 @@ Actions:
   - Name: workspaces:DescribeWorkspacesConnectionStatus
   - Name: workspaces:DisassociateConnectionAlias
   - Name: workspaces:DisassociateIpGroups
+  - Name: workspaces:DisassociateWorkspaceApplication
   - Name: workspaces:ImportClientBranding
   - Name: workspaces:ImportWorkspaceImage
   - Name: workspaces:ListAvailableManagementCidrRanges
@@ -67,13 +75,3 @@ Actions:
 
   # actions with no corresponding API
   - Name: workspaces:Stream
-
-  # APIs without an IAM action
-  - Name: workspaces:AssociateWorkspaceApplication
-  - Name: workspaces:DeployWorkspaceApplications
-  - Name: workspaces:DescribeApplicationAssociations
-  - Name: workspaces:DescribeApplications
-  - Name: workspaces:DescribeBundleAssociations
-  - Name: workspaces:DescribeImageAssociations
-  - Name: workspaces:DescribeWorkspaceAssociations
-  - Name: workspaces:DisassociateWorkspaceApplication
