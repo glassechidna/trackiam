@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 374
-* Unique actions: 15637
+* Unique actions: 15645
 * Managed policies: 1130
 
 Most common managed policy name prefixes:
@@ -54,7 +54,7 @@ The following table summarises the AWS APIs.
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`iotwireless`](services/iotwireless.yml) | 109 | 0 | 1 |
-| [`dms`](services/dms.yml) | 105 | 1 | 28 |
+| [`dms`](services/dms.yml) | 106 | 0 | 28 |
 | [`cloudfront`](services/cloudfront.yml) | 104 | 2 | 7 |
 | [`gamelift`](services/gamelift.yml) | 104 | 0 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 4 |
@@ -93,8 +93,8 @@ The following table summarises the AWS APIs.
 | [`elasticache`](services/elasticache.yml) | 66 | 0 | 1 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
+| [`workspaces`](services/workspaces.yml) | 65 | 8 | 1 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
-| [`workspaces`](services/workspaces.yml) | 65 | 0 | 1 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
@@ -419,7 +419,7 @@ Most common action prefixes:
 | `Get` | 2228 |
 | `Delete` | 1780 |
 | `Create` | 1673 |
-| `Describe` | 1636 |
+| `Describe` | 1641 |
 | `Update` | 1426 |
 | `Put` | 438 |
 | `Start` | 343 |
