@@ -1,0 +1,43 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonSageMakerCanvasDirectDeployAccess",
+  "CreateDate": "2023-10-06T18:11:53Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4BZOXJBTOQ",
+  "PolicyName": "AmazonSageMakerCanvasDirectDeployAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-10-06T18:11:53Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "cloudwatch:GetMetricData",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReadCWInvocationMetrics"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateEndpoint",
+            "sagemaker:CreateEndpointConfig",
+            "sagemaker:DeleteEndpoint",
+            "sagemaker:DescribeEndpoint",
+            "sagemaker:DescribeEndpointConfig",
+            "sagemaker:InvokeEndpoint",
+            "sagemaker:UpdateEndpoint"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:Canvas*",
+            "arn:aws:sagemaker:*:*:canvas*"
+          ],
+          "Sid": "SageMakerEndpointPerms"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-10-06T18:11:53Z"
+}

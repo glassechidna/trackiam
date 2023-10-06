@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 374
-* Unique actions: 15649
-* Managed policies: 1130
+* Unique actions: 15650
+* Managed policies: 1131
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 306 |
 | `arn:aws:iam::aws:policy/Amazon*` | 293 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 248 |
-| `arn:aws:iam::aws:policy/service-role/*` | 182 |
+| `arn:aws:iam::aws:policy/service-role/*` | 183 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 94 |
 
@@ -142,8 +142,8 @@ The following table summarises the AWS APIs.
 | [`transcribe`](services/transcribe.yml) | 42 | 0 | 3 |
 | [`ivs`](services/ivs.yml) | 42 | 0 | 0 |
 | [`fms`](services/fms.yml) | 42 | 0 | 0 |
+| [`fsx`](services/fsx.yml) | 41 | 1 | 5 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
-| [`fsx`](services/fsx.yml) | 41 | 0 | 5 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 40 | 0 | 3 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 40 | 0 | 0 |
@@ -422,7 +422,7 @@ Most common action prefixes:
 | `Describe` | 1642 |
 | `Update` | 1427 |
 | `Put` | 438 |
-| `Start` | 343 |
+| `Start` | 344 |
 | `Tag` | 247 |
 | `Untag` | 244 |
 
