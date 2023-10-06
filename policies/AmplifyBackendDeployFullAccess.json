@@ -1,0 +1,118 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmplifyBackendDeployFullAccess",
+  "CreateDate": "2023-10-06T21:32:59Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4H6M6P2QGM",
+  "PolicyName": "AmplifyBackendDeployFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-10-06T21:32:59Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*amplify*",
+            "arn:aws:s3:::cdk-*-assets-*-*"
+          ],
+          "Sid": "AmplifySchema"
+        },
+        {
+          "Action": [
+            "ssm:DeleteParameter",
+            "ssm:DeleteParameters",
+            "ssm:PutParameter"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:parameter/amplify/*",
+          "Sid": "AmplifyModifySSMParam"
+        },
+        {
+          "Action": [
+            "amplify:ListApps",
+            "appsync:GetIntrospectionSchema",
+            "cloudformation:ListStacks",
+            "ssm:DescribeParameters"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AmplifyMetadata"
+        },
+        {
+          "Action": [
+            "appsync:GetSchemaCreationStatus",
+            "appsync:ListFunctions",
+            "appsync:StartSchemaCreation",
+            "appsync:UpdateFunction",
+            "appsync:UpdateResolver"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AmplifyHotSwappableResources"
+        },
+        {
+          "Action": [
+            "cloudformation:DescribeStackEvents",
+            "cloudformation:DescribeStacks",
+            "cloudformation:GetTemplate",
+            "cloudformation:GetTemplateSummary",
+            "cloudformation:ListStackResources"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/CDKToolkit/*",
+            "arn:aws:cloudformation:*:*:stack/amplify-*"
+          ],
+          "Sid": "CDKPreDeploy"
+        },
+        {
+          "Action": [
+            "ssm:GetParameter",
+            "ssm:GetParameters",
+            "ssm:GetParametersByPath"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:parameter/amplify/*"
+          ],
+          "Sid": "AmplifySSM"
+        },
+        {
+          "Action": [
+            "sts:AssumeRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/cdk-*-deploy-role-*-*",
+            "arn:aws:iam::*:role/cdk-*-file-publishing-role-*-*",
+            "arn:aws:iam::*:role/cdk-*-image-publishing-role-*-*",
+            "arn:aws:iam::*:role/cdk-*-lookup-role-*-*"
+          ],
+          "Sid": "CDKDeploy"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-10-06T21:32:59Z"
+}
