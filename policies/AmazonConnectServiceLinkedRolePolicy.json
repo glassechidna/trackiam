@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-09-27T21:05:04Z",
+    "CreateDate": "2023-10-06T17:23:46Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowPutMetricsForConnectNamespace"
         },
         {
           "Action": [
@@ -44,7 +45,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowWisdomForConnectEnabledTaggedResources"
         },
         {
           "Action": [
@@ -53,14 +55,16 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AllowConnectActions"
         },
         {
           "Action": [
             "iam:DeleteRole"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/aws-service-role/connect.amazonaws.com/AWSServiceRoleForAmazonConnect_*"
+          "Resource": "arn:aws:iam::*:role/aws-service-role/connect.amazonaws.com/AWSServiceRoleForAmazonConnect_*",
+          "Sid": "AllowDeleteSLR"
         },
         {
           "Action": [
@@ -68,7 +72,8 @@
             "lex:ListBots"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowListLexBotAccess"
         },
         {
           "Action": [
@@ -79,18 +84,31 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:logs:*:*:log-group:/aws/connect/*:*"
-          ]
+          ],
+          "Sid": "AllowConnectLogGroupAccess"
         },
         {
           "Action": [
             "profile:AddProfileKey",
             "profile:CreateProfile",
+            "profile:ListCalculatedAttributeDefinitions",
             "profile:ListProfileObjectTypes",
             "profile:SearchProfiles",
             "profile:UpdateProfile"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:profile:*:*:domains/amazon-connect-*"
+          "Resource": "arn:aws:profile:*:*:domains/amazon-connect-*",
+          "Sid": "AllowCustomerProfilesForConnectDomain"
+        },
+        {
+          "Action": [
+            "profile:GetCalculatedAttributeForProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:profile:*:*:domains/amazon-connect-*/calculated-attributes/*"
+          ],
+          "Sid": "AllowReadCalculatedAttributesForProfile"
         },
         {
           "Action": [
@@ -100,7 +118,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:profile:*:*:domains/amazon-connect-*/object-types/*"
-          ]
+          ],
+          "Sid": "AllowReadPermissionForCustomerProfileObjects"
         },
         {
           "Action": [
@@ -108,14 +127,16 @@
             "profile:ListProfileObjectTypeTemplates"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:profile:*:*:/templates*"
+          "Resource": "arn:aws:profile:*:*:/templates*",
+          "Sid": "AllowReadForCustomerProfileObjectTemplates"
         },
         {
           "Action": [
             "profile:ListAccountIntegrations"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowListIntegrationForCustomerProfile"
         },
         {
           "Action": [
@@ -128,7 +149,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:s3:::amazon-connect-*/*"
-          ]
+          ],
+          "Sid": "AllowS3ObjectForConnectBucket"
         },
         {
           "Action": [
@@ -138,7 +160,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:s3:::amazon-connect-*"
-          ]
+          ],
+          "Sid": "AllowGetBucketMetadataForConnectBucket"
         },
         {
           "Action": [
@@ -146,13 +169,14 @@
             "wisdom:ListKnowledgeBases"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowListOperationForWisdom"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2023-09-27T21:05:04Z"
+  "UpdateDate": "2023-10-06T17:23:46Z"
 }
