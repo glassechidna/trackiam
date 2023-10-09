@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSGlueServiceNotebookRole",
   "CreateDate": "2017-08-14T13:37:42Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIMRC6VZUHJYCTKWFI",
   "PolicyName": "AWSGlueServiceNotebookRole",
   "PolicyVersion": {
-    "CreateDate": "2019-10-07T18:05:54Z",
+    "CreateDate": "2023-10-09T15:59:41Z",
     "Document": {
       "Statement": [
         {
@@ -31,6 +31,7 @@
         },
         {
           "Action": [
+            "codewhisperer:GenerateRecommendations",
             "glue:BatchCreatePartition",
             "glue:BatchDeleteConnection",
             "glue:BatchDeletePartition",
@@ -104,7 +105,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2019-10-07T18:05:54Z"
+  "UpdateDate": "2023-10-09T15:59:41Z"
 }
