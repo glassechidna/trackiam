@@ -115,10 +115,10 @@ The following table summarises the AWS APIs.
 | [`resiliencehub`](services/resiliencehub.yml) | 54 | 0 | 0 |
 | [`wafv2`](services/wafv2.yml) | 53 | 0 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 52 | 5 | 13 |
+| [`iotfleetwise`](services/iotfleetwise.yml) | 52 | 0 | 0 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
 | [`logs`](services/logs.yml) | 51 | 0 | 9 |
 | [`profile`](services/profile.yml) | 51 | 0 | 0 |
-| [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 2 | 0 |
 | [`drs`](services/drs.yml) | 50 | 0 | 40 |
 | [`mediaconnect`](services/mediaconnect.yml) | 50 | 0 | 3 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
