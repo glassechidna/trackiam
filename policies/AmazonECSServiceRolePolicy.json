@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonECSServiceRolePolicy",
   "CreateDate": "2017-10-14T01:18:58Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIVUWKCAI7URU4WUEI",
   "PolicyName": "AmazonECSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-10-14T18:10:03Z",
+    "CreateDate": "2023-10-10T16:57:39Z",
     "Document": {
       "Statement": [
         {
@@ -154,7 +154,8 @@
         },
         {
           "Action": [
-            "servicediscovery:DiscoverInstances"
+            "servicediscovery:DiscoverInstances",
+            "servicediscovery:DiscoverInstancesRevision"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -183,7 +184,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2022-10-14T18:10:03Z"
+  "UpdateDate": "2023-10-10T16:57:39Z"
 }

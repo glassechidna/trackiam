@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSAppMeshServiceRolePolicy",
   "CreateDate": "2019-06-03T18:30:51Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4B5IHMMEND",
   "PolicyName": "AWSAppMeshServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-09-10T22:44:43Z",
+    "CreateDate": "2023-10-10T16:46:37Z",
     "Document": {
       "Statement": [
         {
@@ -20,7 +20,8 @@
         },
         {
           "Action": [
-            "servicediscovery:DiscoverInstances"
+            "servicediscovery:DiscoverInstances",
+            "servicediscovery:DiscoverInstancesRevision"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -30,7 +31,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-09-10T22:44:43Z"
+  "UpdateDate": "2023-10-10T16:46:37Z"
 }
