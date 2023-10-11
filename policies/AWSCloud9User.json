@@ -1,28 +1,15 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCloud9User",
   "CreateDate": "2017-11-30T16:16:17Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJPFGFWQF67QVARP6U",
   "PolicyName": "AWSCloud9User",
   "PolicyVersion": {
-    "CreateDate": "2023-08-02T08:53:58Z",
+    "CreateDate": "2023-10-11T13:24:10Z",
     "Document": {
       "Statement": [
-        {
-          "Action": "ssm:StartSession",
-          "Condition": {
-            "StringEquals": {
-              "aws:CalledViaFirst": "cloud9.amazonaws.com"
-            },
-            "StringLike": {
-              "ssm:resourceTag/aws:cloud9:environment": "*"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:instance/*"
-        },
         {
           "Action": [
             "cloud9:CreateEnvironmentEC2",
@@ -77,9 +64,24 @@
         },
         {
           "Action": [
+            "ssm:GetConnectionStatus",
+            "ssm:StartSession"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaFirst": "cloud9.amazonaws.com"
+            },
+            "StringLike": {
+              "ssm:resourceTag/aws:cloud9:environment": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*"
+        },
+        {
+          "Action": [
             "cloud9:GetUserSettings",
             "cloud9:UpdateUserSettings",
-            "cloud9:ValidateEnvironmentName",
             "ec2:DescribeInstanceTypeOfferings",
             "ec2:DescribeRouteTables",
             "ec2:DescribeSubnets",
@@ -103,7 +105,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2023-08-02T08:53:58Z"
+  "UpdateDate": "2023-10-11T13:24:10Z"
 }
