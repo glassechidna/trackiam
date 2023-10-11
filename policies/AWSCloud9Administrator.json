@@ -1,28 +1,15 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCloud9Administrator",
   "CreateDate": "2017-11-30T16:17:28Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIQ4KWP455WDTCBGWK",
   "PolicyName": "AWSCloud9Administrator",
   "PolicyVersion": {
-    "CreateDate": "2023-08-02T08:54:40Z",
+    "CreateDate": "2023-10-11T12:59:29Z",
     "Document": {
       "Statement": [
-        {
-          "Action": "ssm:StartSession",
-          "Condition": {
-            "StringEquals": {
-              "aws:CalledViaFirst": "cloud9.amazonaws.com"
-            },
-            "StringLike": {
-              "ssm:resourceTag/aws:cloud9:environment": "*"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:instance/*"
-        },
         {
           "Action": [
             "iam:CreateServiceLinkedRole"
@@ -34,6 +21,22 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ssm:GetConnectionStatus",
+            "ssm:StartSession"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaFirst": "cloud9.amazonaws.com"
+            },
+            "StringLike": {
+              "ssm:resourceTag/aws:cloud9:environment": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*"
         },
         {
           "Action": [
@@ -61,7 +64,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-08-02T08:54:40Z"
+  "UpdateDate": "2023-10-11T12:59:29Z"
 }

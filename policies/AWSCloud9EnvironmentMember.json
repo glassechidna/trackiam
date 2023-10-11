@@ -1,28 +1,15 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCloud9EnvironmentMember",
   "CreateDate": "2017-11-30T16:18:28Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAI54ULAIPVT5HFTYGK",
   "PolicyName": "AWSCloud9EnvironmentMember",
   "PolicyVersion": {
-    "CreateDate": "2020-07-29T06:29:08Z",
+    "CreateDate": "2023-10-11T12:13:40Z",
     "Document": {
       "Statement": [
-        {
-          "Action": "ssm:StartSession",
-          "Condition": {
-            "StringEquals": {
-              "aws:CalledViaFirst": "cloud9.amazonaws.com"
-            },
-            "StringLike": {
-              "ssm:resourceTag/aws:cloud9:environment": "*"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:instance/*"
-        },
         {
           "Action": [
             "cloud9:DescribeEnvironmentMemberships"
@@ -37,6 +24,22 @@
           "Resource": [
             "*"
           ]
+        },
+        {
+          "Action": [
+            "ssm:GetConnectionStatus",
+            "ssm:StartSession"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaFirst": "cloud9.amazonaws.com"
+            },
+            "StringLike": {
+              "ssm:resourceTag/aws:cloud9:environment": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*"
         },
         {
           "Action": [
@@ -61,7 +64,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-07-29T06:29:08Z"
+  "UpdateDate": "2023-10-11T12:13:40Z"
 }
