@@ -219,6 +219,7 @@ The following table summarises the AWS APIs.
 | [`backup-gateway`](services/backup-gateway.yml) | 25 | 0 | 2 |
 | [`discovery`](services/discovery.yml) | 25 | 0 | 1 |
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 25 | 0 | 1 |
+| [`textract`](services/textract.yml) | 25 | 0 | 0 |
 | [`pca-connector-ad`](services/pca-connector-ad.yml) | 25 | 0 | 0 |
 | [`mediapackagev2`](services/mediapackagev2.yml) | 24 | 0 | 3 |
 | [`verifiedpermissions`](services/verifiedpermissions.yml) | 24 | 0 | 0 |
@@ -280,7 +281,6 @@ The following table summarises the AWS APIs.
 | [`osis`](services/osis.yml) | 14 | 0 | 1 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 14 | 0 | 0 |
 | [`health`](services/health.yml) | 14 | 0 | 0 |
-| [`textract`](services/textract.yml) | 13 | 12 | 0 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 17 |
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 7 |
 | [`codeguru-security`](services/codeguru-security.yml) | 13 | 0 | 2 |
