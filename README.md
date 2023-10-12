@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 374
-* Unique actions: 15650
+* Unique actions: 15665
 * Managed policies: 1132
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 597 | 0 | 15 |
+| [`ec2`](services/ec2.yml) | 597 | 2 | 15 |
 | [`sagemaker`](services/sagemaker.yml) | 319 | 1 | 11 |
 | [`iot`](services/iot.yml) | 257 | 3 | 9 |
 | [`chime`](services/chime.yml) | 253 | 6 | 50 |
@@ -280,10 +280,10 @@ The following table summarises the AWS APIs.
 | [`osis`](services/osis.yml) | 14 | 0 | 1 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 14 | 0 | 0 |
 | [`health`](services/health.yml) | 14 | 0 | 0 |
+| [`textract`](services/textract.yml) | 13 | 12 | 0 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 17 |
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 7 |
 | [`codeguru-security`](services/codeguru-security.yml) | 13 | 0 | 2 |
-| [`textract`](services/textract.yml) | 13 | 0 | 0 |
 | [`snow-device-management`](services/snow-device-management.yml) | 13 | 0 | 0 |
 | [`pi`](services/pi.yml) | 13 | 0 | 0 |
 | [`docdb-elastic`](services/docdb-elastic.yml) | 13 | 0 | 0 |
@@ -322,7 +322,7 @@ The following table summarises the AWS APIs.
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 6 | 0 | 0 |
 | [`s3-outposts`](services/s3-outposts.yml) | 5 | 0 | 43 |
 | [`pricing`](services/pricing.yml) | 5 | 0 | 0 |
-| [`controltower`](services/controltower.yml) | 4 | 0 | 38 |
+| [`controltower`](services/controltower.yml) | 4 | 1 | 38 |
 | [`cur`](services/cur.yml) | 4 | 0 | 5 |
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 4 | 0 | 0 |
 | [`license-manager-linux-subscriptions`](services/license-manager-linux-subscriptions.yml) | 4 | 0 | 0 |
@@ -415,14 +415,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2456 |
-| `Get` | 2228 |
-| `Delete` | 1780 |
-| `Create` | 1673 |
+| `List` | 2459 |
+| `Get` | 2231 |
+| `Delete` | 1782 |
+| `Create` | 1675 |
 | `Describe` | 1642 |
-| `Update` | 1427 |
+| `Update` | 1428 |
 | `Put` | 438 |
 | `Start` | 344 |
-| `Tag` | 247 |
-| `Untag` | 244 |
+| `Tag` | 248 |
+| `Untag` | 245 |
 
