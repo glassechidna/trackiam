@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v106",
+  "DefaultVersionId": "v107",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-09-19T14:57:43Z",
+    "CreateDate": "2023-10-13T14:16:04Z",
     "Document": {
       "Statement": [
         {
@@ -1192,6 +1192,9 @@
             "lookoutequipment:DescribeLabel",
             "lookoutequipment:DescribeLabelGroup",
             "lookoutequipment:DescribeModel",
+            "lookoutequipment:DescribeModelVersion",
+            "lookoutequipment:DescribeResourcePolicy",
+            "lookoutequipment:DescribeRetrainingScheduler",
             "lookoutequipment:ListDataIngestionJobs",
             "lookoutequipment:ListDatasets",
             "lookoutequipment:ListInferenceEvents",
@@ -1199,7 +1202,9 @@
             "lookoutequipment:ListInferenceSchedulers",
             "lookoutequipment:ListLabelGroups",
             "lookoutequipment:ListLabels",
+            "lookoutequipment:ListModelVersions",
             "lookoutequipment:ListModels",
+            "lookoutequipment:ListRetrainingSchedulers",
             "lookoutequipment:ListSensorStatistics",
             "lookoutequipment:ListTagsForResource",
             "lookoutmetrics:Describe*",
@@ -1700,6 +1705,8 @@
             "servicecatalog:List*",
             "servicecatalog:Scan*",
             "servicecatalog:Search*",
+            "servicediscovery:DiscoverInstances",
+            "servicediscovery:DiscoverInstancesRevision",
             "servicediscovery:Get*",
             "servicediscovery:List*",
             "servicequotas:GetAWSDefaultServiceQuota",
@@ -1925,7 +1932,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v106"
+    "VersionId": "v107"
   },
-  "UpdateDate": "2023-09-19T14:57:43Z"
+  "UpdateDate": "2023-10-13T14:16:04Z"
 }
