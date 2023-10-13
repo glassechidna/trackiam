@@ -139,10 +139,10 @@ The following table summarises the AWS APIs.
 | [`workdocs`](services/workdocs.yml) | 44 | 0 | 15 |
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
+| [`fsx`](services/fsx.yml) | 42 | 0 | 5 |
 | [`transcribe`](services/transcribe.yml) | 42 | 0 | 3 |
 | [`ivs`](services/ivs.yml) | 42 | 0 | 0 |
 | [`fms`](services/fms.yml) | 42 | 0 | 0 |
-| [`fsx`](services/fsx.yml) | 41 | 1 | 5 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 40 | 0 | 3 |
