@@ -321,8 +321,8 @@ The following table summarises the AWS APIs.
 | [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 6 | 0 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 6 | 0 | 0 |
 | [`s3-outposts`](services/s3-outposts.yml) | 5 | 0 | 43 |
+| [`controltower`](services/controltower.yml) | 5 | 0 | 38 |
 | [`pricing`](services/pricing.yml) | 5 | 0 | 0 |
-| [`controltower`](services/controltower.yml) | 4 | 1 | 38 |
 | [`cur`](services/cur.yml) | 4 | 0 | 5 |
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 4 | 0 | 0 |
 | [`license-manager-linux-subscriptions`](services/license-manager-linux-subscriptions.yml) | 4 | 0 | 0 |
