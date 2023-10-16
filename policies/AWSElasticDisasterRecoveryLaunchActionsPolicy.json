@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticDisasterRecoveryLaunchActionsPolicy",
   "CreateDate": "2023-09-13T07:38:26Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FYCR5GWGU",
   "PolicyName": "AWSElasticDisasterRecoveryLaunchActionsPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-09-13T07:38:26Z",
+    "CreateDate": "2023-10-16T12:28:44Z",
     "Document": {
       "Statement": [
         {
@@ -23,7 +23,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/service-role/AWSElasticDisasterRecoveryRecoveryInstanceWithLaunchActionsRole"
-          ]
+          ],
+          "Sid": "LaunchActionsPolicy11"
         },
         {
           "Action": [
@@ -39,7 +40,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "LaunchActionsPolicy1"
         },
         {
           "Action": [
@@ -51,7 +53,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:automation-execution/*"
+          "Resource": "arn:aws:ssm:*:*:automation-execution/*",
+          "Sid": "LaunchActionsPolicy8"
         },
         {
           "Action": [
@@ -64,7 +67,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:parameter/ManagedByAWSElasticDisasterRecoveryService-*"
+          "Resource": "arn:aws:ssm:*:*:parameter/ManagedByAWSElasticDisasterRecoveryService-*",
+          "Sid": "LaunchActionsPolicy10"
         },
         {
           "Action": [
@@ -76,7 +80,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:parameter/ManagedByAWSElasticDisasterRecoveryService-*"
+          "Resource": "arn:aws:ssm:*:*:parameter/ManagedByAWSElasticDisasterRecoveryService-*",
+          "Sid": "LaunchActionsPolicy9"
         },
         {
           "Action": [
@@ -95,7 +100,28 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:instance/*"
-          ]
+          ],
+          "Sid": "LaunchActionsPolicy4"
+        },
+        {
+          "Action": [
+            "ssm:SendCommand"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "drs.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceTag/AWSDRS": "AllowLaunchingIntoThisInstance"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "LaunchActionsPolicy5"
         },
         {
           "Action": [
@@ -187,7 +213,8 @@
             "arn:aws:ssm:*::document/AmazonInternal-*",
             "arn:aws:ssm:*::document/AwsEnaNetworkDriver-*",
             "arn:aws:ssm:*::document/AwsVssComponents-*"
-          ]
+          ],
+          "Sid": "LaunchActionsPolicy3"
         },
         {
           "Action": [
@@ -208,7 +235,8 @@
           "Resource": [
             "arn:aws:ssm:*:*:automation-definition/*:*",
             "arn:aws:ssm:*:*:document/*"
-          ]
+          ],
+          "Sid": "LaunchActionsPolicy2"
         },
         {
           "Action": [
@@ -217,7 +245,8 @@
             "ssm:ListDocumentVersions"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:document/*"
+          "Resource": "arn:aws:ssm:*:*:document/*",
+          "Sid": "LaunchActionsPolicy7"
         },
         {
           "Action": [
@@ -225,13 +254,14 @@
             "ssm:ListDocuments"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "LaunchActionsPolicy6"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-09-13T07:38:26Z"
+  "UpdateDate": "2023-10-16T12:28:44Z"
 }

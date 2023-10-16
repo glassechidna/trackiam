@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticDisasterRecoveryConsoleFullAccess",
   "CreateDate": "2021-11-17T10:46:29Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LCQTK3F7W",
   "PolicyName": "AWSElasticDisasterRecoveryConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-06-11T08:37:09Z",
+    "CreateDate": "2023-10-16T12:24:20Z",
     "Document": {
       "Statement": [
         {
@@ -31,7 +31,8 @@
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:snapshot/*",
             "arn:aws:ec2:*:*:volume/*"
-          ]
+          ],
+          "Sid": "ConsoleFullAccess26"
         },
         {
           "Action": "ec2:CreateTags",
@@ -43,7 +44,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:launch-template/*"
+          "Resource": "arn:aws:ec2:*:*:launch-template/*",
+          "Sid": "ConsoleFullAccess27"
         },
         {
           "Action": "iam:PassRole",
@@ -56,7 +58,8 @@
           "Resource": [
             "arn:aws:iam::*:role/service-role/AWSElasticDisasterRecoveryConversionServerRole",
             "arn:aws:iam::*:role/service-role/AWSElasticDisasterRecoveryRecoveryInstanceRole"
-          ]
+          ],
+          "Sid": "ConsoleFullAccess8"
         },
         {
           "Action": [
@@ -71,7 +74,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:volume/*"
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "ConsoleFullAccess22"
         },
         {
           "Action": [
@@ -87,7 +91,30 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:instance/*"
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "ConsoleFullAccess20"
+        },
+        {
+          "Action": [
+            "ec2:AttachVolume",
+            "ec2:DetachVolume",
+            "ec2:GetConsoleOutput",
+            "ec2:GetConsoleScreenshot",
+            "ec2:StartInstances"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "drs.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "ec2:ResourceTag/AWSDRS": "AllowLaunchingIntoThisInstance"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "ConsoleFullAccess21"
         },
         {
           "Action": [
@@ -104,7 +131,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:security-group/*"
+          "Resource": "arn:aws:ec2:*:*:security-group/*",
+          "Sid": "ConsoleFullAccess14"
         },
         {
           "Action": [
@@ -116,7 +144,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:launch-template/*"
+          "Resource": "arn:aws:ec2:*:*:launch-template/*",
+          "Sid": "ConsoleFullAccess11"
         },
         {
           "Action": [
@@ -132,7 +161,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:launch-template/*"
+          "Resource": "arn:aws:ec2:*:*:launch-template/*",
+          "Sid": "ConsoleFullAccess10"
         },
         {
           "Action": [
@@ -147,7 +177,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:security-group/*"
+          "Resource": "arn:aws:ec2:*:*:security-group/*",
+          "Sid": "ConsoleFullAccess17"
         },
         {
           "Action": [
@@ -162,7 +193,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:snapshot/*"
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "ConsoleFullAccess19"
         },
         {
           "Action": [
@@ -177,7 +209,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:volume/*"
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "ConsoleFullAccess18"
         },
         {
           "Action": [
@@ -192,7 +225,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:volume/*"
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "ConsoleFullAccess15"
         },
         {
           "Action": [
@@ -207,7 +241,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:snapshot/*"
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "ConsoleFullAccess9"
         },
         {
           "Action": [
@@ -222,7 +257,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:volume/*"
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "ConsoleFullAccess12"
         },
         {
           "Action": [
@@ -234,7 +270,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:volume/*"
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "ConsoleFullAccess23"
         },
         {
           "Action": [
@@ -254,7 +291,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:instance/*"
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "ConsoleFullAccess13"
         },
         {
           "Action": [
@@ -273,7 +311,8 @@
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:subnet/*",
             "arn:aws:ec2:*:*:volume/*"
-          ]
+          ],
+          "Sid": "ConsoleFullAccess25"
         },
         {
           "Action": [
@@ -288,27 +327,32 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:instance/*"
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "ConsoleFullAccess24"
         },
         {
           "Action": "ec2:CreateSecurityGroup",
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:vpc/*"
+          "Resource": "arn:aws:ec2:*:*:vpc/*",
+          "Sid": "ConsoleFullAccess16"
         },
         {
           "Action": "elasticloadbalancing:DescribeLoadBalancers",
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ConsoleFullAccess6"
         },
         {
           "Action": "license-manager:ListLicenseConfigurations",
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ConsoleFullAccess4"
         },
         {
           "Action": "resource-groups:ListGroups",
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ConsoleFullAccess5"
         },
         {
           "Action": [
@@ -316,14 +360,16 @@
             "cloudformation:ListStacks"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ConsoleFullAccess28"
         },
         {
           "Action": [
             "drs:*"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ConsoleFullAccess1"
         },
         {
           "Action": [
@@ -348,7 +394,8 @@
             "ec2:GetEbsEncryptionByDefault"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ConsoleFullAccess3"
         },
         {
           "Action": [
@@ -356,7 +403,8 @@
             "iam:ListRoles"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ConsoleFullAccess7"
         },
         {
           "Action": [
@@ -364,7 +412,8 @@
             "kms:ListAliases"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ConsoleFullAccess2"
         },
         {
           "Action": [
@@ -372,13 +421,14 @@
             "s3:ListAllMyBuckets"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ConsoleFullAccess29"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2023-06-11T08:37:09Z"
+  "UpdateDate": "2023-10-16T12:24:20Z"
 }
