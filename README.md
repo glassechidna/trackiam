@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 374
-* Unique actions: 15676
+* Unique actions: 15678
 * Managed policies: 1132
 
 Most common managed policy name prefixes:
@@ -210,6 +210,7 @@ The following table summarises the AWS APIs.
 | [`snowball`](services/snowball.yml) | 27 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 27 | 0 | 0 |
 | [`outposts`](services/outposts.yml) | 26 | 0 | 2 |
+| [`entityresolution`](services/entityresolution.yml) | 26 | 0 | 1 |
 | [`private-networks`](services/private-networks.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
@@ -267,7 +268,6 @@ The following table summarises the AWS APIs.
 | [`ivschat`](services/ivschat.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`neptune-db`](services/neptune-db.yml) | 16 | 24 | 17 |
-| [`entityresolution`](services/entityresolution.yml) | 16 | 0 | 11 |
 | [`support`](services/support.yml) | 16 | 0 | 9 |
 | [`fis`](services/fis.yml) | 16 | 0 | 3 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
@@ -310,11 +310,11 @@ The following table summarises the AWS APIs.
 | [`backup-storage`](services/backup-storage.yml) | 8 | 1 | 7 |
 | [`sts`](services/sts.yml) | 8 | 0 | 3 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
+| [`managedblockchain-query`](services/managedblockchain-query.yml) | 8 | 0 | 0 |
 | [`iotfleethub`](services/iotfleethub.yml) | 8 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
 | [`elastic-inference`](services/elastic-inference.yml) | 6 | 0 | 1 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
-| [`managedblockchain-query`](services/managedblockchain-query.yml) | 6 | 0 | 0 |
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
 | [`ebs`](services/ebs.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
@@ -415,8 +415,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2462 |
-| `Get` | 2234 |
+| `List` | 2463 |
+| `Get` | 2235 |
 | `Delete` | 1783 |
 | `Create` | 1676 |
 | `Describe` | 1642 |

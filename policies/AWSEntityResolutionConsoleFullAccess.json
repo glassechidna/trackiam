@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSEntityResolutionConsoleFullAccess",
   "CreateDate": "2023-08-17T17:54:14Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HPFJ6XDUE",
   "PolicyName": "AWSEntityResolutionConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-08-17T17:54:14Z",
+    "CreateDate": "2023-10-16T18:46:10Z",
     "Document": {
       "Statement": [
         {
@@ -27,11 +27,31 @@
         },
         {
           "Action": [
+            "dataexchange:GetDataSet"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ADXReadAccess"
+        },
+        {
+          "Action": [
             "entityresolution:*"
           ],
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "EntityResolutionAccess"
+        },
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:PutRule",
+            "events:PutTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:events:*:*:rule/entity-resolution-automatic*"
+          ],
+          "Sid": "ManageEventBridgeRules"
         },
         {
           "Action": [
@@ -100,7 +120,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-08-17T17:54:14Z"
+  "UpdateDate": "2023-10-16T18:46:10Z"
 }
