@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 374
-* Unique actions: 15665
+* Unique actions: 15676
 * Managed policies: 1132
 
 Most common managed policy name prefixes:
@@ -267,10 +267,10 @@ The following table summarises the AWS APIs.
 | [`ivschat`](services/ivschat.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`neptune-db`](services/neptune-db.yml) | 16 | 24 | 17 |
+| [`entityresolution`](services/entityresolution.yml) | 16 | 0 | 11 |
 | [`support`](services/support.yml) | 16 | 0 | 9 |
 | [`fis`](services/fis.yml) | 16 | 0 | 3 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
-| [`entityresolution`](services/entityresolution.yml) | 16 | 0 | 0 |
 | [`app-integrations`](services/app-integrations.yml) | 15 | 4 | 4 |
 | [`honeycode`](services/honeycode.yml) | 15 | 0 | 15 |
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
@@ -415,14 +415,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2459 |
-| `Get` | 2231 |
-| `Delete` | 1782 |
-| `Create` | 1675 |
+| `List` | 2462 |
+| `Get` | 2234 |
+| `Delete` | 1783 |
+| `Create` | 1676 |
 | `Describe` | 1642 |
-| `Update` | 1428 |
+| `Update` | 1430 |
 | `Put` | 438 |
-| `Start` | 344 |
+| `Start` | 345 |
 | `Tag` | 248 |
 | `Untag` | 245 |
 
