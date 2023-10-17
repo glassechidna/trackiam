@@ -4,10 +4,12 @@ Actions:
   - Name: kafka:CreateCluster
   - Name: kafka:CreateClusterV2
   - Name: kafka:CreateConfiguration
+  - Name: kafka:CreateReplicator
   - Name: kafka:CreateVpcConnection
   - Name: kafka:DeleteCluster
   - Name: kafka:DeleteClusterPolicy
   - Name: kafka:DeleteConfiguration
+  - Name: kafka:DeleteReplicator
   - Name: kafka:DeleteVpcConnection
   - Name: kafka:DescribeCluster
   - Name: kafka:DescribeClusterOperation
@@ -15,6 +17,7 @@ Actions:
   - Name: kafka:DescribeClusterV2
   - Name: kafka:DescribeConfiguration
   - Name: kafka:DescribeConfigurationRevision
+  - Name: kafka:DescribeReplicator
   - Name: kafka:DescribeVpcConnection
   - Name: kafka:GetBootstrapBrokers
   - Name: kafka:GetClusterPolicy
@@ -28,6 +31,7 @@ Actions:
   - Name: kafka:ListConfigurations
   - Name: kafka:ListKafkaVersions
   - Name: kafka:ListNodes
+  - Name: kafka:ListReplicators
   - Name: kafka:ListScramSecrets
   - Name: kafka:ListTagsForResource
   - Name: kafka:ListVpcConnections
@@ -44,12 +48,6 @@ Actions:
   - Name: kafka:UpdateConfiguration
   - Name: kafka:UpdateConnectivity
   - Name: kafka:UpdateMonitoring
+  - Name: kafka:UpdateReplicationInfo
   - Name: kafka:UpdateSecurity
   - Name: kafka:UpdateStorage
-
-  # APIs without an IAM action
-  - Name: kafka:CreateReplicator
-  - Name: kafka:DeleteReplicator
-  - Name: kafka:DescribeReplicator
-  - Name: kafka:ListReplicators
-  - Name: kafka:UpdateReplicationInfo
