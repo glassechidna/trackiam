@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 374
-* Unique actions: 15687
+* Unique actions: 15692
 * Managed policies: 1132
 
 Most common managed policy name prefixes:
@@ -38,8 +38,8 @@ The following table summarises the AWS APIs.
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 597 | 2 | 15 |
 | [`sagemaker`](services/sagemaker.yml) | 319 | 1 | 11 |
+| [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`iot`](services/iot.yml) | 257 | 3 | 9 |
-| [`chime`](services/chime.yml) | 253 | 6 | 50 |
 | [`connect`](services/connect.yml) | 210 | 1 | 8 |
 | [`glue`](services/glue.yml) | 198 | 4 | 13 |
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
@@ -127,9 +127,9 @@ The following table summarises the AWS APIs.
 | [`lookoutequipment`](services/lookoutequipment.yml) | 49 | 0 | 0 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 49 | 0 | 0 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
+| [`kafka`](services/kafka.yml) | 47 | 5 | 0 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
-| [`kafka`](services/kafka.yml) | 47 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 46 | 0 | 5 |
 | [`inspector2`](services/inspector2.yml) | 46 | 0 | 0 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
@@ -223,11 +223,11 @@ The following table summarises the AWS APIs.
 | [`textract`](services/textract.yml) | 25 | 0 | 0 |
 | [`pca-connector-ad`](services/pca-connector-ad.yml) | 25 | 0 | 0 |
 | [`mediapackagev2`](services/mediapackagev2.yml) | 24 | 0 | 3 |
+| [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 24 | 0 | 1 |
 | [`verifiedpermissions`](services/verifiedpermissions.yml) | 24 | 0 | 0 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`detective`](services/detective.yml) | 23 | 1 | 7 |
-| [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 23 | 0 | 2 |
 | [`mq`](services/mq.yml) | 23 | 0 | 1 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 23 | 0 | 0 |
@@ -415,12 +415,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2465 |
+| `List` | 2466 |
 | `Get` | 2237 |
-| `Delete` | 1784 |
-| `Create` | 1677 |
-| `Describe` | 1642 |
-| `Update` | 1431 |
+| `Delete` | 1785 |
+| `Create` | 1678 |
+| `Describe` | 1643 |
+| `Update` | 1432 |
 | `Put` | 438 |
 | `Start` | 345 |
 | `Tag` | 248 |

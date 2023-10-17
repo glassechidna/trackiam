@@ -31,6 +31,8 @@ Actions:
   - Name: chime:CreateMediaInsightsPipeline
   - Name: chime:CreateMediaInsightsPipelineConfiguration
   - Name: chime:CreateMediaLiveConnectorPipeline
+  - Name: chime:CreateMediaPipelineKinesisVideoStreamPool
+  - Name: chime:CreateMediaStreamPipeline
   - Name: chime:CreateMeeting
   - Name: chime:CreateMeetingDialOut
   - Name: chime:CreateMeetingWithAttendees
@@ -63,6 +65,7 @@ Actions:
   - Name: chime:DeleteMediaCapturePipeline
   - Name: chime:DeleteMediaInsightsPipelineConfiguration
   - Name: chime:DeleteMediaPipeline
+  - Name: chime:DeleteMediaPipelineKinesisVideoStreamPool
   - Name: chime:DeleteMeeting
   - Name: chime:DeleteMessagingStreamingConfigurations
   - Name: chime:DeletePhoneNumber
@@ -113,6 +116,7 @@ Actions:
   - Name: chime:GetMediaCapturePipeline
   - Name: chime:GetMediaInsightsPipelineConfiguration
   - Name: chime:GetMediaPipeline
+  - Name: chime:GetMediaPipelineKinesisVideoStreamPool
   - Name: chime:GetMeeting
   - Name: chime:GetMessagingSessionEndpoint
   - Name: chime:GetMessagingStreamingConfigurations
@@ -163,6 +167,7 @@ Actions:
   - Name: chime:ListChannelsModeratedByAppInstanceUser
   - Name: chime:ListMediaCapturePipelines
   - Name: chime:ListMediaInsightsPipelineConfigurations
+  - Name: chime:ListMediaPipelineKinesisVideoStreamPools
   - Name: chime:ListMediaPipelines
   - Name: chime:ListMeetingTags
   - Name: chime:ListMeetings
@@ -237,6 +242,7 @@ Actions:
   - Name: chime:UpdateGlobalSettings
   - Name: chime:UpdateMediaInsightsPipelineConfiguration
   - Name: chime:UpdateMediaInsightsPipelineStatus
+  - Name: chime:UpdateMediaPipelineKinesisVideoStreamPool
   - Name: chime:UpdatePhoneNumber
   - Name: chime:UpdatePhoneNumberSettings
   - Name: chime:UpdateProxySession
@@ -304,11 +310,3 @@ Actions:
   - Name: chime:UpdateSupportedLicenses
   - Name: chime:UpdateUserLicenses
   - Name: chime:ValidateAccountResource
-
-  # APIs without an IAM action
-  - Name: chime:CreateMediaPipelineKinesisVideoStreamPool
-  - Name: chime:CreateMediaStreamPipeline
-  - Name: chime:DeleteMediaPipelineKinesisVideoStreamPool
-  - Name: chime:GetMediaPipelineKinesisVideoStreamPool
-  - Name: chime:ListMediaPipelineKinesisVideoStreamPools
-  - Name: chime:UpdateMediaPipelineKinesisVideoStreamPool
