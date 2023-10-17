@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 374
-* Unique actions: 15678
+* Unique actions: 15686
 * Managed policies: 1132
 
 Most common managed policy name prefixes:
@@ -359,6 +359,7 @@ The following table summarises the AWS APIs.
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
+| [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 16 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 14 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 14 |
 | [`scn`](services/scn.yml) | 0 | 0 | 13 |
@@ -375,7 +376,6 @@ The following table summarises the AWS APIs.
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 9 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 9 |
-| [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 7 |
 | [`payments`](services/payments.yml) | 0 | 0 | 7 |
@@ -415,12 +415,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2463 |
-| `Get` | 2235 |
-| `Delete` | 1783 |
-| `Create` | 1676 |
+| `List` | 2465 |
+| `Get` | 2236 |
+| `Delete` | 1784 |
+| `Create` | 1677 |
 | `Describe` | 1642 |
-| `Update` | 1430 |
+| `Update` | 1431 |
 | `Put` | 438 |
 | `Start` | 345 |
 | `Tag` | 248 |
