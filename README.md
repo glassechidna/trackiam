@@ -247,6 +247,7 @@ The following table summarises the AWS APIs.
 | [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
 | [`iotroborunner`](services/iotroborunner.yml) | 20 | 0 | 0 |
 | [`emr-containers`](services/emr-containers.yml) | 20 | 0 | 0 |
+| [`app-integrations`](services/app-integrations.yml) | 19 | 0 | 4 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`translate`](services/translate.yml) | 19 | 0 | 0 |
 | [`signer`](services/signer.yml) | 19 | 0 | 0 |
@@ -271,7 +272,6 @@ The following table summarises the AWS APIs.
 | [`support`](services/support.yml) | 16 | 0 | 9 |
 | [`fis`](services/fis.yml) | 16 | 0 | 3 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
-| [`app-integrations`](services/app-integrations.yml) | 15 | 4 | 4 |
 | [`honeycode`](services/honeycode.yml) | 15 | 0 | 15 |
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
 | [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 0 |
