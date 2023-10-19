@@ -68,9 +68,9 @@ The following table summarises the AWS APIs.
 | [`workmail`](services/workmail.yml) | 84 | 0 | 51 |
 | [`comprehend`](services/comprehend.yml) | 84 | 0 | 0 |
 | [`omics`](services/omics.yml) | 82 | 0 | 0 |
+| [`es`](services/es.yml) | 81 | 0 | 10 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 79 | 0 | 0 |
-| [`es`](services/es.yml) | 78 | 0 | 13 |
 | [`codecommit`](services/codecommit.yml) | 78 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
