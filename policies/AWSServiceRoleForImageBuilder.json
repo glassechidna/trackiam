@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForImageBuilder",
   "CreateDate": "2019-11-29T22:02:13Z",
-  "DefaultVersionId": "v18",
+  "DefaultVersionId": "v19",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NE22WISEW",
   "PolicyName": "AWSServiceRoleForImageBuilder",
   "PolicyVersion": {
-    "CreateDate": "2023-03-13T20:33:11Z",
+    "CreateDate": "2023-10-19T21:30:10Z",
     "Document": {
       "Statement": [
         {
@@ -288,6 +288,7 @@
             "ec2:CreateLaunchTemplate",
             "ec2:DeregisterImage",
             "ec2:DescribeExportImageTasks",
+            "ec2:DescribeHosts",
             "ec2:DescribeImages",
             "ec2:DescribeImportImageTasks",
             "ec2:DescribeInstanceAttribute",
@@ -397,6 +398,7 @@
             "ssm:DescribeInstanceAssociationsStatus",
             "ssm:DescribeInstanceInformation",
             "ssm:GetAutomationExecution",
+            "ssm:GetCommandInvocation",
             "ssm:ListCommandInvocations",
             "ssm:ListCommands",
             "ssm:ListInventoryEntries",
@@ -422,7 +424,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v18"
+    "VersionId": "v19"
   },
-  "UpdateDate": "2023-03-13T20:33:11Z"
+  "UpdateDate": "2023-10-19T21:30:10Z"
 }
