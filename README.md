@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 374
-* Unique actions: 15699
+* Unique actions: 15701
 * Managed policies: 1132
 
 Most common managed policy name prefixes:
@@ -40,14 +40,14 @@ The following table summarises the AWS APIs.
 | [`sagemaker`](services/sagemaker.yml) | 319 | 1 | 11 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`iot`](services/iot.yml) | 257 | 3 | 9 |
-| [`connect`](services/connect.yml) | 210 | 1 | 8 |
+| [`connect`](services/connect.yml) | 210 | 2 | 8 |
 | [`glue`](services/glue.yml) | 198 | 4 | 13 |
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 158 | 3 | 29 |
 | [`ses`](services/ses.yml) | 149 | 0 | 0 |
 | [`rds`](services/rds.yml) | 144 | 0 | 5 |
-| [`ssm`](services/ssm.yml) | 138 | 0 | 10 |
+| [`ssm`](services/ssm.yml) | 138 | 1 | 10 |
 | [`lex`](services/lex.yml) | 127 | 4 | 8 |
 | [`redshift`](services/redshift.yml) | 123 | 0 | 18 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
@@ -200,6 +200,7 @@ The following table summarises the AWS APIs.
 | [`kinesis`](services/kinesis.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 28 | 0 | 3 |
+| [`discovery`](services/discovery.yml) | 28 | 0 | 1 |
 | [`rolesanywhere`](services/rolesanywhere.yml) | 28 | 0 | 0 |
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
@@ -216,7 +217,6 @@ The following table summarises the AWS APIs.
 | [`appfabric`](services/appfabric.yml) | 26 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
 | [`appflow`](services/appflow.yml) | 25 | 0 | 6 |
-| [`discovery`](services/discovery.yml) | 25 | 0 | 4 |
 | [`backup-gateway`](services/backup-gateway.yml) | 25 | 0 | 2 |
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 25 | 0 | 1 |
 | [`textract`](services/textract.yml) | 25 | 0 | 0 |
@@ -417,10 +417,10 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 2467 |
 | `Get` | 2238 |
-| `Delete` | 1785 |
+| `Delete` | 1786 |
 | `Create` | 1678 |
 | `Describe` | 1645 |
-| `Update` | 1432 |
+| `Update` | 1433 |
 | `Put` | 438 |
 | `Start` | 347 |
 | `Tag` | 248 |

@@ -1,11 +1,13 @@
 Actions:
   - Name: discovery:AssociateConfigurationItemsToApplication
+  - Name: discovery:BatchDeleteAgents
   - Name: discovery:BatchDeleteImportData
   - Name: discovery:CreateApplication
   - Name: discovery:CreateTags
   - Name: discovery:DeleteApplications
   - Name: discovery:DeleteTags
   - Name: discovery:DescribeAgents
+  - Name: discovery:DescribeBatchDeleteConfigurationTask
   - Name: discovery:DescribeConfigurations
   - Name: discovery:DescribeContinuousExports
   - Name: discovery:DescribeExportConfigurations
@@ -17,6 +19,7 @@ Actions:
   - Name: discovery:GetDiscoverySummary
   - Name: discovery:ListConfigurations
   - Name: discovery:ListServerNeighbors
+  - Name: discovery:StartBatchDeleteConfigurationTask
   - Name: discovery:StartContinuousExport
   - Name: discovery:StartDataCollectionByAgentIds
   - Name: discovery:StartExportTask
@@ -26,7 +29,4 @@ Actions:
   - Name: discovery:UpdateApplication
 
   # actions with no corresponding API
-  - Name: discovery:BatchDeleteAgents
-  - Name: discovery:DescribeBatchDeleteConfigurationTask
   - Name: discovery:GetNetworkConnectionGraph
-  - Name: discovery:StartBatchDeleteConfigurationTask
