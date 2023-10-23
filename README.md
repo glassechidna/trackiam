@@ -128,6 +128,7 @@ The following table summarises the AWS APIs.
 | [`lookoutequipment`](services/lookoutequipment.yml) | 49 | 0 | 0 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 49 | 0 | 0 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
+| [`lakeformation`](services/lakeformation.yml) | 47 | 3 | 1 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`cloudtrail`](services/cloudtrail.yml) | 46 | 0 | 5 |
@@ -135,7 +136,6 @@ The following table summarises the AWS APIs.
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`cleanrooms`](services/cleanrooms.yml) | 45 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
-| [`lakeformation`](services/lakeformation.yml) | 44 | 6 | 1 |
 | [`workdocs`](services/workdocs.yml) | 44 | 0 | 15 |
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
