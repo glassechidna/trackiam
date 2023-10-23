@@ -127,6 +127,7 @@ Actions:
   - Name: connect:ListRoutingProfiles
   - Name: connect:ListRules
   - Name: connect:ListSecurityKeys
+  - Name: connect:ListSecurityProfileApplications
   - Name: connect:ListSecurityProfilePermissions
   - Name: connect:ListSecurityProfiles
   - Name: connect:ListTagsForResource
@@ -183,6 +184,7 @@ Actions:
   - Name: connect:UpdateInstanceStorageConfig
   - Name: connect:UpdateParticipantRoleConfig
   - Name: connect:UpdatePhoneNumber
+  - Name: connect:UpdatePhoneNumberMetadata
   - Name: connect:UpdatePrompt
   - Name: connect:UpdateQueueHoursOfOperation
   - Name: connect:UpdateQueueMaxContacts
@@ -214,12 +216,14 @@ Actions:
   - Name: connect:AssociateCustomerProfilesDomain
   - Name: connect:BatchAssociateAnalyticsDataSet
   - Name: connect:BatchDisassociateAnalyticsDataSet
+  - Name: connect:BatchGetFlowAssociation
+  - Name: connect:CreatePredefinedAttribute
+  - Name: connect:DeletePredefinedAttribute
   - Name: connect:DescribeForecastingPlanningSchedulingIntegration
+  - Name: connect:DescribePredefinedAttribute
   - Name: connect:DisassociateCustomerProfilesDomain
   - Name: connect:GetFederationTokens
+  - Name: connect:ListPredefinedAttributes
   - Name: connect:StartForecastingPlanningSchedulingIntegration
   - Name: connect:StopForecastingPlanningSchedulingIntegration
-
-  # APIs without an IAM action
-  - Name: connect:ListSecurityProfileApplications
-  - Name: connect:UpdatePhoneNumberMetadata
+  - Name: connect:UpdatePredefinedAttribute
