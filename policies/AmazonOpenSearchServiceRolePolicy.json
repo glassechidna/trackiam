@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonOpenSearchServiceRolePolicy",
   "CreateDate": "2021-08-26T09:27:09Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NHHCOTRP6",
   "PolicyName": "AmazonOpenSearchServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-10-13T14:05:59Z",
+    "CreateDate": "2023-10-23T07:07:31Z",
     "Document": {
       "Statement": [
         {
@@ -66,6 +66,14 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "Stmt1480452973196"
+        },
+        {
+          "Action": [
+            "ec2:AssignIpv6Addresses"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "Stmt1480452973149"
         },
         {
           "Action": [
@@ -174,6 +182,14 @@
         },
         {
           "Action": [
+            "ec2:UnAssignIpv6Addresses"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "Stmt1480452973150"
+        },
+        {
+          "Action": [
             "elasticloadbalancing:AddListenerCertificates",
             "elasticloadbalancing:RemoveListenerCertificates"
           ],
@@ -187,7 +203,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2022-10-13T14:05:59Z"
+  "UpdateDate": "2023-10-23T07:07:31Z"
 }
