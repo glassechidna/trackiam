@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonElasticsearchServiceRolePolicy",
   "CreateDate": "2017-07-07T00:15:31Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJFEWZPHXKLCVHEUIC",
   "PolicyName": "AmazonElasticsearchServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-10-13T13:45:16Z",
+    "CreateDate": "2023-10-23T06:58:31Z",
     "Document": {
       "Statement": [
         {
@@ -69,6 +69,14 @@
         },
         {
           "Action": [
+            "ec2:AssignIpv6Addresses"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "Stmt1480452973149"
+        },
+        {
+          "Action": [
             "ec2:CreateNetworkInterface",
             "ec2:DeleteNetworkInterface",
             "ec2:DescribeNetworkInterfaces",
@@ -104,12 +112,20 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "Stmt1480452973201"
+        },
+        {
+          "Action": [
+            "ec2:UnAssignIpv6Addresses"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "Stmt1480452973150"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2022-10-13T13:45:16Z"
+  "UpdateDate": "2023-10-23T06:58:31Z"
 }
