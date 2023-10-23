@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRDSPerformanceInsightsFullAccess",
   "CreateDate": "2023-08-15T23:41:34Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AOEG27H7E",
   "PolicyName": "AmazonRDSPerformanceInsightsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-08-15T23:41:34Z",
+    "CreateDate": "2023-10-23T21:14:27Z",
     "Document": {
       "Statement": [
         {
@@ -17,7 +17,8 @@
             "cloudwatch:ListMetrics"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AmazonCloudWatchReadAccess"
         },
         {
           "Action": [
@@ -27,7 +28,8 @@
             "pi:ListPerformanceAnalysisReports"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:pi:*:*:perf-reports/rds/*/*"
+          "Resource": "arn:aws:pi:*:*:perf-reports/rds/*/*",
+          "Sid": "AmazonRDSPerformanceInsightsAnalisysReportFullAccess"
         },
         {
           "Action": [
@@ -39,7 +41,8 @@
             "pi:ListAvailableResourceMetrics"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:pi:*:*:metrics/rds/*"
+          "Resource": "arn:aws:pi:*:*:metrics/rds/*",
+          "Sid": "AmazonRDSPerformanceInsightsReadAccess"
         },
         {
           "Action": [
@@ -48,7 +51,8 @@
             "pi:UntagResource"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:pi:*:*:*/rds/*"
+          "Resource": "arn:aws:pi:*:*:*/rds/*",
+          "Sid": "AmazonRDSPerformanceInsightsTaggingFullAccess"
         },
         {
           "Action": [
@@ -56,13 +60,14 @@
             "rds:DescribeDBInstances"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AmazonRDSDescribeInstanceAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-08-15T23:41:34Z"
+  "UpdateDate": "2023-10-23T21:14:27Z"
 }
