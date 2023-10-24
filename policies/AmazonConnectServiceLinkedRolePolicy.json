@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-10-06T17:23:46Z",
+    "CreateDate": "2023-10-23T23:22:56Z",
     "Document": {
       "Statement": [
         {
@@ -25,19 +25,28 @@
           "Action": [
             "wisdom:CreateContent",
             "wisdom:CreateKnowledgeBase",
+            "wisdom:CreateQuickResponse",
             "wisdom:CreateSession",
             "wisdom:DeleteContent",
+            "wisdom:DeleteQuickResponse",
             "wisdom:GetAssistant",
             "wisdom:GetContent",
+            "wisdom:GetImportJob",
             "wisdom:GetKnowledgeBase",
+            "wisdom:GetQuickResponse",
             "wisdom:GetRecommendations",
             "wisdom:GetSession",
+            "wisdom:ListImportJobs",
+            "wisdom:ListQuickResponses",
             "wisdom:NotifyRecommendationsReceived",
             "wisdom:QueryAssistant",
+            "wisdom:SearchQuickResponses",
             "wisdom:StartContentUpload",
+            "wisdom:StartImportJob",
             "wisdom:TagResource",
             "wisdom:UntagResource",
-            "wisdom:UpdateContent"
+            "wisdom:UpdateContent",
+            "wisdom:UpdateQuickResponse"
           ],
           "Condition": {
             "StringEquals": {
@@ -176,7 +185,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2023-10-06T17:23:46Z"
+  "UpdateDate": "2023-10-23T23:22:56Z"
 }
