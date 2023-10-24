@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 374
-* Unique actions: 15724
+* Unique actions: 15732
 * Managed policies: 1132
 
 Most common managed policy name prefixes:
@@ -181,8 +181,8 @@ The following table summarises the AWS APIs.
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
+| [`aoss`](services/aoss.yml) | 31 | 6 | 2 |
 | [`wisdom`](services/wisdom.yml) | 31 | 0 | 10 |
-| [`aoss`](services/aoss.yml) | 31 | 0 | 2 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`securitylake`](services/securitylake.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
@@ -237,13 +237,13 @@ The following table summarises the AWS APIs.
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 0 |
+| [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 21 | 1 | 7 |
 | [`aps`](services/aps.yml) | 21 | 0 | 16 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
-| [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 21 | 0 | 7 |
 | [`synthetics`](services/synthetics.yml) | 21 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 3 | 0 |
-| [`mgh`](services/mgh.yml) | 20 | 0 | 0 |
+| [`mgh`](services/mgh.yml) | 20 | 1 | 0 |
 | [`iotroborunner`](services/iotroborunner.yml) | 20 | 0 | 0 |
 | [`emr-containers`](services/emr-containers.yml) | 20 | 0 | 0 |
 | [`app-integrations`](services/app-integrations.yml) | 19 | 0 | 4 |
@@ -415,12 +415,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2471 |
+| `List` | 2473 |
 | `Get` | 2243 |
-| `Delete` | 1789 |
-| `Create` | 1680 |
+| `Delete` | 1791 |
+| `Create` | 1681 |
 | `Describe` | 1646 |
-| `Update` | 1435 |
+| `Update` | 1436 |
 | `Put` | 438 |
 | `Start` | 349 |
 | `Tag` | 248 |
