@@ -1,13 +1,17 @@
 Actions:
   - Name: aoss:BatchGetCollection
+  - Name: aoss:BatchGetEffectiveLifecyclePolicy
+  - Name: aoss:BatchGetLifecyclePolicy
   - Name: aoss:BatchGetVpcEndpoint
   - Name: aoss:CreateAccessPolicy
   - Name: aoss:CreateCollection
+  - Name: aoss:CreateLifecyclePolicy
   - Name: aoss:CreateSecurityConfig
   - Name: aoss:CreateSecurityPolicy
   - Name: aoss:CreateVpcEndpoint
   - Name: aoss:DeleteAccessPolicy
   - Name: aoss:DeleteCollection
+  - Name: aoss:DeleteLifecyclePolicy
   - Name: aoss:DeleteSecurityConfig
   - Name: aoss:DeleteSecurityPolicy
   - Name: aoss:DeleteVpcEndpoint
@@ -18,6 +22,7 @@ Actions:
   - Name: aoss:GetSecurityPolicy
   - Name: aoss:ListAccessPolicies
   - Name: aoss:ListCollections
+  - Name: aoss:ListLifecyclePolicies
   - Name: aoss:ListSecurityConfigs
   - Name: aoss:ListSecurityPolicies
   - Name: aoss:ListTagsForResource
@@ -27,6 +32,7 @@ Actions:
   - Name: aoss:UpdateAccessPolicy
   - Name: aoss:UpdateAccountSettings
   - Name: aoss:UpdateCollection
+  - Name: aoss:UpdateLifecyclePolicy
   - Name: aoss:UpdateSecurityConfig
   - Name: aoss:UpdateSecurityPolicy
   - Name: aoss:UpdateVpcEndpoint
@@ -34,11 +40,3 @@ Actions:
   # actions with no corresponding API
   - Name: aoss:APIAccessAll
   - Name: aoss:DashboardsAccessAll
-
-  # APIs without an IAM action
-  - Name: aoss:BatchGetEffectiveLifecyclePolicy
-  - Name: aoss:BatchGetLifecyclePolicy
-  - Name: aoss:CreateLifecyclePolicy
-  - Name: aoss:DeleteLifecyclePolicy
-  - Name: aoss:ListLifecyclePolicies
-  - Name: aoss:UpdateLifecyclePolicy

@@ -160,6 +160,7 @@ The following table summarises the AWS APIs.
 | [`sso`](services/sso.yml) | 37 | 0 | 55 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`apprunner`](services/apprunner.yml) | 37 | 0 | 5 |
+| [`aoss`](services/aoss.yml) | 37 | 0 | 2 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
@@ -181,7 +182,6 @@ The following table summarises the AWS APIs.
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
-| [`aoss`](services/aoss.yml) | 31 | 6 | 2 |
 | [`wisdom`](services/wisdom.yml) | 31 | 0 | 10 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`securitylake`](services/securitylake.yml) | 31 | 0 | 0 |
