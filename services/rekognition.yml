@@ -37,6 +37,7 @@ Actions:
   - Name: rekognition:GetFaceLivenessSessionResults
   - Name: rekognition:GetFaceSearch
   - Name: rekognition:GetLabelDetection
+  - Name: rekognition:GetMediaAnalysisJob
   - Name: rekognition:GetPersonTracking
   - Name: rekognition:GetSegmentDetection
   - Name: rekognition:GetTextDetection
@@ -45,6 +46,7 @@ Actions:
   - Name: rekognition:ListDatasetEntries
   - Name: rekognition:ListDatasetLabels
   - Name: rekognition:ListFaces
+  - Name: rekognition:ListMediaAnalysisJobs
   - Name: rekognition:ListProjectPolicies
   - Name: rekognition:ListStreamProcessors
   - Name: rekognition:ListTagsForResource
@@ -60,6 +62,7 @@ Actions:
   - Name: rekognition:StartFaceDetection
   - Name: rekognition:StartFaceSearch
   - Name: rekognition:StartLabelDetection
+  - Name: rekognition:StartMediaAnalysisJob
   - Name: rekognition:StartPersonTracking
   - Name: rekognition:StartProjectVersion
   - Name: rekognition:StartSegmentDetection
@@ -74,8 +77,3 @@ Actions:
 
   # actions with no corresponding API
   - Name: rekognition:StartFaceLivenessSession
-
-  # APIs without an IAM action
-  - Name: rekognition:GetMediaAnalysisJob
-  - Name: rekognition:ListMediaAnalysisJobs
-  - Name: rekognition:StartMediaAnalysisJob

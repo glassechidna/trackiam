@@ -74,13 +74,13 @@ The following table summarises the AWS APIs.
 | [`codecommit`](services/codecommit.yml) | 78 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
+| [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 75 | 0 | 1 |
 | [`backup`](services/backup.yml) | 74 | 0 | 5 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`workspaces`](services/workspaces.yml) | 73 | 0 | 1 |
 | [`iotsitewise`](services/iotsitewise.yml) | 73 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
-| [`rekognition`](services/rekognition.yml) | 72 | 3 | 1 |
 | [`personalize`](services/personalize.yml) | 72 | 0 | 4 |
 | [`mgn`](services/mgn.yml) | 70 | 0 | 34 |
 | [`cloudformation`](services/cloudformation.yml) | 70 | 0 | 11 |
