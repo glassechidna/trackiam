@@ -242,8 +242,8 @@ The following table summarises the AWS APIs.
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`synthetics`](services/synthetics.yml) | 21 | 0 | 0 |
+| [`mgh`](services/mgh.yml) | 21 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 3 | 0 |
-| [`mgh`](services/mgh.yml) | 20 | 1 | 0 |
 | [`iotroborunner`](services/iotroborunner.yml) | 20 | 0 | 0 |
 | [`emr-containers`](services/emr-containers.yml) | 20 | 0 | 0 |
 | [`app-integrations`](services/app-integrations.yml) | 19 | 0 | 4 |
