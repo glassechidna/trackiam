@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 373
-* Unique actions: 15729
+* Unique actions: 15734
 * Managed policies: 1132
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 597 | 2 | 15 |
+| [`ec2`](services/ec2.yml) | 597 | 3 | 15 |
 | [`sagemaker`](services/sagemaker.yml) | 319 | 1 | 11 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`iot`](services/iot.yml) | 257 | 3 | 9 |
@@ -49,7 +49,7 @@ The following table summarises the AWS APIs.
 | [`rds`](services/rds.yml) | 144 | 0 | 5 |
 | [`ssm`](services/ssm.yml) | 138 | 1 | 10 |
 | [`lex`](services/lex.yml) | 127 | 4 | 8 |
-| [`redshift`](services/redshift.yml) | 123 | 0 | 18 |
+| [`redshift`](services/redshift.yml) | 123 | 4 | 18 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
@@ -415,12 +415,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2470 |
-| `Get` | 2243 |
-| `Delete` | 1791 |
+| `Get` | 2245 |
+| `Delete` | 1792 |
 | `Create` | 1681 |
-| `Describe` | 1646 |
+| `Describe` | 1647 |
 | `Update` | 1436 |
-| `Put` | 438 |
+| `Put` | 439 |
 | `Start` | 349 |
 | `Tag` | 248 |
 | `Untag` | 245 |
