@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRedshiftServiceLinkedRolePolicy",
   "CreateDate": "2017-09-18T19:19:45Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJPY2VXNRUYOY3SRZS",
   "PolicyName": "AmazonRedshiftServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-08-14T10:46:23Z",
+    "CreateDate": "2023-10-27T16:20:17Z",
     "Document": {
       "Statement": [
         {
@@ -132,6 +132,16 @@
         },
         {
           "Action": [
+            "ec2:AssignIpv6Addresses",
+            "ec2:UnassignIpv6Addresses"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*"
+          ]
+        },
+        {
+          "Action": [
             "ec2:AssociateAddress",
             "ec2:CreateNetworkInterface",
             "ec2:CreateVpcEndpoint",
@@ -206,7 +216,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2023-08-14T10:46:23Z"
+  "UpdateDate": "2023-10-27T16:20:17Z"
 }
