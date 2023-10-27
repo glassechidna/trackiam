@@ -1,0 +1,303 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerCanvasDataPrepFullAccess",
+  "CreateDate": "2023-10-27T22:56:13Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CKHJVSVSQ",
+  "PolicyName": "AmazonSageMakerCanvasDataPrepFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-10-27T22:56:13Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "events.amazon.com",
+                "sagemaker.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "IAMPassOperation"
+        },
+        {
+          "Action": "s3:GetObject",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringEqualsIgnoreCase": {
+              "s3:ExistingObjectTag/SageMaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*",
+          "Sid": "S3GetObjectOperation"
+        },
+        {
+          "Action": [
+            "events:DescribeRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "sagemaker:is-canvas-data-prep-job",
+                "sm_canvas_user_profile"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceTag/sagemaker:is-canvas-data-prep-job": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/*",
+          "Sid": "EventBridgeTagBasedOperations"
+        },
+        {
+          "Action": [
+            "s3:AbortMultipartUpload",
+            "s3:DeleteObject",
+            "s3:GetBucketCors",
+            "s3:GetBucketLocation",
+            "s3:GetObject",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*SageMaker*",
+            "arn:aws:s3:::*Sagemaker*",
+            "arn:aws:s3:::*sagemaker*"
+          ],
+          "Sid": "S3Operations"
+        },
+        {
+          "Action": [
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "SageMaker"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/SageMaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:AmazonSageMaker-*",
+          "Sid": "SecretManagerTagBasedOperation"
+        },
+        {
+          "Action": "athena:ListDataCatalogs",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AthenaListDataCatalogOperation"
+        },
+        {
+          "Action": "elasticmapreduce:ListClusters",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EMRListOperation"
+        },
+        {
+          "Action": "events:ListTagsForResource",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EventBridgeListTagOperation"
+        },
+        {
+          "Action": "iam:GetRole",
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "IAMGetOperations"
+        },
+        {
+          "Action": "iam:ListRoles",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IAMListOperations"
+        },
+        {
+          "Action": "kms:DescribeKey",
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSOperations"
+        },
+        {
+          "Action": "kms:ListAliases",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "KMSListOperations"
+        },
+        {
+          "Action": "rds:DescribeDBInstances",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RDSOperation"
+        },
+        {
+          "Action": "redshift:GetClusterCredentials",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift:*:*:dbname:*",
+            "arn:aws:redshift:*:*:dbuser:*/sagemaker_access*"
+          ],
+          "Sid": "RedshiftGetCredentialsOperation"
+        },
+        {
+          "Action": "sagemaker:ListFeatureGroups",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SageMakerListFeatureGroupOperation"
+        },
+        {
+          "Action": "sagemaker:ListProcessingJobs",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SageMakerProcessingJobListOperation"
+        },
+        {
+          "Action": "secretsmanager:CreateSecret",
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:AmazonSageMaker-*",
+          "Sid": "SecretsManagerARNBasedOperation"
+        },
+        {
+          "Action": [
+            "athena:GetQueryExecution",
+            "athena:GetQueryResults",
+            "athena:StartQueryExecution",
+            "athena:StopQueryExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:athena:*:*:workgroup/*",
+          "Sid": "AthenaQueryExecutionOperations"
+        },
+        {
+          "Action": [
+            "athena:ListDatabases",
+            "athena:ListTableMetadata"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:athena:*:*:datacatalog/*",
+          "Sid": "AthenaDataCatalogOperations"
+        },
+        {
+          "Action": [
+            "elasticmapreduce:DescribeCluster",
+            "elasticmapreduce:ListInstanceGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticmapreduce:*:*:cluster/*",
+          "Sid": "EMROperations"
+        },
+        {
+          "Action": [
+            "glue:GetDatabases",
+            "glue:GetTable",
+            "glue:GetTables",
+            "glue:SearchTables"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:catalog",
+            "arn:aws:glue:*:*:database/*",
+            "arn:aws:glue:*:*:table/*"
+          ],
+          "Sid": "GlueOperations"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/sagemaker/studio:*",
+          "Sid": "LoggingOperation"
+        },
+        {
+          "Action": [
+            "redshift-data:CancelStatement",
+            "redshift-data:DescribeStatement",
+            "redshift-data:GetStatementResult"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RedshiftOperations"
+        },
+        {
+          "Action": [
+            "redshift-data:ExecuteStatement",
+            "redshift-data:ListSchemas",
+            "redshift-data:ListTables"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:redshift:*:*:cluster:*",
+          "Sid": "RedshiftArnBasedOperations"
+        },
+        {
+          "Action": [
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "S3ListOperations"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateFeatureGroup",
+            "sagemaker:DescribeFeatureGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:feature-group/*",
+          "Sid": "SageMakerFeatureGroupOperations"
+        },
+        {
+          "Action": [
+            "sagemaker:CreatePipeline",
+            "sagemaker:DeletePipeline",
+            "sagemaker:DescribePipeline",
+            "sagemaker:DescribePipelineExecution",
+            "sagemaker:ListPipelineExecutionSteps",
+            "sagemaker:StartPipelineExecution",
+            "sagemaker:UpdatePipeline"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:pipeline/*canvas-data-prep*",
+          "Sid": "SageMakerPipelineOperations"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateProcessingJob",
+            "sagemaker:DescribeProcessingJob",
+            "sagemaker:addTags"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:processing-job/*canvas-data-prep*",
+          "Sid": "SageMakerProcessingJobOperations"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-10-27T22:56:13Z"
+}

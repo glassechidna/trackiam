@@ -1,0 +1,98 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectSynchronizationServiceRolePolicy",
+  "CreateDate": "2023-10-27T22:38:25Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4J2PE2WH3Y",
+  "PolicyName": "AmazonConnectSynchronizationServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-10-27T22:38:25Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "cloudwatch:PutMetricData",
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/Connect"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowPutMetricsForConnectNamespace"
+        },
+        {
+          "Action": [
+            "connect:Associate*",
+            "connect:BatchGetFlowAssociation",
+            "connect:CreateAgentStatus",
+            "connect:CreateContactFlow*",
+            "connect:CreateHoursOfOperation",
+            "connect:CreatePredefinedAttribute",
+            "connect:CreatePrompt",
+            "connect:CreateQueue",
+            "connect:CreateQuickConnect",
+            "connect:CreateRoutingProfile",
+            "connect:CreateSecurityProfile",
+            "connect:CreateUser*",
+            "connect:DeleteContactFlow*",
+            "connect:DeleteHoursOfOperation",
+            "connect:DeletePredefinedAttribute",
+            "connect:DeletePrompt",
+            "connect:DeleteQueue",
+            "connect:DeleteQuickConnect",
+            "connect:DeleteRoutingProfile",
+            "connect:DeleteSecurityProfile",
+            "connect:DeleteUser*",
+            "connect:DescribeAgentStatus",
+            "connect:DescribeContactFlow*",
+            "connect:DescribeHoursOfOperation",
+            "connect:DescribePhoneNumber",
+            "connect:DescribePredefinedAttribute",
+            "connect:DescribePrompt",
+            "connect:DescribeQueue",
+            "connect:DescribeQuickConnect",
+            "connect:DescribeRoutingProfile",
+            "connect:DescribeSecurityProfile",
+            "connect:DescribeUser*",
+            "connect:Disassociate*",
+            "connect:GetPromptFile",
+            "connect:ListAgentStatuses",
+            "connect:ListContactFlow*",
+            "connect:ListHoursOfOperations",
+            "connect:ListPhoneNumbersV2",
+            "connect:ListPredefinedAttributes",
+            "connect:ListPrompts",
+            "connect:ListQueue*",
+            "connect:ListQuickConnects",
+            "connect:ListRoutingProfile*",
+            "connect:ListSecurityProfile*",
+            "connect:ListTagsForResource",
+            "connect:ListTrafficDistributionGroups",
+            "connect:ListUser*",
+            "connect:TagResource",
+            "connect:UntagResource",
+            "connect:UpdateAgentStatus",
+            "connect:UpdateContactFlow*",
+            "connect:UpdateHoursOfOperation",
+            "connect:UpdatePhoneNumber",
+            "connect:UpdatePredefinedAttribute",
+            "connect:UpdatePrompt",
+            "connect:UpdateQueue*",
+            "connect:UpdateQuickConnect*",
+            "connect:UpdateRoutingProfile*",
+            "connect:UpdateSecurityProfile",
+            "connect:UpdateUser*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowConnectActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-10-27T22:38:25Z"
+}
