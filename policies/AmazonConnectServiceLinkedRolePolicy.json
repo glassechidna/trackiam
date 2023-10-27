@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-10-23T23:22:56Z",
+    "CreateDate": "2023-10-26T23:32:06Z",
     "Document": {
       "Statement": [
         {
@@ -100,7 +100,10 @@
           "Action": [
             "profile:AddProfileKey",
             "profile:CreateProfile",
+            "profile:GetDomain",
             "profile:ListCalculatedAttributeDefinitions",
+            "profile:ListCalculatedAttributesForProfile",
+            "profile:ListIntegrations",
             "profile:ListProfileObjectTypes",
             "profile:SearchProfiles",
             "profile:UpdateProfile"
@@ -111,13 +114,17 @@
         },
         {
           "Action": [
-            "profile:GetCalculatedAttributeForProfile"
+            "profile:CreateCalculatedAttributeDefinition",
+            "profile:DeleteCalculatedAttributeDefinition",
+            "profile:GetCalculatedAttributeDefinition",
+            "profile:GetCalculatedAttributeForProfile",
+            "profile:UpdateCalculatedAttributeDefinition"
           ],
           "Effect": "Allow",
           "Resource": [
             "arn:aws:profile:*:*:domains/amazon-connect-*/calculated-attributes/*"
           ],
-          "Sid": "AllowReadCalculatedAttributesForProfile"
+          "Sid": "AllowCustomerProfilesCalculatedAttributesForConnectDomain"
         },
         {
           "Action": [
@@ -185,7 +192,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2023-10-23T23:22:56Z"
+  "UpdateDate": "2023-10-26T23:32:06Z"
 }
