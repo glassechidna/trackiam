@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 373
-* Unique actions: 15714
+* Unique actions: 15710
 * Managed policies: 1134
 
 Most common managed policy name prefixes:
@@ -361,7 +361,6 @@ The following table summarises the AWS APIs.
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 16 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 14 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 14 |
-| [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
 | [`scn`](services/scn.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`billing`](services/billing.yml) | 0 | 0 | 13 |
@@ -372,6 +371,7 @@ The following table summarises the AWS APIs.
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`artifact`](services/artifact.yml) | 0 | 0 | 10 |
+| [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 10 |
 | [`notifications-contacts`](services/notifications-contacts.yml) | 0 | 0 | 9 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 9 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
@@ -415,13 +415,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2462 |
-| `Get` | 2242 |
+| `Get` | 2240 |
 | `Delete` | 1790 |
 | `Create` | 1678 |
 | `Describe` | 1647 |
 | `Update` | 1432 |
 | `Put` | 441 |
-| `Start` | 353 |
+| `Start` | 351 |
 | `Tag` | 247 |
 | `Untag` | 244 |
 
