@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSResilienceHubAsssessmentExecutionPolicy",
   "CreateDate": "2023-06-27T12:32:15Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AAR6UQTAK",
   "PolicyName": "AWSResilienceHubAsssessmentExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-10-05T11:16:28Z",
+    "CreateDate": "2023-10-29T16:17:40Z",
     "Document": {
       "Statement": [
         {
@@ -20,7 +20,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSResilienceHubCloudWatchStatement"
         },
         {
           "Action": [
@@ -31,7 +32,8 @@
             "arn:aws:apigateway:*::/apis/*",
             "arn:aws:apigateway:*::/restapis/*",
             "arn:aws:apigateway:*::/usageplans"
-          ]
+          ],
+          "Sid": "AWSResilienceHubApiGatewayStatement"
         },
         {
           "Action": [
@@ -142,10 +144,14 @@
             "sqs:GetQueueAttributes",
             "sqs:GetQueueUrl",
             "ssm:DescribeAutomationExecutions",
+            "states:DescribeStateMachine",
+            "states:ListStateMachineAliases",
+            "states:ListStateMachineVersions",
             "tag:GetResources"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSResilienceHubFullResourceStatement"
         },
         {
           "Action": [
@@ -154,20 +160,22 @@
             "s3:PutObject"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:s3:::aws-resilience-hub-artifacts-*"
+          "Resource": "arn:aws:s3:::aws-resilience-hub-artifacts-*",
+          "Sid": "AWSResilienceHubS3Statement"
         },
         {
           "Action": [
             "ssm:GetParametersByPath"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:parameter/ResilienceHub/*"
+          "Resource": "arn:aws:ssm:*:*:parameter/ResilienceHub/*",
+          "Sid": "AWSResilienceHubSSMStatement"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-10-05T11:16:28Z"
+  "UpdateDate": "2023-10-29T16:17:40Z"
 }
