@@ -1,10 +1,12 @@
 Actions:
   - Name: redshift-serverless:ConvertRecoveryPointToSnapshot
+  - Name: redshift-serverless:CreateCustomDomainAssociation
   - Name: redshift-serverless:CreateEndpointAccess
   - Name: redshift-serverless:CreateNamespace
   - Name: redshift-serverless:CreateSnapshot
   - Name: redshift-serverless:CreateUsageLimit
   - Name: redshift-serverless:CreateWorkgroup
+  - Name: redshift-serverless:DeleteCustomDomainAssociation
   - Name: redshift-serverless:DeleteEndpointAccess
   - Name: redshift-serverless:DeleteNamespace
   - Name: redshift-serverless:DeleteResourcePolicy
@@ -12,6 +14,7 @@ Actions:
   - Name: redshift-serverless:DeleteUsageLimit
   - Name: redshift-serverless:DeleteWorkgroup
   - Name: redshift-serverless:GetCredentials
+  - Name: redshift-serverless:GetCustomDomainAssociation
   - Name: redshift-serverless:GetEndpointAccess
   - Name: redshift-serverless:GetNamespace
   - Name: redshift-serverless:GetRecoveryPoint
@@ -20,6 +23,7 @@ Actions:
   - Name: redshift-serverless:GetTableRestoreStatus
   - Name: redshift-serverless:GetUsageLimit
   - Name: redshift-serverless:GetWorkgroup
+  - Name: redshift-serverless:ListCustomDomainAssociations
   - Name: redshift-serverless:ListEndpointAccess
   - Name: redshift-serverless:ListNamespaces
   - Name: redshift-serverless:ListRecoveryPoints
@@ -34,6 +38,7 @@ Actions:
   - Name: redshift-serverless:RestoreTableFromSnapshot
   - Name: redshift-serverless:TagResource
   - Name: redshift-serverless:UntagResource
+  - Name: redshift-serverless:UpdateCustomDomainAssociation
   - Name: redshift-serverless:UpdateEndpointAccess
   - Name: redshift-serverless:UpdateNamespace
   - Name: redshift-serverless:UpdateSnapshot
@@ -42,10 +47,3 @@ Actions:
 
   # actions with no corresponding API
   - Name: redshift-serverless:DescribeOneTimeCredit
-
-  # APIs without an IAM action
-  - Name: redshift-serverless:CreateCustomDomainAssociation
-  - Name: redshift-serverless:DeleteCustomDomainAssociation
-  - Name: redshift-serverless:GetCustomDomainAssociation
-  - Name: redshift-serverless:ListCustomDomainAssociations
-  - Name: redshift-serverless:UpdateCustomDomainAssociation
