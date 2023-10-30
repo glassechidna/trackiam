@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 373
-* Unique actions: 15710
+* Unique actions: 15720
 * Managed policies: 1134
 
 Most common managed policy name prefixes:
@@ -46,7 +46,7 @@ The following table summarises the AWS APIs.
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 158 | 3 | 29 |
 | [`ses`](services/ses.yml) | 149 | 0 | 0 |
-| [`rds`](services/rds.yml) | 144 | 0 | 5 |
+| [`rds`](services/rds.yml) | 144 | 3 | 5 |
 | [`ssm`](services/ssm.yml) | 138 | 1 | 10 |
 | [`lex`](services/lex.yml) | 127 | 4 | 8 |
 | [`redshift`](services/redshift.yml) | 123 | 4 | 18 |
@@ -145,8 +145,8 @@ The following table summarises the AWS APIs.
 | [`fms`](services/fms.yml) | 42 | 0 | 0 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
+| [`redshift-serverless`](services/redshift-serverless.yml) | 40 | 5 | 1 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 40 | 0 | 3 |
-| [`redshift-serverless`](services/redshift-serverless.yml) | 40 | 0 | 1 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
@@ -167,7 +167,7 @@ The following table summarises the AWS APIs.
 | [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 0 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`eks`](services/eks.yml) | 35 | 0 | 1 |
-| [`finspace`](services/finspace.yml) | 34 | 0 | 9 |
+| [`finspace`](services/finspace.yml) | 34 | 1 | 9 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
 | [`states`](services/states.yml) | 34 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
@@ -194,8 +194,8 @@ The following table summarises the AWS APIs.
 | [`xray`](services/xray.yml) | 30 | 0 | 3 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
 | [`cases`](services/cases.yml) | 30 | 0 | 0 |
+| [`dataexchange`](services/dataexchange.yml) | 29 | 1 | 2 |
 | [`voiceid`](services/voiceid.yml) | 29 | 0 | 2 |
-| [`dataexchange`](services/dataexchange.yml) | 29 | 0 | 2 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 29 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 29 | 0 | 0 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
@@ -414,12 +414,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2462 |
-| `Get` | 2240 |
-| `Delete` | 1790 |
-| `Create` | 1678 |
-| `Describe` | 1647 |
-| `Update` | 1432 |
+| `List` | 2463 |
+| `Get` | 2241 |
+| `Delete` | 1792 |
+| `Create` | 1680 |
+| `Describe` | 1648 |
+| `Update` | 1434 |
 | `Put` | 441 |
 | `Start` | 351 |
 | `Tag` | 247 |
