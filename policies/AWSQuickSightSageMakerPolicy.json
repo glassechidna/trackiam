@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSQuickSightSageMakerPolicy",
   "CreateDate": "2020-01-17T17:18:13Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4MCLBVDT2I",
   "PolicyName": "AWSQuickSightSageMakerPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-10-03T23:22:22Z",
+    "CreateDate": "2023-10-30T17:57:43Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:s3:::sagemaker*"
+          "Resource": "arn:aws:s3:::sagemaker*",
+          "Sid": "S3ObjectUpdateAccess"
         },
         {
           "Action": "s3:GetObject",
@@ -26,12 +27,14 @@
           "Resource": [
             "arn:aws:s3:::quicksight-ml.*",
             "arn:aws:s3:::sagemaker*"
-          ]
+          ],
+          "Sid": "S3ObjectReadAccess"
         },
         {
           "Action": "s3:ListBucket",
           "Effect": "Allow",
-          "Resource": "arn:aws:s3:::sagemaker*"
+          "Resource": "arn:aws:s3:::sagemaker*",
+          "Sid": "S3BucketReadAccess"
         },
         {
           "Action": [
@@ -40,7 +43,8 @@
             "sagemaker:StopTransformJob"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:sagemaker:*:*:transform-job/quicksight-auto-generated-*"
+          "Resource": "arn:aws:sagemaker:*:*:transform-job/quicksight-auto-generated-*",
+          "Sid": "SageMakerTransformJobAccess"
         },
         {
           "Action": [
@@ -48,13 +52,14 @@
             "sagemaker:ListModels"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "SageMakerModelReadAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-10-03T23:22:22Z"
+  "UpdateDate": "2023-10-30T17:57:43Z"
 }
