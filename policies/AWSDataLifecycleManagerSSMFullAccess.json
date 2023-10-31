@@ -1,0 +1,69 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSDataLifecycleManagerSSMFullAccess",
+  "CreateDate": "2023-10-31T20:29:44Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4LAVPWOUGF",
+  "PolicyName": "AWSDataLifecycleManagerSSMFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-10-31T20:29:44Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ssm:DescribeDocument",
+            "ssm:GetDocument",
+            "ssm:SendCommand"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/DLMScriptsAccess": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/*"
+          ],
+          "Sid": "AllowTaggedSSMDocumentsOnly"
+        },
+        {
+          "Action": [
+            "ssm:DescribeDocument",
+            "ssm:GetDocument",
+            "ssm:SendCommand"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/AWSEC2-CreateVssSnapshot"
+          ],
+          "Sid": "AllowSpecificAWSOwnedSSMDocuments"
+        },
+        {
+          "Action": [
+            "ssm:DescribeInstanceInformation",
+            "ssm:GetCommandInvocation",
+            "ssm:ListCommands"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowSSMReadOnlyAccess"
+        },
+        {
+          "Action": [
+            "ssm:SendCommand"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "AllowAllEC2Instances"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-10-31T20:29:44Z"
+}
