@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSIPAMServiceRolePolicy",
   "CreateDate": "2021-11-30T19:08:11Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4JEQHJ6QN6",
   "PolicyName": "AWSIPAMServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-01-25T20:13:08Z",
+    "CreateDate": "2023-11-01T16:27:52Z",
     "Document": {
       "Statement": [
         {
@@ -18,31 +18,40 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "CloudWatchMetricsPublishActions"
         },
         {
           "Action": [
+            "ec2:DescribeAccountAttributes",
             "ec2:DescribeAddresses",
             "ec2:DescribeByoipCidrs",
             "ec2:DescribeIpv6Pools",
+            "ec2:DescribeNetworkInterfaces",
             "ec2:DescribePublicIpv4Pools",
+            "ec2:DescribeSecurityGroupRules",
+            "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcs",
+            "ec2:DescribeVpnConnections",
             "ec2:GetIpamDiscoveredAccounts",
             "ec2:GetIpamDiscoveredResourceCidrs",
+            "globalaccelerator:ListAccelerators",
+            "globalaccelerator:ListByoipCidrs",
             "organizations:DescribeAccount",
             "organizations:DescribeOrganization",
             "organizations:ListAccounts",
             "organizations:ListDelegatedAdministrators"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "IPAMDiscoveryDescribeActions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-01-25T20:13:08Z"
+  "UpdateDate": "2023-11-01T16:27:52Z"
 }
