@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSLakeFormationCrossAccountManager",
   "CreateDate": "2020-08-04T20:59:46Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HPT7Y7QL3",
   "PolicyName": "AWSLakeFormationCrossAccountManager",
   "PolicyVersion": {
-    "CreateDate": "2022-05-20T22:19:37Z",
+    "CreateDate": "2023-11-01T00:50:49Z",
     "Document": {
       "Statement": [
         {
@@ -22,6 +22,20 @@
             "StringLike": {
               "ram:ResourceShareName": [
                 "LakeFormation*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ram:AssociateResourceSharePermission"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ram:PermissionArn": [
+                "arn:aws:ram::aws:permission/AWSRAMLFEnabled*"
               ]
             }
           },
@@ -69,7 +83,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2022-05-20T22:19:37Z"
+  "UpdateDate": "2023-11-01T00:50:49Z"
 }
