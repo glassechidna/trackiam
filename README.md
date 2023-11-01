@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 373
-* Unique actions: 15724
+* Unique actions: 15732
 * Managed policies: 1135
 
 Most common managed policy name prefixes:
@@ -40,7 +40,7 @@ The following table summarises the AWS APIs.
 | [`sagemaker`](services/sagemaker.yml) | 319 | 1 | 11 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`iot`](services/iot.yml) | 257 | 3 | 9 |
-| [`connect`](services/connect.yml) | 212 | 0 | 14 |
+| [`connect`](services/connect.yml) | 213 | 0 | 13 |
 | [`glue`](services/glue.yml) | 198 | 4 | 13 |
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
@@ -49,7 +49,7 @@ The following table summarises the AWS APIs.
 | [`rds`](services/rds.yml) | 144 | 3 | 5 |
 | [`ssm`](services/ssm.yml) | 138 | 1 | 10 |
 | [`lex`](services/lex.yml) | 127 | 4 | 8 |
-| [`redshift`](services/redshift.yml) | 123 | 4 | 18 |
+| [`redshift`](services/redshift.yml) | 123 | 5 | 18 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
@@ -123,10 +123,10 @@ The following table summarises the AWS APIs.
 | [`drs`](services/drs.yml) | 50 | 0 | 40 |
 | [`mediaconnect`](services/mediaconnect.yml) | 50 | 0 | 3 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
+| [`globalaccelerator`](services/globalaccelerator.yml) | 49 | 7 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 49 | 0 | 0 |
-| [`globalaccelerator`](services/globalaccelerator.yml) | 49 | 0 | 0 |
 | [`sms-voice`](services/sms-voice.yml) | 48 | 0 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 47 | 3 | 1 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
@@ -414,12 +414,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2464 |
+| `List` | 2467 |
 | `Get` | 2241 |
-| `Delete` | 1792 |
-| `Create` | 1680 |
-| `Describe` | 1649 |
-| `Update` | 1434 |
+| `Delete` | 1793 |
+| `Create` | 1681 |
+| `Describe` | 1650 |
+| `Update` | 1435 |
 | `Put` | 441 |
 | `Start` | 351 |
 | `Tag` | 247 |

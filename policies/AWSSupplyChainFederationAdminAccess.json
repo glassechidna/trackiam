@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSSupplyChainFederationAdminAccess",
   "CreateDate": "2023-03-01T18:54:25Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4ILSYMTZA7",
   "PolicyName": "AWSSupplyChainFederationAdminAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-09-20T20:11:53Z",
+    "CreateDate": "2023-11-01T18:50:13Z",
     "Document": {
       "Statement": [
         {
@@ -23,7 +23,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:secretsmanager:*:*:secret:*"
+          "Resource": "arn:aws:secretsmanager:*:*:secret:*",
+          "Sid": "SecretsManagerCreateSecret"
         },
         {
           "Action": [
@@ -55,7 +56,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:chime:*:*:app-instance/*"
-          ]
+          ],
+          "Sid": "ChimeAppInstance"
         },
         {
           "Action": [
@@ -73,7 +75,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:kms:*:*:key/*"
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSCreateGrant"
         },
         {
           "Action": [
@@ -89,7 +92,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:kms:*:*:key/*"
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSListGrants"
         },
         {
           "Action": [
@@ -104,7 +108,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:s3:::aws-supply-chain-data-*"
-          ]
+          ],
+          "Sid": "S3ReadWriteObject"
         },
         {
           "Action": [
@@ -121,7 +126,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:secretsmanager:*:*:secret:*"
+          "Resource": "arn:aws:secretsmanager:*:*:secret:*",
+          "Sid": "SecretsManagerPutResourcePolicy"
         },
         {
           "Action": [
@@ -133,7 +139,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:appflow:*:*:connectorprofile/scn-*"
-          ]
+          ],
+          "Sid": "AppflowConnectorProfile"
         },
         {
           "Action": [
@@ -151,7 +158,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:appflow:*:*:flow/scn-*"
-          ]
+          ],
+          "Sid": "AppflowFlow"
         },
         {
           "Action": [
@@ -160,14 +168,16 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:chime:*:*:app-instance/*"
-          ]
+          ],
+          "Sid": "ChimeChannel"
         },
         {
           "Action": [
             "chime:GetMessagingSessionEndpoint"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ChimeMessaging"
         },
         {
           "Action": [
@@ -175,7 +185,8 @@
             "kms:ListKeys"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:kms:*:*:key/*"
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSListKeys"
         },
         {
           "Action": [
@@ -186,14 +197,16 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:s3:::aws-supply-chain-data-*"
-          ]
+          ],
+          "Sid": "S3ListSupplyChainBucket"
         },
         {
           "Action": [
             "s3:ListAllMyBuckets"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "S3ListAllBuckets"
         },
         {
           "Action": [
@@ -202,7 +215,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:scn:*:*:instance/*"
-          ]
+          ],
+          "Sid": "AWSSupplyChain"
         },
         {
           "Action": [
@@ -211,16 +225,18 @@
             "sso:GetManagedApplicationInstance",
             "sso:GetProfile",
             "sso:ListDirectoryAssociations",
+            "sso:ListProfileAssociations",
             "sso:ListProfiles"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "IAMIdentityCenter"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-09-20T20:11:53Z"
+  "UpdateDate": "2023-11-01T18:50:13Z"
 }
