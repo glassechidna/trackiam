@@ -4,12 +4,14 @@ Actions:
   - Name: globalaccelerator:AdvertiseByoipCidr
   - Name: globalaccelerator:AllowCustomRoutingTraffic
   - Name: globalaccelerator:CreateAccelerator
+  - Name: globalaccelerator:CreateCrossAccountAttachment
   - Name: globalaccelerator:CreateCustomRoutingAccelerator
   - Name: globalaccelerator:CreateCustomRoutingEndpointGroup
   - Name: globalaccelerator:CreateCustomRoutingListener
   - Name: globalaccelerator:CreateEndpointGroup
   - Name: globalaccelerator:CreateListener
   - Name: globalaccelerator:DeleteAccelerator
+  - Name: globalaccelerator:DeleteCrossAccountAttachment
   - Name: globalaccelerator:DeleteCustomRoutingAccelerator
   - Name: globalaccelerator:DeleteCustomRoutingEndpointGroup
   - Name: globalaccelerator:DeleteCustomRoutingListener
@@ -19,6 +21,7 @@ Actions:
   - Name: globalaccelerator:DeprovisionByoipCidr
   - Name: globalaccelerator:DescribeAccelerator
   - Name: globalaccelerator:DescribeAcceleratorAttributes
+  - Name: globalaccelerator:DescribeCrossAccountAttachment
   - Name: globalaccelerator:DescribeCustomRoutingAccelerator
   - Name: globalaccelerator:DescribeCustomRoutingAcceleratorAttributes
   - Name: globalaccelerator:DescribeCustomRoutingEndpointGroup
@@ -27,6 +30,9 @@ Actions:
   - Name: globalaccelerator:DescribeListener
   - Name: globalaccelerator:ListAccelerators
   - Name: globalaccelerator:ListByoipCidrs
+  - Name: globalaccelerator:ListCrossAccountAttachments
+  - Name: globalaccelerator:ListCrossAccountResourceAccounts
+  - Name: globalaccelerator:ListCrossAccountResources
   - Name: globalaccelerator:ListCustomRoutingAccelerators
   - Name: globalaccelerator:ListCustomRoutingEndpointGroups
   - Name: globalaccelerator:ListCustomRoutingListeners
@@ -42,18 +48,10 @@ Actions:
   - Name: globalaccelerator:UntagResource
   - Name: globalaccelerator:UpdateAccelerator
   - Name: globalaccelerator:UpdateAcceleratorAttributes
+  - Name: globalaccelerator:UpdateCrossAccountAttachment
   - Name: globalaccelerator:UpdateCustomRoutingAccelerator
   - Name: globalaccelerator:UpdateCustomRoutingAcceleratorAttributes
   - Name: globalaccelerator:UpdateCustomRoutingListener
   - Name: globalaccelerator:UpdateEndpointGroup
   - Name: globalaccelerator:UpdateListener
   - Name: globalaccelerator:WithdrawByoipCidr
-
-  # APIs without an IAM action
-  - Name: globalaccelerator:CreateCrossAccountAttachment
-  - Name: globalaccelerator:DeleteCrossAccountAttachment
-  - Name: globalaccelerator:DescribeCrossAccountAttachment
-  - Name: globalaccelerator:ListCrossAccountAttachments
-  - Name: globalaccelerator:ListCrossAccountResourceAccounts
-  - Name: globalaccelerator:ListCrossAccountResources
-  - Name: globalaccelerator:UpdateCrossAccountAttachment

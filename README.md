@@ -109,6 +109,7 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 56 | 0 | 2 |
 | [`events`](services/events.yml) | 56 | 0 | 1 |
 | [`imagebuilder`](services/imagebuilder.yml) | 56 | 0 | 0 |
+| [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 54 | 0 | 26 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
@@ -123,7 +124,6 @@ The following table summarises the AWS APIs.
 | [`drs`](services/drs.yml) | 50 | 0 | 40 |
 | [`mediaconnect`](services/mediaconnect.yml) | 50 | 0 | 3 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
-| [`globalaccelerator`](services/globalaccelerator.yml) | 49 | 7 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 49 | 0 | 0 |
