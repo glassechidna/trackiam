@@ -49,7 +49,7 @@ The following table summarises the AWS APIs.
 | [`rds`](services/rds.yml) | 144 | 3 | 5 |
 | [`ssm`](services/ssm.yml) | 138 | 1 | 10 |
 | [`lex`](services/lex.yml) | 127 | 4 | 8 |
-| [`redshift`](services/redshift.yml) | 123 | 5 | 18 |
+| [`redshift`](services/redshift.yml) | 124 | 4 | 18 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
@@ -234,10 +234,10 @@ The following table summarises the AWS APIs.
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
 | [`bedrock`](services/bedrock.yml) | 22 | 0 | 43 |
+| [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 22 | 0 | 7 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
 | [`secretsmanager`](services/secretsmanager.yml) | 22 | 0 | 0 |
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 0 |
-| [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 21 | 1 | 7 |
 | [`aps`](services/aps.yml) | 21 | 0 | 16 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
