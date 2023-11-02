@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 373
-* Unique actions: 15732
+* Unique actions: 15735
 * Managed policies: 1135
 
 Most common managed policy name prefixes:
@@ -227,10 +227,10 @@ The following table summarises the AWS APIs.
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`detective`](services/detective.yml) | 23 | 1 | 7 |
+| [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 3 |
 | [`mq`](services/mq.yml) | 23 | 0 | 1 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 23 | 0 | 0 |
-| [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
 | [`bedrock`](services/bedrock.yml) | 22 | 0 | 43 |
@@ -415,7 +415,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2467 |
-| `Get` | 2241 |
+| `Get` | 2244 |
 | `Delete` | 1793 |
 | `Create` | 1681 |
 | `Describe` | 1650 |
