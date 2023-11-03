@@ -1,4 +1,5 @@
 Actions:
+  - Name: launchwizard:ListWorkloads
 
   # actions with no corresponding API
   - Name: launchwizard:CreateAdditionalNode
@@ -18,6 +19,14 @@ Actions:
   - Name: launchwizard:ListProvisionedApps
   - Name: launchwizard:ListSettingsSets
   - Name: launchwizard:ListWorkloadDeploymentOptions
-  - Name: launchwizard:ListWorkloads
   - Name: launchwizard:StartProvisioning
   - Name: launchwizard:UpdateSettingsSet
+
+  # APIs without an IAM action
+  - Name: launchwizard:CreateDeployment
+  - Name: launchwizard:DeleteDeployment
+  - Name: launchwizard:GetDeployment
+  - Name: launchwizard:GetWorkload
+  - Name: launchwizard:ListDeploymentEvents
+  - Name: launchwizard:ListDeployments
+  - Name: launchwizard:ListWorkloadDeploymentPatterns
