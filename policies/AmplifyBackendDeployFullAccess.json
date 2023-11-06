@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmplifyBackendDeployFullAccess",
   "CreateDate": "2023-10-06T21:32:59Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4H6M6P2QGM",
   "PolicyName": "AmplifyBackendDeployFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-10-06T21:32:59Z",
+    "CreateDate": "2023-11-06T20:08:59Z",
     "Document": {
       "Statement": [
         {
@@ -43,6 +43,7 @@
         },
         {
           "Action": [
+            "amplify:GetBackendEnvironment",
             "amplify:ListApps",
             "appsync:GetIntrospectionSchema",
             "cloudformation:ListStacks",
@@ -112,7 +113,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-10-06T21:32:59Z"
+  "UpdateDate": "2023-11-06T20:08:59Z"
 }
