@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSecurityHubServiceRolePolicy",
   "CreateDate": "2018-11-27T23:47:51Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJQPCESDDYDLLSOGYO",
   "PolicyName": "AWSSecurityHubServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-09-27T15:38:37Z",
+    "CreateDate": "2023-11-07T00:53:28Z",
     "Document": {
       "Statement": [
         {
@@ -22,7 +22,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "SecurityHubServiceRoleOrganizationsPermissions"
         },
         {
           "Action": [
@@ -66,10 +67,12 @@
             "securityhub:UpdateOrganizationConfiguration",
             "securityhub:UpdateSecurityHubConfiguration",
             "securityhub:UpdateStandardsControl",
-            "sns:ListSubscriptionsByTopic"
+            "sns:ListSubscriptionsByTopic",
+            "tag:GetResources"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "SecurityHubServiceRolePermissions"
         },
         {
           "Action": [
@@ -78,13 +81,14 @@
             "config:PutConfigRule"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:config:*:*:config-rule/aws-service-rule/*securityhub*"
+          "Resource": "arn:aws:config:*:*:config-rule/aws-service-rule/*securityhub*",
+          "Sid": "SecurityHubServiceRoleConfigPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2023-09-27T15:38:37Z"
+  "UpdateDate": "2023-11-07T00:53:28Z"
 }
