@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRekognitionReadOnlyAccess",
   "CreateDate": "2016-11-30T14:58:06Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILWSUHXUY4ES43SA4",
   "PolicyName": "AmazonRekognitionReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-07-24T19:04:30Z",
+    "CreateDate": "2023-11-08T18:30:22Z",
     "Document": {
       "Statement": [
         {
@@ -29,6 +29,7 @@
             "rekognition:GetFaceDetection",
             "rekognition:GetFaceSearch",
             "rekognition:GetLabelDetection",
+            "rekognition:GetMediaAnalysisJob",
             "rekognition:GetPersonTracking",
             "rekognition:GetSegmentDetection",
             "rekognition:GetTextDetection",
@@ -36,6 +37,7 @@
             "rekognition:ListDatasetEntries",
             "rekognition:ListDatasetLabels",
             "rekognition:ListFaces",
+            "rekognition:ListMediaAnalysisJobs",
             "rekognition:ListProjectPolicies",
             "rekognition:ListStreamProcessors",
             "rekognition:ListTagsForResource",
@@ -47,13 +49,14 @@
             "rekognition:SearchUsersByImage"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AmazonRekognitionReadOnlyAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2023-07-24T19:04:30Z"
+  "UpdateDate": "2023-11-08T18:30:22Z"
 }
