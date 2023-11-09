@@ -1,0 +1,83 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudWatchApplicationSignalsServiceRolePolicy",
+  "CreateDate": "2023-11-09T18:09:57Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4LAFFLXUGT",
+  "PolicyName": "CloudWatchApplicationSignalsServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-11-09T18:09:57Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:GetMetricData",
+            "cloudwatch:ListMetrics"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "CWMetricsPermission"
+        },
+        {
+          "Action": [
+            "logs:GetQueryResults",
+            "logs:StartQuery"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/appsignals/eks:*",
+            "arn:aws:logs:*:*:log-group:/aws/appsignals/generic:*"
+          ],
+          "Sid": "CWLogsPermission"
+        },
+        {
+          "Action": [
+            "tag:GetResources"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "TagsPermission"
+        },
+        {
+          "Action": [
+            "xray:GetServiceGraph"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "XRayPermission"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-11-09T18:09:57Z"
+}
