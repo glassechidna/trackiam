@@ -28,7 +28,9 @@ Actions:
   - Name: rds:CreateDBSubnetGroup
   - Name: rds:CreateEventSubscription
   - Name: rds:CreateGlobalCluster
+  - Name: rds:CreateIntegration
   - Name: rds:CreateOptionGroup
+  - Name: rds:CreateTenantDatabase
   - Name: rds:DeleteBlueGreenDeployment
   - Name: rds:DeleteCustomDBEngineVersion
   - Name: rds:DeleteDBCluster
@@ -46,7 +48,9 @@ Actions:
   - Name: rds:DeleteDBSubnetGroup
   - Name: rds:DeleteEventSubscription
   - Name: rds:DeleteGlobalCluster
+  - Name: rds:DeleteIntegration
   - Name: rds:DeleteOptionGroup
+  - Name: rds:DeleteTenantDatabase
   - Name: rds:DeregisterDBProxyTargets
   - Name: rds:DescribeAccountAttributes
   - Name: rds:DescribeBlueGreenDeployments
@@ -73,6 +77,7 @@ Actions:
   - Name: rds:DescribeDBSnapshotAttributes
   - Name: rds:DescribeDBSnapshots
   - Name: rds:DescribeDBSubnetGroups
+  - Name: rds:DescribeDbSnapshotTenantDatabases
   - Name: rds:DescribeEngineDefaultClusterParameters
   - Name: rds:DescribeEngineDefaultParameters
   - Name: rds:DescribeEventCategories
@@ -80,6 +85,7 @@ Actions:
   - Name: rds:DescribeEvents
   - Name: rds:DescribeExportTasks
   - Name: rds:DescribeGlobalClusters
+  - Name: rds:DescribeIntegrations
   - Name: rds:DescribeOptionGroupOptions
   - Name: rds:DescribeOptionGroups
   - Name: rds:DescribeOrderableDBInstanceOptions
@@ -87,6 +93,7 @@ Actions:
   - Name: rds:DescribeReservedDBInstances
   - Name: rds:DescribeReservedDBInstancesOfferings
   - Name: rds:DescribeSourceRegions
+  - Name: rds:DescribeTenantDatabases
   - Name: rds:DescribeValidDBInstanceModifications
   - Name: rds:DownloadDBLogFilePortion
   - Name: rds:FailoverDBCluster
@@ -111,6 +118,7 @@ Actions:
   - Name: rds:ModifyEventSubscription
   - Name: rds:ModifyGlobalCluster
   - Name: rds:ModifyOptionGroup
+  - Name: rds:ModifyTenantDatabase
   - Name: rds:PromoteReadReplica
   - Name: rds:PromoteReadReplicaDBCluster
   - Name: rds:PurchaseReservedDBInstancesOffering
@@ -150,13 +158,3 @@ Actions:
   - Name: rds:DescribeRecommendations
   - Name: rds:DownloadCompleteDBLogFile
   - Name: rds:ModifyRecommendation
-
-  # APIs without an IAM action
-  - Name: rds:CreateIntegration
-  - Name: rds:CreateTenantDatabase
-  - Name: rds:DeleteIntegration
-  - Name: rds:DeleteTenantDatabase
-  - Name: rds:DescribeDBSnapshotTenantDatabases
-  - Name: rds:DescribeIntegrations
-  - Name: rds:DescribeTenantDatabases
-  - Name: rds:ModifyTenantDatabase
