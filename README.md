@@ -65,7 +65,7 @@ The following table summarises the AWS APIs.
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
 | [`s3`](services/s3.yml) | 85 | 58 | 45 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 0 |
-| [`comprehend`](services/comprehend.yml) | 84 | 1 | 0 |
+| [`comprehend`](services/comprehend.yml) | 85 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 84 | 0 | 51 |
 | [`omics`](services/omics.yml) | 82 | 0 | 0 |
 | [`es`](services/es.yml) | 81 | 0 | 10 |
@@ -91,6 +91,7 @@ The following table summarises the AWS APIs.
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 67 | 0 | 10 |
 | [`ds`](services/ds.yml) | 67 | 0 | 10 |
+| [`logs`](services/logs.yml) | 66 | 0 | 9 |
 | [`elasticache`](services/elasticache.yml) | 66 | 0 | 1 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
@@ -118,7 +119,6 @@ The following table summarises the AWS APIs.
 | [`dynamodb`](services/dynamodb.yml) | 52 | 5 | 13 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 52 | 0 | 0 |
-| [`logs`](services/logs.yml) | 51 | 15 | 9 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
 | [`profile`](services/profile.yml) | 51 | 0 | 0 |
 | [`drs`](services/drs.yml) | 50 | 0 | 40 |

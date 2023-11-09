@@ -1,11 +1,16 @@
 Actions:
   - Name: logs:AssociateKmsKey
   - Name: logs:CancelExportTask
+  - Name: logs:CreateDelivery
   - Name: logs:CreateExportTask
   - Name: logs:CreateLogGroup
   - Name: logs:CreateLogStream
   - Name: logs:DeleteAccountPolicy
   - Name: logs:DeleteDataProtectionPolicy
+  - Name: logs:DeleteDelivery
+  - Name: logs:DeleteDeliveryDestination
+  - Name: logs:DeleteDeliveryDestinationPolicy
+  - Name: logs:DeleteDeliverySource
   - Name: logs:DeleteDestination
   - Name: logs:DeleteLogGroup
   - Name: logs:DeleteLogStream
@@ -15,6 +20,9 @@ Actions:
   - Name: logs:DeleteRetentionPolicy
   - Name: logs:DeleteSubscriptionFilter
   - Name: logs:DescribeAccountPolicies
+  - Name: logs:DescribeDeliveries
+  - Name: logs:DescribeDeliveryDestinations
+  - Name: logs:DescribeDeliverySources
   - Name: logs:DescribeDestinations
   - Name: logs:DescribeExportTasks
   - Name: logs:DescribeLogGroups
@@ -27,6 +35,10 @@ Actions:
   - Name: logs:DisassociateKmsKey
   - Name: logs:FilterLogEvents
   - Name: logs:GetDataProtectionPolicy
+  - Name: logs:GetDelivery
+  - Name: logs:GetDeliveryDestination
+  - Name: logs:GetDeliveryDestinationPolicy
+  - Name: logs:GetDeliverySource
   - Name: logs:GetLogEvents
   - Name: logs:GetLogGroupFields
   - Name: logs:GetLogRecord
@@ -35,6 +47,9 @@ Actions:
   - Name: logs:ListTagsLogGroup
   - Name: logs:PutAccountPolicy
   - Name: logs:PutDataProtectionPolicy
+  - Name: logs:PutDeliveryDestination
+  - Name: logs:PutDeliveryDestinationPolicy
+  - Name: logs:PutDeliverySource
   - Name: logs:PutDestination
   - Name: logs:PutDestinationPolicy
   - Name: logs:PutLogEvents
@@ -61,20 +76,3 @@ Actions:
   - Name: logs:StopLiveTail
   - Name: logs:Unmask
   - Name: logs:UpdateLogDelivery
-
-  # APIs without an IAM action
-  - Name: logs:CreateDelivery
-  - Name: logs:DeleteDelivery
-  - Name: logs:DeleteDeliveryDestination
-  - Name: logs:DeleteDeliveryDestinationPolicy
-  - Name: logs:DeleteDeliverySource
-  - Name: logs:DescribeDeliveries
-  - Name: logs:DescribeDeliveryDestinations
-  - Name: logs:DescribeDeliverySources
-  - Name: logs:GetDelivery
-  - Name: logs:GetDeliveryDestination
-  - Name: logs:GetDeliveryDestinationPolicy
-  - Name: logs:GetDeliverySource
-  - Name: logs:PutDeliveryDestination
-  - Name: logs:PutDeliveryDestinationPolicy
-  - Name: logs:PutDeliverySource
