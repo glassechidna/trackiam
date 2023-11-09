@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 373
-* Unique actions: 15756
+* Unique actions: 15780
 * Managed policies: 1137
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 600 | 2 | 16 |
+| [`ec2`](services/ec2.yml) | 600 | 5 | 16 |
 | [`sagemaker`](services/sagemaker.yml) | 320 | 0 | 17 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`iot`](services/iot.yml) | 257 | 3 | 9 |
@@ -65,8 +65,8 @@ The following table summarises the AWS APIs.
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
 | [`s3`](services/s3.yml) | 85 | 58 | 45 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 0 |
+| [`comprehend`](services/comprehend.yml) | 84 | 1 | 0 |
 | [`workmail`](services/workmail.yml) | 84 | 0 | 51 |
-| [`comprehend`](services/comprehend.yml) | 84 | 0 | 0 |
 | [`omics`](services/omics.yml) | 82 | 0 | 0 |
 | [`es`](services/es.yml) | 81 | 0 | 10 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
@@ -118,8 +118,8 @@ The following table summarises the AWS APIs.
 | [`dynamodb`](services/dynamodb.yml) | 52 | 5 | 13 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 52 | 0 | 0 |
+| [`logs`](services/logs.yml) | 51 | 15 | 9 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
-| [`logs`](services/logs.yml) | 51 | 0 | 9 |
 | [`profile`](services/profile.yml) | 51 | 0 | 0 |
 | [`drs`](services/drs.yml) | 50 | 0 | 40 |
 | [`mediaconnect`](services/mediaconnect.yml) | 50 | 0 | 3 |
@@ -147,6 +147,7 @@ The following table summarises the AWS APIs.
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 40 | 0 | 3 |
+| [`eks`](services/eks.yml) | 40 | 0 | 1 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
@@ -166,7 +167,6 @@ The following table summarises the AWS APIs.
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 0 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
-| [`eks`](services/eks.yml) | 35 | 0 | 1 |
 | [`finspace`](services/finspace.yml) | 34 | 1 | 9 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
 | [`states`](services/states.yml) | 34 | 0 | 0 |
@@ -414,13 +414,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2471 |
-| `Get` | 2246 |
-| `Delete` | 1796 |
-| `Create` | 1685 |
-| `Describe` | 1653 |
-| `Update` | 1437 |
-| `Put` | 441 |
+| `List` | 2472 |
+| `Get` | 2251 |
+| `Delete` | 1801 |
+| `Create` | 1687 |
+| `Describe` | 1657 |
+| `Update` | 1438 |
+| `Put` | 444 |
 | `Start` | 351 |
 | `Tag` | 247 |
 | `Untag` | 244 |
