@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSTrustedAdvisorServiceRolePolicy",
   "CreateDate": "2018-02-22T21:24:25Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJH4QJ2WMHBOB47BUE",
   "PolicyName": "AWSTrustedAdvisorServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-09-14T18:02:41Z",
+    "CreateDate": "2023-11-10T00:18:42Z",
     "Document": {
       "Statement": [
         {
@@ -32,6 +32,7 @@
             "ec2:DescribeInstances",
             "ec2:DescribeInternetGateways",
             "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribeRegions",
             "ec2:DescribeReservedInstances",
             "ec2:DescribeReservedInstancesOfferings",
             "ec2:DescribeSecurityGroups",
@@ -41,6 +42,8 @@
             "ec2:DescribeVpcs",
             "ec2:DescribeVpnConnections",
             "ec2:DescribeVpnGateways",
+            "ecs:DescribeTaskDefinition",
+            "ecs:ListTaskDefinitions",
             "elasticloadbalancing:DescribeAccountLimits",
             "elasticloadbalancing:DescribeInstanceHealth",
             "elasticloadbalancing:DescribeLoadBalancerAttributes",
@@ -94,19 +97,21 @@
             "s3:GetBucketPolicyStatus",
             "s3:GetBucketPublicAccessBlock",
             "s3:GetBucketVersioning",
+            "s3:GetLifecycleConfiguration",
             "s3:ListAllMyBuckets",
             "s3:ListBucket",
             "ses:GetSendQuota",
             "sqs:ListQueues"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "TrustedAdvisorServiceRolePermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2023-09-14T18:02:41Z"
+  "UpdateDate": "2023-11-10T00:18:42Z"
 }
