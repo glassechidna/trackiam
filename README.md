@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 374
-* Unique actions: 15785
+* Unique actions: 15791
 * Managed policies: 1138
 
 Most common managed policy name prefixes:
@@ -319,10 +319,10 @@ The following table summarises the AWS APIs.
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 6 | 0 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 6 | 0 | 0 |
+| [`controltower`](services/controltower.yml) | 5 | 3 | 38 |
 | [`s3-outposts`](services/s3-outposts.yml) | 5 | 0 | 43 |
-| [`controltower`](services/controltower.yml) | 5 | 0 | 38 |
 | [`pricing`](services/pricing.yml) | 5 | 0 | 0 |
-| [`cur`](services/cur.yml) | 4 | 0 | 5 |
+| [`cur`](services/cur.yml) | 4 | 3 | 5 |
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 4 | 0 | 0 |
 | [`license-manager-linux-subscriptions`](services/license-manager-linux-subscriptions.yml) | 4 | 0 | 0 |
 | [`cassandra`](services/cassandra.yml) | 2 | 11 | 15 |
@@ -415,7 +415,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2472 |
+| `List` | 2474 |
 | `Get` | 2251 |
 | `Delete` | 1801 |
 | `Create` | 1687 |
@@ -423,6 +423,6 @@ Most common action prefixes:
 | `Update` | 1438 |
 | `Put` | 444 |
 | `Start` | 351 |
-| `Tag` | 247 |
-| `Untag` | 244 |
+| `Tag` | 249 |
+| `Untag` | 246 |
 
