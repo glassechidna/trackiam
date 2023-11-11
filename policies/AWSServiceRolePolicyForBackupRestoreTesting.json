@@ -1,0 +1,113 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRolePolicyForBackupRestoreTesting",
+  "CreateDate": "2023-11-10T23:37:45Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4A6QQZKWX4",
+  "PolicyName": "AWSServiceRolePolicyForBackupRestoreTesting",
+  "PolicyVersion": {
+    "CreateDate": "2023-11-10T23:37:45Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "backup.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IamPassRole"
+        },
+        {
+          "Action": [
+            "dynamodb:DeleteTable",
+            "dynamodb:DescribeTable"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:dynamodb:*:*:table/awsbackup-restore-test-*",
+          "Sid": "DdbDeleteActions"
+        },
+        {
+          "Action": [
+            "ec2:DeleteVolume",
+            "ec2:TerminateInstances",
+            "elasticfilesystem:DeleteFilesystem",
+            "elasticfilesystem:DeleteMountTarget",
+            "fsx:DeleteFileSystem",
+            "fsx:DeleteVolume",
+            "rds:DeleteDBCluster",
+            "rds:DeleteDBInstance"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/awsbackup-restore-test": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DeleteActions"
+        },
+        {
+          "Action": [
+            "s3:DeleteBucket",
+            "s3:GetLifecycleConfiguration",
+            "s3:PutLifecycleConfiguration"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::awsbackup-restore-test-*",
+          "Sid": "S3DeleteActions"
+        },
+        {
+          "Action": [
+            "backup:DescribeRestoreJob",
+            "backup:GetRecoveryPointRestoreMetadata",
+            "backup:ListBackupVaults",
+            "backup:ListProtectedResourcesByBackupVault",
+            "backup:ListRecoveryPointsByBackupVault",
+            "backup:ListTags",
+            "backup:StartRestoreJob"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BackupActions"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstances",
+            "ec2:DescribeTags",
+            "ec2:DescribeVolumes",
+            "elasticfilesystem:DescribeFileSystems",
+            "elasticfilesystem:DescribeMountTargets",
+            "fsx:DescribeFileSystems",
+            "fsx:DescribeVolumes",
+            "fsx:ListTagsForResource",
+            "rds:DescribeDBClusters",
+            "rds:DescribeDBInstanceAutomatedBackups",
+            "rds:DescribeDBInstances",
+            "rds:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-11-10T23:37:45Z"
+}
