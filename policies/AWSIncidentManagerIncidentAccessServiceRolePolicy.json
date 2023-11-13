@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSIncidentManagerIncidentAccessServiceRolePolicy",
+  "CreateDate": "2023-11-13T00:01:23Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4PRZVSLEUN",
+  "PolicyName": "AWSIncidentManagerIncidentAccessServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-11-13T00:01:23Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudformation:DescribeStackEvents",
+            "cloudformation:DescribeStackResources",
+            "codedeploy:BatchGetDeployments",
+            "codedeploy:ListDeploymentTargets",
+            "codedeploy:ListDeployments"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IncidentAccessPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-11-13T00:01:23Z"
+}
