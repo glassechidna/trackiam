@@ -1,0 +1,77 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSIoTTwinMakerServiceRolePolicy",
+  "CreateDate": "2023-11-13T18:59:42Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4IXKMJJBGW",
+  "PolicyName": "AWSIoTTwinMakerServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-11-13T18:59:42Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iottwinmaker:CreateComponentType",
+            "iottwinmaker:CreateEntity",
+            "iottwinmaker:DeleteComponentType",
+            "iottwinmaker:DeleteEntity",
+            "iottwinmaker:GetComponentType",
+            "iottwinmaker:GetEntity",
+            "iottwinmaker:ListComponentTypes",
+            "iottwinmaker:ListEntities",
+            "iottwinmaker:UpdateComponentType",
+            "iottwinmaker:UpdateEntity"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "iottwinmaker:linkedServices": [
+                "IOTSITEWISE"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iottwinmaker:*:*:workspace/*"
+          ],
+          "Sid": "TwinMakerAccess"
+        },
+        {
+          "Action": [
+            "iotsitewise:DescribeAsset"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iotsitewise:*:*:asset/*"
+          ],
+          "Sid": "SiteWiseAssetReadAccess"
+        },
+        {
+          "Action": [
+            "iotsitewise:DescribeAssetModel"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iotsitewise:*:*:asset-model/*"
+          ],
+          "Sid": "SiteWiseAssetModelReadAccess"
+        },
+        {
+          "Action": [
+            "iotsitewise:ListAssetModels",
+            "iotsitewise:ListAssets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "SiteWiseAssetModelAndAssetListAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-11-13T18:59:42Z"
+}

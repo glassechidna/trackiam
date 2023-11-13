@@ -1,34 +1,47 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSApplicationAutoscalingSageMakerEndpointPolicy",
   "CreateDate": "2018-02-06T19:58:21Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAI5DBEBNRZQ4SXYTAW",
   "PolicyName": "AWSApplicationAutoscalingSageMakerEndpointPolicy",
   "PolicyVersion": {
-    "CreateDate": "2018-02-06T19:58:21Z",
+    "CreateDate": "2023-11-13T18:52:34Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "cloudwatch:DeleteAlarms",
+            "cloudwatch:PutMetricAlarm"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudwatch:*:*:alarm:TargetTracking*"
+          ],
+          "Sid": "SageMakerCloudWatchUpdate"
+        },
+        {
+          "Action": [
             "cloudwatch:DescribeAlarms",
-            "cloudwatch:PutMetricAlarm",
+            "cloudwatch:GetMetricData",
             "sagemaker:DescribeEndpoint",
             "sagemaker:DescribeEndpointConfig",
-            "sagemaker:UpdateEndpointWeightsAndCapacities"
+            "sagemaker:DescribeInferenceComponent",
+            "sagemaker:UpdateEndpointWeightsAndCapacities",
+            "sagemaker:UpdateInferenceComponentRuntimeConfig"
           ],
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "SageMaker"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2018-02-06T19:58:21Z"
+  "UpdateDate": "2023-11-13T18:52:34Z"
 }

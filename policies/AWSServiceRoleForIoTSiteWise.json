@@ -1,15 +1,31 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForIoTSiteWise",
   "CreateDate": "2018-11-14T19:19:17Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJGQU4DZIQP6HLYQPE",
   "PolicyName": "AWSServiceRoleForIoTSiteWise",
   "PolicyVersion": {
-    "CreateDate": "2020-04-25T02:15:01Z",
+    "CreateDate": "2023-11-13T18:27:50Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "iottwinmaker:ExecuteQuery",
+            "iottwinmaker:GetWorkspace"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "iottwinmaker:linkedServices": [
+                "IOTSITEWISE"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iottwinmaker:*:*:workspace/*",
+          "Sid": "AllowSiteWiseAccessSiteWiseManagedWorkspaceInTwinMaker"
+        },
         {
           "Action": [
             "greengrass:GetAssociatedRole",
@@ -19,7 +35,8 @@
             "greengrass:GetGroupVersion"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowSiteWiseReadGreenGrass"
         },
         {
           "Action": [
@@ -27,7 +44,8 @@
             "logs:DescribeLogGroups"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:logs:*:*:log-group:/aws/iotsitewise*"
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/iotsitewise*",
+          "Sid": "AllowSiteWiseAccessLogGroup"
         },
         {
           "Action": [
@@ -36,13 +54,14 @@
             "logs:PutLogEvents"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:logs:*:*:log-group:/aws/iotsitewise*:log-stream:*"
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/iotsitewise*:log-stream:*",
+          "Sid": "AllowSiteWiseAccessLog"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2020-04-25T02:15:01Z"
+  "UpdateDate": "2023-11-13T18:27:50Z"
 }
