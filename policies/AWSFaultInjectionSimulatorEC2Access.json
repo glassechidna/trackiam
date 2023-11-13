@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSFaultInjectionSimulatorEC2Access",
   "CreateDate": "2022-10-26T20:39:26Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4JRMRLWKEY",
   "PolicyName": "AWSFaultInjectionSimulatorEC2Access",
   "PolicyVersion": {
-    "CreateDate": "2023-06-02T23:01:50Z",
+    "CreateDate": "2023-11-13T16:39:49Z",
     "Document": {
       "Statement": [
         {
@@ -25,10 +25,12 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:kms:*:*:key/*"
-          ]
+          ],
+          "Sid": "AllowEc2InstancesWithEncryptedEbsVolumes"
         },
         {
           "Action": [
+            "ec2:DescribeInstances",
             "ec2:RebootInstances",
             "ec2:SendSpotInstanceInterruptions",
             "ec2:StartInstances",
@@ -36,7 +38,8 @@
             "ec2:TerminateInstances"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:instance/*"
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "AllowEc2Actions"
         },
         {
           "Action": [
@@ -44,7 +47,8 @@
             "ssm:ListCommands"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowSSMStopOnEc2"
         },
         {
           "Action": [
@@ -54,13 +58,14 @@
           "Resource": [
             "arn:aws:ec2:*:*:instance/*",
             "arn:aws:ssm:*:*:document/*"
-          ]
+          ],
+          "Sid": "AllowSSMSendOnEc2"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-06-02T23:01:50Z"
+  "UpdateDate": "2023-11-13T16:39:49Z"
 }
