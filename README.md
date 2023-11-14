@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 374
-* Unique actions: 15799
+* Unique actions: 15801
 * Managed policies: 1142
 
 Most common managed policy name prefixes:
@@ -166,8 +166,8 @@ The following table summarises the AWS APIs.
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 0 |
+| [`finspace`](services/finspace.yml) | 35 | 0 | 9 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
-| [`finspace`](services/finspace.yml) | 34 | 1 | 9 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
 | [`states`](services/states.yml) | 34 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
@@ -247,12 +247,12 @@ The following table summarises the AWS APIs.
 | [`iotroborunner`](services/iotroborunner.yml) | 20 | 0 | 0 |
 | [`emr-containers`](services/emr-containers.yml) | 20 | 0 | 0 |
 | [`app-integrations`](services/app-integrations.yml) | 19 | 0 | 4 |
+| [`resource-explorer-2`](services/resource-explorer-2.yml) | 19 | 0 | 2 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`translate`](services/translate.yml) | 19 | 0 | 0 |
 | [`signer`](services/signer.yml) | 19 | 0 | 0 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 0 |
 | [`sagemaker-geospatial`](services/sagemaker-geospatial.yml) | 19 | 0 | 0 |
-| [`resource-explorer-2`](services/resource-explorer-2.yml) | 19 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 19 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 19 | 0 | 0 |
 | [`identitystore`](services/identitystore.yml) | 19 | 0 | 0 |
@@ -415,8 +415,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2476 |
-| `Get` | 2254 |
+| `List` | 2477 |
+| `Get` | 2255 |
 | `Delete` | 1801 |
 | `Create` | 1687 |
 | `Describe` | 1658 |
