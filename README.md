@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 374
-* Unique actions: 15792
+* Unique actions: 15798
 * Managed policies: 1141
 
 Most common managed policy name prefixes:
@@ -307,6 +307,7 @@ The following table summarises the AWS APIs.
 | [`kendra-ranking`](services/kendra-ranking.yml) | 9 | 0 | 0 |
 | [`budgets`](services/budgets.yml) | 8 | 15 | 2 |
 | [`backup-storage`](services/backup-storage.yml) | 8 | 1 | 7 |
+| [`launchwizard`](services/launchwizard.yml) | 8 | 0 | 25 |
 | [`sts`](services/sts.yml) | 8 | 0 | 3 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
 | [`managedblockchain-query`](services/managedblockchain-query.yml) | 8 | 0 | 0 |
@@ -330,7 +331,6 @@ The following table summarises the AWS APIs.
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 2 | 0 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 1 | 30 | 0 |
-| [`launchwizard`](services/launchwizard.yml) | 1 | 7 | 19 |
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`cloudtrail-data`](services/cloudtrail-data.yml) | 1 | 0 | 0 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
@@ -415,13 +415,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2474 |
-| `Get` | 2251 |
+| `List` | 2476 |
+| `Get` | 2254 |
 | `Delete` | 1801 |
 | `Create` | 1687 |
 | `Describe` | 1658 |
 | `Update` | 1438 |
-| `Put` | 444 |
+| `Put` | 445 |
 | `Start` | 351 |
 | `Tag` | 249 |
 | `Untag` | 246 |
