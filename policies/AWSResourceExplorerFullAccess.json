@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSResourceExplorerFullAccess",
   "CreateDate": "2022-11-07T20:01:20Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MZIYCHOML",
   "PolicyName": "AWSResourceExplorerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-11-07T20:01:20Z",
+    "CreateDate": "2023-11-14T16:53:46Z",
     "Document": {
       "Statement": [
         {
@@ -22,22 +22,26 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ResourceExplorerSLRAccess"
         },
         {
           "Action": [
             "ec2:DescribeRegions",
+            "organizations:DescribeOrganization",
+            "ram:GetResourceShares",
             "ram:ListResources",
             "resource-explorer-2:*"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ResourceExplorerConsoleFullAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-11-07T20:01:20Z"
+  "UpdateDate": "2023-11-14T16:53:46Z"
 }

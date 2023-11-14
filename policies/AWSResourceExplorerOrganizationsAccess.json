@@ -1,0 +1,79 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSResourceExplorerOrganizationsAccess",
+  "CreateDate": "2023-11-14T17:01:12Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4KIZIE4IPE",
+  "PolicyName": "AWSResourceExplorerOrganizationsAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-11-14T17:01:12Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "resource-explorer-2.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ResourceExplorerCreateSLRAccess"
+        },
+        {
+          "Action": [
+            "organizations:DeregisterDelegatedAdministrator",
+            "organizations:DisableAWSServiceAccess",
+            "organizations:EnableAWSServiceAccess",
+            "organizations:RegisterDelegatedAdministrator"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": [
+                "resource-explorer-2.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "OrganizationsAdministratorAccess"
+        },
+        {
+          "Action": [
+            "ec2:DescribeRegions",
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListAccountsForParent",
+            "organizations:ListDelegatedAdministrators",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListRoots",
+            "ram:GetResourceShares",
+            "ram:ListResources",
+            "resource-explorer-2:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReadOnlyAccess"
+        },
+        {
+          "Action": [
+            "iam:GetRole"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "Sid": "ResourceExplorerGetSLRAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-11-14T17:01:12Z"
+}
