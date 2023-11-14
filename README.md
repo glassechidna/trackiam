@@ -307,6 +307,7 @@ The following table summarises the AWS APIs.
 | [`kendra-ranking`](services/kendra-ranking.yml) | 9 | 0 | 0 |
 | [`budgets`](services/budgets.yml) | 8 | 15 | 2 |
 | [`backup-storage`](services/backup-storage.yml) | 8 | 1 | 7 |
+| [`controltower`](services/controltower.yml) | 8 | 0 | 38 |
 | [`launchwizard`](services/launchwizard.yml) | 8 | 0 | 25 |
 | [`sts`](services/sts.yml) | 8 | 0 | 3 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
@@ -320,7 +321,6 @@ The following table summarises the AWS APIs.
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 6 | 0 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 6 | 0 | 0 |
-| [`controltower`](services/controltower.yml) | 5 | 3 | 38 |
 | [`s3-outposts`](services/s3-outposts.yml) | 5 | 0 | 43 |
 | [`pricing`](services/pricing.yml) | 5 | 0 | 0 |
 | [`cur`](services/cur.yml) | 4 | 3 | 5 |
