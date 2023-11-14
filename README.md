@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 374
-* Unique actions: 15801
+* Unique actions: 15811
 * Managed policies: 1142
 
 Most common managed policy name prefixes:
@@ -41,7 +41,7 @@ The following table summarises the AWS APIs.
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`iot`](services/iot.yml) | 257 | 3 | 9 |
 | [`connect`](services/connect.yml) | 214 | 1 | 13 |
-| [`glue`](services/glue.yml) | 198 | 4 | 13 |
+| [`glue`](services/glue.yml) | 198 | 10 | 13 |
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 158 | 3 | 29 |
@@ -76,7 +76,7 @@ The following table summarises the AWS APIs.
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 75 | 0 | 1 |
-| [`backup`](services/backup.yml) | 74 | 0 | 5 |
+| [`backup`](services/backup.yml) | 74 | 3 | 5 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`workspaces`](services/workspaces.yml) | 73 | 0 | 1 |
 | [`iotsitewise`](services/iotsitewise.yml) | 73 | 0 | 1 |
@@ -168,8 +168,8 @@ The following table summarises the AWS APIs.
 | [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 0 |
 | [`finspace`](services/finspace.yml) | 35 | 0 | 9 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
+| [`states`](services/states.yml) | 34 | 1 | 0 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
-| [`states`](services/states.yml) | 34 | 0 | 0 |
 | [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
 | [`ram`](services/ram.yml) | 34 | 0 | 0 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 34 | 0 | 0 |
@@ -242,12 +242,12 @@ The following table summarises the AWS APIs.
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`synthetics`](services/synthetics.yml) | 21 | 0 | 0 |
+| [`resource-explorer-2`](services/resource-explorer-2.yml) | 21 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 21 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 3 | 0 |
 | [`iotroborunner`](services/iotroborunner.yml) | 20 | 0 | 0 |
 | [`emr-containers`](services/emr-containers.yml) | 20 | 0 | 0 |
 | [`app-integrations`](services/app-integrations.yml) | 19 | 0 | 4 |
-| [`resource-explorer-2`](services/resource-explorer-2.yml) | 19 | 0 | 2 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`translate`](services/translate.yml) | 19 | 0 | 0 |
 | [`signer`](services/signer.yml) | 19 | 0 | 0 |
@@ -415,12 +415,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2477 |
-| `Get` | 2255 |
-| `Delete` | 1801 |
-| `Create` | 1687 |
+| `List` | 2481 |
+| `Get` | 2256 |
+| `Delete` | 1802 |
+| `Create` | 1688 |
 | `Describe` | 1658 |
-| `Update` | 1438 |
+| `Update` | 1439 |
 | `Put` | 445 |
 | `Start` | 351 |
 | `Tag` | 249 |
