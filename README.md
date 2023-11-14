@@ -168,7 +168,7 @@ The following table summarises the AWS APIs.
 | [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 0 |
 | [`finspace`](services/finspace.yml) | 35 | 0 | 9 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
-| [`states`](services/states.yml) | 34 | 1 | 0 |
+| [`states`](services/states.yml) | 35 | 0 | 0 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
 | [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
 | [`ram`](services/ram.yml) | 34 | 0 | 0 |
