@@ -39,6 +39,7 @@ Actions:
   - Name: redshift:DeleteHsmClientCertificate
   - Name: redshift:DeleteHsmConfiguration
   - Name: redshift:DeletePartner
+  - Name: redshift:DeleteResourcePolicy
   - Name: redshift:DeleteScheduledAction
   - Name: redshift:DeleteSnapshotCopyGrant
   - Name: redshift:DeleteSnapshotSchedule
@@ -67,6 +68,7 @@ Actions:
   - Name: redshift:DescribeEvents
   - Name: redshift:DescribeHsmClientCertificates
   - Name: redshift:DescribeHsmConfigurations
+  - Name: redshift:DescribeInboundIntegrations
   - Name: redshift:DescribeLoggingStatus
   - Name: redshift:DescribeNodeConfigurationOptions
   - Name: redshift:DescribeOrderableClusterOptions
@@ -92,6 +94,7 @@ Actions:
   - Name: redshift:GetClusterCredentialsWithIAM
   - Name: redshift:GetReservedNodeExchangeConfigurationOptions
   - Name: redshift:GetReservedNodeExchangeOfferings
+  - Name: redshift:GetResourcePolicy
   - Name: redshift:ModifyAquaConfiguration
   - Name: redshift:ModifyAuthenticationProfile
   - Name: redshift:ModifyCluster
@@ -111,6 +114,7 @@ Actions:
   - Name: redshift:ModifyUsageLimit
   - Name: redshift:PauseCluster
   - Name: redshift:PurchaseReservedNodeOffering
+  - Name: redshift:PutResourcePolicy
   - Name: redshift:RebootCluster
   - Name: redshift:RejectDataShare
   - Name: redshift:ResetClusterParameterGroup
@@ -143,9 +147,3 @@ Actions:
   - Name: redshift:ModifySavedQuery
   - Name: redshift:ViewQueriesFromConsole
   - Name: redshift:ViewQueriesInConsole
-
-  # APIs without an IAM action
-  - Name: redshift:DeleteResourcePolicy
-  - Name: redshift:DescribeInboundIntegrations
-  - Name: redshift:GetResourcePolicy
-  - Name: redshift:PutResourcePolicy

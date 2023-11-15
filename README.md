@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 374
-* Unique actions: 15822
+* Unique actions: 15823
 * Managed policies: 1143
 
 Most common managed policy name prefixes:
@@ -48,8 +48,8 @@ The following table summarises the AWS APIs.
 | [`rds`](services/rds.yml) | 152 | 0 | 5 |
 | [`ses`](services/ses.yml) | 149 | 0 | 0 |
 | [`ssm`](services/ssm.yml) | 139 | 0 | 10 |
+| [`redshift`](services/redshift.yml) | 128 | 0 | 18 |
 | [`lex`](services/lex.yml) | 127 | 4 | 8 |
-| [`redshift`](services/redshift.yml) | 124 | 4 | 18 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
@@ -151,7 +151,7 @@ The following table summarises the AWS APIs.
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
-| [`ce`](services/ce.yml) | 38 | 0 | 12 |
+| [`ce`](services/ce.yml) | 38 | 0 | 13 |
 | [`codeartifact`](services/codeartifact.yml) | 38 | 0 | 3 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 1 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
@@ -416,7 +416,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2483 |
-| `Get` | 2257 |
+| `Get` | 2258 |
 | `Delete` | 1803 |
 | `Create` | 1689 |
 | `Describe` | 1659 |
