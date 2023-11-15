@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSrePostPrivateCloudWatchAccess",
+  "CreateDate": "2023-11-15T16:37:33Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4DFJKUWJMM",
+  "PolicyName": "AWSrePostPrivateCloudWatchAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-11-15T16:37:33Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": [
+                "AWS/Usage",
+                "AWS/rePostPrivate"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchPublishMetrics"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-11-15T16:37:33Z"
+}
