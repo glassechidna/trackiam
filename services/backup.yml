@@ -39,12 +39,14 @@ Actions:
   - Name: backup:GetLegalHold
   - Name: backup:GetRecoveryPointRestoreMetadata
   - Name: backup:GetSupportedResourceTypes
+  - Name: backup:ListBackupJobSummaries
   - Name: backup:ListBackupJobs
   - Name: backup:ListBackupPlanTemplates
   - Name: backup:ListBackupPlanVersions
   - Name: backup:ListBackupPlans
   - Name: backup:ListBackupSelections
   - Name: backup:ListBackupVaults
+  - Name: backup:ListCopyJobSummaries
   - Name: backup:ListCopyJobs
   - Name: backup:ListFrameworks
   - Name: backup:ListLegalHolds
@@ -55,6 +57,7 @@ Actions:
   - Name: backup:ListRecoveryPointsByResource
   - Name: backup:ListReportJobs
   - Name: backup:ListReportPlans
+  - Name: backup:ListRestoreJobSummaries
   - Name: backup:ListRestoreJobs
   - Name: backup:ListTags
   - Name: backup:PutBackupVaultAccessPolicy
@@ -80,8 +83,3 @@ Actions:
   - Name: backup:DeleteBackupVaultSharingPolicy
   - Name: backup:GetBackupVaultSharingPolicy
   - Name: backup:PutBackupVaultSharingPolicy
-
-  # APIs without an IAM action
-  - Name: backup:ListBackupJobSummaries
-  - Name: backup:ListCopyJobSummaries
-  - Name: backup:ListRestoreJobSummaries

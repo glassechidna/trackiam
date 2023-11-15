@@ -72,11 +72,11 @@ The following table summarises the AWS APIs.
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 79 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 78 | 0 | 11 |
+| [`backup`](services/backup.yml) | 77 | 0 | 5 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 75 | 0 | 1 |
-| [`backup`](services/backup.yml) | 74 | 3 | 5 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`workspaces`](services/workspaces.yml) | 73 | 0 | 1 |
 | [`iotsitewise`](services/iotsitewise.yml) | 73 | 0 | 1 |
