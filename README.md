@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 374
-* Unique actions: 15811
+* Unique actions: 15822
 * Managed policies: 1143
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 600 | 6 | 16 |
+| [`ec2`](services/ec2.yml) | 600 | 9 | 16 |
 | [`sagemaker`](services/sagemaker.yml) | 320 | 0 | 17 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`iot`](services/iot.yml) | 257 | 3 | 9 |
@@ -63,7 +63,7 @@ The following table summarises the AWS APIs.
 | [`config`](services/config.yml) | 92 | 0 | 0 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
-| [`s3`](services/s3.yml) | 85 | 58 | 45 |
+| [`s3`](services/s3.yml) | 85 | 66 | 45 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 85 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 84 | 0 | 51 |
@@ -415,14 +415,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2481 |
-| `Get` | 2256 |
-| `Delete` | 1802 |
-| `Create` | 1688 |
-| `Describe` | 1658 |
-| `Update` | 1439 |
+| `List` | 2483 |
+| `Get` | 2257 |
+| `Delete` | 1803 |
+| `Create` | 1689 |
+| `Describe` | 1659 |
+| `Update` | 1440 |
 | `Put` | 445 |
 | `Start` | 351 |
-| `Tag` | 249 |
-| `Untag` | 246 |
+| `Tag` | 250 |
+| `Untag` | 247 |
 
