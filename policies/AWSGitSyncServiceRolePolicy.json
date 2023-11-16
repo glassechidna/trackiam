@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSGitSyncServiceRolePolicy",
+  "CreateDate": "2023-11-16T17:05:42Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4OZHR7ARYP",
+  "PolicyName": "AWSGitSyncServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-11-16T17:05:42Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "codestar-connections:UseConnection"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:codestar-connections:*:*:connection/*",
+          "Sid": "AccessGitRepos"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-11-16T17:05:42Z"
+}
