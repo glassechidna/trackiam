@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSDataLifecycleManagerSSMFullAccess",
   "CreateDate": "2023-10-31T20:29:44Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4LAVPWOUGF",
   "PolicyName": "AWSDataLifecycleManagerSSMFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-10-31T20:29:44Z",
+    "CreateDate": "2023-11-16T22:31:54Z",
     "Document": {
       "Statement": [
         {
@@ -35,7 +35,8 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:ssm:*:*:document/AWSEC2-CreateVssSnapshot"
+            "arn:aws:ssm:*:*:document/AWSEC2-CreateVssSnapshot",
+            "arn:aws:ssm:*:*:document/AWSSystemsManagerSAP-CreateDLMSnapshotForSAPHANA"
           ],
           "Sid": "AllowSpecificAWSOwnedSSMDocuments"
         },
@@ -63,7 +64,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-10-31T20:29:44Z"
+  "UpdateDate": "2023-11-16T22:31:54Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonDataZoneRedshiftManageAccessRolePolicy",
   "CreateDate": "2023-09-22T20:15:14Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4K6KUTPP6X",
   "PolicyName": "AmazonDataZoneRedshiftManageAccessRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-09-22T20:15:14Z",
+    "CreateDate": "2023-11-16T22:04:02Z",
     "Document": {
       "Statement": [
         {
@@ -20,7 +20,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:redshift-serverless:*:*:namespace/*"
-          ]
+          ],
+          "Sid": "getNamespacePermission"
         },
         {
           "Action": "redshift-serverless:GetWorkgroup",
@@ -32,17 +33,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:redshift-serverless:*:*:workgroup/*"
-          ]
-        },
-        {
-          "Action": "redshift:AssociateDataShareConsumer",
-          "Condition": {
-            "StringEquals": {
-              "aws:ResourceOrgID": "${aws:PrincipalOrgID}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:redshift:*:*:datashare:*/datazone*"
+          ],
+          "Sid": "getWorkgroupPermission"
         },
         {
           "Action": [
@@ -62,7 +54,8 @@
           "Resource": [
             "arn:aws:redshift-serverless:*:*:workgroup/*",
             "arn:aws:redshift:*:*:cluster:*"
-          ]
+          ],
+          "Sid": "redshiftDataScopeDownPermissions"
         },
         {
           "Action": [
@@ -77,12 +70,20 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:redshift:*:*:datashare:*/datazone*"
-          ]
+          ],
+          "Sid": "dataSharesPermissions"
+        },
+        {
+          "Action": "redshift:AssociateDataShareConsumer",
+          "Effect": "Allow",
+          "Resource": "arn:aws:redshift:*:*:datashare:*/datazone*",
+          "Sid": "associateDataShareConsumerPermission"
         },
         {
           "Action": "secretsmanager:ListSecrets",
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "listSecretsPermission"
         },
         {
           "Action": [
@@ -91,13 +92,14 @@
             "redshift:DescribeClusters"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "redshiftDataPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-09-22T20:15:14Z"
+  "UpdateDate": "2023-11-16T22:04:02Z"
 }
