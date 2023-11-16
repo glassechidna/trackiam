@@ -78,6 +78,7 @@ The following table summarises the AWS APIs.
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 75 | 0 | 1 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
+| [`sso`](services/sso.yml) | 73 | 0 | 53 |
 | [`workspaces`](services/workspaces.yml) | 73 | 0 | 1 |
 | [`iotsitewise`](services/iotsitewise.yml) | 73 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
@@ -148,7 +149,6 @@ The following table summarises the AWS APIs.
 | [`ecr`](services/ecr.yml) | 41 | 0 | 2 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 40 | 0 | 3 |
 | [`eks`](services/eks.yml) | 40 | 0 | 1 |
-| [`sso`](services/sso.yml) | 39 | 34 | 53 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |

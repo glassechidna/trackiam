@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSecurityHubOrganizationsAccess",
   "CreateDate": "2021-03-15T20:53:03Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KVIUTRVOZ",
   "PolicyName": "AWSSecurityHubOrganizationsAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-03-15T20:53:03Z",
+    "CreateDate": "2023-11-16T21:13:44Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "OrganizationPermissionsEnable"
         },
         {
           "Action": [
@@ -31,21 +32,30 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:organizations::*:account/o-*/*"
+          "Resource": "arn:aws:organizations::*:account/o-*/*",
+          "Sid": "OrganizationPermissionsDelegatedAdmin"
         },
         {
           "Action": [
+            "organizations:DescribeAccount",
             "organizations:DescribeOrganization",
-            "organizations:ListAccounts"
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListAccountsForParent",
+            "organizations:ListDelegatedAdministrators",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListRoots"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "OrganizationPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-03-15T20:53:03Z"
+  "UpdateDate": "2023-11-16T21:13:44Z"
 }
