@@ -22,6 +22,7 @@ Actions:
   - Name: sso:ListAccountAssignmentDeletionStatus
   - Name: sso:ListAccountAssignments
   - Name: sso:ListAccountsForProvisionedPermissionSet
+  - Name: sso:ListApplications
   - Name: sso:ListCustomerManagedPolicyReferencesInPermissionSet
   - Name: sso:ListInstances
   - Name: sso:ListManagedPoliciesInPermissionSet
@@ -30,6 +31,7 @@ Actions:
   - Name: sso:ListPermissionSetsProvisionedToAccount
   - Name: sso:ListTagsForResource
   - Name: sso:ProvisionPermissionSet
+  - Name: sso:PutApplicationAssignmentConfiguration
   - Name: sso:PutInlinePolicyToPermissionSet
   - Name: sso:PutPermissionsBoundaryToPermissionSet
   - Name: sso:TagResource
@@ -71,11 +73,9 @@ Actions:
   - Name: sso:ListApplicationInstanceCertificates
   - Name: sso:ListApplicationInstances
   - Name: sso:ListApplicationTemplates
-  - Name: sso:ListApplications
   - Name: sso:ListDirectoryAssociations
   - Name: sso:ListProfileAssociations
   - Name: sso:ListProfiles
-  - Name: sso:PutApplicationAssignmentConfiguration
   - Name: sso:PutMfaDeviceManagementForDirectory
   - Name: sso:PutPermissionsPolicy
   - Name: sso:SearchGroups
@@ -93,3 +93,39 @@ Actions:
   - Name: sso:UpdateProfile
   - Name: sso:UpdateSSOConfiguration
   - Name: sso:UpdateTrust
+
+  # APIs without an IAM action
+  - Name: sso:CreateApplication
+  - Name: sso:CreateApplicationAssignment
+  - Name: sso:CreateInstance
+  - Name: sso:CreateTrustedTokenIssuer
+  - Name: sso:DeleteApplication
+  - Name: sso:DeleteApplicationAccessScope
+  - Name: sso:DeleteApplicationAssignment
+  - Name: sso:DeleteApplicationAuthenticationMethod
+  - Name: sso:DeleteApplicationGrant
+  - Name: sso:DeleteInstance
+  - Name: sso:DeleteTrustedTokenIssuer
+  - Name: sso:DescribeApplication
+  - Name: sso:DescribeApplicationAssignment
+  - Name: sso:DescribeApplicationProvider
+  - Name: sso:DescribeInstance
+  - Name: sso:DescribeTrustedTokenIssuer
+  - Name: sso:GetApplicationAccessScope
+  - Name: sso:GetApplicationAssignmentConfiguration
+  - Name: sso:GetApplicationAuthenticationMethod
+  - Name: sso:GetApplicationGrant
+  - Name: sso:ListAccountAssignmentsForPrincipal
+  - Name: sso:ListApplicationAccessScopes
+  - Name: sso:ListApplicationAssignments
+  - Name: sso:ListApplicationAssignmentsForPrincipal
+  - Name: sso:ListApplicationAuthenticationMethods
+  - Name: sso:ListApplicationGrants
+  - Name: sso:ListApplicationProviders
+  - Name: sso:ListTrustedTokenIssuers
+  - Name: sso:PutApplicationAccessScope
+  - Name: sso:PutApplicationAuthenticationMethod
+  - Name: sso:PutApplicationGrant
+  - Name: sso:UpdateApplication
+  - Name: sso:UpdateInstance
+  - Name: sso:UpdateTrustedTokenIssuer
