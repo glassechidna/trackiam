@@ -115,6 +115,7 @@ The following table summarises the AWS APIs.
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 54 | 0 | 26 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
 | [`resiliencehub`](services/resiliencehub.yml) | 54 | 0 | 0 |
+| [`ivs`](services/ivs.yml) | 54 | 0 | 0 |
 | [`wafv2`](services/wafv2.yml) | 53 | 0 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 52 | 5 | 13 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 0 |
@@ -140,7 +141,6 @@ The following table summarises the AWS APIs.
 | [`workdocs`](services/workdocs.yml) | 44 | 0 | 15 |
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
-| [`ivs`](services/ivs.yml) | 42 | 12 | 0 |
 | [`fsx`](services/fsx.yml) | 42 | 0 | 5 |
 | [`transcribe`](services/transcribe.yml) | 42 | 0 | 3 |
 | [`fms`](services/fms.yml) | 42 | 0 | 0 |
