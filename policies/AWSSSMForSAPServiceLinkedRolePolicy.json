@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSSMForSAPServiceLinkedRolePolicy",
   "CreateDate": "2022-11-16T01:18:21Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AONIU2LID",
   "PolicyName": "AWSSSMForSAPServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-10-31T23:39:16Z",
+    "CreateDate": "2023-11-17T21:22:26Z",
     "Document": {
       "Statement": [
         {
@@ -56,17 +56,6 @@
           "Effect": "Allow",
           "Resource": "arn:*:servicecatalog:*:*:/attribute-groups/*",
           "Sid": "CreateAttributeGroup"
-        },
-        {
-          "Action": "servicecatalog:DeleteApplication",
-          "Condition": {
-            "StringEquals": {
-              "aws:ResourceTag/SSMForSAPCreated": "True"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:*:servicecatalog:*:*:*",
-          "Sid": "DeleteApplication"
         },
         {
           "Action": "servicecatalog:DeleteAttributeGroup",
@@ -155,6 +144,20 @@
           "Sid": "CreateApplication"
         },
         {
+          "Action": [
+            "servicecatalog:DeleteApplication",
+            "servicecatalog:UpdateApplication"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/SSMForSAPCreated": "True"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:servicecatalog:*:*:*",
+          "Sid": "UpdateOrDeleteApplication"
+        },
+        {
           "Action": "ec2:DescribeInstanceStatus",
           "Effect": "Allow",
           "Resource": "*",
@@ -232,7 +235,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2023-10-31T23:39:16Z"
+  "UpdateDate": "2023-11-17T21:22:26Z"
 }

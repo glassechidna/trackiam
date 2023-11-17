@@ -296,6 +296,7 @@ The following table summarises the AWS APIs.
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 11 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
+| [`trustedadvisor`](services/trustedadvisor.yml) | 10 | 0 | 41 |
 | [`supportapp`](services/supportapp.yml) | 10 | 0 | 3 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
@@ -337,7 +338,6 @@ The following table summarises the AWS APIs.
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 12 | 3 |
-| [`trustedadvisor`](services/trustedadvisor.yml) | 0 | 10 | 41 |
 | [`mobilehub`](services/mobilehub.yml) | 0 | 9 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |

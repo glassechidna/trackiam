@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSVPCVerifiedAccessServiceRolePolicy",
   "CreateDate": "2022-11-29T03:35:11Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4FVJMSTHCL",
   "PolicyName": "AWSVPCVerifiedAccessServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-06-01T16:28:50Z",
+    "CreateDate": "2023-11-17T21:03:13Z",
     "Document": {
       "Statement": [
         {
@@ -20,7 +20,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:network-interface/*"
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "VerifiedAccessRoleTaggedNetworkInterfaceActions"
         },
         {
           "Action": [
@@ -32,7 +33,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:network-interface/*"
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "VerifiedAccessRoleTaggingActions"
         },
         {
           "Action": [
@@ -45,7 +47,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:network-interface/*"
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "VerifiedAccessRoleModifyTaggedNetworkInterfaceActions"
         },
         {
           "Action": [
@@ -55,20 +58,22 @@
           "Resource": [
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:subnet/*"
-          ]
+          ],
+          "Sid": "VerifiedAccessRoleNetworkInterfaceActions"
         },
         {
           "Action": [
             "ec2:ModifyNetworkInterfaceAttribute"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:security-group/*"
+          "Resource": "arn:aws:ec2:*:*:security-group/*",
+          "Sid": "VerifiedAccessRoleModifyNetworkInterfaceActions"
         }
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v2"
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-06-01T16:28:50Z"
+  "UpdateDate": "2023-11-17T21:03:13Z"
 }
