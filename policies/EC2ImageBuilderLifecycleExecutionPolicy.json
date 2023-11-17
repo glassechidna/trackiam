@@ -1,0 +1,94 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/EC2ImageBuilderLifecycleExecutionPolicy",
+  "CreateDate": "2023-11-16T23:23:09Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4MAHJZQTQZ",
+  "PolicyName": "EC2ImageBuilderLifecycleExecutionPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-11-16T23:23:09Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:DeleteSnapshot",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::snapshot/*",
+          "Sid": "EC2DeleteSnapshotPermission"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags",
+            "ec2:DeleteTags"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "DeprecatedBy"
+            },
+            "StringEquals": {
+              "aws:RequestTag/DeprecatedBy": "EC2 Image Builder",
+              "aws:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*::image/*",
+            "arn:aws:ec2:*::snapshot/*"
+          ],
+          "Sid": "EC2TagsPermission"
+        },
+        {
+          "Action": [
+            "ec2:DeregisterImage",
+            "ec2:DescribeImageAttribute",
+            "ec2:DisableImage",
+            "ec2:DisableImageDeprecation",
+            "ec2:EnableImage",
+            "ec2:EnableImageDeprecation"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::image/*",
+          "Sid": "Ec2ImagePermission"
+        },
+        {
+          "Action": [
+            "ecr:BatchDeleteImage",
+            "ecr:BatchGetImage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ecr:ResourceTag/LifecycleExecutionAccess": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecr:*:*:repository/*",
+          "Sid": "ECRImagePermission"
+        },
+        {
+          "Action": [
+            "ec2:DescribeImages",
+            "imagebuilder:DeleteImage",
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ImageBuilderEC2TagServicePermission"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-11-16T23:23:09Z"
+}
