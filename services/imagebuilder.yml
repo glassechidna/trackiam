@@ -1,5 +1,6 @@
 Actions:
   - Name: imagebuilder:CancelImageCreation
+  - Name: imagebuilder:CancelLifecycleExecution
   - Name: imagebuilder:CreateComponent
   - Name: imagebuilder:CreateContainerRecipe
   - Name: imagebuilder:CreateDistributionConfiguration
@@ -7,6 +8,7 @@ Actions:
   - Name: imagebuilder:CreateImagePipeline
   - Name: imagebuilder:CreateImageRecipe
   - Name: imagebuilder:CreateInfrastructureConfiguration
+  - Name: imagebuilder:CreateLifecyclePolicy
   - Name: imagebuilder:DeleteComponent
   - Name: imagebuilder:DeleteContainerRecipe
   - Name: imagebuilder:DeleteDistributionConfiguration
@@ -14,6 +16,7 @@ Actions:
   - Name: imagebuilder:DeleteImagePipeline
   - Name: imagebuilder:DeleteImageRecipe
   - Name: imagebuilder:DeleteInfrastructureConfiguration
+  - Name: imagebuilder:DeleteLifecyclePolicy
   - Name: imagebuilder:GetComponent
   - Name: imagebuilder:GetComponentPolicy
   - Name: imagebuilder:GetContainerRecipe
@@ -25,6 +28,8 @@ Actions:
   - Name: imagebuilder:GetImageRecipe
   - Name: imagebuilder:GetImageRecipePolicy
   - Name: imagebuilder:GetInfrastructureConfiguration
+  - Name: imagebuilder:GetLifecycleExecution
+  - Name: imagebuilder:GetLifecyclePolicy
   - Name: imagebuilder:GetWorkflowExecution
   - Name: imagebuilder:GetWorkflowStepExecution
   - Name: imagebuilder:ImportComponent
@@ -42,6 +47,9 @@ Actions:
   - Name: imagebuilder:ListImageScanFindings
   - Name: imagebuilder:ListImages
   - Name: imagebuilder:ListInfrastructureConfigurations
+  - Name: imagebuilder:ListLifecycleExecutionResources
+  - Name: imagebuilder:ListLifecycleExecutions
+  - Name: imagebuilder:ListLifecyclePolicies
   - Name: imagebuilder:ListTagsForResource
   - Name: imagebuilder:ListWorkflowExecutions
   - Name: imagebuilder:ListWorkflowStepExecutions
@@ -50,20 +58,10 @@ Actions:
   - Name: imagebuilder:PutImagePolicy
   - Name: imagebuilder:PutImageRecipePolicy
   - Name: imagebuilder:StartImagePipelineExecution
+  - Name: imagebuilder:StartResourceStateUpdate
   - Name: imagebuilder:TagResource
   - Name: imagebuilder:UntagResource
   - Name: imagebuilder:UpdateDistributionConfiguration
   - Name: imagebuilder:UpdateImagePipeline
   - Name: imagebuilder:UpdateInfrastructureConfiguration
-
-  # APIs without an IAM action
-  - Name: imagebuilder:CancelLifecycleExecution
-  - Name: imagebuilder:CreateLifecyclePolicy
-  - Name: imagebuilder:DeleteLifecyclePolicy
-  - Name: imagebuilder:GetLifecycleExecution
-  - Name: imagebuilder:GetLifecyclePolicy
-  - Name: imagebuilder:ListLifecycleExecutionResources
-  - Name: imagebuilder:ListLifecycleExecutions
-  - Name: imagebuilder:ListLifecyclePolicies
-  - Name: imagebuilder:StartResourceStateUpdate
   - Name: imagebuilder:UpdateLifecyclePolicy

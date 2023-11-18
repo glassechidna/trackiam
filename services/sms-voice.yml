@@ -5,6 +5,11 @@ Actions:
   - Name: sms-voice:CreateEventDestination
   - Name: sms-voice:CreateOptOutList
   - Name: sms-voice:CreatePool
+  - Name: sms-voice:CreateRegistration
+  - Name: sms-voice:CreateRegistrationAssociation
+  - Name: sms-voice:CreateRegistrationAttachment
+  - Name: sms-voice:CreateRegistrationVersion
+  - Name: sms-voice:CreateVerifiedDestinationNumber
   - Name: sms-voice:DeleteConfigurationSet
   - Name: sms-voice:DeleteConfigurationSetEventDestination
   - Name: sms-voice:DeleteDefaultMessageType
@@ -14,7 +19,11 @@ Actions:
   - Name: sms-voice:DeleteOptOutList
   - Name: sms-voice:DeleteOptedOutNumber
   - Name: sms-voice:DeletePool
+  - Name: sms-voice:DeleteRegistration
+  - Name: sms-voice:DeleteRegistrationAttachment
+  - Name: sms-voice:DeleteRegistrationFieldValue
   - Name: sms-voice:DeleteTextMessageSpendLimitOverride
+  - Name: sms-voice:DeleteVerifiedDestinationNumber
   - Name: sms-voice:DeleteVoiceMessageSpendLimitOverride
   - Name: sms-voice:DescribeAccountAttributes
   - Name: sms-voice:DescribeAccountLimits
@@ -24,40 +33,6 @@ Actions:
   - Name: sms-voice:DescribeOptedOutNumbers
   - Name: sms-voice:DescribePhoneNumbers
   - Name: sms-voice:DescribePools
-  - Name: sms-voice:DescribeSenderIds
-  - Name: sms-voice:DescribeSpendLimits
-  - Name: sms-voice:DisassociateOriginationIdentity
-  - Name: sms-voice:GetConfigurationSetEventDestinations
-  - Name: sms-voice:ListConfigurationSets
-  - Name: sms-voice:ListPoolOriginationIdentities
-  - Name: sms-voice:ListTagsForResource
-  - Name: sms-voice:PutKeyword
-  - Name: sms-voice:PutOptedOutNumber
-  - Name: sms-voice:ReleasePhoneNumber
-  - Name: sms-voice:RequestPhoneNumber
-  - Name: sms-voice:SendTextMessage
-  - Name: sms-voice:SendVoiceMessage
-  - Name: sms-voice:SetDefaultMessageType
-  - Name: sms-voice:SetDefaultSenderId
-  - Name: sms-voice:SetTextMessageSpendLimitOverride
-  - Name: sms-voice:SetVoiceMessageSpendLimitOverride
-  - Name: sms-voice:TagResource
-  - Name: sms-voice:UntagResource
-  - Name: sms-voice:UpdateConfigurationSetEventDestination
-  - Name: sms-voice:UpdateEventDestination
-  - Name: sms-voice:UpdatePhoneNumber
-  - Name: sms-voice:UpdatePool
-
-  # APIs without an IAM action
-  - Name: sms-voice:CreateRegistration
-  - Name: sms-voice:CreateRegistrationAssociation
-  - Name: sms-voice:CreateRegistrationAttachment
-  - Name: sms-voice:CreateRegistrationVersion
-  - Name: sms-voice:CreateVerifiedDestinationNumber
-  - Name: sms-voice:DeleteRegistration
-  - Name: sms-voice:DeleteRegistrationAttachment
-  - Name: sms-voice:DeleteRegistrationFieldValue
-  - Name: sms-voice:DeleteVerifiedDestinationNumber
   - Name: sms-voice:DescribeRegistrationAttachments
   - Name: sms-voice:DescribeRegistrationFieldDefinitions
   - Name: sms-voice:DescribeRegistrationFieldValues
@@ -65,13 +40,36 @@ Actions:
   - Name: sms-voice:DescribeRegistrationTypeDefinitions
   - Name: sms-voice:DescribeRegistrationVersions
   - Name: sms-voice:DescribeRegistrations
+  - Name: sms-voice:DescribeSenderIds
+  - Name: sms-voice:DescribeSpendLimits
   - Name: sms-voice:DescribeVerifiedDestinationNumbers
+  - Name: sms-voice:DisassociateOriginationIdentity
   - Name: sms-voice:DiscardRegistrationVersion
+  - Name: sms-voice:GetConfigurationSetEventDestinations
+  - Name: sms-voice:ListConfigurationSets
+  - Name: sms-voice:ListPoolOriginationIdentities
   - Name: sms-voice:ListRegistrationAssociations
+  - Name: sms-voice:ListTagsForResource
+  - Name: sms-voice:PutKeyword
+  - Name: sms-voice:PutOptedOutNumber
   - Name: sms-voice:PutRegistrationFieldValue
+  - Name: sms-voice:ReleasePhoneNumber
   - Name: sms-voice:ReleaseSenderId
+  - Name: sms-voice:RequestPhoneNumber
   - Name: sms-voice:RequestSenderId
   - Name: sms-voice:SendDestinationNumberVerificationCode
+  - Name: sms-voice:SendTextMessage
+  - Name: sms-voice:SendVoiceMessage
+  - Name: sms-voice:SetDefaultMessageType
+  - Name: sms-voice:SetDefaultSenderId
+  - Name: sms-voice:SetTextMessageSpendLimitOverride
+  - Name: sms-voice:SetVoiceMessageSpendLimitOverride
   - Name: sms-voice:SubmitRegistrationVersion
+  - Name: sms-voice:TagResource
+  - Name: sms-voice:UntagResource
+  - Name: sms-voice:UpdateConfigurationSetEventDestination
+  - Name: sms-voice:UpdateEventDestination
+  - Name: sms-voice:UpdatePhoneNumber
+  - Name: sms-voice:UpdatePool
   - Name: sms-voice:UpdateSenderId
   - Name: sms-voice:VerifyDestinationNumber
