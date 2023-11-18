@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 373
-* Unique actions: 15974
+* Unique actions: 15978
 * Managed policies: 1146
 
 Most common managed policy name prefixes:
@@ -42,9 +42,9 @@ The following table summarises the AWS APIs.
 | [`iot`](services/iot.yml) | 257 | 3 | 9 |
 | [`connect`](services/connect.yml) | 214 | 1 | 13 |
 | [`glue`](services/glue.yml) | 198 | 15 | 16 |
+| [`quicksight`](services/quicksight.yml) | 164 | 3 | 29 |
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
-| [`quicksight`](services/quicksight.yml) | 158 | 9 | 29 |
 | [`rds`](services/rds.yml) | 152 | 0 | 5 |
 | [`ses`](services/ses.yml) | 149 | 0 | 0 |
 | [`ssm`](services/ssm.yml) | 139 | 0 | 10 |
@@ -360,6 +360,7 @@ The following table summarises the AWS APIs.
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 14 |
+| [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
 | [`scn`](services/scn.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`billing`](services/billing.yml) | 0 | 0 | 13 |
@@ -370,7 +371,6 @@ The following table summarises the AWS APIs.
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`artifact`](services/artifact.yml) | 0 | 0 | 10 |
-| [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 10 |
 | [`notifications-contacts`](services/notifications-contacts.yml) | 0 | 0 | 9 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 9 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
@@ -415,13 +415,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2511 |
-| `Get` | 2279 |
+| `Get` | 2281 |
 | `Delete` | 1824 |
 | `Create` | 1710 |
 | `Describe` | 1676 |
 | `Update` | 1452 |
 | `Put` | 450 |
-| `Start` | 355 |
+| `Start` | 357 |
 | `Tag` | 250 |
 | `Untag` | 247 |
 

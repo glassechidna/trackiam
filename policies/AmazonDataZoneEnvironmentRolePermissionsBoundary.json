@@ -1,15 +1,28 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDataZoneEnvironmentRolePermissionsBoundary",
   "CreateDate": "2023-09-11T23:38:22Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4C3KB6Q3VE",
   "PolicyName": "AmazonDataZoneEnvironmentRolePermissionsBoundary",
   "PolicyVersion": {
-    "CreateDate": "2023-09-29T05:12:51Z",
+    "CreateDate": "2023-11-17T23:29:08Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "athena:GetQueryResultsStream"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneEnvironment": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "QueryOperationsWithResourceTag"
+        },
         {
           "Action": [
             "ec2:CreateTags",
@@ -386,6 +399,7 @@
             "athena:GetPreparedStatement",
             "athena:GetQueryExecution",
             "athena:GetQueryResults",
+            "athena:GetQueryResultsStream",
             "athena:GetQueryRuntimeStatistics",
             "athena:GetTableMetadata",
             "athena:GetWorkGroup",
@@ -553,7 +567,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-09-29T05:12:51Z"
+  "UpdateDate": "2023-11-17T23:29:08Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmplifyBackendDeployFullAccess",
   "CreateDate": "2023-10-06T21:32:59Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4H6M6P2QGM",
   "PolicyName": "AmplifyBackendDeployFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-11-06T20:08:59Z",
+    "CreateDate": "2023-11-17T23:27:43Z",
     "Document": {
       "Statement": [
         {
@@ -43,6 +43,41 @@
         },
         {
           "Action": [
+            "ssm:GetParameter",
+            "ssm:GetParameters",
+            "ssm:GetParametersByPath"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:parameter/amplify/*"
+          ],
+          "Sid": "AmplifySSM"
+        },
+        {
+          "Action": [
+            "sts:AssumeRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/cdk-*-deploy-role-*-*",
+            "arn:aws:iam::*:role/cdk-*-file-publishing-role-*-*",
+            "arn:aws:iam::*:role/cdk-*-image-publishing-role-*-*",
+            "arn:aws:iam::*:role/cdk-*-lookup-role-*-*"
+          ],
+          "Sid": "CDKDeploy"
+        },
+        {
+          "Action": [
             "amplify:GetBackendEnvironment",
             "amplify:ListApps",
             "appsync:GetIntrospectionSchema",
@@ -60,6 +95,7 @@
             "appsync:GetSchemaCreationStatus",
             "appsync:ListFunctions",
             "appsync:StartSchemaCreation",
+            "appsync:UpdateApiKey",
             "appsync:UpdateFunction",
             "appsync:UpdateResolver"
           ],
@@ -83,37 +119,12 @@
             "arn:aws:cloudformation:*:*:stack/amplify-*"
           ],
           "Sid": "CDKPreDeploy"
-        },
-        {
-          "Action": [
-            "ssm:GetParameter",
-            "ssm:GetParameters",
-            "ssm:GetParametersByPath"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:ssm:*:*:parameter/amplify/*"
-          ],
-          "Sid": "AmplifySSM"
-        },
-        {
-          "Action": [
-            "sts:AssumeRole"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:iam::*:role/cdk-*-deploy-role-*-*",
-            "arn:aws:iam::*:role/cdk-*-file-publishing-role-*-*",
-            "arn:aws:iam::*:role/cdk-*-image-publishing-role-*-*",
-            "arn:aws:iam::*:role/cdk-*-lookup-role-*-*"
-          ],
-          "Sid": "CDKDeploy"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-11-06T20:08:59Z"
+  "UpdateDate": "2023-11-17T23:27:43Z"
 }
