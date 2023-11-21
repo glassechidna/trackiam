@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSSMForSAPServiceLinkedRolePolicy",
   "CreateDate": "2022-11-16T01:18:21Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AONIU2LID",
   "PolicyName": "AWSSSMForSAPServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-11-17T21:22:26Z",
+    "CreateDate": "2023-11-21T03:35:14Z",
     "Document": {
       "Statement": [
         {
@@ -98,6 +98,19 @@
         },
         {
           "Action": [
+            "resource-groups:CreateGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/EnableAWSServiceCatalogAppRegistry": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:resource-groups:*:*:group/AWS_AppRegistry_AppTag_*",
+          "Sid": "CreateAppTagResourceGroup"
+        },
+        {
+          "Action": [
             "resource-groups:CreateGroup",
             "resource-groups:Tag"
           ],
@@ -114,6 +127,19 @@
           "Effect": "Allow",
           "Resource": "arn:*:resource-groups:*:*:group/SystemsManagerForSAP-*",
           "Sid": "CreateGroup"
+        },
+        {
+          "Action": [
+            "resource-groups:Tag"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/EnableAWSServiceCatalogAppRegistry": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:resource-groups:*:*:group/AWS_AppRegistry_AppTag_*",
+          "Sid": "TagAppTagResourceGroup"
         },
         {
           "Action": [
@@ -220,6 +246,16 @@
         },
         {
           "Action": [
+            "resource-groups:GetGroupConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:resource-groups:*:*:group/AWS_AppRegistry_AppTag_*"
+          ],
+          "Sid": "GetAppTagResourceGroupConfig"
+        },
+        {
+          "Action": [
             "ssm:DescribeDocument",
             "ssm:SendCommand"
           ],
@@ -235,7 +271,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2023-11-17T21:22:26Z"
+  "UpdateDate": "2023-11-21T03:35:14Z"
 }
