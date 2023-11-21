@@ -10,6 +10,7 @@ Actions:
   - Name: iotsitewise:CreateAccessPolicy
   - Name: iotsitewise:CreateAsset
   - Name: iotsitewise:CreateAssetModel
+  - Name: iotsitewise:CreateAssetModelCompositeModel
   - Name: iotsitewise:CreateBulkImportJob
   - Name: iotsitewise:CreateDashboard
   - Name: iotsitewise:CreateGateway
@@ -18,14 +19,18 @@ Actions:
   - Name: iotsitewise:DeleteAccessPolicy
   - Name: iotsitewise:DeleteAsset
   - Name: iotsitewise:DeleteAssetModel
+  - Name: iotsitewise:DeleteAssetModelCompositeModel
   - Name: iotsitewise:DeleteDashboard
   - Name: iotsitewise:DeleteGateway
   - Name: iotsitewise:DeletePortal
   - Name: iotsitewise:DeleteProject
   - Name: iotsitewise:DeleteTimeSeries
   - Name: iotsitewise:DescribeAccessPolicy
+  - Name: iotsitewise:DescribeAction
   - Name: iotsitewise:DescribeAsset
+  - Name: iotsitewise:DescribeAssetCompositeModel
   - Name: iotsitewise:DescribeAssetModel
+  - Name: iotsitewise:DescribeAssetModelCompositeModel
   - Name: iotsitewise:DescribeAssetProperty
   - Name: iotsitewise:DescribeBulkImportJob
   - Name: iotsitewise:DescribeDashboard
@@ -39,11 +44,15 @@ Actions:
   - Name: iotsitewise:DescribeTimeSeries
   - Name: iotsitewise:DisassociateAssets
   - Name: iotsitewise:DisassociateTimeSeriesFromAssetProperty
+  - Name: iotsitewise:ExecuteAction
+  - Name: iotsitewise:ExecuteQuery
   - Name: iotsitewise:GetAssetPropertyAggregates
   - Name: iotsitewise:GetAssetPropertyValue
   - Name: iotsitewise:GetAssetPropertyValueHistory
   - Name: iotsitewise:GetInterpolatedAssetPropertyValues
   - Name: iotsitewise:ListAccessPolicies
+  - Name: iotsitewise:ListActions
+  - Name: iotsitewise:ListAssetModelCompositeModels
   - Name: iotsitewise:ListAssetModelProperties
   - Name: iotsitewise:ListAssetModels
   - Name: iotsitewise:ListAssetProperties
@@ -51,6 +60,7 @@ Actions:
   - Name: iotsitewise:ListAssets
   - Name: iotsitewise:ListAssociatedAssets
   - Name: iotsitewise:ListBulkImportJobs
+  - Name: iotsitewise:ListCompositionRelationships
   - Name: iotsitewise:ListDashboards
   - Name: iotsitewise:ListGateways
   - Name: iotsitewise:ListPortals
@@ -66,6 +76,7 @@ Actions:
   - Name: iotsitewise:UpdateAccessPolicy
   - Name: iotsitewise:UpdateAsset
   - Name: iotsitewise:UpdateAssetModel
+  - Name: iotsitewise:UpdateAssetModelCompositeModel
   - Name: iotsitewise:UpdateAssetProperty
   - Name: iotsitewise:UpdateDashboard
   - Name: iotsitewise:UpdateGateway
@@ -74,17 +85,5 @@ Actions:
   - Name: iotsitewise:UpdateProject
 
   # actions with no corresponding API
+  - Name: iotsitewise:EnableSiteWiseIntegration
   - Name: iotsitewise:UpdateAssetModelPropertyRouting
-
-  # APIs without an IAM action
-  - Name: iotsitewise:CreateAssetModelCompositeModel
-  - Name: iotsitewise:DeleteAssetModelCompositeModel
-  - Name: iotsitewise:DescribeAction
-  - Name: iotsitewise:DescribeAssetCompositeModel
-  - Name: iotsitewise:DescribeAssetModelCompositeModel
-  - Name: iotsitewise:ExecuteAction
-  - Name: iotsitewise:ExecuteQuery
-  - Name: iotsitewise:ListActions
-  - Name: iotsitewise:ListAssetModelCompositeModels
-  - Name: iotsitewise:ListCompositionRelationships
-  - Name: iotsitewise:UpdateAssetModelCompositeModel
