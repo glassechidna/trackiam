@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 373
-* Unique actions: 15963
+* Unique services: 374
+* Unique actions: 15991
 * Managed policies: 1147
 
 Most common managed policy name prefixes:
@@ -55,7 +55,7 @@ The following table summarises the AWS APIs.
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`iotwireless`](services/iotwireless.yml) | 109 | 0 | 1 |
 | [`dms`](services/dms.yml) | 106 | 0 | 28 |
-| [`cloudfront`](services/cloudfront.yml) | 104 | 2 | 7 |
+| [`cloudfront`](services/cloudfront.yml) | 104 | 7 | 7 |
 | [`gamelift`](services/gamelift.yml) | 104 | 0 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 4 |
 | [`datazone`](services/datazone.yml) | 99 | 0 | 19 |
@@ -79,9 +79,9 @@ The following table summarises the AWS APIs.
 | [`appstream`](services/appstream.yml) | 75 | 0 | 1 |
 | [`sms-voice`](services/sms-voice.yml) | 74 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
+| [`iotsitewise`](services/iotsitewise.yml) | 73 | 11 | 1 |
 | [`sso`](services/sso.yml) | 73 | 0 | 53 |
 | [`workspaces`](services/workspaces.yml) | 73 | 0 | 1 |
-| [`iotsitewise`](services/iotsitewise.yml) | 73 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
 | [`personalize`](services/personalize.yml) | 72 | 0 | 4 |
 | [`mgn`](services/mgn.yml) | 70 | 0 | 34 |
@@ -150,6 +150,7 @@ The following table summarises the AWS APIs.
 | [`wisdom`](services/wisdom.yml) | 41 | 0 | 1 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 40 | 0 | 3 |
 | [`eks`](services/eks.yml) | 40 | 0 | 1 |
+| [`iottwinmaker`](services/iottwinmaker.yml) | 40 | 0 | 0 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
@@ -173,7 +174,6 @@ The following table summarises the AWS APIs.
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
 | [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
 | [`ram`](services/ram.yml) | 34 | 0 | 0 |
-| [`iottwinmaker`](services/iottwinmaker.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`applicationinsights`](services/applicationinsights.yml) | 33 | 0 | 1 |
@@ -341,6 +341,7 @@ The following table summarises the AWS APIs.
 | [`mobilehub`](services/mobilehub.yml) | 0 | 9 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
+| [`cloudfront-keyvaluestore`](services/cloudfront-keyvaluestore.yml) | 0 | 6 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 68 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
@@ -414,13 +415,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2508 |
-| `Get` | 2276 |
-| `Delete` | 1822 |
-| `Create` | 1708 |
-| `Describe` | 1676 |
-| `Update` | 1449 |
-| `Put` | 450 |
+| `List` | 2516 |
+| `Get` | 2278 |
+| `Delete` | 1825 |
+| `Create` | 1711 |
+| `Describe` | 1681 |
+| `Update` | 1452 |
+| `Put` | 451 |
 | `Start` | 357 |
 | `Tag` | 250 |
 | `Untag` | 247 |
