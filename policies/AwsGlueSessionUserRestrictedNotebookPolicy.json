@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AwsGlueSessionUserRestrictedNotebookPolicy",
   "CreateDate": "2022-04-18T15:24:56Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BZZRVUUJU",
   "PolicyName": "AwsGlueSessionUserRestrictedNotebookPolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-04-18T15:24:56Z",
+    "CreateDate": "2023-11-22T01:32:43Z",
     "Document": {
       "Statement": [
         {
@@ -28,7 +28,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:glue:*:*:session/*"
-          ]
+          ],
+          "Sid": "NotebookAllowActions2"
         },
         {
           "Action": [
@@ -47,7 +48,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:glue:*:*:session/*"
-          ]
+          ],
+          "Sid": "NotebokAllowActions0"
         },
         {
           "Action": [
@@ -66,7 +68,8 @@
           "Effect": "Deny",
           "Resource": [
             "arn:aws:glue:*:*:session/*"
-          ]
+          ],
+          "Sid": "NotebookDenyActions"
         },
         {
           "Action": [
@@ -82,7 +85,19 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/service-role/AwsGlueSessionServiceRoleUserRestrictedForNotebook*"
-          ]
+          ],
+          "Sid": "NotebookPassRole"
+        },
+        {
+          "Action": [
+            "glue:GetCompletion",
+            "glue:StartCompletion"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:completion/*"
+          ],
+          "Sid": "NotebookAllowActions1"
         },
         {
           "Action": [
@@ -91,13 +106,14 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "NotebookAllowActions3"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-04-18T15:24:56Z"
+  "UpdateDate": "2023-11-22T01:32:43Z"
 }
