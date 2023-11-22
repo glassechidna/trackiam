@@ -2,6 +2,7 @@ Actions:
   - Name: kinesis:AddTagsToStream
   - Name: kinesis:CreateStream
   - Name: kinesis:DecreaseStreamRetentionPeriod
+  - Name: kinesis:DeleteResourcePolicy
   - Name: kinesis:DeleteStream
   - Name: kinesis:DeregisterStreamConsumer
   - Name: kinesis:DescribeLimits
@@ -11,6 +12,7 @@ Actions:
   - Name: kinesis:DisableEnhancedMonitoring
   - Name: kinesis:EnableEnhancedMonitoring
   - Name: kinesis:GetRecords
+  - Name: kinesis:GetResourcePolicy
   - Name: kinesis:GetShardIterator
   - Name: kinesis:IncreaseStreamRetentionPeriod
   - Name: kinesis:ListShards
@@ -20,6 +22,7 @@ Actions:
   - Name: kinesis:MergeShards
   - Name: kinesis:PutRecord
   - Name: kinesis:PutRecords
+  - Name: kinesis:PutResourcePolicy
   - Name: kinesis:RegisterStreamConsumer
   - Name: kinesis:RemoveTagsFromStream
   - Name: kinesis:SplitShard
@@ -28,8 +31,3 @@ Actions:
   - Name: kinesis:SubscribeToShard
   - Name: kinesis:UpdateShardCount
   - Name: kinesis:UpdateStreamMode
-
-  # APIs without an IAM action
-  - Name: kinesis:DeleteResourcePolicy
-  - Name: kinesis:GetResourcePolicy
-  - Name: kinesis:PutResourcePolicy

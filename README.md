@@ -183,6 +183,7 @@ The following table summarises the AWS APIs.
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
+| [`kinesis`](services/kinesis.yml) | 32 | 0 | 0 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 31 | 0 | 0 |
 | [`securitylake`](services/securitylake.yml) | 31 | 0 | 0 |
@@ -196,7 +197,6 @@ The following table summarises the AWS APIs.
 | [`dataexchange`](services/dataexchange.yml) | 30 | 0 | 2 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
 | [`cases`](services/cases.yml) | 30 | 0 | 0 |
-| [`kinesis`](services/kinesis.yml) | 29 | 3 | 0 |
 | [`voiceid`](services/voiceid.yml) | 29 | 0 | 2 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 28 | 0 | 3 |
