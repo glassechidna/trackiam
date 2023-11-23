@@ -20,6 +20,7 @@ Actions:
   - Name: ec2:AssociateEnclaveCertificateIamRole
   - Name: ec2:AssociateIamInstanceProfile
   - Name: ec2:AssociateInstanceEventWindow
+  - Name: ec2:AssociateIpamByoasn
   - Name: ec2:AssociateIpamResourceDiscovery
   - Name: ec2:AssociateNatGatewayAddress
   - Name: ec2:AssociateRouteTable
@@ -210,6 +211,7 @@ Actions:
   - Name: ec2:DeleteVpnConnectionRoute
   - Name: ec2:DeleteVpnGateway
   - Name: ec2:DeprovisionByoipCidr
+  - Name: ec2:DeprovisionIpamByoasn
   - Name: ec2:DeprovisionIpamPoolCidr
   - Name: ec2:DeprovisionPublicIpv4PoolCidr
   - Name: ec2:DeregisterImage
@@ -225,6 +227,7 @@ Actions:
   - Name: ec2:DescribeAwsNetworkPerformanceMetricSubscriptions
   - Name: ec2:DescribeBundleTasks
   - Name: ec2:DescribeByoipCidrs
+  - Name: ec2:DescribeCapacityBlockOfferings
   - Name: ec2:DescribeCapacityReservationFleets
   - Name: ec2:DescribeCapacityReservations
   - Name: ec2:DescribeCarrierGateways
@@ -266,10 +269,12 @@ Actions:
   - Name: ec2:DescribeInstanceEventNotificationAttributes
   - Name: ec2:DescribeInstanceEventWindows
   - Name: ec2:DescribeInstanceStatus
+  - Name: ec2:DescribeInstanceTopology
   - Name: ec2:DescribeInstanceTypeOfferings
   - Name: ec2:DescribeInstanceTypes
   - Name: ec2:DescribeInstances
   - Name: ec2:DescribeInternetGateways
+  - Name: ec2:DescribeIpamByoasn
   - Name: ec2:DescribeIpamPools
   - Name: ec2:DescribeIpamResourceDiscoveries
   - Name: ec2:DescribeIpamResourceDiscoveryAssociations
@@ -285,6 +290,7 @@ Actions:
   - Name: ec2:DescribeLocalGatewayVirtualInterfaceGroups
   - Name: ec2:DescribeLocalGatewayVirtualInterfaces
   - Name: ec2:DescribeLocalGateways
+  - Name: ec2:DescribeLockedSnapshots
   - Name: ec2:DescribeManagedPrefixLists
   - Name: ec2:DescribeMovingAddresses
   - Name: ec2:DescribeNatGateways
@@ -377,6 +383,7 @@ Actions:
   - Name: ec2:DisableImageDeprecation
   - Name: ec2:DisableIpamOrganizationAdminAccount
   - Name: ec2:DisableSerialConsoleAccess
+  - Name: ec2:DisableSnapshotBlockPublicAccess
   - Name: ec2:DisableTransitGatewayRouteTablePropagation
   - Name: ec2:DisableVgwRoutePropagation
   - Name: ec2:DisableVpcClassicLink
@@ -386,6 +393,7 @@ Actions:
   - Name: ec2:DisassociateEnclaveCertificateIamRole
   - Name: ec2:DisassociateIamInstanceProfile
   - Name: ec2:DisassociateInstanceEventWindow
+  - Name: ec2:DisassociateIpamByoasn
   - Name: ec2:DisassociateIpamResourceDiscovery
   - Name: ec2:DisassociateNatGatewayAddress
   - Name: ec2:DisassociateRouteTable
@@ -406,6 +414,7 @@ Actions:
   - Name: ec2:EnableIpamOrganizationAdminAccount
   - Name: ec2:EnableReachabilityAnalyzerOrganizationSharing
   - Name: ec2:EnableSerialConsoleAccess
+  - Name: ec2:EnableSnapshotBlockPublicAccess
   - Name: ec2:EnableTransitGatewayRouteTablePropagation
   - Name: ec2:EnableVgwRoutePropagation
   - Name: ec2:EnableVolumeIO
@@ -433,6 +442,7 @@ Actions:
   - Name: ec2:GetInstanceUefiData
   - Name: ec2:GetIpamAddressHistory
   - Name: ec2:GetIpamDiscoveredAccounts
+  - Name: ec2:GetIpamDiscoveredPublicAddresses
   - Name: ec2:GetIpamDiscoveredResourceCidrs
   - Name: ec2:GetIpamPoolAllocations
   - Name: ec2:GetIpamPoolCidrs
@@ -446,6 +456,7 @@ Actions:
   - Name: ec2:GetReservedInstancesExchangeQuote
   - Name: ec2:GetSecurityGroupsForVpc
   - Name: ec2:GetSerialConsoleAccessStatus
+  - Name: ec2:GetSnapshotBlockPublicAccessState
   - Name: ec2:GetSpotPlacementScores
   - Name: ec2:GetSubnetCidrReservations
   - Name: ec2:GetTransitGatewayAttachmentPropagations
@@ -468,6 +479,7 @@ Actions:
   - Name: ec2:ImportVolume
   - Name: ec2:ListImagesInRecycleBin
   - Name: ec2:ListSnapshotsInRecycleBin
+  - Name: ec2:LockSnapshot
   - Name: ec2:ModifyAddressAttribute
   - Name: ec2:ModifyAvailabilityZoneGroup
   - Name: ec2:ModifyCapacityReservation
@@ -536,8 +548,10 @@ Actions:
   - Name: ec2:MoveAddressToVpc
   - Name: ec2:MoveByoipCidrToIpam
   - Name: ec2:ProvisionByoipCidr
+  - Name: ec2:ProvisionIpamByoasn
   - Name: ec2:ProvisionIpamPoolCidr
   - Name: ec2:ProvisionPublicIpv4PoolCidr
+  - Name: ec2:PurchaseCapacityBlock
   - Name: ec2:PurchaseHostReservation
   - Name: ec2:PurchaseReservedInstancesOffering
   - Name: ec2:PurchaseScheduledInstances
@@ -595,6 +609,7 @@ Actions:
   - Name: ec2:UnassignIpv6Addresses
   - Name: ec2:UnassignPrivateIpAddresses
   - Name: ec2:UnassignPrivateNatGatewayAddress
+  - Name: ec2:UnlockSnapshot
   - Name: ec2:UnmonitorInstances
   - Name: ec2:UpdateSecurityGroupRuleDescriptionsEgress
   - Name: ec2:UpdateSecurityGroupRuleDescriptionsIngress
@@ -617,20 +632,3 @@ Actions:
   - Name: ec2:PauseVolumeIO
   - Name: ec2:PutResourcePolicy
   - Name: ec2:SendSpotInstanceInterruptions
-
-  # APIs without an IAM action
-  - Name: ec2:AssociateIpamByoasn
-  - Name: ec2:DeprovisionIpamByoasn
-  - Name: ec2:DescribeCapacityBlockOfferings
-  - Name: ec2:DescribeInstanceTopology
-  - Name: ec2:DescribeIpamByoasn
-  - Name: ec2:DescribeLockedSnapshots
-  - Name: ec2:DisableSnapshotBlockPublicAccess
-  - Name: ec2:DisassociateIpamByoasn
-  - Name: ec2:EnableSnapshotBlockPublicAccess
-  - Name: ec2:GetIpamDiscoveredPublicAddresses
-  - Name: ec2:GetSnapshotBlockPublicAccessState
-  - Name: ec2:LockSnapshot
-  - Name: ec2:ProvisionIpamByoasn
-  - Name: ec2:PurchaseCapacityBlock
-  - Name: ec2:UnlockSnapshot
