@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSIAMIdentityCenterAllowListForIdentityContext",
   "CreateDate": "2023-11-08T15:21:33Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KDXNUOLXM",
   "PolicyName": "AWSIAMIdentityCenterAllowListForIdentityContext",
   "PolicyVersion": {
-    "CreateDate": "2023-11-08T15:21:33Z",
+    "CreateDate": "2023-11-25T19:27:00Z",
     "Document": {
       "Statement": [
         {
@@ -70,7 +70,9 @@
             "glue:UpdateDatabase",
             "glue:UpdatePartition",
             "glue:UpdateTable",
-            "lakeformation:GetDataAccess"
+            "lakeformation:GetDataAccess",
+            "s3:GetAccessGrantsInstanceForPrefix",
+            "s3:GetDataAccess"
           ],
           "Resource": "*",
           "Sid": "TrustedIdentityPropagation"
@@ -79,7 +81,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-11-08T15:21:33Z"
+  "UpdateDate": "2023-11-25T19:27:00Z"
 }
