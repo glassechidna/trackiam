@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSRepostSpaceSupportOperationsPolicy",
+  "CreateDate": "2023-11-26T21:52:15Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4NIYF2PYNO",
+  "PolicyName": "AWSRepostSpaceSupportOperationsPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-11-26T21:52:15Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "support:AddAttachmentsToSet",
+            "support:AddCommunicationToCase",
+            "support:CreateCase",
+            "support:DescribeCases",
+            "support:DescribeCommunications",
+            "support:ResolveCase"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RepostSpaceSupportOperations"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-11-26T21:52:15Z"
+}
