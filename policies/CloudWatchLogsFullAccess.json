@@ -1,27 +1,29 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchLogsFullAccess",
   "CreateDate": "2015-02-06T18:40:02Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ3ZGNWK2R5HW5BQFO",
   "PolicyName": "CloudWatchLogsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2015-02-06T18:40:02Z",
+    "CreateDate": "2023-11-26T18:12:09Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "cloudwatch:GenerateQuery",
             "logs:*"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "CloudWatchLogsFullAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2015-02-06T18:40:02Z"
+  "UpdateDate": "2023-11-26T18:12:09Z"
 }

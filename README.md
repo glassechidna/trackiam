@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 375
-* Unique actions: 16024
+* Unique actions: 16058
 * Managed policies: 1149
 
 Most common managed policy name prefixes:
@@ -93,7 +93,7 @@ The following table summarises the AWS APIs.
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 67 | 0 | 10 |
 | [`ds`](services/ds.yml) | 67 | 0 | 10 |
-| [`logs`](services/logs.yml) | 66 | 0 | 9 |
+| [`logs`](services/logs.yml) | 66 | 0 | 16 |
 | [`elasticache`](services/elasticache.yml) | 66 | 0 | 1 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 66 | 0 | 0 |
@@ -115,7 +115,7 @@ The following table summarises the AWS APIs.
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 54 | 0 | 26 |
-| [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 1 |
+| [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 54 | 0 | 11 |
 | [`resiliencehub`](services/resiliencehub.yml) | 54 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 54 | 0 | 0 |
 | [`wafv2`](services/wafv2.yml) | 53 | 0 | 2 |
@@ -156,9 +156,9 @@ The following table summarises the AWS APIs.
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
 | [`ce`](services/ce.yml) | 38 | 0 | 13 |
 | [`codeartifact`](services/codeartifact.yml) | 38 | 0 | 3 |
+| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 2 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 1 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
-| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 1 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
@@ -290,7 +290,7 @@ The following table summarises the AWS APIs.
 | [`docdb-elastic`](services/docdb-elastic.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 13 | 0 | 0 |
-| [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 9 |
+| [`codestar-connections`](services/codestar-connections.yml) | 12 | 0 | 25 |
 | [`scheduler`](services/scheduler.yml) | 12 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
@@ -416,12 +416,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2522 |
-| `Get` | 2287 |
-| `Delete` | 1830 |
-| `Create` | 1714 |
-| `Describe` | 1681 |
-| `Update` | 1455 |
+| `List` | 2527 |
+| `Get` | 2295 |
+| `Delete` | 1834 |
+| `Create` | 1718 |
+| `Describe` | 1684 |
+| `Update` | 1460 |
 | `Put` | 453 |
 | `Start` | 357 |
 | `Tag` | 250 |

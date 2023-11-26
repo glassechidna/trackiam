@@ -1,24 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ElasticLoadBalancingReadOnly",
   "CreateDate": "2018-09-20T20:17:09Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJMO7B7SNFLQ6HH736",
   "PolicyName": "ElasticLoadBalancingReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2022-11-29T01:44:23Z",
+    "CreateDate": "2023-11-26T18:15:46Z",
     "Document": {
       "Statement": [
         {
           "Action": "arc-zonal-shift:GetManagedResource",
           "Effect": "Allow",
-          "Resource": "arn:aws:elasticloadbalancing:*:*:loadbalancer/*"
-        },
-        {
-          "Action": "elasticloadbalancing:Describe*",
-          "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "arn:aws:elasticloadbalancing:*:*:loadbalancer/*",
+          "Sid": "Statement3"
         },
         {
           "Action": [
@@ -26,7 +22,8 @@
             "arc-zonal-shift:ListZonalShifts"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "Statement4"
         },
         {
           "Action": [
@@ -35,13 +32,23 @@
             "ec2:DescribeSecurityGroups"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "Statement2"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:Describe*",
+            "elasticloadbalancing:Get*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Statement1"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-11-29T01:44:23Z"
+  "UpdateDate": "2023-11-26T18:15:46Z"
 }
