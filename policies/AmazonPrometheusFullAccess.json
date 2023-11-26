@@ -1,27 +1,56 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonPrometheusFullAccess",
   "CreateDate": "2020-12-15T18:10:46Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4POZK2DGLM",
   "PolicyName": "AmazonPrometheusFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-12-15T18:10:46Z",
+    "CreateDate": "2023-11-26T20:16:13Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "scraper.aps.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/scraper.aps.amazonaws.com/AWSServiceRoleForAmazonPrometheusScraper*",
+          "Sid": "CreateServiceLinkedRole"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "eks:DescribeCluster"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "aps.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeCluster"
+        },
         {
           "Action": [
             "aps:*"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllPrometheusActions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-12-15T18:10:46Z"
+  "UpdateDate": "2023-11-26T20:16:13Z"
 }
