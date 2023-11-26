@@ -1,0 +1,96 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonPrometheusScraperServiceRolePolicy",
+  "CreateDate": "2023-11-26T14:19:52Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4MXDZTGPJI",
+  "PolicyName": "AmazonPrometheusScraperServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-11-26T14:19:52Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "aps:RemoteWrite",
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalAccount": "${aws:ResourceAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:aps:*:*:workspace/*",
+          "Sid": "APSWriting"
+        },
+        {
+          "Action": "ec2:CreateNetworkInterface",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "AMPAgentlessScraper"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ENIManagement"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/AMPAgentlessScraper": "false"
+            },
+            "StringEquals": {
+              "ec2:CreateAction": "CreateNetworkInterface"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:ec2:*:*:network-interface/*",
+          "Sid": "TagManagement"
+        },
+        {
+          "Action": [
+            "ec2:DeleteNetworkInterface",
+            "ec2:ModifyNetworkInterfaceAttribute"
+          ],
+          "Condition": {
+            "Null": {
+              "ec2:ResourceTag/AMPAgentlessScraper": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ENIUpdating"
+        },
+        {
+          "Action": "eks:DescribeCluster",
+          "Effect": "Allow",
+          "Resource": "arn:*:eks:*:*:cluster/*",
+          "Sid": "EKSAccess"
+        },
+        {
+          "Action": [
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "NetworkDiscovery"
+        },
+        {
+          "Action": [
+            "iam:DeleteRole"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/scraper.aps.amazonaws.com/AWSServiceRoleForAmazonPrometheusScraper*",
+          "Sid": "DeleteSLR"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-11-26T14:19:52Z"
+}

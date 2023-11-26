@@ -11,9 +11,9 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 374
-* Unique actions: 16015
-* Managed policies: 1148
+* Unique services: 375
+* Unique actions: 16022
+* Managed policies: 1149
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 309 |
 | `arn:aws:iam::aws:policy/Amazon*` | 294 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 257 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 258 |
 | `arn:aws:iam::aws:policy/service-role/*` | 186 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 95 |
@@ -379,6 +379,7 @@ The following table summarises the AWS APIs.
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 7 |
 | [`payments`](services/payments.yml) | 0 | 0 | 7 |
+| [`cost-optimization-hub`](services/cost-optimization-hub.yml) | 0 | 0 | 7 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
@@ -415,12 +416,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2519 |
-| `Get` | 2285 |
+| `List` | 2522 |
+| `Get` | 2287 |
 | `Delete` | 1830 |
 | `Create` | 1714 |
 | `Describe` | 1681 |
-| `Update` | 1453 |
+| `Update` | 1455 |
 | `Put` | 453 |
 | `Start` | 357 |
 | `Tag` | 250 |
