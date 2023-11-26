@@ -1,0 +1,44 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/CostOptimizationHubServiceRolePolicy",
+  "CreateDate": "2023-11-26T08:03:59Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4GRVZQTOT7",
+  "PolicyName": "CostOptimizationHubServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-11-26T08:03:59Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ce:ListCostAllocationTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "CostExplorerAccess"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListParents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AwsOrgsAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-11-26T08:03:59Z"
+}
