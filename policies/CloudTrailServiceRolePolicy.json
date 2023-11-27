@@ -1,15 +1,41 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudTrailServiceRolePolicy",
   "CreateDate": "2018-10-24T21:21:44Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJXQJ45EGU6U7NQBW4",
   "PolicyName": "CloudTrailServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-11-03T20:35:01Z",
+    "CreateDate": "2023-11-27T01:18:10Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "glue:DeleteTable",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:glue:*:*:catalog",
+            "arn:*:glue:*:*:database/aws:cloudtrail",
+            "arn:*:glue:*:*:table/aws:cloudtrail/*"
+          ],
+          "Sid": "DeleteTableAccess"
+        },
+        {
+          "Action": "lakeformation:DeregisterResource",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DeregisterResourceAccess"
+        },
         {
           "Action": "organizations:ListDelegatedAdministrators",
           "Condition": {
@@ -48,7 +74,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-11-03T20:35:01Z"
+  "UpdateDate": "2023-11-27T01:18:10Z"
 }

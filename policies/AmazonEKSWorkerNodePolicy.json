@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
   "CreateDate": "2018-05-27T21:09:01Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIBVMOY52IPQ6HD3PO",
   "PolicyName": "AmazonEKSWorkerNodePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-03-21T22:39:36Z",
+    "CreateDate": "2023-11-27T00:06:13Z",
     "Document": {
       "Statement": [
         {
@@ -20,16 +20,18 @@
             "ec2:DescribeVolumes",
             "ec2:DescribeVolumesModifications",
             "ec2:DescribeVpcs",
+            "eks-auth:AssumeRoleForPodIdentity",
             "eks:DescribeCluster"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "WorkerNodePermissions"
         }
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v2"
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-03-21T22:39:36Z"
+  "UpdateDate": "2023-11-27T00:06:13Z"
 }
