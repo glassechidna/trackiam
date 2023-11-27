@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 379
-* Unique actions: 16151
+* Unique services: 380
+* Unique actions: 16179
 * Managed policies: 1151
 
 Most common managed policy name prefixes:
@@ -193,7 +193,7 @@ The following table summarises the AWS APIs.
 | [`billingconductor`](services/billingconductor.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 30 | 2 | 1 |
-| [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 5 |
+| [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 6 |
 | [`xray`](services/xray.yml) | 30 | 0 | 3 |
 | [`dataexchange`](services/dataexchange.yml) | 30 | 0 | 2 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
@@ -356,6 +356,7 @@ The following table summarises the AWS APIs.
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 28 |
+| [`b2bi`](services/b2bi.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
@@ -420,14 +421,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2547 |
-| `Get` | 2310 |
-| `Delete` | 1842 |
-| `Create` | 1724 |
+| `List` | 2552 |
+| `Get` | 2315 |
+| `Delete` | 1846 |
+| `Create` | 1728 |
 | `Describe` | 1689 |
-| `Update` | 1471 |
+| `Update` | 1476 |
 | `Put` | 455 |
-| `Start` | 359 |
-| `Tag` | 253 |
-| `Untag` | 250 |
+| `Start` | 360 |
+| `Tag` | 254 |
+| `Untag` | 251 |
 
