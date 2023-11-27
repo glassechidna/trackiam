@@ -1,11 +1,19 @@
 Actions:
   - Name: s3:AbortMultipartUpload
+  - Name: s3:AssociateAccessGrantsIdentityCenter
+  - Name: s3:CreateAccessGrant
+  - Name: s3:CreateAccessGrantsInstance
+  - Name: s3:CreateAccessGrantsLocation
   - Name: s3:CreateAccessPoint
   - Name: s3:CreateAccessPointForObjectLambda
   - Name: s3:CreateBucket
   - Name: s3:CreateJob
   - Name: s3:CreateMultiRegionAccessPoint
   - Name: s3:CreateStorageLensGroup
+  - Name: s3:DeleteAccessGrant
+  - Name: s3:DeleteAccessGrantsInstance
+  - Name: s3:DeleteAccessGrantsInstanceResourcePolicy
+  - Name: s3:DeleteAccessGrantsLocation
   - Name: s3:DeleteAccessPoint
   - Name: s3:DeleteAccessPointForObjectLambda
   - Name: s3:DeleteAccessPointPolicy
@@ -22,6 +30,12 @@ Actions:
   - Name: s3:DeleteStorageLensGroup
   - Name: s3:DescribeJob
   - Name: s3:DescribeMultiRegionAccessPointOperation
+  - Name: s3:DissociateAccessGrantsIdentityCenter
+  - Name: s3:GetAccessGrant
+  - Name: s3:GetAccessGrantsInstance
+  - Name: s3:GetAccessGrantsInstanceForPrefix
+  - Name: s3:GetAccessGrantsInstanceResourcePolicy
+  - Name: s3:GetAccessGrantsLocation
   - Name: s3:GetAccessPoint
   - Name: s3:GetAccessPointConfigurationForObjectLambda
   - Name: s3:GetAccessPointForObjectLambda
@@ -41,6 +55,7 @@ Actions:
   - Name: s3:GetBucketTagging
   - Name: s3:GetBucketVersioning
   - Name: s3:GetBucketWebsite
+  - Name: s3:GetDataAccess
   - Name: s3:GetJobTagging
   - Name: s3:GetMultiRegionAccessPoint
   - Name: s3:GetMultiRegionAccessPointPolicy
@@ -56,6 +71,9 @@ Actions:
   - Name: s3:GetStorageLensConfiguration
   - Name: s3:GetStorageLensConfigurationTagging
   - Name: s3:GetStorageLensGroup
+  - Name: s3:ListAccessGrants
+  - Name: s3:ListAccessGrantsInstances
+  - Name: s3:ListAccessGrantsLocations
   - Name: s3:ListAccessPoints
   - Name: s3:ListAccessPointsForObjectLambda
   - Name: s3:ListJobs
@@ -63,6 +81,7 @@ Actions:
   - Name: s3:ListStorageLensConfigurations
   - Name: s3:ListStorageLensGroups
   - Name: s3:ListTagsForResource
+  - Name: s3:PutAccessGrantsInstanceResourcePolicy
   - Name: s3:PutAccessPointConfigurationForObjectLambda
   - Name: s3:PutAccessPointPolicy
   - Name: s3:PutAccessPointPolicyForObjectLambda
@@ -89,34 +108,20 @@ Actions:
   - Name: s3:SubmitMultiRegionAccessPointRoutes
   - Name: s3:TagResource
   - Name: s3:UntagResource
+  - Name: s3:UpdateAccessGrantsLocation
   - Name: s3:UpdateJobPriority
   - Name: s3:UpdateJobStatus
   - Name: s3:UpdateStorageLensGroup
 
   # actions with no corresponding API
-  - Name: s3:AssociateAccessGrantsIdentityCenter
   - Name: s3:BypassGovernanceRetention
-  - Name: s3:CreateAccessGrant
-  - Name: s3:CreateAccessGrantsInstance
-  - Name: s3:CreateAccessGrantsLocation
-  - Name: s3:DeleteAccessGrant
-  - Name: s3:DeleteAccessGrantsInstance
-  - Name: s3:DeleteAccessGrantsInstanceResourcePolicy
-  - Name: s3:DeleteAccessGrantsLocation
   - Name: s3:DeleteObjectVersion
   - Name: s3:DeleteObjectVersionTagging
-  - Name: s3:DissociateAccessGrantsIdentityCenter
   - Name: s3:GetAccelerateConfiguration
-  - Name: s3:GetAccessGrant
-  - Name: s3:GetAccessGrantsInstance
-  - Name: s3:GetAccessGrantsInstanceForPrefix
-  - Name: s3:GetAccessGrantsInstanceResourcePolicy
-  - Name: s3:GetAccessGrantsLocation
   - Name: s3:GetAccountPublicAccessBlock
   - Name: s3:GetAnalyticsConfiguration
   - Name: s3:GetBucketObjectLockConfiguration
   - Name: s3:GetBucketPublicAccessBlock
-  - Name: s3:GetDataAccess
   - Name: s3:GetEncryptionConfiguration
   - Name: s3:GetIntelligentTieringConfiguration
   - Name: s3:GetInventoryConfiguration
@@ -131,9 +136,6 @@ Actions:
   - Name: s3:GetReplicationConfiguration
   - Name: s3:GetStorageLensDashboard
   - Name: s3:InitiateReplication
-  - Name: s3:ListAccessGrants
-  - Name: s3:ListAccessGrantsInstances
-  - Name: s3:ListAccessGrantsLocations
   - Name: s3:ListAllMyBuckets
   - Name: s3:ListBucket
   - Name: s3:ListBucketMultipartUploads
@@ -141,7 +143,6 @@ Actions:
   - Name: s3:ListMultipartUploadParts
   - Name: s3:ObjectOwnerOverrideToBucketOwner
   - Name: s3:PutAccelerateConfiguration
-  - Name: s3:PutAccessGrantsInstanceResourcePolicy
   - Name: s3:PutAccessPointPublicAccessBlock
   - Name: s3:PutAccountPublicAccessBlock
   - Name: s3:PutAnalyticsConfiguration
@@ -158,7 +159,6 @@ Actions:
   - Name: s3:ReplicateDelete
   - Name: s3:ReplicateObject
   - Name: s3:ReplicateTags
-  - Name: s3:UpdateAccessGrantsLocation
 
   # APIs without an IAM action
   - Name: s3:CompleteMultipartUpload

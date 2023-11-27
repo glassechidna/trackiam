@@ -1,6 +1,8 @@
 Actions:
   - Name: access-analyzer:ApplyArchiveRule
   - Name: access-analyzer:CancelPolicyGeneration
+  - Name: access-analyzer:CheckAccessNotGranted
+  - Name: access-analyzer:CheckNoNewAccess
   - Name: access-analyzer:CreateAccessPreview
   - Name: access-analyzer:CreateAnalyzer
   - Name: access-analyzer:CreateArchiveRule
@@ -29,6 +31,8 @@ Actions:
   - Name: access-analyzer:ValidatePolicy
 
   # actions with no corresponding API
-  - Name: access-analyzer:CheckAccessNotGranted
-  - Name: access-analyzer:CheckNoNewAccess
   - Name: access-analyzer:GetFindingsStatistics
+
+  # APIs without an IAM action
+  - Name: access-analyzer:GetFindingV2
+  - Name: access-analyzer:ListFindingsV2

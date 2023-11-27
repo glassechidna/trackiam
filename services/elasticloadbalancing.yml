@@ -1,6 +1,7 @@
 Actions:
   - Name: elasticloadbalancing:AddListenerCertificates
   - Name: elasticloadbalancing:AddTags
+  - Name: elasticloadbalancing:AddTrustStoreRevocations
   - Name: elasticloadbalancing:ApplySecurityGroupsToLoadBalancer
   - Name: elasticloadbalancing:AttachLoadBalancerToSubnets
   - Name: elasticloadbalancing:ConfigureHealthCheck
@@ -12,12 +13,14 @@ Actions:
   - Name: elasticloadbalancing:CreateLoadBalancerPolicy
   - Name: elasticloadbalancing:CreateRule
   - Name: elasticloadbalancing:CreateTargetGroup
+  - Name: elasticloadbalancing:CreateTrustStore
   - Name: elasticloadbalancing:DeleteListener
   - Name: elasticloadbalancing:DeleteLoadBalancer
   - Name: elasticloadbalancing:DeleteLoadBalancerListeners
   - Name: elasticloadbalancing:DeleteLoadBalancerPolicy
   - Name: elasticloadbalancing:DeleteRule
   - Name: elasticloadbalancing:DeleteTargetGroup
+  - Name: elasticloadbalancing:DeleteTrustStore
   - Name: elasticloadbalancing:DeregisterInstancesFromLoadBalancer
   - Name: elasticloadbalancing:DeregisterTargets
   - Name: elasticloadbalancing:DescribeAccountLimits
@@ -34,18 +37,25 @@ Actions:
   - Name: elasticloadbalancing:DescribeTargetGroupAttributes
   - Name: elasticloadbalancing:DescribeTargetGroups
   - Name: elasticloadbalancing:DescribeTargetHealth
+  - Name: elasticloadbalancing:DescribeTrustStoreAssociations
+  - Name: elasticloadbalancing:DescribeTrustStoreRevocations
+  - Name: elasticloadbalancing:DescribeTrustStores
   - Name: elasticloadbalancing:DetachLoadBalancerFromSubnets
   - Name: elasticloadbalancing:DisableAvailabilityZonesForLoadBalancer
   - Name: elasticloadbalancing:EnableAvailabilityZonesForLoadBalancer
+  - Name: elasticloadbalancing:GetTrustStoreCaCertificatesBundle
+  - Name: elasticloadbalancing:GetTrustStoreRevocationContent
   - Name: elasticloadbalancing:ModifyListener
   - Name: elasticloadbalancing:ModifyLoadBalancerAttributes
   - Name: elasticloadbalancing:ModifyRule
   - Name: elasticloadbalancing:ModifyTargetGroup
   - Name: elasticloadbalancing:ModifyTargetGroupAttributes
+  - Name: elasticloadbalancing:ModifyTrustStore
   - Name: elasticloadbalancing:RegisterInstancesWithLoadBalancer
   - Name: elasticloadbalancing:RegisterTargets
   - Name: elasticloadbalancing:RemoveListenerCertificates
   - Name: elasticloadbalancing:RemoveTags
+  - Name: elasticloadbalancing:RemoveTrustStoreRevocations
   - Name: elasticloadbalancing:SetIpAddressType
   - Name: elasticloadbalancing:SetLoadBalancerListenerSSLCertificate
   - Name: elasticloadbalancing:SetLoadBalancerPoliciesForBackendServer
@@ -55,14 +65,4 @@ Actions:
   - Name: elasticloadbalancing:SetSubnets
 
   # actions with no corresponding API
-  - Name: elasticloadbalancing:AddTrustStoreRevocations
-  - Name: elasticloadbalancing:CreateTrustStore
-  - Name: elasticloadbalancing:DeleteTrustStore
-  - Name: elasticloadbalancing:DescribeTrustStoreAssociations
-  - Name: elasticloadbalancing:DescribeTrustStoreRevocations
-  - Name: elasticloadbalancing:DescribeTrustStores
-  - Name: elasticloadbalancing:GetTrustStoreCaCertificatesBundle
-  - Name: elasticloadbalancing:GetTrustStoreRevocationContent
-  - Name: elasticloadbalancing:ModifyTrustStore
-  - Name: elasticloadbalancing:RemoveTrustStoreRevocations
   - Name: elasticloadbalancing:SetWebAcl

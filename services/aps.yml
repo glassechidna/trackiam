@@ -2,16 +2,21 @@ Actions:
   - Name: aps:CreateAlertManagerDefinition
   - Name: aps:CreateLoggingConfiguration
   - Name: aps:CreateRuleGroupsNamespace
+  - Name: aps:CreateScraper
   - Name: aps:CreateWorkspace
   - Name: aps:DeleteAlertManagerDefinition
   - Name: aps:DeleteLoggingConfiguration
   - Name: aps:DeleteRuleGroupsNamespace
+  - Name: aps:DeleteScraper
   - Name: aps:DeleteWorkspace
   - Name: aps:DescribeAlertManagerDefinition
   - Name: aps:DescribeLoggingConfiguration
   - Name: aps:DescribeRuleGroupsNamespace
+  - Name: aps:DescribeScraper
   - Name: aps:DescribeWorkspace
+  - Name: aps:GetDefaultScraperConfiguration
   - Name: aps:ListRuleGroupsNamespaces
+  - Name: aps:ListScrapers
   - Name: aps:ListTagsForResource
   - Name: aps:ListWorkspaces
   - Name: aps:PutAlertManagerDefinition
@@ -23,13 +28,9 @@ Actions:
 
   # actions with no corresponding API
   - Name: aps:CreateAlertManagerAlerts
-  - Name: aps:CreateScraper
   - Name: aps:DeleteAlertManagerSilence
-  - Name: aps:DeleteScraper
-  - Name: aps:DescribeScraper
   - Name: aps:GetAlertManagerSilence
   - Name: aps:GetAlertManagerStatus
-  - Name: aps:GetDefaultScraperConfiguration
   - Name: aps:GetLabels
   - Name: aps:GetMetricMetadata
   - Name: aps:GetSeries
@@ -39,7 +40,6 @@ Actions:
   - Name: aps:ListAlertManagerSilences
   - Name: aps:ListAlerts
   - Name: aps:ListRules
-  - Name: aps:ListScrapers
   - Name: aps:PutAlertManagerSilences
   - Name: aps:QueryMetrics
   - Name: aps:RemoteWrite

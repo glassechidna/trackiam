@@ -1,4 +1,5 @@
 Actions:
+  - Name: controltower:DeleteLandingZone
   - Name: controltower:DisableControl
   - Name: controltower:EnableControl
   - Name: controltower:GetControlOperation
@@ -10,7 +11,6 @@ Actions:
 
   # actions with no corresponding API
   - Name: controltower:CreateManagedAccount
-  - Name: controltower:DeleteLandingZone
   - Name: controltower:DeregisterManagedAccount
   - Name: controltower:DeregisterOrganizationalUnit
   - Name: controltower:DescribeAccountFactoryConfig
@@ -47,3 +47,8 @@ Actions:
   - Name: controltower:PerformPreLaunchChecks
   - Name: controltower:SetupLandingZone
   - Name: controltower:UpdateAccountFactoryConfig
+
+  # APIs without an IAM action
+  - Name: controltower:GetLandingZoneOperation
+  - Name: controltower:ListLandingZones
+  - Name: controltower:ResetLandingZone

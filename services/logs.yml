@@ -3,6 +3,7 @@ Actions:
   - Name: logs:CancelExportTask
   - Name: logs:CreateDelivery
   - Name: logs:CreateExportTask
+  - Name: logs:CreateLogAnomalyDetector
   - Name: logs:CreateLogGroup
   - Name: logs:CreateLogStream
   - Name: logs:DeleteAccountPolicy
@@ -12,6 +13,7 @@ Actions:
   - Name: logs:DeleteDeliveryDestinationPolicy
   - Name: logs:DeleteDeliverySource
   - Name: logs:DeleteDestination
+  - Name: logs:DeleteLogAnomalyDetector
   - Name: logs:DeleteLogGroup
   - Name: logs:DeleteLogStream
   - Name: logs:DeleteMetricFilter
@@ -39,10 +41,13 @@ Actions:
   - Name: logs:GetDeliveryDestination
   - Name: logs:GetDeliveryDestinationPolicy
   - Name: logs:GetDeliverySource
+  - Name: logs:GetLogAnomalyDetector
   - Name: logs:GetLogEvents
   - Name: logs:GetLogGroupFields
   - Name: logs:GetLogRecord
   - Name: logs:GetQueryResults
+  - Name: logs:ListAnomalies
+  - Name: logs:ListLogAnomalyDetectors
   - Name: logs:ListTagsForResource
   - Name: logs:ListTagsLogGroup
   - Name: logs:PutAccountPolicy
@@ -65,21 +70,16 @@ Actions:
   - Name: logs:TestMetricFilter
   - Name: logs:UntagLogGroup
   - Name: logs:UntagResource
+  - Name: logs:UpdateAnomaly
+  - Name: logs:UpdateLogAnomalyDetector
 
   # actions with no corresponding API
-  - Name: logs:CreateLogAnomalyDetector
   - Name: logs:CreateLogDelivery
-  - Name: logs:DeleteLogAnomalyDetector
   - Name: logs:DeleteLogDelivery
-  - Name: logs:GetLogAnomalyDetector
   - Name: logs:GetLogDelivery
   - Name: logs:Link
-  - Name: logs:ListAnomalies
-  - Name: logs:ListLogAnomalyDetectors
   - Name: logs:ListLogDeliveries
   - Name: logs:StartLiveTail
   - Name: logs:StopLiveTail
   - Name: logs:Unmask
-  - Name: logs:UpdateAnomaly
-  - Name: logs:UpdateLogAnomalyDetector
   - Name: logs:UpdateLogDelivery
