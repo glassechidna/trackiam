@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 378
-* Unique actions: 16104
+* Unique actions: 16112
 * Managed policies: 1150
 
 Most common managed policy name prefixes:
@@ -91,7 +91,7 @@ The following table summarises the AWS APIs.
 | [`guardduty`](services/guardduty.yml) | 68 | 0 | 1 |
 | [`athena`](services/athena.yml) | 68 | 0 | 1 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
-| [`securityhub`](services/securityhub.yml) | 67 | 0 | 10 |
+| [`securityhub`](services/securityhub.yml) | 67 | 0 | 12 |
 | [`ds`](services/ds.yml) | 67 | 0 | 10 |
 | [`logs`](services/logs.yml) | 66 | 0 | 16 |
 | [`elasticache`](services/elasticache.yml) | 66 | 0 | 1 |
@@ -133,7 +133,7 @@ The following table summarises the AWS APIs.
 | [`lakeformation`](services/lakeformation.yml) | 47 | 3 | 1 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
-| [`cloudtrail`](services/cloudtrail.yml) | 46 | 0 | 5 |
+| [`cloudtrail`](services/cloudtrail.yml) | 46 | 0 | 8 |
 | [`inspector2`](services/inspector2.yml) | 46 | 0 | 0 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 45 | 0 | 1 |
@@ -200,11 +200,11 @@ The following table summarises the AWS APIs.
 | [`voiceid`](services/voiceid.yml) | 29 | 0 | 2 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 28 | 0 | 3 |
+| [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 3 |
 | [`discovery`](services/discovery.yml) | 28 | 0 | 1 |
 | [`rolesanywhere`](services/rolesanywhere.yml) | 28 | 0 | 0 |
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
-| [`access-analyzer`](services/access-analyzer.yml) | 28 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 27 | 1 | 8 |
 | [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 7 |
 | [`snowball`](services/snowball.yml) | 27 | 0 | 0 |
@@ -420,11 +420,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2539 |
-| `Get` | 2302 |
+| `Get` | 2305 |
 | `Delete` | 1839 |
 | `Create` | 1722 |
 | `Describe` | 1686 |
-| `Update` | 1465 |
+| `Update` | 1466 |
 | `Put` | 453 |
 | `Start` | 357 |
 | `Tag` | 252 |
