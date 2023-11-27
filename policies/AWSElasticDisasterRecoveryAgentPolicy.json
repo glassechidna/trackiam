@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticDisasterRecoveryAgentPolicy",
   "CreateDate": "2021-11-17T10:32:32Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4IPFHAAF4L",
   "PolicyName": "AWSElasticDisasterRecoveryAgentPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-03-27T13:47:48Z",
+    "CreateDate": "2023-11-27T13:44:15Z",
     "Document": {
       "Statement": [
         {
@@ -25,20 +25,22 @@
             "drs:UpdateAgentSourcePropertiesForDrs"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:drs:*:*:source-server/${aws:SourceIdentity}"
+          "Resource": "arn:aws:drs:*:*:source-server/${aws:SourceIdentity}",
+          "Sid": "DRSAgentPolicy1"
         },
         {
           "Action": [
             "drs:GetAgentInstallationAssetsForDrs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DRSAgentPolicy2"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-03-27T13:47:48Z"
+  "UpdateDate": "2023-11-27T13:44:15Z"
 }

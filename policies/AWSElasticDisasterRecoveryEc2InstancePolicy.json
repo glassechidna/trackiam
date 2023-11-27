@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticDisasterRecoveryEc2InstancePolicy",
   "CreateDate": "2022-05-26T12:30:18Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4DUAC4ANEW",
   "PolicyName": "AWSElasticDisasterRecoveryEc2InstancePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-10-25T08:19:46Z",
+    "CreateDate": "2023-11-27T13:39:44Z",
     "Document": {
       "Statement": [
         {
@@ -20,7 +20,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:drs:*:*:source-network/*"
+          "Resource": "arn:aws:drs:*:*:source-network/*",
+          "Sid": "DRSEc2InstancePolicy3"
         },
         {
           "Action": [
@@ -32,7 +33,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:drs:*:*:source-server/*"
+          "Resource": "arn:aws:drs:*:*:source-server/*",
+          "Sid": "DRSEc2InstancePolicy2"
         },
         {
           "Action": [
@@ -50,7 +52,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/service-role/DRSCrossAccountAgentAuthorizedRole_*"
-          ]
+          ],
+          "Sid": "DRSEc2InstancePolicy5"
         },
         {
           "Action": [
@@ -61,7 +64,8 @@
             "drs:SendClientMetricsForDrs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DRSEc2InstancePolicy1"
         },
         {
           "Action": [
@@ -77,13 +81,14 @@
             "drs:UpdateAgentSourcePropertiesForDrs"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:drs:*:*:source-server/*"
+          "Resource": "arn:aws:drs:*:*:source-server/*",
+          "Sid": "DRSEc2InstancePolicy4"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2023-10-25T08:19:46Z"
+  "UpdateDate": "2023-11-27T13:39:44Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticDisasterRecoveryConversionServerPolicy",
   "CreateDate": "2021-11-17T13:42:23Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4G7IPHJVFX",
   "PolicyName": "AWSElasticDisasterRecoveryConversionServerPolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-11-17T13:42:23Z",
+    "CreateDate": "2023-11-27T13:13:38Z",
     "Document": {
       "Statement": [
         {
@@ -16,7 +16,8 @@
             "drs:SendChannelCommandResultForDrs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DRSConversionServerPolicy2"
         },
         {
           "Action": [
@@ -24,13 +25,14 @@
             "drs:SendClientMetricsForDrs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DRSConversionServerPolicy1"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-11-17T13:42:23Z"
+  "UpdateDate": "2023-11-27T13:13:38Z"
 }

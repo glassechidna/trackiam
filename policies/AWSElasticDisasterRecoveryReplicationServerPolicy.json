@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticDisasterRecoveryReplicationServerPolicy",
   "CreateDate": "2021-11-17T13:34:00Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4PHOT5QARB",
   "PolicyName": "AWSElasticDisasterRecoveryReplicationServerPolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-07-10T12:34:15Z",
+    "CreateDate": "2023-11-27T13:28:14Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DRSReplicationServerPolicy7"
         },
         {
           "Action": [
@@ -30,7 +31,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:snapshot/*"
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "DRSReplicationServerPolicy6"
         },
         {
           "Action": [
@@ -42,7 +44,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:volume/*"
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "DRSReplicationServerPolicy5"
         },
         {
           "Action": [
@@ -60,7 +63,8 @@
             "drs:UpdateAgentReplicationProcessStateForDrs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DRSReplicationServerPolicy3"
         },
         {
           "Action": [
@@ -68,7 +72,8 @@
             "drs:SendChannelCommandResultForDrs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DRSReplicationServerPolicy2"
         },
         {
           "Action": [
@@ -76,7 +81,8 @@
             "drs:SendClientMetricsForDrs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DRSReplicationServerPolicy1"
         },
         {
           "Action": [
@@ -84,13 +90,14 @@
             "ec2:DescribeSnapshots"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DRSReplicationServerPolicy4"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-07-10T12:34:15Z"
+  "UpdateDate": "2023-11-27T13:28:14Z"
 }

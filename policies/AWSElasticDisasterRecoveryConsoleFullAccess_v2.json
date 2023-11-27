@@ -1,0 +1,557 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSElasticDisasterRecoveryConsoleFullAccess_v2",
+  "CreateDate": "2023-11-27T13:35:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4GNEJEKJLM",
+  "PolicyName": "AWSElasticDisasterRecoveryConsoleFullAccess_v2",
+  "PolicyVersion": {
+    "CreateDate": "2023-11-27T13:35:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "CreateSecurityGroup",
+                "CreateSnapshot",
+                "CreateVolume",
+                "RunInstances"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:snapshot/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "ConsoleFullAccess26"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "CreateLaunchTemplate"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:launch-template/*",
+          "Sid": "ConsoleFullAccess27"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "ec2.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/service-role/AWSElasticDisasterRecoveryConversionServerRole",
+            "arn:aws:iam::*:role/service-role/AWSElasticDisasterRecoveryRecoveryInstanceRole",
+            "arn:aws:iam::*:role/service-role/AWSElasticDisasterRecoveryRecoveryInstanceWithLaunchActionsRole"
+          ],
+          "Sid": "ConsoleFullAccess8"
+        },
+        {
+          "Action": [
+            "ec2:AttachVolume"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "Null": {
+              "ec2:ResourceTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "ConsoleFullAccess22"
+        },
+        {
+          "Action": [
+            "ec2:AttachVolume",
+            "ec2:DetachVolume"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "Null": {
+              "ec2:ResourceTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "ConsoleFullAccess20"
+        },
+        {
+          "Action": [
+            "ec2:AttachVolume",
+            "ec2:DetachVolume",
+            "ec2:GetConsoleOutput",
+            "ec2:GetConsoleScreenshot",
+            "ec2:StartInstances"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "drs.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "ec2:ResourceTag/AWSDRS": "AllowLaunchingIntoThisInstance"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "ConsoleFullAccess21"
+        },
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:RevokeSecurityGroupEgress"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "Null": {
+              "aws:ResourceTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*",
+          "Sid": "ConsoleFullAccess14"
+        },
+        {
+          "Action": [
+            "ec2:CreateLaunchTemplate"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:launch-template/*",
+          "Sid": "ConsoleFullAccess11"
+        },
+        {
+          "Action": [
+            "ec2:CreateLaunchTemplateVersion",
+            "ec2:CreateTags",
+            "ec2:DeleteLaunchTemplateVersions",
+            "ec2:DeleteTags",
+            "ec2:ModifyLaunchTemplate"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:launch-template/*",
+          "Sid": "ConsoleFullAccess10"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "Null": {
+              "aws:RequestTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*",
+          "Sid": "ConsoleFullAccess17"
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshot"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "Null": {
+              "aws:RequestTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "ConsoleFullAccess19"
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshot"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "Null": {
+              "ec2:ResourceTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "ConsoleFullAccess18"
+        },
+        {
+          "Action": [
+            "ec2:CreateVolume"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "Null": {
+              "aws:RequestTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "ConsoleFullAccess15"
+        },
+        {
+          "Action": [
+            "ec2:DeleteSnapshot"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "Null": {
+              "aws:ResourceTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "ConsoleFullAccess9"
+        },
+        {
+          "Action": [
+            "ec2:DeleteVolume"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "Null": {
+              "aws:ResourceTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "ConsoleFullAccess12"
+        },
+        {
+          "Action": [
+            "ec2:DetachVolume"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "ConsoleFullAccess23"
+        },
+        {
+          "Action": [
+            "ec2:GetConsoleOutput",
+            "ec2:GetConsoleScreenshot",
+            "ec2:ModifyInstanceAttribute",
+            "ec2:StartInstances",
+            "ec2:StopInstances",
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "Null": {
+              "aws:ResourceTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "ConsoleFullAccess13"
+        },
+        {
+          "Action": [
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:image/*",
+            "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "ConsoleFullAccess25"
+        },
+        {
+          "Action": [
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "Null": {
+              "aws:RequestTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "ConsoleFullAccess24"
+        },
+        {
+          "Action": [
+            "ssm:DescribeInstanceInformation"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "drs.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "ConsoleFullAccess30"
+        },
+        {
+          "Action": [
+            "ssm:GetAutomationExecution"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:automation-execution/*",
+          "Sid": "ConsoleFullAccess37"
+        },
+        {
+          "Action": [
+            "ssm:GetParameter",
+            "ssm:PutParameter"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:parameter/ManagedByAWSElasticDisasterRecoveryService-*",
+          "Sid": "ConsoleFullAccess34"
+        },
+        {
+          "Action": [
+            "ssm:GetParameters"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "ssm.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:parameter/ManagedByAWSElasticDisasterRecovery-*"
+          ],
+          "Sid": "ConsoleFullAccess36"
+        },
+        {
+          "Action": [
+            "ssm:SendCommand"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "drs.amazonaws.com"
+              ]
+            },
+            "Null": {
+              "aws:ResourceTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "ConsoleFullAccess32"
+        },
+        {
+          "Action": [
+            "ssm:SendCommand",
+            "ssm:StartAutomationExecution"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "drs.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:automation-definition/AWS-CreateImage:$DEFAULT",
+            "arn:aws:ssm:*:*:document/AWSEC2-ApplicationInsightsCloudwatchAgentInstallAndConfigure",
+            "arn:aws:ssm:*:*:document/AWSMigration-LinuxTimeSyncSetting",
+            "arn:aws:ssm:*:*:document/AWSMigration-ValidateDiskSpace",
+            "arn:aws:ssm:*:*:document/AWSMigration-ValidateHttpResponse",
+            "arn:aws:ssm:*:*:document/AWSMigration-ValidateNetworkConnectivity",
+            "arn:aws:ssm:*:*:document/AWSMigration-VerifyMountedVolumes",
+            "arn:aws:ssm:*:*:document/AWSMigration-VerifyProcessIsRunning"
+          ],
+          "Sid": "ConsoleFullAccess31"
+        },
+        {
+          "Action": "ec2:CreateSecurityGroup",
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc/*",
+          "Sid": "ConsoleFullAccess16"
+        },
+        {
+          "Action": "elasticloadbalancing:DescribeLoadBalancers",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ConsoleFullAccess6"
+        },
+        {
+          "Action": "license-manager:ListLicenseConfigurations",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ConsoleFullAccess4"
+        },
+        {
+          "Action": "resource-groups:ListGroups",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ConsoleFullAccess5"
+        },
+        {
+          "Action": [
+            "cloudformation:DescribeStacks",
+            "cloudformation:ListStacks"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ConsoleFullAccess28"
+        },
+        {
+          "Action": [
+            "drs:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ConsoleFullAccess1"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeCapacityReservations",
+            "ec2:DescribeHosts",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstanceAttribute",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstanceTypeOfferings",
+            "ec2:DescribeInstanceTypes",
+            "ec2:DescribeInstances",
+            "ec2:DescribeKeyPairs",
+            "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribeLaunchTemplates",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVolumes",
+            "ec2:GetEbsDefaultKmsKeyId",
+            "ec2:GetEbsEncryptionByDefault"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ConsoleFullAccess3"
+        },
+        {
+          "Action": [
+            "iam:ListInstanceProfiles",
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ConsoleFullAccess7"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey",
+            "kms:ListAliases"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ConsoleFullAccess2"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ConsoleFullAccess29"
+        },
+        {
+          "Action": [
+            "ssm:DescribeDocument",
+            "ssm:GetDocument"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:document/*",
+          "Sid": "ConsoleFullAccess35"
+        },
+        {
+          "Action": [
+            "ssm:ListCommandInvocations",
+            "ssm:ListDocuments"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ConsoleFullAccess33"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-11-27T13:35:19Z"
+}
