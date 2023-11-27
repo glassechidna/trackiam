@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticDisasterRecoveryFailbackPolicy",
   "CreateDate": "2021-11-17T10:41:40Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4FSEIUN7KZ",
   "PolicyName": "AWSElasticDisasterRecoveryFailbackPolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-11-17T10:41:40Z",
+    "CreateDate": "2023-11-27T12:56:46Z",
     "Document": {
       "Statement": [
         {
@@ -16,7 +16,8 @@
             "drs:DescribeReplicationServerAssociationsForDrs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DRSFailbackPolicy3"
         },
         {
           "Action": [
@@ -24,7 +25,8 @@
             "drs:SendChannelCommandResultForDrs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DRSFailbackPolicy2"
         },
         {
           "Action": [
@@ -40,7 +42,8 @@
             "drs:UpdateFailbackClientLastSeenForDrs"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:drs:*:*:recovery-instance/${aws:SourceIdentity}"
+          "Resource": "arn:aws:drs:*:*:recovery-instance/${aws:SourceIdentity}",
+          "Sid": "DRSFailbackPolicy4"
         },
         {
           "Action": [
@@ -48,13 +51,14 @@
             "drs:SendClientMetricsForDrs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DRSFailbackPolicy1"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-11-17T10:41:40Z"
+  "UpdateDate": "2023-11-27T12:56:46Z"
 }

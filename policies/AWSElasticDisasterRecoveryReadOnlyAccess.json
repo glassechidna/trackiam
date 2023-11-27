@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticDisasterRecoveryReadOnlyAccess",
   "CreateDate": "2021-11-17T10:50:05Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AACAUJE3T",
   "PolicyName": "AWSElasticDisasterRecoveryReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-09-13T07:42:45Z",
+    "CreateDate": "2023-11-27T13:03:00Z",
     "Document": {
       "Statement": [
         {
@@ -20,22 +20,26 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:automation-execution/*"
+          "Resource": "arn:aws:ssm:*:*:automation-execution/*",
+          "Sid": "DRSReadOnlyAccess8"
         },
         {
           "Action": "iam:ListRoles",
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DRSReadOnlyAccess4"
         },
         {
           "Action": "ssm:GetParameter",
           "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:parameter/ManagedByAWSElasticDisasterRecovery-*"
+          "Resource": "arn:aws:ssm:*:*:parameter/ManagedByAWSElasticDisasterRecovery-*",
+          "Sid": "DRSReadOnlyAccess6"
         },
         {
           "Action": "ssm:ListCommandInvocations",
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DRSReadOnlyAccess5"
         },
         {
           "Action": [
@@ -54,7 +58,8 @@
             "drs:ListTagsForResource"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DRSReadOnlyAccess1"
         },
         {
           "Action": [
@@ -64,7 +69,8 @@
             "ec2:DescribeSubnets"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DRSReadOnlyAccess2"
         },
         {
           "Action": [
@@ -75,14 +81,20 @@
           "Resource": [
             "arn:aws:ssm:*:*:document/AWS-CreateImage",
             "arn:aws:ssm:*:*:document/AWSEC2-ApplicationInsightsCloudwatchAgentInstallAndConfigure",
-            "arn:aws:ssm:*:*:document/AWSMigration-LinuxTimeSyncSetting"
-          ]
+            "arn:aws:ssm:*:*:document/AWSMigration-LinuxTimeSyncSetting",
+            "arn:aws:ssm:*:*:document/AWSMigration-ValidateDiskSpace",
+            "arn:aws:ssm:*:*:document/AWSMigration-ValidateHttpResponse",
+            "arn:aws:ssm:*:*:document/AWSMigration-ValidateNetworkConnectivity",
+            "arn:aws:ssm:*:*:document/AWSMigration-VerifyMountedVolumes",
+            "arn:aws:ssm:*:*:document/AWSMigration-VerifyProcessIsRunning"
+          ],
+          "Sid": "DRSReadOnlyAccess7"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-09-13T07:42:45Z"
+  "UpdateDate": "2023-11-27T13:03:00Z"
 }

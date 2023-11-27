@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticDisasterRecoveryAgentInstallationPolicy",
   "CreateDate": "2021-11-17T10:37:54Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LHPRHPQKB",
   "PolicyName": "AWSElasticDisasterRecoveryAgentInstallationPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-10-25T08:11:51Z",
+    "CreateDate": "2023-11-27T12:38:51Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:drs:*:*:source-server/*"
+          "Resource": "arn:aws:drs:*:*:source-server/*",
+          "Sid": "DRSAgentInstallationPolicy3"
         },
         {
           "Action": "drs:TagResource",
@@ -28,7 +29,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:drs:*:*:source-network/*"
+          "Resource": "arn:aws:drs:*:*:source-network/*",
+          "Sid": "DRSAgentInstallationPolicy4"
         },
         {
           "Action": "drs:TagResource",
@@ -38,12 +40,14 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:drs:*:*:source-server/*"
+          "Resource": "arn:aws:drs:*:*:source-server/*",
+          "Sid": "DRSAgentInstallationPolicy2"
         },
         {
           "Action": "drs:IssueAgentCertificateForDrs",
           "Effect": "Allow",
-          "Resource": "arn:aws:drs:*:*:source-server/*"
+          "Resource": "arn:aws:drs:*:*:source-server/*",
+          "Sid": "DRSAgentInstallationPolicy5"
         },
         {
           "Action": [
@@ -56,13 +60,14 @@
             "drs:SendClientMetricsForDrs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DRSAgentInstallationPolicy1"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2023-10-25T08:11:51Z"
+  "UpdateDate": "2023-11-27T12:38:51Z"
 }
