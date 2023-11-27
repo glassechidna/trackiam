@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDetectiveInvestigatorAccess",
   "CreateDate": "2023-01-17T15:24:26Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KOT67VSLJ",
   "PolicyName": "AmazonDetectiveInvestigatorAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-05-17T19:41:09Z",
+    "CreateDate": "2023-11-27T03:13:25Z",
     "Document": {
       "Statement": [
         {
@@ -17,20 +17,27 @@
             "detective:DescribeOrganizationConfiguration",
             "detective:GetFreeTrialEligibility",
             "detective:GetGraphIngestState",
+            "detective:GetInvestigation",
             "detective:GetMembers",
             "detective:GetPricingInformation",
             "detective:GetUsageInformation",
+            "detective:InvokeAssistant",
             "detective:ListDatasourcePackages",
             "detective:ListGraphs",
             "detective:ListHighDegreeEntities",
+            "detective:ListIndicators",
+            "detective:ListInvestigations",
             "detective:ListInvitations",
             "detective:ListMembers",
             "detective:ListOrganizationAdminAccount",
             "detective:ListTagsForResource",
-            "detective:SearchGraph"
+            "detective:SearchGraph",
+            "detective:StartInvestigation",
+            "detective:UpdateInvestigationState"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DetectivePermissions"
         },
         {
           "Action": [
@@ -39,7 +46,8 @@
             "guardduty:ListDetectors"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "GuardDutyPermissions"
         },
         {
           "Action": [
@@ -47,20 +55,22 @@
             "organizations:ListAccounts"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "OrganizationsPermissions"
         },
         {
           "Action": [
             "securityHub:GetFindings"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "SecurityHubPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-05-17T19:41:09Z"
+  "UpdateDate": "2023-11-27T03:13:25Z"
 }
