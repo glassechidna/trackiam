@@ -296,6 +296,7 @@ The following table summarises the AWS APIs.
 | [`kafkaconnect`](services/kafkaconnect.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`bcm-data-exports`](services/bcm-data-exports.yml) | 12 | 0 | 0 |
+| [`repostspace`](services/repostspace.yml) | 11 | 0 | 0 |
 | [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 11 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 10 | 0 | 41 |
@@ -344,7 +345,6 @@ The following table summarises the AWS APIs.
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 12 | 3 |
-| [`repostspace`](services/repostspace.yml) | 0 | 11 | 0 |
 | [`mobilehub`](services/mobilehub.yml) | 0 | 9 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
