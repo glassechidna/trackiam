@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 380
-* Unique actions: 16197
+* Unique services: 381
+* Unique actions: 16226
 * Managed policies: 1151
 
 Most common managed policy name prefixes:
@@ -62,6 +62,7 @@ The following table summarises the AWS APIs.
 | [`datazone`](services/datazone.yml) | 99 | 0 | 19 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`config`](services/config.yml) | 92 | 0 | 0 |
+| [`backup`](services/backup.yml) | 91 | 0 | 5 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 0 |
@@ -71,9 +72,9 @@ The following table summarises the AWS APIs.
 | [`omics`](services/omics.yml) | 82 | 0 | 0 |
 | [`es`](services/es.yml) | 81 | 0 | 10 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
+| [`securityhub`](services/securityhub.yml) | 79 | 0 | 10 |
 | [`macie2`](services/macie2.yml) | 79 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 78 | 0 | 11 |
-| [`backup`](services/backup.yml) | 77 | 0 | 19 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
@@ -89,7 +90,6 @@ The following table summarises the AWS APIs.
 | [`cloudformation`](services/cloudformation.yml) | 70 | 0 | 11 |
 | [`wellarchitected`](services/wellarchitected.yml) | 70 | 0 | 0 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
-| [`securityhub`](services/securityhub.yml) | 69 | 0 | 10 |
 | [`guardduty`](services/guardduty.yml) | 68 | 0 | 1 |
 | [`athena`](services/athena.yml) | 68 | 0 | 1 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
@@ -105,7 +105,7 @@ The following table summarises the AWS APIs.
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
-| [`appsync`](services/appsync.yml) | 60 | 0 | 6 |
+| [`appsync`](services/appsync.yml) | 60 | 2 | 6 |
 | [`datasync`](services/datasync.yml) | 60 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 59 | 0 | 0 |
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 0 |
@@ -134,6 +134,7 @@ The following table summarises the AWS APIs.
 | [`lakeformation`](services/lakeformation.yml) | 47 | 7 | 1 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
+| [`transcribe`](services/transcribe.yml) | 46 | 0 | 3 |
 | [`inspector2`](services/inspector2.yml) | 46 | 0 | 0 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`fsx`](services/fsx.yml) | 45 | 0 | 5 |
@@ -145,7 +146,6 @@ The following table summarises the AWS APIs.
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`ecr`](services/ecr.yml) | 43 | 0 | 5 |
-| [`transcribe`](services/transcribe.yml) | 42 | 0 | 7 |
 | [`fms`](services/fms.yml) | 42 | 0 | 0 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
 | [`wisdom`](services/wisdom.yml) | 41 | 0 | 1 |
@@ -184,6 +184,7 @@ The following table summarises the AWS APIs.
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 32 | 0 | 0 |
+| [`elasticfilesystem`](services/elasticfilesystem.yml) | 31 | 0 | 5 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 31 | 0 | 0 |
 | [`securitylake`](services/securitylake.yml) | 31 | 0 | 0 |
@@ -193,7 +194,6 @@ The following table summarises the AWS APIs.
 | [`billingconductor`](services/billingconductor.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 30 | 2 | 1 |
-| [`elasticfilesystem`](services/elasticfilesystem.yml) | 30 | 0 | 6 |
 | [`xray`](services/xray.yml) | 30 | 0 | 3 |
 | [`dataexchange`](services/dataexchange.yml) | 30 | 0 | 2 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
@@ -211,6 +211,7 @@ The following table summarises the AWS APIs.
 | [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 7 |
 | [`snowball`](services/snowball.yml) | 27 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 27 | 0 | 0 |
+| [`b2bi`](services/b2bi.yml) | 27 | 0 | 0 |
 | [`aps`](services/aps.yml) | 26 | 0 | 16 |
 | [`outposts`](services/outposts.yml) | 26 | 0 | 2 |
 | [`entityresolution`](services/entityresolution.yml) | 26 | 0 | 1 |
@@ -269,8 +270,8 @@ The following table summarises the AWS APIs.
 | [`ivschat`](services/ivschat.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`neptune-db`](services/neptune-db.yml) | 16 | 24 | 17 |
+| [`fis`](services/fis.yml) | 16 | 8 | 3 |
 | [`support`](services/support.yml) | 16 | 0 | 9 |
-| [`fis`](services/fis.yml) | 16 | 0 | 3 |
 | [`thinclient`](services/thinclient.yml) | 16 | 0 | 1 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
 | [`honeycode`](services/honeycode.yml) | 15 | 0 | 15 |
@@ -356,7 +357,6 @@ The following table summarises the AWS APIs.
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 28 |
-| [`b2bi`](services/b2bi.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
@@ -379,6 +379,7 @@ The following table summarises the AWS APIs.
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`artifact`](services/artifact.yml) | 0 | 0 | 10 |
+| [`ts`](services/ts.yml) | 0 | 0 | 9 |
 | [`notifications-contacts`](services/notifications-contacts.yml) | 0 | 0 | 9 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 9 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
@@ -421,14 +422,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2556 |
-| `Get` | 2320 |
-| `Delete` | 1849 |
-| `Create` | 1730 |
+| `List` | 2564 |
+| `Get` | 2328 |
+| `Delete` | 1851 |
+| `Create` | 1732 |
 | `Describe` | 1689 |
-| `Update` | 1478 |
+| `Update` | 1480 |
 | `Put` | 456 |
-| `Start` | 361 |
-| `Tag` | 254 |
-| `Untag` | 251 |
+| `Start` | 365 |
+| `Tag` | 255 |
+| `Untag` | 252 |
 

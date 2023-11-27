@@ -7,6 +7,8 @@ Actions:
   - Name: backup:CreateLegalHold
   - Name: backup:CreateLogicallyAirGappedBackupVault
   - Name: backup:CreateReportPlan
+  - Name: backup:CreateRestoreTestingPlan
+  - Name: backup:CreateRestoreTestingSelection
   - Name: backup:DeleteBackupPlan
   - Name: backup:DeleteBackupSelection
   - Name: backup:DeleteBackupVault
@@ -16,6 +18,8 @@ Actions:
   - Name: backup:DeleteFramework
   - Name: backup:DeleteRecoveryPoint
   - Name: backup:DeleteReportPlan
+  - Name: backup:DeleteRestoreTestingPlan
+  - Name: backup:DeleteRestoreTestingSelection
   - Name: backup:DescribeBackupJob
   - Name: backup:DescribeBackupVault
   - Name: backup:DescribeCopyJob
@@ -38,6 +42,10 @@ Actions:
   - Name: backup:GetBackupVaultNotifications
   - Name: backup:GetLegalHold
   - Name: backup:GetRecoveryPointRestoreMetadata
+  - Name: backup:GetRestoreJobMetadata
+  - Name: backup:GetRestoreTestingInferredMetadata
+  - Name: backup:GetRestoreTestingPlan
+  - Name: backup:GetRestoreTestingSelection
   - Name: backup:GetSupportedResourceTypes
   - Name: backup:ListBackupJobSummaries
   - Name: backup:ListBackupJobs
@@ -59,10 +67,14 @@ Actions:
   - Name: backup:ListReportPlans
   - Name: backup:ListRestoreJobSummaries
   - Name: backup:ListRestoreJobs
+  - Name: backup:ListRestoreJobsByProtectedResource
+  - Name: backup:ListRestoreTestingPlans
+  - Name: backup:ListRestoreTestingSelections
   - Name: backup:ListTags
   - Name: backup:PutBackupVaultAccessPolicy
   - Name: backup:PutBackupVaultLockConfiguration
   - Name: backup:PutBackupVaultNotifications
+  - Name: backup:PutRestoreValidationResult
   - Name: backup:StartBackupJob
   - Name: backup:StartCopyJob
   - Name: backup:StartReportJob
@@ -76,24 +88,12 @@ Actions:
   - Name: backup:UpdateRecoveryPointLifecycle
   - Name: backup:UpdateRegionSettings
   - Name: backup:UpdateReportPlan
+  - Name: backup:UpdateRestoreTestingPlan
+  - Name: backup:UpdateRestoreTestingSelection
 
   # actions with no corresponding API
   - Name: backup:CopyFromBackupVault
   - Name: backup:CopyIntoBackupVault
-  - Name: backup:CreateRestoreTestingPlan
-  - Name: backup:CreateRestoreTestingSelection
   - Name: backup:DeleteBackupVaultSharingPolicy
-  - Name: backup:DeleteRestoreTestingPlan
-  - Name: backup:DeleteRestoreTestingSelection
   - Name: backup:GetBackupVaultSharingPolicy
-  - Name: backup:GetRestoreJobMetadata
-  - Name: backup:GetRestoreTestingInferredMetadata
-  - Name: backup:GetRestoreTestingPlan
-  - Name: backup:GetRestoreTestingSelection
-  - Name: backup:ListRestoreJobsByProtectedResource
-  - Name: backup:ListRestoreTestingPlans
-  - Name: backup:ListRestoreTestingSelections
   - Name: backup:PutBackupVaultSharingPolicy
-  - Name: backup:PutRestoreValidationResult
-  - Name: backup:UpdateRestoreTestingPlan
-  - Name: backup:UpdateRestoreTestingSelection
