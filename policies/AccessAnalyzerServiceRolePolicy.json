@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AccessAnalyzerServiceRolePolicy",
   "CreateDate": "2019-12-02T17:13:10Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4CAIXDDRI2",
   "PolicyName": "AccessAnalyzerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-11-07T19:55:15Z",
+    "CreateDate": "2023-11-28T19:00:40Z",
     "Document": {
       "Statement": [
         {
@@ -77,6 +77,8 @@
             "s3:ListAccessPoints",
             "s3:ListAllMyBuckets",
             "s3:ListMultiRegionAccessPoints",
+            "s3express:GetBucketPolicy",
+            "s3express:ListAllMyDirectoryBuckets",
             "secretsmanager:DescribeSecret",
             "secretsmanager:GetResourcePolicy",
             "secretsmanager:ListSecrets",
@@ -93,7 +95,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2023-11-07T19:55:15Z"
+  "UpdateDate": "2023-11-28T19:00:40Z"
 }

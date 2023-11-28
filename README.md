@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 384
-* Unique actions: 16280
+* Unique services: 386
+* Unique actions: 16342
 * Managed policies: 1155
 
 Most common managed policy name prefixes:
@@ -352,6 +352,7 @@ The following table summarises the AWS APIs.
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 68 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
+| [`qbusiness`](services/qbusiness.yml) | 0 | 0 | 61 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 51 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
@@ -417,6 +418,7 @@ The following table summarises the AWS APIs.
 | [`rhelkb`](services/rhelkb.yml) | 0 | 0 | 1 |
 | [`rds-db`](services/rds-db.yml) | 0 | 0 | 1 |
 | [`mediaimport`](services/mediaimport.yml) | 0 | 0 | 1 |
+| [`inspector-scan`](services/inspector-scan.yml) | 0 | 0 | 1 |
 | [`elemental-support-content`](services/elemental-support-content.yml) | 0 | 0 | 1 |
 | [`codeguru`](services/codeguru.yml) | 0 | 0 | 1 |
 | [`arsenal`](services/arsenal.yml) | 0 | 0 | 1 |
@@ -425,14 +427,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2572 |
-| `Get` | 2336 |
-| `Delete` | 1859 |
-| `Create` | 1740 |
+| `List` | 2585 |
+| `Get` | 2346 |
+| `Delete` | 1869 |
+| `Create` | 1748 |
 | `Describe` | 1691 |
-| `Update` | 1484 |
-| `Put` | 456 |
-| `Start` | 369 |
-| `Tag` | 256 |
-| `Untag` | 253 |
+| `Update` | 1492 |
+| `Put` | 458 |
+| `Start` | 370 |
+| `Tag` | 257 |
+| `Untag` | 254 |
 
