@@ -79,6 +79,7 @@ The following table summarises the AWS APIs.
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 75 | 0 | 4 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
+| [`elasticache`](services/elasticache.yml) | 75 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 75 | 0 | 1 |
 | [`sms-voice`](services/sms-voice.yml) | 74 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
@@ -94,7 +95,6 @@ The following table summarises the AWS APIs.
 | [`athena`](services/athena.yml) | 68 | 0 | 1 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
 | [`ds`](services/ds.yml) | 67 | 0 | 10 |
-| [`elasticache`](services/elasticache.yml) | 66 | 0 | 10 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |

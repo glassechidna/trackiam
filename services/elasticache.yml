@@ -4,6 +4,7 @@ Actions:
   - Name: elasticache:BatchApplyUpdateAction
   - Name: elasticache:BatchStopUpdateAction
   - Name: elasticache:CompleteMigration
+  - Name: elasticache:CopyServerlessCacheSnapshot
   - Name: elasticache:CopySnapshot
   - Name: elasticache:CreateCacheCluster
   - Name: elasticache:CreateCacheParameterGroup
@@ -11,6 +12,8 @@ Actions:
   - Name: elasticache:CreateCacheSubnetGroup
   - Name: elasticache:CreateGlobalReplicationGroup
   - Name: elasticache:CreateReplicationGroup
+  - Name: elasticache:CreateServerlessCache
+  - Name: elasticache:CreateServerlessCacheSnapshot
   - Name: elasticache:CreateSnapshot
   - Name: elasticache:CreateUser
   - Name: elasticache:CreateUserGroup
@@ -22,6 +25,8 @@ Actions:
   - Name: elasticache:DeleteCacheSubnetGroup
   - Name: elasticache:DeleteGlobalReplicationGroup
   - Name: elasticache:DeleteReplicationGroup
+  - Name: elasticache:DeleteServerlessCache
+  - Name: elasticache:DeleteServerlessCacheSnapshot
   - Name: elasticache:DeleteSnapshot
   - Name: elasticache:DeleteUser
   - Name: elasticache:DeleteUserGroup
@@ -37,12 +42,15 @@ Actions:
   - Name: elasticache:DescribeReplicationGroups
   - Name: elasticache:DescribeReservedCacheNodes
   - Name: elasticache:DescribeReservedCacheNodesOfferings
+  - Name: elasticache:DescribeServerlessCacheSnapshots
+  - Name: elasticache:DescribeServerlessCaches
   - Name: elasticache:DescribeServiceUpdates
   - Name: elasticache:DescribeSnapshots
   - Name: elasticache:DescribeUpdateActions
   - Name: elasticache:DescribeUserGroups
   - Name: elasticache:DescribeUsers
   - Name: elasticache:DisassociateGlobalReplicationGroup
+  - Name: elasticache:ExportServerlessCacheSnapshot
   - Name: elasticache:FailoverGlobalReplicationGroup
   - Name: elasticache:IncreaseNodeGroupsInGlobalReplicationGroup
   - Name: elasticache:IncreaseReplicaCount
@@ -54,6 +62,7 @@ Actions:
   - Name: elasticache:ModifyGlobalReplicationGroup
   - Name: elasticache:ModifyReplicationGroup
   - Name: elasticache:ModifyReplicationGroupShardConfiguration
+  - Name: elasticache:ModifyServerlessCache
   - Name: elasticache:ModifyUser
   - Name: elasticache:ModifyUserGroup
   - Name: elasticache:PurchaseReservedCacheNodesOffering
@@ -68,12 +77,3 @@ Actions:
 
   # actions with no corresponding API
   - Name: elasticache:Connect
-  - Name: elasticache:CopyServerlessCacheSnapshot
-  - Name: elasticache:CreateServerlessCache
-  - Name: elasticache:CreateServerlessCacheSnapshot
-  - Name: elasticache:DeleteServerlessCache
-  - Name: elasticache:DeleteServerlessCacheSnapshot
-  - Name: elasticache:DescribeServerlessCacheSnapshots
-  - Name: elasticache:DescribeServerlessCaches
-  - Name: elasticache:ExportServerlessCacheSnapshot
-  - Name: elasticache:ModifyServerlessCache
