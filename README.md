@@ -11,16 +11,16 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 382
-* Unique actions: 16266
-* Managed policies: 1154
+* Unique services: 383
+* Unique actions: 16274
+* Managed policies: 1155
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 311 |
-| `arn:aws:iam::aws:policy/Amazon*` | 297 |
+| `arn:aws:iam::aws:policy/Amazon*` | 298 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 258 |
 | `arn:aws:iam::aws:policy/service-role/*` | 186 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -123,7 +123,7 @@ The following table summarises the AWS APIs.
 | [`kafka`](services/kafka.yml) | 52 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 52 | 0 | 0 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
-| [`profile`](services/profile.yml) | 51 | 0 | 0 |
+| [`profile`](services/profile.yml) | 51 | 0 | 1 |
 | [`drs`](services/drs.yml) | 50 | 0 | 40 |
 | [`mediaconnect`](services/mediaconnect.yml) | 50 | 0 | 3 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
@@ -388,6 +388,7 @@ The following table summarises the AWS APIs.
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 7 |
 | [`payments`](services/payments.yml) | 0 | 0 | 7 |
+| [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
@@ -423,10 +424,10 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2570 |
+| `List` | 2572 |
 | `Get` | 2334 |
-| `Delete` | 1858 |
-| `Create` | 1739 |
+| `Delete` | 1859 |
+| `Create` | 1740 |
 | `Describe` | 1691 |
 | `Update` | 1484 |
 | `Put` | 456 |
