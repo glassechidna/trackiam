@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-11-15T22:04:36Z",
+    "CreateDate": "2023-11-28T16:05:08Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,20 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowPutMetricsForConnectNamespace"
+        },
+        {
+          "Action": [
+            "sms-voice:DescribePhoneNumbers",
+            "sms-voice:SendTextMessage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sms-voice:*:*:phone-number/*",
+          "Sid": "AllowSMSVoiceOperationsForConnect"
         },
         {
           "Action": [
@@ -193,7 +207,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2023-11-15T22:04:36Z"
+  "UpdateDate": "2023-11-28T16:05:08Z"
 }
