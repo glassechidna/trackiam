@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonOneEnterpriseInstallerAccess",
+  "CreateDate": "2023-11-28T05:00:39Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4BMDOY2M4B",
+  "PolicyName": "AmazonOneEnterpriseInstallerAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-11-28T05:00:39Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "one:CreateDeviceActivationQrCode",
+            "one:GetDeviceInstance",
+            "one:GetSite",
+            "one:GetSiteAddress",
+            "one:ListDeviceInstances",
+            "one:ListSites"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "InstallerAccessStatementID"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-11-28T05:00:39Z"
+}
