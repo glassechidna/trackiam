@@ -77,6 +77,7 @@ The following table summarises the AWS APIs.
 | [`codecommit`](services/codecommit.yml) | 78 | 0 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
+| [`personalize`](services/personalize.yml) | 75 | 0 | 4 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 75 | 0 | 1 |
 | [`sms-voice`](services/sms-voice.yml) | 74 | 0 | 0 |
@@ -85,7 +86,6 @@ The following table summarises the AWS APIs.
 | [`logs`](services/logs.yml) | 73 | 0 | 9 |
 | [`workspaces`](services/workspaces.yml) | 73 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
-| [`personalize`](services/personalize.yml) | 72 | 3 | 4 |
 | [`mgn`](services/mgn.yml) | 70 | 0 | 34 |
 | [`cloudformation`](services/cloudformation.yml) | 70 | 0 | 11 |
 | [`wellarchitected`](services/wellarchitected.yml) | 70 | 0 | 0 |
