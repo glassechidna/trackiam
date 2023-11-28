@@ -104,8 +104,8 @@ The following table summarises the AWS APIs.
 | [`medialive`](services/medialive.yml) | 64 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
+| [`appsync`](services/appsync.yml) | 62 | 0 | 6 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
-| [`appsync`](services/appsync.yml) | 60 | 2 | 6 |
 | [`datasync`](services/datasync.yml) | 60 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 59 | 0 | 0 |
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 0 |
