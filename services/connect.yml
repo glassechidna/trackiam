@@ -3,6 +3,7 @@ Actions:
   - Name: connect:AssociateApprovedOrigin
   - Name: connect:AssociateBot
   - Name: connect:AssociateDefaultVocabulary
+  - Name: connect:AssociateFlow
   - Name: connect:AssociateInstanceStorageConfig
   - Name: connect:AssociateLambdaFunction
   - Name: connect:AssociateLexBot
@@ -85,6 +86,7 @@ Actions:
   - Name: connect:DescribeVocabulary
   - Name: connect:DisassociateApprovedOrigin
   - Name: connect:DisassociateBot
+  - Name: connect:DisassociateFlow
   - Name: connect:DisassociateInstanceStorageConfig
   - Name: connect:DisassociateLambdaFunction
   - Name: connect:DisassociateLexBot
@@ -98,11 +100,13 @@ Actions:
   - Name: connect:GetCurrentMetricData
   - Name: connect:GetCurrentUserData
   - Name: connect:GetFederationToken
+  - Name: connect:GetFlowAssociation
   - Name: connect:GetMetricData
   - Name: connect:GetMetricDataV2
   - Name: connect:GetPromptFile
   - Name: connect:GetTaskTemplate
   - Name: connect:GetTrafficDistribution
+  - Name: connect:ImportPhoneNumber
   - Name: connect:ListAgentStatuses
   - Name: connect:ListApprovedOrigins
   - Name: connect:ListBots
@@ -113,6 +117,7 @@ Actions:
   - Name: connect:ListDefaultVocabularies
   - Name: connect:ListEvaluationFormVersions
   - Name: connect:ListEvaluationForms
+  - Name: connect:ListFlowAssociations
   - Name: connect:ListHoursOfOperations
   - Name: connect:ListInstanceAttributes
   - Name: connect:ListInstanceStorageConfigs
@@ -127,6 +132,7 @@ Actions:
   - Name: connect:ListQueues
   - Name: connect:ListQuickConnects
   - Name: connect:ListRealtimeContactAnalysisSegments
+  - Name: connect:ListRealtimeContactAnalysisSegmentsV2
   - Name: connect:ListRoutingProfileQueues
   - Name: connect:ListRoutingProfiles
   - Name: connect:ListRules
@@ -158,12 +164,14 @@ Actions:
   - Name: connect:SearchSecurityProfiles
   - Name: connect:SearchUsers
   - Name: connect:SearchVocabularies
+  - Name: connect:SendChatIntegrationEvent
   - Name: connect:StartChatContact
   - Name: connect:StartContactEvaluation
   - Name: connect:StartContactRecording
   - Name: connect:StartContactStreaming
   - Name: connect:StartOutboundVoiceContact
   - Name: connect:StartTaskContact
+  - Name: connect:StartWebRTCContact
   - Name: connect:StopContact
   - Name: connect:StopContactRecording
   - Name: connect:StopContactStreaming
@@ -231,14 +239,6 @@ Actions:
 
   # APIs without an IAM action
   - Name: connect:AssociateAnalyticsDataSet
-  - Name: connect:AssociateFlow
   - Name: connect:CreatePersistentContactAssociation
   - Name: connect:DisassociateAnalyticsDataSet
-  - Name: connect:DisassociateFlow
-  - Name: connect:GetFlowAssociation
-  - Name: connect:ImportPhoneNumber
   - Name: connect:ListAnalyticsDataAssociations
-  - Name: connect:ListFlowAssociations
-  - Name: connect:ListRealtimeContactAnalysisSegmentsV2
-  - Name: connect:SendChatIntegrationEvent
-  - Name: connect:StartWebRTCContact
