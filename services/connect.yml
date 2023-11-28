@@ -11,6 +11,8 @@ Actions:
   - Name: connect:AssociateRoutingProfileQueues
   - Name: connect:AssociateSecurityKey
   - Name: connect:AssociateTrafficDistributionGroupUser
+  - Name: connect:BatchAssociateAnalyticsDataSet
+  - Name: connect:BatchDisassociateAnalyticsDataSet
   - Name: connect:BatchGetFlowAssociation
   - Name: connect:BatchPutContact
   - Name: connect:ClaimPhoneNumber
@@ -216,8 +218,6 @@ Actions:
 
   # actions with no corresponding API
   - Name: connect:AssociateCustomerProfilesDomain
-  - Name: connect:BatchAssociateAnalyticsDataSet
-  - Name: connect:BatchDisassociateAnalyticsDataSet
   - Name: connect:CreatePredefinedAttribute
   - Name: connect:DeletePredefinedAttribute
   - Name: connect:DescribeForecastingPlanningSchedulingIntegration
@@ -230,4 +230,15 @@ Actions:
   - Name: connect:UpdatePredefinedAttribute
 
   # APIs without an IAM action
+  - Name: connect:AssociateAnalyticsDataSet
+  - Name: connect:AssociateFlow
   - Name: connect:CreatePersistentContactAssociation
+  - Name: connect:DisassociateAnalyticsDataSet
+  - Name: connect:DisassociateFlow
+  - Name: connect:GetFlowAssociation
+  - Name: connect:ImportPhoneNumber
+  - Name: connect:ListAnalyticsDataAssociations
+  - Name: connect:ListFlowAssociations
+  - Name: connect:ListRealtimeContactAnalysisSegmentsV2
+  - Name: connect:SendChatIntegrationEvent
+  - Name: connect:StartWebRTCContact

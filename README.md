@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 386
-* Unique actions: 16342
+* Unique actions: 16362
 * Managed policies: 1155
 
 Most common managed policy name prefixes:
@@ -40,7 +40,7 @@ The following table summarises the AWS APIs.
 | [`sagemaker`](services/sagemaker.yml) | 320 | 0 | 17 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`iot`](services/iot.yml) | 257 | 3 | 9 |
-| [`connect`](services/connect.yml) | 214 | 1 | 13 |
+| [`connect`](services/connect.yml) | 216 | 12 | 11 |
 | [`glue`](services/glue.yml) | 198 | 15 | 16 |
 | [`quicksight`](services/quicksight.yml) | 164 | 6 | 29 |
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
@@ -52,7 +52,7 @@ The following table summarises the AWS APIs.
 | [`lex`](services/lex.yml) | 127 | 8 | 8 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
-| [`s3`](services/s3.yml) | 113 | 58 | 45 |
+| [`s3`](services/s3.yml) | 113 | 60 | 45 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`iotwireless`](services/iotwireless.yml) | 109 | 0 | 1 |
 | [`dms`](services/dms.yml) | 106 | 0 | 28 |
@@ -114,16 +114,18 @@ The following table summarises the AWS APIs.
 | [`events`](services/events.yml) | 56 | 0 | 2 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 2 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
+| [`bedrock`](services/bedrock.yml) | 55 | 7 | 10 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 54 | 0 | 26 |
+| [`qbusiness`](services/qbusiness.yml) | 54 | 0 | 7 |
 | [`resiliencehub`](services/resiliencehub.yml) | 54 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 54 | 0 | 0 |
 | [`wafv2`](services/wafv2.yml) | 53 | 0 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 52 | 5 | 13 |
+| [`profile`](services/profile.yml) | 52 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 52 | 0 | 0 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
-| [`profile`](services/profile.yml) | 51 | 0 | 1 |
 | [`drs`](services/drs.yml) | 50 | 0 | 40 |
 | [`mediaconnect`](services/mediaconnect.yml) | 50 | 0 | 3 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
@@ -237,7 +239,6 @@ The following table summarises the AWS APIs.
 | [`compute-optimizer`](services/compute-optimizer.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
-| [`bedrock`](services/bedrock.yml) | 22 | 0 | 43 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 22 | 0 | 7 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 0 |
@@ -352,7 +353,6 @@ The following table summarises the AWS APIs.
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 68 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
-| [`qbusiness`](services/qbusiness.yml) | 0 | 0 | 61 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 51 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
@@ -427,14 +427,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2585 |
-| `Get` | 2346 |
-| `Delete` | 1869 |
-| `Create` | 1748 |
+| `List` | 2589 |
+| `Get` | 2347 |
+| `Delete` | 1873 |
+| `Create` | 1749 |
 | `Describe` | 1691 |
 | `Update` | 1492 |
 | `Put` | 458 |
-| `Start` | 370 |
+| `Start` | 371 |
 | `Tag` | 257 |
 | `Untag` | 254 |
 

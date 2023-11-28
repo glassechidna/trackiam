@@ -1,68 +1,77 @@
 Actions:
-  - Name: bedrock:CreateModelCustomizationJob
-  - Name: bedrock:CreateProvisionedModelThroughput
-  - Name: bedrock:DeleteCustomModel
-  - Name: bedrock:DeleteModelInvocationLoggingConfiguration
-  - Name: bedrock:DeleteProvisionedModelThroughput
-  - Name: bedrock:GetCustomModel
-  - Name: bedrock:GetFoundationModel
-  - Name: bedrock:GetModelCustomizationJob
-  - Name: bedrock:GetModelInvocationLoggingConfiguration
-  - Name: bedrock:GetProvisionedModelThroughput
-  - Name: bedrock:InvokeModel
-  - Name: bedrock:InvokeModelWithResponseStream
-  - Name: bedrock:ListCustomModels
-  - Name: bedrock:ListFoundationModels
-  - Name: bedrock:ListModelCustomizationJobs
-  - Name: bedrock:ListProvisionedModelThroughputs
-  - Name: bedrock:ListTagsForResource
-  - Name: bedrock:PutModelInvocationLoggingConfiguration
-  - Name: bedrock:StopModelCustomizationJob
-  - Name: bedrock:TagResource
-  - Name: bedrock:UntagResource
-  - Name: bedrock:UpdateProvisionedModelThroughput
-
-  # actions with no corresponding API
   - Name: bedrock:AssociateAgentKnowledgeBase
-  - Name: bedrock:AssociateThirdPartyKnowledgeBase
   - Name: bedrock:CreateAgent
   - Name: bedrock:CreateAgentActionGroup
   - Name: bedrock:CreateAgentAlias
-  - Name: bedrock:CreateAgentDraftSnapshot
   - Name: bedrock:CreateDataSource
-  - Name: bedrock:CreateFoundationModelAgreement
   - Name: bedrock:CreateKnowledgeBase
+  - Name: bedrock:CreateModelCustomizationJob
+  - Name: bedrock:CreateProvisionedModelThroughput
+  - Name: bedrock:DeleteCustomModel
   - Name: bedrock:DeleteDataSource
-  - Name: bedrock:DeleteFoundationModelAgreement
   - Name: bedrock:DeleteKnowledgeBase
+  - Name: bedrock:DeleteModelInvocationLoggingConfiguration
+  - Name: bedrock:DeleteProvisionedModelThroughput
   - Name: bedrock:DisassociateAgentKnowledgeBase
   - Name: bedrock:GetAgent
   - Name: bedrock:GetAgentActionGroup
   - Name: bedrock:GetAgentAlias
   - Name: bedrock:GetAgentKnowledgeBase
   - Name: bedrock:GetAgentVersion
+  - Name: bedrock:GetCustomModel
   - Name: bedrock:GetDataSource
-  - Name: bedrock:GetFoundationModelAvailability
+  - Name: bedrock:GetFoundationModel
   - Name: bedrock:GetIngestionJob
   - Name: bedrock:GetKnowledgeBase
-  - Name: bedrock:GetUseCaseForModelAccess
+  - Name: bedrock:GetModelCustomizationJob
+  - Name: bedrock:GetModelInvocationLoggingConfiguration
+  - Name: bedrock:GetProvisionedModelThroughput
   - Name: bedrock:InvokeAgent
+  - Name: bedrock:InvokeModel
+  - Name: bedrock:InvokeModelWithResponseStream
   - Name: bedrock:ListAgentActionGroups
   - Name: bedrock:ListAgentAliases
   - Name: bedrock:ListAgentKnowledgeBases
   - Name: bedrock:ListAgentVersions
   - Name: bedrock:ListAgents
+  - Name: bedrock:ListCustomModels
   - Name: bedrock:ListDataSources
-  - Name: bedrock:ListFoundationModelAgreementOffers
+  - Name: bedrock:ListFoundationModels
   - Name: bedrock:ListIngestionJobs
   - Name: bedrock:ListKnowledgeBases
-  - Name: bedrock:PutFoundationModelEntitlement
-  - Name: bedrock:PutUseCaseForModelAccess
-  - Name: bedrock:QueryKnowledgeBase
+  - Name: bedrock:ListModelCustomizationJobs
+  - Name: bedrock:ListProvisionedModelThroughputs
+  - Name: bedrock:ListTagsForResource
+  - Name: bedrock:PutModelInvocationLoggingConfiguration
   - Name: bedrock:StartIngestionJob
+  - Name: bedrock:StopModelCustomizationJob
+  - Name: bedrock:TagResource
+  - Name: bedrock:UntagResource
   - Name: bedrock:UpdateAgent
   - Name: bedrock:UpdateAgentActionGroup
   - Name: bedrock:UpdateAgentAlias
   - Name: bedrock:UpdateAgentKnowledgeBase
   - Name: bedrock:UpdateDataSource
   - Name: bedrock:UpdateKnowledgeBase
+  - Name: bedrock:UpdateProvisionedModelThroughput
+
+  # actions with no corresponding API
+  - Name: bedrock:AssociateThirdPartyKnowledgeBase
+  - Name: bedrock:CreateAgentDraftSnapshot
+  - Name: bedrock:CreateFoundationModelAgreement
+  - Name: bedrock:DeleteFoundationModelAgreement
+  - Name: bedrock:GetFoundationModelAvailability
+  - Name: bedrock:GetUseCaseForModelAccess
+  - Name: bedrock:ListFoundationModelAgreementOffers
+  - Name: bedrock:PutFoundationModelEntitlement
+  - Name: bedrock:PutUseCaseForModelAccess
+  - Name: bedrock:QueryKnowledgeBase
+
+  # APIs without an IAM action
+  - Name: bedrock:DeleteAgent
+  - Name: bedrock:DeleteAgentActionGroup
+  - Name: bedrock:DeleteAgentAlias
+  - Name: bedrock:DeleteAgentVersion
+  - Name: bedrock:PrepareAgent
+  - Name: bedrock:Retrieve
+  - Name: bedrock:RetrieveAndGenerate
