@@ -1,15 +1,65 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/ElastiCacheServiceRolePolicy",
   "CreateDate": "2017-12-07T17:50:04Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIML5LIBUZBVCSF7PI",
   "PolicyName": "ElastiCacheServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-02-06T21:27:13Z",
+    "CreateDate": "2023-11-28T03:05:37Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/AmazonElastiCacheManaged": "true",
+              "ec2:CreateAction": "CreateVpcEndpoint"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-endpoint/*",
+          "Sid": "TagVPCEndpointsOnCreation"
+        },
+        {
+          "Action": [
+            "ec2:CreateVpcEndpoint",
+            "ec2:DeleteVpcEndpoints"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:VpceServiceName": "com.amazonaws.elasticache.serverless.*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-endpoint/*",
+          "Sid": "CreateDeleteVPCEndpoints"
+        },
+        {
+          "Action": [
+            "ec2:ModifyVpcEndpoint"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/AmazonElastiCacheManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-endpoint/*",
+          "Sid": "ModifyVpcEndpoints"
+        },
+        {
+          "Action": [
+            "ec2:CreateVpcEndpoint",
+            "ec2:ModifyVpcEndpoint"
+          ],
+          "Effect": "Allow",
+          "NotResource": "arn:aws:ec2:*:*:vpc-endpoint/*",
+          "Sid": "AllowAccessToElastiCacheTaggedVpcEndpoints"
+        },
         {
           "Action": [
             "cloudwatch:PutMetricData",
@@ -22,6 +72,7 @@
             "ec2:DescribeNetworkInterfaces",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
+            "ec2:DescribeVpcEndpoints",
             "ec2:DescribeVpcs",
             "ec2:ModifyNetworkInterfaceAttribute",
             "ec2:RevokeSecurityGroupIngress",
@@ -31,13 +82,14 @@
             "outposts:ListSites"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ElastiCacheManagementActions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-02-06T21:27:13Z"
+  "UpdateDate": "2023-11-28T03:05:37Z"
 }

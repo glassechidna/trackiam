@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonElastiCacheFullAccess",
   "CreateDate": "2015-02-06T18:40:20Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIA2V44CPHAUAAECKG",
   "PolicyName": "AmazonElastiCacheFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2017-12-07T17:48:26Z",
+    "CreateDate": "2023-11-28T03:49:56Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ec2:CreateVpcEndpoint",
+          "Condition": {
+            "StringLike": {
+              "ec2:VpceServiceName": "com.amazonaws.elasticache.serverless.*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-endpoint/*",
+          "Sid": "CreateVPCEndpoints"
+        },
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
@@ -18,18 +29,122 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/aws-service-role/elasticache.amazonaws.com/AWSServiceRoleForElastiCache"
+          "Resource": "arn:aws:iam::*:role/aws-service-role/elasticache.amazonaws.com/AWSServiceRoleForElastiCache",
+          "Sid": "CreateServiceLinkedRole"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/AmazonElastiCacheManaged": "true",
+              "ec2:CreateAction": "CreateVpcEndpoint"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-endpoint/*",
+          "Sid": "TagVPCEndpointsOnCreation"
+        },
+        {
+          "Action": [
+            "ec2:CreateVpcEndpoint"
+          ],
+          "Effect": "Allow",
+          "NotResource": "arn:aws:ec2:*:*:vpc-endpoint/*",
+          "Sid": "AllowAccessToElastiCacheTaggedVpcEndpoints"
         },
         {
           "Action": "elasticache:*",
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ElastiCacheManagementActions"
+        },
+        {
+          "Action": [
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingActivities",
+            "application-autoscaling:DescribeScalingPolicies",
+            "application-autoscaling:DescribeScheduledActions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowAccessToAutoScaling"
+        },
+        {
+          "Action": [
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowAccessToCloudWatch"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowAccessToEc2"
+        },
+        {
+          "Action": [
+            "firehose:ListDeliveryStreams"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListLogDeliveryStreams"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey",
+            "kms:ListAliases",
+            "kms:ListKeys"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowAccessToKMS"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeLogGroups"
+        },
+        {
+          "Action": [
+            "outposts:ListOutposts"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowAccessToOutposts"
+        },
+        {
+          "Action": [
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeS3Buckets"
+        },
+        {
+          "Action": [
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowAccessToSNS"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2017-12-07T17:48:26Z"
+  "UpdateDate": "2023-11-28T03:49:56Z"
 }

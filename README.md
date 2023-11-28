@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 381
-* Unique actions: 16226
+* Unique services: 382
+* Unique actions: 16262
 * Managed policies: 1151
 
 Most common managed policy name prefixes:
@@ -94,7 +94,7 @@ The following table summarises the AWS APIs.
 | [`athena`](services/athena.yml) | 68 | 0 | 1 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
 | [`ds`](services/ds.yml) | 67 | 0 | 10 |
-| [`elasticache`](services/elasticache.yml) | 66 | 0 | 1 |
+| [`elasticache`](services/elasticache.yml) | 66 | 0 | 10 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
 | [`imagebuilder`](services/imagebuilder.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
@@ -357,6 +357,7 @@ The following table summarises the AWS APIs.
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 28 |
+| [`one`](services/one.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
@@ -422,14 +423,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2564 |
-| `Get` | 2328 |
-| `Delete` | 1851 |
-| `Create` | 1732 |
-| `Describe` | 1689 |
-| `Update` | 1480 |
+| `List` | 2569 |
+| `Get` | 2333 |
+| `Delete` | 1858 |
+| `Create` | 1739 |
+| `Describe` | 1691 |
+| `Update` | 1484 |
 | `Put` | 456 |
 | `Start` | 365 |
-| `Tag` | 255 |
-| `Untag` | 252 |
+| `Tag` | 256 |
+| `Untag` | 253 |
 
