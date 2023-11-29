@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 388
-* Unique actions: 16430
+* Unique services: 389
+* Unique actions: 16472
 * Managed policies: 1158
 
 Most common managed policy name prefixes:
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 615 | 0 | 16 |
-| [`sagemaker`](services/sagemaker.yml) | 320 | 0 | 24 |
+| [`sagemaker`](services/sagemaker.yml) | 333 | 0 | 11 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`iot`](services/iot.yml) | 257 | 3 | 9 |
 | [`connect`](services/connect.yml) | 224 | 4 | 11 |
@@ -65,12 +65,12 @@ The following table summarises the AWS APIs.
 | [`backup`](services/backup.yml) | 91 | 0 | 5 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
+| [`es`](services/es.yml) | 86 | 0 | 11 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 85 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 84 | 0 | 51 |
 | [`iotsitewise`](services/iotsitewise.yml) | 84 | 0 | 2 |
 | [`omics`](services/omics.yml) | 82 | 0 | 0 |
-| [`es`](services/es.yml) | 81 | 0 | 16 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 79 | 0 | 10 |
 | [`macie2`](services/macie2.yml) | 79 | 0 | 0 |
@@ -138,11 +138,11 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`transcribe`](services/transcribe.yml) | 46 | 0 | 3 |
 | [`inspector2`](services/inspector2.yml) | 46 | 0 | 0 |
+| [`cleanrooms`](services/cleanrooms.yml) | 45 | 17 | 0 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`fsx`](services/fsx.yml) | 45 | 0 | 5 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 45 | 0 | 1 |
 | [`eks`](services/eks.yml) | 45 | 0 | 1 |
-| [`cleanrooms`](services/cleanrooms.yml) | 45 | 0 | 0 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
 | [`workdocs`](services/workdocs.yml) | 44 | 0 | 15 |
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
@@ -227,6 +227,7 @@ The following table summarises the AWS APIs.
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 25 | 0 | 1 |
 | [`textract`](services/textract.yml) | 25 | 0 | 0 |
 | [`pca-connector-ad`](services/pca-connector-ad.yml) | 25 | 0 | 0 |
+| [`cleanrooms-ml`](services/cleanrooms-ml.yml) | 25 | 0 | 0 |
 | [`verifiedpermissions`](services/verifiedpermissions.yml) | 24 | 1 | 0 |
 | [`mediapackagev2`](services/mediapackagev2.yml) | 24 | 0 | 3 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 24 | 0 | 1 |
@@ -429,14 +430,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2602 |
-| `Get` | 2362 |
-| `Delete` | 1882 |
-| `Create` | 1760 |
+| `List` | 2614 |
+| `Get` | 2371 |
+| `Delete` | 1889 |
+| `Create` | 1765 |
 | `Describe` | 1693 |
-| `Update` | 1499 |
-| `Put` | 459 |
-| `Start` | 371 |
-| `Tag` | 258 |
+| `Update` | 1502 |
+| `Put` | 460 |
+| `Start` | 373 |
+| `Tag` | 259 |
 | `Untag` | 255 |
 

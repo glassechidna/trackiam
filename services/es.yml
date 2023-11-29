@@ -1,6 +1,7 @@
 Actions:
   - Name: es:AcceptInboundConnection
   - Name: es:AcceptInboundCrossClusterSearchConnection
+  - Name: es:AddDataSource
   - Name: es:AddTags
   - Name: es:AssociatePackage
   - Name: es:AuthorizeVpcEndpointAccess
@@ -12,6 +13,7 @@ Actions:
   - Name: es:CreateOutboundCrossClusterSearchConnection
   - Name: es:CreatePackage
   - Name: es:CreateVpcEndpoint
+  - Name: es:DeleteDataSource
   - Name: es:DeleteDomain
   - Name: es:DeleteElasticsearchDomain
   - Name: es:DeleteElasticsearchServiceRole
@@ -47,10 +49,12 @@ Actions:
   - Name: es:DissociatePackage
   - Name: es:GetCompatibleElasticsearchVersions
   - Name: es:GetCompatibleVersions
+  - Name: es:GetDataSource
   - Name: es:GetDomainMaintenanceStatus
   - Name: es:GetPackageVersionHistory
   - Name: es:GetUpgradeHistory
   - Name: es:GetUpgradeStatus
+  - Name: es:ListDataSources
   - Name: es:ListDomainMaintenances
   - Name: es:ListDomainNames
   - Name: es:ListDomainsForPackage
@@ -73,6 +77,7 @@ Actions:
   - Name: es:StartDomainMaintenance
   - Name: es:StartElasticsearchServiceSoftwareUpdate
   - Name: es:StartServiceSoftwareUpdate
+  - Name: es:UpdateDataSource
   - Name: es:UpdateDomainConfig
   - Name: es:UpdateElasticsearchDomainConfig
   - Name: es:UpdatePackage
@@ -82,11 +87,9 @@ Actions:
   - Name: es:UpgradeElasticsearchDomain
 
   # actions with no corresponding API
-  - Name: es:AddDataSource
   - Name: es:CancelDomainConfigChange
   - Name: es:CreateElasticsearchServiceRole
   - Name: es:CreateServiceRole
-  - Name: es:DeleteDataSource
   - Name: es:ESCrossClusterGet
   - Name: es:ESHttpDelete
   - Name: es:ESHttpGet
@@ -94,7 +97,4 @@ Actions:
   - Name: es:ESHttpPatch
   - Name: es:ESHttpPost
   - Name: es:ESHttpPut
-  - Name: es:GetDataSource
-  - Name: es:ListDataSources
   - Name: es:ListElasticsearchInstanceTypeDetails
-  - Name: es:UpdateDataSource

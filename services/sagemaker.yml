@@ -12,6 +12,7 @@ Actions:
   - Name: sagemaker:CreateArtifact
   - Name: sagemaker:CreateAutoMLJob
   - Name: sagemaker:CreateAutoMLJobV2
+  - Name: sagemaker:CreateCluster
   - Name: sagemaker:CreateCodeRepository
   - Name: sagemaker:CreateCompilationJob
   - Name: sagemaker:CreateContext
@@ -31,6 +32,7 @@ Actions:
   - Name: sagemaker:CreateHyperParameterTuningJob
   - Name: sagemaker:CreateImage
   - Name: sagemaker:CreateImageVersion
+  - Name: sagemaker:CreateInferenceComponent
   - Name: sagemaker:CreateInferenceExperiment
   - Name: sagemaker:CreateInferenceRecommendationsJob
   - Name: sagemaker:CreateLabelingJob
@@ -65,6 +67,7 @@ Actions:
   - Name: sagemaker:DeleteAppImageConfig
   - Name: sagemaker:DeleteArtifact
   - Name: sagemaker:DeleteAssociation
+  - Name: sagemaker:DeleteCluster
   - Name: sagemaker:DeleteCodeRepository
   - Name: sagemaker:DeleteContext
   - Name: sagemaker:DeleteDataQualityJobDefinition
@@ -83,6 +86,7 @@ Actions:
   - Name: sagemaker:DeleteHumanTaskUi
   - Name: sagemaker:DeleteImage
   - Name: sagemaker:DeleteImageVersion
+  - Name: sagemaker:DeleteInferenceComponent
   - Name: sagemaker:DeleteInferenceExperiment
   - Name: sagemaker:DeleteModel
   - Name: sagemaker:DeleteModelBiasJobDefinition
@@ -114,6 +118,8 @@ Actions:
   - Name: sagemaker:DescribeArtifact
   - Name: sagemaker:DescribeAutoMLJob
   - Name: sagemaker:DescribeAutoMLJobV2
+  - Name: sagemaker:DescribeCluster
+  - Name: sagemaker:DescribeClusterNode
   - Name: sagemaker:DescribeCodeRepository
   - Name: sagemaker:DescribeCompilationJob
   - Name: sagemaker:DescribeContext
@@ -136,6 +142,7 @@ Actions:
   - Name: sagemaker:DescribeHyperParameterTuningJob
   - Name: sagemaker:DescribeImage
   - Name: sagemaker:DescribeImageVersion
+  - Name: sagemaker:DescribeInferenceComponent
   - Name: sagemaker:DescribeInferenceExperiment
   - Name: sagemaker:DescribeInferenceRecommendationsJob
   - Name: sagemaker:DescribeLabelingJob
@@ -191,6 +198,8 @@ Actions:
   - Name: sagemaker:ListAssociations
   - Name: sagemaker:ListAutoMLJobs
   - Name: sagemaker:ListCandidatesForAutoMLJob
+  - Name: sagemaker:ListClusterNodes
+  - Name: sagemaker:ListClusters
   - Name: sagemaker:ListCodeRepositories
   - Name: sagemaker:ListCompilationJobs
   - Name: sagemaker:ListContexts
@@ -213,6 +222,7 @@ Actions:
   - Name: sagemaker:ListHyperParameterTuningJobs
   - Name: sagemaker:ListImageVersions
   - Name: sagemaker:ListImages
+  - Name: sagemaker:ListInferenceComponents
   - Name: sagemaker:ListInferenceExperiments
   - Name: sagemaker:ListInferenceRecommendationsJobSteps
   - Name: sagemaker:ListInferenceRecommendationsJobs
@@ -289,6 +299,7 @@ Actions:
   - Name: sagemaker:UpdateAction
   - Name: sagemaker:UpdateAppImageConfig
   - Name: sagemaker:UpdateArtifact
+  - Name: sagemaker:UpdateCluster
   - Name: sagemaker:UpdateCodeRepository
   - Name: sagemaker:UpdateContext
   - Name: sagemaker:UpdateDeviceFleet
@@ -302,6 +313,8 @@ Actions:
   - Name: sagemaker:UpdateHub
   - Name: sagemaker:UpdateImage
   - Name: sagemaker:UpdateImageVersion
+  - Name: sagemaker:UpdateInferenceComponent
+  - Name: sagemaker:UpdateInferenceComponentRuntimeConfig
   - Name: sagemaker:UpdateInferenceExperiment
   - Name: sagemaker:UpdateModelCard
   - Name: sagemaker:UpdateModelPackage
@@ -322,26 +335,13 @@ Actions:
 
   # actions with no corresponding API
   - Name: sagemaker:BatchGetMetrics
-  - Name: sagemaker:CreateCluster
-  - Name: sagemaker:CreateInferenceComponent
   - Name: sagemaker:CreateLineageGroupPolicy
   - Name: sagemaker:CreateSharedModel
-  - Name: sagemaker:DeleteCluster
-  - Name: sagemaker:DeleteInferenceComponent
   - Name: sagemaker:DeleteLineageGroupPolicy
-  - Name: sagemaker:DescribeCluster
-  - Name: sagemaker:DescribeClusterNode
-  - Name: sagemaker:DescribeInferenceComponent
   - Name: sagemaker:DescribeSharedModel
-  - Name: sagemaker:ListClusterNodes
-  - Name: sagemaker:ListClusters
-  - Name: sagemaker:ListInferenceComponents
   - Name: sagemaker:ListSharedModelEvents
   - Name: sagemaker:ListSharedModelVersions
   - Name: sagemaker:ListSharedModels
   - Name: sagemaker:PutLineageGroupPolicy
   - Name: sagemaker:SendSharedModelEvent
-  - Name: sagemaker:UpdateCluster
-  - Name: sagemaker:UpdateInferenceComponent
-  - Name: sagemaker:UpdateInferenceComponentRuntimeConfig
   - Name: sagemaker:UpdateSharedModel
