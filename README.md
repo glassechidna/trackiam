@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 387
-* Unique actions: 16380
+* Unique services: 388
+* Unique actions: 16424
 * Managed policies: 1157
 
 Most common managed policy name prefixes:
@@ -104,6 +104,7 @@ The following table summarises the AWS APIs.
 | [`medialive`](services/medialive.yml) | 64 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
+| [`bedrock`](services/bedrock.yml) | 62 | 0 | 21 |
 | [`appsync`](services/appsync.yml) | 62 | 0 | 6 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 60 | 0 | 0 |
@@ -114,7 +115,6 @@ The following table summarises the AWS APIs.
 | [`events`](services/events.yml) | 56 | 0 | 2 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 2 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
-| [`bedrock`](services/bedrock.yml) | 55 | 7 | 10 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 54 | 0 | 26 |
 | [`qbusiness`](services/qbusiness.yml) | 54 | 0 | 7 |
@@ -351,11 +351,12 @@ The following table summarises the AWS APIs.
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
-| [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 68 |
+| [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 70 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 51 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 36 |
+| [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 31 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
 | [`chatbot`](services/chatbot.yml) | 0 | 0 | 28 |
 | [`one`](services/one.yml) | 0 | 0 | 27 |
@@ -428,14 +429,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2592 |
-| `Get` | 2349 |
-| `Delete` | 1876 |
-| `Create` | 1753 |
+| `List` | 2601 |
+| `Get` | 2361 |
+| `Delete` | 1881 |
+| `Create` | 1760 |
 | `Describe` | 1693 |
-| `Update` | 1495 |
+| `Update` | 1498 |
 | `Put` | 459 |
 | `Start` | 371 |
-| `Tag` | 257 |
-| `Untag` | 254 |
+| `Tag` | 258 |
+| `Untag` | 255 |
 

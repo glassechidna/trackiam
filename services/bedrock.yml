@@ -7,6 +7,10 @@ Actions:
   - Name: bedrock:CreateKnowledgeBase
   - Name: bedrock:CreateModelCustomizationJob
   - Name: bedrock:CreateProvisionedModelThroughput
+  - Name: bedrock:DeleteAgent
+  - Name: bedrock:DeleteAgentActionGroup
+  - Name: bedrock:DeleteAgentAlias
+  - Name: bedrock:DeleteAgentVersion
   - Name: bedrock:DeleteCustomModel
   - Name: bedrock:DeleteDataSource
   - Name: bedrock:DeleteKnowledgeBase
@@ -42,7 +46,10 @@ Actions:
   - Name: bedrock:ListModelCustomizationJobs
   - Name: bedrock:ListProvisionedModelThroughputs
   - Name: bedrock:ListTagsForResource
+  - Name: bedrock:PrepareAgent
   - Name: bedrock:PutModelInvocationLoggingConfiguration
+  - Name: bedrock:Retrieve
+  - Name: bedrock:RetrieveAndGenerate
   - Name: bedrock:StartIngestionJob
   - Name: bedrock:StopModelCustomizationJob
   - Name: bedrock:TagResource
@@ -57,21 +64,23 @@ Actions:
 
   # actions with no corresponding API
   - Name: bedrock:AssociateThirdPartyKnowledgeBase
-  - Name: bedrock:CreateAgentDraftSnapshot
   - Name: bedrock:CreateFoundationModelAgreement
+  - Name: bedrock:CreateGuardrail
+  - Name: bedrock:CreateGuardrailVersion
+  - Name: bedrock:CreateModelEvaluationJob
+  - Name: bedrock:CreateModelInvocationJob
   - Name: bedrock:DeleteFoundationModelAgreement
+  - Name: bedrock:DeleteGuardrail
   - Name: bedrock:GetFoundationModelAvailability
+  - Name: bedrock:GetGuardrail
+  - Name: bedrock:GetModelEvaluationJob
+  - Name: bedrock:GetModelInvocationJob
   - Name: bedrock:GetUseCaseForModelAccess
   - Name: bedrock:ListFoundationModelAgreementOffers
+  - Name: bedrock:ListGuardrails
+  - Name: bedrock:ListModelEvaluationJobs
+  - Name: bedrock:ListModelInvocationJobs
   - Name: bedrock:PutFoundationModelEntitlement
   - Name: bedrock:PutUseCaseForModelAccess
-  - Name: bedrock:QueryKnowledgeBase
-
-  # APIs without an IAM action
-  - Name: bedrock:DeleteAgent
-  - Name: bedrock:DeleteAgentActionGroup
-  - Name: bedrock:DeleteAgentAlias
-  - Name: bedrock:DeleteAgentVersion
-  - Name: bedrock:PrepareAgent
-  - Name: bedrock:Retrieve
-  - Name: bedrock:RetrieveAndGenerate
+  - Name: bedrock:StopModelInvocationJob
+  - Name: bedrock:UpdateGuardrail
