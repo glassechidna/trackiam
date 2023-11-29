@@ -1,0 +1,166 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCleanRoomsMLFullAccess",
+  "CreateDate": "2023-11-29T21:02:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4EZEI4KN75",
+  "PolicyName": "AWSCleanRoomsMLFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-11-29T21:02:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cleanrooms:ListMembers"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cleanrooms-ml.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CollaborationMembershipCheck"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "cleanrooms-ml.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/cleanrooms-ml*"
+          ],
+          "Sid": "PassServiceRole"
+        },
+        {
+          "Action": [
+            "cleanrooms-ml:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CleanRoomsMLFullAccess"
+        },
+        {
+          "Action": [
+            "cleanrooms:CreateConfiguredAudienceModelAssociation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AssociateModels"
+        },
+        {
+          "Action": [
+            "cleanrooms:GetCollaboration",
+            "cleanrooms:GetConfiguredAudienceModelAssociation",
+            "cleanrooms:GetMembership",
+            "cleanrooms:ListAnalysisTemplates",
+            "cleanrooms:ListCollaborationAnalysisTemplates",
+            "cleanrooms:ListCollaborationConfiguredAudienceModelAssociations",
+            "cleanrooms:ListCollaborations",
+            "cleanrooms:ListConfiguredTableAssociations",
+            "cleanrooms:ListConfiguredTables",
+            "cleanrooms:ListMembers",
+            "cleanrooms:ListMemberships",
+            "cleanrooms:ListProtectedQueries",
+            "cleanrooms:ListSchemas",
+            "cleanrooms:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CleanRoomsConsoleNavigation"
+        },
+        {
+          "Action": [
+            "cleanrooms:TagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cleanrooms:*:*:membership/*/configuredaudiencemodelassociation/*",
+          "Sid": "TagAssociations"
+        },
+        {
+          "Action": [
+            "glue:BatchGetPartition",
+            "glue:GetDatabase",
+            "glue:GetDatabases",
+            "glue:GetPartition",
+            "glue:GetPartitions",
+            "glue:GetSchema",
+            "glue:GetSchemaVersion",
+            "glue:GetTable",
+            "glue:GetTables"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ConsoleDisplayTables"
+        },
+        {
+          "Action": [
+            "iam:GetPolicy",
+            "iam:GetPolicyVersion"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:policy/*cleanroomsml*",
+          "Sid": "GetPolicyToInspectServiceRolePolicy"
+        },
+        {
+          "Action": [
+            "iam:GetRole",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListRolePolicies"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/role/cleanrooms-ml*",
+            "arn:aws:iam::*:role/service-role/cleanrooms-ml*"
+          ],
+          "Sid": "GetRoleAndListRolePoliciesToInspectServiceRole"
+        },
+        {
+          "Action": [
+            "iam:ListPolicies"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListPoliciesToInspectServiceRolePolicy"
+        },
+        {
+          "Action": [
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListRolesToPickServiceRole"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*cleanrooms-ml*",
+          "Sid": "ConsolePickS3Location"
+        },
+        {
+          "Action": [
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ConsolePickOutputBucket"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-11-29T21:02:06Z"
+}

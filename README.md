@@ -13,13 +13,13 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 389
 * Unique actions: 16472
-* Managed policies: 1159
+* Managed policies: 1160
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 312 |
+| `arn:aws:iam::aws:policy/AWS*` | 313 |
 | `arn:aws:iam::aws:policy/Amazon*` | 299 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 260 |
 | `arn:aws:iam::aws:policy/service-role/*` | 186 |
@@ -106,6 +106,7 @@ The following table summarises the AWS APIs.
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
 | [`bedrock`](services/bedrock.yml) | 62 | 0 | 21 |
 | [`appsync`](services/appsync.yml) | 62 | 0 | 6 |
+| [`cleanrooms`](services/cleanrooms.yml) | 62 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 60 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 59 | 0 | 0 |
@@ -138,7 +139,6 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`transcribe`](services/transcribe.yml) | 46 | 0 | 3 |
 | [`inspector2`](services/inspector2.yml) | 46 | 0 | 0 |
-| [`cleanrooms`](services/cleanrooms.yml) | 45 | 17 | 0 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`fsx`](services/fsx.yml) | 45 | 0 | 5 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 45 | 0 | 1 |
