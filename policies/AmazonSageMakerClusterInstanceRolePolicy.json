@@ -1,0 +1,84 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerClusterInstanceRolePolicy",
+  "CreateDate": "2023-11-29T15:11:26Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4BOMTPPOSS",
+  "PolicyName": "AmazonSageMakerClusterInstanceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-11-29T15:11:26Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "/aws/sagemaker/Clusters"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "CloudwatchPutMetricDataAccess"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:ListBucket"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::sagemaker-*"
+          ],
+          "Sid": "DataRetrievalFromS3BucketPermissions"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/sagemaker/Clusters/*"
+          ],
+          "Sid": "CloudwatchLogGroupCreationPermissions"
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/sagemaker/Clusters/*:log-stream:*"
+          ],
+          "Sid": "CloudwatchLogStreamPublishPermissions"
+        },
+        {
+          "Action": [
+            "ssmmessages:CreateControlChannel",
+            "ssmmessages:CreateDataChannel",
+            "ssmmessages:OpenControlChannel",
+            "ssmmessages:OpenDataChannel"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSMConnectivityPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-11-29T15:11:26Z"
+}
