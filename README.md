@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 387
-* Unique actions: 16369
+* Unique actions: 16373
 * Managed policies: 1155
 
 Most common managed policy name prefixes:
@@ -294,6 +294,7 @@ The following table summarises the AWS APIs.
 | [`docdb-elastic`](services/docdb-elastic.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 13 | 0 | 0 |
+| [`controltower`](services/controltower.yml) | 12 | 0 | 41 |
 | [`scheduler`](services/scheduler.yml) | 12 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
@@ -307,7 +308,6 @@ The following table summarises the AWS APIs.
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
 | [`rbin`](services/rbin.yml) | 10 | 0 | 0 |
 | [`pipes`](services/pipes.yml) | 10 | 0 | 0 |
-| [`controltower`](services/controltower.yml) | 9 | 3 | 37 |
 | [`account`](services/account.yml) | 9 | 0 | 4 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
@@ -429,11 +429,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2590 |
-| `Get` | 2348 |
+| `Get` | 2349 |
 | `Delete` | 1875 |
-| `Create` | 1751 |
+| `Create` | 1752 |
 | `Describe` | 1691 |
-| `Update` | 1492 |
+| `Update` | 1494 |
 | `Put` | 459 |
 | `Start` | 371 |
 | `Tag` | 257 |
