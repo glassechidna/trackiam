@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 388
-* Unique actions: 16424
-* Managed policies: 1157
+* Unique actions: 16430
+* Managed policies: 1158
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 311 |
 | `arn:aws:iam::aws:policy/Amazon*` | 299 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 259 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 260 |
 | `arn:aws:iam::aws:policy/service-role/*` | 186 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 95 |
@@ -70,7 +70,7 @@ The following table summarises the AWS APIs.
 | [`workmail`](services/workmail.yml) | 84 | 0 | 51 |
 | [`iotsitewise`](services/iotsitewise.yml) | 84 | 0 | 2 |
 | [`omics`](services/omics.yml) | 82 | 0 | 0 |
-| [`es`](services/es.yml) | 81 | 0 | 10 |
+| [`es`](services/es.yml) | 81 | 0 | 16 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 79 | 0 | 10 |
 | [`macie2`](services/macie2.yml) | 79 | 0 | 0 |
@@ -429,12 +429,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2601 |
-| `Get` | 2361 |
-| `Delete` | 1881 |
+| `List` | 2602 |
+| `Get` | 2362 |
+| `Delete` | 1882 |
 | `Create` | 1760 |
 | `Describe` | 1693 |
-| `Update` | 1498 |
+| `Update` | 1499 |
 | `Put` | 459 |
 | `Start` | 371 |
 | `Tag` | 258 |
