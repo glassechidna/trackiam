@@ -1,22 +1,99 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerCanvasAIServicesAccess",
   "CreateDate": "2023-03-23T22:36:43Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4IA6MZINCJ",
   "PolicyName": "AmazonSageMakerCanvasAIServicesAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-09-30T00:15:02Z",
+    "CreateDate": "2023-11-29T14:47:09Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "bedrock:CreateModelCustomizationJob",
+            "bedrock:CreateProvisionedModelThroughput",
+            "bedrock:TagResource"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": [
+                "Canvas",
+                "SageMaker"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/Canvas": "true",
+              "aws:RequestTag/SageMaker": "true",
+              "aws:ResourceTag/Canvas": "true",
+              "aws:ResourceTag/SageMaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:bedrock:*:*:custom-model/*",
+            "arn:aws:bedrock:*:*:model-customization-job/*",
+            "arn:aws:bedrock:*:*:provisioned-model/*"
+          ],
+          "Sid": "CreateBedrockResourcesPermission"
+        },
+        {
+          "Action": [
+            "bedrock:DeleteProvisionedModelThroughput",
+            "bedrock:GetCustomModel",
+            "bedrock:GetModelCustomizationJob",
+            "bedrock:GetProvisionedModelThroughput",
+            "bedrock:StopModelCustomizationJob"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/Canvas": "true",
+              "aws:ResourceTag/SageMaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:bedrock:*:*:custom-model/*",
+            "arn:aws:bedrock:*:*:model-customization-job/*",
+            "arn:aws:bedrock:*:*:provisioned-model/*"
+          ],
+          "Sid": "GetStopAndDeleteBedrockResourcesPermission"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "bedrock.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/*"
+          ],
+          "Sid": "BedrockFineTuningPassRole"
+        },
+        {
+          "Action": [
+            "bedrock:CreateModelCustomizationJob"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:bedrock:*::foundation-model/*"
+          ],
+          "Sid": "FoundationModelPermission"
+        },
+        {
+          "Action": [
             "bedrock:InvokeModel",
+            "bedrock:InvokeModelWithResponseStream",
             "bedrock:ListFoundationModels"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "Bedrock"
         },
         {
           "Action": [
@@ -29,7 +106,8 @@
             "comprehend:DetectSentiment"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "Comprehend"
         },
         {
           "Action": [
@@ -37,7 +115,8 @@
             "rekognition:DetectText"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "Rekognition"
         },
         {
           "Action": [
@@ -50,13 +129,14 @@
             "textract:StartExpenseAnalysis"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "Textract"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-09-30T00:15:02Z"
+  "UpdateDate": "2023-11-29T14:47:09Z"
 }
