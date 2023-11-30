@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 389
-* Unique actions: 16473
+* Unique actions: 16483
 * Managed policies: 1160
 
 Most common managed policy name prefixes:
@@ -139,9 +139,9 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`transcribe`](services/transcribe.yml) | 46 | 0 | 3 |
 | [`inspector2`](services/inspector2.yml) | 46 | 0 | 0 |
+| [`redshift-serverless`](services/redshift-serverless.yml) | 45 | 10 | 1 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`fsx`](services/fsx.yml) | 45 | 0 | 5 |
-| [`redshift-serverless`](services/redshift-serverless.yml) | 45 | 0 | 1 |
 | [`eks`](services/eks.yml) | 45 | 0 | 1 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
 | [`workdocs`](services/workdocs.yml) | 44 | 0 | 15 |
@@ -243,6 +243,7 @@ The following table summarises the AWS APIs.
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 22 | 0 | 7 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 0 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 0 | 31 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`synthetics`](services/synthetics.yml) | 21 | 0 | 0 |
@@ -265,7 +266,6 @@ The following table summarises the AWS APIs.
 | [`ssm-sap`](services/ssm-sap.yml) | 18 | 0 | 3 |
 | [`resource-groups`](services/resource-groups.yml) | 18 | 0 | 3 |
 | [`medical-imaging`](services/medical-imaging.yml) | 18 | 0 | 0 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 17 | 0 | 35 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`rum`](services/rum.yml) | 17 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 17 | 0 | 0 |
@@ -430,12 +430,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2614 |
-| `Get` | 2371 |
-| `Delete` | 1889 |
-| `Create` | 1765 |
+| `List` | 2616 |
+| `Get` | 2372 |
+| `Delete` | 1891 |
+| `Create` | 1767 |
 | `Describe` | 1693 |
-| `Update` | 1502 |
+| `Update` | 1504 |
 | `Put` | 461 |
 | `Start` | 373 |
 | `Tag` | 259 |
