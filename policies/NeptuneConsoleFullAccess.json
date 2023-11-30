@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/NeptuneConsoleFullAccess",
   "CreateDate": "2018-06-19T21:35:19Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJWTD4ELX2KRNICUVQ",
   "PolicyName": "NeptuneConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-09-02T17:25:07Z",
+    "CreateDate": "2023-11-30T07:32:44Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "neptune-graph.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/neptune-graph.amazonaws.com/AWSServiceRoleForNeptuneGraph",
+          "Sid": "AllowCreateSLRForNeptuneAnalytics"
+        },
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
@@ -18,7 +29,19 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/aws-service-role/rds.amazonaws.com/AWSServiceRoleForRDS"
+          "Resource": "arn:aws:iam::*:role/aws-service-role/rds.amazonaws.com/AWSServiceRoleForRDS",
+          "Sid": "AllowCreateSLRForNeptune"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:passedToService": "neptune-graph.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowPassRoleForNeptuneAnalytics"
         },
         {
           "Action": "iam:PassRole",
@@ -28,7 +51,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowPassRoleForNeptune"
         },
         {
           "Action": [
@@ -46,7 +70,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:rds:*:*:*"
-          ]
+          ],
+          "Sid": "AllowNeptuneCreate"
         },
         {
           "Action": [
@@ -113,7 +138,36 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AllowOtherDepedentPermissions"
+        },
+        {
+          "Action": [
+            "neptune-graph:CancelImportTask",
+            "neptune-graph:CreateGraph",
+            "neptune-graph:CreateGraphSnapshot",
+            "neptune-graph:CreateGraphUsingImportTask",
+            "neptune-graph:CreatePrivateGraphEndpoint",
+            "neptune-graph:DeleteGraph",
+            "neptune-graph:DeleteGraphSnapshot",
+            "neptune-graph:DeletePrivateGraphEndpoint",
+            "neptune-graph:GetGraph",
+            "neptune-graph:GetGraphSnapshot",
+            "neptune-graph:GetImportTask",
+            "neptune-graph:GetPrivateGraphEndpoint",
+            "neptune-graph:ListGraphSnapshots",
+            "neptune-graph:ListGraphs",
+            "neptune-graph:ListImportTasks",
+            "neptune-graph:ListPrivateGraphEndpoints",
+            "neptune-graph:ResetGraph",
+            "neptune-graph:RestoreGraphFromSnapshot",
+            "neptune-graph:UpdateGraph"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:neptune-graph:*:*:*"
+          ],
+          "Sid": "AllowManagementPermissionsForNeptuneAnalytics"
         },
         {
           "Action": [
@@ -182,13 +236,14 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AllowManagementPermissionsForRDS"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-09-02T17:25:07Z"
+  "UpdateDate": "2023-11-30T07:32:44Z"
 }

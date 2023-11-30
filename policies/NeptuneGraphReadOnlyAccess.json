@@ -1,0 +1,73 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/NeptuneGraphReadOnlyAccess",
+  "CreateDate": "2023-11-30T07:32:17Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4J6TLMD54B",
+  "PolicyName": "NeptuneGraphReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-11-30T07:32:17Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowReadOnlyPermissionsForCloudwatch"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowReadOnlyPermissionsForEC2"
+        },
+        {
+          "Action": [
+            "kms:ListAliases",
+            "kms:ListKeys"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowReadOnlyPermissionsForKMS"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogStreams",
+            "logs:GetLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/neptune/*:log-stream:*"
+          ],
+          "Sid": "AllowReadOnlyPermissionsForLogs"
+        },
+        {
+          "Action": [
+            "neptune-graph:Get*",
+            "neptune-graph:List*",
+            "neptune-graph:Read*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowReadOnlyPermissionsForNeptuneGraph"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-11-30T07:32:17Z"
+}
