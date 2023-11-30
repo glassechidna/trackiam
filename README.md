@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 389
-* Unique actions: 16497
+* Unique actions: 16502
 * Managed policies: 1161
 
 Most common managed policy name prefixes:
@@ -302,6 +302,7 @@ The following table summarises the AWS APIs.
 | [`bcm-data-exports`](services/bcm-data-exports.yml) | 12 | 0 | 0 |
 | [`repostspace`](services/repostspace.yml) | 11 | 0 | 0 |
 | [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 11 | 0 | 0 |
+| [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 11 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 10 | 0 | 41 |
 | [`supportapp`](services/supportapp.yml) | 10 | 0 | 3 |
@@ -328,7 +329,6 @@ The following table summarises the AWS APIs.
 | [`ebs`](services/ebs.yml) | 6 | 0 | 0 |
 | [`cloudfront-keyvaluestore`](services/cloudfront-keyvaluestore.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
-| [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 6 | 0 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 6 | 0 | 0 |
 | [`s3-outposts`](services/s3-outposts.yml) | 5 | 0 | 43 |
 | [`pricing`](services/pricing.yml) | 5 | 0 | 0 |
@@ -430,12 +430,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2618 |
+| `List` | 2619 |
 | `Get` | 2377 |
-| `Delete` | 1892 |
-| `Create` | 1768 |
+| `Delete` | 1893 |
+| `Create` | 1769 |
 | `Describe` | 1693 |
-| `Update` | 1505 |
+| `Update` | 1507 |
 | `Put` | 461 |
 | `Start` | 373 |
 | `Tag` | 259 |
