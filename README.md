@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 389
-* Unique actions: 16483
+* Unique actions: 16484
 * Managed policies: 1161
 
 Most common managed policy name prefixes:
@@ -78,8 +78,8 @@ The following table summarises the AWS APIs.
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 75 | 0 | 4 |
+| [`elasticache`](services/elasticache.yml) | 75 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
-| [`elasticache`](services/elasticache.yml) | 75 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 75 | 0 | 1 |
 | [`sms-voice`](services/sms-voice.yml) | 74 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
@@ -116,6 +116,7 @@ The following table summarises the AWS APIs.
 | [`events`](services/events.yml) | 56 | 0 | 2 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 2 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
+| [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 54 | 0 | 26 |
 | [`qbusiness`](services/qbusiness.yml) | 54 | 0 | 7 |
@@ -139,7 +140,6 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`transcribe`](services/transcribe.yml) | 46 | 0 | 3 |
 | [`inspector2`](services/inspector2.yml) | 46 | 0 | 0 |
-| [`redshift-serverless`](services/redshift-serverless.yml) | 45 | 10 | 1 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`fsx`](services/fsx.yml) | 45 | 0 | 5 |
 | [`eks`](services/eks.yml) | 45 | 0 | 1 |
