@@ -148,9 +148,9 @@ The following table summarises the AWS APIs.
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`ecr`](services/ecr.yml) | 43 | 0 | 5 |
+| [`wisdom`](services/wisdom.yml) | 42 | 0 | 0 |
 | [`fms`](services/fms.yml) | 42 | 0 | 0 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
-| [`wisdom`](services/wisdom.yml) | 41 | 0 | 1 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 40 | 0 | 3 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 40 | 0 | 0 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
