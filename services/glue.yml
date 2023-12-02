@@ -10,6 +10,7 @@ Actions:
   - Name: glue:BatchGetDevEndpoints
   - Name: glue:BatchGetJobs
   - Name: glue:BatchGetPartition
+  - Name: glue:BatchGetTableOptimizer
   - Name: glue:BatchGetTriggers
   - Name: glue:BatchGetWorkflows
   - Name: glue:BatchStopJobRun
@@ -37,6 +38,7 @@ Actions:
   - Name: glue:CreateSecurityConfiguration
   - Name: glue:CreateSession
   - Name: glue:CreateTable
+  - Name: glue:CreateTableOptimizer
   - Name: glue:CreateTrigger
   - Name: glue:CreateUserDefinedFunction
   - Name: glue:CreateWorkflow
@@ -61,6 +63,7 @@ Actions:
   - Name: glue:DeleteSecurityConfiguration
   - Name: glue:DeleteSession
   - Name: glue:DeleteTable
+  - Name: glue:DeleteTableOptimizer
   - Name: glue:DeleteTableVersion
   - Name: glue:DeleteTrigger
   - Name: glue:DeleteUserDefinedFunction
@@ -73,6 +76,8 @@ Actions:
   - Name: glue:GetClassifiers
   - Name: glue:GetColumnStatisticsForPartition
   - Name: glue:GetColumnStatisticsForTable
+  - Name: glue:GetColumnStatisticsTaskRun
+  - Name: glue:GetColumnStatisticsTaskRuns
   - Name: glue:GetConnection
   - Name: glue:GetConnections
   - Name: glue:GetCrawler
@@ -115,6 +120,7 @@ Actions:
   - Name: glue:GetSession
   - Name: glue:GetStatement
   - Name: glue:GetTable
+  - Name: glue:GetTableOptimizer
   - Name: glue:GetTableVersion
   - Name: glue:GetTableVersions
   - Name: glue:GetTables
@@ -129,6 +135,7 @@ Actions:
   - Name: glue:GetWorkflowRuns
   - Name: glue:ImportCatalogToGlue
   - Name: glue:ListBlueprints
+  - Name: glue:ListColumnStatisticsTaskRuns
   - Name: glue:ListCrawlers
   - Name: glue:ListCrawls
   - Name: glue:ListCustomEntityTypes
@@ -144,6 +151,7 @@ Actions:
   - Name: glue:ListSchemas
   - Name: glue:ListSessions
   - Name: glue:ListStatements
+  - Name: glue:ListTableOptimizerRuns
   - Name: glue:ListTriggers
   - Name: glue:ListWorkflows
   - Name: glue:PutDataCatalogEncryptionSettings
@@ -158,6 +166,7 @@ Actions:
   - Name: glue:RunStatement
   - Name: glue:SearchTables
   - Name: glue:StartBlueprintRun
+  - Name: glue:StartColumnStatisticsTaskRun
   - Name: glue:StartCrawler
   - Name: glue:StartCrawlerSchedule
   - Name: glue:StartDataQualityRuleRecommendationRun
@@ -169,6 +178,7 @@ Actions:
   - Name: glue:StartMLLabelingSetGenerationTaskRun
   - Name: glue:StartTrigger
   - Name: glue:StartWorkflowRun
+  - Name: glue:StopColumnStatisticsTaskRun
   - Name: glue:StopCrawler
   - Name: glue:StopCrawlerSchedule
   - Name: glue:StopSession
@@ -194,6 +204,7 @@ Actions:
   - Name: glue:UpdateSchema
   - Name: glue:UpdateSourceControlFromJob
   - Name: glue:UpdateTable
+  - Name: glue:UpdateTableOptimizer
   - Name: glue:UpdateTrigger
   - Name: glue:UpdateUserDefinedFunction
   - Name: glue:UpdateWorkflow
@@ -206,6 +217,7 @@ Actions:
   - Name: glue:GlueNotebookAuthorize
   - Name: glue:GlueNotebookRefreshCredentials
   - Name: glue:NotifyEvent
+  - Name: glue:PassConnection
   - Name: glue:PublishDataQuality
   - Name: glue:RunDataPreviewStatement
   - Name: glue:SendFeedback
@@ -218,17 +230,6 @@ Actions:
 
   # APIs without an IAM action
   - Name: glue:BatchGetDataQualityResult
-  - Name: glue:BatchGetTableOptimizer
-  - Name: glue:CreateTableOptimizer
-  - Name: glue:DeleteTableOptimizer
-  - Name: glue:GetColumnStatisticsTaskRun
-  - Name: glue:GetColumnStatisticsTaskRuns
-  - Name: glue:GetTableOptimizer
   - Name: glue:GetUnfilteredPartitionMetadata
   - Name: glue:GetUnfilteredPartitionsMetadata
   - Name: glue:GetUnfilteredTableMetadata
-  - Name: glue:ListColumnStatisticsTaskRuns
-  - Name: glue:ListTableOptimizerRuns
-  - Name: glue:StartColumnStatisticsTaskRun
-  - Name: glue:StopColumnStatisticsTaskRun
-  - Name: glue:UpdateTableOptimizer
