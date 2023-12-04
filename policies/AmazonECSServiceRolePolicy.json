@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonECSServiceRolePolicy",
   "CreateDate": "2017-10-14T01:18:58Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIVUWKCAI7URU4WUEI",
   "PolicyName": "AmazonECSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-10-10T16:57:39Z",
+    "CreateDate": "2023-12-04T19:32:25Z",
     "Document": {
       "Statement": [
         {
@@ -23,8 +23,12 @@
         },
         {
           "Action": [
+            "autoscaling:CompleteLifecycleAction",
+            "autoscaling:DeleteLifecycleHook",
             "autoscaling:DeletePolicy",
+            "autoscaling:PutLifecycleHook",
             "autoscaling:PutScalingPolicy",
+            "autoscaling:RecordLifecycleActionHeartbeat",
             "autoscaling:SetInstanceProtection",
             "autoscaling:UpdateAutoScalingGroup"
           ],
@@ -36,6 +40,20 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AutoScalingManagement"
+        },
+        {
+          "Action": [
+            "events:PutRule",
+            "events:PutTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "events:ManagedBy": "ecs.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EventBridgeRuleManagement"
         },
         {
           "Action": [
@@ -70,6 +88,7 @@
           "Action": [
             "autoscaling-plans:CreateScalingPlan",
             "autoscaling-plans:DeleteScalingPlan",
+            "autoscaling-plans:DescribeScalingPlanResources",
             "autoscaling-plans:DescribeScalingPlans"
           ],
           "Effect": "Allow",
@@ -134,6 +153,15 @@
         },
         {
           "Action": [
+            "events:DescribeRule",
+            "events:ListTargetsByRule"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/ecs-managed-*",
+          "Sid": "EventBridge"
+        },
+        {
+          "Action": [
             "logs:CreateLogGroup",
             "logs:DescribeLogGroups",
             "logs:PutRetentionPolicy"
@@ -184,7 +212,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2023-10-10T16:57:39Z"
+  "UpdateDate": "2023-12-04T19:32:25Z"
 }
