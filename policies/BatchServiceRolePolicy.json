@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/BatchServiceRolePolicy",
   "CreateDate": "2021-03-10T06:55:36Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4COHHXEWBT",
   "PolicyName": "BatchServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-10-17T17:20:22Z",
+    "CreateDate": "2023-12-05T22:52:40Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:instance/*"
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "AWSBatchPolicyStatement16"
         },
         {
           "Action": "iam:CreateServiceLinkedRole",
@@ -33,7 +34,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSBatchPolicyStatement6"
         },
         {
           "Action": "iam:PassRole",
@@ -49,7 +51,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AWSBatchPolicyStatement5"
         },
         {
           "Action": [
@@ -61,7 +64,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSBatchPolicyStatement4"
         },
         {
           "Action": [
@@ -76,7 +80,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSBatchPolicyStatement8"
         },
         {
           "Action": [
@@ -88,7 +93,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSBatchPolicyStatement7"
         },
         {
           "Action": [
@@ -106,7 +112,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AWSBatchPolicyStatement17"
         },
         {
           "Action": [
@@ -119,7 +126,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSBatchPolicyStatement14"
         },
         {
           "Action": "ec2:RunInstances",
@@ -138,7 +146,8 @@
             "arn:aws:ec2:*::snapshot/*",
             "arn:aws:elastic-inference:*:*:elastic-inference-accelerator/*",
             "arn:aws:resource-groups:*:*:group/*"
-          ]
+          ],
+          "Sid": "AWSBatchPolicyStatement15"
         },
         {
           "Action": [
@@ -151,7 +160,8 @@
             "autoscaling:UpdateAutoScalingGroup"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:autoscaling:*:*:autoScalingGroup:*:autoScalingGroupName/AWSBatch*"
+          "Resource": "arn:aws:autoscaling:*:*:autoScalingGroup:*:autoScalingGroupName/AWSBatch*",
+          "Sid": "AWSBatchPolicyStatement10"
         },
         {
           "Action": [
@@ -159,7 +169,8 @@
             "autoscaling:DeleteLaunchConfiguration"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:autoscaling:*:*:launchConfiguration:*:launchConfigurationName/AWSBatch*"
+          "Resource": "arn:aws:autoscaling:*:*:launchConfiguration:*:launchConfigurationName/AWSBatch*",
+          "Sid": "AWSBatchPolicyStatement9"
         },
         {
           "Action": [
@@ -167,6 +178,7 @@
             "autoscaling:DescribeAutoScalingGroups",
             "autoscaling:DescribeAutoScalingInstances",
             "autoscaling:DescribeLaunchConfigurations",
+            "autoscaling:DescribeScalingActivities",
             "ec2:DescribeAccountAttributes",
             "ec2:DescribeImageAttribute",
             "ec2:DescribeImages",
@@ -177,6 +189,7 @@
             "ec2:DescribeLaunchTemplateVersions",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSpotFleetInstances",
+            "ec2:DescribeSpotFleetRequestHistory",
             "ec2:DescribeSpotFleetRequests",
             "ec2:DescribeSpotInstanceRequests",
             "ec2:DescribeSpotPriceHistory",
@@ -201,7 +214,8 @@
             "logs:DescribeLogGroups"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSBatchPolicyStatement1"
         },
         {
           "Action": [
@@ -212,7 +226,8 @@
             "ecs:StopTask"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ecs:*:*:cluster/AWSBatch*"
+          "Resource": "arn:aws:ecs:*:*:cluster/AWSBatch*",
+          "Sid": "AWSBatchPolicyStatement11"
         },
         {
           "Action": [
@@ -221,14 +236,16 @@
             "ecs:StopTask"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ecs:*:*:task-definition/*"
+          "Resource": "arn:aws:ecs:*:*:task-definition/*",
+          "Sid": "AWSBatchPolicyStatement12"
         },
         {
           "Action": [
             "ecs:StopTask"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ecs:*:*:task/*/*"
+          "Resource": "arn:aws:ecs:*:*:task/*/*",
+          "Sid": "AWSBatchPolicyStatement13"
         },
         {
           "Action": [
@@ -236,20 +253,22 @@
             "logs:CreateLogStream"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:logs:*:*:log-group:/aws/batch/job*"
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/batch/job*",
+          "Sid": "AWSBatchPolicyStatement2"
         },
         {
           "Action": [
             "logs:PutLogEvents"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:logs:*:*:log-group:/aws/batch/job*:log-stream:*"
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/batch/job*:log-stream:*",
+          "Sid": "AWSBatchPolicyStatement3"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2022-10-17T17:20:22Z"
+  "UpdateDate": "2023-12-05T22:52:40Z"
 }
