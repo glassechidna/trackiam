@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole",
   "CreateDate": "2016-12-06T19:36:24Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIUETIXPCKASQJURFE",
   "PolicyName": "AWSBatchServiceRole",
   "PolicyVersion": {
-    "CreateDate": "2021-12-07T02:22:29Z",
+    "CreateDate": "2023-12-05T18:49:44Z",
     "Document": {
       "Statement": [
         {
@@ -23,7 +23,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSBatchPolicyStatement4"
         },
         {
           "Action": "iam:PassRole",
@@ -39,7 +40,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AWSBatchPolicyStatement3"
         },
         {
           "Action": [
@@ -53,14 +55,16 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AWSBatchPolicyStatement5"
         },
         {
           "Action": "ecs:TagResource",
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ecs:*:*:task/*_Batch_*"
-          ]
+          ],
+          "Sid": "AWSBatchPolicyStatement2"
         },
         {
           "Action": [
@@ -73,6 +77,7 @@
             "autoscaling:DescribeAutoScalingGroups",
             "autoscaling:DescribeAutoScalingInstances",
             "autoscaling:DescribeLaunchConfigurations",
+            "autoscaling:DescribeScalingActivities",
             "autoscaling:PutNotificationConfiguration",
             "autoscaling:SetDesiredCapacity",
             "autoscaling:SuspendProcesses",
@@ -91,6 +96,7 @@
             "ec2:DescribeLaunchTemplateVersions",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSpotFleetInstances",
+            "ec2:DescribeSpotFleetRequestHistory",
             "ec2:DescribeSpotFleetRequests",
             "ec2:DescribeSpotInstanceRequests",
             "ec2:DescribeSpotPriceHistory",
@@ -127,13 +133,14 @@
             "logs:PutLogEvents"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSBatchPolicyStatement1"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2021-12-07T02:22:29Z"
+  "UpdateDate": "2023-12-05T18:49:44Z"
 }
