@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMigrationHubOrchestratorConsoleFullAccess",
   "CreateDate": "2022-04-20T02:26:28Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4K2IRHZ6FO",
   "PolicyName": "AWSMigrationHubOrchestratorConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-04-20T02:26:28Z",
+    "CreateDate": "2023-12-05T17:34:16Z",
     "Document": {
       "Statement": [
         {
@@ -20,7 +20,16 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "CreateServiceRole"
+        },
+        {
+          "Action": [
+            "account:ListRegions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Account"
         },
         {
           "Action": [
@@ -29,42 +38,67 @@
             "discovery:ListConfigurations"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "Configuration"
         },
         {
           "Action": [
-            "ec2:DescribeInstances"
+            "ec2:DescribeInstances",
+            "ec2:DescribeVpcs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "EC2Describe"
+        },
+        {
+          "Action": [
+            "ecs:ListClusters"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ECS"
         },
         {
           "Action": [
             "iam:GetRole"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/aws-service-role/migrationhub-orchestrator.amazonaws.com/AWSServiceRoleForMigrationHubOrchestrator*"
+          "Resource": "arn:aws:iam::*:role/aws-service-role/migrationhub-orchestrator.amazonaws.com/AWSServiceRoleForMigrationHubOrchestrator*",
+          "Sid": "GetRole"
         },
         {
           "Action": [
-            "iam:ListInstanceProfiles"
+            "iam:ListInstanceProfiles",
+            "iam:ListRoles"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "IAMListProfileRole"
+        },
+        {
+          "Action": [
+            "kms:ListAliases",
+            "kms:ListKeys"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "KMS"
         },
         {
           "Action": [
             "mgh:GetHomeRegion"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "GetHomeRegion"
         },
         {
           "Action": [
             "migrationhub-orchestrator:*"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "MHO"
         },
         {
           "Action": [
@@ -79,27 +113,30 @@
           "Resource": [
             "arn:aws:s3:::migrationhub-orchestrator-*",
             "arn:aws:s3:::migrationhub-orchestrator-*/*"
-          ]
+          ],
+          "Sid": "S3MHO"
         },
         {
           "Action": [
             "s3:ListAllMyBuckets"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:s3:::*"
+          "Resource": "arn:aws:s3:::*",
+          "Sid": "ListAllMyBuckets"
         },
         {
           "Action": [
             "secretsmanager:ListSecrets"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ListSecrets"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-04-20T02:26:28Z"
+  "UpdateDate": "2023-12-05T17:34:16Z"
 }

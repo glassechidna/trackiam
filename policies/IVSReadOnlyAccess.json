@@ -1,0 +1,47 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/IVSReadOnlyAccess",
+  "CreateDate": "2023-12-05T18:00:37Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4KSFZMGQOA",
+  "PolicyName": "IVSReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-12-05T18:00:37Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ivs:BatchGetChannel",
+            "ivs:GetChannel",
+            "ivs:GetParticipant",
+            "ivs:GetPlaybackKeyPair",
+            "ivs:GetRecordingConfiguration",
+            "ivs:GetStage",
+            "ivs:GetStageSession",
+            "ivs:GetStream",
+            "ivs:GetStreamSession",
+            "ivs:ListChannels",
+            "ivs:ListParticipantEvents",
+            "ivs:ListParticipants",
+            "ivs:ListPlaybackKeyPairs",
+            "ivs:ListRecordingConfigurations",
+            "ivs:ListStageSessions",
+            "ivs:ListStages",
+            "ivs:ListStreamKeys",
+            "ivs:ListStreamSessions",
+            "ivs:ListStreams",
+            "ivs:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IVSReadOnlyAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-12-05T18:00:37Z"
+}
