@@ -230,6 +230,7 @@ The following table summarises the AWS APIs.
 | [`cleanrooms-ml`](services/cleanrooms-ml.yml) | 25 | 0 | 0 |
 | [`verifiedpermissions`](services/verifiedpermissions.yml) | 24 | 1 | 0 |
 | [`mediapackagev2`](services/mediapackagev2.yml) | 24 | 0 | 3 |
+| [`fis`](services/fis.yml) | 24 | 0 | 3 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 24 | 0 | 1 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
@@ -272,7 +273,6 @@ The following table summarises the AWS APIs.
 | [`ivschat`](services/ivschat.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`neptune-db`](services/neptune-db.yml) | 16 | 24 | 17 |
-| [`fis`](services/fis.yml) | 16 | 8 | 3 |
 | [`support`](services/support.yml) | 16 | 0 | 9 |
 | [`thinclient`](services/thinclient.yml) | 16 | 0 | 1 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |

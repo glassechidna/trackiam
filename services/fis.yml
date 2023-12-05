@@ -1,32 +1,30 @@
 Actions:
   - Name: fis:CreateExperimentTemplate
+  - Name: fis:CreateTargetAccountConfiguration
   - Name: fis:DeleteExperimentTemplate
+  - Name: fis:DeleteTargetAccountConfiguration
   - Name: fis:GetAction
   - Name: fis:GetExperiment
+  - Name: fis:GetExperimentTargetAccountConfiguration
   - Name: fis:GetExperimentTemplate
+  - Name: fis:GetTargetAccountConfiguration
   - Name: fis:GetTargetResourceType
   - Name: fis:ListActions
+  - Name: fis:ListExperimentResolvedTargets
+  - Name: fis:ListExperimentTargetAccountConfigurations
   - Name: fis:ListExperimentTemplates
   - Name: fis:ListExperiments
   - Name: fis:ListTagsForResource
+  - Name: fis:ListTargetAccountConfigurations
   - Name: fis:ListTargetResourceTypes
   - Name: fis:StartExperiment
   - Name: fis:StopExperiment
   - Name: fis:TagResource
   - Name: fis:UntagResource
   - Name: fis:UpdateExperimentTemplate
+  - Name: fis:UpdateTargetAccountConfiguration
 
   # actions with no corresponding API
   - Name: fis:InjectApiInternalError
   - Name: fis:InjectApiThrottleError
   - Name: fis:InjectApiUnavailableError
-
-  # APIs without an IAM action
-  - Name: fis:CreateTargetAccountConfiguration
-  - Name: fis:DeleteTargetAccountConfiguration
-  - Name: fis:GetExperimentTargetAccountConfiguration
-  - Name: fis:GetTargetAccountConfiguration
-  - Name: fis:ListExperimentResolvedTargets
-  - Name: fis:ListExperimentTargetAccountConfigurations
-  - Name: fis:ListTargetAccountConfigurations
-  - Name: fis:UpdateTargetAccountConfiguration
