@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchFullAccessV2",
   "CreateDate": "2023-08-01T11:32:57Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4K5ELCXZSW",
   "PolicyName": "CloudWatchFullAccessV2",
   "PolicyVersion": {
-    "CreateDate": "2023-08-01T11:32:57Z",
+    "CreateDate": "2023-12-05T19:36:00Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "application-signals.cloudwatch.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/application-signals.cloudwatch.amazonaws.com/AWSServiceRoleForCloudWatchApplicationSignals",
+          "Sid": "CloudWatchApplicationSignalsServiceLinkedRolePermissions"
+        },
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
@@ -32,11 +43,14 @@
             "iam:GetRole",
             "logs:*",
             "oam:ListSinks",
+            "rum:*",
             "sns:CreateTopic",
             "sns:ListSubscriptions",
             "sns:ListSubscriptionsByTopic",
             "sns:ListTopics",
-            "sns:Subscribe"
+            "sns:Subscribe",
+            "synthetics:*",
+            "xray:*"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -54,7 +68,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-08-01T11:32:57Z"
+  "UpdateDate": "2023-12-05T19:36:00Z"
 }

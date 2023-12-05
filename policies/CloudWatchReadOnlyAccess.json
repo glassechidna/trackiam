@@ -1,20 +1,22 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess",
   "CreateDate": "2015-02-06T18:40:01Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJN23PDQP7SZQAE3QE",
   "PolicyName": "CloudWatchReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-09-14T11:15:56Z",
+    "CreateDate": "2023-12-05T19:24:15Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "application-autoscaling:DescribeScalingPolicies",
             "autoscaling:Describe*",
+            "cloudwatch:BatchGet*",
             "cloudwatch:Describe*",
+            "cloudwatch:GenerateQuery",
             "cloudwatch:Get*",
             "cloudwatch:List*",
             "logs:Describe*",
@@ -27,24 +29,34 @@
             "logs:StopQuery",
             "logs:TestMetricFilter",
             "oam:ListSinks",
+            "rum:BatchGet*",
+            "rum:Get*",
+            "rum:List*",
             "sns:Get*",
-            "sns:List*"
+            "sns:List*",
+            "synthetics:Describe*",
+            "synthetics:Get*",
+            "synthetics:List*",
+            "xray:BatchGet*",
+            "xray:Get*"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "CloudWatchReadOnlyAccessPermissions"
         },
         {
           "Action": [
             "oam:ListAttachedLinks"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:oam:*:*:sink/*"
+          "Resource": "arn:aws:oam:*:*:sink/*",
+          "Sid": "OAMReadPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2023-09-14T11:15:56Z"
+  "UpdateDate": "2023-12-05T19:24:15Z"
 }
