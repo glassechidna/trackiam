@@ -10,6 +10,7 @@ Actions:
   - Name: cloudfront:CreateFunction
   - Name: cloudfront:CreateInvalidation
   - Name: cloudfront:CreateKeyGroup
+  - Name: cloudfront:CreateKeyValueStore
   - Name: cloudfront:CreateMonitoringSubscription
   - Name: cloudfront:CreateOriginAccessControl
   - Name: cloudfront:CreateOriginRequestPolicy
@@ -26,6 +27,7 @@ Actions:
   - Name: cloudfront:DeleteFieldLevelEncryptionProfile
   - Name: cloudfront:DeleteFunction
   - Name: cloudfront:DeleteKeyGroup
+  - Name: cloudfront:DeleteKeyValueStore
   - Name: cloudfront:DeleteMonitoringSubscription
   - Name: cloudfront:DeleteOriginAccessControl
   - Name: cloudfront:DeleteOriginRequestPolicy
@@ -34,6 +36,7 @@ Actions:
   - Name: cloudfront:DeleteResponseHeadersPolicy
   - Name: cloudfront:DeleteStreamingDistribution
   - Name: cloudfront:DescribeFunction
+  - Name: cloudfront:DescribeKeyValueStore
   - Name: cloudfront:GetCachePolicy
   - Name: cloudfront:GetCachePolicyConfig
   - Name: cloudfront:GetCloudFrontOriginAccessIdentity
@@ -78,6 +81,7 @@ Actions:
   - Name: cloudfront:ListFunctions
   - Name: cloudfront:ListInvalidations
   - Name: cloudfront:ListKeyGroups
+  - Name: cloudfront:ListKeyValueStores
   - Name: cloudfront:ListOriginAccessControls
   - Name: cloudfront:ListOriginRequestPolicies
   - Name: cloudfront:ListPublicKeys
@@ -97,6 +101,7 @@ Actions:
   - Name: cloudfront:UpdateFieldLevelEncryptionProfile
   - Name: cloudfront:UpdateFunction
   - Name: cloudfront:UpdateKeyGroup
+  - Name: cloudfront:UpdateKeyValueStore
   - Name: cloudfront:UpdateOriginAccessControl
   - Name: cloudfront:UpdateOriginRequestPolicy
   - Name: cloudfront:UpdatePublicKey
@@ -115,9 +120,4 @@ Actions:
 
   # APIs without an IAM action
   - Name: cloudfront:CreateDistributionWithTags
-  - Name: cloudfront:CreateKeyValueStore
-  - Name: cloudfront:DeleteKeyValueStore
-  - Name: cloudfront:DescribeKeyValueStore
-  - Name: cloudfront:ListKeyValueStores
   - Name: cloudfront:UpdateDistributionWithStagingConfig
-  - Name: cloudfront:UpdateKeyValueStore
