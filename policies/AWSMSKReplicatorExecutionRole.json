@@ -1,0 +1,69 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSMSKReplicatorExecutionRole",
+  "CreateDate": "2023-12-06T00:07:52Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4DZT4HSKAC",
+  "PolicyName": "AWSMSKReplicatorExecutionRole",
+  "PolicyVersion": {
+    "CreateDate": "2023-12-06T00:07:52Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "kafka-cluster:AlterCluster",
+            "kafka-cluster:AlterGroup",
+            "kafka-cluster:AlterTopic",
+            "kafka-cluster:AlterTopicDynamicConfiguration",
+            "kafka-cluster:Connect",
+            "kafka-cluster:CreateTopic",
+            "kafka-cluster:DescribeCluster",
+            "kafka-cluster:DescribeGroup",
+            "kafka-cluster:DescribeTopic",
+            "kafka-cluster:DescribeTopicDynamicConfiguration",
+            "kafka-cluster:ReadData",
+            "kafka-cluster:WriteData"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:kafka:*:*:cluster/*"
+          ],
+          "Sid": "ClusterPermissions"
+        },
+        {
+          "Action": [
+            "kafka-cluster:AlterCluster",
+            "kafka-cluster:AlterTopic",
+            "kafka-cluster:AlterTopicDynamicConfiguration",
+            "kafka-cluster:CreateTopic",
+            "kafka-cluster:DescribeTopic",
+            "kafka-cluster:DescribeTopicDynamicConfiguration",
+            "kafka-cluster:ReadData",
+            "kafka-cluster:WriteData"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:kafka:*:*:topic/*/*"
+          ],
+          "Sid": "TopicPermissions"
+        },
+        {
+          "Action": [
+            "kafka-cluster:AlterGroup",
+            "kafka-cluster:DescribeGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:kafka:*:*:group/*/*"
+          ],
+          "Sid": "GroupPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-12-06T00:07:52Z"
+}
