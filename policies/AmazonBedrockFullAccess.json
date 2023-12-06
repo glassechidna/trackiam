@@ -1,0 +1,62 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonBedrockFullAccess",
+  "CreateDate": "2023-12-06T15:47:17Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4IZPIPC3GC",
+  "PolicyName": "AmazonBedrockFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-12-06T15:47:17Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "bedrock.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*AmazonBedrock*",
+          "Sid": "PassRoleToBedrock"
+        },
+        {
+          "Action": [
+            "bedrock:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BedrockAll"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "APIsWithAllResourceAccess"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:*:kms:*:::*",
+          "Sid": "DescribeKey"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-12-06T15:47:17Z"
+}

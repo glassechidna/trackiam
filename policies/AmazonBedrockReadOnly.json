@@ -1,0 +1,38 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonBedrockReadOnly",
+  "CreateDate": "2023-12-06T15:48:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4LQSTUJ5QY",
+  "PolicyName": "AmazonBedrockReadOnly",
+  "PolicyVersion": {
+    "CreateDate": "2023-12-06T15:48:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "bedrock:GetCustomModel",
+            "bedrock:GetFoundationModel",
+            "bedrock:GetFoundationModelAvailability",
+            "bedrock:GetModelCustomizationJob",
+            "bedrock:GetModelInvocationLoggingConfiguration",
+            "bedrock:GetProvisionedModelThroughput",
+            "bedrock:ListCustomModels",
+            "bedrock:ListFoundationModels",
+            "bedrock:ListModelCustomizationJobs",
+            "bedrock:ListProvisionedModelThroughputs",
+            "bedrock:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonBedrockReadOnly"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-12-06T15:48:19Z"
+}
