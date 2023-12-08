@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonChimeSDKMediaPipelinesServiceLinkedRolePolicy",
   "CreateDate": "2022-04-04T22:02:05Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ERP6SEMWK",
   "PolicyName": "AmazonChimeSDKMediaPipelinesServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-09-07T20:08:32Z",
+    "CreateDate": "2023-12-08T19:14:31Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "cloudwatch:PutMetricData",
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/ChimeSDK"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowPutMetricsForChimeSDKNamespace"
+        },
         {
           "Action": [
             "chime:CreateAttendee",
@@ -17,7 +28,8 @@
             "chime:GetMeeting"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowChimeMeetingAccess"
         },
         {
           "Action": [
@@ -30,7 +42,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:kinesisvideo:*:*:stream/ChimeMediaPipelines-*"
-          ]
+          ],
+          "Sid": "AllowKinesisVideoStreamsAccess"
         },
         {
           "Action": [
@@ -39,13 +52,14 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AllowKinesisVideoStreamsListAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-09-07T20:08:32Z"
+  "UpdateDate": "2023-12-08T19:14:31Z"
 }
