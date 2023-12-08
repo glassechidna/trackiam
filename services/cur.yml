@@ -1,8 +1,11 @@
 Actions:
   - Name: cur:DeleteReportDefinition
   - Name: cur:DescribeReportDefinitions
+  - Name: cur:ListTagsForResource
   - Name: cur:ModifyReportDefinition
   - Name: cur:PutReportDefinition
+  - Name: cur:TagResource
+  - Name: cur:UntagResource
 
   # actions with no corresponding API
   - Name: cur:GetClassicReport
@@ -10,8 +13,3 @@ Actions:
   - Name: cur:GetUsageReport
   - Name: cur:PutClassicReportPreferences
   - Name: cur:ValidateReportDestination
-
-  # APIs without an IAM action
-  - Name: cur:ListTagsForResource
-  - Name: cur:TagResource
-  - Name: cur:UntagResource
