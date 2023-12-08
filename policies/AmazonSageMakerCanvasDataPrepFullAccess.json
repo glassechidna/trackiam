@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerCanvasDataPrepFullAccess",
   "CreateDate": "2023-10-27T22:56:13Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CKHJVSVSQ",
   "PolicyName": "AmazonSageMakerCanvasDataPrepFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-10-27T22:56:13Z",
+    "CreateDate": "2023-12-08T02:53:24Z",
     "Document": {
       "Statement": [
         {
@@ -15,7 +15,7 @@
           "Condition": {
             "StringEquals": {
               "iam:PassedToService": [
-                "events.amazon.com",
+                "events.amazonaws.com",
                 "sagemaker.amazonaws.com"
               ]
             }
@@ -41,18 +41,37 @@
         {
           "Action": [
             "events:DescribeRule",
-            "events:PutRule",
-            "events:PutTargets",
+            "events:PutTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/sagemaker:is-canvas-data-prep-job": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/*",
+          "Sid": "EventBridgeOperations"
+        },
+        {
+          "Action": [
+            "events:PutRule"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/sagemaker:is-canvas-data-prep-job": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/*",
+          "Sid": "EventBridgePutOperation"
+        },
+        {
+          "Action": [
             "events:TagResource"
           ],
           "Condition": {
-            "ForAllValues:StringEquals": {
-              "aws:TagKeys": [
-                "sagemaker:is-canvas-data-prep-job",
-                "sm_canvas_user_profile"
-              ]
-            },
             "StringEquals": {
+              "aws:RequestTag/sagemaker:is-canvas-data-prep-job": "true",
               "aws:ResourceTag/sagemaker:is-canvas-data-prep-job": "true"
             }
           },
@@ -85,17 +104,12 @@
         {
           "Action": [
             "secretsmanager:DescribeSecret",
-            "secretsmanager:GetSecretValue",
-            "secretsmanager:TagResource"
+            "secretsmanager:GetSecretValue"
           ],
           "Condition": {
-            "ForAllValues:StringEquals": {
-              "aws:TagKeys": [
-                "SageMaker"
-              ]
-            },
             "StringEquals": {
-              "aws:RequestTag/SageMaker": "true"
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/SageMaker": "true"
             }
           },
           "Effect": "Allow",
@@ -262,6 +276,16 @@
         },
         {
           "Action": [
+            "sagemaker:AddTags",
+            "sagemaker:CreateProcessingJob",
+            "sagemaker:DescribeProcessingJob"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:processing-job/*canvas-data-prep*",
+          "Sid": "SageMakerProcessingJobOperations"
+        },
+        {
+          "Action": [
             "sagemaker:CreateFeatureGroup",
             "sagemaker:DescribeFeatureGroup"
           ],
@@ -282,22 +306,12 @@
           "Effect": "Allow",
           "Resource": "arn:aws:sagemaker:*:*:pipeline/*canvas-data-prep*",
           "Sid": "SageMakerPipelineOperations"
-        },
-        {
-          "Action": [
-            "sagemaker:CreateProcessingJob",
-            "sagemaker:DescribeProcessingJob",
-            "sagemaker:addTags"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:sagemaker:*:*:processing-job/*canvas-data-prep*",
-          "Sid": "SageMakerProcessingJobOperations"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-10-27T22:56:13Z"
+  "UpdateDate": "2023-12-08T02:53:24Z"
 }
