@@ -3,27 +3,39 @@ Actions:
   - Name: finspace:CreateKxChangeset
   - Name: finspace:CreateKxCluster
   - Name: finspace:CreateKxDatabase
+  - Name: finspace:CreateKxDataview
   - Name: finspace:CreateKxEnvironment
+  - Name: finspace:CreateKxScalingGroup
   - Name: finspace:CreateKxUser
+  - Name: finspace:CreateKxVolume
   - Name: finspace:DeleteEnvironment
   - Name: finspace:DeleteKxCluster
   - Name: finspace:DeleteKxDatabase
+  - Name: finspace:DeleteKxDataview
   - Name: finspace:DeleteKxEnvironment
+  - Name: finspace:DeleteKxScalingGroup
   - Name: finspace:DeleteKxUser
+  - Name: finspace:DeleteKxVolume
   - Name: finspace:GetEnvironment
   - Name: finspace:GetKxChangeset
   - Name: finspace:GetKxCluster
   - Name: finspace:GetKxConnectionString
   - Name: finspace:GetKxDatabase
+  - Name: finspace:GetKxDataview
   - Name: finspace:GetKxEnvironment
+  - Name: finspace:GetKxScalingGroup
   - Name: finspace:GetKxUser
+  - Name: finspace:GetKxVolume
   - Name: finspace:ListEnvironments
   - Name: finspace:ListKxChangesets
   - Name: finspace:ListKxClusterNodes
   - Name: finspace:ListKxClusters
   - Name: finspace:ListKxDatabases
+  - Name: finspace:ListKxDataviews
   - Name: finspace:ListKxEnvironments
+  - Name: finspace:ListKxScalingGroups
   - Name: finspace:ListKxUsers
+  - Name: finspace:ListKxVolumes
   - Name: finspace:ListTagsForResource
   - Name: finspace:TagResource
   - Name: finspace:UntagResource
@@ -31,9 +43,11 @@ Actions:
   - Name: finspace:UpdateKxClusterCodeConfiguration
   - Name: finspace:UpdateKxClusterDatabases
   - Name: finspace:UpdateKxDatabase
+  - Name: finspace:UpdateKxDataview
   - Name: finspace:UpdateKxEnvironment
   - Name: finspace:UpdateKxEnvironmentNetwork
   - Name: finspace:UpdateKxUser
+  - Name: finspace:UpdateKxVolume
 
   # actions with no corresponding API
   - Name: finspace:ConnectKxCluster
@@ -45,19 +59,3 @@ Actions:
   - Name: finspace:MountKxDatabase
   - Name: finspace:ResetUserPassword
   - Name: finspace:UpdateUser
-
-  # APIs without an IAM action
-  - Name: finspace:CreateKxDataview
-  - Name: finspace:CreateKxScalingGroup
-  - Name: finspace:CreateKxVolume
-  - Name: finspace:DeleteKxDataview
-  - Name: finspace:DeleteKxScalingGroup
-  - Name: finspace:DeleteKxVolume
-  - Name: finspace:GetKxDataview
-  - Name: finspace:GetKxScalingGroup
-  - Name: finspace:GetKxVolume
-  - Name: finspace:ListKxDataviews
-  - Name: finspace:ListKxScalingGroups
-  - Name: finspace:ListKxVolumes
-  - Name: finspace:UpdateKxDataview
-  - Name: finspace:UpdateKxVolume

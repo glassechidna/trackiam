@@ -132,6 +132,7 @@ The following table summarises the AWS APIs.
 | [`mediaconnect`](services/mediaconnect.yml) | 50 | 0 | 3 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
+| [`finspace`](services/finspace.yml) | 49 | 0 | 9 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 49 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 48 | 0 | 6 |
@@ -171,7 +172,6 @@ The following table summarises the AWS APIs.
 | [`states`](services/states.yml) | 36 | 0 | 2 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 0 |
-| [`finspace`](services/finspace.yml) | 35 | 14 | 9 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
 | [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
