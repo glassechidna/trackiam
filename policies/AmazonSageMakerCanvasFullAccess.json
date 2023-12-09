@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerCanvasFullAccess",
   "CreateDate": "2022-09-09T00:44:25Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LG6L7ZJCN",
   "PolicyName": "AmazonSageMakerCanvasFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-09-30T00:15:42Z",
+    "CreateDate": "2023-12-09T00:58:33Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "sagemaker.application-autoscaling.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/sagemaker.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_SageMakerEndpoint",
+          "Sid": "AutoscalingSageMakerEndpointOperation"
+        },
         {
           "Action": [
             "application-autoscaling:PutScalingPolicy",
@@ -24,6 +35,22 @@
           "Effect": "Allow",
           "Resource": "arn:aws:application-autoscaling:*:*:scalable-target/*",
           "Sid": "AutoscalingOperations"
+        },
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:PutMetricAlarm"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaLast": "application-autoscaling.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudwatch:*:*:alarm:TargetTracking*"
+          ],
+          "Sid": "SageMakerCloudWatchUpdate"
         },
         {
           "Action": [
@@ -97,6 +124,15 @@
             "arn:aws:s3:::jumpstart-cache-prod-us-west-2/*"
           ],
           "Sid": "ReadSageMakerJumpstartArtifacts"
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms",
+            "sagemaker:DescribeEndpointConfig"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AsyncEndpointOperations"
         },
         {
           "Action": [
@@ -272,7 +308,9 @@
           "Action": [
             "sagemaker:DeleteEndpointConfig",
             "sagemaker:DeleteModel",
-            "sagemaker:InvokeEndpoint"
+            "sagemaker:InvokeEndpoint",
+            "sagemaker:InvokeEndpointAsync",
+            "sagemaker:UpdateEndpointWeightsAndCapacities"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -310,7 +348,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2023-09-30T00:15:42Z"
+  "UpdateDate": "2023-12-09T00:58:33Z"
 }
