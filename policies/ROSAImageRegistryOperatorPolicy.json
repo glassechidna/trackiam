@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/ROSAImageRegistryOperatorPolicy",
   "CreateDate": "2023-04-27T20:13:18Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4LHLXXTQCY",
   "PolicyName": "ROSAImageRegistryOperatorPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-04-27T20:13:18Z",
+    "CreateDate": "2023-12-12T19:53:12Z",
     "Document": {
       "Statement": [
         {
@@ -20,7 +20,8 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:s3:::*-image-registry-${aws:RequestedRegion}-*/*"
+            "arn:aws:s3:::*-image-registry-${aws:RequestedRegion}-*/*",
+            "arn:aws:s3:::*-image-registry-${aws:RequestedRegion}/*"
           ],
           "Sid": "AllowSpecificObjectActions"
         },
@@ -40,6 +41,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:s3:::*-image-registry-${aws:RequestedRegion}",
             "arn:aws:s3:::*-image-registry-${aws:RequestedRegion}-*"
           ],
           "Sid": "AllowSpecificBucketActions"
@@ -57,7 +59,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-04-27T20:13:18Z"
+  "UpdateDate": "2023-12-12T19:53:12Z"
 }

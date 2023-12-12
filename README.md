@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 389
-* Unique actions: 16527
+* Unique actions: 16534
 * Managed policies: 1163
 
 Most common managed policy name prefixes:
@@ -81,10 +81,10 @@ The following table summarises the AWS APIs.
 | [`elasticache`](services/elasticache.yml) | 75 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 75 | 0 | 1 |
+| [`logs`](services/logs.yml) | 74 | 0 | 8 |
 | [`sms-voice`](services/sms-voice.yml) | 74 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`sso`](services/sso.yml) | 73 | 0 | 53 |
-| [`logs`](services/logs.yml) | 73 | 0 | 9 |
 | [`workspaces`](services/workspaces.yml) | 73 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
 | [`mgn`](services/mgn.yml) | 70 | 0 | 34 |
@@ -95,8 +95,8 @@ The following table summarises the AWS APIs.
 | [`guardduty`](services/guardduty.yml) | 68 | 0 | 1 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
 | [`ds`](services/ds.yml) | 67 | 0 | 10 |
+| [`imagebuilder`](services/imagebuilder.yml) | 66 | 7 | 0 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
-| [`imagebuilder`](services/imagebuilder.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
@@ -430,10 +430,10 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2622 |
-| `Get` | 2388 |
-| `Delete` | 1896 |
-| `Create` | 1772 |
+| `List` | 2625 |
+| `Get` | 2389 |
+| `Delete` | 1897 |
+| `Create` | 1773 |
 | `Describe` | 1693 |
 | `Update` | 1509 |
 | `Put` | 461 |
