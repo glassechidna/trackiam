@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CostOptimizationHubReadOnlyAccess",
+  "CreateDate": "2023-12-13T18:04:15Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4FMI5P7RB7",
+  "PolicyName": "CostOptimizationHubReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-12-13T18:04:15Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cost-optimization-hub:GetPreferences",
+            "cost-optimization-hub:GetRecommendation",
+            "cost-optimization-hub:ListEnrollmentStatuses",
+            "cost-optimization-hub:ListRecommendationSummaries",
+            "cost-optimization-hub:ListRecommendations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CostOptimizationHubReadOnlyAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-12-13T18:04:15Z"
+}
