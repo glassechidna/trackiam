@@ -87,6 +87,7 @@ The following table summarises the AWS APIs.
 | [`sso`](services/sso.yml) | 73 | 0 | 53 |
 | [`workspaces`](services/workspaces.yml) | 73 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
+| [`imagebuilder`](services/imagebuilder.yml) | 73 | 0 | 0 |
 | [`mgn`](services/mgn.yml) | 70 | 0 | 34 |
 | [`cloudformation`](services/cloudformation.yml) | 70 | 0 | 11 |
 | [`wellarchitected`](services/wellarchitected.yml) | 70 | 0 | 0 |
@@ -95,7 +96,6 @@ The following table summarises the AWS APIs.
 | [`guardduty`](services/guardduty.yml) | 68 | 0 | 1 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
 | [`ds`](services/ds.yml) | 67 | 0 | 10 |
-| [`imagebuilder`](services/imagebuilder.yml) | 66 | 7 | 0 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |

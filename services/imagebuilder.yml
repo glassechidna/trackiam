@@ -9,6 +9,7 @@ Actions:
   - Name: imagebuilder:CreateImageRecipe
   - Name: imagebuilder:CreateInfrastructureConfiguration
   - Name: imagebuilder:CreateLifecyclePolicy
+  - Name: imagebuilder:CreateWorkflow
   - Name: imagebuilder:DeleteComponent
   - Name: imagebuilder:DeleteContainerRecipe
   - Name: imagebuilder:DeleteDistributionConfiguration
@@ -17,6 +18,7 @@ Actions:
   - Name: imagebuilder:DeleteImageRecipe
   - Name: imagebuilder:DeleteInfrastructureConfiguration
   - Name: imagebuilder:DeleteLifecyclePolicy
+  - Name: imagebuilder:DeleteWorkflow
   - Name: imagebuilder:GetComponent
   - Name: imagebuilder:GetComponentPolicy
   - Name: imagebuilder:GetContainerRecipe
@@ -30,6 +32,7 @@ Actions:
   - Name: imagebuilder:GetInfrastructureConfiguration
   - Name: imagebuilder:GetLifecycleExecution
   - Name: imagebuilder:GetLifecyclePolicy
+  - Name: imagebuilder:GetWorkflow
   - Name: imagebuilder:GetWorkflowExecution
   - Name: imagebuilder:GetWorkflowStepExecution
   - Name: imagebuilder:ImportComponent
@@ -51,12 +54,16 @@ Actions:
   - Name: imagebuilder:ListLifecycleExecutions
   - Name: imagebuilder:ListLifecyclePolicies
   - Name: imagebuilder:ListTagsForResource
+  - Name: imagebuilder:ListWaitingWorkflowSteps
+  - Name: imagebuilder:ListWorkflowBuildVersions
   - Name: imagebuilder:ListWorkflowExecutions
   - Name: imagebuilder:ListWorkflowStepExecutions
+  - Name: imagebuilder:ListWorkflows
   - Name: imagebuilder:PutComponentPolicy
   - Name: imagebuilder:PutContainerRecipePolicy
   - Name: imagebuilder:PutImagePolicy
   - Name: imagebuilder:PutImageRecipePolicy
+  - Name: imagebuilder:SendWorkflowStepAction
   - Name: imagebuilder:StartImagePipelineExecution
   - Name: imagebuilder:StartResourceStateUpdate
   - Name: imagebuilder:TagResource
@@ -65,12 +72,3 @@ Actions:
   - Name: imagebuilder:UpdateImagePipeline
   - Name: imagebuilder:UpdateInfrastructureConfiguration
   - Name: imagebuilder:UpdateLifecyclePolicy
-
-  # APIs without an IAM action
-  - Name: imagebuilder:CreateWorkflow
-  - Name: imagebuilder:DeleteWorkflow
-  - Name: imagebuilder:GetWorkflow
-  - Name: imagebuilder:ListWaitingWorkflowSteps
-  - Name: imagebuilder:ListWorkflowBuildVersions
-  - Name: imagebuilder:ListWorkflows
-  - Name: imagebuilder:SendWorkflowStepAction
