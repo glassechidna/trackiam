@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SecurityAudit",
   "CreateDate": "2015-02-06T18:41:01Z",
-  "DefaultVersionId": "v40",
+  "DefaultVersionId": "v41",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIX2T3QCXHR2OGGCTO",
   "PolicyName": "SecurityAudit",
   "PolicyVersion": {
-    "CreateDate": "2023-11-02T20:02:24Z",
+    "CreateDate": "2023-12-14T21:45:16Z",
     "Document": {
       "Statement": [
         {
@@ -192,6 +192,7 @@
             "dynamodb:ListTagsOfResource",
             "ec2:Describe*",
             "ec2:GetEbsEncryptionByDefault",
+            "ec2:GetImageBlockPublicAccessState",
             "ec2:GetManagedPrefixListAssociations",
             "ec2:GetManagedPrefixListEntries",
             "ec2:GetNetworkInsightsAccessScopeAnalysisFindings",
@@ -213,8 +214,10 @@
             "ecr:BatchGetRepositoryScanningConfiguration",
             "ecr:DescribeImageScanFindings",
             "ecr:DescribeImages",
+            "ecr:DescribeRegistry",
             "ecr:DescribeRepositories",
             "ecr:GetLifecyclePolicy",
+            "ecr:GetRegistryPolicy",
             "ecr:GetRegistryScanningConfiguration",
             "ecr:GetRepositoryPolicy",
             "ecr:ListImages",
@@ -685,7 +688,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v40"
+    "VersionId": "v41"
   },
-  "UpdateDate": "2023-11-02T20:02:24Z"
+  "UpdateDate": "2023-12-14T21:45:16Z"
 }
