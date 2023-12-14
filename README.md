@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 389
-* Unique actions: 16534
+* Unique actions: 16540
 * Managed policies: 1165
 
 Most common managed policy name prefixes:
@@ -367,6 +367,7 @@ The following table summarises the AWS APIs.
 | [`notifications`](services/notifications.yml) | 0 | 0 | 21 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
+| [`monitron`](services/monitron.yml) | 0 | 0 | 18 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 18 |
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 17 |
@@ -379,7 +380,6 @@ The following table summarises the AWS APIs.
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
 | [`tax`](services/tax.yml) | 0 | 0 | 12 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
-| [`monitron`](services/monitron.yml) | 0 | 0 | 12 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`artifact`](services/artifact.yml) | 0 | 0 | 10 |
@@ -430,10 +430,10 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2625 |
+| `List` | 2627 |
 | `Get` | 2389 |
-| `Delete` | 1897 |
-| `Create` | 1773 |
+| `Delete` | 1899 |
+| `Create` | 1775 |
 | `Describe` | 1693 |
 | `Update` | 1509 |
 | `Put` | 461 |
