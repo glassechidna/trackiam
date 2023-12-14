@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 389
-* Unique actions: 16540
+* Unique actions: 16549
 * Managed policies: 1165
 
 Most common managed policy name prefixes:
@@ -39,10 +39,10 @@ The following table summarises the AWS APIs.
 | [`ec2`](services/ec2.yml) | 615 | 0 | 16 |
 | [`sagemaker`](services/sagemaker.yml) | 333 | 0 | 11 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
-| [`iot`](services/iot.yml) | 257 | 3 | 9 |
-| [`connect`](services/connect.yml) | 225 | 3 | 11 |
+| [`iot`](services/iot.yml) | 257 | 8 | 9 |
+| [`connect`](services/connect.yml) | 225 | 5 | 11 |
 | [`glue`](services/glue.yml) | 209 | 4 | 17 |
-| [`quicksight`](services/quicksight.yml) | 167 | 3 | 29 |
+| [`quicksight`](services/quicksight.yml) | 167 | 4 | 29 |
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
 | [`rds`](services/rds.yml) | 152 | 0 | 5 |
@@ -186,6 +186,7 @@ The following table summarises the AWS APIs.
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 32 | 0 | 0 |
+| [`billingconductor`](services/billingconductor.yml) | 31 | 1 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 31 | 0 | 5 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 31 | 0 | 0 |
@@ -193,7 +194,6 @@ The following table summarises the AWS APIs.
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`payment-cryptography`](services/payment-cryptography.yml) | 31 | 0 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 31 | 0 | 0 |
-| [`billingconductor`](services/billingconductor.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 30 | 2 | 1 |
 | [`xray`](services/xray.yml) | 30 | 0 | 3 |
@@ -430,14 +430,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2627 |
-| `Get` | 2389 |
-| `Delete` | 1899 |
-| `Create` | 1775 |
-| `Describe` | 1693 |
-| `Update` | 1509 |
+| `List` | 2628 |
+| `Get` | 2390 |
+| `Delete` | 1900 |
+| `Create` | 1776 |
+| `Describe` | 1694 |
+| `Update` | 1511 |
 | `Put` | 461 |
 | `Start` | 373 |
-| `Tag` | 259 |
-| `Untag` | 255 |
+| `Tag` | 260 |
+| `Untag` | 256 |
 
