@@ -1,15 +1,31 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonDataZoneGlueManageAccessRolePolicy",
   "CreateDate": "2023-09-22T20:21:53Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4IFGMBEEIW",
   "PolicyName": "AmazonDataZoneGlueManageAccessRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-09-29T01:53:41Z",
+    "CreateDate": "2023-12-14T23:03:20Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ram:AssociateResourceSharePermission",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "lakeformation.amazonaws.com"
+              ]
+            },
+            "StringLike": {
+              "ram:PermissionArn": "arn:aws:ram::aws:permission/AWSRAMLFEnabled*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CrossAccountRAMResourceSharingViaLakeFormationHybrid"
+        },
         {
           "Action": [
             "glue:CreateTable",
@@ -69,6 +85,7 @@
             "ram:DeleteResourceShare",
             "ram:DisassociateResourceShare",
             "ram:GetResourceShares",
+            "ram:ListResourceSharePermissions",
             "ram:UpdateResourceShare"
           ],
           "Condition": {
@@ -115,8 +132,11 @@
             "glue:GetTable",
             "lakeformation:BatchGrantPermissions",
             "lakeformation:BatchRevokePermissions",
+            "lakeformation:CreateLakeFormationOptIn",
+            "lakeformation:DeleteLakeFormationOptIn",
             "lakeformation:GetResourceLFTags",
             "lakeformation:GrantPermissions",
+            "lakeformation:ListLakeFormationOptIns",
             "lakeformation:ListPermissions",
             "lakeformation:RevokePermissions",
             "organizations:DescribeOrganization",
@@ -138,8 +158,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v2"
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-09-29T01:53:41Z"
+  "UpdateDate": "2023-12-14T23:03:20Z"
 }
