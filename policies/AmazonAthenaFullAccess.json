@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonAthenaFullAccess",
   "CreateDate": "2016-11-30T16:46:01Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIPJMLMD4C7RYZ6XCK",
   "PolicyName": "AmazonAthenaFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-01-24T16:59:23Z",
+    "CreateDate": "2023-12-15T19:52:35Z",
     "Document": {
       "Statement": [
         {
@@ -17,7 +17,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "BaseAthenaPermissions"
         },
         {
           "Action": [
@@ -29,7 +30,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "BaseCloudWatchPermissions"
         },
         {
           "Action": [
@@ -43,12 +45,15 @@
             "glue:DeleteDatabase",
             "glue:DeletePartition",
             "glue:DeleteTable",
+            "glue:GetColumnStatisticsTaskRun",
+            "glue:GetColumnStatisticsTaskRuns",
             "glue:GetDatabase",
             "glue:GetDatabases",
             "glue:GetPartition",
             "glue:GetPartitions",
             "glue:GetTable",
             "glue:GetTables",
+            "glue:StartColumnStatisticsTaskRun",
             "glue:UpdateDatabase",
             "glue:UpdatePartition",
             "glue:UpdateTable"
@@ -56,7 +61,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "BaseGluePermissions"
         },
         {
           "Action": [
@@ -65,7 +71,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "BaseLakeFormationPermissions"
         },
         {
           "Action": [
@@ -74,7 +81,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "BasePricingPermissions"
         },
         {
           "Action": [
@@ -91,7 +99,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:s3:::aws-athena-query-results-*"
-          ]
+          ],
+          "Sid": "BaseQueryResultsPermissions"
         },
         {
           "Action": [
@@ -102,7 +111,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "BaseS3BucketPermissions"
         },
         {
           "Action": [
@@ -112,7 +122,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:s3:::athena-examples*"
-          ]
+          ],
+          "Sid": "BaseAthenaExamplesPermissions"
         },
         {
           "Action": [
@@ -122,13 +133,14 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "BaseSNSPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2023-01-24T16:59:23Z"
+  "UpdateDate": "2023-12-15T19:52:35Z"
 }
