@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSElasticDisasterRecoveryServiceRolePolicy",
   "CreateDate": "2021-11-17T10:56:17Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4HALZVJBJX",
   "PolicyName": "AWSElasticDisasterRecoveryServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-11-27T13:35:20Z",
+    "CreateDate": "2023-12-17T14:31:04Z",
     "Document": {
       "Statement": [
         {
@@ -319,6 +319,7 @@
             "ec2:DescribeInternetGateways",
             "ec2:DescribeLaunchTemplateVersions",
             "ec2:DescribeLaunchTemplates",
+            "ec2:DescribeManagedPrefixLists",
             "ec2:DescribeNetworkAcls",
             "ec2:DescribeRouteTables",
             "ec2:DescribeSecurityGroups",
@@ -328,7 +329,8 @@
             "ec2:DescribeVpcAttribute",
             "ec2:DescribeVpcs",
             "ec2:GetEbsDefaultKmsKeyId",
-            "ec2:GetEbsEncryptionByDefault"
+            "ec2:GetEbsEncryptionByDefault",
+            "ec2:GetManagedPrefixListEntries"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -369,7 +371,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2023-11-27T13:35:20Z"
+  "UpdateDate": "2023-12-17T14:31:04Z"
 }
