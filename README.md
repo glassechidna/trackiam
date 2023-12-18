@@ -40,7 +40,7 @@ The following table summarises the AWS APIs.
 | [`sagemaker`](services/sagemaker.yml) | 333 | 1 | 11 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`iot`](services/iot.yml) | 257 | 8 | 9 |
-| [`connect`](services/connect.yml) | 225 | 7 | 11 |
+| [`connect`](services/connect.yml) | 229 | 3 | 11 |
 | [`glue`](services/glue.yml) | 209 | 4 | 17 |
 | [`quicksight`](services/quicksight.yml) | 167 | 4 | 29 |
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
