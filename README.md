@@ -120,6 +120,7 @@ The following table summarises the AWS APIs.
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 54 | 0 | 26 |
 | [`qbusiness`](services/qbusiness.yml) | 54 | 0 | 7 |
+| [`eks`](services/eks.yml) | 54 | 0 | 1 |
 | [`resiliencehub`](services/resiliencehub.yml) | 54 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 54 | 0 | 0 |
 | [`wafv2`](services/wafv2.yml) | 53 | 0 | 2 |
@@ -141,7 +142,6 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`transcribe`](services/transcribe.yml) | 46 | 0 | 3 |
 | [`inspector2`](services/inspector2.yml) | 46 | 0 | 0 |
-| [`eks`](services/eks.yml) | 45 | 9 | 1 |
 | [`codebuild`](services/codebuild.yml) | 45 | 0 | 8 |
 | [`fsx`](services/fsx.yml) | 45 | 0 | 5 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |

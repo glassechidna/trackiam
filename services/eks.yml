@@ -1,12 +1,15 @@
 Actions:
+  - Name: eks:AssociateAccessPolicy
   - Name: eks:AssociateEncryptionConfig
   - Name: eks:AssociateIdentityProviderConfig
+  - Name: eks:CreateAccessEntry
   - Name: eks:CreateAddon
   - Name: eks:CreateCluster
   - Name: eks:CreateEksAnywhereSubscription
   - Name: eks:CreateFargateProfile
   - Name: eks:CreateNodegroup
   - Name: eks:CreatePodIdentityAssociation
+  - Name: eks:DeleteAccessEntry
   - Name: eks:DeleteAddon
   - Name: eks:DeleteCluster
   - Name: eks:DeleteEksAnywhereSubscription
@@ -14,6 +17,7 @@ Actions:
   - Name: eks:DeleteNodegroup
   - Name: eks:DeletePodIdentityAssociation
   - Name: eks:DeregisterCluster
+  - Name: eks:DescribeAccessEntry
   - Name: eks:DescribeAddon
   - Name: eks:DescribeAddonConfiguration
   - Name: eks:DescribeAddonVersions
@@ -24,8 +28,12 @@ Actions:
   - Name: eks:DescribeNodegroup
   - Name: eks:DescribePodIdentityAssociation
   - Name: eks:DescribeUpdate
+  - Name: eks:DisassociateAccessPolicy
   - Name: eks:DisassociateIdentityProviderConfig
+  - Name: eks:ListAccessEntries
+  - Name: eks:ListAccessPolicies
   - Name: eks:ListAddons
+  - Name: eks:ListAssociatedAccessPolicies
   - Name: eks:ListClusters
   - Name: eks:ListEksAnywhereSubscriptions
   - Name: eks:ListFargateProfiles
@@ -37,6 +45,7 @@ Actions:
   - Name: eks:RegisterCluster
   - Name: eks:TagResource
   - Name: eks:UntagResource
+  - Name: eks:UpdateAccessEntry
   - Name: eks:UpdateAddon
   - Name: eks:UpdateClusterConfig
   - Name: eks:UpdateClusterVersion
@@ -47,14 +56,3 @@ Actions:
 
   # actions with no corresponding API
   - Name: eks:AccessKubernetesApi
-
-  # APIs without an IAM action
-  - Name: eks:AssociateAccessPolicy
-  - Name: eks:CreateAccessEntry
-  - Name: eks:DeleteAccessEntry
-  - Name: eks:DescribeAccessEntry
-  - Name: eks:DisassociateAccessPolicy
-  - Name: eks:ListAccessEntries
-  - Name: eks:ListAccessPolicies
-  - Name: eks:ListAssociatedAccessPolicies
-  - Name: eks:UpdateAccessEntry
