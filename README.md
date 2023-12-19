@@ -42,7 +42,7 @@ The following table summarises the AWS APIs.
 | [`iot`](services/iot.yml) | 257 | 8 | 9 |
 | [`connect`](services/connect.yml) | 229 | 3 | 11 |
 | [`glue`](services/glue.yml) | 209 | 4 | 17 |
-| [`quicksight`](services/quicksight.yml) | 167 | 4 | 29 |
+| [`quicksight`](services/quicksight.yml) | 168 | 3 | 29 |
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
 | [`rds`](services/rds.yml) | 152 | 0 | 5 |
