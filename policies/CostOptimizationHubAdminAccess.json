@@ -1,0 +1,64 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CostOptimizationHubAdminAccess",
+  "CreateDate": "2023-12-19T00:03:51Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CARV65TYL",
+  "PolicyName": "CostOptimizationHubAdminAccess",
+  "PolicyVersion": {
+    "CreateDate": "2023-12-19T00:03:51Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "cost-optimization-hub.bcm.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/cost-optimization-hub.bcm.amazonaws.com/AWSServiceRoleForCostOptimizationHub"
+          ],
+          "Sid": "AllowCreationOfServiceLinkedRoleForCostOptimizationHub"
+        },
+        {
+          "Action": [
+            "organizations:EnableAWSServiceAccess"
+          ],
+          "Condition": {
+            "StringLike": {
+              "organizations:ServicePrincipal": [
+                "cost-optimization-hub.bcm.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowAWSServiceAccessForCostOptimizationHub"
+        },
+        {
+          "Action": [
+            "cost-optimization-hub:GetPreferences",
+            "cost-optimization-hub:GetRecommendation",
+            "cost-optimization-hub:ListEnrollmentStatuses",
+            "cost-optimization-hub:ListRecommendationSummaries",
+            "cost-optimization-hub:ListRecommendations",
+            "cost-optimization-hub:UpdateEnrollmentStatus",
+            "cost-optimization-hub:UpdatePreferences"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CostOptimizationHubAdminAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-12-19T00:03:51Z"
+}
