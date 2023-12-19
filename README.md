@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 389
-* Unique actions: 16561
+* Unique actions: 16564
 * Managed policies: 1166
 
 Most common managed policy name prefixes:
@@ -45,7 +45,7 @@ The following table summarises the AWS APIs.
 | [`quicksight`](services/quicksight.yml) | 168 | 3 | 29 |
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
-| [`rds`](services/rds.yml) | 152 | 0 | 5 |
+| [`rds`](services/rds.yml) | 152 | 2 | 5 |
 | [`ses`](services/ses.yml) | 149 | 0 | 0 |
 | [`ssm`](services/ssm.yml) | 139 | 0 | 10 |
 | [`redshift`](services/redshift.yml) | 132 | 0 | 18 |
@@ -244,7 +244,7 @@ The following table summarises the AWS APIs.
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 22 | 0 | 7 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 0 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 0 | 31 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 31 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`synthetics`](services/synthetics.yml) | 21 | 0 | 0 |
@@ -434,7 +434,7 @@ Most common action prefixes:
 | `Get` | 2390 |
 | `Delete` | 1902 |
 | `Create` | 1777 |
-| `Describe` | 1695 |
+| `Describe` | 1696 |
 | `Update` | 1512 |
 | `Put` | 461 |
 | `Start` | 373 |
