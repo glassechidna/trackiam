@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonFSxFullAccess",
   "CreateDate": "2018-11-28T16:34:43Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIEUV6Z2X4VNZRVB5I",
   "PolicyName": "AmazonFSxFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-11-27T05:55:28Z",
+    "CreateDate": "2023-12-19T22:51:41Z",
     "Document": {
       "Statement": [
         {
@@ -73,6 +73,23 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "DescribeEC2VpcResources"
+        },
+        {
+          "Action": [
+            "fsx:DeleteResourcePolicy",
+            "fsx:GetResourcePolicy",
+            "fsx:PutResourcePolicy"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "ram.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ManageCrossAccountDataReplication"
         },
         {
           "Action": [
@@ -163,7 +180,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2023-11-27T05:55:28Z"
+  "UpdateDate": "2023-12-19T22:51:41Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonFSxConsoleFullAccess",
   "CreateDate": "2018-11-28T16:36:05Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAITDDJ23Y5UZ2WCZRQ",
   "PolicyName": "AmazonFSxConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-11-27T06:06:43Z",
+    "CreateDate": "2023-12-19T22:50:06Z",
     "Document": {
       "Statement": [
         {
@@ -55,6 +55,23 @@
             "arn:aws:ec2:*:*:route-table/*"
           ],
           "Sid": "CreateTags"
+        },
+        {
+          "Action": [
+            "fsx:DeleteResourcePolicy",
+            "fsx:GetResourcePolicy",
+            "fsx:PutResourcePolicy"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "ram.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ManageCrossAccountDataReplication"
         },
         {
           "Action": [
@@ -134,7 +151,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2023-11-27T06:06:43Z"
+  "UpdateDate": "2023-12-19T22:50:06Z"
 }
