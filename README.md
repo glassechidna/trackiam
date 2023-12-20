@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 389
-* Unique actions: 16567
+* Unique actions: 16570
 * Managed policies: 1166
 
 Most common managed policy name prefixes:
@@ -92,8 +92,8 @@ The following table summarises the AWS APIs.
 | [`cloudformation`](services/cloudformation.yml) | 70 | 0 | 11 |
 | [`wellarchitected`](services/wellarchitected.yml) | 70 | 0 | 0 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
+| [`guardduty`](services/guardduty.yml) | 68 | 1 | 1 |
 | [`athena`](services/athena.yml) | 68 | 0 | 11 |
-| [`guardduty`](services/guardduty.yml) | 68 | 0 | 1 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
 | [`ds`](services/ds.yml) | 67 | 0 | 10 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
@@ -118,9 +118,9 @@ The following table summarises the AWS APIs.
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
+| [`eks`](services/eks.yml) | 54 | 2 | 1 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 54 | 0 | 26 |
 | [`qbusiness`](services/qbusiness.yml) | 54 | 0 | 7 |
-| [`eks`](services/eks.yml) | 54 | 0 | 1 |
 | [`resiliencehub`](services/resiliencehub.yml) | 54 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 54 | 0 | 0 |
 | [`wafv2`](services/wafv2.yml) | 53 | 0 | 2 |
@@ -430,11 +430,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2631 |
-| `Get` | 2391 |
+| `List` | 2632 |
+| `Get` | 2392 |
 | `Delete` | 1903 |
 | `Create` | 1777 |
-| `Describe` | 1696 |
+| `Describe` | 1697 |
 | `Update` | 1512 |
 | `Put` | 462 |
 | `Start` | 373 |
