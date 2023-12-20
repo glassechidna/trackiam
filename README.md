@@ -115,10 +115,10 @@ The following table summarises the AWS APIs.
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`events`](services/events.yml) | 56 | 0 | 2 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 2 |
+| [`eks`](services/eks.yml) | 56 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
-| [`eks`](services/eks.yml) | 54 | 2 | 1 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 54 | 0 | 26 |
 | [`qbusiness`](services/qbusiness.yml) | 54 | 0 | 7 |
 | [`resiliencehub`](services/resiliencehub.yml) | 54 | 0 | 0 |
