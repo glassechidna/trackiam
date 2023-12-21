@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 389
-* Unique actions: 16582
+* Unique services: 390
+* Unique actions: 16594
 * Managed policies: 1167
 
 Most common managed policy name prefixes:
@@ -380,6 +380,7 @@ The following table summarises the AWS APIs.
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
 | [`tax`](services/tax.yml) | 0 | 0 | 12 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
+| [`networkmonitor`](services/networkmonitor.yml) | 0 | 0 | 12 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`artifact`](services/artifact.yml) | 0 | 0 | 10 |
@@ -430,14 +431,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2634 |
-| `Get` | 2392 |
-| `Delete` | 1904 |
-| `Create` | 1777 |
+| `List` | 2636 |
+| `Get` | 2394 |
+| `Delete` | 1906 |
+| `Create` | 1779 |
 | `Describe` | 1697 |
-| `Update` | 1515 |
+| `Update` | 1517 |
 | `Put` | 462 |
 | `Start` | 373 |
-| `Tag` | 260 |
-| `Untag` | 256 |
+| `Tag` | 261 |
+| `Untag` | 257 |
 
