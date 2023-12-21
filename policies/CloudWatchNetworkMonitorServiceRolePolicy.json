@@ -1,0 +1,66 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudWatchNetworkMonitorServiceRolePolicy",
+  "CreateDate": "2023-12-21T18:53:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4N6T4VFSYW",
+  "PolicyName": "CloudWatchNetworkMonitorServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2023-12-21T18:53:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "cloudwatch:PutMetricData",
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/NetworkMonitor"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PublishCw"
+        },
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission",
+            "ec2:DeleteSecurityGroup",
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "ec2:RevokeSecurityGroupEgress"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/ManagedByCloudWatchNetworkMonitor": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:security-group/*"
+          ],
+          "Sid": "DeleteModifyEc2Resources"
+        },
+        {
+          "Action": [
+            "ec2:DescribeNetworkInterfaceAttribute",
+            "ec2:DescribeNetworkInterfacePermissions",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeAny"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2023-12-21T18:53:19Z"
+}
