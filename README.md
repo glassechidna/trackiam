@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 389
-* Unique actions: 16576
+* Unique actions: 16582
 * Managed policies: 1167
 
 Most common managed policy name prefixes:
@@ -37,15 +37,15 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 615 | 0 | 16 |
-| [`sagemaker`](services/sagemaker.yml) | 333 | 1 | 11 |
+| [`sagemaker`](services/sagemaker.yml) | 334 | 0 | 11 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`iot`](services/iot.yml) | 257 | 8 | 9 |
-| [`connect`](services/connect.yml) | 229 | 3 | 17 |
+| [`connect`](services/connect.yml) | 240 | 4 | 6 |
 | [`glue`](services/glue.yml) | 209 | 4 | 17 |
 | [`quicksight`](services/quicksight.yml) | 168 | 3 | 29 |
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
 | [`lightsail`](services/lightsail.yml) | 159 | 0 | 0 |
-| [`rds`](services/rds.yml) | 152 | 2 | 5 |
+| [`rds`](services/rds.yml) | 152 | 4 | 5 |
 | [`ses`](services/ses.yml) | 149 | 0 | 0 |
 | [`ssm`](services/ssm.yml) | 139 | 0 | 10 |
 | [`redshift`](services/redshift.yml) | 132 | 0 | 18 |
@@ -74,7 +74,7 @@ The following table summarises the AWS APIs.
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 79 | 0 | 10 |
 | [`macie2`](services/macie2.yml) | 79 | 0 | 0 |
-| [`codecommit`](services/codecommit.yml) | 78 | 0 | 11 |
+| [`codecommit`](services/codecommit.yml) | 78 | 1 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 75 | 0 | 4 |
@@ -253,7 +253,7 @@ The following table summarises the AWS APIs.
 | [`sqs`](services/sqs.yml) | 20 | 3 | 0 |
 | [`iotroborunner`](services/iotroborunner.yml) | 20 | 0 | 0 |
 | [`emr-containers`](services/emr-containers.yml) | 20 | 0 | 0 |
-| [`app-integrations`](services/app-integrations.yml) | 19 | 0 | 4 |
+| [`app-integrations`](services/app-integrations.yml) | 19 | 2 | 4 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`translate`](services/translate.yml) | 19 | 0 | 0 |
 | [`signer`](services/signer.yml) | 19 | 0 | 0 |
@@ -430,12 +430,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2633 |
+| `List` | 2634 |
 | `Get` | 2392 |
-| `Delete` | 1903 |
+| `Delete` | 1904 |
 | `Create` | 1777 |
 | `Describe` | 1697 |
-| `Update` | 1514 |
+| `Update` | 1515 |
 | `Put` | 462 |
 | `Start` | 373 |
 | `Tag` | 260 |
