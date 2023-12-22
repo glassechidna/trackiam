@@ -73,6 +73,7 @@ Actions:
   - Name: rds:DescribeDBProxyEndpoints
   - Name: rds:DescribeDBProxyTargetGroups
   - Name: rds:DescribeDBProxyTargets
+  - Name: rds:DescribeDBRecommendations
   - Name: rds:DescribeDBSecurityGroups
   - Name: rds:DescribeDBSnapshotAttributes
   - Name: rds:DescribeDBSnapshots
@@ -95,7 +96,9 @@ Actions:
   - Name: rds:DescribeSourceRegions
   - Name: rds:DescribeTenantDatabases
   - Name: rds:DescribeValidDBInstanceModifications
+  - Name: rds:DisableHttpEndpoint
   - Name: rds:DownloadDBLogFilePortion
+  - Name: rds:EnableHttpEndpoint
   - Name: rds:FailoverDBCluster
   - Name: rds:FailoverGlobalCluster
   - Name: rds:ListTagsForResource
@@ -112,6 +115,7 @@ Actions:
   - Name: rds:ModifyDBProxy
   - Name: rds:ModifyDBProxyEndpoint
   - Name: rds:ModifyDBProxyTargetGroup
+  - Name: rds:ModifyDBRecommendation
   - Name: rds:ModifyDBSnapshot
   - Name: rds:ModifyDBSnapshotAttribute
   - Name: rds:ModifyDBSubnetGroup
@@ -158,9 +162,3 @@ Actions:
   - Name: rds:DescribeRecommendations
   - Name: rds:DownloadCompleteDBLogFile
   - Name: rds:ModifyRecommendation
-
-  # APIs without an IAM action
-  - Name: rds:DescribeDBRecommendations
-  - Name: rds:DisableHttpEndpoint
-  - Name: rds:EnableHttpEndpoint
-  - Name: rds:ModifyDBRecommendation
