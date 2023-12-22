@@ -72,9 +72,9 @@ The following table summarises the AWS APIs.
 | [`iotsitewise`](services/iotsitewise.yml) | 84 | 0 | 2 |
 | [`omics`](services/omics.yml) | 82 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
+| [`codecommit`](services/codecommit.yml) | 79 | 0 | 11 |
 | [`securityhub`](services/securityhub.yml) | 79 | 0 | 10 |
 | [`macie2`](services/macie2.yml) | 79 | 0 | 0 |
-| [`codecommit`](services/codecommit.yml) | 78 | 1 | 11 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 75 | 0 | 4 |
