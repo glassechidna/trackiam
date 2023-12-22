@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 390
-* Unique actions: 16594
-* Managed policies: 1167
+* Unique actions: 16595
+* Managed policies: 1168
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 313 |
 | `arn:aws:iam::aws:policy/Amazon*` | 299 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 261 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 262 |
 | `arn:aws:iam::aws:policy/service-role/*` | 187 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 100 |
@@ -129,8 +129,8 @@ The following table summarises the AWS APIs.
 | [`kafka`](services/kafka.yml) | 52 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 52 | 0 | 0 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
+| [`mediaconnect`](services/mediaconnect.yml) | 50 | 1 | 3 |
 | [`drs`](services/drs.yml) | 50 | 0 | 40 |
-| [`mediaconnect`](services/mediaconnect.yml) | 50 | 0 | 3 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
 | [`finspace`](services/finspace.yml) | 49 | 0 | 9 |
@@ -297,6 +297,7 @@ The following table summarises the AWS APIs.
 | [`application-autoscaling`](services/application-autoscaling.yml) | 13 | 0 | 0 |
 | [`controltower`](services/controltower.yml) | 12 | 0 | 41 |
 | [`scheduler`](services/scheduler.yml) | 12 | 0 | 0 |
+| [`networkmonitor`](services/networkmonitor.yml) | 12 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`bcm-data-exports`](services/bcm-data-exports.yml) | 12 | 0 | 0 |
@@ -380,7 +381,6 @@ The following table summarises the AWS APIs.
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
 | [`tax`](services/tax.yml) | 0 | 0 | 12 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
-| [`networkmonitor`](services/networkmonitor.yml) | 0 | 0 | 12 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`artifact`](services/artifact.yml) | 0 | 0 | 10 |
@@ -435,7 +435,7 @@ Most common action prefixes:
 | `Get` | 2394 |
 | `Delete` | 1906 |
 | `Create` | 1779 |
-| `Describe` | 1697 |
+| `Describe` | 1698 |
 | `Update` | 1517 |
 | `Put` | 462 |
 | `Start` | 373 |
