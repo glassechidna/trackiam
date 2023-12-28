@@ -2,11 +2,13 @@ Actions:
   - Name: app-integrations:CreateApplication
   - Name: app-integrations:CreateDataIntegration
   - Name: app-integrations:CreateEventIntegration
+  - Name: app-integrations:DeleteApplication
   - Name: app-integrations:DeleteDataIntegration
   - Name: app-integrations:DeleteEventIntegration
   - Name: app-integrations:GetApplication
   - Name: app-integrations:GetDataIntegration
   - Name: app-integrations:GetEventIntegration
+  - Name: app-integrations:ListApplicationAssociations
   - Name: app-integrations:ListApplications
   - Name: app-integrations:ListDataIntegrationAssociations
   - Name: app-integrations:ListDataIntegrations
@@ -20,11 +22,9 @@ Actions:
   - Name: app-integrations:UpdateEventIntegration
 
   # actions with no corresponding API
+  - Name: app-integrations:CreateApplicationAssociation
   - Name: app-integrations:CreateDataIntegrationAssociation
   - Name: app-integrations:CreateEventIntegrationAssociation
+  - Name: app-integrations:DeleteApplicationAssociation
   - Name: app-integrations:DeleteDataIntegrationAssociation
   - Name: app-integrations:DeleteEventIntegrationAssociation
-
-  # APIs without an IAM action
-  - Name: app-integrations:DeleteApplication
-  - Name: app-integrations:ListApplicationAssociations

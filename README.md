@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 390
-* Unique actions: 16596
+* Unique actions: 16598
 * Managed policies: 1168
 
 Most common managed policy name prefixes:
@@ -247,13 +247,13 @@ The following table summarises the AWS APIs.
 | [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 31 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
+| [`app-integrations`](services/app-integrations.yml) | 21 | 0 | 6 |
 | [`synthetics`](services/synthetics.yml) | 21 | 0 | 0 |
 | [`resource-explorer-2`](services/resource-explorer-2.yml) | 21 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 21 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 3 | 0 |
 | [`iotroborunner`](services/iotroborunner.yml) | 20 | 0 | 0 |
 | [`emr-containers`](services/emr-containers.yml) | 20 | 0 | 0 |
-| [`app-integrations`](services/app-integrations.yml) | 19 | 2 | 4 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`translate`](services/translate.yml) | 19 | 0 | 0 |
 | [`signer`](services/signer.yml) | 19 | 0 | 0 |
@@ -433,8 +433,8 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 2636 |
 | `Get` | 2394 |
-| `Delete` | 1906 |
-| `Create` | 1779 |
+| `Delete` | 1907 |
+| `Create` | 1780 |
 | `Describe` | 1698 |
 | `Update` | 1517 |
 | `Put` | 462 |
