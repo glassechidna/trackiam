@@ -1,15 +1,31 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmplifyBackendDeployFullAccess",
   "CreateDate": "2023-10-06T21:32:59Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4H6M6P2QGM",
   "PolicyName": "AmplifyBackendDeployFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-11-17T23:27:43Z",
+    "CreateDate": "2024-01-02T21:13:46Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "lambda:InvokeFunction",
+            "lambda:UpdateFunctionCode"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:amplify-*"
+          ],
+          "Sid": "AmplifyHotSwappableSchemaResource"
+        },
         {
           "Action": [
             "s3:GetObject"
@@ -124,7 +140,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-11-17T23:27:43Z"
+  "UpdateDate": "2024-01-02T21:13:46Z"
 }
