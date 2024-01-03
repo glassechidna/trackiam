@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonAthenaFullAccess",
   "CreateDate": "2016-11-30T16:46:01Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIPJMLMD4C7RYZ6XCK",
   "PolicyName": "AmazonAthenaFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-12-15T19:52:35Z",
+    "CreateDate": "2024-01-03T19:05:55Z",
     "Document": {
       "Statement": [
         {
@@ -32,6 +32,18 @@
             "*"
           ],
           "Sid": "BaseCloudWatchPermissions"
+        },
+        {
+          "Action": [
+            "datazone:ListAccountEnvironments",
+            "datazone:ListDomains",
+            "datazone:ListProjects"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "BaseDataZonePermissions"
         },
         {
           "Action": [
@@ -140,7 +152,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2023-12-15T19:52:35Z"
+  "UpdateDate": "2024-01-03T19:05:55Z"
 }
