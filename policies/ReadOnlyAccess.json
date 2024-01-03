@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v109",
+  "DefaultVersionId": "v110",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-12-08T16:54:31Z",
+    "CreateDate": "2024-01-03T15:52:00Z",
     "Document": {
       "Statement": [
         {
@@ -198,6 +198,34 @@
             "backup:List*",
             "batch:Describe*",
             "batch:List*",
+            "bedrock:GetAgent",
+            "bedrock:GetAgentActionGroup",
+            "bedrock:GetAgentAlias",
+            "bedrock:GetAgentKnowledgeBase",
+            "bedrock:GetAgentVersion",
+            "bedrock:GetCustomModel",
+            "bedrock:GetDataSource",
+            "bedrock:GetFoundationModel",
+            "bedrock:GetFoundationModelAvailability",
+            "bedrock:GetIngestionJob",
+            "bedrock:GetKnowledgeBase",
+            "bedrock:GetModelCustomizationJob",
+            "bedrock:GetModelInvocationLoggingConfiguration",
+            "bedrock:GetProvisionedModelThroughput",
+            "bedrock:GetUseCaseForModelAccess",
+            "bedrock:ListAgentActionGroups",
+            "bedrock:ListAgentAliases",
+            "bedrock:ListAgentKnowledgeBases",
+            "bedrock:ListAgentVersions",
+            "bedrock:ListAgents",
+            "bedrock:ListCustomModels",
+            "bedrock:ListDataSources",
+            "bedrock:ListFoundationModelAgreementOffers",
+            "bedrock:ListFoundationModels",
+            "bedrock:ListIngestionJobs",
+            "bedrock:ListKnowledgeBases",
+            "bedrock:ListModelCustomizationJobs",
+            "bedrock:ListProvisionedModelThroughputs",
             "billing:GetBillingData",
             "billing:GetBillingDetails",
             "billing:GetBillingNotifications",
@@ -643,12 +671,17 @@
             "firehose:List*",
             "fis:GetAction",
             "fis:GetExperiment",
+            "fis:GetExperimentTargetAccountConfiguration",
             "fis:GetExperimentTemplate",
+            "fis:GetTargetAccountConfiguration",
             "fis:GetTargetResourceType",
             "fis:ListActions",
+            "fis:ListExperimentResolvedTargets",
+            "fis:ListExperimentTargetAccountConfigurations",
             "fis:ListExperimentTemplates",
             "fis:ListExperiments",
             "fis:ListTagsForResource",
+            "fis:ListTargetAccountConfigurations",
             "fis:ListTargetResourceTypes",
             "fms:GetAdminAccount",
             "fms:GetAppsList",
@@ -1991,7 +2024,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v109"
+    "VersionId": "v110"
   },
-  "UpdateDate": "2023-12-08T16:54:31Z"
+  "UpdateDate": "2024-01-03T15:52:00Z"
 }
