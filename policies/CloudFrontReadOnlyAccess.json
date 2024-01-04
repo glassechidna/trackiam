@@ -1,19 +1,22 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:55Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJJZMNYOTZCNQP36LG",
   "PolicyName": "CloudFrontReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-09-08T22:10:54Z",
+    "CreateDate": "2024-01-04T16:55:27Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "acm:ListCertificates",
-            "cloudfront:DescribeFunction",
+            "cloudfront-keyvaluestore:Describe*",
+            "cloudfront-keyvaluestore:Get*",
+            "cloudfront-keyvaluestore:List*",
+            "cloudfront:Describe*",
             "cloudfront:Get*",
             "cloudfront:List*",
             "iam:ListServerCertificates",
@@ -24,13 +27,14 @@
             "wafv2:ListWebACLs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "cfReadOnly"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2021-09-08T22:10:54Z"
+  "UpdateDate": "2024-01-04T16:55:27Z"
 }

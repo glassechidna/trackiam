@@ -1,18 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudFrontFullAccess",
   "CreateDate": "2015-02-06T18:39:50Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIPRV52SH6HDCCFY6U",
   "PolicyName": "CloudFrontFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-09-03T20:18:42Z",
+    "CreateDate": "2024-01-04T16:56:08Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "acm:ListCertificates",
+            "cloudfront-keyvaluestore:*",
             "cloudfront:*",
             "iam:ListServerCertificates",
             "kinesis:ListStreams",
@@ -22,34 +23,38 @@
             "wafv2:ListWebACLs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "cffullaccess"
         },
         {
           "Action": [
             "iam:ListRoles"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:*"
+          "Resource": "arn:aws:iam::*:*",
+          "Sid": "cfflistroles"
         },
         {
           "Action": [
             "kinesis:DescribeStream"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:kinesis:*:*:*"
+          "Resource": "arn:aws:kinesis:*:*:*",
+          "Sid": "cffdescribestream"
         },
         {
           "Action": [
             "s3:ListAllMyBuckets"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:s3:::*"
+          "Resource": "arn:aws:s3:::*",
+          "Sid": "cfflistbuckets"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2020-09-03T20:18:42Z"
+  "UpdateDate": "2024-01-04T16:56:08Z"
 }
