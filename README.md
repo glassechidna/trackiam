@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 390
-* Unique actions: 16600
+* Unique actions: 16601
 * Managed policies: 1170
 
 Most common managed policy name prefixes:
@@ -38,8 +38,8 @@ The following table summarises the AWS APIs.
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 615 | 0 | 16 |
 | [`sagemaker`](services/sagemaker.yml) | 334 | 0 | 11 |
+| [`iot`](services/iot.yml) | 262 | 3 | 9 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
-| [`iot`](services/iot.yml) | 257 | 8 | 9 |
 | [`connect`](services/connect.yml) | 241 | 3 | 6 |
 | [`glue`](services/glue.yml) | 209 | 4 | 17 |
 | [`quicksight`](services/quicksight.yml) | 168 | 3 | 29 |
@@ -124,7 +124,7 @@ The following table summarises the AWS APIs.
 | [`resiliencehub`](services/resiliencehub.yml) | 54 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 54 | 0 | 0 |
 | [`wafv2`](services/wafv2.yml) | 53 | 0 | 2 |
-| [`dynamodb`](services/dynamodb.yml) | 52 | 5 | 13 |
+| [`dynamodb`](services/dynamodb.yml) | 52 | 5 | 14 |
 | [`profile`](services/profile.yml) | 52 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 52 | 0 | 0 |
@@ -432,7 +432,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2636 |
-| `Get` | 2395 |
+| `Get` | 2396 |
 | `Delete` | 1907 |
 | `Create` | 1780 |
 | `Describe` | 1698 |

@@ -19,6 +19,7 @@ Actions:
   - Name: iot:CreateAuthorizer
   - Name: iot:CreateBillingGroup
   - Name: iot:CreateCertificateFromCsr
+  - Name: iot:CreateCertificateProvider
   - Name: iot:CreateCustomMetric
   - Name: iot:CreateDimension
   - Name: iot:CreateDomainConfiguration
@@ -51,6 +52,7 @@ Actions:
   - Name: iot:DeleteBillingGroup
   - Name: iot:DeleteCACertificate
   - Name: iot:DeleteCertificate
+  - Name: iot:DeleteCertificateProvider
   - Name: iot:DeleteCustomMetric
   - Name: iot:DeleteDimension
   - Name: iot:DeleteDomainConfiguration
@@ -89,6 +91,7 @@ Actions:
   - Name: iot:DescribeBillingGroup
   - Name: iot:DescribeCACertificate
   - Name: iot:DescribeCertificate
+  - Name: iot:DescribeCertificateProvider
   - Name: iot:DescribeCustomMetric
   - Name: iot:DescribeDefaultAuthorizer
   - Name: iot:DescribeDetectMitigationActionsTask
@@ -150,6 +153,7 @@ Actions:
   - Name: iot:ListAuthorizers
   - Name: iot:ListBillingGroups
   - Name: iot:ListCACertificates
+  - Name: iot:ListCertificateProviders
   - Name: iot:ListCertificates
   - Name: iot:ListCertificatesByCA
   - Name: iot:ListCustomMetrics
@@ -233,6 +237,7 @@ Actions:
   - Name: iot:UpdateBillingGroup
   - Name: iot:UpdateCACertificate
   - Name: iot:UpdateCertificate
+  - Name: iot:UpdateCertificateProvider
   - Name: iot:UpdateCustomMetric
   - Name: iot:UpdateDimension
   - Name: iot:UpdateDomainConfiguration
@@ -269,11 +274,6 @@ Actions:
   - Name: iot:Subscribe
 
   # APIs without an IAM action
-  - Name: iot:CreateCertificateProvider
-  - Name: iot:DeleteCertificateProvider
-  - Name: iot:DescribeCertificateProvider
   - Name: iot:GetPendingJobExecutions
-  - Name: iot:ListCertificateProviders
   - Name: iot:StartNextPendingJobExecution
-  - Name: iot:UpdateCertificateProvider
   - Name: iot:UpdateJobExecution
