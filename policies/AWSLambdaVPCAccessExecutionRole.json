@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole",
   "CreateDate": "2016-02-11T23:15:26Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJVTME3YLVNL72YR2K",
   "PolicyName": "AWSLambdaVPCAccessExecutionRole",
   "PolicyVersion": {
-    "CreateDate": "2020-10-15T22:53:03Z",
+    "CreateDate": "2024-01-05T22:38:26Z",
     "Document": {
       "Statement": [
         {
@@ -16,19 +16,21 @@
             "ec2:CreateNetworkInterface",
             "ec2:DeleteNetworkInterface",
             "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSubnets",
             "ec2:UnassignPrivateIpAddresses",
             "logs:CreateLogGroup",
             "logs:CreateLogStream",
             "logs:PutLogEvents"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSLambdaVPCAccessExecutionPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-10-15T22:53:03Z"
+  "UpdateDate": "2024-01-05T22:38:26Z"
 }
