@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonFSxServiceRolePolicy",
   "CreateDate": "2018-11-28T10:38:37Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIVQ24YKVRBV5IYQ5G",
   "PolicyName": "AmazonFSxServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-07-26T17:57:34Z",
+    "CreateDate": "2024-01-10T20:53:47Z",
     "Document": {
       "Statement": [
         {
@@ -22,7 +22,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "PutMetrics"
         },
         {
           "Action": [
@@ -38,7 +39,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:network-interface/*"
-          ]
+          ],
+          "Sid": "ManageNetworkInterface"
         },
         {
           "Action": [
@@ -54,7 +56,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:route-table/*"
-          ]
+          ],
+          "Sid": "ManageRouteTable"
         },
         {
           "Action": [
@@ -71,7 +74,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:network-interface/*"
-          ]
+          ],
+          "Sid": "TagResourceNetworkInterface"
         },
         {
           "Action": [
@@ -89,10 +93,12 @@
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcs",
             "ec2:DisassociateAddress",
+            "ec2:GetSecurityGroupsForVpc",
             "route53:AssociateVPCWithHostedZone"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "CreateFileSystem"
         },
         {
           "Action": [
@@ -101,7 +107,8 @@
             "firehose:PutRecordBatch"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:firehose:*:*:deliverystream/aws-fsx-*"
+          "Resource": "arn:aws:firehose:*:*:deliverystream/aws-fsx-*",
+          "Sid": "ManageAuditLogs"
         },
         {
           "Action": [
@@ -110,13 +117,14 @@
             "logs:PutLogEvents"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:logs:*:*:log-group:/aws/fsx/*"
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/fsx/*",
+          "Sid": "PutCloudWatchLogs"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2023-07-26T17:57:34Z"
+  "UpdateDate": "2024-01-10T20:53:47Z"
 }

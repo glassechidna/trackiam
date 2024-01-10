@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonFSxConsoleReadOnlyAccess",
   "CreateDate": "2018-11-28T16:35:24Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJQUISIZNHGLA6YQFM",
   "PolicyName": "AmazonFSxConsoleReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-09-22T14:07:26Z",
+    "CreateDate": "2024-01-10T20:19:18Z",
     "Document": {
       "Statement": [
         {
@@ -19,6 +19,7 @@
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcs",
+            "ec2:GetSecurityGroupsForVpc",
             "firehose:ListDeliveryStreams",
             "fsx:Describe*",
             "fsx:ListTagsForResource",
@@ -26,13 +27,14 @@
             "logs:DescribeLogGroups"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "FSxReadOnlyPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2022-09-22T14:07:26Z"
+  "UpdateDate": "2024-01-10T20:19:18Z"
 }

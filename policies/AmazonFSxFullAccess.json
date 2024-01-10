@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonFSxFullAccess",
   "CreateDate": "2018-11-28T16:34:43Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIEUV6Z2X4VNZRVB5I",
   "PolicyName": "AmazonFSxFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-12-19T22:51:41Z",
+    "CreateDate": "2024-01-10T20:16:00Z",
     "Document": {
       "Statement": [
         {
@@ -61,7 +61,8 @@
             "ec2:DescribeRouteTables",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
-            "ec2:DescribeVpcs"
+            "ec2:DescribeVpcs",
+            "ec2:GetSecurityGroupsForVpc"
           ],
           "Condition": {
             "ForAnyValue:StringEquals": {
@@ -180,7 +181,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2023-12-19T22:51:41Z"
+  "UpdateDate": "2024-01-10T20:16:00Z"
 }
