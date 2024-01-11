@@ -1,17 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AccessAnalyzerServiceRolePolicy",
   "CreateDate": "2019-12-02T17:13:10Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4CAIXDDRI2",
   "PolicyName": "AccessAnalyzerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-11-28T19:00:40Z",
+    "CreateDate": "2024-01-11T20:13:34Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "dynamodb:GetResourcePolicy",
+            "dynamodb:ListStreams",
+            "dynamodb:ListTables",
             "ec2:DescribeAddresses",
             "ec2:DescribeByoipCidrs",
             "ec2:DescribeSnapshotAttribute",
@@ -95,7 +98,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2023-11-28T19:00:40Z"
+  "UpdateDate": "2024-01-11T20:13:34Z"
 }
