@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 390
-* Unique actions: 16601
+* Unique actions: 16603
 * Managed policies: 1171
 
 Most common managed policy name prefixes:
@@ -353,6 +353,7 @@ The following table summarises the AWS APIs.
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
+| [`scn`](services/scn.yml) | 0 | 2 | 13 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 70 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
@@ -375,7 +376,6 @@ The following table summarises the AWS APIs.
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 14 |
 | [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
-| [`scn`](services/scn.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`billing`](services/billing.yml) | 0 | 0 | 13 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
@@ -432,9 +432,9 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2636 |
-| `Get` | 2396 |
+| `Get` | 2397 |
 | `Delete` | 1907 |
-| `Create` | 1780 |
+| `Create` | 1781 |
 | `Describe` | 1698 |
 | `Update` | 1517 |
 | `Put` | 462 |
