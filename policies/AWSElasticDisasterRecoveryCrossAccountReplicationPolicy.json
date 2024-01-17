@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticDisasterRecoveryCrossAccountReplicationPolicy",
   "CreateDate": "2023-05-14T07:16:47Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4JUELD5VO3",
   "PolicyName": "AWSElasticDisasterRecoveryCrossAccountReplicationPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-05-14T07:16:47Z",
+    "CreateDate": "2024-01-17T13:19:58Z",
     "Document": {
       "Statement": [
         {
@@ -20,7 +20,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:drs:*:*:source-server/*"
+          "Resource": "arn:aws:drs:*:*:source-server/*",
+          "Sid": "CrossAccountPolicy2"
         },
         {
           "Action": [
@@ -28,16 +29,18 @@
             "drs:DescribeReplicationConfigurationTemplates",
             "drs:DescribeSourceServers",
             "ec2:DescribeInstances",
+            "ec2:DescribeVolumeAttribute",
             "ec2:DescribeVolumes"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "CrossAccountPolicy1"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-05-14T07:16:47Z"
+  "UpdateDate": "2024-01-17T13:19:58Z"
 }
