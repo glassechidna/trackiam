@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/Billing",
   "CreateDate": "2016-11-10T17:33:18Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAIFTHXT6FFMIRT7ZEA",
   "PolicyName": "Billing",
   "PolicyVersion": {
-    "CreateDate": "2023-07-26T19:58:17Z",
+    "CreateDate": "2024-01-17T18:03:48Z",
     "Document": {
       "Statement": [
         {
@@ -29,14 +29,31 @@
             "billing:RedeemCredits",
             "billing:UpdateBillingPreferences",
             "billing:UpdateIAMAccessPreference",
+            "budgets:CreateBudgetAction",
+            "budgets:DeleteBudgetAction",
+            "budgets:DescribeBudgetAction",
+            "budgets:DescribeBudgetActionHistories",
+            "budgets:DescribeBudgetActionsForAccount",
+            "budgets:DescribeBudgetActionsForBudget",
+            "budgets:ExecuteBudgetAction",
             "budgets:ModifyBudget",
+            "budgets:UpdateBudgetAction",
             "budgets:ViewBudget",
+            "ce:CreateCostCategoryDefinition",
             "ce:CreateNotificationSubscription",
             "ce:CreateReport",
+            "ce:DeleteCostCategoryDefinition",
             "ce:DeleteNotificationSubscription",
             "ce:DeleteReport",
+            "ce:DescribeCostCategoryDefinition",
+            "ce:GetCostAndUsage",
             "ce:ListCostAllocationTags",
+            "ce:ListCostCategoryDefinitions",
+            "ce:ListTagsForResource",
+            "ce:TagResource",
+            "ce:UntagResource",
             "ce:UpdateCostAllocationTagsStatus",
+            "ce:UpdateCostCategoryDefinition",
             "ce:UpdateNotificationSubscription",
             "ce:UpdatePreferences",
             "ce:UpdateReport",
@@ -65,6 +82,7 @@
             "payments:ListPaymentPreferences",
             "payments:MakePayment",
             "payments:UpdatePaymentPreferences",
+            "pricing:DescribeServices",
             "purchase-orders:AddPurchaseOrder",
             "purchase-orders:DeletePurchaseOrder",
             "purchase-orders:GetPurchaseOrder",
@@ -77,6 +95,9 @@
             "purchase-orders:UpdatePurchaseOrder",
             "purchase-orders:UpdatePurchaseOrderStatus",
             "purchase-orders:ViewPurchaseOrders",
+            "support:AddAttachmentsToSet",
+            "support:CreateCase",
+            "sustainability:GetCarbonFootprintSummary",
             "tax:BatchPutTaxRegistration",
             "tax:DeleteTaxRegistration",
             "tax:GetExemptions",
@@ -98,7 +119,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2023-07-26T19:58:17Z"
+  "UpdateDate": "2024-01-17T18:03:48Z"
 }

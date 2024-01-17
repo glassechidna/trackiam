@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess",
   "CreateDate": "2020-08-27T20:08:51Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LJ3OSZ5SX",
   "PolicyName": "AWSBillingReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-07-26T18:05:19Z",
+    "CreateDate": "2024-01-17T18:15:35Z",
     "Document": {
       "Statement": [
         {
@@ -23,9 +23,19 @@
             "billing:GetIAMAccessPreference",
             "billing:GetSellerOfRecord",
             "billing:ListBillingViews",
+            "budgets:DescribeBudgetAction",
+            "budgets:DescribeBudgetActionHistories",
+            "budgets:DescribeBudgetActionsForAccount",
+            "budgets:DescribeBudgetActionsForBudget",
+            "budgets:ViewBudget",
+            "ce:DescribeCostCategoryDefinition",
+            "ce:GetCostAndUsage",
             "ce:ListCostAllocationTags",
+            "ce:ListCostCategoryDefinitions",
+            "ce:ListTagsForResource",
             "consolidatedbilling:GetAccountBillingRole",
             "consolidatedbilling:ListLinkedAccounts",
+            "cur:DescribeReportDefinitions",
             "cur:GetClassicReport",
             "cur:GetClassicReportPreferences",
             "cur:GetUsageReport",
@@ -42,6 +52,7 @@
             "purchase-orders:ListPurchaseOrders",
             "purchase-orders:ListTagsForResource",
             "purchase-orders:ViewPurchaseOrders",
+            "sustainability:GetCarbonFootprintSummary",
             "tax:GetTaxInheritance",
             "tax:GetTaxRegistrationDocument",
             "tax:ListTaxRegistrations"
@@ -54,7 +65,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2023-07-26T18:05:19Z"
+  "UpdateDate": "2024-01-17T18:15:35Z"
 }
