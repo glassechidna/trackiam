@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSTrustedAdvisorServiceRolePolicy",
   "CreateDate": "2018-02-22T21:24:25Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJH4QJ2WMHBOB47BUE",
   "PolicyName": "AWSTrustedAdvisorServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-11-10T00:18:42Z",
+    "CreateDate": "2024-01-18T16:25:15Z",
     "Document": {
       "Statement": [
         {
@@ -22,7 +22,10 @@
             "cloudformation:ListStacks",
             "cloudfront:ListDistributions",
             "cloudtrail:DescribeTrails",
+            "cloudtrail:GetEventSelectors",
+            "cloudtrail:GetTrail",
             "cloudtrail:GetTrailStatus",
+            "cloudtrail:ListTrails",
             "cloudwatch:GetMetricStatistics",
             "dynamodb:DescribeLimits",
             "dynamodb:DescribeTable",
@@ -60,6 +63,9 @@
             "kafka:ListClustersV2",
             "kafka:ListNodes",
             "kinesis:DescribeLimits",
+            "outposts:GetOutpost",
+            "outposts:ListAssets",
+            "outposts:ListOutposts",
             "rds:DescribeAccountAttributes",
             "rds:DescribeDBClusters",
             "rds:DescribeDBEngineVersions",
@@ -111,7 +117,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2023-11-10T00:18:42Z"
+  "UpdateDate": "2024-01-18T16:25:15Z"
 }
