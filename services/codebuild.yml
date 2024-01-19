@@ -2,13 +2,16 @@ Actions:
   - Name: codebuild:BatchDeleteBuilds
   - Name: codebuild:BatchGetBuildBatches
   - Name: codebuild:BatchGetBuilds
+  - Name: codebuild:BatchGetFleets
   - Name: codebuild:BatchGetProjects
   - Name: codebuild:BatchGetReportGroups
   - Name: codebuild:BatchGetReports
+  - Name: codebuild:CreateFleet
   - Name: codebuild:CreateProject
   - Name: codebuild:CreateReportGroup
   - Name: codebuild:CreateWebhook
   - Name: codebuild:DeleteBuildBatch
+  - Name: codebuild:DeleteFleet
   - Name: codebuild:DeleteProject
   - Name: codebuild:DeleteReport
   - Name: codebuild:DeleteReportGroup
@@ -26,6 +29,7 @@ Actions:
   - Name: codebuild:ListBuilds
   - Name: codebuild:ListBuildsForProject
   - Name: codebuild:ListCuratedEnvironmentImages
+  - Name: codebuild:ListFleets
   - Name: codebuild:ListProjects
   - Name: codebuild:ListReportGroups
   - Name: codebuild:ListReports
@@ -40,22 +44,18 @@ Actions:
   - Name: codebuild:StartBuildBatch
   - Name: codebuild:StopBuild
   - Name: codebuild:StopBuildBatch
+  - Name: codebuild:UpdateFleet
   - Name: codebuild:UpdateProject
   - Name: codebuild:UpdateProjectVisibility
   - Name: codebuild:UpdateReportGroup
   - Name: codebuild:UpdateWebhook
 
   # actions with no corresponding API
-  - Name: codebuild:BatchGetFleets
   - Name: codebuild:BatchPutCodeCoverages
   - Name: codebuild:BatchPutTestCases
-  - Name: codebuild:CreateFleet
   - Name: codebuild:CreateReport
-  - Name: codebuild:DeleteFleet
   - Name: codebuild:DeleteOAuthToken
   - Name: codebuild:ListConnectedOAuthAccounts
-  - Name: codebuild:ListFleets
   - Name: codebuild:ListRepositories
   - Name: codebuild:PersistOAuthToken
-  - Name: codebuild:UpdateFleet
   - Name: codebuild:UpdateReport

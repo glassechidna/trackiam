@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 390
-* Unique actions: 16610
+* Unique actions: 16611
 * Managed policies: 1171
 
 Most common managed policy name prefixes:
@@ -124,7 +124,7 @@ The following table summarises the AWS APIs.
 | [`resiliencehub`](services/resiliencehub.yml) | 54 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 54 | 0 | 0 |
 | [`wafv2`](services/wafv2.yml) | 53 | 0 | 2 |
-| [`dynamodb`](services/dynamodb.yml) | 52 | 5 | 14 |
+| [`dynamodb`](services/dynamodb.yml) | 52 | 6 | 14 |
 | [`profile`](services/profile.yml) | 52 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 52 | 0 | 0 |
@@ -132,6 +132,7 @@ The following table summarises the AWS APIs.
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 50 | 1 | 3 |
 | [`drs`](services/drs.yml) | 50 | 0 | 40 |
+| [`codebuild`](services/codebuild.yml) | 50 | 0 | 8 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
 | [`finspace`](services/finspace.yml) | 49 | 0 | 9 |
@@ -142,7 +143,6 @@ The following table summarises the AWS APIs.
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`transcribe`](services/transcribe.yml) | 46 | 0 | 3 |
 | [`inspector2`](services/inspector2.yml) | 46 | 0 | 0 |
-| [`codebuild`](services/codebuild.yml) | 45 | 0 | 13 |
 | [`fsx`](services/fsx.yml) | 45 | 0 | 8 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
 | [`workdocs`](services/workdocs.yml) | 44 | 0 | 15 |
@@ -436,7 +436,7 @@ Most common action prefixes:
 | `Delete` | 1908 |
 | `Create` | 1782 |
 | `Describe` | 1698 |
-| `Update` | 1518 |
+| `Update` | 1519 |
 | `Put` | 462 |
 | `Start` | 373 |
 | `Tag` | 261 |
