@@ -1,0 +1,105 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonECSInfrastructureRolePolicyForServiceConnectTransportLayerSecurity",
+  "CreateDate": "2024-01-19T20:08:36Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4OIQQFRIAH",
+  "PolicyName": "AmazonECSInfrastructureRolePolicyForServiceConnectTransportLayerSecurity",
+  "PolicyVersion": {
+    "CreateDate": "2024-01-19T20:08:36Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "secretsmanager:CreateSecret",
+          "Condition": {
+            "ArnLike": {
+              "aws:RequestTag/AmazonECSCreated": [
+                "arn:aws:ecs:*:*:service/*/*",
+                "arn:aws:ecs:*:*:task-set/*/*"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/AmazonECSManaged": "true",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:ecs-sc!*",
+          "Sid": "CreateSecret"
+        },
+        {
+          "Action": "secretsmanager:TagResource",
+          "Condition": {
+            "ArnLike": {
+              "aws:RequestTag/AmazonECSCreated": [
+                "arn:aws:ecs:*:*:service/*/*",
+                "arn:aws:ecs:*:*:task-set/*/*"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/AmazonECSManaged": "true",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:ecs-sc!*",
+          "Sid": "TagOnCreateSecret"
+        },
+        {
+          "Action": [
+            "acm-pca:DescribeCertificateAuthority",
+            "acm-pca:GetCertificate",
+            "acm-pca:GetCertificateAuthorityCertificate"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonECSManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ManagePrivateCertificateAuthority"
+        },
+        {
+          "Action": [
+            "acm-pca:IssueCertificate"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "acm-pca:TemplateArn": "arn:aws:acm-pca:::template/EndEntityCertificate/V1",
+              "aws:ResourceTag/AmazonECSManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ManagePrivateCertificateAuthorityForIssuingEndEntityCertificate"
+        },
+        {
+          "Action": [
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:PutSecretValue",
+            "secretsmanager:RotateSecret",
+            "secretsmanager:UpdateSecret",
+            "secretsmanager:UpdateSecretVersionStage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "secretsmanager:ResourceTag/aws:secretsmanager:owningService": "ecs-sc"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:ecs-sc!*",
+          "Sid": "RotateTLSCertificateSecret"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-01-19T20:08:36Z"
+}
