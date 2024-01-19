@@ -329,7 +329,6 @@ The following table summarises the AWS APIs.
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
 | [`ebs`](services/ebs.yml) | 6 | 0 | 0 |
-| [`cloudfront-keyvaluestore`](services/cloudfront-keyvaluestore.yml) | 6 | 0 | 0 |
 | [`autoscaling-plans`](services/autoscaling-plans.yml) | 6 | 0 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 6 | 0 | 0 |
 | [`s3-outposts`](services/s3-outposts.yml) | 5 | 0 | 43 |
@@ -396,6 +395,7 @@ The following table summarises the AWS APIs.
 | [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
 | [`q`](services/q.yml) | 0 | 0 | 6 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
+| [`cloudfront-keyvaluestore`](services/cloudfront-keyvaluestore.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 5 |
