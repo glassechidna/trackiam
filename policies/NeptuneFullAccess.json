@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/NeptuneFullAccess",
   "CreateDate": "2018-05-30T19:17:31Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIXSDEYRCNJRC6ITFK",
   "PolicyName": "NeptuneFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-07-28T19:58:27Z",
+    "CreateDate": "2024-01-22T16:32:31Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/aws-service-role/rds.amazonaws.com/AWSServiceRoleForRDS"
+          "Resource": "arn:aws:iam::*:role/aws-service-role/rds.amazonaws.com/AWSServiceRoleForRDS",
+          "Sid": "AllowCreateSLRForNeptune"
         },
         {
           "Action": "iam:PassRole",
@@ -28,7 +29,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowPassRoleForNeptune"
         },
         {
           "Action": [
@@ -46,7 +48,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:rds:*:*:*"
-          ]
+          ],
+          "Sid": "AllowNeptuneCreate"
         },
         {
           "Action": [
@@ -71,7 +74,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AllowOtherDepedentPermissions"
         },
         {
           "Action": [
@@ -80,7 +84,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AllowDataAccessForNeptune"
         },
         {
           "Action": [
@@ -161,13 +166,14 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AllowManagementPermissionsForRDS"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2022-07-28T19:58:27Z"
+  "UpdateDate": "2024-01-22T16:32:31Z"
 }
