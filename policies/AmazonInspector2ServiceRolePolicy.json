@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonInspector2ServiceRolePolicy",
   "CreateDate": "2021-11-16T20:27:48Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4BINOILVQW",
   "PolicyName": "AmazonInspector2ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-09-07T13:20:55Z",
+    "CreateDate": "2024-01-22T14:06:01Z",
     "Document": {
       "Statement": [
         {
@@ -22,7 +22,7 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:*:cloudtrail:*:*:channel/aws-service-channel/inspector2/*"
+            "arn:aws:cloudtrail:*:*:channel/aws-service-channel/inspector2/*"
           ],
           "Sid": "AllowManagementOfServiceLinkedChannel"
         },
@@ -40,6 +40,21 @@
             "*"
           ],
           "Sid": "AllowListServiceLinkedChannels"
+        },
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/Inspector2"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowToPutCloudwatchMetricData"
         },
         {
           "Action": [
@@ -79,9 +94,24 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:*:ssm:*:*:parameter/inspector-aws/service/inspector-linux-application-paths"
+            "arn:aws:ssm:*:*:parameter/inspector-aws/service/inspector-linux-application-paths"
           ],
           "Sid": "Ec2DeepInspection"
+        },
+        {
+          "Action": [
+            "ssm:SendCommand"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "AllowToRunCisCommandsToSpecificResources"
         },
         {
           "Action": [
@@ -206,7 +236,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:*:events:*:*:rule/DO-NOT-DELETE-AmazonInspector*ManagedRule"
+            "arn:aws:events:*:*:rule/DO-NOT-DELETE-AmazonInspector*ManagedRule"
           ],
           "Sid": "ManagedRules"
         },
@@ -219,11 +249,11 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:*:ec2:*:*:instance/*",
-            "arn:*:ssm:*:*:association/*",
-            "arn:*:ssm:*:*:document/AWS-GatherSoftwareInventory",
-            "arn:*:ssm:*:*:document/AmazonInspector2-*",
-            "arn:*:ssm:*:*:managed-instance/*"
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ssm:*:*:association/*",
+            "arn:aws:ssm:*:*:document/AWS-GatherSoftwareInventory",
+            "arn:aws:ssm:*:*:document/AmazonInspector2-*",
+            "arn:aws:ssm:*:*:managed-instance/*"
           ],
           "Sid": "GatherInventory"
         },
@@ -234,15 +264,26 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:*:ssm:*:*:resource-data-sync/InspectorResourceDataSync-do-not-delete"
+            "arn:aws:ssm:*:*:resource-data-sync/InspectorResourceDataSync-do-not-delete"
           ],
           "Sid": "DataSyncCleanup"
+        },
+        {
+          "Action": [
+            "ssm:GetCommandInvocation",
+            "ssm:SendCommand"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/AmazonInspector2-InvokeInspectorSsmPluginCIS"
+          ],
+          "Sid": "AllowToRunInvokeCisSpecificDocuments"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2023-09-07T13:20:55Z"
+  "UpdateDate": "2024-01-22T14:06:01Z"
 }
