@@ -1,0 +1,92 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonSecurityLakeMetastoreManager",
+  "CreateDate": "2024-01-23T15:26:57Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4H76LFAUPQ",
+  "PolicyName": "AmazonSecurityLakeMetastoreManager",
+  "PolicyVersion": {
+    "CreateDate": "2024-01-23T15:26:57Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "glue:BatchCreatePartition",
+            "glue:CreatePartition",
+            "glue:GetTable",
+            "glue:UpdateTable"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:catalog",
+            "arn:aws:glue:*:*:database/amazon_security_lake_glue_db*",
+            "arn:aws:glue:*:*:table/amazon_security_lake_glue_db*/*"
+          ],
+          "Sid": "AllowGlueManage"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:/aws/lambda/AmazonSecurityLake*",
+            "arn:aws:logs:*:*:log-group:/aws/lambda/AmazonSecurityLake*"
+          ],
+          "Sid": "AllowWriteLambdaLogs"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-security-data-lake*"
+          ],
+          "Sid": "AllowMetaDataReadWrite"
+        },
+        {
+          "Action": [
+            "sqs:DeleteMessage",
+            "sqs:GetQueueAttributes",
+            "sqs:ReceiveMessage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sqs:*:*:AmazonSecurityLake*"
+          ],
+          "Sid": "AllowToReadFromSqs"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-01-23T15:26:57Z"
+}
