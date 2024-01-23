@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 390
-* Unique actions: 16612
+* Unique actions: 16625
 * Managed policies: 1173
 
 Most common managed policy name prefixes:
@@ -141,8 +141,8 @@ The following table summarises the AWS APIs.
 | [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 6 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
+| [`inspector2`](services/inspector2.yml) | 46 | 13 | 0 |
 | [`transcribe`](services/transcribe.yml) | 46 | 0 | 3 |
-| [`inspector2`](services/inspector2.yml) | 46 | 0 | 0 |
 | [`fsx`](services/fsx.yml) | 45 | 0 | 8 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
 | [`workdocs`](services/workdocs.yml) | 44 | 0 | 15 |
@@ -431,14 +431,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2638 |
-| `Get` | 2399 |
-| `Delete` | 1908 |
-| `Create` | 1782 |
+| `List` | 2642 |
+| `Get` | 2401 |
+| `Delete` | 1909 |
+| `Create` | 1783 |
 | `Describe` | 1698 |
-| `Update` | 1519 |
+| `Update` | 1520 |
 | `Put` | 462 |
-| `Start` | 373 |
+| `Start` | 374 |
 | `Tag` | 261 |
 | `Untag` | 257 |
 
