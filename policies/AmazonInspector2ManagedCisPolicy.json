@@ -1,0 +1,31 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonInspector2ManagedCisPolicy",
+  "CreateDate": "2024-01-24T16:31:43Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4DMU4YEMSZ",
+  "PolicyName": "AmazonInspector2ManagedCisPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-01-24T16:31:43Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "inspector2:SendCisSessionHealth",
+            "inspector2:SendCisSessionTelemetry",
+            "inspector2:StartCisSession",
+            "inspector2:StopCisSession"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PermissionsForCISScans"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-01-24T16:31:43Z"
+}

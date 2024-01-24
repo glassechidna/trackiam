@@ -8,9 +8,11 @@ Actions:
   - Name: inspector2:BatchUpdateMemberEc2DeepInspectionStatus
   - Name: inspector2:CancelFindingsReport
   - Name: inspector2:CancelSbomExport
+  - Name: inspector2:CreateCisScanConfiguration
   - Name: inspector2:CreateFilter
   - Name: inspector2:CreateFindingsReport
   - Name: inspector2:CreateSbomExport
+  - Name: inspector2:DeleteCisScanConfiguration
   - Name: inspector2:DeleteFilter
   - Name: inspector2:DescribeOrganizationConfiguration
   - Name: inspector2:Disable
@@ -18,6 +20,8 @@ Actions:
   - Name: inspector2:DisassociateMember
   - Name: inspector2:Enable
   - Name: inspector2:EnableDelegatedAdminAccount
+  - Name: inspector2:GetCisScanReport
+  - Name: inspector2:GetCisScanResultDetails
   - Name: inspector2:GetConfiguration
   - Name: inspector2:GetDelegatedAdminAccount
   - Name: inspector2:GetEc2DeepInspectionConfiguration
@@ -26,6 +30,10 @@ Actions:
   - Name: inspector2:GetMember
   - Name: inspector2:GetSbomExport
   - Name: inspector2:ListAccountPermissions
+  - Name: inspector2:ListCisScanConfigurations
+  - Name: inspector2:ListCisScanResultsAggregatedByChecks
+  - Name: inspector2:ListCisScanResultsAggregatedByTargetResource
+  - Name: inspector2:ListCisScans
   - Name: inspector2:ListCoverage
   - Name: inspector2:ListCoverageStatistics
   - Name: inspector2:ListDelegatedAdminAccounts
@@ -37,26 +45,16 @@ Actions:
   - Name: inspector2:ListUsageTotals
   - Name: inspector2:ResetEncryptionKey
   - Name: inspector2:SearchVulnerabilities
+  - Name: inspector2:SendCisSessionHealth
+  - Name: inspector2:SendCisSessionTelemetry
+  - Name: inspector2:StartCisSession
+  - Name: inspector2:StopCisSession
   - Name: inspector2:TagResource
   - Name: inspector2:UntagResource
+  - Name: inspector2:UpdateCisScanConfiguration
   - Name: inspector2:UpdateConfiguration
   - Name: inspector2:UpdateEc2DeepInspectionConfiguration
   - Name: inspector2:UpdateEncryptionKey
   - Name: inspector2:UpdateFilter
   - Name: inspector2:UpdateOrgEc2DeepInspectionConfiguration
   - Name: inspector2:UpdateOrganizationConfiguration
-
-  # APIs without an IAM action
-  - Name: inspector2:CreateCisScanConfiguration
-  - Name: inspector2:DeleteCisScanConfiguration
-  - Name: inspector2:GetCisScanReport
-  - Name: inspector2:GetCisScanResultDetails
-  - Name: inspector2:ListCisScanConfigurations
-  - Name: inspector2:ListCisScanResultsAggregatedByChecks
-  - Name: inspector2:ListCisScanResultsAggregatedByTargetResource
-  - Name: inspector2:ListCisScans
-  - Name: inspector2:SendCisSessionHealth
-  - Name: inspector2:SendCisSessionTelemetry
-  - Name: inspector2:StartCisSession
-  - Name: inspector2:StopCisSession
-  - Name: inspector2:UpdateCisScanConfiguration
