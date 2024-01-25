@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEMRServerlessServiceRolePolicy",
   "CreateDate": "2022-05-20T23:15:42Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4GWPDPIMVL",
   "PolicyName": "AmazonEMRServerlessServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-04-20T15:47:33Z",
+    "CreateDate": "2024-01-25T18:21:43Z",
     "Document": {
       "Statement": [
         {
@@ -25,7 +25,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "CloudWatchPolicyStatement"
         },
         {
           "Action": [
@@ -39,13 +40,14 @@
             "ec2:DescribeVpcs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "EC2PolicyStatement"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-04-20T15:47:33Z"
+  "UpdateDate": "2024-01-25T18:21:43Z"
 }
