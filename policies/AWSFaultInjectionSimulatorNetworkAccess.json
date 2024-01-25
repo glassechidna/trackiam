@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSFaultInjectionSimulatorNetworkAccess",
   "CreateDate": "2022-10-26T20:32:50Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4AXEXMENON",
   "PolicyName": "AWSFaultInjectionSimulatorNetworkAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-10-26T20:32:50Z",
+    "CreateDate": "2024-01-25T16:07:44Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ec2:CreateManagedPrefixList",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/managedByFIS": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:prefix-list/*",
+          "Sid": "CreateManagedPrefixList"
+        },
         {
           "Action": "ec2:CreateNetworkAcl",
           "Condition": {
@@ -18,7 +29,53 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:network-acl/*"
+          "Resource": "arn:aws:ec2:*:*:network-acl/*",
+          "Sid": "CreateNetworkAcl"
+        },
+        {
+          "Action": "ec2:CreateNetworkInterface",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/managedByFIS": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "CreateNetworkInterface"
+        },
+        {
+          "Action": "ec2:CreateRoute",
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/managedByFIS": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:route-table/*",
+          "Sid": "CreateRoute"
+        },
+        {
+          "Action": "ec2:CreateRouteTable",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/managedByFIS": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:route-table/*",
+          "Sid": "CreateRouteTable"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/managedByFIS": "true",
+              "ec2:CreateAction": "CreateManagedPrefixList"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:prefix-list/*",
+          "Sid": "CreateTagsOnPrefixList"
         },
         {
           "Action": "ec2:CreateTags",
@@ -29,7 +86,105 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:network-acl/*"
+          "Resource": "arn:aws:ec2:*:*:network-acl/*",
+          "Sid": "CreateTagsOnNetworkAcl"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/managedByFIS": "true",
+              "ec2:CreateAction": "CreateNetworkInterface"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "CreateTagsOnNetworkInterface"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/managedByFIS": "true",
+              "ec2:CreateAction": "CreateRouteTable"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:route-table/*",
+          "Sid": "CreateTagsOnRouteTable"
+        },
+        {
+          "Action": "ec2:DeleteManagedPrefixList",
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/managedByFIS": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:prefix-list/*",
+          "Sid": "DeleteManagedPrefixList"
+        },
+        {
+          "Action": "ec2:DeleteNetworkInterface",
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/managedByFIS": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "DeleteNetworkInterface"
+        },
+        {
+          "Action": "ec2:DeleteRouteTable",
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/managedByFIS": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:route-table/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ],
+          "Sid": "DeleteRouteTable"
+        },
+        {
+          "Action": "ec2:DisassociateRouteTable",
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/managedByFIS": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:route-table/*"
+          ],
+          "Sid": "DisassociateRouteTable"
+        },
+        {
+          "Action": "ec2:ModifyManagedPrefixList",
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/managedByFIS": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:prefix-list/*",
+          "Sid": "ModifyManagedPrefixList"
+        },
+        {
+          "Action": "ec2:ModifyVpcEndpoint",
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/managedByFIS": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:route-table/*"
+          ],
+          "Sid": "ModifyVpcEndpointOnRouteTable"
         },
         {
           "Action": [
@@ -45,17 +200,60 @@
           "Resource": [
             "arn:aws:ec2:*:*:network-acl/*",
             "arn:aws:ec2:*:*:vpc/*"
-          ]
+          ],
+          "Sid": "DeleteNetworkAcl"
+        },
+        {
+          "Action": "ec2:AssociateRouteTable",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:route-table/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "AssociateRouteTable"
         },
         {
           "Action": "ec2:CreateNetworkAcl",
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:vpc/*"
+          "Resource": "arn:aws:ec2:*:*:vpc/*",
+          "Sid": "CreateNetworkAclOnVpc"
+        },
+        {
+          "Action": "ec2:CreateNetworkInterface",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "CreateNetworkInterfaceOnSubnet"
+        },
+        {
+          "Action": "ec2:CreateRouteTable",
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc/*",
+          "Sid": "CreateRouteTableOnVpc"
+        },
+        {
+          "Action": "ec2:DisassociateRouteTable",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "DisassociateRouteTableOnSubnet"
         },
         {
           "Action": "ec2:GetManagedPrefixListEntries",
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:prefix-list/*"
+          "Resource": "arn:aws:ec2:*:*:prefix-list/*",
+          "Sid": "GetManagedPrefixListEntries"
+        },
+        {
+          "Action": "ec2:ModifyVpcEndpoint",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:vpc-endpoint/*"
+          ],
+          "Sid": "ModifyVpcEndpoint"
         },
         {
           "Action": "ec2:ReplaceNetworkAclAssociation",
@@ -63,23 +261,53 @@
           "Resource": [
             "arn:aws:ec2:*:*:network-acl/*",
             "arn:aws:ec2:*:*:subnet/*"
-          ]
+          ],
+          "Sid": "ReplaceNetworkAclAssociation"
+        },
+        {
+          "Action": "ec2:ReplaceRouteTableAssociation",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:route-table/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "ReplaceRouteTableAssociation"
+        },
+        {
+          "Action": [
+            "ec2:AssociateTransitGatewayRouteTable",
+            "ec2:DisassociateTransitGatewayRouteTable"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:transit-gateway-attachment/*",
+            "arn:aws:ec2:*:*:transit-gateway-route-table/*"
+          ],
+          "Sid": "TransitGatewayRouteTableAssociation"
         },
         {
           "Action": [
             "ec2:DescribeManagedPrefixLists",
             "ec2:DescribeNetworkAcls",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeRouteTables",
             "ec2:DescribeSubnets",
+            "ec2:DescribeTransitGatewayAttachments",
+            "ec2:DescribeTransitGatewayPeeringAttachments",
+            "ec2:DescribeTransitGateways",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcPeeringConnections",
             "ec2:DescribeVpcs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "VpcActions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-10-26T20:32:50Z"
+  "UpdateDate": "2024-01-25T16:07:44Z"
 }

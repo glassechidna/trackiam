@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSFaultInjectionSimulatorECSAccess",
   "CreateDate": "2022-10-26T20:37:56Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4O4WAPQIW3",
   "PolicyName": "AWSFaultInjectionSimulatorECSAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-06-01T10:48:27Z",
+    "CreateDate": "2024-01-25T16:16:02Z",
     "Document": {
       "Statement": [
         {
@@ -16,7 +16,8 @@
           "Resource": [
             "arn:aws:ssm:*:*:document/*",
             "arn:aws:ssm:*:*:managed-instance/*"
-          ]
+          ],
+          "Sid": "SSMSend"
         },
         {
           "Action": [
@@ -26,7 +27,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ecs:*:*:cluster/*"
-          ]
+          ],
+          "Sid": "Clusters"
         },
         {
           "Action": [
@@ -36,17 +38,26 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ecs:*:*:task/*/*"
-          ]
+          ],
+          "Sid": "Tasks"
         },
         {
           "Action": [
-            "ecs:ListTasks",
+            "ecs:ListTasks"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListTasks"
+        },
+        {
+          "Action": [
             "ecs:UpdateContainerInstancesState"
           ],
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ecs:*:*:container-instance/*/*"
-          ]
+          ],
+          "Sid": "ContainerInstances"
         },
         {
           "Action": [
@@ -54,13 +65,22 @@
             "ssm:ListCommands"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "SSMList"
+        },
+        {
+          "Action": [
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TargetResolutionByTags"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-06-01T10:48:27Z"
+  "UpdateDate": "2024-01-25T16:16:02Z"
 }
