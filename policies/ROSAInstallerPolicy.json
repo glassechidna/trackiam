@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/ROSAInstallerPolicy",
   "CreateDate": "2023-06-06T21:00:31Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4GYZ6SLEWE",
   "PolicyName": "ROSAInstallerPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-06-06T21:00:31Z",
+    "CreateDate": "2024-01-26T21:04:47Z",
     "Document": {
       "Statement": [
         {
@@ -278,9 +278,12 @@
             "ec2:DescribeVpcs",
             "elasticloadbalancing:DescribeAccountLimits",
             "elasticloadbalancing:DescribeLoadBalancers",
+            "iam:GetOpenIDConnectProvider",
             "iam:GetRole",
             "route53:GetAccountLimit",
+            "route53:GetHostedZone",
             "route53:ListHostedZones",
+            "route53:ListHostedZonesByName",
             "route53:ListResourceRecordSets",
             "servicequotas:GetServiceQuota"
           ],
@@ -315,7 +318,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-06-06T21:00:31Z"
+  "UpdateDate": "2024-01-26T21:04:47Z"
 }
