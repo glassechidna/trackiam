@@ -131,7 +131,7 @@ The following table summarises the AWS APIs.
 | [`iotfleetwise`](services/iotfleetwise.yml) | 52 | 0 | 0 |
 | [`lakeformation`](services/lakeformation.yml) | 51 | 3 | 1 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
-| [`mediaconnect`](services/mediaconnect.yml) | 50 | 1 | 3 |
+| [`mediaconnect`](services/mediaconnect.yml) | 51 | 0 | 3 |
 | [`drs`](services/drs.yml) | 50 | 0 | 40 |
 | [`codebuild`](services/codebuild.yml) | 50 | 0 | 8 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
