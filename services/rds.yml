@@ -24,6 +24,7 @@ Actions:
   - Name: rds:CreateDBProxy
   - Name: rds:CreateDBProxyEndpoint
   - Name: rds:CreateDBSecurityGroup
+  - Name: rds:CreateDBShardGroup
   - Name: rds:CreateDBSnapshot
   - Name: rds:CreateDBSubnetGroup
   - Name: rds:CreateEventSubscription
@@ -44,6 +45,7 @@ Actions:
   - Name: rds:DeleteDBProxy
   - Name: rds:DeleteDBProxyEndpoint
   - Name: rds:DeleteDBSecurityGroup
+  - Name: rds:DeleteDBShardGroup
   - Name: rds:DeleteDBSnapshot
   - Name: rds:DeleteDBSubnetGroup
   - Name: rds:DeleteEventSubscription
@@ -75,6 +77,7 @@ Actions:
   - Name: rds:DescribeDBProxyTargets
   - Name: rds:DescribeDBRecommendations
   - Name: rds:DescribeDBSecurityGroups
+  - Name: rds:DescribeDBShardGroups
   - Name: rds:DescribeDBSnapshotAttributes
   - Name: rds:DescribeDBSnapshots
   - Name: rds:DescribeDBSubnetGroups
@@ -116,6 +119,7 @@ Actions:
   - Name: rds:ModifyDBProxyEndpoint
   - Name: rds:ModifyDBProxyTargetGroup
   - Name: rds:ModifyDBRecommendation
+  - Name: rds:ModifyDBShardGroup
   - Name: rds:ModifyDBSnapshot
   - Name: rds:ModifyDBSnapshotAttribute
   - Name: rds:ModifyDBSubnetGroup
@@ -128,6 +132,7 @@ Actions:
   - Name: rds:PurchaseReservedDBInstancesOffering
   - Name: rds:RebootDBCluster
   - Name: rds:RebootDBInstance
+  - Name: rds:RebootDBShardGroup
   - Name: rds:RegisterDBProxyTargets
   - Name: rds:RemoveFromGlobalCluster
   - Name: rds:RemoveRoleFromDBCluster
@@ -162,10 +167,3 @@ Actions:
   - Name: rds:DescribeRecommendations
   - Name: rds:DownloadCompleteDBLogFile
   - Name: rds:ModifyRecommendation
-
-  # APIs without an IAM action
-  - Name: rds:CreateDBShardGroup
-  - Name: rds:DeleteDBShardGroup
-  - Name: rds:DescribeDBShardGroups
-  - Name: rds:ModifyDBShardGroup
-  - Name: rds:RebootDBShardGroup
