@@ -110,6 +110,7 @@ The following table summarises the AWS APIs.
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 60 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 59 | 0 | 0 |
+| [`ivs`](services/ivs.yml) | 59 | 0 | 0 |
 | [`inspector2`](services/inspector2.yml) | 59 | 0 | 0 |
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 0 |
 | [`geo`](services/geo.yml) | 58 | 0 | 0 |
@@ -122,7 +123,6 @@ The following table summarises the AWS APIs.
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`qbusiness`](services/qbusiness.yml) | 54 | 0 | 7 |
-| [`ivs`](services/ivs.yml) | 54 | 0 | 5 |
 | [`resiliencehub`](services/resiliencehub.yml) | 54 | 0 | 0 |
 | [`wafv2`](services/wafv2.yml) | 53 | 0 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 52 | 6 | 14 |
