@@ -1,0 +1,42 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerCanvasBedrockAccess",
+  "CreateDate": "2024-02-02T18:37:25Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4BVRVHW7NT",
+  "PolicyName": "AmazonSageMakerCanvasBedrockAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-02-02T18:37:25Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::sagemaker-*/Canvas",
+            "arn:aws:s3:::sagemaker-*/Canvas/*"
+          ],
+          "Sid": "S3CanvasAccess"
+        },
+        {
+          "Action": [
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::sagemaker-*"
+          ],
+          "Sid": "S3BucketAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-02-02T18:37:25Z"
+}
