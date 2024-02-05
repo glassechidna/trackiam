@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v110",
+  "DefaultVersionId": "v111",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-01-03T15:52:00Z",
+    "CreateDate": "2024-02-05T15:00:23Z",
     "Document": {
       "Statement": [
         {
@@ -147,6 +147,7 @@
             "aps:ListWorkspaces",
             "aps:QueryMetrics",
             "arc-zonal-shift:GetManagedResource",
+            "arc-zonal-shift:ListAutoshifts",
             "arc-zonal-shift:ListManagedResources",
             "arc-zonal-shift:ListZonalShifts",
             "artifact:GetReport",
@@ -235,6 +236,7 @@
             "billing:GetIAMAccessPreference",
             "billing:GetSellerOfRecord",
             "billing:ListBillingViews",
+            "billingconductor:GetBillingGroupCostReport",
             "billingconductor:ListAccountAssociations",
             "billingconductor:ListBillingGroupCostReports",
             "billingconductor:ListBillingGroups",
@@ -327,7 +329,10 @@
             "cloudformation:Get*",
             "cloudformation:List*",
             "cloudformation:ValidateTemplate",
-            "cloudfront:DescribeFunction",
+            "cloudfront-keyvaluestore:Describe*",
+            "cloudfront-keyvaluestore:Get*",
+            "cloudfront-keyvaluestore:List*",
+            "cloudfront:Describe*",
             "cloudfront:Get*",
             "cloudfront:List*",
             "cloudhsm:Describe*",
@@ -1127,14 +1132,24 @@
             "launchwizard:DescribeProvisionedApp",
             "launchwizard:DescribeProvisioningEvents",
             "launchwizard:DescribeSettingsSet",
+            "launchwizard:GetDeployment",
             "launchwizard:GetInfrastructureSuggestion",
             "launchwizard:GetIpAddress",
             "launchwizard:GetResourceCostEstimate",
+            "launchwizard:GetResourceRecommendation",
+            "launchwizard:GetSettingsSet",
+            "launchwizard:GetWorkload",
+            "launchwizard:GetWorkloadAsset",
             "launchwizard:GetWorkloadAssets",
             "launchwizard:ListAdditionalNodes",
+            "launchwizard:ListAllowedResources",
+            "launchwizard:ListDeploymentEvents",
+            "launchwizard:ListDeployments",
             "launchwizard:ListProvisionedApps",
+            "launchwizard:ListResourceCostEstimates",
             "launchwizard:ListSettingsSets",
             "launchwizard:ListWorkloadDeploymentOptions",
+            "launchwizard:ListWorkloadDeploymentPatterns",
             "launchwizard:ListWorkloads",
             "lex:DescribeBot",
             "lex:DescribeBotAlias",
@@ -2024,7 +2039,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v110"
+    "VersionId": "v111"
   },
-  "UpdateDate": "2024-01-03T15:52:00Z"
+  "UpdateDate": "2024-02-05T15:00:23Z"
 }
