@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchAgentAdminPolicy",
   "CreateDate": "2018-03-07T00:52:31Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAICMXPKT7EBAF6KR3O",
   "PolicyName": "CloudWatchAgentAdminPolicy",
   "PolicyVersion": {
-    "CreateDate": "2018-03-07T00:52:31Z",
+    "CreateDate": "2024-02-05T20:59:57Z",
     "Document": {
       "Statement": [
         {
@@ -18,10 +18,17 @@
             "logs:CreateLogStream",
             "logs:DescribeLogGroups",
             "logs:DescribeLogStreams",
-            "logs:PutLogEvents"
+            "logs:PutLogEvents",
+            "logs:PutRetentionPolicy",
+            "xray:GetSamplingRules",
+            "xray:GetSamplingStatisticSummaries",
+            "xray:GetSamplingTargets",
+            "xray:PutTelemetryRecords",
+            "xray:PutTraceSegments"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "CWACloudWatchPermissions"
         },
         {
           "Action": [
@@ -29,13 +36,14 @@
             "ssm:PutParameter"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:parameter/AmazonCloudWatch-*"
+          "Resource": "arn:aws:ssm:*:*:parameter/AmazonCloudWatch-*",
+          "Sid": "CWASSMPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2018-03-07T00:52:31Z"
+  "UpdateDate": "2024-02-05T20:59:57Z"
 }
