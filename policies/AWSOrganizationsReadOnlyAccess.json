@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSOrganizationsReadOnlyAccess",
   "CreateDate": "2018-11-06T20:32:38Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJY5RQATUV77PEPVOM",
   "PolicyName": "AWSOrganizationsReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-12-22T18:08:03Z",
+    "CreateDate": "2024-02-06T17:36:59Z",
     "Document": {
       "Statement": [
         {
@@ -17,7 +17,8 @@
             "account:ListRegions"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSOrganizationsReadOnlyAccount"
         },
         {
           "Action": [
@@ -25,13 +26,14 @@
             "organizations:List*"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSOrganizationsReadOnly"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2022-12-22T18:08:03Z"
+  "UpdateDate": "2024-02-06T17:36:59Z"
 }
