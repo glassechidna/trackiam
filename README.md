@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 390
-* Unique actions: 16648
+* Unique actions: 16651
 * Managed policies: 1175
 
 Most common managed policy name prefixes:
@@ -65,7 +65,7 @@ The following table summarises the AWS APIs.
 | [`backup`](services/backup.yml) | 91 | 0 | 5 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
-| [`es`](services/es.yml) | 86 | 0 | 11 |
+| [`es`](services/es.yml) | 87 | 0 | 10 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 85 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 84 | 0 | 51 |
@@ -104,8 +104,8 @@ The following table summarises the AWS APIs.
 | [`medialive`](services/medialive.yml) | 64 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
+| [`appsync`](services/appsync.yml) | 62 | 2 | 6 |
 | [`bedrock`](services/bedrock.yml) | 62 | 0 | 21 |
-| [`appsync`](services/appsync.yml) | 62 | 0 | 6 |
 | [`cleanrooms`](services/cleanrooms.yml) | 62 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 60 | 0 | 0 |
@@ -124,7 +124,7 @@ The following table summarises the AWS APIs.
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`qbusiness`](services/qbusiness.yml) | 54 | 0 | 7 |
 | [`resiliencehub`](services/resiliencehub.yml) | 54 | 0 | 0 |
-| [`wafv2`](services/wafv2.yml) | 53 | 0 | 2 |
+| [`wafv2`](services/wafv2.yml) | 53 | 1 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 52 | 6 | 14 |
 | [`profile`](services/profile.yml) | 52 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 0 |
@@ -432,12 +432,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2648 |
-| `Get` | 2403 |
-| `Delete` | 1913 |
+| `Get` | 2404 |
+| `Delete` | 1914 |
 | `Create` | 1786 |
 | `Describe` | 1701 |
 | `Update` | 1522 |
-| `Put` | 462 |
+| `Put` | 463 |
 | `Start` | 375 |
 | `Tag` | 261 |
 | `Untag` | 257 |
