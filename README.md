@@ -100,11 +100,11 @@ The following table summarises the AWS APIs.
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
+| [`appsync`](services/appsync.yml) | 64 | 0 | 6 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 64 | 0 | 1 |
 | [`medialive`](services/medialive.yml) | 64 | 0 | 0 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
-| [`appsync`](services/appsync.yml) | 62 | 2 | 6 |
 | [`bedrock`](services/bedrock.yml) | 62 | 0 | 21 |
 | [`cleanrooms`](services/cleanrooms.yml) | 62 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
