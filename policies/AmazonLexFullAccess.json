@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLexFullAccess",
   "CreateDate": "2017-04-11T23:20:36Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJVLXDHKVC23HRTKSI",
   "PolicyName": "AmazonLexFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-07-26T21:48:05Z",
+    "CreateDate": "2024-02-07T00:55:22Z",
     "Document": {
       "Statement": [
         {
@@ -22,7 +22,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/aws-service-role/channels.lex.amazonaws.com/AWSServiceRoleForLexChannels"
-          ]
+          ],
+          "Sid": "AmazonLexFullAccessStatement5"
         },
         {
           "Action": [
@@ -36,7 +37,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/aws-service-role/channels.lexv2.amazonaws.com/AWSServiceRoleForLexV2Channels*"
-          ]
+          ],
+          "Sid": "AmazonLexFullAccessStatement7"
         },
         {
           "Action": [
@@ -50,7 +52,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/aws-service-role/lex.amazonaws.com/AWSServiceRoleForLexBots"
-          ]
+          ],
+          "Sid": "AmazonLexFullAccessStatement4"
         },
         {
           "Action": [
@@ -64,7 +67,23 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots*"
-          ]
+          ],
+          "Sid": "AmazonLexFullAccessStatement6"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "lexv2.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/replication.lexv2.amazonaws.com/AWSServiceRoleForLexV2Replication*"
+          ],
+          "Sid": "AmazonLexFullAccessStatement8"
         },
         {
           "Action": [
@@ -80,7 +99,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/aws-service-role/channels.lexv2.amazonaws.com/AWSServiceRoleForLexV2Channels*"
-          ]
+          ],
+          "Sid": "AmazonLexFullAccessStatement12"
         },
         {
           "Action": [
@@ -96,7 +116,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/aws-service-role/lex.amazonaws.com/AWSServiceRoleForLexBots"
-          ]
+          ],
+          "Sid": "AmazonLexFullAccessStatement10"
         },
         {
           "Action": [
@@ -112,7 +133,25 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots*"
-          ]
+          ],
+          "Sid": "AmazonLexFullAccessStatement11"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "lexv2.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/replication.lexv2.amazonaws.com/AWSServiceRoleForLexV2Replication*"
+          ],
+          "Sid": "AmazonLexFullAccessStatement13"
         },
         {
           "Action": [
@@ -125,7 +164,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:lambda:*:*:function:AmazonLex*"
+          "Resource": "arn:aws:lambda:*:*:function:AmazonLex*",
+          "Sid": "AmazonLexFullAccessStatement2"
         },
         {
           "Action": [
@@ -148,7 +188,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AmazonLexFullAccessStatement1"
         },
         {
           "Action": [
@@ -160,8 +201,10 @@
             "arn:aws:iam::*:role/aws-service-role/channels.lex.amazonaws.com/AWSServiceRoleForLexChannels",
             "arn:aws:iam::*:role/aws-service-role/channels.lexv2.amazonaws.com/AWSServiceRoleForLexV2Channels*",
             "arn:aws:iam::*:role/aws-service-role/lex.amazonaws.com/AWSServiceRoleForLexBots",
-            "arn:aws:iam::*:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots*"
-          ]
+            "arn:aws:iam::*:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots*",
+            "arn:aws:iam::*:role/aws-service-role/replication.lexv2.amazonaws.com/AWSServiceRoleForLexV2Replication*"
+          ],
+          "Sid": "AmazonLexFullAccessStatement9"
         },
         {
           "Action": [
@@ -172,14 +215,16 @@
             "arn:aws:iam::*:role/aws-service-role/channels.lex.amazonaws.com/AWSServiceRoleForLexChannels",
             "arn:aws:iam::*:role/aws-service-role/channels.lexv2.amazonaws.com/AWSServiceRoleForLexV2Channels*",
             "arn:aws:iam::*:role/aws-service-role/lex.amazonaws.com/AWSServiceRoleForLexBots",
-            "arn:aws:iam::*:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots*"
-          ]
+            "arn:aws:iam::*:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots*",
+            "arn:aws:iam::*:role/aws-service-role/replication.lexv2.amazonaws.com/AWSServiceRoleForLexV2Replication*"
+          ],
+          "Sid": "AmazonLexFullAccessStatement3"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2021-07-26T21:48:05Z"
+  "UpdateDate": "2024-02-07T00:55:22Z"
 }
