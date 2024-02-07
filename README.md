@@ -48,7 +48,7 @@ The following table summarises the AWS APIs.
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
 | [`ses`](services/ses.yml) | 149 | 0 | 0 |
 | [`ssm`](services/ssm.yml) | 139 | 0 | 10 |
-| [`redshift`](services/redshift.yml) | 132 | 1 | 18 |
+| [`redshift`](services/redshift.yml) | 133 | 0 | 18 |
 | [`lex`](services/lex.yml) | 131 | 10 | 8 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
