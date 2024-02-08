@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 390
-* Unique actions: 16676
+* Unique services: 391
+* Unique actions: 16680
 * Managed policies: 1175
 
 Most common managed policy name prefixes:
@@ -375,10 +375,10 @@ The following table summarises the AWS APIs.
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 14 |
 | [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
+| [`tax`](services/tax.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`billing`](services/billing.yml) | 0 | 0 | 13 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
-| [`tax`](services/tax.yml) | 0 | 0 | 12 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
@@ -408,6 +408,7 @@ The following table summarises the AWS APIs.
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
 | [`a2c`](services/a2c.yml) | 0 | 0 | 4 |
 | [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 3 |
+| [`resource-explorer`](services/resource-explorer.yml) | 0 | 0 | 3 |
 | [`partnercentral-account-management`](services/partnercentral-account-management.yml) | 0 | 0 | 3 |
 | [`mapcredits`](services/mapcredits.yml) | 0 | 0 | 3 |
 | [`identitystore-auth`](services/identitystore-auth.yml) | 0 | 0 | 3 |
@@ -431,8 +432,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2652 |
-| `Get` | 2404 |
+| `List` | 2655 |
+| `Get` | 2405 |
 | `Delete` | 1917 |
 | `Create` | 1791 |
 | `Describe` | 1708 |

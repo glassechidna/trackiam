@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonVPCReadOnlyAccess",
   "CreateDate": "2015-02-06T18:41:17Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIICZJNOJN36GTG6CM",
   "PolicyName": "AmazonVPCReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-08-02T15:47:38Z",
+    "CreateDate": "2024-02-08T17:08:19Z",
     "Document": {
       "Statement": [
         {
@@ -49,16 +49,18 @@
             "ec2:DescribeVpcPeeringConnections",
             "ec2:DescribeVpcs",
             "ec2:DescribeVpnConnections",
-            "ec2:DescribeVpnGateways"
+            "ec2:DescribeVpnGateways",
+            "ec2:GetSecurityGroupsForVpc"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AmazonVPCReadOnlyAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2021-08-02T15:47:38Z"
+  "UpdateDate": "2024-02-08T17:08:19Z"
 }
