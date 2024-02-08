@@ -5,12 +5,14 @@ Actions:
   - Name: cloudformation:CancelUpdateStack
   - Name: cloudformation:ContinueUpdateRollback
   - Name: cloudformation:CreateChangeSet
+  - Name: cloudformation:CreateGeneratedTemplate
   - Name: cloudformation:CreateStack
   - Name: cloudformation:CreateStackInstances
   - Name: cloudformation:CreateStackSet
   - Name: cloudformation:DeactivateOrganizationsAccess
   - Name: cloudformation:DeactivateType
   - Name: cloudformation:DeleteChangeSet
+  - Name: cloudformation:DeleteGeneratedTemplate
   - Name: cloudformation:DeleteStack
   - Name: cloudformation:DeleteStackInstances
   - Name: cloudformation:DeleteStackSet
@@ -18,8 +20,10 @@ Actions:
   - Name: cloudformation:DescribeAccountLimits
   - Name: cloudformation:DescribeChangeSet
   - Name: cloudformation:DescribeChangeSetHooks
+  - Name: cloudformation:DescribeGeneratedTemplate
   - Name: cloudformation:DescribeOrganizationsAccess
   - Name: cloudformation:DescribePublisher
+  - Name: cloudformation:DescribeResourceScan
   - Name: cloudformation:DescribeStackDriftDetectionStatus
   - Name: cloudformation:DescribeStackEvents
   - Name: cloudformation:DescribeStackInstance
@@ -36,13 +40,18 @@ Actions:
   - Name: cloudformation:DetectStackSetDrift
   - Name: cloudformation:EstimateTemplateCost
   - Name: cloudformation:ExecuteChangeSet
+  - Name: cloudformation:GetGeneratedTemplate
   - Name: cloudformation:GetStackPolicy
   - Name: cloudformation:GetTemplate
   - Name: cloudformation:GetTemplateSummary
   - Name: cloudformation:ImportStacksToStackSet
   - Name: cloudformation:ListChangeSets
   - Name: cloudformation:ListExports
+  - Name: cloudformation:ListGeneratedTemplates
   - Name: cloudformation:ListImports
+  - Name: cloudformation:ListResourceScanRelatedResources
+  - Name: cloudformation:ListResourceScanResources
+  - Name: cloudformation:ListResourceScans
   - Name: cloudformation:ListStackInstanceResourceDrifts
   - Name: cloudformation:ListStackInstances
   - Name: cloudformation:ListStackResources
@@ -62,8 +71,10 @@ Actions:
   - Name: cloudformation:SetTypeConfiguration
   - Name: cloudformation:SetTypeDefaultVersion
   - Name: cloudformation:SignalResource
+  - Name: cloudformation:StartResourceScan
   - Name: cloudformation:StopStackSetOperation
   - Name: cloudformation:TestType
+  - Name: cloudformation:UpdateGeneratedTemplate
   - Name: cloudformation:UpdateStack
   - Name: cloudformation:UpdateStackInstances
   - Name: cloudformation:UpdateStackSet
@@ -82,16 +93,3 @@ Actions:
   - Name: cloudformation:TagResource
   - Name: cloudformation:UntagResource
   - Name: cloudformation:UpdateResource
-
-  # APIs without an IAM action
-  - Name: cloudformation:CreateGeneratedTemplate
-  - Name: cloudformation:DeleteGeneratedTemplate
-  - Name: cloudformation:DescribeGeneratedTemplate
-  - Name: cloudformation:DescribeResourceScan
-  - Name: cloudformation:GetGeneratedTemplate
-  - Name: cloudformation:ListGeneratedTemplates
-  - Name: cloudformation:ListResourceScanRelatedResources
-  - Name: cloudformation:ListResourceScanResources
-  - Name: cloudformation:ListResourceScans
-  - Name: cloudformation:StartResourceScan
-  - Name: cloudformation:UpdateGeneratedTemplate

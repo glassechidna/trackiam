@@ -71,6 +71,7 @@ The following table summarises the AWS APIs.
 | [`workmail`](services/workmail.yml) | 84 | 0 | 51 |
 | [`iotsitewise`](services/iotsitewise.yml) | 84 | 0 | 2 |
 | [`omics`](services/omics.yml) | 82 | 0 | 0 |
+| [`cloudformation`](services/cloudformation.yml) | 81 | 0 | 11 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 79 | 0 | 11 |
 | [`securityhub`](services/securityhub.yml) | 79 | 0 | 10 |
@@ -88,7 +89,6 @@ The following table summarises the AWS APIs.
 | [`workspaces`](services/workspaces.yml) | 73 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
 | [`imagebuilder`](services/imagebuilder.yml) | 73 | 0 | 0 |
-| [`cloudformation`](services/cloudformation.yml) | 70 | 11 | 11 |
 | [`mgn`](services/mgn.yml) | 70 | 0 | 34 |
 | [`wellarchitected`](services/wellarchitected.yml) | 70 | 0 | 0 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
