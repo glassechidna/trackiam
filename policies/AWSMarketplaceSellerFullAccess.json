@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerFullAccess",
   "CreateDate": "2019-07-02T20:40:09Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JF7OFUANW",
   "PolicyName": "AWSMarketplaceSellerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-06-01T17:46:22Z",
+    "CreateDate": "2024-02-08T19:19:05Z",
     "Document": {
       "Statement": [
         {
@@ -27,7 +27,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AgreementAccess"
         },
         {
           "Action": [
@@ -39,7 +40,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/*"
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "AssetScanning"
         },
         {
           "Action": [
@@ -53,11 +55,13 @@
             "aws-marketplace-management:PutSellerVerificationDetails",
             "payments:CreatePaymentInstrument",
             "payments:GetPaymentInstrument",
+            "tax:GetTaxInfoReportingDocument",
             "tax:GetTaxInterview",
             "tax:PutTaxInterview"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "SellerSettings"
         },
         {
           "Action": [
@@ -83,7 +87,8 @@
             "ec2:ModifySnapshotAttribute"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "MarketplaceManagement"
         },
         {
           "Action": [
@@ -92,7 +97,8 @@
             "aws-marketplace:PutResourcePolicy"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace/*"
+          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace/*",
+          "Sid": "ResourcePolicyManagement"
         },
         {
           "Action": [
@@ -101,21 +107,24 @@
             "aws-marketplace:UntagResource"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace/*"
+          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace/*",
+          "Sid": "TagManagement"
         },
         {
           "Action": [
             "iam:GetRole"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/*"
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "IAMGetRole"
         },
         {
           "Action": [
             "support:CreateCase"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "Support"
         },
         {
           "Action": [
@@ -127,13 +136,14 @@
             "vendor-insights:ListSecurityProfiles"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "VendorInsights"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2023-06-01T17:46:22Z"
+  "UpdateDate": "2024-02-08T19:19:05Z"
 }
