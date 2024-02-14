@@ -1,26 +1,29 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:40:17Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v1",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIGDT4SV4GSETWTBZK",
   "PolicyName": "AmazonEC2ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-02-14T15:17:04Z",
+    "CreateDate": "2015-02-06T18:40:17Z",
     "Document": {
       "Statement": [
         {
           "Action": "autoscaling:Describe*",
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "Autoscaling"
+          "Resource": "*"
+        },
+        {
+          "Action": "ec2:Describe*",
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": "elasticloadbalancing:Describe*",
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "ELB"
+          "Resource": "*"
         },
         {
           "Action": [
@@ -29,23 +32,13 @@
             "cloudwatch:ListMetrics"
           ],
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "Cloudwatch"
-        },
-        {
-          "Action": [
-            "ec2:Describe*",
-            "ec2:Get*"
-          ],
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "EC2"
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v1"
   },
-  "UpdateDate": "2024-02-14T15:17:04Z"
+  "UpdateDate": "2024-02-14T18:43:53Z"
 }
