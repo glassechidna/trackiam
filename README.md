@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 391
-* Unique actions: 16680
+* Unique actions: 16689
 * Managed policies: 1175
 
 Most common managed policy name prefixes:
@@ -295,7 +295,7 @@ The following table summarises the AWS APIs.
 | [`docdb-elastic`](services/docdb-elastic.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 13 | 0 | 0 |
-| [`controltower`](services/controltower.yml) | 12 | 0 | 41 |
+| [`controltower`](services/controltower.yml) | 12 | 9 | 41 |
 | [`scheduler`](services/scheduler.yml) | 12 | 0 | 0 |
 | [`networkmonitor`](services/networkmonitor.yml) | 12 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 12 | 0 | 0 |
@@ -432,12 +432,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2655 |
-| `Get` | 2405 |
+| `List` | 2657 |
+| `Get` | 2408 |
 | `Delete` | 1917 |
 | `Create` | 1791 |
 | `Describe` | 1708 |
-| `Update` | 1522 |
+| `Update` | 1523 |
 | `Put` | 463 |
 | `Start` | 376 |
 | `Tag` | 261 |
