@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRolePolicyForBackupRestoreTesting",
   "CreateDate": "2023-11-10T23:37:45Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4A6QQZKWX4",
   "PolicyName": "AWSServiceRolePolicyForBackupRestoreTesting",
   "PolicyVersion": {
-    "CreateDate": "2023-11-10T23:37:45Z",
+    "CreateDate": "2024-02-14T22:42:37Z",
     "Document": {
       "Statement": [
         {
@@ -71,12 +71,28 @@
           "Sid": "S3DeleteActions"
         },
         {
+          "Action": "redshift:DeleteCluster",
+          "Effect": "Allow",
+          "Resource": "arn:aws:redshift:*:*:cluster:awsbackup-restore-test-*",
+          "Sid": "RedshiftDeleteActions"
+        },
+        {
+          "Action": "timestream:DeleteTable",
+          "Effect": "Allow",
+          "Resource": "arn:aws:timestream:*:*:database/*/table/awsbackup-restore-test-*",
+          "Sid": "TimestreamDeleteActions"
+        },
+        {
           "Action": [
+            "backup:DescribeProtectedResource",
+            "backup:DescribeRecoveryPoint",
             "backup:DescribeRestoreJob",
             "backup:GetRecoveryPointRestoreMetadata",
             "backup:ListBackupVaults",
+            "backup:ListProtectedResources",
             "backup:ListProtectedResourcesByBackupVault",
             "backup:ListRecoveryPointsByBackupVault",
+            "backup:ListRecoveryPointsByResource",
             "backup:ListTags",
             "backup:StartRestoreJob"
           ],
@@ -87,6 +103,7 @@
         {
           "Action": [
             "ec2:DescribeInstances",
+            "ec2:DescribeSnapshotTierStatus",
             "ec2:DescribeTags",
             "ec2:DescribeVolumes",
             "elasticfilesystem:DescribeFileSystems",
@@ -94,10 +111,12 @@
             "fsx:DescribeFileSystems",
             "fsx:DescribeVolumes",
             "fsx:ListTagsForResource",
+            "rds:DescribeDBClusterAutomatedBackups",
             "rds:DescribeDBClusters",
             "rds:DescribeDBInstanceAutomatedBackups",
             "rds:DescribeDBInstances",
-            "rds:ListTagsForResource"
+            "rds:ListTagsForResource",
+            "redshift:DescribeClusters"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -107,7 +126,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-11-10T23:37:45Z"
+  "UpdateDate": "2024-02-14T22:42:37Z"
 }

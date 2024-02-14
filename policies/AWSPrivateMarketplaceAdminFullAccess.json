@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPrivateMarketplaceAdminFullAccess",
   "CreateDate": "2018-11-27T16:32:32Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ6VRZDDCYDOVCOCEI",
   "PolicyName": "AWSPrivateMarketplaceAdminFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-12-07T20:02:37Z",
+    "CreateDate": "2024-02-14T22:05:08Z",
     "Document": {
       "Statement": [
         {
@@ -20,7 +20,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "PrivateMarketplaceRequestPermissions"
         },
         {
           "Action": [
@@ -32,7 +33,8 @@
             "aws-marketplace:StartChangeSet"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "PrivateMarketplaceCatalogAPIPermissions"
         },
         {
           "Action": [
@@ -41,13 +43,31 @@
             "aws-marketplace:UntagResource"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace/*"
+          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace/*",
+          "Sid": "PrivateMarketplaceCatalogTaggingPermissions"
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListAccountsForParent",
+            "organizations:ListDelegatedAdministrators",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListParents",
+            "organizations:ListRoots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PrivateMarketplaceOrganizationPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2022-12-07T20:02:37Z"
+  "UpdateDate": "2024-02-14T22:05:08Z"
 }

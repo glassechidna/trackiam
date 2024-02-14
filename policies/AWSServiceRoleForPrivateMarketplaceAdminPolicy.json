@@ -1,0 +1,82 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForPrivateMarketplaceAdminPolicy",
+  "CreateDate": "2024-02-14T22:28:01Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4BGFM6V4D2",
+  "PolicyName": "AWSServiceRoleForPrivateMarketplaceAdminPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-02-14T22:28:01Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aws-marketplace:StartChangeSet"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "catalog:ChangeType": [
+                "AssociateAudience",
+                "DisassociateAudience"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/ChangeSet/*",
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/Experience/*"
+          ],
+          "Sid": "PrivateMarketplaceStartChangeSetPermissions"
+        },
+        {
+          "Action": [
+            "aws-marketplace:DescribeChangeSet"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PrivateMarketplaceCatalogDescribeChangeSetPermissions"
+        },
+        {
+          "Action": [
+            "aws-marketplace:DescribeEntity"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/Audience/*",
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/BrandingSettings/*",
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/Experience/*",
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/ProcurementPolicy/*"
+          ],
+          "Sid": "PrivateMarketplaceCatalogDescribePermissions"
+        },
+        {
+          "Action": [
+            "aws-marketplace:ListChangeSets",
+            "aws-marketplace:ListEntities"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PrivateMarketplaceCatalogListPermissions"
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:ListChildren",
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "PrivateMarketplaceOrganizationPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-02-14T22:28:01Z"
+}
