@@ -1,16 +1,25 @@
 Actions:
   - Name: controltower:DeleteLandingZone
+  - Name: controltower:DisableBaseline
   - Name: controltower:DisableControl
+  - Name: controltower:EnableBaseline
   - Name: controltower:EnableControl
+  - Name: controltower:GetBaseline
+  - Name: controltower:GetBaselineOperation
   - Name: controltower:GetControlOperation
+  - Name: controltower:GetEnabledBaseline
   - Name: controltower:GetEnabledControl
   - Name: controltower:GetLandingZoneOperation
+  - Name: controltower:ListBaselines
+  - Name: controltower:ListEnabledBaselines
   - Name: controltower:ListEnabledControls
   - Name: controltower:ListLandingZones
   - Name: controltower:ListTagsForResource
+  - Name: controltower:ResetEnabledBaseline
   - Name: controltower:ResetLandingZone
   - Name: controltower:TagResource
   - Name: controltower:UntagResource
+  - Name: controltower:UpdateEnabledBaseline
 
   # actions with no corresponding API
   - Name: controltower:CreateLandingZone
@@ -54,14 +63,3 @@ Actions:
   - Name: controltower:UpdateAccountFactoryConfig
   - Name: controltower:UpdateEnabledControl
   - Name: controltower:UpdateLandingZone
-
-  # APIs without an IAM action
-  - Name: controltower:DisableBaseline
-  - Name: controltower:EnableBaseline
-  - Name: controltower:GetBaseline
-  - Name: controltower:GetBaselineOperation
-  - Name: controltower:GetEnabledBaseline
-  - Name: controltower:ListBaselines
-  - Name: controltower:ListEnabledBaselines
-  - Name: controltower:ResetEnabledBaseline
-  - Name: controltower:UpdateEnabledBaseline
