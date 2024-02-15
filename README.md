@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 391
-* Unique actions: 16689
+* Unique actions: 16690
 * Managed policies: 1176
 
 Most common managed policy name prefixes:
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 615 | 0 | 16 |
-| [`sagemaker`](services/sagemaker.yml) | 335 | 0 | 11 |
+| [`sagemaker`](services/sagemaker.yml) | 335 | 1 | 11 |
 | [`iot`](services/iot.yml) | 262 | 3 | 9 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`connect`](services/connect.yml) | 241 | 3 | 6 |
@@ -325,6 +325,7 @@ The following table summarises the AWS APIs.
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
 | [`cur`](services/cur.yml) | 7 | 0 | 5 |
 | [`cost-optimization-hub`](services/cost-optimization-hub.yml) | 7 | 0 | 0 |
+| [`artifact`](services/artifact.yml) | 6 | 0 | 4 |
 | [`elastic-inference`](services/elastic-inference.yml) | 6 | 0 | 1 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
@@ -382,7 +383,6 @@ The following table summarises the AWS APIs.
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 12 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
-| [`artifact`](services/artifact.yml) | 0 | 0 | 10 |
 | [`ts`](services/ts.yml) | 0 | 0 | 9 |
 | [`notifications-contacts`](services/notifications-contacts.yml) | 0 | 0 | 9 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 9 |
@@ -437,7 +437,7 @@ Most common action prefixes:
 | `Delete` | 1917 |
 | `Create` | 1791 |
 | `Describe` | 1708 |
-| `Update` | 1523 |
+| `Update` | 1524 |
 | `Put` | 463 |
 | `Start` | 376 |
 | `Tag` | 261 |
