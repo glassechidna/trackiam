@@ -1,33 +1,41 @@
 {
   "Arn": "arn:aws:iam::aws:policy/IVSReadOnlyAccess",
   "CreateDate": "2023-12-05T18:00:37Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KSFZMGQOA",
   "PolicyName": "IVSReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-12-05T18:00:37Z",
+    "CreateDate": "2024-02-16T18:03:24Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "ivs:BatchGetChannel",
             "ivs:GetChannel",
+            "ivs:GetComposition",
+            "ivs:GetEncoderConfiguration",
             "ivs:GetParticipant",
             "ivs:GetPlaybackKeyPair",
+            "ivs:GetPlaybackRestrictionPolicy",
             "ivs:GetRecordingConfiguration",
             "ivs:GetStage",
             "ivs:GetStageSession",
+            "ivs:GetStorageConfiguration",
             "ivs:GetStream",
             "ivs:GetStreamSession",
             "ivs:ListChannels",
+            "ivs:ListCompositions",
+            "ivs:ListEncoderConfigurations",
             "ivs:ListParticipantEvents",
             "ivs:ListParticipants",
             "ivs:ListPlaybackKeyPairs",
+            "ivs:ListPlaybackRestrictionPolicies",
             "ivs:ListRecordingConfigurations",
             "ivs:ListStageSessions",
             "ivs:ListStages",
+            "ivs:ListStorageConfigurations",
             "ivs:ListStreamKeys",
             "ivs:ListStreamSessions",
             "ivs:ListStreams",
@@ -40,8 +48,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v1"
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-12-05T18:00:37Z"
+  "UpdateDate": "2024-02-16T18:03:24Z"
 }
