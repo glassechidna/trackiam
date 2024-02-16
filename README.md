@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 391
-* Unique actions: 16691
+* Unique actions: 16694
 * Managed policies: 1176
 
 Most common managed policy name prefixes:
@@ -119,7 +119,7 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 56 | 0 | 2 |
 | [`eks`](services/eks.yml) | 56 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
-| [`elasticmapreduce`](services/elasticmapreduce.yml) | 55 | 0 | 26 |
+| [`elasticmapreduce`](services/elasticmapreduce.yml) | 55 | 1 | 26 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`qbusiness`](services/qbusiness.yml) | 54 | 0 | 7 |
@@ -296,10 +296,10 @@ The following table summarises the AWS APIs.
 | [`docdb-elastic`](services/docdb-elastic.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 13 | 0 | 0 |
+| [`firehose`](services/firehose.yml) | 12 | 2 | 0 |
 | [`scheduler`](services/scheduler.yml) | 12 | 0 | 0 |
 | [`networkmonitor`](services/networkmonitor.yml) | 12 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 12 | 0 | 0 |
-| [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`bcm-data-exports`](services/bcm-data-exports.yml) | 12 | 0 | 0 |
 | [`repostspace`](services/repostspace.yml) | 11 | 0 | 0 |
 | [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 11 | 0 | 0 |
@@ -433,7 +433,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2657 |
-| `Get` | 2408 |
+| `Get` | 2409 |
 | `Delete` | 1917 |
 | `Create` | 1791 |
 | `Describe` | 1708 |
