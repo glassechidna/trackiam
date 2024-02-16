@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDataSyncFullAccess",
   "CreateDate": "2019-01-18T19:40:36Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJGOHCDUQULZJKDGT4",
   "PolicyName": "AWSDataSyncFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-05-02T16:37:43Z",
+    "CreateDate": "2024-02-16T17:19:28Z",
     "Document": {
       "Statement": [
         {
@@ -22,7 +22,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DataSyncPassRolePermissions"
         },
         {
           "Action": [
@@ -50,16 +51,18 @@
             "s3-outposts:ListRegionalBuckets",
             "s3:GetBucketLocation",
             "s3:ListAllMyBuckets",
-            "s3:ListBucket"
+            "s3:ListBucket",
+            "s3:ListBucketVersions"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DataSyncFullAccessPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2023-05-02T16:37:43Z"
+  "UpdateDate": "2024-02-16T17:19:28Z"
 }
