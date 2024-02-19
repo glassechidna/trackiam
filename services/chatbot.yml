@@ -1,6 +1,4 @@
 Actions:
-
-  # actions with no corresponding API
   - Name: chatbot:CreateChimeWebhookConfiguration
   - Name: chatbot:CreateMicrosoftTeamsChannelConfiguration
   - Name: chatbot:CreateSlackChannelConfiguration
@@ -13,19 +11,21 @@ Actions:
   - Name: chatbot:DeleteSlackWorkspaceAuthorization
   - Name: chatbot:DescribeChimeWebhookConfigurations
   - Name: chatbot:DescribeSlackChannelConfigurations
-  - Name: chatbot:DescribeSlackChannels
   - Name: chatbot:DescribeSlackUserIdentities
   - Name: chatbot:DescribeSlackWorkspaces
   - Name: chatbot:GetAccountPreferences
   - Name: chatbot:GetMicrosoftTeamsChannelConfiguration
-  - Name: chatbot:GetMicrosoftTeamsOauthParameters
-  - Name: chatbot:GetSlackOauthParameters
   - Name: chatbot:ListMicrosoftTeamsChannelConfigurations
   - Name: chatbot:ListMicrosoftTeamsConfiguredTeams
   - Name: chatbot:ListMicrosoftTeamsUserIdentities
-  - Name: chatbot:RedeemMicrosoftTeamsOauthCode
-  - Name: chatbot:RedeemSlackOauthCode
   - Name: chatbot:UpdateAccountPreferences
   - Name: chatbot:UpdateChimeWebhookConfiguration
   - Name: chatbot:UpdateMicrosoftTeamsChannelConfiguration
   - Name: chatbot:UpdateSlackChannelConfiguration
+
+  # actions with no corresponding API
+  - Name: chatbot:DescribeSlackChannels
+  - Name: chatbot:GetMicrosoftTeamsOauthParameters
+  - Name: chatbot:GetSlackOauthParameters
+  - Name: chatbot:RedeemMicrosoftTeamsOauthCode
+  - Name: chatbot:RedeemSlackOauthCode
