@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 391
-* Unique actions: 16694
+* Unique actions: 16692
 * Managed policies: 1176
 
 Most common managed policy name prefixes:
@@ -297,10 +297,10 @@ The following table summarises the AWS APIs.
 | [`docdb-elastic`](services/docdb-elastic.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 13 | 0 | 0 |
-| [`firehose`](services/firehose.yml) | 12 | 2 | 0 |
 | [`scheduler`](services/scheduler.yml) | 12 | 0 | 0 |
 | [`networkmonitor`](services/networkmonitor.yml) | 12 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 12 | 0 | 0 |
+| [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`bcm-data-exports`](services/bcm-data-exports.yml) | 12 | 0 | 0 |
 | [`repostspace`](services/repostspace.yml) | 11 | 0 | 0 |
 | [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 11 | 0 | 0 |
@@ -433,7 +433,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2657 |
-| `Get` | 2409 |
+| `Get` | 2408 |
 | `Delete` | 1917 |
 | `Create` | 1791 |
 | `Describe` | 1708 |
