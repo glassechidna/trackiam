@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess",
   "CreateDate": "2021-09-24T14:06:02Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BKYFZHR4E",
   "PolicyName": "AmazonRedshiftQueryEditorV2FullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-02-23T17:05:06Z",
+    "CreateDate": "2024-02-21T17:20:52Z",
     "Document": {
       "Statement": [
         {
@@ -22,12 +22,6 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "ResourceGroupsTaggingPermissions"
-        },
-        {
-          "Action": "redshift:DescribeClusters",
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "RedshiftPermissions"
         },
         {
           "Action": "sqlworkbench:*",
@@ -46,6 +40,16 @@
         },
         {
           "Action": [
+            "redshift-serverless:ListNamespaces",
+            "redshift-serverless:ListWorkgroups",
+            "redshift:DescribeClusters"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RedshiftPermissions"
+        },
+        {
+          "Action": [
             "secretsmanager:CreateSecret",
             "secretsmanager:DeleteSecret",
             "secretsmanager:GetSecretValue",
@@ -59,7 +63,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-02-23T17:05:06Z"
+  "UpdateDate": "2024-02-21T17:20:52Z"
 }

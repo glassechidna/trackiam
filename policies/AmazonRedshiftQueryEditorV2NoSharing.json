@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2NoSharing",
   "CreateDate": "2021-09-24T14:18:42Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JFCSC6IV2",
   "PolicyName": "AmazonRedshiftQueryEditorV2NoSharing",
   "PolicyVersion": {
-    "CreateDate": "2023-08-16T19:24:59Z",
+    "CreateDate": "2024-02-21T17:25:07Z",
     "Document": {
       "Statement": [
         {
@@ -119,7 +119,11 @@
           "Sid": "ResourceGroupsTaggingPermissions"
         },
         {
-          "Action": "redshift:DescribeClusters",
+          "Action": [
+            "redshift-serverless:ListNamespaces",
+            "redshift-serverless:ListWorkgroups",
+            "redshift:DescribeClusters"
+          ],
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "RedshiftPermissions"
@@ -158,7 +162,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2023-08-16T19:24:59Z"
+  "UpdateDate": "2024-02-21T17:25:07Z"
 }
