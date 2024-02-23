@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSecurityLakeAdministrator",
   "CreateDate": "2023-05-30T22:04:10Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CVEHEFUO4",
   "PolicyName": "AmazonSecurityLakeAdministrator",
   "PolicyVersion": {
-    "CreateDate": "2023-05-30T22:04:10Z",
+    "CreateDate": "2024-02-23T16:01:57Z",
     "Document": {
       "Statement": [
         {
@@ -70,11 +70,17 @@
               "iam:PassedToService": "lambda.amazonaws.com"
             },
             "StringLike": {
-              "iam:AssociatedResourceARN": "arn:aws:lambda:*:*:function:SecurityLake_Glue_Partition_Updater_Lambda*"
+              "iam:AssociatedResourceARN": [
+                "arn:aws:lambda:*:*:function:AmazonSecurityLake*",
+                "arn:aws:lambda:*:*:function:SecurityLake_Glue_Partition_Updater_Lambda*"
+              ]
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/service-role/AmazonSecurityLakeMetaStoreManager",
+          "Resource": [
+            "arn:aws:iam::*:role/service-role/AmazonSecurityLakeMetaStoreManager",
+            "arn:aws:iam::*:role/service-role/AmazonSecurityLakeMetaStoreManagerV2"
+          ],
           "Sid": "AllowPassRoleForUpdatingGluePartitionsLambdaArn"
         },
         {
@@ -133,7 +139,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/service-role/AmazonSecurityLakeMetaStoreManager",
+          "Resource": [
+            "arn:aws:iam::*:role/service-role/AmazonSecurityLakeMetaStoreManager",
+            "arn:aws:iam::*:role/service-role/AmazonSecurityLakeMetaStoreManagerV2"
+          ],
           "Sid": "AllowPassRoleForUpdatingGluePartitionsSecLakeArn"
         },
         {
@@ -155,6 +164,7 @@
           "Condition": {
             "ForAllValues:StringEquals": {
               "kms:GrantOperations": [
+                "Decrypt",
                 "GenerateDataKey",
                 "RetireGrant"
               ]
@@ -169,17 +179,6 @@
           "Effect": "Allow",
           "Resource": "arn:aws:kms:*:*:key/*",
           "Sid": "AllowKmsCmkGrantForSecurityLake"
-        },
-        {
-          "Action": "lambda:CreateFunction",
-          "Condition": {
-            "ForAnyValue:StringEquals": {
-              "aws:CalledVia": "securitylake.amazonaws.com"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:lambda:*:*:function:SecurityLake_Glue_Partition_Updater_Lambda*",
-          "Sid": "AllowLambdaCreateFunction"
         },
         {
           "Action": [
@@ -217,6 +216,7 @@
             "glue:CreateCrawler",
             "glue:StopCrawlerSchedule",
             "iam:GetRole",
+            "iam:ListAttachedRolePolicies",
             "kms:DescribeKey",
             "lakeformation:GetDatalakeSettings",
             "lakeformation:GrantPermissions",
@@ -299,6 +299,41 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/lakeformation.amazonaws.com/AWSServiceRoleForLakeFormationDataAccess",
           "Sid": "AllowRegisterS3LocationInLakeFormation"
+        },
+        {
+          "Action": [
+            "lambda:AddPermission"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "securitylake.amazonaws.com"
+            },
+            "StringEquals": {
+              "lambda:Principal": "securitylake.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:AmazonSecurityLake*",
+            "arn:aws:lambda:*:*:function:SecurityLake_Glue_Partition_Updater_Lambda*"
+          ],
+          "Sid": "AllowLambdaAddPermission"
+        },
+        {
+          "Action": [
+            "lambda:CreateFunction"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "securitylake.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:AmazonSecurityLake*",
+            "arn:aws:lambda:*:*:function:SecurityLake_Glue_Partition_Updater_Lambda*"
+          ],
+          "Sid": "AllowLambdaCreateFunction"
         },
         {
           "Action": [
@@ -431,12 +466,21 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "S3ResourcelessReadOnly"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:GetObjectVersion"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::security-lake-meta-store-manager-*",
+          "Sid": "S3ReadAccessToSecurityLakeMetastoreObject"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-05-30T22:04:10Z"
+  "UpdateDate": "2024-02-23T16:01:57Z"
 }
