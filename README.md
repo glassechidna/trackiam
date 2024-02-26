@@ -99,8 +99,8 @@ The following table summarises the AWS APIs.
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
+| [`medialive`](services/medialive.yml) | 65 | 0 | 0 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
-| [`medialive`](services/medialive.yml) | 64 | 1 | 0 |
 | [`appsync`](services/appsync.yml) | 64 | 0 | 6 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 64 | 0 | 1 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
