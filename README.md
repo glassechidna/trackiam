@@ -154,11 +154,11 @@ The following table summarises the AWS APIs.
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 40 | 0 | 3 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 40 | 0 | 0 |
+| [`ce`](services/ce.yml) | 39 | 0 | 12 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 15 |
-| [`ce`](services/ce.yml) | 38 | 0 | 13 |
 | [`codeartifact`](services/codeartifact.yml) | 38 | 0 | 3 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 1 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
