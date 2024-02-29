@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 391
-* Unique actions: 16685
+* Unique actions: 16691
 * Managed policies: 1177
 
 Most common managed policy name prefixes:
@@ -201,9 +201,9 @@ The following table summarises the AWS APIs.
 | [`dataexchange`](services/dataexchange.yml) | 30 | 0 | 2 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
 | [`voiceid`](services/voiceid.yml) | 29 | 0 | 2 |
+| [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 28 | 3 | 3 |
 | [`detective`](services/detective.yml) | 28 | 1 | 8 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
-| [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 28 | 0 | 3 |
 | [`discovery`](services/discovery.yml) | 28 | 0 | 1 |
 | [`rolesanywhere`](services/rolesanywhere.yml) | 28 | 0 | 0 |
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
@@ -288,13 +288,13 @@ The following table summarises the AWS APIs.
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 14 | 0 | 0 |
 | [`internetmonitor`](services/internetmonitor.yml) | 14 | 0 | 0 |
 | [`health`](services/health.yml) | 14 | 0 | 0 |
+| [`docdb-elastic`](services/docdb-elastic.yml) | 13 | 3 | 0 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 17 |
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 7 |
 | [`braket`](services/braket.yml) | 13 | 0 | 4 |
 | [`codeguru-security`](services/codeguru-security.yml) | 13 | 0 | 2 |
 | [`snow-device-management`](services/snow-device-management.yml) | 13 | 0 | 0 |
 | [`pi`](services/pi.yml) | 13 | 0 | 0 |
-| [`docdb-elastic`](services/docdb-elastic.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 13 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 12 | 4 | 0 |
@@ -434,12 +434,12 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 2660 |
 | `Get` | 2409 |
-| `Delete` | 1917 |
-| `Create` | 1787 |
+| `Delete` | 1918 |
+| `Create` | 1788 |
 | `Describe` | 1702 |
-| `Update` | 1524 |
+| `Update` | 1525 |
 | `Put` | 463 |
-| `Start` | 375 |
+| `Start` | 376 |
 | `Tag` | 263 |
 | `Untag` | 259 |
 
