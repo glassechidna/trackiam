@@ -123,8 +123,8 @@ The following table summarises the AWS APIs.
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`qbusiness`](services/qbusiness.yml) | 54 | 0 | 7 |
+| [`wafv2`](services/wafv2.yml) | 54 | 0 | 2 |
 | [`resiliencehub`](services/resiliencehub.yml) | 54 | 0 | 0 |
-| [`wafv2`](services/wafv2.yml) | 53 | 1 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 52 | 6 | 14 |
 | [`profile`](services/profile.yml) | 52 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 0 |
@@ -205,6 +205,7 @@ The following table summarises the AWS APIs.
 | [`detective`](services/detective.yml) | 28 | 1 | 8 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`discovery`](services/discovery.yml) | 28 | 0 | 1 |
+| [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 28 | 0 | 1 |
 | [`rolesanywhere`](services/rolesanywhere.yml) | 28 | 0 | 0 |
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
@@ -221,7 +222,6 @@ The following table summarises the AWS APIs.
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`appfabric`](services/appfabric.yml) | 26 | 0 | 0 |
-| [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 25 | 3 | 1 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
 | [`appflow`](services/appflow.yml) | 25 | 0 | 6 |
 | [`backup-gateway`](services/backup-gateway.yml) | 25 | 0 | 2 |
