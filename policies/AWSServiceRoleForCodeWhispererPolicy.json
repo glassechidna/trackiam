@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForCodeWhispererPolicy",
   "CreateDate": "2023-03-24T19:39:12Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4MTPH2EDJ3",
   "PolicyName": "AWSServiceRoleForCodeWhispererPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-06-28T16:57:20Z",
+    "CreateDate": "2024-03-01T23:35:24Z",
     "Document": {
       "Statement": [
         {
@@ -22,7 +22,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "sid5"
         },
         {
           "Action": [
@@ -34,7 +35,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:codeguru-security:*:*:scans/CodeWhisperer-*"
-          ]
+          ],
+          "Sid": "sid4"
         },
         {
           "Action": [
@@ -43,7 +45,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "sid3"
         },
         {
           "Action": [
@@ -52,13 +55,16 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "sid1"
         },
         {
           "Action": [
+            "sso:DescribeInstance",
             "sso:DescribeRegisteredRegions",
             "sso:GetManagedApplicationInstance",
             "sso:GetProfile",
+            "sso:ListApplicationAssignments",
             "sso:ListDirectoryAssociations",
             "sso:ListProfileAssociations",
             "sso:ListProfiles"
@@ -66,13 +72,14 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "sid2"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-06-28T16:57:20Z"
+  "UpdateDate": "2024-03-01T23:35:24Z"
 }
