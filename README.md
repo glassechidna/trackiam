@@ -278,6 +278,7 @@ The following table summarises the AWS APIs.
 | [`support`](services/support.yml) | 16 | 0 | 9 |
 | [`thinclient`](services/thinclient.yml) | 16 | 0 | 1 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
+| [`kafkaconnect`](services/kafkaconnect.yml) | 16 | 0 | 0 |
 | [`honeycode`](services/honeycode.yml) | 15 | 0 | 15 |
 | [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 1 |
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
@@ -297,7 +298,6 @@ The following table summarises the AWS APIs.
 | [`pi`](services/pi.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 13 | 0 | 0 |
-| [`kafkaconnect`](services/kafkaconnect.yml) | 12 | 4 | 0 |
 | [`scheduler`](services/scheduler.yml) | 12 | 0 | 0 |
 | [`networkmonitor`](services/networkmonitor.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
