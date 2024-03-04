@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
   "CreateDate": "2018-05-27T21:07:42Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJWLAS474LDBXNNTM4",
   "PolicyName": "AmazonEKS_CNI_Policy",
   "PolicyVersion": {
-    "CreateDate": "2020-04-20T20:52:01Z",
+    "CreateDate": "2024-03-04T20:20:55Z",
     "Document": {
       "Statement": [
         {
@@ -19,13 +19,15 @@
             "ec2:DescribeInstanceTypes",
             "ec2:DescribeInstances",
             "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSubnets",
             "ec2:DescribeTags",
             "ec2:DetachNetworkInterface",
             "ec2:ModifyNetworkInterfaceAttribute",
             "ec2:UnassignPrivateIpAddresses"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AmazonEKSCNIPolicy"
         },
         {
           "Action": [
@@ -34,13 +36,14 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:network-interface/*"
-          ]
+          ],
+          "Sid": "AmazonEKSCNIPolicyENITag"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2020-04-20T20:52:01Z"
+  "UpdateDate": "2024-03-04T20:20:55Z"
 }
