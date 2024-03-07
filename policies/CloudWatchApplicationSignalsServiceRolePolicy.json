@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudWatchApplicationSignalsServiceRolePolicy",
   "CreateDate": "2023-11-09T18:09:57Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4LAFFLXUGT",
   "PolicyName": "CloudWatchApplicationSignalsServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-11-09T18:09:57Z",
+    "CreateDate": "2024-03-07T00:04:01Z",
     "Document": {
       "Statement": [
         {
@@ -38,8 +38,7 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:logs:*:*:log-group:/aws/appsignals/eks:*",
-            "arn:aws:logs:*:*:log-group:/aws/appsignals/generic:*"
+            "arn:aws:logs:*:*:log-group:/aws/appsignals/*:*"
           ],
           "Sid": "CWLogsPermission"
         },
@@ -77,7 +76,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-11-09T18:09:57Z"
+  "UpdateDate": "2024-03-07T00:04:01Z"
 }
