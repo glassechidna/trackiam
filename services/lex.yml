@@ -6,6 +6,7 @@ Actions:
   - Name: lex:CreateBot
   - Name: lex:CreateBotAlias
   - Name: lex:CreateBotLocale
+  - Name: lex:CreateBotReplica
   - Name: lex:CreateBotVersion
   - Name: lex:CreateExport
   - Name: lex:CreateIntent
@@ -20,6 +21,7 @@ Actions:
   - Name: lex:DeleteBotAlias
   - Name: lex:DeleteBotChannelAssociation
   - Name: lex:DeleteBotLocale
+  - Name: lex:DeleteBotReplica
   - Name: lex:DeleteBotVersion
   - Name: lex:DeleteCustomVocabulary
   - Name: lex:DeleteExport
@@ -37,6 +39,7 @@ Actions:
   - Name: lex:DescribeBotAlias
   - Name: lex:DescribeBotLocale
   - Name: lex:DescribeBotRecommendation
+  - Name: lex:DescribeBotReplica
   - Name: lex:DescribeBotResourceGeneration
   - Name: lex:DescribeBotVersion
   - Name: lex:DescribeCustomVocabularyMetadata
@@ -75,10 +78,13 @@ Actions:
   - Name: lex:GetTestExecutionArtifactsUrl
   - Name: lex:GetUtterancesView
   - Name: lex:ListAggregatedUtterances
+  - Name: lex:ListBotAliasReplicas
   - Name: lex:ListBotAliases
   - Name: lex:ListBotLocales
   - Name: lex:ListBotRecommendations
+  - Name: lex:ListBotReplicas
   - Name: lex:ListBotResourceGenerations
+  - Name: lex:ListBotVersionReplicas
   - Name: lex:ListBotVersions
   - Name: lex:ListBots
   - Name: lex:ListBuiltInIntents
@@ -142,13 +148,7 @@ Actions:
   - Name: lex:UpdateCustomVocabulary
 
   # APIs without an IAM action
-  - Name: lex:CreateBotReplica
   - Name: lex:CreateResourcePolicyStatement
-  - Name: lex:DeleteBotReplica
   - Name: lex:DeleteResourcePolicyStatement
-  - Name: lex:DescribeBotReplica
-  - Name: lex:ListBotAliasReplicas
-  - Name: lex:ListBotReplicas
-  - Name: lex:ListBotVersionReplicas
   - Name: lex:ListUtteranceAnalyticsData
   - Name: lex:ListUtteranceMetrics
