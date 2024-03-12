@@ -1,35 +1,15 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDataZoneRedshiftGlueProvisioningPolicy",
   "CreateDate": "2023-09-22T20:19:54Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FVY5HLLBC",
   "PolicyName": "AmazonDataZoneRedshiftGlueProvisioningPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-09-23T00:50:47Z",
+    "CreateDate": "2024-03-12T16:44:23Z",
     "Document": {
       "Statement": [
-        {
-          "Action": [
-            "iam:PassRole"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "aws:CalledViaFirst": [
-                "cloudformation.amazonaws.com"
-              ],
-              "iam:PassedToService": [
-                "glue.amazonaws.com",
-                "lakeformation.amazonaws.com"
-              ]
-            }
-          },
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:iam::*:role/datazone*"
-          ]
-        },
         {
           "Action": "s3:GetObject",
           "Condition": {
@@ -194,6 +174,27 @@
         },
         {
           "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaFirst": [
+                "cloudformation.amazonaws.com"
+              ],
+              "iam:PassedToService": [
+                "glue.amazonaws.com",
+                "lakeformation.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/datazone*"
+          ],
+          "Sid": "IamPassRolePermissions"
+        },
+        {
+          "Action": [
             "kms:Decrypt",
             "kms:GenerateDataKey"
           ],
@@ -263,6 +264,19 @@
         },
         {
           "Action": [
+            "secretsmanager:GetSecretValue"
+          ],
+          "Condition": {
+            "StringLike": {
+              "secretsmanager:ResourceTag/AmazonDataZoneDomain": "dzd*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GetSecretValuePermissions"
+        },
+        {
+          "Action": [
             "athena:GetWorkGroup",
             "glue:CreateDatabase",
             "glue:GetDatabase",
@@ -294,6 +308,26 @@
         },
         {
           "Action": [
+            "redshift-data:DescribeStatement"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeStatementPermissions"
+        },
+        {
+          "Action": [
+            "redshift-data:ExecuteStatement",
+            "redshift-data:ListSchemas"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift-serverless:*:*:workgroup/*",
+            "arn:aws:redshift:*:*:cluster:*"
+          ],
+          "Sid": "RedshiftDataPermissions"
+        },
+        {
+          "Action": [
             "s3:ListAllMyBuckets",
             "s3:ListBucket"
           ],
@@ -305,7 +339,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-09-23T00:50:47Z"
+  "UpdateDate": "2024-03-12T16:44:23Z"
 }
