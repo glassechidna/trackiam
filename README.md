@@ -11,9 +11,9 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 391
-* Unique actions: 16700
-* Managed policies: 1178
+* Unique services: 392
+* Unique actions: 16711
+* Managed policies: 1179
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 315 |
 | `arn:aws:iam::aws:policy/Amazon*` | 301 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 265 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 266 |
 | `arn:aws:iam::aws:policy/service-role/*` | 190 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 100 |
@@ -350,6 +350,7 @@ The following table summarises the AWS APIs.
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 12 | 3 |
+| [`timestream-influxdb`](services/timestream-influxdb.yml) | 0 | 11 | 0 |
 | [`mobilehub`](services/mobilehub.yml) | 0 | 9 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
@@ -432,14 +433,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2661 |
-| `Get` | 2409 |
-| `Delete` | 1919 |
-| `Create` | 1789 |
+| `List` | 2664 |
+| `Get` | 2411 |
+| `Delete` | 1920 |
+| `Create` | 1791 |
 | `Describe` | 1703 |
-| `Update` | 1525 |
+| `Update` | 1526 |
 | `Put` | 465 |
 | `Start` | 376 |
-| `Tag` | 263 |
-| `Untag` | 259 |
+| `Tag` | 264 |
+| `Untag` | 260 |
 
