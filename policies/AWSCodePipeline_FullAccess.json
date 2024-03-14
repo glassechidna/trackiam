@@ -1,45 +1,15 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodePipeline_FullAccess",
   "CreateDate": "2020-08-03T22:38:28Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4A6ZKP3LKA",
   "PolicyName": "AWSCodePipeline_FullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-06-21T22:46:59Z",
+    "CreateDate": "2024-03-14T17:06:23Z",
     "Document": {
       "Statement": [
-        {
-          "Action": [
-            "iam:PassRole"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "iam:PassedToService": [
-                "codepipeline.amazonaws.com"
-              ]
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
-            "iam:PassRole"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "iam:PassedToService": [
-                "events.amazonaws.com"
-              ]
-            }
-          },
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:iam::*:role/service-role/cwe-role-*"
-          ]
-        },
         {
           "Action": [
             "codestar-notifications:CreateNotificationRule",
@@ -60,8 +30,50 @@
         },
         {
           "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "codepipeline.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodePipelineIAMPassRole"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "events.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/service-role/cwe-role-*"
+          ],
+          "Sid": "EventsIAMPassRole"
+        },
+        {
+          "Action": [
+            "chatbot:DescribeSlackChannelConfigurations",
+            "chatbot:ListMicrosoftTeamsChannelConfigurations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeStarNotificationsChatbotAccess"
+        },
+        {
+          "Action": [
             "cloudformation:DescribeStacks",
             "cloudformation:ListChangeSets",
+            "cloudformation:ListStacks",
             "cloudtrail:DescribeTrails",
             "codebuild:BatchGetProjects",
             "codebuild:CreateProject",
@@ -101,7 +113,8 @@
             "states:ListStateMachines"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "CodePipelineAuthoringAccess"
         },
         {
           "Action": [
@@ -111,7 +124,8 @@
             "cloudtrail:StartLogging"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:cloudtrail:*:*:trail/codepipeline-source-trail"
+          "Resource": "arn:aws:cloudtrail:*:*:trail/codepipeline-source-trail",
+          "Sid": "CodePipelineSourceTrailReadWriteAccess"
         },
         {
           "Action": [
@@ -124,7 +138,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:events:*:*:rule/codepipeline-*"
-          ]
+          ],
+          "Sid": "CodePipelineEventsReadWriteAccess"
         },
         {
           "Action": [
@@ -137,16 +152,8 @@
             "s3:PutBucketPolicy"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:s3::*:codepipeline-*"
-        },
-        {
-          "Action": [
-            "chatbot:DescribeSlackChannelConfigurations",
-            "chatbot:ListMicrosoftTeamsChannelConfigurations"
-          ],
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "CodeStarNotificationsChatbotAccess"
+          "Resource": "arn:aws:s3::*:codepipeline-*",
+          "Sid": "CodePipelineArtifactsReadWriteAccess"
         },
         {
           "Action": [
@@ -161,7 +168,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-06-21T22:46:59Z"
+  "UpdateDate": "2024-03-14T17:06:23Z"
 }
