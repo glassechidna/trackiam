@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRedshiftServiceLinkedRolePolicy",
   "CreateDate": "2017-09-18T19:19:45Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJPY2VXNRUYOY3SRZS",
   "PolicyName": "AmazonRedshiftServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-10-27T16:20:17Z",
+    "CreateDate": "2024-03-15T20:00:47Z",
     "Document": {
       "Statement": [
         {
@@ -32,7 +32,8 @@
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:subnet/*",
             "arn:aws:ec2:*:*:vpc/*"
-          ]
+          ],
+          "Sid": "CreateTagsOnResources"
         },
         {
           "Action": [
@@ -47,7 +48,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "CloudWatch"
         },
         {
           "Action": [
@@ -61,7 +63,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:elastic-ip/*"
-          ]
+          ],
+          "Sid": "PublicAccessCreateEip"
         },
         {
           "Action": [
@@ -80,7 +83,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:security-group/*"
-          ]
+          ],
+          "Sid": "SecurityGroupPermissions"
         },
         {
           "Action": [
@@ -94,7 +98,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:security-group/*"
-          ]
+          ],
+          "Sid": "CreateSecurityGroupWithTags"
         },
         {
           "Action": [
@@ -108,7 +113,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:elastic-ip/*"
-          ]
+          ],
+          "Sid": "PublicAccessReleaseEip"
         },
         {
           "Action": [
@@ -128,7 +134,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:secretsmanager:*:*:secret:redshift!*"
-          ]
+          ],
+          "Sid": "SecretManager"
         },
         {
           "Action": [
@@ -138,7 +145,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:network-interface/*"
-          ]
+          ],
+          "Sid": "IPV6Permissions"
         },
         {
           "Action": [
@@ -157,7 +165,8 @@
             "ec2:ModifyVpcEndpoint"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "Ec2VpcPermissions"
         },
         {
           "Action": [
@@ -166,7 +175,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:vpc/*"
-          ]
+          ],
+          "Sid": "CreateSecurityGroup"
         },
         {
           "Action": [
@@ -179,14 +189,8 @@
             "ec2:DescribeVpcAttribute"
           ],
           "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
-            "secretsmanager:GetRandomPassword"
-          ],
-          "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "VPCPermissions"
         },
         {
           "Action": [
@@ -211,12 +215,31 @@
             "arn:aws:logs:*:*:log-group:/aws/redshift/*:log-stream:*"
           ],
           "Sid": "EnableCreationAndManagementOfRedshiftCloudwatchLogStreams"
+        },
+        {
+          "Action": [
+            "secretsmanager:GetRandomPassword"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecretsManagerRandomPassword"
+        },
+        {
+          "Action": [
+            "servicequotas:GetServiceQuota"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:servicequotas:*:*:ec2/L-0263D0A3",
+            "arn:aws:servicequotas:*:*:vpc/L-29B6F2EB"
+          ],
+          "Sid": "ServiceQuotasToCheckCustomerLimits"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2023-10-27T16:20:17Z"
+  "UpdateDate": "2024-03-15T20:00:47Z"
 }
