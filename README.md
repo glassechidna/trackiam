@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 392
-* Unique actions: 16711
+* Unique actions: 16713
 * Managed policies: 1180
 
 Most common managed policy name prefixes:
@@ -43,7 +43,7 @@ The following table summarises the AWS APIs.
 | [`connect`](services/connect.yml) | 241 | 3 | 6 |
 | [`glue`](services/glue.yml) | 209 | 4 | 17 |
 | [`quicksight`](services/quicksight.yml) | 168 | 3 | 29 |
-| [`rds`](services/rds.yml) | 161 | 0 | 5 |
+| [`rds`](services/rds.yml) | 161 | 1 | 5 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
 | [`ses`](services/ses.yml) | 149 | 0 | 0 |
@@ -71,7 +71,7 @@ The following table summarises the AWS APIs.
 | [`workmail`](services/workmail.yml) | 84 | 0 | 51 |
 | [`iotsitewise`](services/iotsitewise.yml) | 84 | 0 | 2 |
 | [`omics`](services/omics.yml) | 82 | 0 | 0 |
-| [`cloudformation`](services/cloudformation.yml) | 81 | 0 | 11 |
+| [`cloudformation`](services/cloudformation.yml) | 81 | 1 | 11 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 79 | 0 | 11 |
 | [`securityhub`](services/securityhub.yml) | 79 | 0 | 10 |
@@ -433,7 +433,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2664 |
+| `List` | 2665 |
 | `Get` | 2411 |
 | `Delete` | 1920 |
 | `Create` | 1791 |
