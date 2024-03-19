@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 392
-* Unique actions: 16714
+* Unique actions: 16715
 * Managed policies: 1180
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 615 | 0 | 16 |
+| [`ec2`](services/ec2.yml) | 615 | 1 | 16 |
 | [`sagemaker`](services/sagemaker.yml) | 336 | 0 | 11 |
 | [`iot`](services/iot.yml) | 262 | 3 | 9 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
@@ -315,12 +315,12 @@ The following table summarises the AWS APIs.
 | [`account`](services/account.yml) | 9 | 0 | 4 |
 | [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
+| [`managedblockchain-query`](services/managedblockchain-query.yml) | 9 | 0 | 0 |
 | [`kendra-ranking`](services/kendra-ranking.yml) | 9 | 0 | 0 |
 | [`budgets`](services/budgets.yml) | 8 | 15 | 2 |
 | [`backup-storage`](services/backup-storage.yml) | 8 | 1 | 7 |
 | [`launchwizard`](services/launchwizard.yml) | 8 | 0 | 25 |
 | [`sts`](services/sts.yml) | 8 | 0 | 4 |
-| [`managedblockchain-query`](services/managedblockchain-query.yml) | 8 | 0 | 1 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
 | [`iotfleethub`](services/iotfleethub.yml) | 8 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
@@ -437,7 +437,7 @@ Most common action prefixes:
 | `Get` | 2411 |
 | `Delete` | 1920 |
 | `Create` | 1791 |
-| `Describe` | 1703 |
+| `Describe` | 1704 |
 | `Update` | 1526 |
 | `Put` | 465 |
 | `Start` | 376 |
