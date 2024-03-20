@@ -6,6 +6,7 @@ Actions:
   - Name: dynamodb:CreateTable
   - Name: dynamodb:DeleteBackup
   - Name: dynamodb:DeleteItem
+  - Name: dynamodb:DeleteResourcePolicy
   - Name: dynamodb:DeleteTable
   - Name: dynamodb:DescribeBackup
   - Name: dynamodb:DescribeContinuousBackups
@@ -38,6 +39,7 @@ Actions:
   - Name: dynamodb:ListTables
   - Name: dynamodb:ListTagsOfResource
   - Name: dynamodb:PutItem
+  - Name: dynamodb:PutResourcePolicy
   - Name: dynamodb:Query
   - Name: dynamodb:RestoreTableFromBackup
   - Name: dynamodb:RestoreTableToPointInTime
@@ -49,6 +51,7 @@ Actions:
   - Name: dynamodb:UpdateGlobalTable
   - Name: dynamodb:UpdateGlobalTableSettings
   - Name: dynamodb:UpdateItem
+  - Name: dynamodb:UpdateKinesisStreamingDestination
   - Name: dynamodb:UpdateTable
   - Name: dynamodb:UpdateTableReplicaAutoScaling
   - Name: dynamodb:UpdateTimeToLive
@@ -70,10 +73,7 @@ Actions:
 
   # APIs without an IAM action
   - Name: dynamodb:BatchExecuteStatement
-  - Name: dynamodb:DeleteResourcePolicy
   - Name: dynamodb:ExecuteStatement
   - Name: dynamodb:ExecuteTransaction
-  - Name: dynamodb:PutResourcePolicy
   - Name: dynamodb:TransactGetItems
   - Name: dynamodb:TransactWriteItems
-  - Name: dynamodb:UpdateKinesisStreamingDestination

@@ -115,6 +115,7 @@ The following table summarises the AWS APIs.
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 0 |
 | [`geo`](services/geo.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
+| [`dynamodb`](services/dynamodb.yml) | 56 | 5 | 13 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 56 | 0 | 26 |
 | [`events`](services/events.yml) | 56 | 0 | 2 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 2 |
@@ -125,7 +126,6 @@ The following table summarises the AWS APIs.
 | [`qbusiness`](services/qbusiness.yml) | 54 | 0 | 7 |
 | [`wafv2`](services/wafv2.yml) | 54 | 0 | 2 |
 | [`resiliencehub`](services/resiliencehub.yml) | 54 | 0 | 0 |
-| [`dynamodb`](services/dynamodb.yml) | 53 | 8 | 13 |
 | [`profile`](services/profile.yml) | 52 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 52 | 0 | 0 |
