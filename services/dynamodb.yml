@@ -26,6 +26,7 @@ Actions:
   - Name: dynamodb:ExportTableToPointInTime
   - Name: dynamodb:GetItem
   - Name: dynamodb:GetRecords
+  - Name: dynamodb:GetResourcePolicy
   - Name: dynamodb:GetShardIterator
   - Name: dynamodb:ImportTable
   - Name: dynamodb:ListBackups
@@ -58,7 +59,6 @@ Actions:
   - Name: dynamodb:DeleteTableReplica
   - Name: dynamodb:DescribeReservedCapacity
   - Name: dynamodb:DescribeReservedCapacityOfferings
-  - Name: dynamodb:GetResourcePolicy
   - Name: dynamodb:PartiQLDelete
   - Name: dynamodb:PartiQLInsert
   - Name: dynamodb:PartiQLSelect
@@ -70,8 +70,10 @@ Actions:
 
   # APIs without an IAM action
   - Name: dynamodb:BatchExecuteStatement
+  - Name: dynamodb:DeleteResourcePolicy
   - Name: dynamodb:ExecuteStatement
   - Name: dynamodb:ExecuteTransaction
+  - Name: dynamodb:PutResourcePolicy
   - Name: dynamodb:TransactGetItems
   - Name: dynamodb:TransactWriteItems
   - Name: dynamodb:UpdateKinesisStreamingDestination

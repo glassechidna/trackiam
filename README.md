@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 392
-* Unique actions: 16716
+* Unique actions: 16719
 * Managed policies: 1180
 
 Most common managed policy name prefixes:
@@ -125,7 +125,7 @@ The following table summarises the AWS APIs.
 | [`qbusiness`](services/qbusiness.yml) | 54 | 0 | 7 |
 | [`wafv2`](services/wafv2.yml) | 54 | 0 | 2 |
 | [`resiliencehub`](services/resiliencehub.yml) | 54 | 0 | 0 |
-| [`dynamodb`](services/dynamodb.yml) | 52 | 6 | 14 |
+| [`dynamodb`](services/dynamodb.yml) | 53 | 8 | 13 |
 | [`profile`](services/profile.yml) | 52 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 52 | 0 | 0 |
@@ -312,8 +312,8 @@ The following table summarises the AWS APIs.
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
 | [`rbin`](services/rbin.yml) | 10 | 0 | 0 |
 | [`pipes`](services/pipes.yml) | 10 | 0 | 0 |
+| [`savingsplans`](services/savingsplans.yml) | 9 | 1 | 0 |
 | [`account`](services/account.yml) | 9 | 0 | 4 |
-| [`savingsplans`](services/savingsplans.yml) | 9 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`managedblockchain-query`](services/managedblockchain-query.yml) | 9 | 0 | 0 |
 | [`kendra-ranking`](services/kendra-ranking.yml) | 9 | 0 | 0 |
@@ -435,11 +435,11 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 2666 |
 | `Get` | 2411 |
-| `Delete` | 1920 |
+| `Delete` | 1921 |
 | `Create` | 1791 |
 | `Describe` | 1704 |
 | `Update` | 1526 |
-| `Put` | 465 |
+| `Put` | 466 |
 | `Start` | 376 |
 | `Tag` | 264 |
 | `Untag` | 260 |
