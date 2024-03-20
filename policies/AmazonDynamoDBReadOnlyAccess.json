@@ -1,19 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDynamoDBReadOnlyAccess",
   "CreateDate": "2015-02-06T18:40:12Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIY2XFNA232XJ6J7X2",
   "PolicyName": "AmazonDynamoDBReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-01-27T01:01:47Z",
+    "CreateDate": "2024-03-20T15:45:01Z",
     "Document": {
       "Statement": [
         {
           "Action": "cloudwatch:GetInsightRuleReport",
           "Effect": "Allow",
-          "Resource": "arn:aws:cloudwatch:*:*:insight-rule/DynamoDBContributorInsights*"
+          "Resource": "arn:aws:cloudwatch:*:*:insight-rule/DynamoDBContributorInsights*",
+          "Sid": "CCIAccess"
         },
         {
           "Action": [
@@ -40,6 +41,7 @@
             "dynamodb:BatchGetItem",
             "dynamodb:Describe*",
             "dynamodb:GetItem",
+            "dynamodb:GetResourcePolicy",
             "dynamodb:List*",
             "dynamodb:PartiQLSelect",
             "dynamodb:Query",
@@ -66,13 +68,14 @@
             "tag:GetResources"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "GeneralReadOnlyAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2021-01-27T01:01:47Z"
+  "UpdateDate": "2024-03-20T15:45:01Z"
 }
