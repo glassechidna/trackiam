@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSGlueDataBrewServiceRole",
   "CreateDate": "2020-12-04T21:26:50Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4HSXDEANHC",
   "PolicyName": "AWSGlueDataBrewServiceRole",
   "PolicyVersion": {
-    "CreateDate": "2022-05-09T23:06:36Z",
+    "CreateDate": "2024-03-20T23:28:52Z",
     "Document": {
       "Statement": [
         {
@@ -20,7 +20,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "EC2DeleteGlueNetworkInterfacePermissions"
         },
         {
           "Action": [
@@ -38,7 +39,8 @@
           "Resource": [
             "arn:aws:ec2:*:*:network-interface/*",
             "arn:aws:ec2:*:*:security-group/*"
-          ]
+          ],
+          "Sid": "EC2GlueTaggingPermissions"
         },
         {
           "Action": [
@@ -53,16 +55,19 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "EC2NetworkingPermissions"
         },
         {
           "Action": [
-            "glue:BatchGetCustomEntityTypes"
+            "glue:BatchGetCustomEntityTypes",
+            "glue:GetCustomEntityType"
           ],
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "GluePIIPermissions"
         },
         {
           "Action": [
@@ -75,14 +80,16 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "GlueDataPermissions"
         },
         {
           "Action": [
             "lakeformation:GetDataAccess"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "LakeFormationPermissions"
         },
         {
           "Action": [
@@ -93,7 +100,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:logs:*:*:log-group:/aws-glue-databrew/*"
-          ]
+          ],
+          "Sid": "GlueDatabrewLogGroupPermissions"
         },
         {
           "Action": [
@@ -103,20 +111,22 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:s3:::databrew-public-datasets-*"
-          ]
+          ],
+          "Sid": "S3PublicDatasetAccess"
         },
         {
           "Action": [
             "secretsmanager:GetSecretValue"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:secretsmanager:*:*:secret:databrew!default-*"
+          "Resource": "arn:aws:secretsmanager:*:*:secret:databrew!default-*",
+          "Sid": "SecretsManagerPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2022-05-09T23:06:36Z"
+  "UpdateDate": "2024-03-20T23:28:52Z"
 }
