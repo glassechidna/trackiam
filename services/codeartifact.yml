@@ -2,32 +2,40 @@ Actions:
   - Name: codeartifact:AssociateExternalConnection
   - Name: codeartifact:CopyPackageVersions
   - Name: codeartifact:CreateDomain
+  - Name: codeartifact:CreatePackageGroup
   - Name: codeartifact:CreateRepository
   - Name: codeartifact:DeleteDomain
   - Name: codeartifact:DeleteDomainPermissionsPolicy
   - Name: codeartifact:DeletePackage
+  - Name: codeartifact:DeletePackageGroup
   - Name: codeartifact:DeletePackageVersions
   - Name: codeartifact:DeleteRepository
   - Name: codeartifact:DeleteRepositoryPermissionsPolicy
   - Name: codeartifact:DescribeDomain
   - Name: codeartifact:DescribePackage
+  - Name: codeartifact:DescribePackageGroup
   - Name: codeartifact:DescribePackageVersion
   - Name: codeartifact:DescribeRepository
   - Name: codeartifact:DisassociateExternalConnection
   - Name: codeartifact:DisposePackageVersions
+  - Name: codeartifact:GetAssociatedPackageGroup
   - Name: codeartifact:GetAuthorizationToken
   - Name: codeartifact:GetDomainPermissionsPolicy
   - Name: codeartifact:GetPackageVersionAsset
   - Name: codeartifact:GetPackageVersionReadme
   - Name: codeartifact:GetRepositoryEndpoint
   - Name: codeartifact:GetRepositoryPermissionsPolicy
+  - Name: codeartifact:ListAllowedRepositoriesForGroup
+  - Name: codeartifact:ListAssociatedPackages
   - Name: codeartifact:ListDomains
+  - Name: codeartifact:ListPackageGroups
   - Name: codeartifact:ListPackageVersionAssets
   - Name: codeartifact:ListPackageVersionDependencies
   - Name: codeartifact:ListPackageVersions
   - Name: codeartifact:ListPackages
   - Name: codeartifact:ListRepositories
   - Name: codeartifact:ListRepositoriesInDomain
+  - Name: codeartifact:ListSubPackageGroups
   - Name: codeartifact:ListTagsForResource
   - Name: codeartifact:PublishPackageVersion
   - Name: codeartifact:PutDomainPermissionsPolicy
@@ -35,6 +43,8 @@ Actions:
   - Name: codeartifact:PutRepositoryPermissionsPolicy
   - Name: codeartifact:TagResource
   - Name: codeartifact:UntagResource
+  - Name: codeartifact:UpdatePackageGroup
+  - Name: codeartifact:UpdatePackageGroupOriginConfiguration
   - Name: codeartifact:UpdatePackageVersionsStatus
   - Name: codeartifact:UpdateRepository
 
@@ -42,15 +52,3 @@ Actions:
   - Name: codeartifact:AssociateWithDownstreamRepository
   - Name: codeartifact:PutPackageMetadata
   - Name: codeartifact:ReadFromRepository
-
-  # APIs without an IAM action
-  - Name: codeartifact:CreatePackageGroup
-  - Name: codeartifact:DeletePackageGroup
-  - Name: codeartifact:DescribePackageGroup
-  - Name: codeartifact:GetAssociatedPackageGroup
-  - Name: codeartifact:ListAllowedRepositoriesForGroup
-  - Name: codeartifact:ListAssociatedPackages
-  - Name: codeartifact:ListPackageGroups
-  - Name: codeartifact:ListSubPackageGroups
-  - Name: codeartifact:UpdatePackageGroup
-  - Name: codeartifact:UpdatePackageGroupOriginConfiguration

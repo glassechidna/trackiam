@@ -140,6 +140,7 @@ The following table summarises the AWS APIs.
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 49 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 6 |
+| [`codeartifact`](services/codeartifact.yml) | 48 | 0 | 3 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`transcribe`](services/transcribe.yml) | 46 | 0 | 3 |
@@ -158,7 +159,6 @@ The following table summarises the AWS APIs.
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
-| [`codeartifact`](services/codeartifact.yml) | 38 | 10 | 3 |
 | [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 15 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 1 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
