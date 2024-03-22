@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSLakeFormationDataAdmin",
   "CreateDate": "2019-08-08T17:33:44Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4OWCH3ENIA",
   "PolicyName": "AWSLakeFormationDataAdmin",
   "PolicyVersion": {
-    "CreateDate": "2019-12-16T22:41:40Z",
+    "CreateDate": "2024-03-22T18:27:42Z",
     "Document": {
       "Statement": [
         {
@@ -28,7 +28,6 @@
             "glue:GetTableVersions",
             "glue:GetTables",
             "glue:GetWorkflow",
-            "glue:GetWorkflow",
             "glue:GetWorkflowRuns",
             "glue:ListWorkflows",
             "glue:SearchTables",
@@ -46,20 +45,22 @@
             "s3:ListBucket"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSLakeFormationDataAdminAllow"
         },
         {
           "Action": [
             "lakeformation:PutDataLakeSettings"
           ],
           "Effect": "Deny",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSLakeFormationDataAdminDeny"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-12-16T22:41:40Z"
+  "UpdateDate": "2024-03-22T18:27:42Z"
 }

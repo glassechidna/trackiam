@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSLakeFormationCrossAccountManager",
   "CreateDate": "2020-08-04T20:59:46Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HPT7Y7QL3",
   "PolicyName": "AWSLakeFormationCrossAccountManager",
   "PolicyVersion": {
-    "CreateDate": "2023-11-01T00:50:49Z",
+    "CreateDate": "2024-03-22T18:51:56Z",
     "Document": {
       "Statement": [
         {
@@ -26,7 +26,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowManageResourceShare"
         },
         {
           "Action": [
@@ -40,7 +41,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowManageResourceSharePermissions"
         },
         {
           "Action": [
@@ -56,7 +58,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowCreateResourceShare"
         },
         {
           "Action": [
@@ -68,7 +71,8 @@
             "ram:List*"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowXAcctManagerPermissions"
         },
         {
           "Action": [
@@ -77,13 +81,14 @@
             "organizations:ListRoots"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowOrganizationsPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2023-11-01T00:50:49Z"
+  "UpdateDate": "2024-03-22T18:51:56Z"
 }
