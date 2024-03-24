@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSResilienceHubAsssessmentExecutionPolicy",
   "CreateDate": "2023-06-27T12:32:15Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AAR6UQTAK",
   "PolicyName": "AWSResilienceHubAsssessmentExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-10-29T16:17:40Z",
+    "CreateDate": "2024-03-24T18:05:06Z",
     "Document": {
       "Statement": [
         {
@@ -50,12 +50,16 @@
             "cloudwatch:DescribeAlarms",
             "cloudwatch:GetMetricData",
             "cloudwatch:GetMetricStatistics",
+            "datasync:DescribeTask",
+            "datasync:ListLocations",
+            "datasync:ListTasks",
             "devops-guru:ListMonitoredResources",
             "dlm:GetLifecyclePolicies",
             "dlm:GetLifecyclePolicy",
             "drs:DescribeJobs",
             "drs:DescribeSourceServers",
             "drs:GetReplicationConfiguration",
+            "ds:DescribeDirectories",
             "dynamodb:DescribeContinuousBackups",
             "dynamodb:DescribeGlobalTable",
             "dynamodb:DescribeLimits",
@@ -102,6 +106,7 @@
             "fis:GetExperimentTemplate",
             "fis:ListExperimentTemplates",
             "fis:ListExperiments",
+            "fsx:DescribeFileSystems",
             "lambda:GetFunctionConcurrency",
             "lambda:GetFunctionConfiguration",
             "lambda:ListAliases",
@@ -126,7 +131,10 @@
             "route53:ListHealthChecks",
             "route53:ListHostedZones",
             "route53:ListResourceRecordSets",
+            "route53resolver:ListResolverEndpointIpAddresses",
+            "route53resolver:ListResolverEndpoints",
             "s3:GetBucketLocation",
+            "s3:GetBucketLogging",
             "s3:GetBucketObjectLockConfiguration",
             "s3:GetBucketPolicyStatus",
             "s3:GetBucketTagging",
@@ -175,7 +183,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-10-29T16:17:40Z"
+  "UpdateDate": "2024-03-24T18:05:06Z"
 }
