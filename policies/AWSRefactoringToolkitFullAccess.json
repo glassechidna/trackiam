@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSRefactoringToolkitFullAccess",
   "CreateDate": "2022-10-25T16:41:15Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BNNXRNIF7",
   "PolicyName": "AWSRefactoringToolkitFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-11-18T00:37:27Z",
+    "CreateDate": "2024-03-25T18:43:14Z",
     "Document": {
       "Statement": [
         {
@@ -505,6 +505,8 @@
             "cloudformation:DescribeChangeSet",
             "cloudformation:DescribeStackEvents",
             "cloudformation:ExecuteChangeSet",
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource",
             "cloudformation:UpdateStack"
           ],
           "Effect": "Allow",
@@ -591,7 +593,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2023-11-18T00:37:27Z"
+  "UpdateDate": "2024-03-25T18:43:14Z"
 }
