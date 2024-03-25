@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSupportServiceRolePolicy",
   "CreateDate": "2018-04-19T18:04:44Z",
-  "DefaultVersionId": "v34",
+  "DefaultVersionId": "v35",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ7W6266ELXF5MISDS",
   "PolicyName": "AWSSupportServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-01-17T22:28:08Z",
+    "CreateDate": "2024-03-25T16:28:02Z",
     "Document": {
       "Statement": [
         {
@@ -143,8 +143,10 @@
             "appsync:listTypesByAssociation",
             "aps:describeAlertManagerDefinition",
             "aps:describeRuleGroupsNamespace",
+            "aps:describeScraper",
             "aps:describeWorkspace",
             "aps:listRuleGroupsNamespaces",
+            "aps:listScrapers",
             "aps:listWorkspaces",
             "athena:batchGetNamedQuery",
             "athena:batchGetQueryExecution",
@@ -1635,16 +1637,25 @@
             "ivs:listStreams",
             "kafka:describeCluster",
             "kafka:describeClusterOperation",
+            "kafka:describeClusterOperationV2",
             "kafka:describeClusterV2",
             "kafka:describeConfiguration",
             "kafka:describeConfigurationRevision",
+            "kafka:describeReplicator",
+            "kafka:describeVpcConnection",
             "kafka:getBootstrapBrokers",
+            "kafka:getClusterPolicy",
+            "kafka:listClientVpcConnections",
             "kafka:listClusterOperations",
+            "kafka:listClusterOperationsV2",
             "kafka:listClusters",
             "kafka:listClustersV2",
             "kafka:listConfigurationRevisions",
             "kafka:listConfigurations",
             "kafka:listNodes",
+            "kafka:listReplicators",
+            "kafka:listScramSecrets",
+            "kafka:listVpcConnections",
             "kafkaconnect:describeConnector",
             "kafkaconnect:describeCustomPlugin",
             "kafkaconnect:describeWorkerConfiguration",
@@ -1829,8 +1840,11 @@
             "logs:getDeliveryDestination",
             "logs:getDeliveryDestinationPolicy",
             "logs:getDeliverySource",
+            "logs:getLogAnomalyDetector",
             "logs:getLogDelivery",
             "logs:getLogGroupFields",
+            "logs:listAnomalies",
+            "logs:listLogAnomalyDetectors",
             "logs:listLogDeliveries",
             "logs:testMetricFilter",
             "lookoutequipment:describeDataIngestionJob",
@@ -2028,6 +2042,9 @@
             "networkmanager:listOrganizationServiceAccessStatus",
             "networkmanager:listPeerings",
             "networkmanager:listTagsForResource",
+            "networkmonitor:getMonitor",
+            "networkmonitor:getProbe",
+            "networkmonitor:listMonitors",
             "nimble:getEula",
             "nimble:getLaunchProfile",
             "nimble:getLaunchProfileDetails",
@@ -3242,7 +3259,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v34"
+    "VersionId": "v35"
   },
-  "UpdateDate": "2024-01-17T22:28:08Z"
+  "UpdateDate": "2024-03-25T16:28:02Z"
 }
