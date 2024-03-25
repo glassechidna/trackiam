@@ -188,6 +188,7 @@ The following table summarises the AWS APIs.
 | [`kinesis`](services/kinesis.yml) | 32 | 0 | 0 |
 | [`billingconductor`](services/billingconductor.yml) | 32 | 0 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 31 | 0 | 5 |
+| [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 31 | 0 | 3 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 31 | 0 | 0 |
 | [`securitylake`](services/securitylake.yml) | 31 | 0 | 0 |
@@ -201,7 +202,6 @@ The following table summarises the AWS APIs.
 | [`dataexchange`](services/dataexchange.yml) | 30 | 0 | 2 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
 | [`voiceid`](services/voiceid.yml) | 29 | 0 | 2 |
-| [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 28 | 3 | 3 |
 | [`detective`](services/detective.yml) | 28 | 1 | 8 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`discovery`](services/discovery.yml) | 28 | 0 | 1 |
