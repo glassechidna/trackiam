@@ -309,10 +309,10 @@ The following table summarises the AWS APIs.
 | [`trustedadvisor`](services/trustedadvisor.yml) | 10 | 0 | 41 |
 | [`supportapp`](services/supportapp.yml) | 10 | 0 | 3 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
+| [`savingsplans`](services/savingsplans.yml) | 10 | 0 | 0 |
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
 | [`rbin`](services/rbin.yml) | 10 | 0 | 0 |
 | [`pipes`](services/pipes.yml) | 10 | 0 | 0 |
-| [`savingsplans`](services/savingsplans.yml) | 9 | 1 | 0 |
 | [`account`](services/account.yml) | 9 | 0 | 4 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`managedblockchain-query`](services/managedblockchain-query.yml) | 9 | 0 | 0 |
