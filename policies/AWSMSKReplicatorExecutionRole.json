@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSMSKReplicatorExecutionRole",
   "CreateDate": "2023-12-06T00:07:52Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4DZT4HSKAC",
   "PolicyName": "AWSMSKReplicatorExecutionRole",
   "PolicyVersion": {
-    "CreateDate": "2023-12-06T00:07:52Z",
+    "CreateDate": "2024-03-25T21:36:08Z",
     "Document": {
       "Statement": [
         {
@@ -23,7 +23,8 @@
             "kafka-cluster:DescribeTopic",
             "kafka-cluster:DescribeTopicDynamicConfiguration",
             "kafka-cluster:ReadData",
-            "kafka-cluster:WriteData"
+            "kafka-cluster:WriteData",
+            "kafka-cluster:WriteDataIdempotently"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -63,7 +64,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-12-06T00:07:52Z"
+  "UpdateDate": "2024-03-25T21:36:08Z"
 }
