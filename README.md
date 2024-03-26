@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 392
-* Unique actions: 16734
+* Unique actions: 16735
 * Managed policies: 1180
 
 Most common managed policy name prefixes:
@@ -135,8 +135,8 @@ The following table summarises the AWS APIs.
 | [`drs`](services/drs.yml) | 50 | 0 | 40 |
 | [`codebuild`](services/codebuild.yml) | 50 | 0 | 8 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
+| [`finspace`](services/finspace.yml) | 49 | 1 | 9 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
-| [`finspace`](services/finspace.yml) | 49 | 0 | 9 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 49 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 6 |
@@ -153,9 +153,9 @@ The following table summarises the AWS APIs.
 | [`wisdom`](services/wisdom.yml) | 42 | 0 | 0 |
 | [`fms`](services/fms.yml) | 42 | 0 | 0 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
+| [`ce`](services/ce.yml) | 41 | 0 | 12 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 40 | 0 | 3 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 40 | 0 | 0 |
-| [`ce`](services/ce.yml) | 39 | 0 | 14 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
@@ -435,7 +435,7 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 2671 |
 | `Get` | 2413 |
-| `Delete` | 1922 |
+| `Delete` | 1923 |
 | `Create` | 1792 |
 | `Describe` | 1705 |
 | `Update` | 1528 |
