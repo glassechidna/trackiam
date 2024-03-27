@@ -1,0 +1,136 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSQuickSightAssetBundleImportPolicy",
+  "CreateDate": "2024-03-27T21:40:34Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4HAZV3TE36",
+  "PolicyName": "AWSQuickSightAssetBundleImportPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-03-27T21:40:34Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "quicksight:CreateAnalysis",
+            "quicksight:DeleteAnalysis",
+            "quicksight:DescribeAnalysis",
+            "quicksight:DescribeAnalysisPermissions",
+            "quicksight:UpdateAnalysis",
+            "quicksight:UpdateAnalysisPermissions"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:quicksight:*:*:analysis/*",
+          "Sid": "AnalysisWriteAccess"
+        },
+        {
+          "Action": [
+            "quicksight:CreateDashboard",
+            "quicksight:DeleteDashboard",
+            "quicksight:DescribeDashboard",
+            "quicksight:DescribeDashboardPermissions",
+            "quicksight:UpdateDashboard",
+            "quicksight:UpdateDashboardLinks",
+            "quicksight:UpdateDashboardPermissions",
+            "quicksight:UpdateDashboardPublishedVersion"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:quicksight:*:*:dashboard/*",
+          "Sid": "DashboardWriteAccess"
+        },
+        {
+          "Action": [
+            "quicksight:CreateDataSet",
+            "quicksight:DeleteDataSet",
+            "quicksight:DeleteDataSetRefreshProperties",
+            "quicksight:DescribeDataSet",
+            "quicksight:DescribeDataSetPermissions",
+            "quicksight:DescribeDataSetRefreshProperties",
+            "quicksight:ListRefreshSchedules",
+            "quicksight:PassDataSet",
+            "quicksight:PutDataSetRefreshProperties",
+            "quicksight:UpdateDataSet",
+            "quicksight:UpdateDataSetPermissions"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:quicksight:*:*:dataset/*",
+          "Sid": "DataSetWriteAccess"
+        },
+        {
+          "Action": [
+            "quicksight:CreateDataSource",
+            "quicksight:DeleteDataSource",
+            "quicksight:DescribeDataSource",
+            "quicksight:DescribeDataSourcePermissions",
+            "quicksight:PassDataSource",
+            "quicksight:UpdateDataSource",
+            "quicksight:UpdateDataSourcePermissions"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:quicksight:*:*:datasource/*",
+          "Sid": "DataSourceWriteAccess"
+        },
+        {
+          "Action": [
+            "quicksight:CreateRefreshSchedule",
+            "quicksight:DeleteRefreshSchedule",
+            "quicksight:DescribeRefreshSchedule",
+            "quicksight:UpdateRefreshSchedule"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:quicksight:*:*:dataset/*/refresh-schedule/*",
+          "Sid": "RefreshScheduleWriteAccess"
+        },
+        {
+          "Action": [
+            "quicksight:CreateTheme",
+            "quicksight:DeleteTheme",
+            "quicksight:DescribeTheme",
+            "quicksight:DescribeThemePermissions",
+            "quicksight:UpdateTheme",
+            "quicksight:UpdateThemePermissions"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:quicksight:*:*:theme/*",
+          "Sid": "ThemeWriteAccess"
+        },
+        {
+          "Action": [
+            "quicksight:CreateVPCConnection",
+            "quicksight:DeleteVPCConnection",
+            "quicksight:DescribeVPCConnection",
+            "quicksight:ListVPCConnections",
+            "quicksight:UpdateVPCConnection"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:quicksight:*:*:vpcConnection/*",
+          "Sid": "VPCConnectionWriteAccess"
+        },
+        {
+          "Action": [
+            "quicksight:DescribeAssetBundleImportJob",
+            "quicksight:ListAssetBundleImportJobs",
+            "quicksight:StartAssetBundleImportJob"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:quicksight:*:*:asset-bundle-import-job/*",
+          "Sid": "AssetBundleImportOperations"
+        },
+        {
+          "Action": [
+            "quicksight:ListTagsForResource",
+            "quicksight:TagResource",
+            "quicksight:UntagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:quicksight:*:*:*/*",
+          "Sid": "TagWriteAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-03-27T21:40:34Z"
+}
