@@ -133,9 +133,9 @@ The following table summarises the AWS APIs.
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 51 | 0 | 3 |
 | [`drs`](services/drs.yml) | 50 | 0 | 40 |
+| [`finspace`](services/finspace.yml) | 50 | 0 | 9 |
 | [`codebuild`](services/codebuild.yml) | 50 | 0 | 8 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
-| [`finspace`](services/finspace.yml) | 49 | 1 | 9 |
 | [`kms`](services/kms.yml) | 49 | 1 | 3 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 49 | 0 | 0 |
