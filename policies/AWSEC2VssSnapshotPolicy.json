@@ -1,0 +1,152 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSEC2VssSnapshotPolicy",
+  "CreateDate": "2024-03-27T16:32:53Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4KEG6SNTSF",
+  "PolicyName": "AWSEC2VssSnapshotPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-03-27T16:32:53Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "AppConsistent",
+                "Device"
+              ]
+            },
+            "StringLike": {
+              "ec2:ResourceTag/AwsVssConfig": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:image/*",
+            "arn:aws:ec2:*:*:snapshot/*"
+          ],
+          "Sid": "CreateTagsAfterResourceCreation"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "CreateImage",
+                "CreateSnapshots"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:image/*",
+            "arn:aws:ec2:*:*:snapshot/*"
+          ],
+          "Sid": "CreateTagsOnResourceCreation"
+        },
+        {
+          "Action": [
+            "ec2:CreateImage"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/AwsVssConfig": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:image/*",
+            "arn:aws:ec2:*:*:snapshot/*"
+          ],
+          "Sid": "CreateImageWithTag"
+        },
+        {
+          "Action": [
+            "ec2:CreateImage"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:SourceInstanceARN": "*${ec2:InstanceId}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "CreateImageAccessInstance"
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshots"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/AwsVssConfig": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:snapshot/*"
+          ],
+          "Sid": "CreateSnapshotsWithTag"
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshots"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:SourceInstanceARN": "*${ec2:InstanceId}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "CreateSnapshotsAccessInstance"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstanceAttribute"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:SourceInstanceARN": "*${ec2:InstanceId}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "DescribeInstanceInfo"
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshots"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "CreateSnapshotsAccessVolume"
+        },
+        {
+          "Action": [
+            "ec2:DescribeImages",
+            "ec2:DescribeSnapshots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeImagesAndSnapshots"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-03-27T16:32:53Z"
+}
