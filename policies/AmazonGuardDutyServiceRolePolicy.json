@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonGuardDutyServiceRolePolicy",
   "CreateDate": "2017-11-28T20:12:59Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIHZREZOWNSSA6FWQO",
   "PolicyName": "AmazonGuardDutyServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-02-09T18:30:50Z",
+    "CreateDate": "2024-03-27T00:58:20Z",
     "Document": {
       "Statement": [
         {
@@ -144,10 +144,60 @@
           "Sid": "GuardDutyModifyDeleteVpcEndpointPolicy"
         },
         {
+          "Action": [
+            "ssm:AddTagsToResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "GuardDutyManaged"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceTag/GuardDutyManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:association/*",
+          "Sid": "SsmAddTagsToResourcePermission"
+        },
+        {
+          "Action": [
+            "ssm:CreateAssociation",
+            "ssm:DeleteAssociation",
+            "ssm:DescribeAssociation",
+            "ssm:StartAssociationsOnce",
+            "ssm:UpdateAssociation"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/GuardDutyManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:association/*",
+          "Sid": "SsmCreateDescribeUpdateDeleteStartAssociationPermission"
+        },
+        {
           "Action": "ec2:CreateSecurityGroup",
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*:*:vpc/*",
           "Sid": "GuardDutyCreateSecurityGroupForVpcPolicy"
+        },
+        {
+          "Action": "ssm:GetCommandInvocation",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SsmGetCommandStatus"
+        },
+        {
+          "Action": "ssm:SendCommand",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ssm:*:*:document/AmazonGuardDuty-ConfigureRuntimeMonitoringSsmPlugin"
+          ],
+          "Sid": "SsmSendCommandPermission"
         },
         {
           "Action": [
@@ -203,12 +253,21 @@
           "Effect": "Allow",
           "Resource": "arn:aws:eks:*:*:addon/*/aws-guardduty-agent/*",
           "Sid": "GuardDutyEksAddonManagementPolicy"
+        },
+        {
+          "Action": [
+            "ssm:CreateAssociation",
+            "ssm:UpdateAssociation"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:document/AmazonGuardDuty-ConfigureRuntimeMonitoringSsmPlugin",
+          "Sid": "SsmCreateUpdateAssociationInstanceDocumentPermission"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2024-02-09T18:30:50Z"
+  "UpdateDate": "2024-03-27T00:58:20Z"
 }
