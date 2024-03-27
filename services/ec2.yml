@@ -291,6 +291,7 @@ Actions:
   - Name: ec2:DescribeLocalGatewayVirtualInterfaces
   - Name: ec2:DescribeLocalGateways
   - Name: ec2:DescribeLockedSnapshots
+  - Name: ec2:DescribeMacHosts
   - Name: ec2:DescribeManagedPrefixLists
   - Name: ec2:DescribeMovingAddresses
   - Name: ec2:DescribeNatGateways
@@ -438,6 +439,7 @@ Actions:
   - Name: ec2:GetGroupsForCapacityReservation
   - Name: ec2:GetHostReservationPurchasePreview
   - Name: ec2:GetImageBlockPublicAccessState
+  - Name: ec2:GetInstanceMetadataDefaults
   - Name: ec2:GetInstanceTypesFromInstanceRequirements
   - Name: ec2:GetInstanceUefiData
   - Name: ec2:GetIpamAddressHistory
@@ -499,6 +501,7 @@ Actions:
   - Name: ec2:ModifyInstanceEventStartTime
   - Name: ec2:ModifyInstanceEventWindow
   - Name: ec2:ModifyInstanceMaintenanceOptions
+  - Name: ec2:ModifyInstanceMetadataDefaults
   - Name: ec2:ModifyInstanceMetadataOptions
   - Name: ec2:ModifyInstancePlacement
   - Name: ec2:ModifyIpam
@@ -632,8 +635,3 @@ Actions:
   - Name: ec2:PauseVolumeIO
   - Name: ec2:PutResourcePolicy
   - Name: ec2:SendSpotInstanceInterruptions
-
-  # APIs without an IAM action
-  - Name: ec2:DescribeMacHosts
-  - Name: ec2:GetInstanceMetadataDefaults
-  - Name: ec2:ModifyInstanceMetadataDefaults
