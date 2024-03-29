@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 393
-* Unique actions: 16771
+* Unique actions: 16781
 * Managed policies: 1183
 
 Most common managed policy name prefixes:
@@ -211,6 +211,7 @@ The following table summarises the AWS APIs.
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 27 | 1 | 8 |
 | [`codestar-connections`](services/codestar-connections.yml) | 27 | 0 | 10 |
+| [`codeconnections`](services/codeconnections.yml) | 27 | 0 | 10 |
 | [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 7 |
 | [`snowball`](services/snowball.yml) | 27 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 27 | 0 | 0 |
@@ -350,7 +351,6 @@ The following table summarises the AWS APIs.
 | [`cloudtrail-data`](services/cloudtrail-data.yml) | 1 | 0 | 0 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
-| [`codeconnections`](services/codeconnections.yml) | 0 | 27 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 12 | 3 |
 | [`mobilehub`](services/mobilehub.yml) | 0 | 9 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
@@ -434,14 +434,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2679 |
-| `Get` | 2424 |
+| `List` | 2680 |
+| `Get` | 2426 |
 | `Delete` | 1928 |
 | `Create` | 1799 |
 | `Describe` | 1705 |
-| `Update` | 1534 |
+| `Update` | 1535 |
 | `Put` | 467 |
-| `Start` | 377 |
+| `Start` | 379 |
 | `Tag` | 265 |
 | `Untag` | 261 |
 

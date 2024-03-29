@@ -1,6 +1,4 @@
 Actions:
-
-  # APIs without an IAM action
   - Name: codeconnections:CreateConnection
   - Name: codeconnections:CreateHost
   - Name: codeconnections:CreateRepositoryLink
@@ -28,3 +26,15 @@ Actions:
   - Name: codeconnections:UpdateRepositoryLink
   - Name: codeconnections:UpdateSyncBlocker
   - Name: codeconnections:UpdateSyncConfiguration
+
+  # actions with no corresponding API
+  - Name: codeconnections:GetIndividualAccessToken
+  - Name: codeconnections:GetInstallationUrl
+  - Name: codeconnections:ListInstallationTargets
+  - Name: codeconnections:PassConnection
+  - Name: codeconnections:PassRepository
+  - Name: codeconnections:RegisterAppCode
+  - Name: codeconnections:StartAppRegistrationHandshake
+  - Name: codeconnections:StartOAuthHandshake
+  - Name: codeconnections:UpdateConnectionInstallation
+  - Name: codeconnections:UseConnection
