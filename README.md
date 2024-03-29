@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 392
-* Unique actions: 16741
+* Unique services: 393
+* Unique actions: 16771
 * Managed policies: 1183
 
 Most common managed policy name prefixes:
@@ -54,8 +54,8 @@ The following table summarises the AWS APIs.
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
 | [`s3`](services/s3.yml) | 113 | 60 | 45 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
+| [`iotwireless`](services/iotwireless.yml) | 109 | 3 | 1 |
 | [`cloudfront`](services/cloudfront.yml) | 109 | 2 | 7 |
-| [`iotwireless`](services/iotwireless.yml) | 109 | 0 | 1 |
 | [`dms`](services/dms.yml) | 106 | 0 | 28 |
 | [`gamelift`](services/gamelift.yml) | 104 | 0 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 4 |
@@ -350,6 +350,7 @@ The following table summarises the AWS APIs.
 | [`cloudtrail-data`](services/cloudtrail-data.yml) | 1 | 0 | 0 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
+| [`codeconnections`](services/codeconnections.yml) | 0 | 27 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 12 | 3 |
 | [`mobilehub`](services/mobilehub.yml) | 0 | 9 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
@@ -433,14 +434,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2673 |
-| `Get` | 2415 |
-| `Delete` | 1924 |
-| `Create` | 1795 |
+| `List` | 2679 |
+| `Get` | 2424 |
+| `Delete` | 1928 |
+| `Create` | 1799 |
 | `Describe` | 1705 |
-| `Update` | 1529 |
+| `Update` | 1534 |
 | `Put` | 467 |
 | `Start` | 377 |
-| `Tag` | 264 |
-| `Untag` | 260 |
+| `Tag` | 265 |
+| `Untag` | 261 |
 
