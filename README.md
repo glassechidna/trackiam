@@ -53,8 +53,8 @@ The following table summarises the AWS APIs.
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
 | [`s3`](services/s3.yml) | 113 | 60 | 45 |
+| [`iotwireless`](services/iotwireless.yml) | 112 | 0 | 1 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
-| [`iotwireless`](services/iotwireless.yml) | 109 | 3 | 1 |
 | [`cloudfront`](services/cloudfront.yml) | 109 | 2 | 7 |
 | [`dms`](services/dms.yml) | 106 | 0 | 28 |
 | [`gamelift`](services/gamelift.yml) | 104 | 0 | 0 |
