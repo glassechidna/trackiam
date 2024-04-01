@@ -1,20 +1,22 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMigrationHubStrategyCollector",
   "CreateDate": "2021-10-19T20:15:15Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LHUI3MFF6",
   "PolicyName": "AWSMigrationHubStrategyCollector",
   "PolicyVersion": {
-    "CreateDate": "2024-02-05T18:57:29Z",
+    "CreateDate": "2024-04-01T16:21:02Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "s3:CreateBucket",
             "s3:GetBucketAcl",
+            "s3:GetBucketLocation",
             "s3:GetObject",
+            "s3:ListBucket",
             "s3:PutBucketPublicAccessBlock",
             "s3:PutBucketVersioning",
             "s3:PutEncryptionConfiguration",
@@ -58,8 +60,12 @@
         },
         {
           "Action": [
+            "application-transformation:GetPortingCompatibilityAssessment",
+            "application-transformation:GetPortingRecommendationAssessment",
             "application-transformation:PutLogData",
-            "application-transformation:PutMetricData"
+            "application-transformation:PutMetricData",
+            "application-transformation:StartPortingCompatibilityAssessment",
+            "application-transformation:StartPortingRecommendationAssessment"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -83,6 +89,8 @@
             "migrationhub-strategy:GetMessage",
             "migrationhub-strategy:ListAntiPatterns",
             "migrationhub-strategy:ListJarArtifacts",
+            "migrationhub-strategy:PutLogData",
+            "migrationhub-strategy:PutMetricData",
             "migrationhub-strategy:RegisterCollector",
             "migrationhub-strategy:SendMessage",
             "migrationhub-strategy:UpdateCollectorConfiguration"
@@ -95,7 +103,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2024-02-05T18:57:29Z"
+  "UpdateDate": "2024-04-01T16:21:02Z"
 }
