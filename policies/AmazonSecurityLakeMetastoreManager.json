@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonSecurityLakeMetastoreManager",
   "CreateDate": "2024-01-23T15:26:57Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4H76LFAUPQ",
   "PolicyName": "AmazonSecurityLakeMetastoreManager",
   "PolicyVersion": {
-    "CreateDate": "2024-01-23T15:26:57Z",
+    "CreateDate": "2024-04-01T20:04:24Z",
     "Document": {
       "Statement": [
         {
@@ -50,6 +50,22 @@
         },
         {
           "Action": [
+            "s3:DeleteObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-security-data-lake*/metadata/*.avro",
+            "arn:aws:s3:::aws-security-data-lake*/metadata/*.metadata.json"
+          ],
+          "Sid": "AllowMetaDataCleanup"
+        },
+        {
+          "Action": [
             "s3:GetObject",
             "s3:ListBucket",
             "s3:PutObject"
@@ -86,7 +102,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-01-23T15:26:57Z"
+  "UpdateDate": "2024-04-01T20:04:24Z"
 }
