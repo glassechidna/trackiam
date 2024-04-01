@@ -58,8 +58,9 @@ The following table summarises the AWS APIs.
 | [`cloudfront`](services/cloudfront.yml) | 109 | 2 | 7 |
 | [`dms`](services/dms.yml) | 106 | 0 | 28 |
 | [`gamelift`](services/gamelift.yml) | 104 | 0 | 0 |
+| [`datazone`](services/datazone.yml) | 103 | 0 | 25 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 4 |
-| [`datazone`](services/datazone.yml) | 99 | 0 | 29 |
+| [`deadline`](services/deadline.yml) | 102 | 0 | 1 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`config`](services/config.yml) | 92 | 0 | 0 |
 | [`backup`](services/backup.yml) | 91 | 0 | 5 |
@@ -356,7 +357,6 @@ The following table summarises the AWS APIs.
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
-| [`deadline`](services/deadline.yml) | 0 | 0 | 103 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 70 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |

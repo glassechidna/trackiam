@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonDataZoneGlueManageAccessRolePolicy",
   "CreateDate": "2023-09-22T20:21:53Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4IFGMBEEIW",
   "PolicyName": "AmazonDataZoneGlueManageAccessRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-12-14T23:03:20Z",
+    "CreateDate": "2024-04-01T19:05:41Z",
     "Document": {
       "Statement": [
         {
@@ -65,6 +65,38 @@
             "arn:aws:glue:*:*:table/*"
           ],
           "Sid": "CrossAccountRAMResourceSharingPermissions"
+        },
+        {
+          "Action": [
+            "glue:GetDataQualityResult",
+            "glue:ListDataQualityResults"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:glue:*:*:dataQualityRuleset/*",
+          "Sid": "GlueDataQualityPermissions"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "lakeformation.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AmazonDataZone*",
+            "arn:aws:iam::*:role/service-role/AmazonDataZone*"
+          ],
+          "Sid": "PassRoleForDataLocationRegistration"
         },
         {
           "Action": [
@@ -138,6 +170,7 @@
             "lakeformation:GrantPermissions",
             "lakeformation:ListLakeFormationOptIns",
             "lakeformation:ListPermissions",
+            "lakeformation:RegisterResource",
             "lakeformation:RevokePermissions",
             "organizations:DescribeOrganization",
             "ram:GetResourceShareInvitations",
@@ -146,6 +179,17 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "LakeformationResourceSharingPermissions"
+        },
+        {
+          "Action": [
+            "iam:GetRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AmazonDataZone*",
+            "arn:aws:iam::*:role/service-role/AmazonDataZone*"
+          ],
+          "Sid": "GetRoleForDataZone"
         },
         {
           "Action": [
@@ -159,7 +203,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-12-14T23:03:20Z"
+  "UpdateDate": "2024-04-01T19:05:41Z"
 }

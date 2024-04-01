@@ -1,6 +1,7 @@
 Actions:
   - Name: datazone:AcceptPredictions
   - Name: datazone:AcceptSubscriptionRequest
+  - Name: datazone:CancelMetadataGenerationRun
   - Name: datazone:CancelSubscription
   - Name: datazone:CreateAsset
   - Name: datazone:CreateAssetRevision
@@ -51,6 +52,7 @@ Actions:
   - Name: datazone:GetGroupProfile
   - Name: datazone:GetIamPortalLoginUrl
   - Name: datazone:GetListing
+  - Name: datazone:GetMetadataGenerationRun
   - Name: datazone:GetProject
   - Name: datazone:GetSubscription
   - Name: datazone:GetSubscriptionGrant
@@ -66,6 +68,7 @@ Actions:
   - Name: datazone:ListEnvironmentBlueprints
   - Name: datazone:ListEnvironmentProfiles
   - Name: datazone:ListEnvironments
+  - Name: datazone:ListMetadataGenerationRuns
   - Name: datazone:ListNotifications
   - Name: datazone:ListProjectMemberships
   - Name: datazone:ListProjects
@@ -84,6 +87,7 @@ Actions:
   - Name: datazone:SearchTypes
   - Name: datazone:SearchUserProfiles
   - Name: datazone:StartDataSourceRun
+  - Name: datazone:StartMetadataGenerationRun
   - Name: datazone:TagResource
   - Name: datazone:UntagResource
   - Name: datazone:UpdateDataSource
@@ -100,7 +104,6 @@ Actions:
   - Name: datazone:UpdateUserProfile
 
   # actions with no corresponding API
-  - Name: datazone:CancelMetadataGenerationRun
   - Name: datazone:CreateEnvironmentBlueprint
   - Name: datazone:DeleteDomainSharingPolicy
   - Name: datazone:DeleteEnvironmentBlueprint
@@ -108,13 +111,11 @@ Actions:
   - Name: datazone:GetDomainSharingPolicy
   - Name: datazone:GetEnvironmentActionLink
   - Name: datazone:GetEnvironmentCredentials
-  - Name: datazone:GetMetadataGenerationRun
   - Name: datazone:GetSubscriptionEligibility
   - Name: datazone:GetTimeSeriesDataPoint
   - Name: datazone:ListAccountEnvironments
   - Name: datazone:ListEnvironmentBlueprintConfigurationSummaries
   - Name: datazone:ListGroupsForUser
-  - Name: datazone:ListMetadataGenerationRuns
   - Name: datazone:ListTimeSeriesDataPoints
   - Name: datazone:ListWarehouseMetadata
   - Name: datazone:PostTimeSeriesDataPoints
@@ -123,7 +124,6 @@ Actions:
   - Name: datazone:RefreshToken
   - Name: datazone:SsoLogin
   - Name: datazone:SsoLogout
-  - Name: datazone:StartMetadataGenerationRun
   - Name: datazone:StopMetadataGenerationRun
   - Name: datazone:UpdateEnvironmentBlueprint
   - Name: datazone:UpdateEnvironmentConfiguration
