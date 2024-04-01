@@ -71,8 +71,8 @@ The following table summarises the AWS APIs.
 | [`comprehend`](services/comprehend.yml) | 85 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 84 | 0 | 44 |
 | [`iotsitewise`](services/iotsitewise.yml) | 84 | 0 | 2 |
+| [`cloudformation`](services/cloudformation.yml) | 82 | 0 | 11 |
 | [`omics`](services/omics.yml) | 82 | 0 | 0 |
-| [`cloudformation`](services/cloudformation.yml) | 81 | 1 | 11 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 79 | 0 | 11 |
 | [`securityhub`](services/securityhub.yml) | 79 | 0 | 10 |
