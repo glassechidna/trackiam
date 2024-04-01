@@ -11,15 +11,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 393
-* Unique actions: 16781
-* Managed policies: 1185
+* Unique services: 394
+* Unique actions: 16888
+* Managed policies: 1189
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 320 |
+| `arn:aws:iam::aws:policy/AWS*` | 324 |
 | `arn:aws:iam::aws:policy/Amazon*` | 302 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 266 |
 | `arn:aws:iam::aws:policy/service-role/*` | 190 |
@@ -59,7 +59,7 @@ The following table summarises the AWS APIs.
 | [`dms`](services/dms.yml) | 106 | 0 | 28 |
 | [`gamelift`](services/gamelift.yml) | 104 | 0 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 4 |
-| [`datazone`](services/datazone.yml) | 99 | 0 | 25 |
+| [`datazone`](services/datazone.yml) | 99 | 0 | 29 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
 | [`config`](services/config.yml) | 92 | 0 | 0 |
 | [`backup`](services/backup.yml) | 91 | 0 | 5 |
@@ -356,6 +356,7 @@ The following table summarises the AWS APIs.
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
+| [`deadline`](services/deadline.yml) | 0 | 0 | 103 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 70 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
@@ -434,14 +435,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2680 |
-| `Get` | 2426 |
-| `Delete` | 1928 |
-| `Create` | 1799 |
+| `List` | 2707 |
+| `Get` | 2445 |
+| `Delete` | 1940 |
+| `Create` | 1810 |
 | `Describe` | 1705 |
-| `Update` | 1535 |
-| `Put` | 467 |
-| `Start` | 379 |
-| `Tag` | 265 |
-| `Untag` | 261 |
+| `Update` | 1549 |
+| `Put` | 468 |
+| `Start` | 380 |
+| `Tag` | 266 |
+| `Untag` | 262 |
 
