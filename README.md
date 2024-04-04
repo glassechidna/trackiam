@@ -280,6 +280,7 @@ The following table summarises the AWS APIs.
 | [`thinclient`](services/thinclient.yml) | 16 | 0 | 1 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 16 | 0 | 0 |
+| [`docdb-elastic`](services/docdb-elastic.yml) | 16 | 0 | 0 |
 | [`honeycode`](services/honeycode.yml) | 15 | 0 | 15 |
 | [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 1 |
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
@@ -290,7 +291,6 @@ The following table summarises the AWS APIs.
 | [`internetmonitor`](services/internetmonitor.yml) | 14 | 0 | 1 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 14 | 0 | 0 |
 | [`health`](services/health.yml) | 14 | 0 | 0 |
-| [`docdb-elastic`](services/docdb-elastic.yml) | 13 | 3 | 0 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 17 |
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 7 |
 | [`braket`](services/braket.yml) | 13 | 0 | 4 |
