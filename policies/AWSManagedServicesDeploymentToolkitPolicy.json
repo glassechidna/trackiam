@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSManagedServicesDeploymentToolkitPolicy",
   "CreateDate": "2022-06-09T18:33:03Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AJVRS2BUS",
   "PolicyName": "AWSManagedServicesDeploymentToolkitPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-05-10T17:48:44Z",
+    "CreateDate": "2024-04-04T20:41:54Z",
     "Document": {
       "Statement": [
         {
@@ -27,10 +27,12 @@
             "cloudformation:UpdateTerminationProtection"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:cloudformation:*:*:stack/ams-cdk-toolkit*"
+          "Resource": "arn:aws:cloudformation:*:*:stack/ams-cdk-toolkit*",
+          "Sid": "AMSCDKToolkitCloudFormationPermissions"
         },
         {
           "Action": [
+            "ecr:BatchGetRepositoryScanningConfiguration",
             "ecr:CreateRepository",
             "ecr:DeleteLifecyclePolicy",
             "ecr:DeleteRepository",
@@ -38,6 +40,7 @@
             "ecr:DescribeRepositories",
             "ecr:GetLifecyclePolicy",
             "ecr:ListTagsForResource",
+            "ecr:PutImageScanningConfiguration",
             "ecr:PutImageTagMutability",
             "ecr:PutLifecyclePolicy",
             "ecr:SetRepositoryPolicy",
@@ -45,7 +48,8 @@
             "ecr:UntagResource"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ecr:*:*:repository/ams-cdktoolkit*"
+          "Resource": "arn:aws:ecr:*:*:repository/ams-cdktoolkit*",
+          "Sid": "AMSCDKToolkitECRPermissions"
         },
         {
           "Action": [
@@ -86,13 +90,14 @@
             "s3:PutLifecycleConfiguration"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:s3:::ams-cdktoolkit*"
+          "Resource": "arn:aws:s3:::ams-cdktoolkit*",
+          "Sid": "AMSCDKToolkitS3Permissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-05-10T17:48:44Z"
+  "UpdateDate": "2024-04-04T20:41:54Z"
 }
