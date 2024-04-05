@@ -1,19 +1,42 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmplifyBackendDeployFullAccess",
   "CreateDate": "2023-10-06T21:32:59Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4H6M6P2QGM",
   "PolicyName": "AmplifyBackendDeployFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-01-02T21:13:46Z",
+    "CreateDate": "2024-04-05T18:24:13Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "cloudformation:DeleteStack",
+            "cloudformation:DescribeStackEvents",
+            "cloudformation:DescribeStacks",
+            "cloudformation:GetTemplate",
+            "cloudformation:GetTemplateSummary",
+            "cloudformation:ListStackResources"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/CDKToolkit/*",
+            "arn:aws:cloudformation:*:*:stack/amplify-*"
+          ],
+          "Sid": "CDKPreDeploy"
+        },
+        {
+          "Action": [
+            "lambda:GetFunction",
             "lambda:InvokeFunction",
-            "lambda:UpdateFunctionCode"
+            "lambda:UpdateFunctionCode",
+            "lambda:UpdateFunctionConfiguration"
           ],
           "Condition": {
             "StringEquals": {
@@ -24,7 +47,7 @@
           "Resource": [
             "arn:aws:lambda:*:*:function:amplify-*"
           ],
-          "Sid": "AmplifyHotSwappableSchemaResource"
+          "Sid": "AmplifyHotSwappableFunctionResource"
         },
         {
           "Action": [
@@ -120,27 +143,12 @@
             "*"
           ],
           "Sid": "AmplifyHotSwappableResources"
-        },
-        {
-          "Action": [
-            "cloudformation:DescribeStackEvents",
-            "cloudformation:DescribeStacks",
-            "cloudformation:GetTemplate",
-            "cloudformation:GetTemplateSummary",
-            "cloudformation:ListStackResources"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:cloudformation:*:*:stack/CDKToolkit/*",
-            "arn:aws:cloudformation:*:*:stack/amplify-*"
-          ],
-          "Sid": "CDKPreDeploy"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2024-01-02T21:13:46Z"
+  "UpdateDate": "2024-04-05T18:24:13Z"
 }
