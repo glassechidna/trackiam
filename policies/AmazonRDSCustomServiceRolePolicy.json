@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSCustomServiceRolePolicy",
   "CreateDate": "2021-10-08T21:39:12Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4F2M3XYA7J",
   "PolicyName": "AmazonRDSCustomServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-09-20T19:16:42Z",
+    "CreateDate": "2024-04-08T19:39:46Z",
     "Document": {
       "Statement": [
         {
@@ -421,6 +421,24 @@
         },
         {
           "Action": [
+            "ec2:ModifyInstanceAttribute"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AWSRDSCustom": [
+                "custom-sqlserver"
+              ],
+              "ec2:Attribute": "InstanceType"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "eccModifyInstanceAttribute1"
+        },
+        {
+          "Action": [
             "ec2:RunInstances"
           ],
           "Condition": {
@@ -655,6 +673,7 @@
             "ec2:DescribeImages",
             "ec2:DescribeInstanceAttribute",
             "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstanceTypes",
             "ec2:DescribeInstances",
             "ec2:DescribeNetworkInterfaces",
             "ec2:DescribePlacementGroups",
@@ -741,7 +760,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2023-09-20T19:16:42Z"
+  "UpdateDate": "2024-04-08T19:39:46Z"
 }
