@@ -1,18 +1,17 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudWatchApplicationSignalsServiceRolePolicy",
   "CreateDate": "2023-11-09T18:09:57Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4LAFFLXUGT",
   "PolicyName": "CloudWatchApplicationSignalsServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-03-07T00:04:01Z",
+    "CreateDate": "2024-04-08T16:03:52Z",
     "Document": {
       "Statement": [
         {
           "Action": [
-            "cloudwatch:GetMetricData",
             "cloudwatch:ListMetrics"
           ],
           "Condition": {
@@ -24,7 +23,7 @@
           "Resource": [
             "*"
           ],
-          "Sid": "CWMetricsPermission"
+          "Sid": "CWListMetricsPermission"
         },
         {
           "Action": [
@@ -71,12 +70,22 @@
             "*"
           ],
           "Sid": "XRayPermission"
+        },
+        {
+          "Action": [
+            "cloudwatch:GetMetricData"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "CWGetMetricDataPermission"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-03-07T00:04:01Z"
+  "UpdateDate": "2024-04-08T16:03:52Z"
 }
