@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 395
-* Unique actions: 16910
+* Unique actions: 16912
 * Managed policies: 1186
 
 Most common managed policy name prefixes:
@@ -151,7 +151,7 @@ The following table summarises the AWS APIs.
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`ecr`](services/ecr.yml) | 43 | 0 | 5 |
-| [`wisdom`](services/wisdom.yml) | 42 | 0 | 0 |
+| [`wisdom`](services/wisdom.yml) | 42 | 1 | 0 |
 | [`fms`](services/fms.yml) | 42 | 0 | 0 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
 | [`ce`](services/ce.yml) | 41 | 0 | 12 |
@@ -341,7 +341,7 @@ The following table summarises the AWS APIs.
 | [`license-manager-linux-subscriptions`](services/license-manager-linux-subscriptions.yml) | 4 | 0 | 0 |
 | [`controlcatalog`](services/controlcatalog.yml) | 3 | 0 | 0 |
 | [`cassandra`](services/cassandra.yml) | 2 | 12 | 15 |
-| [`scn`](services/scn.yml) | 2 | 0 | 13 |
+| [`scn`](services/scn.yml) | 2 | 1 | 13 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 2 | 0 | 1 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 2 | 0 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
@@ -441,7 +441,7 @@ Most common action prefixes:
 | `Delete` | 1942 |
 | `Create` | 1811 |
 | `Describe` | 1706 |
-| `Update` | 1551 |
+| `Update` | 1552 |
 | `Put` | 469 |
 | `Start` | 381 |
 | `Tag` | 266 |
