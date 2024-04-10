@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/ROSASRESupportPolicy",
   "CreateDate": "2023-06-01T14:36:06Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4J4WC2J4K2",
   "PolicyName": "ROSASRESupportPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-01-22T22:46:40Z",
+    "CreateDate": "2024-04-10T20:51:37Z",
     "Document": {
       "Statement": [
         {
@@ -58,7 +58,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Resource": "arn:aws:iam::*:instance-profile/*",
           "Sid": "DescribeInstance"
         },
         {
@@ -213,7 +213,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-01-22T22:46:40Z"
+  "UpdateDate": "2024-04-10T20:51:37Z"
 }

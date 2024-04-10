@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/ROSAInstallerPolicy",
   "CreateDate": "2023-06-06T21:00:31Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4GYZ6SLEWE",
   "PolicyName": "ROSAInstallerPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-01-26T21:04:47Z",
+    "CreateDate": "2024-04-10T20:52:53Z",
     "Document": {
       "Statement": [
         {
@@ -155,6 +155,20 @@
             "arn:aws:iam::*:instance-profile/rosa-service-managed-*"
           ],
           "Sid": "CreateInstanceProfiles"
+        },
+        {
+          "Action": [
+            "iam:ListAttachedRolePolicies",
+            "iam:ListRolePolicies"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "ListPoliciesAttachedToRoles"
         },
         {
           "Action": [
@@ -318,7 +332,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-01-26T21:04:47Z"
+  "UpdateDate": "2024-04-10T20:52:53Z"
 }
