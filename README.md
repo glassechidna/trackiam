@@ -339,9 +339,9 @@ The following table summarises the AWS APIs.
 | [`pricing`](services/pricing.yml) | 5 | 0 | 0 |
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 4 | 0 | 0 |
 | [`license-manager-linux-subscriptions`](services/license-manager-linux-subscriptions.yml) | 4 | 0 | 0 |
+| [`scn`](services/scn.yml) | 3 | 0 | 13 |
 | [`controlcatalog`](services/controlcatalog.yml) | 3 | 0 | 0 |
 | [`cassandra`](services/cassandra.yml) | 2 | 12 | 15 |
-| [`scn`](services/scn.yml) | 2 | 1 | 13 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 2 | 0 | 1 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 2 | 0 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
