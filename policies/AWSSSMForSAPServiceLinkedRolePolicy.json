@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSSMForSAPServiceLinkedRolePolicy",
   "CreateDate": "2022-11-16T01:18:21Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AONIU2LID",
   "PolicyName": "AWSSSMForSAPServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-11-21T03:35:14Z",
+    "CreateDate": "2024-04-11T18:31:07Z",
     "Document": {
       "Statement": [
         {
@@ -95,6 +95,20 @@
           "Effect": "Allow",
           "Resource": "arn:*:ec2:*:*:instance/*",
           "Sid": "InstanceTagActions"
+        },
+        {
+          "Action": [
+            "ec2:StartInstances",
+            "ec2:StopInstances"
+          ],
+          "Condition": {
+            "StringEqualsIgnoreCase": {
+              "ec2:resourceTag/SSMForSAPManaged": "True"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:ec2:*:*:instance/*",
+          "Sid": "StartStopInstances"
         },
         {
           "Action": [
@@ -271,7 +285,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2023-11-21T03:35:14Z"
+  "UpdateDate": "2024-04-11T18:31:07Z"
 }

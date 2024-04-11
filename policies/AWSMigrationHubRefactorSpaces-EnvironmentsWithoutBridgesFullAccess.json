@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMigrationHubRefactorSpaces-EnvironmentsWithoutBridgesFullAccess",
   "CreateDate": "2023-04-03T20:09:48Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4G56CGGW2F",
   "PolicyName": "AWSMigrationHubRefactorSpaces-EnvironmentsWithoutBridgesFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-07-20T15:39:19Z",
+    "CreateDate": "2024-04-11T18:16:48Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "VpcEndpointServiceConfigurationDelete"
         },
         {
           "Action": "iam:CreateServiceLinkedRole",
@@ -28,7 +29,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "CreateELBSLR"
         },
         {
           "Action": "iam:CreateServiceLinkedRole",
@@ -38,7 +40,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "CreateRefactorSpacesSLR"
         },
         {
           "Action": [
@@ -62,7 +65,8 @@
             "arn:aws:apigateway:*::/tags/*",
             "arn:aws:apigateway:*::/vpclinks",
             "arn:aws:apigateway:*::/vpclinks/*"
-          ]
+          ],
+          "Sid": "APIGatewayModify"
         },
         {
           "Action": [
@@ -74,7 +78,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "EC2TagsDelete"
         },
         {
           "Action": [
@@ -90,7 +95,8 @@
           "Resource": [
             "arn:*:elasticloadbalancing:*:*:listener/net/refactor-spaces-nlb-*",
             "arn:*:elasticloadbalancing:*:*:loadbalancer/net/refactor-spaces-nlb-*"
-          ]
+          ],
+          "Sid": "ELBListenerCreate"
         },
         {
           "Action": [
@@ -103,7 +109,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:*:elasticloadbalancing:*:*:loadbalancer/net/refactor-spaces-nlb-*"
+          "Resource": "arn:*:elasticloadbalancing:*:*:loadbalancer/net/refactor-spaces-nlb-*",
+          "Sid": "ELBLoadBalancerCreate"
         },
         {
           "Action": [
@@ -116,7 +123,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:*:elasticloadbalancing:*:*:targetgroup/refactor-spaces-tg-*"
+          "Resource": "arn:*:elasticloadbalancing:*:*:targetgroup/refactor-spaces-tg-*",
+          "Sid": "ELBTargetGroupCreate"
         },
         {
           "Action": [
@@ -134,7 +142,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ELBModify"
         },
         {
           "Action": "apigateway:GET",
@@ -142,31 +151,44 @@
           "Resource": [
             "arn:aws:apigateway:*::/vpclinks",
             "arn:aws:apigateway:*::/vpclinks/*"
-          ]
+          ],
+          "Sid": "APIGatewayVpcLinksGet"
         },
         {
           "Action": "elasticloadbalancing:DeleteListener",
           "Effect": "Allow",
-          "Resource": "arn:*:elasticloadbalancing:*:*:listener/net/refactor-spaces-nlb-*"
+          "Resource": "arn:*:elasticloadbalancing:*:*:listener/net/refactor-spaces-nlb-*",
+          "Sid": "ELBListenerDelete"
         },
         {
           "Action": "elasticloadbalancing:DeleteLoadBalancer",
           "Effect": "Allow",
-          "Resource": "arn:*:elasticloadbalancing:*:*:loadbalancer/net/refactor-spaces-nlb-*"
+          "Resource": "arn:*:elasticloadbalancing:*:*:loadbalancer/net/refactor-spaces-nlb-*",
+          "Sid": "ELBLoadBalancerDelete"
         },
         {
           "Action": [
             "cloudformation:CreateStack"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "CloudformationStackCreate"
+        },
+        {
+          "Action": [
+            "cloudformation:TagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/*",
+          "Sid": "CloudformationStackTag"
         },
         {
           "Action": [
             "ec2:CreateVpcEndpointServiceConfiguration"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "VpcEndpointServiceConfigurationCreate"
         },
         {
           "Action": [
@@ -178,7 +200,8 @@
             "ec2:DescribeVpcs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "EC2Describe"
         },
         {
           "Action": [
@@ -186,7 +209,8 @@
             "elasticloadbalancing:RegisterTargets"
           ],
           "Effect": "Allow",
-          "Resource": "arn:*:elasticloadbalancing:*:*:targetgroup/refactor-spaces-tg-*"
+          "Resource": "arn:*:elasticloadbalancing:*:*:targetgroup/refactor-spaces-tg-*",
+          "Sid": "ELBTargetGroupModify"
         },
         {
           "Action": [
@@ -197,14 +221,16 @@
             "elasticloadbalancing:DescribeTargetHealth"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ELBDescribe"
         },
         {
           "Action": [
             "organizations:DescribeOrganization"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "OrganizationDescribe"
         },
         {
           "Action": [
@@ -218,7 +244,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-07-20T15:39:19Z"
+  "UpdateDate": "2024-04-11T18:16:48Z"
 }

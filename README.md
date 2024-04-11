@@ -62,6 +62,7 @@ The following table summarises the AWS APIs.
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 4 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 1 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
+| [`medialive`](services/medialive.yml) | 92 | 0 | 0 |
 | [`config`](services/config.yml) | 92 | 0 | 0 |
 | [`backup`](services/backup.yml) | 91 | 0 | 5 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
@@ -99,7 +100,6 @@ The following table summarises the AWS APIs.
 | [`ds`](services/ds.yml) | 67 | 0 | 10 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
-| [`medialive`](services/medialive.yml) | 65 | 0 | 27 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 64 | 0 | 6 |
