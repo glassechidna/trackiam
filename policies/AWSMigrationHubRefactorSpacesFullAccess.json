@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMigrationHubRefactorSpacesFullAccess",
   "CreateDate": "2021-11-29T07:12:55Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4OQKCEGRMK",
   "PolicyName": "AWSMigrationHubRefactorSpacesFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-07-19T19:07:24Z",
+    "CreateDate": "2024-04-11T17:45:46Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "VpcEndpointServiceConfigurationDelete"
         },
         {
           "Action": "iam:CreateServiceLinkedRole",
@@ -28,7 +29,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "CreateELBSLR"
         },
         {
           "Action": "iam:CreateServiceLinkedRole",
@@ -38,7 +40,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "CreateRefactorSpacesSLR"
         },
         {
           "Action": [
@@ -62,7 +65,8 @@
             "arn:aws:apigateway:*::/tags/*",
             "arn:aws:apigateway:*::/vpclinks",
             "arn:aws:apigateway:*::/vpclinks/*"
-          ]
+          ],
+          "Sid": "APIGatewayModify"
         },
         {
           "Action": [
@@ -81,7 +85,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "EC2NetworkingModify"
         },
         {
           "Action": [
@@ -95,7 +100,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "RequestTagTransitGatewayCreate"
         },
         {
           "Action": [
@@ -109,7 +115,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ResourceTagTransitGatewayCreate"
         },
         {
           "Action": [
@@ -125,7 +132,8 @@
           "Resource": [
             "arn:*:elasticloadbalancing:*:*:listener/net/refactor-spaces-nlb-*",
             "arn:*:elasticloadbalancing:*:*:loadbalancer/net/refactor-spaces-nlb-*"
-          ]
+          ],
+          "Sid": "ELBListenerCreate"
         },
         {
           "Action": [
@@ -138,7 +146,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:*:elasticloadbalancing:*:*:loadbalancer/net/refactor-spaces-nlb-*"
+          "Resource": "arn:*:elasticloadbalancing:*:*:loadbalancer/net/refactor-spaces-nlb-*",
+          "Sid": "ELBLoadBalancerCreate"
         },
         {
           "Action": [
@@ -151,7 +160,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:*:elasticloadbalancing:*:*:targetgroup/refactor-spaces-tg-*"
+          "Resource": "arn:*:elasticloadbalancing:*:*:targetgroup/refactor-spaces-tg-*",
+          "Sid": "ELBTargetGroupCreate"
         },
         {
           "Action": [
@@ -169,7 +179,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ELBModify"
         },
         {
           "Action": "apigateway:GET",
@@ -177,31 +188,44 @@
           "Resource": [
             "arn:aws:apigateway:*::/vpclinks",
             "arn:aws:apigateway:*::/vpclinks/*"
-          ]
+          ],
+          "Sid": "APIGatewayVpcLinksGet"
         },
         {
           "Action": "elasticloadbalancing:DeleteListener",
           "Effect": "Allow",
-          "Resource": "arn:*:elasticloadbalancing:*:*:listener/net/refactor-spaces-nlb-*"
+          "Resource": "arn:*:elasticloadbalancing:*:*:listener/net/refactor-spaces-nlb-*",
+          "Sid": "ELBListenerDelete"
         },
         {
           "Action": "elasticloadbalancing:DeleteLoadBalancer",
           "Effect": "Allow",
-          "Resource": "arn:*:elasticloadbalancing:*:*:loadbalancer/net/refactor-spaces-nlb-*"
+          "Resource": "arn:*:elasticloadbalancing:*:*:loadbalancer/net/refactor-spaces-nlb-*",
+          "Sid": "ELBLoadBalancerDelete"
         },
         {
           "Action": [
             "cloudformation:CreateStack"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "CloudformationStackCreate"
+        },
+        {
+          "Action": [
+            "cloudformation:TagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/*",
+          "Sid": "CloudformationStackTag"
         },
         {
           "Action": [
             "ec2:CreateVpcEndpointServiceConfiguration"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "VpcEndpointServiceConfigurationCreate"
         },
         {
           "Action": [
@@ -218,7 +242,8 @@
             "ec2:DescribeVpcs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "EC2Describe"
         },
         {
           "Action": [
@@ -226,7 +251,8 @@
             "elasticloadbalancing:RegisterTargets"
           ],
           "Effect": "Allow",
-          "Resource": "arn:*:elasticloadbalancing:*:*:targetgroup/refactor-spaces-tg-*"
+          "Resource": "arn:*:elasticloadbalancing:*:*:targetgroup/refactor-spaces-tg-*",
+          "Sid": "ELBTargetGroupModify"
         },
         {
           "Action": [
@@ -237,14 +263,16 @@
             "elasticloadbalancing:DescribeTargetHealth"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ELBDescribe"
         },
         {
           "Action": [
             "organizations:DescribeOrganization"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "OrganizationDescribe"
         },
         {
           "Action": [
@@ -258,7 +286,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2023-07-19T19:07:24Z"
+  "UpdateDate": "2024-04-11T17:45:46Z"
 }
