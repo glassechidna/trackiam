@@ -31,6 +31,7 @@ Actions:
   - Name: kms:ListAliases
   - Name: kms:ListGrants
   - Name: kms:ListKeyPolicies
+  - Name: kms:ListKeyRotations
   - Name: kms:ListKeys
   - Name: kms:ListResourceTags
   - Name: kms:ListRetirableGrants
@@ -38,6 +39,7 @@ Actions:
   - Name: kms:ReplicateKey
   - Name: kms:RetireGrant
   - Name: kms:RevokeGrant
+  - Name: kms:RotateKeyOnDemand
   - Name: kms:ScheduleKeyDeletion
   - Name: kms:Sign
   - Name: kms:TagResource
@@ -55,6 +57,4 @@ Actions:
   - Name: kms:SynchronizeMultiRegionKey
 
   # APIs without an IAM action
-  - Name: kms:ListKeyRotations
   - Name: kms:ReEncrypt
-  - Name: kms:RotateKeyOnDemand

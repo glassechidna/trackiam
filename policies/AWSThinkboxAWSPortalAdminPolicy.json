@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSThinkboxAWSPortalAdminPolicy",
   "CreateDate": "2020-05-27T19:41:02Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BVM3T5TP2",
   "PolicyName": "AWSThinkboxAWSPortalAdminPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-02-23T22:25:47Z",
+    "CreateDate": "2024-04-12T20:07:12Z",
     "Document": {
       "Statement": [
         {
@@ -178,6 +178,8 @@
             "cloudformation:DescribeStackResources",
             "cloudformation:ExecuteChangeSet",
             "cloudformation:ListStackResources",
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource",
             "cloudformation:UpdateTerminationProtection"
           ],
           "Effect": "Allow",
@@ -432,7 +434,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2024-02-23T22:25:47Z"
+  "UpdateDate": "2024-04-12T20:07:12Z"
 }

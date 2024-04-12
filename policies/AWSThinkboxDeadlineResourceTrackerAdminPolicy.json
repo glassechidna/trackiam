@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSThinkboxDeadlineResourceTrackerAdminPolicy",
   "CreateDate": "2020-05-27T19:29:09Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FKWWNUOP2",
   "PolicyName": "AWSThinkboxDeadlineResourceTrackerAdminPolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-06-22T18:08:40Z",
+    "CreateDate": "2024-04-12T20:55:58Z",
     "Document": {
       "Statement": [
         {
@@ -24,7 +24,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/aws-service-role/*"
-          ]
+          ],
+          "Sid": "AWSThinkboxDeadlineResourceTracker9"
         },
         {
           "Action": [
@@ -40,7 +41,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
-          ]
+          ],
+          "Sid": "AWSThinkboxDeadlineResourceTracker11"
         },
         {
           "Action": [
@@ -56,7 +58,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/DeadlineResourceTrackerAccess*"
-          ]
+          ],
+          "Sid": "AWSThinkboxDeadlineResourceTracker10"
         },
         {
           "Action": [
@@ -71,7 +74,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:lambda:*:*:function:DeadlineResourceTracker*"
-          ]
+          ],
+          "Sid": "AWSThinkboxDeadlineResourceTracker14"
         },
         {
           "Action": [
@@ -88,7 +92,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AWSThinkboxDeadlineResourceTracker13"
         },
         {
           "Action": [
@@ -102,20 +107,24 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AWSThinkboxDeadlineResourceTracker1"
         },
         {
           "Action": [
             "cloudformation:CreateStack",
             "cloudformation:DeleteStack",
             "cloudformation:DescribeStacks",
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource",
             "cloudformation:UpdateStack",
             "cloudformation:UpdateTerminationProtection"
           ],
           "Effect": "Allow",
           "Resource": [
             "arn:aws:cloudformation:*:*:stack/DeadlineResourceTracker*"
-          ]
+          ],
+          "Sid": "AWSThinkboxDeadlineResourceTracker3"
         },
         {
           "Action": [
@@ -124,7 +133,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AWSThinkboxDeadlineResourceTracker2"
         },
         {
           "Action": [
@@ -134,7 +144,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:dynamodb:*:*:table/DeadlineFleetHealth*"
-          ]
+          ],
+          "Sid": "AWSThinkboxDeadlineResourceTracker5"
         },
         {
           "Action": [
@@ -150,7 +161,8 @@
             "arn:aws:dynamodb:*:*:table/DeadlineEC2ComputeNodeHealth*",
             "arn:aws:dynamodb:*:*:table/DeadlineEC2ComputeNodeInfo*",
             "arn:aws:dynamodb:*:*:table/DeadlineFleetHealth*"
-          ]
+          ],
+          "Sid": "AWSThinkboxDeadlineResourceTracker4"
         },
         {
           "Action": [
@@ -163,7 +175,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:events:*:*:rule/DeadlineResourceTracker*"
-          ]
+          ],
+          "Sid": "AWSThinkboxDeadlineResourceTracker6"
         },
         {
           "Action": [
@@ -173,7 +186,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/DeadlineResourceTracker*"
-          ]
+          ],
+          "Sid": "AWSThinkboxDeadlineResourceTracker7"
         },
         {
           "Action": [
@@ -182,7 +196,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AWSThinkboxDeadlineResourceTracker8"
         },
         {
           "Action": [
@@ -201,7 +216,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:lambda:*:*:function:DeadlineResourceTracker*"
-          ]
+          ],
+          "Sid": "AWSThinkboxDeadlineResourceTracker15"
         },
         {
           "Action": [
@@ -210,7 +226,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AWSThinkboxDeadlineResourceTracker12"
         },
         {
           "Action": [
@@ -220,7 +237,8 @@
           "Resource": [
             "arn:aws:s3:::*/DeadlineAWSResourceTrackerTemplate-*.yaml",
             "arn:aws:s3:::*/deadline_aws_resource_tracker-*.zip"
-          ]
+          ],
+          "Sid": "AWSThinkboxDeadlineResourceTracker16"
         },
         {
           "Action": [
@@ -235,13 +253,14 @@
           "Resource": [
             "arn:aws:sqs:*:*:DeadlineAWSComputeNodeState*",
             "arn:aws:sqs:*:*:DeadlineResourceTracker*"
-          ]
+          ],
+          "Sid": "AWSThinkboxDeadlineResourceTracker17"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2022-06-22T18:08:40Z"
+  "UpdateDate": "2024-04-12T20:55:58Z"
 }
