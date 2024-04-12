@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 395
-* Unique actions: 16955
+* Unique actions: 16957
 * Managed policies: 1186
 
 Most common managed policy name prefixes:
@@ -137,7 +137,7 @@ The following table summarises the AWS APIs.
 | [`finspace`](services/finspace.yml) | 50 | 0 | 9 |
 | [`codebuild`](services/codebuild.yml) | 50 | 0 | 8 |
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
-| [`kms`](services/kms.yml) | 49 | 1 | 3 |
+| [`kms`](services/kms.yml) | 49 | 3 | 3 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 49 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 6 |
@@ -436,7 +436,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2718 |
+| `List` | 2719 |
 | `Get` | 2466 |
 | `Delete` | 1947 |
 | `Create` | 1816 |
