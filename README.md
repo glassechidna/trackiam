@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 395
-* Unique actions: 16960
+* Unique actions: 16966
 * Managed policies: 1187
 
 Most common managed policy name prefixes:
@@ -91,8 +91,8 @@ The following table summarises the AWS APIs.
 | [`workspaces`](services/workspaces.yml) | 73 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
 | [`imagebuilder`](services/imagebuilder.yml) | 73 | 0 | 0 |
+| [`wellarchitected`](services/wellarchitected.yml) | 72 | 0 | 1 |
 | [`mgn`](services/mgn.yml) | 70 | 0 | 34 |
-| [`wellarchitected`](services/wellarchitected.yml) | 70 | 0 | 3 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
 | [`guardduty`](services/guardduty.yml) | 69 | 0 | 1 |
 | [`athena`](services/athena.yml) | 68 | 0 | 11 |
@@ -174,14 +174,15 @@ The following table summarises the AWS APIs.
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 0 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
+| [`entityresolution`](services/entityresolution.yml) | 35 | 0 | 2 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
 | [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
 | [`ram`](services/ram.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
+| [`m2`](services/m2.yml) | 33 | 1 | 0 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`applicationinsights`](services/applicationinsights.yml) | 33 | 0 | 1 |
 | [`tnb`](services/tnb.yml) | 33 | 0 | 0 |
-| [`m2`](services/m2.yml) | 33 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
@@ -190,6 +191,7 @@ The following table summarises the AWS APIs.
 | [`billingconductor`](services/billingconductor.yml) | 32 | 0 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 31 | 0 | 5 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 31 | 0 | 3 |
+| [`outposts`](services/outposts.yml) | 31 | 0 | 2 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 31 | 0 | 0 |
 | [`securitylake`](services/securitylake.yml) | 31 | 0 | 0 |
@@ -218,8 +220,6 @@ The following table summarises the AWS APIs.
 | [`servicediscovery`](services/servicediscovery.yml) | 27 | 0 | 0 |
 | [`b2bi`](services/b2bi.yml) | 27 | 0 | 0 |
 | [`aps`](services/aps.yml) | 26 | 0 | 16 |
-| [`entityresolution`](services/entityresolution.yml) | 26 | 0 | 11 |
-| [`outposts`](services/outposts.yml) | 26 | 0 | 2 |
 | [`private-networks`](services/private-networks.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
@@ -436,14 +436,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2719 |
-| `Get` | 2467 |
+| `List` | 2721 |
+| `Get` | 2469 |
 | `Delete` | 1947 |
 | `Create` | 1816 |
 | `Describe` | 1706 |
 | `Update` | 1557 |
 | `Put` | 469 |
-| `Start` | 384 |
+| `Start` | 385 |
 | `Tag` | 266 |
 | `Untag` | 262 |
 
