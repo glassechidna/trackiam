@@ -1,0 +1,40 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/SplitCostAllocationDataServiceRolePolicy",
+  "CreateDate": "2024-04-16T16:05:16Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4OIA5I7XXW",
+  "PolicyName": "SplitCostAllocationDataServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-04-16T16:05:16Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aps:ListWorkspaces",
+            "aps:QueryMetrics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonManagedServiceForPrometheusAccess"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListParents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AwsOrganizationsAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-04-16T16:05:16Z"
+}
