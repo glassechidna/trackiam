@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmplifyBackendDeployFullAccess",
   "CreateDate": "2023-10-06T21:32:59Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4H6M6P2QGM",
   "PolicyName": "AmplifyBackendDeployFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-04-05T18:24:13Z",
+    "CreateDate": "2024-04-17T16:00:59Z",
     "Document": {
       "Statement": [
         {
@@ -30,6 +30,29 @@
             "arn:aws:cloudformation:*:*:stack/amplify-*"
           ],
           "Sid": "CDKPreDeploy"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSubnets",
+            "rds:DescribeDBClusters",
+            "rds:DescribeDBInstances",
+            "rds:DescribeDBProxies",
+            "rds:DescribeDBSubnetGroups"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:rds:*:*:cluster:*",
+            "arn:aws:rds:*:*:db-proxy:*",
+            "arn:aws:rds:*:*:db:*",
+            "arn:aws:rds:*:*:subgrp:*"
+          ],
+          "Sid": "AmplifyDiscoverRDSVpcConfig"
         },
         {
           "Action": [
@@ -148,7 +171,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2024-04-05T18:24:13Z"
+  "UpdateDate": "2024-04-17T16:00:59Z"
 }
