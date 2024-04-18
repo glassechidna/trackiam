@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 395
-* Unique actions: 16971
+* Unique actions: 16982
 * Managed policies: 1187
 
 Most common managed policy name prefixes:
@@ -87,8 +87,8 @@ The following table summarises the AWS APIs.
 | [`logs`](services/logs.yml) | 74 | 0 | 8 |
 | [`sms-voice`](services/sms-voice.yml) | 74 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
+| [`workspaces`](services/workspaces.yml) | 73 | 6 | 1 |
 | [`sso`](services/sso.yml) | 73 | 0 | 53 |
-| [`workspaces`](services/workspaces.yml) | 73 | 0 | 1 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
 | [`imagebuilder`](services/imagebuilder.yml) | 73 | 0 | 0 |
 | [`wellarchitected`](services/wellarchitected.yml) | 72 | 0 | 1 |
@@ -205,11 +205,11 @@ The following table summarises the AWS APIs.
 | [`dataexchange`](services/dataexchange.yml) | 30 | 0 | 2 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
 | [`voiceid`](services/voiceid.yml) | 29 | 0 | 2 |
+| [`rolesanywhere`](services/rolesanywhere.yml) | 28 | 2 | 0 |
 | [`detective`](services/detective.yml) | 28 | 1 | 8 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`discovery`](services/discovery.yml) | 28 | 0 | 1 |
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 28 | 0 | 1 |
-| [`rolesanywhere`](services/rolesanywhere.yml) | 28 | 0 | 0 |
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 27 | 1 | 8 |
@@ -387,6 +387,7 @@ The following table summarises the AWS APIs.
 | [`billing`](services/billing.yml) | 0 | 0 | 13 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
+| [`q`](services/q.yml) | 0 | 0 | 10 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`ts`](services/ts.yml) | 0 | 0 | 9 |
 | [`notifications-contacts`](services/notifications-contacts.yml) | 0 | 0 | 9 |
@@ -396,7 +397,6 @@ The following table summarises the AWS APIs.
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 7 |
 | [`s3express`](services/s3express.yml) | 0 | 0 | 7 |
-| [`q`](services/q.yml) | 0 | 0 | 7 |
 | [`payments`](services/payments.yml) | 0 | 0 | 7 |
 | [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
@@ -436,13 +436,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2723 |
-| `Get` | 2470 |
-| `Delete` | 1947 |
-| `Create` | 1817 |
+| `List` | 2724 |
+| `Get` | 2472 |
+| `Delete` | 1949 |
+| `Create` | 1818 |
 | `Describe` | 1707 |
-| `Update` | 1557 |
-| `Put` | 469 |
+| `Update` | 1558 |
+| `Put` | 470 |
 | `Start` | 385 |
 | `Tag` | 266 |
 | `Untag` | 262 |
