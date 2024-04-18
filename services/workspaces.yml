@@ -1,9 +1,11 @@
 Actions:
+  - Name: workspaces:AcceptAccountLinkInvitation
   - Name: workspaces:AssociateConnectionAlias
   - Name: workspaces:AssociateIpGroups
   - Name: workspaces:AssociateWorkspaceApplication
   - Name: workspaces:AuthorizeIpRules
   - Name: workspaces:CopyWorkspaceImage
+  - Name: workspaces:CreateAccountLinkInvitation
   - Name: workspaces:CreateConnectClientAddIn
   - Name: workspaces:CreateConnectionAlias
   - Name: workspaces:CreateIpGroup
@@ -13,6 +15,7 @@ Actions:
   - Name: workspaces:CreateWorkspaceBundle
   - Name: workspaces:CreateWorkspaceImage
   - Name: workspaces:CreateWorkspaces
+  - Name: workspaces:DeleteAccountLinkInvitation
   - Name: workspaces:DeleteClientBranding
   - Name: workspaces:DeleteConnectClientAddIn
   - Name: workspaces:DeleteConnectionAlias
@@ -46,8 +49,10 @@ Actions:
   - Name: workspaces:DisassociateConnectionAlias
   - Name: workspaces:DisassociateIpGroups
   - Name: workspaces:DisassociateWorkspaceApplication
+  - Name: workspaces:GetAccountLink
   - Name: workspaces:ImportClientBranding
   - Name: workspaces:ImportWorkspaceImage
+  - Name: workspaces:ListAccountLinks
   - Name: workspaces:ListAvailableManagementCidrRanges
   - Name: workspaces:MigrateWorkspace
   - Name: workspaces:ModifyAccount
@@ -62,6 +67,7 @@ Actions:
   - Name: workspaces:RebootWorkspaces
   - Name: workspaces:RebuildWorkspaces
   - Name: workspaces:RegisterWorkspaceDirectory
+  - Name: workspaces:RejectAccountLinkInvitation
   - Name: workspaces:RestoreWorkspace
   - Name: workspaces:RevokeIpRules
   - Name: workspaces:StartWorkspaces
@@ -75,11 +81,3 @@ Actions:
 
   # actions with no corresponding API
   - Name: workspaces:Stream
-
-  # APIs without an IAM action
-  - Name: workspaces:AcceptAccountLinkInvitation
-  - Name: workspaces:CreateAccountLinkInvitation
-  - Name: workspaces:DeleteAccountLinkInvitation
-  - Name: workspaces:GetAccountLink
-  - Name: workspaces:ListAccountLinks
-  - Name: workspaces:RejectAccountLinkInvitation
