@@ -278,6 +278,7 @@ The following table summarises the AWS APIs.
 | [`neptune-db`](services/neptune-db.yml) | 16 | 24 | 17 |
 | [`support`](services/support.yml) | 16 | 0 | 9 |
 | [`thinclient`](services/thinclient.yml) | 16 | 0 | 1 |
+| [`internetmonitor`](services/internetmonitor.yml) | 16 | 0 | 1 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 16 | 0 | 0 |
 | [`docdb-elastic`](services/docdb-elastic.yml) | 16 | 0 | 0 |
@@ -285,7 +286,6 @@ The following table summarises the AWS APIs.
 | [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 1 |
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
-| [`internetmonitor`](services/internetmonitor.yml) | 14 | 0 | 3 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`osis`](services/osis.yml) | 14 | 0 | 1 |
