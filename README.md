@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 395
-* Unique actions: 16982
+* Unique actions: 16985
 * Managed policies: 1187
 
 Most common managed policy name prefixes:
@@ -161,9 +161,9 @@ The following table summarises the AWS APIs.
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`codepipeline`](services/codepipeline.yml) | 39 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 15 |
+| [`appmesh`](services/appmesh.yml) | 38 | 0 | 4 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 1 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
-| [`appmesh`](services/appmesh.yml) | 38 | 0 | 1 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`apprunner`](services/apprunner.yml) | 37 | 0 | 5 |
@@ -437,12 +437,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2724 |
-| `Get` | 2472 |
-| `Delete` | 1949 |
+| `Get` | 2473 |
+| `Delete` | 1950 |
 | `Create` | 1818 |
 | `Describe` | 1707 |
 | `Update` | 1558 |
-| `Put` | 470 |
+| `Put` | 471 |
 | `Start` | 385 |
 | `Tag` | 266 |
 | `Untag` | 262 |
