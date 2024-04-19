@@ -1,15 +1,31 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/SecurityLakeServiceLinkedRole",
   "CreateDate": "2022-11-29T14:03:33Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4CY4TAEDJQ",
   "PolicyName": "SecurityLakeServiceLinkedRole",
   "PolicyVersion": {
-    "CreateDate": "2024-02-29T19:14:11Z",
+    "CreateDate": "2024-04-19T16:00:05Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogDelivery",
+            "logs:DeleteLogDelivery"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "wafv2.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LogDelivery"
+        },
         {
           "Action": [
             "organizations:ListDelegatedAdministrators"
@@ -112,7 +128,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-02-29T19:14:11Z"
+  "UpdateDate": "2024-04-19T16:00:05Z"
 }

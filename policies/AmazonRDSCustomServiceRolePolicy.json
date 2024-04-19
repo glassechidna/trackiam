@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSCustomServiceRolePolicy",
   "CreateDate": "2021-10-08T21:39:12Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4F2M3XYA7J",
   "PolicyName": "AmazonRDSCustomServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-04-08T19:39:46Z",
+    "CreateDate": "2024-04-19T15:15:23Z",
     "Document": {
       "Statement": [
         {
@@ -152,7 +152,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/AWSRDSCustom*",
+          "Resource": [
+            "arn:aws:iam::*:role/AWSRDSCustom*",
+            "arn:aws:iam::*:role/service-role/AWSRDSCustom*"
+          ],
           "Sid": "iam2"
         },
         {
@@ -760,7 +763,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2024-04-08T19:39:46Z"
+  "UpdateDate": "2024-04-19T15:15:23Z"
 }
