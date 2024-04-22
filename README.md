@@ -203,9 +203,9 @@ The following table summarises the AWS APIs.
 | [`access-analyzer`](services/access-analyzer.yml) | 30 | 2 | 1 |
 | [`xray`](services/xray.yml) | 30 | 0 | 3 |
 | [`dataexchange`](services/dataexchange.yml) | 30 | 0 | 2 |
+| [`rolesanywhere`](services/rolesanywhere.yml) | 30 | 0 | 0 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
 | [`voiceid`](services/voiceid.yml) | 29 | 0 | 2 |
-| [`rolesanywhere`](services/rolesanywhere.yml) | 28 | 2 | 0 |
 | [`detective`](services/detective.yml) | 28 | 1 | 8 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`discovery`](services/discovery.yml) | 28 | 0 | 1 |
