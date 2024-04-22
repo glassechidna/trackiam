@@ -280,6 +280,7 @@ The following table summarises the AWS APIs.
 | [`thinclient`](services/thinclient.yml) | 16 | 0 | 1 |
 | [`internetmonitor`](services/internetmonitor.yml) | 16 | 0 | 1 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
+| [`route53profiles`](services/route53profiles.yml) | 16 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 16 | 0 | 0 |
 | [`docdb-elastic`](services/docdb-elastic.yml) | 16 | 0 | 0 |
 | [`honeycode`](services/honeycode.yml) | 15 | 0 | 15 |
@@ -353,7 +354,6 @@ The following table summarises the AWS APIs.
 | [`cloudtrail-data`](services/cloudtrail-data.yml) | 1 | 0 | 0 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
-| [`route53profiles`](services/route53profiles.yml) | 0 | 16 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 12 | 3 |
 | [`mobilehub`](services/mobilehub.yml) | 0 | 9 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
