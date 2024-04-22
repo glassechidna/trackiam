@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 395
-* Unique actions: 16985
+* Unique services: 396
+* Unique actions: 17002
 * Managed policies: 1187
 
 Most common managed policy name prefixes:
@@ -110,7 +110,7 @@ The following table summarises the AWS APIs.
 | [`bedrock`](services/bedrock.yml) | 62 | 0 | 22 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 60 | 0 | 0 |
-| [`transfer`](services/transfer.yml) | 59 | 0 | 0 |
+| [`transfer`](services/transfer.yml) | 59 | 1 | 0 |
 | [`ivs`](services/ivs.yml) | 59 | 0 | 0 |
 | [`inspector2`](services/inspector2.yml) | 59 | 0 | 0 |
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 0 |
@@ -353,6 +353,7 @@ The following table summarises the AWS APIs.
 | [`cloudtrail-data`](services/cloudtrail-data.yml) | 1 | 0 | 0 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
+| [`route53profiles`](services/route53profiles.yml) | 0 | 16 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 12 | 3 |
 | [`mobilehub`](services/mobilehub.yml) | 0 | 9 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
@@ -436,14 +437,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2724 |
-| `Get` | 2473 |
-| `Delete` | 1950 |
-| `Create` | 1818 |
+| `List` | 2728 |
+| `Get` | 2476 |
+| `Delete` | 1951 |
+| `Create` | 1819 |
 | `Describe` | 1707 |
-| `Update` | 1558 |
+| `Update` | 1559 |
 | `Put` | 471 |
-| `Start` | 385 |
-| `Tag` | 266 |
-| `Untag` | 262 |
+| `Start` | 386 |
+| `Tag` | 267 |
+| `Untag` | 263 |
 
