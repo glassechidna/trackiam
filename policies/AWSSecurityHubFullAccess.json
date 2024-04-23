@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSecurityHubFullAccess",
   "CreateDate": "2018-11-27T23:54:34Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ4262VZCA4HPBZSO6",
   "PolicyName": "AWSSecurityHubFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-11-16T21:10:53Z",
+    "CreateDate": "2024-04-23T18:35:45Z",
     "Document": {
       "Statement": [
         {
@@ -31,7 +31,8 @@
           "Action": [
             "guardduty:GetDetector",
             "guardduty:ListDetectors",
-            "inspector2:BatchGetAccountStatus"
+            "inspector2:BatchGetAccountStatus",
+            "pricing:GetProducts"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -41,7 +42,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-11-16T21:10:53Z"
+  "UpdateDate": "2024-04-23T18:35:45Z"
 }

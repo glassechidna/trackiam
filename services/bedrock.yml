@@ -4,6 +4,9 @@ Actions:
   - Name: bedrock:CreateAgentActionGroup
   - Name: bedrock:CreateAgentAlias
   - Name: bedrock:CreateDataSource
+  - Name: bedrock:CreateEvaluationJob
+  - Name: bedrock:CreateGuardrail
+  - Name: bedrock:CreateGuardrailVersion
   - Name: bedrock:CreateKnowledgeBase
   - Name: bedrock:CreateModelCustomizationJob
   - Name: bedrock:CreateProvisionedModelThroughput
@@ -13,6 +16,7 @@ Actions:
   - Name: bedrock:DeleteAgentVersion
   - Name: bedrock:DeleteCustomModel
   - Name: bedrock:DeleteDataSource
+  - Name: bedrock:DeleteGuardrail
   - Name: bedrock:DeleteKnowledgeBase
   - Name: bedrock:DeleteModelInvocationLoggingConfiguration
   - Name: bedrock:DeleteProvisionedModelThroughput
@@ -24,7 +28,9 @@ Actions:
   - Name: bedrock:GetAgentVersion
   - Name: bedrock:GetCustomModel
   - Name: bedrock:GetDataSource
+  - Name: bedrock:GetEvaluationJob
   - Name: bedrock:GetFoundationModel
+  - Name: bedrock:GetGuardrail
   - Name: bedrock:GetIngestionJob
   - Name: bedrock:GetKnowledgeBase
   - Name: bedrock:GetModelCustomizationJob
@@ -40,7 +46,9 @@ Actions:
   - Name: bedrock:ListAgents
   - Name: bedrock:ListCustomModels
   - Name: bedrock:ListDataSources
+  - Name: bedrock:ListEvaluationJobs
   - Name: bedrock:ListFoundationModels
+  - Name: bedrock:ListGuardrails
   - Name: bedrock:ListIngestionJobs
   - Name: bedrock:ListKnowledgeBases
   - Name: bedrock:ListModelCustomizationJobs
@@ -51,6 +59,7 @@ Actions:
   - Name: bedrock:Retrieve
   - Name: bedrock:RetrieveAndGenerate
   - Name: bedrock:StartIngestionJob
+  - Name: bedrock:StopEvaluationJob
   - Name: bedrock:StopModelCustomizationJob
   - Name: bedrock:TagResource
   - Name: bedrock:UntagResource
@@ -59,34 +68,25 @@ Actions:
   - Name: bedrock:UpdateAgentAlias
   - Name: bedrock:UpdateAgentKnowledgeBase
   - Name: bedrock:UpdateDataSource
+  - Name: bedrock:UpdateGuardrail
   - Name: bedrock:UpdateKnowledgeBase
   - Name: bedrock:UpdateProvisionedModelThroughput
 
   # actions with no corresponding API
   - Name: bedrock:ApplyGuardrail
   - Name: bedrock:AssociateThirdPartyKnowledgeBase
-  - Name: bedrock:CreateEvaluationJob
   - Name: bedrock:CreateFoundationModelAgreement
-  - Name: bedrock:CreateGuardrail
-  - Name: bedrock:CreateGuardrailVersion
   - Name: bedrock:CreateModelEvaluationJob
   - Name: bedrock:CreateModelInvocationJob
   - Name: bedrock:DeleteFoundationModelAgreement
-  - Name: bedrock:DeleteGuardrail
   - Name: bedrock:DetectGeneratedContent
-  - Name: bedrock:GetEvaluationJob
   - Name: bedrock:GetFoundationModelAvailability
-  - Name: bedrock:GetGuardrail
   - Name: bedrock:GetModelEvaluationJob
   - Name: bedrock:GetModelInvocationJob
   - Name: bedrock:GetUseCaseForModelAccess
-  - Name: bedrock:ListEvaluationJobs
   - Name: bedrock:ListFoundationModelAgreementOffers
-  - Name: bedrock:ListGuardrails
   - Name: bedrock:ListModelEvaluationJobs
   - Name: bedrock:ListModelInvocationJobs
   - Name: bedrock:PutFoundationModelEntitlement
   - Name: bedrock:PutUseCaseForModelAccess
-  - Name: bedrock:StopEvaluationJob
   - Name: bedrock:StopModelInvocationJob
-  - Name: bedrock:UpdateGuardrail
