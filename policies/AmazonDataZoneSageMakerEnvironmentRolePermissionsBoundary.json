@@ -1,0 +1,1146 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary",
+  "CreateDate": "2024-04-23T23:01:14Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4BVNAOGKEU",
+  "PolicyName": "AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary",
+  "PolicyVersion": {
+    "CreateDate": "2024-04-23T23:01:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "sagemaker.application-autoscaling.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/sagemaker.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_SageMakerEndpoint",
+          "Sid": "AllowCreateServiceLinkedRoleForSageMakerApplicationAutoscaling"
+        },
+        {
+          "Action": "sagemaker:*",
+          "Condition": {
+            "StringEqualsIfExists": {
+              "sagemaker:WorkteamType": [
+                "private-crowd",
+                "vendor-crowd"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:flow-definition/*"
+          ],
+          "Sid": "AllowFlowDefinitionActions"
+        },
+        {
+          "Action": [
+            "events:DescribeRule",
+            "events:PutTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/sagemaker:is-canvas-data-prep-job": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/*",
+          "Sid": "EventBridgeOperations"
+        },
+        {
+          "Action": [
+            "events:PutRule"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/sagemaker:is-canvas-data-prep-job": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/*",
+          "Sid": "AllowEventBridgeRule"
+        },
+        {
+          "Action": [
+            "events:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/sagemaker:is-canvas-data-prep-job": "true",
+              "aws:ResourceTag/sagemaker:is-canvas-data-prep-job": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/*",
+          "Sid": "EventBridgeTagBasedOperations"
+        },
+        {
+          "Action": [
+            "glue:*DataQuality*",
+            "glue:BatchDeleteConnection",
+            "glue:BatchGetJobs",
+            "glue:BatchGetWorkflows",
+            "glue:BatchStopJobRun",
+            "glue:CreateWorkflow",
+            "glue:DeleteBlueprint",
+            "glue:DeleteConnection",
+            "glue:DeleteCrawler",
+            "glue:DeleteJob",
+            "glue:DeleteWorkflow",
+            "glue:GetConnection",
+            "glue:GetDatabase",
+            "glue:GetDatabases",
+            "glue:GetPartition",
+            "glue:GetPartitions",
+            "glue:GetTable",
+            "glue:GetTables",
+            "glue:ListSchemas",
+            "glue:NotifyEvent",
+            "glue:PutWorkflowRunProperties",
+            "glue:ResetJobBookmark",
+            "glue:ResumeWorkflowRun",
+            "glue:SearchTables",
+            "glue:StartBlueprintRun",
+            "glue:StartCrawler",
+            "glue:StartCrawlerSchedule",
+            "glue:StartJobRun",
+            "glue:StartWorkflowRun",
+            "glue:StopCrawler",
+            "glue:StopCrawlerSchedule",
+            "glue:StopWorkflowRun",
+            "glue:UpdateBlueprint",
+            "glue:UpdateConnection",
+            "glue:UpdateCrawler",
+            "glue:UpdateCrawlerSchedule",
+            "glue:UpdateJob",
+            "glue:UpdateWorkflow"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneEnvironment": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowGlueActionsWithEnvironmentTag"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "bedrock.amazonaws.com",
+                "events.amazonaws.com",
+                "forecast.amazonaws.com",
+                "glue.amazonaws.com",
+                "lakeformation.amazonaws.com",
+                "sagemaker.amazonaws.com",
+                "states.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/sm-provisioning/datazone_usr_sagemaker_execution_role_*"
+          ],
+          "Sid": "AllowPassRoleForSageMakerRoles"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:DescribeKey",
+            "kms:Encrypt",
+            "kms:GenerateDataKey",
+            "kms:ListKeys",
+            "kms:RetireGrant"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneEnvironment": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "KmsOperationsWithResourceTag"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:DescribeKey",
+            "kms:ListKeys"
+          ],
+          "Condition": {
+            "StringNotEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CrossAccountKmsOperations"
+        },
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "s3:ExistingObjectTag/servicecatalog:provisioning": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*"
+          ],
+          "Sid": "AllowS3GetObjectWithServiceCatalogProvisioningExistingObjectTag"
+        },
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Condition": {
+            "StringEqualsIgnoreCase": {
+              "s3:ExistingObjectTag/SageMaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*"
+          ],
+          "Sid": "AllowS3GetObjectWithSageMakerExistingObjectTag"
+        },
+        {
+          "Action": [
+            "sagemaker:AddTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "sagemaker:TaggingAction": [
+                "CreateApp",
+                "CreateSpace"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:app/*",
+            "arn:aws:sagemaker:*:*:space/*"
+          ],
+          "Sid": "AllowAddTagsForAppAndSpace"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateApp",
+            "sagemaker:DeleteApp"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "sagemaker:OwnerUserProfileArn": "arn:aws:sagemaker:*:*:user-profile/${sagemaker:DomainId}/${sagemaker:UserProfileName}"
+            },
+            "StringEquals": {
+              "sagemaker:SpaceSharingType": [
+                "Private"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:app/${sagemaker:DomainId}/*/*/*",
+          "Sid": "RestrictMutatingActionsOnPrivateSpaceAppsToOwnerUserProfile"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateApp",
+            "sagemaker:DeleteApp"
+          ],
+          "Condition": {
+            "Null": {
+              "sagemaker:OwnerUserProfileArn": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:app/*/*/*/*",
+          "Sid": "AllowAppActionsForUserProfile"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateApp",
+            "sagemaker:DeleteApp"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "sagemaker:SpaceSharingType": [
+                "Shared"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:app/${sagemaker:DomainId}/*/*/*",
+          "Sid": "AllowAppActionsForSharedSpaces"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateSpace",
+            "sagemaker:DeleteSpace",
+            "sagemaker:UpdateSpace"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "sagemaker:OwnerUserProfileArn": "arn:aws:sagemaker:*:*:user-profile/${sagemaker:DomainId}/${sagemaker:UserProfileName}"
+            },
+            "StringEquals": {
+              "sagemaker:SpaceSharingType": [
+                "Private",
+                "Shared"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:space/${sagemaker:DomainId}/*",
+          "Sid": "RestrictMutatingActionsOnSpacesToOwnerUserProfile"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateSpace",
+            "sagemaker:DeleteSpace",
+            "sagemaker:UpdateSpace"
+          ],
+          "Condition": {
+            "Null": {
+              "sagemaker:OwnerUserProfileArn": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:space/${sagemaker:DomainId}/*",
+          "Sid": "AllowMutatingActionsOnSharedSpacesWithoutOwner"
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "AmazonDataZoneDomain",
+                "AmazonDataZoneProject"
+              ]
+            },
+            "Null": {
+              "aws:RequestTag/AmazonDataZoneDomain": "false",
+              "aws:RequestTag/AmazonDataZoneProject": "false",
+              "aws:ResourceTag/AmazonDataZoneDomain": "false",
+              "aws:ResourceTag/AmazonDataZoneProject": "false",
+              "aws:TagKeys": "false"
+            },
+            "StringLike": {
+              "aws:RequestTag/AmazonDataZoneDomain": "dzd_*",
+              "aws:ResourceTag/AmazonDataZoneDomain": "dzd_*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:AmazonDataZone-*",
+          "Sid": "AllowCreateSecretActions"
+        },
+        {
+          "Action": [
+            "servicecatalog:TerminateProvisionedProduct",
+            "servicecatalog:UpdateProvisionedProduct"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "servicecatalog:userLevel": "self"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowServiceCatalogTerminateUpdateProvisionProduct"
+        },
+        {
+          "Action": [
+            "sagemaker-geospatial:*",
+            "sagemaker:*"
+          ],
+          "Effect": "Allow",
+          "NotResource": [
+            "arn:aws:sagemaker:*:*:app/*",
+            "arn:aws:sagemaker:*:*:domain/*",
+            "arn:aws:sagemaker:*:*:flow-definition/*",
+            "arn:aws:sagemaker:*:*:space/*",
+            "arn:aws:sagemaker:*:*:user-profile/*"
+          ],
+          "Sid": "AllowAllNonAdminSageMakerActions"
+        },
+        {
+          "Action": "events:ListTagsForResource",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EventBridgeListTagOperation"
+        },
+        {
+          "Action": "rds:DescribeDBInstances",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RDSOperation"
+        },
+        {
+          "Action": "s3:GetObject",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::jumpstart-cache-prod-ap-northeast-1/*",
+            "arn:aws:s3:::jumpstart-cache-prod-ap-northeast-2/*",
+            "arn:aws:s3:::jumpstart-cache-prod-ap-south-1/*",
+            "arn:aws:s3:::jumpstart-cache-prod-ap-southeast-1/*",
+            "arn:aws:s3:::jumpstart-cache-prod-ap-southeast-2/*",
+            "arn:aws:s3:::jumpstart-cache-prod-eu-central-1/*",
+            "arn:aws:s3:::jumpstart-cache-prod-eu-west-1/*",
+            "arn:aws:s3:::jumpstart-cache-prod-us-east-1/*",
+            "arn:aws:s3:::jumpstart-cache-prod-us-east-2/*",
+            "arn:aws:s3:::jumpstart-cache-prod-us-west-2/*"
+          ],
+          "Sid": "ReadSageMakerJumpstartArtifacts"
+        },
+        {
+          "Action": [
+            "application-autoscaling:DeleteScalingPolicy",
+            "application-autoscaling:DeleteScheduledAction",
+            "application-autoscaling:DeregisterScalableTarget",
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingActivities",
+            "application-autoscaling:DescribeScalingPolicies",
+            "application-autoscaling:DescribeScheduledActions",
+            "application-autoscaling:PutScalingPolicy",
+            "application-autoscaling:PutScheduledAction",
+            "application-autoscaling:RegisterScalableTarget",
+            "aws-marketplace:ViewSubscriptions",
+            "cloudformation:GetTemplateSummary",
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics",
+            "cloudwatch:PutMetricAlarm",
+            "cloudwatch:PutMetricData",
+            "codecommit:BatchGetRepositories",
+            "codecommit:CreateRepository",
+            "codecommit:GetRepository",
+            "codecommit:List*",
+            "datazone:*",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission",
+            "ec2:DescribeDhcpOptions",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcEndpointServices",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs",
+            "ecr:BatchCheckLayerAvailability",
+            "ecr:BatchGetImage",
+            "ecr:CreateRepository",
+            "ecr:Describe*",
+            "ecr:GetAuthorizationToken",
+            "ecr:GetDownloadUrlForLayer",
+            "ecr:StartImageScan",
+            "elastic-inference:Connect",
+            "elasticfilesystem:DescribeFileSystems",
+            "elasticfilesystem:DescribeMountTargets",
+            "fsx:DescribeFileSystems",
+            "groundtruthlabeling:*",
+            "iam:ListRoles",
+            "kms:DescribeKey",
+            "kms:ListAliases",
+            "lambda:ListFunctions",
+            "logs:CreateLogDelivery",
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DeleteLogDelivery",
+            "logs:DescribeLogGroups",
+            "logs:DescribeLogStreams",
+            "logs:GetLogDelivery",
+            "logs:GetLogEvents",
+            "logs:ListLogDeliveries",
+            "logs:PutLogEvents",
+            "logs:UpdateLogDelivery",
+            "redshift-data:BatchExecuteStatement",
+            "redshift-data:CancelStatement",
+            "redshift-data:DescribeStatement",
+            "redshift-data:DescribeTable",
+            "redshift-data:ExecuteStatement",
+            "redshift-data:GetStatementResult",
+            "redshift-data:ListSchemas",
+            "redshift-data:ListTables",
+            "redshift-serverless:GetCredentials",
+            "redshift-serverless:GetNamespace",
+            "redshift-serverless:GetWorkgroup",
+            "redshift-serverless:ListNamespaces",
+            "redshift-serverless:ListWorkgroups",
+            "secretsmanager:ListSecrets",
+            "servicecatalog:Describe*",
+            "servicecatalog:List*",
+            "servicecatalog:ScanProvisionedProducts",
+            "servicecatalog:SearchProducts",
+            "servicecatalog:SearchProvisionedProducts",
+            "sns:ListTopics",
+            "sqlworkbench:*",
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowAWSServiceActions"
+        },
+        {
+          "Action": [
+            "athena:BatchGetNamedQuery",
+            "athena:BatchGetPreparedStatement",
+            "athena:BatchGetQueryExecution",
+            "athena:CreateNamedQuery",
+            "athena:CreateNotebook",
+            "athena:CreatePreparedStatement",
+            "athena:CreatePresignedNotebookUrl",
+            "athena:DeleteNamedQuery",
+            "athena:DeleteNotebook",
+            "athena:DeletePreparedStatement",
+            "athena:ExportNotebook",
+            "athena:GetDataCatalog",
+            "athena:GetDatabase",
+            "athena:GetNamedQuery",
+            "athena:GetPreparedStatement",
+            "athena:GetQueryExecution",
+            "athena:GetQueryResults",
+            "athena:GetQueryResultsStream",
+            "athena:GetQueryRuntimeStatistics",
+            "athena:GetTableMetadata",
+            "athena:GetWorkGroup",
+            "athena:ImportNotebook",
+            "athena:ListDataCatalogs",
+            "athena:ListDatabases",
+            "athena:ListEngineVersions",
+            "athena:ListNamedQueries",
+            "athena:ListPreparedStatements",
+            "athena:ListQueryExecutions",
+            "athena:ListTableMetadata",
+            "athena:ListTagsForResource",
+            "athena:ListWorkGroups",
+            "athena:StartCalculationExecution",
+            "athena:StartQueryExecution",
+            "athena:StartSession",
+            "athena:StopCalculationExecution",
+            "athena:StopQueryExecution",
+            "athena:TerminateSession",
+            "athena:UpdateNamedQuery",
+            "athena:UpdateNotebook",
+            "athena:UpdateNotebookMetadata",
+            "athena:UpdatePreparedStatement"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowAthenaActions"
+        },
+        {
+          "Action": [
+            "cloudformation:ListStackResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/SC-*",
+          "Sid": "AllowCloudformationListStackResources"
+        },
+        {
+          "Action": [
+            "codebuild:BatchGetBuilds",
+            "codebuild:StartBuild"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:codebuild:*:*:build/*",
+            "arn:aws:codebuild:*:*:project/sagemaker*"
+          ],
+          "Sid": "AllowCodeBuildActions"
+        },
+        {
+          "Action": [
+            "codecommit:GitPull",
+            "codecommit:GitPush"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:codecommit:*:*:*SageMaker*",
+            "arn:aws:codecommit:*:*:*Sagemaker*",
+            "arn:aws:codecommit:*:*:*sagemaker*"
+          ],
+          "Sid": "AllowCodeCommitActions"
+        },
+        {
+          "Action": [
+            "ecr:BatchDeleteImage",
+            "ecr:CompleteLayerUpload",
+            "ecr:DeleteRepository",
+            "ecr:DeleteRepositoryPolicy",
+            "ecr:InitiateLayerUpload",
+            "ecr:PutImage",
+            "ecr:SetRepositoryPolicy",
+            "ecr:UploadLayerPart"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ecr:*:*:repository/*"
+          ],
+          "Sid": "AllowECRActions"
+        },
+        {
+          "Action": [
+            "elasticmapreduce:DescribeCluster",
+            "elasticmapreduce:ListClusters",
+            "elasticmapreduce:ListInstanceGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowEMR"
+        },
+        {
+          "Action": [
+            "forecast:CreateAutoPredictor",
+            "forecast:CreateDataset",
+            "forecast:CreateDatasetGroup",
+            "forecast:CreateDatasetImportJob",
+            "forecast:CreateExplainability",
+            "forecast:CreateExplainabilityExport",
+            "forecast:CreateForecast",
+            "forecast:CreateForecastEndpoint",
+            "forecast:CreateForecastExportJob",
+            "forecast:CreatePredictor",
+            "forecast:CreatePredictorBacktestExportJob",
+            "forecast:DeleteResourceTree",
+            "forecast:DescribeAutoPredictor",
+            "forecast:DescribeDataset",
+            "forecast:DescribeDatasetImportJob",
+            "forecast:DescribeExplainability",
+            "forecast:DescribeExplainabilityExport",
+            "forecast:DescribeForecast",
+            "forecast:DescribeForecastEndpoint",
+            "forecast:DescribeForecastExportJob",
+            "forecast:DescribePredictor",
+            "forecast:DescribePredictorBacktestExportJob",
+            "forecast:GetAccuracyMetrics",
+            "forecast:GetRecentForecastContext",
+            "forecast:InvokeForecastEndpoint",
+            "forecast:TagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:forecast:*:*:*Canvas*"
+          ],
+          "Sid": "ForecastOperations"
+        },
+        {
+          "Action": [
+            "glue:BatchCreatePartition",
+            "glue:BatchDeletePartition",
+            "glue:BatchDeleteTable",
+            "glue:BatchDeleteTableVersion",
+            "glue:BatchUpdatePartition",
+            "glue:CreateBlueprint",
+            "glue:CreateConnection",
+            "glue:CreateCrawler",
+            "glue:CreateDataQualityRuleset",
+            "glue:CreateJob",
+            "glue:CreatePartition",
+            "glue:CreatePartitionIndex",
+            "glue:CreateSession",
+            "glue:CreateTable",
+            "glue:DeleteColumnStatisticsForPartition",
+            "glue:DeleteColumnStatisticsForTable",
+            "glue:DeletePartition",
+            "glue:DeletePartitionIndex",
+            "glue:DeleteTable",
+            "glue:DeleteTableVersion",
+            "glue:GetColumnStatisticsForPartition",
+            "glue:GetColumnStatisticsForTable",
+            "glue:ListJobs",
+            "glue:RunStatement",
+            "glue:UpdateColumnStatisticsForPartition",
+            "glue:UpdateColumnStatisticsForTable",
+            "glue:UpdatePartition",
+            "glue:UpdateTable"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowGlueActions"
+        },
+        {
+          "Action": [
+            "glue:CreateDatabase"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:catalog",
+            "arn:aws:glue:*:*:database/default"
+          ],
+          "Sid": "AllowGlueCreateDatabase"
+        },
+        {
+          "Action": [
+            "lakeformation:GetDataAccess"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowLakeFormation"
+        },
+        {
+          "Action": [
+            "lambda:InvokeFunction"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:*LabelingFunction*",
+            "arn:aws:lambda:*:*:function:*SageMaker*",
+            "arn:aws:lambda:*:*:function:*Sagemaker*",
+            "arn:aws:lambda:*:*:function:*sagemaker*"
+          ],
+          "Sid": "AllowLambdaInvokeFunction"
+        },
+        {
+          "Action": [
+            "redshift:CreateClusterUser"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift:*:*:dbuser:*"
+          ],
+          "Sid": "AllowCreateClusterUser"
+        },
+        {
+          "Action": [
+            "redshift:DescribeClusters",
+            "redshift:GetClusterCredentialsWithIAM"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift:*:*:cluster:*",
+            "arn:aws:redshift:*:*:dbname:*"
+          ],
+          "Sid": "AllowRedshiftClusterActions"
+        },
+        {
+          "Action": [
+            "redshift:GetClusterCredentials"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift:*:*:dbname:*",
+            "arn:aws:redshift:*:*:dbuser:*/sagemaker_access*"
+          ],
+          "Sid": "AllowRedshiftGetClusterCredentials"
+        },
+        {
+          "Action": [
+            "s3:AbortMultipartUpload",
+            "s3:DeleteObject",
+            "s3:DeleteObjectVersion",
+            "s3:GetBucketAcl",
+            "s3:GetObject",
+            "s3:PutObject",
+            "s3:PutObjectAcl",
+            "s3:PutObjectRetention",
+            "s3:ReplicateObject",
+            "s3:RestoreObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::DataZone-SageMaker*",
+            "arn:aws:s3:::DataZone-Sagemaker*",
+            "arn:aws:s3:::SageMaker-DataZone*",
+            "arn:aws:s3:::Sagemaker-DataZone*",
+            "arn:aws:s3:::amazon-datazone*",
+            "arn:aws:s3:::datazone-sagemaker*",
+            "arn:aws:s3:::sagemaker-datazone*"
+          ],
+          "Sid": "AllowS3ObjectActions"
+        },
+        {
+          "Action": [
+            "s3:GetBucketCors",
+            "s3:GetBucketLocation",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket",
+            "s3:PutBucketCors"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::DataZone-SageMaker*",
+            "arn:aws:s3:::DataZone-Sagemaker*",
+            "arn:aws:s3:::SageMaker-DataZone*",
+            "arn:aws:s3:::Sagemaker-DataZone*",
+            "arn:aws:s3:::amazon-datazone*",
+            "arn:aws:s3:::datazone-sagemaker*",
+            "arn:aws:s3:::sagemaker-datazone*"
+          ],
+          "Sid": "AllowS3BucketActions"
+        },
+        {
+          "Action": [
+            "sagemaker:CreatePresignedDomainUrl",
+            "sagemaker:CreateUserProfile",
+            "sagemaker:DescribeUserProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:*/${sagemaker:DomainId}/*",
+          "Sid": "AllowSageMakerProfileManagement"
+        },
+        {
+          "Action": [
+            "sagemaker:CreatePresignedDomainUrl",
+            "sagemaker:DescribeApp",
+            "sagemaker:DescribeDomain",
+            "sagemaker:DescribeSpace",
+            "sagemaker:DescribeUserProfile",
+            "sagemaker:ListApps",
+            "sagemaker:ListDomains",
+            "sagemaker:ListSpaces",
+            "sagemaker:ListUserProfiles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowStudioActions"
+        },
+        {
+          "Action": [
+            "sagemaker:ListTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:domain/*",
+            "arn:aws:sagemaker:*:*:user-profile/*"
+          ],
+          "Sid": "AllowListTags"
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:PutResourcePolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:secretsmanager:*:*:secret:AmazonSageMaker-*"
+          ],
+          "Sid": "AllowSecretManagerActions"
+        },
+        {
+          "Action": [
+            "servicecatalog:ProvisionProduct"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowServiceCatalogProvisionProduct"
+        },
+        {
+          "Action": [
+            "sns:CreateTopic",
+            "sns:Publish",
+            "sns:Subscribe"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sns:*:*:*SageMaker*",
+            "arn:aws:sns:*:*:*Sagemaker*",
+            "arn:aws:sns:*:*:*sagemaker*"
+          ],
+          "Sid": "AllowSNSActions"
+        },
+        {
+          "Action": [
+            "sso:CreateApplicationAssignment"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowSSOAction"
+        },
+        {
+          "Action": [
+            "states:DescribeExecution",
+            "states:GetExecutionHistory",
+            "states:StartExecution",
+            "states:StopExecution",
+            "states:UpdateStateMachine"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:states:*:*:execution:*sagemaker*:*",
+            "arn:aws:states:*:*:statemachine:*sagemaker*"
+          ],
+          "Sid": "AllowStepFunctionsActions"
+        },
+        {
+          "Effect": "Deny",
+          "NotAction": [
+            "application-autoscaling:DeleteScalingPolicy",
+            "application-autoscaling:DeleteScheduledAction",
+            "application-autoscaling:DeregisterScalableTarget",
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingActivities",
+            "application-autoscaling:DescribeScalingPolicies",
+            "application-autoscaling:DescribeScheduledActions",
+            "application-autoscaling:PutScalingPolicy",
+            "application-autoscaling:PutScheduledAction",
+            "application-autoscaling:RegisterScalableTarget",
+            "athena:BatchGetNamedQuery",
+            "athena:BatchGetPreparedStatement",
+            "athena:BatchGetQueryExecution",
+            "athena:CreateNamedQuery",
+            "athena:CreateNotebook",
+            "athena:CreatePreparedStatement",
+            "athena:CreatePresignedNotebookUrl",
+            "athena:DeleteNamedQuery",
+            "athena:DeleteNotebook",
+            "athena:DeletePreparedStatement",
+            "athena:ExportNotebook",
+            "athena:GetDataCatalog",
+            "athena:GetDatabase",
+            "athena:GetNamedQuery",
+            "athena:GetPreparedStatement",
+            "athena:GetQueryExecution",
+            "athena:GetQueryResults",
+            "athena:GetQueryResultsStream",
+            "athena:GetQueryRuntimeStatistics",
+            "athena:GetTableMetadata",
+            "athena:GetWorkGroup",
+            "athena:ImportNotebook",
+            "athena:ListDataCatalogs",
+            "athena:ListDatabases",
+            "athena:ListEngineVersions",
+            "athena:ListNamedQueries",
+            "athena:ListPreparedStatements",
+            "athena:ListQueryExecutions",
+            "athena:ListTableMetadata",
+            "athena:ListTagsForResource",
+            "athena:ListWorkGroups",
+            "athena:StartCalculationExecution",
+            "athena:StartQueryExecution",
+            "athena:StartSession",
+            "athena:StopCalculationExecution",
+            "athena:StopQueryExecution",
+            "athena:TerminateSession",
+            "athena:UpdateNamedQuery",
+            "athena:UpdateNotebook",
+            "athena:UpdateNotebookMetadata",
+            "athena:UpdatePreparedStatement",
+            "aws-marketplace:ViewSubscriptions",
+            "cloudformation:GetTemplateSummary",
+            "cloudformation:ListStackResources",
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics",
+            "cloudwatch:PutMetricAlarm",
+            "cloudwatch:PutMetricData",
+            "codebuild:BatchGetBuilds",
+            "codebuild:StartBuild",
+            "codecommit:BatchGetRepositories",
+            "codecommit:CreateRepository",
+            "codecommit:GetRepository",
+            "codecommit:GitPull",
+            "codecommit:GitPush",
+            "codecommit:List*",
+            "datazone:*",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission",
+            "ec2:DescribeDhcpOptions",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs",
+            "ecr:BatchCheckLayerAvailability",
+            "ecr:BatchDeleteImage",
+            "ecr:BatchGetImage",
+            "ecr:CompleteLayerUpload",
+            "ecr:CreateRepository",
+            "ecr:DeleteRepository",
+            "ecr:DeleteRepositoryPolicy",
+            "ecr:Describe*",
+            "ecr:GetAuthorizationToken",
+            "ecr:GetDownloadUrlForLayer",
+            "ecr:InitiateLayerUpload",
+            "ecr:PutImage",
+            "ecr:SetRepositoryPolicy",
+            "ecr:StartImageScan",
+            "ecr:UploadLayerPart",
+            "elastic-inference:Connect",
+            "elasticfilesystem:DescribeFileSystems",
+            "elasticfilesystem:DescribeMountTargets",
+            "elasticmapreduce:DescribeCluster",
+            "elasticmapreduce:ListClusters",
+            "elasticmapreduce:ListInstanceGroups",
+            "events:DescribeRule",
+            "events:ListTagsForResource",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:TagResource",
+            "forecast:*",
+            "fsx:DescribeFileSystems",
+            "glue:*DataQuality*",
+            "glue:BatchCreatePartition",
+            "glue:BatchDeleteConnection",
+            "glue:BatchDeletePartition",
+            "glue:BatchDeleteTable",
+            "glue:BatchDeleteTableVersion",
+            "glue:BatchGet*",
+            "glue:BatchStopJobRun",
+            "glue:BatchUpdatePartition",
+            "glue:CreateBlueprint",
+            "glue:CreateConnection",
+            "glue:CreateCrawler",
+            "glue:CreateJob",
+            "glue:CreatePartition",
+            "glue:CreatePartitionIndex",
+            "glue:CreateSession",
+            "glue:CreateTable",
+            "glue:CreateWorkflow",
+            "glue:DeleteBlueprint",
+            "glue:DeleteColumnStatisticsForPartition",
+            "glue:DeleteColumnStatisticsForTable",
+            "glue:DeleteConnection",
+            "glue:DeleteCrawler",
+            "glue:DeleteJob",
+            "glue:DeletePartition",
+            "glue:DeletePartitionIndex",
+            "glue:DeleteTable",
+            "glue:DeleteTableVersion",
+            "glue:DeleteWorkflow",
+            "glue:Get*",
+            "glue:List*",
+            "glue:NotifyEvent",
+            "glue:PutWorkflowRunProperties",
+            "glue:ResetJobBookmark",
+            "glue:ResumeWorkflowRun",
+            "glue:RunStatement",
+            "glue:SearchTables",
+            "glue:StartBlueprintRun",
+            "glue:StartCrawler",
+            "glue:StartCrawlerSchedule",
+            "glue:StartJobRun",
+            "glue:StartWorkflowRun",
+            "glue:StopCrawler",
+            "glue:StopCrawlerSchedule",
+            "glue:StopWorkflowRun",
+            "glue:UpdateBlueprint",
+            "glue:UpdateColumnStatisticsForPartition",
+            "glue:UpdateColumnStatisticsForTable",
+            "glue:UpdateConnection",
+            "glue:UpdateCrawler",
+            "glue:UpdateCrawlerSchedule",
+            "glue:UpdateJob",
+            "glue:UpdatePartition",
+            "glue:UpdateTable",
+            "glue:UpdateWorkflow",
+            "groundtruthlabeling:*",
+            "iam:CreateServiceLinkedRole",
+            "iam:ListRoles",
+            "iam:PassRole",
+            "kms:Decrypt",
+            "kms:DescribeKey",
+            "kms:Encrypt",
+            "kms:GenerateDataKey",
+            "kms:ListAliases",
+            "kms:ListKeys",
+            "lakeformation:GetDataAccess",
+            "lambda:InvokeFunction",
+            "lambda:ListFunctions",
+            "logs:CreateLogDelivery",
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DeleteLogDelivery",
+            "logs:Describe*",
+            "logs:GetLogDelivery",
+            "logs:GetLogEvents",
+            "logs:ListLogDeliveries",
+            "logs:PutLogEvents",
+            "logs:UpdateLogDelivery",
+            "rds:DescribeDBInstances",
+            "redshift-serverless:GetCredentials",
+            "redshift-serverless:GetNamespace",
+            "redshift-serverless:GetWorkgroup",
+            "redshift-serverless:ListNamespaces",
+            "redshift-serverless:ListWorkgroups",
+            "redshift:CreateClusterUser",
+            "redshift:DescribeClusters",
+            "redshift:GetClusterCredentials",
+            "redshift:GetClusterCredentialsWithIAM",
+            "robomaker:CancelSimulationJob",
+            "robomaker:CreateSimulationApplication",
+            "robomaker:CreateSimulationJob",
+            "robomaker:DeleteSimulationApplication",
+            "robomaker:DescribeSimulationApplication",
+            "robomaker:DescribeSimulationJob",
+            "s3:AbortMultipartUpload",
+            "s3:CreateBucket",
+            "s3:DeleteObject",
+            "s3:DeleteObjectVersion",
+            "s3:GetBucketAcl",
+            "s3:GetBucketCors",
+            "s3:GetBucketLocation",
+            "s3:GetObject",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket",
+            "s3:PutBucketCors",
+            "s3:PutObject",
+            "s3:PutObjectAcl",
+            "s3:PutObjectRetention",
+            "s3:ReplicateObject",
+            "s3:RestoreObject",
+            "sagemaker-geospatial:*",
+            "sagemaker:*",
+            "secretsmanager:CreateSecret",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:ListSecrets",
+            "secretsmanager:TagResource",
+            "servicecatalog:Describe*",
+            "servicecatalog:List*",
+            "servicecatalog:ProvisionProduct",
+            "servicecatalog:ScanProvisionedProducts",
+            "servicecatalog:SearchProducts",
+            "servicecatalog:SearchProvisionedProducts",
+            "servicecatalog:TerminateProvisionedProduct",
+            "servicecatalog:UpdateProvisionedProduct",
+            "sns:CreateTopic",
+            "sns:ListTopics",
+            "sns:Publish",
+            "sns:Subscribe",
+            "sqlworkbench:*",
+            "sso:CreateApplicationAssignment",
+            "states:DescribeExecution",
+            "states:GetExecutionHistory",
+            "states:StartExecution",
+            "states:StopExecution",
+            "states:UpdateStateMachine",
+            "tag:GetResources"
+          ],
+          "Resource": "*",
+          "Sid": "DenyNotAction"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-04-23T23:01:14Z"
+}
