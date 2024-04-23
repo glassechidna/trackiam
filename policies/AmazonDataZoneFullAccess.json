@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDataZoneFullAccess",
   "CreateDate": "2023-09-22T20:06:52Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4M44MZFTQR",
   "PolicyName": "AmazonDataZoneFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-03-12T16:34:41Z",
+    "CreateDate": "2024-04-23T21:36:18Z",
     "Document": {
       "Statement": [
         {
@@ -91,6 +91,14 @@
           "Sid": "DataZoneTagOnCreate"
         },
         {
+          "Action": "iam:GetPolicy",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:policy/service-role/AmazonDataZoneRedshiftAccessPolicy*"
+          ],
+          "Sid": "IAMGetPolicyStatement"
+        },
+        {
           "Action": "s3:CreateBucket",
           "Effect": "Allow",
           "Resource": "arn:aws:s3:::amazon-datazone*",
@@ -108,6 +116,7 @@
         },
         {
           "Action": [
+            "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcs",
             "iam:ListRoles",
@@ -148,7 +157,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-03-12T16:34:41Z"
+  "UpdateDate": "2024-04-23T21:36:18Z"
 }
