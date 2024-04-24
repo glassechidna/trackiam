@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSIAMIdentityCenterAllowListForIdentityContext",
   "CreateDate": "2023-11-08T15:21:33Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KDXNUOLXM",
   "PolicyName": "AWSIAMIdentityCenterAllowListForIdentityContext",
   "PolicyVersion": {
-    "CreateDate": "2024-04-19T18:58:23Z",
+    "CreateDate": "2024-04-24T19:03:59Z",
     "Document": {
       "Statement": [
         {
@@ -71,6 +71,14 @@
             "glue:UpdatePartition",
             "glue:UpdateTable",
             "lakeformation:GetDataAccess",
+            "q:GetConversation",
+            "q:GetTroubleshootingResults",
+            "q:ListConversations",
+            "q:SendMessage",
+            "q:StartConversation",
+            "q:StartTroubleshootingAnalysis",
+            "q:StartTroubleshootingResolutionExplanation",
+            "q:UpdateTroubleshootingCommandResult",
             "qbusiness:Chat",
             "qbusiness:ChatSync",
             "qbusiness:DeleteConversation",
@@ -86,8 +94,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v4"
+    "IsDefaultVersion": true,
+    "VersionId": "v5"
   },
-  "UpdateDate": "2024-04-19T18:58:23Z"
+  "UpdateDate": "2024-04-24T19:03:59Z"
 }

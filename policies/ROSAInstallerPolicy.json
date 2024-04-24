@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/ROSAInstallerPolicy",
   "CreateDate": "2023-06-06T21:00:31Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4GYZ6SLEWE",
   "PolicyName": "ROSAInstallerPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-04-10T20:52:53Z",
+    "CreateDate": "2024-04-24T19:49:55Z",
     "Document": {
       "Statement": [
         {
@@ -56,6 +56,23 @@
             "arn:aws:ec2:*:*:security-group*/*"
           ],
           "Sid": "CreateSecurityGroups"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": [
+                "kubernetes.io/cluster/*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "CreateTagsK8sSubnet"
         },
         {
           "Action": [
@@ -332,7 +349,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2024-04-10T20:52:53Z"
+  "UpdateDate": "2024-04-24T19:49:55Z"
 }
