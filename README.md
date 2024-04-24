@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 396
-* Unique actions: 17012
+* Unique actions: 17017
 * Managed policies: 1190
 
 Most common managed policy name prefixes:
@@ -47,7 +47,7 @@ The following table summarises the AWS APIs.
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
 | [`ses`](services/ses.yml) | 149 | 0 | 0 |
-| [`ssm`](services/ssm.yml) | 139 | 0 | 10 |
+| [`ssm`](services/ssm.yml) | 140 | 0 | 9 |
 | [`lex`](services/lex.yml) | 137 | 4 | 8 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 22 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
@@ -58,7 +58,7 @@ The following table summarises the AWS APIs.
 | [`cloudfront`](services/cloudfront.yml) | 109 | 2 | 7 |
 | [`datazone`](services/datazone.yml) | 107 | 0 | 25 |
 | [`dms`](services/dms.yml) | 106 | 0 | 28 |
-| [`gamelift`](services/gamelift.yml) | 104 | 0 | 0 |
+| [`gamelift`](services/gamelift.yml) | 104 | 4 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 4 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 1 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
@@ -173,8 +173,8 @@ The following table summarises the AWS APIs.
 | [`states`](services/states.yml) | 36 | 0 | 2 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 0 |
+| [`entityresolution`](services/entityresolution.yml) | 35 | 1 | 2 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
-| [`entityresolution`](services/entityresolution.yml) | 35 | 0 | 2 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
 | [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
 | [`ram`](services/ram.yml) | 34 | 0 | 0 |
@@ -240,6 +240,7 @@ The following table summarises the AWS APIs.
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 3 |
 | [`mq`](services/mq.yml) | 23 | 0 | 1 |
 | [`secretsmanager`](services/secretsmanager.yml) | 23 | 0 | 0 |
+| [`emr-containers`](services/emr-containers.yml) | 23 | 0 | 0 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
@@ -256,7 +257,6 @@ The following table summarises the AWS APIs.
 | [`resource-explorer-2`](services/resource-explorer-2.yml) | 21 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 21 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 3 | 0 |
-| [`emr-containers`](services/emr-containers.yml) | 20 | 0 | 3 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`translate`](services/translate.yml) | 19 | 0 | 0 |
 | [`signer`](services/signer.yml) | 19 | 0 | 0 |
@@ -437,11 +437,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2729 |
+| `List` | 2730 |
 | `Get` | 2478 |
-| `Delete` | 1952 |
-| `Create` | 1820 |
-| `Describe` | 1707 |
+| `Delete` | 1953 |
+| `Create` | 1821 |
+| `Describe` | 1708 |
 | `Update` | 1559 |
 | `Put` | 472 |
 | `Start` | 386 |
