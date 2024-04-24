@@ -3,6 +3,7 @@ Actions:
   - Name: gamelift:ClaimGameServer
   - Name: gamelift:CreateAlias
   - Name: gamelift:CreateBuild
+  - Name: gamelift:CreateContainerGroupDefinition
   - Name: gamelift:CreateFleet
   - Name: gamelift:CreateFleetLocations
   - Name: gamelift:CreateGameServerGroup
@@ -18,6 +19,7 @@ Actions:
   - Name: gamelift:CreateVpcPeeringConnection
   - Name: gamelift:DeleteAlias
   - Name: gamelift:DeleteBuild
+  - Name: gamelift:DeleteContainerGroupDefinition
   - Name: gamelift:DeleteFleet
   - Name: gamelift:DeleteFleetLocations
   - Name: gamelift:DeleteGameServerGroup
@@ -34,6 +36,7 @@ Actions:
   - Name: gamelift:DescribeAlias
   - Name: gamelift:DescribeBuild
   - Name: gamelift:DescribeCompute
+  - Name: gamelift:DescribeContainerGroupDefinition
   - Name: gamelift:DescribeEC2InstanceLimits
   - Name: gamelift:DescribeFleetAttributes
   - Name: gamelift:DescribeFleetCapacity
@@ -67,6 +70,7 @@ Actions:
   - Name: gamelift:ListAliases
   - Name: gamelift:ListBuilds
   - Name: gamelift:ListCompute
+  - Name: gamelift:ListContainerGroupDefinitions
   - Name: gamelift:ListFleets
   - Name: gamelift:ListGameServerGroups
   - Name: gamelift:ListGameServers
@@ -103,9 +107,3 @@ Actions:
   - Name: gamelift:UpdateRuntimeConfiguration
   - Name: gamelift:UpdateScript
   - Name: gamelift:ValidateMatchmakingRuleSet
-
-  # APIs without an IAM action
-  - Name: gamelift:CreateContainerGroupDefinition
-  - Name: gamelift:DeleteContainerGroupDefinition
-  - Name: gamelift:DescribeContainerGroupDefinition
-  - Name: gamelift:ListContainerGroupDefinitions

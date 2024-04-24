@@ -56,9 +56,9 @@ The following table summarises the AWS APIs.
 | [`iotwireless`](services/iotwireless.yml) | 112 | 0 | 1 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`cloudfront`](services/cloudfront.yml) | 109 | 2 | 7 |
+| [`gamelift`](services/gamelift.yml) | 108 | 0 | 0 |
 | [`datazone`](services/datazone.yml) | 107 | 0 | 25 |
 | [`dms`](services/dms.yml) | 106 | 0 | 28 |
-| [`gamelift`](services/gamelift.yml) | 104 | 4 | 0 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 4 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 1 |
 | [`a4b`](services/a4b.yml) | 93 | 0 | 3 |
