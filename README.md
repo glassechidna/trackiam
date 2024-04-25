@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 396
-* Unique actions: 17020
+* Unique actions: 17023
 * Managed policies: 1192
 
 Most common managed policy name prefixes:
@@ -191,6 +191,7 @@ The following table summarises the AWS APIs.
 | [`billingconductor`](services/billingconductor.yml) | 32 | 0 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 31 | 0 | 5 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 31 | 0 | 3 |
+| [`cases`](services/cases.yml) | 31 | 0 | 3 |
 | [`outposts`](services/outposts.yml) | 31 | 0 | 2 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 31 | 0 | 0 |
@@ -198,7 +199,6 @@ The following table summarises the AWS APIs.
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`payment-cryptography`](services/payment-cryptography.yml) | 31 | 0 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 31 | 0 | 0 |
-| [`cases`](services/cases.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 30 | 2 | 1 |
 | [`xray`](services/xray.yml) | 30 | 0 | 3 |
@@ -439,7 +439,7 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 2730 |
 | `Get` | 2478 |
-| `Delete` | 1953 |
+| `Delete` | 1956 |
 | `Create` | 1821 |
 | `Describe` | 1709 |
 | `Update` | 1559 |
