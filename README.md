@@ -167,10 +167,10 @@ The following table summarises the AWS APIs.
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
 | [`swf`](services/swf.yml) | 37 | 0 | 12 |
 | [`apprunner`](services/apprunner.yml) | 37 | 0 | 5 |
+| [`states`](services/states.yml) | 37 | 0 | 2 |
 | [`aoss`](services/aoss.yml) | 37 | 0 | 2 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
-| [`states`](services/states.yml) | 36 | 1 | 2 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 0 |
 | [`entityresolution`](services/entityresolution.yml) | 35 | 1 | 2 |
