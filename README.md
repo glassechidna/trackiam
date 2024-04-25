@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 396
-* Unique actions: 17017
-* Managed policies: 1191
+* Unique actions: 17019
+* Managed policies: 1192
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 322 |
 | `arn:aws:iam::aws:policy/Amazon*` | 305 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 267 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 268 |
 | `arn:aws:iam::aws:policy/service-role/*` | 190 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 100 |
@@ -147,7 +147,7 @@ The following table summarises the AWS APIs.
 | [`transcribe`](services/transcribe.yml) | 46 | 0 | 3 |
 | [`fsx`](services/fsx.yml) | 45 | 0 | 8 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
-| [`workdocs`](services/workdocs.yml) | 44 | 0 | 15 |
+| [`workdocs`](services/workdocs.yml) | 44 | 0 | 17 |
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`ecr`](services/ecr.yml) | 43 | 0 | 5 |
@@ -441,10 +441,10 @@ Most common action prefixes:
 | `Get` | 2478 |
 | `Delete` | 1953 |
 | `Create` | 1821 |
-| `Describe` | 1708 |
+| `Describe` | 1709 |
 | `Update` | 1559 |
 | `Put` | 472 |
-| `Start` | 386 |
+| `Start` | 387 |
 | `Tag` | 267 |
 | `Untag` | 263 |
 
