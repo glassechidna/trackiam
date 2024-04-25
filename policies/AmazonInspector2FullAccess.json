@@ -1,29 +1,34 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonInspector2FullAccess",
   "CreateDate": "2021-11-29T19:10:15Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CK4E7UETF",
   "PolicyName": "AmazonInspector2FullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-08-03T19:28:59Z",
+    "CreateDate": "2024-04-25T13:21:03Z",
     "Document": {
       "Statement": [
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
             "StringEquals": {
-              "iam:AWSServiceName": "inspector2.amazonaws.com"
+              "iam:AWSServiceName": [
+                "agentless.inspector2.amazonaws.com",
+                "inspector2.amazonaws.com"
+              ]
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowAccessToCreateSlr"
         },
         {
           "Action": "inspector2:*",
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowFullAccessToInspectorApis"
         },
         {
           "Action": [
@@ -31,7 +36,8 @@
             "codeguru-security:GetAccountConfiguration"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowAccessToCodeGuruApis"
         },
         {
           "Action": [
@@ -44,13 +50,14 @@
             "organizations:RegisterDelegatedAdministrator"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowAccessToOrganizationApis"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-08-03T19:28:59Z"
+  "UpdateDate": "2024-04-25T13:21:03Z"
 }
