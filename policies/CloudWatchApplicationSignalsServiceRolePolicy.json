@@ -1,15 +1,30 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudWatchApplicationSignalsServiceRolePolicy",
   "CreateDate": "2023-11-09T18:09:57Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4LAFFLXUGT",
   "PolicyName": "CloudWatchApplicationSignalsServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-04-18T22:52:11Z",
+    "CreateDate": "2024-04-26T21:29:34Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "autoscaling:DescribeAutoScalingGroups"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "EC2AutoScalingPermission"
+        },
         {
           "Action": [
             "cloudwatch:ListMetrics"
@@ -86,7 +101,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2024-04-18T22:52:11Z"
+  "UpdateDate": "2024-04-26T21:29:34Z"
 }
