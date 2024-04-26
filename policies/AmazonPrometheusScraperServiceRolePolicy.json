@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonPrometheusScraperServiceRolePolicy",
   "CreateDate": "2023-11-26T14:19:52Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4MXDZTGPJI",
   "PolicyName": "AmazonPrometheusScraperServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-11-26T14:19:52Z",
+    "CreateDate": "2024-04-26T20:25:54Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:*:aps:*:*:workspace/*",
+          "Resource": "arn:aws:aps:*:*:workspace/*",
           "Sid": "APSWriting"
         },
         {
@@ -45,8 +45,22 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:*:ec2:*:*:network-interface/*",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
           "Sid": "TagManagement"
+        },
+        {
+          "Action": "eks:DeleteAccessEntry",
+          "Condition": {
+            "ArnLike": {
+              "eks:principalArn": "arn:aws:iam::*:role/aws-service-role/scraper.aps.amazonaws.com/AWSServiceRoleForAmazonPrometheusScraper*"
+            },
+            "StringEquals": {
+              "aws:PrincipalAccount": "${aws:ResourceAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:access-entry/*/role/*",
+          "Sid": "DeleteEKSAccessEntry"
         },
         {
           "Action": [
@@ -65,7 +79,7 @@
         {
           "Action": "eks:DescribeCluster",
           "Effect": "Allow",
-          "Resource": "arn:*:eks:*:*:cluster/*",
+          "Resource": "arn:aws:eks:*:*:cluster/*",
           "Sid": "EKSAccess"
         },
         {
@@ -90,7 +104,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-11-26T14:19:52Z"
+  "UpdateDate": "2024-04-26T20:25:54Z"
 }
