@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSElasticBeanstalkMaintenance",
   "CreateDate": "2019-01-11T23:22:52Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJQPH22XGBH2VV2LSW",
   "PolicyName": "AWSElasticBeanstalkMaintenance",
   "PolicyVersion": {
-    "CreateDate": "2019-06-04T17:48:27Z",
+    "CreateDate": "2024-04-29T21:48:04Z",
     "Document": {
       "Statement": [
         {
@@ -23,7 +23,9 @@
             "cloudformation:DescribeChangeSet",
             "cloudformation:DescribeStacks",
             "cloudformation:ExecuteChangeSet",
-            "cloudformation:ListChangeSets"
+            "cloudformation:ListChangeSets",
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -36,7 +38,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2019-06-04T17:48:27Z"
+  "UpdateDate": "2024-04-29T21:48:04Z"
 }
