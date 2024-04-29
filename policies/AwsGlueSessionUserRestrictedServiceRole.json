@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AwsGlueSessionUserRestrictedServiceRole",
   "CreateDate": "2022-04-14T21:30:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NDGTDBV5G",
   "PolicyName": "AwsGlueSessionUserRestrictedServiceRole",
   "PolicyVersion": {
-    "CreateDate": "2022-04-14T21:30:07Z",
+    "CreateDate": "2024-04-29T22:51:39Z",
     "Document": {
       "Statement": [
         {
@@ -27,7 +27,8 @@
             "arn:aws:ec2:*:*:instance/*",
             "arn:aws:ec2:*:*:network-interface/*",
             "arn:aws:ec2:*:*:security-group/*"
-          ]
+          ],
+          "Sid": "AllowTagsActions"
         },
         {
           "Action": [
@@ -47,7 +48,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:glue:*:*:session/*"
-          ]
+          ],
+          "Sid": "AllowStatementActions"
         },
         {
           "Action": [
@@ -66,7 +68,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:glue:*:*:session/*"
-          ]
+          ],
+          "Sid": "AllowSessionActions"
         },
         {
           "Action": [
@@ -85,7 +88,8 @@
           "Effect": "Deny",
           "Resource": [
             "arn:aws:glue:*:*:session/*"
-          ]
+          ],
+          "Sid": "DenyTagActions"
         },
         {
           "Action": "glue:*",
@@ -105,7 +109,19 @@
             "arn:aws:glue:*:*:trigger/*",
             "arn:aws:glue:*:*:userDefinedFunction/*",
             "arn:aws:glue:*:*:workflow/*"
-          ]
+          ],
+          "Sid": "AllowGlueActions"
+        },
+        {
+          "Action": [
+            "glue:GetCompletion",
+            "glue:StartCompletion"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:completion/*"
+          ],
+          "Sid": "AllowCompletionActions"
         },
         {
           "Action": [
@@ -114,7 +130,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AllowListSessionsAction"
         },
         {
           "Action": [
@@ -125,7 +142,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:logs:*:*:/aws-glue/*"
-          ]
+          ],
+          "Sid": "AllowLogsActions"
         },
         {
           "Action": [
@@ -134,7 +152,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:s3:::aws-glue-*"
-          ]
+          ],
+          "Sid": "AllowS3BucketActions"
         },
         {
           "Action": [
@@ -146,7 +165,8 @@
           "Resource": [
             "arn:aws:s3:::*/*aws-glue-*/*",
             "arn:aws:s3:::aws-glue-*/*"
-          ]
+          ],
+          "Sid": "AllowS3ObjectActions"
         },
         {
           "Action": [
@@ -155,13 +175,14 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:s3:::crawler-public*"
-          ]
+          ],
+          "Sid": "AllowS3ObjectCrawlerActions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-04-14T21:30:07Z"
+  "UpdateDate": "2024-04-29T22:51:39Z"
 }

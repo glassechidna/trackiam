@@ -205,6 +205,7 @@ The following table summarises the AWS APIs.
 | [`dataexchange`](services/dataexchange.yml) | 30 | 0 | 2 |
 | [`rolesanywhere`](services/rolesanywhere.yml) | 30 | 0 | 0 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
+| [`timestream`](services/timestream.yml) | 29 | 1 | 8 |
 | [`voiceid`](services/voiceid.yml) | 29 | 0 | 2 |
 | [`detective`](services/detective.yml) | 28 | 1 | 8 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
@@ -212,7 +213,6 @@ The following table summarises the AWS APIs.
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 28 | 0 | 1 |
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
-| [`timestream`](services/timestream.yml) | 27 | 3 | 8 |
 | [`codestar-connections`](services/codestar-connections.yml) | 27 | 0 | 10 |
 | [`codeconnections`](services/codeconnections.yml) | 27 | 0 | 10 |
 | [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 7 |

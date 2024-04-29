@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary",
   "CreateDate": "2024-04-23T23:01:14Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BVNAOGKEU",
   "PolicyName": "AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary",
   "PolicyVersion": {
-    "CreateDate": "2024-04-23T23:01:14Z",
+    "CreateDate": "2024-04-29T22:30:44Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,17 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/sagemaker.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_SageMakerEndpoint",
           "Sid": "AllowCreateServiceLinkedRoleForSageMakerApplicationAutoscaling"
+        },
+        {
+          "Action": "ram:AcceptResourceShareInvitation",
+          "Condition": {
+            "StringLike": {
+              "ram:ResourceShareName": "dzd_*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowRAMInvitation"
         },
         {
           "Action": "sagemaker:*",
@@ -93,11 +104,9 @@
             "glue:DeleteWorkflow",
             "glue:GetConnection",
             "glue:GetDatabase",
-            "glue:GetDatabases",
             "glue:GetPartition",
             "glue:GetPartitions",
             "glue:GetTable",
-            "glue:GetTables",
             "glue:ListSchemas",
             "glue:NotifyEvent",
             "glue:PutWorkflowRunProperties",
@@ -444,7 +453,6 @@
             "ec2:DescribeVpcs",
             "ecr:BatchCheckLayerAvailability",
             "ecr:BatchGetImage",
-            "ecr:CreateRepository",
             "ecr:Describe*",
             "ecr:GetAuthorizationToken",
             "ecr:GetDownloadUrlForLayer",
@@ -454,6 +462,7 @@
             "elasticfilesystem:DescribeMountTargets",
             "fsx:DescribeFileSystems",
             "groundtruthlabeling:*",
+            "iam:GetRole",
             "iam:ListRoles",
             "kms:DescribeKey",
             "kms:ListAliases",
@@ -583,16 +592,20 @@
           "Action": [
             "ecr:BatchDeleteImage",
             "ecr:CompleteLayerUpload",
+            "ecr:CreateRepository",
             "ecr:DeleteRepository",
             "ecr:DeleteRepositoryPolicy",
             "ecr:InitiateLayerUpload",
             "ecr:PutImage",
             "ecr:SetRepositoryPolicy",
+            "ecr:TagResource",
+            "ecr:UntagResource",
             "ecr:UploadLayerPart"
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:ecr:*:*:repository/*"
+            "arn:aws:ecr:*:*:repository/datazone*",
+            "arn:aws:ecr:*:*:repository/sagemaker*"
           ],
           "Sid": "AllowECRActions"
         },
@@ -665,6 +678,8 @@
             "glue:DeleteTableVersion",
             "glue:GetColumnStatisticsForPartition",
             "glue:GetColumnStatisticsForTable",
+            "glue:GetDatabases",
+            "glue:GetTables",
             "glue:ListJobs",
             "glue:RunStatement",
             "glue:UpdateColumnStatisticsForPartition",
@@ -677,6 +692,23 @@
             "*"
           ],
           "Sid": "AllowGlueActions"
+        },
+        {
+          "Action": [
+            "glue:BatchGet*",
+            "glue:Get*",
+            "glue:List*",
+            "glue:RunStatement",
+            "glue:SearchTables"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:catalog",
+            "arn:aws:glue:*:*:connection/dz-sm-*",
+            "arn:aws:glue:*:*:database/default",
+            "arn:aws:glue:*:*:session/*"
+          ],
+          "Sid": "AllowGlueDefaultAccess"
         },
         {
           "Action": [
@@ -792,10 +824,11 @@
           "Action": [
             "sagemaker:CreatePresignedDomainUrl",
             "sagemaker:CreateUserProfile",
-            "sagemaker:DescribeUserProfile"
+            "sagemaker:DescribeUserProfile",
+            "sagemaker:UpdateUserProfile"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:sagemaker:*:*:*/${sagemaker:DomainId}/*",
+          "Resource": "arn:aws:sagemaker:*:*:*/*",
           "Sid": "AllowSageMakerProfileManagement"
         },
         {
@@ -965,6 +998,7 @@
             "ec2:DescribeRouteTables",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
+            "ec2:DescribeVpcEndpointServices",
             "ec2:DescribeVpcEndpoints",
             "ec2:DescribeVpcs",
             "ecr:BatchCheckLayerAvailability",
@@ -981,6 +1015,8 @@
             "ecr:PutImage",
             "ecr:SetRepositoryPolicy",
             "ecr:StartImageScan",
+            "ecr:TagResource",
+            "ecr:UntagResource",
             "ecr:UploadLayerPart",
             "elastic-inference:Connect",
             "elasticfilesystem:DescribeFileSystems",
@@ -1007,6 +1043,7 @@
             "glue:CreateBlueprint",
             "glue:CreateConnection",
             "glue:CreateCrawler",
+            "glue:CreateDatabase",
             "glue:CreateJob",
             "glue:CreatePartition",
             "glue:CreatePartitionIndex",
@@ -1052,6 +1089,7 @@
             "glue:UpdateWorkflow",
             "groundtruthlabeling:*",
             "iam:CreateServiceLinkedRole",
+            "iam:GetRole",
             "iam:ListRoles",
             "iam:PassRole",
             "kms:Decrypt",
@@ -1060,6 +1098,7 @@
             "kms:GenerateDataKey",
             "kms:ListAliases",
             "kms:ListKeys",
+            "kms:RetireGrant",
             "lakeformation:GetDataAccess",
             "lambda:InvokeFunction",
             "lambda:ListFunctions",
@@ -1073,7 +1112,16 @@
             "logs:ListLogDeliveries",
             "logs:PutLogEvents",
             "logs:UpdateLogDelivery",
+            "ram:AcceptResourceShareInvitation",
             "rds:DescribeDBInstances",
+            "redshift-data:BatchExecuteStatement",
+            "redshift-data:CancelStatement",
+            "redshift-data:DescribeStatement",
+            "redshift-data:DescribeTable",
+            "redshift-data:ExecuteStatement",
+            "redshift-data:GetStatementResult",
+            "redshift-data:ListSchemas",
+            "redshift-data:ListTables",
             "redshift-serverless:GetCredentials",
             "redshift-serverless:GetNamespace",
             "redshift-serverless:GetWorkgroup",
@@ -1083,12 +1131,6 @@
             "redshift:DescribeClusters",
             "redshift:GetClusterCredentials",
             "redshift:GetClusterCredentialsWithIAM",
-            "robomaker:CancelSimulationJob",
-            "robomaker:CreateSimulationApplication",
-            "robomaker:CreateSimulationJob",
-            "robomaker:DeleteSimulationApplication",
-            "robomaker:DescribeSimulationApplication",
-            "robomaker:DescribeSimulationJob",
             "s3:AbortMultipartUpload",
             "s3:CreateBucket",
             "s3:DeleteObject",
@@ -1111,6 +1153,7 @@
             "secretsmanager:DescribeSecret",
             "secretsmanager:GetSecretValue",
             "secretsmanager:ListSecrets",
+            "secretsmanager:PutResourcePolicy",
             "secretsmanager:TagResource",
             "servicecatalog:Describe*",
             "servicecatalog:List*",
@@ -1140,7 +1183,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-04-23T23:01:14Z"
+  "UpdateDate": "2024-04-29T22:30:44Z"
 }
