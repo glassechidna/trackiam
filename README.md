@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 397
-* Unique actions: 17017
+* Unique actions: 17020
 * Managed policies: 1193
 
 Most common managed policy name prefixes:
@@ -179,6 +179,7 @@ The following table summarises the AWS APIs.
 | [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
 | [`ram`](services/ram.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
+| [`cases`](services/cases.yml) | 34 | 0 | 0 |
 | [`m2`](services/m2.yml) | 33 | 1 | 0 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`applicationinsights`](services/applicationinsights.yml) | 33 | 0 | 1 |
@@ -191,7 +192,6 @@ The following table summarises the AWS APIs.
 | [`billingconductor`](services/billingconductor.yml) | 32 | 0 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 31 | 0 | 5 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 31 | 0 | 3 |
-| [`cases`](services/cases.yml) | 31 | 0 | 3 |
 | [`outposts`](services/outposts.yml) | 31 | 0 | 2 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 31 | 0 | 0 |
@@ -212,7 +212,7 @@ The following table summarises the AWS APIs.
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 28 | 0 | 1 |
 | [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
-| [`timestream`](services/timestream.yml) | 27 | 1 | 8 |
+| [`timestream`](services/timestream.yml) | 27 | 3 | 8 |
 | [`codestar-connections`](services/codestar-connections.yml) | 27 | 0 | 10 |
 | [`codeconnections`](services/codeconnections.yml) | 27 | 0 | 10 |
 | [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 7 |
@@ -309,7 +309,7 @@ The following table summarises the AWS APIs.
 | [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 11 | 0 | 0 |
 | [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 11 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
-| [`trustedadvisor`](services/trustedadvisor.yml) | 10 | 0 | 41 |
+| [`trustedadvisor`](services/trustedadvisor.yml) | 10 | 1 | 41 |
 | [`supportapp`](services/supportapp.yml) | 10 | 0 | 3 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`savingsplans`](services/savingsplans.yml) | 10 | 0 | 0 |
@@ -442,8 +442,8 @@ Most common action prefixes:
 | `Get` | 2477 |
 | `Delete` | 1956 |
 | `Create` | 1822 |
-| `Describe` | 1704 |
-| `Update` | 1560 |
+| `Describe` | 1705 |
+| `Update` | 1561 |
 | `Put` | 472 |
 | `Start` | 387 |
 | `Tag` | 267 |
