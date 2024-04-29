@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonQFullAccess",
   "CreateDate": "2023-11-28T16:00:24Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JQANMNF6S",
   "PolicyName": "AmazonQFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-11-28T16:00:24Z",
+    "CreateDate": "2024-04-29T17:02:36Z",
     "Document": {
       "Statement": [
         {
@@ -17,12 +17,20 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowAmazonQFullAccess"
+        },
+        {
+          "Action": [
+            "sts:SetContext"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sts::*:self",
+          "Sid": "AllowSetTrustedIdentity"
         }
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v1"
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-11-28T16:00:24Z"
+  "UpdateDate": "2024-04-29T17:02:36Z"
 }
