@@ -1,0 +1,78 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/QBusinessServiceRolePolicy",
+  "CreateDate": "2024-04-29T16:05:44Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4FIVD5NCLJ",
+  "PolicyName": "QBusinessServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-04-29T16:05:44Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/QBusiness"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "QBusinessPutMetricDataPermission"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/qbusiness/*"
+          ],
+          "Sid": "QBusinessCreateLogGroupPermission"
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/qbusiness/*:log-stream:*"
+          ],
+          "Sid": "QBusinessLogStreamPermission"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogGroups"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "QBusinessDescribeLogGroupsPermission"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-04-29T16:05:44Z"
+}
