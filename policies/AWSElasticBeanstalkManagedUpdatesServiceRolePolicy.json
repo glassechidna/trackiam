@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSElasticBeanstalkManagedUpdatesServiceRolePolicy",
   "CreateDate": "2019-11-21T22:35:06Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4HVFNJB4NR",
   "PolicyName": "AWSElasticBeanstalkManagedUpdatesServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-03-24T00:18:43Z",
+    "CreateDate": "2024-04-29T23:11:34Z",
     "Document": {
       "Statement": [
         {
@@ -120,6 +120,8 @@
             "cloudformation:CreateStack",
             "cloudformation:DeleteStack",
             "cloudformation:GetTemplate",
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource",
             "cloudformation:UpdateStack"
           ],
           "Effect": "Allow",
@@ -234,7 +236,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2023-03-24T00:18:43Z"
+  "UpdateDate": "2024-04-29T23:11:34Z"
 }

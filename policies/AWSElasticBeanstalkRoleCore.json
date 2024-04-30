@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkRoleCore",
   "CreateDate": "2020-06-05T21:48:24Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4OXQ5DMW6K",
   "PolicyName": "AWSElasticBeanstalkRoleCore",
   "PolicyVersion": {
-    "CreateDate": "2020-09-09T20:31:14Z",
+    "CreateDate": "2024-04-30T00:01:53Z",
     "Document": {
       "Statement": [
         {
@@ -126,6 +126,8 @@
             "cloudformation:DeleteStack",
             "cloudformation:GetTemplate",
             "cloudformation:ListStackResources",
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource",
             "cloudformation:UpdateStack"
           ],
           "Effect": "Allow",
@@ -214,7 +216,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-09-09T20:31:14Z"
+  "UpdateDate": "2024-04-30T00:01:53Z"
 }
