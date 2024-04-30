@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 398
-* Unique actions: 17045
-* Managed policies: 1193
+* Unique actions: 17058
+* Managed policies: 1195
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 322 |
-| `arn:aws:iam::aws:policy/Amazon*` | 305 |
+| `arn:aws:iam::aws:policy/Amazon*` | 307 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 269 |
 | `arn:aws:iam::aws:policy/service-role/*` | 190 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -42,7 +42,7 @@ The following table summarises the AWS APIs.
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`connect`](services/connect.yml) | 241 | 3 | 6 |
 | [`glue`](services/glue.yml) | 209 | 4 | 33 |
-| [`quicksight`](services/quicksight.yml) | 168 | 3 | 30 |
+| [`quicksight`](services/quicksight.yml) | 169 | 3 | 29 |
 | [`rds`](services/rds.yml) | 162 | 0 | 5 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
@@ -85,8 +85,8 @@ The following table summarises the AWS APIs.
 | [`elasticache`](services/elasticache.yml) | 75 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 75 | 0 | 1 |
+| [`sms-voice`](services/sms-voice.yml) | 74 | 13 | 0 |
 | [`logs`](services/logs.yml) | 74 | 0 | 8 |
-| [`sms-voice`](services/sms-voice.yml) | 74 | 0 | 0 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`sso`](services/sso.yml) | 73 | 0 | 53 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
@@ -122,9 +122,9 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 56 | 0 | 2 |
 | [`eks`](services/eks.yml) | 56 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
+| [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 10 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
-| [`qbusiness`](services/qbusiness.yml) | 54 | 0 | 11 |
 | [`wafv2`](services/wafv2.yml) | 54 | 0 | 2 |
 | [`resiliencehub`](services/resiliencehub.yml) | 54 | 0 | 0 |
 | [`profile`](services/profile.yml) | 52 | 0 | 0 |
@@ -440,11 +440,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2733 |
-| `Get` | 2479 |
-| `Delete` | 1958 |
-| `Create` | 1827 |
-| `Describe` | 1705 |
-| `Update` | 1564 |
+| `Get` | 2480 |
+| `Delete` | 1961 |
+| `Create` | 1828 |
+| `Describe` | 1706 |
+| `Update` | 1566 |
 | `Put` | 472 |
 | `Start` | 388 |
 | `Tag` | 267 |

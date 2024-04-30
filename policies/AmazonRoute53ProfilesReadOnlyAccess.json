@@ -1,0 +1,40 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonRoute53ProfilesReadOnlyAccess",
+  "CreateDate": "2024-04-30T18:29:25Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4KTR6UWE5Y",
+  "PolicyName": "AmazonRoute53ProfilesReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-04-30T18:29:25Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "route53profiles:GetProfile",
+            "route53profiles:GetProfileAssociation",
+            "route53profiles:GetProfileResourceAssociation",
+            "route53profiles:ListProfileAssociations",
+            "route53profiles:ListProfileResourceAssociations",
+            "route53profiles:ListProfiles",
+            "route53profiles:ListTagsForResource",
+            "route53resolver:GetFirewallConfig",
+            "route53resolver:GetResolverConfig",
+            "route53resolver:GetResolverDnssecConfig",
+            "route53resolver:GetResolverQueryLogConfig"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AmazonRoute53ProfilesReadOnlyAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-04-30T18:29:25Z"
+}
