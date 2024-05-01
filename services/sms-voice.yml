@@ -1,24 +1,29 @@
 Actions:
   - Name: sms-voice:AssociateOriginationIdentity
+  - Name: sms-voice:AssociateProtectConfiguration
   - Name: sms-voice:CreateConfigurationSet
   - Name: sms-voice:CreateConfigurationSetEventDestination
   - Name: sms-voice:CreateEventDestination
   - Name: sms-voice:CreateOptOutList
   - Name: sms-voice:CreatePool
+  - Name: sms-voice:CreateProtectConfiguration
   - Name: sms-voice:CreateRegistration
   - Name: sms-voice:CreateRegistrationAssociation
   - Name: sms-voice:CreateRegistrationAttachment
   - Name: sms-voice:CreateRegistrationVersion
   - Name: sms-voice:CreateVerifiedDestinationNumber
+  - Name: sms-voice:DeleteAccountDefaultProtectConfiguration
   - Name: sms-voice:DeleteConfigurationSet
   - Name: sms-voice:DeleteConfigurationSetEventDestination
   - Name: sms-voice:DeleteDefaultMessageType
   - Name: sms-voice:DeleteDefaultSenderId
   - Name: sms-voice:DeleteEventDestination
   - Name: sms-voice:DeleteKeyword
+  - Name: sms-voice:DeleteMediaMessageSpendLimitOverride
   - Name: sms-voice:DeleteOptOutList
   - Name: sms-voice:DeleteOptedOutNumber
   - Name: sms-voice:DeletePool
+  - Name: sms-voice:DeleteProtectConfiguration
   - Name: sms-voice:DeleteRegistration
   - Name: sms-voice:DeleteRegistrationAttachment
   - Name: sms-voice:DeleteRegistrationFieldValue
@@ -33,6 +38,7 @@ Actions:
   - Name: sms-voice:DescribeOptedOutNumbers
   - Name: sms-voice:DescribePhoneNumbers
   - Name: sms-voice:DescribePools
+  - Name: sms-voice:DescribeProtectConfigurations
   - Name: sms-voice:DescribeRegistrationAttachments
   - Name: sms-voice:DescribeRegistrationFieldDefinitions
   - Name: sms-voice:DescribeRegistrationFieldValues
@@ -44,8 +50,10 @@ Actions:
   - Name: sms-voice:DescribeSpendLimits
   - Name: sms-voice:DescribeVerifiedDestinationNumbers
   - Name: sms-voice:DisassociateOriginationIdentity
+  - Name: sms-voice:DisassociateProtectConfiguration
   - Name: sms-voice:DiscardRegistrationVersion
   - Name: sms-voice:GetConfigurationSetEventDestinations
+  - Name: sms-voice:GetProtectConfigurationCountryRuleSet
   - Name: sms-voice:ListConfigurationSets
   - Name: sms-voice:ListPoolOriginationIdentities
   - Name: sms-voice:ListRegistrationAssociations
@@ -58,10 +66,13 @@ Actions:
   - Name: sms-voice:RequestPhoneNumber
   - Name: sms-voice:RequestSenderId
   - Name: sms-voice:SendDestinationNumberVerificationCode
+  - Name: sms-voice:SendMediaMessage
   - Name: sms-voice:SendTextMessage
   - Name: sms-voice:SendVoiceMessage
+  - Name: sms-voice:SetAccountDefaultProtectConfiguration
   - Name: sms-voice:SetDefaultMessageType
   - Name: sms-voice:SetDefaultSenderId
+  - Name: sms-voice:SetMediaMessageSpendLimitOverride
   - Name: sms-voice:SetTextMessageSpendLimitOverride
   - Name: sms-voice:SetVoiceMessageSpendLimitOverride
   - Name: sms-voice:SubmitRegistrationVersion
@@ -71,20 +82,7 @@ Actions:
   - Name: sms-voice:UpdateEventDestination
   - Name: sms-voice:UpdatePhoneNumber
   - Name: sms-voice:UpdatePool
-  - Name: sms-voice:UpdateSenderId
-  - Name: sms-voice:VerifyDestinationNumber
-
-  # APIs without an IAM action
-  - Name: sms-voice:AssociateProtectConfiguration
-  - Name: sms-voice:CreateProtectConfiguration
-  - Name: sms-voice:DeleteAccountDefaultProtectConfiguration
-  - Name: sms-voice:DeleteMediaMessageSpendLimitOverride
-  - Name: sms-voice:DeleteProtectConfiguration
-  - Name: sms-voice:DescribeProtectConfigurations
-  - Name: sms-voice:DisassociateProtectConfiguration
-  - Name: sms-voice:GetProtectConfigurationCountryRuleSet
-  - Name: sms-voice:SendMediaMessage
-  - Name: sms-voice:SetAccountDefaultProtectConfiguration
-  - Name: sms-voice:SetMediaMessageSpendLimitOverride
   - Name: sms-voice:UpdateProtectConfiguration
   - Name: sms-voice:UpdateProtectConfigurationCountryRuleSet
+  - Name: sms-voice:UpdateSenderId
+  - Name: sms-voice:VerifyDestinationNumber
