@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 398
-* Unique actions: 17058
+* Unique actions: 17062
 * Managed policies: 1195
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 618 | 2 | 16 |
+| [`ec2`](services/ec2.yml) | 618 | 3 | 16 |
 | [`sagemaker`](services/sagemaker.yml) | 336 | 0 | 14 |
 | [`iot`](services/iot.yml) | 262 | 3 | 9 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
@@ -81,7 +81,7 @@ The following table summarises the AWS APIs.
 | [`macie2`](services/macie2.yml) | 79 | 0 | 0 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
-| [`personalize`](services/personalize.yml) | 75 | 0 | 4 |
+| [`personalize`](services/personalize.yml) | 75 | 3 | 4 |
 | [`elasticache`](services/elasticache.yml) | 75 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 75 | 0 | 1 |
@@ -439,11 +439,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2733 |
-| `Get` | 2480 |
+| `List` | 2734 |
+| `Get` | 2481 |
 | `Delete` | 1961 |
-| `Create` | 1828 |
-| `Describe` | 1706 |
+| `Create` | 1829 |
+| `Describe` | 1707 |
 | `Update` | 1566 |
 | `Put` | 472 |
 | `Start` | 388 |
