@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/ROSANodePoolManagementPolicy",
   "CreateDate": "2023-06-08T20:48:08Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4AXLMC5W7P",
   "PolicyName": "ROSANodePoolManagementPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-06-08T20:48:08Z",
+    "CreateDate": "2024-05-02T14:01:47Z",
     "Document": {
       "Statement": [
         {
@@ -204,6 +204,7 @@
         },
         {
           "Action": [
+            "ec2:DescribeDhcpOptions",
             "ec2:DescribeImages",
             "ec2:DescribeInstances",
             "ec2:DescribeInternetGateways",
@@ -249,7 +250,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-06-08T20:48:08Z"
+  "UpdateDate": "2024-05-02T14:01:47Z"
 }
