@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeBuildReadOnlyAccess",
   "CreateDate": "2016-12-01T19:03:41Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJIZZWN6557F5HVP2K",
   "PolicyName": "AWSCodeBuildReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-09-14T16:04:04Z",
+    "CreateDate": "2024-05-02T01:23:27Z",
     "Document": {
       "Statement": [
         {
@@ -40,7 +40,8 @@
             "logs:GetLogEvents"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSServicesAccess"
         },
         {
           "Action": [
@@ -48,7 +49,10 @@
             "codestar-connections:ListConnections"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:codestar-connections:*:*:connection/*",
+          "Resource": [
+            "arn:aws:codeconnections:*:*:connection/*",
+            "arn:aws:codestar-connections:*:*:connection/*"
+          ],
           "Sid": "CodeStarConnectionsUserAccess"
         },
         {
@@ -65,7 +69,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2020-09-14T16:04:04Z"
+  "UpdateDate": "2024-05-02T01:23:27Z"
 }
