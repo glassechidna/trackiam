@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeBuildDeveloperAccess",
   "CreateDate": "2016-12-01T19:02:32Z",
-  "DefaultVersionId": "v14",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIMKTMR34XSBQW45HS",
   "PolicyName": "AWSCodeBuildDeveloperAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-07-31T23:06:10Z",
+    "CreateDate": "2024-05-02T01:36:55Z",
     "Document": {
       "Statement": [
         {
@@ -71,7 +71,10 @@
             "codestar-connections:ListConnections"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:codestar-connections:*:*:connection/*",
+          "Resource": [
+            "arn:aws:codeconnections:*:*:connection/*",
+            "arn:aws:codestar-connections:*:*:connection/*"
+          ],
           "Sid": "CodeStarConnectionsUserAccess"
         },
         {
@@ -114,7 +117,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v14"
+    "VersionId": "v15"
   },
-  "UpdateDate": "2023-07-31T23:06:10Z"
+  "UpdateDate": "2024-05-02T01:36:55Z"
 }
