@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary",
   "CreateDate": "2024-04-23T23:01:14Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BVNAOGKEU",
   "PolicyName": "AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary",
   "PolicyVersion": {
-    "CreateDate": "2024-04-29T22:30:44Z",
+    "CreateDate": "2024-05-03T18:05:41Z",
     "Document": {
       "Statement": [
         {
@@ -660,6 +660,8 @@
             "glue:BatchDeletePartition",
             "glue:BatchDeleteTable",
             "glue:BatchDeleteTableVersion",
+            "glue:BatchGetJobs",
+            "glue:BatchGetWorkflows",
             "glue:BatchUpdatePartition",
             "glue:CreateBlueprint",
             "glue:CreateConnection",
@@ -670,6 +672,7 @@
             "glue:CreatePartitionIndex",
             "glue:CreateSession",
             "glue:CreateTable",
+            "glue:CreateWorkflow",
             "glue:DeleteColumnStatisticsForPartition",
             "glue:DeleteColumnStatisticsForTable",
             "glue:DeletePartition",
@@ -678,10 +681,18 @@
             "glue:DeleteTableVersion",
             "glue:GetColumnStatisticsForPartition",
             "glue:GetColumnStatisticsForTable",
+            "glue:GetConnection",
+            "glue:GetDatabase",
             "glue:GetDatabases",
+            "glue:GetPartition",
+            "glue:GetPartitions",
+            "glue:GetTable",
             "glue:GetTables",
             "glue:ListJobs",
+            "glue:ListSchemas",
+            "glue:NotifyEvent",
             "glue:RunStatement",
+            "glue:SearchTables",
             "glue:UpdateColumnStatisticsForPartition",
             "glue:UpdateColumnStatisticsForTable",
             "glue:UpdatePartition",
@@ -1183,7 +1194,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-04-29T22:30:44Z"
+  "UpdateDate": "2024-05-03T18:05:41Z"
 }
