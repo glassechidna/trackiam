@@ -440,7 +440,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2734 |
-| `Get` | 2482 |
+| `Get` | 2481 |
 | `Delete` | 1962 |
 | `Create` | 1829 |
 | `Describe` | 1707 |
