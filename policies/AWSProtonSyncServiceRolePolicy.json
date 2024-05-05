@@ -1,21 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSProtonSyncServiceRolePolicy",
   "CreateDate": "2021-11-23T21:14:36Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4H6XP2ZY2O",
   "PolicyName": "AWSProtonSyncServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-11-23T21:14:36Z",
+    "CreateDate": "2024-05-05T01:49:07Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "codeconnections:UseConnection",
             "codestar-connections:UseConnection"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:codestar-connections:*:*:connection/*",
+          "Resource": [
+            "arn:aws:codeconnections:*:*:connection/*",
+            "arn:aws:codestar-connections:*:*:connection/*"
+          ],
           "Sid": "AccessGitRepos"
         },
         {
@@ -47,7 +51,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-11-23T21:14:36Z"
+  "UpdateDate": "2024-05-05T01:49:07Z"
 }
