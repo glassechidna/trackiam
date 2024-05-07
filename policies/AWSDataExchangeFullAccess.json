@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDataExchangeFullAccess",
   "CreateDate": "2019-11-13T19:27:59Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MPDTDB3FH",
   "PolicyName": "AWSDataExchangeFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-12-02T16:14:27Z",
+    "CreateDate": "2024-05-07T17:04:55Z",
     "Document": {
       "Statement": [
         {
@@ -20,7 +20,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:s3:::*aws-data-exchange*"
+          "Resource": "arn:aws:s3:::*aws-data-exchange*",
+          "Sid": "S3GetActionConditionalResourceAndADX"
         },
         {
           "Action": "s3:GetObject",
@@ -35,7 +36,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "S3GetActionConditionalTagAndADX"
         },
         {
           "Action": [
@@ -47,7 +49,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "RedshiftConditionalActions"
         },
         {
           "Action": [
@@ -62,14 +65,16 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:s3:::*aws-data-exchange*"
+          "Resource": "arn:aws:s3:::*aws-data-exchange*",
+          "Sid": "S3WriteActions"
         },
         {
           "Action": [
             "apigateway:GET"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "APIGatewayActions"
         },
         {
           "Action": [
@@ -82,32 +87,41 @@
             "aws-marketplace:ListAgreementApprovalRequests",
             "aws-marketplace:ListChangeSets",
             "aws-marketplace:ListEntities",
+            "aws-marketplace:ListTagsForResource",
             "aws-marketplace:RejectAgreementApprovalRequest",
             "aws-marketplace:SearchAgreements",
             "aws-marketplace:StartChangeSet",
+            "aws-marketplace:TagResource",
+            "aws-marketplace:UntagResource",
             "aws-marketplace:UpdateAgreementApprovalRequest"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSMarketplaceProviderActions"
         },
         {
           "Action": [
             "aws-marketplace:CancelAgreementRequest",
+            "aws-marketplace:DescribeAgreement",
             "aws-marketplace:GetAgreementRequest",
+            "aws-marketplace:GetPrivateListing",
             "aws-marketplace:ListAgreementRequests",
+            "aws-marketplace:ListPrivateListings",
             "aws-marketplace:Subscribe",
             "aws-marketplace:Unsubscribe",
             "aws-marketplace:ViewSubscriptions"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSMarketplaceSubscriberActions"
         },
         {
           "Action": [
             "dataexchange:*"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DataExchangeActions"
         },
         {
           "Action": [
@@ -116,7 +130,8 @@
             "kms:ListKeys"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "KMSActions"
         },
         {
           "Action": [
@@ -124,7 +139,8 @@
             "redshift:DescribeDataSharesForProducer"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "RedshiftActions"
         },
         {
           "Action": [
@@ -133,13 +149,14 @@
             "s3:ListBucket"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "S3ReadActions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2021-12-02T16:14:27Z"
+  "UpdateDate": "2024-05-07T17:04:55Z"
 }
