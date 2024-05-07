@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 398
-* Unique actions: 17067
+* Unique actions: 17071
 * Managed policies: 1196
 
 Most common managed policy name prefixes:
@@ -124,8 +124,8 @@ The following table summarises the AWS APIs.
 | [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 10 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
+| [`resiliencehub`](services/resiliencehub.yml) | 54 | 1 | 0 |
 | [`wafv2`](services/wafv2.yml) | 54 | 0 | 2 |
-| [`resiliencehub`](services/resiliencehub.yml) | 54 | 0 | 0 |
 | [`profile`](services/profile.yml) | 52 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 52 | 0 | 0 |
@@ -303,6 +303,7 @@ The following table summarises the AWS APIs.
 | [`networkmonitor`](services/networkmonitor.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`bcm-data-exports`](services/bcm-data-exports.yml) | 12 | 0 | 0 |
+| [`budgets`](services/budgets.yml) | 11 | 15 | 2 |
 | [`timestream-influxdb`](services/timestream-influxdb.yml) | 11 | 0 | 0 |
 | [`repostspace`](services/repostspace.yml) | 11 | 0 | 0 |
 | [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 11 | 0 | 0 |
@@ -319,7 +320,6 @@ The following table summarises the AWS APIs.
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`managedblockchain-query`](services/managedblockchain-query.yml) | 9 | 0 | 0 |
 | [`kendra-ranking`](services/kendra-ranking.yml) | 9 | 0 | 0 |
-| [`budgets`](services/budgets.yml) | 8 | 15 | 2 |
 | [`backup-storage`](services/backup-storage.yml) | 8 | 1 | 7 |
 | [`launchwizard`](services/launchwizard.yml) | 8 | 0 | 25 |
 | [`sts`](services/sts.yml) | 8 | 0 | 4 |
@@ -439,7 +439,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2734 |
+| `List` | 2736 |
 | `Get` | 2481 |
 | `Delete` | 1962 |
 | `Create` | 1829 |
@@ -447,6 +447,6 @@ Most common action prefixes:
 | `Update` | 1566 |
 | `Put` | 472 |
 | `Start` | 389 |
-| `Tag` | 267 |
-| `Untag` | 263 |
+| `Tag` | 268 |
+| `Untag` | 264 |
 
