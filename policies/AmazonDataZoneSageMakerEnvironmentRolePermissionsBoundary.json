@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary",
   "CreateDate": "2024-04-23T23:01:14Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BVNAOGKEU",
   "PolicyName": "AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary",
   "PolicyVersion": {
-    "CreateDate": "2024-05-03T18:05:41Z",
+    "CreateDate": "2024-05-08T02:03:49Z",
     "Document": {
       "Statement": [
         {
@@ -906,6 +906,7 @@
         },
         {
           "Action": [
+            "sso:AssociateProfile",
             "sso:CreateApplicationAssignment"
           ],
           "Effect": "Allow",
@@ -1179,6 +1180,7 @@
             "sns:Publish",
             "sns:Subscribe",
             "sqlworkbench:*",
+            "sso:AssociateProfile",
             "sso:CreateApplicationAssignment",
             "states:DescribeExecution",
             "states:GetExecutionHistory",
@@ -1193,8 +1195,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v3"
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
   },
-  "UpdateDate": "2024-05-03T18:05:41Z"
+  "UpdateDate": "2024-05-08T02:03:49Z"
 }
