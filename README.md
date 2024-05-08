@@ -123,8 +123,8 @@ The following table summarises the AWS APIs.
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
 | [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 10 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 1 |
+| [`resiliencehub`](services/resiliencehub.yml) | 55 | 0 | 0 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
-| [`resiliencehub`](services/resiliencehub.yml) | 54 | 1 | 0 |
 | [`wafv2`](services/wafv2.yml) | 54 | 0 | 2 |
 | [`profile`](services/profile.yml) | 52 | 0 | 0 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 0 |
