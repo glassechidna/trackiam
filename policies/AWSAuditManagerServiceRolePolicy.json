@@ -1,15 +1,33 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSAuditManagerServiceRolePolicy",
   "CreateDate": "2020-12-08T15:12:12Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4C5N52UWST",
   "PolicyName": "AWSAuditManagerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-12-06T20:39:40Z",
+    "CreateDate": "2024-05-09T16:51:51Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "apigateway:GET"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": [
+                "${aws:PrincipalAccount}"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:apigateway:*::/restapis/*/stages",
+            "arn:aws:apigateway:*::/restapis/*/stages/*"
+          ],
+          "Sid": "APIGatewayAccess"
+        },
         {
           "Action": [
             "events:PutRule"
@@ -33,7 +51,11 @@
         },
         {
           "Action": [
-            "s3:GetBucketPolicy"
+            "s3:GetBucketAcl",
+            "s3:GetBucketLogging",
+            "s3:GetBucketOwnershipControls",
+            "s3:GetBucketPolicy",
+            "s3:GetBucketTagging"
           ],
           "Condition": {
             "StringEquals": {
@@ -44,12 +66,14 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "AuditManagerS3GetBucketPolicyAccess"
+          "Sid": "S3Access"
         },
         {
           "Action": [
             "acm:GetAccountConfiguration",
             "acm:ListCertificates",
+            "autoscaling:DescribeAutoScalingGroups",
+            "backup:ListBackupPlans",
             "backup:ListRecoveryPointsByResource",
             "bedrock:GetCustomModel",
             "bedrock:GetFoundationModel",
@@ -58,7 +82,12 @@
             "bedrock:ListCustomModels",
             "bedrock:ListFoundationModels",
             "bedrock:ListModelCustomizationJobs",
+            "cloudfront:GetDistribution",
+            "cloudfront:GetDistributionConfig",
+            "cloudfront:ListDistributions",
             "cloudtrail:DescribeTrails",
+            "cloudtrail:GetTrail",
+            "cloudtrail:ListTrails",
             "cloudtrail:LookupEvents",
             "cloudwatch:DescribeAlarms",
             "cloudwatch:DescribeAlarmsForMetric",
@@ -70,7 +99,10 @@
             "config:ListDiscoveredResources",
             "directconnect:DescribeDirectConnectGateways",
             "directconnect:DescribeVirtualGateways",
+            "dynamodb:DescribeBackup",
+            "dynamodb:DescribeContinuousBackups",
             "dynamodb:DescribeTable",
+            "dynamodb:DescribeTableReplicaAutoScaling",
             "dynamodb:ListBackups",
             "dynamodb:ListGlobalTables",
             "dynamodb:ListTables",
@@ -78,6 +110,8 @@
             "ec2:DescribeCustomerGateways",
             "ec2:DescribeEgressOnlyInternetGateways",
             "ec2:DescribeFlowLogs",
+            "ec2:DescribeInstanceAttribute",
+            "ec2:DescribeInstanceCreditSpecifications",
             "ec2:DescribeInstances",
             "ec2:DescribeInternetGateways",
             "ec2:DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociations",
@@ -86,10 +120,13 @@
             "ec2:DescribeNatGateways",
             "ec2:DescribeNetworkAcls",
             "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroupRules",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSnapshots",
             "ec2:DescribeTransitGateways",
             "ec2:DescribeVolumes",
+            "ec2:DescribeVpcEndpointConnections",
+            "ec2:DescribeVpcEndpointServiceConfigurations",
             "ec2:DescribeVpcEndpoints",
             "ec2:DescribeVpcPeeringConnections",
             "ec2:DescribeVpcs",
@@ -97,6 +134,7 @@
             "ec2:DescribeVpnGateways",
             "ec2:GetEbsDefaultKmsKeyId",
             "ec2:GetEbsEncryptionByDefault",
+            "ec2:GetLaunchTemplateData",
             "ecs:DescribeClusters",
             "eks:DescribeAddonVersions",
             "elasticache:DescribeCacheClusters",
@@ -108,6 +146,9 @@
             "elasticloadbalancing:DescribeTargetGroups",
             "elasticmapreduce:ListClusters",
             "elasticmapreduce:ListSecurityConfigurations",
+            "es:DescribeDomain",
+            "es:DescribeDomainConfig",
+            "es:DescribeDomains",
             "events:DescribeRule",
             "events:ListConnections",
             "events:ListEventBuses",
@@ -117,15 +158,27 @@
             "fsx:DescribeFileSystems",
             "guardduty:ListDetectors",
             "iam:GenerateCredentialReport",
+            "iam:GetAccessKeyLastUsed",
             "iam:GetAccountAuthorizationDetails",
             "iam:GetAccountPasswordPolicy",
             "iam:GetAccountSummary",
             "iam:GetCredentialReport",
+            "iam:GetGroupPolicy",
+            "iam:GetPolicy",
+            "iam:GetPolicyVersion",
+            "iam:GetRolePolicy",
+            "iam:GetUser",
+            "iam:GetUserPolicy",
+            "iam:ListAccessKeys",
+            "iam:ListAttachedRolePolicies",
             "iam:ListEntitiesForPolicy",
             "iam:ListGroupPolicies",
             "iam:ListGroups",
+            "iam:ListMfaDeviceTags",
+            "iam:ListMfaDevices",
             "iam:ListOpenIdConnectProviders",
             "iam:ListPolicies",
+            "iam:ListPolicyVersions",
             "iam:ListRolePolicies",
             "iam:ListRoles",
             "iam:ListSamlProviders",
@@ -151,33 +204,51 @@
             "logs:DescribeMetricFilters",
             "logs:DescribeResourcePolicies",
             "logs:FilterLogEvents",
+            "logs:GetDataProtectionPolicy",
             "organizations:DescribeOrganization",
             "organizations:DescribePolicy",
             "rds:DescribeCertificates",
+            "rds:DescribeDBClusterEndpoints",
+            "rds:DescribeDBClusterParameterGroups",
+            "rds:DescribeDBClusters",
+            "rds:DescribeDBInstanceAutomatedBackups",
             "rds:DescribeDBInstances",
-            "rds:DescribeDbClusterEndpoints",
-            "rds:DescribeDbClusterParameterGroups",
-            "rds:DescribeDbClusters",
-            "rds:DescribeDbSecurityGroups",
+            "rds:DescribeDBSecurityGroups",
+            "redshift:DescribeClusterSnapshots",
             "redshift:DescribeClusters",
+            "redshift:DescribeLoggingStatus",
             "route53:GetQueryLoggingConfig",
             "s3:GetBucketPublicAccessBlock",
             "s3:GetBucketVersioning",
             "s3:GetEncryptionConfiguration",
             "s3:GetLifecycleConfiguration",
             "s3:ListAllMyBuckets",
+            "sagemaker:DescribeEndpointConfig",
+            "sagemaker:ListEndpointConfigs",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:ListSecrets",
             "securityhub:DescribeStandards",
+            "sns:ListTagsForResource",
             "sns:ListTopics",
             "sqs:ListQueues",
             "waf-regional:GetLoggingConfiguration",
+            "waf-regional:GetRule",
+            "waf-regional:GetWebAcl",
             "waf-regional:ListRuleGroups",
+            "waf-regional:ListRules",
             "waf-regional:ListSubscribedRuleGroups",
             "waf-regional:ListWebACLs",
-            "waf:ListActivatedRulesInRuleGroup"
+            "waf:GetRule",
+            "waf:GetRuleGroup",
+            "waf:ListActivatedRulesInRuleGroup",
+            "waf:ListRuleGroups",
+            "waf:ListRules",
+            "waf:ListWebAcls",
+            "wafv2:ListWebAcls"
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "AuditManagerAPICallAccess"
+          "Sid": "APIsAccess"
         },
         {
           "Action": [
@@ -197,7 +268,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2023-12-06T20:39:40Z"
+  "UpdateDate": "2024-05-09T16:51:51Z"
 }
