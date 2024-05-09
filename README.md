@@ -108,8 +108,8 @@ The following table summarises the AWS APIs.
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
 | [`cleanrooms`](services/cleanrooms.yml) | 63 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
+| [`transfer`](services/transfer.yml) | 60 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 60 | 0 | 0 |
-| [`transfer`](services/transfer.yml) | 59 | 1 | 0 |
 | [`ivs`](services/ivs.yml) | 59 | 0 | 0 |
 | [`inspector2`](services/inspector2.yml) | 59 | 0 | 0 |
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 0 |
