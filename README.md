@@ -252,6 +252,7 @@ The following table summarises the AWS APIs.
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`app-integrations`](services/app-integrations.yml) | 21 | 0 | 6 |
+| [`ssm-sap`](services/ssm-sap.yml) | 21 | 0 | 3 |
 | [`synthetics`](services/synthetics.yml) | 21 | 0 | 0 |
 | [`resource-explorer-2`](services/resource-explorer-2.yml) | 21 | 0 | 0 |
 | [`mgh`](services/mgh.yml) | 21 | 0 | 0 |
@@ -265,7 +266,6 @@ The following table summarises the AWS APIs.
 | [`mediapackage`](services/mediapackage.yml) | 19 | 0 | 0 |
 | [`identitystore`](services/identitystore.yml) | 19 | 0 | 0 |
 | [`grafana`](services/grafana.yml) | 19 | 0 | 0 |
-| [`ssm-sap`](services/ssm-sap.yml) | 18 | 3 | 3 |
 | [`resource-groups`](services/resource-groups.yml) | 18 | 0 | 6 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
 | [`medical-imaging`](services/medical-imaging.yml) | 18 | 0 | 0 |
