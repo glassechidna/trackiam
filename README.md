@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 398
-* Unique actions: 17077
+* Unique actions: 17078
 * Managed policies: 1196
 
 Most common managed policy name prefixes:
@@ -175,11 +175,11 @@ The following table summarises the AWS APIs.
 | [`entityresolution`](services/entityresolution.yml) | 35 | 1 | 2 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
+| [`cases`](services/cases.yml) | 34 | 0 | 1 |
 | [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
 | [`ram`](services/ram.yml) | 34 | 0 | 0 |
 | [`m2`](services/m2.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
-| [`cases`](services/cases.yml) | 34 | 0 | 0 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`applicationinsights`](services/applicationinsights.yml) | 33 | 0 | 1 |
 | [`tnb`](services/tnb.yml) | 33 | 0 | 0 |
@@ -441,7 +441,7 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 2737 |
 | `Get` | 2481 |
-| `Delete` | 1963 |
+| `Delete` | 1964 |
 | `Create` | 1830 |
 | `Describe` | 1707 |
 | `Update` | 1566 |
