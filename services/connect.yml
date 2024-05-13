@@ -15,9 +15,11 @@ Actions:
   - Name: connect:AssociateUserProficiencies
   - Name: connect:BatchAssociateAnalyticsDataSet
   - Name: connect:BatchDisassociateAnalyticsDataSet
+  - Name: connect:BatchGetAttachedFileMetadata
   - Name: connect:BatchGetFlowAssociation
   - Name: connect:BatchPutContact
   - Name: connect:ClaimPhoneNumber
+  - Name: connect:CompleteAttachedFileUpload
   - Name: connect:CreateAgentStatus
   - Name: connect:CreateContactFlow
   - Name: connect:CreateContactFlowModule
@@ -43,6 +45,7 @@ Actions:
   - Name: connect:CreateViewVersion
   - Name: connect:CreateVocabulary
   - Name: connect:DeactivateEvaluationForm
+  - Name: connect:DeleteAttachedFile
   - Name: connect:DeleteContactEvaluation
   - Name: connect:DeleteContactFlow
   - Name: connect:DeleteContactFlowModule
@@ -102,6 +105,7 @@ Actions:
   - Name: connect:DisassociateTrafficDistributionGroupUser
   - Name: connect:DisassociateUserProficiencies
   - Name: connect:DismissUserContact
+  - Name: connect:GetAttachedFile
   - Name: connect:GetContactAttributes
   - Name: connect:GetCurrentMetricData
   - Name: connect:GetCurrentUserData
@@ -177,6 +181,7 @@ Actions:
   - Name: connect:SearchUsers
   - Name: connect:SearchVocabularies
   - Name: connect:SendChatIntegrationEvent
+  - Name: connect:StartAttachedFileUpload
   - Name: connect:StartChatContact
   - Name: connect:StartContactEvaluation
   - Name: connect:StartContactRecording
@@ -251,10 +256,5 @@ Actions:
 
   # APIs without an IAM action
   - Name: connect:AssociateAnalyticsDataSet
-  - Name: connect:BatchGetAttachedFileMetadata
-  - Name: connect:CompleteAttachedFileUpload
-  - Name: connect:DeleteAttachedFile
   - Name: connect:DisassociateAnalyticsDataSet
-  - Name: connect:GetAttachedFile
   - Name: connect:ListAnalyticsDataAssociations
-  - Name: connect:StartAttachedFileUpload
