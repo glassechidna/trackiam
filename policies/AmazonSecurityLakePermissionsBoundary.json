@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSecurityLakePermissionsBoundary",
   "CreateDate": "2022-11-29T14:11:12Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4B7P5TB4TG",
   "PolicyName": "AmazonSecurityLakePermissionsBoundary",
   "PolicyVersion": {
-    "CreateDate": "2022-11-29T14:11:12Z",
+    "CreateDate": "2024-05-14T20:39:20Z",
     "Document": {
       "Statement": [
         {
@@ -26,7 +26,8 @@
             }
           },
           "Effect": "Deny",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DenyActionsNotOnSecurityLakeKMSForS3"
         },
         {
           "Action": [
@@ -44,7 +45,8 @@
             }
           },
           "Effect": "Deny",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DenyActionsNotOnSecurityLakeKMSForS3SQS"
         },
         {
           "Action": [
@@ -60,7 +62,8 @@
             }
           },
           "Effect": "Deny",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DenyActionsNotOnSecurityLakeKMSS3SQS"
         },
         {
           "Action": [
@@ -74,7 +77,8 @@
           "Effect": "Deny",
           "NotResource": [
             "arn:aws:s3:::aws-security-data-lake*"
-          ]
+          ],
+          "Sid": "DenyActionsNotOnSecurityLakeBucket"
         },
         {
           "Action": [
@@ -87,7 +91,8 @@
             "sqs:SendMessage"
           ],
           "Effect": "Deny",
-          "NotResource": "arn:aws:sqs:*:*:AmazonSecurityLake*"
+          "NotResource": "arn:aws:sqs:*:*:AmazonSecurityLake*",
+          "Sid": "DenyActionsNotOnSecurityLakeSQS"
         },
         {
           "Action": [
@@ -108,7 +113,8 @@
             "sqs:SendMessage"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowActionsForSecurityLake"
         },
         {
           "Effect": "Deny",
@@ -129,13 +135,14 @@
             "sqs:ReceiveMessage",
             "sqs:SendMessage"
           ],
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DenyActionsForSecurityLake"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-11-29T14:11:12Z"
+  "UpdateDate": "2024-05-14T20:39:20Z"
 }
