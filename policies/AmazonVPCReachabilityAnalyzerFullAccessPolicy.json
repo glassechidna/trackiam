@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonVPCReachabilityAnalyzerFullAccessPolicy",
   "CreateDate": "2023-06-14T20:12:17Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LYY3MKOH7",
   "PolicyName": "AmazonVPCReachabilityAnalyzerFullAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-11-03T19:37:28Z",
+    "CreateDate": "2024-05-15T20:47:28Z",
     "Document": {
       "Statement": [
         {
@@ -20,7 +20,8 @@
             "directconnect:DescribeVirtualInterfaces"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DirectconnectPermissions"
         },
         {
           "Action": [
@@ -60,7 +61,8 @@
             "ec2:StartNetworkInsightsAnalysis"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "EC2Permissions"
         },
         {
           "Action": [
@@ -71,7 +73,8 @@
           "Resource": [
             "arn:*:ec2:*:*:network-insights-analysis/*",
             "arn:*:ec2:*:*:network-insights-path/*"
-          ]
+          ],
+          "Sid": "EC2TagsPermissions"
         },
         {
           "Action": [
@@ -80,11 +83,13 @@
             "elasticloadbalancing:DescribeLoadBalancers",
             "elasticloadbalancing:DescribeRules",
             "elasticloadbalancing:DescribeTags",
+            "elasticloadbalancing:DescribeTargetGroupAttributes",
             "elasticloadbalancing:DescribeTargetGroups",
             "elasticloadbalancing:DescribeTargetHealth"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ElasticloadbalancingPermissions"
         },
         {
           "Action": [
@@ -97,7 +102,8 @@
             "globalaccelerator:ListListeners"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "GlobalacceleratorPermissions"
         },
         {
           "Action": [
@@ -110,7 +116,8 @@
             "network-firewall:ListRuleGroups"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "NetworkFirewallPermissions"
         },
         {
           "Action": [
@@ -121,13 +128,14 @@
             "tiros:GetQueryExtensionAccounts"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "TirosPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-11-03T19:37:28Z"
+  "UpdateDate": "2024-05-15T20:47:28Z"
 }
