@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 398
-* Unique actions: 17081
+* Unique actions: 17087
 * Managed policies: 1197
 
 Most common managed policy name prefixes:
@@ -228,6 +228,7 @@ The following table summarises the AWS APIs.
 | [`backup-gateway`](services/backup-gateway.yml) | 25 | 0 | 2 |
 | [`textract`](services/textract.yml) | 25 | 0 | 0 |
 | [`pca-connector-ad`](services/pca-connector-ad.yml) | 25 | 0 | 0 |
+| [`grafana`](services/grafana.yml) | 25 | 0 | 0 |
 | [`cleanrooms-ml`](services/cleanrooms-ml.yml) | 25 | 0 | 0 |
 | [`verifiedpermissions`](services/verifiedpermissions.yml) | 24 | 2 | 0 |
 | [`mediapackagev2`](services/mediapackagev2.yml) | 24 | 0 | 3 |
@@ -265,7 +266,6 @@ The following table summarises the AWS APIs.
 | [`opsworks-cm`](services/opsworks-cm.yml) | 19 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 19 | 0 | 0 |
 | [`identitystore`](services/identitystore.yml) | 19 | 0 | 0 |
-| [`grafana`](services/grafana.yml) | 19 | 0 | 0 |
 | [`resource-groups`](services/resource-groups.yml) | 18 | 0 | 6 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
 | [`medical-imaging`](services/medical-imaging.yml) | 18 | 0 | 0 |
@@ -439,10 +439,10 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2737 |
+| `List` | 2739 |
 | `Get` | 2481 |
-| `Delete` | 1964 |
-| `Create` | 1830 |
+| `Delete` | 1966 |
+| `Create` | 1832 |
 | `Describe` | 1707 |
 | `Update` | 1567 |
 | `Put` | 472 |
