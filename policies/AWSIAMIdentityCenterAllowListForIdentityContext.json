@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSIAMIdentityCenterAllowListForIdentityContext",
   "CreateDate": "2023-11-08T15:21:33Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KDXNUOLXM",
   "PolicyName": "AWSIAMIdentityCenterAllowListForIdentityContext",
   "PolicyVersion": {
-    "CreateDate": "2024-04-30T09:31:36Z",
+    "CreateDate": "2024-05-16T22:01:55Z",
     "Document": {
       "Statement": [
         {
@@ -41,7 +41,12 @@
             "athena:StopQueryExecution",
             "athena:UpdateNamedQuery",
             "athena:UpdatePreparedStatement",
+            "elasticmapreduce:AddJobFlowSteps",
+            "elasticmapreduce:CancelSteps",
+            "elasticmapreduce:DescribeCluster",
+            "elasticmapreduce:DescribeStep",
             "elasticmapreduce:GetClusterSessionCredentials",
+            "elasticmapreduce:ListSteps",
             "glue:BatchCreatePartition",
             "glue:BatchDeletePartition",
             "glue:BatchDeleteTable",
@@ -116,7 +121,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2024-04-30T09:31:36Z"
+  "UpdateDate": "2024-05-16T22:01:55Z"
 }
