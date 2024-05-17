@@ -1,18 +1,27 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess",
   "CreateDate": "2015-02-06T18:40:01Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJN23PDQP7SZQAE3QE",
   "PolicyName": "CloudWatchReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-12-05T19:24:15Z",
+    "CreateDate": "2024-05-17T22:17:51Z",
     "Document": {
       "Statement": [
         {
+          "Action": "iam:GetRole",
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/application-signals.cloudwatch.amazonaws.com/AWSServiceRoleForCloudWatchApplicationSignals",
+          "Sid": "CloudWatchReadOnlyGetRolePermissions"
+        },
+        {
           "Action": [
             "application-autoscaling:DescribeScalingPolicies",
+            "application-signals:BatchGet*",
+            "application-signals:Get*",
+            "application-signals:List*",
             "autoscaling:Describe*",
             "cloudwatch:BatchGet*",
             "cloudwatch:Describe*",
@@ -56,7 +65,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2023-12-05T19:24:15Z"
+  "UpdateDate": "2024-05-17T22:17:51Z"
 }

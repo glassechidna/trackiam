@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchFullAccessV2",
   "CreateDate": "2023-08-01T11:32:57Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4K5ELCXZSW",
   "PolicyName": "CloudWatchFullAccessV2",
   "PolicyVersion": {
-    "CreateDate": "2023-12-05T19:36:00Z",
+    "CreateDate": "2024-05-17T22:20:49Z",
     "Document": {
       "Statement": [
         {
@@ -35,6 +35,7 @@
         {
           "Action": [
             "application-autoscaling:DescribeScalingPolicies",
+            "application-signals:*",
             "autoscaling:DescribeAutoScalingGroups",
             "autoscaling:DescribePolicies",
             "cloudwatch:*",
@@ -68,7 +69,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-12-05T19:36:00Z"
+  "UpdateDate": "2024-05-17T22:20:49Z"
 }
