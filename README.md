@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 398
-* Unique actions: 17094
+* Unique services: 399
+* Unique actions: 17100
 * Managed policies: 1197
 
 Most common managed policy name prefixes:
@@ -401,6 +401,7 @@ The following table summarises the AWS APIs.
 | [`s3express`](services/s3express.yml) | 0 | 0 | 7 |
 | [`payments`](services/payments.yml) | 0 | 0 | 7 |
 | [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
+| [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 6 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`cloudfront-keyvaluestore`](services/cloudfront-keyvaluestore.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
@@ -439,12 +440,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2740 |
+| `List` | 2743 |
 | `Get` | 2483 |
-| `Delete` | 1967 |
-| `Create` | 1833 |
+| `Delete` | 1968 |
+| `Create` | 1834 |
 | `Describe` | 1708 |
-| `Update` | 1568 |
+| `Update` | 1569 |
 | `Put` | 472 |
 | `Start` | 390 |
 | `Tag` | 268 |
