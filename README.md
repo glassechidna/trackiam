@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 398
-* Unique actions: 17093
+* Unique actions: 17094
 * Managed policies: 1197
 
 Most common managed policy name prefixes:
@@ -42,7 +42,7 @@ The following table summarises the AWS APIs.
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`connect`](services/connect.yml) | 246 | 5 | 6 |
 | [`glue`](services/glue.yml) | 209 | 4 | 33 |
-| [`quicksight`](services/quicksight.yml) | 169 | 5 | 29 |
+| [`quicksight`](services/quicksight.yml) | 171 | 3 | 29 |
 | [`rds`](services/rds.yml) | 162 | 0 | 5 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
@@ -268,7 +268,7 @@ The following table summarises the AWS APIs.
 | [`identitystore`](services/identitystore.yml) | 19 | 0 | 0 |
 | [`resource-groups`](services/resource-groups.yml) | 18 | 0 | 6 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
-| [`medical-imaging`](services/medical-imaging.yml) | 18 | 0 | 0 |
+| [`medical-imaging`](services/medical-imaging.yml) | 18 | 0 | 1 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`rum`](services/rum.yml) | 17 | 0 | 0 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 17 | 0 | 0 |
@@ -440,7 +440,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2740 |
-| `Get` | 2482 |
+| `Get` | 2483 |
 | `Delete` | 1967 |
 | `Create` | 1833 |
 | `Describe` | 1708 |
