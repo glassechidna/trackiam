@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSAuditManagerServiceRolePolicy",
   "CreateDate": "2020-12-08T15:12:12Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4C5N52UWST",
   "PolicyName": "AWSAuditManagerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-05-09T16:51:51Z",
+    "CreateDate": "2024-05-17T20:42:45Z",
     "Document": {
       "Statement": [
         {
@@ -23,6 +23,7 @@
           },
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:apigateway:*::/restapis",
             "arn:aws:apigateway:*::/restapis/*/stages",
             "arn:aws:apigateway:*::/restapis/*/stages/*"
           ],
@@ -149,6 +150,7 @@
             "es:DescribeDomain",
             "es:DescribeDomainConfig",
             "es:DescribeDomains",
+            "es:ListDomainNames",
             "events:DescribeRule",
             "events:ListConnections",
             "events:ListEventBuses",
@@ -170,10 +172,13 @@
             "iam:GetUser",
             "iam:GetUserPolicy",
             "iam:ListAccessKeys",
+            "iam:ListAttachedGroupPolicies",
             "iam:ListAttachedRolePolicies",
+            "iam:ListAttachedUserPolicies",
             "iam:ListEntitiesForPolicy",
             "iam:ListGroupPolicies",
             "iam:ListGroups",
+            "iam:ListGroupsForUser",
             "iam:ListMfaDeviceTags",
             "iam:ListMfaDevices",
             "iam:ListOpenIdConnectProviders",
@@ -268,7 +273,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2024-05-09T16:51:51Z"
+  "UpdateDate": "2024-05-17T20:42:45Z"
 }
