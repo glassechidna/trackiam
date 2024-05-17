@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBackupServiceLinkedRolePolicyForBackup",
   "CreateDate": "2020-06-02T23:08:40Z",
-  "DefaultVersionId": "v15",
+  "DefaultVersionId": "v16",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ONJBD4ZY2",
   "PolicyName": "AWSBackupServiceLinkedRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2023-12-15T22:06:53Z",
+    "CreateDate": "2024-05-17T17:12:59Z",
     "Document": {
       "Statement": [
         {
@@ -68,6 +68,19 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "KMSCreateGrantPermissions"
+        },
+        {
+          "Action": [
+            "backup:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalAccount": "${aws:ResourceAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:backup:*:*:recovery-point:*",
+          "Sid": "RecoveryPointTaggingPermissions"
         },
         {
           "Action": [
@@ -340,7 +353,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v15"
+    "VersionId": "v16"
   },
-  "UpdateDate": "2023-12-15T22:06:53Z"
+  "UpdateDate": "2024-05-17T17:12:59Z"
 }

@@ -1,15 +1,28 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupServiceRolePolicyForS3Backup",
   "CreateDate": "2022-02-18T17:40:24Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CGZAHUZ2D",
   "PolicyName": "AWSBackupServiceRolePolicyForS3Backup",
   "PolicyVersion": {
-    "CreateDate": "2022-09-01T16:52:33Z",
+    "CreateDate": "2024-05-17T17:12:03Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "backup:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalAccount": "${aws:ResourceAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:backup:*:*:recovery-point:*",
+          "Sid": "RecoveryPointTaggingPermissions"
+        },
         {
           "Action": [
             "kms:Decrypt",
@@ -21,22 +34,26 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "KmsPermissions"
         },
         {
           "Action": "cloudwatch:GetMetricData",
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "CloudWatchGetMetricDataPermissions"
         },
         {
           "Action": "events:ListRules",
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "EventBridgeListRulesPermissions"
         },
         {
           "Action": "s3:ListAllMyBuckets",
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "S3ListBucketPermissions"
         },
         {
           "Action": [
@@ -52,7 +69,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:events:*:*:rule/AwsBackupManagedRule*"
-          ]
+          ],
+          "Sid": "EventBridgePermissionsForAwsBackupManagedRule"
         },
         {
           "Action": [
@@ -68,7 +86,8 @@
             "s3:PutInventoryConfiguration"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:s3:::*"
+          "Resource": "arn:aws:s3:::*",
+          "Sid": "S3BucketPermissions"
         },
         {
           "Action": [
@@ -80,13 +99,14 @@
             "s3:GetObjectVersionTagging"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:s3:::*/*"
+          "Resource": "arn:aws:s3:::*/*",
+          "Sid": "S3ObjectPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2022-09-01T16:52:33Z"
+  "UpdateDate": "2024-05-17T17:12:03Z"
 }
