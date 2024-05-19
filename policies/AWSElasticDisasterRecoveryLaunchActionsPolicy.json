@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticDisasterRecoveryLaunchActionsPolicy",
   "CreateDate": "2023-09-13T07:38:26Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FYCR5GWGU",
   "PolicyName": "AWSElasticDisasterRecoveryLaunchActionsPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-10-16T12:28:44Z",
+    "CreateDate": "2024-05-19T07:29:42Z",
     "Document": {
       "Statement": [
         {
@@ -28,7 +28,8 @@
         },
         {
           "Action": [
-            "ssm:DescribeInstanceInformation"
+            "ssm:DescribeInstanceInformation",
+            "ssm:DescribeParameters"
           ],
           "Condition": {
             "ForAnyValue:StringEquals": {
@@ -261,7 +262,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-10-16T12:28:44Z"
+  "UpdateDate": "2024-05-19T07:29:42Z"
 }

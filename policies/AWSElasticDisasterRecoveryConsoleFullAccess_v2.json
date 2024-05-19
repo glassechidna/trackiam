@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticDisasterRecoveryConsoleFullAccess_v2",
   "CreateDate": "2023-11-27T13:35:19Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4GNEJEKJLM",
   "PolicyName": "AWSElasticDisasterRecoveryConsoleFullAccess_v2",
   "PolicyVersion": {
-    "CreateDate": "2023-11-27T13:35:19Z",
+    "CreateDate": "2024-05-19T07:38:32Z",
     "Document": {
       "Statement": [
         {
@@ -333,7 +333,8 @@
         },
         {
           "Action": [
-            "ssm:DescribeInstanceInformation"
+            "ssm:DescribeInstanceInformation",
+            "ssm:DescribeParameters"
           ],
           "Condition": {
             "ForAnyValue:StringEquals": {
@@ -551,7 +552,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-11-27T13:35:19Z"
+  "UpdateDate": "2024-05-19T07:38:32Z"
 }
