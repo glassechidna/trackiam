@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSApplicationMigrationFullAccess",
   "CreateDate": "2021-04-07T06:56:05Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HPQNMM2HL",
   "PolicyName": "AWSApplicationMigrationFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-04-20T17:28:13Z",
+    "CreateDate": "2024-05-19T08:30:02Z",
     "Document": {
       "Statement": [
         {
@@ -24,7 +24,8 @@
           "Resource": [
             "arn:aws:iam::*:role/service-role/AWSApplicationMigrationLaunchInstanceWithDrsRole",
             "arn:aws:iam::*:role/service-role/AWSApplicationMigrationLaunchInstanceWithSsmRole"
-          ]
+          ],
+          "Sid": "VisualEditor6"
         },
         {
           "Action": "ssm:ListCommands",
@@ -34,7 +35,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "VisualEditor19"
         },
         {
           "Action": [
@@ -49,7 +51,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:drs:*:*:source-server/*"
+          "Resource": "arn:aws:drs:*:*:source-server/*",
+          "Sid": "VisualEditor12"
         },
         {
           "Action": [
@@ -65,7 +68,8 @@
           "Resource": [
             "arn:aws:ssm:*:*:document/AWSDisasterRecovery-InstallDRAgentOnInstance",
             "arn:aws:ssm:*:*:document/AWSMigration-*"
-          ]
+          ],
+          "Sid": "VisualEditor11"
         },
         {
           "Action": [
@@ -78,7 +82,23 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "VisualEditor10"
+        },
+        {
+          "Action": [
+            "ssm:DescribeParameters"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "VisualEditor20"
         },
         {
           "Action": [
@@ -90,7 +110,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:parameter/ManagedByAWSApplicationMigrationService-*"
+          "Resource": "arn:aws:ssm:*:*:parameter/ManagedByAWSApplicationMigrationService-*",
+          "Sid": "VisualEditor17"
         },
         {
           "Action": [
@@ -107,7 +128,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:instance/*"
-          ]
+          ],
+          "Sid": "VisualEditor8"
         },
         {
           "Action": [
@@ -119,29 +141,34 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:automation-definition/AWSMigration-*:$DEFAULT"
+          "Resource": "arn:aws:ssm:*:*:automation-definition/AWSMigration-*:$DEFAULT",
+          "Sid": "VisualEditor18"
         },
         {
           "Action": "elasticloadbalancing:DescribeLoadBalancers",
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "VisualEditor4"
         },
         {
           "Action": "iam:ListInstanceProfiles",
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "VisualEditor5"
         },
         {
           "Action": "license-manager:ListLicenseConfigurations",
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "VisualEditor3"
         },
         {
           "Action": [
             "drs:DescribeSourceServers"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "VisualEditor7"
         },
         {
           "Action": [
@@ -167,7 +194,8 @@
             "ec2:GetEbsEncryptionByDefault"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "VisualEditor2"
         },
         {
           "Action": [
@@ -175,28 +203,32 @@
             "kms:ListAliases"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "VisualEditor1"
         },
         {
           "Action": [
             "mgn:*"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "VisualEditor0"
         },
         {
           "Action": [
             "servicequotas:GetServiceQuota"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "VisualEditor14"
         },
         {
           "Action": [
             "ssm:GetAutomationExecution"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:automation-execution/*"
+          "Resource": "arn:aws:ssm:*:*:automation-execution/*",
+          "Sid": "VisualEditor15"
         },
         {
           "Action": [
@@ -206,7 +238,8 @@
           "Resource": [
             "arn:aws:ssm:*:*:document/AWSDisasterRecovery-InstallDRAgentOnInstance",
             "arn:aws:ssm:*:*:document/AWSMigration-*"
-          ]
+          ],
+          "Sid": "VisualEditor16"
         },
         {
           "Action": [
@@ -214,20 +247,22 @@
             "ssm:PutParameter"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:parameter/ManagedByAWSApplicationMigrationService-*"
+          "Resource": "arn:aws:ssm:*:*:parameter/ManagedByAWSApplicationMigrationService-*",
+          "Sid": "VisualEditor13"
         },
         {
           "Action": [
             "ssm:ListCommandInvocations"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "VisualEditor9"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2023-04-20T17:28:13Z"
+  "UpdateDate": "2024-05-19T08:30:02Z"
 }
