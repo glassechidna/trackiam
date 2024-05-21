@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDataExchangeSubscriberFullAccess",
   "CreateDate": "2019-11-13T19:27:52Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MAWRW4GF7",
   "PolicyName": "AWSDataExchangeSubscriberFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-11-29T23:00:06Z",
+    "CreateDate": "2024-05-21T17:36:35Z",
     "Document": {
       "Statement": [
         {
@@ -20,7 +20,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:s3:::*aws-data-exchange*"
+          "Resource": "arn:aws:s3:::*aws-data-exchange*",
+          "Sid": "S3GetActionConditionalResourceAndADX"
         },
         {
           "Action": [
@@ -38,19 +39,22 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DataExchangeExportActions"
         },
         {
           "Action": [
             "aws-marketplace:CancelAgreementRequest",
             "aws-marketplace:GetAgreementRequest",
             "aws-marketplace:ListAgreementRequests",
+            "aws-marketplace:ListPrivateListings",
             "aws-marketplace:Subscribe",
             "aws-marketplace:Unsubscribe",
             "aws-marketplace:ViewSubscriptions"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSMarketplaceSubscriberActions"
         },
         {
           "Action": [
@@ -60,7 +64,8 @@
             "dataexchange:UpdateEventAction"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DataExchangeEventActionActions"
         },
         {
           "Action": [
@@ -68,7 +73,8 @@
             "dataexchange:List*"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DataExchangeReadOnlyActions"
         },
         {
           "Action": [
@@ -77,7 +83,8 @@
             "kms:ListKeys"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "KMSActions"
         },
         {
           "Action": [
@@ -86,13 +93,14 @@
             "s3:ListBucket"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "S3ReadActions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2021-11-29T23:00:06Z"
+  "UpdateDate": "2024-05-21T17:36:35Z"
 }
