@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/Billing",
   "CreateDate": "2016-11-10T17:33:18Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAIFTHXT6FFMIRT7ZEA",
   "PolicyName": "Billing",
   "PolicyVersion": {
-    "CreateDate": "2024-01-17T18:03:48Z",
+    "CreateDate": "2024-05-21T21:12:57Z",
     "Document": {
       "Statement": [
         {
@@ -47,9 +47,13 @@
             "ce:DeleteReport",
             "ce:DescribeCostCategoryDefinition",
             "ce:GetCostAndUsage",
+            "ce:GetDimensionValues",
+            "ce:GetTags",
+            "ce:ListCostAllocationTagBackfillHistory",
             "ce:ListCostAllocationTags",
             "ce:ListCostCategoryDefinitions",
             "ce:ListTagsForResource",
+            "ce:StartCostAllocationTagBackfill",
             "ce:TagResource",
             "ce:UntagResource",
             "ce:UpdateCostAllocationTagsStatus",
@@ -119,7 +123,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2024-01-17T18:03:48Z"
+  "UpdateDate": "2024-05-21T21:12:57Z"
 }
