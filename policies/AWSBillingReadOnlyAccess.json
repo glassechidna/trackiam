@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess",
   "CreateDate": "2020-08-27T20:08:51Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LJ3OSZ5SX",
   "PolicyName": "AWSBillingReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-01-17T18:15:35Z",
+    "CreateDate": "2024-05-21T19:58:07Z",
     "Document": {
       "Statement": [
         {
@@ -30,6 +30,9 @@
             "budgets:ViewBudget",
             "ce:DescribeCostCategoryDefinition",
             "ce:GetCostAndUsage",
+            "ce:GetDimensionValues",
+            "ce:GetTags",
+            "ce:ListCostAllocationTagBackfillHistory",
             "ce:ListCostAllocationTags",
             "ce:ListCostCategoryDefinitions",
             "ce:ListTagsForResource",
@@ -65,7 +68,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2024-01-17T18:15:35Z"
+  "UpdateDate": "2024-05-21T19:58:07Z"
 }
