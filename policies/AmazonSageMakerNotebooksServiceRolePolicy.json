@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonSageMakerNotebooksServiceRolePolicy",
   "CreateDate": "2019-10-18T20:27:37Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4MYB7OEJED",
   "PolicyName": "AmazonSageMakerNotebooksServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-03-09T18:20:35Z",
+    "CreateDate": "2024-05-22T19:18:48Z",
     "Document": {
       "Statement": [
         {
@@ -19,7 +19,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:elasticfilesystem:*:*:file-system/*"
+          "Resource": "arn:aws:elasticfilesystem:*:*:file-system/*",
+          "Sid": "AllowEFSAccessPointCreation"
         },
         {
           "Action": "elasticfilesystem:CreateFileSystem",
@@ -29,7 +30,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowEFSCreation"
         },
         {
           "Action": "elasticfilesystem:TagResource",
@@ -42,7 +44,8 @@
           "Resource": [
             "arn:aws:elasticfilesystem:*:*:access-point/*",
             "arn:aws:elasticfilesystem:*:*:file-system/*"
-          ]
+          ],
+          "Sid": "AllowEFSTagging"
         },
         {
           "Action": [
@@ -60,7 +63,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowEC2AuthZ"
         },
         {
           "Action": [
@@ -74,7 +78,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowEFSMountWithDeletion"
         },
         {
           "Action": [
@@ -86,7 +91,21 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:elasticfilesystem:*:*:access-point/*"
+          "Resource": "arn:aws:elasticfilesystem:*:*:access-point/*",
+          "Sid": "AllowEFSAccessPointDeletion"
+        },
+        {
+          "Action": [
+            "sagemaker:AddTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "sagemaker:TaggingAction": "CreateSpace"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:space/*/CanvasManagedSpace-*",
+          "Sid": "AllowSagemakerAddTagsForAppManagedSpaces"
         },
         {
           "Action": "ec2:CreateTags",
@@ -94,7 +113,8 @@
           "Resource": [
             "arn:aws:ec2:*:*:network-interface/*",
             "arn:aws:ec2:*:*:security-group/*"
-          ]
+          ],
+          "Sid": "AllowEC2Tagging"
         },
         {
           "Action": [
@@ -109,7 +129,8 @@
             "ec2:ModifyNetworkInterfaceAttribute"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowEC2Operations"
         },
         {
           "Action": [
@@ -118,7 +139,19 @@
             "elasticfilesystem:DescribeMountTargets"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowEFSDescribe"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateSpace",
+            "sagemaker:DeleteSpace",
+            "sagemaker:DescribeSpace",
+            "sagemaker:ListTags"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:space/*/CanvasManagedSpace-*",
+          "Sid": "AllowSagemakerSpaceOperationsForCanvasManagedSpaces"
         },
         {
           "Action": [
@@ -126,7 +159,8 @@
             "sagemaker:DescribeUserProfile"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowSagemakerProfileCreation"
         },
         {
           "Action": [
@@ -135,13 +169,14 @@
             "sso:GetManagedApplicationInstance"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowIdcOperations"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2023-03-09T18:20:35Z"
+  "UpdateDate": "2024-05-22T19:18:48Z"
 }
