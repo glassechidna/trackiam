@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 399
-* Unique actions: 17151
+* Unique actions: 17154
 * Managed policies: 1198
 
 Most common managed policy name prefixes:
@@ -236,7 +236,7 @@ The following table summarises the AWS APIs.
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 24 | 0 | 1 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
-| [`chatbot`](services/chatbot.yml) | 23 | 0 | 5 |
+| [`chatbot`](services/chatbot.yml) | 23 | 3 | 5 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 3 |
 | [`mq`](services/mq.yml) | 23 | 0 | 1 |
 | [`secretsmanager`](services/secretsmanager.yml) | 23 | 0 | 0 |
@@ -440,7 +440,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2755 |
+| `List` | 2756 |
 | `Get` | 2496 |
 | `Delete` | 1975 |
 | `Create` | 1841 |
@@ -448,6 +448,6 @@ Most common action prefixes:
 | `Update` | 1575 |
 | `Put` | 472 |
 | `Start` | 392 |
-| `Tag` | 269 |
-| `Untag` | 265 |
+| `Tag` | 270 |
+| `Untag` | 266 |
 
