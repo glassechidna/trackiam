@@ -2,6 +2,9 @@ Actions:
   - Name: ses:BatchGetMetricData
   - Name: ses:CancelExportJob
   - Name: ses:CloneReceiptRuleSet
+  - Name: ses:CreateAddonInstance
+  - Name: ses:CreateAddonSubscription
+  - Name: ses:CreateArchive
   - Name: ses:CreateConfigurationSet
   - Name: ses:CreateConfigurationSetEventDestination
   - Name: ses:CreateConfigurationSetTrackingOptions
@@ -15,10 +18,17 @@ Actions:
   - Name: ses:CreateEmailTemplate
   - Name: ses:CreateExportJob
   - Name: ses:CreateImportJob
+  - Name: ses:CreateIngressPoint
   - Name: ses:CreateReceiptFilter
   - Name: ses:CreateReceiptRule
   - Name: ses:CreateReceiptRuleSet
+  - Name: ses:CreateRelay
+  - Name: ses:CreateRuleSet
   - Name: ses:CreateTemplate
+  - Name: ses:CreateTrafficPolicy
+  - Name: ses:DeleteAddonInstance
+  - Name: ses:DeleteAddonSubscription
+  - Name: ses:DeleteArchive
   - Name: ses:DeleteConfigurationSet
   - Name: ses:DeleteConfigurationSetEventDestination
   - Name: ses:DeleteConfigurationSetTrackingOptions
@@ -31,11 +41,15 @@ Actions:
   - Name: ses:DeleteEmailTemplate
   - Name: ses:DeleteIdentity
   - Name: ses:DeleteIdentityPolicy
+  - Name: ses:DeleteIngressPoint
   - Name: ses:DeleteReceiptFilter
   - Name: ses:DeleteReceiptRule
   - Name: ses:DeleteReceiptRuleSet
+  - Name: ses:DeleteRelay
+  - Name: ses:DeleteRuleSet
   - Name: ses:DeleteSuppressedDestination
   - Name: ses:DeleteTemplate
+  - Name: ses:DeleteTrafficPolicy
   - Name: ses:DeleteVerifiedEmailAddress
   - Name: ses:DescribeActiveReceiptRuleSet
   - Name: ses:DescribeConfigurationSet
@@ -43,6 +57,14 @@ Actions:
   - Name: ses:DescribeReceiptRuleSet
   - Name: ses:GetAccount
   - Name: ses:GetAccountSendingEnabled
+  - Name: ses:GetAddonInstance
+  - Name: ses:GetAddonSubscription
+  - Name: ses:GetArchive
+  - Name: ses:GetArchiveExport
+  - Name: ses:GetArchiveMessage
+  - Name: ses:GetArchiveMessageContent
+  - Name: ses:GetArchiveSearch
+  - Name: ses:GetArchiveSearchResults
   - Name: ses:GetBlacklistReports
   - Name: ses:GetConfigurationSet
   - Name: ses:GetConfigurationSetEventDestinations
@@ -66,11 +88,20 @@ Actions:
   - Name: ses:GetIdentityPolicies
   - Name: ses:GetIdentityVerificationAttributes
   - Name: ses:GetImportJob
+  - Name: ses:GetIngressPoint
   - Name: ses:GetMessageInsights
+  - Name: ses:GetRelay
+  - Name: ses:GetRuleSet
   - Name: ses:GetSendQuota
   - Name: ses:GetSendStatistics
   - Name: ses:GetSuppressedDestination
   - Name: ses:GetTemplate
+  - Name: ses:GetTrafficPolicy
+  - Name: ses:ListAddonInstances
+  - Name: ses:ListAddonSubscriptions
+  - Name: ses:ListArchiveExports
+  - Name: ses:ListArchiveSearches
+  - Name: ses:ListArchives
   - Name: ses:ListConfigurationSets
   - Name: ses:ListContactLists
   - Name: ses:ListContacts
@@ -84,12 +115,16 @@ Actions:
   - Name: ses:ListIdentities
   - Name: ses:ListIdentityPolicies
   - Name: ses:ListImportJobs
+  - Name: ses:ListIngressPoints
   - Name: ses:ListReceiptFilters
   - Name: ses:ListReceiptRuleSets
   - Name: ses:ListRecommendations
+  - Name: ses:ListRelays
+  - Name: ses:ListRuleSets
   - Name: ses:ListSuppressedDestinations
   - Name: ses:ListTagsForResource
   - Name: ses:ListTemplates
+  - Name: ses:ListTrafficPolicies
   - Name: ses:ListVerifiedEmailAddresses
   - Name: ses:PutAccountDedicatedIpWarmupAttributes
   - Name: ses:PutAccountDetails
@@ -128,11 +163,16 @@ Actions:
   - Name: ses:SetIdentityMailFromDomain
   - Name: ses:SetIdentityNotificationTopic
   - Name: ses:SetReceiptRulePosition
+  - Name: ses:StartArchiveExport
+  - Name: ses:StartArchiveSearch
+  - Name: ses:StopArchiveExport
+  - Name: ses:StopArchiveSearch
   - Name: ses:TagResource
   - Name: ses:TestRenderEmailTemplate
   - Name: ses:TestRenderTemplate
   - Name: ses:UntagResource
   - Name: ses:UpdateAccountSendingEnabled
+  - Name: ses:UpdateArchive
   - Name: ses:UpdateConfigurationSetEventDestination
   - Name: ses:UpdateConfigurationSetReputationMetricsEnabled
   - Name: ses:UpdateConfigurationSetSendingEnabled
@@ -142,55 +182,13 @@ Actions:
   - Name: ses:UpdateCustomVerificationEmailTemplate
   - Name: ses:UpdateEmailIdentityPolicy
   - Name: ses:UpdateEmailTemplate
+  - Name: ses:UpdateIngressPoint
   - Name: ses:UpdateReceiptRule
+  - Name: ses:UpdateRelay
+  - Name: ses:UpdateRuleSet
   - Name: ses:UpdateTemplate
+  - Name: ses:UpdateTrafficPolicy
   - Name: ses:VerifyDomainDkim
   - Name: ses:VerifyDomainIdentity
   - Name: ses:VerifyEmailAddress
   - Name: ses:VerifyEmailIdentity
-
-  # APIs without an IAM action
-  - Name: ses:CreateAddonInstance
-  - Name: ses:CreateAddonSubscription
-  - Name: ses:CreateArchive
-  - Name: ses:CreateIngressPoint
-  - Name: ses:CreateRelay
-  - Name: ses:CreateRuleSet
-  - Name: ses:CreateTrafficPolicy
-  - Name: ses:DeleteAddonInstance
-  - Name: ses:DeleteAddonSubscription
-  - Name: ses:DeleteArchive
-  - Name: ses:DeleteIngressPoint
-  - Name: ses:DeleteRelay
-  - Name: ses:DeleteRuleSet
-  - Name: ses:DeleteTrafficPolicy
-  - Name: ses:GetAddonInstance
-  - Name: ses:GetAddonSubscription
-  - Name: ses:GetArchive
-  - Name: ses:GetArchiveExport
-  - Name: ses:GetArchiveMessage
-  - Name: ses:GetArchiveMessageContent
-  - Name: ses:GetArchiveSearch
-  - Name: ses:GetArchiveSearchResults
-  - Name: ses:GetIngressPoint
-  - Name: ses:GetRelay
-  - Name: ses:GetRuleSet
-  - Name: ses:GetTrafficPolicy
-  - Name: ses:ListAddonInstances
-  - Name: ses:ListAddonSubscriptions
-  - Name: ses:ListArchiveExports
-  - Name: ses:ListArchiveSearches
-  - Name: ses:ListArchives
-  - Name: ses:ListIngressPoints
-  - Name: ses:ListRelays
-  - Name: ses:ListRuleSets
-  - Name: ses:ListTrafficPolicies
-  - Name: ses:StartArchiveExport
-  - Name: ses:StartArchiveSearch
-  - Name: ses:StopArchiveExport
-  - Name: ses:StopArchiveSearch
-  - Name: ses:UpdateArchive
-  - Name: ses:UpdateIngressPoint
-  - Name: ses:UpdateRelay
-  - Name: ses:UpdateRuleSet
-  - Name: ses:UpdateTrafficPolicy

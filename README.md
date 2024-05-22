@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 399
-* Unique actions: 17146
+* Unique actions: 17151
 * Managed policies: 1198
 
 Most common managed policy name prefixes:
@@ -42,11 +42,11 @@ The following table summarises the AWS APIs.
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`connect`](services/connect.yml) | 246 | 5 | 6 |
 | [`glue`](services/glue.yml) | 209 | 4 | 33 |
+| [`ses`](services/ses.yml) | 193 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 171 | 3 | 29 |
 | [`rds`](services/rds.yml) | 162 | 0 | 5 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
-| [`ses`](services/ses.yml) | 149 | 44 | 0 |
 | [`ssm`](services/ssm.yml) | 140 | 0 | 9 |
 | [`lex`](services/lex.yml) | 137 | 4 | 8 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 22 |
@@ -390,6 +390,7 @@ The following table summarises the AWS APIs.
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
 | [`q`](services/q.yml) | 0 | 0 | 12 |
+| [`payments`](services/payments.yml) | 0 | 0 | 12 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`ts`](services/ts.yml) | 0 | 0 | 9 |
 | [`notifications-contacts`](services/notifications-contacts.yml) | 0 | 0 | 9 |
@@ -399,7 +400,6 @@ The following table summarises the AWS APIs.
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 7 |
 | [`s3express`](services/s3express.yml) | 0 | 0 | 7 |
-| [`payments`](services/payments.yml) | 0 | 0 | 7 |
 | [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
 | [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 6 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
@@ -440,14 +440,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2753 |
+| `List` | 2755 |
 | `Get` | 2496 |
 | `Delete` | 1975 |
 | `Create` | 1841 |
 | `Describe` | 1708 |
-| `Update` | 1574 |
+| `Update` | 1575 |
 | `Put` | 472 |
 | `Start` | 392 |
-| `Tag` | 268 |
-| `Untag` | 264 |
+| `Tag` | 269 |
+| `Untag` | 265 |
 
