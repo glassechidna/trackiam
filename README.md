@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 399
-* Unique actions: 17154
+* Unique services: 400
+* Unique actions: 17156
 * Managed policies: 1198
 
 Most common managed policy name prefixes:
@@ -421,6 +421,7 @@ The following table summarises the AWS APIs.
 | [`identitystore-auth`](services/identitystore-auth.yml) | 0 | 0 | 3 |
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |
 | [`vpc-lattice-svcs`](services/vpc-lattice-svcs.yml) | 0 | 0 | 2 |
+| [`supportrecommendations`](services/supportrecommendations.yml) | 0 | 0 | 2 |
 | [`signin`](services/signin.yml) | 0 | 0 | 2 |
 | [`consolidatedbilling`](services/consolidatedbilling.yml) | 0 | 0 | 2 |
 | [`consoleapp`](services/consoleapp.yml) | 0 | 0 | 2 |
@@ -441,13 +442,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2756 |
-| `Get` | 2496 |
+| `Get` | 2497 |
 | `Delete` | 1975 |
 | `Create` | 1841 |
 | `Describe` | 1708 |
 | `Update` | 1575 |
 | `Put` | 472 |
-| `Start` | 392 |
+| `Start` | 393 |
 | `Tag` | 270 |
 | `Untag` | 266 |
 
