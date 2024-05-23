@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 400
-* Unique actions: 17156
+* Unique actions: 17157
 * Managed policies: 1198
 
 Most common managed policy name prefixes:
@@ -282,7 +282,7 @@ The following table summarises the AWS APIs.
 | [`route53profiles`](services/route53profiles.yml) | 16 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 16 | 0 | 0 |
 | [`docdb-elastic`](services/docdb-elastic.yml) | 16 | 0 | 0 |
-| [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 1 |
+| [`emr-serverless`](services/emr-serverless.yml) | 15 | 0 | 2 |
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
