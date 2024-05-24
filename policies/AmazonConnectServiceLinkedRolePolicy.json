@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v15",
+  "DefaultVersionId": "v16",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-05-16T23:07:54Z",
+    "CreateDate": "2024-05-24T01:42:32Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,20 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowPutMetricsForConnectNamespace"
+        },
+        {
+          "Action": [
+            "cognito-idp:DescribeUserPool",
+            "cognito-idp:ListUserPoolClients"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonConnectEnabled": "True"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cognito-idp:*:*:userpool/*",
+          "Sid": "AllowCognitoForConnectEnabledTaggedResources"
         },
         {
           "Action": [
@@ -172,6 +186,16 @@
         },
         {
           "Action": [
+            "profile:PutProfileObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:profile:*:*:domains/amazon-connect-*/object-types/*"
+          ],
+          "Sid": "AllowWritePermissionForCustomerProfileObjects"
+        },
+        {
+          "Action": [
             "s3:DeleteObject",
             "s3:GetObject",
             "s3:GetObjectAcl",
@@ -208,7 +232,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v15"
+    "VersionId": "v16"
   },
-  "UpdateDate": "2024-05-16T23:07:54Z"
+  "UpdateDate": "2024-05-24T01:42:32Z"
 }
