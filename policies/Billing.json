@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/Billing",
   "CreateDate": "2016-11-10T17:33:18Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAIFTHXT6FFMIRT7ZEA",
   "PolicyName": "Billing",
   "PolicyVersion": {
-    "CreateDate": "2024-05-21T21:12:57Z",
+    "CreateDate": "2024-05-23T23:26:02Z",
     "Document": {
       "Statement": [
         {
@@ -83,8 +83,13 @@
             "payments:DeletePaymentInstrument",
             "payments:GetPaymentInstrument",
             "payments:GetPaymentStatus",
+            "payments:ListPaymentInstruments",
             "payments:ListPaymentPreferences",
+            "payments:ListTagsForResource",
             "payments:MakePayment",
+            "payments:TagResource",
+            "payments:UntagResource",
+            "payments:UpdatePaymentInstrument",
             "payments:UpdatePaymentPreferences",
             "pricing:DescribeServices",
             "purchase-orders:AddPurchaseOrder",
@@ -123,7 +128,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2024-05-21T21:12:57Z"
+  "UpdateDate": "2024-05-23T23:26:02Z"
 }

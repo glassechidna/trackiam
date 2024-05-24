@@ -219,6 +219,7 @@ The following table summarises the AWS APIs.
 | [`servicediscovery`](services/servicediscovery.yml) | 27 | 0 | 0 |
 | [`b2bi`](services/b2bi.yml) | 27 | 0 | 0 |
 | [`aps`](services/aps.yml) | 26 | 0 | 16 |
+| [`chatbot`](services/chatbot.yml) | 26 | 0 | 5 |
 | [`private-networks`](services/private-networks.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
@@ -236,7 +237,6 @@ The following table summarises the AWS APIs.
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 24 | 0 | 1 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`batch`](services/batch.yml) | 24 | 0 | 0 |
-| [`chatbot`](services/chatbot.yml) | 23 | 3 | 5 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 3 |
 | [`mq`](services/mq.yml) | 23 | 0 | 1 |
 | [`secretsmanager`](services/secretsmanager.yml) | 23 | 0 | 0 |
