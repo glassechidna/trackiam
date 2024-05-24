@@ -382,6 +382,7 @@ Actions:
   - Name: ec2:DisableImage
   - Name: ec2:DisableImageBlockPublicAccess
   - Name: ec2:DisableImageDeprecation
+  - Name: ec2:DisableImageDeregistrationProtection
   - Name: ec2:DisableIpamOrganizationAdminAccount
   - Name: ec2:DisableSerialConsoleAccess
   - Name: ec2:DisableSnapshotBlockPublicAccess
@@ -412,6 +413,7 @@ Actions:
   - Name: ec2:EnableImage
   - Name: ec2:EnableImageBlockPublicAccess
   - Name: ec2:EnableImageDeprecation
+  - Name: ec2:EnableImageDeregistrationProtection
   - Name: ec2:EnableIpamOrganizationAdminAccount
   - Name: ec2:EnableReachabilityAnalyzerOrganizationSharing
   - Name: ec2:EnableSerialConsoleAccess
@@ -440,6 +442,7 @@ Actions:
   - Name: ec2:GetHostReservationPurchasePreview
   - Name: ec2:GetImageBlockPublicAccessState
   - Name: ec2:GetInstanceMetadataDefaults
+  - Name: ec2:GetInstanceTpmEkPub
   - Name: ec2:GetInstanceTypesFromInstanceRequirements
   - Name: ec2:GetInstanceUefiData
   - Name: ec2:GetIpamAddressHistory
@@ -635,8 +638,3 @@ Actions:
   - Name: ec2:PauseVolumeIO
   - Name: ec2:PutResourcePolicy
   - Name: ec2:SendSpotInstanceInterruptions
-
-  # APIs without an IAM action
-  - Name: ec2:DisableImageDeregistrationProtection
-  - Name: ec2:EnableImageDeregistrationProtection
-  - Name: ec2:GetInstanceTpmEkPub
