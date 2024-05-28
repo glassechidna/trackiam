@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 400
-* Unique actions: 17157
+* Unique actions: 17170
 * Managed policies: 1198
 
 Most common managed policy name prefixes:
@@ -41,7 +41,7 @@ The following table summarises the AWS APIs.
 | [`iot`](services/iot.yml) | 262 | 3 | 9 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`connect`](services/connect.yml) | 246 | 5 | 6 |
-| [`glue`](services/glue.yml) | 209 | 4 | 33 |
+| [`glue`](services/glue.yml) | 209 | 4 | 44 |
 | [`ses`](services/ses.yml) | 193 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 171 | 3 | 29 |
 | [`rds`](services/rds.yml) | 162 | 0 | 5 |
@@ -164,7 +164,7 @@ The following table summarises the AWS APIs.
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 1 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
-| [`swf`](services/swf.yml) | 37 | 0 | 12 |
+| [`swf`](services/swf.yml) | 37 | 2 | 12 |
 | [`apprunner`](services/apprunner.yml) | 37 | 0 | 5 |
 | [`states`](services/states.yml) | 37 | 0 | 2 |
 | [`aoss`](services/aoss.yml) | 37 | 0 | 2 |
@@ -441,13 +441,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2756 |
-| `Get` | 2497 |
-| `Delete` | 1975 |
+| `List` | 2760 |
+| `Get` | 2499 |
+| `Delete` | 1977 |
 | `Create` | 1841 |
-| `Describe` | 1708 |
+| `Describe` | 1710 |
 | `Update` | 1575 |
-| `Put` | 472 |
+| `Put` | 473 |
 | `Start` | 393 |
 | `Tag` | 270 |
 | `Untag` | 266 |
