@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmplifyBackendDeployFullAccess",
   "CreateDate": "2023-10-06T21:32:59Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4H6M6P2QGM",
   "PolicyName": "AmplifyBackendDeployFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-04-17T16:00:59Z",
+    "CreateDate": "2024-05-31T15:53:42Z",
     "Document": {
       "Statement": [
         {
@@ -116,7 +116,8 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:ssm:*:*:parameter/amplify/*"
+            "arn:aws:ssm:*:*:parameter/amplify/*",
+            "arn:aws:ssm:*:*:parameter/cdk-bootstrap/*"
           ],
           "Sid": "AmplifySSM"
         },
@@ -171,7 +172,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2024-04-17T16:00:59Z"
+  "UpdateDate": "2024-05-31T15:53:42Z"
 }
