@@ -1,19 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/WAFV2LoggingServiceRolePolicy",
   "CreateDate": "2019-11-07T00:40:56Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AHQ3ASNCX",
   "PolicyName": "WAFV2LoggingServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-07-23T17:04:25Z",
+    "CreateDate": "2024-06-03T17:29:04Z",
     "Document": {
       "Statement": [
         {
           "Action": "organizations:DescribeOrganization",
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DescribeOrganizationAPIStatement"
         },
         {
           "Action": [
@@ -23,13 +24,14 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:firehose:*:*:deliverystream/aws-waf-logs-*"
-          ]
+          ],
+          "Sid": "FirehoseAPIStatement"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-07-23T17:04:25Z"
+  "UpdateDate": "2024-06-03T17:29:04Z"
 }
