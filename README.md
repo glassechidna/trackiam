@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 401
-* Unique actions: 17192
+* Unique actions: 17193
 * Managed policies: 1198
 
 Most common managed policy name prefixes:
@@ -232,11 +232,11 @@ The following table summarises the AWS APIs.
 | [`grafana`](services/grafana.yml) | 25 | 0 | 0 |
 | [`cleanrooms-ml`](services/cleanrooms-ml.yml) | 25 | 0 | 0 |
 | [`verifiedpermissions`](services/verifiedpermissions.yml) | 24 | 2 | 0 |
+| [`batch`](services/batch.yml) | 24 | 1 | 0 |
 | [`mediapackagev2`](services/mediapackagev2.yml) | 24 | 0 | 3 |
 | [`fis`](services/fis.yml) | 24 | 0 | 3 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 24 | 0 | 1 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
-| [`batch`](services/batch.yml) | 24 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 3 |
 | [`mq`](services/mq.yml) | 23 | 0 | 1 |
 | [`secretsmanager`](services/secretsmanager.yml) | 23 | 0 | 0 |
@@ -443,7 +443,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2768 |
-| `Get` | 2502 |
+| `Get` | 2503 |
 | `Delete` | 1978 |
 | `Create` | 1842 |
 | `Describe` | 1710 |
