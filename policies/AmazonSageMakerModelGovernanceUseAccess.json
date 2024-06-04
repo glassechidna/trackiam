@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerModelGovernanceUseAccess",
   "CreateDate": "2022-11-30T08:58:19Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JWBD7BEKI",
   "PolicyName": "AmazonSageMakerModelGovernanceUseAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-07-17T22:31:07Z",
+    "CreateDate": "2024-06-04T21:48:12Z",
     "Document": {
       "Statement": [
         {
@@ -15,7 +15,8 @@
             "kms:ListAliases"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowKMSActions"
         },
         {
           "Action": [
@@ -29,7 +30,8 @@
             "arn:aws:s3:::*SageMaker*",
             "arn:aws:s3:::*Sagemaker*",
             "arn:aws:s3:::*sagemaker*"
-          ]
+          ],
+          "Sid": "AllowS3Actions"
         },
         {
           "Action": [
@@ -37,7 +39,8 @@
             "s3:ListBucket"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowS3ListActions"
         },
         {
           "Action": [
@@ -51,7 +54,8 @@
             "sagemaker:Search"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowSMTrainingModelsSearchTags"
         },
         {
           "Action": [
@@ -74,13 +78,14 @@
             "sagemaker:UpdateMonitoringAlert"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowSMMonitoringModelCards"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-07-17T22:31:07Z"
+  "UpdateDate": "2024-06-04T21:48:12Z"
 }
