@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 401
-* Unique actions: 17193
+* Unique actions: 17194
 * Managed policies: 1198
 
 Most common managed policy name prefixes:
@@ -327,6 +327,7 @@ The following table summarises the AWS APIs.
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
 | [`cur`](services/cur.yml) | 7 | 0 | 5 |
 | [`cost-optimization-hub`](services/cost-optimization-hub.yml) | 7 | 0 | 0 |
+| [`tax`](services/tax.yml) | 6 | 1 | 7 |
 | [`artifact`](services/artifact.yml) | 6 | 0 | 4 |
 | [`elastic-inference`](services/elastic-inference.yml) | 6 | 0 | 1 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
@@ -384,7 +385,6 @@ The following table summarises the AWS APIs.
 | [`application-signals`](services/application-signals.yml) | 0 | 0 | 15 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 14 |
 | [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
-| [`tax`](services/tax.yml) | 0 | 0 | 13 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`billing`](services/billing.yml) | 0 | 0 | 13 |
