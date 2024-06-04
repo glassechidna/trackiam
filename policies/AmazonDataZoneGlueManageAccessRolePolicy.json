@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonDataZoneGlueManageAccessRolePolicy",
   "CreateDate": "2023-09-22T20:21:53Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4IFGMBEEIW",
   "PolicyName": "AmazonDataZoneGlueManageAccessRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-04-01T19:05:41Z",
+    "CreateDate": "2024-06-03T23:29:25Z",
     "Document": {
       "Statement": [
         {
@@ -79,6 +79,24 @@
           "Effect": "Allow",
           "Resource": "arn:aws:glue:*:*:dataQualityRuleset/*",
           "Sid": "GlueDataQualityPermissions"
+        },
+        {
+          "Action": [
+            "glue:GetTags",
+            "glue:TagResource",
+            "glue:UntagResource"
+          ],
+          "Condition": {
+            "ForAnyValue:StringLikeIfExists": {
+              "aws:TagKeys": "DataZoneDiscoverable_*"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GlueTagDatabasePermissions"
         },
         {
           "Action": [
@@ -203,7 +221,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2024-04-01T19:05:41Z"
+  "UpdateDate": "2024-06-03T23:29:25Z"
 }
