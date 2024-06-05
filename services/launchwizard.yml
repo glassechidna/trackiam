@@ -3,10 +3,14 @@ Actions:
   - Name: launchwizard:DeleteDeployment
   - Name: launchwizard:GetDeployment
   - Name: launchwizard:GetWorkload
+  - Name: launchwizard:GetWorkloadDeploymentPattern
   - Name: launchwizard:ListDeploymentEvents
   - Name: launchwizard:ListDeployments
+  - Name: launchwizard:ListTagsForResource
   - Name: launchwizard:ListWorkloadDeploymentPatterns
   - Name: launchwizard:ListWorkloads
+  - Name: launchwizard:TagResource
+  - Name: launchwizard:UntagResource
 
   # actions with no corresponding API
   - Name: launchwizard:CreateAdditionalNode
@@ -34,9 +38,3 @@ Actions:
   - Name: launchwizard:PutSettingsSet
   - Name: launchwizard:StartProvisioning
   - Name: launchwizard:UpdateSettingsSet
-
-  # APIs without an IAM action
-  - Name: launchwizard:GetWorkloadDeploymentPattern
-  - Name: launchwizard:ListTagsForResource
-  - Name: launchwizard:TagResource
-  - Name: launchwizard:UntagResource

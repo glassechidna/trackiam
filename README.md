@@ -298,6 +298,7 @@ The following table summarises the AWS APIs.
 | [`pi`](services/pi.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 13 | 0 | 0 |
+| [`launchwizard`](services/launchwizard.yml) | 12 | 0 | 25 |
 | [`scheduler`](services/scheduler.yml) | 12 | 0 | 0 |
 | [`networkmonitor`](services/networkmonitor.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
@@ -319,7 +320,6 @@ The following table summarises the AWS APIs.
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`managedblockchain-query`](services/managedblockchain-query.yml) | 9 | 0 | 0 |
 | [`kendra-ranking`](services/kendra-ranking.yml) | 9 | 0 | 0 |
-| [`launchwizard`](services/launchwizard.yml) | 8 | 4 | 25 |
 | [`backup-storage`](services/backup-storage.yml) | 8 | 1 | 7 |
 | [`sts`](services/sts.yml) | 8 | 0 | 4 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
