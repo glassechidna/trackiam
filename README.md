@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 401
-* Unique actions: 17194
+* Unique actions: 17199
 * Managed policies: 1198
 
 Most common managed policy name prefixes:
@@ -112,8 +112,8 @@ The following table summarises the AWS APIs.
 | [`datasync`](services/datasync.yml) | 60 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 59 | 0 | 0 |
 | [`inspector2`](services/inspector2.yml) | 59 | 0 | 0 |
+| [`geo`](services/geo.yml) | 58 | 2 | 0 |
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 0 |
-| [`geo`](services/geo.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`events`](services/events.yml) | 57 | 0 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 56 | 5 | 13 |
@@ -316,7 +316,7 @@ The following table summarises the AWS APIs.
 | [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
 | [`rbin`](services/rbin.yml) | 10 | 0 | 0 |
 | [`pipes`](services/pipes.yml) | 10 | 0 | 0 |
-| [`account`](services/account.yml) | 9 | 0 | 4 |
+| [`account`](services/account.yml) | 9 | 3 | 4 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`managedblockchain-query`](services/managedblockchain-query.yml) | 9 | 0 | 0 |
 | [`kendra-ranking`](services/kendra-ranking.yml) | 9 | 0 | 0 |
@@ -443,13 +443,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2768 |
-| `Get` | 2503 |
+| `Get` | 2504 |
 | `Delete` | 1978 |
 | `Create` | 1842 |
 | `Describe` | 1710 |
 | `Update` | 1576 |
 | `Put` | 473 |
-| `Start` | 394 |
+| `Start` | 395 |
 | `Tag` | 272 |
 | `Untag` | 268 |
 

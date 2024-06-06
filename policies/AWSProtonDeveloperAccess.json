@@ -1,15 +1,29 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSProtonDeveloperAccess",
   "CreateDate": "2021-02-17T19:02:08Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FWOFPRNSU",
   "PolicyName": "AWSProtonDeveloperAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-11-18T18:35:07Z",
+    "CreateDate": "2024-06-06T18:26:38Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "codeconnections:PassConnection",
+          "Condition": {
+            "StringEquals": {
+              "codeconnections:PassedToService": "proton.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:codeconnections:*:*:connection/*",
+            "arn:aws:codestar-connections:*:*:connection/*"
+          ],
+          "Sid": "CodeConnectionsPermissions"
+        },
         {
           "Action": "codestar-connections:PassConnection",
           "Condition": {
@@ -18,7 +32,11 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:codestar-connections:*:*:connection/*"
+          "Resource": [
+            "arn:aws:codeconnections:*:*:connection/*",
+            "arn:aws:codestar-connections:*:*:connection/*"
+          ],
+          "Sid": "CodeStarConnectionsPermissions"
         },
         {
           "Action": [
@@ -81,13 +99,14 @@
             "s3:ListBucket"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ProtonPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2022-11-18T18:35:07Z"
+  "UpdateDate": "2024-06-06T18:26:38Z"
 }

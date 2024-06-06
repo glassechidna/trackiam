@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerModelRegistryFullAccess",
   "CreateDate": "2023-04-13T05:20:48Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AQTREA5Z7",
   "PolicyName": "AmazonSageMakerModelRegistryFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-04-13T05:20:48Z",
+    "CreateDate": "2024-06-06T18:48:51Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:resource-groups:*:*:group/*"
+          "Resource": "arn:aws:resource-groups:*:*:group/*",
+          "Sid": "AmazonSageMakerModelRegistryResourceGroupDeletePermission"
         },
         {
           "Action": [
@@ -30,7 +31,27 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/*"
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "AmazonSageMakerModelRegistryIAMPassRolePermission"
+        },
+        {
+          "Action": [
+            "kms:CreateGrant",
+            "kms:Decrypt",
+            "kms:DescribeKey",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/sagemaker": "true"
+            },
+            "StringLike": {
+              "kms:ViaService": "sagemaker.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "AmazonSageMakerModelRegistryResourceKMSPermission"
         },
         {
           "Action": [
@@ -43,7 +64,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:resource-groups:*:*:group/*"
+          "Resource": "arn:aws:resource-groups:*:*:group/*",
+          "Sid": "AmazonSageMakerModelRegistryResourceGroupWritePermission"
         },
         {
           "Action": [
@@ -51,21 +73,24 @@
             "ecr:DescribeImages"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AmazonSageMakerModelRegistryECRReadPermission"
         },
         {
           "Action": [
             "resource-groups:GetGroupQuery"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:resource-groups:*:*:group/*"
+          "Resource": "arn:aws:resource-groups:*:*:group/*",
+          "Sid": "AmazonSageMakerModelRegistryResourceGroupGetPermission"
         },
         {
           "Action": [
             "resource-groups:ListGroupResources"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AmazonSageMakerModelRegistryResourceGroupListPermission"
         },
         {
           "Action": [
@@ -76,7 +101,8 @@
             "arn:aws:s3:::*SageMaker*",
             "arn:aws:s3:::*Sagemaker*",
             "arn:aws:s3:::*sagemaker*"
-          ]
+          ],
+          "Sid": "AmazonSageMakerModelRegistryS3GetPermission"
         },
         {
           "Action": [
@@ -84,7 +110,8 @@
             "s3:ListBucket"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AmazonSageMakerModelRegistryS3ListPermission"
         },
         {
           "Action": [
@@ -101,7 +128,8 @@
             "sagemaker:UpdateModelPackage"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AmazonSageMakerModelRegistrySageMakerWritePermission"
         },
         {
           "Action": [
@@ -119,20 +147,22 @@
             "sagemaker:Search"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AmazonSageMakerModelRegistrySageMakerReadPermission"
         },
         {
           "Action": [
             "tag:GetResources"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AmazonSageMakerModelRegistryTagReadPermission"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-04-13T05:20:48Z"
+  "UpdateDate": "2024-06-06T18:48:51Z"
 }
