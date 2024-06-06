@@ -1,0 +1,131 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CloudWatchApplicationSignalsFullAccess",
+  "CreateDate": "2024-06-06T22:50:16Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4JEEZZVUG6",
+  "PolicyName": "CloudWatchApplicationSignalsFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-06-06T22:50:16Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "application-signals.cloudwatch.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/application-signals.cloudwatch.amazonaws.com/AWSServiceRoleForCloudWatchApplicationSignals",
+          "Sid": "CloudWatchApplicationSignalsCreateServiceLinkedRolePermissions"
+        },
+        {
+          "Action": "application-signals:*",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchApplicationSignalsFullAccessPermissions"
+        },
+        {
+          "Action": "cloudwatch:DescribeAlarms",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchApplicationSignalsAlarmsPermissions"
+        },
+        {
+          "Action": "cloudwatch:PutMetricAlarm",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudwatch:*:*:alarm:SLI-HealthAlarm-*",
+            "arn:aws:cloudwatch:*:*:alarm:SLO-AttainmentGoalAlarm-*",
+            "arn:aws:cloudwatch:*:*:alarm:SLO-WarningAlarm-*"
+          ],
+          "Sid": "CloudWatchApplicationSignalsPutMetricAlarmPermissions"
+        },
+        {
+          "Action": "iam:GetRole",
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/application-signals.cloudwatch.amazonaws.com/AWSServiceRoleForCloudWatchApplicationSignals",
+          "Sid": "CloudWatchApplicationSignalsGetRolePermissions"
+        },
+        {
+          "Action": "sns:ListTopics",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchApplicationSignalsSnsReadPermissions"
+        },
+        {
+          "Action": "xray:GetTraceSummaries",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchApplicationSignalsXrayPermissions"
+        },
+        {
+          "Action": [
+            "cloudwatch:GetMetricData",
+            "cloudwatch:ListMetrics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchApplicationSignalsMetricsPermissions"
+        },
+        {
+          "Action": [
+            "logs:GetQueryResults",
+            "logs:StopQuery"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchApplicationSignalsLogsPermissions"
+        },
+        {
+          "Action": [
+            "logs:StartQuery"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/application-signals/data:*",
+          "Sid": "CloudWatchApplicationSignalsLogGroupPermissions"
+        },
+        {
+          "Action": [
+            "rum:BatchCreateRumMetricDefinitions",
+            "rum:BatchDeleteRumMetricDefinitions",
+            "rum:BatchGetRumMetricDefinitions",
+            "rum:GetAppMonitor",
+            "rum:GetAppMonitorData",
+            "rum:ListAppMonitors",
+            "rum:PutRumMetricsDestination",
+            "rum:UpdateRumMetricDefinition"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchApplicationSignalsRumPermissions"
+        },
+        {
+          "Action": [
+            "sns:CreateTopic",
+            "sns:Subscribe"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sns:*:*:cloudwatch-application-signals-*",
+          "Sid": "CloudWatchApplicationSignalsSnsWritePermissions"
+        },
+        {
+          "Action": [
+            "synthetics:DescribeCanaries",
+            "synthetics:DescribeCanariesLastRun",
+            "synthetics:GetCanaryRuns"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchApplicationSignalsSyntheticsPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-06-06T22:50:16Z"
+}

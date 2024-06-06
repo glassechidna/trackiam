@@ -13,7 +13,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 
 * Unique services: 401
 * Unique actions: 17199
-* Managed policies: 1198
+* Managed policies: 1200
 
 Most common managed policy name prefixes:
 
@@ -24,7 +24,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 270 |
 | `arn:aws:iam::aws:policy/service-role/*` | 190 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
-| Other | 101 |
+| Other | 103 |
 
 The following table summarises the AWS APIs. 
 
@@ -109,10 +109,10 @@ The following table summarises the AWS APIs.
 | [`cleanrooms`](services/cleanrooms.yml) | 63 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 60 | 0 | 0 |
+| [`geo`](services/geo.yml) | 60 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 60 | 0 | 0 |
 | [`ivs`](services/ivs.yml) | 59 | 0 | 0 |
 | [`inspector2`](services/inspector2.yml) | 59 | 0 | 0 |
-| [`geo`](services/geo.yml) | 58 | 2 | 0 |
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`events`](services/events.yml) | 57 | 0 | 2 |
