@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSAuditManagerServiceRolePolicy",
   "CreateDate": "2020-12-08T15:12:12Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4C5N52UWST",
   "PolicyName": "AWSAuditManagerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-05-17T20:42:45Z",
+    "CreateDate": "2024-06-10T20:28:09Z",
     "Document": {
       "Statement": [
         {
@@ -228,8 +228,34 @@
             "s3:GetEncryptionConfiguration",
             "s3:GetLifecycleConfiguration",
             "s3:ListAllMyBuckets",
+            "sagemaker:DescribeAlgorithm",
+            "sagemaker:DescribeDomain",
+            "sagemaker:DescribeEndpoint",
             "sagemaker:DescribeEndpointConfig",
+            "sagemaker:DescribeFlowDefinition",
+            "sagemaker:DescribeHumanTaskUi",
+            "sagemaker:DescribeLabelingJob",
+            "sagemaker:DescribeModel",
+            "sagemaker:DescribeModelBiasJobDefinition",
+            "sagemaker:DescribeModelCard",
+            "sagemaker:DescribeModelQualityJobDefinition",
+            "sagemaker:DescribeTrainingJob",
+            "sagemaker:DescribeUserProfile",
+            "sagemaker:ListAlgorithms",
+            "sagemaker:ListDomains",
             "sagemaker:ListEndpointConfigs",
+            "sagemaker:ListEndpoints",
+            "sagemaker:ListFlowDefinitions",
+            "sagemaker:ListHumanTaskUis",
+            "sagemaker:ListLabelingJobs",
+            "sagemaker:ListModelBiasJobDefinitions",
+            "sagemaker:ListModelCards",
+            "sagemaker:ListModelQualityJobDefinitions",
+            "sagemaker:ListModels",
+            "sagemaker:ListMonitoringAlerts",
+            "sagemaker:ListMonitoringSchedules",
+            "sagemaker:ListTrainingJobs",
+            "sagemaker:ListUserProfiles",
             "secretsmanager:DescribeSecret",
             "secretsmanager:ListSecrets",
             "securityhub:DescribeStandards",
@@ -273,7 +299,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2024-05-17T20:42:45Z"
+  "UpdateDate": "2024-06-10T20:28:09Z"
 }

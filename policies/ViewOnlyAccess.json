@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/ViewOnlyAccess",
   "CreateDate": "2016-11-10T17:20:15Z",
-  "DefaultVersionId": "v18",
+  "DefaultVersionId": "v19",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAID22R6XPJATWOFDK6",
   "PolicyName": "ViewOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-03-28T21:28:38Z",
+    "CreateDate": "2024-06-10T20:57:11Z",
     "Document": {
       "Statement": [
         {
@@ -66,6 +66,13 @@
             "codebuild:ListBuilds*",
             "codebuild:ListProjects",
             "codecommit:List*",
+            "codedeploy:BatchGetApplicationRevisions",
+            "codedeploy:BatchGetApplications",
+            "codedeploy:BatchGetDeploymentGroups",
+            "codedeploy:BatchGetDeploymentInstances",
+            "codedeploy:BatchGetDeploymentTargets",
+            "codedeploy:BatchGetDeployments",
+            "codedeploy:BatchGetOnPremisesInstances",
             "codedeploy:Get*",
             "codedeploy:List*",
             "codepipeline:ListPipelines",
@@ -370,7 +377,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v18"
+    "VersionId": "v19"
   },
-  "UpdateDate": "2024-03-28T21:28:38Z"
+  "UpdateDate": "2024-06-10T20:57:11Z"
 }
