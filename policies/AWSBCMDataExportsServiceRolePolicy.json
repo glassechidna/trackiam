@@ -1,0 +1,29 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBCMDataExportsServiceRolePolicy",
+  "CreateDate": "2024-06-10T17:40:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4EW7YUR6GZ",
+  "PolicyName": "AWSBCMDataExportsServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-06-10T17:40:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cost-optimization-hub:ListEnrollmentStatuses",
+            "cost-optimization-hub:ListRecommendations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CostOptimizationRecommendationAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-06-10T17:40:19Z"
+}
