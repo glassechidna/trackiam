@@ -284,6 +284,7 @@ The following table summarises the AWS APIs.
 | [`kafkaconnect`](services/kafkaconnect.yml) | 16 | 0 | 0 |
 | [`docdb-elastic`](services/docdb-elastic.yml) | 16 | 0 | 0 |
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
+| [`application-signals`](services/application-signals.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
@@ -382,7 +383,6 @@ The following table summarises the AWS APIs.
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 16 |
-| [`application-signals`](services/application-signals.yml) | 0 | 0 | 15 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 14 |
 | [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 13 |
