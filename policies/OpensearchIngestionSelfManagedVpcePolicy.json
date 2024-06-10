@@ -1,0 +1,41 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/OpensearchIngestionSelfManagedVpcePolicy",
+  "CreateDate": "2024-06-10T19:59:40Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4DWAL7NRX4",
+  "PolicyName": "OpensearchIngestionSelfManagedVpcePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-06-10T19:59:40Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "cloudwatch:PutMetricData",
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/OSIS"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CwPermissionsForOsiNamespace"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcEndpoints"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeEc2Resources"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-06-10T19:59:40Z"
+}
