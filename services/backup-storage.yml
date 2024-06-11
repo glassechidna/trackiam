@@ -1,21 +1,18 @@
 Actions:
-  - Name: backup-storage:GetChunk
-  - Name: backup-storage:GetObjectMetadata
-  - Name: backup-storage:ListChunks
-  - Name: backup-storage:ListObjects
-  - Name: backup-storage:NotifyObjectComplete
-  - Name: backup-storage:PutChunk
-  - Name: backup-storage:PutObject
-  - Name: backup-storage:StartObject
 
   # actions with no corresponding API
   - Name: backup-storage:CommitBackupJob
   - Name: backup-storage:DeleteObjects
   - Name: backup-storage:DescribeBackupJob
   - Name: backup-storage:GetBaseBackup
+  - Name: backup-storage:GetChunk
   - Name: backup-storage:GetIncrementalBaseBackup
+  - Name: backup-storage:GetObjectMetadata
+  - Name: backup-storage:ListChunks
+  - Name: backup-storage:ListObjects
   - Name: backup-storage:MountCapsule
+  - Name: backup-storage:NotifyObjectComplete
+  - Name: backup-storage:PutChunk
+  - Name: backup-storage:PutObject
+  - Name: backup-storage:StartObject
   - Name: backup-storage:UpdateObjectComplete
-
-  # APIs without an IAM action
-  - Name: backup-storage:DeleteObject

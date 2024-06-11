@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 402
-* Unique actions: 17221
+* Unique actions: 17220
 * Managed policies: 1202
 
 Most common managed policy name prefixes:
@@ -322,7 +322,6 @@ The following table summarises the AWS APIs.
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`managedblockchain-query`](services/managedblockchain-query.yml) | 9 | 0 | 0 |
 | [`kendra-ranking`](services/kendra-ranking.yml) | 9 | 0 | 0 |
-| [`backup-storage`](services/backup-storage.yml) | 8 | 1 | 7 |
 | [`sts`](services/sts.yml) | 8 | 0 | 4 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
 | [`iotfleethub`](services/iotfleethub.yml) | 8 | 0 | 0 |
@@ -384,6 +383,7 @@ The following table summarises the AWS APIs.
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 16 |
+| [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 15 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 14 |
 | [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 13 |
@@ -445,7 +445,7 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 2772 |
 | `Get` | 2509 |
-| `Delete` | 1981 |
+| `Delete` | 1980 |
 | `Create` | 1845 |
 | `Describe` | 1710 |
 | `Update` | 1577 |
