@@ -1,17 +1,18 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSTrustedAdvisorServiceRolePolicy",
   "CreateDate": "2018-02-22T21:24:25Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJH4QJ2WMHBOB47BUE",
   "PolicyName": "AWSTrustedAdvisorServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-01-18T16:25:15Z",
+    "CreateDate": "2024-06-11T18:53:22Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "access-analyzer:ListAnalyzers",
             "autoscaling:DescribeAccountLimits",
             "autoscaling:DescribeAutoScalingGroups",
             "autoscaling:DescribeLaunchConfigurations",
@@ -27,6 +28,8 @@
             "cloudtrail:GetTrailStatus",
             "cloudtrail:ListTrails",
             "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics",
+            "dax:DescribeClusters",
             "dynamodb:DescribeLimits",
             "dynamodb:DescribeTable",
             "dynamodb:ListTables",
@@ -35,16 +38,20 @@
             "ec2:DescribeInstances",
             "ec2:DescribeInternetGateways",
             "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribeNatGateways",
             "ec2:DescribeRegions",
             "ec2:DescribeReservedInstances",
             "ec2:DescribeReservedInstancesOfferings",
+            "ec2:DescribeRouteTables",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSnapshots",
             "ec2:DescribeSubnets",
             "ec2:DescribeVolumes",
+            "ec2:DescribeVpcEndpoints",
             "ec2:DescribeVpcs",
             "ec2:DescribeVpnConnections",
             "ec2:DescribeVpnGateways",
+            "ec2:GetManagedPrefixListEntries",
             "ecs:DescribeTaskDefinition",
             "ecs:ListTaskDefinitions",
             "elasticloadbalancing:DescribeAccountLimits",
@@ -54,15 +61,20 @@
             "elasticloadbalancing:DescribeLoadBalancerPolicyTypes",
             "elasticloadbalancing:DescribeLoadBalancers",
             "elasticloadbalancing:DescribeTargetGroups",
+            "elasticloadbalancing:DescribeTargetHealth",
             "iam:GenerateCredentialReport",
             "iam:GetAccountPasswordPolicy",
             "iam:GetAccountSummary",
             "iam:GetCredentialReport",
             "iam:GetServerCertificate",
+            "iam:ListSAMLProviders",
             "iam:ListServerCertificates",
+            "kafka:DescribeClusterV2",
             "kafka:ListClustersV2",
             "kafka:ListNodes",
             "kinesis:DescribeLimits",
+            "network-firewall:DescribeFirewall",
+            "network-firewall:ListFirewalls",
             "outposts:GetOutpost",
             "outposts:ListAssets",
             "outposts:ListOutposts",
@@ -107,6 +119,7 @@
             "s3:ListAllMyBuckets",
             "s3:ListBucket",
             "ses:GetSendQuota",
+            "sqs:GetQueueAttributes",
             "sqs:ListQueues"
           ],
           "Effect": "Allow",
@@ -117,7 +130,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2024-01-18T16:25:15Z"
+  "UpdateDate": "2024-06-11T18:53:22Z"
 }

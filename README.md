@@ -86,6 +86,7 @@ The following table summarises the AWS APIs.
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
 | [`appstream`](services/appstream.yml) | 75 | 0 | 1 |
 | [`logs`](services/logs.yml) | 74 | 0 | 8 |
+| [`guardduty`](services/guardduty.yml) | 74 | 0 | 1 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`sso`](services/sso.yml) | 73 | 0 | 53 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
@@ -94,7 +95,6 @@ The following table summarises the AWS APIs.
 | [`wellarchitected`](services/wellarchitected.yml) | 72 | 0 | 1 |
 | [`mgn`](services/mgn.yml) | 70 | 0 | 34 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
-| [`guardduty`](services/guardduty.yml) | 69 | 0 | 6 |
 | [`athena`](services/athena.yml) | 68 | 0 | 11 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
 | [`ds`](services/ds.yml) | 67 | 0 | 10 |
@@ -180,6 +180,7 @@ The following table summarises the AWS APIs.
 | [`ram`](services/ram.yml) | 34 | 0 | 0 |
 | [`m2`](services/m2.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
+| [`access-analyzer`](services/access-analyzer.yml) | 33 | 2 | 1 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`applicationinsights`](services/applicationinsights.yml) | 33 | 0 | 1 |
 | [`tnb`](services/tnb.yml) | 33 | 0 | 0 |
@@ -199,7 +200,6 @@ The following table summarises the AWS APIs.
 | [`payment-cryptography`](services/payment-cryptography.yml) | 31 | 0 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
-| [`access-analyzer`](services/access-analyzer.yml) | 30 | 2 | 4 |
 | [`xray`](services/xray.yml) | 30 | 0 | 3 |
 | [`dataexchange`](services/dataexchange.yml) | 30 | 0 | 2 |
 | [`rolesanywhere`](services/rolesanywhere.yml) | 30 | 0 | 0 |
@@ -302,6 +302,7 @@ The following table summarises the AWS APIs.
 | [`launchwizard`](services/launchwizard.yml) | 12 | 0 | 25 |
 | [`account`](services/account.yml) | 12 | 0 | 4 |
 | [`scheduler`](services/scheduler.yml) | 12 | 0 | 0 |
+| [`pca-connector-scep`](services/pca-connector-scep.yml) | 12 | 0 | 0 |
 | [`networkmonitor`](services/networkmonitor.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`bcm-data-exports`](services/bcm-data-exports.yml) | 12 | 0 | 0 |
@@ -391,7 +392,6 @@ The following table summarises the AWS APIs.
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
 | [`q`](services/q.yml) | 0 | 0 | 12 |
-| [`pca-connector-scep`](services/pca-connector-scep.yml) | 0 | 0 | 12 |
 | [`payments`](services/payments.yml) | 0 | 0 | 12 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
 | [`ts`](services/ts.yml) | 0 | 0 | 9 |

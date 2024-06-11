@@ -1,15 +1,61 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonSageMakerServiceCatalogProductsCodePipelineServiceRolePolicy",
   "CreateDate": "2022-02-22T09:53:17Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4CL3UG2EHM",
   "PolicyName": "AmazonSageMakerServiceCatalogProductsCodePipelineServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-02-22T09:53:17Z",
+    "CreateDate": "2024-06-11T18:37:51Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": [
+                "sagemaker:project-name"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/sagemaker-*",
+          "Sid": "AmazonSageMakerCodePipelineCFnTagPermission"
+        },
+        {
+          "Action": [
+            "codeconnections:UseConnection"
+          ],
+          "Condition": {
+            "StringEqualsIgnoreCase": {
+              "aws:ResourceTag/sagemaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:codeconnections:*:*:connection/*"
+          ],
+          "Sid": "AmazonSageMakerCodePipelineCodeConnectionPermission"
+        },
+        {
+          "Action": [
+            "codestar-connections:UseConnection"
+          ],
+          "Condition": {
+            "StringEqualsIgnoreCase": {
+              "aws:ResourceTag/sagemaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:codestar-connections:*:*:connection/*"
+          ],
+          "Sid": "AmazonSageMakerCodePipelineCodeStarConnectionPermission"
+        },
         {
           "Action": [
             "cloudformation:CreateChangeSet",
@@ -23,7 +69,8 @@
             "cloudformation:UpdateStack"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:cloudformation:*:*:stack/sagemaker-*"
+          "Resource": "arn:aws:cloudformation:*:*:stack/sagemaker-*",
+          "Sid": "AmazonSageMakerCodePipelineCFnPermission"
         },
         {
           "Action": [
@@ -34,7 +81,8 @@
           "Resource": [
             "arn:aws:codebuild:*:*:build/sagemaker-*",
             "arn:aws:codebuild:*:*:project/sagemaker-*"
-          ]
+          ],
+          "Sid": "AmazonSageMakerCodePipelineCodeBuildPermission"
         },
         {
           "Action": [
@@ -45,7 +93,8 @@
             "codecommit:UploadArchive"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:codecommit:*:*:sagemaker-*"
+          "Resource": "arn:aws:codecommit:*:*:sagemaker-*",
+          "Sid": "AmazonSageMakerCodePipelineCodeCommitPermission"
         },
         {
           "Action": [
@@ -54,7 +103,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/service-role/AmazonSageMakerServiceCatalogProductsCloudformationRole"
-          ]
+          ],
+          "Sid": "AmazonSageMakerCodePipelinePassRolePermission"
         },
         {
           "Action": [
@@ -67,13 +117,14 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:s3:::sagemaker-*"
-          ]
+          ],
+          "Sid": "AmazonSageMakerCodePipelineS3Permission"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-02-22T09:53:17Z"
+  "UpdateDate": "2024-06-11T18:37:51Z"
 }

@@ -5,6 +5,7 @@ Actions:
   - Name: guardduty:CreateDetector
   - Name: guardduty:CreateFilter
   - Name: guardduty:CreateIPSet
+  - Name: guardduty:CreateMalwareProtectionPlan
   - Name: guardduty:CreateMembers
   - Name: guardduty:CreatePublishingDestination
   - Name: guardduty:CreateSampleFindings
@@ -14,6 +15,7 @@ Actions:
   - Name: guardduty:DeleteFilter
   - Name: guardduty:DeleteIPSet
   - Name: guardduty:DeleteInvitations
+  - Name: guardduty:DeleteMalwareProtectionPlan
   - Name: guardduty:DeleteMembers
   - Name: guardduty:DeletePublishingDestination
   - Name: guardduty:DeleteThreatIntelSet
@@ -33,6 +35,7 @@ Actions:
   - Name: guardduty:GetFindingsStatistics
   - Name: guardduty:GetIPSet
   - Name: guardduty:GetInvitationsCount
+  - Name: guardduty:GetMalwareProtectionPlan
   - Name: guardduty:GetMalwareScanSettings
   - Name: guardduty:GetMasterAccount
   - Name: guardduty:GetMemberDetectors
@@ -48,6 +51,7 @@ Actions:
   - Name: guardduty:ListFindings
   - Name: guardduty:ListIPSets
   - Name: guardduty:ListInvitations
+  - Name: guardduty:ListMalwareProtectionPlans
   - Name: guardduty:ListMembers
   - Name: guardduty:ListOrganizationAdminAccounts
   - Name: guardduty:ListPublishingDestinations
@@ -63,6 +67,7 @@ Actions:
   - Name: guardduty:UpdateFilter
   - Name: guardduty:UpdateFindingsFeedback
   - Name: guardduty:UpdateIPSet
+  - Name: guardduty:UpdateMalwareProtectionPlan
   - Name: guardduty:UpdateMalwareScanSettings
   - Name: guardduty:UpdateMemberDetectors
   - Name: guardduty:UpdateOrganizationConfiguration
@@ -70,9 +75,4 @@ Actions:
   - Name: guardduty:UpdateThreatIntelSet
 
   # actions with no corresponding API
-  - Name: guardduty:CreateMalwareProtectionPlan
-  - Name: guardduty:DeleteMalwareProtectionPlan
-  - Name: guardduty:GetMalwareProtectionPlan
-  - Name: guardduty:ListMalwareProtectionPlans
   - Name: guardduty:SendSecurityTelemetry
-  - Name: guardduty:UpdateMalwareProtectionPlan

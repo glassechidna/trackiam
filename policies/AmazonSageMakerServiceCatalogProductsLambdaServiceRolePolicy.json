@@ -1,15 +1,29 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonSageMakerServiceCatalogProductsLambdaServiceRolePolicy",
   "CreateDate": "2022-04-04T16:34:43Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4CMUQVI4HY",
   "PolicyName": "AmazonSageMakerServiceCatalogProductsLambdaServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-04-04T16:34:43Z",
+    "CreateDate": "2024-06-11T18:57:13Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "codebuild:BatchGetBuilds",
+            "codebuild:StartBuild"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/sagemaker:project-name": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:codebuild:*:*:project/sagemaker-*",
+          "Sid": "AmazonSageMakerLambdaCodeBuildPermission"
+        },
         {
           "Action": [
             "ecr:BatchDeleteImage",
@@ -24,7 +38,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ecr:*:*:repository/sagemaker-*"
-          ]
+          ],
+          "Sid": "AmazonSageMakerLambdaECRPermission"
         },
         {
           "Action": [
@@ -37,7 +52,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:events:*:*:rule/sagemaker-*"
-          ]
+          ],
+          "Sid": "AmazonSageMakerLambdaEventBridgePermission"
         },
         {
           "Action": [
@@ -46,7 +62,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/service-role/AmazonSageMakerServiceCatalogProductsExecutionRole"
-          ]
+          ],
+          "Sid": "AmazonSageMakerLambdaPassRolePermission"
         },
         {
           "Action": [
@@ -71,7 +88,8 @@
             "logs:UpdateLogDelivery"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:logs:*:*:log-group:/aws/lambda/*"
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/lambda/*",
+          "Sid": "AmazonSageMakerLambdaLogPermission"
         },
         {
           "Action": [
@@ -85,7 +103,8 @@
           "Resource": [
             "arn:aws:s3:::aws-glue-*",
             "arn:aws:s3:::sagemaker-*"
-          ]
+          ],
+          "Sid": "AmazonSageMakerLambdaS3ObjectPermission"
         },
         {
           "Action": [
@@ -103,7 +122,8 @@
           "Resource": [
             "arn:aws:s3:::aws-glue-*",
             "arn:aws:s3:::sagemaker-*"
-          ]
+          ],
+          "Sid": "AmazonSageMakerLambdaS3BucketPermission"
         },
         {
           "Action": [
@@ -416,13 +436,14 @@
             "arn:aws:sagemaker:*:*:transform-job/*",
             "arn:aws:sagemaker:*:*:workforce/*",
             "arn:aws:sagemaker:*:*:workteam/*"
-          ]
+          ],
+          "Sid": "AmazonSageMakerLambdaSageMakerPermission"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2022-04-04T16:34:43Z"
+  "UpdateDate": "2024-06-11T18:57:13Z"
 }
