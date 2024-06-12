@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 402
-* Unique actions: 17220
+* Unique services: 403
+* Unique actions: 17245
 * Managed policies: 1202
 
 Most common managed policy name prefixes:
@@ -36,7 +36,7 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 621 | 0 | 16 |
+| [`ec2`](services/ec2.yml) | 621 | 1 | 16 |
 | [`sagemaker`](services/sagemaker.yml) | 336 | 0 | 14 |
 | [`iot`](services/iot.yml) | 262 | 3 | 9 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
@@ -354,6 +354,7 @@ The following table summarises the AWS APIs.
 | [`cloudtrail-data`](services/cloudtrail-data.yml) | 1 | 0 | 0 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
+| [`apptest`](services/apptest.yml) | 0 | 24 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 12 | 3 |
 | [`mobilehub`](services/mobilehub.yml) | 0 | 9 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
@@ -443,14 +444,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2772 |
-| `Get` | 2509 |
-| `Delete` | 1980 |
-| `Create` | 1845 |
-| `Describe` | 1710 |
-| `Update` | 1577 |
+| `List` | 2779 |
+| `Get` | 2513 |
+| `Delete` | 1984 |
+| `Create` | 1848 |
+| `Describe` | 1711 |
+| `Update` | 1580 |
 | `Put` | 473 |
-| `Start` | 395 |
-| `Tag` | 273 |
-| `Untag` | 269 |
+| `Start` | 396 |
+| `Tag` | 274 |
+| `Untag` | 270 |
 
