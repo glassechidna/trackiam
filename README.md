@@ -170,9 +170,9 @@ The following table summarises the AWS APIs.
 | [`aoss`](services/aoss.yml) | 37 | 0 | 2 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
+| [`entityresolution`](services/entityresolution.yml) | 36 | 0 | 2 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 0 |
-| [`entityresolution`](services/entityresolution.yml) | 35 | 1 | 2 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
 | [`cases`](services/cases.yml) | 34 | 0 | 1 |
