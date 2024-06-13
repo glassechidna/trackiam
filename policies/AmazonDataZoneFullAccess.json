@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDataZoneFullAccess",
   "CreateDate": "2023-09-22T20:06:52Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4M44MZFTQR",
   "PolicyName": "AmazonDataZoneFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-04-23T21:36:18Z",
+    "CreateDate": "2024-06-13T19:02:55Z",
     "Document": {
       "Statement": [
         {
@@ -78,9 +78,6 @@
                 "AmazonDataZoneDomain"
               ]
             },
-            "Null": {
-              "aws:TagKeys": "false"
-            },
             "StringLike": {
               "aws:RequestTag/AmazonDataZoneDomain": "dzd_*",
               "aws:ResourceTag/AmazonDataZoneDomain": "dzd_*"
@@ -89,6 +86,26 @@
           "Effect": "Allow",
           "Resource": "arn:aws:secretsmanager:*:*:secret:AmazonDataZone-*",
           "Sid": "DataZoneTagOnCreate"
+        },
+        {
+          "Action": [
+            "secretsmanager:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "AmazonDataZoneDomain",
+                "AmazonDataZoneProject"
+              ]
+            },
+            "StringLike": {
+              "aws:RequestTag/AmazonDataZoneDomain": "dzd_*",
+              "aws:ResourceTag/AmazonDataZoneDomain": "dzd_*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:AmazonDataZone-*",
+          "Sid": "DataZoneTagOnCreateDomainProjectTags"
         },
         {
           "Action": "iam:GetPolicy",
@@ -138,7 +155,8 @@
           "Action": [
             "ram:GetResourceShareAssociations",
             "ram:GetResourceShareInvitations",
-            "ram:GetResourceShares"
+            "ram:GetResourceShares",
+            "ram:ListResourceSharePermissions"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -156,8 +174,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v3"
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
   },
-  "UpdateDate": "2024-04-23T21:36:18Z"
+  "UpdateDate": "2024-06-13T19:02:55Z"
 }
