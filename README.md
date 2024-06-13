@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 403
-* Unique actions: 17246
+* Unique actions: 17253
 * Managed policies: 1202
 
 Most common managed policy name prefixes:
@@ -40,7 +40,7 @@ The following table summarises the AWS APIs.
 | [`sagemaker`](services/sagemaker.yml) | 336 | 0 | 14 |
 | [`iot`](services/iot.yml) | 262 | 3 | 9 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
-| [`connect`](services/connect.yml) | 246 | 5 | 6 |
+| [`connect`](services/connect.yml) | 248 | 3 | 6 |
 | [`glue`](services/glue.yml) | 209 | 4 | 44 |
 | [`ses`](services/ses.yml) | 193 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 171 | 3 | 29 |
@@ -57,7 +57,7 @@ The following table summarises the AWS APIs.
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`cloudfront`](services/cloudfront.yml) | 109 | 2 | 7 |
 | [`gamelift`](services/gamelift.yml) | 108 | 0 | 0 |
-| [`datazone`](services/datazone.yml) | 107 | 0 | 25 |
+| [`datazone`](services/datazone.yml) | 107 | 0 | 32 |
 | [`dms`](services/dms.yml) | 106 | 0 | 28 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 4 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 1 |
@@ -237,6 +237,7 @@ The following table summarises the AWS APIs.
 | [`fis`](services/fis.yml) | 24 | 0 | 3 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 24 | 0 | 1 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
+| [`apptest`](services/apptest.yml) | 24 | 0 | 0 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 3 |
 | [`mq`](services/mq.yml) | 23 | 0 | 1 |
 | [`secretsmanager`](services/secretsmanager.yml) | 23 | 0 | 0 |
@@ -326,9 +327,9 @@ The following table summarises the AWS APIs.
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
 | [`iotfleethub`](services/iotfleethub.yml) | 8 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
+| [`tax`](services/tax.yml) | 7 | 0 | 7 |
 | [`cur`](services/cur.yml) | 7 | 0 | 5 |
 | [`cost-optimization-hub`](services/cost-optimization-hub.yml) | 7 | 0 | 0 |
-| [`tax`](services/tax.yml) | 6 | 1 | 7 |
 | [`artifact`](services/artifact.yml) | 6 | 0 | 4 |
 | [`elastic-inference`](services/elastic-inference.yml) | 6 | 0 | 1 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
@@ -354,7 +355,6 @@ The following table summarises the AWS APIs.
 | [`cloudtrail-data`](services/cloudtrail-data.yml) | 1 | 0 | 0 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 9 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
-| [`apptest`](services/apptest.yml) | 0 | 24 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 12 | 3 |
 | [`mobilehub`](services/mobilehub.yml) | 0 | 9 | 0 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
@@ -444,12 +444,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2779 |
-| `Get` | 2513 |
-| `Delete` | 1984 |
-| `Create` | 1848 |
+| `List` | 2780 |
+| `Get` | 2514 |
+| `Delete` | 1985 |
+| `Create` | 1849 |
 | `Describe` | 1711 |
-| `Update` | 1580 |
+| `Update` | 1581 |
 | `Put` | 473 |
 | `Start` | 396 |
 | `Tag` | 274 |
