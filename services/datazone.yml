@@ -1,6 +1,7 @@
 Actions:
   - Name: datazone:AcceptPredictions
   - Name: datazone:AcceptSubscriptionRequest
+  - Name: datazone:AssociateEnvironmentRole
   - Name: datazone:CancelMetadataGenerationRun
   - Name: datazone:CancelSubscription
   - Name: datazone:CreateAsset
@@ -9,6 +10,7 @@ Actions:
   - Name: datazone:CreateDataSource
   - Name: datazone:CreateDomain
   - Name: datazone:CreateEnvironment
+  - Name: datazone:CreateEnvironmentAction
   - Name: datazone:CreateEnvironmentProfile
   - Name: datazone:CreateFormType
   - Name: datazone:CreateGlossary
@@ -26,6 +28,7 @@ Actions:
   - Name: datazone:DeleteDataSource
   - Name: datazone:DeleteDomain
   - Name: datazone:DeleteEnvironment
+  - Name: datazone:DeleteEnvironmentAction
   - Name: datazone:DeleteEnvironmentBlueprintConfiguration
   - Name: datazone:DeleteEnvironmentProfile
   - Name: datazone:DeleteFormType
@@ -38,12 +41,14 @@ Actions:
   - Name: datazone:DeleteSubscriptionRequest
   - Name: datazone:DeleteSubscriptionTarget
   - Name: datazone:DeleteTimeSeriesDataPoints
+  - Name: datazone:DisassociateEnvironmentRole
   - Name: datazone:GetAsset
   - Name: datazone:GetAssetType
   - Name: datazone:GetDataSource
   - Name: datazone:GetDataSourceRun
   - Name: datazone:GetDomain
   - Name: datazone:GetEnvironment
+  - Name: datazone:GetEnvironmentAction
   - Name: datazone:GetEnvironmentBlueprint
   - Name: datazone:GetEnvironmentBlueprintConfiguration
   - Name: datazone:GetEnvironmentProfile
@@ -66,6 +71,7 @@ Actions:
   - Name: datazone:ListDataSourceRuns
   - Name: datazone:ListDataSources
   - Name: datazone:ListDomains
+  - Name: datazone:ListEnvironmentActions
   - Name: datazone:ListEnvironmentBlueprintConfigurations
   - Name: datazone:ListEnvironmentBlueprints
   - Name: datazone:ListEnvironmentProfiles
@@ -97,6 +103,7 @@ Actions:
   - Name: datazone:UpdateDataSource
   - Name: datazone:UpdateDomain
   - Name: datazone:UpdateEnvironment
+  - Name: datazone:UpdateEnvironmentAction
   - Name: datazone:UpdateEnvironmentProfile
   - Name: datazone:UpdateGlossary
   - Name: datazone:UpdateGlossaryTerm
@@ -109,20 +116,14 @@ Actions:
 
   # actions with no corresponding API
   - Name: datazone:AddPolicyGrant
-  - Name: datazone:AssociateEnvironmentRole
-  - Name: datazone:CreateEnvironmentAction
   - Name: datazone:CreateEnvironmentBlueprint
   - Name: datazone:DeleteDomainSharingPolicy
-  - Name: datazone:DeleteEnvironmentAction
   - Name: datazone:DeleteEnvironmentBlueprint
-  - Name: datazone:DisassociateEnvironmentRole
   - Name: datazone:GetDomainSharingPolicy
-  - Name: datazone:GetEnvironmentAction
   - Name: datazone:GetEnvironmentActionLink
   - Name: datazone:GetEnvironmentCredentials
   - Name: datazone:GetSubscriptionEligibility
   - Name: datazone:ListAccountEnvironments
-  - Name: datazone:ListEnvironmentActions
   - Name: datazone:ListEnvironmentBlueprintConfigurationSummaries
   - Name: datazone:ListGroupsForUser
   - Name: datazone:ListPolicyGrants
@@ -135,7 +136,6 @@ Actions:
   - Name: datazone:SsoLogout
   - Name: datazone:StopMetadataGenerationRun
   - Name: datazone:UpdateDataSourceRunActivities
-  - Name: datazone:UpdateEnvironmentAction
   - Name: datazone:UpdateEnvironmentBlueprint
   - Name: datazone:UpdateEnvironmentConfiguration
   - Name: datazone:UpdateEnvironmentDeploymentStatus

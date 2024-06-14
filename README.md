@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 403
-* Unique actions: 17253
+* Unique actions: 17256
 * Managed policies: 1202
 
 Most common managed policy name prefixes:
@@ -51,13 +51,13 @@ The following table summarises the AWS APIs.
 | [`lex`](services/lex.yml) | 137 | 4 | 8 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 22 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
+| [`datazone`](services/datazone.yml) | 114 | 0 | 25 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
 | [`s3`](services/s3.yml) | 113 | 60 | 46 |
 | [`iotwireless`](services/iotwireless.yml) | 112 | 0 | 1 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`cloudfront`](services/cloudfront.yml) | 109 | 2 | 7 |
 | [`gamelift`](services/gamelift.yml) | 108 | 0 | 0 |
-| [`datazone`](services/datazone.yml) | 107 | 0 | 32 |
 | [`dms`](services/dms.yml) | 106 | 0 | 28 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 4 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 1 |
@@ -75,10 +75,10 @@ The following table summarises the AWS APIs.
 | [`cloudformation`](services/cloudformation.yml) | 82 | 0 | 11 |
 | [`omics`](services/omics.yml) | 82 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
+| [`macie2`](services/macie2.yml) | 79 | 2 | 0 |
 | [`codecommit`](services/codecommit.yml) | 79 | 0 | 11 |
 | [`securityhub`](services/securityhub.yml) | 79 | 0 | 10 |
 | [`workspaces`](services/workspaces.yml) | 79 | 0 | 1 |
-| [`macie2`](services/macie2.yml) | 79 | 0 | 0 |
 | [`personalize`](services/personalize.yml) | 78 | 0 | 4 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
@@ -208,9 +208,9 @@ The following table summarises the AWS APIs.
 | [`voiceid`](services/voiceid.yml) | 29 | 0 | 2 |
 | [`detective`](services/detective.yml) | 28 | 1 | 8 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
+| [`mediaconvert`](services/mediaconvert.yml) | 28 | 1 | 0 |
 | [`discovery`](services/discovery.yml) | 28 | 0 | 1 |
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 28 | 0 | 1 |
-| [`mediaconvert`](services/mediaconvert.yml) | 28 | 0 | 0 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`codestar-connections`](services/codestar-connections.yml) | 27 | 0 | 10 |
 | [`codeconnections`](services/codeconnections.yml) | 27 | 0 | 10 |
@@ -444,7 +444,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2780 |
+| `List` | 2781 |
 | `Get` | 2514 |
 | `Delete` | 1985 |
 | `Create` | 1849 |
