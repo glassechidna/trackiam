@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 403
-* Unique actions: 17256
-* Managed policies: 1202
+* Unique actions: 17261
+* Managed policies: 1203
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 322 |
 | `arn:aws:iam::aws:policy/Amazon*` | 308 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 272 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 273 |
 | `arn:aws:iam::aws:policy/service-role/*` | 190 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 103 |
@@ -41,7 +41,7 @@ The following table summarises the AWS APIs.
 | [`iot`](services/iot.yml) | 262 | 3 | 9 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`connect`](services/connect.yml) | 248 | 3 | 6 |
-| [`glue`](services/glue.yml) | 209 | 4 | 44 |
+| [`glue`](services/glue.yml) | 209 | 9 | 44 |
 | [`ses`](services/ses.yml) | 193 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 171 | 3 | 29 |
 | [`rds`](services/rds.yml) | 162 | 0 | 5 |
@@ -444,12 +444,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2781 |
-| `Get` | 2514 |
-| `Delete` | 1985 |
-| `Create` | 1849 |
+| `List` | 2782 |
+| `Get` | 2515 |
+| `Delete` | 1986 |
+| `Create` | 1850 |
 | `Describe` | 1711 |
-| `Update` | 1581 |
+| `Update` | 1582 |
 | `Put` | 473 |
 | `Start` | 396 |
 | `Tag` | 274 |

@@ -1,0 +1,67 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSApplicationAutoscalingWorkSpacesPoolPolicy",
+  "CreateDate": "2024-06-17T18:39:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4F4MLGAF7S",
+  "PolicyName": "AWSApplicationAutoscalingWorkSpacesPoolPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-06-17T18:39:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:PutMetricAlarm"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudwatch:*:*:alarm:TargetTracking*"
+          ],
+          "Sid": "CloudWatchActionsOnTargetTrackingAlarms"
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudwatch:*:*:alarm:*"
+          ],
+          "Sid": "CloudWatchActionsOnAllAlarms"
+        },
+        {
+          "Action": [
+            "workspaces:DescribeWorkspacesPools",
+            "workspaces:UpdateWorkspacesPool"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "WorkSpacesActionsOnAllPools"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-06-17T18:39:07Z"
+}
