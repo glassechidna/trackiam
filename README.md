@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 403
-* Unique actions: 17269
+* Unique actions: 17270
 * Managed policies: 1203
 
 Most common managed policy name prefixes:
@@ -91,7 +91,7 @@ The following table summarises the AWS APIs.
 | [`sso`](services/sso.yml) | 73 | 0 | 53 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
 | [`imagebuilder`](services/imagebuilder.yml) | 73 | 0 | 0 |
-| [`bedrock`](services/bedrock.yml) | 72 | 2 | 17 |
+| [`bedrock`](services/bedrock.yml) | 72 | 2 | 18 |
 | [`wellarchitected`](services/wellarchitected.yml) | 72 | 0 | 1 |
 | [`mgn`](services/mgn.yml) | 70 | 0 | 34 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
