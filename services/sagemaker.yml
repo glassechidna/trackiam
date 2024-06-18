@@ -36,6 +36,7 @@ Actions:
   - Name: sagemaker:CreateInferenceExperiment
   - Name: sagemaker:CreateInferenceRecommendationsJob
   - Name: sagemaker:CreateLabelingJob
+  - Name: sagemaker:CreateMlflowTrackingServer
   - Name: sagemaker:CreateModel
   - Name: sagemaker:CreateModelBiasJobDefinition
   - Name: sagemaker:CreateModelCard
@@ -49,6 +50,7 @@ Actions:
   - Name: sagemaker:CreateNotebookInstanceLifecycleConfig
   - Name: sagemaker:CreatePipeline
   - Name: sagemaker:CreatePresignedDomainUrl
+  - Name: sagemaker:CreatePresignedMlflowTrackingServerUrl
   - Name: sagemaker:CreatePresignedNotebookInstanceUrl
   - Name: sagemaker:CreateProcessingJob
   - Name: sagemaker:CreateProject
@@ -90,6 +92,7 @@ Actions:
   - Name: sagemaker:DeleteImageVersion
   - Name: sagemaker:DeleteInferenceComponent
   - Name: sagemaker:DeleteInferenceExperiment
+  - Name: sagemaker:DeleteMlflowTrackingServer
   - Name: sagemaker:DeleteModel
   - Name: sagemaker:DeleteModelBiasJobDefinition
   - Name: sagemaker:DeleteModelCard
@@ -149,6 +152,7 @@ Actions:
   - Name: sagemaker:DescribeInferenceRecommendationsJob
   - Name: sagemaker:DescribeLabelingJob
   - Name: sagemaker:DescribeLineageGroup
+  - Name: sagemaker:DescribeMlflowTrackingServer
   - Name: sagemaker:DescribeModel
   - Name: sagemaker:DescribeModelBiasJobDefinition
   - Name: sagemaker:DescribeModelCard
@@ -231,6 +235,7 @@ Actions:
   - Name: sagemaker:ListLabelingJobs
   - Name: sagemaker:ListLabelingJobsForWorkteam
   - Name: sagemaker:ListLineageGroups
+  - Name: sagemaker:ListMlflowTrackingServers
   - Name: sagemaker:ListModelBiasJobDefinitions
   - Name: sagemaker:ListModelCardExportJobs
   - Name: sagemaker:ListModelCardVersions
@@ -280,6 +285,7 @@ Actions:
   - Name: sagemaker:StartEdgeDeploymentStage
   - Name: sagemaker:StartHumanLoop
   - Name: sagemaker:StartInferenceExperiment
+  - Name: sagemaker:StartMlflowTrackingServer
   - Name: sagemaker:StartMonitoringSchedule
   - Name: sagemaker:StartNotebookInstance
   - Name: sagemaker:StartPipelineExecution
@@ -292,6 +298,7 @@ Actions:
   - Name: sagemaker:StopInferenceExperiment
   - Name: sagemaker:StopInferenceRecommendationsJob
   - Name: sagemaker:StopLabelingJob
+  - Name: sagemaker:StopMlflowTrackingServer
   - Name: sagemaker:StopMonitoringSchedule
   - Name: sagemaker:StopNotebookInstance
   - Name: sagemaker:StopPipelineExecution
@@ -319,6 +326,7 @@ Actions:
   - Name: sagemaker:UpdateInferenceComponent
   - Name: sagemaker:UpdateInferenceComponentRuntimeConfig
   - Name: sagemaker:UpdateInferenceExperiment
+  - Name: sagemaker:UpdateMlflowTrackingServer
   - Name: sagemaker:UpdateModelCard
   - Name: sagemaker:UpdateModelPackage
   - Name: sagemaker:UpdateMonitoringAlert
@@ -351,13 +359,3 @@ Actions:
   - Name: sagemaker:PutResourcePolicy
   - Name: sagemaker:SendSharedModelEvent
   - Name: sagemaker:UpdateSharedModel
-
-  # APIs without an IAM action
-  - Name: sagemaker:CreateMlflowTrackingServer
-  - Name: sagemaker:CreatePresignedMlflowTrackingServerUrl
-  - Name: sagemaker:DeleteMlflowTrackingServer
-  - Name: sagemaker:DescribeMlflowTrackingServer
-  - Name: sagemaker:ListMlflowTrackingServers
-  - Name: sagemaker:StartMlflowTrackingServer
-  - Name: sagemaker:StopMlflowTrackingServer
-  - Name: sagemaker:UpdateMlflowTrackingServer

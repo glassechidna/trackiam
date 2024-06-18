@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 403
-* Unique actions: 17270
+* Unique services: 404
+* Unique actions: 17315
 * Managed policies: 1203
 
 Most common managed policy name prefixes:
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 621 | 1 | 16 |
-| [`sagemaker`](services/sagemaker.yml) | 336 | 8 | 14 |
+| [`sagemaker`](services/sagemaker.yml) | 344 | 0 | 14 |
 | [`iot`](services/iot.yml) | 262 | 3 | 9 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`connect`](services/connect.yml) | 248 | 3 | 6 |
@@ -365,6 +365,7 @@ The following table summarises the AWS APIs.
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 51 |
+| [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 45 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 32 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
@@ -444,12 +445,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2783 |
-| `Get` | 2515 |
-| `Delete` | 1987 |
-| `Create` | 1852 |
+| `List` | 2784 |
+| `Get` | 2524 |
+| `Delete` | 1995 |
+| `Create` | 1856 |
 | `Describe` | 1712 |
-| `Update` | 1583 |
+| `Update` | 1587 |
 | `Put` | 473 |
 | `Start` | 397 |
 | `Tag` | 274 |
