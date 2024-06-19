@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 404
-* Unique actions: 17315
+* Unique actions: 17316
 * Managed policies: 1203
 
 Most common managed policy name prefixes:
@@ -396,10 +396,10 @@ The following table summarises the AWS APIs.
 | [`q`](services/q.yml) | 0 | 0 | 12 |
 | [`payments`](services/payments.yml) | 0 | 0 | 12 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 10 |
+| [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 10 |
 | [`ts`](services/ts.yml) | 0 | 0 | 9 |
 | [`notifications-contacts`](services/notifications-contacts.yml) | 0 | 0 | 9 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 9 |
-| [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 9 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 9 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 7 |
@@ -449,7 +449,7 @@ Most common action prefixes:
 | `Get` | 2524 |
 | `Delete` | 1995 |
 | `Create` | 1856 |
-| `Describe` | 1712 |
+| `Describe` | 1713 |
 | `Update` | 1587 |
 | `Put` | 473 |
 | `Start` | 397 |
