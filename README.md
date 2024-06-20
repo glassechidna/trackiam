@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 404
-* Unique actions: 17316
+* Unique actions: 17319
 * Managed policies: 1204
 
 Most common managed policy name prefixes:
@@ -238,12 +238,12 @@ The following table summarises the AWS APIs.
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 24 | 0 | 1 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`apptest`](services/apptest.yml) | 24 | 0 | 0 |
+| [`compute-optimizer`](services/compute-optimizer.yml) | 23 | 0 | 3 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 3 |
 | [`mq`](services/mq.yml) | 23 | 0 | 1 |
 | [`secretsmanager`](services/secretsmanager.yml) | 23 | 0 | 0 |
 | [`emr-containers`](services/emr-containers.yml) | 23 | 0 | 0 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
-| [`compute-optimizer`](services/compute-optimizer.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
 | [`controltower`](services/controltower.yml) | 22 | 0 | 41 |
@@ -446,7 +446,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2784 |
-| `Get` | 2524 |
+| `Get` | 2526 |
 | `Delete` | 1995 |
 | `Create` | 1856 |
 | `Describe` | 1713 |

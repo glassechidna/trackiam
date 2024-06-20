@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ComputeOptimizerReadOnlyAccess",
   "CreateDate": "2020-03-07T00:11:02Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FI27MEARJ",
   "PolicyName": "ComputeOptimizerReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-08-28T19:22:58Z",
+    "CreateDate": "2024-06-20T16:15:31Z",
     "Document": {
       "Statement": [
         {
@@ -27,6 +27,8 @@
             "compute-optimizer:GetEnrollmentStatusesForOrganization",
             "compute-optimizer:GetLambdaFunctionRecommendations",
             "compute-optimizer:GetLicenseRecommendations",
+            "compute-optimizer:GetRDSDatabaseRecommendationProjectedMetrics",
+            "compute-optimizer:GetRDSDatabaseRecommendations",
             "compute-optimizer:GetRecommendationPreferences",
             "compute-optimizer:GetRecommendationSummaries",
             "ec2:DescribeInstances",
@@ -37,16 +39,19 @@
             "lambda:ListProvisionedConcurrencyConfigs",
             "organizations:DescribeAccount",
             "organizations:DescribeOrganization",
-            "organizations:ListAccounts"
+            "organizations:ListAccounts",
+            "rds:DescribeDBClusters",
+            "rds:DescribeDBInstances"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "computeOptimizerReadOnlyAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2023-08-28T19:22:58Z"
+  "UpdateDate": "2024-06-20T16:15:31Z"
 }
