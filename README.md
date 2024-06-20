@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 404
-* Unique actions: 17323
+* Unique actions: 17325
 * Managed policies: 1204
 
 Most common managed policy name prefixes:
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 621 | 1 | 16 |
-| [`sagemaker`](services/sagemaker.yml) | 344 | 0 | 14 |
+| [`sagemaker`](services/sagemaker.yml) | 344 | 2 | 14 |
 | [`iot`](services/iot.yml) | 262 | 3 | 9 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`connect`](services/connect.yml) | 248 | 3 | 10 |
@@ -223,6 +223,7 @@ The following table summarises the AWS APIs.
 | [`private-networks`](services/private-networks.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
+| [`compute-optimizer`](services/compute-optimizer.yml) | 26 | 0 | 0 |
 | [`appfabric`](services/appfabric.yml) | 26 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
 | [`appflow`](services/appflow.yml) | 25 | 0 | 6 |
@@ -238,7 +239,6 @@ The following table summarises the AWS APIs.
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 24 | 0 | 1 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`apptest`](services/apptest.yml) | 24 | 0 | 0 |
-| [`compute-optimizer`](services/compute-optimizer.yml) | 23 | 0 | 3 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 3 |
 | [`mq`](services/mq.yml) | 23 | 0 | 1 |
 | [`secretsmanager`](services/secretsmanager.yml) | 23 | 0 | 0 |
@@ -447,8 +447,8 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 2785 |
 | `Get` | 2526 |
-| `Delete` | 1995 |
-| `Create` | 1857 |
+| `Delete` | 1996 |
+| `Create` | 1858 |
 | `Describe` | 1714 |
 | `Update` | 1588 |
 | `Put` | 473 |
