@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v113",
+  "DefaultVersionId": "v114",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-05-16T21:10:15Z",
+    "CreateDate": "2024-06-21T20:04:53Z",
     "Document": {
       "Statement": [
         {
@@ -1245,6 +1245,7 @@
             "lex:DescribeBotAlias",
             "lex:DescribeBotChannel",
             "lex:DescribeBotLocale",
+            "lex:DescribeBotReplica",
             "lex:DescribeBotVersion",
             "lex:DescribeExport",
             "lex:DescribeImport",
@@ -1253,9 +1254,12 @@
             "lex:DescribeSlot",
             "lex:DescribeSlotType",
             "lex:Get*",
+            "lex:ListBotAliasReplicas",
             "lex:ListBotAliases",
             "lex:ListBotChannels",
             "lex:ListBotLocales",
+            "lex:ListBotReplicas",
+            "lex:ListBotVersionReplicas",
             "lex:ListBotVersions",
             "lex:ListBots",
             "lex:ListBuiltInIntents",
@@ -1652,7 +1656,9 @@
             "payment-cryptography:ListTagsForResource",
             "payments:GetPaymentInstrument",
             "payments:GetPaymentStatus",
+            "payments:ListPaymentInstruments",
             "payments:ListPaymentPreferences",
+            "payments:ListTagsForResource",
             "pca-connector-ad:GetConnector",
             "pca-connector-ad:GetDirectoryRegistration",
             "pca-connector-ad:GetServicePrincipalName",
@@ -2179,7 +2185,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v113"
+    "VersionId": "v114"
   },
-  "UpdateDate": "2024-05-16T21:10:15Z"
+  "UpdateDate": "2024-06-21T20:04:53Z"
 }
