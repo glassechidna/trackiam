@@ -1,0 +1,58 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonWorkSpacesSecureBrowserReadOnly",
+  "CreateDate": "2024-06-24T20:01:09Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4AL2N5G6EG",
+  "PolicyName": "AmazonWorkSpacesSecureBrowserReadOnly",
+  "PolicyVersion": {
+    "CreateDate": "2024-06-24T20:01:09Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "kinesis:ListStreams"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Dependencies"
+        },
+        {
+          "Action": [
+            "workspaces-web:GetBrowserSettings",
+            "workspaces-web:GetIdentityProvider",
+            "workspaces-web:GetIpAccessSettings",
+            "workspaces-web:GetNetworkSettings",
+            "workspaces-web:GetPortal",
+            "workspaces-web:GetPortalServiceProviderMetadata",
+            "workspaces-web:GetTrustStore",
+            "workspaces-web:GetTrustStoreCertificate",
+            "workspaces-web:GetUserAccessLoggingSettings",
+            "workspaces-web:GetUserSettings",
+            "workspaces-web:ListBrowserSettings",
+            "workspaces-web:ListIdentityProviders",
+            "workspaces-web:ListIpAccessSettings",
+            "workspaces-web:ListNetworkSettings",
+            "workspaces-web:ListPortals",
+            "workspaces-web:ListTagsForResource",
+            "workspaces-web:ListTrustStoreCertificates",
+            "workspaces-web:ListTrustStores",
+            "workspaces-web:ListUserAccessLoggingSettings",
+            "workspaces-web:ListUserSettings"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:workspaces-web:*:*:*",
+          "Sid": "WorkSpacesSecureBrowser"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-06-24T20:01:09Z"
+}
