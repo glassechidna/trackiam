@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/NetworkAdministrator",
   "CreateDate": "2016-11-10T17:31:35Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAJPNMADZFJCVPJVZA2",
   "PolicyName": "NetworkAdministrator",
   "PolicyVersion": {
-    "CreateDate": "2021-09-16T20:22:54Z",
+    "CreateDate": "2024-06-26T16:53:02Z",
     "Document": {
       "Statement": [
         {
@@ -22,7 +22,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowTransitGatewaySLRCreation"
         },
         {
           "Action": [
@@ -140,6 +141,9 @@
             "ec2:DisassociateVpcCidrBlock",
             "ec2:EnableVgwRoutePropagation",
             "ec2:EnableVpcClassicLinkDnsSupport",
+            "ec2:GetVpnConnectionDeviceSampleConfiguration",
+            "ec2:GetVpnConnectionDeviceTypes",
+            "ec2:GetVpnTunnelReplacementStatus",
             "ec2:ModifyNetworkInterfaceAttribute",
             "ec2:ModifySecurityGroupRules",
             "ec2:ModifySubnetAttribute",
@@ -150,6 +154,10 @@
             "ec2:ModifyVpcEndpointServicePermissions",
             "ec2:ModifyVpcPeeringConnectionOptions",
             "ec2:ModifyVpcTenancy",
+            "ec2:ModifyVpnConnection",
+            "ec2:ModifyVpnConnectionOptions",
+            "ec2:ModifyVpnTunnelCertificate",
+            "ec2:ModifyVpnTunnelOptions",
             "ec2:MoveAddressToVpc",
             "ec2:RejectVpcEndpointConnections",
             "ec2:ReleaseAddress",
@@ -157,6 +165,7 @@
             "ec2:ReplaceNetworkAclEntry",
             "ec2:ReplaceRoute",
             "ec2:ReplaceRouteTableAssociation",
+            "ec2:ReplaceVpnTunnel",
             "ec2:ResetNetworkInterfaceAttribute",
             "ec2:RestoreAddressToClassic",
             "ec2:UnassignIpv6Addresses",
@@ -178,7 +187,8 @@
             "sns:ListTopics"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowDefaultNetworkAdminActions"
         },
         {
           "Action": [
@@ -210,7 +220,8 @@
             "ec2:SearchTransitGatewayRoutes"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "TransitGatewayPermissions"
         },
         {
           "Action": [
@@ -240,7 +251,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AllowVPCPermissions"
         },
         {
           "Action": [
@@ -257,7 +269,8 @@
             "ec2:SearchLocalGatewayRoutes"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowLocalGatewayPermissions"
         },
         {
           "Action": [
@@ -266,14 +279,16 @@
             "iam:PassRole"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/flow-logs-*"
+          "Resource": "arn:aws:iam::*:role/flow-logs-*",
+          "Sid": "DiscoverFlowLogRoles"
         },
         {
           "Action": [
             "networkmanager:*"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "NetworkmanagerPermissions"
         },
         {
           "Action": [
@@ -284,13 +299,14 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "DiscoverBuckets"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2021-09-16T20:22:54Z"
+  "UpdateDate": "2024-06-26T16:53:02Z"
 }
