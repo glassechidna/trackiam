@@ -1,0 +1,46 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupPatchPolicyBaselineAccess",
+  "CreateDate": "2024-06-26T09:38:00Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CCQL42YSU",
+  "PolicyName": "AWSQuickSetupPatchPolicyBaselineAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-06-26T09:38:00Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "s3:GetObject",
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalAccount": [
+                "${aws:ResourceAccount}"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::aws-quicksetup-patchpolicy-*",
+          "Sid": "QuickSetupPatchingBaselineOverridesS3SameAccountReadOnlyAccess"
+        },
+        {
+          "Action": "s3:GetObject",
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalOrgID": [
+                "${aws:ResourceOrgID}"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::aws-quicksetup-patchpolicy-*",
+          "Sid": "QuickSetupPatchingBaselineOverridesS3OrganizationReadOnlyAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-06-26T09:38:00Z"
+}

@@ -1,0 +1,260 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupSSMHostMgmtPermissionsBoundary",
+  "CreateDate": "2024-06-26T09:48:42Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4OOB7VXG7I",
+  "PolicyName": "AWSQuickSetupSSMHostMgmtPermissionsBoundary",
+  "PolicyVersion": {
+    "CreateDate": "2024-06-26T09:48:42Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:AssociateIamInstanceProfile"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "ec2:NewInstanceProfile": "arn:aws:iam::*:instance-profile/AmazonSSMRoleForInstancesQuickSetup"
+            },
+            "Null": {
+              "ec2:InstanceProfile": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DefaultInstanceProfileAssociationPermissions"
+        },
+        {
+          "Action": [
+            "ec2:DisassociateIamInstanceProfile"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "ec2:InstanceProfile": "arn:aws:iam::*:instance-profile/AmazonSSMRoleForInstancesQuickSetup"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DefaultInstanceProfileDisassociationPermissions"
+        },
+        {
+          "Action": [
+            "iam:AttachRolePolicy",
+            "iam:DetachRolePolicy"
+          ],
+          "Condition": {
+            "ArnEquals": {
+              "iam:PolicyARN": [
+                "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore",
+                "arn:aws:iam::aws:policy/AmazonSSMPatchAssociation"
+              ]
+            },
+            "ArnLike": {
+              "aws:PrincipalArn": "arn:aws:iam::*:role/AWS-QuickSetup-HostMgmtRole-*"
+            },
+            "StringLike": {
+              "aws:PrincipalTag/QuickSetupManagerID": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "InstanceManagementPoliciesAttachPermissions"
+        },
+        {
+          "Action": [
+            "iam:CreateRole",
+            "iam:DeleteRole",
+            "iam:GetRole",
+            "iam:UpdateRole"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "aws:PrincipalArn": "arn:aws:iam::*:role/AWS-QuickSetup-HostMgmtRole-*"
+            },
+            "StringLike": {
+              "aws:PrincipalTag/QuickSetupManagerID": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AmazonSSMRoleForInstancesQuickSetup"
+          ],
+          "Sid": "DefaultInstanceRoleManagePermissions"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "ssm.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/ssm.amazonaws.com/AWSServiceRoleForAmazonSSM"
+          ],
+          "Sid": "CreateSystemsManagerSLRPermissions"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "ec2.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AmazonSSMRoleForInstancesQuickSetup"
+          ],
+          "Sid": "DefaultInstanceRolePassToEC2Permissions"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "ssm.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AWS-QuickSetup-HostMgmtRole-*"
+          ],
+          "Sid": "HostManagementAutomationRolePassPermissions"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "ssm.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AmazonSSMRoleForInstancesQuickSetup"
+          ],
+          "Sid": "DefaultInstanceRolePassToSSMPermissions"
+        },
+        {
+          "Action": [
+            "compute-optimizer:GetEnrollmentStatus",
+            "config:DescribeConfigurationRecorders",
+            "support:DescribeTrustedAdvisorChecks"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReadOnlyPermissionsForEnablingExplorer"
+        },
+        {
+          "Action": [
+            "ec2:DescribeIamInstanceProfileAssociations",
+            "ec2:DescribeInstances",
+            "ssm:GetAutomationExecution",
+            "ssm:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReadOnlyPermissionsForEnablingHostManagementBySSM"
+        },
+        {
+          "Action": [
+            "iam:AddRoleToInstanceProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "DefaultInstanceRoleAddPermissions"
+        },
+        {
+          "Action": [
+            "iam:CreateInstanceProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:instance-profile/AmazonSSMRoleForInstancesQuickSetup"
+          ],
+          "Sid": "DefaultInstanceProfileCreatePermissions"
+        },
+        {
+          "Action": [
+            "iam:GetInstanceProfile",
+            "iam:GetRolePolicy",
+            "iam:ListInstanceProfilesForRole",
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "IAMReadOnlyPermissions"
+        },
+        {
+          "Action": [
+            "iam:GetRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AWS-QuickSetup-HostMgmtRole-*"
+          ],
+          "Sid": "HostManagementAutomationRoleGetPermissions"
+        },
+        {
+          "Action": [
+            "ssm:GetServiceSetting",
+            "ssm:UpdateServiceSetting"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsdata/Association",
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsdata/ComputeOptimizer",
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsdata/ConfigCompliance",
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsdata/ExplorerOnboarded",
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsdata/OpsData-TrustedAdvisor",
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsdata/SupportCenterCase",
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsitem/EC2",
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsitem/ssm-patchmanager"
+          ],
+          "Sid": "SSMExplorerServiceSettingsPermissions"
+        },
+        {
+          "Action": [
+            "ssm:StartAutomationExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:automation-definition/AWS-AttachIAMToInstance*",
+            "arn:aws:ssm:*:*:automation-definition/AWS-GatherSoftwareInventory*",
+            "arn:aws:ssm:*:*:automation-definition/AWS-RunPatchBaselineAssociation*",
+            "arn:aws:ssm:*:*:automation-definition/AWS-UpdateSSMAgent*",
+            "arn:aws:ssm:*:*:automation-definition/AWSEC2-UpdateLaunchAgent-*",
+            "arn:aws:ssm:*:*:automation-definition/AWSQuickSetup-CreateAndAttachIAMToInstance-*",
+            "arn:aws:ssm:*:*:automation-definition/AWSQuickSetup-HostMgmt-*",
+            "arn:aws:ssm:*:*:automation-definition/AWSQuickSetup-InstallAndManageCloudWatchDocument-*",
+            "arn:aws:ssm:*:*:automation-definition/AWSQuickSetup-UpdateExistingInstanceProfile-*",
+            "arn:aws:ssm:*:*:automation-definition/UpdateCloudWatchDocument-*"
+          ],
+          "Sid": "ConfigurationAutomationsStartPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-06-26T09:48:42Z"
+}

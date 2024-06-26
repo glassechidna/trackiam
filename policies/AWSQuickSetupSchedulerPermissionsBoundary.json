@@ -1,0 +1,147 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupSchedulerPermissionsBoundary",
+  "CreateDate": "2024-06-26T09:53:37Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4OJGU53LJB",
+  "PolicyName": "AWSQuickSetupSchedulerPermissionsBoundary",
+  "PolicyVersion": {
+    "CreateDate": "2024-06-26T09:53:37Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:StartInstances",
+            "ec2:StopInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "EC2StartStopPermissions"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "ssm.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/ssm.amazonaws.com/AWSServiceRoleForAmazonSSM"
+          ],
+          "Sid": "CreateSystemsManagerSLRPermissions"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "ssm.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AWS-QuickSetup-Scheduler-*"
+          ],
+          "Sid": "ConfigurationAutomationRolePassPermissions"
+        },
+        {
+          "Action": [
+            "compute-optimizer:GetEnrollmentStatus",
+            "config:DescribeConfigurationRecorders",
+            "iam:ListRoles",
+            "support:DescribeTrustedAdvisorChecks"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReadOnlyPermissionsForEnablingExplorer"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstances",
+            "ec2:DescribeRegions",
+            "ec2:DescribeTags",
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2ReadOnlyPermissions"
+        },
+        {
+          "Action": [
+            "iam:GetRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AWS-QuickSetup-Scheduler-*"
+          ],
+          "Sid": "ConfigurationAutomationRoleGetPermissions"
+        },
+        {
+          "Action": [
+            "ssm:GetCalendarState"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/AWSQuickSetup-ChangeCalendar-*"
+          ],
+          "Sid": "SystemsManagerCalendarReadOnlyPermissions"
+        },
+        {
+          "Action": [
+            "ssm:GetServiceSetting",
+            "ssm:UpdateServiceSetting"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsdata/Association",
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsdata/ComputeOptimizer",
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsdata/ConfigCompliance",
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsdata/ExplorerOnboarded",
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsdata/OpsData-TrustedAdvisor",
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsdata/SupportCenterCase",
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsitem/EC2",
+            "arn:aws:ssm:*:*:servicesetting/ssm/opsitem/ssm-patchmanager"
+          ],
+          "Sid": "SSMExplorerServiceSettingsPermissions"
+        },
+        {
+          "Action": [
+            "ssm:StartAssociationsOnce"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:association/*"
+          ],
+          "Sid": "AssociationsStartOncePermissions"
+        },
+        {
+          "Action": [
+            "ssm:StartAutomationExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:automation-definition/AWSQuickSetup-StartStateManagerAssociations-*"
+          ],
+          "Sid": "AutomationStartPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-06-26T09:53:37Z"
+}
