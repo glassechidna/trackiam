@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 404
-* Unique actions: 17325
+* Unique actions: 17332
 * Managed policies: 1217
 
 Most common managed policy name prefixes:
@@ -111,7 +111,7 @@ The following table summarises the AWS APIs.
 | [`transfer`](services/transfer.yml) | 60 | 0 | 0 |
 | [`geo`](services/geo.yml) | 60 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 60 | 0 | 0 |
-| [`ivs`](services/ivs.yml) | 59 | 0 | 0 |
+| [`ivs`](services/ivs.yml) | 59 | 4 | 0 |
 | [`inspector2`](services/inspector2.yml) | 59 | 0 | 0 |
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
@@ -190,10 +190,10 @@ The following table summarises the AWS APIs.
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 32 | 0 | 0 |
 | [`billingconductor`](services/billingconductor.yml) | 32 | 0 | 0 |
+| [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 2 | 1 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 31 | 0 | 5 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 31 | 0 | 3 |
 | [`outposts`](services/outposts.yml) | 31 | 0 | 2 |
-| [`kinesisanalytics`](services/kinesisanalytics.yml) | 31 | 0 | 1 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 31 | 0 | 0 |
 | [`securitylake`](services/securitylake.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
@@ -246,7 +246,7 @@ The following table summarises the AWS APIs.
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
-| [`controltower`](services/controltower.yml) | 22 | 0 | 41 |
+| [`controltower`](services/controltower.yml) | 22 | 1 | 41 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 22 | 0 | 9 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 0 |
@@ -445,11 +445,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2785 |
-| `Get` | 2526 |
-| `Delete` | 1996 |
+| `List` | 2788 |
+| `Get` | 2527 |
+| `Delete` | 1997 |
 | `Create` | 1858 |
-| `Describe` | 1714 |
+| `Describe` | 1715 |
 | `Update` | 1588 |
 | `Put` | 473 |
 | `Start` | 397 |
