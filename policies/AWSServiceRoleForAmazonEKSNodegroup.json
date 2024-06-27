@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForAmazonEKSNodegroup",
   "CreateDate": "2019-11-07T01:34:26Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4KH2AAMJJG",
   "PolicyName": "AWSServiceRoleForAmazonEKSNodegroup",
   "PolicyVersion": {
-    "CreateDate": "2024-01-04T20:37:13Z",
+    "CreateDate": "2024-06-27T21:03:09Z",
     "Document": {
       "Statement": [
         {
@@ -139,6 +139,7 @@
             "autoscaling:EnableMetricsCollection",
             "autoscaling:PutLifecycleHook",
             "autoscaling:PutNotificationConfiguration",
+            "autoscaling:PutScheduledUpdateGroupAction",
             "autoscaling:TerminateInstanceInAutoScalingGroup",
             "autoscaling:UpdateAutoScalingGroup"
           ],
@@ -151,6 +152,7 @@
             "autoscaling:DescribeAutoScalingGroups",
             "ec2:CreateLaunchTemplate",
             "ec2:CreateSecurityGroup",
+            "ec2:DescribeCapacityReservations",
             "ec2:DescribeInstances",
             "ec2:DescribeLaunchTemplateVersions",
             "ec2:DescribeLaunchTemplates",
@@ -181,7 +183,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2024-01-04T20:37:13Z"
+  "UpdateDate": "2024-06-27T21:03:09Z"
 }
