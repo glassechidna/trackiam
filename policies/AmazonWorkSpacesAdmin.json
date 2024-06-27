@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonWorkSpacesAdmin",
   "CreateDate": "2015-09-22T22:21:15Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ26AU6ATUQCT5KVJU",
   "PolicyName": "AmazonWorkSpacesAdmin",
   "PolicyVersion": {
-    "CreateDate": "2023-08-03T23:57:36Z",
+    "CreateDate": "2024-06-27T17:16:27Z",
     "Document": {
       "Statement": [
         {
@@ -19,30 +19,43 @@
             "workspaces:CreateTags",
             "workspaces:CreateWorkspaceImage",
             "workspaces:CreateWorkspaces",
+            "workspaces:CreateWorkspacesPool",
             "workspaces:DeleteTags",
+            "workspaces:DeregisterWorkspaceDirectory",
             "workspaces:DescribeTags",
             "workspaces:DescribeWorkspaceBundles",
             "workspaces:DescribeWorkspaceDirectories",
             "workspaces:DescribeWorkspaces",
             "workspaces:DescribeWorkspacesConnectionStatus",
+            "workspaces:DescribeWorkspacesPoolSessions",
+            "workspaces:DescribeWorkspacesPools",
             "workspaces:ModifyCertificateBasedAuthProperties",
             "workspaces:ModifySamlProperties",
+            "workspaces:ModifyStreamingProperties",
+            "workspaces:ModifyWorkspaceCreationProperties",
             "workspaces:ModifyWorkspaceProperties",
             "workspaces:RebootWorkspaces",
             "workspaces:RebuildWorkspaces",
+            "workspaces:RegisterWorkspaceDirectory",
             "workspaces:RestoreWorkspace",
             "workspaces:StartWorkspaces",
+            "workspaces:StartWorkspacesPool",
             "workspaces:StopWorkspaces",
-            "workspaces:TerminateWorkspaces"
+            "workspaces:StopWorkspacesPool",
+            "workspaces:TerminateWorkspaces",
+            "workspaces:TerminateWorkspacesPool",
+            "workspaces:TerminateWorkspacesPoolSession",
+            "workspaces:UpdateWorkspacesPool"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AmazonWorkSpacesAdmin"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2023-08-03T23:57:36Z"
+  "UpdateDate": "2024-06-27T17:16:27Z"
 }
