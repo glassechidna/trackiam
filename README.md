@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 404
-* Unique actions: 17349
+* Unique actions: 17360
 * Managed policies: 1218
 
 Most common managed policy name prefixes:
@@ -51,7 +51,7 @@ The following table summarises the AWS APIs.
 | [`lex`](services/lex.yml) | 137 | 4 | 8 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 22 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
-| [`datazone`](services/datazone.yml) | 114 | 0 | 33 |
+| [`datazone`](services/datazone.yml) | 117 | 0 | 30 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
 | [`s3`](services/s3.yml) | 113 | 60 | 46 |
 | [`iotwireless`](services/iotwireless.yml) | 112 | 0 | 1 |
@@ -65,6 +65,7 @@ The following table summarises the AWS APIs.
 | [`config`](services/config.yml) | 92 | 0 | 0 |
 | [`backup`](services/backup.yml) | 91 | 0 | 5 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
+| [`workspaces`](services/workspaces.yml) | 88 | 0 | 1 |
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
 | [`es`](services/es.yml) | 87 | 0 | 10 |
 | [`sms-voice`](services/sms-voice.yml) | 87 | 0 | 0 |
@@ -77,7 +78,6 @@ The following table summarises the AWS APIs.
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 81 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 79 | 0 | 11 |
-| [`workspaces`](services/workspaces.yml) | 79 | 0 | 10 |
 | [`securityhub`](services/securityhub.yml) | 79 | 0 | 10 |
 | [`personalize`](services/personalize.yml) | 78 | 0 | 4 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
@@ -128,7 +128,7 @@ The following table summarises the AWS APIs.
 | [`wafv2`](services/wafv2.yml) | 54 | 0 | 2 |
 | [`lakeformation`](services/lakeformation.yml) | 52 | 3 | 1 |
 | [`kms`](services/kms.yml) | 52 | 1 | 3 |
-| [`profile`](services/profile.yml) | 52 | 0 | 0 |
+| [`profile`](services/profile.yml) | 52 | 0 | 2 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 0 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 52 | 0 | 0 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
@@ -143,6 +143,7 @@ The following table summarises the AWS APIs.
 | [`codeartifact`](services/codeartifact.yml) | 48 | 0 | 3 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
+| [`wisdom`](services/wisdom.yml) | 47 | 0 | 0 |
 | [`transcribe`](services/transcribe.yml) | 46 | 0 | 3 |
 | [`fsx`](services/fsx.yml) | 45 | 0 | 8 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
@@ -150,7 +151,6 @@ The following table summarises the AWS APIs.
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
 | [`ecr`](services/ecr.yml) | 43 | 0 | 5 |
-| [`wisdom`](services/wisdom.yml) | 43 | 0 | 4 |
 | [`fms`](services/fms.yml) | 42 | 0 | 0 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
 | [`ce`](services/ce.yml) | 41 | 0 | 12 |
@@ -368,13 +368,13 @@ The following table summarises the AWS APIs.
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 45 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 32 |
+| [`qapps`](services/qapps.yml) | 0 | 0 | 30 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
 | [`one`](services/one.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
-| [`qapps`](services/qapps.yml) | 0 | 0 | 21 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 21 |
 | [`iotroborunner`](services/iotroborunner.yml) | 0 | 0 | 20 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
@@ -446,13 +446,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2790 |
-| `Get` | 2529 |
+| `Get` | 2532 |
 | `Delete` | 1998 |
-| `Create` | 1860 |
+| `Create` | 1861 |
 | `Describe` | 1717 |
-| `Update` | 1590 |
+| `Update` | 1592 |
 | `Put` | 473 |
 | `Start` | 398 |
-| `Tag` | 274 |
+| `Tag` | 275 |
 | `Untag` | 270 |
 

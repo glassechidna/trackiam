@@ -15,6 +15,7 @@ Actions:
   - Name: workspaces:CreateWorkspaceBundle
   - Name: workspaces:CreateWorkspaceImage
   - Name: workspaces:CreateWorkspaces
+  - Name: workspaces:CreateWorkspacesPool
   - Name: workspaces:DeleteAccountLinkInvitation
   - Name: workspaces:DeleteClientBranding
   - Name: workspaces:DeleteConnectClientAddIn
@@ -46,6 +47,8 @@ Actions:
   - Name: workspaces:DescribeWorkspaceSnapshots
   - Name: workspaces:DescribeWorkspaces
   - Name: workspaces:DescribeWorkspacesConnectionStatus
+  - Name: workspaces:DescribeWorkspacesPoolSessions
+  - Name: workspaces:DescribeWorkspacesPools
   - Name: workspaces:DisassociateConnectionAlias
   - Name: workspaces:DisassociateIpGroups
   - Name: workspaces:DisassociateWorkspaceApplication
@@ -60,6 +63,7 @@ Actions:
   - Name: workspaces:ModifyClientProperties
   - Name: workspaces:ModifySamlProperties
   - Name: workspaces:ModifySelfservicePermissions
+  - Name: workspaces:ModifyStreamingProperties
   - Name: workspaces:ModifyWorkspaceAccessProperties
   - Name: workspaces:ModifyWorkspaceCreationProperties
   - Name: workspaces:ModifyWorkspaceProperties
@@ -71,22 +75,18 @@ Actions:
   - Name: workspaces:RestoreWorkspace
   - Name: workspaces:RevokeIpRules
   - Name: workspaces:StartWorkspaces
+  - Name: workspaces:StartWorkspacesPool
   - Name: workspaces:StopWorkspaces
+  - Name: workspaces:StopWorkspacesPool
   - Name: workspaces:TerminateWorkspaces
+  - Name: workspaces:TerminateWorkspacesPool
+  - Name: workspaces:TerminateWorkspacesPoolSession
   - Name: workspaces:UpdateConnectClientAddIn
   - Name: workspaces:UpdateConnectionAliasPermission
   - Name: workspaces:UpdateRulesOfIpGroup
   - Name: workspaces:UpdateWorkspaceBundle
   - Name: workspaces:UpdateWorkspaceImagePermission
+  - Name: workspaces:UpdateWorkspacesPool
 
   # actions with no corresponding API
-  - Name: workspaces:CreateWorkspacesPool
-  - Name: workspaces:DescribeWorkspacesPoolSessions
-  - Name: workspaces:DescribeWorkspacesPools
-  - Name: workspaces:ModifyStreamingProperties
-  - Name: workspaces:StartWorkspacesPool
-  - Name: workspaces:StopWorkspacesPool
   - Name: workspaces:Stream
-  - Name: workspaces:TerminateWorkspacesPool
-  - Name: workspaces:TerminateWorkspacesPoolSession
-  - Name: workspaces:UpdateWorkspacesPool
