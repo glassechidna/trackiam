@@ -1,0 +1,64 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonWorkSpacesPoolServiceAccess",
+  "CreateDate": "2024-06-27T16:21:03Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4I6MMGZXJE",
+  "PolicyName": "AmazonWorkSpacesPoolServiceAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-06-27T16:21:03Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "s3:ListAllMyBuckets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ProvisioningWorkSpacesPoolPermissions"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:DeleteObject",
+            "s3:DeleteObjectVersion",
+            "s3:GetBucketPolicy",
+            "s3:GetObject",
+            "s3:GetObjectVersion",
+            "s3:ListBucket",
+            "s3:PutBucketPolicy",
+            "s3:PutEncryptionConfiguration",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::wspool-app-settings-*",
+            "arn:aws:s3:::wspool-home-folder-*",
+            "arn:aws:s3:::wspool-logs-*"
+          ],
+          "Sid": "WorkSpacesPoolS3Permissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-06-27T16:21:03Z"
+}
