@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 404
-* Unique actions: 17360
+* Unique actions: 17363
 * Managed policies: 1218
 
 Most common managed policy name prefixes:
@@ -180,13 +180,13 @@ The following table summarises the AWS APIs.
 | [`ram`](services/ram.yml) | 34 | 0 | 0 |
 | [`m2`](services/m2.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
+| [`cloudhsm`](services/cloudhsm.yml) | 33 | 3 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 33 | 2 | 1 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`applicationinsights`](services/applicationinsights.yml) | 33 | 0 | 1 |
 | [`tnb`](services/tnb.yml) | 33 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
-| [`cloudhsm`](services/cloudhsm.yml) | 33 | 0 | 0 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 32 | 0 | 0 |
 | [`billingconductor`](services/billingconductor.yml) | 32 | 0 | 0 |
@@ -446,12 +446,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2790 |
-| `Get` | 2532 |
-| `Delete` | 1998 |
+| `Get` | 2533 |
+| `Delete` | 1999 |
 | `Create` | 1861 |
 | `Describe` | 1717 |
 | `Update` | 1592 |
-| `Put` | 473 |
+| `Put` | 474 |
 | `Start` | 398 |
 | `Tag` | 275 |
 | `Untag` | 270 |
