@@ -173,6 +173,7 @@ The following table summarises the AWS APIs.
 | [`entityresolution`](services/entityresolution.yml) | 36 | 0 | 2 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 0 |
+| [`cloudhsm`](services/cloudhsm.yml) | 36 | 0 | 0 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
 | [`cases`](services/cases.yml) | 34 | 0 | 1 |
@@ -180,7 +181,6 @@ The following table summarises the AWS APIs.
 | [`ram`](services/ram.yml) | 34 | 0 | 0 |
 | [`m2`](services/m2.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
-| [`cloudhsm`](services/cloudhsm.yml) | 33 | 3 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 33 | 2 | 1 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`applicationinsights`](services/applicationinsights.yml) | 33 | 0 | 1 |
