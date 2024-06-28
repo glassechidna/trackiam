@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonDataZoneGlueManageAccessRolePolicy",
   "CreateDate": "2023-09-22T20:21:53Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4IFGMBEEIW",
   "PolicyName": "AmazonDataZoneGlueManageAccessRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-06-03T23:29:25Z",
+    "CreateDate": "2024-06-28T16:41:41Z",
     "Document": {
       "Statement": [
         {
@@ -182,14 +182,19 @@
             "glue:GetTable",
             "lakeformation:BatchGrantPermissions",
             "lakeformation:BatchRevokePermissions",
+            "lakeformation:CreateDataCellsFilter",
             "lakeformation:CreateLakeFormationOptIn",
+            "lakeformation:DeleteDataCellsFilter",
             "lakeformation:DeleteLakeFormationOptIn",
+            "lakeformation:GetDataCellsFilter",
             "lakeformation:GetResourceLFTags",
             "lakeformation:GrantPermissions",
+            "lakeformation:ListDataCellsFilter",
             "lakeformation:ListLakeFormationOptIns",
             "lakeformation:ListPermissions",
             "lakeformation:RegisterResource",
             "lakeformation:RevokePermissions",
+            "lakeformation:UpdateDataCellsFilter",
             "organizations:DescribeOrganization",
             "ram:GetResourceShareInvitations",
             "ram:ListResources"
@@ -221,7 +226,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2024-06-03T23:29:25Z"
+  "UpdateDate": "2024-06-28T16:41:41Z"
 }
