@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 404
-* Unique actions: 17363
+* Unique services: 405
+* Unique actions: 17376
 * Managed policies: 1218
 
 Most common managed policy name prefixes:
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 622 | 0 | 16 |
-| [`sagemaker`](services/sagemaker.yml) | 344 | 2 | 14 |
+| [`sagemaker`](services/sagemaker.yml) | 346 | 0 | 15 |
 | [`iot`](services/iot.yml) | 262 | 3 | 9 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`connect`](services/connect.yml) | 251 | 3 | 7 |
@@ -392,6 +392,7 @@ The following table summarises the AWS APIs.
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`billing`](services/billing.yml) | 0 | 0 | 13 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
+| [`ssm-quicksetup`](services/ssm-quicksetup.yml) | 0 | 0 | 12 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
 | [`q`](services/q.yml) | 0 | 0 | 12 |
 | [`payments`](services/payments.yml) | 0 | 0 | 12 |
@@ -445,14 +446,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2790 |
-| `Get` | 2533 |
-| `Delete` | 1999 |
-| `Create` | 1861 |
+| `List` | 2793 |
+| `Get` | 2535 |
+| `Delete` | 2000 |
+| `Create` | 1862 |
 | `Describe` | 1717 |
-| `Update` | 1592 |
+| `Update` | 1595 |
 | `Put` | 474 |
 | `Start` | 398 |
-| `Tag` | 275 |
-| `Untag` | 270 |
+| `Tag` | 276 |
+| `Untag` | 271 |
 

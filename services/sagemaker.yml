@@ -28,6 +28,7 @@ Actions:
   - Name: sagemaker:CreateFeatureGroup
   - Name: sagemaker:CreateFlowDefinition
   - Name: sagemaker:CreateHub
+  - Name: sagemaker:CreateHubContentReference
   - Name: sagemaker:CreateHumanTaskUi
   - Name: sagemaker:CreateHyperParameterTuningJob
   - Name: sagemaker:CreateImage
@@ -85,6 +86,7 @@ Actions:
   - Name: sagemaker:DeleteFlowDefinition
   - Name: sagemaker:DeleteHub
   - Name: sagemaker:DeleteHubContent
+  - Name: sagemaker:DeleteHubContentReference
   - Name: sagemaker:DeleteHumanLoop
   - Name: sagemaker:DeleteHumanTaskUi
   - Name: sagemaker:DeleteHyperParameterTuningJob
@@ -350,6 +352,7 @@ Actions:
   - Name: sagemaker:CreateSharedModel
   - Name: sagemaker:DeleteLineageGroupPolicy
   - Name: sagemaker:DeleteResourcePolicy
+  - Name: sagemaker:DeployHubModel
   - Name: sagemaker:DescribeSharedModel
   - Name: sagemaker:GetResourcePolicy
   - Name: sagemaker:ListSharedModelEvents
@@ -359,7 +362,3 @@ Actions:
   - Name: sagemaker:PutResourcePolicy
   - Name: sagemaker:SendSharedModelEvent
   - Name: sagemaker:UpdateSharedModel
-
-  # APIs without an IAM action
-  - Name: sagemaker:CreateHubContentReference
-  - Name: sagemaker:DeleteHubContentReference
