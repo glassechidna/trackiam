@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 405
-* Unique actions: 17376
+* Unique actions: 17378
 * Managed policies: 1218
 
 Most common managed policy name prefixes:
@@ -250,6 +250,7 @@ The following table summarises the AWS APIs.
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 22 | 0 | 9 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 0 |
+| [`qapps`](services/qapps.yml) | 21 | 2 | 9 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 33 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
@@ -368,7 +369,6 @@ The following table summarises the AWS APIs.
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 45 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 32 |
-| [`qapps`](services/qapps.yml) | 0 | 0 | 30 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
 | [`one`](services/one.yml) | 0 | 0 | 27 |
@@ -446,7 +446,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2793 |
+| `List` | 2794 |
 | `Get` | 2535 |
 | `Delete` | 2000 |
 | `Create` | 1862 |
@@ -455,5 +455,5 @@ Most common action prefixes:
 | `Put` | 474 |
 | `Start` | 398 |
 | `Tag` | 276 |
-| `Untag` | 271 |
+| `Untag` | 272 |
 
