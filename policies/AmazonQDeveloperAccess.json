@@ -1,13 +1,13 @@
 {
-  "Arn": "arn:aws:iam::aws:policy/AmazonQFullAccess",
-  "CreateDate": "2023-11-28T16:00:24Z",
-  "DefaultVersionId": "v3",
+  "Arn": "arn:aws:iam::aws:policy/AmazonQDeveloperAccess",
+  "CreateDate": "2024-07-09T08:35:15Z",
+  "DefaultVersionId": "v1",
   "IsAttachable": true,
   "Path": "/",
-  "PolicyId": "ANPAZKAPJZG4JQANMNF6S",
-  "PolicyName": "AmazonQFullAccess",
+  "PolicyId": "ANPAZKAPJZG4C4YINGFPW",
+  "PolicyName": "AmazonQDeveloperAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-07-09T08:35:50Z",
+    "CreateDate": "2024-07-09T08:35:15Z",
     "Document": {
       "Statement": [
         {
@@ -21,10 +21,8 @@
         },
         {
           "Action": [
-            "q:CreateAssignment",
-            "q:DeleteAssignment",
             "q:GetConversation",
-            "q:GetIdentityMetadata",
+            "q:GetIdentityMetaData",
             "q:GetTroubleshootingResults",
             "q:ListConversations",
             "q:PassRequest",
@@ -36,7 +34,7 @@
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "AllowAmazonQFullAccess"
+          "Sid": "AllowAmazonQDeveloperAccess"
         },
         {
           "Action": [
@@ -50,7 +48,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v1"
   },
-  "UpdateDate": "2024-07-09T08:35:50Z"
+  "UpdateDate": "2024-07-09T08:35:15Z"
 }
