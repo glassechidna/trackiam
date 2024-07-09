@@ -206,9 +206,9 @@ The following table summarises the AWS APIs.
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 29 | 1 | 8 |
 | [`voiceid`](services/voiceid.yml) | 29 | 0 | 2 |
+| [`mediaconvert`](services/mediaconvert.yml) | 29 | 0 | 0 |
 | [`detective`](services/detective.yml) | 28 | 1 | 8 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
-| [`mediaconvert`](services/mediaconvert.yml) | 28 | 1 | 0 |
 | [`discovery`](services/discovery.yml) | 28 | 0 | 1 |
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 28 | 0 | 1 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
