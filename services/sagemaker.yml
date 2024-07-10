@@ -49,6 +49,7 @@ Actions:
   - Name: sagemaker:CreateMonitoringSchedule
   - Name: sagemaker:CreateNotebookInstance
   - Name: sagemaker:CreateNotebookInstanceLifecycleConfig
+  - Name: sagemaker:CreateOptimizationJob
   - Name: sagemaker:CreatePipeline
   - Name: sagemaker:CreatePresignedDomainUrl
   - Name: sagemaker:CreatePresignedMlflowTrackingServerUrl
@@ -166,6 +167,7 @@ Actions:
   - Name: sagemaker:DescribeMonitoringSchedule
   - Name: sagemaker:DescribeNotebookInstance
   - Name: sagemaker:DescribeNotebookInstanceLifecycleConfig
+  - Name: sagemaker:DescribeOptimizationJob
   - Name: sagemaker:DescribePipeline
   - Name: sagemaker:DescribePipelineDefinitionForExecution
   - Name: sagemaker:DescribePipelineExecution
@@ -254,6 +256,7 @@ Actions:
   - Name: sagemaker:ListMonitoringSchedules
   - Name: sagemaker:ListNotebookInstanceLifecycleConfigs
   - Name: sagemaker:ListNotebookInstances
+  - Name: sagemaker:ListOptimizationJobs
   - Name: sagemaker:ListPipelineExecutionSteps
   - Name: sagemaker:ListPipelineExecutions
   - Name: sagemaker:ListPipelineParametersForExecution
@@ -303,6 +306,7 @@ Actions:
   - Name: sagemaker:StopMlflowTrackingServer
   - Name: sagemaker:StopMonitoringSchedule
   - Name: sagemaker:StopNotebookInstance
+  - Name: sagemaker:StopOptimizationJob
   - Name: sagemaker:StopPipelineExecution
   - Name: sagemaker:StopProcessingJob
   - Name: sagemaker:StopTrainingJob
@@ -351,6 +355,7 @@ Actions:
   - Name: sagemaker:CreateLineageGroupPolicy
   - Name: sagemaker:CreateSharedModel
   - Name: sagemaker:DeleteLineageGroupPolicy
+  - Name: sagemaker:DeleteOptimization
   - Name: sagemaker:DeleteResourcePolicy
   - Name: sagemaker:DeployHubModel
   - Name: sagemaker:DescribeSharedModel
@@ -364,8 +369,4 @@ Actions:
   - Name: sagemaker:UpdateSharedModel
 
   # APIs without an IAM action
-  - Name: sagemaker:CreateOptimizationJob
   - Name: sagemaker:DeleteOptimizationJob
-  - Name: sagemaker:DescribeOptimizationJob
-  - Name: sagemaker:ListOptimizationJobs
-  - Name: sagemaker:StopOptimizationJob
