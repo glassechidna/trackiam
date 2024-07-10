@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 406
-* Unique actions: 17396
+* Unique actions: 17420
 * Managed policies: 1220
 
 Most common managed policy name prefixes:
@@ -88,10 +88,10 @@ The following table summarises the AWS APIs.
 | [`logs`](services/logs.yml) | 74 | 0 | 8 |
 | [`guardduty`](services/guardduty.yml) | 74 | 0 | 1 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
+| [`bedrock`](services/bedrock.yml) | 73 | 26 | 17 |
 | [`sso`](services/sso.yml) | 73 | 0 | 53 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
 | [`imagebuilder`](services/imagebuilder.yml) | 73 | 0 | 0 |
-| [`bedrock`](services/bedrock.yml) | 72 | 2 | 18 |
 | [`wellarchitected`](services/wellarchitected.yml) | 72 | 0 | 1 |
 | [`mgn`](services/mgn.yml) | 70 | 0 | 34 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
@@ -313,6 +313,7 @@ The following table summarises the AWS APIs.
 | [`timestream-influxdb`](services/timestream-influxdb.yml) | 11 | 0 | 0 |
 | [`repostspace`](services/repostspace.yml) | 11 | 0 | 0 |
 | [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 11 | 0 | 0 |
+| [`license-manager-linux-subscriptions`](services/license-manager-linux-subscriptions.yml) | 11 | 0 | 0 |
 | [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 11 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`supportapp`](services/supportapp.yml) | 10 | 0 | 3 |
@@ -340,7 +341,6 @@ The following table summarises the AWS APIs.
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 6 | 0 | 0 |
 | [`s3-outposts`](services/s3-outposts.yml) | 5 | 0 | 43 |
 | [`pricing`](services/pricing.yml) | 5 | 0 | 0 |
-| [`license-manager-linux-subscriptions`](services/license-manager-linux-subscriptions.yml) | 4 | 0 | 7 |
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 4 | 0 | 0 |
 | [`scn`](services/scn.yml) | 3 | 0 | 13 |
 | [`controlcatalog`](services/controlcatalog.yml) | 3 | 0 | 0 |
@@ -447,12 +447,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2797 |
-| `Get` | 2538 |
-| `Delete` | 2002 |
-| `Create` | 1863 |
+| `List` | 2801 |
+| `Get` | 2543 |
+| `Delete` | 2007 |
+| `Create` | 1868 |
 | `Describe` | 1718 |
-| `Update` | 1595 |
+| `Update` | 1598 |
 | `Put` | 474 |
 | `Start` | 401 |
 | `Tag` | 277 |
