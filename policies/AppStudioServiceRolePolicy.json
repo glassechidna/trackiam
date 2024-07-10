@@ -1,0 +1,77 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AppStudioServiceRolePolicy",
+  "CreateDate": "2024-07-10T05:01:15Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4GV26I5FBZ",
+  "PolicyName": "AppStudioServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-07-10T05:01:15Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/appstudio/*"
+          ],
+          "Sid": "AppStudioResourcePermissionsForCloudWatch"
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:PutSecretValue",
+            "secretsmanager:TagResource",
+            "secretsmanager:UpdateSecret"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "IsAppStudioSecret"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/IsAppStudioSecret": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:appstudio-*",
+          "Sid": "AppStudioResourcePermissionsForSecretsManager"
+        },
+        {
+          "Action": [
+            "sso-directory:DescribeUsers",
+            "sso-directory:ListMembersInGroup",
+            "sso:GetManagedApplicationInstance"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AppStudioResourcePermissionsForSSO"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-07-10T05:01:15Z"
+}
