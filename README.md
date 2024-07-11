@@ -61,6 +61,7 @@ The following table summarises the AWS APIs.
 | [`dms`](services/dms.yml) | 106 | 0 | 28 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 4 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 1 |
+| [`bedrock`](services/bedrock.yml) | 97 | 2 | 17 |
 | [`medialive`](services/medialive.yml) | 92 | 0 | 0 |
 | [`config`](services/config.yml) | 92 | 0 | 0 |
 | [`backup`](services/backup.yml) | 91 | 0 | 5 |
@@ -88,7 +89,6 @@ The following table summarises the AWS APIs.
 | [`logs`](services/logs.yml) | 74 | 0 | 8 |
 | [`guardduty`](services/guardduty.yml) | 74 | 0 | 1 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
-| [`bedrock`](services/bedrock.yml) | 73 | 26 | 17 |
 | [`sso`](services/sso.yml) | 73 | 0 | 53 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
 | [`imagebuilder`](services/imagebuilder.yml) | 73 | 0 | 0 |

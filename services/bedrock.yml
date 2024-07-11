@@ -6,38 +6,54 @@ Actions:
   - Name: bedrock:CreateAgentAlias
   - Name: bedrock:CreateDataSource
   - Name: bedrock:CreateEvaluationJob
+  - Name: bedrock:CreateFlow
+  - Name: bedrock:CreateFlowAlias
+  - Name: bedrock:CreateFlowVersion
   - Name: bedrock:CreateGuardrail
   - Name: bedrock:CreateGuardrailVersion
   - Name: bedrock:CreateKnowledgeBase
   - Name: bedrock:CreateModelCustomizationJob
+  - Name: bedrock:CreatePrompt
+  - Name: bedrock:CreatePromptVersion
   - Name: bedrock:CreateProvisionedModelThroughput
   - Name: bedrock:DeleteAgent
   - Name: bedrock:DeleteAgentActionGroup
   - Name: bedrock:DeleteAgentAlias
+  - Name: bedrock:DeleteAgentMemory
   - Name: bedrock:DeleteAgentVersion
   - Name: bedrock:DeleteCustomModel
   - Name: bedrock:DeleteDataSource
+  - Name: bedrock:DeleteFlow
+  - Name: bedrock:DeleteFlowAlias
+  - Name: bedrock:DeleteFlowVersion
   - Name: bedrock:DeleteGuardrail
   - Name: bedrock:DeleteKnowledgeBase
   - Name: bedrock:DeleteModelInvocationLoggingConfiguration
+  - Name: bedrock:DeletePrompt
   - Name: bedrock:DeleteProvisionedModelThroughput
   - Name: bedrock:DisassociateAgentKnowledgeBase
   - Name: bedrock:GetAgent
   - Name: bedrock:GetAgentActionGroup
   - Name: bedrock:GetAgentAlias
   - Name: bedrock:GetAgentKnowledgeBase
+  - Name: bedrock:GetAgentMemory
   - Name: bedrock:GetAgentVersion
   - Name: bedrock:GetCustomModel
   - Name: bedrock:GetDataSource
   - Name: bedrock:GetEvaluationJob
+  - Name: bedrock:GetFlow
+  - Name: bedrock:GetFlowAlias
+  - Name: bedrock:GetFlowVersion
   - Name: bedrock:GetFoundationModel
   - Name: bedrock:GetGuardrail
   - Name: bedrock:GetIngestionJob
   - Name: bedrock:GetKnowledgeBase
   - Name: bedrock:GetModelCustomizationJob
   - Name: bedrock:GetModelInvocationLoggingConfiguration
+  - Name: bedrock:GetPrompt
   - Name: bedrock:GetProvisionedModelThroughput
   - Name: bedrock:InvokeAgent
+  - Name: bedrock:InvokeFlow
   - Name: bedrock:InvokeModel
   - Name: bedrock:InvokeModelWithResponseStream
   - Name: bedrock:ListAgentActionGroups
@@ -48,14 +64,19 @@ Actions:
   - Name: bedrock:ListCustomModels
   - Name: bedrock:ListDataSources
   - Name: bedrock:ListEvaluationJobs
+  - Name: bedrock:ListFlowAliases
+  - Name: bedrock:ListFlowVersions
+  - Name: bedrock:ListFlows
   - Name: bedrock:ListFoundationModels
   - Name: bedrock:ListGuardrails
   - Name: bedrock:ListIngestionJobs
   - Name: bedrock:ListKnowledgeBases
   - Name: bedrock:ListModelCustomizationJobs
+  - Name: bedrock:ListPrompts
   - Name: bedrock:ListProvisionedModelThroughputs
   - Name: bedrock:ListTagsForResource
   - Name: bedrock:PrepareAgent
+  - Name: bedrock:PrepareFlow
   - Name: bedrock:PutModelInvocationLoggingConfiguration
   - Name: bedrock:Retrieve
   - Name: bedrock:RetrieveAndGenerate
@@ -69,8 +90,11 @@ Actions:
   - Name: bedrock:UpdateAgentAlias
   - Name: bedrock:UpdateAgentKnowledgeBase
   - Name: bedrock:UpdateDataSource
+  - Name: bedrock:UpdateFlow
+  - Name: bedrock:UpdateFlowAlias
   - Name: bedrock:UpdateGuardrail
   - Name: bedrock:UpdateKnowledgeBase
+  - Name: bedrock:UpdatePrompt
   - Name: bedrock:UpdateProvisionedModelThroughput
 
   # actions with no corresponding API
@@ -95,27 +119,3 @@ Actions:
   # APIs without an IAM action
   - Name: bedrock:Converse
   - Name: bedrock:ConverseStream
-  - Name: bedrock:CreateFlow
-  - Name: bedrock:CreateFlowAlias
-  - Name: bedrock:CreateFlowVersion
-  - Name: bedrock:CreatePrompt
-  - Name: bedrock:CreatePromptVersion
-  - Name: bedrock:DeleteAgentMemory
-  - Name: bedrock:DeleteFlow
-  - Name: bedrock:DeleteFlowAlias
-  - Name: bedrock:DeleteFlowVersion
-  - Name: bedrock:DeletePrompt
-  - Name: bedrock:GetAgentMemory
-  - Name: bedrock:GetFlow
-  - Name: bedrock:GetFlowAlias
-  - Name: bedrock:GetFlowVersion
-  - Name: bedrock:GetPrompt
-  - Name: bedrock:InvokeFlow
-  - Name: bedrock:ListFlowAliases
-  - Name: bedrock:ListFlowVersions
-  - Name: bedrock:ListFlows
-  - Name: bedrock:ListPrompts
-  - Name: bedrock:PrepareFlow
-  - Name: bedrock:UpdateFlow
-  - Name: bedrock:UpdateFlowAlias
-  - Name: bedrock:UpdatePrompt
