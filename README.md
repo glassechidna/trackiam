@@ -105,13 +105,13 @@ The following table summarises the AWS APIs.
 | [`appsync`](services/appsync.yml) | 64 | 0 | 6 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 64 | 0 | 1 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
+| [`ivs`](services/ivs.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
 | [`cleanrooms`](services/cleanrooms.yml) | 63 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 60 | 0 | 0 |
 | [`geo`](services/geo.yml) | 60 | 0 | 0 |
 | [`datasync`](services/datasync.yml) | 60 | 0 | 0 |
-| [`ivs`](services/ivs.yml) | 59 | 4 | 0 |
 | [`inspector2`](services/inspector2.yml) | 59 | 0 | 0 |
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 0 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
