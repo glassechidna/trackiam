@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 406
-* Unique actions: 17422
+* Unique actions: 17427
 * Managed policies: 1220
 
 Most common managed policy name prefixes:
@@ -43,7 +43,7 @@ The following table summarises the AWS APIs.
 | [`connect`](services/connect.yml) | 251 | 3 | 7 |
 | [`glue`](services/glue.yml) | 214 | 4 | 44 |
 | [`ses`](services/ses.yml) | 193 | 0 | 0 |
-| [`quicksight`](services/quicksight.yml) | 171 | 3 | 29 |
+| [`quicksight`](services/quicksight.yml) | 171 | 6 | 29 |
 | [`rds`](services/rds.yml) | 162 | 0 | 5 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
 | [`iam`](services/iam.yml) | 159 | 0 | 12 |
@@ -309,12 +309,12 @@ The following table summarises the AWS APIs.
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`bcm-data-exports`](services/bcm-data-exports.yml) | 12 | 0 | 0 |
 | [`budgets`](services/budgets.yml) | 11 | 15 | 2 |
+| [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 11 | 2 | 0 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 11 | 0 | 41 |
 | [`timestream-influxdb`](services/timestream-influxdb.yml) | 11 | 0 | 0 |
 | [`repostspace`](services/repostspace.yml) | 11 | 0 | 0 |
 | [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 11 | 0 | 0 |
 | [`license-manager-linux-subscriptions`](services/license-manager-linux-subscriptions.yml) | 11 | 0 | 0 |
-| [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 11 | 0 | 0 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 0 |
 | [`supportapp`](services/supportapp.yml) | 10 | 0 | 3 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
@@ -447,12 +447,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2801 |
-| `Get` | 2545 |
+| `List` | 2802 |
+| `Get` | 2546 |
 | `Delete` | 2007 |
 | `Create` | 1868 |
 | `Describe` | 1718 |
-| `Update` | 1598 |
+| `Update` | 1599 |
 | `Put` | 474 |
 | `Start` | 401 |
 | `Tag` | 277 |
