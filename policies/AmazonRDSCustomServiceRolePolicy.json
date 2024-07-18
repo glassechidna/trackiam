@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSCustomServiceRolePolicy",
   "CreateDate": "2021-10-08T21:39:12Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4F2M3XYA7J",
   "PolicyName": "AmazonRDSCustomServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-04-19T15:15:23Z",
+    "CreateDate": "2024-07-18T17:33:36Z",
     "Document": {
       "Statement": [
         {
@@ -67,6 +67,7 @@
               ],
               "ec2:CreateAction": [
                 "AllocateAddress",
+                "CopyImage",
                 "CopySnapshot",
                 "CreateKeyPair",
                 "CreateNetworkInterface",
@@ -671,6 +672,17 @@
         },
         {
           "Action": [
+            "ec2:CopyImage"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*::image/*",
+            "arn:aws:ec2:*::snapshot/*"
+          ],
+          "Sid": "eccAmi1"
+        },
+        {
+          "Action": [
             "ec2:DeregisterImage",
             "ec2:DescribeIamInstanceProfileAssociations",
             "ec2:DescribeImages",
@@ -743,6 +755,14 @@
         },
         {
           "Action": [
+            "rds:CrossRegionCommunication"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "rdscrc"
+        },
+        {
+          "Action": [
             "servicequotas:GetServiceQuota"
           ],
           "Effect": "Allow",
@@ -763,7 +783,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2024-04-19T15:15:23Z"
+  "UpdateDate": "2024-07-18T17:33:36Z"
 }

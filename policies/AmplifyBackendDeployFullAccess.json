@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmplifyBackendDeployFullAccess",
   "CreateDate": "2023-10-06T21:32:59Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4H6M6P2QGM",
   "PolicyName": "AmplifyBackendDeployFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-05-31T15:53:42Z",
+    "CreateDate": "2024-07-18T17:05:12Z",
     "Document": {
       "Statement": [
         {
@@ -167,12 +167,32 @@
             "*"
           ],
           "Sid": "AmplifyHotSwappableResources"
+        },
+        {
+          "Action": [
+            "lambda:ListTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:amplify-*"
+          ],
+          "Sid": "AmplifySandboxLambdaLogsStreamingListTags"
+        },
+        {
+          "Action": [
+            "logs:FilterLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/lambda/amplify-*:*"
+          ],
+          "Sid": "AmplifySandboxLambdaLogsStreamingFilterLogEvents"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2024-05-31T15:53:42Z"
+  "UpdateDate": "2024-07-18T17:05:12Z"
 }

@@ -1,19 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/IAMAccessAnalyzerReadOnlyAccess",
   "CreateDate": "2019-12-02T17:12:53Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4GY4R3GAPM",
   "PolicyName": "IAMAccessAnalyzerReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-11-27T02:24:16Z",
+    "CreateDate": "2024-07-18T17:49:04Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "access-analyzer:CheckAccessNotGranted",
             "access-analyzer:CheckNoNewAccess",
+            "access-analyzer:CheckNoPublicAccess",
             "access-analyzer:Get*",
             "access-analyzer:List*",
             "access-analyzer:ValidatePolicy"
@@ -26,7 +27,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-11-27T02:24:16Z"
+  "UpdateDate": "2024-07-18T17:49:04Z"
 }
