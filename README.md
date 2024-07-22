@@ -50,8 +50,8 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 140 | 0 | 9 |
 | [`lex`](services/lex.yml) | 137 | 4 | 8 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 22 |
+| [`datazone`](services/datazone.yml) | 122 | 0 | 25 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
-| [`datazone`](services/datazone.yml) | 117 | 0 | 30 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
 | [`s3`](services/s3.yml) | 113 | 60 | 46 |
 | [`iotwireless`](services/iotwireless.yml) | 112 | 0 | 1 |
