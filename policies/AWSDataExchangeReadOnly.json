@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDataExchangeReadOnly",
   "CreateDate": "2019-11-13T19:27:37Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DQNFEZURI",
   "PolicyName": "AWSDataExchangeReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2021-05-10T21:15:26Z",
+    "CreateDate": "2024-07-22T13:36:03Z",
     "Document": {
       "Statement": [
         {
@@ -21,25 +21,38 @@
             "aws-marketplace:ListAgreementRequests",
             "aws-marketplace:ListChangeSets",
             "aws-marketplace:ListEntities",
+            "aws-marketplace:ListPrivateListings",
+            "aws-marketplace:ListTagsForResource",
             "aws-marketplace:SearchAgreements",
             "aws-marketplace:ViewSubscriptions"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AWSMarketplaceReadOnlyActions"
         },
         {
           "Action": [
-            "dataexchange:Get*",
-            "dataexchange:List*"
+            "dataexchange:GetAsset",
+            "dataexchange:GetDataSet",
+            "dataexchange:GetEventAction",
+            "dataexchange:GetJob",
+            "dataexchange:GetRevision",
+            "dataexchange:ListDataSetRevisions",
+            "dataexchange:ListDataSets",
+            "dataexchange:ListEventActions",
+            "dataexchange:ListJobs",
+            "dataexchange:ListRevisionAssets",
+            "dataexchange:ListTagsForResource"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DataExchangeReadOnlyActions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-05-10T21:15:26Z"
+  "UpdateDate": "2024-07-22T13:36:03Z"
 }
