@@ -8,6 +8,7 @@ Actions:
   - Name: cleanrooms:CreateConfiguredTable
   - Name: cleanrooms:CreateConfiguredTableAnalysisRule
   - Name: cleanrooms:CreateConfiguredTableAssociation
+  - Name: cleanrooms:CreateIdMappingTable
   - Name: cleanrooms:CreateMembership
   - Name: cleanrooms:CreatePrivacyBudgetTemplate
   - Name: cleanrooms:DeleteAnalysisTemplate
@@ -16,6 +17,8 @@ Actions:
   - Name: cleanrooms:DeleteConfiguredTable
   - Name: cleanrooms:DeleteConfiguredTableAnalysisRule
   - Name: cleanrooms:DeleteConfiguredTableAssociation
+  - Name: cleanrooms:DeleteIdMappingTable
+  - Name: cleanrooms:DeleteIdNamespaceAssociation
   - Name: cleanrooms:DeleteMember
   - Name: cleanrooms:DeleteMembership
   - Name: cleanrooms:DeletePrivacyBudgetTemplate
@@ -28,6 +31,7 @@ Actions:
   - Name: cleanrooms:GetConfiguredTable
   - Name: cleanrooms:GetConfiguredTableAnalysisRule
   - Name: cleanrooms:GetConfiguredTableAssociation
+  - Name: cleanrooms:GetIdMappingTable
   - Name: cleanrooms:GetMembership
   - Name: cleanrooms:GetPrivacyBudgetTemplate
   - Name: cleanrooms:GetProtectedQuery
@@ -36,12 +40,15 @@ Actions:
   - Name: cleanrooms:ListAnalysisTemplates
   - Name: cleanrooms:ListCollaborationAnalysisTemplates
   - Name: cleanrooms:ListCollaborationConfiguredAudienceModelAssociations
+  - Name: cleanrooms:ListCollaborationIdNamespaceAssociations
   - Name: cleanrooms:ListCollaborationPrivacyBudgetTemplates
   - Name: cleanrooms:ListCollaborationPrivacyBudgets
   - Name: cleanrooms:ListCollaborations
   - Name: cleanrooms:ListConfiguredAudienceModelAssociations
   - Name: cleanrooms:ListConfiguredTableAssociations
   - Name: cleanrooms:ListConfiguredTables
+  - Name: cleanrooms:ListIdMappingTables
+  - Name: cleanrooms:ListIdNamespaceAssociations
   - Name: cleanrooms:ListMembers
   - Name: cleanrooms:ListMemberships
   - Name: cleanrooms:ListPrivacyBudgetTemplates
@@ -49,6 +56,7 @@ Actions:
   - Name: cleanrooms:ListProtectedQueries
   - Name: cleanrooms:ListSchemas
   - Name: cleanrooms:ListTagsForResource
+  - Name: cleanrooms:PopulateIdMappingTable
   - Name: cleanrooms:PreviewPrivacyImpact
   - Name: cleanrooms:StartProtectedQuery
   - Name: cleanrooms:TagResource
@@ -59,17 +67,13 @@ Actions:
   - Name: cleanrooms:UpdateConfiguredTable
   - Name: cleanrooms:UpdateConfiguredTableAnalysisRule
   - Name: cleanrooms:UpdateConfiguredTableAssociation
+  - Name: cleanrooms:UpdateIdMappingTable
   - Name: cleanrooms:UpdateMembership
   - Name: cleanrooms:UpdatePrivacyBudgetTemplate
   - Name: cleanrooms:UpdateProtectedQuery
 
-  # APIs without an IAM action
-  - Name: cleanrooms:CreateIdMappingTable
-  - Name: cleanrooms:DeleteIdMappingTable
-  - Name: cleanrooms:DeleteIdNamespaceAssociation
-  - Name: cleanrooms:GetIdMappingTable
-  - Name: cleanrooms:ListCollaborationIdNamespaceAssociations
-  - Name: cleanrooms:ListIdMappingTables
-  - Name: cleanrooms:ListIdNamespaceAssociations
-  - Name: cleanrooms:PopulateIdMappingTable
-  - Name: cleanrooms:UpdateIdMappingTable
+  # actions with no corresponding API
+  - Name: cleanrooms:CreateIdNamespaceAssociation
+  - Name: cleanrooms:GetCollaborationIdNamespaceAssociation
+  - Name: cleanrooms:GetIdNamespaceAssociation
+  - Name: cleanrooms:UpdateIdNamespaceAssociation

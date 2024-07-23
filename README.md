@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 405
-* Unique actions: 17436
+* Unique actions: 17440
 * Managed policies: 1221
 
 Most common managed policy name prefixes:
@@ -92,6 +92,7 @@ The following table summarises the AWS APIs.
 | [`sso`](services/sso.yml) | 73 | 0 | 53 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
 | [`imagebuilder`](services/imagebuilder.yml) | 73 | 0 | 0 |
+| [`cleanrooms`](services/cleanrooms.yml) | 72 | 0 | 4 |
 | [`wellarchitected`](services/wellarchitected.yml) | 72 | 0 | 1 |
 | [`mgn`](services/mgn.yml) | 70 | 0 | 34 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
@@ -104,7 +105,6 @@ The following table summarises the AWS APIs.
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 64 | 0 | 6 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 64 | 0 | 1 |
-| [`cleanrooms`](services/cleanrooms.yml) | 63 | 9 | 0 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
 | [`ivs`](services/ivs.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
@@ -447,11 +447,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2803 |
-| `Get` | 2548 |
+| `Get` | 2550 |
 | `Delete` | 2010 |
-| `Create` | 1869 |
+| `Create` | 1870 |
 | `Describe` | 1717 |
-| `Update` | 1599 |
+| `Update` | 1600 |
 | `Put` | 475 |
 | `Start` | 401 |
 | `Tag` | 277 |
