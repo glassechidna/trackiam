@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 405
-* Unique actions: 17426
+* Unique actions: 17436
 * Managed policies: 1221
 
 Most common managed policy name prefixes:
@@ -104,10 +104,10 @@ The following table summarises the AWS APIs.
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 64 | 0 | 6 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 64 | 0 | 1 |
+| [`cleanrooms`](services/cleanrooms.yml) | 63 | 9 | 0 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
 | [`ivs`](services/ivs.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
-| [`cleanrooms`](services/cleanrooms.yml) | 63 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 60 | 0 | 0 |
 | [`geo`](services/geo.yml) | 60 | 0 | 0 |
@@ -170,7 +170,7 @@ The following table summarises the AWS APIs.
 | [`aoss`](services/aoss.yml) | 37 | 0 | 2 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 0 |
-| [`entityresolution`](services/entityresolution.yml) | 36 | 0 | 2 |
+| [`entityresolution`](services/entityresolution.yml) | 36 | 0 | 3 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 36 | 0 | 0 |
@@ -446,12 +446,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2800 |
-| `Get` | 2547 |
-| `Delete` | 2008 |
-| `Create` | 1868 |
+| `List` | 2803 |
+| `Get` | 2548 |
+| `Delete` | 2010 |
+| `Create` | 1869 |
 | `Describe` | 1717 |
-| `Update` | 1598 |
+| `Update` | 1599 |
 | `Put` | 475 |
 | `Start` | 401 |
 | `Tag` | 277 |
