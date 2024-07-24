@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectSynchronizationServiceRolePolicy",
   "CreateDate": "2023-10-27T22:38:25Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4J2PE2WH3Y",
   "PolicyName": "AmazonConnectSynchronizationServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-10-27T22:38:25Z",
+    "CreateDate": "2024-07-24T17:45:43Z",
     "Document": {
       "Statement": [
         {
@@ -23,9 +23,13 @@
         },
         {
           "Action": [
-            "connect:Associate*",
+            "connect:AssociatePhoneNumberContactFlow",
+            "connect:AssociateQueueQuickConnects",
+            "connect:AssociateRoutingProfileQueues",
+            "connect:AssociateUserProficiencies",
             "connect:BatchGetFlowAssociation",
             "connect:CreateAgentStatus",
+            "connect:CreateAuthenticationProfile",
             "connect:CreateContactFlow*",
             "connect:CreateHoursOfOperation",
             "connect:CreatePredefinedAttribute",
@@ -45,6 +49,7 @@
             "connect:DeleteSecurityProfile",
             "connect:DeleteUser*",
             "connect:DescribeAgentStatus",
+            "connect:DescribeAuthenticationProfile",
             "connect:DescribeContactFlow*",
             "connect:DescribeHoursOfOperation",
             "connect:DescribePhoneNumber",
@@ -55,9 +60,13 @@
             "connect:DescribeRoutingProfile",
             "connect:DescribeSecurityProfile",
             "connect:DescribeUser*",
-            "connect:Disassociate*",
+            "connect:DisassociatePhoneNumberContactFlow",
+            "connect:DisassociateQueueQuickConnects",
+            "connect:DisassociateRoutingProfileQueues",
+            "connect:DisassociateUserProficiencies",
             "connect:GetPromptFile",
             "connect:ListAgentStatuses",
+            "connect:ListAuthenticationProfiles",
             "connect:ListContactFlow*",
             "connect:ListHoursOfOperations",
             "connect:ListPhoneNumbersV2",
@@ -73,6 +82,7 @@
             "connect:TagResource",
             "connect:UntagResource",
             "connect:UpdateAgentStatus",
+            "connect:UpdateAuthenticationProfile",
             "connect:UpdateContactFlow*",
             "connect:UpdateHoursOfOperation",
             "connect:UpdatePhoneNumber",
@@ -92,7 +102,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-10-27T22:38:25Z"
+  "UpdateDate": "2024-07-24T17:45:43Z"
 }
