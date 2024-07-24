@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonSageMakerNotebooksServiceRolePolicy",
   "CreateDate": "2019-10-18T20:27:37Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4MYB7OEJED",
   "PolicyName": "AmazonSageMakerNotebooksServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-05-22T19:18:48Z",
+    "CreateDate": "2024-07-24T18:05:40Z",
     "Document": {
       "Statement": [
         {
@@ -164,6 +164,14 @@
         },
         {
           "Action": [
+            "sagemaker:DeleteApp"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:app/*",
+          "Sid": "AllowSageMakerDeleteApp"
+        },
+        {
+          "Action": [
             "sso:CreateManagedApplicationInstance",
             "sso:DeleteManagedApplicationInstance",
             "sso:GetManagedApplicationInstance"
@@ -176,7 +184,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2024-05-22T19:18:48Z"
+  "UpdateDate": "2024-07-24T18:05:40Z"
 }
