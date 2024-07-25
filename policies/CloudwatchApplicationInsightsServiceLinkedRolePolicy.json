@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "CreateDate": "2018-12-01T16:22:12Z",
-  "DefaultVersionId": "v24",
+  "DefaultVersionId": "v25",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJH3SHQERZRQMQOQ44",
   "PolicyName": "CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-05-11T16:34:40Z",
+    "CreateDate": "2024-07-25T16:24:03Z",
     "Document": {
       "Statement": [
         {
@@ -19,7 +19,8 @@
             "arn:aws:ssm:*:*:document/AWSEC2-CheckPerformanceCounterSets",
             "arn:aws:ssm:*:*:document/AWSEC2-DetectWorkload",
             "arn:aws:ssm:*:*:document/AmazonCloudWatch-ManageAgent"
-          ]
+          ],
+          "Sid": "SSMSendCommand"
         },
         {
           "Action": [
@@ -28,7 +29,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "APIGateway"
         },
         {
           "Action": [
@@ -37,7 +39,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "ApplicationAutoscaling"
         },
         {
           "Action": [
@@ -46,19 +49,22 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "AutoScaling"
         },
         {
           "Action": [
             "cloudFormation:CreateStack",
             "cloudFormation:DeleteStack",
             "cloudFormation:DescribeStackResources",
-            "cloudFormation:UpdateStack"
+            "cloudFormation:UpdateStack",
+            "cloudFormation:UpdateTerminationProtection"
           ],
           "Effect": "Allow",
           "Resource": [
             "arn:aws:cloudformation:*:*:stack/ApplicationInsights-*"
-          ]
+          ],
+          "Sid": "CloudFormation"
         },
         {
           "Action": [
@@ -69,7 +75,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "CloudFormationStacks"
         },
         {
           "Action": [
@@ -86,7 +93,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "CloudWatch"
         },
         {
           "Action": [
@@ -98,7 +106,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "DynamoDB"
         },
         {
           "Action": [
@@ -112,7 +121,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "EC2"
         },
         {
           "Action": [
@@ -130,7 +140,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "ECS"
         },
         {
           "Action": [
@@ -139,7 +150,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ecs:*:*:cluster/*"
-          ]
+          ],
+          "Sid": "ECSCluster"
         },
         {
           "Action": [
@@ -155,7 +167,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "EKS"
         },
         {
           "Action": [
@@ -164,7 +177,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "EFS"
         },
         {
           "Action": [
@@ -175,7 +189,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "ElasticLoadBalancing"
         },
         {
           "Action": [
@@ -187,7 +202,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:events:*:*:rule/AmazonCloudWatch-ApplicationInsights-*"
-          ]
+          ],
+          "Sid": "EventBridgeManagedRule"
         },
         {
           "Action": [
@@ -196,7 +212,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "EventBridge"
         },
         {
           "Action": [
@@ -207,7 +224,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "Lambda"
         },
         {
           "Action": [
@@ -216,7 +234,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:logs:*:*:log-group:*"
-          ]
+          ],
+          "Sid": "CloudWatchLogsDeleteSubscriptionFilter"
         },
         {
           "Action": [
@@ -228,7 +247,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "CloudWatchLogs"
         },
         {
           "Action": [
@@ -238,7 +258,8 @@
           "Resource": [
             "arn:aws:logs:*:*:destination:AmazonCloudWatch-ApplicationInsights-LogIngestionDestination*",
             "arn:aws:logs:*:*:log-group:*"
-          ]
+          ],
+          "Sid": "CloudWatchLogsCreateSubscriptionFilter"
         },
         {
           "Action": [
@@ -248,7 +269,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "RDS"
         },
         {
           "Action": [
@@ -258,7 +280,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:resource-groups:*:*:group/ApplicationInsights-*"
-          ]
+          ],
+          "Sid": "ApplicationInsightsResourceGroup"
         },
         {
           "Action": [
@@ -269,7 +292,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "ResourceGroups"
         },
         {
           "Action": [
@@ -282,7 +306,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "Route53"
         },
         {
           "Action": [
@@ -299,7 +324,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "Route53Resolver"
         },
         {
           "Action": [
@@ -310,7 +336,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "S3"
         },
         {
           "Action": [
@@ -323,21 +350,24 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "SNS"
         },
         {
           "Action": [
             "sqs:ListQueues"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "SQS"
         },
         {
           "Action": [
             "ssm:AddTagsToResource"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:opsitem/*"
+          "Resource": "arn:aws:ssm:*:*:opsitem/*",
+          "Sid": "SSMTags"
         },
         {
           "Action": [
@@ -348,7 +378,8 @@
             "ssm:RemoveTagsFromResource"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:parameter/AmazonCloudWatch-ApplicationInsights-*"
+          "Resource": "arn:aws:ssm:*:*:parameter/AmazonCloudWatch-ApplicationInsights-*",
+          "Sid": "SSMParameter"
         },
         {
           "Action": [
@@ -365,7 +396,8 @@
             "arn:aws:ssm:*:*:document/AWSEC2-ApplicationInsightsCloudwatchAgentInstallAndConfigure",
             "arn:aws:ssm:*:*:document/AmazonCloudWatch-ManageAgent",
             "arn:aws:ssm:*:*:managed-instance/*"
-          ]
+          ],
+          "Sid": "SSMAssociation"
         },
         {
           "Action": [
@@ -378,7 +410,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "SSMOpsItem"
         },
         {
           "Action": [
@@ -388,7 +421,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "SSMGetCommandInvocation"
         },
         {
           "Action": [
@@ -400,7 +434,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "States"
         },
         {
           "Action": [
@@ -409,7 +444,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "Tag"
         },
         {
           "Action": [
@@ -421,13 +457,14 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "XRay"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v24"
+    "VersionId": "v25"
   },
-  "UpdateDate": "2023-05-11T16:34:40Z"
+  "UpdateDate": "2024-07-25T16:24:03Z"
 }
