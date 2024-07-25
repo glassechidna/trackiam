@@ -6,10 +6,12 @@ Actions:
   - Name: ecr:CompleteLayerUpload
   - Name: ecr:CreatePullThroughCacheRule
   - Name: ecr:CreateRepository
+  - Name: ecr:CreateRepositoryCreationTemplate
   - Name: ecr:DeleteLifecyclePolicy
   - Name: ecr:DeletePullThroughCacheRule
   - Name: ecr:DeleteRegistryPolicy
   - Name: ecr:DeleteRepository
+  - Name: ecr:DeleteRepositoryCreationTemplate
   - Name: ecr:DeleteRepositoryPolicy
   - Name: ecr:DescribeImageReplicationStatus
   - Name: ecr:DescribeImageScanFindings
@@ -17,6 +19,7 @@ Actions:
   - Name: ecr:DescribePullThroughCacheRules
   - Name: ecr:DescribeRegistry
   - Name: ecr:DescribeRepositories
+  - Name: ecr:DescribeRepositoryCreationTemplates
   - Name: ecr:GetAuthorizationToken
   - Name: ecr:GetDownloadUrlForLayer
   - Name: ecr:GetLifecyclePolicy
@@ -40,13 +43,10 @@ Actions:
   - Name: ecr:TagResource
   - Name: ecr:UntagResource
   - Name: ecr:UpdatePullThroughCacheRule
+  - Name: ecr:UpdateRepositoryCreationTemplate
   - Name: ecr:UploadLayerPart
   - Name: ecr:ValidatePullThroughCacheRule
 
   # actions with no corresponding API
   - Name: ecr:BatchImportUpstreamImage
-  - Name: ecr:CreateRepositoryCreationTemplate
-  - Name: ecr:DeleteRepositoryCreationTemplate
-  - Name: ecr:DescribeRepositoryCreationTemplates
   - Name: ecr:ReplicateImage
-  - Name: ecr:UpdateRepositoryCreationTemplate

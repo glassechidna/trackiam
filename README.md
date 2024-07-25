@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 405
-* Unique actions: 17445
+* Unique actions: 17447
 * Managed policies: 1221
 
 Most common managed policy name prefixes:
@@ -50,7 +50,7 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 140 | 0 | 9 |
 | [`lex`](services/lex.yml) | 137 | 4 | 8 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 22 |
-| [`datazone`](services/datazone.yml) | 122 | 0 | 25 |
+| [`datazone`](services/datazone.yml) | 123 | 0 | 24 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
 | [`s3`](services/s3.yml) | 113 | 60 | 46 |
@@ -103,8 +103,8 @@ The following table summarises the AWS APIs.
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
+| [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 64 | 2 | 1 |
 | [`appsync`](services/appsync.yml) | 64 | 0 | 6 |
-| [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 64 | 0 | 1 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
 | [`ivs`](services/ivs.yml) | 63 | 0 | 0 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
@@ -142,6 +142,7 @@ The following table summarises the AWS APIs.
 | [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 7 |
 | [`codeartifact`](services/codeartifact.yml) | 48 | 0 | 3 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
+| [`ecr`](services/ecr.yml) | 47 | 0 | 2 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`wisdom`](services/wisdom.yml) | 47 | 0 | 0 |
 | [`transcribe`](services/transcribe.yml) | 46 | 0 | 3 |
@@ -150,7 +151,6 @@ The following table summarises the AWS APIs.
 | [`workdocs`](services/workdocs.yml) | 44 | 0 | 17 |
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
-| [`ecr`](services/ecr.yml) | 43 | 0 | 6 |
 | [`fms`](services/fms.yml) | 42 | 0 | 0 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
 | [`ce`](services/ce.yml) | 41 | 0 | 12 |
@@ -447,8 +447,8 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2803 |
-| `Get` | 2551 |
-| `Delete` | 2010 |
+| `Get` | 2552 |
+| `Delete` | 2011 |
 | `Create` | 1871 |
 | `Describe` | 1717 |
 | `Update` | 1602 |
