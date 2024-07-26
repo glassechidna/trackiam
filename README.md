@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 405
-* Unique actions: 17447
+* Unique actions: 17448
 * Managed policies: 1221
 
 Most common managed policy name prefixes:
@@ -411,12 +411,12 @@ The following table summarises the AWS APIs.
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 5 |
+| [`customer-verification`](services/customer-verification.yml) | 0 | 0 | 5 |
 | [`appstudio`](services/appstudio.yml) | 0 | 0 | 5 |
 | [`supportplans`](services/supportplans.yml) | 0 | 0 | 4 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
 | [`invoicing`](services/invoicing.yml) | 0 | 0 | 4 |
-| [`customer-verification`](services/customer-verification.yml) | 0 | 0 | 4 |
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
 | [`a2c`](services/a2c.yml) | 0 | 0 | 4 |
 | [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 3 |
@@ -449,7 +449,7 @@ Most common action prefixes:
 | `List` | 2803 |
 | `Get` | 2552 |
 | `Delete` | 2011 |
-| `Create` | 1871 |
+| `Create` | 1872 |
 | `Describe` | 1717 |
 | `Update` | 1602 |
 | `Put` | 475 |
