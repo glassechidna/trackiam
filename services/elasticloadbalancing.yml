@@ -19,6 +19,7 @@ Actions:
   - Name: elasticloadbalancing:DeleteLoadBalancerListeners
   - Name: elasticloadbalancing:DeleteLoadBalancerPolicy
   - Name: elasticloadbalancing:DeleteRule
+  - Name: elasticloadbalancing:DeleteSharedTrustStoreAssociation
   - Name: elasticloadbalancing:DeleteTargetGroup
   - Name: elasticloadbalancing:DeleteTrustStore
   - Name: elasticloadbalancing:DeregisterInstancesFromLoadBalancer
@@ -43,6 +44,7 @@ Actions:
   - Name: elasticloadbalancing:DetachLoadBalancerFromSubnets
   - Name: elasticloadbalancing:DisableAvailabilityZonesForLoadBalancer
   - Name: elasticloadbalancing:EnableAvailabilityZonesForLoadBalancer
+  - Name: elasticloadbalancing:GetResourcePolicy
   - Name: elasticloadbalancing:GetTrustStoreCaCertificatesBundle
   - Name: elasticloadbalancing:GetTrustStoreRevocationContent
   - Name: elasticloadbalancing:ModifyListener
@@ -66,7 +68,3 @@ Actions:
 
   # actions with no corresponding API
   - Name: elasticloadbalancing:SetWebAcl
-
-  # APIs without an IAM action
-  - Name: elasticloadbalancing:DeleteSharedTrustStoreAssociation
-  - Name: elasticloadbalancing:GetResourcePolicy

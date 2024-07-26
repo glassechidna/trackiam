@@ -99,11 +99,11 @@ The following table summarises the AWS APIs.
 | [`athena`](services/athena.yml) | 68 | 0 | 11 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
 | [`ds`](services/ds.yml) | 67 | 0 | 10 |
+| [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 66 | 0 | 1 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
-| [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 64 | 2 | 1 |
 | [`appsync`](services/appsync.yml) | 64 | 0 | 6 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 5 |
 | [`ivs`](services/ivs.yml) | 63 | 0 | 0 |
