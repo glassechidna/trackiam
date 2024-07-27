@@ -1,0 +1,69 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerCanvasEMRServerlessExecutionRolePolicy",
+  "CreateDate": "2024-07-27T00:35:42Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4ATKMS5NQP",
+  "PolicyName": "AmazonSageMakerCanvasEMRServerlessExecutionRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-07-27T00:35:42Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "s3:GetObject",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringEqualsIgnoreCase": {
+              "s3:ExistingObjectTag/SageMaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*",
+          "Sid": "S3GetObjectOperation"
+        },
+        {
+          "Action": [
+            "s3:AbortMultipartUpload",
+            "s3:DeleteObject",
+            "s3:GetBucketCors",
+            "s3:GetBucketLocation",
+            "s3:GetObject",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*SageMaker*",
+            "arn:aws:s3:::*sagemaker*"
+          ],
+          "Sid": "S3Operations"
+        },
+        {
+          "Action": [
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "S3ListOperations"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-07-27T00:35:42Z"
+}
