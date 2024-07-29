@@ -1,15 +1,35 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticDisasterRecoveryConsoleFullAccess_v2",
   "CreateDate": "2023-11-27T13:35:19Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4GNEJEKJLM",
   "PolicyName": "AWSElasticDisasterRecoveryConsoleFullAccess_v2",
   "PolicyVersion": {
-    "CreateDate": "2024-05-19T07:38:32Z",
+    "CreateDate": "2024-07-29T19:38:08Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ec2:CreateFleet",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "drs.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:fleet/*",
+            "arn:aws:ec2:*:*:image/*",
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "ConsoleFullAccess39"
+        },
         {
           "Action": "ec2:CreateTags",
           "Condition": {
@@ -33,6 +53,29 @@
             "arn:aws:ec2:*:*:volume/*"
           ],
           "Sid": "ConsoleFullAccess26"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "drs.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "CreateFleet"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:snapshot/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "ConsoleFullAccess40"
         },
         {
           "Action": "ec2:CreateTags",
@@ -61,6 +104,24 @@
             "arn:aws:iam::*:role/service-role/AWSElasticDisasterRecoveryRecoveryInstanceWithLaunchActionsRole"
           ],
           "Sid": "ConsoleFullAccess8"
+        },
+        {
+          "Action": [
+            "ec2:AssociateIamInstanceProfile"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "Null": {
+              "aws:ResourceTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "ConsoleFullAccess38"
         },
         {
           "Action": [
@@ -497,7 +558,8 @@
             "ec2:DescribeSubnets",
             "ec2:DescribeVolumes",
             "ec2:GetEbsDefaultKmsKeyId",
-            "ec2:GetEbsEncryptionByDefault"
+            "ec2:GetEbsEncryptionByDefault",
+            "ec2:GetInstanceTypesFromInstanceRequirements"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -552,7 +614,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-05-19T07:38:32Z"
+  "UpdateDate": "2024-07-29T19:38:08Z"
 }

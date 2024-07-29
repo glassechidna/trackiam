@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticDisasterRecoveryReadOnlyAccess",
   "CreateDate": "2021-11-17T10:50:05Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AACAUJE3T",
   "PolicyName": "AWSElasticDisasterRecoveryReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-11-27T13:03:00Z",
+    "CreateDate": "2024-07-29T19:39:26Z",
     "Document": {
       "Statement": [
         {
@@ -66,7 +66,8 @@
             "ec2:DescribeInstances",
             "ec2:DescribeLaunchTemplateVersions",
             "ec2:DescribeSecurityGroups",
-            "ec2:DescribeSubnets"
+            "ec2:DescribeSubnets",
+            "ec2:GetInstanceTypesFromInstanceRequirements"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -94,7 +95,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2023-11-27T13:03:00Z"
+  "UpdateDate": "2024-07-29T19:39:26Z"
 }
