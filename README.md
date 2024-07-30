@@ -300,6 +300,7 @@ The following table summarises the AWS APIs.
 | [`snow-device-management`](services/snow-device-management.yml) | 13 | 0 | 0 |
 | [`pi`](services/pi.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
+| [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 13 | 0 | 0 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 13 | 0 | 0 |
 | [`launchwizard`](services/launchwizard.yml) | 12 | 0 | 25 |
 | [`account`](services/account.yml) | 12 | 0 | 4 |
@@ -309,7 +310,6 @@ The following table summarises the AWS APIs.
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`bcm-data-exports`](services/bcm-data-exports.yml) | 12 | 0 | 0 |
 | [`budgets`](services/budgets.yml) | 11 | 15 | 2 |
-| [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 11 | 2 | 0 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 11 | 0 | 41 |
 | [`timestream-influxdb`](services/timestream-influxdb.yml) | 11 | 0 | 0 |
 | [`repostspace`](services/repostspace.yml) | 11 | 0 | 0 |
