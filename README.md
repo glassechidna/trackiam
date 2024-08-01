@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 405
-* Unique actions: 17472
+* Unique actions: 17474
 * Managed policies: 1223
 
 Most common managed policy name prefixes:
@@ -173,7 +173,6 @@ The following table summarises the AWS APIs.
 | [`entityresolution`](services/entityresolution.yml) | 36 | 0 | 3 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 0 |
-| [`cloudhsm`](services/cloudhsm.yml) | 36 | 0 | 0 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
 | [`cases`](services/cases.yml) | 34 | 0 | 1 |
@@ -268,6 +267,7 @@ The following table summarises the AWS APIs.
 | [`opsworks-cm`](services/opsworks-cm.yml) | 19 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 19 | 0 | 0 |
 | [`identitystore`](services/identitystore.yml) | 19 | 0 | 0 |
+| [`cloudhsm`](services/cloudhsm.yml) | 18 | 18 | 0 |
 | [`resource-groups`](services/resource-groups.yml) | 18 | 0 | 6 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
 | [`medical-imaging`](services/medical-imaging.yml) | 18 | 0 | 3 |
@@ -343,7 +343,7 @@ The following table summarises the AWS APIs.
 | [`pricing`](services/pricing.yml) | 5 | 0 | 0 |
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 4 | 0 | 0 |
 | [`scn`](services/scn.yml) | 3 | 0 | 13 |
-| [`controlcatalog`](services/controlcatalog.yml) | 3 | 0 | 0 |
+| [`controlcatalog`](services/controlcatalog.yml) | 3 | 0 | 2 |
 | [`cassandra`](services/cassandra.yml) | 2 | 12 | 15 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 2 | 0 | 1 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 2 | 0 | 0 |
@@ -446,8 +446,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2810 |
-| `Get` | 2555 |
+| `List` | 2811 |
+| `Get` | 2556 |
 | `Delete` | 2013 |
 | `Create` | 1876 |
 | `Describe` | 1718 |
