@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 405
-* Unique actions: 17454
+* Unique actions: 17472
 * Managed policies: 1223
 
 Most common managed policy name prefixes:
@@ -50,7 +50,7 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 140 | 0 | 9 |
 | [`lex`](services/lex.yml) | 137 | 4 | 8 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 22 |
-| [`datazone`](services/datazone.yml) | 123 | 0 | 24 |
+| [`datazone`](services/datazone.yml) | 123 | 0 | 37 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
 | [`s3`](services/s3.yml) | 113 | 60 | 46 |
@@ -122,8 +122,8 @@ The following table summarises the AWS APIs.
 | [`eks`](services/eks.yml) | 56 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
 | [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 10 |
+| [`resiliencehub`](services/resiliencehub.yml) | 55 | 0 | 5 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 1 |
-| [`resiliencehub`](services/resiliencehub.yml) | 55 | 0 | 0 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`wafv2`](services/wafv2.yml) | 54 | 0 | 2 |
 | [`lakeformation`](services/lakeformation.yml) | 52 | 3 | 1 |
@@ -446,14 +446,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2806 |
-| `Get` | 2553 |
-| `Delete` | 2011 |
-| `Create` | 1873 |
-| `Describe` | 1717 |
-| `Update` | 1602 |
+| `List` | 2810 |
+| `Get` | 2555 |
+| `Delete` | 2013 |
+| `Create` | 1876 |
+| `Describe` | 1718 |
+| `Update` | 1603 |
 | `Put` | 475 |
-| `Start` | 401 |
+| `Start` | 402 |
 | `Tag` | 277 |
 | `Untag` | 273 |
 
