@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonDataZoneDomainExecutionRolePolicy",
   "CreateDate": "2023-09-27T21:55:08Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4F33DOLA5S",
   "PolicyName": "AmazonDataZoneDomainExecutionRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-06-27T15:17:17Z",
+    "CreateDate": "2024-08-01T18:25:12Z",
     "Document": {
       "Statement": [
         {
@@ -20,13 +20,18 @@
           "Action": [
             "datazone:AcceptPredictions",
             "datazone:AcceptSubscriptionRequest",
+            "datazone:AddEntityOwner",
+            "datazone:AddPolicyGrant",
             "datazone:CancelMetadataGenerationRun",
             "datazone:CancelSubscription",
             "datazone:CreateAsset",
             "datazone:CreateAssetFilter",
             "datazone:CreateAssetRevision",
             "datazone:CreateAssetType",
+            "datazone:CreateDataProduct",
+            "datazone:CreateDataProductRevision",
             "datazone:CreateDataSource",
+            "datazone:CreateDomainUnit",
             "datazone:CreateEnvironment",
             "datazone:CreateEnvironmentBlueprint",
             "datazone:CreateEnvironmentProfile",
@@ -41,7 +46,9 @@
             "datazone:DeleteAsset",
             "datazone:DeleteAssetFilter",
             "datazone:DeleteAssetType",
+            "datazone:DeleteDataProduct",
             "datazone:DeleteDataSource",
+            "datazone:DeleteDomainUnit",
             "datazone:DeleteEnvironment",
             "datazone:DeleteEnvironmentBlueprint",
             "datazone:DeleteEnvironmentProfile",
@@ -58,9 +65,11 @@
             "datazone:GetAsset",
             "datazone:GetAssetFilter",
             "datazone:GetAssetType",
+            "datazone:GetDataProduct",
             "datazone:GetDataSource",
             "datazone:GetDataSourceRun",
             "datazone:GetDomain",
+            "datazone:GetDomainUnit",
             "datazone:GetEnvironment",
             "datazone:GetEnvironmentAction",
             "datazone:GetEnvironmentActionLink",
@@ -85,9 +94,12 @@
             "datazone:ListAccountEnvironments",
             "datazone:ListAssetFilters",
             "datazone:ListAssetRevisions",
+            "datazone:ListDataProductRevisions",
             "datazone:ListDataSourceRunActivities",
             "datazone:ListDataSourceRuns",
             "datazone:ListDataSources",
+            "datazone:ListDomainUnitsForParent",
+            "datazone:ListEntityOwners",
             "datazone:ListEnvironmentActions",
             "datazone:ListEnvironmentBlueprintConfigurationSummaries",
             "datazone:ListEnvironmentBlueprintConfigurations",
@@ -98,6 +110,7 @@
             "datazone:ListLineageNodeHistory",
             "datazone:ListMetadataGenerationRuns",
             "datazone:ListNotifications",
+            "datazone:ListPolicyGrants",
             "datazone:ListProjectMemberships",
             "datazone:ListProjects",
             "datazone:ListSubscriptionGrants",
@@ -108,6 +121,8 @@
             "datazone:ListWarehouseMetadata",
             "datazone:RejectPredictions",
             "datazone:RejectSubscriptionRequest",
+            "datazone:RemoveEntityOwner",
+            "datazone:RemovePolicyGrant",
             "datazone:RevokeSubscription",
             "datazone:Search",
             "datazone:SearchGroupProfiles",
@@ -118,6 +133,7 @@
             "datazone:StartMetadataGenerationRun",
             "datazone:UpdateAssetFilter",
             "datazone:UpdateDataSource",
+            "datazone:UpdateDomainUnit",
             "datazone:UpdateEnvironment",
             "datazone:UpdateEnvironmentBlueprint",
             "datazone:UpdateEnvironmentDeploymentStatus",
@@ -136,7 +152,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2024-06-27T15:17:17Z"
+  "UpdateDate": "2024-08-01T18:25:12Z"
 }
