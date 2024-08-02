@@ -151,10 +151,10 @@ The following table summarises the AWS APIs.
 | [`workdocs`](services/workdocs.yml) | 44 | 0 | 17 |
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
+| [`codepipeline`](services/codepipeline.yml) | 43 | 0 | 0 |
 | [`fms`](services/fms.yml) | 42 | 0 | 0 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
 | [`ce`](services/ce.yml) | 41 | 0 | 12 |
-| [`codepipeline`](services/codepipeline.yml) | 40 | 3 | 0 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 40 | 0 | 3 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 40 | 0 | 0 |
 | [`swf`](services/swf.yml) | 39 | 0 | 12 |

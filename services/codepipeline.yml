@@ -19,8 +19,11 @@ Actions:
   - Name: codepipeline:ListActionTypes
   - Name: codepipeline:ListPipelineExecutions
   - Name: codepipeline:ListPipelines
+  - Name: codepipeline:ListRuleExecutions
+  - Name: codepipeline:ListRuleTypes
   - Name: codepipeline:ListTagsForResource
   - Name: codepipeline:ListWebhooks
+  - Name: codepipeline:OverrideStageCondition
   - Name: codepipeline:PollForJobs
   - Name: codepipeline:PollForThirdPartyJobs
   - Name: codepipeline:PutActionRevision
@@ -39,8 +42,3 @@ Actions:
   - Name: codepipeline:UntagResource
   - Name: codepipeline:UpdateActionType
   - Name: codepipeline:UpdatePipeline
-
-  # APIs without an IAM action
-  - Name: codepipeline:ListRuleExecutions
-  - Name: codepipeline:ListRuleTypes
-  - Name: codepipeline:OverrideStageCondition
