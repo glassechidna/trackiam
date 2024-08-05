@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSSMForSAPServiceLinkedRolePolicy",
   "CreateDate": "2022-11-16T01:18:21Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AONIU2LID",
   "PolicyName": "AWSSSMForSAPServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-04-11T18:31:07Z",
+    "CreateDate": "2024-08-05T22:40:26Z",
     "Document": {
       "Statement": [
         {
@@ -32,7 +32,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:*:iam::*:role/aws-service-role/servicecatalog-appregistry.amazonaws.com/AWSServiceRoleForAWSServiceCatalogAppRegistry",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/servicecatalog-appregistry.amazonaws.com/AWSServiceRoleForAWSServiceCatalogAppRegistry",
           "Sid": "CreateServiceLinkedRole"
         },
         {
@@ -85,6 +85,41 @@
             "ec2:DeleteTags"
           ],
           "Condition": {
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": [
+                "SystemsManagerForSAP-*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "ManageSsmSapTagsOnEbsVolumes"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags",
+            "ec2:DeleteTags"
+          ],
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": [
+                "SystemsManagerForSAP-*"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceTag/SSMForSAPManaged": "True"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "ManageSsmSapTagsOnEc2Instances"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags",
+            "ec2:DeleteTags"
+          ],
+          "Condition": {
             "Null": {
               "aws:RequestTag/awsApplication": "false"
             },
@@ -122,6 +157,29 @@
           "Effect": "Allow",
           "Resource": "arn:*:resource-groups:*:*:group/AWS_AppRegistry_AppTag_*",
           "Sid": "CreateAppTagResourceGroup"
+        },
+        {
+          "Action": [
+            "resource-groups:CreateGroup",
+            "resource-groups:Tag"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "aws:RequestTag/awsApplication": "arn:aws:resource-groups:*:*:group/*/*"
+            },
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "SSMForSAPCreated",
+                "awsApplication"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/SSMForSAPCreated": "True"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:resource-groups:*:*:group/SystemsManagerForSAP-*",
+          "Sid": "SsmSapResourceGroup"
         },
         {
           "Action": [
@@ -285,7 +343,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2024-04-11T18:31:07Z"
+  "UpdateDate": "2024-08-05T22:40:26Z"
 }
