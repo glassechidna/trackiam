@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AwsGlueSessionUserRestrictedPolicy",
   "CreateDate": "2022-04-14T21:31:01Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MG6ZEY4WF",
   "PolicyName": "AwsGlueSessionUserRestrictedPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-04-29T22:45:28Z",
+    "CreateDate": "2024-08-05T23:06:45Z",
     "Document": {
       "Statement": [
         {
@@ -53,7 +53,20 @@
         },
         {
           "Action": [
-            "glue:TagResource",
+            "glue:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/owner": "${aws:userid}",
+              "aws:ResourceTag/owner": "${aws:userid}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:glue:*:*:session/*",
+          "Sid": "AllowGlueTaggingAction"
+        },
+        {
+          "Action": [
             "glue:UntagResource",
             "tag:TagResources",
             "tag:UntagResources"
@@ -113,7 +126,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-04-29T22:45:28Z"
+  "UpdateDate": "2024-08-05T23:06:45Z"
 }

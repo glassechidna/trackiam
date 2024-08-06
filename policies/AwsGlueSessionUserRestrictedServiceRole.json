@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AwsGlueSessionUserRestrictedServiceRole",
   "CreateDate": "2022-04-14T21:30:07Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NDGTDBV5G",
   "PolicyName": "AwsGlueSessionUserRestrictedServiceRole",
   "PolicyVersion": {
-    "CreateDate": "2024-04-29T22:51:39Z",
+    "CreateDate": "2024-08-05T23:14:07Z",
     "Document": {
       "Statement": [
         {
@@ -73,7 +73,20 @@
         },
         {
           "Action": [
-            "glue:TagResource",
+            "glue:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/owner": "${aws:userid}",
+              "aws:ResourceTag/owner": "${aws:userid}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:glue:*:*:session/*",
+          "Sid": "AllowGlueTaggingAction"
+        },
+        {
+          "Action": [
             "glue:UntagResource",
             "tag:TagResources",
             "tag:UntagResources"
@@ -182,7 +195,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-04-29T22:51:39Z"
+  "UpdateDate": "2024-08-05T23:14:07Z"
 }
