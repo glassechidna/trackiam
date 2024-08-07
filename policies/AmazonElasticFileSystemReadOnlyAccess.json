@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonElasticFileSystemReadOnlyAccess",
   "CreateDate": "2015-05-27T16:25:25Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIPN5S4NE5JJOKVC4Y",
   "PolicyName": "AmazonElasticFileSystemReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-01-10T18:53:37Z",
+    "CreateDate": "2024-08-07T16:59:47Z",
     "Document": {
       "Statement": [
         {
@@ -35,13 +35,14 @@
             "kms:ListAliases"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ElasticFileSystemReadOnlyAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2022-01-10T18:53:37Z"
+  "UpdateDate": "2024-08-07T16:59:47Z"
 }
