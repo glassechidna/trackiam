@@ -1,13 +1,13 @@
 {
-  "Arn": "arn:aws:iam::aws:policy/AmazonWorkSpacesThinClientReadOnlyAccess",
-  "CreateDate": "2024-07-19T08:50:52Z",
-  "DefaultVersionId": "v2",
+  "Arn": "arn:aws:iam::aws:policy/AmazonWorkSpacesThinClientFullAccess",
+  "CreateDate": "2024-08-09T07:25:24Z",
+  "DefaultVersionId": "v1",
   "IsAttachable": true,
   "Path": "/",
-  "PolicyId": "ANPAZKAPJZG4C45JOKZDB",
-  "PolicyName": "AmazonWorkSpacesThinClientReadOnlyAccess",
+  "PolicyId": "ANPAZKAPJZG4ADQB7X4NV",
+  "PolicyName": "AmazonWorkSpacesThinClientFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-08-09T07:11:12Z",
+    "CreateDate": "2024-08-09T07:25:24Z",
     "Document": {
       "Statement": [
         {
@@ -20,18 +20,11 @@
         },
         {
           "Action": [
-            "thinclient:GetDevice",
-            "thinclient:GetEnvironment",
-            "thinclient:GetSoftwareSet",
-            "thinclient:ListDeviceSessions",
-            "thinclient:ListDevices",
-            "thinclient:ListEnvironments",
-            "thinclient:ListSoftwareSets",
-            "thinclient:ListTagsForResource"
+            "thinclient:*"
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "AllowThinClientReadAccess"
+          "Sid": "AllowThinClientFullAccess"
         },
         {
           "Action": [
@@ -55,7 +48,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v1"
   },
-  "UpdateDate": "2024-08-09T07:11:12Z"
+  "UpdateDate": "2024-08-09T07:25:24Z"
 }
