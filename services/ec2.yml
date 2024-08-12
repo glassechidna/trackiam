@@ -75,6 +75,7 @@ Actions:
   - Name: ec2:CreateInstanceExportTask
   - Name: ec2:CreateInternetGateway
   - Name: ec2:CreateIpam
+  - Name: ec2:CreateIpamExternalResourceVerificationToken
   - Name: ec2:CreateIpamPool
   - Name: ec2:CreateIpamResourceDiscovery
   - Name: ec2:CreateIpamScope
@@ -151,6 +152,7 @@ Actions:
   - Name: ec2:DeleteInstanceEventWindow
   - Name: ec2:DeleteInternetGateway
   - Name: ec2:DeleteIpam
+  - Name: ec2:DeleteIpamExternalResourceVerificationToken
   - Name: ec2:DeleteIpamPool
   - Name: ec2:DeleteIpamResourceDiscovery
   - Name: ec2:DeleteIpamScope
@@ -275,6 +277,7 @@ Actions:
   - Name: ec2:DescribeInstances
   - Name: ec2:DescribeInternetGateways
   - Name: ec2:DescribeIpamByoasn
+  - Name: ec2:DescribeIpamExternalResourceVerificationTokens
   - Name: ec2:DescribeIpamPools
   - Name: ec2:DescribeIpamResourceDiscoveries
   - Name: ec2:DescribeIpamResourceDiscoveryAssociations
@@ -639,8 +642,3 @@ Actions:
   - Name: ec2:PauseVolumeIO
   - Name: ec2:PutResourcePolicy
   - Name: ec2:SendSpotInstanceInterruptions
-
-  # APIs without an IAM action
-  - Name: ec2:CreateIpamExternalResourceVerificationToken
-  - Name: ec2:DeleteIpamExternalResourceVerificationToken
-  - Name: ec2:DescribeIpamExternalResourceVerificationTokens
