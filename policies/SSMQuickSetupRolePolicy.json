@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/SSMQuickSetupRolePolicy",
   "CreateDate": "2024-06-25T15:20:04Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4LCIDYUKDZ",
   "PolicyName": "SSMQuickSetupRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-06-25T15:20:04Z",
+    "CreateDate": "2024-08-12T14:32:20Z",
     "Document": {
       "Statement": [
         {
@@ -23,8 +23,11 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:cloudformation:*:*:stack/StackSet-AWS-QuickSetup-*",
+            "arn:aws:cloudformation:*:*:stack/StackSet-SSMQuickSetup*",
             "arn:aws:cloudformation:*:*:stackset-target/AWS-QuickSetup-*",
+            "arn:aws:cloudformation:*:*:stackset-target/SSMQuickSetup*",
             "arn:aws:cloudformation:*:*:stackset/AWS-QuickSetup-*",
+            "arn:aws:cloudformation:*:*:stackset/SSMQuickSetup*",
             "arn:aws:cloudformation:*:*:type/resource/*"
           ],
           "Sid": "QuickSetupStackSetDeletePermissions"
@@ -40,7 +43,9 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:cloudformation:*:*:stack/StackSet-AWS-QuickSetup-*",
-            "arn:aws:cloudformation:*:*:stackset/AWS-QuickSetup-*"
+            "arn:aws:cloudformation:*:*:stack/StackSet-SSMQuickSetup*",
+            "arn:aws:cloudformation:*:*:stackset/AWS-QuickSetup-*",
+            "arn:aws:cloudformation:*:*:stackset/SSMQuickSetup*"
           ],
           "Sid": "QuickSetupStackSetReadOnlyPermissions"
         },
@@ -97,7 +102,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-06-25T15:20:04Z"
+  "UpdateDate": "2024-08-12T14:32:20Z"
 }
