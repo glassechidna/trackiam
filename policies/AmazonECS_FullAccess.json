@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonECS_FullAccess",
   "CreateDate": "2017-11-07T21:36:54Z",
-  "DefaultVersionId": "v20",
+  "DefaultVersionId": "v21",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ7S7AN6YQPTJC7IFS",
   "PolicyName": "AmazonECS_FullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-01-04T16:26:05Z",
+    "CreateDate": "2024-08-13T19:39:37Z",
     "Document": {
       "Statement": [
         {
@@ -24,7 +24,21 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ServiceLinkedRoleCreationPolicy"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "ecs.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/ecsInfrastructureRole"
+          ],
+          "Sid": "InfrastructurePassRolePolicy"
         },
         {
           "Action": "iam:PassRole",
@@ -36,7 +50,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "TasksPassRolePolicy"
         },
         {
           "Action": "iam:PassRole",
@@ -51,7 +66,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/ecsAutoscaleRole*"
-          ]
+          ],
+          "Sid": "AutoScalingPassRolePolicy"
         },
         {
           "Action": "iam:PassRole",
@@ -66,7 +82,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/ecsInstanceRole*"
-          ]
+          ],
+          "Sid": "InstancePassRolePolicy"
         },
         {
           "Action": [
@@ -83,7 +100,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "ManagedCloudformationResourcesCleanupPolicy"
         },
         {
           "Action": [
@@ -100,7 +118,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ELBTaggingPolicy"
         },
         {
           "Action": [
@@ -222,7 +241,8 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "ECSIntegrationsManagementPolicy"
         },
         {
           "Action": [
@@ -231,13 +251,14 @@
             "ssm:GetParametersByPath"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:parameter/aws/service/ecs*"
+          "Resource": "arn:aws:ssm:*:*:parameter/aws/service/ecs*",
+          "Sid": "SSMPolicy"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v20"
+    "VersionId": "v21"
   },
-  "UpdateDate": "2023-01-04T16:26:05Z"
+  "UpdateDate": "2024-08-13T19:39:37Z"
 }
