@@ -16,9 +16,11 @@ Actions:
   - Name: kinesisanalytics:DeleteApplicationSnapshot
   - Name: kinesisanalytics:DeleteApplicationVpcConfiguration
   - Name: kinesisanalytics:DescribeApplication
+  - Name: kinesisanalytics:DescribeApplicationOperation
   - Name: kinesisanalytics:DescribeApplicationSnapshot
   - Name: kinesisanalytics:DescribeApplicationVersion
   - Name: kinesisanalytics:DiscoverInputSchema
+  - Name: kinesisanalytics:ListApplicationOperations
   - Name: kinesisanalytics:ListApplicationSnapshots
   - Name: kinesisanalytics:ListApplicationVersions
   - Name: kinesisanalytics:ListApplications
@@ -33,7 +35,3 @@ Actions:
 
   # actions with no corresponding API
   - Name: kinesisanalytics:GetApplicationState
-
-  # APIs without an IAM action
-  - Name: kinesisanalytics:DescribeApplicationOperation
-  - Name: kinesisanalytics:ListApplicationOperations
