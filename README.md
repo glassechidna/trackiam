@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 405
-* Unique actions: 17491
+* Unique actions: 17496
 * Managed policies: 1224
 
 Most common managed policy name prefixes:
@@ -84,9 +84,9 @@ The following table summarises the AWS APIs.
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`cleanrooms`](services/cleanrooms.yml) | 76 | 0 | 4 |
+| [`appstream`](services/appstream.yml) | 75 | 0 | 5 |
 | [`elasticache`](services/elasticache.yml) | 75 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
-| [`appstream`](services/appstream.yml) | 75 | 0 | 1 |
 | [`logs`](services/logs.yml) | 74 | 0 | 8 |
 | [`guardduty`](services/guardduty.yml) | 74 | 0 | 1 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
@@ -212,7 +212,7 @@ The following table summarises the AWS APIs.
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 28 | 0 | 1 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
 | [`codestar-connections`](services/codestar-connections.yml) | 27 | 0 | 11 |
-| [`codeconnections`](services/codeconnections.yml) | 27 | 0 | 10 |
+| [`codeconnections`](services/codeconnections.yml) | 27 | 0 | 11 |
 | [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 7 |
 | [`snowball`](services/snowball.yml) | 27 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 27 | 0 | 0 |
@@ -447,11 +447,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2809 |
-| `Get` | 2565 |
-| `Delete` | 2014 |
-| `Create` | 1876 |
-| `Describe` | 1718 |
-| `Update` | 1604 |
+| `Get` | 2566 |
+| `Delete` | 2015 |
+| `Create` | 1877 |
+| `Describe` | 1719 |
+| `Update` | 1605 |
 | `Put` | 478 |
 | `Start` | 402 |
 | `Tag` | 277 |
