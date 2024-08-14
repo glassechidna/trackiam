@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonInspector2ServiceRolePolicy",
   "CreateDate": "2021-11-16T20:27:48Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4BINOILVQW",
   "PolicyName": "AmazonInspector2ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-01-22T14:06:01Z",
+    "CreateDate": "2024-08-14T16:03:32Z",
     "Document": {
       "Statement": [
         {
@@ -118,7 +118,8 @@
             "cloudwatch:GetMetricData",
             "lambda:GetFunction",
             "lambda:GetLayerVersion",
-            "lambda:ListFunctions"
+            "lambda:ListFunctions",
+            "lambda:ListTags"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -282,8 +283,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v12"
+    "IsDefaultVersion": true,
+    "VersionId": "v13"
   },
-  "UpdateDate": "2024-01-22T14:06:01Z"
+  "UpdateDate": "2024-08-14T16:03:32Z"
 }
