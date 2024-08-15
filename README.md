@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 405
-* Unique actions: 17496
+* Unique actions: 17504
 * Managed policies: 1224
 
 Most common managed policy name prefixes:
@@ -50,7 +50,7 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 140 | 0 | 9 |
 | [`lex`](services/lex.yml) | 137 | 4 | 8 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 22 |
-| [`datazone`](services/datazone.yml) | 123 | 0 | 37 |
+| [`datazone`](services/datazone.yml) | 123 | 0 | 42 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
 | [`s3`](services/s3.yml) | 113 | 60 | 46 |
@@ -294,7 +294,7 @@ The following table summarises the AWS APIs.
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 14 | 0 | 0 |
 | [`health`](services/health.yml) | 14 | 0 | 0 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 17 |
-| [`healthlake`](services/healthlake.yml) | 13 | 0 | 8 |
+| [`healthlake`](services/healthlake.yml) | 13 | 0 | 11 |
 | [`braket`](services/braket.yml) | 13 | 0 | 4 |
 | [`codeguru-security`](services/codeguru-security.yml) | 13 | 0 | 2 |
 | [`snow-device-management`](services/snow-device-management.yml) | 13 | 0 | 0 |
@@ -446,14 +446,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2809 |
-| `Get` | 2566 |
-| `Delete` | 2015 |
-| `Create` | 1877 |
-| `Describe` | 1719 |
-| `Update` | 1605 |
+| `List` | 2810 |
+| `Get` | 2567 |
+| `Delete` | 2016 |
+| `Create` | 1878 |
+| `Describe` | 1720 |
+| `Update` | 1606 |
 | `Put` | 478 |
-| `Start` | 402 |
+| `Start` | 403 |
 | `Tag` | 277 |
 | `Untag` | 273 |
 
