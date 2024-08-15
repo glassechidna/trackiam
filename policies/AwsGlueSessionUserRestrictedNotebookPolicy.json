@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AwsGlueSessionUserRestrictedNotebookPolicy",
   "CreateDate": "2022-04-18T15:24:56Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BZZRVUUJU",
   "PolicyName": "AwsGlueSessionUserRestrictedNotebookPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-11-22T01:32:43Z",
+    "CreateDate": "2024-08-15T20:51:03Z",
     "Document": {
       "Statement": [
         {
@@ -53,7 +53,20 @@
         },
         {
           "Action": [
-            "glue:TagResource",
+            "glue:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/owner": "${aws:PrincipalTag/owner}",
+              "aws:ResourceTag/owner": "${aws:PrincipalTag/owner}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:glue:*:*:session/*",
+          "Sid": "AllowGlueTaggingAction"
+        },
+        {
+          "Action": [
             "glue:UntagResource",
             "tag:TagResources",
             "tag:UntagResources"
@@ -84,6 +97,7 @@
           },
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:iam::*:role/AwsGlueSessionUserRestrictedNotebookServiceRole*",
             "arn:aws:iam::*:role/service-role/AwsGlueSessionServiceRoleUserRestrictedForNotebook*"
           ],
           "Sid": "NotebookPassRole"
@@ -113,7 +127,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-11-22T01:32:43Z"
+  "UpdateDate": "2024-08-15T20:51:03Z"
 }
