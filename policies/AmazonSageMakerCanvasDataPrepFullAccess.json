@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerCanvasDataPrepFullAccess",
   "CreateDate": "2023-10-27T22:56:13Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CKHJVSVSQ",
   "PolicyName": "AmazonSageMakerCanvasDataPrepFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-07-18T23:21:28Z",
+    "CreateDate": "2024-08-16T18:11:13Z",
     "Document": {
       "Statement": [
         {
@@ -78,7 +78,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/AmazonSageMakerCanvasEMRSExecutionAccess-*",
+          "Resource": [
+            "arn:aws:iam::*:role/AmazonSageMakerCanvasEMRSExecutionAccess-*",
+            "arn:aws:iam::*:role/service-role/AmazonSageMakerCanvasEMRSExecutionAccess-*"
+          ],
           "Sid": "IAMPassOperationForEMRServerless"
         },
         {
@@ -412,7 +415,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2024-07-18T23:21:28Z"
+  "UpdateDate": "2024-08-16T18:11:13Z"
 }
