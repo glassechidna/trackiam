@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSResourceExplorerServiceRolePolicy",
   "CreateDate": "2022-10-25T20:35:29Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4K2H54PAUL",
   "PolicyName": "AWSResourceExplorerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-12-20T13:58:52Z",
+    "CreateDate": "2024-08-19T15:51:19Z",
     "Document": {
       "Statement": [
         {
@@ -391,7 +391,8 @@
         },
         {
           "Action": [
-            "cloudtrail:CreateServiceLinkedChannel"
+            "cloudtrail:CreateServiceLinkedChannel",
+            "cloudtrail:GetServiceLinkedChannel"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -403,7 +404,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2023-12-20T13:58:52Z"
+  "UpdateDate": "2024-08-19T15:51:19Z"
 }
