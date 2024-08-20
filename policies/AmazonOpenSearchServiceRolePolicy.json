@@ -1,20 +1,23 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonOpenSearchServiceRolePolicy",
   "CreateDate": "2021-08-26T09:27:09Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NHHCOTRP6",
   "PolicyName": "AmazonOpenSearchServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-10-23T07:07:31Z",
+    "CreateDate": "2024-08-20T22:57:07Z",
     "Document": {
       "Statement": [
         {
           "Action": "cloudwatch:PutMetricData",
           "Condition": {
             "StringEquals": {
-              "cloudwatch:namespace": "AWS/ES"
+              "cloudwatch:namespace": [
+                "AWS/ES",
+                "AWS/OpenSearch"
+              ]
             }
           },
           "Effect": "Allow",
@@ -203,7 +206,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2023-10-23T07:07:31Z"
+  "UpdateDate": "2024-08-20T22:57:07Z"
 }
