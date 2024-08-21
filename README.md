@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 405
-* Unique actions: 17506
+* Unique actions: 17498
 * Managed policies: 1224
 
 Most common managed policy name prefixes:
@@ -379,16 +379,16 @@ The following table summarises the AWS APIs.
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 18 |
-| [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 18 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 18 |
-| [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 16 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 15 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 14 |
+| [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 14 |
 | [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 13 |
+| [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`billing`](services/billing.yml) | 0 | 0 | 13 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
@@ -446,14 +446,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2810 |
-| `Get` | 2568 |
+| `List` | 2808 |
+| `Get` | 2567 |
 | `Delete` | 2016 |
 | `Create` | 1878 |
 | `Describe` | 1720 |
 | `Update` | 1606 |
 | `Put` | 479 |
-| `Start` | 403 |
-| `Tag` | 277 |
-| `Untag` | 273 |
+| `Start` | 402 |
+| `Tag` | 275 |
+| `Untag` | 271 |
 
