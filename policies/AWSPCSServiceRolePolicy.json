@@ -1,0 +1,225 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSPCSServiceRolePolicy",
+  "CreateDate": "2024-08-27T16:01:15Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4LSTCNC74O",
+  "PolicyName": "AWSPCSServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-08-27T16:01:15Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "cloudwatch:PutMetricData",
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/PCS"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PermissionsToPublishMetrics"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "ec2.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/*/AWSPCS*",
+            "arn:aws:iam::*:role/*/aws-pcs/*",
+            "arn:aws:iam::*:role/AWSPCS*",
+            "arn:aws:iam::*:role/aws-pcs/*"
+          ],
+          "Sid": "PermissionsToPassRoleToEC2"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet",
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/AWSPCSManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "PermissionsToProvisionClusterInstances"
+        },
+        {
+          "Action": [
+            "ec2:CreateLaunchTemplate"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/AWSPCSManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:launch-template/*",
+          "Sid": "PermissionsToCreatePCSLaunchTemplates"
+        },
+        {
+          "Action": [
+            "ec2:CreateLaunchTemplateVersion",
+            "ec2:DeleteLaunchTemplate",
+            "ec2:DeleteLaunchTemplateVersions"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AWSPCSManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:launch-template/*",
+          "Sid": "PermissionsToManagePCSLaunchTemplates"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/AWSPCSManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "PermissionsToCreatePCSNetworkInterfaces"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AWSPCSManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "PermissionsToManagePCSNetworkInterfaces"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "CreateFleet",
+                "CreateLaunchTemplate",
+                "CreateNetworkInterface",
+                "RunInstances"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "PermissionsToTagPCSResources"
+        },
+        {
+          "Action": [
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AWSPCSManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "PermissionsToTerminatePCSManagedInstances"
+        },
+        {
+          "Action": [
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:PutSecretValue",
+            "secretsmanager:UpdateSecretVersionStage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "secretsmanager:ResourceTag/aws:secretsmanager:owningService": "pcs"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:pcs!*",
+          "Sid": "PermissionsToManageSecret"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet",
+            "ec2:RunInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:capacity-reservation/*",
+            "arn:aws:ec2:*:*:fleet/*",
+            "arn:aws:ec2:*:*:key-pair/*",
+            "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:placement-group/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:spot-instances-request/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:volume/*",
+            "arn:aws:ec2:*::image/*",
+            "arn:aws:ec2:*::snapshot/*",
+            "arn:aws:resource-groups:*:*:group/*"
+          ],
+          "Sid": "PermissionsToControlClusterInstanceAttributes"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "PermissionsToCreatePCSNetworkInterfacesInSubnet"
+        },
+        {
+          "Action": [
+            "ec2:DescribeImageAttribute",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstanceAttribute",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstanceTypes",
+            "ec2:DescribeInstances",
+            "ec2:DescribeKeyPairs",
+            "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribeLaunchTemplates",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PermissionsToDescribePCSResources"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-08-27T16:01:15Z"
+}
