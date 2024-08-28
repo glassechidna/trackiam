@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 405
-* Unique actions: 17509
+* Unique services: 406
+* Unique actions: 17528
 * Managed policies: 1226
 
 Most common managed policy name prefixes:
@@ -377,6 +377,7 @@ The following table summarises the AWS APIs.
 | [`notifications`](services/notifications.yml) | 0 | 0 | 21 |
 | [`iotroborunner`](services/iotroborunner.yml) | 0 | 0 | 20 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
+| [`pcs`](services/pcs.yml) | 0 | 0 | 19 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 18 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
@@ -446,14 +447,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2811 |
-| `Get` | 2571 |
-| `Delete` | 2018 |
-| `Create` | 1879 |
+| `List` | 2815 |
+| `Get` | 2574 |
+| `Delete` | 2021 |
+| `Create` | 1882 |
 | `Describe` | 1720 |
-| `Update` | 1606 |
+| `Update` | 1608 |
 | `Put` | 480 |
 | `Start` | 402 |
-| `Tag` | 275 |
-| `Untag` | 271 |
+| `Tag` | 276 |
+| `Untag` | 272 |
 
