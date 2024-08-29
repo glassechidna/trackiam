@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSSMForSAPServiceLinkedRolePolicy",
   "CreateDate": "2022-11-16T01:18:21Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AONIU2LID",
   "PolicyName": "AWSSSMForSAPServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-08-05T22:40:26Z",
+    "CreateDate": "2024-08-29T22:17:07Z",
     "Document": {
       "Statement": [
         {
@@ -78,6 +78,25 @@
           "Effect": "Allow",
           "Resource": "arn:*:ec2:*:*:instance/*",
           "Sid": "CustomerSendCommand"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags",
+            "ec2:DeleteTags"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "aws:RequestTag/awsApplication": "arn:aws:resource-groups:*:*:group/*/*"
+            },
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "awsApplication"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "ManageAppTagsOnEbsVolumes"
         },
         {
           "Action": [
@@ -343,7 +362,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2024-08-05T22:40:26Z"
+  "UpdateDate": "2024-08-29T22:17:07Z"
 }
