@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 406
-* Unique actions: 17531
+* Unique actions: 17534
 * Managed policies: 1226
 
 Most common managed policy name prefixes:
@@ -53,7 +53,7 @@ The following table summarises the AWS APIs.
 | [`datazone`](services/datazone.yml) | 123 | 0 | 42 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 0 |
-| [`s3`](services/s3.yml) | 113 | 60 | 46 |
+| [`s3`](services/s3.yml) | 113 | 60 | 47 |
 | [`iotwireless`](services/iotwireless.yml) | 112 | 0 | 1 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`cloudfront`](services/cloudfront.yml) | 110 | 1 | 7 |
@@ -147,7 +147,7 @@ The following table summarises the AWS APIs.
 | [`wisdom`](services/wisdom.yml) | 47 | 0 | 0 |
 | [`transcribe`](services/transcribe.yml) | 46 | 0 | 3 |
 | [`fsx`](services/fsx.yml) | 45 | 0 | 8 |
-| [`appconfig`](services/appconfig.yml) | 45 | 0 | 0 |
+| [`appconfig`](services/appconfig.yml) | 45 | 0 | 2 |
 | [`workdocs`](services/workdocs.yml) | 44 | 0 | 17 |
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
@@ -447,12 +447,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2816 |
-| `Get` | 2575 |
+| `List` | 2817 |
+| `Get` | 2576 |
 | `Delete` | 2021 |
 | `Create` | 1882 |
 | `Describe` | 1720 |
-| `Update` | 1609 |
+| `Update` | 1610 |
 | `Put` | 480 |
 | `Start` | 402 |
 | `Tag` | 276 |
