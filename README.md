@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 406
-* Unique actions: 17534
+* Unique actions: 17538
 * Managed policies: 1226
 
 Most common managed policy name prefixes:
@@ -87,7 +87,7 @@ The following table summarises the AWS APIs.
 | [`appstream`](services/appstream.yml) | 75 | 0 | 5 |
 | [`elasticache`](services/elasticache.yml) | 75 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
-| [`logs`](services/logs.yml) | 74 | 0 | 8 |
+| [`logs`](services/logs.yml) | 74 | 0 | 10 |
 | [`guardduty`](services/guardduty.yml) | 74 | 0 | 1 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`sso`](services/sso.yml) | 73 | 0 | 53 |
@@ -99,7 +99,7 @@ The following table summarises the AWS APIs.
 | [`athena`](services/athena.yml) | 68 | 0 | 11 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
 | [`ds`](services/ds.yml) | 67 | 0 | 10 |
-| [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 66 | 0 | 1 |
+| [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 66 | 0 | 3 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
@@ -451,8 +451,8 @@ Most common action prefixes:
 | `Get` | 2576 |
 | `Delete` | 2021 |
 | `Create` | 1882 |
-| `Describe` | 1720 |
-| `Update` | 1610 |
+| `Describe` | 1722 |
+| `Update` | 1611 |
 | `Put` | 480 |
 | `Start` | 402 |
 | `Tag` | 276 |
