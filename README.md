@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 406
-* Unique actions: 17540
+* Unique actions: 17554
 * Managed policies: 1227
 
 Most common managed policy name prefixes:
@@ -141,10 +141,10 @@ The following table summarises the AWS APIs.
 | [`lookoutequipment`](services/lookoutequipment.yml) | 49 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 7 |
 | [`codeartifact`](services/codeartifact.yml) | 48 | 0 | 3 |
+| [`wisdom`](services/wisdom.yml) | 47 | 0 | 14 |
 | [`ecr`](services/ecr.yml) | 47 | 0 | 4 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
-| [`wisdom`](services/wisdom.yml) | 47 | 0 | 0 |
 | [`transcribe`](services/transcribe.yml) | 46 | 0 | 3 |
 | [`fsx`](services/fsx.yml) | 45 | 0 | 8 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 2 |
@@ -447,12 +447,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2817 |
-| `Get` | 2576 |
-| `Delete` | 2021 |
-| `Create` | 1883 |
+| `List` | 2819 |
+| `Get` | 2577 |
+| `Delete` | 2023 |
+| `Create` | 1886 |
 | `Describe` | 1722 |
-| `Update` | 1611 |
+| `Update` | 1613 |
 | `Put` | 480 |
 | `Start` | 402 |
 | `Tag` | 276 |
