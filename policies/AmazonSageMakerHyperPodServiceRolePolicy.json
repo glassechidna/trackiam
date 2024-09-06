@@ -1,0 +1,58 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonSageMakerHyperPodServiceRolePolicy",
+  "CreateDate": "2024-09-06T17:04:30Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4D6YQ3FRFH",
+  "PolicyName": "AmazonSageMakerHyperPodServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-09-06T17:04:30Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "eks:DescribeCluster",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EKSClusterDescribePermissions"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/sagemaker/Clusters/*",
+          "Sid": "CloudWatchLogGroupPermissions"
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/sagemaker/Clusters/*:log-stream:*",
+          "Sid": "CloudWatchLogStreamPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-09-06T17:04:30Z"
+}
