@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v16",
+  "DefaultVersionId": "v17",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-05-24T01:42:32Z",
+    "CreateDate": "2024-09-11T20:44:09Z",
     "Document": {
       "Statement": [
         {
@@ -51,31 +51,45 @@
         },
         {
           "Action": [
+            "wisdom:ActivateMessageTemplate",
             "wisdom:CreateContent",
             "wisdom:CreateKnowledgeBase",
+            "wisdom:CreateMessageTemplate",
+            "wisdom:CreateMessageTemplateAttachment",
+            "wisdom:CreateMessageTemplateVersion",
             "wisdom:CreateQuickResponse",
             "wisdom:CreateSession",
+            "wisdom:DeactivateMessageTemplate",
             "wisdom:DeleteContent",
+            "wisdom:DeleteMessageTemplate",
+            "wisdom:DeleteMessageTemplateAttachment",
             "wisdom:DeleteQuickResponse",
             "wisdom:GetAssistant",
             "wisdom:GetContent",
             "wisdom:GetImportJob",
             "wisdom:GetKnowledgeBase",
+            "wisdom:GetMessageTemplate",
             "wisdom:GetQuickResponse",
             "wisdom:GetRecommendations",
             "wisdom:GetSession",
             "wisdom:ListContentAssociations",
             "wisdom:ListImportJobs",
+            "wisdom:ListMessageTemplateVersions",
+            "wisdom:ListMessageTemplates",
             "wisdom:ListQuickResponses",
             "wisdom:NotifyRecommendationsReceived",
             "wisdom:PutFeedback",
             "wisdom:QueryAssistant",
+            "wisdom:RenderMessageTemplate",
+            "wisdom:SearchMessageTemplates",
             "wisdom:SearchQuickResponses",
             "wisdom:StartContentUpload",
             "wisdom:StartImportJob",
             "wisdom:TagResource",
             "wisdom:UntagResource",
             "wisdom:UpdateContent",
+            "wisdom:UpdateMessageTemplate",
+            "wisdom:UpdateMessageTemplateMetadata",
             "wisdom:UpdateQuickResponse"
           ],
           "Condition": {
@@ -129,12 +143,19 @@
         {
           "Action": [
             "profile:AddProfileKey",
+            "profile:BatchGetCalculatedAttributeForProfile",
+            "profile:BatchGetProfile",
             "profile:CreateProfile",
+            "profile:CreateSegmentEstimate",
             "profile:GetDomain",
+            "profile:GetSegmentEstimate",
+            "profile:GetSegmentMembership",
             "profile:ListCalculatedAttributeDefinitions",
             "profile:ListCalculatedAttributesForProfile",
             "profile:ListIntegrations",
+            "profile:ListProfileAttributeValues",
             "profile:ListProfileObjectTypes",
+            "profile:ListSegmentDefinitions",
             "profile:SearchProfiles",
             "profile:UpdateProfile"
           ],
@@ -158,7 +179,22 @@
         },
         {
           "Action": [
+            "profile:CreateSegmentDefinition",
+            "profile:CreateSegmentSnapshot",
+            "profile:DeleteSegmentDefinition",
+            "profile:GetSegmentDefinition",
+            "profile:GetSegmentSnapshot"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:profile:*:*:domains/amazon-connect-*/segment-definitions/*"
+          ],
+          "Sid": "AllowCustomerProfilesSegmentationForConnectDomain"
+        },
+        {
+          "Action": [
             "profile:GetProfileObjectType",
+            "profile:ListObjectTypeAttributes",
             "profile:ListProfileObjects"
           ],
           "Effect": "Allow",
@@ -232,7 +268,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v16"
+    "VersionId": "v17"
   },
-  "UpdateDate": "2024-05-24T01:42:32Z"
+  "UpdateDate": "2024-09-11T20:44:09Z"
 }
