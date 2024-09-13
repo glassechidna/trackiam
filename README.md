@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 405
-* Unique actions: 17555
+* Unique actions: 17559
 * Managed policies: 1227
 
 Most common managed policy name prefixes:
@@ -361,7 +361,7 @@ The following table summarises the AWS APIs.
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
-| [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 70 |
+| [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 74 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 52 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 51 |
@@ -447,12 +447,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2820 |
-| `Get` | 2578 |
-| `Delete` | 2021 |
+| `Get` | 2580 |
+| `Delete` | 2022 |
 | `Create` | 1886 |
 | `Describe` | 1722 |
 | `Update` | 1611 |
-| `Put` | 480 |
+| `Put` | 481 |
 | `Start` | 402 |
 | `Tag` | 276 |
 | `Untag` | 272 |
