@@ -1,0 +1,38 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSDirectoryServiceDataReadOnlyAccess",
+  "CreateDate": "2024-09-18T22:00:34Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4NNF72G4OL",
+  "PolicyName": "AWSDirectoryServiceDataReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-09-18T22:00:34Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ds-data:DescribeGroup",
+            "ds-data:DescribeUser",
+            "ds-data:ListGroupMembers",
+            "ds-data:ListGroups",
+            "ds-data:ListGroupsForMember",
+            "ds-data:ListUsers",
+            "ds-data:SearchGroups",
+            "ds-data:SearchUsers",
+            "ds:AccessDSData"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ds:*:*:directory/*"
+          ],
+          "Sid": "DSDataReadOnlyAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-09-18T22:00:34Z"
+}

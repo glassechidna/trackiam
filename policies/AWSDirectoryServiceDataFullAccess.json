@@ -1,0 +1,47 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSDirectoryServiceDataFullAccess",
+  "CreateDate": "2024-09-18T21:45:17Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4LZBNDVW6J",
+  "PolicyName": "AWSDirectoryServiceDataFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-09-18T21:45:17Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ds-data:AddGroupMember",
+            "ds-data:CreateGroup",
+            "ds-data:CreateUser",
+            "ds-data:DeleteGroup",
+            "ds-data:DeleteUser",
+            "ds-data:DescribeGroup",
+            "ds-data:DescribeUser",
+            "ds-data:DisableUser",
+            "ds-data:ListGroupMembers",
+            "ds-data:ListGroups",
+            "ds-data:ListGroupsForMember",
+            "ds-data:ListUsers",
+            "ds-data:RemoveGroupMember",
+            "ds-data:SearchGroups",
+            "ds-data:SearchUsers",
+            "ds-data:UpdateGroup",
+            "ds-data:UpdateUser",
+            "ds:AccessDSData"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ds:*:*:directory/*"
+          ],
+          "Sid": "DSDataFullAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-09-18T21:45:17Z"
+}
