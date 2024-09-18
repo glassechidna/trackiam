@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 405
-* Unique actions: 17569
+* Unique actions: 17571
 * Managed policies: 1227
 
 Most common managed policy name prefixes:
@@ -398,12 +398,12 @@ The following table summarises the AWS APIs.
 | [`payments`](services/payments.yml) | 0 | 0 | 12 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 10 |
 | [`ts`](services/ts.yml) | 0 | 0 | 9 |
+| [`s3express`](services/s3express.yml) | 0 | 0 | 9 |
 | [`notifications-contacts`](services/notifications-contacts.yml) | 0 | 0 | 9 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 9 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 9 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
-| [`s3express`](services/s3express.yml) | 0 | 0 | 7 |
 | [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
 | [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 6 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
@@ -447,12 +447,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2821 |
-| `Get` | 2582 |
+| `Get` | 2583 |
 | `Delete` | 2023 |
 | `Create` | 1886 |
 | `Describe` | 1722 |
 | `Update` | 1612 |
-| `Put` | 483 |
+| `Put` | 484 |
 | `Start` | 402 |
 | `Tag` | 276 |
 | `Untag` | 272 |
