@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 405
-* Unique actions: 17574
+* Unique services: 406
+* Unique actions: 17591
 * Managed policies: 1227
 
 Most common managed policy name prefixes:
@@ -381,6 +381,7 @@ The following table summarises the AWS APIs.
 | [`monitron`](services/monitron.yml) | 0 | 0 | 18 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 18 |
+| [`ds-data`](services/ds-data.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 16 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 15 |
@@ -446,12 +447,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2821 |
+| `List` | 2825 |
 | `Get` | 2583 |
-| `Delete` | 2023 |
-| `Create` | 1886 |
-| `Describe` | 1723 |
-| `Update` | 1612 |
+| `Delete` | 2025 |
+| `Create` | 1888 |
+| `Describe` | 1725 |
+| `Update` | 1614 |
 | `Put` | 484 |
 | `Start` | 402 |
 | `Tag` | 276 |
