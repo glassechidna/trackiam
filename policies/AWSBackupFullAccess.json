@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupFullAccess",
   "CreateDate": "2019-11-18T22:21:52Z",
-  "DefaultVersionId": "v17",
+  "DefaultVersionId": "v18",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LL52EIPJX",
   "PolicyName": "AWSBackupFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-11-27T17:33:10Z",
+    "CreateDate": "2024-09-26T19:18:54Z",
     "Document": {
       "Statement": [
         {
@@ -384,8 +384,7 @@
         {
           "Action": [
             "storagegateway:DescribeGatewayInformation",
-            "storagegateway:ListLocalDisks",
-            "storagegateway:ListVolumes"
+            "storagegateway:ListLocalDisks"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:storagegateway:*:*:gateway/*",
@@ -398,6 +397,14 @@
           "Effect": "Allow",
           "Resource": "arn:aws:storagegateway:*:*:*",
           "Sid": "StorageGatewayPermissions"
+        },
+        {
+          "Action": [
+            "storagegateway:ListVolumes"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "StorageGatewayGatewayStarPermissions"
         },
         {
           "Action": [
@@ -432,7 +439,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v17"
+    "VersionId": "v18"
   },
-  "UpdateDate": "2023-11-27T17:33:10Z"
+  "UpdateDate": "2024-09-26T19:18:54Z"
 }
