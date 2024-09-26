@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSSOMasterAccountAdministrator",
   "CreateDate": "2018-06-27T20:36:51Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIHXAQZIS3GOYIETUC",
   "PolicyName": "AWSSSOMasterAccountAdministrator",
   "PolicyVersion": {
-    "CreateDate": "2024-04-26T00:38:45Z",
+    "CreateDate": "2024-09-26T17:13:59Z",
     "Document": {
       "Statement": [
         {
@@ -75,12 +75,22 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AWSSSOMemberAccountAdministrator"
+        },
+        {
+          "Action": [
+            "identity-sync:DeleteSyncProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:identity-sync:*:*:profile/*"
+          ],
+          "Sid": "AllowDeleteSyncProfile"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2024-04-26T00:38:45Z"
+  "UpdateDate": "2024-09-26T17:13:59Z"
 }
