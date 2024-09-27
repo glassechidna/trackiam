@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
   "CreateDate": "2019-01-10T21:01:28Z",
-  "DefaultVersionId": "v19",
+  "DefaultVersionId": "v20",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIOOYZSLZZXWFJJ5N2",
   "PolicyName": "AWSBackupServiceRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2024-05-17T17:12:58Z",
+    "CreateDate": "2024-09-27T20:02:34Z",
     "Document": {
       "Statement": [
         {
@@ -140,6 +140,18 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "KMSPermissions"
+        },
+        {
+          "Action": "rds:DeleteDBClusterAutomatedBackup",
+          "Effect": "Allow",
+          "Resource": "arn:aws:rds:*:*:cluster-auto-backup:*",
+          "Sid": "RDSClusterBackupPermissions"
+        },
+        {
+          "Action": "rds:DeleteDBInstanceAutomatedBackup",
+          "Effect": "Allow",
+          "Resource": "arn:aws:rds:*:*:auto-backup:*",
+          "Sid": "RDSInstanceAutomatedBackupPermissions"
         },
         {
           "Action": "ssm:SendCommand",
@@ -320,14 +332,6 @@
         },
         {
           "Action": [
-            "rds:DeleteDBClusterAutomatedBackup"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:rds:*:*:cluster-auto-backup:*",
-          "Sid": "RDSClusterBackupPermissions"
-        },
-        {
-          "Action": [
             "rds:DeleteDBClusterSnapshot",
             "rds:ModifyDBClusterSnapshotAttribute"
           ],
@@ -484,8 +488,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v19"
+    "IsDefaultVersion": true,
+    "VersionId": "v20"
   },
-  "UpdateDate": "2024-05-17T17:12:58Z"
+  "UpdateDate": "2024-09-27T20:02:34Z"
 }
