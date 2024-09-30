@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 406
-* Unique actions: 17641
+* Unique actions: 17652
 * Managed policies: 1230
 
 Most common managed policy name prefixes:
@@ -342,7 +342,7 @@ The following table summarises the AWS APIs.
 | [`s3-outposts`](services/s3-outposts.yml) | 5 | 0 | 43 |
 | [`pricing`](services/pricing.yml) | 5 | 0 | 0 |
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 4 | 0 | 0 |
-| [`scn`](services/scn.yml) | 3 | 0 | 13 |
+| [`scn`](services/scn.yml) | 3 | 0 | 24 |
 | [`controlcatalog`](services/controlcatalog.yml) | 3 | 0 | 2 |
 | [`cassandra`](services/cassandra.yml) | 2 | 12 | 15 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 2 | 0 | 1 |
@@ -447,12 +447,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2836 |
-| `Get` | 2589 |
-| `Delete` | 2032 |
-| `Create` | 1894 |
+| `List` | 2838 |
+| `Get` | 2592 |
+| `Delete` | 2034 |
+| `Create` | 1896 |
 | `Describe` | 1730 |
-| `Update` | 1620 |
+| `Update` | 1622 |
 | `Put` | 486 |
 | `Start` | 403 |
 | `Tag` | 276 |
