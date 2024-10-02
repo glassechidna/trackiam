@@ -1,24 +1,37 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCompromisedKeyQuarantineV3",
   "CreateDate": "2024-08-21T17:36:49Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JAJQG37HX",
   "PolicyName": "AWSCompromisedKeyQuarantineV3",
   "PolicyVersion": {
-    "CreateDate": "2024-08-21T17:36:49Z",
+    "CreateDate": "2024-10-02T16:52:27Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "amplify:CreateBackendEnvironment",
+            "amplify:CreateDeployment",
+            "bedrock:CreateFoundationModelAgreement",
+            "bedrock:CreateModelInvocationJob",
+            "bedrock:InvokeModel",
+            "bedrock:InvokeModelWithResponseStream",
+            "bedrock:PutFoundationModelEntitlement",
             "cloudtrail:LookupEvents",
+            "codebuild:CreateProject",
             "ec2:AcceptReservedInstancesExchangeQuote",
             "ec2:CreateReservedInstancesListing",
             "ec2:PurchaseReservedInstancesOffering",
             "ec2:RequestSpotInstances",
             "ec2:RunInstances",
             "ec2:StartInstances",
+            "ecr:GetAuthorizationToken",
+            "ecs:CreateCluster",
+            "ecs:CreateService",
+            "ecs:RegisterTaskDefinition",
+            "glue:CreateJob",
             "iam:AddUserToGroup",
             "iam:AttachGroupPolicy",
             "iam:AttachRolePolicy",
@@ -30,7 +43,10 @@
             "iam:CreatePolicyVersion",
             "iam:CreateRole",
             "iam:CreateUser",
+            "iam:DeleteAccessKey",
+            "iam:DeleteRole",
             "iam:DetachUserPolicy",
+            "iam:ListUsers",
             "iam:PassRole",
             "iam:PutGroupPolicy",
             "iam:PutRolePolicy",
@@ -45,6 +61,7 @@
             "lambda:AddLayerVersionPermission",
             "lambda:AddPermission",
             "lambda:CreateFunction",
+            "lambda:GetEventSourceMapping",
             "lambda:GetPolicy",
             "lambda:ListTags",
             "lambda:PutProvisionedConcurrencyConfig",
@@ -57,21 +74,33 @@
             "lightsail:GetInstanceAccessDetails",
             "lightsail:Start*",
             "lightsail:Update*",
+            "mediapackagev2:CreateChannel",
             "organizations:CreateAccount",
             "organizations:CreateOrganization",
             "organizations:InviteAccountToOrganization",
+            "s3:CreateBucket",
             "s3:DeleteBucket",
             "s3:DeleteBucketPolicy",
             "s3:DeleteObject",
             "s3:DeleteObjectVersion",
+            "s3:GetObject",
             "s3:ListAllMyBuckets",
+            "s3:ListBucket",
             "s3:ObjectOwnerOverrideToBucketOwner",
             "s3:PutAccountPublicAccessBlock",
             "s3:PutBucketAcl",
+            "s3:PutBucketCors",
             "s3:PutBucketOwnershipControls",
             "s3:PutBucketPolicy",
             "s3:PutLifecycleConfiguration",
-            "savingsplans:CreateSavingsPlan"
+            "sagemaker:CreateEndpointConfig",
+            "sagemaker:CreateProcessingJob",
+            "savingsplans:CreateSavingsPlan",
+            "ses:GetSendQuota",
+            "ses:ListIdentities",
+            "sns:GetSMSAttributes",
+            "sts:GetFederationToken",
+            "sts:GetSessionToken"
           ],
           "Effect": "Deny",
           "Resource": [
@@ -82,7 +111,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-08-21T17:36:49Z"
+  "UpdateDate": "2024-10-02T16:52:27Z"
 }
