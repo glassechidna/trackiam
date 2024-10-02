@@ -1,0 +1,28 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonEKSWorkerNodeMinimalPolicy",
+  "CreateDate": "2024-10-02T20:03:51Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4I4XYHBGUK",
+  "PolicyName": "AmazonEKSWorkerNodeMinimalPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-10-02T20:03:51Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "eks-auth:AssumeRoleForPodIdentity"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "WorkerNodePermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-10-02T20:03:51Z"
+}
