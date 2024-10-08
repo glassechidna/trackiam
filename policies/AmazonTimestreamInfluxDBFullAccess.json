@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonTimestreamInfluxDBFullAccess",
   "CreateDate": "2024-03-14T22:53:22Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JY77WLMFL",
   "PolicyName": "AmazonTimestreamInfluxDBFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-03-14T22:53:22Z",
+    "CreateDate": "2024-10-08T20:31:28Z",
     "Document": {
       "Statement": [
         {
@@ -40,6 +40,7 @@
         },
         {
           "Action": [
+            "ec2:DescribeRouteTables",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcs"
@@ -85,7 +86,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-03-14T22:53:22Z"
+  "UpdateDate": "2024-10-08T20:31:28Z"
 }
