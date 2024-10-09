@@ -1,0 +1,41 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSDataSyncServiceRolePolicy",
+  "CreateDate": "2024-10-09T17:45:40Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4PHSENNDOP",
+  "PolicyName": "AWSDataSyncServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-10-09T17:45:40Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:logs:*:*:log-group:/aws/datasync*"
+          ],
+          "Sid": "DataSyncCloudWatchLogCreateAccess"
+        },
+        {
+          "Action": [
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:logs:*:*:log-group:/aws/datasync*:log-stream:*"
+          ],
+          "Sid": "DataSyncCloudWatchLogStreamUpdateAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-10-09T17:45:40Z"
+}
