@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSDataExchangeServiceRolePolicyForOrganizationDiscovery",
+  "CreateDate": "2024-10-10T14:33:13Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4PY2X5VZ6E",
+  "PolicyName": "AWSDataExchangeServiceRolePolicyForOrganizationDiscovery",
+  "PolicyVersion": {
+    "CreateDate": "2024-10-10T14:33:13Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAccounts"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowAWSOrganizationsActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-10-10T14:33:13Z"
+}

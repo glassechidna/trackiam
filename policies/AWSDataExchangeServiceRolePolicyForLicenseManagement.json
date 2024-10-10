@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSDataExchangeServiceRolePolicyForLicenseManagement",
+  "CreateDate": "2024-10-10T14:54:27Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4KJOXEA5CK",
+  "PolicyName": "AWSDataExchangeServiceRolePolicyForLicenseManagement",
+  "PolicyVersion": {
+    "CreateDate": "2024-10-10T14:54:27Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "license-manager:CreateGrantVersion",
+            "license-manager:DeleteGrant",
+            "license-manager:GetGrant",
+            "license-manager:ListDistributedGrants",
+            "organizations:DescribeOrganization"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowLicenseManagerActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-10-10T14:54:27Z"
+}
