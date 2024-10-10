@@ -1,0 +1,31 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSocialMessagingServiceRolePolicy",
+  "CreateDate": "2024-10-10T19:28:38Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4I35MZTT64",
+  "PolicyName": "AWSSocialMessagingServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-10-10T19:28:38Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "cloudwatch:PutMetricData",
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/SocialMessaging"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudwatchMetricPublishing"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-10-10T19:28:38Z"
+}
