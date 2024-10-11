@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 407
-* Unique actions: 17695
-* Managed policies: 1238
+* Unique actions: 17690
+* Managed policies: 1240
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 336 |
-| `arn:aws:iam::aws:policy/Amazon*` | 317 |
+| `arn:aws:iam::aws:policy/Amazon*` | 319 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 284 |
 | `arn:aws:iam::aws:policy/service-role/*` | 190 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -105,7 +105,7 @@ The following table summarises the AWS APIs.
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
 | [`appsync`](services/appsync.yml) | 64 | 0 | 6 |
-| [`lambda`](services/lambda.yml) | 63 | 3 | 12 |
+| [`lambda`](services/lambda.yml) | 63 | 3 | 7 |
 | [`ivs`](services/ivs.yml) | 63 | 0 | 5 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
@@ -449,12 +449,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2846 |
-| `Get` | 2599 |
-| `Delete` | 2039 |
+| `Get` | 2597 |
+| `Delete` | 2038 |
 | `Create` | 1901 |
 | `Describe` | 1731 |
 | `Update` | 1627 |
-| `Put` | 487 |
+| `Put` | 485 |
 | `Start` | 403 |
 | `Tag` | 277 |
 | `Untag` | 273 |

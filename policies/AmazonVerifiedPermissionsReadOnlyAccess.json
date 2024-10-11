@@ -1,0 +1,47 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonVerifiedPermissionsReadOnlyAccess",
+  "CreateDate": "2024-10-11T18:25:51Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4HFAWM5KNR",
+  "PolicyName": "AmazonVerifiedPermissionsReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-10-11T18:25:51Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "verifiedpermissions:GetIdentitySource",
+            "verifiedpermissions:GetPolicy",
+            "verifiedpermissions:GetPolicyStore",
+            "verifiedpermissions:GetPolicyTemplate",
+            "verifiedpermissions:GetSchema",
+            "verifiedpermissions:IsAuthorized",
+            "verifiedpermissions:IsAuthorizedWithToken",
+            "verifiedpermissions:ListIdentitySources",
+            "verifiedpermissions:ListPolicies",
+            "verifiedpermissions:ListPolicyTemplates"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:verifiedpermissions::*:policy-store/*"
+          ],
+          "Sid": "PolicyStoreLevelPermissions"
+        },
+        {
+          "Action": [
+            "verifiedpermissions:ListPolicyStores"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AccountLevelPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-10-11T18:25:51Z"
+}
