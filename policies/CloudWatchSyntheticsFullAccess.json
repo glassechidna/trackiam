@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchSyntheticsFullAccess",
   "CreateDate": "2019-11-25T17:39:46Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MAGQWEZP4",
   "PolicyName": "CloudWatchSyntheticsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-05-06T18:14:01Z",
+    "CreateDate": "2024-10-11T17:07:13Z",
     "Document": {
       "Statement": [
         {
@@ -120,7 +120,10 @@
             "lambda:CreateFunction",
             "lambda:DeleteFunction",
             "lambda:GetFunctionConfiguration",
+            "lambda:ListTags",
             "lambda:PublishVersion",
+            "lambda:TagResource",
+            "lambda:UntagResource",
             "lambda:UpdateFunctionCode",
             "lambda:UpdateFunctionConfiguration"
           ],
@@ -138,6 +141,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:lambda:*:*:layer:Synthetics:*",
+            "arn:aws:lambda:*:*:layer:Synthetics_Selenium:*",
             "arn:aws:lambda:*:*:layer:cwsyn-*"
           ]
         },
@@ -204,7 +208,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2022-05-06T18:14:01Z"
+  "UpdateDate": "2024-10-11T17:07:13Z"
 }
