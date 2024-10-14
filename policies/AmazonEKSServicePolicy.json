@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEKSServicePolicy",
   "CreateDate": "2018-05-27T21:08:21Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJFCNXU6HPGCIVXYDI",
   "PolicyName": "AmazonEKSServicePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-05-27T19:27:03Z",
+    "CreateDate": "2024-10-14T21:12:40Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,21 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "arn:aws:iam::*:role/aws-service-role/eks.amazonaws.com/AWSServiceRoleForAmazonEKS"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/Name": "eks-cluster-*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*"
+          ]
         },
         {
           "Action": "logs:CreateLogGroup",
@@ -46,6 +60,7 @@
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcs",
             "ec2:DetachNetworkInterface",
+            "ec2:GetSecurityGroupsForVpc",
             "ec2:ModifyNetworkInterfaceAttribute",
             "eks:UpdateClusterVersion",
             "iam:ListAttachedRolePolicies"
@@ -76,7 +91,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2020-05-27T19:27:03Z"
+  "UpdateDate": "2024-10-14T21:12:40Z"
 }
