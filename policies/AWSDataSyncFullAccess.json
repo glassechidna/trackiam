@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDataSyncFullAccess",
   "CreateDate": "2019-01-18T19:40:36Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJGOHCDUQULZJKDGT4",
   "PolicyName": "AWSDataSyncFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-07-22T16:13:41Z",
+    "CreateDate": "2024-10-18T20:07:03Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "datasync.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/datasync.amazonaws.com/AWSServiceRoleForDataSync",
+          "Sid": "DataSyncCreateSLRPermissions"
+        },
         {
           "Action": [
             "iam:PassRole"
@@ -63,7 +74,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2024-07-22T16:13:41Z"
+  "UpdateDate": "2024-10-18T20:07:03Z"
 }
