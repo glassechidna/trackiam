@@ -1,20 +1,22 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerProductsReadOnly",
   "CreateDate": "2019-07-02T21:40:47Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4K5Y2Q5F7D",
   "PolicyName": "AWSMarketplaceSellerProductsReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2022-11-19T00:08:42Z",
+    "CreateDate": "2024-10-21T19:52:20Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "aws-marketplace:DescribeAssessment",
             "aws-marketplace:DescribeChangeSet",
             "aws-marketplace:DescribeEntity",
             "aws-marketplace:DescribeTask",
+            "aws-marketplace:ListAssessments",
             "aws-marketplace:ListChangeSets",
             "aws-marketplace:ListEntities",
             "aws-marketplace:ListTasks",
@@ -23,6 +25,13 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "aws-marketplace:GetResourcePolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace/*"
         },
         {
           "Action": [
@@ -35,7 +44,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2022-11-19T00:08:42Z"
+  "UpdateDate": "2024-10-21T19:52:20Z"
 }
