@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEKSServiceRolePolicy",
   "CreateDate": "2020-02-21T20:10:47Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4KZBLSP26Y",
   "PolicyName": "AmazonEKSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-05-27T19:30:19Z",
+    "CreateDate": "2024-10-21T21:23:26Z",
     "Document": {
       "Statement": [
         {
@@ -17,7 +17,7 @@
             "ec2:RevokeSecurityGroupIngress"
           ],
           "Condition": {
-            "ForAnyValue:StringLike": {
+            "StringLike": {
               "ec2:ResourceTag/Name": "eks-cluster-sg*"
             }
           },
@@ -31,7 +31,6 @@
           ],
           "Condition": {
             "ForAnyValue:StringLike": {
-              "aws:RequestTag/Name": "eks-cluster-sg*",
               "aws:TagKeys": [
                 "kubernetes.io/cluster/*"
               ]
@@ -39,7 +38,10 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:ec2:*:*:security-group/*"
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:vpc/*"
           ]
         },
         {
@@ -48,16 +50,14 @@
             "ec2:DeleteTags"
           ],
           "Condition": {
-            "ForAnyValue:StringLike": {
-              "aws:TagKeys": [
-                "kubernetes.io/cluster/*"
-              ]
+            "StringLike": {
+              "aws:RequestTag/Name": "eks-cluster-*"
             }
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:ec2:*:*:subnet/*",
-            "arn:aws:ec2:*:*:vpc/*"
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:security-group/*"
           ]
         },
         {
@@ -87,6 +87,7 @@
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcs",
             "ec2:DetachNetworkInterface",
+            "ec2:GetSecurityGroupsForVpc",
             "ec2:ModifyNetworkInterfaceAttribute",
             "iam:ListAttachedRolePolicies"
           ],
@@ -105,7 +106,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-05-27T19:30:19Z"
+  "UpdateDate": "2024-10-21T21:23:26Z"
 }
