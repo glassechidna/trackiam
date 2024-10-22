@@ -1,0 +1,85 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CloudWatchInternetMonitorFullAccess",
+  "CreateDate": "2024-10-22T21:02:59Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4N6RFI4MLR",
+  "PolicyName": "CloudWatchInternetMonitorFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-10-22T21:02:59Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "internetmonitor.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/internetmonitor.amazonaws.com/AWSServiceRoleForInternetMonitor",
+          "Sid": "ServiceLinkedRoleActions"
+        },
+        {
+          "Action": [
+            "iam:AttachRolePolicy"
+          ],
+          "Condition": {
+            "ArnEquals": {
+              "iam:PolicyARN": "arn:aws:iam::aws:policy/aws-service-role/CloudWatchInternetMonitorServiceRolePolicy"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/internetmonitor.amazonaws.com/AWSServiceRoleForInternetMonitor",
+          "Sid": "RolePolicyActions"
+        },
+        {
+          "Action": [
+            "cloudfront:GetDistribution",
+            "cloudfront:ListDistributions",
+            "cloudwatch:GetMetricData",
+            "ec2:DescribeVpcs",
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "logs:DescribeLogGroups",
+            "logs:GetQueryResults",
+            "logs:StartQuery",
+            "logs:StopQuery",
+            "workspaces:DescribeWorkspaceDirectories"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReadOnlyActions"
+        },
+        {
+          "Action": [
+            "internetmonitor:CreateMonitor",
+            "internetmonitor:DeleteMonitor",
+            "internetmonitor:GetHealthEvent",
+            "internetmonitor:GetInternetEvent",
+            "internetmonitor:GetMonitor",
+            "internetmonitor:GetQueryResults",
+            "internetmonitor:GetQueryStatus",
+            "internetmonitor:Link",
+            "internetmonitor:ListHealthEvents",
+            "internetmonitor:ListInternetEvents",
+            "internetmonitor:ListMonitors",
+            "internetmonitor:ListTagsForResource",
+            "internetmonitor:StartQuery",
+            "internetmonitor:StopQuery",
+            "internetmonitor:TagResource",
+            "internetmonitor:UntagResource",
+            "internetmonitor:UpdateMonitor"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "FullAccessActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-10-22T21:02:59Z"
+}
