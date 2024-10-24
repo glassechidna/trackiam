@@ -1,0 +1,75 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSDataExchangeDataGrantReceiverFullAccess",
+  "CreateDate": "2024-10-24T14:45:58Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CQHKPMDQI",
+  "PolicyName": "AWSDataExchangeDataGrantReceiverFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-10-24T14:45:58Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "dataexchange:CancelJob",
+            "dataexchange:CreateJob",
+            "dataexchange:StartJob"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "dataexchange:JobType": [
+                "EXPORT_ASSETS_TO_S3",
+                "EXPORT_ASSET_TO_SIGNED_URL",
+                "EXPORT_REVISIONS_TO_S3"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DataExchangeExportActions"
+        },
+        {
+          "Action": [
+            "dataexchange:AcceptDataGrant",
+            "dataexchange:GetReceivedDataGrant",
+            "dataexchange:ListReceivedDataGrants"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DataExchangeDataGrantActions"
+        },
+        {
+          "Action": [
+            "dataexchange:CreateEventAction",
+            "dataexchange:DeleteEventAction",
+            "dataexchange:GetEventAction",
+            "dataexchange:ListEventActions",
+            "dataexchange:UpdateEventAction"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DataExchangeEventActionActions"
+        },
+        {
+          "Action": [
+            "dataexchange:GetAsset",
+            "dataexchange:GetDataSet",
+            "dataexchange:GetRevision",
+            "dataexchange:ListDataSetRevisions",
+            "dataexchange:ListDataSets",
+            "dataexchange:ListRevisionAssets",
+            "dataexchange:SendApiAsset"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DataExchangeReadOnlyActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-10-24T14:45:58Z"
+}

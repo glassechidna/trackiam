@@ -1,0 +1,75 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSDataExchangeDataGrantOwnerFullAccess",
+  "CreateDate": "2024-10-24T14:43:43Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4KNFOUVXKN",
+  "PolicyName": "AWSDataExchangeDataGrantOwnerFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-10-24T14:43:43Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "dataexchange:CancelJob",
+            "dataexchange:CreateJob",
+            "dataexchange:StartJob"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "dataexchange:JobType": [
+                "EXPORT_ASSETS_TO_S3",
+                "EXPORT_ASSET_TO_SIGNED_URL",
+                "IMPORT_ASSETS_FROM_LAKE_FORMATION_TAG_POLICY",
+                "IMPORT_ASSETS_FROM_REDSHIFT_DATA_SHARES",
+                "IMPORT_ASSETS_FROM_S3",
+                "IMPORT_ASSET_FROM_API_GATEWAY_API",
+                "IMPORT_ASSET_FROM_SIGNED_URL"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DataExchangeJobsActions"
+        },
+        {
+          "Action": [
+            "dataexchange:CreateAsset",
+            "dataexchange:CreateDataGrant",
+            "dataexchange:CreateDataSet",
+            "dataexchange:CreateRevision",
+            "dataexchange:DeleteAsset",
+            "dataexchange:DeleteDataGrant",
+            "dataexchange:DeleteDataSet",
+            "dataexchange:DeleteRevision",
+            "dataexchange:GetAsset",
+            "dataexchange:GetDataGrant",
+            "dataexchange:GetDataSet",
+            "dataexchange:GetRevision",
+            "dataexchange:ListDataGrants",
+            "dataexchange:ListDataSetRevisions",
+            "dataexchange:ListDataSets",
+            "dataexchange:ListRevisionAssets",
+            "dataexchange:PublishToDataGrant",
+            "dataexchange:RevokeRevision",
+            "dataexchange:SendApiAsset",
+            "dataexchange:SendDataSetNotification",
+            "dataexchange:TagResource",
+            "dataexchange:UntagResource",
+            "dataexchange:UpdateAsset",
+            "dataexchange:UpdateDataSet",
+            "dataexchange:UpdateRevision"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DataExchangeActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-10-24T14:43:43Z"
+}

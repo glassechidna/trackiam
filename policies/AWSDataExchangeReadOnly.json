@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDataExchangeReadOnly",
   "CreateDate": "2019-11-13T19:27:37Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DQNFEZURI",
   "PolicyName": "AWSDataExchangeReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2024-07-22T13:36:03Z",
+    "CreateDate": "2024-10-24T14:40:40Z",
     "Document": {
       "Statement": [
         {
@@ -33,14 +33,18 @@
         {
           "Action": [
             "dataexchange:GetAsset",
+            "dataexchange:GetDataGrant",
             "dataexchange:GetDataSet",
             "dataexchange:GetEventAction",
             "dataexchange:GetJob",
+            "dataexchange:GetReceivedDataGrant",
             "dataexchange:GetRevision",
+            "dataexchange:ListDataGrants",
             "dataexchange:ListDataSetRevisions",
             "dataexchange:ListDataSets",
             "dataexchange:ListEventActions",
             "dataexchange:ListJobs",
+            "dataexchange:ListReceivedDataGrants",
             "dataexchange:ListRevisionAssets",
             "dataexchange:ListTagsForResource"
           ],
@@ -52,7 +56,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2024-07-22T13:36:03Z"
+  "UpdateDate": "2024-10-24T14:40:40Z"
 }
