@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v17",
+  "DefaultVersionId": "v18",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-09-11T20:44:09Z",
+    "CreateDate": "2024-10-25T22:33:28Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,33 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowPutMetricsForConnectNamespace"
+        },
+        {
+          "Action": [
+            "chime:GetVoiceConnector"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/AmazonConnectEnabled": "True"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:chime:*:*:vc/*",
+          "Sid": "AllowChimeSDKVoiceConnectorGetOperationForConnect"
+        },
+        {
+          "Action": [
+            "chime:ListVoiceConnectors"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:chime:*:*:vc/*",
+          "Sid": "AllowChimeSDKVoiceConnectorListOperationForConnect"
         },
         {
           "Action": [
@@ -268,7 +295,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v17"
+    "VersionId": "v18"
   },
-  "UpdateDate": "2024-09-11T20:44:09Z"
+  "UpdateDate": "2024-10-25T22:33:28Z"
 }
