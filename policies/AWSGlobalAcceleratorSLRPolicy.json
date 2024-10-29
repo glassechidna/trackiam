@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSGlobalAcceleratorSLRPolicy",
   "CreateDate": "2019-04-05T19:39:13Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4EJ5ZEQR2C",
   "PolicyName": "AWSGlobalAcceleratorSLRPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-09-12T16:45:28Z",
+    "CreateDate": "2024-10-29T18:23:36Z",
     "Document": {
       "Statement": [
         {
@@ -53,7 +53,8 @@
         {
           "Action": [
             "ec2:CreateSecurityGroup",
-            "ec2:DescribeSecurityGroups"
+            "ec2:DescribeSecurityGroups",
+            "ec2:GetSecurityGroupsForVpc"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -73,7 +74,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2023-09-12T16:45:28Z"
+  "UpdateDate": "2024-10-29T18:23:36Z"
 }
