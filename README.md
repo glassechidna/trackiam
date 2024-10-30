@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 407
-* Unique actions: 17719
+* Unique actions: 17725
 * Managed policies: 1248
 
 Most common managed policy name prefixes:
@@ -68,7 +68,7 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
 | [`workspaces`](services/workspaces.yml) | 88 | 0 | 1 |
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
-| [`es`](services/es.yml) | 87 | 0 | 10 |
+| [`es`](services/es.yml) | 87 | 0 | 15 |
 | [`sms-voice`](services/sms-voice.yml) | 87 | 0 | 3 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 85 | 0 | 0 |
@@ -193,10 +193,10 @@ The following table summarises the AWS APIs.
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 31 | 0 | 5 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 31 | 0 | 3 |
 | [`outposts`](services/outposts.yml) | 31 | 0 | 2 |
+| [`payment-cryptography`](services/payment-cryptography.yml) | 31 | 0 | 1 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 31 | 0 | 0 |
 | [`securitylake`](services/securitylake.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
-| [`payment-cryptography`](services/payment-cryptography.yml) | 31 | 0 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
 | [`dataexchange`](services/dataexchange.yml) | 30 | 0 | 10 |
@@ -448,12 +448,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2853 |
-| `Get` | 2600 |
-| `Delete` | 2040 |
-| `Create` | 1904 |
+| `List` | 2854 |
+| `Get` | 2601 |
+| `Delete` | 2041 |
+| `Create` | 1905 |
 | `Describe` | 1735 |
-| `Update` | 1627 |
+| `Update` | 1628 |
 | `Put` | 485 |
 | `Start` | 404 |
 | `Tag` | 277 |
