@@ -1,0 +1,103 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonEKSComputePolicy",
+  "CreateDate": "2024-11-01T21:46:52Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4HYRJHGSOQ",
+  "PolicyName": "AmazonEKSComputePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-11-01T21:46:52Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "CreateFleet",
+                "CreateLaunchTemplate",
+                "RunInstances"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "ec2.amazonaws.com",
+                "ec2.amazonaws.com.cn"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet",
+            "ec2:CreateLaunchTemplate",
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": [
+                "eks:eks-cluster-name",
+                "eks:kubernetes-node-class-name",
+                "eks:kubernetes-node-pool-name",
+                "kubernetes.io/cluster/*"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/eks:eks-cluster-name": "${aws:PrincipalTag/eks:eks-cluster-name}"
+            },
+            "StringLike": {
+              "aws:RequestTag/eks:kubernetes-node-class-name": "*",
+              "aws:RequestTag/eks:kubernetes-node-pool-name": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet",
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/eks:eks-cluster-name": "${aws:PrincipalTag/eks:eks-cluster-name}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:launch-template/*"
+        },
+        {
+          "Action": "iam:AddRoleToInstanceProfile",
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:instance-profile/eks-compute-*"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet",
+            "ec2:RunInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*::image/*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-11-01T21:46:52Z"
+}

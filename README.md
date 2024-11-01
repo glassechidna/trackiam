@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 407
-* Unique actions: 17736
-* Managed policies: 1248
+* Unique actions: 17737
+* Managed policies: 1249
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 338 |
-| `arn:aws:iam::aws:policy/Amazon*` | 322 |
+| `arn:aws:iam::aws:policy/Amazon*` | 323 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 285 |
 | `arn:aws:iam::aws:policy/service-role/*` | 190 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -285,8 +285,8 @@ The following table summarises the AWS APIs.
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 16 | 0 | 0 |
 | [`docdb-elastic`](services/docdb-elastic.yml) | 16 | 0 | 0 |
+| [`application-signals`](services/application-signals.yml) | 15 | 0 | 1 |
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
-| [`application-signals`](services/application-signals.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
@@ -448,7 +448,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2855 |
+| `List` | 2856 |
 | `Get` | 2602 |
 | `Delete` | 2045 |
 | `Create` | 1907 |
