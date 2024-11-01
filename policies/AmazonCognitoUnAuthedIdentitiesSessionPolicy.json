@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonCognitoUnAuthedIdentitiesSessionPolicy",
   "CreateDate": "2023-07-19T23:04:05Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MQ5TUJ5ET",
   "PolicyName": "AmazonCognitoUnAuthedIdentitiesSessionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-08-09T20:02:58Z",
+    "CreateDate": "2024-11-01T18:12:44Z",
     "Document": {
       "Statement": [
         {
@@ -21,6 +21,14 @@
             "geo:GetMap*",
             "geo:GetPlace",
             "geo:SearchPlaceIndex*",
+            "kms:Decrypt",
+            "kms:Encrypt",
+            "kms:GenerateDataKey",
+            "kms:GenerateDataKeyPair",
+            "kms:GenerateDataKeyPairWithoutPlaintext",
+            "kms:GenerateDataKeyWithoutPlaintext",
+            "kms:ReEncryptFrom",
+            "kms:ReEncryptTo",
             "mobiletargeting:*",
             "personalize:*",
             "polly:*",
@@ -38,7 +46,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-08-09T20:02:58Z"
+  "UpdateDate": "2024-11-01T18:12:44Z"
 }
