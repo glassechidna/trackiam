@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 407
-* Unique actions: 17741
+* Unique services: 410
+* Unique actions: 17755
 * Managed policies: 1249
 
 Most common managed policy name prefixes:
@@ -407,12 +407,14 @@ The following table summarises the AWS APIs.
 | [`wickr`](services/wickr.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
+| [`geo-places`](services/geo-places.yml) | 0 | 0 | 7 |
 | [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 6 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`cloudfront-keyvaluestore`](services/cloudfront-keyvaluestore.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
 | [`supportplans`](services/supportplans.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
+| [`geo-routes`](services/geo-routes.yml) | 0 | 0 | 5 |
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 5 |
 | [`customer-verification`](services/customer-verification.yml) | 0 | 0 | 5 |
 | [`appstudio`](services/appstudio.yml) | 0 | 0 | 5 |
@@ -430,6 +432,7 @@ The following table summarises the AWS APIs.
 | [`vpc-lattice-svcs`](services/vpc-lattice-svcs.yml) | 0 | 0 | 2 |
 | [`supportrecommendations`](services/supportrecommendations.yml) | 0 | 0 | 2 |
 | [`signin`](services/signin.yml) | 0 | 0 | 2 |
+| [`geo-maps`](services/geo-maps.yml) | 0 | 0 | 2 |
 | [`consolidatedbilling`](services/consolidatedbilling.yml) | 0 | 0 | 2 |
 | [`consoleapp`](services/consoleapp.yml) | 0 | 0 | 2 |
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
@@ -449,7 +452,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2857 |
-| `Get` | 2602 |
+| `Get` | 2605 |
 | `Delete` | 2045 |
 | `Create` | 1907 |
 | `Describe` | 1736 |
