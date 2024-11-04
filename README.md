@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 410
-* Unique actions: 17755
+* Unique actions: 17758
 * Managed policies: 1249
 
 Most common managed policy name prefixes:
@@ -278,13 +278,13 @@ The following table summarises the AWS APIs.
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`neptune-db`](services/neptune-db.yml) | 16 | 24 | 17 |
 | [`support`](services/support.yml) | 16 | 0 | 9 |
+| [`docdb-elastic`](services/docdb-elastic.yml) | 16 | 0 | 3 |
 | [`route53profiles`](services/route53profiles.yml) | 16 | 0 | 2 |
 | [`emr-serverless`](services/emr-serverless.yml) | 16 | 0 | 2 |
 | [`thinclient`](services/thinclient.yml) | 16 | 0 | 1 |
 | [`internetmonitor`](services/internetmonitor.yml) | 16 | 0 | 1 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 16 | 0 | 0 |
-| [`docdb-elastic`](services/docdb-elastic.yml) | 16 | 0 | 0 |
 | [`application-signals`](services/application-signals.yml) | 15 | 0 | 1 |
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
@@ -451,8 +451,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2857 |
-| `Get` | 2605 |
+| `List` | 2858 |
+| `Get` | 2606 |
 | `Delete` | 2045 |
 | `Create` | 1907 |
 | `Describe` | 1736 |
