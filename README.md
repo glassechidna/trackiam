@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 410
-* Unique actions: 17758
+* Unique actions: 17771
 * Managed policies: 1249
 
 Most common managed policy name prefixes:
@@ -104,7 +104,7 @@ The following table summarises the AWS APIs.
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 0 |
-| [`appsync`](services/appsync.yml) | 64 | 0 | 6 |
+| [`appsync`](services/appsync.yml) | 64 | 0 | 19 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 7 |
 | [`ivs`](services/ivs.yml) | 63 | 0 | 5 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
@@ -451,12 +451,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2858 |
-| `Get` | 2606 |
-| `Delete` | 2045 |
-| `Create` | 1907 |
+| `List` | 2860 |
+| `Get` | 2608 |
+| `Delete` | 2047 |
+| `Create` | 1909 |
 | `Describe` | 1736 |
-| `Update` | 1628 |
+| `Update` | 1630 |
 | `Put` | 486 |
 | `Start` | 404 |
 | `Tag` | 277 |
