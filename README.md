@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 410
-* Unique actions: 17784
+* Unique actions: 17785
 * Managed policies: 1249
 
 Most common managed policy name prefixes:
@@ -279,9 +279,9 @@ The following table summarises the AWS APIs.
 | [`neptune-db`](services/neptune-db.yml) | 16 | 24 | 17 |
 | [`support`](services/support.yml) | 16 | 0 | 9 |
 | [`docdb-elastic`](services/docdb-elastic.yml) | 16 | 0 | 3 |
+| [`thinclient`](services/thinclient.yml) | 16 | 0 | 2 |
 | [`route53profiles`](services/route53profiles.yml) | 16 | 0 | 2 |
 | [`emr-serverless`](services/emr-serverless.yml) | 16 | 0 | 2 |
-| [`thinclient`](services/thinclient.yml) | 16 | 0 | 1 |
 | [`internetmonitor`](services/internetmonitor.yml) | 16 | 0 | 1 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 16 | 0 | 0 |
@@ -452,7 +452,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2861 |
-| `Get` | 2608 |
+| `Get` | 2609 |
 | `Delete` | 2048 |
 | `Create` | 1909 |
 | `Describe` | 1739 |
