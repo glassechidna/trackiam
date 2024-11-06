@@ -626,6 +626,9 @@ Actions:
   - Name: ec2:WithdrawByoipCidr
 
   # actions with no corresponding API
+  - Name: ec2:AcceptCapacityReservationBillingOwnership
+  - Name: ec2:AssociateCapacityReservationBillingOwner
+  - Name: ec2:AssociateSecurityGroupVpc
   - Name: ec2:AssociateVerifiedAccessInstanceWebAcl
   - Name: ec2:CreateCapacityReservationBySplitting
   - Name: ec2:CreateCoipPoolPermission
@@ -633,14 +636,21 @@ Actions:
   - Name: ec2:DeleteCoipPoolPermission
   - Name: ec2:DeleteLocalGatewayRouteTablePermission
   - Name: ec2:DeleteResourcePolicy
+  - Name: ec2:DescribeCapacityReservationBillingRequests
+  - Name: ec2:DescribeInstanceImageMetadata
   - Name: ec2:DescribeLocalGatewayRouteTablePermissions
+  - Name: ec2:DescribeSecurityGroupVpcAssociations
   - Name: ec2:DescribeVerifiedAccessInstanceWebAclAssociations
+  - Name: ec2:DisassociateCapacityReservationBillingOwner
+  - Name: ec2:DisassociateSecurityGroupVpc
   - Name: ec2:DisassociateVerifiedAccessInstanceWebAcl
   - Name: ec2:GetResourcePolicy
   - Name: ec2:GetVerifiedAccessInstanceWebAcl
   - Name: ec2:ImportByoipCidrToIpam
   - Name: ec2:InjectApiError
+  - Name: ec2:ModifyInstanceCpuOptions
   - Name: ec2:MoveCapacityReservationInstances
   - Name: ec2:PauseVolumeIO
   - Name: ec2:PutResourcePolicy
+  - Name: ec2:RejectCapacityReservationBillingOwnership
   - Name: ec2:SendSpotInstanceInterruptions
