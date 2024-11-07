@@ -1,5 +1,6 @@
 Actions:
   - Name: connect:ActivateEvaluationForm
+  - Name: connect:AssociateAnalyticsDataSet
   - Name: connect:AssociateApprovedOrigin
   - Name: connect:AssociateBot
   - Name: connect:AssociateDefaultVocabulary
@@ -93,6 +94,7 @@ Actions:
   - Name: connect:DescribeUserHierarchyStructure
   - Name: connect:DescribeView
   - Name: connect:DescribeVocabulary
+  - Name: connect:DisassociateAnalyticsDataSet
   - Name: connect:DisassociateApprovedOrigin
   - Name: connect:DisassociateBot
   - Name: connect:DisassociateFlow
@@ -119,6 +121,7 @@ Actions:
   - Name: connect:GetTrafficDistribution
   - Name: connect:ImportPhoneNumber
   - Name: connect:ListAgentStatuses
+  - Name: connect:ListAnalyticsDataAssociations
   - Name: connect:ListApprovedOrigins
   - Name: connect:ListAuthenticationProfiles
   - Name: connect:ListBots
@@ -267,10 +270,7 @@ Actions:
   - Name: connect:SearchHoursOfOperationOverrides
   - Name: connect:SendOutboundEmail
   - Name: connect:StartForecastingPlanningSchedulingIntegration
+  - Name: connect:StartOutboundChatContact
+  - Name: connect:StartScreenSharing
   - Name: connect:StopForecastingPlanningSchedulingIntegration
   - Name: connect:UpdateHoursOfOperationOverride
-
-  # APIs without an IAM action
-  - Name: connect:AssociateAnalyticsDataSet
-  - Name: connect:DisassociateAnalyticsDataSet
-  - Name: connect:ListAnalyticsDataAssociations
