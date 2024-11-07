@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonElasticFileSystemFullAccess",
   "CreateDate": "2015-05-27T16:22:28Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJKXTMNVQGIDNCKPBC",
   "PolicyName": "AmazonElasticFileSystemFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-11-28T16:53:28Z",
+    "CreateDate": "2024-11-07T19:34:20Z",
     "Document": {
       "Statement": [
         {
@@ -22,6 +22,17 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "CreateServiceLinkedRoleForEFS"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": "elasticfilesystem.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "IAMPassRoleAccessForEFS"
         },
         {
           "Action": [
@@ -65,6 +76,8 @@
             "elasticfilesystem:PutBackupPolicy",
             "elasticfilesystem:PutFileSystemPolicy",
             "elasticfilesystem:PutLifecycleConfiguration",
+            "elasticfilesystem:ReplicationRead",
+            "elasticfilesystem:ReplicationWrite",
             "elasticfilesystem:Restore",
             "elasticfilesystem:TagResource",
             "elasticfilesystem:UntagResource",
@@ -81,7 +94,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2023-11-28T16:53:28Z"
+  "UpdateDate": "2024-11-07T19:34:20Z"
 }

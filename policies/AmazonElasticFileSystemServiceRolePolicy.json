@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonElasticFileSystemServiceRolePolicy",
   "CreateDate": "2019-11-05T16:52:41Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4FXCJYWBN7",
   "PolicyName": "AmazonElasticFileSystemServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-01-10T19:27:33Z",
+    "CreateDate": "2024-11-07T19:19:50Z",
     "Document": {
       "Statement": [
         {
@@ -77,7 +77,9 @@
             "elasticfilesystem:CreateReplicationConfiguration",
             "elasticfilesystem:DeleteReplicationConfiguration",
             "elasticfilesystem:DescribeFileSystems",
-            "elasticfilesystem:DescribeReplicationConfigurations"
+            "elasticfilesystem:DescribeReplicationConfigurations",
+            "elasticfilesystem:ReplicationRead",
+            "elasticfilesystem:ReplicationWrite"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -93,7 +95,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2022-01-10T19:27:33Z"
+  "UpdateDate": "2024-11-07T19:19:50Z"
 }
