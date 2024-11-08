@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSIPAMServiceRolePolicy",
   "CreateDate": "2021-11-30T19:08:11Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4JEQHJ6QN6",
   "PolicyName": "AWSIPAMServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-11-08T19:05:45Z",
+    "CreateDate": "2024-11-08T16:29:09Z",
     "Document": {
       "Statement": [
         {
@@ -41,8 +41,11 @@
             "globalaccelerator:ListByoipCidrs",
             "organizations:DescribeAccount",
             "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
             "organizations:ListAccounts",
-            "organizations:ListDelegatedAdministrators"
+            "organizations:ListChildren",
+            "organizations:ListDelegatedAdministrators",
+            "organizations:ListParents"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -52,7 +55,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2023-11-08T19:05:45Z"
+  "UpdateDate": "2024-11-08T16:29:09Z"
 }
