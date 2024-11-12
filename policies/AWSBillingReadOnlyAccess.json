@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess",
   "CreateDate": "2020-08-27T20:08:51Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LJ3OSZ5SX",
   "PolicyName": "AWSBillingReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-05-23T23:23:30Z",
+    "CreateDate": "2024-11-12T18:16:52Z",
     "Document": {
       "Statement": [
         {
@@ -47,10 +47,19 @@
             "invoicing:GetInvoiceEmailDeliveryPreferences",
             "invoicing:GetInvoicePDF",
             "invoicing:ListInvoiceSummaries",
+            "payments:GetFinancingApplication",
+            "payments:GetFinancingLine",
+            "payments:GetFinancingLineWithdrawal",
+            "payments:GetFinancingOption",
             "payments:GetPaymentInstrument",
             "payments:GetPaymentStatus",
+            "payments:ListFinancingApplications",
+            "payments:ListFinancingLineWithdrawals",
+            "payments:ListFinancingLines",
             "payments:ListPaymentInstruments",
             "payments:ListPaymentPreferences",
+            "payments:ListPaymentProgramOptions",
+            "payments:ListPaymentProgramStatus",
             "payments:ListTagsForResource",
             "purchase-orders:GetPurchaseOrder",
             "purchase-orders:ListPurchaseOrderInvoices",
@@ -70,7 +79,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2024-05-23T23:23:30Z"
+  "UpdateDate": "2024-11-12T18:16:52Z"
 }

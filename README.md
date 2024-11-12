@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 411
-* Unique actions: 17818
+* Unique actions: 17830
 * Managed policies: 1249
 
 Most common managed policy name prefixes:
@@ -373,6 +373,7 @@ The following table summarises the AWS APIs.
 | [`one`](services/one.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
+| [`payments`](services/payments.yml) | 0 | 0 | 24 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 21 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
@@ -397,7 +398,6 @@ The following table summarises the AWS APIs.
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
 | [`ssm-quicksetup`](services/ssm-quicksetup.yml) | 0 | 0 | 12 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
-| [`payments`](services/payments.yml) | 0 | 0 | 12 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 10 |
 | [`ts`](services/ts.yml) | 0 | 0 | 9 |
 | [`s3express`](services/s3express.yml) | 0 | 0 | 9 |
@@ -452,12 +452,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2868 |
-| `Get` | 2612 |
+| `List` | 2873 |
+| `Get` | 2616 |
 | `Delete` | 2050 |
-| `Create` | 1911 |
+| `Create` | 1912 |
 | `Describe` | 1739 |
-| `Update` | 1632 |
+| `Update` | 1633 |
 | `Put` | 487 |
 | `Start` | 407 |
 | `Tag` | 277 |

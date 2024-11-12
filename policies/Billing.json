@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/Billing",
   "CreateDate": "2016-11-10T17:33:18Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAIFTHXT6FFMIRT7ZEA",
   "PolicyName": "Billing",
   "PolicyVersion": {
-    "CreateDate": "2024-05-23T23:26:02Z",
+    "CreateDate": "2024-11-12T18:12:19Z",
     "Document": {
       "Statement": [
         {
@@ -79,16 +79,27 @@
             "invoicing:GetInvoicePDF",
             "invoicing:ListInvoiceSummaries",
             "invoicing:PutInvoiceEmailDeliveryPreferences",
+            "payments:CreateFinancingApplication",
             "payments:CreatePaymentInstrument",
             "payments:DeletePaymentInstrument",
+            "payments:GetFinancingApplication",
+            "payments:GetFinancingLine",
+            "payments:GetFinancingLineWithdrawal",
+            "payments:GetFinancingOption",
             "payments:GetPaymentInstrument",
             "payments:GetPaymentStatus",
+            "payments:ListFinancingApplications",
+            "payments:ListFinancingLineWithdrawals",
+            "payments:ListFinancingLines",
             "payments:ListPaymentInstruments",
             "payments:ListPaymentPreferences",
+            "payments:ListPaymentProgramOptions",
+            "payments:ListPaymentProgramStatus",
             "payments:ListTagsForResource",
             "payments:MakePayment",
             "payments:TagResource",
             "payments:UntagResource",
+            "payments:UpdateFinancingApplication",
             "payments:UpdatePaymentInstrument",
             "payments:UpdatePaymentPreferences",
             "pricing:DescribeServices",
@@ -128,7 +139,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2024-05-23T23:26:02Z"
+  "UpdateDate": "2024-11-12T18:12:19Z"
 }
