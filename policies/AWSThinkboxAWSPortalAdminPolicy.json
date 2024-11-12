@@ -1,25 +1,47 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSThinkboxAWSPortalAdminPolicy",
   "CreateDate": "2020-05-27T19:41:02Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BVM3T5TP2",
   "PolicyName": "AWSThinkboxAWSPortalAdminPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-04-12T20:07:12Z",
+    "CreateDate": "2024-11-12T19:22:36Z",
     "Document": {
       "Statement": [
         {
           "Action": "ec2:RunInstances",
           "Condition": {
-            "StringLike": {
+            "ArnLike": {
               "ec2:InstanceProfile": "arn:aws:iam::*:instance-profile/AWSPortal*"
             }
           },
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*:*:instance/*",
           "Sid": "AWSThinkboxAWSPortal3"
+        },
+        {
+          "Action": "ec2:TerminateInstances",
+          "Condition": {
+            "ArnLike": {
+              "ec2:PlacementGroup": "arn:aws:ec2:*:*:placement-group/*DeadlinePlacementGroup*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSThinkboxAWSPortal6"
+        },
+        {
+          "Action": "ec2:TerminateInstances",
+          "Condition": {
+            "Null": {
+              "ec2:ResourceTag/aws:ec2spot:fleet-request-id": false
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSThinkboxAWSPortal5"
         },
         {
           "Action": "ec2:TerminateInstances",
@@ -31,28 +53,6 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AWSThinkboxAWSPortal4"
-        },
-        {
-          "Action": "ec2:TerminateInstances",
-          "Condition": {
-            "StringLike": {
-              "ec2:PlacementGroup": "*DeadlinePlacementGroup*"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "AWSThinkboxAWSPortal6"
-        },
-        {
-          "Action": "ec2:TerminateInstances",
-          "Condition": {
-            "StringLike": {
-              "ec2:ResourceTag/aws:ec2spot:fleet-request-id": "*"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "AWSThinkboxAWSPortal5"
         },
         {
           "Action": "iam:CreateServiceLinkedRole",
@@ -74,13 +74,13 @@
             "ec2:CreateTags"
           ],
           "Condition": {
-            "StringLike": {
-              "ec2:CreateAction": "RunInstances"
+            "ArnLike": {
+              "ec2:PlacementGroup": "arn:aws:ec2:*:*:placement-group/*DeadlinePlacementGroup*"
             }
           },
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "AWSThinkboxAWSPortal8"
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "AWSThinkboxAWSPortal7"
         },
         {
           "Action": [
@@ -88,12 +88,12 @@
           ],
           "Condition": {
             "StringLike": {
-              "ec2:PlacementGroup": "*DeadlinePlacementGroup*"
+              "ec2:CreateAction": "RunInstances"
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:instance/*",
-          "Sid": "AWSThinkboxAWSPortal7"
+          "Resource": "*",
+          "Sid": "AWSThinkboxAWSPortal8"
         },
         {
           "Action": [
@@ -434,7 +434,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2024-04-12T20:07:12Z"
+  "UpdateDate": "2024-11-12T19:22:36Z"
 }

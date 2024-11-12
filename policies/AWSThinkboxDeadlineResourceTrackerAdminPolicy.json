@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSThinkboxDeadlineResourceTrackerAdminPolicy",
   "CreateDate": "2020-05-27T19:29:09Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FKWWNUOP2",
   "PolicyName": "AWSThinkboxDeadlineResourceTrackerAdminPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-04-12T20:55:58Z",
+    "CreateDate": "2024-11-12T19:29:09Z",
     "Document": {
       "Statement": [
         {
@@ -83,7 +83,7 @@
             "lambda:DeleteEventSourceMapping"
           ],
           "Condition": {
-            "StringLike": {
+            "ArnLike": {
               "lambda:FunctionArn": [
                 "arn:aws:lambda:*:*:function:DeadlineResourceTracker*"
               ]
@@ -260,7 +260,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2024-04-12T20:55:58Z"
+  "UpdateDate": "2024-11-12T19:29:09Z"
 }
