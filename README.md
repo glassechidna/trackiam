@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 411
-* Unique actions: 17830
-* Managed policies: 1253
+* Unique actions: 17832
+* Managed policies: 1254
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 338 |
 | `arn:aws:iam::aws:policy/Amazon*` | 323 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 285 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 286 |
 | `arn:aws:iam::aws:policy/service-role/*` | 192 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 108 |
@@ -139,7 +139,7 @@ The following table summarises the AWS APIs.
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 49 | 0 | 0 |
-| [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 7 |
+| [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 8 |
 | [`codeartifact`](services/codeartifact.yml) | 48 | 0 | 3 |
 | [`wisdom`](services/wisdom.yml) | 47 | 0 | 34 |
 | [`ecr`](services/ecr.yml) | 47 | 0 | 4 |
@@ -238,7 +238,7 @@ The following table summarises the AWS APIs.
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 24 | 0 | 1 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`apptest`](services/apptest.yml) | 24 | 0 | 0 |
-| [`controltower`](services/controltower.yml) | 23 | 0 | 41 |
+| [`controltower`](services/controltower.yml) | 23 | 0 | 42 |
 | [`qapps`](services/qapps.yml) | 23 | 0 | 16 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 3 |
 | [`mq`](services/mq.yml) | 23 | 0 | 1 |

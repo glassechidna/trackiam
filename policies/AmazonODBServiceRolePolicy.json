@@ -1,0 +1,43 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonODBServiceRolePolicy",
+  "CreateDate": "2024-11-13T18:21:41Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4BLAIMLXVO",
+  "PolicyName": "AmazonODBServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-11-13T18:21:41Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": [
+                "AWS/ODB"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatch"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-11-13T18:21:41Z"
+}
