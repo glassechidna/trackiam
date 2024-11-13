@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 411
-* Unique actions: 17842
+* Unique actions: 17851
 * Managed policies: 1254
 
 Most common managed policy name prefixes:
@@ -375,6 +375,7 @@ The following table summarises the AWS APIs.
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
+| [`q`](services/q.yml) | 0 | 0 | 22 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 21 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 19 |
@@ -390,7 +391,6 @@ The following table summarises the AWS APIs.
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 14 |
 | [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
 | [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 13 |
-| [`q`](services/q.yml) | 0 | 0 | 13 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 13 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
@@ -452,14 +452,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2876 |
-| `Get` | 2616 |
-| `Delete` | 2051 |
-| `Create` | 1913 |
+| `List` | 2879 |
+| `Get` | 2617 |
+| `Delete` | 2052 |
+| `Create` | 1914 |
 | `Describe` | 1741 |
 | `Update` | 1635 |
 | `Put` | 487 |
 | `Start` | 407 |
-| `Tag` | 277 |
-| `Untag` | 273 |
+| `Tag` | 278 |
+| `Untag` | 274 |
 

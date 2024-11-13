@@ -1,15 +1,30 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonQFullAccess",
   "CreateDate": "2023-11-28T16:00:24Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JQANMNF6S",
   "PolicyName": "AmazonQFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-10-28T20:01:31Z",
+    "CreateDate": "2024-11-13T21:51:39Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "q.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "AllowPassRoleToAmazonQ"
+        },
         {
           "Action": [
             "cloudformation:GetResource",
@@ -22,18 +37,27 @@
         {
           "Action": [
             "q:CreateAssignment",
+            "q:CreatePlugin",
             "q:DeleteAssignment",
+            "q:DeletePlugin",
             "q:GenerateCodeFromCommands",
             "q:GetConversation",
             "q:GetIdentityMetadata",
+            "q:GetPlugin",
             "q:GetTroubleshootingResults",
             "q:ListConversations",
+            "q:ListPluginProviders",
+            "q:ListPlugins",
+            "q:ListTagsForResource",
             "q:PassRequest",
             "q:SendMessage",
             "q:StartConversation",
             "q:StartTroubleshootingAnalysis",
             "q:StartTroubleshootingResolutionExplanation",
-            "q:UpdateTroubleshootingCommandResult"
+            "q:TagResource",
+            "q:UntagResource",
+            "q:UpdateTroubleshootingCommandResult",
+            "q:UsePlugin"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -51,7 +75,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2024-10-28T20:01:31Z"
+  "UpdateDate": "2024-11-13T21:51:39Z"
 }
