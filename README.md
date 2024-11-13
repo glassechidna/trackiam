@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 411
-* Unique actions: 17832
+* Unique actions: 17842
 * Managed policies: 1254
 
 Most common managed policy name prefixes:
@@ -57,7 +57,7 @@ The following table summarises the AWS APIs.
 | [`iotwireless`](services/iotwireless.yml) | 112 | 0 | 1 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`cloudfront`](services/cloudfront.yml) | 110 | 1 | 7 |
-| [`gamelift`](services/gamelift.yml) | 108 | 0 | 0 |
+| [`gamelift`](services/gamelift.yml) | 108 | 0 | 9 |
 | [`dms`](services/dms.yml) | 106 | 0 | 28 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 4 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 3 |
@@ -214,7 +214,7 @@ The following table summarises the AWS APIs.
 | [`codestar-connections`](services/codestar-connections.yml) | 27 | 0 | 11 |
 | [`codeconnections`](services/codeconnections.yml) | 27 | 0 | 11 |
 | [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 7 |
-| [`b2bi`](services/b2bi.yml) | 27 | 0 | 2 |
+| [`b2bi`](services/b2bi.yml) | 27 | 0 | 3 |
 | [`snowball`](services/snowball.yml) | 27 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 27 | 0 | 0 |
 | [`aps`](services/aps.yml) | 26 | 0 | 17 |
@@ -452,12 +452,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2873 |
+| `List` | 2876 |
 | `Get` | 2616 |
-| `Delete` | 2050 |
-| `Create` | 1912 |
-| `Describe` | 1739 |
-| `Update` | 1633 |
+| `Delete` | 2051 |
+| `Create` | 1913 |
+| `Describe` | 1741 |
+| `Update` | 1635 |
 | `Put` | 487 |
 | `Start` | 407 |
 | `Tag` | 277 |
