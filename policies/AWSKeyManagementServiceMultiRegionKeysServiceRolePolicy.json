@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSKeyManagementServiceMultiRegionKeysServiceRolePolicy",
   "CreateDate": "2021-06-16T15:37:37Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4P3NRAIDRH",
   "PolicyName": "AWSKeyManagementServiceMultiRegionKeysServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-06-16T15:37:37Z",
+    "CreateDate": "2024-11-13T22:53:54Z",
     "Document": {
       "Statement": [
         {
@@ -15,13 +15,14 @@
             "kms:SynchronizeMultiRegionKey"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "KMSSynchronizeMultiRegionKey"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-06-16T15:37:37Z"
+  "UpdateDate": "2024-11-13T22:53:54Z"
 }
