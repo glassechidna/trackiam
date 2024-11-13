@@ -1,0 +1,43 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CloudWatchInternetMonitorReadOnlyAccess",
+  "CreateDate": "2024-11-12T23:11:17Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4OKHHAXI5N",
+  "PolicyName": "CloudWatchInternetMonitorReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-11-12T23:11:17Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:GetMetricData",
+            "internetmonitor:GetHealthEvent",
+            "internetmonitor:GetInternetEvent",
+            "internetmonitor:GetMonitor",
+            "internetmonitor:GetQueryResults",
+            "internetmonitor:GetQueryStatus",
+            "internetmonitor:ListHealthEvents",
+            "internetmonitor:ListInternetEvents",
+            "internetmonitor:ListMonitors",
+            "internetmonitor:ListTagsForResource",
+            "internetmonitor:StartQuery",
+            "internetmonitor:StopQuery",
+            "logs:DescribeLogGroups",
+            "logs:GetQueryResults",
+            "logs:StartQuery",
+            "logs:StopQuery"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReadOnlyActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-11-12T23:11:17Z"
+}
