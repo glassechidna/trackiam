@@ -1,0 +1,238 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/SecurityLakeResourceManagementServiceRolePolicy",
+  "CreateDate": "2024-11-14T22:10:14Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4INIYQBUHP",
+  "PolicyName": "SecurityLakeResourceManagementServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-11-14T22:10:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "events:ListRules"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReadEventBridgeRules"
+        },
+        {
+          "Action": [
+            "events:PutRule"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/AmazonSecurityLake-*",
+          "Sid": "ManageSecurityLakeEventRules"
+        },
+        {
+          "Action": [
+            "glue:BatchCreatePartition",
+            "glue:CreatePartition",
+            "glue:GetDatabase",
+            "glue:GetTable",
+            "glue:GetTables",
+            "glue:UpdateTable"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:catalog",
+            "arn:aws:glue:*:*:database/amazon_security_lake_glue_db*",
+            "arn:aws:glue:*:*:table/amazon_security_lake_glue_db*/*"
+          ],
+          "Sid": "ManageSecurityLakeGlueResources"
+        },
+        {
+          "Action": [
+            "lakeformation:GetDataLakeSettings",
+            "lakeformation:ListPermissions"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowDataLakeManagement"
+        },
+        {
+          "Action": [
+            "lambda:DeleteEventSourceMapping",
+            "lambda:DeleteFunctionConcurrency",
+            "lambda:GetAlias",
+            "lambda:GetEventSourceMapping",
+            "lambda:GetFunction",
+            "lambda:GetFunctionConcurrency",
+            "lambda:GetFunctionConfiguration",
+            "lambda:GetPolicy",
+            "lambda:GetProvisionedConcurrencyConfig",
+            "lambda:GetRuntimeManagementConfig",
+            "lambda:PublishVersion",
+            "lambda:PutFunctionConcurrency",
+            "lambda:PutProvisionedConcurrencyConfig",
+            "lambda:UpdateFunctionConfiguration"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:AmazonSecurityLakeMetastoreManager-*-*",
+            "arn:aws:lambda:*:*:function:SecurityLake_Glue_Partition_Updater_Lambda*"
+          ],
+          "Sid": "ManageSecurityLakeLambdaConfigurations"
+        },
+        {
+          "Action": [
+            "lambda:ListEventSourceMappings"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListLambdaEventSourceMappings"
+        },
+        {
+          "Action": [
+            "lambda:UpdateEventSourceMapping"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "lambda:FunctionArn": "arn:aws:lambda:*:*:function:AmazonSecurityLakeMetastoreManager-*-*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowUpdateLambdaEventSourceMapping"
+        },
+        {
+          "Action": [
+            "lambda:UpdateFunctionConfiguration"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:function:AmazonSecurityLakeMetastoreManager-*-*",
+          "Sid": "AllowUpdateLambdaConfigs"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogStreams",
+            "logs:GetLogEvents",
+            "logs:GetLogRecord",
+            "logs:GetQueryResults",
+            "logs:StartQuery"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/lambda/AmazonSecurityLakeMetastoreManager-*-*"
+          ],
+          "Sid": "ReadSecurityLakeLambdaLogs"
+        },
+        {
+          "Action": [
+            "s3:DeleteObject",
+            "s3:GetObject",
+            "s3:RestoreObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-security-data-lake*/metadata/*.avro",
+            "arn:aws:s3:::aws-security-data-lake*/metadata/*.metadata.json"
+          ],
+          "Sid": "AllowMetaDataCompactionAndManagement"
+        },
+        {
+          "Action": [
+            "s3:GetBucketNotification",
+            "s3:GetEncryptionConfiguration",
+            "s3:GetLifecycleConfiguration",
+            "s3:GetObjectAttributes",
+            "s3:GetReplicationConfiguration",
+            "s3:ListBucket",
+            "s3:PutBucketNotification",
+            "s3:PutLifecycleConfiguration",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-security-data-lake*"
+          ],
+          "Sid": "AllowDataLakeConfigurationManagement"
+        },
+        {
+          "Action": [
+            "sqs:ChangeMessageVisibility",
+            "sqs:DeleteMessage",
+            "sqs:GetQueueAttributes",
+            "sqs:GetQueueUrl",
+            "sqs:ListDeadLetterSourceQueues",
+            "sqs:ListMessageMoveTasks",
+            "sqs:ReceiveMessage",
+            "sqs:SendMessage",
+            "sqs:SetQueueAttributes",
+            "sqs:StartMessageMoveTask"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sqs:*:*:AmazonSecurityLakeManager-*",
+            "arn:aws:sqs:*:*:SecurityLake_*"
+          ],
+          "Sid": "ManageSecurityLakeSQSQueue"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-11-14T22:10:14Z"
+}

@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 412
-* Unique actions: 17885
-* Managed policies: 1257
+* Unique actions: 17886
+* Managed policies: 1263
 
 Most common managed policy name prefixes:
 
@@ -21,10 +21,10 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 340 |
 | `arn:aws:iam::aws:policy/Amazon*` | 323 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 287 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 288 |
 | `arn:aws:iam::aws:policy/service-role/*` | 192 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
-| Other | 108 |
+| Other | 113 |
 
 The following table summarises the AWS APIs. 
 
@@ -180,7 +180,7 @@ The following table summarises the AWS APIs.
 | [`ram`](services/ram.yml) | 34 | 0 | 0 |
 | [`m2`](services/m2.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
-| [`access-analyzer`](services/access-analyzer.yml) | 33 | 2 | 1 |
+| [`access-analyzer`](services/access-analyzer.yml) | 33 | 2 | 2 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 33 | 0 | 1 |
 | [`applicationinsights`](services/applicationinsights.yml) | 33 | 0 | 1 |
@@ -458,7 +458,7 @@ Most common action prefixes:
 | `Delete` | 2055 |
 | `Create` | 1918 |
 | `Describe` | 1741 |
-| `Update` | 1638 |
+| `Update` | 1639 |
 | `Put` | 487 |
 | `Start` | 409 |
 | `Tag` | 279 |
