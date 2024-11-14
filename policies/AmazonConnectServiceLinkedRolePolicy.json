@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v19",
+  "DefaultVersionId": "v20",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-10-29T20:36:31Z",
+    "CreateDate": "2024-11-14T18:06:40Z",
     "Document": {
       "Statement": [
         {
@@ -130,6 +130,23 @@
           "Effect": "Allow",
           "Resource": "arn:aws:sms-voice:*:*:phone-number/*",
           "Sid": "AllowSMSVoiceOperationsForConnect"
+        },
+        {
+          "Action": [
+            "social-messaging:GetLinkedWhatsAppBusinessAccountPhoneNumber",
+            "social-messaging:GetWhatsAppMessageMedia",
+            "social-messaging:PostWhatsAppMessageMedia",
+            "social-messaging:SendWhatsAppMessage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/AmazonConnectEnabled": "True"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:social-messaging:*:*:phone-number-id/*",
+          "Sid": "AllowSocialMessagingOperations"
         },
         {
           "Action": [
@@ -350,7 +367,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v19"
+    "VersionId": "v20"
   },
-  "UpdateDate": "2024-10-29T20:36:31Z"
+  "UpdateDate": "2024-11-14T18:06:40Z"
 }
