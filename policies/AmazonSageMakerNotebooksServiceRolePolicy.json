@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonSageMakerNotebooksServiceRolePolicy",
   "CreateDate": "2019-10-18T20:27:37Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4MYB7OEJED",
   "PolicyName": "AmazonSageMakerNotebooksServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-07-24T18:05:40Z",
+    "CreateDate": "2024-11-14T20:33:45Z",
     "Document": {
       "Statement": [
         {
@@ -93,6 +93,19 @@
           "Effect": "Allow",
           "Resource": "arn:aws:elasticfilesystem:*:*:access-point/*",
           "Sid": "AllowEFSAccessPointDeletion"
+        },
+        {
+          "Action": [
+            "fsx:DescribeFileSystems"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowFSxDescribe"
         },
         {
           "Action": [
@@ -184,7 +197,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2024-07-24T18:05:40Z"
+  "UpdateDate": "2024-11-14T20:33:45Z"
 }
