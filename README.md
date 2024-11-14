@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 412
-* Unique actions: 17867
-* Managed policies: 1255
+* Unique actions: 17878
+* Managed policies: 1257
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 338 |
+| `arn:aws:iam::aws:policy/AWS*` | 340 |
 | `arn:aws:iam::aws:policy/Amazon*` | 323 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 287 |
 | `arn:aws:iam::aws:policy/service-role/*` | 192 |
@@ -141,7 +141,7 @@ The following table summarises the AWS APIs.
 | [`lookoutequipment`](services/lookoutequipment.yml) | 49 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 8 |
 | [`codeartifact`](services/codeartifact.yml) | 48 | 0 | 3 |
-| [`wisdom`](services/wisdom.yml) | 47 | 0 | 34 |
+| [`wisdom`](services/wisdom.yml) | 47 | 0 | 45 |
 | [`ecr`](services/ecr.yml) | 47 | 0 | 4 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
@@ -453,12 +453,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2882 |
-| `Get` | 2620 |
-| `Delete` | 2052 |
-| `Create` | 1915 |
+| `List` | 2885 |
+| `Get` | 2622 |
+| `Delete` | 2054 |
+| `Create` | 1917 |
 | `Describe` | 1741 |
-| `Update` | 1636 |
+| `Update` | 1637 |
 | `Put` | 487 |
 | `Start` | 409 |
 | `Tag` | 278 |

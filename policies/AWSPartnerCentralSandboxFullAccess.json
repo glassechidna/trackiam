@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralSandboxFullAccess",
+  "CreateDate": "2024-11-14T19:10:37Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4DX7TQBP3V",
+  "PolicyName": "AWSPartnerCentralSandboxFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-11-14T19:10:37Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "partnercentral:*"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": "Sandbox"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSPartnerCentralSandboxAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-11-14T19:10:37Z"
+}

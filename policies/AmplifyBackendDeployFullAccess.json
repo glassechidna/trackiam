@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmplifyBackendDeployFullAccess",
   "CreateDate": "2023-10-06T21:32:59Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4H6M6P2QGM",
   "PolicyName": "AmplifyBackendDeployFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-07-18T17:05:12Z",
+    "CreateDate": "2024-11-14T19:09:39Z",
     "Document": {
       "Statement": [
         {
@@ -184,7 +184,8 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:logs:*:*:log-group:/aws/lambda/amplify-*:*"
+            "arn:aws:logs:*:*:log-group:/aws/lambda/amplify-*:*",
+            "arn:aws:logs:*:*:log-group:amplify-*:*"
           ],
           "Sid": "AmplifySandboxLambdaLogsStreamingFilterLogEvents"
         }
@@ -192,7 +193,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2024-07-18T17:05:12Z"
+  "UpdateDate": "2024-11-14T19:09:39Z"
 }

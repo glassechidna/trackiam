@@ -1,0 +1,61 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralOpportunityManagement",
+  "CreateDate": "2024-11-14T19:09:05Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4OANYBNL3Z",
+  "PolicyName": "AWSPartnerCentralOpportunityManagement",
+  "PolicyVersion": {
+    "CreateDate": "2024-11-14T19:09:05Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aws-marketplace:DescribeEntity"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/Offer/*"
+          ],
+          "Sid": "AWSMarketplaceOffersAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:ListEntities"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListingAWSMarketplaceEntities"
+        },
+        {
+          "Action": [
+            "partnercentral:AcceptEngagementInvitation",
+            "partnercentral:AssignOpportunity",
+            "partnercentral:AssociateOpportunity",
+            "partnercentral:CreateOpportunity",
+            "partnercentral:DisassociateOpportunity",
+            "partnercentral:GetAwsOpportunitySummary",
+            "partnercentral:GetEngagementInvitation",
+            "partnercentral:GetOpportunity",
+            "partnercentral:ListEngagementInvitations",
+            "partnercentral:ListOpportunities",
+            "partnercentral:ListSolutions",
+            "partnercentral:RejectEngagementInvitation",
+            "partnercentral:StartEngagementByAcceptingInvitationTask",
+            "partnercentral:StartEngagementFromOpportunityTask",
+            "partnercentral:SubmitOpportunity",
+            "partnercentral:UpdateOpportunity"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "OpportunityManagement"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-11-14T19:09:05Z"
+}
