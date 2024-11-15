@@ -1,30 +1,69 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/KeyspacesReplicationServiceRolePolicy",
   "CreateDate": "2023-05-02T16:15:49Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4C2B6EEBHZ",
   "PolicyName": "KeyspacesReplicationServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-05-02T16:15:49Z",
+    "CreateDate": "2024-11-15T20:55:16Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "cloudwatch:PutMetricAlarm"
+          ],
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "cloudwatch:AlarmActions": [
+                "arn:aws:autoscaling:*:*:scalingPolicy:*:resource/cassandra/keyspace/*/table/*:policyName/*:createdBy/*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch:*:*:alarm:TargetTracking-*",
+          "Sid": "CWPutMetricAlarmPolicy"
+        },
+        {
+          "Action": [
+            "application-autoscaling:DeregisterScalableTarget",
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingPolicies",
+            "application-autoscaling:PutScalingPolicy",
+            "application-autoscaling:RegisterScalableTarget",
+            "cassandra:Alter",
+            "cassandra:AlterMultiRegionResource",
             "cassandra:Modify",
             "cassandra:ModifyMultiRegionResource",
             "cassandra:Select",
             "cassandra:SelectMultiRegionResource"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "KeyspacesActionsNeededForSteadyStateReplication"
+        },
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch:*:*:alarm:TargetTracking-*",
+          "Sid": "CWDeleteAlarmPolicy"
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch:*:*:alarm:*",
+          "Sid": "CWDescribeAlarmPolicy"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-05-02T16:15:49Z"
+  "UpdateDate": "2024-11-15T20:55:16Z"
 }

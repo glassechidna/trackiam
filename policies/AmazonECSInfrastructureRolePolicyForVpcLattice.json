@@ -1,0 +1,59 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonECSInfrastructureRolePolicyForVpcLattice",
+  "CreateDate": "2024-11-15T20:02:55Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4LAY36SJ4I",
+  "PolicyName": "AmazonECSInfrastructureRolePolicyForVpcLattice",
+  "PolicyVersion": {
+    "CreateDate": "2024-11-15T20:02:55Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "vpc-lattice:GetTargetGroup",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:vpc-lattice:*:*:targetgroup/*"
+          ],
+          "Sid": "DescribeVpcLatticeTargetGroup"
+        },
+        {
+          "Action": "vpc-lattice:ListTargets",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:vpc-lattice:*:*:targetgroup/*"
+          ],
+          "Sid": "ListVpcLatticeTargets"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstances",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "DescribeEc2Resources"
+        },
+        {
+          "Action": [
+            "vpc-lattice:DeregisterTargets",
+            "vpc-lattice:RegisterTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:vpc-lattice:*:*:targetgroup/*"
+          ],
+          "Sid": "ManagedVpcLatticeTargetRegistration"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-11-15T20:02:55Z"
+}
