@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 412
-* Unique actions: 17886
+* Unique actions: 17894
 * Managed policies: 1263
 
 Most common managed policy name prefixes:
@@ -46,7 +46,7 @@ The following table summarises the AWS APIs.
 | [`quicksight`](services/quicksight.yml) | 174 | 3 | 33 |
 | [`rds`](services/rds.yml) | 162 | 0 | 6 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
-| [`iam`](services/iam.yml) | 159 | 0 | 12 |
+| [`iam`](services/iam.yml) | 159 | 0 | 17 |
 | [`ssm`](services/ssm.yml) | 140 | 0 | 9 |
 | [`lex`](services/lex.yml) | 137 | 4 | 8 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 28 |
@@ -325,7 +325,7 @@ The following table summarises the AWS APIs.
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
 | [`managedblockchain-query`](services/managedblockchain-query.yml) | 9 | 0 | 0 |
 | [`kendra-ranking`](services/kendra-ranking.yml) | 9 | 0 | 0 |
-| [`sts`](services/sts.yml) | 8 | 0 | 4 |
+| [`sts`](services/sts.yml) | 8 | 0 | 5 |
 | [`tag`](services/tag.yml) | 8 | 0 | 0 |
 | [`iotfleethub`](services/iotfleethub.yml) | 8 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
@@ -364,8 +364,8 @@ The following table summarises the AWS APIs.
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 74 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 56 |
+| [`deepracer`](services/deepracer.yml) | 0 | 0 | 53 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 52 |
-| [`deepracer`](services/deepracer.yml) | 0 | 0 | 51 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 32 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
@@ -453,7 +453,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2887 |
+| `List` | 2888 |
 | `Get` | 2622 |
 | `Delete` | 2055 |
 | `Create` | 1918 |
