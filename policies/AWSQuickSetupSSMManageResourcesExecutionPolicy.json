@@ -1,0 +1,126 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupSSMManageResourcesExecutionPolicy",
+  "CreateDate": "2024-11-15T22:49:24Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4IIJFXBPXF",
+  "PolicyName": "AWSQuickSetupSSMManageResourcesExecutionPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-11-15T22:49:24Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:AttachRolePolicy",
+            "iam:DetachRolePolicy"
+          ],
+          "Condition": {
+            "ArnEquals": {
+              "iam:PolicyARN": "arn:aws:iam::aws:policy/AWSQuickSetupEnableAREXExecutionPolicy"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AWS-QuickSetup-SSM-EnableAREX*"
+        },
+        {
+          "Action": [
+            "iam:AttachRolePolicy",
+            "iam:DetachRolePolicy"
+          ],
+          "Condition": {
+            "ArnEquals": {
+              "iam:PolicyARN": "arn:aws:iam::aws:policy/AWSQuickSetupEnableDHMCExecutionPolicy"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AWS-QuickSetup-SSM-EnableDHMC*"
+        },
+        {
+          "Action": [
+            "iam:AttachRolePolicy",
+            "iam:DetachRolePolicy"
+          ],
+          "Condition": {
+            "ArnEquals": {
+              "iam:PolicyARN": "arn:aws:iam::aws:policy/AWSQuickSetupManagedInstanceProfileExecutionPolicy"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AWS-QuickSetup-SSM-ManageInstanceProfile*"
+        },
+        {
+          "Action": [
+            "iam:AttachRolePolicy",
+            "iam:DetachRolePolicy"
+          ],
+          "Condition": {
+            "ArnEquals": {
+              "iam:PolicyARN": [
+                "arn:aws:iam::aws:policy/AWSSystemsManagerEnableExplorerExecutionPolicy"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AWS-QuickSetup-SSM-EnableExplorer*"
+        },
+        {
+          "Action": [
+            "iam:CreateRole",
+            "iam:TagRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/QuickSetupDocument": "AWSQuickSetupType-SSM",
+              "iam:ResourceTag/QuickSetupDocument": "AWSQuickSetupType-SSM"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AWS-QuickSetup-SSM-EnableAREX*",
+            "arn:aws:iam::*:role/AWS-QuickSetup-SSM-EnableDHMC*",
+            "arn:aws:iam::*:role/AWS-QuickSetup-SSM-EnableExplorer*",
+            "arn:aws:iam::*:role/AWS-QuickSetup-SSM-ManageInstanceProfile*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:DeleteObject",
+            "s3:DeleteObjectVersion",
+            "s3:GetObject",
+            "s3:GetObjectVersion",
+            "s3:ListBucketVersions"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": [
+                "${aws:PrincipalAccount}"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::do-not-delete-ssm-*"
+        },
+        {
+          "Action": [
+            "iam:DeleteRole",
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:UpdateRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AWS-QuickSetup-SSM-EnableAREX*",
+            "arn:aws:iam::*:role/AWS-QuickSetup-SSM-EnableDHMC*",
+            "arn:aws:iam::*:role/AWS-QuickSetup-SSM-EnableExplorer*",
+            "arn:aws:iam::*:role/AWS-QuickSetup-SSM-ManageInstanceProfile*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-11-15T22:49:24Z"
+}

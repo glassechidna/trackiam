@@ -1,0 +1,77 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupEnableAREXExecutionPolicy",
+  "CreateDate": "2024-11-15T22:45:53Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4B4VUJZWXE",
+  "PolicyName": "AWSQuickSetupEnableAREXExecutionPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-11-15T22:45:53Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "resource-explorer-2.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "Sid": "AllowCreateServiceLinkedRole"
+        },
+        {
+          "Action": [
+            "resource-explorer-2:CreateIndex",
+            "resource-explorer-2:CreateView",
+            "resource-explorer-2:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "Type"
+            },
+            "StringEquals": {
+              "aws:RequestTag/Type": "QuickSetup",
+              "aws:ResourceTag/Type": "QuickSetup"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:resource-explorer-2:*:*:index/*",
+            "arn:aws:resource-explorer-2:*:*:view/all-resources/*"
+          ],
+          "Sid": "AllowCreateViewAndIndex"
+        },
+        {
+          "Action": [
+            "resource-explorer-2:AssociateDefaultView",
+            "resource-explorer-2:UpdateIndexType"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowUpdateExistingIndexAndAssociateDefaultView"
+        },
+        {
+          "Action": [
+            "resource-explorer-2:GetDefaultView",
+            "resource-explorer-2:GetIndex",
+            "resource-explorer-2:ListIndexes",
+            "resource-explorer-2:ListViews"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowReadActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-11-15T22:45:53Z"
+}

@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 412
-* Unique actions: 17927
-* Managed policies: 1268
+* Unique actions: 17940
+* Managed policies: 1271
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 344 |
+| `arn:aws:iam::aws:policy/AWS*` | 347 |
 | `arn:aws:iam::aws:policy/Amazon*` | 324 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 288 |
 | `arn:aws:iam::aws:policy/service-role/*` | 192 |
@@ -247,9 +247,9 @@ The following table summarises the AWS APIs.
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
+| [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 13 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 22 | 0 | 9 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
-| [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 0 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 34 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
@@ -453,13 +453,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2898 |
+| `List` | 2899 |
 | `Get` | 2631 |
-| `Delete` | 2060 |
+| `Delete` | 2064 |
 | `Create` | 1922 |
 | `Describe` | 1741 |
-| `Update` | 1639 |
-| `Put` | 488 |
+| `Update` | 1645 |
+| `Put` | 490 |
 | `Start` | 411 |
 | `Tag` | 279 |
 | `Untag` | 275 |
