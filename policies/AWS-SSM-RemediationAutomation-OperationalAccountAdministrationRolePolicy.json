@@ -1,0 +1,40 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWS-SSM-RemediationAutomation-OperationalAccountAdministrationRolePolicy",
+  "CreateDate": "2024-11-16T00:25:12Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4NKOB25DTG",
+  "PolicyName": "AWS-SSM-RemediationAutomation-OperationalAccountAdministrationRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-11-16T00:25:12Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceOrgId": "${aws:PrincipalOrgId}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AWS-SSM-RemediationExecutionRole*",
+          "Sid": "AllowAssumeRemediationExecutionRoleWithinOrg"
+        },
+        {
+          "Action": [
+            "organizations:ListChildren",
+            "organizations:ListRoots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowReadOnlyAccessOrganization"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-11-16T00:25:12Z"
+}
