@@ -1,0 +1,113 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWS-SSM-DiagnosisAutomation-AdministrationRolePolicy",
+  "CreateDate": "2024-11-16T00:01:45Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4APUPTIENG",
+  "PolicyName": "AWS-SSM-DiagnosisAutomation-AdministrationRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-11-16T00:01:45Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "ssm.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AWS-SSM-DiagnosisAdminRole*",
+          "Sid": "AllowPassRoleOnSelfToSsm"
+        },
+        {
+          "Action": "sts:AssumeRole",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AWS-SSM-DiagnosisExecutionRole*",
+          "Sid": "AllowAssumeDiagnosisExecutionRoleWithinAccount"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:s3:arn": "arn:aws:s3:::do-not-delete-ssm-diagnosis-*"
+            },
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "StringEquals": {
+              "aws:ResourceTag/SystemsManagerManaged": "true"
+            },
+            "StringLike": {
+              "kms:ViaService": "s3.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "AllowKMSOperations"
+        },
+        {
+          "Action": [
+            "s3:DeleteObject",
+            "s3:GetObject",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::do-not-delete-ssm-diagnosis-*/actions/*",
+          "Sid": "AllowReadWriteToSsmDiagnosisBucketInSameAccount"
+        },
+        {
+          "Action": [
+            "s3:ListBucket"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::do-not-delete-ssm-diagnosis-*",
+          "Sid": "AllowListBucketOnSsmDiagnosisBucketInSameAccount"
+        },
+        {
+          "Action": [
+            "ssm:DescribeAutomationExecutions",
+            "ssm:DescribeAutomationStepExecutions",
+            "ssm:GetAutomationExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowReadOnlyAccessSSMResource"
+        },
+        {
+          "Action": [
+            "ssm:StartAutomationExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:automation-definition/AWS-*UnmanagedEC2*:*"
+          ],
+          "Sid": "AllowExecuteSSMAutomation"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-11-16T00:01:45Z"
+}
