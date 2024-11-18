@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 412
-* Unique actions: 17947
+* Unique actions: 17955
 * Managed policies: 1278
 
 Most common managed policy name prefixes:
@@ -73,7 +73,7 @@ The following table summarises the AWS APIs.
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 0 |
 | [`comprehend`](services/comprehend.yml) | 85 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 84 | 0 | 42 |
-| [`iotsitewise`](services/iotsitewise.yml) | 84 | 0 | 2 |
+| [`iotsitewise`](services/iotsitewise.yml) | 84 | 0 | 8 |
 | [`cloudformation`](services/cloudformation.yml) | 82 | 0 | 11 |
 | [`omics`](services/omics.yml) | 82 | 0 | 0 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
@@ -312,9 +312,9 @@ The following table summarises the AWS APIs.
 | [`budgets`](services/budgets.yml) | 11 | 15 | 2 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 11 | 0 | 41 |
 | [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 11 | 0 | 6 |
+| [`repostspace`](services/repostspace.yml) | 11 | 0 | 2 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 1 |
 | [`timestream-influxdb`](services/timestream-influxdb.yml) | 11 | 0 | 0 |
-| [`repostspace`](services/repostspace.yml) | 11 | 0 | 0 |
 | [`license-manager-linux-subscriptions`](services/license-manager-linux-subscriptions.yml) | 11 | 0 | 0 |
 | [`supportapp`](services/supportapp.yml) | 10 | 0 | 3 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
@@ -453,12 +453,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2900 |
+| `List` | 2901 |
 | `Get` | 2632 |
-| `Delete` | 2065 |
-| `Create` | 1922 |
-| `Describe` | 1741 |
-| `Update` | 1646 |
+| `Delete` | 2066 |
+| `Create` | 1923 |
+| `Describe` | 1742 |
+| `Update` | 1647 |
 | `Put` | 492 |
 | `Start` | 411 |
 | `Tag` | 279 |
