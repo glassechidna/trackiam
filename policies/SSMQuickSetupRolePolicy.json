@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/SSMQuickSetupRolePolicy",
   "CreateDate": "2024-06-25T15:20:04Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4LCIDYUKDZ",
   "PolicyName": "SSMQuickSetupRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-08-12T14:32:20Z",
+    "CreateDate": "2024-11-18T13:06:59Z",
     "Document": {
       "Statement": [
         {
@@ -34,8 +34,23 @@
         },
         {
           "Action": [
+            "ssm:DeleteResourceDataSync"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ssm:SyncType": "SyncFromSource"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:resource-data-sync/AWS-QuickSetup-*",
+          "Sid": "SSMResourceDataSyncManagePermissions"
+        },
+        {
+          "Action": [
+            "cloudformation:DescribeStackInstance",
             "cloudformation:DescribeStackSet",
             "cloudformation:DescribeStackSetOperation",
+            "cloudformation:GetTemplate",
             "cloudformation:ListStackInstances",
             "cloudformation:ListStackSetOperationResults",
             "cloudformation:ListStackSetOperations"
@@ -51,9 +66,22 @@
         },
         {
           "Action": [
+            "cloudformation:DescribeStacks",
+            "cloudformation:ListStacks"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "QuickSetupCfnStacksDescribePermissions"
+        },
+        {
+          "Action": [
             "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
             "organizations:ListAccountsForParent",
             "organizations:ListDelegatedAdministrators",
+            "organizations:ListDelegatedServicesForAccount",
             "organizations:ListOrganizationalUnitsForParent",
             "organizations:ListRoots"
           ],
@@ -102,7 +130,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-08-12T14:32:20Z"
+  "UpdateDate": "2024-11-18T13:06:59Z"
 }
