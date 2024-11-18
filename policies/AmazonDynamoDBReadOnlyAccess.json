@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDynamoDBReadOnlyAccess",
   "CreateDate": "2015-02-06T18:40:12Z",
-  "DefaultVersionId": "v14",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIY2XFNA232XJ6J7X2",
   "PolicyName": "AmazonDynamoDBReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-03-20T15:45:01Z",
+    "CreateDate": "2024-11-18T17:38:15Z",
     "Document": {
       "Statement": [
         {
@@ -40,6 +40,7 @@
             "dax:Scan",
             "dynamodb:BatchGetItem",
             "dynamodb:Describe*",
+            "dynamodb:GetAbacStatus",
             "dynamodb:GetItem",
             "dynamodb:GetResourcePolicy",
             "dynamodb:List*",
@@ -75,7 +76,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v14"
+    "VersionId": "v15"
   },
-  "UpdateDate": "2024-03-20T15:45:01Z"
+  "UpdateDate": "2024-11-18T17:38:15Z"
 }
