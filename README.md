@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 412
-* Unique actions: 17995
+* Unique actions: 18003
 * Managed policies: 1280
 
 Most common managed policy name prefixes:
@@ -41,7 +41,7 @@ The following table summarises the AWS APIs.
 | [`iot`](services/iot.yml) | 262 | 3 | 13 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`connect`](services/connect.yml) | 256 | 0 | 17 |
-| [`glue`](services/glue.yml) | 214 | 4 | 69 |
+| [`glue`](services/glue.yml) | 214 | 4 | 72 |
 | [`ses`](services/ses.yml) | 193 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 174 | 3 | 33 |
 | [`rds`](services/rds.yml) | 162 | 0 | 6 |
@@ -361,7 +361,7 @@ The following table summarises the AWS APIs.
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
-| [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 74 |
+| [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 56 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 53 |
@@ -454,12 +454,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2903 |
-| `Get` | 2640 |
-| `Delete` | 2073 |
+| `Get` | 2645 |
+| `Delete` | 2074 |
 | `Create` | 1931 |
 | `Describe` | 1744 |
 | `Update` | 1654 |
-| `Put` | 493 |
+| `Put` | 494 |
 | `Start` | 412 |
 | `Tag` | 279 |
 | `Untag` | 275 |
