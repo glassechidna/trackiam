@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SecurityAudit",
   "CreateDate": "2015-02-06T18:41:01Z",
-  "DefaultVersionId": "v45",
+  "DefaultVersionId": "v46",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIX2T3QCXHR2OGGCTO",
   "PolicyName": "SecurityAudit",
   "PolicyVersion": {
-    "CreateDate": "2024-10-30T18:36:49Z",
+    "CreateDate": "2024-11-19T17:51:06Z",
     "Document": {
       "Statement": [
         {
@@ -571,6 +571,11 @@
             "secretsmanager:GetResourcePolicy",
             "secretsmanager:ListSecretVersionIds",
             "secretsmanager:ListSecrets",
+            "securityhub:BatchGetAutomationRules",
+            "securityhub:BatchGetConfigurationPolicyAssociations",
+            "securityhub:BatchGetControlEvaluations",
+            "securityhub:BatchGetSecurityControls",
+            "securityhub:BatchGetStandardsControlAssociations",
             "securityhub:Describe*",
             "securityhub:Get*",
             "securityhub:List*",
@@ -778,7 +783,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v45"
+    "VersionId": "v46"
   },
-  "UpdateDate": "2024-10-30T18:36:49Z"
+  "UpdateDate": "2024-11-19T17:51:06Z"
 }
