@@ -1,0 +1,96 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerOfferManagement",
+  "CreateDate": "2024-11-19T00:41:38Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4BMTW6QBBN",
+  "PolicyName": "AWSMarketplaceSellerOfferManagement",
+  "PolicyVersion": {
+    "CreateDate": "2024-11-19T00:41:38Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aws-marketplace:DescribeAgreement",
+            "aws-marketplace:GetAgreementTerms",
+            "aws-marketplace:SearchAgreements"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws-marketplace:AgreementType": [
+                "PurchaseAgreement"
+              ]
+            },
+            "StringEquals": {
+              "aws-marketplace:PartyType": "Proposer"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSMarketplaceAgreementsReadAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:StartChangeSet"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "catalog:ChangeType": "CreateOfferOnProduct"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSMarketplaceCreateOfferOnProduct"
+        },
+        {
+          "Action": [
+            "aws-marketplace:DescribeChangeSet",
+            "aws-marketplace:ListChangeSets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSMarketplaceChangeSetReadAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:DescribeEntity"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/AmiProduct/*",
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/ContainerProduct/*",
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/Offer/*",
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/ProfessionalServicesProduct/*",
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/ResaleAuthorization/*",
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/SaaSProduct/*"
+          ],
+          "Sid": "AWSMarketplaceEntitiesReadAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:ListEntities"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSMarketplaceListEntities"
+        },
+        {
+          "Action": [
+            "aws-marketplace:StartChangeSet"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/ChangeSet/*",
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/Offer/*"
+          ],
+          "Sid": "AWSMarketplaceOfferManagement"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-11-19T00:41:38Z"
+}
