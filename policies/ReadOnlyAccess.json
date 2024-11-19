@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v121",
+  "DefaultVersionId": "v122",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-10-21T14:38:46Z",
+    "CreateDate": "2024-11-19T16:06:06Z",
     "Document": {
       "Statement": [
         {
@@ -111,6 +111,7 @@
             "application-signals:BatchGetServiceLevelObjectiveBudgetReport",
             "application-signals:GetService",
             "application-signals:GetServiceLevelObjective",
+            "application-signals:ListObservedEntities",
             "application-signals:ListServiceDependencies",
             "application-signals:ListServiceDependents",
             "application-signals:ListServiceLevelObjectives",
@@ -982,6 +983,8 @@
             "glue:GetSchemaVersionsDiff",
             "glue:GetSecurityConfiguration",
             "glue:GetSecurityConfigurations",
+            "glue:GetSession",
+            "glue:GetStatement",
             "glue:GetTable",
             "glue:GetTableOptimizer",
             "glue:GetTableVersion",
@@ -1004,6 +1007,8 @@
             "glue:ListRegistries",
             "glue:ListSchemaVersions",
             "glue:ListSchemas",
+            "glue:ListSessions",
+            "glue:ListStatements",
             "glue:ListTableOptimizerRuns",
             "glue:ListTriggers",
             "glue:ListWorkflows",
@@ -1441,8 +1446,10 @@
             "logs:FilterLogEvents",
             "logs:Get*",
             "logs:ListAnomalies",
+            "logs:ListEntitiesForLogGroup",
             "logs:ListLogAnomalyDetectors",
             "logs:ListLogDeliveries",
+            "logs:ListLogGroupsForEntity",
             "logs:ListTagsForResource",
             "logs:ListTagsLogGroup",
             "logs:StartLiveTail",
@@ -2195,6 +2202,7 @@
             "support:DescribeTrustedAdvisorChecks",
             "supportplans:GetSupportPlan",
             "supportplans:GetSupportPlanUpdateStatus",
+            "supportplans:ListSupportPlanModifiers",
             "sustainability:GetCarbonFootprintSummary",
             "swf:Count*",
             "swf:Describe*",
@@ -2365,7 +2373,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v121"
+    "VersionId": "v122"
   },
-  "UpdateDate": "2024-10-21T14:38:46Z"
+  "UpdateDate": "2024-11-19T16:06:06Z"
 }
