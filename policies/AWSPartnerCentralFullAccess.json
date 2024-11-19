@@ -1,0 +1,59 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralFullAccess",
+  "CreateDate": "2024-11-18T23:33:28Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4DRJMXIHNK",
+  "PolicyName": "AWSPartnerCentralFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-11-18T23:33:28Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "partnercentral-account-management.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/PartnerCentralRoleFor*",
+          "Sid": "PassAWSPartnerCentralRole"
+        },
+        {
+          "Action": [
+            "partnercentral:*"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSPartnerCentralAccess"
+        },
+        {
+          "Action": [
+            "Partnercentral-account-management:AssociatePartnerUser",
+            "Partnercentral-account-management:DisassociatePartnerUser",
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PartnerUserRoleAssociation"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-11-18T23:33:28Z"
+}
