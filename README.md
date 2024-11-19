@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 412
-* Unique actions: 17961
+* Unique actions: 17995
 * Managed policies: 1280
 
 Most common managed policy name prefixes:
@@ -41,7 +41,7 @@ The following table summarises the AWS APIs.
 | [`iot`](services/iot.yml) | 262 | 3 | 13 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`connect`](services/connect.yml) | 256 | 0 | 17 |
-| [`glue`](services/glue.yml) | 214 | 4 | 44 |
+| [`glue`](services/glue.yml) | 214 | 4 | 69 |
 | [`ses`](services/ses.yml) | 193 | 0 | 0 |
 | [`quicksight`](services/quicksight.yml) | 174 | 3 | 33 |
 | [`rds`](services/rds.yml) | 162 | 0 | 6 |
@@ -75,7 +75,7 @@ The following table summarises the AWS APIs.
 | [`workmail`](services/workmail.yml) | 84 | 0 | 42 |
 | [`iotsitewise`](services/iotsitewise.yml) | 84 | 0 | 8 |
 | [`cloudformation`](services/cloudformation.yml) | 82 | 0 | 11 |
-| [`omics`](services/omics.yml) | 82 | 0 | 0 |
+| [`omics`](services/omics.yml) | 82 | 0 | 9 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 81 | 0 | 0 |
 | [`codecommit`](services/codecommit.yml) | 79 | 0 | 11 |
@@ -453,14 +453,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2902 |
-| `Get` | 2633 |
-| `Delete` | 2067 |
-| `Create` | 1924 |
-| `Describe` | 1742 |
-| `Update` | 1648 |
-| `Put` | 492 |
-| `Start` | 411 |
+| `List` | 2903 |
+| `Get` | 2640 |
+| `Delete` | 2073 |
+| `Create` | 1931 |
+| `Describe` | 1744 |
+| `Update` | 1654 |
+| `Put` | 493 |
+| `Start` | 412 |
 | `Tag` | 279 |
 | `Untag` | 275 |
 
