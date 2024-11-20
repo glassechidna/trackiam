@@ -1,15 +1,33 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceManageSubscriptions",
   "CreateDate": "2015-02-06T18:40:32Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJRDW2WIFN7QLUAKBQ",
   "PolicyName": "AWSMarketplaceManageSubscriptions",
   "PolicyVersion": {
-    "CreateDate": "2023-01-19T23:45:29Z",
+    "CreateDate": "2024-11-20T19:22:33Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "aws-marketplace:ListAgreementCharges",
+            "aws-marketplace:UpdatePurchaseOrders"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws-marketplace:AgreementType": [
+                "PurchaseAgreement"
+              ]
+            },
+            "Null": {
+              "aws-marketplace:AgreementType": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "aws-marketplace:CreatePrivateMarketplaceRequests",
@@ -39,7 +57,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-01-19T23:45:29Z"
+  "UpdateDate": "2024-11-20T19:22:33Z"
 }
