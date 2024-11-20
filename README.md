@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 412
-* Unique actions: 18039
-* Managed policies: 1280
+* Unique actions: 18040
+* Managed policies: 1286
 
 Most common managed policy name prefixes:
 
@@ -22,9 +22,9 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 356 |
 | `arn:aws:iam::aws:policy/Amazon*` | 324 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 288 |
-| `arn:aws:iam::aws:policy/service-role/*` | 192 |
+| `arn:aws:iam::aws:policy/service-role/*` | 195 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
-| Other | 113 |
+| Other | 116 |
 
 The following table summarises the AWS APIs. 
 
@@ -61,7 +61,7 @@ The following table summarises the AWS APIs.
 | [`dms`](services/dms.yml) | 106 | 0 | 28 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 4 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 3 |
-| [`bedrock`](services/bedrock.yml) | 97 | 2 | 38 |
+| [`bedrock`](services/bedrock.yml) | 97 | 2 | 39 |
 | [`medialive`](services/medialive.yml) | 92 | 0 | 24 |
 | [`config`](services/config.yml) | 92 | 0 | 0 |
 | [`backup`](services/backup.yml) | 91 | 0 | 5 |
