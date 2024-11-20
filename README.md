@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 412
-* Unique actions: 18035
+* Unique actions: 18039
 * Managed policies: 1280
 
 Most common managed policy name prefixes:
@@ -99,7 +99,7 @@ The following table summarises the AWS APIs.
 | [`athena`](services/athena.yml) | 68 | 0 | 11 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
 | [`ds`](services/ds.yml) | 67 | 0 | 14 |
-| [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 66 | 0 | 3 |
+| [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 66 | 0 | 5 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
@@ -219,10 +219,10 @@ The following table summarises the AWS APIs.
 | [`servicediscovery`](services/servicediscovery.yml) | 27 | 0 | 0 |
 | [`aps`](services/aps.yml) | 26 | 0 | 17 |
 | [`chatbot`](services/chatbot.yml) | 26 | 0 | 5 |
+| [`compute-optimizer`](services/compute-optimizer.yml) | 26 | 0 | 2 |
 | [`private-networks`](services/private-networks.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
 | [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
-| [`compute-optimizer`](services/compute-optimizer.yml) | 26 | 0 | 0 |
 | [`appfabric`](services/appfabric.yml) | 26 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
 | [`cleanrooms-ml`](services/cleanrooms-ml.yml) | 25 | 0 | 33 |
@@ -454,10 +454,10 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2913 |
-| `Get` | 2651 |
+| `Get` | 2652 |
 | `Delete` | 2078 |
 | `Create` | 1937 |
-| `Describe` | 1745 |
+| `Describe` | 1746 |
 | `Update` | 1658 |
 | `Put` | 494 |
 | `Start` | 412 |
