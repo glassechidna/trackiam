@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 412
-* Unique actions: 18003
+* Unique actions: 18015
 * Managed policies: 1280
 
 Most common managed policy name prefixes:
@@ -50,7 +50,7 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 140 | 0 | 9 |
 | [`lex`](services/lex.yml) | 137 | 4 | 8 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 28 |
-| [`datazone`](services/datazone.yml) | 123 | 0 | 51 |
+| [`datazone`](services/datazone.yml) | 123 | 0 | 61 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 3 |
 | [`s3`](services/s3.yml) | 113 | 60 | 47 |
@@ -250,7 +250,7 @@ The following table summarises the AWS APIs.
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 13 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 22 | 0 | 9 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 34 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 36 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`app-integrations`](services/app-integrations.yml) | 21 | 0 | 7 |
@@ -453,12 +453,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2903 |
-| `Get` | 2645 |
-| `Delete` | 2074 |
-| `Create` | 1931 |
+| `List` | 2907 |
+| `Get` | 2649 |
+| `Delete` | 2075 |
+| `Create` | 1932 |
 | `Describe` | 1744 |
-| `Update` | 1654 |
+| `Update` | 1656 |
 | `Put` | 494 |
 | `Start` | 412 |
 | `Tag` | 279 |
