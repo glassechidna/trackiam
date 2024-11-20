@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRedshiftServiceLinkedRolePolicy",
   "CreateDate": "2017-09-18T19:19:45Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJPY2VXNRUYOY3SRZS",
   "PolicyName": "AmazonRedshiftServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-03-15T20:00:47Z",
+    "CreateDate": "2024-11-20T18:06:07Z",
     "Document": {
       "Statement": [
         {
@@ -115,6 +115,23 @@
             "arn:aws:ec2:*:*:elastic-ip/*"
           ],
           "Sid": "PublicAccessReleaseEip"
+        },
+        {
+          "Action": [
+            "glue:GetCatalog",
+            "glue:GetCatalogs"
+          ],
+          "Condition": {
+            "Bool": {
+              "glue:EnabledForRedshiftAutoDiscovery": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:catalog",
+            "arn:aws:glue:*:*:catalog/*"
+          ],
+          "Sid": "DiscoverRedshiftCatalogs"
         },
         {
           "Action": [
@@ -239,7 +256,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2024-03-15T20:00:47Z"
+  "UpdateDate": "2024-11-20T18:06:07Z"
 }

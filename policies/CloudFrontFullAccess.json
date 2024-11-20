@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudFrontFullAccess",
   "CreateDate": "2015-02-06T18:39:50Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIPRV52SH6HDCCFY6U",
   "PolicyName": "CloudFrontFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-01-04T16:56:08Z",
+    "CreateDate": "2024-11-20T18:39:41Z",
     "Document": {
       "Statement": [
         {
@@ -15,6 +15,9 @@
             "acm:ListCertificates",
             "cloudfront-keyvaluestore:*",
             "cloudfront:*",
+            "ec2:DescribeInstances",
+            "ec2:DescribeInternetGateways",
+            "elasticloadbalancing:DescribeLoadBalancers",
             "iam:ListServerCertificates",
             "kinesis:ListStreams",
             "waf:GetWebACL",
@@ -54,7 +57,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2024-01-04T16:56:08Z"
+  "UpdateDate": "2024-11-20T18:39:41Z"
 }
