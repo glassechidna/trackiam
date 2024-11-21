@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchSyntheticsFullAccess",
   "CreateDate": "2019-11-25T17:39:46Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MAGQWEZP4",
   "PolicyName": "CloudWatchSyntheticsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-10-11T17:07:13Z",
+    "CreateDate": "2024-11-21T22:21:05Z",
     "Document": {
       "Statement": [
         {
@@ -40,6 +40,25 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:kms:*:*:key/*"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogStreams",
+            "logs:FilterLogEvents",
+            "logs:GetLogEvents",
+            "logs:GetLogGroupFields",
+            "logs:GetLogRecord",
+            "logs:StartQuery"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/lambda/cwsyn-*"
+          ]
         },
         {
           "Action": [
@@ -119,6 +138,7 @@
             "lambda:AddPermission",
             "lambda:CreateFunction",
             "lambda:DeleteFunction",
+            "lambda:GetFunction",
             "lambda:GetFunctionConfiguration",
             "lambda:ListTags",
             "lambda:PublishVersion",
@@ -140,6 +160,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:lambda:*:*:layer:AWS-CW-Synthetics*:*",
             "arn:aws:lambda:*:*:layer:Synthetics:*",
             "arn:aws:lambda:*:*:layer:Synthetics_Selenium:*",
             "arn:aws:lambda:*:*:layer:cwsyn-*"
@@ -208,7 +229,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2024-10-11T17:07:13Z"
+  "UpdateDate": "2024-11-21T22:21:05Z"
 }

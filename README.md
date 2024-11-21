@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 412
-* Unique actions: 18092
+* Unique actions: 18097
 * Managed policies: 1285
 
 Most common managed policy name prefixes:
@@ -239,7 +239,7 @@ The following table summarises the AWS APIs.
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`apptest`](services/apptest.yml) | 24 | 0 | 0 |
 | [`controltower`](services/controltower.yml) | 23 | 0 | 42 |
-| [`qapps`](services/qapps.yml) | 23 | 0 | 16 |
+| [`qapps`](services/qapps.yml) | 23 | 0 | 19 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 3 |
 | [`mq`](services/mq.yml) | 23 | 0 | 1 |
 | [`secretsmanager`](services/secretsmanager.yml) | 23 | 0 | 0 |
@@ -399,9 +399,9 @@ The following table summarises the AWS APIs.
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
 | [`ssm-quicksetup`](services/ssm-quicksetup.yml) | 0 | 0 | 12 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
+| [`s3express`](services/s3express.yml) | 0 | 0 | 11 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 10 |
 | [`ts`](services/ts.yml) | 0 | 0 | 9 |
-| [`s3express`](services/s3express.yml) | 0 | 0 | 9 |
 | [`notifications-contacts`](services/notifications-contacts.yml) | 0 | 0 | 9 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 9 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 9 |
@@ -454,12 +454,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2922 |
-| `Get` | 2662 |
+| `Get` | 2663 |
 | `Delete` | 2085 |
-| `Create` | 1941 |
-| `Describe` | 1749 |
-| `Update` | 1664 |
-| `Put` | 498 |
+| `Create` | 1942 |
+| `Describe` | 1750 |
+| `Update` | 1665 |
+| `Put` | 499 |
 | `Start` | 416 |
 | `Tag` | 279 |
 | `Untag` | 275 |

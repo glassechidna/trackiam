@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy",
   "CreateDate": "2024-11-20T21:58:39Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQZUIPVLH",
   "PolicyName": "SageMakerStudioProjectProvisioningRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-20T21:58:39Z",
+    "CreateDate": "2024-11-21T22:36:06Z",
     "Document": {
       "Statement": [
         {
@@ -220,6 +220,7 @@
           },
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:iam::*:role/SageMakerStudioQueryExecutionRole",
             "arn:aws:iam::*:role/datazone_usr_role_*"
           ],
           "Sid": "IamPassRole"
@@ -282,6 +283,7 @@
               "aws:TagKeys": [
                 "AmazonBedrockManaged",
                 "AmazonDataZone*",
+                "CreatedForUseWithSageMakerStudio",
                 "DomainBucketName",
                 "EnableAmazonBedrockIDEPermissions",
                 "EnableGlueWorkloadsPermissions",
@@ -289,7 +291,8 @@
                 "KmsKeyId",
                 "LogGroupName",
                 "RedshiftDb*",
-                "RoleName"
+                "RoleName",
+                "vpcArn"
               ]
             },
             "Null": {
@@ -307,6 +310,7 @@
             "arn:aws:iam::*:role/AmazonBedrockEvaluation*",
             "arn:aws:iam::*:role/AmazonBedrockExecution*",
             "arn:aws:iam::*:role/BedrockStudio*",
+            "arn:aws:iam::*:role/SageMakerStudioQueryExecutionRole",
             "arn:aws:iam::*:role/datazone-partner-apps-*",
             "arn:aws:iam::*:role/datazone_redshift_serverless_admin_role_*",
             "arn:aws:iam::*:role/datazone_usr_role_*"
@@ -404,6 +408,9 @@
         {
           "Action": "sagemaker:DeleteApp",
           "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            },
             "StringEquals": {
               "aws:ResourceAccount": "${aws:PrincipalAccount}"
             }
@@ -433,6 +440,9 @@
         {
           "Action": "sagemaker:DeleteSpace",
           "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            },
             "StringEquals": {
               "aws:ResourceAccount": "${aws:PrincipalAccount}"
             }
@@ -444,6 +454,9 @@
         {
           "Action": "sagemaker:DeleteUserProfile",
           "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            },
             "StringEquals": {
               "aws:ResourceAccount": "${aws:PrincipalAccount}"
             }
@@ -1291,6 +1304,7 @@
             "arn:aws:iam::*:role/AmazonBedrockEvaluation*",
             "arn:aws:iam::*:role/AmazonBedrockExecution*",
             "arn:aws:iam::*:role/BedrockStudio*",
+            "arn:aws:iam::*:role/SageMakerStudioQueryExecutionRole",
             "arn:aws:iam::*:role/datazone*"
           ],
           "Sid": "IAMRoleAndPolicyManagement"
@@ -1329,7 +1343,11 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:policy/datazone*",
+          "Resource": [
+            "arn:aws:iam::*:policy/SageMakerStudioQueryExecutionRolePolicy",
+            "arn:aws:iam::*:policy/connector*",
+            "arn:aws:iam::*:policy/datazone*"
+          ],
           "Sid": "IAMPolicyManagementFromService"
         },
         {
@@ -1397,6 +1415,19 @@
             "arn:aws:iam::*:role/datazone*"
           ],
           "Sid": "GetIAMRole"
+        },
+        {
+          "Action": [
+            "iam:GetRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/SageMakerStudioQueryExecutionRole",
+          "Sid": "GetRolePermissionsForSageMakerStudioQueryExecutionRole"
         },
         {
           "Action": [
@@ -1642,7 +1673,8 @@
             "redshift-serverless:CreateNamespace",
             "redshift-serverless:CreateWorkgroup",
             "redshift-serverless:DeleteNamespace",
-            "redshift-serverless:DeleteWorkgroup"
+            "redshift-serverless:DeleteWorkgroup",
+            "redshift-serverless:ListTagsForResource"
           ],
           "Condition": {
             "StringEquals": {
@@ -2002,6 +2034,7 @@
           "Action": [
             "secretsmanager:CreateSecret",
             "secretsmanager:DeleteSecret",
+            "secretsmanager:DescribeSecret",
             "secretsmanager:UpdateSecret"
           ],
           "Condition": {
@@ -2236,7 +2269,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-11-20T21:58:39Z"
+  "UpdateDate": "2024-11-21T22:36:06Z"
 }
