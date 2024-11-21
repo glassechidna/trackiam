@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 412
-* Unique actions: 18051
+* Unique actions: 18066
 * Managed policies: 1285
 
 Most common managed policy name prefixes:
@@ -87,7 +87,7 @@ The following table summarises the AWS APIs.
 | [`appstream`](services/appstream.yml) | 75 | 0 | 5 |
 | [`elasticache`](services/elasticache.yml) | 75 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
-| [`logs`](services/logs.yml) | 74 | 0 | 12 |
+| [`logs`](services/logs.yml) | 74 | 0 | 21 |
 | [`guardduty`](services/guardduty.yml) | 74 | 0 | 1 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`sso`](services/sso.yml) | 73 | 0 | 53 |
@@ -129,8 +129,8 @@ The following table summarises the AWS APIs.
 | [`lakeformation`](services/lakeformation.yml) | 52 | 3 | 1 |
 | [`kms`](services/kms.yml) | 52 | 1 | 3 |
 | [`profile`](services/profile.yml) | 52 | 0 | 15 |
+| [`iotfleetwise`](services/iotfleetwise.yml) | 52 | 0 | 6 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 0 |
-| [`iotfleetwise`](services/iotfleetwise.yml) | 52 | 0 | 0 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
 | [`mediaconnect`](services/mediaconnect.yml) | 51 | 0 | 4 |
 | [`drs`](services/drs.yml) | 50 | 0 | 40 |
@@ -453,13 +453,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2914 |
-| `Get` | 2656 |
-| `Delete` | 2078 |
-| `Create` | 1937 |
-| `Describe` | 1746 |
-| `Update` | 1660 |
-| `Put` | 496 |
+| `List` | 2916 |
+| `Get` | 2658 |
+| `Delete` | 2081 |
+| `Create` | 1938 |
+| `Describe` | 1748 |
+| `Update` | 1661 |
+| `Put` | 498 |
 | `Start` | 413 |
 | `Tag` | 279 |
 | `Untag` | 275 |
