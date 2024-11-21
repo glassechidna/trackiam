@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess",
   "CreateDate": "2015-02-06T18:40:01Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJN23PDQP7SZQAE3QE",
   "PolicyName": "CloudWatchReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-05-17T22:17:51Z",
+    "CreateDate": "2024-11-21T17:51:05Z",
     "Document": {
       "Statement": [
         {
@@ -47,7 +47,10 @@
             "synthetics:Get*",
             "synthetics:List*",
             "xray:BatchGet*",
-            "xray:Get*"
+            "xray:CancelTraceRetrieval",
+            "xray:Get*",
+            "xray:List*",
+            "xray:StartTraceRetrieval"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -65,7 +68,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2024-05-17T22:17:51Z"
+  "UpdateDate": "2024-11-21T17:51:05Z"
 }

@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 412
-* Unique actions: 18050
+* Unique actions: 18051
 * Managed policies: 1285
 
 Most common managed policy name prefixes:
@@ -297,11 +297,11 @@ The following table summarises the AWS APIs.
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 11 |
 | [`braket`](services/braket.yml) | 13 | 0 | 4 |
 | [`codeguru-security`](services/codeguru-security.yml) | 13 | 0 | 2 |
+| [`application-autoscaling`](services/application-autoscaling.yml) | 13 | 0 | 1 |
 | [`snow-device-management`](services/snow-device-management.yml) | 13 | 0 | 0 |
 | [`pi`](services/pi.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 13 | 0 | 0 |
-| [`application-autoscaling`](services/application-autoscaling.yml) | 13 | 0 | 0 |
 | [`launchwizard`](services/launchwizard.yml) | 12 | 0 | 25 |
 | [`account`](services/account.yml) | 12 | 0 | 4 |
 | [`scheduler`](services/scheduler.yml) | 12 | 0 | 0 |
@@ -454,7 +454,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2914 |
-| `Get` | 2655 |
+| `Get` | 2656 |
 | `Delete` | 2078 |
 | `Create` | 1937 |
 | `Describe` | 1746 |
