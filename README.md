@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 412
-* Unique actions: 18078
+* Unique actions: 18092
 * Managed policies: 1285
 
 Most common managed policy name prefixes:
@@ -139,7 +139,7 @@ The following table summarises the AWS APIs.
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 49 | 0 | 0 |
-| [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 8 |
+| [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 14 |
 | [`codeartifact`](services/codeartifact.yml) | 48 | 0 | 3 |
 | [`wisdom`](services/wisdom.yml) | 47 | 0 | 45 |
 | [`ecr`](services/ecr.yml) | 47 | 0 | 4 |
@@ -218,7 +218,7 @@ The following table summarises the AWS APIs.
 | [`snowball`](services/snowball.yml) | 27 | 0 | 0 |
 | [`servicediscovery`](services/servicediscovery.yml) | 27 | 0 | 0 |
 | [`aps`](services/aps.yml) | 26 | 0 | 17 |
-| [`chatbot`](services/chatbot.yml) | 26 | 0 | 5 |
+| [`chatbot`](services/chatbot.yml) | 26 | 0 | 13 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 26 | 0 | 2 |
 | [`private-networks`](services/private-networks.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
@@ -453,14 +453,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2919 |
-| `Get` | 2660 |
-| `Delete` | 2083 |
-| `Create` | 1939 |
+| `List` | 2922 |
+| `Get` | 2662 |
+| `Delete` | 2085 |
+| `Create` | 1941 |
 | `Describe` | 1749 |
-| `Update` | 1662 |
+| `Update` | 1664 |
 | `Put` | 498 |
-| `Start` | 415 |
+| `Start` | 416 |
 | `Tag` | 279 |
 | `Untag` | 275 |
 
