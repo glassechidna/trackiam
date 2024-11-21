@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForAmazonEKSNodegroup",
   "CreateDate": "2019-11-07T01:34:26Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4KH2AAMJJG",
   "PolicyName": "AWSServiceRoleForAmazonEKSNodegroup",
   "PolicyVersion": {
-    "CreateDate": "2024-08-21T15:51:37Z",
+    "CreateDate": "2024-11-21T00:07:12Z",
     "Document": {
       "Statement": [
         {
@@ -115,7 +115,54 @@
         },
         {
           "Action": [
-            "ec2:CreateTags",
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "ForAnyValue:StringLike": {
+              "aws:TagKeys": [
+                "eks",
+                "eks:cluster-name",
+                "eks:nodegroup-name",
+                "kubernetes.io/cluster/*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:ec2:*:*:launch-template/*",
+            "arn:*:ec2:*:*:security-group/*"
+          ],
+          "Sid": "PermissionsToCreateEKSAndKubernetesTags"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "ForAnyValue:StringLike": {
+              "aws:TagKeys": [
+                "eks",
+                "eks:cluster-name",
+                "eks:nodegroup-name",
+                "kubernetes.io/cluster/*"
+              ]
+            },
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "RunInstances"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:ec2:*:*:instance/*",
+            "arn:*:ec2:*:*:network-interface/*",
+            "arn:*:ec2:*:*:volume/*"
+          ],
+          "Sid": "AllowTaggingEC2ResourcesOnlyDuringInstanceCreation"
+        },
+        {
+          "Action": [
             "ec2:DeleteTags"
           ],
           "Condition": {
@@ -130,7 +177,20 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "PermissionsToManageEKSAndKubernetesTags"
+          "Sid": "PermissionsToDeleteEKSAndKubernetesTags"
+        },
+        {
+          "Action": [
+            "ec2:RebootInstances"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/eks:nodegroup-name": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PermissionsForManagedNodegroupsAutoRepair"
         },
         {
           "Action": [
@@ -185,7 +245,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2024-08-21T15:51:37Z"
+  "UpdateDate": "2024-11-21T00:07:12Z"
 }
