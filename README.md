@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 412
-* Unique actions: 18066
+* Unique actions: 18078
 * Managed policies: 1285
 
 Most common managed policy name prefixes:
@@ -38,7 +38,7 @@ The following table summarises the AWS APIs.
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 625 | 0 | 28 |
 | [`sagemaker`](services/sagemaker.yml) | 351 | 0 | 22 |
-| [`iot`](services/iot.yml) | 262 | 3 | 13 |
+| [`iot`](services/iot.yml) | 262 | 3 | 22 |
 | [`chime`](services/chime.yml) | 259 | 0 | 50 |
 | [`connect`](services/connect.yml) | 256 | 0 | 19 |
 | [`glue`](services/glue.yml) | 214 | 4 | 72 |
@@ -122,7 +122,7 @@ The following table summarises the AWS APIs.
 | [`eks`](services/eks.yml) | 56 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
 | [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 13 |
-| [`resiliencehub`](services/resiliencehub.yml) | 55 | 0 | 5 |
+| [`resiliencehub`](services/resiliencehub.yml) | 55 | 0 | 8 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 1 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`wafv2`](services/wafv2.yml) | 54 | 0 | 2 |
@@ -453,14 +453,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2916 |
-| `Get` | 2658 |
-| `Delete` | 2081 |
-| `Create` | 1938 |
-| `Describe` | 1748 |
-| `Update` | 1661 |
+| `List` | 2919 |
+| `Get` | 2660 |
+| `Delete` | 2083 |
+| `Create` | 1939 |
+| `Describe` | 1749 |
+| `Update` | 1662 |
 | `Put` | 498 |
-| `Start` | 413 |
+| `Start` | 415 |
 | `Tag` | 279 |
 | `Untag` | 275 |
 
