@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy",
   "CreateDate": "2024-11-20T21:58:39Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQZUIPVLH",
   "PolicyName": "SageMakerStudioProjectProvisioningRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-21T22:36:06Z",
+    "CreateDate": "2024-11-22T04:51:06Z",
     "Document": {
       "Statement": [
         {
@@ -292,6 +292,7 @@
                 "LogGroupName",
                 "RedshiftDb*",
                 "RoleName",
+                "SageMakerStudioQueryExecutionRole",
                 "vpcArn"
               ]
             },
@@ -1345,7 +1346,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:policy/SageMakerStudioQueryExecutionRolePolicy",
-            "arn:aws:iam::*:policy/connector*",
+            "arn:aws:iam::*:policy/connector-manage-access-policy*",
             "arn:aws:iam::*:policy/datazone*"
           ],
           "Sid": "IAMPolicyManagementFromService"
@@ -2049,6 +2050,19 @@
         },
         {
           "Action": [
+            "secretsmanager:DescribeSecret"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/for-use-with-all-datazone-projects": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowDescribeSecretTaggedForAllProjects"
+        },
+        {
+          "Action": [
             "secretsmanager:TagResource"
           ],
           "Condition": {
@@ -2269,7 +2283,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-11-21T22:36:06Z"
+  "UpdateDate": "2024-11-22T04:51:06Z"
 }

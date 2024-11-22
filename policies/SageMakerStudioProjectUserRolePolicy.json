@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-20T21:59:23Z",
+    "CreateDate": "2024-11-22T04:51:06Z",
     "Document": {
       "Statement": [
         {
@@ -1100,6 +1100,23 @@
         {
           "Action": [
             "redshift-data:BatchExecuteStatement",
+            "redshift-data:CancelStatement",
+            "redshift-data:DescribeStatement",
+            "redshift-data:ExecuteStatement",
+            "redshift-data:GetStatementResult"
+          ],
+          "Condition": {
+            "StringLike": {
+              "redshift-data:glue-catalog-arn": "arn:aws:glue:*:*:catalog/*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RedshiftDataActionsForManagedWorkgroup"
+        },
+        {
+          "Action": [
+            "redshift-data:BatchExecuteStatement",
             "redshift-data:DescribeTable",
             "redshift-data:ExecuteStatement",
             "redshift-data:ListDatabases",
@@ -1118,18 +1135,26 @@
         {
           "Action": [
             "redshift-data:BatchExecuteStatement",
-            "redshift-data:ExecuteStatement"
+            "redshift-data:DescribeTable",
+            "redshift-data:ExecuteStatement",
+            "redshift-data:ListDatabases",
+            "redshift-data:ListSchemas",
+            "redshift-data:ListTables",
+            "redshift-serverless:GetCredentials",
+            "redshift-serverless:GetNamespace",
+            "redshift-serverless:GetWorkgroup",
+            "redshift-serverless:ListTagsForResource",
+            "redshift:DescribeTags",
+            "redshift:GetClusterCredentialsWithIAM"
           ],
           "Condition": {
-            "ForAnyValue:StringLike": {
-              "aws:CalledVia": [
-                "glue.amazonaws.com"
-              ]
+            "StringEquals": {
+              "aws:ResourceTag/for-use-with-all-datazone-projects": "true"
             }
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "RedshiftDataActionsForManagedWorkgroup"
+          "Sid": "AllowAccessExistingRedshiftCompute"
         },
         {
           "Action": [
@@ -1154,29 +1179,14 @@
           "Condition": {
             "Bool": {
               "aws:ViaAWSService": "true"
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "redshift-data.amazonaws.com"
             }
           },
           "Effect": "Allow",
           "Resource": "arn:aws:redshift-serverless:*:*:workgroup/*",
           "Sid": "RedshifServerlessCredentialsForManagedWorkgroup"
-        },
-        {
-          "Action": [
-            "redshift-serverless:GetCredentials",
-            "redshift-serverless:GetNamespace",
-            "redshift-serverless:GetWorkgroup",
-            "redshift-serverless:ListTagsForResource",
-            "redshift:DescribeTags",
-            "redshift:GetClusterCredentialsWithIAM"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "aws:ResourceTag/for-use-with-all-datazone-projects": "true"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "AllowAccessExistingRedshiftCompute"
         },
         {
           "Action": [
@@ -1726,7 +1736,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-11-20T21:59:23Z"
+  "UpdateDate": "2024-11-22T04:51:06Z"
 }
