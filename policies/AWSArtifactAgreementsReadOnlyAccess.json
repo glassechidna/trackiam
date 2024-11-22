@@ -1,0 +1,54 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSArtifactAgreementsReadOnlyAccess",
+  "CreateDate": "2024-11-22T19:36:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4KXQLOC2XA",
+  "PolicyName": "AWSArtifactAgreementsReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-11-22T19:36:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "artifact:GetCustomerAgreement"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:artifact::*:customer-agreement/*",
+          "Sid": "GetCustomerAgreementActions"
+        },
+        {
+          "Action": [
+            "artifact:ListAgreements",
+            "artifact:ListCustomerAgreements"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListAgreementsActions"
+        },
+        {
+          "Action": [
+            "iam:GetRole"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/artifact.amazonaws.com/AWSServiceRoleForArtifact",
+          "Sid": "GetRole"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSOrganizationActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-11-22T19:36:07Z"
+}

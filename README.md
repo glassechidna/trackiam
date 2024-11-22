@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 412
-* Unique actions: 18107
-* Managed policies: 1285
+* Unique actions: 18115
+* Managed policies: 1287
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 356 |
+| `arn:aws:iam::aws:policy/AWS*` | 358 |
 | `arn:aws:iam::aws:policy/Amazon*` | 324 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 288 |
 | `arn:aws:iam::aws:policy/service-role/*` | 194 |
@@ -83,7 +83,7 @@ The following table summarises the AWS APIs.
 | [`personalize`](services/personalize.yml) | 78 | 0 | 5 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
-| [`cleanrooms`](services/cleanrooms.yml) | 76 | 0 | 4 |
+| [`cleanrooms`](services/cleanrooms.yml) | 76 | 0 | 6 |
 | [`appstream`](services/appstream.yml) | 75 | 0 | 5 |
 | [`elasticache`](services/elasticache.yml) | 75 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
@@ -332,7 +332,7 @@ The following table summarises the AWS APIs.
 | [`tax`](services/tax.yml) | 7 | 0 | 10 |
 | [`cur`](services/cur.yml) | 7 | 0 | 5 |
 | [`cost-optimization-hub`](services/cost-optimization-hub.yml) | 7 | 0 | 0 |
-| [`artifact`](services/artifact.yml) | 6 | 0 | 4 |
+| [`artifact`](services/artifact.yml) | 6 | 0 | 10 |
 | [`elastic-inference`](services/elastic-inference.yml) | 6 | 0 | 1 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
@@ -453,8 +453,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2926 |
-| `Get` | 2666 |
+| `List` | 2928 |
+| `Get` | 2669 |
 | `Delete` | 2085 |
 | `Create` | 1942 |
 | `Describe` | 1750 |
