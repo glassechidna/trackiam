@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary",
   "CreateDate": "2024-04-23T23:01:14Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BVNAOGKEU",
   "PolicyName": "AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary",
   "PolicyVersion": {
-    "CreateDate": "2024-05-08T02:03:49Z",
+    "CreateDate": "2024-11-21T23:06:06Z",
     "Document": {
       "Statement": [
         {
@@ -231,16 +231,18 @@
             "StringEquals": {
               "sagemaker:TaggingAction": [
                 "CreateApp",
-                "CreateSpace"
+                "CreateSpace",
+                "CreateUserProfile"
               ]
             }
           },
           "Effect": "Allow",
           "Resource": [
             "arn:aws:sagemaker:*:*:app/*",
-            "arn:aws:sagemaker:*:*:space/*"
+            "arn:aws:sagemaker:*:*:space/*",
+            "arn:aws:sagemaker:*:*:user-profile/*"
           ],
-          "Sid": "AllowAddTagsForAppAndSpace"
+          "Sid": "AllowAddTagsForDomainResources"
         },
         {
           "Action": [
@@ -1196,7 +1198,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2024-05-08T02:03:49Z"
+  "UpdateDate": "2024-11-21T23:06:06Z"
 }

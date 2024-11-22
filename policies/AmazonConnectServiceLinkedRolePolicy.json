@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v20",
+  "DefaultVersionId": "v21",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-14T18:06:40Z",
+    "CreateDate": "2024-11-21T23:06:06Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,17 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowPutMetricsForConnectNamespace"
+        },
+        {
+          "Action": "mobiletargeting:SendMessages",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:mobiletargeting:*:*:apps/*",
+          "Sid": "AllowMobileTargetingOperationsForConnect"
         },
         {
           "Action": [
@@ -367,7 +378,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v20"
+    "VersionId": "v21"
   },
-  "UpdateDate": "2024-11-14T18:06:40Z"
+  "UpdateDate": "2024-11-21T23:06:06Z"
 }
