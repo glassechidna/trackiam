@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 412
-* Unique actions: 18131
+* Unique services: 413
+* Unique actions: 18172
 * Managed policies: 1288
 
 Most common managed policy name prefixes:
@@ -128,7 +128,7 @@ The following table summarises the AWS APIs.
 | [`wafv2`](services/wafv2.yml) | 54 | 0 | 2 |
 | [`lakeformation`](services/lakeformation.yml) | 52 | 3 | 1 |
 | [`kms`](services/kms.yml) | 52 | 1 | 3 |
-| [`profile`](services/profile.yml) | 52 | 0 | 15 |
+| [`profile`](services/profile.yml) | 52 | 0 | 20 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 52 | 0 | 6 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 0 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 0 |
@@ -367,6 +367,7 @@ The following table summarises the AWS APIs.
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 53 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 52 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
+| [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 32 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
@@ -453,14 +454,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2930 |
-| `Get` | 2669 |
-| `Delete` | 2088 |
-| `Create` | 1943 |
+| `List` | 2942 |
+| `Get` | 2674 |
+| `Delete` | 2095 |
+| `Create` | 1950 |
 | `Describe` | 1754 |
-| `Update` | 1670 |
+| `Update` | 1678 |
 | `Put` | 499 |
 | `Start` | 418 |
-| `Tag` | 279 |
-| `Untag` | 275 |
+| `Tag` | 280 |
+| `Untag` | 276 |
 
