@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectRoleMachineLearningPolicy",
   "CreateDate": "2024-11-20T21:55:27Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NSSEENOX7",
   "PolicyName": "SageMakerStudioProjectRoleMachineLearningPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-20T21:55:27Z",
+    "CreateDate": "2024-11-24T19:51:06Z",
     "Document": {
       "Statement": [
         {
@@ -56,6 +56,20 @@
         },
         {
           "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:PutMetricAlarm"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch:*:*:alarm:TargetTracking*",
+          "Sid": "MutateSageMakerEndpointsAutoscalingAlarms"
+        },
+        {
+          "Action": [
             "cloudwatch:DescribeAlarms"
           ],
           "Condition": {
@@ -66,19 +80,6 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "ManageSageMakerEndpointsAutoscalingAlarms"
-        },
-        {
-          "Action": [
-            "cloudwatch:PutMetricAlarm"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:cloudwatch:*:*:alarm:TargetTracking*",
-          "Sid": "CreateSageMakerEndpointsAutoscalingAlarms"
         },
         {
           "Action": [
@@ -121,12 +122,15 @@
             "ec2:DeleteNetworkInterfacePermission"
           ],
           "Condition": {
-            "StringEqualsIfExists": {
-              "aws:CalledViaLast": "sagemaker.amazonaws.com",
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
-            },
-            "StringLike": {
+            "ArnLike": {
               "ec2:Vpc": "arn:aws:ec2:*:*:vpc/${aws:PrincipalTag/VpcId}"
+            },
+            "StringEquals": {
+              "aws:CalledViaLast": [
+                "airflow.amazonaws.com",
+                "sagemaker.amazonaws.com"
+              ],
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
             }
           },
           "Effect": "Allow",
@@ -137,6 +141,28 @@
             "arn:aws:ec2:*:*:subnet/*"
           ],
           "Sid": "AllowManageSageMakerEniOnVpc"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterfacePermission"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "ec2:Vpc": "arn:aws:ec2:*:*:vpc/${aws:PrincipalTag/VpcId}"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:route-table/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "AllowManageSageMakerTrainingEniOnVpc"
         },
         {
           "Action": [
@@ -558,22 +584,6 @@
         },
         {
           "Action": [
-            "sagemaker:DescribeApp"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:sagemaker:*:*:app/*/*/JupyterLab/*",
-            "arn:aws:sagemaker:*:*:app/*/*/jupyterlab/*"
-          ],
-          "Sid": "SageMakerStudioAppDescribeJupyterLabAppActionPermissions"
-        },
-        {
-          "Action": [
             "sagemaker:DescribeDomain"
           ],
           "Condition": {
@@ -732,6 +742,17 @@
         },
         {
           "Action": [
+            "sagemaker:DescribeApp"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:app/*/*/JupyterLab/*",
+            "arn:aws:sagemaker:*:*:app/*/*/jupyterlab/*"
+          ],
+          "Sid": "SageMakerStudioAppDescribeJupyterLabAppActionPermissions"
+        },
+        {
+          "Action": [
             "sagemaker:DescribeImage"
           ],
           "Effect": "Allow",
@@ -788,7 +809,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-11-20T21:55:27Z"
+  "UpdateDate": "2024-11-24T19:51:06Z"
 }
