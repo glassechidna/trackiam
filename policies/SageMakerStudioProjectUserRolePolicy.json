@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-22T04:51:06Z",
+    "CreateDate": "2024-11-24T20:21:06Z",
     "Document": {
       "Statement": [
         {
@@ -903,6 +903,7 @@
             },
             "StringLike": {
               "kms:ViaService": [
+                "bedrock.*.amazonaws.com",
                 "s3.*.amazonaws.com",
                 "sagemaker.*.amazonaws.com",
                 "sqs.*.amazonaws.com"
@@ -1736,7 +1737,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-11-22T04:51:06Z"
+  "UpdateDate": "2024-11-24T20:21:06Z"
 }

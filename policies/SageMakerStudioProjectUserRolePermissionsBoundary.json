@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePermissionsBoundary",
   "CreateDate": "2024-11-20T21:57:42Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FU36Z3GEL",
   "PolicyName": "SageMakerStudioProjectUserRolePermissionsBoundary",
   "PolicyVersion": {
-    "CreateDate": "2024-11-22T04:51:06Z",
+    "CreateDate": "2024-11-24T20:21:06Z",
     "Document": {
       "Statement": [
         {
@@ -24,6 +24,8 @@
           },
           "Effect": "Deny",
           "NotResource": [
+            "arn:*:glue:*:*:catalog/*",
+            "arn:*:glue:*:*:database/*",
             "arn:*:sagemaker:*:*:model-package-group/*",
             "arn:*:sagemaker:*:*:model-package/*"
           ],
@@ -95,6 +97,24 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AirflowS3GetAccountPublicAccessBlock"
+        },
+        {
+          "Action": "s3:GetObject",
+          "Condition": {
+            "Null": {
+              "aws:PrincipalTag/AmazonDataZoneProject": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringNotEquals": {
+              "aws:PrincipalTag/AmazonDataZoneDomain": "",
+              "aws:PrincipalTag/DomainBucketName": ""
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}/${aws:PrincipalTag/AmazonDataZoneDomain}/certificate_location/*",
+          "Sid": "AccessCertificateS3LocationPermissions"
         },
         {
           "Action": "s3:PutObjectTagging",
@@ -1503,6 +1523,14 @@
         },
         {
           "Action": [
+            "s3:GetEncryptionConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}",
+          "Sid": "AirflowS3BucketActions"
+        },
+        {
+          "Action": [
             "sqs:ChangeMessageVisibility",
             "sqs:DeleteMessage",
             "sqs:GetQueueAttributes",
@@ -1945,6 +1973,7 @@
             "s3:DeleteObjectVersion",
             "s3:GetAccountPublicAccessBlock",
             "s3:GetBucketLocation",
+            "s3:GetEncryptionConfiguration",
             "s3:GetObject*",
             "s3:ListBucket",
             "s3:ListBucketVersions",
@@ -2169,7 +2198,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-11-22T04:51:06Z"
+  "UpdateDate": "2024-11-24T20:21:06Z"
 }
