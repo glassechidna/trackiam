@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v21",
+  "DefaultVersionId": "v22",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-21T23:06:06Z",
+    "CreateDate": "2024-11-25T22:06:07Z",
     "Document": {
       "Statement": [
         {
@@ -257,15 +257,19 @@
             "profile:BatchGetProfile",
             "profile:CreateProfile",
             "profile:CreateSegmentEstimate",
+            "profile:DeleteIntegration",
             "profile:GetDomain",
+            "profile:GetIntegration",
             "profile:GetSegmentEstimate",
             "profile:GetSegmentMembership",
             "profile:ListCalculatedAttributeDefinitions",
             "profile:ListCalculatedAttributesForProfile",
+            "profile:ListEventTriggers",
             "profile:ListIntegrations",
             "profile:ListProfileAttributeValues",
             "profile:ListProfileObjectTypes",
             "profile:ListSegmentDefinitions",
+            "profile:PutIntegration",
             "profile:SearchProfiles",
             "profile:UpdateProfile"
           ],
@@ -286,6 +290,19 @@
             "arn:aws:profile:*:*:domains/amazon-connect-*/calculated-attributes/*"
           ],
           "Sid": "AllowCustomerProfilesCalculatedAttributesForConnectDomain"
+        },
+        {
+          "Action": [
+            "profile:CreateEventTrigger",
+            "profile:DeleteEventTrigger",
+            "profile:GetEventTrigger",
+            "profile:UpdateEventTrigger"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:profile:*:*:domains/amazon-connect-*/event-triggers/*"
+          ],
+          "Sid": "AllowCustomerProfilesEventTriggerForConnectDomain"
         },
         {
           "Action": [
@@ -378,7 +395,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v21"
+    "VersionId": "v22"
   },
-  "UpdateDate": "2024-11-21T23:06:06Z"
+  "UpdateDate": "2024-11-25T22:06:07Z"
 }
