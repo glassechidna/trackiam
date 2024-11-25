@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 413
-* Unique actions: 18172
+* Unique actions: 18174
 * Managed policies: 1288
 
 Most common managed policy name prefixes:
@@ -123,7 +123,7 @@ The following table summarises the AWS APIs.
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
 | [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 13 |
 | [`resiliencehub`](services/resiliencehub.yml) | 55 | 0 | 8 |
-| [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 1 |
+| [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 2 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`wafv2`](services/wafv2.yml) | 54 | 0 | 2 |
 | [`lakeformation`](services/lakeformation.yml) | 52 | 3 | 1 |
@@ -317,9 +317,9 @@ The following table summarises the AWS APIs.
 | [`timestream-influxdb`](services/timestream-influxdb.yml) | 11 | 0 | 0 |
 | [`license-manager-linux-subscriptions`](services/license-manager-linux-subscriptions.yml) | 11 | 0 | 0 |
 | [`supportapp`](services/supportapp.yml) | 10 | 0 | 3 |
+| [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 1 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 0 |
 | [`savingsplans`](services/savingsplans.yml) | 10 | 0 | 0 |
-| [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 0 |
 | [`rbin`](services/rbin.yml) | 10 | 0 | 0 |
 | [`pipes`](services/pipes.yml) | 10 | 0 | 0 |
 | [`polly`](services/polly.yml) | 9 | 0 | 0 |
@@ -455,7 +455,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2942 |
-| `Get` | 2674 |
+| `Get` | 2676 |
 | `Delete` | 2095 |
 | `Create` | 1950 |
 | `Describe` | 1754 |
