@@ -1,25 +1,36 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonDataZoneGlueManageAccessRolePolicy",
   "CreateDate": "2023-09-22T20:21:53Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4IFGMBEEIW",
   "PolicyName": "AmazonDataZoneGlueManageAccessRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-06-28T16:41:41Z",
+    "CreateDate": "2024-11-26T15:51:06Z",
     "Document": {
       "Statement": [
         {
+          "Action": "glue:ListCrawls",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:glue:*:*:crawler/*",
+          "Sid": "GlueCrawlerPermissions"
+        },
+        {
           "Action": "ram:AssociateResourceSharePermission",
           "Condition": {
+            "ArnLike": {
+              "ram:PermissionArn": "arn:aws:ram::aws:permission/AWSRAMLFEnabled*"
+            },
             "ForAnyValue:StringEquals": {
               "aws:CalledVia": [
                 "lakeformation.amazonaws.com"
               ]
-            },
-            "StringLike": {
-              "ram:PermissionArn": "arn:aws:ram::aws:permission/AWSRAMLFEnabled*"
             }
           },
           "Effect": "Allow",
@@ -31,7 +42,8 @@
             "glue:CreateTable",
             "glue:DeleteTable",
             "glue:GetDatabases",
-            "glue:GetTables"
+            "glue:GetTables",
+            "glue:SearchTables"
           ],
           "Condition": {
             "StringEquals": {
@@ -41,6 +53,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:glue:*:*:catalog",
+            "arn:aws:glue:*:*:catalog/*",
             "arn:aws:glue:*:*:database/*",
             "arn:aws:glue:*:*:table/*"
           ],
@@ -61,10 +74,29 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:glue:*:*:catalog",
+            "arn:aws:glue:*:*:catalog/*",
             "arn:aws:glue:*:*:database/*",
             "arn:aws:glue:*:*:table/*"
           ],
           "Sid": "CrossAccountRAMResourceSharingPermissions"
+        },
+        {
+          "Action": [
+            "glue:GetCatalog",
+            "glue:GetTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:catalog",
+            "arn:aws:glue:*:*:catalog/*",
+            "arn:aws:glue:*:*:database/*"
+          ],
+          "Sid": "GlueGetTagsPermissions"
         },
         {
           "Action": [
@@ -82,7 +114,6 @@
         },
         {
           "Action": [
-            "glue:GetTags",
             "glue:TagResource",
             "glue:UntagResource"
           ],
@@ -128,6 +159,25 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "KMSDecryptPermission"
+        },
+        {
+          "Action": [
+            "lakeformation:GetDataAccess"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "glue.amazonaws.com",
+                "lakeformation.amazonaws.com"
+              ]
+            },
+            "Null": {
+              "lakeformation:GlueARN": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LakeformationResourceFederatedSharingPermissions"
         },
         {
           "Action": [
@@ -226,7 +276,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2024-06-28T16:41:41Z"
+  "UpdateDate": "2024-11-26T15:51:06Z"
 }
