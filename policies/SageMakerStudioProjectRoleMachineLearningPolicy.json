@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectRoleMachineLearningPolicy",
   "CreateDate": "2024-11-20T21:55:27Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NSSEENOX7",
   "PolicyName": "SageMakerStudioProjectRoleMachineLearningPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-24T19:51:06Z",
+    "CreateDate": "2024-11-26T05:21:05Z",
     "Document": {
       "Statement": [
         {
@@ -61,6 +61,7 @@
           ],
           "Condition": {
             "StringEquals": {
+              "aws:CalledViaLast": "application-autoscaling.amazonaws.com",
               "aws:ResourceAccount": "${aws:PrincipalAccount}"
             }
           },
@@ -676,6 +677,20 @@
         },
         {
           "Action": [
+            "sagemaker:UpdateInferenceComponentRuntimeConfig"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaLast": "application-autoscaling.amazonaws.com",
+              "aws:PrincipalTag/EnableSageMakerMLWorkloadsPermissions": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SageMakerUpdateInferenceComponentRuntimeConfigAutoscalingPermissions"
+        },
+        {
+          "Action": [
             "ec2:DescribeDhcpOptions",
             "ec2:DescribeNetworkInterfaces",
             "ec2:DescribeRouteTables",
@@ -809,7 +824,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-11-24T19:51:06Z"
+  "UpdateDate": "2024-11-26T05:21:05Z"
 }

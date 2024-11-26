@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-24T20:21:06Z",
+    "CreateDate": "2024-11-26T05:21:06Z",
     "Document": {
       "Statement": [
         {
@@ -777,6 +777,41 @@
         },
         {
           "Action": [
+            "glue:GetUserDefinedFunction",
+            "glue:GetUserDefinedFunctions"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:userDefinedFunction/*"
+          ],
+          "Sid": "GetGlueUserDefinedFuncPermissions"
+        },
+        {
+          "Action": [
+            "glue:GetUserDefinedFunction",
+            "glue:GetUserDefinedFunctions"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "glue:LakeFormationPermissions": "Enabled"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:catalog",
+            "arn:aws:glue:*:*:catalog/*",
+            "arn:aws:glue:*:*:database/*"
+          ],
+          "Sid": "GetGlueUserDefinedFuncLakeFormationPermissions"
+        },
+        {
+          "Action": [
             "glue:TagResource",
             "glue:UntagResource"
           ],
@@ -1104,7 +1139,9 @@
             "redshift-data:CancelStatement",
             "redshift-data:DescribeStatement",
             "redshift-data:ExecuteStatement",
-            "redshift-data:GetStatementResult"
+            "redshift-data:GetStagingBucketLocation",
+            "redshift-data:GetStatementResult",
+            "redshift-serverless:GetManagedWorkgroup"
           ],
           "Condition": {
             "StringLike": {
@@ -1292,6 +1329,40 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "DataLakeCrossAccountS3Permissions"
+        },
+        {
+          "Action": [
+            "s3:ListBucket"
+          ],
+          "Condition": {
+            "ArnEquals": {
+              "lambda:SourceFunctionArn": "arn:aws:lambda:*:*:function:athenafederatedcatalog_*"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}"
+          ],
+          "Sid": "ListDomainBucketFromAthenaFederatedCatalog"
+        },
+        {
+          "Action": [
+            "s3:ListBucket"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringNotEquals": {
+              "aws:PrincipalTag/DomainBucketName": ""
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}",
+          "Sid": "AirflowListDomainS3BucketPermissions"
         },
         {
           "Action": [
@@ -1737,7 +1808,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2024-11-24T20:21:06Z"
+  "UpdateDate": "2024-11-26T05:21:06Z"
 }
