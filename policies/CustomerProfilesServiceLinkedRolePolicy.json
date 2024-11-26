@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CustomerProfilesServiceLinkedRolePolicy",
   "CreateDate": "2023-03-07T22:56:52Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4GN7CNQPYF",
   "PolicyName": "CustomerProfilesServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-03-07T22:56:52Z",
+    "CreateDate": "2024-11-26T22:21:06Z",
     "Document": {
       "Statement": [
         {
@@ -24,16 +24,32 @@
         },
         {
           "Action": [
+            "connect-campaigns:PutProfileOutboundRequestBatch"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:connect-campaigns:*:*:campaign/*"
+          ]
+        },
+        {
+          "Action": [
             "iam:DeleteRole"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/profile.amazonaws.com/AWSServiceRoleForProfile_*"
+        },
+        {
+          "Action": [
+            "profile:BatchGetProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-03-07T22:56:52Z"
+  "UpdateDate": "2024-11-26T22:21:06Z"
 }
