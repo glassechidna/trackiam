@@ -1,0 +1,114 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSObservabilityAdminServiceRolePolicy",
+  "CreateDate": "2024-11-27T19:36:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4MSF2FZK2R",
+  "PolicyName": "AWSObservabilityAdminServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-11-27T19:36:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "config.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig"
+          ]
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "config.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig"
+          ]
+        },
+        {
+          "Action": [
+            "organizations:EnableAWSServiceAccess"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": [
+                "config.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": [
+                "config.amazonaws.com",
+                "observabilityadmin.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "config:DeleteConfigurationAggregator",
+            "config:PutConfigurationAggregator",
+            "config:SelectAggregateResourceConfig"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:config:*:*:config-aggregator/aws-service-config-aggregator/observabilityadmin.amazonaws.com/*"
+          ]
+        },
+        {
+          "Action": [
+            "config:DeleteServiceLinkedConfigurationRecorder",
+            "config:PutServiceLinkedConfigurationRecorder"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:config:*:*:configuration-recorder/AWSConfigurationRecorderForObservabilityAdmin/*"
+          ]
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:ListAccounts",
+            "organizations:ListAccountsForParent",
+            "organizations:ListChildren",
+            "organizations:ListParents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-11-27T19:36:07Z"
+}

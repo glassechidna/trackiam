@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 414
-* Unique actions: 18184
-* Managed policies: 1288
+* Unique actions: 18189
+* Managed policies: 1289
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 359 |
 | `arn:aws:iam::aws:policy/Amazon*` | 324 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 288 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 289 |
 | `arn:aws:iam::aws:policy/service-role/*` | 194 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 116 |
@@ -63,7 +63,7 @@ The following table summarises the AWS APIs.
 | [`deadline`](services/deadline.yml) | 102 | 0 | 3 |
 | [`bedrock`](services/bedrock.yml) | 97 | 2 | 39 |
 | [`medialive`](services/medialive.yml) | 92 | 0 | 24 |
-| [`config`](services/config.yml) | 92 | 0 | 0 |
+| [`config`](services/config.yml) | 92 | 0 | 5 |
 | [`backup`](services/backup.yml) | 91 | 0 | 5 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
 | [`workspaces`](services/workspaces.yml) | 88 | 0 | 1 |
@@ -455,13 +455,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2943 |
+| `List` | 2944 |
 | `Get` | 2678 |
-| `Delete` | 2095 |
+| `Delete` | 2096 |
 | `Create` | 1951 |
 | `Describe` | 1754 |
 | `Update` | 1679 |
-| `Put` | 500 |
+| `Put` | 501 |
 | `Start` | 419 |
 | `Tag` | 280 |
 | `Untag` | 276 |
