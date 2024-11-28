@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePermissionsBoundary",
   "CreateDate": "2024-11-20T21:57:42Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FU36Z3GEL",
   "PolicyName": "SageMakerStudioProjectUserRolePermissionsBoundary",
   "PolicyVersion": {
-    "CreateDate": "2024-11-27T06:36:06Z",
+    "CreateDate": "2024-11-28T04:51:07Z",
     "Document": {
       "Statement": [
         {
@@ -1082,6 +1082,15 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AccessAossCollectionsForBedrock"
+        },
+        {
+          "Action": "bedrock:CreateEvaluationJob",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:bedrock:*:*:custom-model/*",
+            "arn:aws:bedrock:*::foundation-model/*"
+          ],
+          "Sid": "CreateEvaluationJobForFoundationModel"
         },
         {
           "Action": "bedrock:InvokeInlineAgent",
@@ -2392,7 +2401,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2024-11-27T06:36:06Z"
+  "UpdateDate": "2024-11-28T04:51:07Z"
 }
