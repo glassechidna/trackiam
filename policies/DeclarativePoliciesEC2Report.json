@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/DeclarativePoliciesEC2Report",
+  "CreateDate": "2024-11-30T13:21:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4DLY4GTUO5",
+  "PolicyName": "DeclarativePoliciesEC2Report",
+  "PolicyVersion": {
+    "CreateDate": "2024-11-30T13:21:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeRegions",
+            "ec2:DescribeVpcBlockPublicAccessOptions",
+            "ec2:GetAllowedImagesSettings",
+            "ec2:GetImageBlockPublicAccessState",
+            "ec2:GetInstanceMetadataDefaults",
+            "ec2:GetSerialConsoleAccessStatus",
+            "ec2:GetSnapshotBlockPublicAccessState"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "DeclarativePoliciesEC2Report"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-11-30T13:21:06Z"
+}
