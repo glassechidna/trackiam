@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess",
   "CreateDate": "2020-08-27T20:08:51Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LJ3OSZ5SX",
   "PolicyName": "AWSBillingReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-11-12T18:16:52Z",
+    "CreateDate": "2024-12-01T17:36:06Z",
     "Document": {
       "Statement": [
         {
@@ -44,9 +44,13 @@
             "cur:GetUsageReport",
             "freetier:GetFreeTierAlertPreference",
             "freetier:GetFreeTierUsage",
+            "invoicing:BatchGetInvoiceProfile",
             "invoicing:GetInvoiceEmailDeliveryPreferences",
             "invoicing:GetInvoicePDF",
+            "invoicing:GetInvoiceUnit",
             "invoicing:ListInvoiceSummaries",
+            "invoicing:ListInvoiceUnits",
+            "invoicing:ListTagsForResource",
             "payments:GetFinancingApplication",
             "payments:GetFinancingLine",
             "payments:GetFinancingLineWithdrawal",
@@ -79,7 +83,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2024-11-12T18:16:52Z"
+  "UpdateDate": "2024-12-01T17:36:06Z"
 }

@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 416
-* Unique actions: 18239
+* Unique actions: 18268
 * Managed policies: 1293
 
 Most common managed policy name prefixes:
@@ -121,7 +121,7 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 56 | 0 | 5 |
 | [`eks`](services/eks.yml) | 56 | 0 | 1 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
-| [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 13 |
+| [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 33 |
 | [`resiliencehub`](services/resiliencehub.yml) | 55 | 0 | 8 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 2 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
@@ -395,6 +395,7 @@ The following table summarises the AWS APIs.
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 14 |
 | [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
 | [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 13 |
+| [`invoicing`](services/invoicing.yml) | 0 | 0 | 13 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 13 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
@@ -426,7 +427,6 @@ The following table summarises the AWS APIs.
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
 | [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 4 |
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
-| [`invoicing`](services/invoicing.yml) | 0 | 0 | 4 |
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
 | [`a2c`](services/a2c.yml) | 0 | 0 | 4 |
 | [`resource-explorer`](services/resource-explorer.yml) | 0 | 0 | 3 |
@@ -457,14 +457,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2954 |
-| `Get` | 2688 |
-| `Delete` | 2099 |
-| `Create` | 1955 |
+| `List` | 2961 |
+| `Get` | 2693 |
+| `Delete` | 2102 |
+| `Create` | 1958 |
 | `Describe` | 1757 |
-| `Update` | 1686 |
-| `Put` | 502 |
-| `Start` | 422 |
-| `Tag` | 281 |
-| `Untag` | 277 |
+| `Update` | 1689 |
+| `Put` | 503 |
+| `Start` | 423 |
+| `Tag` | 282 |
+| `Untag` | 278 |
 
