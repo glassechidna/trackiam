@@ -11,9 +11,9 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 416
-* Unique actions: 18268
-* Managed policies: 1295
+* Unique services: 417
+* Unique actions: 18294
+* Managed policies: 1298
 
 Most common managed policy name prefixes:
 
@@ -21,10 +21,10 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 359 |
 | `arn:aws:iam::aws:policy/Amazon*` | 324 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 292 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 294 |
 | `arn:aws:iam::aws:policy/service-role/*` | 194 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
-| Other | 119 |
+| Other | 120 |
 
 The following table summarises the AWS APIs. 
 
@@ -373,6 +373,7 @@ The following table summarises the AWS APIs.
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
 | [`one`](services/one.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
+| [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
@@ -457,14 +458,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2961 |
-| `Get` | 2693 |
-| `Delete` | 2102 |
-| `Create` | 1958 |
+| `List` | 2964 |
+| `Get` | 2701 |
+| `Delete` | 2104 |
+| `Create` | 1960 |
 | `Describe` | 1757 |
-| `Update` | 1689 |
+| `Update` | 1691 |
 | `Put` | 503 |
-| `Start` | 423 |
-| `Tag` | 282 |
-| `Untag` | 278 |
+| `Start` | 426 |
+| `Tag` | 283 |
+| `Untag` | 279 |
 
