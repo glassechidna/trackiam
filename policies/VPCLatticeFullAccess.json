@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/VPCLatticeFullAccess",
   "CreateDate": "2023-03-30T02:49:02Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MMVKZLVVN",
   "PolicyName": "VPCLatticeFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-03-30T02:49:02Z",
+    "CreateDate": "2024-12-01T14:21:06Z",
     "Document": {
       "Statement": [
         {
@@ -68,6 +68,8 @@
             "lambda:ListFunctions",
             "lambda:ListVersionsByFunction",
             "logs:DescribeLogGroups",
+            "rds:DescribeDBClusters",
+            "rds:DescribeDBInstances",
             "s3:ListAllMyBuckets",
             "vpc-lattice:*"
           ],
@@ -86,7 +88,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-03-30T02:49:02Z"
+  "UpdateDate": "2024-12-01T14:21:06Z"
 }
