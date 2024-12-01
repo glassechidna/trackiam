@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 415
-* Unique actions: 18201
+* Unique actions: 18210
 * Managed policies: 1291
 
 Most common managed policy name prefixes:
@@ -68,7 +68,7 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
 | [`workspaces`](services/workspaces.yml) | 88 | 0 | 1 |
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
-| [`es`](services/es.yml) | 87 | 0 | 18 |
+| [`es`](services/es.yml) | 87 | 0 | 23 |
 | [`sms-voice`](services/sms-voice.yml) | 87 | 0 | 8 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 3 |
 | [`comprehend`](services/comprehend.yml) | 85 | 0 | 0 |
@@ -416,6 +416,7 @@ The following table summarises the AWS APIs.
 | [`cloudfront-keyvaluestore`](services/cloudfront-keyvaluestore.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
 | [`supportplans`](services/supportplans.yml) | 0 | 0 | 5 |
+| [`opensearch`](services/opensearch.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
 | [`geo-routes`](services/geo-routes.yml) | 0 | 0 | 5 |
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 5 |
@@ -445,7 +446,6 @@ The following table summarises the AWS APIs.
 | [`serviceextract`](services/serviceextract.yml) | 0 | 0 | 1 |
 | [`rhelkb`](services/rhelkb.yml) | 0 | 0 | 1 |
 | [`rds-db`](services/rds-db.yml) | 0 | 0 | 1 |
-| [`opensearch`](services/opensearch.yml) | 0 | 0 | 1 |
 | [`mediaimport`](services/mediaimport.yml) | 0 | 0 | 1 |
 | [`inspector-scan`](services/inspector-scan.yml) | 0 | 0 | 1 |
 | [`elemental-support-content`](services/elemental-support-content.yml) | 0 | 0 | 1 |
@@ -456,14 +456,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2947 |
-| `Get` | 2681 |
-| `Delete` | 2097 |
+| `List` | 2948 |
+| `Get` | 2684 |
+| `Delete` | 2098 |
 | `Create` | 1951 |
 | `Describe` | 1754 |
-| `Update` | 1679 |
+| `Update` | 1680 |
 | `Put` | 502 |
-| `Start` | 421 |
+| `Start` | 422 |
 | `Tag` | 280 |
 | `Untag` | 276 |
 
