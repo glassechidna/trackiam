@@ -1,0 +1,49 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSecurityIncidentResponseServiceRolePolicy",
+  "CreateDate": "2024-12-01T16:36:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4PN7K2GF47",
+  "PolicyName": "AWSSecurityIncidentResponseServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-12-01T16:36:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "security-ir:CreateCase",
+            "security-ir:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "SecurityIncidentResponseManaged"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/SecurityIncidentResponseManaged": "true",
+              "aws:ResourceTag/SecurityIncidentResponseManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:security-ir:*:*:case/*",
+          "Sid": "SecurityIncidentResponseCreateCasePolicyTagOnCreate"
+        },
+        {
+          "Action": [
+            "organizations:ListAccounts",
+            "organizations:ListChildren"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecurityIncidentResponseOrganizationsPolicy"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-12-01T16:36:06Z"
+}

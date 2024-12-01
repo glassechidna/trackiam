@@ -11,9 +11,9 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 415
-* Unique actions: 18210
-* Managed policies: 1291
+* Unique services: 416
+* Unique actions: 18239
+* Managed policies: 1293
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 359 |
 | `arn:aws:iam::aws:policy/Amazon*` | 324 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 290 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 292 |
 | `arn:aws:iam::aws:policy/service-role/*` | 194 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
 | Other | 117 |
@@ -161,8 +161,8 @@ The following table summarises the AWS APIs.
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 16 |
+| [`memorydb`](services/memorydb.yml) | 38 | 0 | 8 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 4 |
-| [`memorydb`](services/memorydb.yml) | 38 | 0 | 1 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
 | [`apprunner`](services/apprunner.yml) | 37 | 0 | 5 |
@@ -377,6 +377,7 @@ The following table summarises the AWS APIs.
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`q`](services/q.yml) | 0 | 0 | 23 |
+| [`security-ir`](services/security-ir.yml) | 0 | 0 | 22 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 21 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 19 |
@@ -456,14 +457,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2948 |
-| `Get` | 2684 |
-| `Delete` | 2098 |
-| `Create` | 1951 |
-| `Describe` | 1754 |
-| `Update` | 1680 |
+| `List` | 2954 |
+| `Get` | 2688 |
+| `Delete` | 2099 |
+| `Create` | 1955 |
+| `Describe` | 1757 |
+| `Update` | 1686 |
 | `Put` | 502 |
 | `Start` | 422 |
-| `Tag` | 280 |
-| `Untag` | 276 |
+| `Tag` | 281 |
+| `Untag` | 277 |
 

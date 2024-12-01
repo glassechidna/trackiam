@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/MemoryDBServiceRolePolicy",
   "CreateDate": "2021-08-17T22:34:59Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4KWEJCOJNF",
   "PolicyName": "MemoryDBServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-08-18T23:48:16Z",
+    "CreateDate": "2024-12-01T16:21:07Z",
     "Document": {
       "Statement": [
         {
@@ -20,7 +20,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "PutCloudWatchMetricData"
         },
         {
           "Action": [
@@ -37,7 +38,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:network-interface/*"
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "CreateMemoryDBTagsOnNetworkInterfaces"
         },
         {
           "Action": [
@@ -50,7 +52,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:network-interface/*"
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "DeleteMemoryDBTaggedNetworkInterfaces"
         },
         {
           "Action": [
@@ -61,7 +64,8 @@
             "arn:aws:ec2:*:*:network-interface/*",
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:subnet/*"
-          ]
+          ],
+          "Sid": "CreateNetworkInterfaces"
         },
         {
           "Action": [
@@ -69,7 +73,8 @@
             "ec2:ModifyNetworkInterfaceAttribute"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:security-group/*"
+          "Resource": "arn:aws:ec2:*:*:security-group/*",
+          "Sid": "DeleteNetworkInterfaces"
         },
         {
           "Action": [
@@ -80,13 +85,22 @@
             "ec2:DescribeVpcs"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DescribeEC2Resources"
+        },
+        {
+          "Action": [
+            "memorydb:ReplicateMultiRegionClusterData"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:memorydb:*:*:cluster/*",
+          "Sid": "ReplicateMemoryDBMultiRegionClusterData"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-08-18T23:48:16Z"
+  "UpdateDate": "2024-12-01T16:21:07Z"
 }

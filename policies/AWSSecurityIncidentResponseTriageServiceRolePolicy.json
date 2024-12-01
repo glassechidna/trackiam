@@ -1,0 +1,83 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSecurityIncidentResponseTriageServiceRolePolicy",
+  "CreateDate": "2024-12-01T16:36:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4AA3VA2VH7",
+  "PolicyName": "AWSSecurityIncidentResponseTriageServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-12-01T16:36:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "events:ManagedBy": "triage.security-ir.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "security-ir:CreateCase",
+            "security-ir:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/SecurityIncidentResponseManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "events:DescribeRule",
+            "events:ListTargetsByRule"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "guardduty:ArchiveFindings",
+            "guardduty:CreateFilter",
+            "guardduty:DescribeMalwareScans",
+            "guardduty:GetDetector",
+            "guardduty:GetFilter",
+            "guardduty:GetFindings",
+            "guardduty:ListDetectors",
+            "guardduty:StartMalwareScan",
+            "guardduty:UpdateFindingsFeedback"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "securityhub:BatchUpdateFindings",
+            "securityhub:DescribeHub",
+            "securityhub:GetEnabledStandards",
+            "securityhub:GetFindings",
+            "securityhub:ListEnabledProductsForImport",
+            "securityhub:UpdateFindings"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:securityhub:*:*:hub/default"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-12-01T16:36:07Z"
+}
