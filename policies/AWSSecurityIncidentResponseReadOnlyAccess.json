@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSSecurityIncidentResponseReadOnlyAccess",
+  "CreateDate": "2024-12-01T23:06:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4BW45DRUEH",
+  "PolicyName": "AWSSecurityIncidentResponseReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-12-01T23:06:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "security-ir:BatchGetMemberAccountDetails",
+            "security-ir:GetCase",
+            "security-ir:GetCaseAttachmentDownloadUrl",
+            "security-ir:GetMembership",
+            "security-ir:ListCaseEdits",
+            "security-ir:ListCases",
+            "security-ir:ListComments",
+            "security-ir:ListMemberships",
+            "security-ir:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecurityIRReadAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-12-01T23:06:06Z"
+}

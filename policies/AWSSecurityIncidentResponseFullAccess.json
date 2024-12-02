@@ -1,0 +1,100 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSSecurityIncidentResponseFullAccess",
+  "CreateDate": "2024-12-01T23:21:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CFW7Y32C3",
+  "PolicyName": "AWSSecurityIncidentResponseFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-12-01T23:21:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "security-ir.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/security-ir.amazonaws.com/AWSServiceRoleForSecurityIncidentResponse"
+          ],
+          "Sid": "AllowCreationOfServiceLinkedRoleForSecurityIncidentResponse"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "triage.security-ir.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/triage.security-ir.amazonaws.com/AWSServiceRoleForSecurityIncidentResponse_Triage"
+          ],
+          "Sid": "AllowCreationOfServiceLinkedRoleForSecurityIncidentResponseTriage"
+        },
+        {
+          "Action": [
+            "security-ir:CancelMembership",
+            "security-ir:CloseCase",
+            "security-ir:CreateCase",
+            "security-ir:CreateCaseComment",
+            "security-ir:CreateMembership",
+            "security-ir:GetCaseAttachmentUploadUrl",
+            "security-ir:TagResource",
+            "security-ir:UntagResource",
+            "security-ir:UpdateCase",
+            "security-ir:UpdateCaseComment",
+            "security-ir:UpdateCaseStatus",
+            "security-ir:UpdateMembership",
+            "security-ir:UpdateResolverType"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:MultiFactorAuthPresent": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecurityIRWriteAccess"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "OrganizationsPolicies"
+        },
+        {
+          "Action": [
+            "security-ir:BatchGetMemberAccountDetails",
+            "security-ir:GetCase",
+            "security-ir:GetCaseAttachmentDownloadUrl",
+            "security-ir:GetMembership",
+            "security-ir:ListCaseEdits",
+            "security-ir:ListCases",
+            "security-ir:ListComments",
+            "security-ir:ListMemberships",
+            "security-ir:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecurityIRReadAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-12-01T23:21:06Z"
+}
