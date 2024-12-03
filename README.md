@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 420
-* Unique actions: 18391
+* Unique actions: 18402
 * Managed policies: 1312
 
 Most common managed policy name prefixes:
@@ -43,7 +43,7 @@ The following table summarises the AWS APIs.
 | [`connect`](services/connect.yml) | 256 | 0 | 19 |
 | [`glue`](services/glue.yml) | 214 | 4 | 77 |
 | [`ses`](services/ses.yml) | 193 | 0 | 0 |
-| [`quicksight`](services/quicksight.yml) | 174 | 3 | 48 |
+| [`quicksight`](services/quicksight.yml) | 174 | 3 | 56 |
 | [`rds`](services/rds.yml) | 162 | 0 | 6 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
 | [`iam`](services/iam.yml) | 159 | 0 | 17 |
@@ -53,7 +53,7 @@ The following table summarises the AWS APIs.
 | [`datazone`](services/datazone.yml) | 123 | 0 | 61 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 3 |
-| [`s3`](services/s3.yml) | 113 | 60 | 47 |
+| [`s3`](services/s3.yml) | 113 | 60 | 50 |
 | [`iotwireless`](services/iotwireless.yml) | 112 | 0 | 1 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`cloudfront`](services/cloudfront.yml) | 110 | 1 | 19 |
@@ -462,11 +462,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 2979 |
-| `Get` | 2722 |
-| `Delete` | 2121 |
-| `Create` | 1976 |
-| `Describe` | 1759 |
-| `Update` | 1700 |
+| `Get` | 2723 |
+| `Delete` | 2123 |
+| `Create` | 1977 |
+| `Describe` | 1761 |
+| `Update` | 1703 |
 | `Put` | 510 |
 | `Start` | 426 |
 | `Tag` | 285 |
