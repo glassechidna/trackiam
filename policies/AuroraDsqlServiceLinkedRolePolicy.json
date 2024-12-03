@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AuroraDsqlServiceLinkedRolePolicy",
+  "CreateDate": "2024-12-03T15:06:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4NLZGIT7C3",
+  "PolicyName": "AuroraDsqlServiceLinkedRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-12-03T15:06:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "cloudwatch:namespace": "AWS/AuroraDSQL"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-12-03T15:06:07Z"
+}

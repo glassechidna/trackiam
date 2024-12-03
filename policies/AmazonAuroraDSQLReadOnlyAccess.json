@@ -1,0 +1,38 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonAuroraDSQLReadOnlyAccess",
+  "CreateDate": "2024-12-03T15:21:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4HJLOJCTKI",
+  "PolicyName": "AmazonAuroraDSQLReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-12-03T15:21:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:GetMetricData"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RelatedServicesPermissions"
+        },
+        {
+          "Action": [
+            "dsql:GetCluster",
+            "dsql:ListClusters",
+            "dsql:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DsqlReadOnlyPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-12-03T15:21:07Z"
+}

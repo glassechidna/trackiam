@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSLakeFormationDataAdmin",
   "CreateDate": "2019-08-08T17:33:44Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4OWCH3ENIA",
   "PolicyName": "AWSLakeFormationDataAdmin",
   "PolicyVersion": {
-    "CreateDate": "2024-03-22T18:27:42Z",
+    "CreateDate": "2024-12-03T15:06:06Z",
     "Document": {
       "Statement": [
         {
@@ -15,11 +15,15 @@
             "cloudtrail:DescribeTrails",
             "cloudtrail:LookupEvents",
             "glue:BatchGetWorkflows",
+            "glue:CreateCatalog",
             "glue:CreateDatabase",
             "glue:CreateTable",
+            "glue:DeleteCatalog",
             "glue:DeleteDatabase",
             "glue:DeleteTable",
             "glue:DeleteWorkflow",
+            "glue:GetCatalog",
+            "glue:GetCatalogs",
             "glue:GetConnections",
             "glue:GetDatabase",
             "glue:GetDatabases",
@@ -32,6 +36,7 @@
             "glue:ListWorkflows",
             "glue:SearchTables",
             "glue:StartWorkflowRun",
+            "glue:UpdateCatalog",
             "glue:UpdateDatabase",
             "glue:UpdateTable",
             "iam:GetRole",
@@ -60,7 +65,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2024-03-22T18:27:42Z"
+  "UpdateDate": "2024-12-03T15:06:06Z"
 }

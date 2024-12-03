@@ -1,0 +1,31 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/QBusinessQuicksightPluginPolicy",
+  "CreateDate": "2024-12-03T15:36:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4IUA5IRFPX",
+  "PolicyName": "QBusinessQuicksightPluginPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-12-03T15:36:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "quicksight:PredictQAResults"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:quicksight:*:*:dashboard/*",
+            "arn:aws:quicksight:*:*:topic/*"
+          ],
+          "Sid": "QBusinessToQuickSightPredictQAResultsInvocation"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-12-03T15:36:06Z"
+}

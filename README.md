@@ -11,20 +11,20 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 418
-* Unique actions: 18351
-* Managed policies: 1305
+* Unique services: 420
+* Unique actions: 18391
+* Managed policies: 1312
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 362 |
-| `arn:aws:iam::aws:policy/Amazon*` | 324 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 294 |
+| `arn:aws:iam::aws:policy/Amazon*` | 329 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 295 |
 | `arn:aws:iam::aws:policy/service-role/*` | 194 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
-| Other | 124 |
+| Other | 125 |
 
 The following table summarises the AWS APIs. 
 
@@ -371,6 +371,7 @@ The following table summarises the AWS APIs.
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 32 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
+| [`s3tables`](services/s3tables.yml) | 0 | 0 | 28 |
 | [`one`](services/one.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
@@ -404,6 +405,7 @@ The following table summarises the AWS APIs.
 | [`billing`](services/billing.yml) | 0 | 0 | 13 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
+| [`dsql`](services/dsql.yml) | 0 | 0 | 12 |
 | [`s3express`](services/s3express.yml) | 0 | 0 | 11 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 10 |
 | [`ts`](services/ts.yml) | 0 | 0 | 9 |
@@ -459,14 +461,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2974 |
-| `Get` | 2711 |
-| `Delete` | 2114 |
-| `Create` | 1971 |
+| `List` | 2979 |
+| `Get` | 2722 |
+| `Delete` | 2121 |
+| `Create` | 1976 |
 | `Describe` | 1759 |
-| `Update` | 1698 |
-| `Put` | 505 |
+| `Update` | 1700 |
+| `Put` | 510 |
 | `Start` | 426 |
-| `Tag` | 284 |
-| `Untag` | 280 |
+| `Tag` | 285 |
+| `Untag` | 281 |
 
