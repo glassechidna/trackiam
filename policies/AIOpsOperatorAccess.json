@@ -1,0 +1,122 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AIOpsOperatorAccess",
+  "CreateDate": "2024-12-02T23:51:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4F7RFA2ZXQ",
+  "PolicyName": "AIOpsOperatorAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-12-02T23:51:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ssm:AddTagsToResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "Integration"
+            },
+            "StringEquals": {
+              "aws:ResourceTag/Integration": [
+                "CloudWatch"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:opsitem/*",
+          "Sid": "SSMTagOperation"
+        },
+        {
+          "Action": [
+            "ssm:AddTagsToResource",
+            "ssm:CreateOpsItem"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "Integration"
+            },
+            "StringEquals": {
+              "aws:RequestTag/Integration": [
+                "CloudWatch"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSMIntegrationTagAccess"
+        },
+        {
+          "Action": [
+            "ssm:DeleteOpsItem",
+            "ssm:UpdateOpsItem"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/Integration": [
+                "CloudWatch"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSMOpsItemIntegration"
+        },
+        {
+          "Action": [
+            "aiops:CreateInvestigation",
+            "aiops:CreateInvestigationEvent",
+            "aiops:CreateInvestigationResource",
+            "aiops:DeleteInvestigation",
+            "aiops:Get*",
+            "aiops:List*",
+            "aiops:UpdateInvestigation",
+            "aiops:UpdateInvestigationEvent"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AIOpsOperatorAccess"
+        },
+        {
+          "Action": [
+            "identitystore:DescribeUser",
+            "sso-directory:DescribeUsers",
+            "sso:DescribeInstance"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSOManagementAccess"
+        },
+        {
+          "Action": [
+            "ssm:GetOpsSummary"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSMOpsSummaryIntegration"
+        },
+        {
+          "Action": [
+            "ssm:GetServiceSetting"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:servicesetting/integrations/*",
+          "Sid": "SSMSettingServiceIntegration"
+        },
+        {
+          "Action": [
+            "sts:SetContext"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sts::*:self",
+          "Sid": "AllowSTSContextSetting"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-12-02T23:51:07Z"
+}

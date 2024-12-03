@@ -1,0 +1,251 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AIOpsConsoleAdminPolicy",
+  "CreateDate": "2024-12-02T23:51:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4C4AWCZMJB",
+  "PolicyName": "AIOpsConsoleAdminPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-12-02T23:51:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "ArnEquals": {
+              "iam:AssociatedResourceArn": "arn:aws:aiops:*:*:investigation-group/*"
+            },
+            "StringEquals": {
+              "iam:PassedToService": "ssm.integrations.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IAMPassRoleToSSMIntegration"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "aiops.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IAMPassRoleToAIOps"
+        },
+        {
+          "Action": [
+            "ssm:AddTagsToResource",
+            "ssm:CreateOpsItem"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "Integration"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/Integration": "CloudWatch",
+              "aws:ResourceTag/Integration": "CloudWatch"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:ssm:*:*:opsitem/*",
+          "Sid": "SSMOpsItemAccess"
+        },
+        {
+          "Action": [
+            "sso:CreateApplication",
+            "sso:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "ManagedByAmazonAIOperations"
+              ]
+            },
+            "StringEquals": {
+              "aws:CalledViaLast": "aiops.amazonaws.com",
+              "aws:RequestTag/ManagedByAmazonAIOperations": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sso:::instance/*",
+            "arn:aws:sso::aws:applicationProvider/aiops"
+          ],
+          "Sid": "SSOApplicationTagManagement"
+        },
+        {
+          "Action": [
+            "sso:DeleteApplication",
+            "sso:PutApplicationAccessScope",
+            "sso:PutApplicationAssignmentConfiguration",
+            "sso:PutApplicationAuthenticationMethod",
+            "sso:PutApplicationGrant"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaLast": "aiops.amazonaws.com",
+              "aws:ResourceTag/ManagedByAmazonAIOperations": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSOApplicationManagement"
+        },
+        {
+          "Action": [
+            "sso:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "ManagedByAmazonAIOperations"
+              ]
+            },
+            "StringEquals": {
+              "aws:CalledViaLast": "aiops.amazonaws.com",
+              "aws:ResourceTag/ManagedByAmazonAIOperations": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sso::*:application/*",
+          "Sid": "SSOTagManagement"
+        },
+        {
+          "Action": [
+            "aiops:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AIOpsAdmin"
+        },
+        {
+          "Action": [
+            "chatbot:DescribeChimeWebhookConfigurations",
+            "chatbot:DescribeSlackChannelConfigurations",
+            "chatbot:DescribeSlackWorkspaces",
+            "chatbot:ListMicrosoftTeamsChannelConfigurations",
+            "chatbot:ListMicrosoftTeamsConfiguredTeams"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ChatbotConfigurations"
+        },
+        {
+          "Action": [
+            "cloudtrail:DescribeTrails",
+            "cloudtrail:ListEventDataStores",
+            "cloudtrail:ListTrails"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudtrailAccess"
+        },
+        {
+          "Action": [
+            "iam:CreatePolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:policy/service-role/AWSServiceRoleSSMIntegrationsPolicy*",
+          "Sid": "SSMIntegrationCreatePolicy"
+        },
+        {
+          "Action": [
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IAMListRoles"
+        },
+        {
+          "Action": [
+            "identitystore:DescribeUser",
+            "sso-directory:DescribeUsers",
+            "sso:DescribeInstance",
+            "sso:DescribeRegisteredRegions",
+            "sso:GetSSOStatus",
+            "sso:GetSharedSsoConfiguration",
+            "sso:ListApplications",
+            "sso:ListInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSOManagementAccess"
+        },
+        {
+          "Action": [
+            "kms:ListAliases"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "KMSAccess"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "OrganizationsAccess"
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:PutResourcePolicy",
+            "secretsmanager:UpdateSecret"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:aws/ssm/3p/*",
+          "Sid": "SSMIntegrationSecretsManagerAccess"
+        },
+        {
+          "Action": [
+            "signin:ListTrustedIdentityPropagationApplicationsForConsole"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IdentityPropagationAccess"
+        },
+        {
+          "Action": [
+            "ssm:GetServiceSetting",
+            "ssm:UpdateServiceSetting"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:servicesetting/integrations/*",
+          "Sid": "SSMIntegrationAccess"
+        },
+        {
+          "Action": [
+            "sts:SetContext"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sts::*:self",
+          "Sid": "AllowSTSContextSetting"
+        },
+        {
+          "Action": [
+            "tag:GetTagKeys"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TagBoundaryPermission"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-12-02T23:51:06Z"
+}
