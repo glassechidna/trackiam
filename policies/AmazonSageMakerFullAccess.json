@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerFullAccess",
   "CreateDate": "2017-11-29T13:07:59Z",
-  "DefaultVersionId": "v26",
+  "DefaultVersionId": "v27",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJZ5IWYMXO5QDB4QOG",
   "PolicyName": "AmazonSageMakerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-03-29T17:35:49Z",
+    "CreateDate": "2024-12-04T13:21:06Z",
     "Document": {
       "Statement": [
         {
@@ -281,7 +281,10 @@
             "arn:aws:sagemaker:*:*:app/*",
             "arn:aws:sagemaker:*:*:domain/*",
             "arn:aws:sagemaker:*:*:flow-definition/*",
+            "arn:aws:sagemaker:*:*:partner-app/*",
+            "arn:aws:sagemaker:*:*:reserved-capacity/*",
             "arn:aws:sagemaker:*:*:space/*",
+            "arn:aws:sagemaker:*:*:training-plan/*",
             "arn:aws:sagemaker:*:*:user-profile/*"
           ],
           "Sid": "AllowAllNonAdminSageMakerActions"
@@ -626,6 +629,20 @@
         },
         {
           "Action": [
+            "sagemaker:CreateCluster",
+            "sagemaker:CreateTrainingJob",
+            "sagemaker:DescribeTrainingPlan",
+            "sagemaker:UpdateCluster"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:reserved-capacity/*",
+            "arn:aws:sagemaker:*:*:training-plan/*"
+          ],
+          "Sid": "AllowUseOfTrainingPlanResources"
+        },
+        {
+          "Action": [
             "sagemaker:CreatePresignedDomainUrl",
             "sagemaker:DescribeApp",
             "sagemaker:DescribeDomain",
@@ -703,7 +720,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v26"
+    "VersionId": "v27"
   },
-  "UpdateDate": "2024-03-29T17:35:49Z"
+  "UpdateDate": "2024-12-04T13:21:06Z"
 }
