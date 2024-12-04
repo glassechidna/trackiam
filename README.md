@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 420
-* Unique actions: 18404
+* Unique services: 421
+* Unique actions: 18405
 * Managed policies: 1312
 
 Most common managed policy name prefixes:
@@ -449,6 +449,7 @@ The following table summarises the AWS APIs.
 | [`verified-access`](services/verified-access.yml) | 0 | 0 | 1 |
 | [`sustainability`](services/sustainability.yml) | 0 | 0 | 1 |
 | [`serviceextract`](services/serviceextract.yml) | 0 | 0 | 1 |
+| [`sagemaker-data-science-assistant`](services/sagemaker-data-science-assistant.yml) | 0 | 0 | 1 |
 | [`rhelkb`](services/rhelkb.yml) | 0 | 0 | 1 |
 | [`rds-db`](services/rds-db.yml) | 0 | 0 | 1 |
 | [`mediaimport`](services/mediaimport.yml) | 0 | 0 | 1 |
