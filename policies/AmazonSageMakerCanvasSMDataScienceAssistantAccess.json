@@ -1,0 +1,46 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerCanvasSMDataScienceAssistantAccess",
+  "CreateDate": "2024-12-04T14:06:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4POUUE6WVH",
+  "PolicyName": "AmazonSageMakerCanvasSMDataScienceAssistantAccess",
+  "PolicyVersion": {
+    "CreateDate": "2024-12-04T14:06:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "q:SendMessage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonQDeveloperAccess"
+        },
+        {
+          "Action": [
+            "sagemaker-data-science-assistant:SendConversation"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SageMakerDataScienceAssistantAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-12-04T14:06:07Z"
+}
