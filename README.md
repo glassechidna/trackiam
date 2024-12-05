@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 421
-* Unique actions: 18424
+* Unique actions: 18443
 * Managed policies: 1314
 
 Most common managed policy name prefixes:
@@ -368,6 +368,7 @@ The following table summarises the AWS APIs.
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 52 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
 | [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
+| [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 35 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 32 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
@@ -390,7 +391,6 @@ The following table summarises the AWS APIs.
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 18 |
 | [`ds-data`](services/ds-data.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
-| [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 16 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 16 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 15 |
 | [`ssm-quicksetup`](services/ssm-quicksetup.yml) | 0 | 0 | 14 |
@@ -462,14 +462,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 2983 |
-| `Get` | 2723 |
-| `Delete` | 2125 |
-| `Create` | 1981 |
+| `List` | 2990 |
+| `Get` | 2727 |
+| `Delete` | 2126 |
+| `Create` | 1985 |
 | `Describe` | 1764 |
 | `Update` | 1705 |
-| `Put` | 510 |
-| `Start` | 427 |
+| `Put` | 511 |
+| `Start` | 428 |
 | `Tag` | 285 |
 | `Untag` | 281 |
 
