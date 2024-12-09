@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDocDBConsoleFullAccess",
   "CreateDate": "2019-01-09T20:37:28Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJHV6VMSNDDHJ3ESNI",
   "PolicyName": "AmazonDocDBConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-11-30T15:23:27Z",
+    "CreateDate": "2024-12-09T16:51:06Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/aws-service-role/docdb-elastic.amazonaws.com/AWSServiceRoleForDocDB-Elastic"
+          "Resource": "arn:aws:iam::*:role/aws-service-role/docdb-elastic.amazonaws.com/AWSServiceRoleForDocDB-Elastic",
+          "Sid": "DocdbElasticSLRSid"
         },
         {
           "Action": "iam:CreateServiceLinkedRole",
@@ -28,7 +29,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/aws-service-role/rds.amazonaws.com/AWSServiceRoleForRDS"
+          "Resource": "arn:aws:iam::*:role/aws-service-role/rds.amazonaws.com/AWSServiceRoleForRDS",
+          "Sid": "DocdbSLRSid"
         },
         {
           "Action": [
@@ -90,10 +92,12 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "DependencySids"
         },
         {
           "Action": [
+            "docdb-elastic:CopyClusterSnapshot",
             "docdb-elastic:CreateCluster",
             "docdb-elastic:CreateClusterSnapshot",
             "docdb-elastic:DeleteCluster",
@@ -104,6 +108,8 @@
             "docdb-elastic:ListClusters",
             "docdb-elastic:ListTagsForResource",
             "docdb-elastic:RestoreClusterFromSnapshot",
+            "docdb-elastic:StartCluster",
+            "docdb-elastic:StopCluster",
             "docdb-elastic:TagResource",
             "docdb-elastic:UntagResource",
             "docdb-elastic:UpdateCluster",
@@ -179,13 +185,14 @@
           "Effect": "Allow",
           "Resource": [
             "*"
-          ]
+          ],
+          "Sid": "DocdbSids"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2022-11-30T15:23:27Z"
+  "UpdateDate": "2024-12-09T16:51:06Z"
 }
