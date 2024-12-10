@@ -1,0 +1,40 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralSellingResourceSnapshotJobExecutionRolePolicy",
+  "CreateDate": "2024-12-10T18:21:15Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4IOWFGGDCE",
+  "PolicyName": "AWSPartnerCentralSellingResourceSnapshotJobExecutionRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2024-12-10T18:21:15Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "partnercentral:CreateResourceSnapshot"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:partnercentral:*::catalog/AWS/engagement/*",
+            "arn:aws:partnercentral:*::catalog/Sandbox/engagement/*"
+          ]
+        },
+        {
+          "Action": [
+            "partnercentral:GetOpportunity"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:partnercentral:*:*:catalog/AWS/opportunity/*",
+            "arn:aws:partnercentral:*:*:catalog/Sandbox/opportunity/*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-12-10T18:21:15Z"
+}

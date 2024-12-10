@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralFullAccess",
   "CreateDate": "2024-11-18T23:33:28Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DRJMXIHNK",
   "PolicyName": "AWSPartnerCentralFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-11-18T23:33:28Z",
+    "CreateDate": "2024-12-10T18:21:17Z",
     "Document": {
       "Statement": [
         {
@@ -22,6 +22,21 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/PartnerCentralRoleFor*",
           "Sid": "PassAWSPartnerCentralRole"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "resource-snapshot-job.partnercentral-selling.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/*"
+          ],
+          "Sid": "PassAWSPartnerCentralSnapshotJobRole"
         },
         {
           "Action": [
@@ -53,7 +68,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-11-18T23:33:28Z"
+  "UpdateDate": "2024-12-10T18:21:17Z"
 }
