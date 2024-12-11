@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ResourceGroupsTaggingAPITagUntagSupportedResources",
   "CreateDate": "2024-10-11T11:11:14Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MQKHGY2IF",
   "PolicyName": "ResourceGroupsTaggingAPITagUntagSupportedResources",
   "PolicyVersion": {
-    "CreateDate": "2024-10-11T11:11:14Z",
+    "CreateDate": "2024-12-11T17:51:30Z",
     "Document": {
       "Statement": [
         {
@@ -203,6 +203,8 @@
             "kinesis:RemoveTagsFromStream",
             "kinesisanalytics:TagResource",
             "kinesisanalytics:UntagResource",
+            "kinesisvideo:TagResource",
+            "kinesisvideo:UntagResource",
             "kms:TagResource",
             "kms:UntagResource",
             "lambda:TagResource",
@@ -263,6 +265,8 @@
             "ram:UntagResource",
             "rds:AddTagsToResource",
             "rds:RemoveTagsFromResource",
+            "redshift-serverless:TagResource",
+            "redshift-serverless:UntagResource",
             "redshift:CreateTags",
             "redshift:DeleteTags",
             "resource-explorer-2:TagResource",
@@ -271,6 +275,10 @@
             "resource-groups:Untag",
             "robomaker:TagResource",
             "robomaker:UntagResource",
+            "route53-recovery-control-config:TagResource",
+            "route53-recovery-control-config:UntagResource",
+            "route53-recovery-readiness:TagResource",
+            "route53-recovery-readiness:UntagResource",
             "route53:ChangeTagsForResource",
             "route53domains:DeleteTagsForDomain",
             "route53domains:UpdateTagsForDomain",
@@ -312,6 +320,10 @@
             "sns:UntagResource",
             "sqs:TagQueue",
             "sqs:UntagQueue",
+            "ssm-contacts:TagResource",
+            "ssm-contacts:UntagResource",
+            "ssm-incidents:TagResource",
+            "ssm-incidents:UntagResource",
             "ssm:AddTagsToResource",
             "ssm:RemoveTagsFromResource",
             "states:TagResource",
@@ -327,6 +339,8 @@
             "tag:UntagResources",
             "transfer:TagResource",
             "transfer:UntagResource",
+            "vpc-lattice:TagResource",
+            "vpc-lattice:UntagResource",
             "waf-regional:TagResource",
             "waf-regional:UntagResource",
             "waf:TagResource",
@@ -337,6 +351,8 @@
             "worklink:UntagResource",
             "workmail:TagResource",
             "workmail:UntagResource",
+            "workspaces-web:TagResource",
+            "workspaces-web:UntagResource",
             "workspaces:CreateTags",
             "workspaces:DeleteTags",
             "xray:TagResource",
@@ -349,7 +365,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-10-11T11:11:14Z"
+  "UpdateDate": "2024-12-11T17:51:30Z"
 }
