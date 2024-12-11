@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSSupplyChainFederationAdminAccess",
   "CreateDate": "2023-03-01T18:54:25Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4ILSYMTZA7",
   "PolicyName": "AWSSupplyChainFederationAdminAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-11-01T18:50:13Z",
+    "CreateDate": "2024-12-11T21:36:24Z",
     "Document": {
       "Statement": [
         {
@@ -221,9 +221,13 @@
         {
           "Action": [
             "sso:AssociateProfile",
+            "sso:DescribeApplication",
+            "sso:DescribeInstance",
             "sso:DisassociateProfile",
+            "sso:GetApplicationAssignmentConfiguration",
             "sso:GetManagedApplicationInstance",
             "sso:GetProfile",
+            "sso:ListApplicationAssignments",
             "sso:ListDirectoryAssociations",
             "sso:ListProfileAssociations",
             "sso:ListProfiles"
@@ -236,7 +240,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-11-01T18:50:13Z"
+  "UpdateDate": "2024-12-11T21:36:24Z"
 }
