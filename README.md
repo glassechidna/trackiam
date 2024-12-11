@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 421
-* Unique actions: 18531
+* Unique actions: 18556
 * Managed policies: 1315
 
 Most common managed policy name prefixes:
@@ -251,13 +251,13 @@ The following table summarises the AWS APIs.
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 22 | 0 | 9 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
 | [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 36 |
+| [`mgh`](services/mgh.yml) | 21 | 0 | 25 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`app-integrations`](services/app-integrations.yml) | 21 | 0 | 7 |
 | [`resource-explorer-2`](services/resource-explorer-2.yml) | 21 | 0 | 6 |
 | [`ssm-sap`](services/ssm-sap.yml) | 21 | 0 | 3 |
 | [`synthetics`](services/synthetics.yml) | 21 | 0 | 0 |
-| [`mgh`](services/mgh.yml) | 21 | 0 | 0 |
 | [`sqs`](services/sqs.yml) | 20 | 3 | 0 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`translate`](services/translate.yml) | 19 | 0 | 0 |
@@ -462,14 +462,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3009 |
-| `Get` | 2741 |
-| `Delete` | 2134 |
-| `Create` | 1992 |
-| `Describe` | 1772 |
+| `List` | 3016 |
+| `Get` | 2742 |
+| `Delete` | 2137 |
+| `Create` | 1994 |
+| `Describe` | 1774 |
 | `Update` | 1713 |
 | `Put` | 511 |
 | `Start` | 434 |
-| `Tag` | 285 |
-| `Untag` | 281 |
+| `Tag` | 286 |
+| `Untag` | 282 |
 
