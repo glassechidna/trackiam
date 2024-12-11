@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSSMForSAPServiceLinkedRolePolicy",
   "CreateDate": "2022-11-16T01:18:21Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AONIU2LID",
   "PolicyName": "AWSSSMForSAPServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-08-29T22:17:07Z",
+    "CreateDate": "2024-12-11T22:51:34Z",
     "Document": {
       "Statement": [
         {
@@ -312,7 +312,12 @@
         },
         {
           "Action": [
+            "ec2:DescribeInstanceAttribute",
+            "ec2:DescribeInstanceTypes",
             "ec2:DescribeInstances",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeVolumes",
             "ssm:DescribeInstanceInformation",
             "ssm:GetCommandInvocation"
           ],
@@ -362,7 +367,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2024-08-29T22:17:07Z"
+  "UpdateDate": "2024-12-11T22:51:34Z"
 }
