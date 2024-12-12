@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 421
-* Unique actions: 18558
+* Unique actions: 18568
 * Managed policies: 1315
 
 Most common managed policy name prefixes:
@@ -42,7 +42,7 @@ The following table summarises the AWS APIs.
 | [`chime`](services/chime.yml) | 259 | 0 | 57 |
 | [`connect`](services/connect.yml) | 256 | 0 | 23 |
 | [`glue`](services/glue.yml) | 214 | 4 | 77 |
-| [`ses`](services/ses.yml) | 193 | 0 | 0 |
+| [`ses`](services/ses.yml) | 193 | 0 | 5 |
 | [`quicksight`](services/quicksight.yml) | 174 | 3 | 56 |
 | [`rds`](services/rds.yml) | 162 | 0 | 6 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
@@ -126,7 +126,7 @@ The following table summarises the AWS APIs.
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 3 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
 | [`wafv2`](services/wafv2.yml) | 54 | 0 | 2 |
-| [`lakeformation`](services/lakeformation.yml) | 52 | 3 | 1 |
+| [`lakeformation`](services/lakeformation.yml) | 52 | 3 | 6 |
 | [`kms`](services/kms.yml) | 52 | 1 | 3 |
 | [`profile`](services/profile.yml) | 52 | 0 | 20 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 52 | 0 | 6 |
@@ -462,12 +462,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3016 |
-| `Get` | 2742 |
-| `Delete` | 2138 |
-| `Create` | 1995 |
+| `List` | 3018 |
+| `Get` | 2744 |
+| `Delete` | 2140 |
+| `Create` | 1997 |
 | `Describe` | 1774 |
-| `Update` | 1713 |
+| `Update` | 1714 |
 | `Put` | 511 |
 | `Start` | 434 |
 | `Tag` | 286 |
