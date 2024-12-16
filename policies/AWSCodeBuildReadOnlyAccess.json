@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeBuildReadOnlyAccess",
   "CreateDate": "2016-12-01T19:03:41Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJIZZWN6557F5HVP2K",
   "PolicyName": "AWSCodeBuildReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-05-02T01:23:27Z",
+    "CreateDate": "2024-12-16T19:52:06Z",
     "Document": {
       "Statement": [
         {
@@ -15,8 +15,8 @@
             "codestar-notifications:DescribeNotificationRule"
           ],
           "Condition": {
-            "StringLike": {
-              "codestar-notifications:NotificationsForResource": "arn:aws:codebuild:*"
+            "ArnLike": {
+              "codestar-notifications:NotificationsForResource": "arn:aws:codebuild:*:*:project/*"
             }
           },
           "Effect": "Allow",
@@ -69,7 +69,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2024-05-02T01:23:27Z"
+  "UpdateDate": "2024-12-16T19:52:06Z"
 }
