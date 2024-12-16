@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeDeployFullAccess",
   "CreateDate": "2015-05-19T18:13:23Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIONKN3TJZUKXCHXWC",
   "PolicyName": "AWSCodeDeployFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-04-02T16:14:47Z",
+    "CreateDate": "2024-12-16T20:22:06Z",
     "Document": {
       "Statement": [
         {
@@ -20,8 +20,8 @@
             "codestar-notifications:UpdateNotificationRule"
           ],
           "Condition": {
-            "StringLike": {
-              "codestar-notifications:NotificationsForResource": "arn:aws:codedeploy:*"
+            "ArnLike": {
+              "codestar-notifications:NotificationsForResource": "arn:aws:codedeploy:*:*:application:*"
             }
           },
           "Effect": "Allow",
@@ -73,7 +73,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-04-02T16:14:47Z"
+  "UpdateDate": "2024-12-16T20:22:06Z"
 }

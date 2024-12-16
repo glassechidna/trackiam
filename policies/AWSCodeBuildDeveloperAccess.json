@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeBuildDeveloperAccess",
   "CreateDate": "2016-12-01T19:02:32Z",
-  "DefaultVersionId": "v15",
+  "DefaultVersionId": "v16",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIMKTMR34XSBQW45HS",
   "PolicyName": "AWSCodeBuildDeveloperAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-05-02T01:36:55Z",
+    "CreateDate": "2024-12-16T20:07:06Z",
     "Document": {
       "Statement": [
         {
@@ -19,8 +19,8 @@
             "codestar-notifications:UpdateNotificationRule"
           ],
           "Condition": {
-            "StringLike": {
-              "codestar-notifications:NotificationsForResource": "arn:aws:codebuild:*"
+            "ArnLike": {
+              "codestar-notifications:NotificationsForResource": "arn:aws:codebuild:*:*:project/*"
             }
           },
           "Effect": "Allow",
@@ -117,7 +117,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v15"
+    "VersionId": "v16"
   },
-  "UpdateDate": "2024-05-02T01:36:55Z"
+  "UpdateDate": "2024-12-16T20:07:06Z"
 }
