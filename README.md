@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 421
-* Unique actions: 18571
+* Unique actions: 18583
 * Managed policies: 1317
 
 Most common managed policy name prefixes:
@@ -389,6 +389,7 @@ The following table summarises the AWS APIs.
 | [`monitron`](services/monitron.yml) | 0 | 0 | 18 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 18 |
+| [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 17 |
 | [`ds-data`](services/ds-data.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 16 |
@@ -425,7 +426,6 @@ The following table summarises the AWS APIs.
 | [`opensearch`](services/opensearch.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
 | [`geo-routes`](services/geo-routes.yml) | 0 | 0 | 5 |
-| [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 5 |
 | [`customer-verification`](services/customer-verification.yml) | 0 | 0 | 5 |
 | [`appstudio`](services/appstudio.yml) | 0 | 0 | 5 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
@@ -462,14 +462,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3018 |
-| `Get` | 2745 |
+| `List` | 3019 |
+| `Get` | 2747 |
 | `Delete` | 2141 |
-| `Create` | 1997 |
+| `Create` | 1999 |
 | `Describe` | 1774 |
-| `Update` | 1715 |
+| `Update` | 1717 |
 | `Put` | 511 |
-| `Start` | 434 |
-| `Tag` | 286 |
-| `Untag` | 282 |
+| `Start` | 435 |
+| `Tag` | 287 |
+| `Untag` | 283 |
 
