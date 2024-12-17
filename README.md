@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 421
-* Unique actions: 18583
+* Unique services: 422
+* Unique actions: 18600
 * Managed policies: 1317
 
 Most common managed policy name prefixes:
@@ -64,7 +64,7 @@ The following table summarises the AWS APIs.
 | [`bedrock`](services/bedrock.yml) | 97 | 2 | 78 |
 | [`medialive`](services/medialive.yml) | 92 | 0 | 24 |
 | [`config`](services/config.yml) | 92 | 0 | 5 |
-| [`backup`](services/backup.yml) | 91 | 0 | 5 |
+| [`backup`](services/backup.yml) | 91 | 0 | 10 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
 | [`workspaces`](services/workspaces.yml) | 88 | 0 | 1 |
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
@@ -407,6 +407,7 @@ The following table summarises the AWS APIs.
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
 | [`dsql`](services/dsql.yml) | 0 | 0 | 12 |
+| [`backup-search`](services/backup-search.yml) | 0 | 0 | 12 |
 | [`s3express`](services/s3express.yml) | 0 | 0 | 11 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 10 |
 | [`ts`](services/ts.yml) | 0 | 0 | 9 |
@@ -462,14 +463,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3019 |
-| `Get` | 2747 |
+| `List` | 3026 |
+| `Get` | 2750 |
 | `Delete` | 2141 |
 | `Create` | 1999 |
 | `Describe` | 1774 |
-| `Update` | 1717 |
+| `Update` | 1718 |
 | `Put` | 511 |
-| `Start` | 435 |
-| `Tag` | 287 |
-| `Untag` | 283 |
+| `Start` | 437 |
+| `Tag` | 288 |
+| `Untag` | 284 |
 
