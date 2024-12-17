@@ -1,0 +1,89 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSBackupServiceRolePolicyForItemRestores",
+  "CreateDate": "2024-12-17T18:37:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4HKGYW2QUJ",
+  "PolicyName": "AWSBackupServiceRolePolicyForItemRestores",
+  "PolicyVersion": {
+    "CreateDate": "2024-12-17T18:37:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": [
+                "ec2.*.amazonaws.com",
+                "s3.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSDataKeyForS3AndEC2Permissions"
+        },
+        {
+          "Action": [
+            "s3:AbortMultipartUpload",
+            "s3:ListMultipartUploadParts",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*/*",
+          "Sid": "S3PermissionsForFileLevelRestore"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:ListBucket"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*",
+          "Sid": "S3ReadonlyPermissions"
+        },
+        {
+          "Action": "kms:DescribeKey",
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSReadOnlyPermissions"
+        },
+        {
+          "Action": [
+            "ebs:GetSnapshotBlock",
+            "ebs:ListSnapshotBlocks"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::snapshot/*",
+          "Sid": "EBSDirectReadAPIPermissions"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSnapshots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EBSReadOnlyPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-12-17T18:37:06Z"
+}

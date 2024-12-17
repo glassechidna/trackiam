@@ -1,0 +1,58 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSBackupServiceRolePolicyForIndexing",
+  "CreateDate": "2024-12-17T18:37:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4LFHUOSAHN",
+  "PolicyName": "AWSBackupServiceRolePolicyForIndexing",
+  "PolicyVersion": {
+    "CreateDate": "2024-12-17T18:37:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": [
+                "ec2.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSDataKeyForEC2Permissions"
+        },
+        {
+          "Action": "kms:DescribeKey",
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSReadOnlyPermissions"
+        },
+        {
+          "Action": [
+            "ebs:GetSnapshotBlock",
+            "ebs:ListSnapshotBlocks"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::snapshot/*",
+          "Sid": "EBSDirectReadAPIPermissions"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSnapshots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EBSReadOnlyPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2024-12-17T18:37:06Z"
+}
