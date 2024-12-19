@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/NetworkAdministrator",
   "CreateDate": "2016-11-10T17:31:35Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAJPNMADZFJCVPJVZA2",
   "PolicyName": "NetworkAdministrator",
   "PolicyVersion": {
-    "CreateDate": "2024-06-26T16:53:02Z",
+    "CreateDate": "2024-12-19T22:52:06Z",
     "Document": {
       "Statement": [
         {
@@ -226,6 +226,7 @@
         {
           "Action": [
             "ec2:AcceptVpcPeeringConnection",
+            "ec2:AssociateSecurityGroupVpc",
             "ec2:AttachClassicLinkVpc",
             "ec2:AuthorizeSecurityGroupEgress",
             "ec2:AuthorizeSecurityGroupIngress",
@@ -240,10 +241,13 @@
             "ec2:DeleteSecurityGroup",
             "ec2:DeleteVolume",
             "ec2:DeleteVpcPeeringConnection",
+            "ec2:DescribeSecurityGroupVpcAssociations",
             "ec2:DetachClassicLinkVpc",
             "ec2:DisableVpcClassicLink",
+            "ec2:DisassociateSecurityGroupVpc",
             "ec2:EnableVpcClassicLink",
             "ec2:GetConsoleScreenshot",
+            "ec2:GetSecurityGroupsForVpc",
             "ec2:RejectVpcPeeringConnection",
             "ec2:RevokeSecurityGroupEgress",
             "ec2:RevokeSecurityGroupIngress"
@@ -306,7 +310,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2024-06-26T16:53:02Z"
+  "UpdateDate": "2024-12-19T22:52:06Z"
 }

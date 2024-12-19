@@ -1,18 +1,23 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/ViewOnlyAccess",
   "CreateDate": "2016-11-10T17:20:15Z",
-  "DefaultVersionId": "v22",
+  "DefaultVersionId": "v23",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAID22R6XPJATWOFDK6",
   "PolicyName": "ViewOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-11-19T17:36:54Z",
+    "CreateDate": "2024-12-19T22:52:06Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "acm:ListCertificates",
+            "aiops:GetInvestigation",
+            "aiops:GetInvestigationGroup",
+            "aiops:ListInvestigationEvents",
+            "aiops:ListInvestigationGroups",
+            "aiops:ListInvestigations",
             "athena:List*",
             "autoscaling:Describe*",
             "aws-marketplace:ViewSubscriptions",
@@ -238,8 +243,10 @@
             "lightsail:GetStaticIps",
             "lightsail:IsVpcPeered",
             "logs:Describe*",
+            "logs:GetTransformer",
             "logs:ListEntitiesForLogGroup",
             "logs:ListLogGroupsForEntity",
+            "logs:ListLogGroupsForQuery",
             "logs:ListTagsForResource",
             "lookoutvision:ListModelPackagingJobs",
             "lookoutvision:ListModels",
@@ -385,7 +392,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v22"
+    "VersionId": "v23"
   },
-  "UpdateDate": "2024-11-19T17:36:54Z"
+  "UpdateDate": "2024-12-19T22:52:06Z"
 }
