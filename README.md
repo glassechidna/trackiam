@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 422
-* Unique actions: 18607
+* Unique actions: 18618
 * Managed policies: 1317
 
 Most common managed policy name prefixes:
@@ -379,6 +379,7 @@ The following table summarises the AWS APIs.
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
+| [`billing`](services/billing.yml) | 0 | 0 | 24 |
 | [`q`](services/q.yml) | 0 | 0 | 23 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 22 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 22 |
@@ -403,7 +404,6 @@ The following table summarises the AWS APIs.
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 13 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
-| [`billing`](services/billing.yml) | 0 | 0 | 13 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
 | [`dsql`](services/dsql.yml) | 0 | 0 | 12 |
@@ -463,14 +463,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3028 |
-| `Get` | 2752 |
-| `Delete` | 2141 |
-| `Create` | 1999 |
+| `List` | 3030 |
+| `Get` | 2754 |
+| `Delete` | 2143 |
+| `Create` | 2000 |
 | `Describe` | 1774 |
-| `Update` | 1719 |
-| `Put` | 511 |
+| `Update` | 1720 |
+| `Put` | 512 |
 | `Start` | 438 |
-| `Tag` | 288 |
-| `Untag` | 284 |
+| `Tag` | 289 |
+| `Untag` | 285 |
 
