@@ -1,15 +1,39 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForImageBuilder",
   "CreateDate": "2019-11-29T22:02:13Z",
-  "DefaultVersionId": "v19",
+  "DefaultVersionId": "v20",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NE22WISEW",
   "PolicyName": "AWSServiceRoleForImageBuilder",
   "PolicyVersion": {
-    "CreateDate": "2023-10-19T21:30:10Z",
+    "CreateDate": "2024-12-26T23:52:06Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ec2:RegisterImage",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*::image/*"
+          ]
+        },
+        {
+          "Action": "ec2:RegisterImage",
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*::snapshot/*"
+          ]
+        },
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
@@ -424,7 +448,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v19"
+    "VersionId": "v20"
   },
-  "UpdateDate": "2023-10-19T21:30:10Z"
+  "UpdateDate": "2024-12-26T23:52:06Z"
 }

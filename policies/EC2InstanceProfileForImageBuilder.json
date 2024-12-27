@@ -1,15 +1,58 @@
 {
   "Arn": "arn:aws:iam::aws:policy/EC2InstanceProfileForImageBuilder",
   "CreateDate": "2019-12-01T19:08:23Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4EJC2UPLYL",
   "PolicyName": "EC2InstanceProfileForImageBuilder",
   "PolicyVersion": {
-    "CreateDate": "2024-12-02T02:06:07Z",
+    "CreateDate": "2024-12-26T23:52:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "ec2:CreateSnapshot"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:snapshot/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshot"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:volume/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": [
+                "EC2 Image Builder"
+              ],
+              "ec2:CreateAction": "CreateSnapshot"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "kms:Decrypt"
@@ -22,6 +65,26 @@
               "kms:EncryptionContextKeys": "aws:imagebuilder:arn"
             }
           },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "s3:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*/*.ISO"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeVolumes"
+          ],
           "Effect": "Allow",
           "Resource": "*"
         },
@@ -53,7 +116,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2024-12-02T02:06:07Z"
+  "UpdateDate": "2024-12-26T23:52:07Z"
 }
