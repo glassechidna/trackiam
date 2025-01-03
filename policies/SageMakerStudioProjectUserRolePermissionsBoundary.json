@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePermissionsBoundary",
   "CreateDate": "2024-11-20T21:57:42Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FU36Z3GEL",
   "PolicyName": "SageMakerStudioProjectUserRolePermissionsBoundary",
   "PolicyVersion": {
-    "CreateDate": "2024-11-28T04:51:07Z",
+    "CreateDate": "2025-01-03T00:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -63,6 +63,17 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/sagemaker.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_SageMakerEndpoint",
           "Sid": "SageMakerSLRForAutoScalingPermissions"
+        },
+        {
+          "Action": "kms:GenerateDataKey",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/${aws:PrincipalTag/KmsKeyId}",
+          "Sid": "AllowGenerateDataKeyForEmrEbsEncryption"
         },
         {
           "Action": "lambda:InvokeFunction",
@@ -634,7 +645,11 @@
             "StringLike": {
               "kms:ViaService": [
                 "bedrock.*.amazonaws.com",
+                "codecommit.*.amazonaws.com",
+                "ec2.*.amazonaws.com",
                 "emr-serverless.*.amazonaws.com",
+                "glue.*.amazonaws.com",
+                "redshift-serverless.*.amazonaws.com",
                 "redshift.*.amazonaws.com",
                 "s3.*.amazonaws.com",
                 "sagemaker.*.amazonaws.com",
@@ -737,6 +752,7 @@
             "StringLike": {
               "kms:ViaService": [
                 "bedrock.*.amazonaws.com",
+                "codecommit.*.amazonaws.com",
                 "emr-serverless.*.amazonaws.com",
                 "redshift.*.amazonaws.com",
                 "s3.*.amazonaws.com",
@@ -1387,6 +1403,7 @@
             "sagemaker:DescribeApp",
             "sagemaker:DescribeArtifact",
             "sagemaker:DescribeAutoMLJob",
+            "sagemaker:DescribeAutoMLJobV2",
             "sagemaker:DescribeContext",
             "sagemaker:DescribeDomain",
             "sagemaker:DescribeEndpoint",
@@ -2277,6 +2294,7 @@
             "sagemaker:DescribeApp",
             "sagemaker:DescribeArtifact",
             "sagemaker:DescribeAutoMLJob",
+            "sagemaker:DescribeAutoMLJobV2",
             "sagemaker:DescribeContext",
             "sagemaker:DescribeDomain",
             "sagemaker:DescribeEndpoint",
@@ -2401,7 +2419,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2024-11-28T04:51:07Z"
+  "UpdateDate": "2025-01-03T00:37:06Z"
 }

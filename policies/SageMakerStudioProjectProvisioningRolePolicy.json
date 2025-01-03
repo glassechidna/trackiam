@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy",
   "CreateDate": "2024-11-20T21:58:39Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQZUIPVLH",
   "PolicyName": "SageMakerStudioProjectProvisioningRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-27T06:21:08Z",
+    "CreateDate": "2025-01-03T00:52:07Z",
     "Document": {
       "Statement": [
         {
@@ -53,21 +53,6 @@
             "arn:aws:bedrock:*:*:flow/*/alias/TSTALIASID"
           ],
           "Sid": "TagBedrockTestAliases"
-        },
-        {
-          "Action": "codecommit:DeleteRepository",
-          "Condition": {
-            "Null": {
-              "aws:ResourceTag/AmazonDataZoneProject": "false"
-            },
-            "StringEquals": {
-              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:codecommit:*:*:datazone*",
-          "Sid": "CodeCommitDeletion"
         },
         {
           "Action": "ec2:CreateNetworkInterface",
@@ -330,6 +315,7 @@
                 "AmazonDataZone*",
                 "DataZone*",
                 "DomainBucketName",
+                "KmsKeyId",
                 "for-use-with-amazon-emr-managed-policies"
               ]
             },
@@ -893,6 +879,25 @@
           "Effect": "Allow",
           "Resource": "arn:aws:codecommit:*:*:datazone*",
           "Sid": "CodeCommitCreationAndTagging"
+        },
+        {
+          "Action": [
+            "codecommit:DeleteRepository",
+            "codecommit:PutRepositoryTriggers",
+            "codecommit:UpdateRepositoryEncryptionKey"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            },
+            "StringEquals": {
+              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:codecommit:*:*:datazone*",
+          "Sid": "CodeCommitDeletion"
         },
         {
           "Action": [
@@ -1512,6 +1517,94 @@
         },
         {
           "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "kms:EncryptionContext:glue_catalog_id": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:ViaService": [
+                "glue.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GlueKmsPermissions"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:Encrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "Null": {
+              "kms:EncryptionContext:aws:redshift-serverless:arn": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:ViaService": [
+                "redshift-serverless.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RedshiftKmsPermissions"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "Null": {
+              "kms:EncryptionContext:SecretARN": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:ViaService": [
+                "secretsmanager.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecretsManagerKmsPermissions"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey",
+            "kms:ReEncryptFrom",
+            "kms:ReEncryptTo"
+          ],
+          "Condition": {
+            "Null": {
+              "kms:EncryptionContext:aws:codecommit:id": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:ViaService": [
+                "codecommit.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeCommitKmsPermissions"
+        },
+        {
+          "Action": [
             "kms:DescribeKey"
           ],
           "Condition": {
@@ -1521,7 +1614,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "AirflowKmsDescribeKey"
+          "Sid": "KmsDescribeKey"
         },
         {
           "Action": [
@@ -2335,7 +2428,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2024-11-27T06:21:08Z"
+  "UpdateDate": "2025-01-03T00:52:07Z"
 }
