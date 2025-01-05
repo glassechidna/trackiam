@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSElasticDisasterRecoveryServiceRolePolicy",
   "CreateDate": "2021-11-17T10:56:17Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4HALZVJBJX",
   "PolicyName": "AWSElasticDisasterRecoveryServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-01-17T13:49:07Z",
+    "CreateDate": "2025-01-05T14:07:06Z",
     "Document": {
       "Statement": [
         {
@@ -29,6 +29,7 @@
             "StringEquals": {
               "ec2:CreateAction": [
                 "CreateLaunchTemplate",
+                "CreateNetworkInterface",
                 "CreateSecurityGroup",
                 "CreateSnapshot",
                 "CreateVolume",
@@ -40,6 +41,7 @@
           "Resource": [
             "arn:aws:ec2:*:*:instance/*",
             "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*:*:network-interface/*",
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:snapshot/*",
             "arn:aws:ec2:*:*:volume/*"
@@ -134,6 +136,34 @@
         },
         {
           "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "DRSServiceRolePolicy30"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:ModifyNetworkInterfaceAttribute"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "DRSServiceRolePolicy32"
+        },
+        {
+          "Action": [
             "ec2:CreateSecurityGroup"
           ],
           "Condition": {
@@ -183,6 +213,19 @@
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*:*:volume/*",
           "Sid": "DRSServiceRolePolicy14"
+        },
+        {
+          "Action": [
+            "ec2:CreateVolume"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "DRSServiceRolePolicy29"
         },
         {
           "Action": [
@@ -300,6 +343,17 @@
         },
         {
           "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "DRSServiceRolePolicy31"
+        },
+        {
+          "Action": [
             "ec2:CreateSecurityGroup"
           ],
           "Effect": "Allow",
@@ -321,6 +375,7 @@
             "ec2:DescribeLaunchTemplates",
             "ec2:DescribeManagedPrefixLists",
             "ec2:DescribeNetworkAcls",
+            "ec2:DescribeNetworkInterfaces",
             "ec2:DescribeRouteTables",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSnapshots",
@@ -345,6 +400,16 @@
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*:*:volume/*",
           "Sid": "DRSServiceRolePolicy22"
+        },
+        {
+          "Action": [
+            "ec2:ModifyNetworkInterfaceAttribute"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "DRSServiceRolePolicy33"
         },
         {
           "Action": [
@@ -373,7 +438,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2024-01-17T13:49:07Z"
+  "UpdateDate": "2025-01-05T14:07:06Z"
 }
