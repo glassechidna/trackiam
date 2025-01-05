@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticDisasterRecoveryConsoleFullAccess_v2",
   "CreateDate": "2023-11-27T13:35:19Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4GNEJEKJLM",
   "PolicyName": "AWSElasticDisasterRecoveryConsoleFullAccess_v2",
   "PolicyVersion": {
-    "CreateDate": "2024-07-29T19:38:08Z",
+    "CreateDate": "2025-01-05T15:22:06Z",
     "Document": {
       "Statement": [
         {
@@ -38,6 +38,7 @@
             },
             "StringEquals": {
               "ec2:CreateAction": [
+                "CreateNetworkInterface",
                 "CreateSecurityGroup",
                 "CreateSnapshot",
                 "CreateVolume",
@@ -48,6 +49,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:network-interface/*",
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:snapshot/*",
             "arn:aws:ec2:*:*:volume/*"
@@ -228,6 +230,38 @@
         },
         {
           "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "Null": {
+              "aws:RequestTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "ConsoleFullAccess42"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterfacePermission"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "Null": {
+              "aws:ResourceTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "ConsoleFullAccess44"
+        },
+        {
+          "Action": [
             "ec2:CreateSecurityGroup"
           ],
           "Condition": {
@@ -289,6 +323,22 @@
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*:*:volume/*",
           "Sid": "ConsoleFullAccess15"
+        },
+        {
+          "Action": [
+            "ec2:CreateVolume"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "Null": {
+              "aws:ResourceTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "ConsoleFullAccess41"
         },
         {
           "Action": [
@@ -540,6 +590,17 @@
         },
         {
           "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "ConsoleFullAccess43"
+        },
+        {
+          "Action": [
             "ec2:DescribeAccountAttributes",
             "ec2:DescribeAvailabilityZones",
             "ec2:DescribeCapacityReservations",
@@ -614,7 +675,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2024-07-29T19:38:08Z"
+  "UpdateDate": "2025-01-05T15:22:06Z"
 }
