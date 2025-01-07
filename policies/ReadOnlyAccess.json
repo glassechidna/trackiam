@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v125",
+  "DefaultVersionId": "v126",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-12-31T03:07:07Z",
+    "CreateDate": "2025-01-07T17:52:06Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,7 @@
             "access-analyzer:GetAnalyzer",
             "access-analyzer:GetArchiveRule",
             "access-analyzer:GetFinding",
+            "access-analyzer:GetFindingsStatistics",
             "access-analyzer:GetGeneratedPolicy",
             "access-analyzer:ListAccessPreviewFindings",
             "access-analyzer:ListAccessPreviews",
@@ -57,6 +58,7 @@
             "amplify:GetDomainAssociation",
             "amplify:GetJob",
             "amplify:ListApps",
+            "amplify:ListBackendEnvironments",
             "amplify:ListBranches",
             "amplify:ListDomainAssociations",
             "amplify:ListJobs",
@@ -2259,14 +2261,21 @@
             "sts:GetCallerIdentity",
             "sts:GetSessionToken",
             "support:DescribeAttachment",
+            "support:DescribeCaseAttributes",
             "support:DescribeCases",
+            "support:DescribeCommunication",
             "support:DescribeCommunications",
+            "support:DescribeCreateCaseOptions",
+            "support:DescribeIssueTypes",
             "support:DescribeServices",
             "support:DescribeSeverityLevels",
+            "support:DescribeSupportLevel",
+            "support:DescribeSupportedLanguages",
             "support:DescribeTrustedAdvisorCheckRefreshStatuses",
             "support:DescribeTrustedAdvisorCheckResult",
             "support:DescribeTrustedAdvisorCheckSummaries",
             "support:DescribeTrustedAdvisorChecks",
+            "support:SearchForCases",
             "supportplans:GetSupportPlan",
             "supportplans:GetSupportPlanUpdateStatus",
             "supportplans:ListSupportPlanModifiers",
@@ -2440,7 +2449,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v125"
+    "VersionId": "v126"
   },
-  "UpdateDate": "2024-12-31T03:07:07Z"
+  "UpdateDate": "2025-01-07T17:52:06Z"
 }
