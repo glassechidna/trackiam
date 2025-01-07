@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBackupServiceLinkedRolePolicyForBackup",
   "CreateDate": "2020-06-02T23:08:40Z",
-  "DefaultVersionId": "v16",
+  "DefaultVersionId": "v17",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ONJBD4ZY2",
   "PolicyName": "AWSBackupServiceLinkedRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2024-05-17T17:12:59Z",
+    "CreateDate": "2025-01-07T18:22:07Z",
     "Document": {
       "Statement": [
         {
@@ -256,6 +256,16 @@
         },
         {
           "Action": [
+            "rds:AddTagsToResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:rds:*:*:snapshot-tenant-database:awsbackup:*"
+          ],
+          "Sid": "RDSSnapshotTenantDatabasePermissions"
+        },
+        {
+          "Action": [
             "rds:AddTagsToResource",
             "rds:CopyDBClusterSnapshot",
             "rds:DeleteDBClusterSnapshot"
@@ -353,7 +363,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v16"
+    "VersionId": "v17"
   },
-  "UpdateDate": "2024-05-17T17:12:59Z"
+  "UpdateDate": "2025-01-07T18:22:07Z"
 }
