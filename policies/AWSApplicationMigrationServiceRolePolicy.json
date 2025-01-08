@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSApplicationMigrationServiceRolePolicy",
   "CreateDate": "2021-04-07T06:43:20Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4LGJRHTEPG",
   "PolicyName": "AWSApplicationMigrationServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-06-20T09:12:04Z",
+    "CreateDate": "2025-01-08T09:22:07Z",
     "Document": {
       "Statement": [
         {
@@ -158,6 +158,18 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*:*:volume/*"
+        },
+        {
+          "Action": [
+            "ec2:CreateVolume"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AWSApplicationMigrationServiceManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*"
         },
         {
           "Action": [
@@ -313,7 +325,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-06-20T09:12:04Z"
+  "UpdateDate": "2025-01-08T09:22:07Z"
 }

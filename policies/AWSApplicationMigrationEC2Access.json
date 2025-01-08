@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSApplicationMigrationEC2Access",
   "CreateDate": "2021-04-07T07:05:22Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4OBKWG2D2O",
   "PolicyName": "AWSApplicationMigrationEC2Access",
   "PolicyVersion": {
-    "CreateDate": "2023-02-06T16:07:02Z",
+    "CreateDate": "2025-01-08T09:22:06Z",
     "Document": {
       "Statement": [
         {
@@ -206,6 +206,21 @@
         },
         {
           "Action": [
+            "ec2:CreateVolume"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "Null": {
+              "aws:ResourceTag/AWSApplicationMigrationServiceManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*"
+        },
+        {
+          "Action": [
             "ec2:DeleteLaunchTemplate"
           ],
           "Condition": {
@@ -342,7 +357,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2023-02-06T16:07:02Z"
+  "UpdateDate": "2025-01-08T09:22:06Z"
 }
