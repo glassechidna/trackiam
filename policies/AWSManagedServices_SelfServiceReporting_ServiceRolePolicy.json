@@ -1,0 +1,31 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSManagedServices_SelfServiceReporting_ServiceRolePolicy",
+  "CreateDate": "2025-01-08T21:22:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4ICBUAQ6SN",
+  "PolicyName": "AWSManagedServices_SelfServiceReporting_ServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-01-08T21:22:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-01-08T21:22:06Z"
+}
