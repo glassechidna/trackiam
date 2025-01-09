@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 422
-* Unique actions: 18633
+* Unique actions: 18634
 * Managed policies: 1318
 
 Most common managed policy name prefixes:
@@ -62,7 +62,7 @@ The following table summarises the AWS APIs.
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 9 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 3 |
 | [`bedrock`](services/bedrock.yml) | 97 | 2 | 78 |
-| [`medialive`](services/medialive.yml) | 92 | 0 | 24 |
+| [`medialive`](services/medialive.yml) | 92 | 0 | 25 |
 | [`config`](services/config.yml) | 92 | 0 | 5 |
 | [`backup`](services/backup.yml) | 91 | 0 | 10 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
@@ -463,7 +463,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3031 |
+| `List` | 3032 |
 | `Get` | 2755 |
 | `Delete` | 2144 |
 | `Create` | 2002 |

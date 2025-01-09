@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEKSLoadBalancingPolicy",
   "CreateDate": "2024-10-30T20:18:06Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BAR6P5E2F",
   "PolicyName": "AmazonEKSLoadBalancingPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-10-30T20:18:06Z",
+    "CreateDate": "2025-01-09T22:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -227,6 +227,27 @@
         },
         {
           "Action": [
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAddresses",
+            "ec2:DescribeClassicLinkInstances",
+            "ec2:DescribeCoipPools",
+            "ec2:DescribeInstances",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcClassicLink",
+            "ec2:DescribeVpcPeeringConnections",
+            "ec2:DescribeVpcs",
+            "ec2:GetCoipPoolUsage",
+            "ec2:GetSecurityGroupsForVpc"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "wafv2:AssociateWebACL",
             "wafv2:DisassociateWebACL"
           ],
@@ -240,7 +261,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-10-30T20:18:06Z"
+  "UpdateDate": "2025-01-09T22:37:06Z"
 }
