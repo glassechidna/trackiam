@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeCommitPowerUser",
   "CreateDate": "2015-07-09T17:06:49Z",
-  "DefaultVersionId": "v15",
+  "DefaultVersionId": "v16",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAI4UIINUVGB5SEC57G",
   "PolicyName": "AWSCodeCommitPowerUser",
   "PolicyVersion": {
-    "CreateDate": "2023-07-17T21:49:06Z",
+    "CreateDate": "2025-01-10T20:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -30,8 +30,8 @@
             "codestar-notifications:UpdateNotificationRule"
           ],
           "Condition": {
-            "StringLike": {
-              "codestar-notifications:NotificationsForResource": "arn:aws:codecommit:*"
+            "ArnLike": {
+              "codestar-notifications:NotificationsForResource": "arn:aws:codecommit:*:*:*"
             }
           },
           "Effect": "Allow",
@@ -212,7 +212,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v15"
+    "VersionId": "v16"
   },
-  "UpdateDate": "2023-07-17T21:49:06Z"
+  "UpdateDate": "2025-01-10T20:07:07Z"
 }

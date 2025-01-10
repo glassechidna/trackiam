@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeCommitReadOnly",
   "CreateDate": "2015-07-09T17:05:06Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJACNSXR7Z2VLJW3D6",
   "PolicyName": "AWSCodeCommitReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2021-08-18T18:18:01Z",
+    "CreateDate": "2025-01-10T20:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -15,8 +15,8 @@
             "codestar-notifications:DescribeNotificationRule"
           ],
           "Condition": {
-            "StringLike": {
-              "codestar-notifications:NotificationsForResource": "arn:aws:codecommit:*"
+            "ArnLike": {
+              "codestar-notifications:NotificationsForResource": "arn:aws:codecommit:*:*:*"
             }
           },
           "Effect": "Allow",
@@ -116,7 +116,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2021-08-18T18:18:01Z"
+  "UpdateDate": "2025-01-10T20:07:07Z"
 }

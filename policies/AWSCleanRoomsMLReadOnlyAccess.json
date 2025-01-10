@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCleanRoomsMLReadOnlyAccess",
   "CreateDate": "2023-11-29T20:55:31Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4PQFZRTNP7",
   "PolicyName": "AWSCleanRoomsMLReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-11-29T20:55:31Z",
+    "CreateDate": "2025-01-10T20:52:06Z",
     "Document": {
       "Statement": [
         {
@@ -39,12 +39,21 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "CleanRoomsConsoleNavigation"
+        },
+        {
+          "Action": [
+            "cleanrooms:PassCollaboration",
+            "cleanrooms:PassMembership"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PassCleanRoomsResources"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-11-29T20:55:31Z"
+  "UpdateDate": "2025-01-10T20:52:06Z"
 }

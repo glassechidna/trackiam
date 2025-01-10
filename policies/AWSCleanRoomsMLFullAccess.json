@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCleanRoomsMLFullAccess",
   "CreateDate": "2023-11-29T21:02:06Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4EZEI4KN75",
   "PolicyName": "AWSCleanRoomsMLFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-11-29T21:02:06Z",
+    "CreateDate": "2025-01-10T20:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -50,14 +50,7 @@
         },
         {
           "Action": [
-            "cleanrooms:CreateConfiguredAudienceModelAssociation"
-          ],
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "AssociateModels"
-        },
-        {
-          "Action": [
+            "cleanrooms:BatchGetSchema",
             "cleanrooms:GetCollaboration",
             "cleanrooms:GetConfiguredAudienceModelAssociation",
             "cleanrooms:GetMembership",
@@ -79,11 +72,37 @@
         },
         {
           "Action": [
+            "cleanrooms:CreateConfiguredAudienceModelAssociation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AssociateModels"
+        },
+        {
+          "Action": [
+            "cleanrooms:PassCollaboration",
+            "cleanrooms:PassMembership"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PassCleanRoomsResources"
+        },
+        {
+          "Action": [
             "cleanrooms:TagResource"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:cleanrooms:*:*:membership/*/configuredaudiencemodelassociation/*",
           "Sid": "TagAssociations"
+        },
+        {
+          "Action": [
+            "ecr:DescribeRepositories",
+            "ecr:ListImages"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecr:*:*:repository/*",
+          "Sid": "ConsoleDescribeECRRepositories"
         },
         {
           "Action": [
@@ -160,7 +179,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-11-29T21:02:06Z"
+  "UpdateDate": "2025-01-10T20:07:07Z"
 }
