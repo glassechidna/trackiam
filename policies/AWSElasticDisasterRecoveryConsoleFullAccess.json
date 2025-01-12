@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticDisasterRecoveryConsoleFullAccess",
   "CreateDate": "2021-11-17T10:46:29Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LCQTK3F7W",
   "PolicyName": "AWSElasticDisasterRecoveryConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-10-16T12:24:20Z",
+    "CreateDate": "2025-01-12T07:52:06Z",
     "Document": {
       "Statement": [
         {
@@ -230,6 +230,22 @@
         },
         {
           "Action": [
+            "ec2:CreateVolume"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "Null": {
+              "aws:ResourceTag/AWSElasticDisasterRecoveryManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "ConsoleFullAccess30"
+        },
+        {
+          "Action": [
             "ec2:DeleteSnapshot"
           ],
           "Condition": {
@@ -428,7 +444,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2023-10-16T12:24:20Z"
+  "UpdateDate": "2025-01-12T07:52:06Z"
 }
