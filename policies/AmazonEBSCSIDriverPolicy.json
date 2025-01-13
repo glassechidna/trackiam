@@ -1,15 +1,39 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy",
   "CreateDate": "2022-04-04T17:24:29Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4IV6FHD2UE",
   "PolicyName": "AmazonEBSCSIDriverPolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-11-18T14:42:46Z",
+    "CreateDate": "2025-01-13T17:07:06Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "ec2:CreateSnapshot"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/CSIVolumeSnapshotName": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*"
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshot"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/ebs.csi.aws.com/cluster": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*"
+        },
         {
           "Action": [
             "ec2:CreateTags"
@@ -38,7 +62,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "arn:aws:ec2:*:*:volume/*"
         },
         {
           "Action": [
@@ -50,7 +74,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "arn:aws:ec2:*:*:volume/*"
         },
         {
           "Action": [
@@ -62,7 +86,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "arn:aws:ec2:*:*:snapshot/*"
         },
         {
           "Action": [
@@ -74,7 +98,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "arn:aws:ec2:*:*:snapshot/*"
         },
         {
           "Action": [
@@ -86,7 +110,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "arn:aws:ec2:*:*:volume/*"
         },
         {
           "Action": [
@@ -98,7 +122,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "arn:aws:ec2:*:*:volume/*"
         },
         {
           "Action": [
@@ -110,23 +134,34 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "arn:aws:ec2:*:*:volume/*"
         },
         {
           "Action": [
             "ec2:AttachVolume",
+            "ec2:DetachVolume"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ]
+        },
+        {
+          "Action": [
             "ec2:CreateSnapshot",
-            "ec2:DescribeAvailabilityZones",
-            "ec2:DescribeInstances",
-            "ec2:DescribeSnapshots",
-            "ec2:DescribeTags",
-            "ec2:DescribeVolumes",
-            "ec2:DescribeVolumesModifications",
-            "ec2:DetachVolume",
             "ec2:ModifyVolume"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "arn:aws:ec2:*:*:volume/*"
+        },
+        {
+          "Action": [
+            "ec2:CreateVolume",
+            "ec2:EnableFastSnapshotRestores"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*"
         },
         {
           "Action": [
@@ -137,12 +172,24 @@
             "arn:aws:ec2:*:*:snapshot/*",
             "arn:aws:ec2:*:*:volume/*"
           ]
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeInstances",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeTags",
+            "ec2:DescribeVolumes",
+            "ec2:DescribeVolumesModifications"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-11-18T14:42:46Z"
+  "UpdateDate": "2025-01-13T17:07:06Z"
 }
