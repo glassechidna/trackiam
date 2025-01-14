@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 422
-* Unique actions: 18640
+* Unique actions: 18642
 * Managed policies: 1318
 
 Most common managed policy name prefixes:
@@ -281,10 +281,10 @@ The following table summarises the AWS APIs.
 | [`docdb-elastic`](services/docdb-elastic.yml) | 16 | 0 | 3 |
 | [`thinclient`](services/thinclient.yml) | 16 | 0 | 2 |
 | [`route53profiles`](services/route53profiles.yml) | 16 | 0 | 2 |
+| [`kafkaconnect`](services/kafkaconnect.yml) | 16 | 0 | 2 |
 | [`emr-serverless`](services/emr-serverless.yml) | 16 | 0 | 2 |
 | [`internetmonitor`](services/internetmonitor.yml) | 16 | 0 | 1 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
-| [`kafkaconnect`](services/kafkaconnect.yml) | 16 | 0 | 0 |
 | [`application-signals`](services/application-signals.yml) | 15 | 0 | 1 |
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 0 |
@@ -463,11 +463,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3032 |
+| `List` | 3033 |
 | `Get` | 2755 |
 | `Delete` | 2144 |
 | `Create` | 2002 |
-| `Describe` | 1775 |
+| `Describe` | 1776 |
 | `Update` | 1729 |
 | `Put` | 512 |
 | `Start` | 438 |
