@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerFullAccess",
   "CreateDate": "2019-07-02T20:40:09Z",
-  "DefaultVersionId": "v15",
+  "DefaultVersionId": "v16",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JF7OFUANW",
   "PolicyName": "AWSMarketplaceSellerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-12-10T00:21:20Z",
+    "CreateDate": "2025-01-14T19:52:06Z",
     "Document": {
       "Statement": [
         {
@@ -66,8 +66,12 @@
             "aws-marketplace-management:PutSellerVerificationDetails",
             "payments:CreatePaymentInstrument",
             "payments:GetPaymentInstrument",
+            "tax:DeleteSupplementalTaxRegistration",
             "tax:GetTaxInfoReportingDocument",
             "tax:GetTaxInterview",
+            "tax:GetTaxRegistration",
+            "tax:ListSupplementalTaxRegistrations",
+            "tax:PutSupplementalTaxRegistration",
             "tax:PutTaxInterview"
           ],
           "Effect": "Allow",
@@ -150,7 +154,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v15"
+    "VersionId": "v16"
   },
-  "UpdateDate": "2024-12-10T00:21:20Z"
+  "UpdateDate": "2025-01-14T19:52:06Z"
 }
