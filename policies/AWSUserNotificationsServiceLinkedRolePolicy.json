@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSUserNotificationsServiceLinkedRolePolicy",
   "CreateDate": "2023-04-19T13:28:34Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4JMXN6GOLB",
   "PolicyName": "AWSUserNotificationsServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-04-19T13:28:34Z",
+    "CreateDate": "2025-01-14T23:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -33,12 +33,26 @@
           "Resource": [
             "arn:aws:events:*:*:rule/AWSUserNotificationsManagedRule-*"
           ]
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListChildren",
+            "organizations:ListParents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowOrgsActions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-04-19T13:28:34Z"
+  "UpdateDate": "2025-01-14T23:37:06Z"
 }
