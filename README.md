@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 422
-* Unique actions: 18645
+* Unique actions: 18661
 * Managed policies: 1318
 
 Most common managed policy name prefixes:
@@ -368,6 +368,7 @@ The following table summarises the AWS APIs.
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 52 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 38 |
+| [`notifications`](services/notifications.yml) | 0 | 0 | 37 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 36 |
 | [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
@@ -383,7 +384,6 @@ The following table summarises the AWS APIs.
 | [`q`](services/q.yml) | 0 | 0 | 23 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 22 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 22 |
-| [`notifications`](services/notifications.yml) | 0 | 0 | 21 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 19 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
@@ -463,13 +463,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3034 |
-| `Get` | 2755 |
+| `List` | 3038 |
+| `Get` | 2760 |
 | `Delete` | 2144 |
 | `Create` | 2002 |
 | `Describe` | 1776 |
 | `Update` | 1729 |
-| `Put` | 512 |
+| `Put` | 513 |
 | `Start` | 438 |
 | `Tag` | 290 |
 | `Untag` | 286 |
