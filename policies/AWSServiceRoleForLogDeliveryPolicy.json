@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForLogDeliveryPolicy",
   "CreateDate": "2019-10-04T17:31:19Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4EMA7ANTDG",
   "PolicyName": "AWSServiceRoleForLogDeliveryPolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-07-15T20:07:44Z",
+    "CreateDate": "2025-01-16T21:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -22,13 +22,14 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "LogDeliveryToFirehose"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2021-07-15T20:07:44Z"
+  "UpdateDate": "2025-01-16T21:37:06Z"
 }

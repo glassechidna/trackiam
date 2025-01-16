@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v22",
+  "DefaultVersionId": "v23",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-25T22:06:07Z",
+    "CreateDate": "2025-01-16T21:52:06Z",
     "Document": {
       "Statement": [
         {
@@ -162,6 +162,13 @@
         {
           "Action": [
             "wisdom:ActivateMessageTemplate",
+            "wisdom:CreateAIAgent",
+            "wisdom:CreateAIAgentVersion",
+            "wisdom:CreateAIGuardrail",
+            "wisdom:CreateAIGuardrailVersion",
+            "wisdom:CreateAIPrompt",
+            "wisdom:CreateAIPromptVersion",
+            "wisdom:CreateAssistant",
             "wisdom:CreateContent",
             "wisdom:CreateKnowledgeBase",
             "wisdom:CreateMessageTemplate",
@@ -170,10 +177,19 @@
             "wisdom:CreateQuickResponse",
             "wisdom:CreateSession",
             "wisdom:DeactivateMessageTemplate",
+            "wisdom:DeleteAIAgent",
+            "wisdom:DeleteAIAgentVersion",
+            "wisdom:DeleteAIGuardrail",
+            "wisdom:DeleteAIGuardrailVersion",
+            "wisdom:DeleteAIPrompt",
+            "wisdom:DeleteAIPromptVersion",
             "wisdom:DeleteContent",
             "wisdom:DeleteMessageTemplate",
             "wisdom:DeleteMessageTemplateAttachment",
             "wisdom:DeleteQuickResponse",
+            "wisdom:GetAIAgent",
+            "wisdom:GetAIGuardrail",
+            "wisdom:GetAIPrompt",
             "wisdom:GetAssistant",
             "wisdom:GetContent",
             "wisdom:GetImportJob",
@@ -182,14 +198,22 @@
             "wisdom:GetQuickResponse",
             "wisdom:GetRecommendations",
             "wisdom:GetSession",
+            "wisdom:ListAIAgentVersions",
+            "wisdom:ListAIAgents",
+            "wisdom:ListAIGuardrailVersions",
+            "wisdom:ListAIGuardrails",
+            "wisdom:ListAIPromptVersions",
+            "wisdom:ListAIPrompts",
             "wisdom:ListContentAssociations",
             "wisdom:ListImportJobs",
             "wisdom:ListMessageTemplateVersions",
             "wisdom:ListMessageTemplates",
             "wisdom:ListQuickResponses",
+            "wisdom:ListTagsForResource",
             "wisdom:NotifyRecommendationsReceived",
             "wisdom:PutFeedback",
             "wisdom:QueryAssistant",
+            "wisdom:RemoveAssistantAIAgent",
             "wisdom:RenderMessageTemplate",
             "wisdom:SearchMessageTemplates",
             "wisdom:SearchQuickResponses",
@@ -197,6 +221,10 @@
             "wisdom:StartImportJob",
             "wisdom:TagResource",
             "wisdom:UntagResource",
+            "wisdom:UpdateAIAgent",
+            "wisdom:UpdateAIGuardrail",
+            "wisdom:UpdateAIPrompt",
+            "wisdom:UpdateAssistantAIAgent",
             "wisdom:UpdateContent",
             "wisdom:UpdateMessageTemplate",
             "wisdom:UpdateMessageTemplateMetadata",
@@ -395,7 +423,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v22"
+    "VersionId": "v23"
   },
-  "UpdateDate": "2024-11-25T22:06:07Z"
+  "UpdateDate": "2025-01-16T21:52:06Z"
 }
