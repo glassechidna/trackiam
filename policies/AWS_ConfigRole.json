@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWS_ConfigRole",
   "CreateDate": "2020-09-15T20:30:30Z",
-  "DefaultVersionId": "v33",
+  "DefaultVersionId": "v34",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4PP7QZ4FBG",
   "PolicyName": "AWS_ConfigRole",
   "PolicyVersion": {
-    "CreateDate": "2024-11-06T22:29:15Z",
+    "CreateDate": "2025-01-16T16:22:05Z",
     "Document": {
       "Statement": [
         {
@@ -181,6 +181,8 @@
             "cassandra:Select",
             "ce:GetAnomalyMonitors",
             "ce:GetAnomalySubscriptions",
+            "cleanrooms-ml:GetTrainingDataset",
+            "cleanrooms-ml:ListTrainingDatasets",
             "cloud9:DescribeEnvironmentMemberships",
             "cloud9:DescribeEnvironments",
             "cloud9:ListEnvironments",
@@ -258,6 +260,9 @@
             "cognito-idp:ListTagsForResource",
             "cognito-idp:ListUserPoolClients",
             "cognito-idp:ListUserPools",
+            "comprehend:DescribeFlywheel",
+            "comprehend:ListFlywheels",
+            "comprehend:ListTagsForResource",
             "config:BatchGet*",
             "config:Describe*",
             "config:Get*",
@@ -391,6 +396,7 @@
             "ec2:GetManagedPrefixListEntries",
             "ec2:GetNetworkInsightsAccessScopeAnalysisFindings",
             "ec2:GetNetworkInsightsAccessScopeContent",
+            "ec2:GetSnapshotBlockPublicAccessState",
             "ecr-public:DescribeRepositories",
             "ecr-public:GetRepositoryCatalogData",
             "ecr-public:GetRepositoryPolicy",
@@ -1040,7 +1046,16 @@
             "oam:GetSink",
             "oam:GetSinkPolicy",
             "oam:ListSinks",
+            "omics:GetAnnotationStore",
+            "omics:GetRunGroup",
+            "omics:GetSequenceStore",
+            "omics:GetVariantStore",
             "omics:GetWorkflow",
+            "omics:ListAnnotationStores",
+            "omics:ListRunGroups",
+            "omics:ListSequenceStores",
+            "omics:ListTagsForResource",
+            "omics:ListVariantStores",
             "omics:ListWorkflows",
             "opsworks:DescribeInstances",
             "opsworks:DescribeLayers",
@@ -1293,6 +1308,8 @@
             "s3:ListStorageLensGroups",
             "s3:ListTagsForResource",
             "s3express:GetBucketPolicy",
+            "s3express:GetEncryptionConfiguration",
+            "s3express:GetLifecycleConfiguration",
             "s3express:ListAllMyDirectoryBuckets",
             "sagemaker:DescribeAppImageConfig",
             "sagemaker:DescribeCodeRepository",
@@ -1367,10 +1384,13 @@
             "ses:GetConfigurationSet",
             "ses:GetConfigurationSetEventDestinations",
             "ses:GetContactList",
+            "ses:GetDedicatedIpPool",
+            "ses:GetDedicatedIps",
             "ses:GetEmailTemplate",
             "ses:GetTemplate",
             "ses:ListConfigurationSets",
             "ses:ListContactLists",
+            "ses:ListDedicatedIpPools",
             "ses:ListEmailTemplates",
             "ses:ListReceiptFilters",
             "ses:ListReceiptRuleSets",
@@ -1493,7 +1513,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v33"
+    "VersionId": "v34"
   },
-  "UpdateDate": "2024-11-06T22:29:15Z"
+  "UpdateDate": "2025-01-16T16:22:05Z"
 }
