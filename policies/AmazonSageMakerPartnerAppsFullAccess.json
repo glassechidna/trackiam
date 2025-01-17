@@ -1,0 +1,41 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerPartnerAppsFullAccess",
+  "CreateDate": "2025-01-17T18:37:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4HFTFHP6PG",
+  "PolicyName": "AmazonSageMakerPartnerAppsFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2025-01-17T18:37:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "sagemaker:CallPartnerAppApi",
+            "sagemaker:CreatePartnerAppPresignedUrl",
+            "sagemaker:DescribePartnerApp"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:partner-app/*",
+          "Sid": "AmazonSageMakerPartnerAppsPermission"
+        },
+        {
+          "Action": "sagemaker:ListPartnerApps",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonSageMakerPartnerListAppsPermission"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-01-17T18:37:06Z"
+}
