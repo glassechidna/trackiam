@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSDMSServerlessServiceRolePolicy",
   "CreateDate": "2023-05-18T20:28:05Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AIKMNBTIJ",
   "PolicyName": "AWSDMSServerlessServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-05-18T20:28:05Z",
+    "CreateDate": "2025-01-17T08:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -28,6 +28,8 @@
           "Action": [
             "dms:DeleteReplicationInstance",
             "dms:DeleteReplicationTask",
+            "dms:ModifyReplicationInstance",
+            "dms:ModifyReplicationTask",
             "dms:StartReplicationTask",
             "dms:StopReplicationTask"
           ],
@@ -68,7 +70,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-05-18T20:28:05Z"
+  "UpdateDate": "2025-01-17T08:37:06Z"
 }
