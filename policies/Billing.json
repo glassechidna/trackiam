@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/Billing",
   "CreateDate": "2016-11-10T17:33:18Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAIFTHXT6FFMIRT7ZEA",
   "PolicyName": "Billing",
   "PolicyVersion": {
-    "CreateDate": "2024-12-01T17:51:07Z",
+    "CreateDate": "2025-01-18T00:07:06Z",
     "Document": {
       "Statement": [
         {
@@ -16,18 +16,27 @@
             "aws-portal:*Billing",
             "aws-portal:*PaymentMethods",
             "aws-portal:*Usage",
+            "billing:CreateBillingView",
+            "billing:DeleteBillingView",
             "billing:GetBillingData",
             "billing:GetBillingDetails",
             "billing:GetBillingNotifications",
             "billing:GetBillingPreferences",
+            "billing:GetBillingView",
             "billing:GetContractInformation",
             "billing:GetCredits",
             "billing:GetIAMAccessPreference",
+            "billing:GetResourcePolicy",
             "billing:GetSellerOfRecord",
             "billing:ListBillingViews",
+            "billing:ListSourceViewsForBillingView",
+            "billing:ListTagsForResource",
             "billing:PutContractInformation",
             "billing:RedeemCredits",
+            "billing:TagResource",
+            "billing:UntagResource",
             "billing:UpdateBillingPreferences",
+            "billing:UpdateBillingView",
             "billing:UpdateIAMAccessPreference",
             "budgets:CreateBudgetAction",
             "budgets:DeleteBudgetAction",
@@ -148,7 +157,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2024-12-01T17:51:07Z"
+  "UpdateDate": "2025-01-18T00:07:06Z"
 }
