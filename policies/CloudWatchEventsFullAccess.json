@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchEventsFullAccess",
   "CreateDate": "2016-01-14T18:37:08Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJZLOYLNHESMYOJAFU",
   "PolicyName": "CloudWatchEventsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-12-01T17:05:05Z",
+    "CreateDate": "2025-01-22T02:07:06Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/aws-service-role/AmazonEventBridgeApiDestinationsServiceRolePolicy",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/apidestinations.events.amazonaws.com/AWSServiceRoleForAmazonEventBridgeApiDestinations",
           "Sid": "IAMCreateServiceLinkedRoleForApiDestinations"
         },
         {
@@ -87,7 +87,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-12-01T17:05:05Z"
+  "UpdateDate": "2025-01-22T02:07:06Z"
 }
