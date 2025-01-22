@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCertificateManagerPrivateCAPrivilegedUser",
   "CreateDate": "2019-06-20T17:43:13Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4EQ6CWU5X5",
   "PolicyName": "AWSCertificateManagerPrivateCAPrivilegedUser",
   "PolicyVersion": {
-    "CreateDate": "2019-06-20T17:43:13Z",
+    "CreateDate": "2025-01-22T19:52:05Z",
     "Document": {
       "Statement": [
         {
@@ -15,9 +15,9 @@
             "acm-pca:IssueCertificate"
           ],
           "Condition": {
-            "StringLike": {
+            "ArnLike": {
               "acm-pca:TemplateArn": [
-                "arn:aws:acm-pca:::template/*CACertificate*/V*"
+                "arn:aws:acm-pca:*:*:template/*CACertificate*/V*"
               ]
             }
           },
@@ -29,9 +29,9 @@
             "acm-pca:IssueCertificate"
           ],
           "Condition": {
-            "StringNotLike": {
+            "ArnNotLike": {
               "acm-pca:TemplateArn": [
-                "arn:aws:acm-pca:::template/*CACertificate*/V*"
+                "arn:aws:acm-pca:*:*:template/*CACertificate*/V*"
               ]
             }
           },
@@ -58,7 +58,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-06-20T17:43:13Z"
+  "UpdateDate": "2025-01-22T19:52:05Z"
 }
