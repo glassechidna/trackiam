@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCertificateManagerPrivateCAUser",
   "CreateDate": "2018-10-23T16:53:33Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJBXCSJJULLMRWSNII",
   "PolicyName": "AWSCertificateManagerPrivateCAUser",
   "PolicyVersion": {
-    "CreateDate": "2019-06-20T17:42:37Z",
+    "CreateDate": "2025-01-22T15:52:06Z",
     "Document": {
       "Statement": [
         {
@@ -15,9 +15,9 @@
             "acm-pca:IssueCertificate"
           ],
           "Condition": {
-            "StringLike": {
+            "ArnLike": {
               "acm-pca:TemplateArn": [
-                "arn:aws:acm-pca:::template/EndEntityCertificate/V*"
+                "arn:aws:acm-pca:*:*:template/EndEntityCertificate/V*"
               ]
             }
           },
@@ -29,9 +29,9 @@
             "acm-pca:IssueCertificate"
           ],
           "Condition": {
-            "StringNotLike": {
+            "ArnNotLike": {
               "acm-pca:TemplateArn": [
-                "arn:aws:acm-pca:::template/EndEntityCertificate/V*"
+                "arn:aws:acm-pca:*:*:template/EndEntityCertificate/V*"
               ]
             }
           },
@@ -58,7 +58,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2019-06-20T17:42:37Z"
+  "UpdateDate": "2025-01-22T15:52:06Z"
 }
