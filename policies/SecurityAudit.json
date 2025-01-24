@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SecurityAudit",
   "CreateDate": "2015-02-06T18:41:01Z",
-  "DefaultVersionId": "v48",
+  "DefaultVersionId": "v49",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIX2T3QCXHR2OGGCTO",
   "PolicyName": "SecurityAudit",
   "PolicyVersion": {
-    "CreateDate": "2024-12-31T03:22:06Z",
+    "CreateDate": "2025-01-24T21:52:06Z",
     "Document": {
       "Statement": [
         {
@@ -528,6 +528,13 @@
             "opsworks:DescribeStacks",
             "organizations:Describe*",
             "organizations:List*",
+            "pcs:GetCluster",
+            "pcs:GetComputeNodeGroup",
+            "pcs:GetQueue",
+            "pcs:ListClusters",
+            "pcs:ListComputeNodeGroups",
+            "pcs:ListQueues",
+            "pcs:ListTagsForResource",
             "personalize:DescribeDatasetGroup",
             "personalize:ListDatasetGroups",
             "private-networks:ListNetworks",
@@ -826,7 +833,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v48"
+    "VersionId": "v49"
   },
-  "UpdateDate": "2024-12-31T03:22:06Z"
+  "UpdateDate": "2025-01-24T21:52:06Z"
 }
