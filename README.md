@@ -121,7 +121,7 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 56 | 0 | 5 |
 | [`eks`](services/eks.yml) | 56 | 0 | 2 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
-| [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 33 |
+| [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 34 |
 | [`resiliencehub`](services/resiliencehub.yml) | 55 | 0 | 8 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 3 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
@@ -333,7 +333,6 @@ The following table summarises the AWS APIs.
 | [`cur`](services/cur.yml) | 7 | 0 | 5 |
 | [`cost-optimization-hub`](services/cost-optimization-hub.yml) | 7 | 0 | 0 |
 | [`artifact`](services/artifact.yml) | 6 | 0 | 10 |
-| [`elastic-inference`](services/elastic-inference.yml) | 6 | 0 | 1 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
 | [`ebs`](services/ebs.yml) | 6 | 0 | 0 |
@@ -359,6 +358,7 @@ The following table summarises the AWS APIs.
 | [`execute-api`](services/execute-api.yml) | 0 | 12 | 3 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
+| [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
@@ -465,7 +465,7 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 3041 |
 | `Get` | 2764 |
-| `Delete` | 2148 |
+| `Delete` | 2149 |
 | `Create` | 2005 |
 | `Describe` | 1777 |
 | `Update` | 1733 |
