@@ -1,0 +1,87 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioQueryExecutionRolePolicy",
+  "CreateDate": "2025-01-31T19:52:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4PVJJYJWRB",
+  "PolicyName": "SageMakerStudioQueryExecutionRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-01-31T19:52:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "lambda:InvokeFunction",
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalTag/SageMakerStudioQueryExecutionRole": "true",
+              "aws:ResourceTag/federated_athena_datacatalog": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:function:*",
+          "Sid": "InvokeFunctionPermissionsForAthenaCatalogLambda"
+        },
+        {
+          "Action": [
+            "glue:GetConnection",
+            "glue:GetConnections",
+            "glue:GetTags"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:glue:*:*:connection/*",
+          "Sid": "GlueGetConnectionsForProject"
+        },
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalTag/SageMakerStudioQueryExecutionRole": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*/dzd_*/*/dev/sys/athena/*"
+          ],
+          "Sid": "S3GetObjectForAthenaSpillBucket"
+        },
+        {
+          "Action": [
+            "s3:ListBucket"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalTag/SageMakerStudioQueryExecutionRole": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::amazon-sagemaker-*"
+          ],
+          "Sid": "S3ListBucketOwnershipCheckForAthenaSpillBucket"
+        },
+        {
+          "Action": [
+            "glue:GetConnection"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:catalog"
+          ],
+          "Sid": "GlueGetConnectionOnCatalog"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-01-31T19:52:07Z"
+}

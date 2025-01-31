@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy",
   "CreateDate": "2024-11-20T21:58:39Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQZUIPVLH",
   "PolicyName": "SageMakerStudioProjectProvisioningRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-01-03T00:52:07Z",
+    "CreateDate": "2025-01-31T19:52:06Z",
     "Document": {
       "Statement": [
         {
@@ -263,6 +263,36 @@
             "arn:aws:iam::*:role/datazone_usr_role_*"
           ],
           "Sid": "IamPassRoleFromDataZone"
+        },
+        {
+          "Action": "iam:TagRole",
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": [
+                "AgentAliasId",
+                "AgentId",
+                "AmazonBedrockManaged",
+                "AmazonDataZone*",
+                "AppDefinitionPath",
+                "DomainBucketName",
+                "KmsKeyId",
+                "OpenSearchServerlessCollectionId",
+                "PromptDefinitionPath",
+                "PromptId",
+                "PromptVersion"
+              ]
+            },
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            },
+            "StringEquals": {
+              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AmazonBedrock*",
+          "Sid": "IAMRoleTaggingForBedrock"
         },
         {
           "Action": "iam:TagRole",
@@ -1340,7 +1370,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/SageMakerStudioQueryExecutionRole",
-          "Sid": "IamRolePermissionsForSageMakerStudioQueryExecutionRole"
+          "Sid": "IamRolePermissionsForSageMakerStudioQueryExecutionRoleWithBoundary"
         },
         {
           "Action": [
@@ -1372,6 +1402,85 @@
         },
         {
           "Action": [
+            "iam:AttachRolePolicy",
+            "iam:DetachRolePolicy"
+          ],
+          "Condition": {
+            "ArnEquals": {
+              "iam:PolicyARN": [
+                "arn:aws:iam::aws:policy/SageMakerStudioProjectRoleMachineLearningPolicy",
+                "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
+                "arn:aws:iam::aws:policy/service-role/AmazonEMRServicePolicy_v2",
+                "arn:aws:iam::aws:policy/service-role/SageMakerStudioEMRInstanceRolePolicy",
+                "arn:aws:iam::aws:policy/service-role/SageMakerStudioEMRServiceRolePolicy"
+              ]
+            },
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            },
+            "StringEquals": {
+              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/datazone*"
+          ],
+          "Sid": "IAMRoleManagement"
+        },
+        {
+          "Action": [
+            "iam:AttachRolePolicy",
+            "iam:DetachRolePolicy"
+          ],
+          "Condition": {
+            "ArnEquals": {
+              "iam:PolicyARN": [
+                "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+                "arn:aws:iam::aws:policy/service-role/AmazonBedrockIDEAgentServiceRolePolicy",
+                "arn:aws:iam::aws:policy/service-role/AmazonBedrockIDEChatAppUserRolePolicy",
+                "arn:aws:iam::aws:policy/service-role/AmazonBedrockIDEEvaluationJobServiceRolePolicy",
+                "arn:aws:iam::aws:policy/service-role/AmazonBedrockIDEFlowServiceRolePolicy",
+                "arn:aws:iam::aws:policy/service-role/AmazonBedrockIDEFunctionExecutionRolePolicy",
+                "arn:aws:iam::aws:policy/service-role/AmazonBedrockIDEKnowledgeBaseCustomResourcePolicy",
+                "arn:aws:iam::aws:policy/service-role/AmazonBedrockIDEKnowledgeBaseServiceRolePolicy",
+                "arn:aws:iam::aws:policy/service-role/AmazonBedrockIDEPromptUserRolePolicy"
+              ]
+            },
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            },
+            "StringEquals": {
+              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AmazonBedrock*",
+          "Sid": "IAMRoleManagementForBedrock"
+        },
+        {
+          "Action": [
+            "iam:AttachRolePolicy",
+            "iam:DetachRolePolicy"
+          ],
+          "Condition": {
+            "ArnEquals": {
+              "iam:PolicyARN": [
+                "arn:aws:iam::aws:policy/service-role/SageMakerStudioQueryExecutionRolePolicy"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/SageMakerStudioQueryExecutionRole",
+          "Sid": "IamRolePermissionsForSageMakerStudioQueryExecutionRole"
+        },
+        {
+          "Action": [
             "iam:CreatePolicy",
             "iam:CreatePolicyVersion",
             "iam:DeletePolicy",
@@ -1393,6 +1502,39 @@
             "arn:aws:iam::*:policy/datazone*"
           ],
           "Sid": "IAMPolicyManagementFromService"
+        },
+        {
+          "Action": [
+            "iam:CreateRole"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            },
+            "StringEquals": {
+              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AmazonBedrock*",
+            "arn:aws:iam::*:role/datazone*"
+          ],
+          "Sid": "IAMRoleCreation"
+        },
+        {
+          "Action": [
+            "iam:CreateRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/SageMakerStudioQueryExecutionRole",
+          "Sid": "IamRolePermissionsForCreatingSageMakerStudioQueryExecutionRole"
         },
         {
           "Action": [
@@ -1493,6 +1635,19 @@
             "arn:aws:iam::*:role/datazone_usr_role_*"
           ],
           "Sid": "IamManageRolesFromDataZone"
+        },
+        {
+          "Action": [
+            "iam:ListAttachedRolePolicies"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/SageMakerStudioQueryExecutionRole",
+          "Sid": "IamListAttachedPoliciesForSageMakerStudioQueryExecutionRole"
         },
         {
           "Action": [
@@ -1697,6 +1852,25 @@
           "Effect": "Allow",
           "Resource": "arn:aws:lambda:*:*:function:amazon-bedrock-ide-*",
           "Sid": "ManageFunctionPermissionsForBedrockApp"
+        },
+        {
+          "Action": [
+            "lambda:GetFunctionConfiguration",
+            "lambda:UpdateFunctionConfiguration"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:athenafederatedcatalog*"
+          ],
+          "Sid": "FederatedDBAthenaUpdateLambdaPermission"
         },
         {
           "Action": [
@@ -2428,7 +2602,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2025-01-03T00:52:07Z"
+  "UpdateDate": "2025-01-31T19:52:06Z"
 }
