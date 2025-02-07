@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 422
-* Unique actions: 18708
+* Unique actions: 18716
 * Managed policies: 1321
 
 Most common managed policy name prefixes:
@@ -371,6 +371,7 @@ The following table summarises the AWS APIs.
 | [`notifications`](services/notifications.yml) | 0 | 0 | 37 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 36 |
 | [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
+| [`q`](services/q.yml) | 0 | 0 | 31 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
 | [`s3tables`](services/s3tables.yml) | 0 | 0 | 28 |
@@ -381,7 +382,6 @@ The following table summarises the AWS APIs.
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
 | [`deeplens`](services/deeplens.yml) | 0 | 0 | 24 |
 | [`billing`](services/billing.yml) | 0 | 0 | 24 |
-| [`q`](services/q.yml) | 0 | 0 | 23 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 22 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 22 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
@@ -464,11 +464,11 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3047 |
-| `Get` | 2768 |
+| `Get` | 2769 |
 | `Delete` | 2150 |
-| `Create` | 2008 |
+| `Create` | 2010 |
 | `Describe` | 1778 |
-| `Update` | 1733 |
+| `Update` | 1735 |
 | `Put` | 513 |
 | `Start` | 442 |
 | `Tag` | 290 |

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSDMSServerlessServiceRolePolicy",
   "CreateDate": "2023-05-18T20:28:05Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AIKMNBTIJ",
   "PolicyName": "AWSDMSServerlessServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-01-17T08:37:06Z",
+    "CreateDate": "2025-02-07T17:52:06Z",
     "Document": {
       "Statement": [
         {
@@ -47,6 +47,57 @@
         },
         {
           "Action": [
+            "dms:StartReplicationTaskAssessmentRun"
+          ],
+          "Condition": {
+            "StringEqualsIgnoreCase": {
+              "aws:ResourceTag/ResourceCreatedBy": "DMSServerless"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "id6"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:GetBucketLocation",
+            "s3:ListBucket",
+            "s3:PutBucketPolicy"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "s3:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::dms-serverless-premigration-results-*"
+          ],
+          "Sid": "id5"
+        },
+        {
+          "Action": [
+            "s3:DeleteObject",
+            "s3:GetObject",
+            "s3:PutObject",
+            "s3:PutObjectTagging"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "s3:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::dms-serverless-premigration-results-*"
+          ],
+          "Sid": "id4"
+        },
+        {
+          "Action": [
             "dms:DeleteConnection",
             "dms:TestConnection"
           ],
@@ -70,7 +121,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-01-17T08:37:06Z"
+  "UpdateDate": "2025-02-07T17:52:06Z"
 }
