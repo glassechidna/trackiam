@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSApplicationMigrationEC2Access",
   "CreateDate": "2021-04-07T07:05:22Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4OBKWG2D2O",
   "PolicyName": "AWSApplicationMigrationEC2Access",
   "PolicyVersion": {
-    "CreateDate": "2025-01-08T09:22:06Z",
+    "CreateDate": "2025-02-11T13:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -30,6 +30,7 @@
           "Resource": [
             "arn:aws:ec2:*:*:instance/*",
             "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*:*:network-interface/*",
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:snapshot/*",
             "arn:aws:ec2:*:*:volume/*"
@@ -356,8 +357,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v5"
+    "IsDefaultVersion": true,
+    "VersionId": "v6"
   },
-  "UpdateDate": "2025-01-08T09:22:06Z"
+  "UpdateDate": "2025-02-11T13:07:07Z"
 }
