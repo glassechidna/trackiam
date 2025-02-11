@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDocDBConsoleFullAccess",
   "CreateDate": "2019-01-09T20:37:28Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJHV6VMSNDDHJ3ESNI",
   "PolicyName": "AmazonDocDBConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-12-09T16:51:06Z",
+    "CreateDate": "2025-02-11T18:22:07Z",
     "Document": {
       "Statement": [
         {
@@ -97,6 +97,7 @@
         },
         {
           "Action": [
+            "docdb-elastic:ApplyPendingMaintenanceAction",
             "docdb-elastic:CopyClusterSnapshot",
             "docdb-elastic:CreateCluster",
             "docdb-elastic:CreateClusterSnapshot",
@@ -104,8 +105,10 @@
             "docdb-elastic:DeleteClusterSnapshot",
             "docdb-elastic:GetCluster",
             "docdb-elastic:GetClusterSnapshot",
+            "docdb-elastic:GetPendingMaintenanceAction",
             "docdb-elastic:ListClusterSnapshots",
             "docdb-elastic:ListClusters",
+            "docdb-elastic:ListPendingMaintenanceActions",
             "docdb-elastic:ListTagsForResource",
             "docdb-elastic:RestoreClusterFromSnapshot",
             "docdb-elastic:StartCluster",
@@ -192,7 +195,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2024-12-09T16:51:06Z"
+  "UpdateDate": "2025-02-11T18:22:07Z"
 }
