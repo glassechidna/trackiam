@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/FMSServiceRolePolicy",
   "CreateDate": "2018-03-28T23:01:12Z",
-  "DefaultVersionId": "v30",
+  "DefaultVersionId": "v31",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAI62NTGYJB446ACUEA",
   "PolicyName": "FMSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-07-22T20:08:34Z",
+    "CreateDate": "2025-02-11T21:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -374,18 +374,7 @@
         },
         {
           "Action": [
-            "config:DeleteConfigRule",
-            "config:DeleteEvaluationResults",
-            "config:GetComplianceDetailsByConfigRule",
-            "config:PutConfigRule",
-            "config:StartConfigRulesEvaluation"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:config:*:*:config-rule/aws-service-rule/fms.amazonaws.com/*",
-          "Sid": "ConfigScoped"
-        },
-        {
-          "Action": [
+            "config:BatchGetResourceConfig",
             "config:DescribeComplianceByConfigRule",
             "config:DescribeConfigRuleEvaluationStatus",
             "config:DescribeConfigRules",
@@ -404,6 +393,18 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "ConfigUnscoped"
+        },
+        {
+          "Action": [
+            "config:DeleteConfigRule",
+            "config:DeleteEvaluationResults",
+            "config:GetComplianceDetailsByConfigRule",
+            "config:PutConfigRule",
+            "config:StartConfigRulesEvaluation"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:config:*:*:config-rule/aws-service-rule/fms.amazonaws.com/*",
+          "Sid": "ConfigScoped"
         },
         {
           "Action": [
@@ -544,7 +545,6 @@
             "network-firewall:ListFirewalls",
             "network-firewall:ListRuleGroups",
             "network-firewall:ListTLSInspectionConfigurations",
-            "network-firewall:PutResourcePolicy",
             "network-firewall:UpdateFirewallDeleteProtection",
             "network-firewall:UpdateFirewallPolicy",
             "network-firewall:UpdateFirewallPolicyChangeProtection",
@@ -554,6 +554,18 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "NetworkFirewallGeneral"
+        },
+        {
+          "Action": [
+            "network-firewall:PutResourcePolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:network-firewall:*:*:firewall-policy/*",
+            "arn:aws:network-firewall:*:*:stateful-rulegroup/*",
+            "arn:aws:network-firewall:*:*:stateless-rulegroup/*"
+          ],
+          "Sid": "NetworkFirewallResourcePolicy"
         },
         {
           "Action": [
@@ -711,7 +723,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v30"
+    "VersionId": "v31"
   },
-  "UpdateDate": "2024-07-22T20:08:34Z"
+  "UpdateDate": "2025-02-11T21:37:06Z"
 }
