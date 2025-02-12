@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectRoleMachineLearningPolicy",
   "CreateDate": "2024-11-20T21:55:27Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NSSEENOX7",
   "PolicyName": "SageMakerStudioProjectRoleMachineLearningPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-27T06:21:07Z",
+    "CreateDate": "2025-02-12T18:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -210,6 +210,24 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "SageMakerECRGetAuthorizationTokenPermissions"
+        },
+        {
+          "Action": [
+            "kms:CreateGrant"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:ViaService": [
+                "sagemaker.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/${aws:PrincipalTag/KmsKeyId}",
+          "Sid": "SageMakerKmsPermissions"
         },
         {
           "Action": [
@@ -440,8 +458,10 @@
         {
           "Action": [
             "sagemaker:BatchDescribeModelPackage",
+            "sagemaker:CreateModel",
             "sagemaker:DescribeModelPackage",
-            "sagemaker:DescribeModelPackageGroup"
+            "sagemaker:DescribeModelPackageGroup",
+            "sagemaker:ListModelPackages"
           ],
           "Condition": {
             "StringNotEquals": {
@@ -450,7 +470,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "SageMakerCrossAccountReadPermissions"
+          "Sid": "SageMakerCrossAccountPermissions"
         },
         {
           "Action": [
@@ -555,6 +575,7 @@
           "Action": [
             "sagemaker:DeletePipeline",
             "sagemaker:DescribeAutoMLJob",
+            "sagemaker:DescribeAutoMLJobV2",
             "sagemaker:DescribeHyperParameterTuningJob",
             "sagemaker:DescribeInferenceRecommendationsJob",
             "sagemaker:DescribeModelPackage",
@@ -627,13 +648,10 @@
           "Action": [
             "sagemaker:GetSearchSuggestions",
             "sagemaker:ListArtifacts",
-            "sagemaker:ListAssociations",
             "sagemaker:ListAutoMLJobs",
-            "sagemaker:ListCandidatesForAutoMLJob",
             "sagemaker:ListContexts",
             "sagemaker:ListEndpointConfigs",
             "sagemaker:ListEndpoints",
-            "sagemaker:ListHubContents",
             "sagemaker:ListHubs",
             "sagemaker:ListHyperParameterTuningJobs",
             "sagemaker:ListInferenceComponents",
@@ -642,13 +660,9 @@
             "sagemaker:ListModelPackageGroups",
             "sagemaker:ListModelPackages",
             "sagemaker:ListModels",
-            "sagemaker:ListPipelineExecutionSteps",
-            "sagemaker:ListPipelineExecutions",
-            "sagemaker:ListPipelineParametersForExecution",
             "sagemaker:ListPipelines",
             "sagemaker:ListProcessingJobs",
             "sagemaker:ListTrainingJobs",
-            "sagemaker:ListTrainingJobsForHyperParameterTuningJob",
             "sagemaker:ListTransformJobs",
             "sagemaker:Search"
           ],
@@ -663,10 +677,30 @@
         },
         {
           "Action": [
+            "sagemaker:ListAssociations",
+            "sagemaker:ListCandidatesForAutoMLJob",
+            "sagemaker:ListHubContents",
+            "sagemaker:ListPipelineExecutionSteps",
+            "sagemaker:ListPipelineExecutions",
+            "sagemaker:ListPipelineParametersForExecution",
+            "sagemaker:ListTrainingJobsForHyperParameterTuningJob"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalTag/EnableSageMakerMLWorkloadsPermissions": "true",
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SageMakerListPermissionsTagRestricted"
+        },
+        {
+          "Action": [
             "sagemaker:ListTags"
           ],
           "Condition": {
-            "StringEqualsIfExists": {
+            "StringEquals": {
               "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
             }
           },
@@ -727,22 +761,11 @@
           "Action": [
             "logs:CreateLogGroup",
             "logs:CreateLogStream",
-            "logs:DescribeLogStreams",
-            "logs:GetLogEvents",
             "logs:PutLogEvents"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:logs:*:*:log-group:/aws/sagemaker/*",
           "Sid": "SageMakerLogPermissions"
-        },
-        {
-          "Action": [
-            "logs:DescribeLogStreams",
-            "logs:GetLogEvents"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:logs:*:*:log-group:/aws/sagemaker/*",
-          "Sid": "AllowSageMakerLogAccess"
         },
         {
           "Action": [
@@ -825,7 +848,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2024-11-27T06:21:07Z"
+  "UpdateDate": "2025-02-12T18:07:07Z"
 }
