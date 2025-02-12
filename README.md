@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 422
-* Unique actions: 18717
+* Unique actions: 18719
 * Managed policies: 1323
 
 Most common managed policy name prefixes:
@@ -294,7 +294,7 @@ The following table summarises the AWS APIs.
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 14 | 0 | 0 |
 | [`health`](services/health.yml) | 14 | 0 | 0 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 17 |
-| [`healthlake`](services/healthlake.yml) | 13 | 0 | 13 |
+| [`healthlake`](services/healthlake.yml) | 13 | 0 | 15 |
 | [`braket`](services/braket.yml) | 13 | 0 | 4 |
 | [`codeguru-security`](services/codeguru-security.yml) | 13 | 0 | 2 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 13 | 0 | 1 |
@@ -464,7 +464,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3047 |
-| `Get` | 2769 |
+| `Get` | 2770 |
 | `Delete` | 2150 |
 | `Create` | 2011 |
 | `Describe` | 1778 |
