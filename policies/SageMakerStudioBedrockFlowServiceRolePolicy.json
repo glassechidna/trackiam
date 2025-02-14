@@ -1,0 +1,121 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioBedrockFlowServiceRolePolicy",
+  "CreateDate": "2025-02-14T00:07:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4L34RDKAH5",
+  "PolicyName": "SageMakerStudioBedrockFlowServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-02-14T00:07:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "bedrock:ApplyGuardrail",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock:*:*:guardrail/*",
+          "Sid": "BedrockGuardrailPermissions"
+        },
+        {
+          "Action": "bedrock:GetPrompt",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock:*:*:prompt/*",
+          "Sid": "BedrockPromptPermissions"
+        },
+        {
+          "Action": "bedrock:InvokeModel",
+          "Condition": {
+            "Null": {
+              "bedrock:InferenceProfileArn": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:bedrock:*:*:custom-model/*",
+            "arn:aws:bedrock:*:*:provisioned-model/*",
+            "arn:aws:bedrock:*::foundation-model/*"
+          ],
+          "Sid": "AllowBedrockInvokeModelAccessWithInferenceProfilePermissions"
+        },
+        {
+          "Action": "bedrock:Retrieve",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock:*:*:knowledge-base/*",
+          "Sid": "BedrockKnowledgeBasePermissions"
+        },
+        {
+          "Action": "lambda:InvokeFunction",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:function:amazon-bedrock*",
+          "Sid": "AllowLambdaInvokeFunctionInProjectPermissions"
+        },
+        {
+          "Action": [
+            "bedrock:GetInferenceProfile",
+            "bedrock:InvokeModel"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock:*:*:application-inference-profile/*",
+          "Sid": "AllowBedrockApplicationInferenceProfileAccessInProjectPermissions"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:bedrock-prompts:arn": "arn:aws:bedrock:*:${aws:PrincipalAccount}:prompt/*",
+              "kms:ViaService": "bedrock.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/${aws:PrincipalTag/KmsKeyId}",
+          "Sid": "BedrockPromptKmsPermissions"
+        },
+        {
+          "Action": "bedrock:RetrieveAndGenerate",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowBedrockRetrieveAndGeneratePermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-02-14T00:07:06Z"
+}
