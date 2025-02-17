@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonTimestreamInfluxDBFullAccess",
   "CreateDate": "2024-03-14T22:53:22Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JY77WLMFL",
   "PolicyName": "AmazonTimestreamInfluxDBFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-10-08T20:31:28Z",
+    "CreateDate": "2025-02-17T20:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -64,16 +64,22 @@
         },
         {
           "Action": [
+            "timestream-influxdb:CreateDbCluster",
             "timestream-influxdb:CreateDbInstance",
             "timestream-influxdb:CreateDbParameterGroup",
+            "timestream-influxdb:DeleteDbCluster",
             "timestream-influxdb:DeleteDbInstance",
+            "timestream-influxdb:GetDbCluster",
             "timestream-influxdb:GetDbInstance",
             "timestream-influxdb:GetDbParameterGroup",
+            "timestream-influxdb:ListDbClusters",
             "timestream-influxdb:ListDbInstances",
+            "timestream-influxdb:ListDbInstancesForCluster",
             "timestream-influxdb:ListDbParameterGroups",
             "timestream-influxdb:ListTagsForResource",
             "timestream-influxdb:TagResource",
             "timestream-influxdb:UntagResource",
+            "timestream-influxdb:UpdateDbCluster",
             "timestream-influxdb:UpdateDbInstance"
           ],
           "Effect": "Allow",
@@ -86,7 +92,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-10-08T20:31:28Z"
+  "UpdateDate": "2025-02-17T20:37:06Z"
 }
