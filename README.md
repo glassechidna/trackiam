@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 422
-* Unique actions: 18731
+* Unique actions: 18740
 * Managed policies: 1328
 
 Most common managed policy name prefixes:
@@ -65,7 +65,7 @@ The following table summarises the AWS APIs.
 | [`medialive`](services/medialive.yml) | 92 | 0 | 25 |
 | [`config`](services/config.yml) | 92 | 0 | 5 |
 | [`backup`](services/backup.yml) | 91 | 0 | 10 |
-| [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 1 |
+| [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 6 |
 | [`workspaces`](services/workspaces.yml) | 88 | 0 | 1 |
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
 | [`es`](services/es.yml) | 87 | 0 | 23 |
@@ -170,9 +170,9 @@ The following table summarises the AWS APIs.
 | [`states`](services/states.yml) | 37 | 0 | 2 |
 | [`aoss`](services/aoss.yml) | 37 | 0 | 2 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
+| [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 4 |
 | [`entityresolution`](services/entityresolution.yml) | 36 | 0 | 3 |
 | [`shield`](services/shield.yml) | 36 | 0 | 0 |
-| [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 0 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`cases`](services/cases.yml) | 34 | 0 | 6 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
@@ -463,14 +463,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3050 |
-| `Get` | 2771 |
-| `Delete` | 2152 |
+| `List` | 3052 |
+| `Get` | 2772 |
+| `Delete` | 2153 |
 | `Create` | 2014 |
-| `Describe` | 1778 |
-| `Update` | 1737 |
+| `Describe` | 1779 |
+| `Update` | 1738 |
 | `Put` | 513 |
-| `Start` | 442 |
+| `Start` | 444 |
 | `Tag` | 290 |
 | `Untag` | 286 |
 
