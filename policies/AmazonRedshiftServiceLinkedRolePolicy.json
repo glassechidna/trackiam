@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRedshiftServiceLinkedRolePolicy",
   "CreateDate": "2017-09-18T19:19:45Z",
-  "DefaultVersionId": "v14",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJPY2VXNRUYOY3SRZS",
   "PolicyName": "AmazonRedshiftServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-20T18:06:07Z",
+    "CreateDate": "2025-02-19T17:22:07Z",
     "Document": {
       "Statement": [
         {
@@ -124,6 +124,9 @@
           "Condition": {
             "Bool": {
               "glue:EnabledForRedshiftAutoDiscovery": "true"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
             }
           },
           "Effect": "Allow",
@@ -132,6 +135,27 @@
             "arn:aws:glue:*:*:catalog/*"
           ],
           "Sid": "DiscoverRedshiftCatalogs"
+        },
+        {
+          "Action": [
+            "lakeformation:GetDataAccess"
+          ],
+          "Condition": {
+            "Bool": {
+              "lakeformation:EnabledOnlyForMetaDataAccess": "true"
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "glue.amazonaws.com"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "LakeFormationGetMetadataAccessForFederatedCatalogs"
         },
         {
           "Action": [
@@ -256,7 +280,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v14"
+    "VersionId": "v15"
   },
-  "UpdateDate": "2024-11-20T18:06:07Z"
+  "UpdateDate": "2025-02-19T17:22:07Z"
 }
