@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy",
   "CreateDate": "2024-11-20T21:58:39Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQZUIPVLH",
   "PolicyName": "SageMakerStudioProjectProvisioningRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-01-31T19:52:06Z",
+    "CreateDate": "2025-02-22T00:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -58,15 +58,27 @@
           "Action": "ec2:CreateNetworkInterface",
           "Condition": {
             "StringEquals": {
+              "aws:CalledViaLast": "ops.emr-serverless.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "CreateNetworkInterfaceForEMRServerlessSharedVPC"
+        },
+        {
+          "Action": "ec2:CreateNetworkInterface",
+          "Condition": {
+            "StringEquals": {
               "aws:CalledViaLast": "ops.emr-serverless.amazonaws.com",
               "aws:ResourceAccount": "${aws:PrincipalAccount}"
             }
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:ec2:*:*:network-interface/*",
-            "arn:aws:ec2:*:*:security-group/*",
-            "arn:aws:ec2:*:*:subnet/*"
+            "arn:aws:ec2:*:*:network-interface/*"
           ],
           "Sid": "CreateNetworkInterfaceForEMRServerless"
         },
@@ -93,6 +105,17 @@
             "arn:aws:ec2:*:*:security-group/*"
           ],
           "Sid": "EC2ResourceTagging"
+        },
+        {
+          "Action": "ec2:DeleteSecurityGroup",
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*",
+          "Sid": "SecurityGroupCleanUpForEMR"
         },
         {
           "Action": "glue:GetConnection",
@@ -122,6 +145,20 @@
           "Sid": "IamCreateServiceLinkedRoleForAoss"
         },
         {
+          "Action": "iam:GetRole",
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/datazone_emr_*",
+          "Sid": "IamGetEmrRoleFromDataZone"
+        },
+        {
           "Action": "iam:PassRole",
           "Condition": {
             "StringEquals": {
@@ -132,7 +169,7 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:iam::*:role/AmazonBedrockExecution*",
+            "arn:aws:iam::*:role/AmazonBedrock*",
             "arn:aws:iam::*:role/BedrockStudio*"
           ],
           "Sid": "IamPassRoleToBedrock"
@@ -148,7 +185,7 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:iam::*:role/AmazonBedrockExecution*",
+            "arn:aws:iam::*:role/AmazonBedrock*",
             "arn:aws:iam::*:role/BedrockStudio*"
           ],
           "Sid": "IamPassRoleToLambda"
@@ -274,6 +311,7 @@
                 "AmazonBedrockManaged",
                 "AmazonDataZone*",
                 "AppDefinitionPath",
+                "DataSourcePath",
                 "DomainBucketName",
                 "KmsKeyId",
                 "OpenSearchServerlessCollectionId",
@@ -326,9 +364,7 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:iam::*:role/AmazonBedrockConsumptionRole*",
-            "arn:aws:iam::*:role/AmazonBedrockEvaluation*",
-            "arn:aws:iam::*:role/AmazonBedrockExecution*",
+            "arn:aws:iam::*:role/AmazonBedrock*",
             "arn:aws:iam::*:role/BedrockStudio*",
             "arn:aws:iam::*:role/SageMakerStudioQueryExecutionRole",
             "arn:aws:iam::*:role/datazone-partner-apps-*",
@@ -346,6 +382,7 @@
                 "DataZone*",
                 "DomainBucketName",
                 "KmsKeyId",
+                "VpcId",
                 "for-use-with-amazon-emr-managed-policies"
               ]
             },
@@ -462,21 +499,6 @@
           "Sid": "SageMakerAppDeletion"
         },
         {
-          "Action": "sagemaker:DeleteDomain",
-          "Condition": {
-            "Null": {
-              "aws:ResourceTag/AmazonDataZoneProject": "false"
-            },
-            "StringEquals": {
-              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:sagemaker:*:*:domain/*",
-          "Sid": "SageMakerDomainDeletion"
-        },
-        {
           "Action": "sagemaker:DeleteSpace",
           "Condition": {
             "Null": {
@@ -519,7 +541,8 @@
           "Action": [
             "airflow:CreateEnvironment",
             "airflow:DeleteEnvironment",
-            "airflow:TagResource"
+            "airflow:TagResource",
+            "airflow:UpdateEnvironment"
           ],
           "Condition": {
             "Null": {
@@ -958,8 +981,7 @@
               "aws:TagKeys": "true"
             },
             "StringEquals": {
-              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+              "aws:CalledViaFirst": "cloudformation.amazonaws.com"
             }
           },
           "Effect": "Allow",
@@ -977,8 +999,7 @@
           ],
           "Condition": {
             "StringEquals": {
-              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+              "aws:CalledViaFirst": "cloudformation.amazonaws.com"
             }
           },
           "Effect": "Allow",
@@ -1029,6 +1050,7 @@
             "elasticmapreduce:DescribeCluster",
             "elasticmapreduce:DescribeJobFlows",
             "elasticmapreduce:ListInstanceFleets",
+            "elasticmapreduce:ModifyInstanceFleet",
             "elasticmapreduce:RunJobFlow",
             "elasticmapreduce:SetTerminationProtection",
             "elasticmapreduce:TerminateJobFlows"
@@ -1088,7 +1110,8 @@
         {
           "Action": [
             "emr-serverless:DeleteApplication",
-            "emr-serverless:GetApplication"
+            "emr-serverless:GetApplication",
+            "emr-serverless:UpdateApplication"
           ],
           "Condition": {
             "Null": {
@@ -1438,14 +1461,14 @@
             "ArnEquals": {
               "iam:PolicyARN": [
                 "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
-                "arn:aws:iam::aws:policy/service-role/AmazonBedrockIDEAgentServiceRolePolicy",
-                "arn:aws:iam::aws:policy/service-role/AmazonBedrockIDEChatAppUserRolePolicy",
-                "arn:aws:iam::aws:policy/service-role/AmazonBedrockIDEEvaluationJobServiceRolePolicy",
-                "arn:aws:iam::aws:policy/service-role/AmazonBedrockIDEFlowServiceRolePolicy",
-                "arn:aws:iam::aws:policy/service-role/AmazonBedrockIDEFunctionExecutionRolePolicy",
-                "arn:aws:iam::aws:policy/service-role/AmazonBedrockIDEKnowledgeBaseCustomResourcePolicy",
-                "arn:aws:iam::aws:policy/service-role/AmazonBedrockIDEKnowledgeBaseServiceRolePolicy",
-                "arn:aws:iam::aws:policy/service-role/AmazonBedrockIDEPromptUserRolePolicy"
+                "arn:aws:iam::aws:policy/service-role/SageMakerStudioBedrockAgentServiceRolePolicy",
+                "arn:aws:iam::aws:policy/service-role/SageMakerStudioBedrockChatAgentUserRolePolicy",
+                "arn:aws:iam::aws:policy/service-role/SageMakerStudioBedrockEvaluationJobServiceRolePolicy",
+                "arn:aws:iam::aws:policy/service-role/SageMakerStudioBedrockFlowServiceRolePolicy",
+                "arn:aws:iam::aws:policy/service-role/SageMakerStudioBedrockFunctionExecutionRolePolicy",
+                "arn:aws:iam::aws:policy/service-role/SageMakerStudioBedrockKnowledgeBaseCustomResourcePolicy",
+                "arn:aws:iam::aws:policy/service-role/SageMakerStudioBedrockKnowledgeBaseServiceRolePolicy",
+                "arn:aws:iam::aws:policy/service-role/SageMakerStudioBedrockPromptUserRolePolicy"
               ]
             },
             "Null": {
@@ -1538,6 +1561,37 @@
         },
         {
           "Action": [
+            "iam:DeleteInstanceProfile",
+            "iam:RemoveRoleFromInstanceProfile"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:instance-profile/datazone_emr_ec2_instance_profile_*",
+          "Sid": "IAMInstanceProfileCleanUpForEMR"
+        },
+        {
+          "Action": [
+            "iam:DeleteRole",
+            "iam:DeleteRolePolicy",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListInstanceProfilesForRole",
+            "iam:ListRolePolicies"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/datazone_emr_*",
+          "Sid": "IAMRoleCleanUpForEMR"
+        },
+        {
+          "Action": [
             "iam:DeleteRole",
             "iam:GetRolePolicy",
             "iam:ListAttachedRolePolicies",
@@ -1554,9 +1608,7 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:iam::*:role/AmazonBedrockConsumptionRole*",
-            "arn:aws:iam::*:role/AmazonBedrockEvaluation*",
-            "arn:aws:iam::*:role/AmazonBedrockExecution*",
+            "arn:aws:iam::*:role/AmazonBedrock*",
             "arn:aws:iam::*:role/BedrockStudio*",
             "arn:aws:iam::*:role/datazone*"
           ],
@@ -1609,9 +1661,7 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:iam::*:role/AmazonBedrockConsumptionRole*",
-            "arn:aws:iam::*:role/AmazonBedrockEvaluation*",
-            "arn:aws:iam::*:role/AmazonBedrockExecution*",
+            "arn:aws:iam::*:role/AmazonBedrock*",
             "arn:aws:iam::*:role/BedrockStudio*",
             "arn:aws:iam::*:role/datazone*"
           ],
@@ -2266,6 +2316,24 @@
         },
         {
           "Action": [
+            "sagemaker:DeleteDomain",
+            "sagemaker:UpdateDomain"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            },
+            "StringEquals": {
+              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:domain/*",
+          "Sid": "SageMakerDomainUpdationAndDeletion"
+        },
+        {
+          "Action": [
             "sagemaker:DeleteMlflowTrackingServer"
           ],
           "Condition": {
@@ -2549,6 +2617,7 @@
         },
         {
           "Action": [
+            "lakeformation:BatchGrantPermissions",
             "lakeformation:DeregisterResource",
             "lakeformation:GrantPermissions",
             "lakeformation:ListResources",
@@ -2560,6 +2629,7 @@
         },
         {
           "Action": [
+            "lakeformation:BatchRevokePermissions",
             "lakeformation:GetDataLakeSettings",
             "lakeformation:ListPermissions",
             "lakeformation:PutDataLakeSettings",
@@ -2602,7 +2672,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2025-01-31T19:52:06Z"
+  "UpdateDate": "2025-02-22T00:07:07Z"
 }
