@@ -1,0 +1,50 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioBedrockFunctionExecutionRolePolicy",
+  "CreateDate": "2025-02-25T03:52:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4IKCKWR5W2",
+  "PolicyName": "SageMakerStudioBedrockFunctionExecutionRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-02-25T03:52:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "kms:Decrypt",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:SecretARN": "arn:aws:secretsmanager:*:${aws:PrincipalAccount}:secret:amazon-bedrock*",
+              "kms:ViaService": "secretsmanager.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/${aws:PrincipalTag/KmsKeyId}",
+          "Sid": "KMSSameAccountBedrockViaSecretsManagerPermissions"
+        },
+        {
+          "Action": [
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:amazon-bedrock*",
+          "Sid": "SecretsManagerReadPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-02-25T03:52:07Z"
+}
