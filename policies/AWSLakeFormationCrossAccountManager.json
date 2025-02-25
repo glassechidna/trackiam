@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSLakeFormationCrossAccountManager",
   "CreateDate": "2020-08-04T20:59:46Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HPT7Y7QL3",
   "PolicyName": "AWSLakeFormationCrossAccountManager",
   "PolicyVersion": {
-    "CreateDate": "2024-03-22T18:51:56Z",
+    "CreateDate": "2025-02-25T00:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -34,7 +34,7 @@
             "ram:AssociateResourceSharePermission"
           ],
           "Condition": {
-            "StringLike": {
+            "ArnLike": {
               "ram:PermissionArn": [
                 "arn:aws:ram::aws:permission/AWSRAMLFEnabled*"
               ]
@@ -88,7 +88,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2024-03-22T18:51:56Z"
+  "UpdateDate": "2025-02-25T00:37:06Z"
 }
