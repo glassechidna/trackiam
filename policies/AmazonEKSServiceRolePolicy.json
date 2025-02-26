@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEKSServiceRolePolicy",
   "CreateDate": "2020-02-21T20:10:47Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4KZBLSP26Y",
   "PolicyName": "AmazonEKSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-16T17:42:18Z",
+    "CreateDate": "2025-02-26T21:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -97,6 +97,21 @@
             "arn:aws:ec2:*:*:network-interface/*",
             "arn:aws:ec2:*:*:security-group/*"
           ]
+        },
+        {
+          "Action": [
+            "ec2:DeleteLaunchTemplate",
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ManagedResourceOperator": [
+                "eks.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": [
@@ -309,7 +324,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2024-11-16T17:42:18Z"
+  "UpdateDate": "2025-02-26T21:37:06Z"
 }
