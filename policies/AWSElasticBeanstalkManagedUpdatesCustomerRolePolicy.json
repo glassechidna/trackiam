@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticBeanstalkManagedUpdatesCustomerRolePolicy",
   "CreateDate": "2021-03-03T22:18:00Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AKB7QD2CZ",
   "PolicyName": "AWSElasticBeanstalkManagedUpdatesCustomerRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-03-23T23:15:54Z",
+    "CreateDate": "2025-02-27T16:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,20 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "EC2RunInstancesOperationPermissions"
+        },
+        {
+          "Action": "ec2:createTags",
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "CreateLaunchTemplate",
+                "RunInstances"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LaunchTemplateTagPropagationPermissions"
         },
         {
           "Action": "iam:PassRole",
@@ -295,7 +309,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2023-03-23T23:15:54Z"
+  "UpdateDate": "2025-02-27T16:07:07Z"
 }
