@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioEMRServiceRolePolicy",
   "CreateDate": "2025-01-31T19:52:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4LHCFHLBRB",
   "PolicyName": "SageMakerStudioEMRServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-01-31T19:52:07Z",
+    "CreateDate": "2025-02-27T00:22:06Z",
     "Document": {
       "Statement": [
         {
@@ -52,6 +52,23 @@
           "Effect": "Allow",
           "Resource": "arn:aws:kms:*:*:key/${aws:PrincipalTag/KmsKeyId}",
           "Sid": "AllowEMRToListKmsAliases"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet",
+            "ec2:CreateNetworkInterface",
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "ec2:Vpc": "arn:aws:ec2:*:*:vpc/${aws:PrincipalTag/VpcId}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "CreateInNetworkForSharedSubnet"
         },
         {
           "Action": [
@@ -103,7 +120,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-01-31T19:52:07Z"
+  "UpdateDate": "2025-02-27T00:22:06Z"
 }

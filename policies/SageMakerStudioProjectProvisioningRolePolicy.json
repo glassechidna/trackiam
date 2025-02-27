@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy",
   "CreateDate": "2024-11-20T21:58:39Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQZUIPVLH",
   "PolicyName": "SageMakerStudioProjectProvisioningRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-02-22T00:07:07Z",
+    "CreateDate": "2025-02-27T00:22:05Z",
     "Document": {
       "Statement": [
         {
@@ -342,6 +342,7 @@
                 "CreatedForUseWithSageMakerStudio",
                 "DomainBucketName",
                 "EnableAmazonBedrockIDEPermissions",
+                "EnableAmazonBedrockPermissions",
                 "EnableGlueWorkloadsPermissions",
                 "EnableSageMakerMLWorkloadsPermissions",
                 "KmsKeyId",
@@ -440,6 +441,24 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/SageMakerStudioQueryExecutionRole",
           "Sid": "IamTagRolePermissionsForSageMakerStudioQueryExecutionRole"
+        },
+        {
+          "Action": "iam:UntagRole",
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": "EnableAmazonBedrockIDEPermissions"
+            },
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            },
+            "StringEquals": {
+              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/datazone_usr_role_*",
+          "Sid": "IAMRoleUntagging"
         },
         {
           "Action": "logs:DescribeLogGroups",
@@ -2672,7 +2691,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2025-02-22T00:07:07Z"
+  "UpdateDate": "2025-02-27T00:22:05Z"
 }

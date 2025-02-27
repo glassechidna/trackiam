@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectRoleMachineLearningPolicy",
   "CreateDate": "2024-11-20T21:55:27Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NSSEENOX7",
   "PolicyName": "SageMakerStudioProjectRoleMachineLearningPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-02-13T23:07:06Z",
+    "CreateDate": "2025-02-27T00:22:05Z",
     "Document": {
       "Statement": [
         {
@@ -118,42 +118,12 @@
             "ec2:AttachNetworkInterface",
             "ec2:CreateNetworkInterface",
             "ec2:CreateNetworkInterfacePermission",
-            "ec2:CreateVpcEndpoint",
             "ec2:DeleteNetworkInterface",
             "ec2:DeleteNetworkInterfacePermission"
           ],
           "Condition": {
             "ArnLike": {
               "ec2:Vpc": "arn:aws:ec2:*:*:vpc/${aws:PrincipalTag/VpcId}"
-            },
-            "StringEquals": {
-              "aws:CalledViaLast": [
-                "airflow.amazonaws.com",
-                "sagemaker.amazonaws.com"
-              ],
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:ec2:*:*:network-interface/*",
-            "arn:aws:ec2:*:*:route-table/*",
-            "arn:aws:ec2:*:*:security-group/*",
-            "arn:aws:ec2:*:*:subnet/*"
-          ],
-          "Sid": "AllowManageSageMakerEniOnVpc"
-        },
-        {
-          "Action": [
-            "ec2:CreateNetworkInterfacePermission",
-            "ec2:DeleteNetworkInterfacePermission"
-          ],
-          "Condition": {
-            "ArnLike": {
-              "ec2:Vpc": "arn:aws:ec2:*:*:vpc/${aws:PrincipalTag/VpcId}"
-            },
-            "StringEquals": {
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
             }
           },
           "Effect": "Allow",
@@ -164,6 +134,30 @@
             "arn:aws:ec2:*:*:subnet/*"
           ],
           "Sid": "AllowManageSageMakerTrainingEniOnVpc"
+        },
+        {
+          "Action": [
+            "ec2:CreateVpcEndpoint"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "ec2:Vpc": "arn:aws:ec2:*:*:vpc/${aws:PrincipalTag/VpcId}"
+            },
+            "StringEquals": {
+              "aws:CalledViaLast": [
+                "airflow.amazonaws.com",
+                "sagemaker.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:route-table/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "AllowManageSageMakerEniOnVpc"
         },
         {
           "Action": [
@@ -663,8 +657,7 @@
             "sagemaker:ListPipelines",
             "sagemaker:ListProcessingJobs",
             "sagemaker:ListTrainingJobs",
-            "sagemaker:ListTransformJobs",
-            "sagemaker:Search"
+            "sagemaker:ListTransformJobs"
           ],
           "Condition": {
             "StringEquals": {
@@ -709,6 +702,20 @@
             "*"
           ],
           "Sid": "SageMakerListTagsRestrictionOnSharedResources"
+        },
+        {
+          "Action": [
+            "sagemaker:Search"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalTag/EnableSageMakerMLWorkloadsPermissions": "true",
+              "sagemaker:SearchVisibilityCondition/Tags.AmazonDataZoneProject/EqualsIfExists": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SageMakerSearchPermissions"
         },
         {
           "Action": [
@@ -857,7 +864,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2025-02-13T23:07:06Z"
+  "UpdateDate": "2025-02-27T00:22:05Z"
 }
