@@ -107,11 +107,13 @@ Actions:
   - Name: bedrock:CreateDataAutomationProject
   - Name: bedrock:CreateFoundationModelAgreement
   - Name: bedrock:CreateInferenceProfile
+  - Name: bedrock:CreateInvocation
   - Name: bedrock:CreateMarketplaceModelEndpoint
   - Name: bedrock:CreateModelCopyJob
   - Name: bedrock:CreateModelEvaluationJob
   - Name: bedrock:CreateModelImportJob
   - Name: bedrock:CreateModelInvocationJob
+  - Name: bedrock:CreateSession
   - Name: bedrock:DeleteBlueprint
   - Name: bedrock:DeleteDataAutomationProject
   - Name: bedrock:DeleteFoundationModelAgreement
@@ -121,9 +123,11 @@ Actions:
   - Name: bedrock:DeleteMarketplaceModelAgreement
   - Name: bedrock:DeleteMarketplaceModelEndpoint
   - Name: bedrock:DeleteResourcePolicy
+  - Name: bedrock:DeleteSession
   - Name: bedrock:DeregisterMarketplaceModelEndpoint
   - Name: bedrock:DetectGeneratedContent
   - Name: bedrock:DisassociateAgentCollaborator
+  - Name: bedrock:EndSession
   - Name: bedrock:GenerateQuery
   - Name: bedrock:GetAgentCollaborator
   - Name: bedrock:GetAsyncInvoke
@@ -134,6 +138,7 @@ Actions:
   - Name: bedrock:GetFoundationModelAvailability
   - Name: bedrock:GetImportedModel
   - Name: bedrock:GetInferenceProfile
+  - Name: bedrock:GetInvocationStep
   - Name: bedrock:GetKnowledgeBaseDocuments
   - Name: bedrock:GetMarketplaceModelEndpoint
   - Name: bedrock:GetModelCopyJob
@@ -142,6 +147,7 @@ Actions:
   - Name: bedrock:GetModelInvocationJob
   - Name: bedrock:GetPromptRouter
   - Name: bedrock:GetResourcePolicy
+  - Name: bedrock:GetSession
   - Name: bedrock:GetUseCaseForModelAccess
   - Name: bedrock:IngestKnowledgeBaseDocuments
   - Name: bedrock:InvokeBlueprintRecommendationAsync
@@ -155,6 +161,8 @@ Actions:
   - Name: bedrock:ListFoundationModelAgreementOffers
   - Name: bedrock:ListImportedModels
   - Name: bedrock:ListInferenceProfiles
+  - Name: bedrock:ListInvocationSteps
+  - Name: bedrock:ListInvocations
   - Name: bedrock:ListKnowledgeBaseDocuments
   - Name: bedrock:ListMarketplaceModelEndpoints
   - Name: bedrock:ListModelCopyJobs
@@ -162,8 +170,10 @@ Actions:
   - Name: bedrock:ListModelImportJobs
   - Name: bedrock:ListModelInvocationJobs
   - Name: bedrock:ListPromptRouters
+  - Name: bedrock:ListSessions
   - Name: bedrock:OptimizePrompt
   - Name: bedrock:PutFoundationModelEntitlement
+  - Name: bedrock:PutInvocationStep
   - Name: bedrock:PutResourcePolicy
   - Name: bedrock:PutUseCaseForModelAccess
   - Name: bedrock:RegisterMarketplaceModelEndpoint
@@ -175,6 +185,7 @@ Actions:
   - Name: bedrock:UpdateBlueprint
   - Name: bedrock:UpdateDataAutomationProject
   - Name: bedrock:UpdateMarketplaceModelEndpoint
+  - Name: bedrock:UpdateSession
   - Name: bedrock:ValidateFlowDefinition
 
   # APIs without an IAM action
