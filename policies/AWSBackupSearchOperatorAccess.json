@@ -1,0 +1,79 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSBackupSearchOperatorAccess",
+  "CreateDate": "2025-02-27T21:52:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4IV7XJFY6I",
+  "PolicyName": "AWSBackupSearchOperatorAccess",
+  "PolicyVersion": {
+    "CreateDate": "2025-02-27T21:52:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "kms:EncryptionContextKeys": [
+                "aws:backup-search:search-job"
+              ]
+            },
+            "StringLike": {
+              "kms:ViaService": [
+                "backup.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSDataKeyForSearchAndExportPermissions"
+        },
+        {
+          "Action": [
+            "backup-search:GetSearchJob",
+            "backup-search:GetSearchResultExportJob",
+            "backup-search:ListSearchJobBackups",
+            "backup-search:ListSearchJobResults",
+            "backup-search:StartSearchResultExportJob",
+            "backup-search:StopSearchJob"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:backup-search:*:*:search-export-job/*",
+            "arn:aws:backup-search:*:*:search-job/*"
+          ],
+          "Sid": "SearchAndExportPermissions"
+        },
+        {
+          "Action": [
+            "backup-search:ListSearchJobs",
+            "backup-search:ListSearchResultExportJobs",
+            "backup-search:StartSearchJob",
+            "backup:ListIndexedRecoveryPointsForSearch"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "StartSearchAndListPermissions"
+        },
+        {
+          "Action": [
+            "backup:SearchRecoveryPoint"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:backup:*:*:recovery-point:*",
+            "arn:aws:ec2:*::snapshot/*"
+          ],
+          "Sid": "BackupSearchRecoveryPointPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-02-27T21:52:06Z"
+}
