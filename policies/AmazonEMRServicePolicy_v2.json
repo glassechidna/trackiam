@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonEMRServicePolicy_v2",
   "CreateDate": "2021-03-12T01:11:08Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4M2DU3H3GW",
   "PolicyName": "AmazonEMRServicePolicy_v2",
   "PolicyVersion": {
-    "CreateDate": "2024-05-02T18:43:30Z",
+    "CreateDate": "2025-03-03T20:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -179,6 +179,21 @@
           ],
           "Condition": {
             "StringEquals": {
+              "aws:RequestTag/Name": "emr-service-vpce",
+              "aws:RequestTag/for-use-with-amazon-emr-managed-policies": "true",
+              "ec2:CreateAction": "CreateVpcEndpoint"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-endpoint/*",
+          "Sid": "TagEmrServiceVPCEndpoint"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
               "aws:RequestTag/for-use-with-amazon-emr-managed-policies": "true",
               "ec2:CreateAction": "CreateSecurityGroup"
             }
@@ -228,6 +243,41 @@
             "arn:aws:ec2:*:*:volume/*"
           ],
           "Sid": "ManageTagsOnEMRTaggedResources"
+        },
+        {
+          "Action": [
+            "ec2:CreateVpcEndpoint"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/Name": "emr-service-vpce",
+              "aws:RequestTag/for-use-with-amazon-emr-managed-policies": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:vpc-endpoint/*"
+          ],
+          "Sid": "CreateEmrServiceVPCEndpoint"
+        },
+        {
+          "Action": [
+            "ec2:CreateVpcEndpoint",
+            "ec2:ModifyVpcEndpoint"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/for-use-with-amazon-emr-managed-policies": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:vpc-endpoint/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ],
+          "Sid": "CreateAndModifyEmrServiceVPCEndpoint"
         },
         {
           "Action": [
@@ -336,7 +386,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2024-05-02T18:43:30Z"
+  "UpdateDate": "2025-03-03T20:37:06Z"
 }
