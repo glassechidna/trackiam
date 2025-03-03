@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy",
   "CreateDate": "2024-11-20T21:58:39Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQZUIPVLH",
   "PolicyName": "SageMakerStudioProjectProvisioningRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-02-27T00:22:05Z",
+    "CreateDate": "2025-03-03T19:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -116,6 +116,22 @@
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*:*:security-group/*",
           "Sid": "SecurityGroupCleanUpForEMR"
+        },
+        {
+          "Action": "emr-serverless:GetApplication",
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:emr-serverless:*:*:/applications/*"
+          ],
+          "Sid": "EMRServerlessGetApplication"
         },
         {
           "Action": "glue:GetConnection",
@@ -1129,7 +1145,6 @@
         {
           "Action": [
             "emr-serverless:DeleteApplication",
-            "emr-serverless:GetApplication",
             "emr-serverless:UpdateApplication"
           ],
           "Condition": {
@@ -2691,7 +2706,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2025-02-27T00:22:05Z"
+  "UpdateDate": "2025-03-03T19:37:06Z"
 }
