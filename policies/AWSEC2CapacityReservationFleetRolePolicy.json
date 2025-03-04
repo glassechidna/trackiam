@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSEC2CapacityReservationFleetRolePolicy",
   "CreateDate": "2021-09-29T14:43:09Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4HMH3YJXLU",
   "PolicyName": "AWSEC2CapacityReservationFleetRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-09-29T14:43:09Z",
+    "CreateDate": "2025-03-03T23:22:06Z",
     "Document": {
       "Statement": [
         {
@@ -17,7 +17,7 @@
             "ec2:ModifyCapacityReservation"
           ],
           "Condition": {
-            "StringLike": {
+            "ArnLike": {
               "ec2:CapacityReservationFleet": "arn:aws:ec2:*:*:capacity-reservation-fleet/crf-*"
             }
           },
@@ -52,7 +52,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-09-29T14:43:09Z"
+  "UpdateDate": "2025-03-03T23:22:06Z"
 }
