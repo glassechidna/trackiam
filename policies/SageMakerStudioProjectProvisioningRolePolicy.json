@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy",
   "CreateDate": "2024-11-20T21:58:39Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQZUIPVLH",
   "PolicyName": "SageMakerStudioProjectProvisioningRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-03-03T19:37:06Z",
+    "CreateDate": "2025-03-05T23:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -159,20 +159,6 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/observability.aoss.amazonaws.com/AWSServiceRoleForAmazonOpenSearchServerless",
           "Sid": "IamCreateServiceLinkedRoleForAoss"
-        },
-        {
-          "Action": "iam:GetRole",
-          "Condition": {
-            "Null": {
-              "aws:ResourceTag/AmazonDataZoneProject": "false"
-            },
-            "StringEquals": {
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/datazone_emr_*",
-          "Sid": "IamGetEmrRoleFromDataZone"
         },
         {
           "Action": "iam:PassRole",
@@ -1465,6 +1451,7 @@
           "Condition": {
             "ArnEquals": {
               "iam:PolicyARN": [
+                "arn:aws:iam::aws:policy/AmazonSageMakerPartnerAppsFullAccess",
                 "arn:aws:iam::aws:policy/SageMakerStudioProjectRoleMachineLearningPolicy",
                 "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
                 "arn:aws:iam::aws:policy/service-role/AmazonEMRServicePolicy_v2",
@@ -1716,6 +1703,9 @@
           },
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:iam::*:role/AmazonBedrock*",
+            "arn:aws:iam::*:role/datazone-partner-apps-*",
+            "arn:aws:iam::*:role/datazone_emr_*",
             "arn:aws:iam::*:role/datazone_usr_role_*"
           ],
           "Sid": "IamManageRolesFromDataZone"
@@ -2706,7 +2696,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2025-03-03T19:37:06Z"
+  "UpdateDate": "2025-03-05T23:07:07Z"
 }
