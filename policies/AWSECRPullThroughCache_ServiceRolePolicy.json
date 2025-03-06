@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSECRPullThroughCache_ServiceRolePolicy",
   "CreateDate": "2021-11-26T21:51:09Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4G6RNU4BVN",
   "PolicyName": "AWSECRPullThroughCache_ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-11-13T15:23:16Z",
+    "CreateDate": "2025-03-06T21:22:07Z",
     "Document": {
       "Statement": [
         {
@@ -26,8 +26,12 @@
         {
           "Action": [
             "ecr:BatchCheckLayerAvailability",
+            "ecr:BatchGetImage",
+            "ecr:BatchImportUpstreamImage",
             "ecr:CompleteLayerUpload",
             "ecr:GetAuthorizationToken",
+            "ecr:GetDownloadUrlForLayer",
+            "ecr:GetImageCopyStatus",
             "ecr:InitiateLayerUpload",
             "ecr:PutImage",
             "ecr:UploadLayerPart"
@@ -40,7 +44,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-11-13T15:23:16Z"
+  "UpdateDate": "2025-03-06T21:22:07Z"
 }
