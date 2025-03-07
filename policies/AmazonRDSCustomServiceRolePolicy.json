@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSCustomServiceRolePolicy",
   "CreateDate": "2021-10-08T21:39:12Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4F2M3XYA7J",
   "PolicyName": "AmazonRDSCustomServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-07-18T17:33:36Z",
+    "CreateDate": "2025-03-06T23:52:07Z",
     "Document": {
       "Statement": [
         {
@@ -550,7 +550,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:secretsmanager:*:*:secret:do-not-delete-rds-custom-*",
+          "Resource": [
+            "arn:aws:secretsmanager:*:*:secret:do-not-delete-rds-custom-*",
+            "arn:aws:secretsmanager:*:*:secret:rds-custom!*"
+          ],
           "Sid": "secretmanager1"
         },
         {
@@ -558,6 +561,7 @@
             "secretsmanager:DeleteSecret",
             "secretsmanager:DescribeSecret",
             "secretsmanager:PutSecretValue",
+            "secretsmanager:RestoreSecret",
             "secretsmanager:TagResource"
           ],
           "Condition": {
@@ -570,8 +574,26 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:secretsmanager:*:*:secret:do-not-delete-rds-custom-*",
+          "Resource": [
+            "arn:aws:secretsmanager:*:*:secret:do-not-delete-rds-custom-*",
+            "arn:aws:secretsmanager:*:*:secret:rds-custom!*"
+          ],
           "Sid": "secretmanager2"
+        },
+        {
+          "Action": [
+            "secretsmanager:ListSecrets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "secretmanager3"
         },
         {
           "Action": [
@@ -783,7 +805,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2024-07-18T17:33:36Z"
+  "UpdateDate": "2025-03-06T23:52:07Z"
 }

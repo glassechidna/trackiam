@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSCustomPreviewServiceRolePolicy",
   "CreateDate": "2021-10-08T21:44:15Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4D6BEPON2G",
   "PolicyName": "AmazonRDSCustomPreviewServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-09-20T17:48:39Z",
+    "CreateDate": "2025-03-06T23:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -511,7 +511,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:secretsmanager:*:*:secret:do-not-delete-rds-custom-*",
+          "Resource": [
+            "arn:aws:secretsmanager:*:*:secret:do-not-delete-rds-custom-*",
+            "arn:aws:secretsmanager:*:*:secret:preview-rds-custom!*"
+          ],
           "Sid": "secretmanager1"
         },
         {
@@ -519,6 +522,7 @@
             "secretsmanager:DeleteSecret",
             "secretsmanager:DescribeSecret",
             "secretsmanager:PutSecretValue",
+            "secretsmanager:RestoreSecret",
             "secretsmanager:TagResource"
           ],
           "Condition": {
@@ -531,8 +535,26 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:secretsmanager:*:*:secret:do-not-delete-rds-custom-*",
+          "Resource": [
+            "arn:aws:secretsmanager:*:*:secret:do-not-delete-rds-custom-*",
+            "arn:aws:secretsmanager:*:*:secret:preview-rds-custom!*"
+          ],
           "Sid": "secretmanager2"
+        },
+        {
+          "Action": [
+            "secretsmanager:ListSecrets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "secretmanager3"
         },
         {
           "Action": [
@@ -689,7 +711,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2023-09-20T17:48:39Z"
+  "UpdateDate": "2025-03-06T23:37:06Z"
 }
