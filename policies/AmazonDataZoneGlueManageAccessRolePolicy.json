@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonDataZoneGlueManageAccessRolePolicy",
   "CreateDate": "2023-09-22T20:21:53Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4IFGMBEEIW",
   "PolicyName": "AmazonDataZoneGlueManageAccessRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-26T15:51:06Z",
+    "CreateDate": "2025-03-07T00:22:06Z",
     "Document": {
       "Statement": [
         {
@@ -19,7 +19,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:glue:*:*:crawler/*",
-          "Sid": "GlueCrawlerPermissions"
+          "Sid": "GlueCrawler"
         },
         {
           "Action": "ram:AssociateResourceSharePermission",
@@ -38,8 +38,25 @@
           "Sid": "CrossAccountRAMResourceSharingViaLakeFormationHybrid"
         },
         {
+          "Action": "ram:GetResourceShares",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "lakeformation.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GetResourceSharesViaLakeFormation"
+        },
+        {
           "Action": [
+            "glue:CreateCatalog",
+            "glue:CreateDatabase",
             "glue:CreateTable",
+            "glue:DeleteCatalog",
+            "glue:DeleteDatabase",
             "glue:DeleteTable",
             "glue:GetDatabases",
             "glue:GetTables",
@@ -55,9 +72,10 @@
             "arn:aws:glue:*:*:catalog",
             "arn:aws:glue:*:*:catalog/*",
             "arn:aws:glue:*:*:database/*",
-            "arn:aws:glue:*:*:table/*"
+            "arn:aws:glue:*:*:table/*",
+            "arn:aws:glue:*:*:userDefinedFunction/*"
           ],
-          "Sid": "GlueTableDatabasePermissions"
+          "Sid": "GlueTableDatabaseCatalog"
         },
         {
           "Action": [
@@ -78,7 +96,7 @@
             "arn:aws:glue:*:*:database/*",
             "arn:aws:glue:*:*:table/*"
           ],
-          "Sid": "CrossAccountRAMResourceSharingPermissions"
+          "Sid": "CrossAccountRAMResourceSharing"
         },
         {
           "Action": [
@@ -96,7 +114,7 @@
             "arn:aws:glue:*:*:catalog/*",
             "arn:aws:glue:*:*:database/*"
           ],
-          "Sid": "GlueGetTagsPermissions"
+          "Sid": "GlueGetTags"
         },
         {
           "Action": [
@@ -110,7 +128,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:glue:*:*:dataQualityRuleset/*",
-          "Sid": "GlueDataQualityPermissions"
+          "Sid": "GlueDataQuality"
         },
         {
           "Action": [
@@ -127,7 +145,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "GlueTagDatabasePermissions"
+          "Sid": "GlueTagDatabase"
         },
         {
           "Action": [
@@ -136,6 +154,7 @@
           "Condition": {
             "StringEquals": {
               "iam:PassedToService": [
+                "glue.amazonaws.com",
                 "lakeformation.amazonaws.com"
               ]
             }
@@ -143,7 +162,9 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/AmazonDataZone*",
-            "arn:aws:iam::*:role/service-role/AmazonDataZone*"
+            "arn:aws:iam::*:role/AmazonSageMakerManageAccess*",
+            "arn:aws:iam::*:role/service-role/AmazonDataZone*",
+            "arn:aws:iam::*:role/service-role/AmazonSageMakerManageAccess*"
           ],
           "Sid": "PassRoleForDataLocationRegistration"
         },
@@ -158,7 +179,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "KMSDecryptPermission"
+          "Sid": "KMSDecrypt"
         },
         {
           "Action": [
@@ -177,14 +198,13 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "LakeformationResourceFederatedSharingPermissions"
+          "Sid": "LakeformationResourceFederatedSharing"
         },
         {
           "Action": [
             "ram:AssociateResourceShare",
             "ram:DeleteResourceShare",
             "ram:DisassociateResourceShare",
-            "ram:GetResourceShares",
             "ram:ListResourceSharePermissions",
             "ram:UpdateResourceShare"
           ],
@@ -202,7 +222,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "CrossAccountRAMResourceSharingViaLakeFormationPermissions"
+          "Sid": "CrossAccountRAMResourceSharingViaLakeFormation"
         },
         {
           "Action": [
@@ -224,7 +244,37 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "CrossAccountLakeFormationResourceSharingPermissions"
+          "Sid": "CrossAccountLakeFormationResourceSharing"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:DeleteBucket",
+            "s3:PutBucketPolicy",
+            "s3:PutBucketTagging",
+            "s3:PutBucketVersioning",
+            "s3:PutEncryptionConfiguration",
+            "s3:PutLifecycleConfiguration"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::redshift-staging-bucket*",
+          "Sid": "CreateCatalogS3"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CreateCatalogEC2"
         },
         {
           "Action": [
@@ -251,7 +301,7 @@
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "LakeformationResourceSharingPermissions"
+          "Sid": "LakeformationResourceSharing"
         },
         {
           "Action": [
@@ -260,7 +310,9 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/AmazonDataZone*",
-            "arn:aws:iam::*:role/service-role/AmazonDataZone*"
+            "arn:aws:iam::*:role/AmazonSageMakerManageAccess*",
+            "arn:aws:iam::*:role/service-role/AmazonDataZone*",
+            "arn:aws:iam::*:role/service-role/AmazonSageMakerManageAccess*"
           ],
           "Sid": "GetRoleForDataZone"
         },
@@ -270,13 +322,13 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:ram:*:*:resource-share-invitation/*",
-          "Sid": "CrossAccountRAMResourceShareInvitationPermission"
+          "Sid": "CrossAccountRAMResourceShareInvitation"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2024-11-26T15:51:06Z"
+  "UpdateDate": "2025-03-07T00:22:06Z"
 }
