@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioBedrockFlowServiceRolePolicy",
   "CreateDate": "2025-02-14T00:07:06Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4L34RDKAH5",
   "PolicyName": "SageMakerStudioBedrockFlowServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-02-14T00:07:06Z",
+    "CreateDate": "2025-03-12T18:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -60,6 +60,23 @@
           "Effect": "Allow",
           "Resource": "arn:aws:bedrock:*:*:knowledge-base/*",
           "Sid": "BedrockKnowledgeBasePermissions"
+        },
+        {
+          "Action": "kms:Decrypt",
+          "Condition": {
+            "Null": {
+              "kms:EncryptionContext:aws:bedrock:guardrail-id": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:ViaService": "bedrock.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/${aws:PrincipalTag/KmsKeyId}",
+          "Sid": "BedrockGuardrailKmsPermissions"
         },
         {
           "Action": "lambda:InvokeFunction",
@@ -115,7 +132,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-02-14T00:07:06Z"
+  "UpdateDate": "2025-03-12T18:37:06Z"
 }
