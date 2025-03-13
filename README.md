@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 425
-* Unique actions: 18859
+* Unique actions: 18863
 * Managed policies: 1335
 
 Most common managed policy name prefixes:
@@ -226,12 +226,12 @@ The following table summarises the AWS APIs.
 | [`appfabric`](services/appfabric.yml) | 26 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
 | [`cleanrooms-ml`](services/cleanrooms-ml.yml) | 25 | 0 | 33 |
+| [`batch`](services/batch.yml) | 25 | 0 | 6 |
 | [`appflow`](services/appflow.yml) | 25 | 0 | 6 |
 | [`backup-gateway`](services/backup-gateway.yml) | 25 | 0 | 2 |
 | [`textract`](services/textract.yml) | 25 | 0 | 0 |
 | [`pca-connector-ad`](services/pca-connector-ad.yml) | 25 | 0 | 0 |
 | [`grafana`](services/grafana.yml) | 25 | 0 | 0 |
-| [`batch`](services/batch.yml) | 25 | 0 | 0 |
 | [`verifiedpermissions`](services/verifiedpermissions.yml) | 24 | 2 | 0 |
 | [`mediapackagev2`](services/mediapackagev2.yml) | 24 | 0 | 8 |
 | [`fis`](services/fis.yml) | 24 | 0 | 5 |
@@ -303,7 +303,7 @@ The following table summarises the AWS APIs.
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 13 | 0 | 0 |
 | [`launchwizard`](services/launchwizard.yml) | 12 | 0 | 25 |
-| [`account`](services/account.yml) | 12 | 0 | 4 |
+| [`account`](services/account.yml) | 12 | 0 | 2 |
 | [`scheduler`](services/scheduler.yml) | 12 | 0 | 0 |
 | [`pca-connector-scep`](services/pca-connector-scep.yml) | 12 | 0 | 0 |
 | [`networkmonitor`](services/networkmonitor.yml) | 12 | 0 | 0 |
@@ -466,13 +466,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3073 |
-| `Get` | 2799 |
-| `Delete` | 2166 |
-| `Create` | 2028 |
-| `Describe` | 1779 |
-| `Update` | 1748 |
-| `Put` | 519 |
+| `List` | 3075 |
+| `Get` | 2798 |
+| `Delete` | 2167 |
+| `Create` | 2029 |
+| `Describe` | 1780 |
+| `Update` | 1749 |
+| `Put` | 518 |
 | `Start` | 448 |
 | `Tag` | 292 |
 | `Untag` | 288 |
