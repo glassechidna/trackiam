@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AppStudioServiceRolePolicy",
   "CreateDate": "2024-07-10T05:01:15Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4GV26I5FBZ",
   "PolicyName": "AppStudioServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-07-10T05:01:15Z",
+    "CreateDate": "2025-03-13T20:37:07Z",
     "Document": {
       "Statement": [
         {
@@ -26,6 +26,19 @@
             "arn:aws:logs:*:*:log-group:/aws/appstudio/*"
           ],
           "Sid": "AppStudioResourcePermissionsForCloudWatch"
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:appstudio!*",
+          "Sid": "AppStudioResourceWritePermissionsForManagedSecrets"
         },
         {
           "Action": [
@@ -54,6 +67,24 @@
         },
         {
           "Action": [
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:PutSecretValue",
+            "secretsmanager:UpdateSecret"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "secretsmanager:ResourceTag/aws:secretsmanager:owningService": "appstudio"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:appstudio!*",
+          "Sid": "AppStudioResourcePermissionsForManagedSecrets"
+        },
+        {
+          "Action": [
             "sso-directory:DescribeUsers",
             "sso-directory:ListMembersInGroup",
             "sso:GetManagedApplicationInstance"
@@ -71,7 +102,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-07-10T05:01:15Z"
+  "UpdateDate": "2025-03-13T20:37:07Z"
 }
