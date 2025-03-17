@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSLambda_ReadOnlyAccess",
   "CreateDate": "2020-11-17T21:10:32Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4IERNVMNPE",
   "PolicyName": "AWSLambda_ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-07-27T17:32:05Z",
+    "CreateDate": "2025-03-17T21:07:06Z",
     "Document": {
       "Statement": [
         {
@@ -49,7 +49,9 @@
             "logs:GetLogGroupFields",
             "logs:GetLogRecord",
             "logs:GetQueryResults",
+            "logs:StartLiveTail",
             "logs:StartQuery",
+            "logs:StopLiveTail",
             "logs:StopQuery"
           ],
           "Effect": "Allow",
@@ -59,7 +61,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-07-27T17:32:05Z"
+  "UpdateDate": "2025-03-17T21:07:06Z"
 }
