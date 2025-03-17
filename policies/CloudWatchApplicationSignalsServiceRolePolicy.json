@@ -1,15 +1,31 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudWatchApplicationSignalsServiceRolePolicy",
   "CreateDate": "2023-11-09T18:09:57Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4LAFFLXUGT",
   "PolicyName": "CloudWatchApplicationSignalsServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-04-26T21:29:34Z",
+    "CreateDate": "2025-03-17T15:07:06Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "application-signals:GetServiceLevelObjective",
+            "application-signals:ListServiceLevelObjectiveExclusionWindows"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "ApplicationSignalsPermission"
+        },
         {
           "Action": [
             "autoscaling:DescribeAutoScalingGroups"
@@ -101,7 +117,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2024-04-26T21:29:34Z"
+  "UpdateDate": "2025-03-17T15:07:06Z"
 }
