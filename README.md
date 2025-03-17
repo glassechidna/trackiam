@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 425
-* Unique actions: 18865
+* Unique actions: 18866
 * Managed policies: 1335
 
 Most common managed policy name prefixes:
@@ -205,7 +205,7 @@ The following table summarises the AWS APIs.
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
 | [`timestream`](services/timestream.yml) | 29 | 1 | 8 |
 | [`voiceid`](services/voiceid.yml) | 29 | 0 | 2 |
-| [`mediaconvert`](services/mediaconvert.yml) | 29 | 0 | 1 |
+| [`mediaconvert`](services/mediaconvert.yml) | 29 | 0 | 2 |
 | [`detective`](services/detective.yml) | 28 | 1 | 8 |
 | [`cloudsearch`](services/cloudsearch.yml) | 28 | 1 | 4 |
 | [`discovery`](services/discovery.yml) | 28 | 0 | 1 |
