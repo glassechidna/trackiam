@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRDSCustomInstanceProfileRolePolicy",
   "CreateDate": "2024-02-27T17:42:02Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DJJDFEO4V",
   "PolicyName": "AmazonRDSCustomInstanceProfileRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-02-27T17:42:02Z",
+    "CreateDate": "2025-03-20T16:22:05Z",
     "Document": {
       "Statement": [
         {
@@ -121,7 +121,10 @@
           ],
           "Condition": {
             "ArnLike": {
-              "kms:EncryptionContext:SecretARN": "arn:aws:secretsmanager:*:*:secret:do-not-delete-rds-custom-*"
+              "kms:EncryptionContext:SecretARN": [
+                "arn:aws:secretsmanager:*:*:secret:do-not-delete-rds-custom-*",
+                "arn:aws:secretsmanager:*:*:secret:rds-custom!*"
+              ]
             },
             "StringLike": {
               "kms:ViaService": "secretsmanager.*.amazonaws.com"
@@ -215,7 +218,8 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:secretsmanager:*:*:secret:do-not-delete-rds-custom-*"
+            "arn:aws:secretsmanager:*:*:secret:do-not-delete-rds-custom-*",
+            "arn:aws:secretsmanager:*:*:secret:rds-custom!*"
           ],
           "Sid": "readSecretsFromCpPermission"
         },
@@ -316,7 +320,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-02-27T17:42:02Z"
+  "UpdateDate": "2025-03-20T16:22:05Z"
 }
