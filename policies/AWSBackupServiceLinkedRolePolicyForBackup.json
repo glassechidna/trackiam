@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBackupServiceLinkedRolePolicyForBackup",
   "CreateDate": "2020-06-02T23:08:40Z",
-  "DefaultVersionId": "v17",
+  "DefaultVersionId": "v18",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ONJBD4ZY2",
   "PolicyName": "AWSBackupServiceLinkedRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2025-01-07T18:22:07Z",
+    "CreateDate": "2025-03-21T23:22:06Z",
     "Document": {
       "Statement": [
         {
@@ -129,6 +129,21 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "KMSGrantPermissions"
+        },
+        {
+          "Action": [
+            "redshift-serverless:DeleteSnapshot"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/aws:backup:source-resource": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift-serverless:*:*:snapshot/*"
+          ],
+          "Sid": "RedshiftServerlessDeleteSnapshotPermissions"
         },
         {
           "Action": "dynamodb:DeleteBackup",
@@ -287,6 +302,33 @@
         },
         {
           "Action": [
+            "redshift-serverless:GetNamespace",
+            "redshift-serverless:GetSnapshot",
+            "redshift-serverless:GetWorkgroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift-serverless:*:*:namespace/*",
+            "arn:aws:redshift-serverless:*:*:snapshot/*",
+            "arn:aws:redshift-serverless:*:*:workgroup/*"
+          ],
+          "Sid": "RedshiftServerlessGetPermissions"
+        },
+        {
+          "Action": [
+            "redshift-serverless:ListNamespaces",
+            "redshift-serverless:ListSnapshots",
+            "redshift-serverless:ListTagsForResource",
+            "redshift-serverless:ListWorkgroups"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "RedshiftServerlessListPermissions"
+        },
+        {
+          "Action": [
             "redshift:DeleteClusterSnapshot"
           ],
           "Effect": "Allow",
@@ -363,7 +405,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v17"
+    "VersionId": "v18"
   },
-  "UpdateDate": "2025-01-07T18:22:07Z"
+  "UpdateDate": "2025-03-21T23:22:06Z"
 }
