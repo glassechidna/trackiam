@@ -1,0 +1,74 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonECSComputeServiceRolePolicy",
+  "CreateDate": "2025-03-24T17:37:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4FH2VJZ3QY",
+  "PolicyName": "AmazonECSComputeServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-03-24T17:37:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DeleteLaunchTemplate",
+            "ec2:DeleteLaunchTemplateVersions"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ManagedResourceOperator": "ecs.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:launch-template/*",
+          "Sid": "DeleteManagedLaunchTemplate"
+        },
+        {
+          "Action": [
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ManagedResourceOperator": "ecs.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "TerminateManagedInstances"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstanceEventWindows"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReadOnlyPermissionsForInstanceEventWindows"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstances",
+            "ec2:DescribeNetworkInterfaces"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:*/*",
+          "Sid": "ReadOnlyPermissionsForInstanceManagement"
+        },
+        {
+          "Action": [
+            "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribeLaunchTemplates"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:launch-template/*",
+          "Sid": "ReadOnlyPermissionsForLaunchTemplates"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-03-24T17:37:06Z"
+}

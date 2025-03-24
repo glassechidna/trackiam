@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonInspector2ServiceRolePolicy",
   "CreateDate": "2021-11-16T20:27:48Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4BINOILVQW",
   "PolicyName": "AmazonInspector2ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-08-14T16:03:32Z",
+    "CreateDate": "2025-03-24T17:37:07Z",
     "Document": {
       "Statement": [
         {
@@ -55,6 +55,36 @@
             "*"
           ],
           "Sid": "AllowToPutCloudwatchMetricData"
+        },
+        {
+          "Action": [
+            "ecs:DescribeTasks"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecs:*:*:cluster/*",
+          "Sid": "AllowAccessToECSTasks"
+        },
+        {
+          "Action": [
+            "ecs:ListClusters",
+            "ecs:ListTasks",
+            "eks:ListClusters"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowListAccessToECSAndEKS"
         },
         {
           "Action": [
@@ -284,7 +314,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2024-08-14T16:03:32Z"
+  "UpdateDate": "2025-03-24T17:37:07Z"
 }
