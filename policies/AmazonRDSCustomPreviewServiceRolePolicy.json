@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSCustomPreviewServiceRolePolicy",
   "CreateDate": "2021-10-08T21:44:15Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4D6BEPON2G",
   "PolicyName": "AmazonRDSCustomPreviewServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-03-06T23:37:06Z",
+    "CreateDate": "2025-03-25T22:22:06Z",
     "Document": {
       "Statement": [
         {
@@ -322,7 +322,8 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:ec2:*:*:key-pair/do-not-delete-rds-custom-*"
+            "arn:aws:ec2:*:*:key-pair/do-not-delete-rds-custom-*",
+            "arn:aws:ec2:*:*:key-pair/preview-rds-custom!*"
           ],
           "Sid": "eccKeyPair2"
         },
@@ -379,7 +380,8 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:ec2:*:*:key-pair/do-not-delete-rds-custom-*"
+            "arn:aws:ec2:*:*:key-pair/do-not-delete-rds-custom-*",
+            "arn:aws:ec2:*:*:key-pair/preview-rds-custom!*"
           ],
           "Sid": "eccRunInstances3keyPair1"
         },
@@ -558,6 +560,41 @@
         },
         {
           "Action": [
+            "sqs:CreateQueue",
+            "sqs:TagQueue"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/AWSRDSCustom": [
+                "custom-oracle"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sqs:*:*:do-not-delete-rds-custom-*",
+          "Sid": "sqs1"
+        },
+        {
+          "Action": [
+            "sqs:DeleteMessage",
+            "sqs:DeleteQueue",
+            "sqs:GetQueueAttributes",
+            "sqs:ReceiveMessage",
+            "sqs:SendMessage"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/AWSRDSCustom": [
+                "custom-oracle"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sqs:*:*:do-not-delete-rds-custom-*",
+          "Sid": "sqs2"
+        },
+        {
+          "Action": [
             "ssm:AddTagsToResource",
             "ssm:PutParameter"
           ],
@@ -711,7 +748,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2025-03-06T23:37:06Z"
+  "UpdateDate": "2025-03-25T22:22:06Z"
 }
