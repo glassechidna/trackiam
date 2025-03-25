@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 424
-* Unique actions: 18850
+* Unique actions: 18852
 * Managed policies: 1336
 
 Most common managed policy name prefixes:
@@ -233,7 +233,7 @@ The following table summarises the AWS APIs.
 | [`pca-connector-ad`](services/pca-connector-ad.yml) | 25 | 0 | 0 |
 | [`grafana`](services/grafana.yml) | 25 | 0 | 0 |
 | [`verifiedpermissions`](services/verifiedpermissions.yml) | 24 | 2 | 0 |
-| [`mediapackagev2`](services/mediapackagev2.yml) | 24 | 0 | 8 |
+| [`mediapackagev2`](services/mediapackagev2.yml) | 24 | 0 | 10 |
 | [`fis`](services/fis.yml) | 24 | 0 | 5 |
 | [`route53-recovery-control-config`](services/route53-recovery-control-config.yml) | 24 | 0 | 4 |
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
