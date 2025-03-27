@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
   "CreateDate": "2019-01-10T21:01:28Z",
-  "DefaultVersionId": "v20",
+  "DefaultVersionId": "v21",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIOOYZSLZZXWFJJ5N2",
   "PolicyName": "AWSBackupServiceRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2024-09-27T20:02:34Z",
+    "CreateDate": "2025-03-27T21:52:06Z",
     "Document": {
       "Statement": [
         {
@@ -91,6 +91,21 @@
           "Effect": "Allow",
           "Resource": "arn:aws:kms:*:*:key/*",
           "Sid": "KMSDataKeyEC2Permissions"
+        },
+        {
+          "Action": [
+            "redshift-serverless:DeleteSnapshot"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/aws:backup:source-resource": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift-serverless:*:*:snapshot/*"
+          ],
+          "Sid": "RedshiftServerlessSnapshotPermissions"
         },
         {
           "Action": "fsx:CreateBackup",
@@ -374,6 +389,50 @@
         },
         {
           "Action": [
+            "redshift-serverless:CreateSnapshot"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift-serverless:*:*:namespace/*",
+            "arn:aws:redshift-serverless:*:*:snapshot/*"
+          ],
+          "Sid": "RedshiftServerlessCreatePermissions"
+        },
+        {
+          "Action": [
+            "redshift-serverless:GetNamespace"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift-serverless:*:*:namespace/*"
+          ],
+          "Sid": "RedshiftServerlessGetPermissions"
+        },
+        {
+          "Action": [
+            "redshift-serverless:GetSnapshot",
+            "redshift-serverless:TagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift-serverless:*:*:snapshot/*"
+          ],
+          "Sid": "RedshiftServerlessResourcePermissions"
+        },
+        {
+          "Action": [
+            "redshift-serverless:ListNamespaces",
+            "redshift-serverless:ListSnapshots",
+            "redshift-serverless:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "RedshiftServerlessListPermissions"
+        },
+        {
+          "Action": [
             "redshift:CreateClusterSnapshot",
             "redshift:DescribeClusterSnapshots",
             "redshift:DescribeTags"
@@ -489,7 +548,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v20"
+    "VersionId": "v21"
   },
-  "UpdateDate": "2024-09-27T20:02:34Z"
+  "UpdateDate": "2025-03-27T21:52:06Z"
 }

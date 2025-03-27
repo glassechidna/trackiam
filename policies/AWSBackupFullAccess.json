@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupFullAccess",
   "CreateDate": "2019-11-18T22:21:52Z",
-  "DefaultVersionId": "v18",
+  "DefaultVersionId": "v19",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LL52EIPJX",
   "PolicyName": "AWSBackupFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-09-26T19:18:54Z",
+    "CreateDate": "2025-03-27T21:52:06Z",
     "Document": {
       "Statement": [
         {
@@ -119,6 +119,26 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "RdsDeletePermissions"
+        },
+        {
+          "Action": [
+            "redshift-serverless:DeleteSnapshot"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "backup.amazonaws.com"
+              ]
+            },
+            "Null": {
+              "aws:ResourceTag/aws:backup:source-resource": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift-serverless:*:*:snapshot/*"
+          ],
+          "Sid": "RedshiftServerlessDeletetPermissions"
         },
         {
           "Action": "backup-storage:*",
@@ -319,6 +339,32 @@
         },
         {
           "Action": [
+            "redshift-serverless:GetNamespace",
+            "redshift-serverless:GetSnapshot",
+            "redshift-serverless:GetWorkgroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift-serverless:*:*:namespace/*",
+            "arn:aws:redshift-serverless:*:*:snapshot/*",
+            "arn:aws:redshift-serverless:*:*:workgroup/*"
+          ],
+          "Sid": "RedshiftServerlessGetPermissions"
+        },
+        {
+          "Action": [
+            "redshift-serverless:ListNamespaces",
+            "redshift-serverless:ListSnapshots",
+            "redshift-serverless:ListWorkgroups"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "RedshiftServerlessListPermissions"
+        },
+        {
+          "Action": [
             "redshift:DescribeClusterParameterGroups",
             "redshift:DescribeClusterTracks",
             "redshift:DescribeNodeConfigurationOptions",
@@ -439,7 +485,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v18"
+    "VersionId": "v19"
   },
-  "UpdateDate": "2024-09-26T19:18:54Z"
+  "UpdateDate": "2025-03-27T21:52:06Z"
 }

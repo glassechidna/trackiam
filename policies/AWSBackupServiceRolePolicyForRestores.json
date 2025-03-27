@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForRestores",
   "CreateDate": "2019-01-12T00:23:54Z",
-  "DefaultVersionId": "v21",
+  "DefaultVersionId": "v22",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJZCCL6F2WPVOUXZKI",
   "PolicyName": "AWSBackupServiceRolePolicyForRestores",
   "PolicyVersion": {
-    "CreateDate": "2025-01-07T18:22:06Z",
+    "CreateDate": "2025-03-27T21:52:06Z",
     "Document": {
       "Statement": [
         {
@@ -42,7 +42,7 @@
             "ec2:CreateTags"
           ],
           "Condition": {
-            "ForAnyValue:StringLike": {
+            "StringLike": {
               "ec2:CreateAction": [
                 "CreateVolume",
                 "RunInstances"
@@ -133,6 +133,7 @@
                 "ec2.*.amazonaws.com",
                 "elasticfilesystem.*.amazonaws.com",
                 "rds.*.amazonaws.com",
+                "redshift-serverless.*.amazonaws.com",
                 "redshift.*.amazonaws.com"
               ]
             }
@@ -349,6 +350,38 @@
         },
         {
           "Action": [
+            "redshift-serverless:GetNamespace"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift-serverless:*:*:namespace/*"
+          ],
+          "Sid": "RedshiftServerlessNamespacePermissions"
+        },
+        {
+          "Action": [
+            "redshift-serverless:GetTableRestoreStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "RedshiftServerlessTablePermissions"
+        },
+        {
+          "Action": [
+            "redshift-serverless:RestoreTableFromSnapshot"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift-serverless:*:*:namespace/*",
+            "arn:aws:redshift-serverless:*:*:snapshot/*",
+            "arn:aws:redshift-serverless:*:*:workgroup/*"
+          ],
+          "Sid": "RedshiftServerlessSnapshotPermissions"
+        },
+        {
+          "Action": [
             "redshift:DescribeClusters"
           ],
           "Effect": "Allow",
@@ -372,6 +405,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:redshift-serverless:*:*:snapshot/*",
             "arn:aws:redshift:*:*:cluster:*",
             "arn:aws:redshift:*:*:snapshot:*/*"
           ],
@@ -436,7 +470,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v21"
+    "VersionId": "v22"
   },
-  "UpdateDate": "2025-01-07T18:22:06Z"
+  "UpdateDate": "2025-03-27T21:52:06Z"
 }

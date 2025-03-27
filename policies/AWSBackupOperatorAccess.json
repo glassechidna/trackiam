@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupOperatorAccess",
   "CreateDate": "2019-11-18T22:23:17Z",
-  "DefaultVersionId": "v16",
+  "DefaultVersionId": "v17",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KHXVYMY4O",
   "PolicyName": "AWSBackupOperatorAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-07-24T18:58:33Z",
+    "CreateDate": "2025-03-27T21:52:05Z",
     "Document": {
       "Statement": [
         {
@@ -213,6 +213,32 @@
         },
         {
           "Action": [
+            "redshift-serverless:GetNamespace",
+            "redshift-serverless:GetSnapshot",
+            "redshift-serverless:GetWorkgroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift-serverless:*:*:namespace/*",
+            "arn:aws:redshift-serverless:*:*:snapshot/*",
+            "arn:aws:redshift-serverless:*:*:workgroup/*"
+          ],
+          "Sid": "RedshiftServerlessGetPermissions"
+        },
+        {
+          "Action": [
+            "redshift-serverless:ListNamespaces",
+            "redshift-serverless:ListSnapshots",
+            "redshift-serverless:ListWorkgroups"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "RedshiftServerlessListPermissions"
+        },
+        {
+          "Action": [
             "redshift:DescribeClusterParameterGroups",
             "redshift:DescribeClusterTracks",
             "redshift:DescribeNodeConfigurationOptions",
@@ -340,7 +366,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v16"
+    "VersionId": "v17"
   },
-  "UpdateDate": "2024-07-24T18:58:33Z"
+  "UpdateDate": "2025-03-27T21:52:05Z"
 }
