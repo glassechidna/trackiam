@@ -1,15 +1,35 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEventBridgeApiDestinationsServiceRolePolicy",
   "CreateDate": "2021-02-11T20:52:05Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4GHQV22EVJ",
   "PolicyName": "AmazonEventBridgeApiDestinationsServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-02-11T20:52:05Z",
+    "CreateDate": "2025-03-28T20:07:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:Encrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/EventBridgeApiDestinations": "true"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:SecretARN": [
+                "arn:aws:secretsmanager:*:*:secret:events!connection/*"
+              ],
+              "kms:ViaService": "secretsmanager.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*"
+        },
         {
           "Action": [
             "secretsmanager:CreateSecret",
@@ -26,7 +46,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-02-11T20:52:05Z"
+  "UpdateDate": "2025-03-28T20:07:07Z"
 }

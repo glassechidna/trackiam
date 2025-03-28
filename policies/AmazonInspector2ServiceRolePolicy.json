@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonInspector2ServiceRolePolicy",
   "CreateDate": "2021-11-16T20:27:48Z",
-  "DefaultVersionId": "v14",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4BINOILVQW",
   "PolicyName": "AmazonInspector2ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-03-24T17:37:07Z",
+    "CreateDate": "2025-03-28T20:07:06Z",
     "Document": {
       "Statement": [
         {
@@ -66,7 +66,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ecs:*:*:cluster/*",
+          "Resource": "arn:aws:ecs:*:*:task/*",
           "Sid": "AllowAccessToECSTasks"
         },
         {
@@ -314,7 +314,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v14"
+    "VersionId": "v15"
   },
-  "UpdateDate": "2025-03-24T17:37:07Z"
+  "UpdateDate": "2025-03-28T20:07:06Z"
 }

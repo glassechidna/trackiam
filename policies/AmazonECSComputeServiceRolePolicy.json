@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonECSComputeServiceRolePolicy",
   "CreateDate": "2025-03-24T17:37:06Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4FH2VJZ3QY",
   "PolicyName": "AmazonECSComputeServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-03-24T17:37:06Z",
+    "CreateDate": "2025-03-28T20:07:06Z",
     "Document": {
       "Statement": [
         {
@@ -39,6 +39,17 @@
         },
         {
           "Action": [
+            "ec2:DescribeFleets",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstances",
+            "ec2:DescribeNetworkInterfaces"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReadOnlyPermissionsForInstanceManagement"
+        },
+        {
+          "Action": [
             "ec2:DescribeInstanceEventWindows"
           ],
           "Effect": "Allow",
@@ -47,28 +58,18 @@
         },
         {
           "Action": [
-            "ec2:DescribeInstanceStatus",
-            "ec2:DescribeInstances",
-            "ec2:DescribeNetworkInterfaces"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:*/*",
-          "Sid": "ReadOnlyPermissionsForInstanceManagement"
-        },
-        {
-          "Action": [
             "ec2:DescribeLaunchTemplateVersions",
             "ec2:DescribeLaunchTemplates"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:launch-template/*",
+          "Resource": "*",
           "Sid": "ReadOnlyPermissionsForLaunchTemplates"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-03-24T17:37:06Z"
+  "UpdateDate": "2025-03-28T20:07:06Z"
 }
