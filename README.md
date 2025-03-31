@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 424
-* Unique actions: 18860
+* Unique actions: 18870
 * Managed policies: 1336
 
 Most common managed policy name prefixes:
@@ -385,6 +385,7 @@ The following table summarises the AWS APIs.
 | [`billing`](services/billing.yml) | 0 | 0 | 24 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 22 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 22 |
+| [`s3express`](services/s3express.yml) | 0 | 0 | 21 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 19 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
@@ -409,7 +410,6 @@ The following table summarises the AWS APIs.
 | [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
 | [`dsql`](services/dsql.yml) | 0 | 0 | 12 |
 | [`backup-search`](services/backup-search.yml) | 0 | 0 | 12 |
-| [`s3express`](services/s3express.yml) | 0 | 0 | 11 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 11 |
 | [`ts`](services/ts.yml) | 0 | 0 | 9 |
 | [`notifications-contacts`](services/notifications-contacts.yml) | 0 | 0 | 9 |
@@ -465,13 +465,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3078 |
-| `Get` | 2794 |
-| `Delete` | 2166 |
-| `Create` | 2026 |
+| `List` | 3079 |
+| `Get` | 2797 |
+| `Delete` | 2169 |
+| `Create` | 2027 |
 | `Describe` | 1781 |
 | `Update` | 1750 |
-| `Put` | 519 |
+| `Put` | 521 |
 | `Start` | 451 |
 | `Tag` | 292 |
 | `Untag` | 288 |
