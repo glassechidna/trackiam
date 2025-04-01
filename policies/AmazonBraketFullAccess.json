@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonBraketFullAccess",
   "CreateDate": "2020-08-06T20:12:37Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HUAKO7NZO",
   "PolicyName": "AmazonBraketFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-04-19T16:25:29Z",
+    "CreateDate": "2025-04-01T22:52:06Z",
     "Document": {
       "Statement": [
         {
@@ -57,6 +57,23 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/service-role/AmazonBraketServiceSageMakerNotebookRole*"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutBucketPolicy",
+            "s3:PutBucketPublicAccessBlock",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::amazon-braket-*"
         },
         {
           "Action": "braket:*",
@@ -132,18 +149,6 @@
         },
         {
           "Action": [
-            "s3:CreateBucket",
-            "s3:GetObject",
-            "s3:ListBucket",
-            "s3:PutBucketPolicy",
-            "s3:PutBucketPublicAccessBlock",
-            "s3:PutObject"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:s3:::amazon-braket-*"
-        },
-        {
-          "Action": [
             "sagemaker:AddTags",
             "sagemaker:CreateNotebookInstance",
             "sagemaker:CreatePresignedNotebookInstanceUrl",
@@ -180,7 +185,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2023-04-19T16:25:29Z"
+  "UpdateDate": "2025-04-01T22:52:06Z"
 }
