@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-03-21T20:07:06Z",
+    "CreateDate": "2025-04-08T17:52:05Z",
     "Document": {
       "Statement": [
         {
@@ -1260,7 +1260,8 @@
                 "airflow.amazonaws.com",
                 "emr-serverless.amazonaws.com",
                 "glue.amazonaws.com",
-                "sagemaker.amazonaws.com"
+                "sagemaker.amazonaws.com",
+                "scheduler.amazonaws.com"
               ]
             }
           },
@@ -1319,6 +1320,7 @@
                 "bedrock.*.amazonaws.com",
                 "s3.*.amazonaws.com",
                 "sagemaker.*.amazonaws.com",
+                "scheduler.*.amazonaws.com",
                 "sqs.*.amazonaws.com"
               ]
             }
@@ -1583,6 +1585,7 @@
                 "redshift.*.amazonaws.com",
                 "s3.*.amazonaws.com",
                 "sagemaker.*.amazonaws.com",
+                "scheduler.*.amazonaws.com",
                 "sqs.*.amazonaws.com"
               ]
             }
@@ -1733,6 +1736,9 @@
             "redshift:GetClusterCredentialsWithIAM"
           ],
           "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneEnvironment": "true"
+            },
             "StringEquals": {
               "aws:ResourceTag/for-use-with-all-datazone-projects": "true"
             }
@@ -1949,6 +1955,39 @@
           "Effect": "Allow",
           "Resource": "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}",
           "Sid": "ListDomainS3BucketPermissions"
+        },
+        {
+          "Action": [
+            "scheduler:CreateSchedule",
+            "scheduler:DeleteSchedule",
+            "scheduler:GetSchedule",
+            "scheduler:UpdateSchedule"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:scheduler:*:*:schedule/*"
+          ],
+          "Sid": "EventBridgeScheduleActions"
+        },
+        {
+          "Action": [
+            "scheduler:GetScheduleGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:scheduler:*:*:schedule-group/*"
+          ],
+          "Sid": "EventBridgeScheduleGroupActions"
         },
         {
           "Action": [
@@ -2455,7 +2494,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2025-03-21T20:07:06Z"
+  "UpdateDate": "2025-04-08T17:52:05Z"
 }
