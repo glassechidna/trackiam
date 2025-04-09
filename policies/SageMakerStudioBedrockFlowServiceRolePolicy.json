@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioBedrockFlowServiceRolePolicy",
   "CreateDate": "2025-02-14T00:07:06Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4L34RDKAH5",
   "PolicyName": "SageMakerStudioBedrockFlowServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-03-12T18:37:06Z",
+    "CreateDate": "2025-04-09T20:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -33,6 +33,18 @@
           "Effect": "Allow",
           "Resource": "arn:aws:bedrock:*:*:prompt/*",
           "Sid": "BedrockPromptPermissions"
+        },
+        {
+          "Action": "bedrock:InvokeAgent",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock:*:*:agent-alias/*",
+          "Sid": "BedrockInvokeAgentPermissions"
         },
         {
           "Action": "bedrock:InvokeModel",
@@ -123,6 +135,24 @@
           "Sid": "BedrockPromptKmsPermissions"
         },
         {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:bedrock:arn": "arn:aws:bedrock:*:${aws:PrincipalAccount}:agent/*",
+              "kms:ViaService": "bedrock.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/${aws:PrincipalTag/KmsKeyId}",
+          "Sid": "BedrockAgentKmsPermissions"
+        },
+        {
           "Action": "bedrock:RetrieveAndGenerate",
           "Effect": "Allow",
           "Resource": "*",
@@ -132,7 +162,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-03-12T18:37:06Z"
+  "UpdateDate": "2025-04-09T20:37:06Z"
 }

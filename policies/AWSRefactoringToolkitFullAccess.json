@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSRefactoringToolkitFullAccess",
   "CreateDate": "2022-10-25T16:41:15Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BNNXRNIF7",
   "PolicyName": "AWSRefactoringToolkitFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-03-25T18:43:14Z",
+    "CreateDate": "2025-04-09T20:22:06Z",
     "Document": {
       "Statement": [
         {
@@ -18,8 +18,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
-          "Sid": "CreateEcsServiceLinkedRoleAccess"
+          "Resource": "arn:aws:iam::*:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS"
         },
         {
           "Action": [
@@ -32,8 +31,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:codebuild:*:*:project/*",
-          "Sid": "CodeBuildCreateAccess"
+          "Resource": "arn:aws:codebuild:*:*:project/*"
         },
         {
           "Action": [
@@ -54,8 +52,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "Ec2ModifyAccess"
+          "Resource": "*"
         },
         {
           "Action": [
@@ -76,8 +73,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "Ec2ModifyAccessATS"
+          "Resource": "*"
         },
         {
           "Action": [
@@ -87,7 +83,6 @@
             "ec2:CreateRoute",
             "ec2:CreateRouteTable",
             "ec2:CreateSubnet",
-            "ec2:CreateTags",
             "ec2:CreateVpc"
           ],
           "Condition": {
@@ -96,8 +91,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "Ec2CreateAccess"
+          "Resource": "*"
         },
         {
           "Action": [
@@ -107,7 +101,6 @@
             "ec2:CreateRoute",
             "ec2:CreateRouteTable",
             "ec2:CreateSubnet",
-            "ec2:CreateTags",
             "ec2:CreateVpc"
           ],
           "Condition": {
@@ -116,8 +109,49 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "Ec2CreateAccessATS"
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "application-transformation.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "application-transformation.amazonaws.com"
+              ]
+            },
+            "Null": {
+              "aws:RequestTag/application-transformation": "false"
+            },
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "AuthorizeSecurityGroupIngress",
+                "CreateInternetGateway",
+                "CreateKeyPair",
+                "CreateRoute",
+                "CreateRouteTable",
+                "CreateSubnet",
+                "CreateVpc"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": [
@@ -134,8 +168,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:*:ecr:*:*:repository/*",
-          "Sid": "EcrPushAccess"
+          "Resource": "arn:*:ecr:*:*:repository/*"
         },
         {
           "Action": [
@@ -148,8 +181,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:*:ecr:*:*:repository/*",
-          "Sid": "EcrCreateAccess"
+          "Resource": "arn:*:ecr:*:*:repository/*"
         },
         {
           "Action": [
@@ -162,8 +194,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:*:ecr:*:*:repository/*",
-          "Sid": "EcrCreateAccessATS"
+          "Resource": "arn:*:ecr:*:*:repository/*"
         },
         {
           "Action": [
@@ -180,8 +211,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:*:ecr:*:*:repository/*",
-          "Sid": "EcrModifyAccess"
+          "Resource": "arn:*:ecr:*:*:repository/*"
         },
         {
           "Action": [
@@ -198,8 +228,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:*:ecr:*:*:repository/*",
-          "Sid": "EcrModifyAccessATS"
+          "Resource": "arn:*:ecr:*:*:repository/*"
         },
         {
           "Action": [
@@ -214,8 +243,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "EcsCreateAccess"
+          "Resource": "*"
         },
         {
           "Action": [
@@ -230,8 +258,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "EcsCreateAccessATS"
+          "Resource": "*"
         },
         {
           "Action": [
@@ -243,8 +270,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "EcsReadTaskDefinitionAccess"
+          "Resource": "*"
         },
         {
           "Action": [
@@ -256,8 +282,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "EcsExecuteCommandInSidecar"
+          "Resource": "*"
         },
         {
           "Action": [
@@ -269,8 +294,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "EcsExecuteCommandInSidecarATS"
+          "Resource": "*"
         },
         {
           "Action": [
@@ -284,8 +308,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "EcsModifyAccess"
+          "Resource": "*"
         },
         {
           "Action": [
@@ -299,8 +322,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "EcsModifyAccessATS"
+          "Resource": "*"
         },
         {
           "Action": [
@@ -315,8 +337,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:kms:*::*",
-          "Sid": "KmsCreateGrantAccess"
+          "Resource": "arn:aws:kms:*::*"
         },
         {
           "Action": [
@@ -331,8 +352,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:kms:*::*",
-          "Sid": "KmsAccess"
+          "Resource": "arn:aws:kms:*::*"
         },
         {
           "Action": [
@@ -354,8 +374,7 @@
             "arn:aws:logs:*:*:log-group:/aws/codebuild/*:*",
             "arn:aws:logs:*:*:log-group:/aws/ecs/container-logs/*:*",
             "arn:aws:logs:*:*:log-group:/aws/ecs/containerinsights/*:*"
-          ],
-          "Sid": "CloudwatchCreateAccess"
+          ]
         },
         {
           "Action": [
@@ -376,8 +395,7 @@
           "Resource": [
             "arn:aws:logs:*:*:log-group:/aws/ecs/container-logs/*:*",
             "arn:aws:logs:*:*:log-group:/aws/ecs/containerinsights/*:*"
-          ],
-          "Sid": "CloudwatchCreateAccessATS"
+          ]
         },
         {
           "Action": [
@@ -393,8 +411,7 @@
             "arn:aws:logs:*:*:log-group:/aws/codebuild/*:*",
             "arn:aws:logs:*:*:log-group:/aws/ecs/container-logs/*:*",
             "arn:aws:logs:*:*:log-group:/aws/ecs/containerinsights/*:*"
-          ],
-          "Sid": "CloudwatchGetAccess"
+          ]
         },
         {
           "Action": [
@@ -409,8 +426,7 @@
           "Resource": [
             "arn:aws:logs:*:*:log-group:/aws/ecs/container-logs/*:*",
             "arn:aws:logs:*:*:log-group:/aws/ecs/containerinsights/*:*"
-          ],
-          "Sid": "CloudwatchGetAccessATS"
+          ]
         },
         {
           "Action": [
@@ -425,14 +441,12 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:s3:::*",
-          "Sid": "S3ListAccess"
+          "Resource": "arn:aws:s3:::*"
         },
         {
           "Action": "iam:GetRole",
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
-          "Sid": "GetECSSLR"
+          "Resource": "arn:aws:iam::*:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS"
         },
         {
           "Action": [
@@ -442,8 +456,7 @@
             "a2c:StartDeploymentJob"
           ],
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "App2ContainerAccess"
+          "Resource": "*"
         },
         {
           "Action": [
@@ -459,8 +472,7 @@
             "application-transformation:StartPortingRecommendationAssessment"
           ],
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "ApplicationTransformationAccess"
+          "Resource": "*"
         },
         {
           "Action": [
@@ -495,8 +507,7 @@
             "secretsmanager:ListSecrets"
           ],
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "ReadOnlyAccess"
+          "Resource": "*"
         },
         {
           "Action": [
@@ -514,32 +525,28 @@
             "arn:*:cloudformation:*:*:stack/a2c-app-*",
             "arn:*:cloudformation:*:*:stack/a2c-build-*",
             "arn:*:cloudformation:*:*:stack/application-transformation-app-*"
-          ],
-          "Sid": "CloudformationExecutionAccess"
+          ]
         },
         {
           "Action": [
             "codebuild:StartBuild"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:codebuild:*:*:project/*",
-          "Sid": "CodeBuildExecutionAccess"
+          "Resource": "arn:aws:codebuild:*:*:project/*"
         },
         {
           "Action": [
             "ec2:CreateSecurityGroup"
           ],
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "CreateSecurityGroupAccess"
+          "Resource": "*"
         },
         {
           "Action": [
             "ecr:GetAuthorizationToken"
           ],
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "EcrAuthAccess"
+          "Resource": "*"
         },
         {
           "Action": [
@@ -552,8 +559,7 @@
             "arn:aws:s3:::*/a2c-generated*",
             "arn:aws:s3:::*/application-transformation*",
             "arn:aws:s3:::*/refactoringtoolkit*"
-          ],
-          "Sid": "S3ObjectAccess"
+          ]
         },
         {
           "Action": [
@@ -563,8 +569,7 @@
           "Resource": [
             "arn:aws:s3:::aws.portingassistant.dotnet.datastore",
             "arn:aws:s3:::aws.portingassistant.dotnet.datastore/*"
-          ],
-          "Sid": "PortingAssistantFullAccess"
+          ]
         },
         {
           "Action": [
@@ -574,8 +579,7 @@
             "ssm:RemoveTagsFromResource"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:parameter/a2c-generated-check-ecs-slr-*",
-          "Sid": "SsmParameterAccess"
+          "Resource": "arn:aws:ssm:*:*:parameter/a2c-generated-check-ecs-slr-*"
         },
         {
           "Action": [
@@ -586,14 +590,13 @@
             "ssmmessages:OpenDataChannel"
           ],
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "SsmMessagesAccess"
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2024-03-25T18:43:14Z"
+  "UpdateDate": "2025-04-09T20:22:06Z"
 }
