@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy",
   "CreateDate": "2024-11-20T21:58:39Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQZUIPVLH",
   "PolicyName": "SageMakerStudioProjectProvisioningRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-03-21T20:07:07Z",
+    "CreateDate": "2025-04-09T21:22:07Z",
     "Document": {
       "Statement": [
         {
@@ -43,7 +43,6 @@
               "aws:RequestTag/AmazonDataZoneProject": "false"
             },
             "StringEquals": {
-              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
               "aws:ResourceAccount": "${aws:PrincipalAccount}"
             }
           },
@@ -258,6 +257,24 @@
             "StringEquals": {
               "aws:ResourceAccount": "${aws:PrincipalAccount}",
               "iam:PassedToService": [
+                "bedrock.amazonaws.com",
+                "redshift-serverless.amazonaws.com",
+                "sagemaker.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/datazone_usr_role_*"
+          ],
+          "Sid": "IamPassRoleFromDataZone"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "iam:PassedToService": [
                 "glue.amazonaws.com",
                 "lakeformation.amazonaws.com"
               ]
@@ -285,23 +302,6 @@
             "arn:aws:iam::*:role/datazone_usr_role_*"
           ],
           "Sid": "IamPassProjectRoleToLambdaForFederatedDataConnection"
-        },
-        {
-          "Action": "iam:PassRole",
-          "Condition": {
-            "StringEquals": {
-              "aws:ResourceAccount": "${aws:PrincipalAccount}",
-              "iam:PassedToService": [
-                "redshift-serverless.amazonaws.com",
-                "sagemaker.amazonaws.com"
-              ]
-            }
-          },
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:iam::*:role/datazone_usr_role_*"
-          ],
-          "Sid": "IamPassRoleFromDataZone"
         },
         {
           "Action": "iam:TagRole",
@@ -514,7 +514,9 @@
           },
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:sagemaker:*:*:app/*/*/CodeEditor/*",
             "arn:aws:sagemaker:*:*:app/*/*/JupyterLab/*",
+            "arn:aws:sagemaker:*:*:app/*/*/codeeditor/*",
             "arn:aws:sagemaker:*:*:app/*/*/jupyterlab/*"
           ],
           "Sid": "SageMakerAppDeletion"
@@ -546,6 +548,59 @@
           "Effect": "Allow",
           "Resource": "arn:aws:sagemaker:*:*:user-profile/*",
           "Sid": "SageMakerUserProfileDeletion"
+        },
+        {
+          "Action": "scheduler:CreateScheduleGroup",
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": "AmazonDataZone*"
+            },
+            "Null": {
+              "aws:RequestTag/AmazonDataZoneProject": "false",
+              "aws:TagKeys": "false"
+            },
+            "StringEquals": {
+              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:scheduler:*:*:schedule-group/*",
+          "Sid": "EventBridgeCreateScheduleGroupActions"
+        },
+        {
+          "Action": "scheduler:DeleteScheduleGroup",
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            },
+            "StringEquals": {
+              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:scheduler:*:*:schedule-group/*",
+          "Sid": "EventBridgeDeleteScheduleGroupActions"
+        },
+        {
+          "Action": "scheduler:TagResource",
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": "AmazonDataZone*"
+            },
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false",
+              "aws:TagKeys": "false"
+            },
+            "StringEquals": {
+              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:scheduler:*:*:schedule-group/*",
+          "Sid": "EventBridgeTagScheduleGroupActions"
         },
         {
           "Action": "secretsmanager:GetRandomPassword",
@@ -755,14 +810,18 @@
             "bedrock:GetDataSource",
             "bedrock:GetFlowAlias",
             "bedrock:GetFlowVersion",
+            "bedrock:GetIngestionJob",
             "bedrock:ListAgentActionGroups",
             "bedrock:ListAgentAliases",
             "bedrock:ListAgentKnowledgeBases",
             "bedrock:ListDataSources",
             "bedrock:ListFlowAliases",
             "bedrock:ListFlowVersions",
+            "bedrock:ListIngestionJobs",
             "bedrock:PrepareAgent",
             "bedrock:PrepareFlow",
+            "bedrock:StartIngestionJob",
+            "bedrock:StopIngestionJob",
             "bedrock:TagResource",
             "bedrock:UpdateAgent",
             "bedrock:UpdateAgentActionGroup",
@@ -780,7 +839,6 @@
               "aws:ResourceTag/AmazonDataZoneProject": "false"
             },
             "StringEquals": {
-              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
               "aws:ResourceAccount": "${aws:PrincipalAccount}"
             }
           },
@@ -800,7 +858,6 @@
           ],
           "Condition": {
             "StringEquals": {
-              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
               "aws:ResourceAccount": "${aws:PrincipalAccount}"
             }
           },
@@ -1456,6 +1513,7 @@
                 "arn:aws:iam::aws:policy/SageMakerStudioProjectRoleMachineLearningPolicy",
                 "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
                 "arn:aws:iam::aws:policy/service-role/AmazonEMRServicePolicy_v2",
+                "arn:aws:iam::aws:policy/service-role/SageMakerStudioBedrockKnowledgeBaseServiceRolePolicy",
                 "arn:aws:iam::aws:policy/service-role/SageMakerStudioEMRInstanceRolePolicy",
                 "arn:aws:iam::aws:policy/service-role/SageMakerStudioEMRServiceRolePolicy"
               ]
@@ -2389,6 +2447,21 @@
         },
         {
           "Action": [
+            "scheduler:GetScheduleGroup",
+            "scheduler:ListTagsForResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:scheduler:*:*:schedule-group/*",
+          "Sid": "EventBridgeViewScheduleGroupActions"
+        },
+        {
+          "Action": [
             "secretsmanager:CreateSecret",
             "secretsmanager:DeleteResourcePolicy",
             "secretsmanager:DeleteSecret",
@@ -2644,6 +2717,7 @@
           "Action": [
             "lakeformation:BatchGrantPermissions",
             "lakeformation:DeregisterResource",
+            "lakeformation:DescribeResource",
             "lakeformation:GrantPermissions",
             "lakeformation:ListResources",
             "lakeformation:RegisterResource"
@@ -2697,7 +2771,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2025-03-21T20:07:07Z"
+  "UpdateDate": "2025-04-09T21:22:07Z"
 }
