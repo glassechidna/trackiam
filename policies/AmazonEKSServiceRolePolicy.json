@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEKSServiceRolePolicy",
   "CreateDate": "2020-02-21T20:10:47Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4KZBLSP26Y",
   "PolicyName": "AmazonEKSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-02-26T21:37:06Z",
+    "CreateDate": "2025-04-14T20:52:07Z",
     "Document": {
       "Statement": [
         {
@@ -50,8 +50,10 @@
         },
         {
           "Action": [
+            "ec2:AuthorizeSecurityGroupEgress",
             "ec2:AuthorizeSecurityGroupIngress",
             "ec2:DeleteSecurityGroup",
+            "ec2:RevokeSecurityGroupEgress",
             "ec2:RevokeSecurityGroupIngress"
           ],
           "Condition": {
@@ -324,7 +326,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2025-02-26T21:37:06Z"
+  "UpdateDate": "2025-04-14T20:52:07Z"
 }
