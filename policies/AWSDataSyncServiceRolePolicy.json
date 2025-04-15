@@ -1,15 +1,32 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSDataSyncServiceRolePolicy",
   "CreateDate": "2024-10-09T17:45:40Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4PHSENNDOP",
   "PolicyName": "AWSDataSyncServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-10-09T17:45:40Z",
+    "CreateDate": "2025-04-15T16:37:06Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "secretsmanager:ResourceTag/aws:secretsmanager:owningService": "aws-datasync"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:secretsmanager:*:*:secret:aws-datasync!*"
+          ],
+          "Sid": "DataSyncSecretsManagerReadAccess"
+        },
         {
           "Action": [
             "logs:CreateLogGroup",
@@ -35,7 +52,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-10-09T17:45:40Z"
+  "UpdateDate": "2025-04-15T16:37:06Z"
 }
