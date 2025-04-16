@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 424
-* Unique actions: 18888
-* Managed policies: 1337
+* Unique actions: 18890
+* Managed policies: 1338
 
 Most common managed policy name prefixes:
 
@@ -24,7 +24,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 299 |
 | `arn:aws:iam::aws:policy/service-role/*` | 205 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
-| Other | 125 |
+| Other | 126 |
 
 The following table summarises the AWS APIs. 
 
@@ -109,7 +109,7 @@ The following table summarises the AWS APIs.
 | [`ivs`](services/ivs.yml) | 63 | 0 | 5 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
-| [`transfer`](services/transfer.yml) | 60 | 0 | 9 |
+| [`transfer`](services/transfer.yml) | 60 | 0 | 11 |
 | [`datasync`](services/datasync.yml) | 60 | 0 | 6 |
 | [`geo`](services/geo.yml) | 60 | 0 | 0 |
 | [`inspector2`](services/inspector2.yml) | 59 | 0 | 0 |
@@ -472,7 +472,7 @@ Most common action prefixes:
 | `Describe` | 1782 |
 | `Update` | 1751 |
 | `Put` | 521 |
-| `Start` | 454 |
+| `Start` | 456 |
 | `Tag` | 292 |
 | `Untag` | 288 |
 

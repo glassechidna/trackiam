@@ -1,0 +1,53 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/GitLabDuoWithAmazonQPermissionsPolicy",
+  "CreateDate": "2025-04-16T16:37:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4D6QXPN63R",
+  "PolicyName": "GitLabDuoWithAmazonQPermissionsPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-04-16T16:37:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "q:CreateAuthGrant",
+            "q:GenerateCodeRecommendations",
+            "q:ListPlugins",
+            "q:SendEvent",
+            "q:SendMessage",
+            "q:UpdateAuthGrant",
+            "q:VerifyOAuthAppConnection"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GitLabDuoUsagePermissions"
+        },
+        {
+          "Action": [
+            "q:CreateOAuthAppConnection",
+            "q:DeleteOAuthAppConnection"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GitLabDuoManagementPermissions"
+        },
+        {
+          "Action": [
+            "q:CreatePlugin",
+            "q:DeletePlugin",
+            "q:GetPlugin"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:qdeveloper:*:*:plugin/GitLabDuoWithAmazonQ/*",
+          "Sid": "GitLabDuoPluginPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-04-16T16:37:07Z"
+}
