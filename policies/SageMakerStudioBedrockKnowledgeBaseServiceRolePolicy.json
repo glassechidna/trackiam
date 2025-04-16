@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioBedrockKnowledgeBaseServiceRolePolicy",
   "CreateDate": "2025-02-25T02:52:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4H3IVWYHBJ",
   "PolicyName": "SageMakerStudioBedrockKnowledgeBaseServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-02-25T02:52:07Z",
+    "CreateDate": "2025-04-16T20:37:07Z",
     "Document": {
       "Statement": [
         {
@@ -134,12 +134,31 @@
           "Effect": "Allow",
           "Resource": "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}/${aws:PrincipalTag/AmazonDataZoneDomain}/${aws:PrincipalTag/AmazonDataZoneProject}/*",
           "Sid": "AccessDomainS3BucketPermissions"
+        },
+        {
+          "Action": [
+            "bedrock:GenerateQuery"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BedrockGenerateQueryPermissions"
+        },
+        {
+          "Action": [
+            "sqlworkbench:DeleteSqlGenerationContext",
+            "sqlworkbench:GetSqlGenerationContext",
+            "sqlworkbench:GetSqlRecommendations",
+            "sqlworkbench:PutSqlGenerationContext"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SqlWorkbenchAccessPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-02-25T02:52:07Z"
+  "UpdateDate": "2025-04-16T20:37:07Z"
 }
