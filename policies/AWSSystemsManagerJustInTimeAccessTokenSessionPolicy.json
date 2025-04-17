@@ -1,0 +1,117 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSSystemsManagerJustInTimeAccessTokenSessionPolicy",
+  "CreateDate": "2025-04-17T20:52:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4FLG3BUTYM",
+  "PolicyName": "AWSSystemsManagerJustInTimeAccessTokenSessionPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-04-17T20:52:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "identitystore:DescribeUser",
+            "ssm:GetCommandInvocation",
+            "sso:ListDirectoryAssociations*"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaFirst": "ssm-guiconnect.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SsmRdpSsoSetup"
+        },
+        {
+          "Action": [
+            "kms:CreateGrant"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "StringEquals": {
+              "aws:ResourceTag/SystemsManagerJustInTimeNodeAccessManaged": "true"
+            },
+            "StringLike": {
+              "kms:ViaService": "ssm-guiconnect.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "RdpKmsPermission"
+        },
+        {
+          "Action": [
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/SystemsManagerJustInTimeNodeAccessManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "SessionManagerKmsPermission"
+        },
+        {
+          "Action": [
+            "ssm:SendCommand"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaFirst": "ssm-guiconnect.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/AWSSSO-CreateSSOUser"
+          ],
+          "Sid": "SsmRdpSsoSetupSendCommand"
+        },
+        {
+          "Action": [
+            "ssm:StartSession"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaFirst": "ssm-guiconnect.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/AWS-StartPortForwardingSession"
+          ],
+          "Sid": "RdpStartSession"
+        },
+        {
+          "Action": [
+            "ssm-guiconnect:CancelConnection",
+            "ssm-guiconnect:GetConnection",
+            "ssm-guiconnect:StartConnection"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GuiConnect"
+        },
+        {
+          "Action": [
+            "ssm:StartSession"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/SSM-SessionManagerRunShell"
+          ],
+          "Sid": "SsmStartSession"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-04-17T20:52:07Z"
+}

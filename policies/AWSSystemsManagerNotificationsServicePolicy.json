@@ -1,0 +1,65 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSystemsManagerNotificationsServicePolicy",
+  "CreateDate": "2025-04-17T20:52:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4FP2IRW2BY",
+  "PolicyName": "AWSSystemsManagerNotificationsServicePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-04-17T20:52:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:GetRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowIamActions"
+        },
+        {
+          "Action": [
+            "identitystore:DescribeUser",
+            "identitystore:ListGroupMemberships",
+            "identitystore:ListGroupMembershipsForMember"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowIdentityStoreActions"
+        },
+        {
+          "Action": [
+            "sso-directory:DescribeUser",
+            "sso-directory:ListMembersInGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowSSODirectoryActions"
+        },
+        {
+          "Action": [
+            "sso:DescribeRegisteredRegions",
+            "sso:ListDirectoryAssociations",
+            "sso:ListInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowSSOActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-04-17T20:52:07Z"
+}
