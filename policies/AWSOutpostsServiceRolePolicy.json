@@ -1,30 +1,87 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSOutpostsServiceRolePolicy",
   "CreateDate": "2020-11-09T22:55:56Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NM7FW2RO7",
   "PolicyName": "AWSOutpostsServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-11-09T22:55:56Z",
+    "CreateDate": "2025-04-17T17:37:07Z",
     "Document": {
       "Statement": [
         {
           "Action": [
-            "ec2:CreateNetworkInterface",
-            "ec2:CreateSecurityGroup",
-            "ec2:DescribeNetworkInterfaces",
-            "ec2:DescribeSecurityGroups"
+            "ec2:CreateNetworkInterface"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": [
+                "outposts:private-connectivity-resourceId"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:ec2:*:*:network-interface/*"
+          ],
+          "Sid": "PrivateConnectivityCreateNetworkInterfaceTaggingPolicy"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": [
+                "outposts:private-connectivity-resourceId"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:ec2:*:*:security-group/*"
+          ],
+          "Sid": "PrivateConnectivityCreateSecurityGroupTaggingPolicy"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": [
+            "arn:*:ec2:*:*:security-group/*",
+            "arn:*:ec2:*:*:subnet/*",
+            "arn:*:ec2:*:*:vpc/*"
+          ],
+          "Sid": "PrivateConnectivityCreateNetworkInterfacePolicy"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:ec2:*:*:vpc/*"
+          ],
+          "Sid": "PrivateConnectivityCreateSecurityGroupPolicy"
+        },
+        {
+          "Action": [
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcEndpoints"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PrivateConnectivityServiceRolePolicy"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-11-09T22:55:56Z"
+  "UpdateDate": "2025-04-17T17:37:07Z"
 }

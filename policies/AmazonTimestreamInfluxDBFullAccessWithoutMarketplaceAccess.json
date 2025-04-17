@@ -1,0 +1,98 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonTimestreamInfluxDBFullAccessWithoutMarketplaceAccess",
+  "CreateDate": "2025-04-17T17:52:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4LUL3RNNBP",
+  "PolicyName": "AmazonTimestreamInfluxDBFullAccessWithoutMarketplaceAccess",
+  "PolicyVersion": {
+    "CreateDate": "2025-04-17T17:52:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "timestream-influxdb.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/timestream-influxdb.amazonaws.com/AWSServiceRoleForTimestreamInfluxDB",
+          "Sid": "ServiceLinkedRoleStatement"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "CreateEniInSubnetStatement"
+        },
+        {
+          "Action": [
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "NetworkValidationStatement"
+        },
+        {
+          "Action": [
+            "s3:GetBucketPolicy",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*"
+          ],
+          "Sid": "BucketValidationStatement"
+        },
+        {
+          "Action": [
+            "timestream-influxdb:CreateDbCluster",
+            "timestream-influxdb:CreateDbInstance",
+            "timestream-influxdb:CreateDbParameterGroup",
+            "timestream-influxdb:DeleteDbCluster",
+            "timestream-influxdb:DeleteDbInstance",
+            "timestream-influxdb:GetDbCluster",
+            "timestream-influxdb:GetDbInstance",
+            "timestream-influxdb:GetDbParameterGroup",
+            "timestream-influxdb:ListDbClusters",
+            "timestream-influxdb:ListDbInstances",
+            "timestream-influxdb:ListDbInstancesForCluster",
+            "timestream-influxdb:ListDbParameterGroups",
+            "timestream-influxdb:ListTagsForResource",
+            "timestream-influxdb:TagResource",
+            "timestream-influxdb:UntagResource",
+            "timestream-influxdb:UpdateDbCluster",
+            "timestream-influxdb:UpdateDbInstance"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:timestream-influxdb:*:*:*"
+          ],
+          "Sid": "TimestreamInfluxDBStatement"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-04-17T17:52:07Z"
+}
