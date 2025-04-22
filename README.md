@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 424
-* Unique actions: 18906
+* Unique actions: 18908
 * Managed policies: 1346
 
 Most common managed policy name prefixes:
@@ -118,7 +118,7 @@ The following table summarises the AWS APIs.
 | [`events`](services/events.yml) | 57 | 0 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 56 | 5 | 15 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 56 | 0 | 26 |
-| [`ecs`](services/ecs.yml) | 56 | 0 | 5 |
+| [`ecs`](services/ecs.yml) | 56 | 0 | 6 |
 | [`eks`](services/eks.yml) | 56 | 0 | 2 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
 | [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 35 |
@@ -303,7 +303,7 @@ The following table summarises the AWS APIs.
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 13 | 0 | 0 |
 | [`launchwizard`](services/launchwizard.yml) | 12 | 0 | 25 |
-| [`account`](services/account.yml) | 12 | 0 | 2 |
+| [`account`](services/account.yml) | 12 | 0 | 3 |
 | [`scheduler`](services/scheduler.yml) | 12 | 0 | 0 |
 | [`pca-connector-scep`](services/pca-connector-scep.yml) | 12 | 0 | 0 |
 | [`networkmonitor`](services/networkmonitor.yml) | 12 | 0 | 0 |
@@ -471,7 +471,7 @@ Most common action prefixes:
 | `Create` | 2030 |
 | `Describe` | 1783 |
 | `Update` | 1753 |
-| `Put` | 523 |
+| `Put` | 524 |
 | `Start` | 456 |
 | `Tag` | 292 |
 | `Untag` | 288 |
