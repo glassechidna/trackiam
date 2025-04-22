@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 424
-* Unique actions: 18905
+* Unique actions: 18906
 * Managed policies: 1346
 
 Most common managed policy name prefixes:
@@ -121,7 +121,7 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 56 | 0 | 5 |
 | [`eks`](services/eks.yml) | 56 | 0 | 2 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
-| [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 34 |
+| [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 35 |
 | [`resiliencehub`](services/resiliencehub.yml) | 55 | 0 | 8 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 5 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
