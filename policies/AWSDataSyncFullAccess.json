@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDataSyncFullAccess",
   "CreateDate": "2019-01-18T19:40:36Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJGOHCDUQULZJKDGT4",
   "PolicyName": "AWSDataSyncFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-10-18T20:07:03Z",
+    "CreateDate": "2025-04-23T20:07:06Z",
     "Document": {
       "Statement": [
         {
@@ -55,6 +55,8 @@
             "fsx:DescribeStorageVirtualMachines",
             "iam:GetRole",
             "iam:ListRoles",
+            "kms:DescribeKey",
+            "kms:ListAliases",
             "logs:CreateLogGroup",
             "logs:DescribeLogGroups",
             "logs:DescribeResourcePolicies",
@@ -64,7 +66,8 @@
             "s3:GetBucketLocation",
             "s3:ListAllMyBuckets",
             "s3:ListBucket",
-            "s3:ListBucketVersions"
+            "s3:ListBucketVersions",
+            "secretsmanager:ListSecrets"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -74,7 +77,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2024-10-18T20:07:03Z"
+  "UpdateDate": "2025-04-23T20:07:06Z"
 }

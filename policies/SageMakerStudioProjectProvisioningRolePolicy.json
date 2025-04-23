@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy",
   "CreateDate": "2024-11-20T21:58:39Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQZUIPVLH",
   "PolicyName": "SageMakerStudioProjectProvisioningRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-04-09T21:22:07Z",
+    "CreateDate": "2025-04-23T20:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -283,7 +283,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/SageMakerStudioQueryExecutionRole",
-            "arn:aws:iam::*:role/datazone_usr_role_*"
+            "arn:aws:iam::*:role/datazone_usr_role_*",
+            "arn:aws:iam::*:role/service-role/AmazonSageMakerQueryExecution"
           ],
           "Sid": "IamPassRoleForGlueCatalog"
         },
@@ -2447,6 +2448,25 @@
         },
         {
           "Action": [
+            "scheduler:DeleteSchedule"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            },
+            "StringEquals": {
+              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:scheduler:*:*:schedule/SageMakerUnifiedStudio-*-*/*"
+          ],
+          "Sid": "EventBridgeScheduleDeleteAction"
+        },
+        {
+          "Action": [
             "scheduler:GetScheduleGroup",
             "scheduler:ListTagsForResource"
           ],
@@ -2702,7 +2722,10 @@
             "iam:GetRole"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/SageMakerStudioQueryExecutionRole",
+          "Resource": [
+            "arn:aws:iam::*:role/SageMakerStudioQueryExecutionRole",
+            "arn:aws:iam::*:role/service-role/AmazonSageMakerQueryExecution"
+          ],
           "Sid": "IamGetRoleProvisioningRoleForFederatedDataConnection"
         },
         {
@@ -2771,7 +2794,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2025-04-09T21:22:07Z"
+  "UpdateDate": "2025-04-23T20:07:07Z"
 }
