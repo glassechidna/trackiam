@@ -1,15 +1,31 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSystemsManagerJustInTimeNodeAccessRolePropagationPolicy",
   "CreateDate": "2025-04-21T20:52:05Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KMHEU6F7E",
   "PolicyName": "AWSSystemsManagerJustInTimeNodeAccessRolePropagationPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-04-21T20:52:05Z",
+    "CreateDate": "2025-04-23T21:07:06Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ram:TagResource",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "SystemsManagerJustInTimeNodeAccessManaged"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/SystemsManagerJustInTimeNodeAccessManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ram:*:*:resource-share/*",
+          "Sid": "RAMTaggingPermissions"
+        },
         {
           "Action": [
             "organizations:ListDelegatedAdministrators"
@@ -166,7 +182,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-04-21T20:52:05Z"
+  "UpdateDate": "2025-04-23T21:07:06Z"
 }
