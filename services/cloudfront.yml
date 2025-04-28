@@ -112,24 +112,49 @@ Actions:
 
   # actions with no corresponding API
   - Name: cloudfront:AllowVendedLogDeliveryForResource
+  - Name: cloudfront:AssociateDistributionTenantWebACL
+  - Name: cloudfront:AssociateDistributionWebACL
   - Name: cloudfront:CreateAnycastIpList
+  - Name: cloudfront:CreateConnectionGroup
+  - Name: cloudfront:CreateDistributionTenant
+  - Name: cloudfront:CreateInvalidationForDistributionTenant
   - Name: cloudfront:CreateSavingsPlan
   - Name: cloudfront:CreateVpcOrigin
   - Name: cloudfront:DeleteAnycastIpList
+  - Name: cloudfront:DeleteConnectionGroup
+  - Name: cloudfront:DeleteDistributionTenant
   - Name: cloudfront:DeleteVpcOrigin
+  - Name: cloudfront:DisassociateDistributionTenantWebACL
+  - Name: cloudfront:DisassociateDistributionWebACL
   - Name: cloudfront:GetAnycastIpList
+  - Name: cloudfront:GetConnectionGroup
+  - Name: cloudfront:GetConnectionGroupByRoutingEndpoint
+  - Name: cloudfront:GetDistributionTenant
+  - Name: cloudfront:GetDistributionTenantByDomain
+  - Name: cloudfront:GetInvalidationForDistributionTenant
+  - Name: cloudfront:GetManagedCertificateDetails
   - Name: cloudfront:GetSavingsPlan
   - Name: cloudfront:GetVpcOrigin
   - Name: cloudfront:ListAnycastIpLists
+  - Name: cloudfront:ListConnectionGroups
+  - Name: cloudfront:ListDistributionTenants
+  - Name: cloudfront:ListDistributionTenantsByCustomization
   - Name: cloudfront:ListDistributionsByAnycastIpListId
+  - Name: cloudfront:ListDistributionsByConnectionMode
   - Name: cloudfront:ListDistributionsByLambdaFunction
   - Name: cloudfront:ListDistributionsByVpcOriginId
+  - Name: cloudfront:ListDomainConflicts
+  - Name: cloudfront:ListInvalidationsForDistributionTenant
   - Name: cloudfront:ListRateCards
   - Name: cloudfront:ListSavingsPlans
   - Name: cloudfront:ListUsages
   - Name: cloudfront:ListVpcOrigins
+  - Name: cloudfront:UpdateConnectionGroup
+  - Name: cloudfront:UpdateDistributionTenant
+  - Name: cloudfront:UpdateDomainAssociation
   - Name: cloudfront:UpdateSavingsPlan
   - Name: cloudfront:UpdateVpcOrigin
+  - Name: cloudfront:VerifyDnsConfiguration
 
   # APIs without an IAM action
   - Name: cloudfront:CreateDistributionWithTags

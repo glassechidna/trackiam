@@ -1,17 +1,31 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudFrontFullAccess",
   "CreateDate": "2015-02-06T18:39:50Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIPRV52SH6HDCCFY6U",
   "PolicyName": "CloudFrontFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-11-20T18:39:41Z",
+    "CreateDate": "2025-04-28T16:52:07Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "acm:RequestCertificate"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaLast": "cloudfront.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "cfrequestcertificate"
+        },
+        {
+          "Action": [
+            "acm:DescribeCertificate",
             "acm:ListCertificates",
             "cloudfront-keyvaluestore:*",
             "cloudfront:*",
@@ -57,7 +71,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2024-11-20T18:39:41Z"
+  "UpdateDate": "2025-04-28T16:52:07Z"
 }

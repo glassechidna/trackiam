@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 424
-* Unique actions: 18910
+* Unique actions: 18935
 * Managed policies: 1346
 
 Most common managed policy name prefixes:
@@ -56,7 +56,7 @@ The following table summarises the AWS APIs.
 | [`s3`](services/s3.yml) | 113 | 60 | 50 |
 | [`iotwireless`](services/iotwireless.yml) | 112 | 0 | 1 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
-| [`cloudfront`](services/cloudfront.yml) | 110 | 1 | 19 |
+| [`cloudfront`](services/cloudfront.yml) | 110 | 1 | 44 |
 | [`gamelift`](services/gamelift.yml) | 108 | 0 | 10 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 9 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 13 |
@@ -465,12 +465,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3087 |
-| `Get` | 2803 |
-| `Delete` | 2174 |
-| `Create` | 2031 |
+| `List` | 3093 |
+| `Get` | 2809 |
+| `Delete` | 2176 |
+| `Create` | 2034 |
 | `Describe` | 1783 |
-| `Update` | 1754 |
+| `Update` | 1757 |
 | `Put` | 524 |
 | `Start` | 456 |
 | `Tag` | 292 |
