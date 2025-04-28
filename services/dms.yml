@@ -32,7 +32,6 @@ Actions:
   - Name: dms:DescribeCertificates
   - Name: dms:DescribeConnections
   - Name: dms:DescribeConversionConfiguration
-  - Name: dms:DescribeDataProviders
   - Name: dms:DescribeEndpointSettings
   - Name: dms:DescribeEndpointTypes
   - Name: dms:DescribeEndpoints
@@ -40,19 +39,12 @@ Actions:
   - Name: dms:DescribeEventCategories
   - Name: dms:DescribeEventSubscriptions
   - Name: dms:DescribeEvents
-  - Name: dms:DescribeExtensionPackAssociations
   - Name: dms:DescribeFleetAdvisorCollectors
   - Name: dms:DescribeFleetAdvisorDatabases
   - Name: dms:DescribeFleetAdvisorLsaAnalysis
   - Name: dms:DescribeFleetAdvisorSchemaObjectSummary
   - Name: dms:DescribeFleetAdvisorSchemas
-  - Name: dms:DescribeInstanceProfiles
-  - Name: dms:DescribeMetadataModelAssessments
-  - Name: dms:DescribeMetadataModelConversions
-  - Name: dms:DescribeMetadataModelExportsAsScript
-  - Name: dms:DescribeMetadataModelExportsToTarget
   - Name: dms:DescribeMetadataModelImports
-  - Name: dms:DescribeMigrationProjects
   - Name: dms:DescribeOrderableReplicationInstances
   - Name: dms:DescribePendingMaintenanceActions
   - Name: dms:DescribeRecommendationLimitations
@@ -73,12 +65,8 @@ Actions:
   - Name: dms:ExportMetadataModelAssessment
   - Name: dms:ImportCertificate
   - Name: dms:ListTagsForResource
-  - Name: dms:ModifyConversionConfiguration
-  - Name: dms:ModifyDataProvider
   - Name: dms:ModifyEndpoint
   - Name: dms:ModifyEventSubscription
-  - Name: dms:ModifyInstanceProfile
-  - Name: dms:ModifyMigrationProject
   - Name: dms:ModifyReplicationConfig
   - Name: dms:ModifyReplicationInstance
   - Name: dms:ModifyReplicationSubnetGroup
@@ -90,10 +78,8 @@ Actions:
   - Name: dms:ReloadTables
   - Name: dms:RemoveTagsFromResource
   - Name: dms:RunFleetAdvisorLsaAnalysis
-  - Name: dms:StartExtensionPackAssociation
   - Name: dms:StartMetadataModelAssessment
   - Name: dms:StartMetadataModelConversion
-  - Name: dms:StartMetadataModelExportAsScript
   - Name: dms:StartMetadataModelExportToTarget
   - Name: dms:StartMetadataModelImport
   - Name: dms:StartRecommendations
@@ -108,14 +94,9 @@ Actions:
 
   # actions with no corresponding API
   - Name: dms:AssociateExtensionPack
-  - Name: dms:CancelMetadataModelAssessment
-  - Name: dms:CancelMetadataModelConversion
-  - Name: dms:CancelMetadataModelExport
   - Name: dms:CreateDataMigration
   - Name: dms:DeleteDataMigration
   - Name: dms:DescribeDataMigrations
-  - Name: dms:DisassociateExtensionPack
-  - Name: dms:GetMetadataModel
   - Name: dms:ListDataProviders
   - Name: dms:ListExtensionPacks
   - Name: dms:ListInstanceProfiles
@@ -135,3 +116,19 @@ Actions:
   - Name: dms:UpdateInstanceProfile
   - Name: dms:UpdateMigrationProject
   - Name: dms:UploadFileMetadataList
+
+  # APIs without an IAM action
+  - Name: dms:DescribeDataProviders
+  - Name: dms:DescribeExtensionPackAssociations
+  - Name: dms:DescribeInstanceProfiles
+  - Name: dms:DescribeMetadataModelAssessments
+  - Name: dms:DescribeMetadataModelConversions
+  - Name: dms:DescribeMetadataModelExportsAsScript
+  - Name: dms:DescribeMetadataModelExportsToTarget
+  - Name: dms:DescribeMigrationProjects
+  - Name: dms:ModifyConversionConfiguration
+  - Name: dms:ModifyDataProvider
+  - Name: dms:ModifyInstanceProfile
+  - Name: dms:ModifyMigrationProject
+  - Name: dms:StartExtensionPackAssociation
+  - Name: dms:StartMetadataModelExportAsScript

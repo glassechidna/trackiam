@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 424
-* Unique actions: 18915
+* Unique actions: 18910
 * Managed policies: 1346
 
 Most common managed policy name prefixes:
@@ -58,10 +58,10 @@ The following table summarises the AWS APIs.
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`cloudfront`](services/cloudfront.yml) | 110 | 1 | 19 |
 | [`gamelift`](services/gamelift.yml) | 108 | 0 | 10 |
-| [`dms`](services/dms.yml) | 106 | 0 | 28 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 9 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 13 |
 | [`bedrock`](services/bedrock.yml) | 97 | 2 | 91 |
+| [`dms`](services/dms.yml) | 92 | 14 | 23 |
 | [`medialive`](services/medialive.yml) | 92 | 0 | 30 |
 | [`config`](services/config.yml) | 92 | 0 | 5 |
 | [`backup`](services/backup.yml) | 91 | 0 | 10 |
@@ -466,7 +466,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3087 |
-| `Get` | 2804 |
+| `Get` | 2803 |
 | `Delete` | 2174 |
 | `Create` | 2031 |
 | `Describe` | 1783 |
