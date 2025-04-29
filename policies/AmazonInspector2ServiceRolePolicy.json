@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonInspector2ServiceRolePolicy",
   "CreateDate": "2021-11-16T20:27:48Z",
-  "DefaultVersionId": "v15",
+  "DefaultVersionId": "v16",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4BINOILVQW",
   "PolicyName": "AmazonInspector2ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-03-28T20:07:06Z",
+    "CreateDate": "2025-04-29T17:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -179,8 +179,10 @@
             "directconnect:DescribeDirectConnectGateways",
             "directconnect:DescribeVirtualGateways",
             "directconnect:DescribeVirtualInterfaces",
+            "ec2:DescribeAddresses",
             "ec2:DescribeAvailabilityZones",
             "ec2:DescribeCustomerGateways",
+            "ec2:DescribeEgressOnlyInternetGateways",
             "ec2:DescribeInstances",
             "ec2:DescribeInternetGateways",
             "ec2:DescribeManagedPrefixLists",
@@ -274,7 +276,6 @@
         {
           "Action": [
             "ssm:CreateAssociation",
-            "ssm:DeleteAssociation",
             "ssm:StartAssociationsOnce",
             "ssm:UpdateAssociation"
           ],
@@ -301,6 +302,16 @@
         },
         {
           "Action": [
+            "ssm:DeleteAssociation"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:association/*"
+          ],
+          "Sid": "GatherInventoryDeleteAssociation"
+        },
+        {
+          "Action": [
             "ssm:GetCommandInvocation",
             "ssm:SendCommand"
           ],
@@ -314,7 +325,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v15"
+    "VersionId": "v16"
   },
-  "UpdateDate": "2025-03-28T20:07:06Z"
+  "UpdateDate": "2025-04-29T17:37:06Z"
 }
