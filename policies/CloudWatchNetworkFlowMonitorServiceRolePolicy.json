@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudWatchNetworkFlowMonitorServiceRolePolicy",
   "CreateDate": "2024-12-01T22:36:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4KN3KL52FD",
   "PolicyName": "CloudWatchNetworkFlowMonitorServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-12-01T22:36:07Z",
+    "CreateDate": "2025-04-29T10:52:07Z",
     "Document": {
       "Statement": [
         {
@@ -24,23 +24,28 @@
         },
         {
           "Action": [
-            "organizations:DescribeAccount",
+            "organizations:DescribeAccount"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:organizations::*:account/*"
+          ]
+        },
+        {
+          "Action": [
             "organizations:DescribeOrganization",
             "organizations:ListAWSServiceAccessForOrganization",
             "organizations:ListAccounts",
             "organizations:ListDelegatedAdministrators"
           ],
           "Effect": "Allow",
-          "Resource": [
-            "arn:aws:organizations::*:account/*",
-            "arn:aws:organizations::*:organization/*"
-          ]
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-12-01T22:36:07Z"
+  "UpdateDate": "2025-04-29T10:52:07Z"
 }
