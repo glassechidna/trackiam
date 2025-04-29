@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 424
-* Unique actions: 18953
+* Unique actions: 18956
 * Managed policies: 1346
 
 Most common managed policy name prefixes:
@@ -187,8 +187,8 @@ The following table summarises the AWS APIs.
 | [`tnb`](services/tnb.yml) | 33 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
+| [`kinesis`](services/kinesis.yml) | 32 | 0 | 3 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
-| [`kinesis`](services/kinesis.yml) | 32 | 0 | 0 |
 | [`billingconductor`](services/billingconductor.yml) | 32 | 0 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 31 | 0 | 7 |
 | [`outposts`](services/outposts.yml) | 31 | 0 | 4 |
@@ -465,7 +465,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3093 |
+| `List` | 3094 |
 | `Get` | 2813 |
 | `Delete` | 2179 |
 | `Create` | 2037 |
@@ -473,6 +473,6 @@ Most common action prefixes:
 | `Update` | 1757 |
 | `Put` | 524 |
 | `Start` | 456 |
-| `Tag` | 292 |
-| `Untag` | 288 |
+| `Tag` | 293 |
+| `Untag` | 289 |
 
