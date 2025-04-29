@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 424
-* Unique actions: 18956
+* Unique actions: 18961
 * Managed policies: 1346
 
 Most common managed policy name prefixes:
@@ -47,7 +47,7 @@ The following table summarises the AWS APIs.
 | [`rds`](services/rds.yml) | 162 | 0 | 6 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
 | [`iam`](services/iam.yml) | 159 | 0 | 17 |
-| [`ssm`](services/ssm.yml) | 140 | 0 | 14 |
+| [`ssm`](services/ssm.yml) | 140 | 0 | 16 |
 | [`lex`](services/lex.yml) | 137 | 4 | 8 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 30 |
 | [`datazone`](services/datazone.yml) | 123 | 0 | 62 |
@@ -418,6 +418,7 @@ The following table summarises the AWS APIs.
 | [`wickr`](services/wickr.yml) | 0 | 0 | 8 |
 | [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
+| [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 7 |
 | [`qdeveloper`](services/qdeveloper.yml) | 0 | 0 | 7 |
 | [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
 | [`geo-places`](services/geo-places.yml) | 0 | 0 | 7 |
@@ -432,7 +433,6 @@ The following table summarises the AWS APIs.
 | [`customer-verification`](services/customer-verification.yml) | 0 | 0 | 5 |
 | [`appstudio`](services/appstudio.yml) | 0 | 0 | 5 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
-| [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 4 |
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
 | [`a2c`](services/a2c.yml) | 0 | 0 | 4 |
@@ -466,13 +466,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3094 |
-| `Get` | 2813 |
-| `Delete` | 2179 |
+| `Get` | 2815 |
+| `Delete` | 2180 |
 | `Create` | 2037 |
 | `Describe` | 1786 |
-| `Update` | 1757 |
+| `Update` | 1758 |
 | `Put` | 524 |
-| `Start` | 456 |
+| `Start` | 457 |
 | `Tag` | 293 |
 | `Untag` | 289 |
 
