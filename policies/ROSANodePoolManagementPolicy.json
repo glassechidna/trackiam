@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/ROSANodePoolManagementPolicy",
   "CreateDate": "2023-06-08T20:48:08Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4AXLMC5W7P",
   "PolicyName": "ROSANodePoolManagementPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-05-02T14:01:47Z",
+    "CreateDate": "2025-05-05T16:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -25,6 +25,21 @@
             "arn:aws:ec2:*:*:security-group/*"
           ],
           "Sid": "AuthorizeSecurityGroupIngressRestrictedResourceTag"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*"
+          ],
+          "Sid": "CreateTagsCAPAControllerReconcileNetworkInterface"
         },
         {
           "Action": [
@@ -70,6 +85,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:network-interface/*",
             "arn:aws:ec2:*:*:volume/*"
           ],
           "Sid": "CreateTags"
@@ -250,7 +266,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-05-02T14:01:47Z"
+  "UpdateDate": "2025-05-05T16:37:06Z"
 }
