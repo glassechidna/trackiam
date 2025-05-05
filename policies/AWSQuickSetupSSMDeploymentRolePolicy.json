@@ -1,15 +1,36 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupSSMDeploymentRolePolicy",
   "CreateDate": "2024-11-15T22:53:20Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4GPQ3OIOC6",
   "PolicyName": "AWSQuickSetupSSMDeploymentRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-20T12:43:56Z",
+    "CreateDate": "2025-05-05T10:52:06Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "lambda:TagResource",
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": "QuickSetup*"
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "cloudformation.amazonaws.com"
+            },
+            "StringEquals": {
+              "aws:ResourceTag/QuickSetupDocument": "AWSQuickSetupType-SSM"
+            },
+            "StringLike": {
+              "aws:RequestTag/QuickSetupDocumentVersionName": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:aws-quicksetup-lifecycle*"
+          ]
+        },
         {
           "Action": [
             "iam:AttachRolePolicy",
@@ -69,14 +90,14 @@
             "iam:TagRole"
           ],
           "Condition": {
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": [
+                "QuickSetup*"
+              ]
+            },
             "ForAnyValue:StringEquals": {
               "aws:CalledVia": [
                 "cloudformation.amazonaws.com"
-              ]
-            },
-            "ForAnyValue:StringLike": {
-              "aws:TagKeys": [
-                "QuickSetup*"
               ]
             },
             "StringEquals": {
@@ -124,6 +145,11 @@
             "iam:PassRole"
           ],
           "Condition": {
+            "ArnLike": {
+              "iam:AssociatedResourceARN": [
+                "arn:aws:lambda:*:*:function:aws-quicksetup-lifecycle-*"
+              ]
+            },
             "StringEquals": {
               "iam:PassedToService": "lambda.amazonaws.com",
               "iam:ResourceTag/QuickSetupDocument": "AWSQuickSetupType-SSM"
@@ -139,6 +165,15 @@
             "iam:PassRole"
           ],
           "Condition": {
+            "ArnLike": {
+              "iam:AssociatedResourceARN": [
+                "arn:aws:ssm:*:*:association/*",
+                "arn:aws:ssm:*::document/AWS-EnableExplorer",
+                "arn:aws:ssm:*::document/AWSQuickSetupType-EnableAREX",
+                "arn:aws:ssm:*::document/AWSQuickSetupType-EnableDHMC",
+                "arn:aws:ssm:*::document/AWSQuickSetupType-ManageInstanceProfile"
+              ]
+            },
             "StringEquals": {
               "iam:PassedToService": "ssm.amazonaws.com",
               "iam:ResourceTag/QuickSetupDocument": "AWSQuickSetupType-SSM"
@@ -151,18 +186,43 @@
         },
         {
           "Action": [
+            "iam:TagRole"
+          ],
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": "QuickSetup*"
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "cloudformation.amazonaws.com"
+            },
+            "StringEquals": {
+              "aws:ResourceTag/QuickSetupDocument": "AWSQuickSetupType-SSM"
+            },
+            "StringLike": {
+              "aws:RequestTag/QuickSetupDocumentVersionName": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AWS-QuickSetup-SSM-*",
+            "arn:aws:iam::*:role/AWS-SSM-Diagnosis*",
+            "arn:aws:iam::*:role/AWS-SSM-Remediation*"
+          ]
+        },
+        {
+          "Action": [
             "lambda:CreateFunction",
             "lambda:TagResource"
           ],
           "Condition": {
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": [
+                "QuickSetup*"
+              ]
+            },
             "ForAnyValue:StringEquals": {
               "aws:CalledVia": [
                 "cloudformation.amazonaws.com"
-              ]
-            },
-            "ForAnyValue:StringLike": {
-              "aws:TagKeys": [
-                "QuickSetup*"
               ]
             },
             "StringEquals": {
@@ -301,7 +361,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-11-20T12:43:56Z"
+  "UpdateDate": "2025-05-05T10:52:06Z"
 }
