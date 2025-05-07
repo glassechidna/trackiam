@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDataSyncFullAccess",
   "CreateDate": "2019-01-18T19:40:36Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJGOHCDUQULZJKDGT4",
   "PolicyName": "AWSDataSyncFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-04-23T20:07:06Z",
+    "CreateDate": "2025-05-07T19:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -35,6 +35,25 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "DataSyncPassRolePermissions"
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:PutSecretValue",
+            "secretsmanager:UpdateSecret"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "secretsmanager:ResourceTag/aws:secretsmanager:owningService": "aws-datasync"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:secretsmanager:*:*:secret:aws-datasync!*"
+          ],
+          "Sid": "DataSyncSecretsManagerWriteAccess"
         },
         {
           "Action": [
@@ -77,7 +96,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2025-04-23T20:07:06Z"
+  "UpdateDate": "2025-05-07T19:37:06Z"
 }
