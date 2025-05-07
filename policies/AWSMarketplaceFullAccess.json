@@ -1,41 +1,15 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceFullAccess",
   "CreateDate": "2015-02-11T17:21:45Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAI2DV5ULJSO2FYVPYG",
   "PolicyName": "AWSMarketplaceFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-03-04T17:04:00Z",
+    "CreateDate": "2025-05-07T20:07:06Z",
     "Document": {
       "Statement": [
-        {
-          "Action": [
-            "iam:PassRole"
-          ],
-          "Condition": {
-            "StringLike": {
-              "iam:AssociatedResourceARN": [
-                "arn:aws:ssm:ap-northeast-1:340648487307:automation-definition/*",
-                "arn:aws:ssm:ap-southeast-2:362149219987:automation-definition/*",
-                "arn:aws:ssm:eu-central-1:906690553262:automation-definition/*",
-                "arn:aws:ssm:eu-west-1:564714592864:automation-definition/*",
-                "arn:aws:ssm:eu-west-2:587945719687:automation-definition/*",
-                "arn:aws:ssm:us-east-1:058657716661:automation-definition/*",
-                "arn:aws:ssm:us-east-2:134937423163:automation-definition/*",
-                "arn:aws:ssm:us-west-2:243045473901:automation-definition/*"
-              ],
-              "iam:PassedToService": [
-                "ssm.amazonaws.com"
-              ]
-            }
-          },
-          "Effect": "Allow",
-          "Resource": [
-            "*"
-          ]
-        },
         {
           "Action": [
             "iam:PassRole"
@@ -104,46 +78,12 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
-        },
-        {
-          "Action": [
-            "s3:GetObject",
-            "s3:ListBucket"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:s3:::*image-build*"
-          ]
-        },
-        {
-          "Action": [
-            "sns:Publish",
-            "sns:setTopicAttributes"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:sns:*:*:*image-build*"
-        },
-        {
-          "Action": [
-            "ssm:StartAutomationExecution"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:ssm:ap-northeast-1:340648487307:automation-definition/*",
-            "arn:aws:ssm:ap-southeast-2:362149219987:automation-definition/*",
-            "arn:aws:ssm:eu-central-1:906690553262:automation-definition/*",
-            "arn:aws:ssm:eu-west-1:564714592864:automation-definition/*",
-            "arn:aws:ssm:eu-west-2:587945719687:automation-definition/*",
-            "arn:aws:ssm:us-east-1:058657716661:automation-definition/*",
-            "arn:aws:ssm:us-east-2:134937423163:automation-definition/*",
-            "arn:aws:ssm:us-west-2:243045473901:automation-definition/*"
-          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2022-03-04T17:04:00Z"
+  "UpdateDate": "2025-05-07T20:07:06Z"
 }
