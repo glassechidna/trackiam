@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 424
-* Unique actions: 18987
+* Unique services: 425
+* Unique actions: 18994
 * Managed policies: 1350
 
 Most common managed policy name prefixes:
@@ -418,6 +418,7 @@ The following table summarises the AWS APIs.
 | [`wickr`](services/wickr.yml) | 0 | 0 | 8 |
 | [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
+| [`transform`](services/transform.yml) | 0 | 0 | 7 |
 | [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 7 |
 | [`qdeveloper`](services/qdeveloper.yml) | 0 | 0 | 7 |
 | [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
@@ -465,12 +466,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3098 |
-| `Get` | 2818 |
-| `Delete` | 2184 |
-| `Create` | 2041 |
+| `List` | 3099 |
+| `Get` | 2819 |
+| `Delete` | 2185 |
+| `Create` | 2042 |
 | `Describe` | 1788 |
-| `Update` | 1760 |
+| `Update` | 1761 |
 | `Put` | 526 |
 | `Start` | 458 |
 | `Tag` | 294 |
