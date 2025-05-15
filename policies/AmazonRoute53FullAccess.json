@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRoute53FullAccess",
   "CreateDate": "2015-02-06T18:40:54Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJWVDLG5RPST6PHQ3A",
   "PolicyName": "AmazonRoute53FullAccess",
   "PolicyVersion": {
-    "CreateDate": "2018-12-20T21:42:00Z",
+    "CreateDate": "2025-05-15T18:07:06Z",
     "Document": {
       "Statement": [
         {
@@ -17,21 +17,28 @@
         },
         {
           "Action": [
+            "cloudfront:GetConnectionGroup",
+            "cloudfront:GetDistributionTenantByDomain",
             "cloudfront:ListDistributions",
             "cloudwatch:DescribeAlarms",
+            "cloudwatch:GetMetricData",
             "cloudwatch:GetMetricStatistics",
             "ec2:DescribeRegions",
             "ec2:DescribeVpcEndpoints",
             "ec2:DescribeVpcs",
             "elasticbeanstalk:DescribeEnvironments",
             "elasticloadbalancing:DescribeLoadBalancers",
+            "es:DescribeDomains",
+            "es:ListDomainNames",
+            "lightsail:GetContainerServices",
             "route53:*",
             "route53domains:*",
             "s3:GetBucketLocation",
             "s3:GetBucketWebsite",
             "s3:ListBucket",
             "sns:ListSubscriptionsByTopic",
-            "sns:ListTopics"
+            "sns:ListTopics",
+            "tag:GetResources"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -40,7 +47,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2018-12-20T21:42:00Z"
+  "UpdateDate": "2025-05-15T18:07:06Z"
 }
