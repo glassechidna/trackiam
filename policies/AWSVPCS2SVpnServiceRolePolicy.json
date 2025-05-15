@@ -1,15 +1,44 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSVPCS2SVpnServiceRolePolicy",
   "CreateDate": "2019-08-06T14:13:58Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ENV7ZVNT6",
   "PolicyName": "AWSVPCS2SVpnServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-08-06T14:13:58Z",
+    "CreateDate": "2025-05-15T16:52:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "secretsmanager:CreateSecret",
+          "Condition": {
+            "StringLike": {
+              "secretsmanager:Name": "s2svpn!*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:s2svpn!*",
+          "Sid": "VpnConnectionSecretsCreation"
+        },
+        {
+          "Action": [
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:PutSecretValue",
+            "secretsmanager:UpdateSecret"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "secretsmanager:ResourceTag/aws:secretsmanager:owningService": "s2svpn"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:s2svpn!*",
+          "Sid": "VpnConnectionSecretsManagement"
+        },
         {
           "Action": [
             "acm-pca:DescribeCertificateAuthority",
@@ -25,7 +54,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-08-06T14:13:58Z"
+  "UpdateDate": "2025-05-15T16:52:07Z"
 }
