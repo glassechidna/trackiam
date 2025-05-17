@@ -1,0 +1,96 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEVSServiceRolePolicy",
+  "CreateDate": "2025-05-16T23:37:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4HOHZBKDBX",
+  "PolicyName": "AmazonEVSServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-05-16T23:37:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:AssignIpv6Addresses",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:ModifyNetworkInterfaceAttribute"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonEVSManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "ManageEniStatement"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/AmazonEVSManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "CreateEniWithTagStatement"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/AmazonEVSManaged": "false"
+            },
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "CreateNetworkInterface"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "TagOnCreateNetworkInterface"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "CreateEniInSubnetStatement"
+        },
+        {
+          "Action": [
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeNetworkStatement"
+        },
+        {
+          "Action": [
+            "ec2:ModifyNetworkInterfaceAttribute"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*",
+          "Sid": "UpdateSecurityGroupStatement"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-05-16T23:37:06Z"
+}
