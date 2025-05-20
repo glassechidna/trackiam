@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 425
-* Unique actions: 19005
+* Unique services: 426
+* Unique actions: 19009
 * Managed policies: 1352
 
 Most common managed policy name prefixes:
@@ -160,7 +160,7 @@ The following table summarises the AWS APIs.
 | [`swf`](services/swf.yml) | 39 | 0 | 12 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
-| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 16 |
+| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 17 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 8 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 4 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
@@ -437,6 +437,7 @@ The following table summarises the AWS APIs.
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
 | [`a2c`](services/a2c.yml) | 0 | 0 | 4 |
+| [`uxc`](services/uxc.yml) | 0 | 0 | 3 |
 | [`resource-explorer`](services/resource-explorer.yml) | 0 | 0 | 3 |
 | [`partnercentral-account-management`](services/partnercentral-account-management.yml) | 0 | 0 | 3 |
 | [`mapcredits`](services/mapcredits.yml) | 0 | 0 | 3 |
@@ -467,12 +468,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3101 |
-| `Get` | 2820 |
-| `Delete` | 2186 |
+| `Get` | 2821 |
+| `Delete` | 2187 |
 | `Create` | 2043 |
 | `Describe` | 1789 |
 | `Update` | 1763 |
-| `Put` | 526 |
+| `Put` | 527 |
 | `Start` | 458 |
 | `Tag` | 294 |
 | `Untag` | 290 |
