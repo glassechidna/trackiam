@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 426
-* Unique actions: 19009
+* Unique actions: 19012
 * Managed policies: 1352
 
 Most common managed policy name prefixes:
@@ -119,7 +119,7 @@ The following table summarises the AWS APIs.
 | [`dynamodb`](services/dynamodb.yml) | 56 | 5 | 15 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 56 | 0 | 26 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 6 |
-| [`eks`](services/eks.yml) | 56 | 0 | 2 |
+| [`eks`](services/eks.yml) | 56 | 0 | 4 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
 | [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 36 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 10 |
@@ -269,7 +269,7 @@ The following table summarises the AWS APIs.
 | [`identitystore`](services/identitystore.yml) | 19 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 18 | 18 | 0 |
 | [`resource-groups`](services/resource-groups.yml) | 18 | 0 | 11 |
-| [`medical-imaging`](services/medical-imaging.yml) | 18 | 0 | 6 |
+| [`medical-imaging`](services/medical-imaging.yml) | 18 | 0 | 7 |
 | [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
 | [`rum`](services/rum.yml) | 17 | 0 | 3 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
@@ -467,8 +467,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3101 |
-| `Get` | 2821 |
+| `List` | 3103 |
+| `Get` | 2822 |
 | `Delete` | 2187 |
 | `Create` | 2043 |
 | `Describe` | 1789 |

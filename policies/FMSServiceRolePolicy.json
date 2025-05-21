@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/FMSServiceRolePolicy",
   "CreateDate": "2018-03-28T23:01:12Z",
-  "DefaultVersionId": "v31",
+  "DefaultVersionId": "v32",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAI62NTGYJB446ACUEA",
   "PolicyName": "FMSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-02-11T21:37:06Z",
+    "CreateDate": "2025-05-21T18:22:07Z",
     "Document": {
       "Statement": [
         {
@@ -362,6 +362,8 @@
         },
         {
           "Action": [
+            "cloudfront:AssociateDistributionWebACL",
+            "cloudfront:DisassociateDistributionWebACL",
             "cloudfront:GetDistribution",
             "cloudfront:ListDistributions",
             "cloudfront:ListDistributionsByWebACLId",
@@ -723,7 +725,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v31"
+    "VersionId": "v32"
   },
-  "UpdateDate": "2025-02-11T21:37:06Z"
+  "UpdateDate": "2025-05-21T18:22:07Z"
 }
