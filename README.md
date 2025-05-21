@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 426
-* Unique actions: 19012
+* Unique actions: 19016
 * Managed policies: 1352
 
 Most common managed policy name prefixes:
@@ -386,6 +386,7 @@ The following table summarises the AWS APIs.
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 22 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 22 |
 | [`s3express`](services/s3express.yml) | 0 | 0 | 21 |
+| [`dsql`](services/dsql.yml) | 0 | 0 | 21 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 19 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
@@ -393,7 +394,6 @@ The following table summarises the AWS APIs.
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 18 |
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 17 |
-| [`dsql`](services/dsql.yml) | 0 | 0 | 17 |
 | [`ds-data`](services/ds-data.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 16 |
@@ -468,13 +468,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3103 |
-| `Get` | 2822 |
-| `Delete` | 2187 |
-| `Create` | 2043 |
+| `Get` | 2824 |
+| `Delete` | 2186 |
+| `Create` | 2042 |
 | `Describe` | 1789 |
 | `Update` | 1763 |
 | `Put` | 527 |
-| `Start` | 458 |
+| `Start` | 460 |
 | `Tag` | 294 |
 | `Untag` | 290 |
 
