@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonAuroraDSQLFullAccess",
   "CreateDate": "2024-12-03T15:36:07Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4OL6SKRIYE",
   "PolicyName": "AmazonAuroraDSQLFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-05-14T19:37:06Z",
+    "CreateDate": "2025-05-21T21:22:07Z",
     "Document": {
       "Statement": [
         {
@@ -23,6 +23,43 @@
         },
         {
           "Action": [
+            "kms:Decrypt",
+            "kms:Encrypt",
+            "kms:GenerateDataKey",
+            "kms:ReEncryptFrom",
+            "kms:ReEncryptTo"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "kms:EncryptionContextKeys": "aws:dsql:ClusterId"
+            },
+            "StringLike": {
+              "kms:ViaService": [
+                "dsql.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "KMSCryptographicPermissions"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": [
+                "dsql.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "KMSDescribePermission"
+        },
+        {
+          "Action": [
             "cloudwatch:GetMetricData"
           ],
           "Effect": "Allow",
@@ -33,18 +70,22 @@
           "Action": [
             "dsql:AddPeerCluster",
             "dsql:CreateCluster",
-            "dsql:CreateMultiRegionClusters",
             "dsql:DbConnect",
             "dsql:DbConnectAdmin",
             "dsql:DeleteCluster",
-            "dsql:DeleteMultiRegionClusters",
+            "dsql:GetBackupJob",
             "dsql:GetCluster",
+            "dsql:GetRestoreJob",
             "dsql:GetVpcEndpointServiceName",
             "dsql:ListClusters",
             "dsql:ListTagsForResource",
             "dsql:PutMultiRegionProperties",
             "dsql:PutWitnessRegion",
             "dsql:RemovePeerCluster",
+            "dsql:StartBackupJob",
+            "dsql:StartRestoreJob",
+            "dsql:StopBackupJob",
+            "dsql:StopRestoreJob",
             "dsql:TagResource",
             "dsql:UntagResource",
             "dsql:UpdateCluster"
@@ -57,7 +98,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-05-14T19:37:06Z"
+  "UpdateDate": "2025-05-21T21:22:07Z"
 }
