@@ -129,10 +129,10 @@ The following table summarises the AWS APIs.
 | [`lakeformation`](services/lakeformation.yml) | 52 | 3 | 7 |
 | [`kms`](services/kms.yml) | 52 | 1 | 3 |
 | [`profile`](services/profile.yml) | 52 | 0 | 25 |
-| [`iotfleetwise`](services/iotfleetwise.yml) | 52 | 0 | 6 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 0 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 19 |
 | [`mediaconnect`](services/mediaconnect.yml) | 51 | 0 | 4 |
+| [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 2 | 6 |
 | [`drs`](services/drs.yml) | 50 | 0 | 40 |
 | [`codebuild`](services/codebuild.yml) | 50 | 0 | 17 |
 | [`finspace`](services/finspace.yml) | 50 | 0 | 9 |
