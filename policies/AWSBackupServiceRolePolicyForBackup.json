@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
   "CreateDate": "2019-01-10T21:01:28Z",
-  "DefaultVersionId": "v21",
+  "DefaultVersionId": "v22",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIOOYZSLZZXWFJJ5N2",
   "PolicyName": "AWSBackupServiceRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2025-03-27T21:52:06Z",
+    "CreateDate": "2025-05-22T00:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -63,6 +63,24 @@
         },
         {
           "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "kms:EncryptionContextKeys": "aws:dsql:ClusterId"
+            },
+            "StringLike": {
+              "kms:ViaService": [
+                "dsql.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "KMSDSQLPermissions"
+        },
+        {
+          "Action": [
             "kms:Decrypt",
             "kms:GenerateDataKey"
           ],
@@ -79,9 +97,14 @@
         },
         {
           "Action": [
-            "kms:GenerateDataKeyWithoutPlaintext"
+            "kms:GenerateDataKeyWithoutPlaintext",
+            "kms:ReEncryptFrom",
+            "kms:ReEncryptTo"
           ],
           "Condition": {
+            "ForAnyValue:StringEquals": {
+              "kms:EncryptionContextKeys": "aws:ebs:id"
+            },
             "StringLike": {
               "kms:ViaService": [
                 "ec2.*.amazonaws.com"
@@ -90,7 +113,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:kms:*:*:key/*",
-          "Sid": "KMSDataKeyEC2Permissions"
+          "Sid": "KMSEC2Permissions"
         },
         {
           "Action": [
@@ -213,6 +236,21 @@
           "Effect": "Allow",
           "Resource": "arn:aws:cloudformation:*:*:stack/*/*",
           "Sid": "CloudformationStackPermissions"
+        },
+        {
+          "Action": [
+            "dsql:GetBackupJob",
+            "dsql:GetCluster",
+            "dsql:ListClusters",
+            "dsql:ListTagsForResource",
+            "dsql:StartBackupJob",
+            "dsql:StopBackupJob"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "DSQLResourcePermissionsForBackup"
         },
         {
           "Action": [
@@ -548,7 +586,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v21"
+    "VersionId": "v22"
   },
-  "UpdateDate": "2025-03-27T21:52:06Z"
+  "UpdateDate": "2025-05-22T00:37:06Z"
 }

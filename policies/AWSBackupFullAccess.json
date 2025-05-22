@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupFullAccess",
   "CreateDate": "2019-11-18T22:21:52Z",
-  "DefaultVersionId": "v19",
+  "DefaultVersionId": "v20",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LL52EIPJX",
   "PolicyName": "AWSBackupFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-03-27T21:52:06Z",
+    "CreateDate": "2025-05-22T00:37:07Z",
     "Document": {
       "Statement": [
         {
@@ -240,6 +240,16 @@
             "arn:aws:cloudformation:*:*:stack/*"
           ],
           "Sid": "CloudFormationStackPermissions"
+        },
+        {
+          "Action": [
+            "dsql:GetCluster",
+            "dsql:ListClusters",
+            "dsql:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DSQLDescribePermissions"
         },
         {
           "Action": [
@@ -485,7 +495,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v19"
+    "VersionId": "v20"
   },
-  "UpdateDate": "2025-03-27T21:52:06Z"
+  "UpdateDate": "2025-05-22T00:37:07Z"
 }

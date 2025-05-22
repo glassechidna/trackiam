@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForRestores",
   "CreateDate": "2019-01-12T00:23:54Z",
-  "DefaultVersionId": "v22",
+  "DefaultVersionId": "v23",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJZCCL6F2WPVOUXZKI",
   "PolicyName": "AWSBackupServiceRolePolicyForRestores",
   "PolicyVersion": {
-    "CreateDate": "2025-03-27T21:52:06Z",
+    "CreateDate": "2025-05-22T00:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -36,6 +36,19 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "KMSCreateGrantPermissions"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonFSx": "ManagedByAmazonFSx"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:route-table/*",
+          "Sid": "CreateTagsPermissions"
         },
         {
           "Action": [
@@ -120,6 +133,7 @@
         {
           "Action": [
             "kms:Decrypt",
+            "kms:DescribeKey",
             "kms:Encrypt",
             "kms:GenerateDataKey",
             "kms:GenerateDataKeyWithoutPlaintext",
@@ -129,6 +143,7 @@
           "Condition": {
             "StringLike": {
               "kms:ViaService": [
+                "dsql.*.amazonaws.com",
                 "dynamodb.*.amazonaws.com",
                 "ec2.*.amazonaws.com",
                 "elasticfilesystem.*.amazonaws.com",
@@ -177,6 +192,22 @@
           "Effect": "Allow",
           "Resource": "arn:aws:cloudformation:*:*:*/*/*",
           "Sid": "CloudformationChangeSetPermissions"
+        },
+        {
+          "Action": [
+            "dsql:CreateCluster",
+            "dsql:GetRestoreJob",
+            "dsql:PutMultiRegionProperties",
+            "dsql:PutWitnessRegion",
+            "dsql:StartRestoreJob",
+            "dsql:StopRestoreJob",
+            "dsql:TagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "DSQLResourcePermissionsForRestore"
         },
         {
           "Action": [
@@ -239,6 +270,7 @@
             "ec2:DescribeImages",
             "ec2:DescribeInstances",
             "ec2:DescribeInternetGateways",
+            "ec2:DescribeRouteTables",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSnapshotTierStatus",
             "ec2:DescribeSnapshots",
@@ -470,7 +502,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v22"
+    "VersionId": "v23"
   },
-  "UpdateDate": "2025-03-27T21:52:06Z"
+  "UpdateDate": "2025-05-22T00:37:06Z"
 }

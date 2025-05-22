@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupOperatorAccess",
   "CreateDate": "2019-11-18T22:23:17Z",
-  "DefaultVersionId": "v17",
+  "DefaultVersionId": "v18",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KHXVYMY4O",
   "PolicyName": "AWSBackupOperatorAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-03-27T21:52:05Z",
+    "CreateDate": "2025-05-22T00:37:07Z",
     "Document": {
       "Statement": [
         {
@@ -136,6 +136,16 @@
             "arn:aws:cloudformation:*:*:stack/*"
           ],
           "Sid": "CloudFormationAccess"
+        },
+        {
+          "Action": [
+            "dsql:GetCluster",
+            "dsql:ListClusters",
+            "dsql:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DSQLDescribePermissions"
         },
         {
           "Action": [
@@ -366,7 +376,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v17"
+    "VersionId": "v18"
   },
-  "UpdateDate": "2025-03-27T21:52:05Z"
+  "UpdateDate": "2025-05-22T00:37:07Z"
 }
