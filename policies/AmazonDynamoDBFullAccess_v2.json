@@ -1,0 +1,154 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess_v2",
+  "CreateDate": "2025-05-22T14:52:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4APITYEQVI",
+  "PolicyName": "AmazonDynamoDBFullAccess_v2",
+  "PolicyVersion": {
+    "CreateDate": "2025-05-22T14:52:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "application-autoscaling:DeleteScalingPolicy",
+            "application-autoscaling:DeregisterScalableTarget",
+            "application-autoscaling:PutScalingPolicy",
+            "application-autoscaling:RegisterScalableTarget"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "application-autoscaling:service-namespace": "dynamodb"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ApplicationAutoscalingIntegration"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "contributorinsights.dynamodb.amazonaws.com",
+                "dax.amazonaws.com",
+                "dynamodb.application-autoscaling.amazonaws.com",
+                "kinesisreplication.dynamodb.amazonaws.com",
+                "replication.dynamodb.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ServiceRoleCreation"
+        },
+        {
+          "Action": "cloudwatch:GetInsightRuleReport",
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch:*:*:insight-rule/DynamoDBContributorInsights*",
+          "Sid": "CloudwatchInsightsRules"
+        },
+        {
+          "Action": [
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingActivities",
+            "application-autoscaling:DescribeScalingPolicies"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ApplicationAutoscalingDescribeActions"
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudwatchMonitoring"
+        },
+        {
+          "Action": [
+            "dax:*",
+            "dynamodb:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DDBAndDAXFullAccess"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListEC2ResourcesForDaxClusterCreation"
+        },
+        {
+          "Action": [
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "IamIntegration"
+        },
+        {
+          "Action": [
+            "kinesis:DescribeStream",
+            "kinesis:DescribeStreamSummary",
+            "kinesis:ListStreams"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListKinesisResources"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey",
+            "kms:ListAliases"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "KMSIntegration"
+        },
+        {
+          "Action": [
+            "lambda:ListEventSourceMappings",
+            "lambda:ListFunctions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LambdaIntegration"
+        },
+        {
+          "Action": [
+            "sns:ListTopics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DaxSNSIntegration"
+        },
+        {
+          "Action": [
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TagManagement"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-05-22T14:52:06Z"
+}
