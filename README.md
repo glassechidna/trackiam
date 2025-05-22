@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 426
-* Unique actions: 19016
+* Unique actions: 19020
 * Managed policies: 1354
 
 Most common managed policy name prefixes:
@@ -217,7 +217,7 @@ The following table summarises the AWS APIs.
 | [`servicediscovery`](services/servicediscovery.yml) | 27 | 0 | 3 |
 | [`b2bi`](services/b2bi.yml) | 27 | 0 | 3 |
 | [`snowball`](services/snowball.yml) | 27 | 0 | 0 |
-| [`aps`](services/aps.yml) | 26 | 0 | 19 |
+| [`aps`](services/aps.yml) | 26 | 0 | 23 |
 | [`chatbot`](services/chatbot.yml) | 26 | 0 | 13 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 26 | 0 | 2 |
 | [`private-networks`](services/private-networks.yml) | 26 | 0 | 0 |
@@ -469,10 +469,10 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 3103 |
 | `Get` | 2824 |
-| `Delete` | 2186 |
-| `Create` | 2042 |
-| `Describe` | 1789 |
-| `Update` | 1763 |
+| `Delete` | 2187 |
+| `Create` | 2043 |
+| `Describe` | 1790 |
+| `Update` | 1764 |
 | `Put` | 527 |
 | `Start` | 460 |
 | `Tag` | 294 |
