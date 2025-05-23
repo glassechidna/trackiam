@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSConfigServiceRolePolicy",
   "CreateDate": "2018-05-30T23:31:46Z",
-  "DefaultVersionId": "v57",
+  "DefaultVersionId": "v58",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJUCWFHNZER665LLQQ",
   "PolicyName": "AWSConfigServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-04-08T21:52:06Z",
+    "CreateDate": "2025-05-23T17:52:07Z",
     "Document": {
       "Statement": [
         {
@@ -170,7 +170,14 @@
             "batch:DescribeSchedulingPolicies",
             "batch:ListSchedulingPolicies",
             "batch:ListTagsForResource",
+            "bedrock:GetGuardrail",
+            "bedrock:GetInferenceProfile",
+            "bedrock:GetKnowledgeBase",
             "bedrock:ListAgents",
+            "bedrock:ListGuardrails",
+            "bedrock:ListInferenceProfiles",
+            "bedrock:ListKnowledgeBases",
+            "bedrock:ListTagsForResource",
             "billingconductor:ListAccountAssociations",
             "billingconductor:ListBillingGroups",
             "billingconductor:ListCustomLineItems",
@@ -1602,7 +1609,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v57"
+    "VersionId": "v58"
   },
-  "UpdateDate": "2025-04-08T21:52:06Z"
+  "UpdateDate": "2025-05-23T17:52:07Z"
 }
