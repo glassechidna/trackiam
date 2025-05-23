@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v24",
+  "DefaultVersionId": "v25",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-03-12T20:22:06Z",
+    "CreateDate": "2025-05-23T21:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -293,8 +293,10 @@
             "profile:GetIntegration",
             "profile:GetSegmentEstimate",
             "profile:GetSegmentMembership",
+            "profile:GetSimilarProfiles",
             "profile:ListCalculatedAttributeDefinitions",
             "profile:ListCalculatedAttributesForProfile",
+            "profile:ListDomainLayouts",
             "profile:ListEventTriggers",
             "profile:ListIntegrations",
             "profile:ListProfileAttributeValues",
@@ -321,6 +323,19 @@
             "arn:aws:profile:*:*:domains/amazon-connect-*/calculated-attributes/*"
           ],
           "Sid": "AllowCustomerProfilesCalculatedAttributesForConnectDomain"
+        },
+        {
+          "Action": [
+            "profile:CreateDomainLayout",
+            "profile:DeleteDomainLayout",
+            "profile:GetDomainLayout",
+            "profile:UpdateDomainLayout"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:profile:*:*:domains/amazon-connect-*/layouts/*"
+          ],
+          "Sid": "AllowCustomerProfilesDomainLayoutsForConnectDomain"
         },
         {
           "Action": [
@@ -426,7 +441,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v24"
+    "VersionId": "v25"
   },
-  "UpdateDate": "2025-03-12T20:22:06Z"
+  "UpdateDate": "2025-05-23T21:07:07Z"
 }
