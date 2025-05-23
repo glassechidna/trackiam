@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 426
-* Unique actions: 19026
+* Unique actions: 19023
 * Managed policies: 1354
 
 Most common managed policy name prefixes:
@@ -239,7 +239,7 @@ The following table summarises the AWS APIs.
 | [`refactor-spaces`](services/refactor-spaces.yml) | 24 | 0 | 0 |
 | [`apptest`](services/apptest.yml) | 24 | 0 | 0 |
 | [`controltower`](services/controltower.yml) | 23 | 0 | 42 |
-| [`qapps`](services/qapps.yml) | 23 | 0 | 19 |
+| [`qapps`](services/qapps.yml) | 23 | 0 | 16 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 3 |
 | [`mq`](services/mq.yml) | 23 | 0 | 2 |
 | [`emr-containers`](services/emr-containers.yml) | 23 | 0 | 1 |
@@ -470,7 +470,7 @@ Most common action prefixes:
 | `List` | 3105 |
 | `Get` | 2826 |
 | `Delete` | 2187 |
-| `Create` | 2043 |
+| `Create` | 2042 |
 | `Describe` | 1790 |
 | `Update` | 1764 |
 | `Put` | 527 |
