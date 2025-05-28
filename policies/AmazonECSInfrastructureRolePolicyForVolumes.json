@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonECSInfrastructureRolePolicyForVolumes",
   "CreateDate": "2024-01-10T22:56:41Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4JRAUMLGMS",
   "PolicyName": "AmazonECSInfrastructureRolePolicyForVolumes",
   "PolicyVersion": {
-    "CreateDate": "2024-10-10T18:56:53Z",
+    "CreateDate": "2025-05-28T20:52:05Z",
     "Document": {
       "Statement": [
         {
@@ -90,12 +90,20 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "DescribeVolumesForLifecycle"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeInstancesForAttachingVolume"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-10-10T18:56:53Z"
+  "UpdateDate": "2025-05-28T20:52:05Z"
 }
