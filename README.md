@@ -11,9 +11,9 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 426
-* Unique actions: 19029
-* Managed policies: 1354
+* Unique services: 425
+* Unique actions: 19017
+* Managed policies: 1352
 
 Most common managed policy name prefixes:
 
@@ -24,7 +24,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 305 |
 | `arn:aws:iam::aws:policy/service-role/*` | 206 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
-| Other | 126 |
+| Other | 124 |
 
 The following table summarises the AWS APIs. 
 
@@ -408,7 +408,6 @@ The following table summarises the AWS APIs.
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
-| [`sagemaker-groundtruth-synthetic`](services/sagemaker-groundtruth-synthetic.yml) | 0 | 0 | 12 |
 | [`backup-search`](services/backup-search.yml) | 0 | 0 | 12 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 11 |
 | [`ts`](services/ts.yml) | 0 | 0 | 9 |
@@ -467,14 +466,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3106 |
-| `Get` | 2829 |
-| `Delete` | 2188 |
-| `Create` | 2044 |
+| `List` | 3102 |
+| `Get` | 2826 |
+| `Delete` | 2187 |
+| `Create` | 2043 |
 | `Describe` | 1791 |
-| `Update` | 1763 |
+| `Update` | 1762 |
 | `Put` | 527 |
-| `Start` | 461 |
+| `Start` | 459 |
 | `Tag` | 294 |
 | `Untag` | 290 |
 

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonDataZoneBedrockModelConsumptionPolicy",
   "CreateDate": "2024-11-12T22:15:08Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4BMSB6QOKU",
   "PolicyName": "AmazonDataZoneBedrockModelConsumptionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-05-13T21:37:06Z",
+    "CreateDate": "2025-05-28T18:52:08Z",
     "Document": {
       "Statement": [
         {
@@ -95,12 +95,20 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "BedrockListSessionsPermissions"
+        },
+        {
+          "Action": [
+            "bedrock:ListFoundationModels"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListFoundationModels"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-05-13T21:37:06Z"
+  "UpdateDate": "2025-05-28T18:52:08Z"
 }
