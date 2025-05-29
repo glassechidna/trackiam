@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 425
-* Unique actions: 19017
+* Unique actions: 19019
 * Managed policies: 1351
 
 Most common managed policy name prefixes:
@@ -139,7 +139,7 @@ The following table summarises the AWS APIs.
 | [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 49 | 0 | 0 |
-| [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 15 |
+| [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 17 |
 | [`codeartifact`](services/codeartifact.yml) | 48 | 0 | 3 |
 | [`wisdom`](services/wisdom.yml) | 47 | 0 | 45 |
 | [`ecr`](services/ecr.yml) | 47 | 0 | 5 |
@@ -467,12 +467,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3102 |
-| `Get` | 2826 |
+| `Get` | 2827 |
 | `Delete` | 2187 |
 | `Create` | 2043 |
 | `Describe` | 1791 |
 | `Update` | 1762 |
-| `Put` | 527 |
+| `Put` | 528 |
 | `Start` | 459 |
 | `Tag` | 294 |
 | `Untag` | 290 |
