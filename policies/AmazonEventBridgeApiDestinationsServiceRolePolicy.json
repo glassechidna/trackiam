@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEventBridgeApiDestinationsServiceRolePolicy",
   "CreateDate": "2021-02-11T20:52:05Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4GHQV22EVJ",
   "PolicyName": "AmazonEventBridgeApiDestinationsServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-03-28T20:07:07Z",
+    "CreateDate": "2025-05-29T21:22:07Z",
     "Document": {
       "Statement": [
         {
@@ -39,6 +39,11 @@
             "secretsmanager:PutSecretValue",
             "secretsmanager:UpdateSecret"
           ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
           "Effect": "Allow",
           "Resource": "arn:aws:secretsmanager:*:*:secret:events!connection/*"
         }
@@ -46,7 +51,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-03-28T20:07:07Z"
+  "UpdateDate": "2025-05-29T21:22:07Z"
 }
