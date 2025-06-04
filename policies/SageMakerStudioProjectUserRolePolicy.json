@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-04-28T18:37:07Z",
+    "CreateDate": "2025-06-04T00:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -1364,9 +1364,11 @@
             "StringLike": {
               "kms:ViaService": [
                 "bedrock.*.amazonaws.com",
+                "glue.*.amazonaws.com",
                 "s3.*.amazonaws.com",
                 "sagemaker.*.amazonaws.com",
                 "scheduler.*.amazonaws.com",
+                "secretsmanager.*.amazonaws.com",
                 "sqs.*.amazonaws.com"
               ]
             }
@@ -1655,6 +1657,77 @@
         },
         {
           "Action": [
+            "quicksight:CreateDataSet",
+            "quicksight:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": [
+                "AmazonDataZone*"
+              ]
+            },
+            "Null": {
+              "aws:TagKeys": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            },
+            "StringEqualsIfExists": {
+              "aws:RequestTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:quicksight:*:*:dataset/*",
+          "Sid": "ManageCreateDataSetPermissions"
+        },
+        {
+          "Action": [
+            "quicksight:CreateFolderMembership"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonDataZoneAssetsFolder": "true",
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:quicksight:*:*:folder/sagemaker-*-assets",
+          "Sid": "CreateFolderMembership"
+        },
+        {
+          "Action": [
+            "quicksight:DescribeDataSource",
+            "quicksight:DescribeFolder",
+            "quicksight:DescribeFolderPermissions",
+            "quicksight:ListFolderMembers"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:quicksight:*:*:datasource/*",
+            "arn:aws:quicksight:*:*:folder/*"
+          ],
+          "Sid": "ManageQuickSightFolderAndDataSourceResources"
+        },
+        {
+          "Action": [
+            "quicksight:PassDataSource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:quicksight:*:*:datasource/*",
+          "Sid": "ManagePassDataSourcePermissions"
+        },
+        {
+          "Action": [
             "ram:AcceptResourceShareInvitation"
           ],
           "Condition": {
@@ -1833,18 +1906,11 @@
           "Condition": {
             "StringEquals": {
               "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
-            },
-            "StringLike": {
-              "aws:PrincipalTag/RedshiftDbUser": [
-                "user-${aws:PrincipalTag/datazone:userId}*",
-                "user-*@*",
-                "user-project@${aws:PrincipalTag/AmazonDataZoneProject}"
-              ]
             }
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "RedshiftServerlessGetCredentialsOnlyForDbUser"
+          "Sid": "RedshiftGetCredentials"
         },
         {
           "Action": [
@@ -2521,6 +2587,19 @@
         },
         {
           "Action": [
+            "quicksight:DescribeAccountSubscription",
+            "quicksight:DescribeDataSet",
+            "quicksight:DescribeGroup",
+            "quicksight:DescribeUser"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:quicksight:*:*:*"
+          ],
+          "Sid": "ManageQuickSightOtherResources"
+        },
+        {
+          "Action": [
             "redshift-serverless:ListNamespaces",
             "redshift-serverless:ListWorkgroups",
             "redshift:DescribeClusters"
@@ -2557,7 +2636,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2025-04-28T18:37:07Z"
+  "UpdateDate": "2025-06-04T00:07:07Z"
 }
