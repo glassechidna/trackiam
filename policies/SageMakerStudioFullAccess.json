@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioFullAccess",
   "CreateDate": "2024-11-28T00:06:07Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BQBROTCPP",
   "PolicyName": "SageMakerStudioFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-05-22T17:52:06Z",
+    "CreateDate": "2025-06-06T19:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -290,6 +290,7 @@
             "iam:ListUsers",
             "kms:DescribeKey",
             "kms:ListAliases",
+            "quicksight:DescribeAccountSubscription",
             "redshift-serverless:ListWorkgroups",
             "redshift:DescribeClusters",
             "s3:ListAllMyBuckets",
@@ -323,6 +324,17 @@
             "arn:aws:bedrock:*:*:inference-profile/*"
           ],
           "Sid": "GetInferenceProfileStatement"
+        },
+        {
+          "Action": [
+            "bedrock:GetUseCaseForModelAccess",
+            "bedrock:PutUseCaseForModelAccess"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "ModelAccessUseCaseStatement"
         },
         {
           "Action": [
@@ -394,7 +406,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2025-05-22T17:52:06Z"
+  "UpdateDate": "2025-06-06T19:07:07Z"
 }
