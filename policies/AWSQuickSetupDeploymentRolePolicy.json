@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupDeploymentRolePolicy",
   "CreateDate": "2024-06-26T09:55:21Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CG2CDKZLJ",
   "PolicyName": "AWSQuickSetupDeploymentRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-06-26T09:55:21Z",
+    "CreateDate": "2025-06-10T13:22:06Z",
     "Document": {
       "Statement": [
         {
@@ -34,6 +34,7 @@
           "Condition": {
             "ArnEquals": {
               "iam:PolicyARN": [
+                "arn:aws:iam::aws:policy/AWSQuickSetupManagedInstanceProfileExecutionPolicy",
                 "arn:aws:iam::aws:policy/AWSSystemsManagerEnableConfigRecordingExecutionPolicy",
                 "arn:aws:iam::aws:policy/AWSSystemsManagerEnableExplorerExecutionPolicy"
               ]
@@ -222,7 +223,8 @@
             "arn:aws:ssm:*::document/AWS-GatherSoftwareInventory",
             "arn:aws:ssm:*::document/AWS-RunPatchBaselineAssociation",
             "arn:aws:ssm:*::document/AWS-UpdateSSMAgent",
-            "arn:aws:ssm:*::document/AWSEC2-UpdateLaunchAgent"
+            "arn:aws:ssm:*::document/AWSEC2-UpdateLaunchAgent",
+            "arn:aws:ssm:*::document/AWSQuickSetupType-ManageInstanceProfile"
           ],
           "Sid": "QSAssociationsManage"
         },
@@ -333,7 +335,8 @@
             "arn:aws:ssm:*::document/AWS-RunPatchBaselineAssociation",
             "arn:aws:ssm:*::document/AWS-UpdateSSMAgent",
             "arn:aws:ssm:*::document/AWSConformancePacks-*",
-            "arn:aws:ssm:*::document/AWSEC2-UpdateLaunchAgent"
+            "arn:aws:ssm:*::document/AWSEC2-UpdateLaunchAgent",
+            "arn:aws:ssm:*::document/AWSQuickSetupType-ManageInstanceProfile"
           ],
           "Sid": "QSDocsRead"
         }
@@ -341,7 +344,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-06-26T09:55:21Z"
+  "UpdateDate": "2025-06-10T13:22:06Z"
 }
