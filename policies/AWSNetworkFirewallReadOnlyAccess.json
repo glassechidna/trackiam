@@ -1,0 +1,51 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSNetworkFirewallReadOnlyAccess",
+  "CreateDate": "2025-06-10T21:52:05Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4HUHKA5TJR",
+  "PolicyName": "AWSNetworkFirewallReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2025-06-10T21:52:05Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:GetLogDelivery",
+            "logs:ListLogDeliveries"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:*"
+        },
+        {
+          "Action": [
+            "network-firewall:DescribeFirewall",
+            "network-firewall:DescribeFirewallPolicy",
+            "network-firewall:DescribeFlowOperation",
+            "network-firewall:DescribeLoggingConfiguration",
+            "network-firewall:DescribeResourcePolicy",
+            "network-firewall:DescribeRuleGroup",
+            "network-firewall:DescribeRuleGroupMetadata",
+            "network-firewall:DescribeTLSInspectionConfiguration",
+            "network-firewall:GetAnalysisReportResults",
+            "network-firewall:ListAnalysisReports",
+            "network-firewall:ListFirewallPolicies",
+            "network-firewall:ListFirewalls",
+            "network-firewall:ListFlowOperationResults",
+            "network-firewall:ListFlowOperations",
+            "network-firewall:ListRuleGroups",
+            "network-firewall:ListTLSInspectionConfigurations",
+            "network-firewall:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:network-firewall:*:*:*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-06-10T21:52:05Z"
+}

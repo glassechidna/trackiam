@@ -1,0 +1,177 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSNetworkFirewallFullAccess",
+  "CreateDate": "2025-06-10T21:52:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4BX6YRKUMU",
+  "PolicyName": "AWSNetworkFirewallFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2025-06-10T21:52:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "network-firewall.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/network-firewall.amazonaws.com/AWSServiceRoleForNetworkFirewall"
+          ],
+          "Sid": "NetworkFirewallSLR"
+        },
+        {
+          "Action": [
+            "ec2:CreateVpcEndpoint"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/AWSNetworkFirewallManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:*",
+          "Sid": "NetworkFirewallCreateVpcEndpoint"
+        },
+        {
+          "Action": [
+            "ec2:DeleteVpcEndpoints"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AWSNetworkFirewallManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:*",
+          "Sid": "NetworkFirewallDeleteVpcEndpoints"
+        },
+        {
+          "Action": [
+            "s3:GetBucketPolicy",
+            "s3:PutBucketPolicy"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*",
+          "Sid": "NetworkFirewallLoggingS3"
+        },
+        {
+          "Action": "firehose:TagDeliveryStream",
+          "Effect": "Allow",
+          "Resource": "arn:aws:firehose:*:*:*",
+          "Sid": "NetworkFirewallLoggingFirehose"
+        },
+        {
+          "Action": [
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs",
+            "ec2:GetManagedPrefixListEntries"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "NetworkFirewallEC2"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/delivery.logs.amazonaws.com/AWSServiceRoleForLogDelivery"
+          ],
+          "Sid": "NetworkFirewallLogDeliverySLR"
+        },
+        {
+          "Action": [
+            "logs:CreateLogDelivery",
+            "logs:DeleteLogDelivery",
+            "logs:GetLogDelivery",
+            "logs:ListLogDeliveries",
+            "logs:UpdateLogDelivery"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "NetworkFirewallLogging"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogGroups",
+            "logs:DescribeResourcePolicies",
+            "logs:PutResourcePolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:*",
+          "Sid": "NetworkFirewallLoggingCWL"
+        },
+        {
+          "Action": [
+            "network-firewall:AssociateFirewallPolicy",
+            "network-firewall:AssociateSubnets",
+            "network-firewall:CreateFirewall",
+            "network-firewall:CreateFirewallPolicy",
+            "network-firewall:CreateRuleGroup",
+            "network-firewall:CreateTLSInspectionConfiguration",
+            "network-firewall:DeleteFirewall",
+            "network-firewall:DeleteFirewallPolicy",
+            "network-firewall:DeleteResourcePolicy",
+            "network-firewall:DeleteRuleGroup",
+            "network-firewall:DeleteTLSInspectionConfiguration",
+            "network-firewall:DescribeFirewall",
+            "network-firewall:DescribeFirewallPolicy",
+            "network-firewall:DescribeFlowOperation",
+            "network-firewall:DescribeLoggingConfiguration",
+            "network-firewall:DescribeResourcePolicy",
+            "network-firewall:DescribeRuleGroup",
+            "network-firewall:DescribeRuleGroupMetadata",
+            "network-firewall:DescribeTLSInspectionConfiguration",
+            "network-firewall:DisassociateSubnets",
+            "network-firewall:GetAnalysisReportResults",
+            "network-firewall:ListAnalysisReports",
+            "network-firewall:ListFirewallPolicies",
+            "network-firewall:ListFirewalls",
+            "network-firewall:ListFlowOperationResults",
+            "network-firewall:ListFlowOperations",
+            "network-firewall:ListRuleGroups",
+            "network-firewall:ListTLSInspectionConfigurations",
+            "network-firewall:ListTagsForResource",
+            "network-firewall:PutResourcePolicy",
+            "network-firewall:StartAnalysisReport",
+            "network-firewall:StartFlowCapture",
+            "network-firewall:StartFlowFlush",
+            "network-firewall:TagResource",
+            "network-firewall:UntagResource",
+            "network-firewall:UpdateFirewallAnalysisSettings",
+            "network-firewall:UpdateFirewallDeleteProtection",
+            "network-firewall:UpdateFirewallDescription",
+            "network-firewall:UpdateFirewallEncryptionConfiguration",
+            "network-firewall:UpdateFirewallPolicy",
+            "network-firewall:UpdateFirewallPolicyChangeProtection",
+            "network-firewall:UpdateLoggingConfiguration",
+            "network-firewall:UpdateRuleGroup",
+            "network-firewall:UpdateSubnetChangeProtection",
+            "network-firewall:UpdateTLSInspectionConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:network-firewall:*:*:*"
+          ],
+          "Sid": "NetworkFirewall"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-06-10T21:52:06Z"
+}
