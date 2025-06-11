@@ -1,0 +1,44 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRolePolicyForWorkspacesInstances",
+  "CreateDate": "2025-06-11T20:37:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4GHC77ROUU",
+  "PolicyName": "AWSServiceRolePolicyForWorkspacesInstances",
+  "PolicyVersion": {
+    "CreateDate": "2025-06-11T20:37:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DeleteVolume",
+            "ec2:StartInstances",
+            "ec2:StopInstances",
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ManagedResourceOperator": "workspaces-instances.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstances",
+            "ec2:DescribeVolumes"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-06-11T20:37:06Z"
+}
