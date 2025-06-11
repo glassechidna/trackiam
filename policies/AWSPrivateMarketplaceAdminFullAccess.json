@@ -1,15 +1,57 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPrivateMarketplaceAdminFullAccess",
   "CreateDate": "2018-11-27T16:32:32Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ6VRZDDCYDOVCOCEI",
   "PolicyName": "AWSPrivateMarketplaceAdminFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-02-14T22:05:08Z",
+    "CreateDate": "2025-06-11T16:22:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "private-marketplace.marketplace.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/private-marketplace.marketplace.amazonaws.com/AWSServiceRoleForPrivateMarketplaceAdmin"
+          ],
+          "Sid": "PrivateMarketplaceCreateSLRPermissions"
+        },
+        {
+          "Action": [
+            "organizations:DeregisterDelegatedAdministrator",
+            "organizations:RegisterDelegatedAdministrator"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": "private-marketplace.marketplace.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PrivateMarketplaceManageDelegatedAdministratorPermissions"
+        },
+        {
+          "Action": [
+            "organizations:EnableAWSServiceAccess"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": "private-marketplace.marketplace.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PrivateMarketplaceEnableServiceAccessPermissions"
+        },
         {
           "Action": [
             "aws-marketplace:AssociateProductsWithPrivateMarketplace",
@@ -48,6 +90,16 @@
         },
         {
           "Action": [
+            "iam:GetRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/*AWSServiceRoleForPrivateMarketplaceAdmin"
+          ],
+          "Sid": "PrivateMarketplaceGetRolePermissions"
+        },
+        {
+          "Action": [
             "organizations:DescribeAccount",
             "organizations:DescribeOrganization",
             "organizations:DescribeOrganizationalUnit",
@@ -67,7 +119,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2024-02-14T22:05:08Z"
+  "UpdateDate": "2025-06-11T16:22:07Z"
 }
