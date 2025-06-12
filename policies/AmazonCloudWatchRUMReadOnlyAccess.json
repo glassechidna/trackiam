@@ -1,15 +1,36 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonCloudWatchRUMReadOnlyAccess",
   "CreateDate": "2021-11-29T15:43:47Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MNS2SANVJ",
   "PolicyName": "AmazonCloudWatchRUMReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-04-30T19:22:06Z",
+    "CreateDate": "2025-06-12T21:37:06Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch:*:*:alarm:*"
+        },
+        {
+          "Action": [
+            "cloudwatch:GetMetricData"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group::log-stream:*"
+        },
         {
           "Action": [
             "rum:BatchGetRumMetricDefinitions",
@@ -17,7 +38,23 @@
             "rum:GetAppMonitorData",
             "rum:GetResourcePolicy",
             "rum:ListAppMonitors",
-            "rum:ListRumMetricsDestinations"
+            "rum:ListRumMetricsDestinations",
+            "rum:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "synthetics:describeCanaries",
+            "synthetics:describeCanariesLastRun"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:synthetics:*:*:canary:*"
+        },
+        {
+          "Action": [
+            "xray:GetTraceSummaries"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -26,7 +63,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2025-04-30T19:22:06Z"
+  "UpdateDate": "2025-06-12T21:37:06Z"
 }
