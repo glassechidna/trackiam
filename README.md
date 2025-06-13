@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 426
-* Unique actions: 19075
+* Unique services: 427
+* Unique actions: 19086
 * Managed policies: 1357
 
 Most common managed policy name prefixes:
@@ -410,6 +410,7 @@ The following table summarises the AWS APIs.
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
 | [`backup-search`](services/backup-search.yml) | 0 | 0 | 12 |
+| [`support-console`](services/support-console.yml) | 0 | 0 | 11 |
 | [`evs`](services/evs.yml) | 0 | 0 | 11 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 11 |
 | [`ts`](services/ts.yml) | 0 | 0 | 9 |
@@ -468,10 +469,10 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3115 |
-| `Get` | 2835 |
-| `Delete` | 2193 |
-| `Create` | 2053 |
-| `Describe` | 1795 |
+| `Get` | 2840 |
+| `Delete` | 2194 |
+| `Create` | 2055 |
+| `Describe` | 1796 |
 | `Update` | 1765 |
 | `Put` | 527 |
 | `Start` | 460 |
