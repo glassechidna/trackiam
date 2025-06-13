@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-06-04T00:07:07Z",
+    "CreateDate": "2025-06-12T23:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -565,6 +565,7 @@
         {
           "Action": [
             "bedrock:ListEvaluationJobs",
+            "bedrock:ListFoundationModels",
             "bedrock:RetrieveAndGenerate"
           ],
           "Condition": {
@@ -728,22 +729,6 @@
         },
         {
           "Action": [
-            "ec2:AuthorizeSecurityGroupEgress",
-            "ec2:AuthorizeSecurityGroupIngress",
-            "ec2:RevokeSecurityGroupEgress",
-            "ec2:RevokeSecurityGroupIngress"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "DataLakeEC2Permissions"
-        },
-        {
-          "Action": [
             "ec2:CreateNetworkInterface"
           ],
           "Condition": {
@@ -887,8 +872,7 @@
             "elasticmapreduce:ListBootstrapActions",
             "elasticmapreduce:ListInstanceFleets",
             "elasticmapreduce:ListInstanceGroups",
-            "elasticmapreduce:ListInstances",
-            "elasticmapreduce:TerminateJobFlows"
+            "elasticmapreduce:ListInstances"
           ],
           "Condition": {
             "StringEquals": {
@@ -2029,22 +2013,6 @@
         },
         {
           "Action": [
-            "s3:ListBucket"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
-            },
-            "StringNotEquals": {
-              "aws:PrincipalTag/DomainBucketName": ""
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}",
-          "Sid": "AirflowListDomainS3BucketPermissions"
-        },
-        {
-          "Action": [
             "s3:ListBucket",
             "s3:ListBucketVersions"
           ],
@@ -2257,21 +2225,6 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AirflowListEnvironments"
-        },
-        {
-          "Action": [
-            "athena:GetDataCatalog",
-            "athena:GetDatabase",
-            "athena:GetTableMetadata",
-            "athena:ListDatabases",
-            "athena:ListTableMetadata"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:athena:*:*:datacatalog/AwsDataCatalog",
-            "arn:aws:athena:*:*:datacatalog/awsdatacatalog"
-          ],
-          "Sid": "DefaultAthenaDataCatalogPermissions"
         },
         {
           "Action": [
@@ -2636,7 +2589,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2025-06-04T00:07:07Z"
+  "UpdateDate": "2025-06-12T23:07:07Z"
 }
