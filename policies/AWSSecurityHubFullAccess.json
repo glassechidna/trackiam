@@ -1,20 +1,23 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSecurityHubFullAccess",
   "CreateDate": "2018-11-27T23:54:34Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ4262VZCA4HPBZSO6",
   "PolicyName": "AWSSecurityHubFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-04-23T18:35:45Z",
+    "CreateDate": "2025-06-17T13:07:07Z",
     "Document": {
       "Statement": [
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
-            "StringLike": {
-              "iam:AWSServiceName": "securityhub.amazonaws.com"
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "securityhub.amazonaws.com",
+                "securityhubv2.amazonaws.com"
+              ]
             }
           },
           "Effect": "Allow",
@@ -42,7 +45,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2024-04-23T18:35:45Z"
+  "UpdateDate": "2025-06-17T13:07:07Z"
 }
