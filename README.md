@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 427
-* Unique actions: 19092
+* Unique actions: 19093
 * Managed policies: 1359
 
 Most common managed policy name prefixes:
@@ -277,7 +277,7 @@ The following table summarises the AWS APIs.
 | [`ivschat`](services/ivschat.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`neptune-db`](services/neptune-db.yml) | 16 | 24 | 17 |
-| [`support`](services/support.yml) | 16 | 0 | 13 |
+| [`support`](services/support.yml) | 16 | 0 | 14 |
 | [`docdb-elastic`](services/docdb-elastic.yml) | 16 | 0 | 3 |
 | [`thinclient`](services/thinclient.yml) | 16 | 0 | 2 |
 | [`route53profiles`](services/route53profiles.yml) | 16 | 0 | 2 |
@@ -473,7 +473,7 @@ Most common action prefixes:
 | `Delete` | 2195 |
 | `Create` | 2055 |
 | `Describe` | 1796 |
-| `Update` | 1766 |
+| `Update` | 1767 |
 | `Put` | 527 |
 | `Start` | 460 |
 | `Tag` | 296 |
