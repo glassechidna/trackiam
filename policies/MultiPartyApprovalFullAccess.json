@@ -1,0 +1,79 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/MultiPartyApprovalFullAccess",
+  "CreateDate": "2025-06-18T20:22:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4NFSC5RO5O",
+  "PolicyName": "MultiPartyApprovalFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2025-06-18T20:22:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "sso:DeleteApplication",
+            "sso:DescribeApplication",
+            "sso:PutApplicationAccessScope",
+            "sso:PutApplicationAssignmentConfiguration",
+            "sso:PutApplicationAuthenticationMethod",
+            "sso:PutApplicationGrant"
+          ],
+          "Condition": {
+            "StringEqualsIfExists": {
+              "aws:CalledViaLast": "mpa.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSOApplicationManagement"
+        },
+        {
+          "Action": [
+            "mpa:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MpaFullAccess"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "OrganizationsAccess"
+        },
+        {
+          "Action": [
+            "sso-directory:DescribeUsers",
+            "sso-directory:SearchUsers",
+            "sso:DescribeInstance",
+            "sso:DescribeRegisteredRegions",
+            "sso:GetSharedSsoConfiguration",
+            "sso:ListInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSOManagementAccess"
+        },
+        {
+          "Action": [
+            "sso:CreateApplication"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sso:::instance/*",
+            "arn:aws:sso::aws:applicationProvider/mpa"
+          ],
+          "Sid": "SSOCreateApplication"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-06-18T20:22:07Z"
+}

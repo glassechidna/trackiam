@@ -1,0 +1,51 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/MultiPartyApprovalReadOnlyAccess",
+  "CreateDate": "2025-06-18T20:07:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4IY6QJCO57",
+  "PolicyName": "MultiPartyApprovalReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2025-06-18T20:07:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "mpa:Get*",
+            "mpa:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MpaReadAccess"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "OrganizationsAccess"
+        },
+        {
+          "Action": [
+            "sso-directory:DescribeUsers",
+            "sso-directory:SearchUsers",
+            "sso:DescribeInstance",
+            "sso:DescribeRegisteredRegions",
+            "sso:GetSharedSsoConfiguration",
+            "sso:ListInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSOManagementAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-06-18T20:07:07Z"
+}
