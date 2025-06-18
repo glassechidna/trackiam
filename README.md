@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 427
-* Unique actions: 19098
+* Unique services: 428
+* Unique actions: 19122
 * Managed policies: 1359
 
 Most common managed policy name prefixes:
@@ -381,6 +381,7 @@ The following table summarises the AWS APIs.
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
+| [`mpa`](services/mpa.yml) | 0 | 0 | 24 |
 | [`gameliftstreams`](services/gameliftstreams.yml) | 0 | 0 | 24 |
 | [`billing`](services/billing.yml) | 0 | 0 | 24 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 22 |
@@ -468,14 +469,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3116 |
-| `Get` | 2840 |
-| `Delete` | 2195 |
-| `Create` | 2056 |
+| `List` | 3123 |
+| `Get` | 2845 |
+| `Delete` | 2198 |
+| `Create` | 2058 |
 | `Describe` | 1796 |
-| `Update` | 1767 |
-| `Put` | 527 |
-| `Start` | 460 |
-| `Tag` | 296 |
-| `Untag` | 292 |
+| `Update` | 1768 |
+| `Put` | 528 |
+| `Start` | 462 |
+| `Tag` | 297 |
+| `Untag` | 293 |
 
