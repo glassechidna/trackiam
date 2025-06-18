@@ -48,7 +48,7 @@ The following table summarises the AWS APIs.
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
 | [`iam`](services/iam.yml) | 159 | 0 | 17 |
 | [`ssm`](services/ssm.yml) | 140 | 0 | 16 |
-| [`lex`](services/lex.yml) | 137 | 4 | 8 |
+| [`lex`](services/lex.yml) | 139 | 2 | 8 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 30 |
 | [`datazone`](services/datazone.yml) | 123 | 0 | 62 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
