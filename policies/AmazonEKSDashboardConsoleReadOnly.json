@@ -1,0 +1,57 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonEKSDashboardConsoleReadOnly",
+  "CreateDate": "2025-06-19T17:22:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4LHUIMEM7K",
+  "PolicyName": "AmazonEKSDashboardConsoleReadOnly",
+  "PolicyVersion": {
+    "CreateDate": "2025-06-19T17:22:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": "eks.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AmazonOrganizationsDelegatedAdmin"
+        },
+        {
+          "Action": [
+            "eks:DescribeClusterVersions",
+            "eks:ListDashboardData",
+            "eks:ListDashboardResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonEKSDashboardReadOnly"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccountsForParent",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListRoots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonOrganizationsReadOnly"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-06-19T17:22:07Z"
+}
