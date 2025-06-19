@@ -1,0 +1,103 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonS3TablesLakeFormationServiceRole",
+  "CreateDate": "2025-06-19T19:07:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4OK2X3BMV2",
+  "PolicyName": "AmazonS3TablesLakeFormationServiceRole",
+  "PolicyVersion": {
+    "CreateDate": "2025-06-19T19:07:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:s3:arn": "arn:aws:s3tables:*:*:bucket/*/table/*",
+              "kms:ViaService": [
+                "s3.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "KMSDataAccessPermissionsForS3TablesResources"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:ViaService": [
+                "s3tables.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "KMSDescribeKeyAccessPermissionsForS3TablesResources"
+        },
+        {
+          "Action": [
+            "s3tables:CreateNamespace",
+            "s3tables:CreateTable",
+            "s3tables:CreateTableBucket",
+            "s3tables:DeleteNamespace",
+            "s3tables:DeleteTable",
+            "s3tables:DeleteTableBucket",
+            "s3tables:GetNamespace",
+            "s3tables:GetTable",
+            "s3tables:GetTableBucket",
+            "s3tables:GetTableData",
+            "s3tables:GetTableMetadataLocation",
+            "s3tables:ListNamespaces",
+            "s3tables:ListTables",
+            "s3tables:PutTableData",
+            "s3tables:RenameTable",
+            "s3tables:UpdateTableMetadataLocation"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "DataAccessPermissionsForS3TablesResources"
+        },
+        {
+          "Action": [
+            "s3tables:ListTableBuckets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "PermissionsForS3ListTableBuckets"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-06-19T19:07:07Z"
+}
