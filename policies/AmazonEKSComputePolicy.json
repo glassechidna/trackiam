@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEKSComputePolicy",
   "CreateDate": "2024-11-01T21:46:52Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HYRJHGSOQ",
   "PolicyName": "AmazonEKSComputePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-07T21:21:18Z",
+    "CreateDate": "2025-06-20T21:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -77,6 +77,20 @@
           "Resource": "arn:aws:ec2:*:*:launch-template/*"
         },
         {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "spot.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/spot.amazonaws.com/AWSServiceRoleForEC2Spot"
+          ]
+        },
+        {
           "Action": "iam:AddRoleToInstanceProfile",
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:instance-profile/eks*"
@@ -88,6 +102,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:ec2:*:*:capacity-reservation/*",
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:subnet/*",
             "arn:aws:ec2:*::image/*"
@@ -97,7 +112,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-11-07T21:21:18Z"
+  "UpdateDate": "2025-06-20T21:07:07Z"
 }
