@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSecurityHubOrganizationsAccess",
   "CreateDate": "2021-03-15T20:53:03Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KVIUTRVOZ",
   "PolicyName": "AWSSecurityHubOrganizationsAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-11-16T21:13:44Z",
+    "CreateDate": "2025-06-24T22:22:08Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,32 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "OrganizationPermissionsEnable"
+        },
+        {
+          "Action": [
+            "organizations:AttachPolicy",
+            "organizations:CreatePolicy",
+            "organizations:DeletePolicy",
+            "organizations:DescribeEffectivePolicy",
+            "organizations:DescribePolicy",
+            "organizations:DetachPolicy",
+            "organizations:DisablePolicyType",
+            "organizations:EnablePolicyType",
+            "organizations:UpdatePolicy"
+          ],
+          "Condition": {
+            "StringLikeIfExists": {
+              "organizations:PolicyType": "SECURITYHUB_POLICY"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:organizations::*:account/o-*/*",
+            "arn:aws:organizations::*:ou/o-*/*",
+            "arn:aws:organizations::*:policy/o-*/securityhub_policy/*",
+            "arn:aws:organizations::*:root/o-*/*"
+          ],
+          "Sid": "OrganizationPolicyPermissions"
         },
         {
           "Action": [
@@ -45,17 +71,33 @@
             "organizations:ListAccountsForParent",
             "organizations:ListDelegatedAdministrators",
             "organizations:ListOrganizationalUnitsForParent",
-            "organizations:ListRoots"
+            "organizations:ListParents",
+            "organizations:ListPolicies",
+            "organizations:ListPoliciesForTarget",
+            "organizations:ListRoots",
+            "organizations:ListTargetsForPolicy"
           ],
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "OrganizationPermissions"
+        },
+        {
+          "Action": [
+            "organizations:ListTagsForResource",
+            "organizations:TagResource",
+            "organizations:UntagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:organizations::*:policy/o-*/securityhub_policy/*"
+          ],
+          "Sid": "OrganizationPolicyTaggingPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-11-16T21:13:44Z"
+  "UpdateDate": "2025-06-24T22:22:08Z"
 }
