@@ -1,19 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AIOpsReadOnlyAccess",
   "CreateDate": "2024-12-02T23:51:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4M5INIYYNW",
   "PolicyName": "AIOpsReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-12-02T23:51:07Z",
+    "CreateDate": "2025-06-24T00:22:07Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "aiops:Get*",
-            "aiops:List*"
+            "aiops:List*",
+            "aiops:ValidateInvestigationGroup"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -33,7 +34,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-12-02T23:51:07Z"
+  "UpdateDate": "2025-06-24T00:22:07Z"
 }

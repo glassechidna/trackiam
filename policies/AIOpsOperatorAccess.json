@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AIOpsOperatorAccess",
   "CreateDate": "2024-12-02T23:51:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4F7RFA2ZXQ",
   "PolicyName": "AIOpsOperatorAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-12-02T23:51:07Z",
+    "CreateDate": "2025-06-24T00:52:06Z",
     "Document": {
       "Statement": [
         {
@@ -72,7 +72,8 @@
             "aiops:Get*",
             "aiops:List*",
             "aiops:UpdateInvestigation",
-            "aiops:UpdateInvestigationEvent"
+            "aiops:UpdateInvestigationEvent",
+            "aiops:ValidateInvestigationGroup"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -116,7 +117,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-12-02T23:51:07Z"
+  "UpdateDate": "2025-06-24T00:52:06Z"
 }
