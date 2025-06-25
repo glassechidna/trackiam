@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-06-13T22:22:06Z",
+    "CreateDate": "2025-06-25T04:22:08Z",
     "Document": {
       "Statement": [
         {
@@ -2244,6 +2244,21 @@
         },
         {
           "Action": [
+            "athena:GetDataCatalog",
+            "athena:GetDatabase",
+            "athena:GetTableMetadata",
+            "athena:ListDatabases",
+            "athena:ListTableMetadata"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:athena:*:*:datacatalog/AwsDataCatalog",
+            "arn:aws:athena:*:*:datacatalog/awsdatacatalog"
+          ],
+          "Sid": "DefaultAthenaDataCatalogPermissions"
+        },
+        {
+          "Action": [
             "athena:ListDataCatalogs",
             "athena:ListEngineVersions",
             "athena:ListWorkGroups"
@@ -2605,7 +2620,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2025-06-13T22:22:06Z"
+  "UpdateDate": "2025-06-25T04:22:08Z"
 }
