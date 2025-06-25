@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonFSxFullAccess",
   "CreateDate": "2018-11-28T16:34:43Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIEUV6Z2X4VNZRVB5I",
   "PolicyName": "AmazonFSxFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-01-10T20:16:00Z",
+    "CreateDate": "2025-06-25T17:52:07Z",
     "Document": {
       "Statement": [
         {
@@ -117,6 +117,7 @@
             "fsx:CancelDataRepositoryTask",
             "fsx:CopyBackup",
             "fsx:CopySnapshotAndUpdateVolume",
+            "fsx:CreateAndAttachS3AccessPoint",
             "fsx:CreateBackup",
             "fsx:CreateDataRepositoryAssociation",
             "fsx:CreateDataRepositoryTask",
@@ -141,10 +142,12 @@
             "fsx:DescribeFileCaches",
             "fsx:DescribeFileSystemAliases",
             "fsx:DescribeFileSystems",
+            "fsx:DescribeS3AccessPointAttachments",
             "fsx:DescribeSharedVpcConfiguration",
             "fsx:DescribeSnapshots",
             "fsx:DescribeStorageVirtualMachines",
             "fsx:DescribeVolumes",
+            "fsx:DetachAndDeleteS3AccessPoint",
             "fsx:DisassociateFileGateway",
             "fsx:DisassociateFileSystemAliases",
             "fsx:ListTagsForResource",
@@ -181,7 +184,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2024-01-10T20:16:00Z"
+  "UpdateDate": "2025-06-25T17:52:07Z"
 }
