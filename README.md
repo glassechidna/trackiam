@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 428
-* Unique actions: 19133
+* Unique actions: 19135
 * Managed policies: 1365
 
 Most common managed policy name prefixes:
@@ -146,7 +146,7 @@ The following table summarises the AWS APIs.
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`transcribe`](services/transcribe.yml) | 46 | 0 | 5 |
-| [`fsx`](services/fsx.yml) | 45 | 0 | 8 |
+| [`fsx`](services/fsx.yml) | 45 | 0 | 11 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 2 |
 | [`workdocs`](services/workdocs.yml) | 44 | 0 | 17 |
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
@@ -293,8 +293,8 @@ The following table summarises the AWS APIs.
 | [`osis`](services/osis.yml) | 14 | 0 | 1 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 14 | 0 | 0 |
 | [`health`](services/health.yml) | 14 | 0 | 0 |
-| [`cloud9`](services/cloud9.yml) | 13 | 0 | 17 |
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 16 |
+| [`cloud9`](services/cloud9.yml) | 13 | 0 | 16 |
 | [`braket`](services/braket.yml) | 13 | 0 | 3 |
 | [`codeguru-security`](services/codeguru-security.yml) | 13 | 0 | 2 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 13 | 0 | 1 |
@@ -472,8 +472,8 @@ Most common action prefixes:
 | `List` | 3124 |
 | `Get` | 2848 |
 | `Delete` | 2198 |
-| `Create` | 2060 |
-| `Describe` | 1796 |
+| `Create` | 2061 |
+| `Describe` | 1797 |
 | `Update` | 1768 |
 | `Put` | 529 |
 | `Start` | 463 |
