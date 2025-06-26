@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 428
-* Unique actions: 19136
+* Unique actions: 19161
 * Managed policies: 1365
 
 Most common managed policy name prefixes:
@@ -361,10 +361,10 @@ The following table summarises the AWS APIs.
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
+| [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 82 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
-| [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 57 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 53 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 52 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
@@ -469,14 +469,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3124 |
-| `Get` | 2848 |
-| `Delete` | 2198 |
-| `Create` | 2062 |
+| `List` | 3131 |
+| `Get` | 2851 |
+| `Delete` | 2201 |
+| `Create` | 2065 |
 | `Describe` | 1797 |
-| `Update` | 1768 |
+| `Update` | 1771 |
 | `Put` | 529 |
-| `Start` | 463 |
-| `Tag` | 297 |
-| `Untag` | 293 |
+| `Start` | 464 |
+| `Tag` | 298 |
+| `Untag` | 294 |
 
