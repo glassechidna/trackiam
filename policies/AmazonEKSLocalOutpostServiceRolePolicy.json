@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEKSLocalOutpostServiceRolePolicy",
   "CreateDate": "2022-08-23T21:53:02Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4A6PGOGKJI",
   "PolicyName": "AmazonEKSLocalOutpostServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2022-10-24T16:24:51Z",
+    "CreateDate": "2025-06-26T18:22:07Z",
     "Document": {
       "Statement": [
         {
@@ -244,12 +244,19 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:ssm:*::document/AmazonEKS-ControlPlaneInstanceProxy"
+        },
+        {
+          "Action": [
+            "ssmmessages:OpenDataChannel"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:session/*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-10-24T16:24:51Z"
+  "UpdateDate": "2025-06-26T18:22:07Z"
 }
