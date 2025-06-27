@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonKeyspacesReadOnlyAccess_v2",
   "CreateDate": "2023-09-12T17:01:45Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4N6YWPPLRH",
   "PolicyName": "AmazonKeyspacesReadOnlyAccess_v2",
   "PolicyVersion": {
-    "CreateDate": "2023-09-12T17:01:45Z",
+    "CreateDate": "2025-06-27T22:22:06Z",
     "Document": {
       "Statement": [
         {
@@ -26,6 +26,10 @@
         },
         {
           "Action": [
+            "cassandra:GetRecords",
+            "cassandra:GetShardIterator",
+            "cassandra:GetStream",
+            "cassandra:ListStreams",
             "cassandra:Select"
           ],
           "Effect": "Allow",
@@ -43,7 +47,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-09-12T17:01:45Z"
+  "UpdateDate": "2025-06-27T22:22:06Z"
 }
