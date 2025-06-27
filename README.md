@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 428
-* Unique actions: 19163
+* Unique services: 429
+* Unique actions: 19213
 * Managed policies: 1365
 
 Most common managed policy name prefixes:
@@ -343,7 +343,7 @@ The following table summarises the AWS APIs.
 | [`route53-recovery-cluster`](services/route53-recovery-cluster.yml) | 4 | 0 | 0 |
 | [`scn`](services/scn.yml) | 3 | 0 | 33 |
 | [`controlcatalog`](services/controlcatalog.yml) | 3 | 0 | 3 |
-| [`cassandra`](services/cassandra.yml) | 2 | 12 | 15 |
+| [`cassandra`](services/cassandra.yml) | 2 | 12 | 19 |
 | [`ec2-instance-connect`](services/ec2-instance-connect.yml) | 2 | 0 | 1 |
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 2 | 0 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
@@ -367,6 +367,7 @@ The following table summarises the AWS APIs.
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 53 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 52 |
+| [`odb`](services/odb.yml) | 0 | 0 | 46 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 38 |
 | [`q`](services/q.yml) | 0 | 0 | 37 |
@@ -469,14 +470,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3131 |
-| `Get` | 2851 |
-| `Delete` | 2201 |
-| `Create` | 2065 |
+| `List` | 3144 |
+| `Get` | 2864 |
+| `Delete` | 2208 |
+| `Create` | 2072 |
 | `Describe` | 1797 |
-| `Update` | 1771 |
-| `Put` | 529 |
-| `Start` | 464 |
-| `Tag` | 298 |
-| `Untag` | 294 |
+| `Update` | 1773 |
+| `Put` | 530 |
+| `Start` | 465 |
+| `Tag` | 299 |
+| `Untag` | 295 |
 
