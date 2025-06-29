@@ -1,0 +1,91 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonBedrockLimitedAccess",
+  "CreateDate": "2025-06-29T22:22:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4ITL2W5IGN",
+  "PolicyName": "AmazonBedrockLimitedAccess",
+  "PolicyVersion": {
+    "CreateDate": "2025-06-29T22:22:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aws-marketplace:Subscribe",
+            "aws-marketplace:Unsubscribe",
+            "aws-marketplace:ViewSubscriptions"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaLast": "bedrock.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MarketplaceOperationsFromBedrockFor3pModels"
+        },
+        {
+          "Action": [
+            "bedrock:ApplyGuardrail",
+            "bedrock:BatchDeleteEvaluationJob",
+            "bedrock:CallWithBearerToken",
+            "bedrock:CreateEvaluationJob",
+            "bedrock:CreateGuardrail",
+            "bedrock:CreateGuardrailVersion",
+            "bedrock:CreateInferenceProfile",
+            "bedrock:CreateModelCopyJob",
+            "bedrock:CreateModelCustomizationJob",
+            "bedrock:CreateModelImportJob",
+            "bedrock:CreateModelInvocationJob",
+            "bedrock:CreatePromptRouter",
+            "bedrock:CreateProvisionedModelThroughput",
+            "bedrock:DeleteCustomModel",
+            "bedrock:DeleteGuardrail",
+            "bedrock:DeleteImportedModel",
+            "bedrock:DeleteInferenceProfile",
+            "bedrock:DeletePromptRouter",
+            "bedrock:DeleteProvisionedModelThroughput",
+            "bedrock:Get*",
+            "bedrock:InvokeModel",
+            "bedrock:InvokeModelWithResponseStream",
+            "bedrock:List*",
+            "bedrock:StopEvaluationJob",
+            "bedrock:StopModelCustomizationJob",
+            "bedrock:StopModelInvocationJob",
+            "bedrock:TagResource",
+            "bedrock:UntagResource",
+            "bedrock:UpdateGuardrail",
+            "bedrock:UpdateProvisionedModelThroughput"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BedrockAPIs"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "APIsWithAllResourceAccess"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:*:kms:*:::*",
+          "Sid": "DescribeKey"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-06-29T22:22:06Z"
+}

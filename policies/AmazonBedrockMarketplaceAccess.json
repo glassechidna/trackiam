@@ -1,30 +1,15 @@
 {
-  "Arn": "arn:aws:iam::aws:policy/AmazonBedrockFullAccess",
-  "CreateDate": "2023-12-06T15:47:17Z",
-  "DefaultVersionId": "v3",
+  "Arn": "arn:aws:iam::aws:policy/AmazonBedrockMarketplaceAccess",
+  "CreateDate": "2025-06-29T22:22:07Z",
+  "DefaultVersionId": "v1",
   "IsAttachable": true,
   "Path": "/",
-  "PolicyId": "ANPAZKAPJZG4IZPIPC3GC",
-  "PolicyName": "AmazonBedrockFullAccess",
+  "PolicyId": "ANPAZKAPJZG4DDKNABK3M",
+  "PolicyName": "AmazonBedrockMarketplaceAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-06-29T22:22:06Z",
+    "CreateDate": "2025-06-29T22:22:07Z",
     "Document": {
       "Statement": [
-        {
-          "Action": [
-            "aws-marketplace:Subscribe",
-            "aws-marketplace:Unsubscribe",
-            "aws-marketplace:ViewSubscriptions"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "aws:CalledViaLast": "bedrock.amazonaws.com"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "MarketplaceOperationsFromBedrockFor3pModels"
-        },
         {
           "Action": [
             "iam:PassRole"
@@ -173,30 +158,15 @@
         },
         {
           "Action": [
-            "bedrock:*"
+            "bedrock:CreateMarketplaceModelEndpoint",
+            "bedrock:DeleteMarketplaceModelEndpoint",
+            "bedrock:DeregisterMarketplaceModelEndpoint",
+            "bedrock:RegisterMarketplaceModelEndpoint",
+            "bedrock:UpdateMarketplaceModelEndpoint"
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "BedrockAll"
-        },
-        {
-          "Action": [
-            "ec2:DescribeSecurityGroups",
-            "ec2:DescribeSubnets",
-            "ec2:DescribeVpcs",
-            "iam:ListRoles"
-          ],
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "APIsWithAllResourceAccess"
-        },
-        {
-          "Action": [
-            "kms:DescribeKey"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:*:kms:*:::*",
-          "Sid": "DescribeKey"
+          "Sid": "BedrockMarketplaceAPIs"
         },
         {
           "Action": [
@@ -221,7 +191,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v1"
   },
-  "UpdateDate": "2025-06-29T22:22:06Z"
+  "UpdateDate": "2025-06-29T22:22:07Z"
 }
