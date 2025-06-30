@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 429
-* Unique actions: 19213
+* Unique actions: 19220
 * Managed policies: 1367
 
 Most common managed policy name prefixes:
@@ -116,7 +116,7 @@ The following table summarises the AWS APIs.
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 10 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`events`](services/events.yml) | 57 | 0 | 2 |
-| [`dynamodb`](services/dynamodb.yml) | 56 | 5 | 15 |
+| [`dynamodb`](services/dynamodb.yml) | 56 | 5 | 17 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 56 | 0 | 27 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 6 |
 | [`eks`](services/eks.yml) | 56 | 0 | 4 |
@@ -353,7 +353,7 @@ The following table summarises the AWS APIs.
 | [`freetier`](services/freetier.yml) | 1 | 0 | 2 |
 | [`eks-auth`](services/eks-auth.yml) | 1 | 0 | 0 |
 | [`cloudtrail-data`](services/cloudtrail-data.yml) | 1 | 0 | 0 |
-| [`apigateway`](services/apigateway.yml) | 0 | 152 | 13 |
+| [`apigateway`](services/apigateway.yml) | 0 | 152 | 18 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 12 | 3 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
@@ -470,12 +470,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3144 |
-| `Get` | 2864 |
-| `Delete` | 2208 |
-| `Create` | 2072 |
+| `List` | 3145 |
+| `Get` | 2865 |
+| `Delete` | 2210 |
+| `Create` | 2074 |
 | `Describe` | 1797 |
-| `Update` | 1773 |
+| `Update` | 1774 |
 | `Put` | 530 |
 | `Start` | 465 |
 | `Tag` | 299 |
