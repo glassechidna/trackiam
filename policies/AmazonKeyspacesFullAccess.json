@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonKeyspacesFullAccess",
   "CreateDate": "2020-04-23T17:06:37Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HMS72N6JG",
   "PolicyName": "AmazonKeyspacesFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-10-03T19:12:30Z",
+    "CreateDate": "2025-06-30T17:37:06Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "cassandra-streams.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/cassandra-streams.amazonaws.com/AWSServiceRoleForAmazonKeyspacesCDC",
+          "Sid": "KeyspacesCDCServiceLinkedRole"
+        },
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
@@ -83,7 +94,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2023-10-03T19:12:30Z"
+  "UpdateDate": "2025-06-30T17:37:06Z"
 }

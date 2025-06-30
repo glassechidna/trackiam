@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSZonalAutoshiftPracticeRunSLRPolicy",
   "CreateDate": "2023-11-29T17:34:54Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4KEQN62N5M",
   "PolicyName": "AWSZonalAutoshiftPracticeRunSLRPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-11-29T17:34:54Z",
+    "CreateDate": "2025-06-30T17:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -23,6 +23,17 @@
         },
         {
           "Action": [
+            "autoscaling:DescribeAutoScalingGroups",
+            "ec2:DescribeInstances",
+            "elasticloadbalancing:DescribeTargetGroups",
+            "elasticloadbalancing:DescribeTargetHealth"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AutoshiftPracticeCheckPermissions"
+        },
+        {
+          "Action": [
             "cloudwatch:DescribeAlarms",
             "health:DescribeEvents"
           ],
@@ -34,7 +45,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-11-29T17:34:54Z"
+  "UpdateDate": "2025-06-30T17:07:07Z"
 }
