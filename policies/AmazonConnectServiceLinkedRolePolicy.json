@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v25",
+  "DefaultVersionId": "v26",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-05-23T21:07:07Z",
+    "CreateDate": "2025-07-01T00:22:06Z",
     "Document": {
       "Statement": [
         {
@@ -288,7 +288,9 @@
             "profile:BatchGetProfile",
             "profile:CreateProfile",
             "profile:CreateSegmentEstimate",
+            "profile:CreateUploadJob",
             "profile:DeleteIntegration",
+            "profile:DetectProfileObjectType",
             "profile:GetDomain",
             "profile:GetIntegration",
             "profile:GetSegmentEstimate",
@@ -302,6 +304,7 @@
             "profile:ListProfileAttributeValues",
             "profile:ListProfileObjectTypes",
             "profile:ListSegmentDefinitions",
+            "profile:ListUploadJobs",
             "profile:PutIntegration",
             "profile:SearchProfiles",
             "profile:UpdateProfile"
@@ -387,6 +390,19 @@
         },
         {
           "Action": [
+            "profile:GetUploadJob",
+            "profile:GetUploadJobPath",
+            "profile:StartUploadJob",
+            "profile:StopUploadJob"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:profile:*:*:domains/amazon-connect-*/upload-jobs/*"
+          ],
+          "Sid": "AllowCustomerProfilesSegmentationImportForConnectDomain"
+        },
+        {
+          "Action": [
             "profile:ListAccountIntegrations"
           ],
           "Effect": "Allow",
@@ -441,7 +457,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v25"
+    "VersionId": "v26"
   },
-  "UpdateDate": "2025-05-23T21:07:07Z"
+  "UpdateDate": "2025-07-01T00:22:06Z"
 }
