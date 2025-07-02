@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticDisasterRecoveryConsoleFullAccess_v2",
   "CreateDate": "2023-11-27T13:35:19Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4GNEJEKJLM",
   "PolicyName": "AWSElasticDisasterRecoveryConsoleFullAccess_v2",
   "PolicyVersion": {
-    "CreateDate": "2025-01-05T15:22:06Z",
+    "CreateDate": "2025-07-02T15:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -537,6 +537,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ssm:*:*:automation-definition/AWS-CreateImage:$DEFAULT",
+            "arn:aws:ssm:*:*:automation-execution/*",
             "arn:aws:ssm:*:*:document/AWSEC2-ApplicationInsightsCloudwatchAgentInstallAndConfigure",
             "arn:aws:ssm:*:*:document/AWSMigration-LinuxTimeSyncSetting",
             "arn:aws:ssm:*:*:document/AWSMigration-ValidateDiskSpace",
@@ -675,7 +676,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2025-01-05T15:22:06Z"
+  "UpdateDate": "2025-07-02T15:37:06Z"
 }

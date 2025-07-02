@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSApplicationMigrationFullAccess",
   "CreateDate": "2021-04-07T06:56:05Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HPQNMM2HL",
   "PolicyName": "AWSApplicationMigrationFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-05-19T08:30:02Z",
+    "CreateDate": "2025-07-02T15:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -141,7 +141,11 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:automation-definition/AWSMigration-*:$DEFAULT",
+          "Resource": [
+            "arn:aws:ssm:*:*:automation-definition/AWSMigration-*:$DEFAULT",
+            "arn:aws:ssm:*:*:automation-execution/*",
+            "arn:aws:ssm:*:*:document/AWSMigration-*"
+          ],
           "Sid": "VisualEditor18"
         },
         {
@@ -262,7 +266,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2024-05-19T08:30:02Z"
+  "UpdateDate": "2025-07-02T15:37:08Z"
 }
