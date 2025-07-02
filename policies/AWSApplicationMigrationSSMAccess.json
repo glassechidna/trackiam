@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSApplicationMigrationSSMAccess",
   "CreateDate": "2022-11-27T09:29:05Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4EEPTUBLGD",
   "PolicyName": "AWSApplicationMigrationSSMAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-03-20T10:57:51Z",
+    "CreateDate": "2025-07-02T18:07:08Z",
     "Document": {
       "Statement": [
         {
@@ -26,6 +26,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ssm:*:*:automation-definition/*:*",
+            "arn:aws:ssm:*:*:automation-execution/*",
             "arn:aws:ssm:*:*:document/*"
           ]
         },
@@ -84,7 +85,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-03-20T10:57:51Z"
+  "UpdateDate": "2025-07-02T18:07:08Z"
 }
