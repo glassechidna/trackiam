@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonODBServiceRolePolicy",
   "CreateDate": "2024-11-13T18:21:41Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4BLAIMLXVO",
   "PolicyName": "AmazonODBServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-06-24T23:22:06Z",
+    "CreateDate": "2025-07-03T17:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -27,11 +27,22 @@
         },
         {
           "Action": [
-            "ec2:DescribeAvailabilityZones"
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeTransitGatewayVpcAttachments"
           ],
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "EC2"
+        },
+        {
+          "Action": [
+            "events:ActivateEventSource",
+            "events:DescribeEventSource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:event-source/aws.partner/odb*",
+          "Sid": "EB1"
         },
         {
           "Action": [
@@ -41,20 +52,12 @@
           "Effect": "Allow",
           "Resource": "arn:aws:events:*:*:event-bus/aws.partner/odb*",
           "Sid": "EB2"
-        },
-        {
-          "Action": [
-            "events:DescribeEventSource"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:events:*:*:event-source/aws.partner/odb*",
-          "Sid": "EB1"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-06-24T23:22:06Z"
+  "UpdateDate": "2025-07-03T17:07:07Z"
 }
