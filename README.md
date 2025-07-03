@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 429
-* Unique actions: 19230
+* Unique actions: 19235
 * Managed policies: 1368
 
 Most common managed policy name prefixes:
@@ -121,7 +121,7 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 56 | 0 | 6 |
 | [`eks`](services/eks.yml) | 56 | 0 | 4 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
-| [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 37 |
+| [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 42 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 10 |
 | [`resiliencehub`](services/resiliencehub.yml) | 55 | 0 | 8 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
@@ -470,12 +470,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3148 |
-| `Get` | 2867 |
-| `Delete` | 2210 |
-| `Create` | 2075 |
+| `List` | 3149 |
+| `Get` | 2868 |
+| `Delete` | 2211 |
+| `Create` | 2076 |
 | `Describe` | 1797 |
-| `Update` | 1775 |
+| `Update` | 1776 |
 | `Put` | 530 |
 | `Start` | 466 |
 | `Tag` | 300 |
