@@ -1,0 +1,92 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonInspector2FullAccess_v2",
+  "CreateDate": "2025-07-03T16:07:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4LAYOUDP4B",
+  "PolicyName": "AmazonInspector2FullAccess_v2",
+  "PolicyVersion": {
+    "CreateDate": "2025-07-03T16:07:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "agentless.inspector2.amazonaws.com",
+                "inspector2.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowAccessToCreateSlr"
+        },
+        {
+          "Action": [
+            "organizations:EnableAWSServiceAccess",
+            "organizations:ListDelegatedAdministrators",
+            "organizations:RegisterDelegatedAdministrator"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": [
+                "agentless.inspector2.amazonaws.com",
+                "inspector2.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowServicePrincipalBasedAccessToOrganizationApis"
+        },
+        {
+          "Action": "inspector2:*",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowFullAccessToInspectorApis"
+        },
+        {
+          "Action": [
+            "codeguru-security:BatchGetFindings",
+            "codeguru-security:GetAccountConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowAccessToCodeGuruApis"
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:*:organizations::*:account/o-*/*",
+          "Sid": "AllowAccountsBasedAccessToOrganizationApis"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowAccessToOrganizationApis"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganizationalUnit"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:*:organizations::*:ou/o-*/ou-*",
+          "Sid": "AllowOrganizationalBasedAccessToOrganizationApis"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-07-03T16:07:07Z"
+}
