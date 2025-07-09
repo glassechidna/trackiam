@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSSMForSAPServiceLinkedRolePolicy",
   "CreateDate": "2022-11-16T01:18:21Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AONIU2LID",
   "PolicyName": "AWSSSMForSAPServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-05-27T23:22:07Z",
+    "CreateDate": "2025-07-08T23:37:07Z",
     "Document": {
       "Statement": [
         {
@@ -308,6 +308,17 @@
         },
         {
           "Action": [
+            "ce:ListCostAllocationTagBackfillHistory",
+            "ce:ListCostAllocationTags",
+            "ce:StartCostAllocationTagBackfill",
+            "ce:UpdateCostAllocationTagsStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ManageCostAllocationTags"
+        },
+        {
+          "Action": [
             "ec2:DescribeInstanceAttribute",
             "ec2:DescribeInstanceTypes",
             "ec2:DescribeInstances",
@@ -363,7 +374,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2025-05-27T23:22:07Z"
+  "UpdateDate": "2025-07-08T23:37:07Z"
 }
