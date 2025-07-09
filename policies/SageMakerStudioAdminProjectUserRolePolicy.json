@@ -1,0 +1,116 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/SageMakerStudioAdminProjectUserRolePolicy",
+  "CreateDate": "2025-07-09T20:52:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4GK2FWX5FA",
+  "PolicyName": "SageMakerStudioAdminProjectUserRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-07-09T20:52:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "glue:BatchCreatePartition",
+            "glue:BatchDeletePartition",
+            "glue:BatchDeleteTable",
+            "glue:BatchDeleteTableVersion",
+            "glue:BatchGetPartition",
+            "glue:BatchGetTableOptimizer",
+            "glue:BatchUpdatePartition",
+            "glue:CreatePartition",
+            "glue:CreatePartitionIndex",
+            "glue:CreateTable",
+            "glue:DeleteColumnStatisticsForPartition",
+            "glue:DeleteColumnStatisticsForTable",
+            "glue:DeletePartition",
+            "glue:DeletePartitionIndex",
+            "glue:DeleteTable",
+            "glue:DeleteTableVersion",
+            "glue:GetCatalog",
+            "glue:GetCatalogImportStatus",
+            "glue:GetCatalogs",
+            "glue:GetColumnStatisticsForPartition",
+            "glue:GetColumnStatisticsForTable",
+            "glue:GetColumnStatisticsTaskRun",
+            "glue:GetColumnStatisticsTaskRuns",
+            "glue:GetDatabase",
+            "glue:GetPartition",
+            "glue:GetPartitionIndexes",
+            "glue:GetPartitions",
+            "glue:GetTable",
+            "glue:GetTableOptimizer",
+            "glue:GetTableVersion",
+            "glue:GetTableVersions",
+            "glue:GetTables",
+            "glue:ListTableOptimizerRuns",
+            "glue:SearchTables",
+            "glue:UpdateColumnStatisticsForPartition",
+            "glue:UpdateColumnStatisticsForTable",
+            "glue:UpdatePartition",
+            "glue:UpdateTable"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "aws:PrincipalTag/BootstrappedServices": "*glue*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:catalog",
+            "arn:aws:glue:*:*:database/*",
+            "arn:aws:glue:*:*:table/*"
+          ],
+          "Sid": "GlueDatalakePermissions"
+        },
+        {
+          "Action": [
+            "glue:CreateDatabase",
+            "glue:DeleteDatabase"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "aws:PrincipalTag/BootstrappedServices": "*glue*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:catalog"
+          ],
+          "Sid": "GlueCatalogDatabasePermissions"
+        },
+        {
+          "Action": [
+            "s3:DeleteObject",
+            "s3:GetObject",
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "aws:PrincipalTag/BootstrappedServices": "*glue*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*",
+          "Sid": "DataAccessPermissionsForS3"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-07-09T20:52:08Z"
+}
