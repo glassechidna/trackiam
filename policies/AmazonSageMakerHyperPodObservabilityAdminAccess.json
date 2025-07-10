@@ -1,0 +1,272 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerHyperPodObservabilityAdminAccess",
+  "CreateDate": "2025-07-10T14:37:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4ODJSMCAHC",
+  "PolicyName": "AmazonSageMakerHyperPodObservabilityAdminAccess",
+  "PolicyVersion": {
+    "CreateDate": "2025-07-10T14:37:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "aps:CreateRuleGroupsNamespace",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/SageMaker": "true",
+              "aws:ResourceTag/SageMaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:aps:*:*:rulegroupsnamespace/*/HyperPodObservabilityNamespace",
+          "Sid": "PrometheusCreateRuleGroupAccess"
+        },
+        {
+          "Action": "aps:TagResource",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "SageMaker"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/SageMaker": "true",
+              "aws:ResourceTag/SageMaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aps:*:*:/workspaces",
+            "arn:aws:aps:*:*:rulegroupsnamespace/*/HyperPodObservabilityNamespace"
+          ],
+          "Sid": "PrometheusTagsAccess"
+        },
+        {
+          "Action": "eks:TagResource",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "SageMaker"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/SageMaker": "true",
+              "aws:ResourceTag/SageMaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:eks:*:*:addon/*/*/*",
+            "arn:aws:eks:*:*:cluster/*",
+            "arn:aws:eks:*:*:podidentityassociation/*/*"
+          ],
+          "Sid": "EKSTagsAccess"
+        },
+        {
+          "Action": "grafana:TagResource",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "SageMaker"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/SageMaker": "true",
+              "aws:ResourceTag/SageMaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:grafana:*:*:/workspaces",
+          "Sid": "GrafanaTagsAccess"
+        },
+        {
+          "Action": [
+            "aps:CreateWorkspace"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/SageMaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PrometheusCreateAccess"
+        },
+        {
+          "Action": [
+            "eks:CreateAddon",
+            "eks:CreatePodIdentityAssociation"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/SageMaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:cluster/*",
+          "Sid": "EKSCreateAccess"
+        },
+        {
+          "Action": [
+            "grafana:CreateWorkspace"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/SageMaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GrafanaCreateWorkspaceAccess"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": [
+                "grafana.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AmazonSageMakerHyperPodObservabilityGrafanaAccess-*",
+          "Sid": "IAMGrafanaPassRoleAccess"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": [
+                "pods.eks.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AmazonSageMakerHyperPodObservabilityAddonAccess-*",
+          "Sid": "IAMEKSPassRoleAccess"
+        },
+        {
+          "Action": "eks:DescribePodIdentityAssociation",
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:podidentityassociation/*/*",
+          "Sid": "EKSAddonDescribePodIdentityAccess"
+        },
+        {
+          "Action": "iam:GetRole",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AmazonSageMakerHyperPodObservabilityAddonAccess-*"
+          ],
+          "Sid": "IAMGetRoleAccess"
+        },
+        {
+          "Action": [
+            "aps:CreateAlertManagerDefinition",
+            "aps:DescribeAlertManagerDefinition",
+            "aps:DescribeRuleGroupsNamespace",
+            "aps:ListRuleGroupsNamespaces"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aps:*:*:rulegroupsnamespace/*/HyperPodObservabilityNamespace",
+            "arn:aws:aps:*:*:workspace/*"
+          ],
+          "Sid": "PrometheusAlertsRuleGroupAccess"
+        },
+        {
+          "Action": [
+            "aps:DescribeWorkspace"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aps:*:*:workspace/*",
+          "Sid": "PrometheusDescribeAccess"
+        },
+        {
+          "Action": [
+            "aps:ListWorkspaces"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PrometheusListAccess"
+        },
+        {
+          "Action": [
+            "eks:DeleteAddon",
+            "eks:DescribeAddon",
+            "eks:UpdateAddon"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:addon/*/amazon-sagemaker-hyperpod-observability/*",
+          "Sid": "EKSAddonAccess"
+        },
+        {
+          "Action": [
+            "eks:DescribeAddonConfiguration",
+            "eks:DescribeAddonVersions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EKSAddonDescribeAccess"
+        },
+        {
+          "Action": [
+            "eks:DescribeCluster",
+            "eks:ListAddons"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:cluster/*",
+          "Sid": "EKSListDescribeAccess"
+        },
+        {
+          "Action": [
+            "grafana:CreateWorkspaceApiKey",
+            "grafana:CreateWorkspaceServiceAccount",
+            "grafana:CreateWorkspaceServiceAccountToken",
+            "grafana:DeleteWorkspaceServiceAccountToken",
+            "grafana:DescribeWorkspace",
+            "grafana:ListWorkspaceServiceAccountTokens",
+            "grafana:ListWorkspaceServiceAccounts"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:grafana:*:*:/workspaces/*",
+          "Sid": "GrafanaServiceAccountAccess"
+        },
+        {
+          "Action": [
+            "grafana:ListWorkspaces"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GrafanaListAccess"
+        },
+        {
+          "Action": [
+            "sagemaker:DescribeCluster",
+            "sagemaker:ListClusters"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "HyperPodClusterAccess"
+        },
+        {
+          "Action": [
+            "sso:CreateManagedApplicationInstance",
+            "sso:DescribeRegisteredRegions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSOAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-07-10T14:37:07Z"
+}
