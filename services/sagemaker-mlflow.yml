@@ -7,6 +7,8 @@ Actions:
   - Name: sagemaker-mlflow:CreateRegisteredModel
   - Name: sagemaker-mlflow:CreateRun
   - Name: sagemaker-mlflow:DeleteExperiment
+  - Name: sagemaker-mlflow:DeleteLoggedModel
+  - Name: sagemaker-mlflow:DeleteLoggedModelTag
   - Name: sagemaker-mlflow:DeleteModelVersion
   - Name: sagemaker-mlflow:DeleteModelVersionTag
   - Name: sagemaker-mlflow:DeleteRegisteredModel
@@ -17,10 +19,12 @@ Actions:
   - Name: sagemaker-mlflow:DeleteTraceTag
   - Name: sagemaker-mlflow:DeleteTraces
   - Name: sagemaker-mlflow:EndTrace
+  - Name: sagemaker-mlflow:FinalizeLoggedModel
   - Name: sagemaker-mlflow:GetDownloadURIForModelVersionArtifacts
   - Name: sagemaker-mlflow:GetExperiment
   - Name: sagemaker-mlflow:GetExperimentByName
   - Name: sagemaker-mlflow:GetLatestModelVersions
+  - Name: sagemaker-mlflow:GetLoggedModel
   - Name: sagemaker-mlflow:GetMetricHistory
   - Name: sagemaker-mlflow:GetModelVersion
   - Name: sagemaker-mlflow:GetModelVersionByAlias
@@ -28,20 +32,25 @@ Actions:
   - Name: sagemaker-mlflow:GetRun
   - Name: sagemaker-mlflow:GetTraceInfo
   - Name: sagemaker-mlflow:ListArtifacts
+  - Name: sagemaker-mlflow:ListLoggedModelArtifacts
   - Name: sagemaker-mlflow:LogBatch
   - Name: sagemaker-mlflow:LogInputs
+  - Name: sagemaker-mlflow:LogLoggedModelParams
   - Name: sagemaker-mlflow:LogMetric
   - Name: sagemaker-mlflow:LogModel
+  - Name: sagemaker-mlflow:LogOutputs
   - Name: sagemaker-mlflow:LogParam
   - Name: sagemaker-mlflow:RenameRegisteredModel
   - Name: sagemaker-mlflow:RestoreExperiment
   - Name: sagemaker-mlflow:RestoreRun
   - Name: sagemaker-mlflow:SearchExperiments
+  - Name: sagemaker-mlflow:SearchLoggedModels
   - Name: sagemaker-mlflow:SearchModelVersions
   - Name: sagemaker-mlflow:SearchRegisteredModels
   - Name: sagemaker-mlflow:SearchRuns
   - Name: sagemaker-mlflow:SearchTraces
   - Name: sagemaker-mlflow:SetExperimentTag
+  - Name: sagemaker-mlflow:SetLoggedModelTags
   - Name: sagemaker-mlflow:SetModelVersionTag
   - Name: sagemaker-mlflow:SetRegisteredModelAlias
   - Name: sagemaker-mlflow:SetRegisteredModelTag
