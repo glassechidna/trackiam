@@ -1,0 +1,56 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSDirectoryServiceServiceRolePolicy",
+  "CreateDate": "2025-07-11T00:22:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4HUAILYWBK",
+  "PolicyName": "AWSDirectoryServiceServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-07-11T00:22:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeDhcpOptions",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2DescribePermissions"
+        },
+        {
+          "Action": [
+            "ssm:DescribeInstanceInformation",
+            "ssm:GetCommandInvocation",
+            "ssm:GetConnectionStatus",
+            "ssm:ListCommands"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSMManagementPermissions"
+        },
+        {
+          "Action": [
+            "ssm:SendCommand"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ssm:*:*:document/AWS-RunPowerShellScript"
+          ],
+          "Sid": "SSMSendCommandPermission"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-07-11T00:22:07Z"
+}
