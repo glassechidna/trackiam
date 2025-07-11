@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v14",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-06-25T04:22:08Z",
+    "CreateDate": "2025-07-11T17:52:08Z",
     "Document": {
       "Statement": [
         {
@@ -249,6 +249,17 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AirflowS3GetAccountPublicAccessBlock"
+        },
+        {
+          "Action": "s3:GetBucketAcl",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}",
+          "Sid": "AccessLevelControlS3BucketPermissions"
         },
         {
           "Action": "s3:PutObjectTagging",
@@ -619,6 +630,22 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AirflowCloudwatchActions"
+        },
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringLike": {
+              "cloudwatch:namespace": [
+                "AWS/Glue",
+                "Glue"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GlueJobCloudwatchPutMetricActions"
         },
         {
           "Action": [
@@ -1001,6 +1028,7 @@
         },
         {
           "Action": [
+            "glue:BatchGetJobs",
             "glue:BatchStopJobRun",
             "glue:CancelDataQualityRuleRecommendationRun",
             "glue:CancelDataQualityRulesetEvaluationRun",
@@ -1017,6 +1045,9 @@
             "glue:GetDataQualityRuleRecommendationRun",
             "glue:GetDataQualityRuleset",
             "glue:GetDataQualityRulesetEvaluationRun",
+            "glue:GetJob",
+            "glue:GetJobRun",
+            "glue:GetJobRuns",
             "glue:GetSession",
             "glue:GetStatement",
             "glue:ListDataQualityResults",
@@ -1217,6 +1248,20 @@
         },
         {
           "Action": [
+            "glue:ListJobs"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalTag/EnableGlueWorkloadsPermissions": "true",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GlueListJobsPermissions"
+        },
+        {
+          "Action": [
             "glue:TagResource",
             "glue:UntagResource"
           ],
@@ -1287,6 +1332,7 @@
             "StringEquals": {
               "aws:ResourceAccount": "${aws:PrincipalAccount}",
               "iam:PassedToService": [
+                "access-grants.s3.amazonaws.com",
                 "airflow.amazonaws.com",
                 "emr-serverless.amazonaws.com",
                 "glue.amazonaws.com",
@@ -1563,6 +1609,23 @@
         },
         {
           "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "kms:EncryptionContext:aws:datazone:domainId": "${aws:PrincipalTag/AmazonDataZoneDomain}",
+              "kms:ViaService": [
+                "datazone.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/${aws:PrincipalTag/DomainKmsKeyId}",
+          "Sid": "DZDomainKMSKeyXAcctPerm"
+        },
+        {
+          "Action": [
             "kms:DescribeKey"
           ],
           "Condition": {
@@ -1717,6 +1780,7 @@
           "Condition": {
             "StringLike": {
               "ram:ResourceShareName": [
+                "DataZoneS3AG*",
                 "LakeFormation*"
               ]
             }
@@ -1875,7 +1939,10 @@
               "aws:ViaAWSService": "true"
             },
             "ForAnyValue:StringEquals": {
-              "aws:CalledVia": "redshift-data.amazonaws.com"
+              "aws:CalledVia": [
+                "redshift-data.amazonaws.com",
+                "sqlworkbench.amazonaws.com"
+              ]
             }
           },
           "Effect": "Allow",
@@ -2417,7 +2484,10 @@
             "glue:StartCompletion"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:glue:*:*:completion/*",
+          "Resource": [
+            "arn:aws:glue:*:*:completion/*",
+            "arn:aws:glue:*:*:job/*"
+          ],
           "Sid": "GlueCompletionsPermissions"
         },
         {
@@ -2470,6 +2540,7 @@
             "lakeformation:BatchRevokePermissions",
             "lakeformation:CreateDataCellsFilter",
             "lakeformation:DeleteDataCellsFilter",
+            "lakeformation:DescribeResource",
             "lakeformation:GetDataCellsFilter",
             "lakeformation:ListDataCellsFilter",
             "lakeformation:ListPermissions",
@@ -2488,6 +2559,26 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "LakeFormationPermissionForDataLakeAccess"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:FilterLogEvents",
+            "logs:GetLogEvents",
+            "logs:GetLogGroupFields",
+            "logs:GetLogRecord",
+            "logs:GetQueryResults",
+            "logs:PutLogEvents",
+            "logs:StartQuery"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:${aws:PrincipalTag/LogGroupName}/*",
+            "arn:aws:logs:*:*:log-group:${aws:PrincipalTag/LogGroupName}/*:log-stream:*"
+          ],
+          "Sid": "GlueJobLogGroupPermissions"
         },
         {
           "Action": [
@@ -2620,7 +2711,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v14"
+    "VersionId": "v15"
   },
-  "UpdateDate": "2025-06-25T04:22:08Z"
+  "UpdateDate": "2025-07-11T17:52:08Z"
 }
