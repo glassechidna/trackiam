@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectRoleMachineLearningPolicy",
   "CreateDate": "2024-11-20T21:55:27Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NSSEENOX7",
   "PolicyName": "SageMakerStudioProjectRoleMachineLearningPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-04-14T21:52:06Z",
+    "CreateDate": "2025-07-14T22:07:08Z",
     "Document": {
       "Statement": [
         {
@@ -225,6 +225,46 @@
         },
         {
           "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "kms:EncryptionContextKeys": "aws:s3:arn"
+            },
+            "StringLike": {
+              "kms:ViaService": "s3.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "S3AGKMSPermissions"
+        },
+        {
+          "Action": [
+            "ram:CreateResourceShare"
+          ],
+          "Condition": {
+            "ArnEquals": {
+              "ram:ResourceArn": [
+                "arn:aws:s3:*:*:access-grants/default"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "ram:RequestedResourceType": [
+                "s3:AccessGrants"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CrossAccountS3AGResourceSharingPermissions"
+        },
+        {
+          "Action": [
             "resource-groups:CreateGroup",
             "resource-groups:Tag"
           ],
@@ -287,6 +327,65 @@
         },
         {
           "Action": [
+            "s3:AbortMultipartUpload",
+            "s3:DeleteObject",
+            "s3:DeleteObjectVersion",
+            "s3:PutObject",
+            "s3:PutObjectAcl",
+            "s3:PutObjectVersionAcl"
+          ],
+          "Condition": {
+            "ArnEquals": {
+              "s3:AccessGrantsInstanceArn": [
+                "arn:aws:s3:*:*:access-grants/default"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "S3AGObjectWrite"
+        },
+        {
+          "Action": [
+            "s3:CreateAccessGrant",
+            "s3:DeleteAccessGrant"
+          ],
+          "Condition": {
+            "StringLike": {
+              "s3:accessGrantScope": "s3://${aws:PrincipalTag/DomainBucketName}/${aws:PrincipalTag/AmazonDataZoneDomain}/${aws:PrincipalTag/AmazonDataZoneProject}/*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:*:*:access-grants/default/grant/*",
+            "arn:aws:s3:*:*:access-grants/default/location/*"
+          ],
+          "Sid": "S3AGPermissionManagement"
+        },
+        {
+          "Action": [
+            "s3:CreateAccessGrantsLocation",
+            "s3:DeleteAccessGrantsLocation",
+            "s3:GetAccessGrantsLocation"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "s3:accessGrantsLocationScope": "s3://${aws:PrincipalTag/DomainBucketName}/${aws:PrincipalTag/AmazonDataZoneDomain}/${aws:PrincipalTag/AmazonDataZoneProject}/"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:*:*:access-grants/default/*"
+          ],
+          "Sid": "S3AGLocationManagement"
+        },
+        {
+          "Action": [
             "s3:GetObject"
           ],
           "Condition": {
@@ -299,6 +398,67 @@
             "arn:aws:s3:::jumpstart-cache-prod-*/*"
           ],
           "Sid": "SageMakerJumpstartS3Access"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:GetObjectAcl",
+            "s3:GetObjectVersion",
+            "s3:GetObjectVersionAcl",
+            "s3:ListMultipartUploadParts"
+          ],
+          "Condition": {
+            "ArnEquals": {
+              "s3:AccessGrantsInstanceArn": [
+                "arn:aws:s3:*:*:access-grants/default"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "S3AGObjectRead"
+        },
+        {
+          "Action": [
+            "s3:ListBucket"
+          ],
+          "Condition": {
+            "ArnEquals": {
+              "s3:AccessGrantsInstanceArn": [
+                "arn:aws:s3:*:*:access-grants/default"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*"
+          ],
+          "Sid": "S3AGBucketLevelReadPermissions"
+        },
+        {
+          "Action": [
+            "s3:ListTagsForResource",
+            "s3:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:*:*:access-grants/default/grant/*",
+            "arn:aws:s3:*:*:access-grants/default/location/*"
+          ],
+          "Sid": "S3AGTaggingPermission"
         },
         {
           "Action": [
@@ -873,6 +1033,17 @@
         },
         {
           "Action": [
+            "ram:GetResourceShareInvitations",
+            "s3:GetAccessGrantsInstanceForPrefix",
+            "s3:GetDataAccess",
+            "s3:ListCallerAccessGrants"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ConsumerS3AGPermission"
+        },
+        {
+          "Action": [
             "sagemaker:DescribeAction",
             "sagemaker:DescribeArtifact",
             "sagemaker:DescribeContext",
@@ -954,7 +1125,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2025-04-14T21:52:06Z"
+  "UpdateDate": "2025-07-14T22:07:08Z"
 }
