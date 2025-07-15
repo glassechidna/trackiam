@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonSSMServiceRolePolicy",
   "CreateDate": "2017-11-13T19:20:08Z",
-  "DefaultVersionId": "v15",
+  "DefaultVersionId": "v16",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIXJ26NUGBA3TCV7EC",
   "PolicyName": "AmazonSSMServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-15T14:08:27Z",
+    "CreateDate": "2025-07-15T17:22:08Z",
     "Document": {
       "Statement": [
         {
@@ -34,6 +34,23 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ssm:PutInventory"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "ssm:InventoryTypeName": [
+                "AWS:ComplianceItem",
+                "AWS:PatchSummary"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
         },
         {
           "Action": "cloudformation:DeleteStackInstances",
@@ -232,7 +249,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v15"
+    "VersionId": "v16"
   },
-  "UpdateDate": "2024-11-15T14:08:27Z"
+  "UpdateDate": "2025-07-15T17:22:08Z"
 }
