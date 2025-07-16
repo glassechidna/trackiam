@@ -11,20 +11,20 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 430
-* Unique actions: 19284
-* Managed policies: 1373
+* Unique services: 431
+* Unique actions: 19365
+* Managed policies: 1375
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 378 |
-| `arn:aws:iam::aws:policy/Amazon*` | 340 |
+| `arn:aws:iam::aws:policy/Amazon*` | 341 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 313 |
 | `arn:aws:iam::aws:policy/service-role/*` | 208 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
-| Other | 127 |
+| Other | 128 |
 
 The following table summarises the AWS APIs. 
 
@@ -362,6 +362,7 @@ The following table summarises the AWS APIs.
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 82 |
+| [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 81 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 61 |
@@ -471,14 +472,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3160 |
-| `Get` | 2878 |
-| `Delete` | 2217 |
-| `Create` | 2079 |
+| `List` | 3177 |
+| `Get` | 2898 |
+| `Delete` | 2229 |
+| `Create` | 2090 |
 | `Describe` | 1800 |
-| `Update` | 1781 |
+| `Update` | 1790 |
 | `Put` | 532 |
-| `Start` | 468 |
+| `Start` | 470 |
 | `Tag` | 300 |
 | `Untag` | 296 |
 

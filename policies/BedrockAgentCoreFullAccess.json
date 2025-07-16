@@ -1,0 +1,239 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/BedrockAgentCoreFullAccess",
+  "CreateDate": "2025-07-16T13:37:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4BB44GAY7X",
+  "PolicyName": "BedrockAgentCoreFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2025-07-16T13:37:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "application-signals.cloudwatch.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/application-signals.cloudwatch.amazonaws.com/AWSServiceRoleForCloudWatchApplicationSignals",
+          "Sid": "CloudWatchApplicationSignalsCreateServiceLinkedRolePermissions"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "bedrock-agentcore.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*BedrockAgentCore*",
+          "Sid": "BedrockAgentCorePassRoleAccess"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "bedrock-agentcore.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:kms:*:*:key/*"
+          ],
+          "Sid": "BedrockAgentCoreKMSAccess"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey",
+            "kms:ListKeys"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:kms:*:*:key/*"
+          ],
+          "Sid": "BedrockAgentCoreKMSReadAccess"
+        },
+        {
+          "Action": [
+            "logs:DescribeResourcePolicies"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "TransactionSearchLogsPermissions"
+        },
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaLast": "bedrock-agentcore.amazonaws.com",
+              "s3:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::bedrock-agentcore-gateway-*"
+          ],
+          "Sid": "BedrockAgentCoreS3Access"
+        },
+        {
+          "Action": "iam:GetRole",
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/application-signals.cloudwatch.amazonaws.com/AWSServiceRoleForCloudWatchApplicationSignals",
+          "Sid": "CloudWatchApplicationSignalsGetRolePermissions"
+        },
+        {
+          "Action": [
+            "application-autoscaling:DescribeScalingPolicies",
+            "application-signals:BatchGet*",
+            "application-signals:Get*",
+            "application-signals:List*",
+            "autoscaling:Describe*",
+            "cloudwatch:BatchGet*",
+            "cloudwatch:Describe*",
+            "cloudwatch:GenerateQuery",
+            "cloudwatch:Get*",
+            "cloudwatch:List*",
+            "logs:DescribeLogGroups",
+            "logs:StartLiveTail",
+            "logs:StopLiveTail",
+            "oam:ListSinks",
+            "rum:BatchGet*",
+            "rum:Get*",
+            "rum:List*",
+            "synthetics:Describe*",
+            "synthetics:Get*",
+            "synthetics:List*",
+            "xray:BatchGet*",
+            "xray:CancelTraceRetrieval",
+            "xray:Get*",
+            "xray:List*",
+            "xray:StartTraceRetrieval"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ObservabilityReadOnlyPermissions"
+        },
+        {
+          "Action": [
+            "application-signals:StartDiscovery"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TransactionSearchApplicationSignalsPermissions"
+        },
+        {
+          "Action": [
+            "bedrock-agentcore:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock-agentcore:*:*:*",
+          "Sid": "BedrockAgentCoreFullAccess"
+        },
+        {
+          "Action": [
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListRolePolicies",
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "IAMListAccess"
+        },
+        {
+          "Action": [
+            "lambda:ListFunctions"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:*"
+          ],
+          "Sid": "BedrockAgentCoreGatewayLambdaAccess"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutRetentionPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/application-signals/data:*",
+            "arn:aws:logs:*:*:log-group:aws/spans:*"
+          ],
+          "Sid": "TransactionSearchLogGroupPermissions"
+        },
+        {
+          "Action": [
+            "logs:Describe*",
+            "logs:FilterLogEvents",
+            "logs:Get*",
+            "logs:List*",
+            "logs:StartQuery",
+            "logs:StopQuery",
+            "logs:TestMetricFilter"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/application-signals/data:*",
+            "arn:aws:logs:*:*:log-group:/aws/bedrock-agentcore/*",
+            "arn:aws:logs:*:*:log-group:aws/spans:*"
+          ],
+          "Sid": "LoggingAccess"
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:PutSecretValue"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:bedrock-agentcore*",
+          "Sid": "SecretsManagerAccess"
+        },
+        {
+          "Action": [
+            "xray:GetIndexingRules",
+            "xray:GetTraceSegmentDestination",
+            "xray:UpdateIndexingRule",
+            "xray:UpdateTraceSegmentDestination"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TransactionSearchXRayPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-07-16T13:37:07Z"
+}
