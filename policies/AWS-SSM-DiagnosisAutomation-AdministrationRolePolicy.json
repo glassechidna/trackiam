@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWS-SSM-DiagnosisAutomation-AdministrationRolePolicy",
   "CreateDate": "2024-11-16T00:01:45Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4APUPTIENG",
   "PolicyName": "AWS-SSM-DiagnosisAutomation-AdministrationRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-16T00:01:45Z",
+    "CreateDate": "2025-07-16T17:22:07Z",
     "Document": {
       "Statement": [
         {
@@ -99,7 +99,9 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:ssm:*:*:automation-definition/AWS-*UnmanagedEC2*:*"
+            "arn:aws:ssm:*:*:automation-definition/AWS-*UnmanagedEC2*:*",
+            "arn:aws:ssm:*:*:automation-execution/*",
+            "arn:aws:ssm:*:*:document/AWS-*UnmanagedEC2*"
           ],
           "Sid": "AllowExecuteSSMAutomation"
         }
@@ -107,7 +109,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-11-16T00:01:45Z"
+  "UpdateDate": "2025-07-16T17:22:07Z"
 }
