@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CostOptimizationHubServiceRolePolicy",
   "CreateDate": "2023-11-26T08:03:59Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4GRVZQTOT7",
   "PolicyName": "CostOptimizationHubServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-07-05T18:02:53Z",
+    "CreateDate": "2025-07-17T18:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -28,6 +28,7 @@
         {
           "Action": [
             "ce:GetCostAndUsage",
+            "ce:GetDimensionValues",
             "ce:ListCostAllocationTags"
           ],
           "Effect": "Allow",
@@ -54,7 +55,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-07-05T18:02:53Z"
+  "UpdateDate": "2025-07-17T18:07:07Z"
 }
