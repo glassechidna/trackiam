@@ -1,0 +1,53 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonECSInfrastructureRolePolicyForLoadBalancers",
+  "CreateDate": "2025-07-17T16:37:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4D6JFMQCSN",
+  "PolicyName": "AmazonECSInfrastructureRolePolicyForLoadBalancers",
+  "PolicyVersion": {
+    "CreateDate": "2025-07-17T16:37:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "elasticloadbalancing:ModifyListener",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticloadbalancing:*:*:listener/app/*/*/*"
+          ],
+          "Sid": "ALBModifyListeners"
+        },
+        {
+          "Action": "elasticloadbalancing:ModifyListener",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticloadbalancing:*:*:listener/net/*/*/*"
+          ],
+          "Sid": "NLBModifyListeners"
+        },
+        {
+          "Action": "elasticloadbalancing:ModifyRule",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticloadbalancing:*:*:listener-rule/app/*/*/*/*"
+          ],
+          "Sid": "ALBModifyRules"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:DescribeListeners",
+            "elasticloadbalancing:DescribeRules"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ELBReadOperations"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-07-17T16:37:07Z"
+}

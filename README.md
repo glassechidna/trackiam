@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 431
-* Unique actions: 19365
-* Managed policies: 1377
+* Unique actions: 19366
+* Managed policies: 1378
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 380 |
-| `arn:aws:iam::aws:policy/Amazon*` | 341 |
+| `arn:aws:iam::aws:policy/Amazon*` | 342 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 313 |
 | `arn:aws:iam::aws:policy/service-role/*` | 208 |
 | `arn:aws:iam::aws:policy/job-function/*` | 7 |
@@ -161,7 +161,7 @@ The following table summarises the AWS APIs.
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
 | [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 17 |
-| [`memorydb`](services/memorydb.yml) | 38 | 0 | 8 |
+| [`memorydb`](services/memorydb.yml) | 38 | 0 | 9 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 4 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
