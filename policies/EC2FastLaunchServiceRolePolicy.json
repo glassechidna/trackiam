@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/EC2FastLaunchServiceRolePolicy",
   "CreateDate": "2022-01-10T13:08:21Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4PBILMNSY7",
   "PolicyName": "EC2FastLaunchServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-05-14T17:07:07Z",
+    "CreateDate": "2025-07-18T00:37:06Z",
     "Document": {
       "Statement": [
         {
@@ -116,6 +116,21 @@
         },
         {
           "Action": [
+            "ec2:DeleteNetworkInterface"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "EC2 Fast Launch"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*"
+          ],
+          "Sid": "AllowDeleteNetworkInterfaces"
+        },
+        {
+          "Action": [
             "ec2:DeleteSnapshot"
           ],
           "Condition": {
@@ -128,6 +143,21 @@
             "arn:aws:ec2:*:*:snapshot/*"
           ],
           "Sid": "AllowDeleteSnapshots"
+        },
+        {
+          "Action": [
+            "ec2:DeleteVolume"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "EC2 Fast Launch"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "AllowDeleteVolumes"
         },
         {
           "Action": [
@@ -195,8 +225,10 @@
             "ec2:DescribeInstances",
             "ec2:DescribeLaunchTemplateVersions",
             "ec2:DescribeLaunchTemplates",
+            "ec2:DescribeNetworkInterfaces",
             "ec2:DescribeSnapshots",
-            "ec2:DescribeSubnets"
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVolumes"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -233,7 +265,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-05-14T17:07:07Z"
+  "UpdateDate": "2025-07-18T00:37:06Z"
 }
