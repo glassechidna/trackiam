@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectRoleMachineLearningPolicy",
   "CreateDate": "2024-11-20T21:55:27Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NSSEENOX7",
   "PolicyName": "SageMakerStudioProjectRoleMachineLearningPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-07-14T22:07:08Z",
+    "CreateDate": "2025-07-22T20:07:08Z",
     "Document": {
       "Statement": [
         {
@@ -247,13 +247,10 @@
             "ram:CreateResourceShare"
           ],
           "Condition": {
-            "ArnEquals": {
-              "ram:ResourceArn": [
-                "arn:aws:s3:*:*:access-grants/default"
-              ]
-            },
             "StringEquals": {
-              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringEqualsIfExists": {
               "ram:RequestedResourceType": [
                 "s3:AccessGrants"
               ]
@@ -459,6 +456,19 @@
             "arn:aws:s3:*:*:access-grants/default/location/*"
           ],
           "Sid": "S3AGTaggingPermission"
+        },
+        {
+          "Action": [
+            "s3:PutAccessGrantsInstanceResourcePolicy"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:*:*:access-grants/default",
+          "Sid": "CrossAccountS3AGResourceSharingPolicyPermissions"
         },
         {
           "Action": [
@@ -1125,7 +1135,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2025-07-14T22:07:08Z"
+  "UpdateDate": "2025-07-22T20:07:08Z"
 }
