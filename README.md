@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 431
-* Unique actions: 19376
+* Unique actions: 19377
 * Managed policies: 1378
 
 Most common managed policy name prefixes:
@@ -278,11 +278,11 @@ The following table summarises the AWS APIs.
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`neptune-db`](services/neptune-db.yml) | 16 | 24 | 17 |
 | [`support`](services/support.yml) | 16 | 0 | 14 |
+| [`emr-serverless`](services/emr-serverless.yml) | 16 | 0 | 3 |
 | [`docdb-elastic`](services/docdb-elastic.yml) | 16 | 0 | 3 |
 | [`thinclient`](services/thinclient.yml) | 16 | 0 | 2 |
 | [`route53profiles`](services/route53profiles.yml) | 16 | 0 | 2 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 16 | 0 | 2 |
-| [`emr-serverless`](services/emr-serverless.yml) | 16 | 0 | 2 |
 | [`internetmonitor`](services/internetmonitor.yml) | 16 | 0 | 1 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
 | [`application-signals`](services/application-signals.yml) | 15 | 0 | 4 |
