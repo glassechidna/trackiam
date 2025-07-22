@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioEMRServiceRolePolicy",
   "CreateDate": "2025-01-31T19:52:07Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4LHCFHLBRB",
   "PolicyName": "SageMakerStudioEMRServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-02-27T00:22:06Z",
+    "CreateDate": "2025-07-22T16:52:07Z",
     "Document": {
       "Statement": [
         {
@@ -43,17 +43,6 @@
           "Sid": "AllowGenerateDataKeyForEbsEncryption"
         },
         {
-          "Action": "kms:ListAliases",
-          "Condition": {
-            "StringEquals": {
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:kms:*:*:key/${aws:PrincipalTag/KmsKeyId}",
-          "Sid": "AllowEMRToListKmsAliases"
-        },
-        {
           "Action": [
             "ec2:CreateFleet",
             "ec2:CreateNetworkInterface",
@@ -75,9 +64,7 @@
             "kms:CreateGrant",
             "kms:Decrypt",
             "kms:Encrypt",
-            "kms:GenerateDataKeyWithoutPlaintext",
-            "kms:ReEncryptFrom",
-            "kms:ReEncryptTo"
+            "kms:GenerateDataKeyWithoutPlaintext"
           ],
           "Condition": {
             "Null": {
@@ -98,29 +85,22 @@
         },
         {
           "Action": [
-            "kms:DescribeKey",
-            "kms:ListGrants",
-            "kms:RevokeGrant"
+            "kms:DescribeKey"
           ],
           "Condition": {
             "StringEquals": {
               "aws:ResourceAccount": "${aws:PrincipalAccount}"
-            },
-            "StringLike": {
-              "kms:ViaService": [
-                "ec2.*.amazonaws.com"
-              ]
             }
           },
           "Effect": "Allow",
           "Resource": "arn:aws:kms:*:*:key/${aws:PrincipalTag/KmsKeyId}",
-          "Sid": "AllowEMRForKMSManagement"
+          "Sid": "AllowDescribeKeyForLogPusherCMK"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-02-27T00:22:06Z"
+  "UpdateDate": "2025-07-22T16:52:07Z"
 }
