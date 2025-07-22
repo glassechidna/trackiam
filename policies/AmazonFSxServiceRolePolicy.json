@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonFSxServiceRolePolicy",
   "CreateDate": "2018-11-28T10:38:37Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIVQ24YKVRBV5IYQ5G",
   "PolicyName": "AmazonFSxServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-01-10T20:53:47Z",
+    "CreateDate": "2025-07-22T18:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -27,8 +27,10 @@
         },
         {
           "Action": [
+            "ec2:AssignIpv6Addresses",
             "ec2:AssignPrivateIpAddresses",
             "ec2:ModifyNetworkInterfaceAttribute",
+            "ec2:UnassignIpv6Addresses",
             "ec2:UnassignPrivateIpAddresses"
           ],
           "Condition": {
@@ -124,7 +126,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2024-01-10T20:53:47Z"
+  "UpdateDate": "2025-07-22T18:07:07Z"
 }
