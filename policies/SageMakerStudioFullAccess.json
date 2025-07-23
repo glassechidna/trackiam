@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioFullAccess",
   "CreateDate": "2024-11-28T00:06:07Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BQBROTCPP",
   "PolicyName": "SageMakerStudioFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-06-06T19:07:07Z",
+    "CreateDate": "2025-07-23T19:22:06Z",
     "Document": {
       "Statement": [
         {
@@ -40,6 +40,23 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "RamAssociateResourceSharePermissionStatement"
+        },
+        {
+          "Action": "s3:GetObject",
+          "Condition": {
+            "ArnLike": {
+              "s3:DataAccessPointArn": "arn:aws:s3:*:*:accesspoint/env-blueprint-accesspoint"
+            },
+            "StringNotEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:*:*:accesspoint/env-blueprint-accesspoint*",
+            "arn:aws:s3:::default-env-blueprint-*/*"
+          ],
+          "Sid": "ReadManagedBlueprintTemplatesStatement"
         },
         {
           "Action": [
@@ -198,6 +215,22 @@
         },
         {
           "Action": [
+            "s3:GetObject",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::amazon-sagemaker*/*"
+          ],
+          "Sid": "PutObjectStatement"
+        },
+        {
+          "Action": [
             "s3:PutBucketCORS",
             "s3:PutBucketPolicy",
             "s3:PutBucketVersioning"
@@ -219,7 +252,7 @@
           ],
           "Condition": {
             "StringLike": {
-              "aws:RequestTag/AmazonDataZoneDomain": "dzd_*"
+              "aws:RequestTag/AmazonDataZoneDomain": "dzd*"
             }
           },
           "Effect": "Allow",
@@ -237,8 +270,8 @@
               ]
             },
             "StringLike": {
-              "aws:RequestTag/AmazonDataZoneDomain": "dzd_*",
-              "aws:ResourceTag/AmazonDataZoneDomain": "dzd_*"
+              "aws:RequestTag/AmazonDataZoneDomain": "dzd*",
+              "aws:ResourceTag/AmazonDataZoneDomain": "dzd*"
             }
           },
           "Effect": "Allow",
@@ -257,8 +290,8 @@
               ]
             },
             "StringLike": {
-              "aws:RequestTag/AmazonDataZoneDomain": "dzd_*",
-              "aws:ResourceTag/AmazonDataZoneDomain": "dzd_*"
+              "aws:RequestTag/AmazonDataZoneDomain": "dzd*",
+              "aws:ResourceTag/AmazonDataZoneDomain": "dzd*"
             }
           },
           "Effect": "Allow",
@@ -279,6 +312,7 @@
             "bedrock:ListFoundationModels",
             "bedrock:ListInferenceProfiles",
             "bedrock:ListTagsForResource",
+            "cloudformation:ValidateTemplate",
             "codeconnections:ListConnections",
             "codeconnections:ListTagsForResource",
             "codewhisperer:ListProfiles",
@@ -286,6 +320,7 @@
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcs",
             "glue:GetDatabases",
+            "iam:ListPolicies",
             "iam:ListRoles",
             "iam:ListUsers",
             "kms:DescribeKey",
@@ -381,7 +416,8 @@
         {
           "Action": [
             "s3:GetBucketLocation",
-            "s3:ListBucket"
+            "s3:ListBucket",
+            "s3:ListBucketVersions"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:s3:::*",
@@ -406,7 +442,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2025-06-06T19:07:07Z"
+  "UpdateDate": "2025-07-23T19:22:06Z"
 }

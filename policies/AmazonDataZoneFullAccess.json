@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDataZoneFullAccess",
   "CreateDate": "2023-09-22T20:06:52Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4M44MZFTQR",
   "PolicyName": "AmazonDataZoneFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-05-22T18:07:07Z",
+    "CreateDate": "2025-07-23T19:22:08Z",
     "Document": {
       "Statement": [
         {
@@ -217,7 +217,7 @@
           ],
           "Condition": {
             "StringLike": {
-              "aws:RequestTag/AmazonDataZoneDomain": "dzd_*"
+              "aws:RequestTag/AmazonDataZoneDomain": "dzd*"
             }
           },
           "Effect": "Allow",
@@ -235,8 +235,8 @@
               ]
             },
             "StringLike": {
-              "aws:RequestTag/AmazonDataZoneDomain": "dzd_*",
-              "aws:ResourceTag/AmazonDataZoneDomain": "dzd_*"
+              "aws:RequestTag/AmazonDataZoneDomain": "dzd*",
+              "aws:ResourceTag/AmazonDataZoneDomain": "dzd*"
             }
           },
           "Effect": "Allow",
@@ -255,8 +255,8 @@
               ]
             },
             "StringLike": {
-              "aws:RequestTag/AmazonDataZoneDomain": "dzd_*",
-              "aws:ResourceTag/AmazonDataZoneDomain": "dzd_*"
+              "aws:RequestTag/AmazonDataZoneDomain": "dzd*",
+              "aws:ResourceTag/AmazonDataZoneDomain": "dzd*"
             }
           },
           "Effect": "Allow",
@@ -392,7 +392,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2025-05-22T18:07:07Z"
+  "UpdateDate": "2025-07-23T19:22:08Z"
 }
