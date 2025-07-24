@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v130",
+  "DefaultVersionId": "v131",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-07-17T18:22:08Z",
+    "CreateDate": "2025-07-24T15:07:06Z",
     "Document": {
       "Statement": [
         {
@@ -791,6 +791,10 @@
             "dms:Describe*",
             "dms:List*",
             "dms:Test*",
+            "docdb-elastic:ListClusterSnapshots",
+            "docdb-elastic:ListClusters",
+            "docdb-elastic:ListPendingMaintenanceActions",
+            "docdb-elastic:ListTagsForResource",
             "drs:DescribeJobLogItems",
             "drs:DescribeJobs",
             "drs:DescribeLaunchConfigurationTemplates",
@@ -2513,7 +2517,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v130"
+    "VersionId": "v131"
   },
-  "UpdateDate": "2025-07-17T18:22:08Z"
+  "UpdateDate": "2025-07-24T15:07:06Z"
 }
