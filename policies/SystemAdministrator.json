@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/SystemAdministrator",
   "CreateDate": "2016-11-10T17:23:56Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAITJPEZXCYCBXANDSW",
   "PolicyName": "SystemAdministrator",
   "PolicyVersion": {
-    "CreateDate": "2025-02-11T22:07:07Z",
+    "CreateDate": "2025-07-24T12:22:07Z",
     "Document": {
       "Statement": [
         {
@@ -170,6 +170,17 @@
             "logs:*",
             "rds:Describe*",
             "rds:ListTagsForResource",
+            "rolesanywhere:GetCrl",
+            "rolesanywhere:GetProfile",
+            "rolesanywhere:GetSubject",
+            "rolesanywhere:GetTrustAnchor",
+            "rolesanywhere:ListCrls",
+            "rolesanywhere:ListProfiles",
+            "rolesanywhere:ListSubjects",
+            "rolesanywhere:ListTagsForResource",
+            "rolesanywhere:ListTrustAnchors",
+            "rolesanywhere:PutNotificationSettings",
+            "rolesanywhere:ResetNotificationSettings",
             "route53:*",
             "route53domains:*",
             "ses:*",
@@ -267,7 +278,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2025-02-11T22:07:07Z"
+  "UpdateDate": "2025-07-24T12:22:07Z"
 }
