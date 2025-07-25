@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonECSInfrastructureRolePolicyForLoadBalancers",
   "CreateDate": "2025-07-17T16:37:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4D6JFMQCSN",
   "PolicyName": "AmazonECSInfrastructureRolePolicyForLoadBalancers",
   "PolicyVersion": {
-    "CreateDate": "2025-07-17T16:37:07Z",
+    "CreateDate": "2025-07-25T20:22:06Z",
     "Document": {
       "Statement": [
         {
@@ -36,8 +36,19 @@
         },
         {
           "Action": [
+            "elasticloadbalancing:DeregisterTargets",
+            "elasticloadbalancing:RegisterTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticloadbalancing:*:*:targetgroup/*/*",
+          "Sid": "TargetGroupOperations"
+        },
+        {
+          "Action": [
             "elasticloadbalancing:DescribeListeners",
-            "elasticloadbalancing:DescribeRules"
+            "elasticloadbalancing:DescribeRules",
+            "elasticloadbalancing:DescribeTargetGroups",
+            "elasticloadbalancing:DescribeTargetHealth"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -47,7 +58,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-07-17T16:37:07Z"
+  "UpdateDate": "2025-07-25T20:22:06Z"
 }
