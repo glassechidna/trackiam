@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v15",
+  "DefaultVersionId": "v16",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-07-11T17:52:08Z",
+    "CreateDate": "2025-07-28T22:22:06Z",
     "Document": {
       "Statement": [
         {
@@ -289,6 +289,22 @@
           "Effect": "Allow",
           "Resource": "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}/${aws:PrincipalTag/AmazonDataZoneDomain}/${aws:PrincipalTag/AmazonDataZoneProject}/genAI/assets/evaluations/*",
           "Sid": "TagS3ObjectPermissionsForBedrockEvaluation"
+        },
+        {
+          "Action": "sts:SetContext",
+          "Condition": {
+            "ForAllValues:ArnEquals": {
+              "sts:RequestContextProviders": [
+                "arn:aws:iam::aws:contextProvider/IdentityCenter"
+              ]
+            },
+            "Null": {
+              "sts:RequestContextProviders": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "StsContext"
         },
         {
           "Action": "sts:SetSourceIdentity",
@@ -1471,7 +1487,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:kms:*:*:key/${aws:PrincipalTag/KmsKeyId}",
+          "Resource": [
+            "arn:aws:kms:*:*:key/${aws:PrincipalTag/DefaultGlueCatalogKmsKeyId}",
+            "arn:aws:kms:*:*:key/${aws:PrincipalTag/KmsKeyId}"
+          ],
           "Sid": "GlueKmsPermissions"
         },
         {
@@ -2575,8 +2594,10 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:logs:*:*:log-group:${aws:PrincipalTag/LogGroupName}/*",
-            "arn:aws:logs:*:*:log-group:${aws:PrincipalTag/LogGroupName}/*:log-stream:*"
+            "arn:aws:logs:*:*:log-group:${aws:PrincipalTag/LogGroupName}/error",
+            "arn:aws:logs:*:*:log-group:${aws:PrincipalTag/LogGroupName}/error:log-stream:*",
+            "arn:aws:logs:*:*:log-group:${aws:PrincipalTag/LogGroupName}/output",
+            "arn:aws:logs:*:*:log-group:${aws:PrincipalTag/LogGroupName}/output:log-stream:*"
           ],
           "Sid": "GlueJobLogGroupPermissions"
         },
@@ -2711,7 +2732,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v15"
+    "VersionId": "v16"
   },
-  "UpdateDate": "2025-07-11T17:52:08Z"
+  "UpdateDate": "2025-07-28T22:22:06Z"
 }
