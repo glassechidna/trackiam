@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 431
-* Unique actions: 19417
+* Unique services: 432
+* Unique actions: 19447
 * Managed policies: 1379
 
 Most common managed policy name prefixes:
@@ -98,7 +98,7 @@ The following table summarises the AWS APIs.
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
 | [`athena`](services/athena.yml) | 68 | 0 | 11 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
-| [`ds`](services/ds.yml) | 67 | 0 | 14 |
+| [`ds`](services/ds.yml) | 67 | 0 | 21 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 66 | 0 | 6 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
@@ -387,6 +387,7 @@ The following table summarises the AWS APIs.
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
 | [`mpa`](services/mpa.yml) | 0 | 0 | 24 |
 | [`gameliftstreams`](services/gameliftstreams.yml) | 0 | 0 | 24 |
+| [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 23 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 23 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 22 |
 | [`dsql`](services/dsql.yml) | 0 | 0 | 21 |
@@ -472,14 +473,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3186 |
-| `Get` | 2905 |
-| `Delete` | 2235 |
-| `Create` | 2096 |
-| `Describe` | 1806 |
-| `Update` | 1797 |
-| `Put` | 532 |
-| `Start` | 471 |
-| `Tag` | 300 |
-| `Untag` | 296 |
+| `List` | 3193 |
+| `Get` | 2910 |
+| `Delete` | 2238 |
+| `Create` | 2098 |
+| `Describe` | 1808 |
+| `Update` | 1801 |
+| `Put` | 533 |
+| `Start` | 473 |
+| `Tag` | 301 |
+| `Untag` | 297 |
 
