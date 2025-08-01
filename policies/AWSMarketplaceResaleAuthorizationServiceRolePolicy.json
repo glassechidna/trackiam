@@ -1,17 +1,18 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSMarketplaceResaleAuthorizationServiceRolePolicy",
   "CreateDate": "2024-03-05T18:47:54Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NB3NLEV34",
   "PolicyName": "AWSMarketplaceResaleAuthorizationServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-03-05T18:47:54Z",
+    "CreateDate": "2025-08-01T15:19:07Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "aws-marketplace:DeleteResourcePolicy",
             "aws-marketplace:GetResourcePolicy",
             "aws-marketplace:PutResourcePolicy"
           ],
@@ -23,12 +24,13 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace/ResaleAuthorization/*",
+          "Resource": "arn:aws:aws-marketplace:*:*:*/ResaleAuthorization/*",
           "Sid": "AllowResaleAuthorizationShareActionsMarketplace"
         },
         {
           "Action": [
-            "ram:AcceptResourceShareInvitation"
+            "ram:AcceptResourceShareInvitation",
+            "ram:DeleteResourceShare"
           ],
           "Condition": {
             "StringEquals": {
@@ -39,7 +41,7 @@
           "Resource": [
             "arn:aws:ram:*:*:*"
           ],
-          "Sid": "AllowResaleAuthorizationShareActionsRAMAccept"
+          "Sid": "AllowResaleAuthorizationShareActionsRAMAcceptDelete"
         },
         {
           "Action": [
@@ -65,7 +67,7 @@
           ],
           "Condition": {
             "ArnLike": {
-              "ram:ResourceArn": "arn:aws:aws-marketplace:*:*:AWSMarketplace/ResaleAuthorization/*"
+              "ram:ResourceArn": "arn:aws:aws-marketplace:*:*:*/ResaleAuthorization/*"
             },
             "Null": {
               "ram:Principal": "true"
@@ -85,7 +87,7 @@
             "aws-marketplace:DescribeEntity"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace/ResaleAuthorization/*",
+          "Resource": "arn:aws:aws-marketplace:*:*:*/ResaleAuthorization/*",
           "Sid": "AllowResaleAuthorizationShareActionsMarketplaceDescribe"
         },
         {
@@ -103,7 +105,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-03-05T18:47:54Z"
+  "UpdateDate": "2025-08-01T15:19:07Z"
 }
