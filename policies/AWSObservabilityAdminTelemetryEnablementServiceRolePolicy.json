@@ -1,0 +1,176 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSObservabilityAdminTelemetryEnablementServiceRolePolicy",
+  "CreateDate": "2025-08-01T18:04:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4ABS5BMRXG",
+  "PolicyName": "AWSObservabilityAdminTelemetryEnablementServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-08-01T18:04:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "config:AssociateResourceTypes",
+            "config:DeleteServiceLinkedConfigurationRecorder",
+            "config:DisassociateResourceTypes",
+            "config:PutServiceLinkedConfigurationRecorder"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:config:*:*:configuration-recorder/AWSConfigurationRecorderForObservabilityAdmin_TelemetryEnablement/*"
+          ],
+          "Sid": "ManagementOperationsForServiceLinkedRecorder"
+        },
+        {
+          "Action": [
+            "config:DescribeConfigurationRecorders"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "config:ConfigurationRecorderServicePrincipal": [
+                "telemetry-enablement.observabilityadmin.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "ReadOperationsForServiceLinkedRecorder"
+        },
+        {
+          "Action": [
+            "ec2:CreateFlowLogs"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "CloudWatchTelemetryRuleManaged"
+            },
+            "StringEquals": {
+              "aws:RequestTag/CloudWatchTelemetryRuleManaged": "true",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-flow-log/*",
+          "Sid": "TelemetryOperationsForVPCFlowLogs"
+        },
+        {
+          "Action": [
+            "ec2:CreateFlowLogs"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc/*",
+          "Sid": "TelemetryOperationsForVPCLogs"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "CloudWatchTelemetryRuleManaged"
+            },
+            "StringEquals": {
+              "aws:RequestTag/CloudWatchTelemetryRuleManaged": "true",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "ec2:CreateAction": "CreateFlowLogs"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TagOperationForEC2"
+        },
+        {
+          "Action": [
+            "ec2:DeleteFlowLogs",
+            "logs:CreateLogGroup",
+            "logs:PutResourcePolicy",
+            "logs:PutRetentionPolicy"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/CloudWatchTelemetryRuleManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TelemetryOperationsForLogs"
+        },
+        {
+          "Action": [
+            "ec2:DescribeFlowLogs",
+            "ec2:DescribeVpcs",
+            "logs:DescribeLogGroups",
+            "logs:DescribeResourcePolicies",
+            "logs:ListLogGroups"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TelemetryOperations"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "BoolIfExists": {
+              "aws:ViaAWSService": "true"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "iam:AWSServiceName": [
+                "config.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig"
+          ],
+          "Sid": "IAMOperationsForConfigServiceLinkedRecorder"
+        },
+        {
+          "Action": [
+            "logs:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "CloudWatchTelemetryRuleManaged"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/CloudWatchTelemetryRuleManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TagOperationForLogs"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-08-01T18:04:06Z"
+}
