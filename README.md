@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 432
-* Unique actions: 19459
+* Unique actions: 19472
 * Managed policies: 1380
 
 Most common managed policy name prefixes:
@@ -390,6 +390,7 @@ The following table summarises the AWS APIs.
 | [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 23 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 23 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 22 |
+| [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 21 |
 | [`dsql`](services/dsql.yml) | 0 | 0 | 21 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 19 |
@@ -424,7 +425,6 @@ The following table summarises the AWS APIs.
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 9 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 9 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 8 |
-| [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`transform`](services/transform.yml) | 0 | 0 | 7 |
 | [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 7 |
@@ -473,14 +473,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3197 |
-| `Get` | 2912 |
-| `Delete` | 2240 |
-| `Create` | 2100 |
+| `List` | 3200 |
+| `Get` | 2914 |
+| `Delete` | 2242 |
+| `Create` | 2102 |
 | `Describe` | 1808 |
-| `Update` | 1803 |
+| `Update` | 1805 |
 | `Put` | 533 |
 | `Start` | 473 |
-| `Tag` | 301 |
-| `Untag` | 297 |
+| `Tag` | 302 |
+| `Untag` | 298 |
 
