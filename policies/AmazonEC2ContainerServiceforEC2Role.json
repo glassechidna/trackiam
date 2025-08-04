@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role",
   "CreateDate": "2015-03-19T18:45:18Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJLYJCVHC7TQHCSQDS",
   "PolicyName": "AmazonEC2ContainerServiceforEC2Role",
   "PolicyVersion": {
-    "CreateDate": "2023-03-06T22:19:04Z",
+    "CreateDate": "2025-08-04T18:19:07Z",
     "Document": {
       "Statement": [
         {
@@ -43,12 +43,22 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ecs:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ecs:*:*:container-instance/*/*",
+            "arn:aws:ecs:*:*:task/*/*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2023-03-06T22:19:04Z"
+  "UpdateDate": "2025-08-04T18:19:07Z"
 }
