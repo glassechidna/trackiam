@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 432
-* Unique actions: 19476
+* Unique actions: 19496
 * Managed policies: 1380
 
 Most common managed policy name prefixes:
@@ -60,7 +60,7 @@ The following table summarises the AWS APIs.
 | [`gamelift`](services/gamelift.yml) | 108 | 0 | 10 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 10 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 13 |
-| [`bedrock`](services/bedrock.yml) | 97 | 2 | 103 |
+| [`bedrock`](services/bedrock.yml) | 97 | 2 | 128 |
 | [`dms`](services/dms.yml) | 92 | 14 | 23 |
 | [`medialive`](services/medialive.yml) | 92 | 0 | 30 |
 | [`config`](services/config.yml) | 92 | 0 | 5 |
@@ -121,7 +121,7 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 56 | 0 | 6 |
 | [`eks`](services/eks.yml) | 56 | 0 | 4 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
-| [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 42 |
+| [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 37 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 10 |
 | [`resiliencehub`](services/resiliencehub.yml) | 55 | 0 | 8 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 0 |
@@ -473,14 +473,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3201 |
-| `Get` | 2914 |
-| `Delete` | 2243 |
-| `Create` | 2102 |
+| `List` | 3204 |
+| `Get` | 2921 |
+| `Delete` | 2246 |
+| `Create` | 2104 |
 | `Describe` | 1809 |
-| `Update` | 1805 |
+| `Update` | 1808 |
 | `Put` | 534 |
-| `Start` | 473 |
+| `Start` | 475 |
 | `Tag` | 302 |
 | `Untag` | 298 |
 

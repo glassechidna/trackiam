@@ -103,6 +103,10 @@ Actions:
   - Name: bedrock:AssociateThirdPartyKnowledgeBase
   - Name: bedrock:BatchDeleteEvaluationJob
   - Name: bedrock:CallWithBearerToken
+  - Name: bedrock:CancelAutomatedReasoningPolicyBuildWorkflow
+  - Name: bedrock:CreateAutomatedReasoningPolicy
+  - Name: bedrock:CreateAutomatedReasoningPolicyTestCase
+  - Name: bedrock:CreateAutomatedReasoningPolicyVersion
   - Name: bedrock:CreateBlueprint
   - Name: bedrock:CreateBlueprintVersion
   - Name: bedrock:CreateCustomModel
@@ -118,6 +122,9 @@ Actions:
   - Name: bedrock:CreateModelInvocationJob
   - Name: bedrock:CreatePromptRouter
   - Name: bedrock:CreateSession
+  - Name: bedrock:DeleteAutomatedReasoningPolicy
+  - Name: bedrock:DeleteAutomatedReasoningPolicyBuildWorkflow
+  - Name: bedrock:DeleteAutomatedReasoningPolicyTestCase
   - Name: bedrock:DeleteBlueprint
   - Name: bedrock:DeleteCustomModelDeployment
   - Name: bedrock:DeleteDataAutomationProject
@@ -134,9 +141,17 @@ Actions:
   - Name: bedrock:DetectGeneratedContent
   - Name: bedrock:DisassociateAgentCollaborator
   - Name: bedrock:EndSession
+  - Name: bedrock:ExportAutomatedReasoningPolicyVersion
   - Name: bedrock:GenerateQuery
   - Name: bedrock:GetAgentCollaborator
   - Name: bedrock:GetAsyncInvoke
+  - Name: bedrock:GetAutomatedReasoningPolicy
+  - Name: bedrock:GetAutomatedReasoningPolicyAnnotations
+  - Name: bedrock:GetAutomatedReasoningPolicyBuildWorkflow
+  - Name: bedrock:GetAutomatedReasoningPolicyBuildWorkflowResultAssets
+  - Name: bedrock:GetAutomatedReasoningPolicyNextScenario
+  - Name: bedrock:GetAutomatedReasoningPolicyTestCase
+  - Name: bedrock:GetAutomatedReasoningPolicyTestResult
   - Name: bedrock:GetBlueprint
   - Name: bedrock:GetBlueprintRecommendation
   - Name: bedrock:GetCustomModelDeployment
@@ -159,12 +174,17 @@ Actions:
   - Name: bedrock:GetSession
   - Name: bedrock:GetUseCaseForModelAccess
   - Name: bedrock:IngestKnowledgeBaseDocuments
+  - Name: bedrock:InvokeAutomatedReasoningPolicy
   - Name: bedrock:InvokeBlueprintRecommendationAsync
   - Name: bedrock:InvokeBuilder
   - Name: bedrock:InvokeDataAutomationAsync
   - Name: bedrock:InvokeInlineAgent
   - Name: bedrock:ListAgentCollaborators
   - Name: bedrock:ListAsyncInvokes
+  - Name: bedrock:ListAutomatedReasoningPolicies
+  - Name: bedrock:ListAutomatedReasoningPolicyBuildWorkflows
+  - Name: bedrock:ListAutomatedReasoningPolicyTestCases
+  - Name: bedrock:ListAutomatedReasoningPolicyTestResults
   - Name: bedrock:ListBlueprints
   - Name: bedrock:ListCustomModelDeployments
   - Name: bedrock:ListDataAutomationProjects
@@ -191,11 +211,16 @@ Actions:
   - Name: bedrock:RegisterMarketplaceModelEndpoint
   - Name: bedrock:RenderPrompt
   - Name: bedrock:Rerank
+  - Name: bedrock:StartAutomatedReasoningPolicyBuildWorkflow
+  - Name: bedrock:StartAutomatedReasoningPolicyTestWorkflow
   - Name: bedrock:StartFlowExecution
   - Name: bedrock:StopFlowExecution
   - Name: bedrock:StopIngestionJob
   - Name: bedrock:StopModelInvocationJob
   - Name: bedrock:UpdateAgentCollaborator
+  - Name: bedrock:UpdateAutomatedReasoningPolicy
+  - Name: bedrock:UpdateAutomatedReasoningPolicyAnnotations
+  - Name: bedrock:UpdateAutomatedReasoningPolicyTestCase
   - Name: bedrock:UpdateBlueprint
   - Name: bedrock:UpdateDataAutomationProject
   - Name: bedrock:UpdateMarketplaceModelEndpoint
