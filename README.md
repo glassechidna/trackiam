@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 432
-* Unique actions: 19501
+* Unique actions: 19507
 * Managed policies: 1380
 
 Most common managed policy name prefixes:
@@ -311,9 +311,9 @@ The following table summarises the AWS APIs.
 | [`bcm-data-exports`](services/bcm-data-exports.yml) | 12 | 0 | 0 |
 | [`budgets`](services/budgets.yml) | 11 | 15 | 2 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 11 | 0 | 41 |
+| [`repostspace`](services/repostspace.yml) | 11 | 0 | 8 |
 | [`timestream-influxdb`](services/timestream-influxdb.yml) | 11 | 0 | 6 |
 | [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 11 | 0 | 6 |
-| [`repostspace`](services/repostspace.yml) | 11 | 0 | 2 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 1 |
 | [`license-manager-linux-subscriptions`](services/license-manager-linux-subscriptions.yml) | 11 | 0 | 0 |
 | [`supportapp`](services/supportapp.yml) | 10 | 0 | 3 |
@@ -473,12 +473,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3205 |
-| `Get` | 2921 |
+| `List` | 3206 |
+| `Get` | 2922 |
 | `Delete` | 2246 |
-| `Create` | 2104 |
+| `Create` | 2105 |
 | `Describe` | 1810 |
-| `Update` | 1808 |
+| `Update` | 1809 |
 | `Put` | 534 |
 | `Start` | 475 |
 | `Tag` | 302 |
