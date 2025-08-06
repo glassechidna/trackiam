@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioDomainExecutionRolePolicy",
   "CreateDate": "2024-11-20T21:56:55Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4IBNDNDGG3",
   "PolicyName": "SageMakerStudioDomainExecutionRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-06-17T20:52:07Z",
+    "CreateDate": "2025-08-06T22:49:07Z",
     "Document": {
       "Statement": [
         {
@@ -217,6 +217,16 @@
         },
         {
           "Action": [
+            "datazone:GetAccountPool",
+            "datazone:ListAccountPools",
+            "datazone:ListAccountsInAccountPool"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:datazone:*:*:domain/*",
+          "Sid": "AccountPoolPermissionsStatement"
+        },
+        {
+          "Action": [
             "datazone:GetProjectProfile",
             "datazone:ListProjectProfiles"
           ],
@@ -260,7 +270,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2025-06-17T20:52:07Z"
+  "UpdateDate": "2025-08-06T22:49:07Z"
 }
