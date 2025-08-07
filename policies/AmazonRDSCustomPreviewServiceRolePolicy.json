@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSCustomPreviewServiceRolePolicy",
   "CreateDate": "2021-10-08T21:44:15Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4D6BEPON2G",
   "PolicyName": "AmazonRDSCustomPreviewServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-03-25T22:22:06Z",
+    "CreateDate": "2025-08-07T20:19:07Z",
     "Document": {
       "Statement": [
         {
@@ -291,11 +291,10 @@
         },
         {
           "Action": [
-            "ec2:CopySnapshot",
-            "ec2:CreateSnapshots"
+            "ec2:CopySnapshot"
           ],
           "Condition": {
-            "StringLike": {
+            "StringEquals": {
               "aws:RequestTag/AWSRDSCustom": [
                 "custom-oracle",
                 "custom-oracle-rac",
@@ -304,8 +303,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*::snapshot/*",
-          "Sid": "eccSnapshot2"
+          "Resource": [
+            "arn:aws:ec2:*::snapshot/${*}"
+          ],
+          "Sid": "eccSnapshotCopyDestination"
         },
         {
           "Action": [
@@ -326,6 +327,23 @@
             "arn:aws:ec2:*:*:key-pair/preview-rds-custom!*"
           ],
           "Sid": "eccKeyPair2"
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshots"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/AWSRDSCustom": [
+                "custom-oracle",
+                "custom-oracle-rac",
+                "custom-sqlserver"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::snapshot/*",
+          "Sid": "eccSnapshot2"
         },
         {
           "Action": [
@@ -657,6 +675,14 @@
         },
         {
           "Action": [
+            "ec2:CopySnapshot"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::snapshot/snap-*",
+          "Sid": "eccSnapshotCopySource"
+        },
+        {
+          "Action": [
             "ec2:DeregisterImage",
             "ec2:DescribeIamInstanceProfileAssociations",
             "ec2:DescribeImages",
@@ -748,7 +774,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2025-03-25T22:22:06Z"
+  "UpdateDate": "2025-08-07T20:19:07Z"
 }
