@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerTrainingPlanCreateAccess",
   "CreateDate": "2024-12-04T13:21:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FCUDPFEIQ",
   "PolicyName": "AmazonSageMakerTrainingPlanCreateAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-12-04T13:21:07Z",
+    "CreateDate": "2025-08-08T21:19:07Z",
     "Document": {
       "Statement": [
         {
@@ -27,7 +27,7 @@
             "arn:aws:sagemaker:*:*:reserved-capacity/*",
             "arn:aws:sagemaker:*:*:training-plan/*"
           ],
-          "Sid": "AggTagsToTrainingPlanPermissions"
+          "Sid": "AddTagsToTrainingPlanPermissions"
         },
         {
           "Action": "sagemaker:DescribeTrainingPlan",
@@ -38,9 +38,18 @@
           "Sid": "DescribeTrainingPlanPermissions"
         },
         {
+          "Action": "sagemaker:ListUltraServersByReservedCapacity",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:reserved-capacity/*"
+          ],
+          "Sid": "ListUltraServersByReservedCapacityPermissions"
+        },
+        {
           "Action": [
             "sagemaker:CreateReservedCapacity",
-            "sagemaker:CreateTrainingPlan"
+            "sagemaker:CreateTrainingPlan",
+            "sagemaker:DescribeReservedCapacity"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -62,7 +71,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-12-04T13:21:07Z"
+  "UpdateDate": "2025-08-08T21:19:07Z"
 }
