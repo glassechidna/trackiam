@@ -1,0 +1,175 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/ROSASharedVPCEndpointPolicy",
+  "CreateDate": "2025-08-11T17:19:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4DWTCDHZVL",
+  "PolicyName": "ROSASharedVPCEndpointPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-08-11T17:19:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:RevokeSecurityGroupEgress",
+            "ec2:RevokeSecurityGroupIngress"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group*/*"
+          ],
+          "Sid": "SecurityGroupIngressEgress"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group*/*"
+          ],
+          "Sid": "CreateSecurityGroups"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "CreateSecurityGroup",
+                "CreateVpcEndpoint"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:vpc-endpoint/*"
+          ],
+          "Sid": "CreateTagsRestrictedActions"
+        },
+        {
+          "Action": [
+            "ec2:CreateVpcEndpoint"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:vpc-endpoint/*"
+          ],
+          "Sid": "VPCEndpointWithCondition"
+        },
+        {
+          "Action": [
+            "ec2:CreateVpcEndpoint"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group*/*"
+          ],
+          "Sid": "VPCEndpointResourceTagCondition"
+        },
+        {
+          "Action": [
+            "ec2:DeleteSecurityGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group*/*"
+          ],
+          "Sid": "DeleteSecurityGroup"
+        },
+        {
+          "Action": [
+            "ec2:DeleteVpcEndpoints",
+            "ec2:ModifyVpcEndpoint"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:vpc-endpoint/*"
+          ],
+          "Sid": "ManageVPCEndpointWithCondition"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:vpc/*"
+          ],
+          "Sid": "CreateSecurityGroupsVPCNoCondition"
+        },
+        {
+          "Action": [
+            "ec2:CreateVpcEndpoint"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:route-table/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ],
+          "Sid": "VPCEndpointNoCondition"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReadPermissions"
+        },
+        {
+          "Action": [
+            "ec2:ModifyVpcEndpoint"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "ModifyVPCEndpoingNoCondition"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-08-11T17:19:07Z"
+}
