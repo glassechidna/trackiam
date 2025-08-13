@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 432
-* Unique actions: 19533
+* Unique services: 435
+* Unique actions: 19584
 * Managed policies: 1384
 
 Most common managed policy name prefixes:
@@ -381,6 +381,7 @@ The following table summarises the AWS APIs.
 | [`one`](services/one.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
+| [`diode-messaging`](services/diode-messaging.yml) | 0 | 0 | 25 |
 | [`billing`](services/billing.yml) | 0 | 0 | 25 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`s3express`](services/s3express.yml) | 0 | 0 | 24 |
@@ -395,6 +396,7 @@ The following table summarises the AWS APIs.
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 19 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
+| [`diode`](services/diode.yml) | 0 | 0 | 19 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 18 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 18 |
@@ -431,6 +433,7 @@ The following table summarises the AWS APIs.
 | [`qdeveloper`](services/qdeveloper.yml) | 0 | 0 | 7 |
 | [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
 | [`geo-places`](services/geo-places.yml) | 0 | 0 | 7 |
+| [`awsbillingconsole-deprecated`](services/awsbillingconsole-deprecated.yml) | 0 | 0 | 7 |
 | [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 6 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`cloudfront-keyvaluestore`](services/cloudfront-keyvaluestore.yml) | 0 | 0 | 6 |
@@ -473,14 +476,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3211 |
-| `Get` | 2926 |
-| `Delete` | 2251 |
-| `Create` | 2108 |
-| `Describe` | 1813 |
-| `Update` | 1812 |
+| `List` | 3220 |
+| `Get` | 2931 |
+| `Delete` | 2256 |
+| `Create` | 2114 |
+| `Update` | 1817 |
+| `Describe` | 1815 |
 | `Put` | 535 |
 | `Start` | 475 |
-| `Tag` | 302 |
-| `Untag` | 298 |
+| `Tag` | 304 |
+| `Untag` | 300 |
 
