@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 433
-* Unique actions: 19542
+* Unique services: 434
+* Unique actions: 19543
 * Managed policies: 1379
 
 Most common managed policy name prefixes:
@@ -468,13 +468,14 @@ The following table summarises the AWS APIs.
 | [`inspector-scan`](services/inspector-scan.yml) | 0 | 0 | 1 |
 | [`elemental-support-content`](services/elemental-support-content.yml) | 0 | 0 | 1 |
 | [`codeguru`](services/codeguru.yml) | 0 | 0 | 1 |
+| [`bcm-recommended-actions`](services/bcm-recommended-actions.yml) | 0 | 0 | 1 |
 | [`arsenal`](services/arsenal.yml) | 0 | 0 | 1 |
 
 Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3211 |
+| `List` | 3212 |
 | `Get` | 2929 |
 | `Delete` | 2253 |
 | `Create` | 2108 |
