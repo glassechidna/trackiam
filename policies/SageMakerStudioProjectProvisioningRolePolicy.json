@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy",
   "CreateDate": "2024-11-20T21:58:39Z",
-  "DefaultVersionId": "v17",
+  "DefaultVersionId": "v18",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQZUIPVLH",
   "PolicyName": "SageMakerStudioProjectProvisioningRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-07-15T16:22:08Z",
+    "CreateDate": "2025-08-13T23:49:07Z",
     "Document": {
       "Statement": [
         {
@@ -104,17 +104,6 @@
             "arn:aws:ec2:*:*:security-group/*"
           ],
           "Sid": "TagEc2"
-        },
-        {
-          "Action": "ec2:DeleteSecurityGroup",
-          "Condition": {
-            "Null": {
-              "aws:ResourceTag/AmazonDataZoneProject": "false"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:security-group/*",
-          "Sid": "EMRCleanup"
         },
         {
           "Action": "events:PutRule",
@@ -463,21 +452,6 @@
           "Sid": "CreateSchedule"
         },
         {
-          "Action": "scheduler:DeleteScheduleGroup",
-          "Condition": {
-            "Null": {
-              "aws:ResourceTag/AmazonDataZoneProject": "false"
-            },
-            "StringEquals": {
-              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:scheduler:*:*:schedule-group/*",
-          "Sid": "ScheduleGroup"
-        },
-        {
           "Action": "scheduler:TagResource",
           "Condition": {
             "ForAllValues:StringLike": {
@@ -637,7 +611,9 @@
         {
           "Action": [
             "athena:DeleteWorkGroup",
-            "athena:GetWorkGroup"
+            "athena:GetWorkGroup",
+            "athena:UntagResource",
+            "athena:UpdateWorkGroup"
           ],
           "Condition": {
             "Null": {
@@ -896,6 +872,7 @@
           "Action": [
             "codecommit:DeleteRepository",
             "codecommit:PutRepositoryTriggers",
+            "codecommit:UntagResource",
             "codecommit:UpdateRepositoryEncryptionKey"
           ],
           "Condition": {
@@ -949,6 +926,20 @@
             "arn:aws:ec2:*:*:vpc/*"
           ],
           "Sid": "CreateSG"
+        },
+        {
+          "Action": [
+            "ec2:DeleteSecurityGroup",
+            "ec2:DeleteTags"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*",
+          "Sid": "EMRCleanup"
         },
         {
           "Action": [
@@ -1551,22 +1542,6 @@
           "Action": [
             "iam:DeleteRole",
             "iam:DeleteRolePolicy",
-            "iam:ListAttachedRolePolicies",
-            "iam:ListInstanceProfilesForRole",
-            "iam:ListRolePolicies"
-          ],
-          "Condition": {
-            "Null": {
-              "aws:ResourceTag/AmazonDataZoneProject": "false"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/datazone_emr_*",
-          "Sid": "EmrRoleCleanup"
-        },
-        {
-          "Action": [
-            "iam:DeleteRole",
             "iam:GetRolePolicy",
             "iam:ListAttachedRolePolicies",
             "iam:ListRolePolicies"
@@ -1586,6 +1561,23 @@
             "arn:aws:iam::*:role/datazone*"
           ],
           "Sid": "ManageRoles"
+        },
+        {
+          "Action": [
+            "iam:DeleteRole",
+            "iam:DeleteRolePolicy",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListInstanceProfilesForRole",
+            "iam:ListRolePolicies"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/datazone_emr_*",
+          "Sid": "EmrRoleCleanup"
         },
         {
           "Action": [
@@ -2068,7 +2060,8 @@
             "logs:DisassociateKmsKey",
             "logs:GetDataProtectionPolicy",
             "logs:ListTagsForResource",
-            "logs:PutDataProtectionPolicy"
+            "logs:PutDataProtectionPolicy",
+            "logs:UntagResource"
           ],
           "Condition": {
             "Null": {
@@ -2626,6 +2619,24 @@
         },
         {
           "Action": [
+            "scheduler:DeleteScheduleGroup",
+            "scheduler:UntagResource"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            },
+            "StringEquals": {
+              "aws:CalledViaFirst": "cloudformation.amazonaws.com",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:scheduler:*:*:schedule-group/*",
+          "Sid": "ScheduleGroup"
+        },
+        {
+          "Action": [
             "scheduler:GetScheduleGroup",
             "scheduler:ListTagsForResource"
           ],
@@ -3017,7 +3028,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v17"
+    "VersionId": "v18"
   },
-  "UpdateDate": "2025-07-15T16:22:08Z"
+  "UpdateDate": "2025-08-13T23:49:07Z"
 }
