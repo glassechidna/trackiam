@@ -11,15 +11,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 434
-* Unique actions: 19578
-* Managed policies: 1384
+* Unique services: 432
+* Unique actions: 19534
+* Managed policies: 1383
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 382 |
+| `arn:aws:iam::aws:policy/AWS*` | 381 |
 | `arn:aws:iam::aws:policy/Amazon*` | 342 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 315 |
 | `arn:aws:iam::aws:policy/service-role/*` | 208 |
@@ -381,7 +381,6 @@ The following table summarises the AWS APIs.
 | [`one`](services/one.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
-| [`diode-messaging`](services/diode-messaging.yml) | 0 | 0 | 25 |
 | [`billing`](services/billing.yml) | 0 | 0 | 25 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`s3express`](services/s3express.yml) | 0 | 0 | 24 |
@@ -396,7 +395,6 @@ The following table summarises the AWS APIs.
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 19 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
-| [`diode`](services/diode.yml) | 0 | 0 | 19 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 18 |
 | [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 18 |
@@ -475,14 +473,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3220 |
-| `Get` | 2932 |
-| `Delete` | 2256 |
-| `Create` | 2114 |
-| `Update` | 1817 |
-| `Describe` | 1815 |
+| `List` | 3211 |
+| `Get` | 2927 |
+| `Delete` | 2251 |
+| `Create` | 2108 |
+| `Describe` | 1813 |
+| `Update` | 1812 |
 | `Put` | 535 |
 | `Start` | 475 |
-| `Tag` | 304 |
-| `Untag` | 300 |
+| `Tag` | 302 |
+| `Untag` | 298 |
 
