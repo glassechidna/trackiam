@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEVSServiceRolePolicy",
   "CreateDate": "2025-05-16T23:37:06Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4HOHZBKDBX",
   "PolicyName": "AmazonEVSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-08-05T18:34:07Z",
+    "CreateDate": "2025-08-14T16:04:06Z",
     "Document": {
       "Statement": [
         {
@@ -88,6 +88,52 @@
         },
         {
           "Action": [
+            "ec2:DeleteVolume",
+            "ec2:DetachVolume"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonEVSManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "ManageVolumeStatement"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstanceAttribute",
+            "ec2:ModifyInstanceAttribute",
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonEVSManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "ManageInstanceStatement"
+        },
+        {
+          "Action": [
+            "secretsmanager:DeleteSecret"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonEVSManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:secretsmanager:*:*:secret:*"
+          ],
+          "Sid": "ManageSecretStatement"
+        },
+        {
+          "Action": [
             "ec2:CreateNetworkInterface"
           ],
           "Effect": "Allow",
@@ -96,6 +142,15 @@
             "arn:aws:ec2:*:*:subnet/*"
           ],
           "Sid": "CreateEniInSubnetStatement"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstances",
+            "ec2:DescribeVolumes"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeInstanceAndVolumeStatement"
         },
         {
           "Action": [
@@ -119,7 +174,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-08-05T18:34:07Z"
+  "UpdateDate": "2025-08-14T16:04:06Z"
 }
