@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 433
-* Unique actions: 19537
-* Managed policies: 1377
+* Unique actions: 19542
+* Managed policies: 1378
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 376 |
+| `arn:aws:iam::aws:policy/AWS*` | 377 |
 | `arn:aws:iam::aws:policy/Amazon*` | 342 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 315 |
 | `arn:aws:iam::aws:policy/service-role/*` | 207 |
@@ -214,7 +214,7 @@ The following table summarises the AWS APIs.
 | [`codestar-connections`](services/codestar-connections.yml) | 27 | 0 | 11 |
 | [`codeconnections`](services/codeconnections.yml) | 27 | 0 | 11 |
 | [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 7 |
-| [`servicediscovery`](services/servicediscovery.yml) | 27 | 0 | 3 |
+| [`servicediscovery`](services/servicediscovery.yml) | 27 | 0 | 6 |
 | [`b2bi`](services/b2bi.yml) | 27 | 0 | 3 |
 | [`snowball`](services/snowball.yml) | 27 | 0 | 0 |
 | [`aps`](services/aps.yml) | 26 | 0 | 23 |
@@ -297,11 +297,11 @@ The following table summarises the AWS APIs.
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 16 |
 | [`braket`](services/braket.yml) | 13 | 0 | 3 |
 | [`codeguru-security`](services/codeguru-security.yml) | 13 | 0 | 2 |
+| [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 13 | 0 | 2 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 13 | 0 | 1 |
 | [`snow-device-management`](services/snow-device-management.yml) | 13 | 0 | 0 |
 | [`pi`](services/pi.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
-| [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 13 | 0 | 0 |
 | [`launchwizard`](services/launchwizard.yml) | 12 | 0 | 25 |
 | [`account`](services/account.yml) | 12 | 0 | 3 |
 | [`scheduler`](services/scheduler.yml) | 12 | 0 | 0 |
@@ -475,13 +475,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3211 |
-| `Get` | 2928 |
-| `Delete` | 2252 |
+| `Get` | 2929 |
+| `Delete` | 2253 |
 | `Create` | 2108 |
 | `Describe` | 1813 |
 | `Update` | 1812 |
-| `Put` | 536 |
-| `Start` | 475 |
+| `Put` | 537 |
+| `Start` | 476 |
 | `Tag` | 302 |
 | `Untag` | 298 |
 
