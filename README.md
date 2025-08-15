@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 434
-* Unique actions: 19547
+* Unique actions: 19560
 * Managed policies: 1379
 
 Most common managed policy name prefixes:
@@ -88,7 +88,7 @@ The following table summarises the AWS APIs.
 | [`elasticache`](services/elasticache.yml) | 75 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
 | [`logs`](services/logs.yml) | 74 | 0 | 26 |
-| [`guardduty`](services/guardduty.yml) | 74 | 0 | 1 |
+| [`guardduty`](services/guardduty.yml) | 74 | 0 | 11 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`sso`](services/sso.yml) | 73 | 0 | 55 |
 | [`imagebuilder`](services/imagebuilder.yml) | 73 | 0 | 2 |
@@ -217,7 +217,7 @@ The following table summarises the AWS APIs.
 | [`servicediscovery`](services/servicediscovery.yml) | 27 | 0 | 6 |
 | [`b2bi`](services/b2bi.yml) | 27 | 0 | 3 |
 | [`snowball`](services/snowball.yml) | 27 | 0 | 0 |
-| [`aps`](services/aps.yml) | 26 | 0 | 23 |
+| [`aps`](services/aps.yml) | 26 | 0 | 26 |
 | [`chatbot`](services/chatbot.yml) | 26 | 0 | 13 |
 | [`compute-optimizer`](services/compute-optimizer.yml) | 26 | 0 | 2 |
 | [`private-networks`](services/private-networks.yml) | 26 | 0 | 0 |
@@ -475,13 +475,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3212 |
-| `Get` | 2929 |
-| `Delete` | 2253 |
-| `Create` | 2108 |
-| `Describe` | 1815 |
-| `Update` | 1813 |
-| `Put` | 537 |
+| `List` | 3214 |
+| `Get` | 2931 |
+| `Delete` | 2256 |
+| `Create` | 2110 |
+| `Describe` | 1816 |
+| `Update` | 1815 |
+| `Put` | 538 |
 | `Start` | 476 |
 | `Tag` | 302 |
 | `Untag` | 298 |
