@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 435
-* Unique actions: 19568
+* Unique actions: 19576
 * Managed policies: 1386
 
 Most common managed policy name prefixes:
@@ -390,6 +390,7 @@ The following table summarises the AWS APIs.
 | [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 23 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 23 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 22 |
+| [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 21 |
 | [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 21 |
 | [`dsql`](services/dsql.yml) | 0 | 0 | 21 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
@@ -409,7 +410,6 @@ The following table summarises the AWS APIs.
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 14 |
 | [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
 | [`workspaces-instances`](services/workspaces-instances.yml) | 0 | 0 | 13 |
-| [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 13 |
 | [`invoicing`](services/invoicing.yml) | 0 | 0 | 13 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 13 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 13 |
@@ -476,11 +476,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3216 |
-| `Get` | 2933 |
-| `Delete` | 2257 |
-| `Create` | 2112 |
-| `Update` | 1816 |
+| `List` | 3218 |
+| `Get` | 2934 |
+| `Delete` | 2258 |
+| `Create` | 2115 |
+| `Update` | 1817 |
 | `Describe` | 1813 |
 | `Put` | 538 |
 | `Start` | 476 |
