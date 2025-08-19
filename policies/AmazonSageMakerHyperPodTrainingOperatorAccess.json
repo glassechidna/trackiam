@@ -1,0 +1,31 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerHyperPodTrainingOperatorAccess",
+  "CreateDate": "2025-08-19T17:04:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4GP7KCKAP4",
+  "PolicyName": "AmazonSageMakerHyperPodTrainingOperatorAccess",
+  "PolicyVersion": {
+    "CreateDate": "2025-08-19T17:04:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "sagemaker:DescribeClusterNode",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/SageMaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:cluster/*",
+          "Sid": "AllowDescribeClusterNodeOnHyperPodClusters"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-08-19T17:04:07Z"
+}
