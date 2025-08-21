@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerHyperPodObservabilityAdminAccess",
   "CreateDate": "2025-07-10T14:37:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ODJSMCAHC",
   "PolicyName": "AmazonSageMakerHyperPodObservabilityAdminAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-07-10T14:37:07Z",
+    "CreateDate": "2025-08-21T21:19:07Z",
     "Document": {
       "Statement": [
         {
@@ -109,6 +109,21 @@
         },
         {
           "Action": [
+            "eks:DeletePodIdentityAssociation",
+            "eks:DescribePodIdentityAssociation",
+            "eks:UpdatePodIdentityAssociation"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/SageMaker": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:podidentityassociation/*/*",
+          "Sid": "EKSAddonPodIdentityAccess"
+        },
+        {
+          "Action": [
             "grafana:CreateWorkspace"
           ],
           "Condition": {
@@ -132,7 +147,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/AmazonSageMakerHyperPodObservabilityGrafanaAccess-*",
+          "Resource": "arn:aws:iam::*:role/service-role/AmazonSageMakerHyperPodObservabilityGrafanaAccess-*",
           "Sid": "IAMGrafanaPassRoleAccess"
         },
         {
@@ -147,20 +162,14 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/AmazonSageMakerHyperPodObservabilityAddonAccess-*",
+          "Resource": "arn:aws:iam::*:role/service-role/AmazonSageMakerHyperPodObservabilityAddonAccess-*",
           "Sid": "IAMEKSPassRoleAccess"
-        },
-        {
-          "Action": "eks:DescribePodIdentityAssociation",
-          "Effect": "Allow",
-          "Resource": "arn:aws:eks:*:*:podidentityassociation/*/*",
-          "Sid": "EKSAddonDescribePodIdentityAccess"
         },
         {
           "Action": "iam:GetRole",
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:iam::*:role/AmazonSageMakerHyperPodObservabilityAddonAccess-*"
+            "arn:aws:iam::*:role/service-role/AmazonSageMakerHyperPodObservabilityAddonAccess-*"
           ],
           "Sid": "IAMGetRoleAccess"
         },
@@ -266,7 +275,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-07-10T14:37:07Z"
+  "UpdateDate": "2025-08-21T21:19:07Z"
 }
