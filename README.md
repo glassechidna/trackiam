@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 435
-* Unique actions: 19580
+* Unique actions: 19581
 * Managed policies: 1386
 
 Most common managed policy name prefixes:
@@ -390,9 +390,9 @@ The following table summarises the AWS APIs.
 | [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 23 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 23 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 22 |
+| [`dsql`](services/dsql.yml) | 0 | 0 | 22 |
 | [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 21 |
 | [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 21 |
-| [`dsql`](services/dsql.yml) | 0 | 0 | 21 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 19 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
