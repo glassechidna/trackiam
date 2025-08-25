@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSystemsManagerJustInTimeAccessServicePolicy",
   "CreateDate": "2025-04-21T20:07:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NI73M5RG3",
   "PolicyName": "AWSSystemsManagerJustInTimeAccessServicePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-04-21T20:07:07Z",
+    "CreateDate": "2025-08-25T20:49:06Z",
     "Document": {
       "Statement": [
         {
@@ -44,6 +44,26 @@
             "arn:aws:ssm:*:*:opsitem/*"
           ],
           "Sid": "AllowOpsItemReplicationTagging"
+        },
+        {
+          "Action": [
+            "ssm:AddTagsToResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "SystemsManagerJustInTimeNodeAccessManaged"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/SystemsManagerJustInTimeNodeAccessManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:automation-execution/*"
+          ],
+          "Sid": "AllowAutomationExecutionTagging"
         },
         {
           "Action": [
@@ -183,7 +203,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-04-21T20:07:07Z"
+  "UpdateDate": "2025-08-25T20:49:06Z"
 }
