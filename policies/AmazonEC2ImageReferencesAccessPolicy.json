@@ -1,0 +1,46 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonEC2ImageReferencesAccessPolicy",
+  "CreateDate": "2025-08-26T19:19:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4ARAFPWZ6Z",
+  "PolicyName": "AmazonEC2ImageReferencesAccessPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-08-26T19:19:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeInstances",
+            "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribeLaunchTemplates",
+            "imagebuilder:GetContainerRecipe",
+            "imagebuilder:ListContainerRecipes",
+            "imagebuilder:ListImageRecipes",
+            "ssm:DescribeParameters",
+            "ssm:GetParameters"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "ec2-images.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "ec2:DescribeImageReferences",
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-08-26T19:19:07Z"
+}
