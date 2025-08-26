@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMPermissiveExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:08Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MQ2K3CR4F",
   "PolicyName": "SageMakerStudioUserIAMPermissiveExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-08-18T17:19:08Z",
+    "CreateDate": "2025-08-26T21:34:07Z",
     "Document": {
       "Statement": [
         {
@@ -27,7 +27,7 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:iam::*:role/service-role/AmazonSageMakerExpressExecutionRole*"
+            "arn:aws:iam::*:role/service-role/AmazonSageMaker*"
           ],
           "Sid": "PassRole"
         },
@@ -82,6 +82,21 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "SharedSecret"
+        },
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/airflow.amazonaws.com/AWSServiceRoleForAmazonMWAA",
+            "arn:aws:iam::*:role/aws-service-role/elasticmapreduce.amazonaws.com/AWSServiceRoleForEMRCleanup",
+            "arn:aws:iam::*:role/aws-service-role/neptune-graph.amazonaws.com/AWSServiceRoleForNeptuneGraph",
+            "arn:aws:iam::*:role/aws-service-role/observability.aoss.amazonaws.com/AWSServiceRoleForAmazonOpenSearchServerless",
+            "arn:aws:iam::*:role/aws-service-role/ops.emr-serverless.amazonaws.com/AWSServiceRoleForAmazonEMRServerless",
+            "arn:aws:iam::*:role/aws-service-role/redshift.amazonaws.com/AWSServiceRoleForRedshift",
+            "arn:aws:iam::*:role/aws-service-role/sagemaker.amazonaws.com/AWSServiceRoleForAmazonSageMakerNotebooks",
+            "arn:aws:iam::*:role/aws-service-role/sagemaker.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_SageMakerEndpoint"
+          ],
+          "Sid": "CreateSLR"
         },
         {
           "Action": [
@@ -196,7 +211,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-08-18T17:19:08Z"
+  "UpdateDate": "2025-08-26T21:34:07Z"
 }
