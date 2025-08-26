@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonWorkSpacesThinClientFullAccess",
   "CreateDate": "2024-08-09T07:25:24Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ADQB7X4NV",
   "PolicyName": "AmazonWorkSpacesThinClientFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-01-09T16:52:06Z",
+    "CreateDate": "2025-08-26T17:34:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "monitoring.thinclient.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/monitoring.thinclient.amazonaws.com/AWSServiceRoleForAmazonWorkSpacesThinClientMonitoring",
+          "Sid": "AllowCreateServiceLinkedRole"
+        },
         {
           "Action": [
             "appstream:DescribeStacks"
@@ -49,7 +60,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-01-09T16:52:06Z"
+  "UpdateDate": "2025-08-26T17:34:07Z"
 }
