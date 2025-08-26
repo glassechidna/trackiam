@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEKSServiceRolePolicy",
   "CreateDate": "2020-02-21T20:10:47Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4KZBLSP26Y",
   "PolicyName": "AmazonEKSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-06-20T21:07:07Z",
+    "CreateDate": "2025-08-26T22:49:07Z",
     "Document": {
       "Statement": [
         {
@@ -126,7 +126,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:launch-template/*"
+          ]
         },
         {
           "Action": [
@@ -194,6 +197,7 @@
                 "arn:aws:eks::aws:cluster-access-policy/AmazonEKSBlockStoragePolicy",
                 "arn:aws:eks::aws:cluster-access-policy/AmazonEKSComputeClusterPolicy",
                 "arn:aws:eks::aws:cluster-access-policy/AmazonEKSComputePolicy",
+                "arn:aws:eks::aws:cluster-access-policy/AmazonEKSEventPolicy",
                 "arn:aws:eks::aws:cluster-access-policy/AmazonEKSHybridPolicy",
                 "arn:aws:eks::aws:cluster-access-policy/AmazonEKSLoadBalancingClusterPolicy",
                 "arn:aws:eks::aws:cluster-access-policy/AmazonEKSLoadBalancingPolicy",
@@ -327,7 +331,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2025-06-20T21:07:07Z"
+  "UpdateDate": "2025-08-26T22:49:07Z"
 }
