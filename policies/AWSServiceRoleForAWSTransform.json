@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForAWSTransform",
   "CreateDate": "2025-05-15T13:37:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4MY6VRFQPB",
   "PolicyName": "AWSServiceRoleForAWSTransform",
   "PolicyVersion": {
-    "CreateDate": "2025-05-15T13:37:07Z",
+    "CreateDate": "2025-08-29T17:49:08Z",
     "Document": {
       "Statement": [
         {
@@ -24,12 +24,24 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "PublishCloudWatchMetrics"
+        },
+        {
+          "Action": [
+            "sso:DescribeApplication",
+            "sso:GetApplicationAssignmentConfiguration",
+            "sso:ListApplicationAssignmentsForPrincipal"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "UserManagementPolicy"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-05-15T13:37:07Z"
+  "UpdateDate": "2025-08-29T17:49:08Z"
 }
