@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 435
-* Unique actions: 19597
+* Unique actions: 19600
 * Managed policies: 1388
 
 Most common managed policy name prefixes:
@@ -98,7 +98,7 @@ The following table summarises the AWS APIs.
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
 | [`athena`](services/athena.yml) | 68 | 0 | 11 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
-| [`ds`](services/ds.yml) | 67 | 0 | 21 |
+| [`ds`](services/ds.yml) | 67 | 0 | 24 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 66 | 0 | 6 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
@@ -480,8 +480,8 @@ Most common action prefixes:
 | `Get` | 2935 |
 | `Delete` | 2259 |
 | `Create` | 2116 |
+| `Describe` | 1819 |
 | `Update` | 1818 |
-| `Describe` | 1818 |
 | `Put` | 538 |
 | `Start` | 479 |
 | `Tag` | 303 |
