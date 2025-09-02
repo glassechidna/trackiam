@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSUserNotificationsServiceLinkedRolePolicy",
   "CreateDate": "2023-04-19T13:28:34Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4JMXN6GOLB",
   "PolicyName": "AWSUserNotificationsServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-01-14T23:37:06Z",
+    "CreateDate": "2025-09-02T20:49:07Z",
     "Document": {
       "Statement": [
         {
@@ -22,6 +22,21 @@
         },
         {
           "Action": [
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": [
+                "notifications.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "OrganizationsAdminDataAccess"
+        },
+        {
+          "Action": [
             "events:DeleteRule",
             "events:DescribeRule",
             "events:ListTargetsByRule",
@@ -33,6 +48,18 @@
           "Resource": [
             "arn:aws:events:*:*:rule/AWSUserNotificationsManagedRule-*"
           ]
+        },
+        {
+          "Action": [
+            "notifications:CreateEventRule",
+            "notifications:CreateNotificationConfiguration",
+            "notifications:DeleteEventRule",
+            "notifications:DeleteNotificationConfiguration",
+            "notifications:UpdateEventRule"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "OrganizationNotificationConfigurationDistribution"
         },
         {
           "Action": [
@@ -52,7 +79,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-01-14T23:37:06Z"
+  "UpdateDate": "2025-09-02T20:49:07Z"
 }
