@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 435
-* Unique actions: 19601
+* Unique actions: 19605
 * Managed policies: 1388
 
 Most common managed policy name prefixes:
@@ -83,7 +83,7 @@ The following table summarises the AWS APIs.
 | [`personalize`](services/personalize.yml) | 78 | 0 | 5 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
-| [`cleanrooms`](services/cleanrooms.yml) | 76 | 0 | 12 |
+| [`cleanrooms`](services/cleanrooms.yml) | 76 | 0 | 15 |
 | [`appstream`](services/appstream.yml) | 75 | 0 | 5 |
 | [`elasticache`](services/elasticache.yml) | 75 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
@@ -240,8 +240,8 @@ The following table summarises the AWS APIs.
 | [`apptest`](services/apptest.yml) | 24 | 0 | 0 |
 | [`controltower`](services/controltower.yml) | 23 | 0 | 42 |
 | [`qapps`](services/qapps.yml) | 23 | 0 | 16 |
+| [`mq`](services/mq.yml) | 23 | 0 | 3 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 3 |
-| [`mq`](services/mq.yml) | 23 | 0 | 2 |
 | [`emr-containers`](services/emr-containers.yml) | 23 | 0 | 1 |
 | [`secretsmanager`](services/secretsmanager.yml) | 23 | 0 | 0 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
@@ -476,12 +476,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3222 |
-| `Get` | 2936 |
+| `List` | 3223 |
+| `Get` | 2937 |
 | `Delete` | 2259 |
-| `Create` | 2116 |
+| `Create` | 2117 |
+| `Update` | 1819 |
 | `Describe` | 1819 |
-| `Update` | 1818 |
 | `Put` | 538 |
 | `Start` | 479 |
 | `Tag` | 303 |
