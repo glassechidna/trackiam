@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 435
-* Unique actions: 19605
+* Unique actions: 19609
 * Managed policies: 1388
 
 Most common managed policy name prefixes:
@@ -369,11 +369,11 @@ The following table summarises the AWS APIs.
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 53 |
 | [`odb`](services/odb.yml) | 0 | 0 | 46 |
+| [`notifications`](services/notifications.yml) | 0 | 0 | 41 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 38 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 38 |
 | [`q`](services/q.yml) | 0 | 0 | 37 |
-| [`notifications`](services/notifications.yml) | 0 | 0 | 37 |
 | [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
 | [`s3tables`](services/s3tables.yml) | 0 | 0 | 33 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
@@ -476,7 +476,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3223 |
+| `List` | 3225 |
 | `Get` | 2937 |
 | `Delete` | 2259 |
 | `Create` | 2117 |
