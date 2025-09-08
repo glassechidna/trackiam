@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectRoleMachineLearningPolicy",
   "CreateDate": "2024-11-20T21:55:27Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NSSEENOX7",
   "PolicyName": "SageMakerStudioProjectRoleMachineLearningPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-07-22T20:07:08Z",
+    "CreateDate": "2025-09-08T18:34:08Z",
     "Document": {
       "Statement": [
         {
@@ -977,6 +977,20 @@
         },
         {
           "Action": [
+            "sagemaker:StartSession"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}",
+              "aws:ResourceTag/AmazonDataZoneUser": "${aws:PrincipalTag/datazone:userId}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:space/*",
+          "Sid": "AllowStartSessionForSpaceRemoteConnection"
+        },
+        {
+          "Action": [
             "sagemaker:UpdateInferenceComponentRuntimeConfig"
           ],
           "Condition": {
@@ -1135,7 +1149,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2025-07-22T20:07:08Z"
+  "UpdateDate": "2025-09-08T18:34:08Z"
 }
