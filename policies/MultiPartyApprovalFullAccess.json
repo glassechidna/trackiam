@@ -1,15 +1,47 @@
 {
   "Arn": "arn:aws:iam::aws:policy/MultiPartyApprovalFullAccess",
   "CreateDate": "2025-06-18T20:22:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NFSC5RO5O",
   "PolicyName": "MultiPartyApprovalFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-06-18T20:22:07Z",
+    "CreateDate": "2025-09-08T17:04:06Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:identitystore:identitystore-arn": "arn:*:identitystore::*:identitystore/*"
+            },
+            "StringLike": {
+              "kms:ViaService": "identitystore.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKmsAccessViaIdentityStore"
+        },
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:sso:instance-arn": "arn:*:sso:::instance/*"
+            },
+            "StringLike": {
+              "kms:ViaService": "sso.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKmsAccessViaIdentityCenter"
+        },
         {
           "Action": [
             "sso:DeleteApplication",
@@ -73,7 +105,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-06-18T20:22:07Z"
+  "UpdateDate": "2025-09-08T17:04:06Z"
 }
