@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/ROSANodePoolManagementPolicy",
   "CreateDate": "2023-06-08T20:48:08Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4AXLMC5W7P",
   "PolicyName": "ROSANodePoolManagementPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-05-05T16:37:06Z",
+    "CreateDate": "2025-09-09T17:04:07Z",
     "Document": {
       "Statement": [
         {
@@ -255,6 +255,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:ec2:*:*:capacity-reservation/*",
             "arn:aws:ec2:*:*:network-interface/*",
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:subnet/*",
@@ -266,7 +267,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2025-05-05T16:37:06Z"
+  "UpdateDate": "2025-09-09T17:04:07Z"
 }
