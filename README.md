@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 435
-* Unique actions: 19612
+* Unique actions: 19617
 * Managed policies: 1388
 
 Most common managed policy name prefixes:
@@ -415,6 +415,7 @@ The following table summarises the AWS APIs.
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
+| [`transform`](services/transform.yml) | 0 | 0 | 12 |
 | [`backup-search`](services/backup-search.yml) | 0 | 0 | 12 |
 | [`support-console`](services/support-console.yml) | 0 | 0 | 11 |
 | [`evs`](services/evs.yml) | 0 | 0 | 11 |
@@ -427,7 +428,6 @@ The following table summarises the AWS APIs.
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 9 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
-| [`transform`](services/transform.yml) | 0 | 0 | 7 |
 | [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 7 |
 | [`qdeveloper`](services/qdeveloper.yml) | 0 | 0 | 7 |
 | [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
@@ -476,14 +476,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3227 |
+| `List` | 3229 |
 | `Get` | 2937 |
-| `Delete` | 2259 |
+| `Delete` | 2260 |
 | `Create` | 2118 |
 | `Update` | 1819 |
 | `Describe` | 1819 |
 | `Put` | 538 |
 | `Start` | 479 |
-| `Tag` | 303 |
-| `Untag` | 299 |
+| `Tag` | 304 |
+| `Untag` | 300 |
 
