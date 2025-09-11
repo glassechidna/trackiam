@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 435
-* Unique actions: 19620
+* Unique actions: 19623
 * Managed policies: 1389
 
 Most common managed policy name prefixes:
@@ -259,6 +259,7 @@ The following table summarises the AWS APIs.
 | [`resource-explorer-2`](services/resource-explorer-2.yml) | 21 | 0 | 6 |
 | [`synthetics`](services/synthetics.yml) | 21 | 0 | 1 |
 | [`sqs`](services/sqs.yml) | 20 | 3 | 0 |
+| [`identitystore`](services/identitystore.yml) | 19 | 0 | 3 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 1 |
 | [`translate`](services/translate.yml) | 19 | 0 | 0 |
@@ -266,7 +267,6 @@ The following table summarises the AWS APIs.
 | [`sagemaker-geospatial`](services/sagemaker-geospatial.yml) | 19 | 0 | 0 |
 | [`opsworks-cm`](services/opsworks-cm.yml) | 19 | 0 | 0 |
 | [`mediapackage`](services/mediapackage.yml) | 19 | 0 | 0 |
-| [`identitystore`](services/identitystore.yml) | 19 | 0 | 0 |
 | [`cloudhsm`](services/cloudhsm.yml) | 18 | 18 | 0 |
 | [`resource-groups`](services/resource-groups.yml) | 18 | 0 | 11 |
 | [`medical-imaging`](services/medical-imaging.yml) | 18 | 0 | 10 |
@@ -478,9 +478,9 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 3229 |
 | `Get` | 2937 |
-| `Delete` | 2261 |
-| `Create` | 2118 |
-| `Update` | 1820 |
+| `Delete` | 2262 |
+| `Create` | 2119 |
+| `Update` | 1821 |
 | `Describe` | 1820 |
 | `Put` | 538 |
 | `Start` | 479 |

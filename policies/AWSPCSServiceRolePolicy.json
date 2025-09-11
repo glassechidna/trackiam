@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSPCSServiceRolePolicy",
   "CreateDate": "2024-08-27T16:01:15Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4LSTCNC74O",
   "PolicyName": "AWSPCSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-08-27T16:01:15Z",
+    "CreateDate": "2025-09-11T18:49:07Z",
     "Document": {
       "Statement": [
         {
@@ -197,6 +197,7 @@
         },
         {
           "Action": [
+            "ec2:DescribeCapacityReservations",
             "ec2:DescribeImageAttribute",
             "ec2:DescribeImages",
             "ec2:DescribeInstanceAttribute",
@@ -219,7 +220,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-08-27T16:01:15Z"
+  "UpdateDate": "2025-09-11T18:49:07Z"
 }
