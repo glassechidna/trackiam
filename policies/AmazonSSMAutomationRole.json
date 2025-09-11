@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonSSMAutomationRole",
   "CreateDate": "2016-12-05T22:09:55Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJIBQCTBCXD2XRNB6W",
   "PolicyName": "AmazonSSMAutomationRole",
   "PolicyVersion": {
-    "CreateDate": "2017-07-24T23:29:12Z",
+    "CreateDate": "2025-09-11T17:34:07Z",
     "Document": {
       "Statement": [
         {
@@ -62,12 +62,21 @@
           "Resource": [
             "*"
           ]
+        },
+        {
+          "Action": [
+            "ssmmessages:OpenDataChannel"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:ssm:*:*:session/*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2017-07-24T23:29:12Z"
+  "UpdateDate": "2025-09-11T17:34:07Z"
 }
