@@ -1,0 +1,27 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBillingServiceRolePolicy",
+  "CreateDate": "2025-09-11T16:19:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4ONZLBT3UB",
+  "PolicyName": "AWSBillingServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-09-11T16:19:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "billing:GetBillingViewData"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:billing::*:billingview/*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-09-11T16:19:07Z"
+}
