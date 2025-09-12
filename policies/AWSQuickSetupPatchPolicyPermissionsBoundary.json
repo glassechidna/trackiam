@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupPatchPolicyPermissionsBoundary",
   "CreateDate": "2024-06-26T09:46:54Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4P7JLA3HXH",
   "PolicyName": "AWSQuickSetupPatchPolicyPermissionsBoundary",
   "PolicyVersion": {
-    "CreateDate": "2024-06-26T09:46:54Z",
+    "CreateDate": "2025-09-12T15:34:07Z",
     "Document": {
       "Statement": [
         {
@@ -338,7 +338,13 @@
             "arn:aws:ssm:*:*:automation-definition/AWS-EnableExplorer*",
             "arn:aws:ssm:*:*:automation-definition/AWS-RunPatchBaseline*",
             "arn:aws:ssm:*:*:automation-definition/AWSQuickSetup-*",
-            "arn:aws:ssm:*:*:automation-definition/QuickSetup-*"
+            "arn:aws:ssm:*:*:automation-definition/QuickSetup-*",
+            "arn:aws:ssm:*:*:automation-execution/*",
+            "arn:aws:ssm:*:*:document/AWS-AttachIAMToInstance*",
+            "arn:aws:ssm:*:*:document/AWS-EnableExplorer*",
+            "arn:aws:ssm:*:*:document/AWS-RunPatchBaseline*",
+            "arn:aws:ssm:*:*:document/AWSQuickSetup-*",
+            "arn:aws:ssm:*:*:document/QuickSetup-*"
           ],
           "Sid": "PatchingAutomationsStartPermissions"
         },
@@ -354,7 +360,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-06-26T09:46:54Z"
+  "UpdateDate": "2025-09-12T15:34:07Z"
 }
