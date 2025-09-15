@@ -1,0 +1,51 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSObservabilityAdminLogsCentralizationServiceRolePolicy",
+  "CreateDate": "2025-09-15T14:34:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4LJRZDMZVZ",
+  "PolicyName": "AWSObservabilityAdminLogsCentralizationServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-09-15T14:34:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:Encrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:logs:arn": "arn:aws:logs:*:*:log-group:*"
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "logs.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceTag/LogsManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-09-15T14:34:06Z"
+}
