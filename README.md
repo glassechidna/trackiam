@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 435
-* Unique actions: 19623
+* Unique actions: 19626
 * Managed policies: 1389
 
 Most common managed policy name prefixes:
@@ -403,6 +403,7 @@ The following table summarises the AWS APIs.
 | [`ds-data`](services/ds-data.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 16 |
+| [`invoicing`](services/invoicing.yml) | 0 | 0 | 16 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 16 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 15 |
 | [`ssm-quicksetup`](services/ssm-quicksetup.yml) | 0 | 0 | 14 |
@@ -410,7 +411,6 @@ The following table summarises the AWS APIs.
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 14 |
 | [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
 | [`workspaces-instances`](services/workspaces-instances.yml) | 0 | 0 | 13 |
-| [`invoicing`](services/invoicing.yml) | 0 | 0 | 13 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 13 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
@@ -476,14 +476,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3229 |
-| `Get` | 2937 |
+| `List` | 3230 |
+| `Get` | 2938 |
 | `Delete` | 2262 |
 | `Create` | 2119 |
 | `Update` | 1821 |
 | `Describe` | 1820 |
 | `Put` | 538 |
-| `Start` | 479 |
+| `Start` | 480 |
 | `Tag` | 304 |
 | `Untag` | 300 |
 
