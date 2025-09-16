@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 435
-* Unique actions: 19633
+* Unique actions: 19641
 * Managed policies: 1390
 
 Most common managed policy name prefixes:
@@ -378,6 +378,7 @@ The following table summarises the AWS APIs.
 | [`s3tables`](services/s3tables.yml) | 0 | 0 | 33 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
+| [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 29 |
 | [`one`](services/one.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
@@ -392,7 +393,6 @@ The following table summarises the AWS APIs.
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 22 |
 | [`dsql`](services/dsql.yml) | 0 | 0 | 22 |
 | [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 21 |
-| [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 21 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 19 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
@@ -476,14 +476,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3233 |
-| `Get` | 2940 |
-| `Delete` | 2262 |
-| `Create` | 2120 |
-| `Update` | 1821 |
+| `List` | 3234 |
+| `Get` | 2942 |
+| `Delete` | 2263 |
+| `Create` | 2121 |
+| `Update` | 1822 |
 | `Describe` | 1820 |
 | `Put` | 538 |
-| `Start` | 480 |
+| `Start` | 481 |
 | `Tag` | 304 |
 | `Untag` | 300 |
 
