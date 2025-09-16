@@ -1,15 +1,47 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSSOMemberAccountAdministrator",
   "CreateDate": "2018-06-27T20:45:42Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIQYHEY7KJWXZFNDPY",
   "PolicyName": "AWSSSOMemberAccountAdministrator",
   "PolicyVersion": {
-    "CreateDate": "2024-04-26T00:31:10Z",
+    "CreateDate": "2025-09-16T19:49:08Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:Encrypt",
+            "kms:GenerateDataKeyWithoutPlaintext"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:EncryptionContext:aws:identitystore:identitystore-arn": "*",
+              "kms:ViaService": "identitystore.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKMSKeyUseViaAWSIdentityStoreService"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:Encrypt",
+            "kms:GenerateDataKeyWithoutPlaintext"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:EncryptionContext:aws:sso:instance-arn": "*",
+              "kms:ViaService": "sso.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKMSKeyUseViaAWSIAMIdentityCenterService"
+        },
         {
           "Action": [
             "organizations:DeregisterDelegatedAdministrator",
@@ -53,12 +85,21 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AWSSSOMemberAccountAdministrator"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey",
+            "kms:ListAliases"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKMSKeyDiscovery"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2024-04-26T00:31:10Z"
+  "UpdateDate": "2025-09-16T19:49:08Z"
 }

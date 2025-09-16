@@ -1,15 +1,29 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSSOReadOnly",
   "CreateDate": "2018-06-27T20:24:34Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJBSMEEZXFDMKMY43I",
   "PolicyName": "AWSSSOReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2024-04-26T00:44:59Z",
+    "CreateDate": "2025-09-16T19:49:08Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:EncryptionContext:aws:sso:instance-arn": "*",
+              "kms:ViaService": "sso.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKMSKeyUseViaAWSIAMIdentityCenterService"
+        },
         {
           "Action": [
             "access-analyzer:ValidatePolicy",
@@ -35,12 +49,21 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AWSSSOReadOnly"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey",
+            "kms:ListAliases"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKMSKeyDiscovery"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2024-04-26T00:44:59Z"
+  "UpdateDate": "2025-09-16T19:49:08Z"
 }

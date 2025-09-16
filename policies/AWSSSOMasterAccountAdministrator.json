@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSSOMasterAccountAdministrator",
   "CreateDate": "2018-06-27T20:36:51Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIHXAQZIS3GOYIETUC",
   "PolicyName": "AWSSSOMasterAccountAdministrator",
   "PolicyVersion": {
-    "CreateDate": "2024-09-26T17:13:59Z",
+    "CreateDate": "2025-09-16T19:49:07Z",
     "Document": {
       "Statement": [
         {
@@ -31,6 +31,38 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/sso.amazonaws.com/AWSServiceRoleForSSO",
           "Sid": "AWSSSOMasterAccountAdministrator"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:Encrypt",
+            "kms:GenerateDataKeyWithoutPlaintext"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:EncryptionContext:aws:identitystore:identitystore-arn": "*",
+              "kms:ViaService": "identitystore.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKMSKeyUseViaAWSIdentityStoreService"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:Encrypt",
+            "kms:GenerateDataKeyWithoutPlaintext"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:EncryptionContext:aws:sso:instance-arn": "*",
+              "kms:ViaService": "sso.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKMSKeyUseViaAWSIAMIdentityCenterService"
         },
         {
           "Action": [
@@ -85,12 +117,21 @@
             "arn:aws:identity-sync:*:*:profile/*"
           ],
           "Sid": "AllowDeleteSyncProfile"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey",
+            "kms:ListAliases"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKMSKeyDiscovery"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2024-09-26T17:13:59Z"
+  "UpdateDate": "2025-09-16T19:49:07Z"
 }

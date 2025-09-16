@@ -1,15 +1,29 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSSODirectoryReadOnly",
   "CreateDate": "2018-10-31T23:49:32Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJDPMQELJXZD2NC6JG",
   "PolicyName": "AWSSSODirectoryReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2022-11-16T18:17:48Z",
+    "CreateDate": "2025-09-16T19:49:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:EncryptionContext:aws:identitystore:identitystore-arn": "*",
+              "kms:ViaService": "identitystore.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKMSKeyUseViaAWSIdentityStoreService"
+        },
         {
           "Action": [
             "identitystore-auth:BatchGetSession",
@@ -29,7 +43,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2022-11-16T18:17:48Z"
+  "UpdateDate": "2025-09-16T19:49:07Z"
 }
