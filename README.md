@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 435
-* Unique actions: 19642
+* Unique actions: 19643
 * Managed policies: 1390
 
 Most common managed policy name prefixes:
@@ -66,7 +66,7 @@ The following table summarises the AWS APIs.
 | [`config`](services/config.yml) | 92 | 0 | 5 |
 | [`backup`](services/backup.yml) | 91 | 0 | 15 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 7 |
-| [`workspaces`](services/workspaces.yml) | 88 | 0 | 11 |
+| [`workspaces`](services/workspaces.yml) | 88 | 0 | 10 |
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
 | [`es`](services/es.yml) | 87 | 0 | 23 |
 | [`sms-voice`](services/sms-voice.yml) | 87 | 0 | 8 |
@@ -412,13 +412,13 @@ The following table summarises the AWS APIs.
 | [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
 | [`workspaces-instances`](services/workspaces-instances.yml) | 0 | 0 | 13 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 13 |
+| [`evs`](services/evs.yml) | 0 | 0 | 13 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
 | [`transform`](services/transform.yml) | 0 | 0 | 12 |
 | [`backup-search`](services/backup-search.yml) | 0 | 0 | 12 |
 | [`support-console`](services/support-console.yml) | 0 | 0 | 11 |
-| [`evs`](services/evs.yml) | 0 | 0 | 11 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 11 |
 | [`ts`](services/ts.yml) | 0 | 0 | 9 |
 | [`notifications-contacts`](services/notifications-contacts.yml) | 0 | 0 | 9 |
@@ -481,7 +481,7 @@ Most common action prefixes:
 | `Delete` | 2263 |
 | `Create` | 2121 |
 | `Update` | 1822 |
-| `Describe` | 1820 |
+| `Describe` | 1819 |
 | `Put` | 538 |
 | `Start` | 481 |
 | `Tag` | 304 |
