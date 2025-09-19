@@ -1,0 +1,94 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/BedrockAgentCoreNetworkServiceRolePolicy",
+  "CreateDate": "2025-09-19T22:04:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4KSISIYJN2",
+  "PolicyName": "BedrockAgentCoreNetworkServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-09-19T22:04:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:CreateNetworkInterface",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "AmazonBedrockAgentCoreManaged"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/AmazonBedrockAgentCoreManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "AllowCreateEniWithBedrockManagedRequestTag"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": "CreateNetworkInterface"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "AllowTagEniOnCreate"
+        },
+        {
+          "Action": [
+            "ec2:AssignPrivateIpAddresses",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:UnassignPrivateIpAddresses"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonBedrockAgentCoreManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "AllowManageEniWhenBedrockManaged"
+        },
+        {
+          "Action": "ec2:CreateNetworkInterface",
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*",
+          "Sid": "AllowCreateEniWithSecurityGroups"
+        },
+        {
+          "Action": "ec2:CreateNetworkInterface",
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:subnet/*",
+          "Sid": "AllowCreateEniInAnySubnet"
+        },
+        {
+          "Action": [
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowDescribeNetworkingResources"
+        },
+        {
+          "Action": [
+            "ec2:GetSecurityGroupsForVPC"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc/*",
+          "Sid": "AllowGetSecurityGroupsForVpc"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-09-19T22:04:06Z"
+}
