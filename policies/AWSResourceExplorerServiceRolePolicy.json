@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSResourceExplorerServiceRolePolicy",
   "CreateDate": "2022-10-25T20:35:29Z",
-  "DefaultVersionId": "v17",
+  "DefaultVersionId": "v18",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4K2H54PAUL",
   "PolicyName": "AWSResourceExplorerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-09-15T16:19:07Z",
+    "CreateDate": "2025-09-24T21:19:07Z",
     "Document": {
       "Statement": [
         {
@@ -15,13 +15,19 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:apigateway:*::/apis",
+            "arn:aws:apigateway:*::/apis/*",
             "arn:aws:apigateway:*::/apis/*/routes",
+            "arn:aws:apigateway:*::/apis/*/routes/*",
             "arn:aws:apigateway:*::/apis/*/stages",
+            "arn:aws:apigateway:*::/apis/*/stages/*",
             "arn:aws:apigateway:*::/restapis",
+            "arn:aws:apigateway:*::/restapis/*",
             "arn:aws:apigateway:*::/restapis/*/deployments",
             "arn:aws:apigateway:*::/restapis/*/resources",
             "arn:aws:apigateway:*::/restapis/*/resources/*",
+            "arn:aws:apigateway:*::/restapis/*/resources/*/methods/*",
             "arn:aws:apigateway:*::/restapis/*/stages",
+            "arn:aws:apigateway:*::/restapis/*/stages/*",
             "arn:aws:apigateway:*::/vpclinks"
           ],
           "Sid": "ApiGatewayAccess"
@@ -466,6 +472,7 @@
             "lightsail:GetDisks",
             "logs:DescribeDestinations",
             "logs:DescribeLogGroups",
+            "logs:ListTagsForResource",
             "lookoutmetrics:ListAlerts",
             "lookoutmetrics:ListAnomalyDetectors",
             "lookoutvision:ListProjects",
@@ -699,6 +706,63 @@
         },
         {
           "Action": [
+            "cloudformation:GetResource",
+            "cloudfront:GetDistribution",
+            "cloudfront:GetDistributionConfig",
+            "dynamodb:DescribeContinuousBackups",
+            "dynamodb:DescribeContributorInsights",
+            "dynamodb:DescribeKinesisStreamingDestination",
+            "dynamodb:DescribeTable",
+            "dynamodb:GetResourcePolicy",
+            "dynamodb:ListTagsOfResource",
+            "ecs:ListTagsForResource",
+            "elasticloadbalancing:DescribeCapacityReservation",
+            "elasticloadbalancing:DescribeLoadBalancerAttributes",
+            "elasticloadbalancing:DescribeTags",
+            "events:DescribeRule",
+            "events:ListTargetsByRule",
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListRolePolicies",
+            "lambda:GetEventSourceMapping",
+            "lambda:GetFunction",
+            "lambda:GetFunctionCodeSigningConfig",
+            "lambda:GetFunctionRecursionConfig",
+            "lambda:ListTags",
+            "logs:DescribeIndexPolicies",
+            "logs:GetDataProtectionPolicy",
+            "s3:GetAccelerateConfiguration",
+            "s3:GetAnalyticsConfiguration",
+            "s3:GetBucketCORS",
+            "s3:GetBucketLogging",
+            "s3:GetBucketMetadataTableConfiguration",
+            "s3:GetBucketNotification",
+            "s3:GetBucketObjectLockConfiguration",
+            "s3:GetBucketOwnershipControls",
+            "s3:GetBucketPublicAccessBlock",
+            "s3:GetBucketTagging",
+            "s3:GetBucketVersioning",
+            "s3:GetBucketWebsite",
+            "s3:GetEncryptionConfiguration",
+            "s3:GetIntelligentTieringConfiguration",
+            "s3:GetInventoryConfiguration",
+            "s3:GetLifecycleConfiguration",
+            "s3:GetMetricsConfiguration",
+            "s3:GetReplicationConfiguration",
+            "sns:GetDataProtectionPolicy",
+            "sns:GetTopicAttributes",
+            "sns:ListSubscriptionsByTopic",
+            "sns:ListTagsForResource",
+            "sqs:GetQueueAttributes",
+            "sqs:ListQueueTags"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PermissionsForReadGetResources"
+        },
+        {
+          "Action": [
             "cloudtrail:CreateServiceLinkedChannel",
             "cloudtrail:GetServiceLinkedChannel"
           ],
@@ -736,7 +800,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v17"
+    "VersionId": "v18"
   },
-  "UpdateDate": "2025-09-15T16:19:07Z"
+  "UpdateDate": "2025-09-24T21:19:07Z"
 }
