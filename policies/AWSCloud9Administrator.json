@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCloud9Administrator",
   "CreateDate": "2017-11-30T16:17:28Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIQ4KWP455WDTCBGWK",
   "PolicyName": "AWSCloud9Administrator",
   "PolicyVersion": {
-    "CreateDate": "2023-10-11T12:59:29Z",
+    "CreateDate": "2025-09-25T11:49:08Z",
     "Document": {
       "Statement": [
         {
@@ -59,12 +59,21 @@
           "Resource": [
             "arn:aws:ssm:*:*:document/*"
           ]
+        },
+        {
+          "Action": [
+            "ssmmessages:OpenDataChannel"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:session/*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2023-10-11T12:59:29Z"
+  "UpdateDate": "2025-09-25T11:49:08Z"
 }
