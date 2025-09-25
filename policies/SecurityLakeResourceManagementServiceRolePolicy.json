@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/SecurityLakeResourceManagementServiceRolePolicy",
   "CreateDate": "2024-11-14T22:10:14Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4INIYQBUHP",
   "PolicyName": "SecurityLakeResourceManagementServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-14T22:10:14Z",
+    "CreateDate": "2025-09-25T17:19:07Z",
     "Document": {
       "Statement": [
         {
@@ -119,11 +119,11 @@
             "lambda:UpdateEventSourceMapping"
           ],
           "Condition": {
+            "ArnLike": {
+              "lambda:FunctionArn": "arn:aws:lambda:*:*:function:AmazonSecurityLakeMetastoreManager-*-*"
+            },
             "StringEquals": {
               "aws:ResourceAccount": "${aws:PrincipalAccount}"
-            },
-            "StringLike": {
-              "lambda:FunctionArn": "arn:aws:lambda:*:*:function:AmazonSecurityLakeMetastoreManager-*-*"
             }
           },
           "Effect": "Allow",
@@ -232,7 +232,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-11-14T22:10:14Z"
+  "UpdateDate": "2025-09-25T17:19:07Z"
 }
