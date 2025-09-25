@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSystemsManagerJustInTimeAccessTokenPolicy",
   "CreateDate": "2025-04-17T21:07:06Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KKEWYZFPU",
   "PolicyName": "AWSSystemsManagerJustInTimeAccessTokenPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-04-17T21:07:06Z",
+    "CreateDate": "2025-09-25T20:04:08Z",
     "Document": {
       "Statement": [
         {
@@ -104,11 +104,12 @@
         {
           "Action": [
             "ssm:ResumeSession",
-            "ssm:TerminateSession"
+            "ssm:TerminateSession",
+            "ssmmessages:OpenDataChannel"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:ssm:*:*:session/*",
-          "Sid": "TerminateAndResumeSession"
+          "Sid": "TerminateAndResumeSessionAndOpenDataChannel"
         },
         {
           "Action": [
@@ -126,7 +127,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-04-17T21:07:06Z"
+  "UpdateDate": "2025-09-25T20:04:08Z"
 }
