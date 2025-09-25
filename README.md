@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 435
-* Unique actions: 19648
+* Unique actions: 19651
 * Managed policies: 1389
 
 Most common managed policy name prefixes:
@@ -379,10 +379,10 @@ The following table summarises the AWS APIs.
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
 | [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 29 |
+| [`billing`](services/billing.yml) | 0 | 0 | 28 |
 | [`one`](services/one.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
-| [`billing`](services/billing.yml) | 0 | 0 | 25 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`s3express`](services/s3express.yml) | 0 | 0 | 24 |
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
