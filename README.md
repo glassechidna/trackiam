@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 435
-* Unique actions: 19651
+* Unique actions: 19653
 * Managed policies: 1389
 
 Most common managed policy name prefixes:
@@ -348,7 +348,7 @@ The following table summarises the AWS APIs.
 | [`workmailmessageflow`](services/workmailmessageflow.yml) | 2 | 0 | 0 |
 | [`marketplacecommerceanalytics`](services/marketplacecommerceanalytics.yml) | 2 | 0 | 0 |
 | [`finspace-api`](services/finspace-api.yml) | 1 | 30 | 0 |
-| [`sso-oauth`](services/sso-oauth.yml) | 1 | 3 | 0 |
+| [`sso-oauth`](services/sso-oauth.yml) | 1 | 3 | 2 |
 | [`freetier`](services/freetier.yml) | 1 | 0 | 6 |
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`eks-auth`](services/eks-auth.yml) | 1 | 0 | 0 |

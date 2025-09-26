@@ -1,6 +1,10 @@
 Actions:
   - Name: sso-oauth:CreateTokenWithIAM
 
+  # actions with no corresponding API
+  - Name: sso-oauth:IntrospectTokenWithIAM
+  - Name: sso-oauth:RevokeTokenWithIAM
+
   # APIs without an IAM action
   - Name: sso-oauth:CreateToken
   - Name: sso-oauth:RegisterClient
