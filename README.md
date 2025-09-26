@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 435
-* Unique actions: 19653
-* Managed policies: 1389
+* Unique actions: 19661
+* Managed policies: 1390
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 375 |
-| `arn:aws:iam::aws:policy/Amazon*` | 344 |
+| `arn:aws:iam::aws:policy/Amazon*` | 345 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 318 |
 | `arn:aws:iam::aws:policy/service-role/*` | 208 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
@@ -288,9 +288,9 @@ The following table summarises the AWS APIs.
 | [`application-signals`](services/application-signals.yml) | 15 | 0 | 4 |
 | [`acm`](services/acm.yml) | 15 | 0 | 1 |
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
+| [`osis`](services/osis.yml) | 14 | 0 | 9 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
-| [`osis`](services/osis.yml) | 14 | 0 | 1 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 14 | 0 | 0 |
 | [`health`](services/health.yml) | 14 | 0 | 0 |
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 16 |
@@ -476,13 +476,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3235 |
-| `Get` | 2942 |
-| `Delete` | 2263 |
-| `Create` | 2121 |
+| `List` | 3237 |
+| `Get` | 2943 |
+| `Delete` | 2265 |
+| `Create` | 2122 |
 | `Update` | 1822 |
 | `Describe` | 1819 |
-| `Put` | 539 |
+| `Put` | 540 |
 | `Start` | 481 |
 | `Tag` | 305 |
 | `Untag` | 301 |
