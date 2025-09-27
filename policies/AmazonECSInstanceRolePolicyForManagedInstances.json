@@ -1,0 +1,62 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonECSInstanceRolePolicyForManagedInstances",
+  "CreateDate": "2025-09-26T23:49:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4HILO25VPF",
+  "PolicyName": "AmazonECSInstanceRolePolicyForManagedInstances",
+  "PolicyVersion": {
+    "CreateDate": "2025-09-26T23:49:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ecs:DiscoverPollEndpoint"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ECSAgentDiscoverPollEndpointPermissions"
+        },
+        {
+          "Action": [
+            "ecs:Poll"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecs:*:*:container-instance/*",
+          "Sid": "ECSAgentPollPermissions"
+        },
+        {
+          "Action": [
+            "ecs:PutSystemLogEvents",
+            "ecs:StartTelemetrySession"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecs:*:*:container-instance/*",
+          "Sid": "ECSAgentTelemetryPermissions"
+        },
+        {
+          "Action": [
+            "ecs:RegisterContainerInstance"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecs:*:*:cluster/*",
+          "Sid": "ECSAgentRegisterPermissions"
+        },
+        {
+          "Action": [
+            "ecs:SubmitAttachmentStateChanges",
+            "ecs:SubmitTaskStateChange"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecs:*:*:cluster/*",
+          "Sid": "ECSAgentStateChangePermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-09-26T23:49:07Z"
+}
