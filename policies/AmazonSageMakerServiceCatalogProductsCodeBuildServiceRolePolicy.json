@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerServiceCatalogProductsCodeBuildServiceRolePolicy",
   "CreateDate": "2022-03-25T04:27:46Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ILK6GZTSE",
   "PolicyName": "AmazonSageMakerServiceCatalogProductsCodeBuildServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-06-11T18:45:27Z",
+    "CreateDate": "2025-09-27T04:19:07Z",
     "Document": {
       "Statement": [
         {
@@ -21,7 +21,8 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:codeconnections:*:*:connection/*"
+            "arn:aws:codeconnections:*:*:connection/*",
+            "arn:aws:codestar-connections:*:*:connection/*"
           ],
           "Sid": "AmazonSageMakerCodeBuildCodeConnectionPermission"
         },
@@ -36,6 +37,7 @@
           },
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:codeconnections:*:*:connection/*",
             "arn:aws:codestar-connections:*:*:connection/*"
           ],
           "Sid": "AmazonSageMakerCodeBuildCodeStarConnectionPermission"
@@ -441,7 +443,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-06-11T18:45:27Z"
+  "UpdateDate": "2025-09-27T04:19:07Z"
 }

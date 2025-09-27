@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerAdmin-ServiceCatalogProductsServiceRolePolicy",
   "CreateDate": "2020-11-27T18:48:07Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NAOSKQH4V",
   "PolicyName": "AmazonSageMakerAdmin-ServiceCatalogProductsServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-07-01T07:33:43Z",
+    "CreateDate": "2025-09-27T04:34:07Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:codeconnections:*:*:connection/*",
+          "Resource": [
+            "arn:aws:codeconnections:*:*:connection/*",
+            "arn:aws:codestar-connections:*:*:connection/*"
+          ],
           "Sid": "AmazonSageMakerServiceCatalogCodeConnectionPermission"
         },
         {
@@ -29,7 +32,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:codestar-connections:*:*:connection/*",
+          "Resource": [
+            "arn:aws:codeconnections:*:*:connection/*",
+            "arn:aws:codestar-connections:*:*:connection/*"
+          ],
           "Sid": "AmazonSageMakerServiceCatalogCodeStarPermission"
         },
         {
@@ -499,7 +505,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2024-07-01T07:33:43Z"
+  "UpdateDate": "2025-09-27T04:34:07Z"
 }
