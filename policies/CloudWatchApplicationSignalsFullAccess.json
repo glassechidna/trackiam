@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchApplicationSignalsFullAccess",
   "CreateDate": "2024-06-06T22:50:16Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JEEZZVUG6",
   "PolicyName": "CloudWatchApplicationSignalsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-06-06T22:50:16Z",
+    "CreateDate": "2025-09-29T16:19:07Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,24 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/application-signals.cloudwatch.amazonaws.com/AWSServiceRoleForCloudWatchApplicationSignals",
           "Sid": "CloudWatchApplicationSignalsCreateServiceLinkedRolePermissions"
+        },
+        {
+          "Action": [
+            "xray:BatchGetTraces",
+            "xray:GetTraceSegmentDestination",
+            "xray:ListRetrievedTraces",
+            "xray:StartTraceRetrieval"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "application-signals.cloudwatch.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchApplicationSignalsXrayPermissions"
         },
         {
           "Action": "application-signals:*",
@@ -56,10 +74,21 @@
           "Sid": "CloudWatchApplicationSignalsSnsReadPermissions"
         },
         {
-          "Action": "xray:GetTraceSummaries",
+          "Action": [
+            "cloudtrail:CreateServiceLinkedChannel",
+            "cloudtrail:GetChannel"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudtrail:*:*:channel/aws-service-channel/application-signals/*",
+          "Sid": "CloudWatchApplicationSignalsCloudTrailPermissions"
+        },
+        {
+          "Action": [
+            "cloudtrail:ListChannels"
+          ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "CloudWatchApplicationSignalsXrayPermissions"
+          "Sid": "CloudWatchApplicationSignalsCloudTrailListPermissions"
         },
         {
           "Action": [
@@ -72,20 +101,14 @@
         },
         {
           "Action": [
+            "logs:DescribeLogGroups",
             "logs:GetQueryResults",
+            "logs:StartQuery",
             "logs:StopQuery"
           ],
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "CloudWatchApplicationSignalsLogsPermissions"
-        },
-        {
-          "Action": [
-            "logs:StartQuery"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:logs:*:*:log-group:/aws/application-signals/data:*",
-          "Sid": "CloudWatchApplicationSignalsLogGroupPermissions"
         },
         {
           "Action": [
@@ -101,6 +124,24 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "CloudWatchApplicationSignalsRumPermissions"
+        },
+        {
+          "Action": [
+            "servicequotas:GetServiceQuota"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:servicequotas:*:*:bedrock/*",
+            "arn:aws:servicequotas:*:*:dynamodb/*",
+            "arn:aws:servicequotas:*:*:ec2/*",
+            "arn:aws:servicequotas:*:*:elasticloadbalancing/*",
+            "arn:aws:servicequotas:*:*:fargate/*",
+            "arn:aws:servicequotas:*:*:kinesis/*",
+            "arn:aws:servicequotas:*:*:lambda/*",
+            "arn:aws:servicequotas:*:*:s3/*",
+            "arn:aws:servicequotas:*:*:sns/*"
+          ],
+          "Sid": "CloudWatchApplicationSignalsServiceQuotaPermissions"
         },
         {
           "Action": [
@@ -120,12 +161,20 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "CloudWatchApplicationSignalsSyntheticsPermissions"
+        },
+        {
+          "Action": [
+            "xray:GetTraceSummaries"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchApplicationSignalsXrayTracePermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-06-06T22:50:16Z"
+  "UpdateDate": "2025-09-29T16:19:07Z"
 }
