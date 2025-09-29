@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonODBServiceRolePolicy",
   "CreateDate": "2024-11-13T18:21:41Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4BLAIMLXVO",
   "PolicyName": "AmazonODBServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-07-03T17:07:07Z",
+    "CreateDate": "2025-09-29T17:34:06Z",
     "Document": {
       "Statement": [
         {
@@ -52,12 +52,21 @@
           "Effect": "Allow",
           "Resource": "arn:aws:events:*:*:event-bus/aws.partner/odb*",
           "Sid": "EB2"
+        },
+        {
+          "Action": [
+            "networkmanager:GetVpcAttachment",
+            "networkmanager:ListAttachments"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "NM"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2025-07-03T17:07:07Z"
+  "UpdateDate": "2025-09-29T17:34:06Z"
 }
