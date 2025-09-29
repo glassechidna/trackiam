@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy",
   "CreateDate": "2024-11-20T21:58:39Z",
-  "DefaultVersionId": "v20",
+  "DefaultVersionId": "v21",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQZUIPVLH",
   "PolicyName": "SageMakerStudioProjectProvisioningRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-08-27T21:04:07Z",
+    "CreateDate": "2025-09-29T20:04:07Z",
     "Document": {
       "Statement": [
         {
@@ -1016,20 +1016,6 @@
           "Effect": "Allow",
           "Resource": "arn:aws:elasticmapreduce:*:*:cluster/*",
           "Sid": "EMRClusterManage"
-        },
-        {
-          "Action": [
-            "elasticmapreduce:CreateSecurityConfiguration",
-            "elasticmapreduce:DeleteSecurityConfiguration"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "aws:CalledViaFirst": "cloudformation.amazonaws.com"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "EMRManage"
         },
         {
           "Action": [
@@ -2799,6 +2785,32 @@
           "Sid": "TagRsSecret"
         },
         {
+          "Action": [
+            "sso:CreateApplication",
+            "sso:DeleteApplication",
+            "sso:DescribeApplication",
+            "sso:DescribeInstance",
+            "sso:ListInstances",
+            "sso:PutApplicationAccessScope",
+            "sso:PutApplicationAssignmentConfiguration",
+            "sso:PutApplicationAuthenticationMethod",
+            "sso:PutApplicationGrant"
+          ],
+          "Condition": {
+            "ForAnyValue:StringLike": {
+              "aws:CalledVia": [
+                "elasticmapreduce.amazonaws.com",
+                "glue.amazonaws.com",
+                "lakeformation.amazonaws.com",
+                "ops.emr-serverless.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSOManage"
+        },
+        {
           "Action": "bedrock:ListEvaluationJobs",
           "Effect": "Allow",
           "Resource": "*",
@@ -2891,6 +2903,17 @@
         },
         {
           "Action": [
+            "elasticmapreduce:CreateSecurityConfiguration",
+            "elasticmapreduce:DeleteSecurityConfiguration",
+            "elasticmapreduce:DescribeSecurityConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EMRManage"
+        },
+        {
+          "Action": [
+            "glue:*GlueIdentityCenterConfiguration",
             "glue:DescribeConnectionType",
             "glue:ListConnectionTypes"
           ],
@@ -2986,6 +3009,7 @@
         },
         {
           "Action": [
+            "lakeformation:*LakeFormationIdentityCenterConfiguration",
             "lakeformation:BatchGrantPermissions",
             "lakeformation:BatchRevokePermissions",
             "lakeformation:DeregisterResource",
@@ -3027,8 +3051,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v20"
+    "IsDefaultVersion": true,
+    "VersionId": "v21"
   },
-  "UpdateDate": "2025-08-27T21:04:07Z"
+  "UpdateDate": "2025-09-29T20:04:07Z"
 }
