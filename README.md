@@ -222,7 +222,6 @@ The following table summarises the AWS APIs.
 | [`compute-optimizer`](services/compute-optimizer.yml) | 26 | 0 | 2 |
 | [`private-networks`](services/private-networks.yml) | 26 | 0 | 0 |
 | [`mediastore`](services/mediastore.yml) | 26 | 0 | 0 |
-| [`iot1click`](services/iot1click.yml) | 26 | 0 | 0 |
 | [`appfabric`](services/appfabric.yml) | 26 | 0 | 0 |
 | [`comprehendmedical`](services/comprehendmedical.yml) | 25 | 1 | 0 |
 | [`cleanrooms-ml`](services/cleanrooms-ml.yml) | 25 | 0 | 34 |
@@ -355,6 +354,7 @@ The following table summarises the AWS APIs.
 | [`cloudtrail-data`](services/cloudtrail-data.yml) | 1 | 0 | 0 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 18 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
+| [`iot1click`](services/iot1click.yml) | 0 | 26 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 12 | 3 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
