@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess",
   "CreateDate": "2020-08-27T20:08:51Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LJ3OSZ5SX",
   "PolicyName": "AWSBillingReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-08-21T21:34:07Z",
+    "CreateDate": "2025-10-02T22:19:07Z",
     "Document": {
       "Statement": [
         {
@@ -50,9 +50,11 @@
             "freetier:GetFreeTierUsage",
             "freetier:ListAccountActivities",
             "invoicing:BatchGetInvoiceProfile",
+            "invoicing:GetInvoiceCorrection",
             "invoicing:GetInvoiceEmailDeliveryPreferences",
             "invoicing:GetInvoicePDF",
             "invoicing:GetInvoiceUnit",
+            "invoicing:ListInvoiceCorrections",
             "invoicing:ListInvoiceSummaries",
             "invoicing:ListInvoiceUnits",
             "invoicing:ListTagsForResource",
@@ -91,7 +93,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2025-08-21T21:34:07Z"
+  "UpdateDate": "2025-10-02T22:19:07Z"
 }
