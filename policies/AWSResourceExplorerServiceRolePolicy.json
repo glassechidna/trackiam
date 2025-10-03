@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSResourceExplorerServiceRolePolicy",
   "CreateDate": "2022-10-25T20:35:29Z",
-  "DefaultVersionId": "v18",
+  "DefaultVersionId": "v19",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4K2H54PAUL",
   "PolicyName": "AWSResourceExplorerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-09-24T21:19:07Z",
+    "CreateDate": "2025-10-03T16:04:07Z",
     "Document": {
       "Statement": [
         {
@@ -516,6 +516,7 @@
             "omics:ListReferenceStores",
             "omics:ListRunGroups",
             "omics:ListWorkflows",
+            "organizations:DescribeResourcePolicy",
             "organizations:ListPolicies",
             "outposts:ListSites",
             "panorama:ListPackages",
@@ -718,13 +719,19 @@
             "ecs:ListTagsForResource",
             "elasticloadbalancing:DescribeCapacityReservation",
             "elasticloadbalancing:DescribeLoadBalancerAttributes",
+            "elasticloadbalancing:DescribeLoadBalancerPolicies",
+            "elasticloadbalancing:DescribeLoadBalancerPolicyTypes",
             "elasticloadbalancing:DescribeTags",
+            "elasticloadbalancing:DescribeTargetGroupAttributes",
+            "elasticloadbalancing:DescribeTargetHealth",
             "events:DescribeRule",
             "events:ListTargetsByRule",
             "iam:GetRole",
             "iam:GetRolePolicy",
             "iam:ListAttachedRolePolicies",
             "iam:ListRolePolicies",
+            "kinesis:DescribeStreamSummary",
+            "kinesis:ListTagsForStream",
             "lambda:GetEventSourceMapping",
             "lambda:GetFunction",
             "lambda:GetFunctionCodeSigningConfig",
@@ -800,7 +807,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v18"
+    "VersionId": "v19"
   },
-  "UpdateDate": "2025-09-24T21:19:07Z"
+  "UpdateDate": "2025-10-03T16:04:07Z"
 }
