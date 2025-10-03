@@ -1,0 +1,60 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSControlTowerIdentityCenterManagementPolicy",
+  "CreateDate": "2025-10-03T18:34:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4IQAKX56ST",
+  "PolicyName": "AWSControlTowerIdentityCenterManagementPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-10-03T18:34:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "sso-directory:CreateGroup",
+            "sso-directory:CreateUser",
+            "sso-directory:DescribeDirectory",
+            "sso-directory:SearchGroups",
+            "sso-directory:SearchUsers"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowIdentityCenterDirectoryPermissions"
+        },
+        {
+          "Action": [
+            "sso:AssociateProfile",
+            "sso:CreateApplicationInstance",
+            "sso:CreateProfile",
+            "sso:CreateTrust",
+            "sso:DescribeRegisteredRegions",
+            "sso:GetApplicationInstance",
+            "sso:GetProfile",
+            "sso:GetSSOStatus",
+            "sso:GetTrust",
+            "sso:ListDirectoryAssociations",
+            "sso:ListProfileAssociations",
+            "sso:UpdateProfile",
+            "sso:UpdateTrust"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowIdentityCenterManagementPermissions"
+        },
+        {
+          "Action": [
+            "sso:ListPermissionSets"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sso:::instance/*",
+          "Sid": "AllowIdentityCenterInstancePermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-10-03T18:34:07Z"
+}

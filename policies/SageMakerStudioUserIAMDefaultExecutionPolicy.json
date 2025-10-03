@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMDefaultExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BV3PMY4IB",
   "PolicyName": "SageMakerStudioUserIAMDefaultExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-08-26T21:34:06Z",
+    "CreateDate": "2025-10-03T18:04:07Z",
     "Document": {
       "Statement": [
         {
@@ -153,6 +153,19 @@
           "Effect": "Allow",
           "Resource": "arn:aws:sagemaker:*:*:user-profile/*",
           "Sid": "SageMakerUserTagPermissions"
+        },
+        {
+          "Action": [
+            "sagemaker:StartSession"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonDataZoneUser": "${aws:PrincipalTag/datazone:userId}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:space/*",
+          "Sid": "AllowStartSessionForSpaceRemoteConnection"
         },
         {
           "Action": [
@@ -329,6 +342,7 @@
             "glue:StartCompletion",
             "glue:StopSession",
             "glue:TagResource",
+            "glue:UntagResource",
             "glue:UseGlueStudio"
           ],
           "Effect": "Allow",
@@ -452,8 +466,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v2"
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-08-26T21:34:06Z"
+  "UpdateDate": "2025-10-03T18:04:07Z"
 }
