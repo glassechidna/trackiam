@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess",
   "CreateDate": "2015-02-06T18:40:01Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJN23PDQP7SZQAE3QE",
   "PolicyName": "CloudWatchReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-11-21T17:51:05Z",
+    "CreateDate": "2025-10-06T21:34:07Z",
     "Document": {
       "Statement": [
         {
@@ -38,6 +38,18 @@
             "logs:StopQuery",
             "logs:TestMetricFilter",
             "oam:ListSinks",
+            "observabilityadmin:GetCentralizationRuleForOrganization",
+            "observabilityadmin:GetTelemetryEnrichmentStatus",
+            "observabilityadmin:GetTelemetryEvaluationStatus",
+            "observabilityadmin:GetTelemetryEvaluationStatusForOrganization",
+            "observabilityadmin:GetTelemetryRule",
+            "observabilityadmin:GetTelemetryRuleForOrganization",
+            "observabilityadmin:ListCentralizationRulesForOrganization",
+            "observabilityadmin:ListResourceTelemetry",
+            "observabilityadmin:ListResourceTelemetryForOrganization",
+            "observabilityadmin:ListTagsForResource",
+            "observabilityadmin:ListTelemetryRules",
+            "observabilityadmin:ListTelemetryRulesForOrganization",
             "rum:BatchGet*",
             "rum:Get*",
             "rum:List*",
@@ -68,7 +80,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2024-11-21T17:51:05Z"
+  "UpdateDate": "2025-10-06T21:34:07Z"
 }
