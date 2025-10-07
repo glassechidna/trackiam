@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 435
-* Unique actions: 19687
+* Unique actions: 19696
 * Managed policies: 1393
 
 Most common managed policy name prefixes:
@@ -376,6 +376,7 @@ The following table summarises the AWS APIs.
 | [`q`](services/q.yml) | 0 | 0 | 37 |
 | [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
 | [`s3tables`](services/s3tables.yml) | 0 | 0 | 33 |
+| [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
 | [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 29 |
@@ -388,7 +389,6 @@ The following table summarises the AWS APIs.
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
 | [`mpa`](services/mpa.yml) | 0 | 0 | 24 |
 | [`gameliftstreams`](services/gameliftstreams.yml) | 0 | 0 | 24 |
-| [`aiops`](services/aiops.yml) | 0 | 0 | 24 |
 | [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 23 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 22 |
 | [`dsql`](services/dsql.yml) | 0 | 0 | 22 |
@@ -476,13 +476,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3246 |
-| `Get` | 2948 |
+| `List` | 3248 |
+| `Get` | 2951 |
 | `Delete` | 2268 |
-| `Create` | 2124 |
-| `Update` | 1823 |
+| `Create` | 2125 |
+| `Update` | 1824 |
 | `Describe` | 1819 |
-| `Put` | 541 |
+| `Put` | 542 |
 | `Start` | 481 |
 | `Tag` | 305 |
 | `Untag` | 301 |
