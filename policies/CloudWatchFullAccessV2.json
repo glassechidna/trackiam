@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchFullAccessV2",
   "CreateDate": "2023-08-01T11:32:57Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4K5ELCXZSW",
   "PolicyName": "CloudWatchFullAccessV2",
   "PolicyVersion": {
-    "CreateDate": "2024-05-17T22:20:49Z",
+    "CreateDate": "2025-10-08T17:34:07Z",
     "Document": {
       "Statement": [
         {
@@ -59,17 +59,52 @@
         },
         {
           "Action": [
+            "cloudtrail:CreateServiceLinkedChannel",
+            "cloudtrail:GetChannel"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudtrail:*:*:channel/aws-service-channel/application-signals/*",
+          "Sid": "CloudWatchCloudTrailPermissions"
+        },
+        {
+          "Action": [
+            "cloudtrail:ListChannels"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchApplicationSignalsCloudTrailListPermissions"
+        },
+        {
+          "Action": [
             "oam:ListAttachedLinks"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:oam:*:*:sink/*",
           "Sid": "OAMReadPermissions"
+        },
+        {
+          "Action": [
+            "servicequotas:GetServiceQuota"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:servicequotas:*:*:bedrock/*",
+            "arn:aws:servicequotas:*:*:dynamodb/*",
+            "arn:aws:servicequotas:*:*:ec2/*",
+            "arn:aws:servicequotas:*:*:elasticloadbalancing/*",
+            "arn:aws:servicequotas:*:*:fargate/*",
+            "arn:aws:servicequotas:*:*:kinesis/*",
+            "arn:aws:servicequotas:*:*:lambda/*",
+            "arn:aws:servicequotas:*:*:s3/*",
+            "arn:aws:servicequotas:*:*:sns/*"
+          ],
+          "Sid": "CloudWatchServiceQuotaPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2024-05-17T22:20:49Z"
+  "UpdateDate": "2025-10-08T17:34:07Z"
 }

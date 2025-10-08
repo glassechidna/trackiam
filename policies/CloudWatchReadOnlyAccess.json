@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess",
   "CreateDate": "2015-02-06T18:40:01Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJN23PDQP7SZQAE3QE",
   "PolicyName": "CloudWatchReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-10-06T21:34:07Z",
+    "CreateDate": "2025-10-08T17:34:07Z",
     "Document": {
       "Statement": [
         {
@@ -23,6 +23,7 @@
             "application-signals:Get*",
             "application-signals:List*",
             "autoscaling:Describe*",
+            "cloudtrail:ListChannels",
             "cloudwatch:BatchGet*",
             "cloudwatch:Describe*",
             "cloudwatch:GenerateQuery",
@@ -70,17 +71,43 @@
         },
         {
           "Action": [
+            "cloudtrail:GetChannel"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudtrail:*:*:channel/aws-service-channel/application-signals/*",
+          "Sid": "CloudWatchCloudTrailPermissions"
+        },
+        {
+          "Action": [
             "oam:ListAttachedLinks"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:oam:*:*:sink/*",
           "Sid": "OAMReadPermissions"
+        },
+        {
+          "Action": [
+            "servicequotas:GetServiceQuota"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:servicequotas:*:*:bedrock/*",
+            "arn:aws:servicequotas:*:*:dynamodb/*",
+            "arn:aws:servicequotas:*:*:ec2/*",
+            "arn:aws:servicequotas:*:*:elasticloadbalancing/*",
+            "arn:aws:servicequotas:*:*:fargate/*",
+            "arn:aws:servicequotas:*:*:kinesis/*",
+            "arn:aws:servicequotas:*:*:lambda/*",
+            "arn:aws:servicequotas:*:*:s3/*",
+            "arn:aws:servicequotas:*:*:sns/*"
+          ],
+          "Sid": "CloudWatchServiceQuotaPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2025-10-06T21:34:07Z"
+  "UpdateDate": "2025-10-08T17:34:07Z"
 }
