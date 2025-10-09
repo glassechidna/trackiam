@@ -1,0 +1,48 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSEC2CapacityManagerServiceRolePolicy",
+  "CreateDate": "2025-10-09T22:04:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4H2JGMEAFS",
+  "PolicyName": "AWSEC2CapacityManagerServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-10-09T22:04:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Condition": {
+            "StringLikeIfExists": {
+              "organizations:ServicePrincipal": [
+                "ec2.capacitymanager.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowOrganizationsListDelegatedAdministratorsAction"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListChildren"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowOrganizationsDefaultReadActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-10-09T22:04:07Z"
+}
