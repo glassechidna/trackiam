@@ -1,0 +1,47 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AIOpsAssistantIncidentReportPolicy",
+  "CreateDate": "2025-10-10T22:04:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4GULC5CUMS",
+  "PolicyName": "AIOpsAssistantIncidentReportPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-10-10T22:04:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aiops:CreateReport",
+            "aiops:GenerateReport",
+            "aiops:GetFact",
+            "aiops:GetFactVersions",
+            "aiops:GetInvestigation",
+            "aiops:GetInvestigationEvent",
+            "aiops:GetReport",
+            "aiops:ListFacts",
+            "aiops:ListInvestigationEvents",
+            "aiops:PutFact",
+            "aiops:UpdateReport"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalAccount": [
+                "${aws:ResourceAccount}"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aiops:*:*:investigation-group/*"
+          ],
+          "Sid": "Statement1"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-10-10T22:04:07Z"
+}
