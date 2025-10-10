@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AIOpsOperatorAccess",
   "CreateDate": "2024-12-02T23:51:07Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4F7RFA2ZXQ",
   "PolicyName": "AIOpsOperatorAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-06-24T00:52:06Z",
+    "CreateDate": "2025-10-10T21:49:07Z",
     "Document": {
       "Statement": [
         {
@@ -68,11 +68,15 @@
             "aiops:CreateInvestigation",
             "aiops:CreateInvestigationEvent",
             "aiops:CreateInvestigationResource",
+            "aiops:CreateReport",
             "aiops:DeleteInvestigation",
+            "aiops:GenerateReport",
             "aiops:Get*",
             "aiops:List*",
+            "aiops:PutFact",
             "aiops:UpdateInvestigation",
             "aiops:UpdateInvestigationEvent",
+            "aiops:UpdateReport",
             "aiops:ValidateInvestigationGroup"
           ],
           "Effect": "Allow",
@@ -117,7 +121,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-06-24T00:52:06Z"
+  "UpdateDate": "2025-10-10T21:49:07Z"
 }
