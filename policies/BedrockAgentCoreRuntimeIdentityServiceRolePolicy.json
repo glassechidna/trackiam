@@ -1,0 +1,31 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/BedrockAgentCoreRuntimeIdentityServiceRolePolicy",
+  "CreateDate": "2025-10-11T01:04:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4IMA46VNZF",
+  "PolicyName": "BedrockAgentCoreRuntimeIdentityServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-10-11T01:04:08Z",
+    "Document": {
+      "Statement": {
+        "Action": [
+          "bedrock-agentcore:GetWorkloadAccessToken",
+          "bedrock-agentcore:GetWorkloadAccessTokenForJWT",
+          "bedrock-agentcore:GetWorkloadAccessTokenForUserId"
+        ],
+        "Effect": "Allow",
+        "Resource": [
+          "arn:aws:bedrock-agentcore:*:*:workload-identity-directory/default",
+          "arn:aws:bedrock-agentcore:*:*:workload-identity-directory/default/workload-identity/*"
+        ],
+        "Sid": "AllowWorkloadIdentityAccess"
+      },
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-10-11T01:04:08Z"
+}
