@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SecurityAudit",
   "CreateDate": "2015-02-06T18:41:01Z",
-  "DefaultVersionId": "v55",
+  "DefaultVersionId": "v56",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIX2T3QCXHR2OGGCTO",
   "PolicyName": "SecurityAudit",
   "PolicyVersion": {
-    "CreateDate": "2025-09-05T18:04:08Z",
+    "CreateDate": "2025-10-13T18:19:07Z",
     "Document": {
       "Statement": [
         {
@@ -22,6 +22,7 @@
             "access-analyzer:ListArchiveRules",
             "access-analyzer:ListFindings",
             "access-analyzer:ListTagsForResource",
+            "account:GetAccountInformation",
             "account:GetAlternateContact",
             "account:GetPrimaryEmail",
             "account:GetRegionOptStatus",
@@ -298,17 +299,24 @@
             "dynamodb:ListTables",
             "dynamodb:ListTagsOfResource",
             "ec2:Describe*",
+            "ec2:GetAllowedImagesSettings",
+            "ec2:GetEbsDefaultKmsKeyId",
             "ec2:GetEbsEncryptionByDefault",
             "ec2:GetImageBlockPublicAccessState",
+            "ec2:GetInstanceMetadataDefaults",
             "ec2:GetManagedPrefixListAssociations",
             "ec2:GetManagedPrefixListEntries",
             "ec2:GetNetworkInsightsAccessScopeAnalysisFindings",
             "ec2:GetNetworkInsightsAccessScopeContent",
+            "ec2:GetSerialConsoleAccessStatus",
+            "ec2:GetSnapshotBlockPublicAccessState",
             "ec2:GetTransitGatewayAttachmentPropagations",
             "ec2:GetTransitGatewayMulticastDomainAssociations",
             "ec2:GetTransitGatewayPrefixListReferences",
+            "ec2:GetTransitGatewayPrefixListReferences",
             "ec2:GetTransitGatewayRouteTableAssociations",
             "ec2:GetTransitGatewayRouteTablePropagations",
+            "ec2:SearchTransitGatewayRoutes",
             "ec2:SearchTransitGatewayRoutes",
             "ecr-public:DescribeImageTags",
             "ecr-public:DescribeImages",
@@ -957,7 +965,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v55"
+    "VersionId": "v56"
   },
-  "UpdateDate": "2025-09-05T18:04:08Z"
+  "UpdateDate": "2025-10-13T18:19:07Z"
 }
