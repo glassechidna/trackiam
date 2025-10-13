@@ -1,27 +1,40 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ServiceQuotasReadOnlyAccess",
   "CreateDate": "2019-06-24T15:31:06Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ITU2HGGUJ",
   "PolicyName": "ServiceQuotasReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-12-21T18:11:57Z",
+    "CreateDate": "2025-10-13T17:19:07Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "autoscaling:DescribeAccountLimits",
+            "chatbot:DescribeChimeWebhookConfigurations",
+            "chatbot:DescribeSlackChannelConfigurations",
+            "chatbot:ListMicrosoftTeamsChannelConfigurations",
             "cloudformation:DescribeAccountLimits",
             "cloudwatch:DescribeAlarms",
             "cloudwatch:DescribeAlarmsForMetric",
             "cloudwatch:GetMetricData",
             "cloudwatch:GetMetricStatistics",
+            "consoleapp:GetDeviceIdentity",
+            "consoleapp:ListDeviceIdentities",
             "dynamodb:DescribeLimits",
             "elasticloadbalancing:DescribeAccountLimits",
             "iam:GetAccountSummary",
             "kinesis:DescribeLimits",
+            "notifications-contacts:GetEmailContact",
+            "notifications-contacts:ListEmailContacts",
+            "notifications:GetEventRule",
+            "notifications:GetNotificationConfiguration",
+            "notifications:ListChannels",
+            "notifications:ListEventRules",
+            "notifications:ListNotificationConfigurations",
+            "notifications:ListNotificationHubs",
             "organizations:DescribeAccount",
             "organizations:DescribeOrganization",
             "organizations:ListAWSServiceAccessForOrganization",
@@ -29,6 +42,7 @@
             "route53:GetAccountLimit",
             "servicequotas:GetAWSDefaultServiceQuota",
             "servicequotas:GetAssociationForServiceQuotaTemplate",
+            "servicequotas:GetAutoManagementConfiguration",
             "servicequotas:GetRequestedServiceQuotaChange",
             "servicequotas:GetServiceQuota",
             "servicequotas:GetServiceQuotaIncreaseRequestFromTemplate",
@@ -49,7 +63,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-12-21T18:11:57Z"
+  "UpdateDate": "2025-10-13T17:19:07Z"
 }
