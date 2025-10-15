@@ -1,15 +1,31 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonTimestreamInfluxDBFullAccess",
   "CreateDate": "2024-03-14T22:53:22Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JY77WLMFL",
   "PolicyName": "AmazonTimestreamInfluxDBFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-04-17T18:22:07Z",
+    "CreateDate": "2025-10-15T21:19:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "aws-marketplace:Subscribe",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws-marketplace:ProductId": [
+                "prod-rjppt7huo35fm",
+                "prod-xcc5llpq4vlbc"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "MPSubscriptionAccessStatement"
+        },
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
@@ -20,23 +36,6 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/timestream-influxdb.amazonaws.com/AWSServiceRoleForTimestreamInfluxDB",
           "Sid": "ServiceLinkedRoleStatement"
-        },
-        {
-          "Action": [
-            "aws-marketplace:Subscribe"
-          ],
-          "Condition": {
-            "ForAnyValue:StringEquals": {
-              "aws-marketplace:ProductId": [
-                "prod-xcc5llpq4vlbc"
-              ]
-            }
-          },
-          "Effect": "Allow",
-          "Resource": [
-            "*"
-          ],
-          "Sid": "MPSubscriptionAccessStatement"
         },
         {
           "Action": [
@@ -60,9 +59,7 @@
             "aws-marketplace:ViewSubscriptions"
           ],
           "Effect": "Allow",
-          "Resource": [
-            "*"
-          ],
+          "Resource": "*",
           "Sid": "MPViewAccessStatement"
         },
         {
@@ -73,9 +70,7 @@
             "ec2:DescribeVpcs"
           ],
           "Effect": "Allow",
-          "Resource": [
-            "*"
-          ],
+          "Resource": "*",
           "Sid": "NetworkValidationStatement"
         },
         {
@@ -110,16 +105,14 @@
             "timestream-influxdb:UpdateDbInstance"
           ],
           "Effect": "Allow",
-          "Resource": [
-            "arn:aws:timestream-influxdb:*:*:*"
-          ],
+          "Resource": "arn:aws:timestream-influxdb:*:*:*",
           "Sid": "TimestreamInfluxDBStatement"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2025-04-17T18:22:07Z"
+  "UpdateDate": "2025-10-15T21:19:07Z"
 }
