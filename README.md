@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 435
-* Unique actions: 19734
-* Managed policies: 1396
+* Unique actions: 19735
+* Managed policies: 1397
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 375 |
 | `arn:aws:iam::aws:policy/Amazon*` | 346 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 320 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 321 |
 | `arn:aws:iam::aws:policy/service-role/*` | 210 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
 | Other | 137 |
@@ -187,7 +187,7 @@ The following table summarises the AWS APIs.
 | [`tnb`](services/tnb.yml) | 33 | 0 | 0 |
 | [`groundstation`](services/groundstation.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
-| [`kinesis`](services/kinesis.yml) | 32 | 0 | 3 |
+| [`kinesis`](services/kinesis.yml) | 32 | 0 | 4 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`billingconductor`](services/billingconductor.yml) | 32 | 0 | 0 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 31 | 0 | 7 |
