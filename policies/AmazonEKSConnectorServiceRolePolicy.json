@@ -1,21 +1,23 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEKSConnectorServiceRolePolicy",
   "CreateDate": "2021-09-04T20:31:08Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4H2PH3AV2C",
   "PolicyName": "AmazonEKSConnectorServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-09-04T20:31:08Z",
+    "CreateDate": "2025-10-15T22:34:07Z",
     "Document": {
       "Statement": [
         {
           "Action": "events:PutRule",
           "Condition": {
-            "StringEquals": {
-              "events:ManagedBy": "eks-connector.amazonaws.com",
+            "ForAllValues:StringEquals": {
               "events:source": "aws.ssm"
+            },
+            "StringEquals": {
+              "events:ManagedBy": "eks-connector.amazonaws.com"
             }
           },
           "Effect": "Allow",
@@ -78,12 +80,20 @@
             "arn:aws:ssm:*::document/AmazonEKS-ExecuteNonInteractiveCommand"
           ],
           "Sid": "ConnectorAgentStartSession"
+        },
+        {
+          "Action": [
+            "ssmmessages:OpenDataChannel"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:session/*",
+          "Sid": "OpenDataChannel"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-09-04T20:31:08Z"
+  "UpdateDate": "2025-10-15T22:34:07Z"
 }
