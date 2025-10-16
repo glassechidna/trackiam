@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchFullAccessV2",
   "CreateDate": "2023-08-01T11:32:57Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4K5ELCXZSW",
   "PolicyName": "CloudWatchFullAccessV2",
   "PolicyVersion": {
-    "CreateDate": "2025-10-08T17:34:07Z",
+    "CreateDate": "2025-10-16T21:49:07Z",
     "Document": {
       "Statement": [
         {
@@ -44,6 +44,35 @@
             "iam:GetRole",
             "logs:*",
             "oam:ListSinks",
+            "observabilityadmin:CreateCentralizationRuleForOrganization",
+            "observabilityadmin:CreateTelemetryRule",
+            "observabilityadmin:CreateTelemetryRuleForOrganization",
+            "observabilityadmin:DeleteCentralizationRuleForOrganization",
+            "observabilityadmin:DeleteTelemetryRule",
+            "observabilityadmin:DeleteTelemetryRuleForOrganization",
+            "observabilityadmin:GetCentralizationRuleForOrganization",
+            "observabilityadmin:GetTelemetryEnrichmentStatus",
+            "observabilityadmin:GetTelemetryEvaluationStatus",
+            "observabilityadmin:GetTelemetryEvaluationStatusForOrganization",
+            "observabilityadmin:GetTelemetryRule",
+            "observabilityadmin:GetTelemetryRuleForOrganization",
+            "observabilityadmin:ListCentralizationRulesForOrganization",
+            "observabilityadmin:ListResourceTelemetry",
+            "observabilityadmin:ListResourceTelemetryForOrganization",
+            "observabilityadmin:ListTagsForResource",
+            "observabilityadmin:ListTelemetryRules",
+            "observabilityadmin:ListTelemetryRulesForOrganization",
+            "observabilityadmin:StartTelemetryEnrichment",
+            "observabilityadmin:StartTelemetryEvaluation",
+            "observabilityadmin:StartTelemetryEvaluationForOrganization",
+            "observabilityadmin:StopTelemetryEnrichment",
+            "observabilityadmin:StopTelemetryEvaluation",
+            "observabilityadmin:StopTelemetryEvaluationForOrganization",
+            "observabilityadmin:TagResource",
+            "observabilityadmin:UntagResource",
+            "observabilityadmin:UpdateCentralizationRuleForOrganization",
+            "observabilityadmin:UpdateTelemetryRule",
+            "observabilityadmin:UpdateTelemetryRuleForOrganization",
             "rum:*",
             "sns:CreateTopic",
             "sns:ListSubscriptions",
@@ -104,7 +133,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2025-10-08T17:34:07Z"
+  "UpdateDate": "2025-10-16T21:49:07Z"
 }
