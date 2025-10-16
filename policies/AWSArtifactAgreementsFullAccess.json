@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSArtifactAgreementsFullAccess",
   "CreateDate": "2024-11-22T19:36:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4C2E3JAVOQ",
   "PolicyName": "AWSArtifactAgreementsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-11-22T19:36:07Z",
+    "CreateDate": "2025-10-16T20:19:07Z",
     "Document": {
       "Statement": [
         {
@@ -24,6 +24,21 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/artifact.amazonaws.com/AWSServiceRoleForArtifact",
           "Sid": "CreateServiceLinkedRoleForOrganizationsIntegration"
+        },
+        {
+          "Action": [
+            "organizations:EnableAWSServiceAccess"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": [
+                "aws-artifact-account-sync.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EnableServiceTrustForArtifact"
         },
         {
           "Action": [
@@ -65,7 +80,6 @@
         {
           "Action": [
             "organizations:DescribeOrganization",
-            "organizations:EnableAWSServiceAccess",
             "organizations:ListAWSServiceAccessForOrganization"
           ],
           "Effect": "Allow",
@@ -76,7 +90,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-11-22T19:36:07Z"
+  "UpdateDate": "2025-10-16T20:19:07Z"
 }
