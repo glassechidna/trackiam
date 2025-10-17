@@ -1,20 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/RTBFabricServiceRolePolicy",
   "CreateDate": "2025-10-16T16:49:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4CSJPZHNVI",
   "PolicyName": "RTBFabricServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-10-16T16:49:07Z",
+    "CreateDate": "2025-10-17T19:19:07Z",
     "Document": {
       "Statement": [
         {
           "Action": "cloudwatch:PutMetricData",
           "Condition": {
             "StringEquals": {
-              "cloudwatch:namespace": "rtbfabric"
+              "cloudwatch:namespace": "AWS/RTBFabric"
             }
           },
           "Effect": "Allow",
@@ -99,7 +99,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-10-16T16:49:07Z"
+  "UpdateDate": "2025-10-17T19:19:07Z"
 }
