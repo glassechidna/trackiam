@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 436
-* Unique actions: 19748
+* Unique services: 437
+* Unique actions: 19775
 * Managed policies: 1398
 
 Most common managed policy name prefixes:
@@ -382,6 +382,7 @@ The following table summarises the AWS APIs.
 | [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 29 |
 | [`one`](services/one.yml) | 0 | 0 | 28 |
 | [`billing`](services/billing.yml) | 0 | 0 | 28 |
+| [`rtbfabric`](services/rtbfabric.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
@@ -477,14 +478,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3256 |
-| `Get` | 2955 |
-| `Delete` | 2270 |
-| `Create` | 2127 |
-| `Update` | 1833 |
+| `List` | 3260 |
+| `Get` | 2960 |
+| `Delete` | 2275 |
+| `Create` | 2132 |
+| `Update` | 1837 |
 | `Describe` | 1826 |
 | `Put` | 542 |
 | `Start` | 482 |
-| `Tag` | 305 |
-| `Untag` | 301 |
+| `Tag` | 306 |
+| `Untag` | 302 |
 
