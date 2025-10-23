@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSResourceExplorerServiceRolePolicy",
   "CreateDate": "2022-10-25T20:35:29Z",
-  "DefaultVersionId": "v19",
+  "DefaultVersionId": "v20",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4K2H54PAUL",
   "PolicyName": "AWSResourceExplorerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-10-03T16:04:07Z",
+    "CreateDate": "2025-10-23T21:49:07Z",
     "Document": {
       "Statement": [
         {
@@ -16,6 +16,8 @@
           "Resource": [
             "arn:aws:apigateway:*::/apis",
             "arn:aws:apigateway:*::/apis/*",
+            "arn:aws:apigateway:*::/apis/*/integrations",
+            "arn:aws:apigateway:*::/apis/*/integrations/*",
             "arn:aws:apigateway:*::/apis/*/routes",
             "arn:aws:apigateway:*::/apis/*/routes/*",
             "arn:aws:apigateway:*::/apis/*/stages",
@@ -23,6 +25,7 @@
             "arn:aws:apigateway:*::/restapis",
             "arn:aws:apigateway:*::/restapis/*",
             "arn:aws:apigateway:*::/restapis/*/deployments",
+            "arn:aws:apigateway:*::/restapis/*/deployments/*",
             "arn:aws:apigateway:*::/restapis/*/resources",
             "arn:aws:apigateway:*::/restapis/*/resources/*",
             "arn:aws:apigateway:*::/restapis/*/resources/*/methods/*",
@@ -707,6 +710,16 @@
         },
         {
           "Action": [
+            "bedrock:GetAgent",
+            "bedrock:GetAgentActionGroup",
+            "bedrock:GetAgentCollaborator",
+            "bedrock:GetAgentKnowledgeBase",
+            "bedrock:GetGuardrail",
+            "bedrock:GetKnowledgeBase",
+            "bedrock:ListAgentActionGroups",
+            "bedrock:ListAgentCollaborators",
+            "bedrock:ListAgentKnowledgeBases",
+            "bedrock:ListTagsForResource",
             "cloudformation:GetResource",
             "cloudfront:GetDistribution",
             "cloudfront:GetDistributionConfig",
@@ -716,7 +729,10 @@
             "dynamodb:DescribeTable",
             "dynamodb:GetResourcePolicy",
             "dynamodb:ListTagsOfResource",
+            "ecs:DescribeClusters",
+            "ecs:DescribeTaskDefinition",
             "ecs:ListTagsForResource",
+            "eks:DescribeCluster",
             "elasticloadbalancing:DescribeCapacityReservation",
             "elasticloadbalancing:DescribeLoadBalancerAttributes",
             "elasticloadbalancing:DescribeLoadBalancerPolicies",
@@ -726,6 +742,8 @@
             "elasticloadbalancing:DescribeTargetHealth",
             "events:DescribeRule",
             "events:ListTargetsByRule",
+            "iam:GetPolicy",
+            "iam:GetPolicyVersion",
             "iam:GetRole",
             "iam:GetRolePolicy",
             "iam:ListAttachedRolePolicies",
@@ -739,6 +757,9 @@
             "lambda:ListTags",
             "logs:DescribeIndexPolicies",
             "logs:GetDataProtectionPolicy",
+            "route53:GetHostedZone",
+            "route53:ListQueryLoggingConfigs",
+            "route53:ListTagsForResource",
             "s3:GetAccelerateConfiguration",
             "s3:GetAnalyticsConfiguration",
             "s3:GetBucketCORS",
@@ -757,6 +778,8 @@
             "s3:GetLifecycleConfiguration",
             "s3:GetMetricsConfiguration",
             "s3:GetReplicationConfiguration",
+            "sagemaker:DescribeEndpoint",
+            "sagemaker:ListTags",
             "sns:GetDataProtectionPolicy",
             "sns:GetTopicAttributes",
             "sns:ListSubscriptionsByTopic",
@@ -807,7 +830,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v19"
+    "VersionId": "v20"
   },
-  "UpdateDate": "2025-10-03T16:04:07Z"
+  "UpdateDate": "2025-10-23T21:49:07Z"
 }
