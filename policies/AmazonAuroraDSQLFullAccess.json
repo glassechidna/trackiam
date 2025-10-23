@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonAuroraDSQLFullAccess",
   "CreateDate": "2024-12-03T15:36:07Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4OL6SKRIYE",
   "PolicyName": "AmazonAuroraDSQLFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-08-22T19:04:07Z",
+    "CreateDate": "2025-10-23T18:04:08Z",
     "Document": {
       "Statement": [
         {
@@ -73,13 +73,16 @@
             "dsql:DbConnect",
             "dsql:DbConnectAdmin",
             "dsql:DeleteCluster",
+            "dsql:DeleteClusterPolicy",
             "dsql:GetBackupJob",
             "dsql:GetCluster",
+            "dsql:GetClusterPolicy",
             "dsql:GetRestoreJob",
             "dsql:GetVpcEndpointServiceName",
             "dsql:InjectError",
             "dsql:ListClusters",
             "dsql:ListTagsForResource",
+            "dsql:PutClusterPolicy",
             "dsql:PutMultiRegionProperties",
             "dsql:PutWitnessRegion",
             "dsql:RemovePeerCluster",
@@ -98,8 +101,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v4"
+    "IsDefaultVersion": true,
+    "VersionId": "v5"
   },
-  "UpdateDate": "2025-08-22T19:04:07Z"
+  "UpdateDate": "2025-10-23T18:04:08Z"
 }
