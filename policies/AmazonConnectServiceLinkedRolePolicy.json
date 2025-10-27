@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v28",
+  "DefaultVersionId": "v29",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-07-29T21:22:06Z",
+    "CreateDate": "2025-10-27T21:19:07Z",
     "Document": {
       "Statement": [
         {
@@ -158,6 +158,34 @@
           "Effect": "Allow",
           "Resource": "arn:aws:social-messaging:*:*:phone-number-id/*",
           "Sid": "AllowSocialMessagingOperations"
+        },
+        {
+          "Action": [
+            "social-messaging:GetWhatsAppMessageTemplate",
+            "social-messaging:ListWhatsAppMessageTemplates"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/AmazonConnectEnabled": "True"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:social-messaging:*:*:waba/*",
+          "Sid": "AllowRetrievalOfWhatsAppTemplates"
+        },
+        {
+          "Action": [
+            "social-messaging:ListLinkedWhatsAppBusinessAccounts"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowRetrievalOfWabas"
         },
         {
           "Action": [
@@ -473,7 +501,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v28"
+    "VersionId": "v29"
   },
-  "UpdateDate": "2025-07-29T21:22:06Z"
+  "UpdateDate": "2025-10-27T21:19:07Z"
 }
