@@ -1,15 +1,30 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupSSMDeploymentRolePolicy",
   "CreateDate": "2024-11-15T22:53:20Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4GPQ3OIOC6",
   "PolicyName": "AWSQuickSetupSSMDeploymentRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-05-05T10:52:06Z",
+    "CreateDate": "2025-10-27T11:49:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "ssm.amazonaws.com"
+              ],
+              "iam:ResourceTag/QuickSetupDocument": [
+                "AWSQuickSetupType-SSM"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AWS-QuickSetup-SSM-ManageResources*"
+        },
         {
           "Action": "lambda:TagResource",
           "Condition": {
@@ -285,6 +300,41 @@
         },
         {
           "Action": [
+            "ssm:AddTagsToResource",
+            "ssm:CreateAssociation"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/QuickSetupDocument": [
+                "AWSQuickSetupType-SSM"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:association/*"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:AddTagsToResource",
+            "ssm:RemoveTagsFromResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/QuickSetupDocument": [
+                "AWSQuickSetupType-SSM"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:association/*",
+            "arn:aws:ssm:*:*:automation-execution/*"
+          ]
+        },
+        {
+          "Action": [
             "ssm:CreateAssociation",
             "ssm:DeleteAssociation",
             "ssm:DescribeAssociation",
@@ -310,6 +360,48 @@
             "arn:aws:ssm:*::document/AWSQuickSetupType-EnableAREX",
             "arn:aws:ssm:*::document/AWSQuickSetupType-EnableDHMC",
             "arn:aws:ssm:*::document/AWSQuickSetupType-ManageInstanceProfile"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:DeleteAssociation",
+            "ssm:DescribeAssociation",
+            "ssm:UpdateAssociation"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/QuickSetupDocument": [
+                "AWSQuickSetupType-SSM"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:association/*"
+          ]
+        },
+        {
+          "Action": [
+            "ssm:DescribeAssociationExecutionTargets",
+            "ssm:DescribeAssociationExecutions",
+            "ssm:GetAutomationExecution"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceTag/QuickSetupDocument": [
+                "AWSQuickSetupType-SSM"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:association/*",
+            "arn:aws:ssm:*:*:automation-execution/*"
           ]
         },
         {
@@ -356,12 +448,22 @@
           "Resource": [
             "*"
           ]
+        },
+        {
+          "Action": [
+            "ssm:CreateAssociation",
+            "ssm:DeleteAssociation",
+            "ssm:DescribeAssociation",
+            "ssm:UpdateAssociation"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*::document/AWSQuickSetupType-SSM-ManageResources"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2025-05-05T10:52:06Z"
+  "UpdateDate": "2025-10-27T11:49:07Z"
 }
