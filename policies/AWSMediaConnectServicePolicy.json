@@ -1,15 +1,31 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSMediaConnectServicePolicy",
   "CreateDate": "2023-04-03T22:11:40Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4HLQANTOAO",
   "PolicyName": "AWSMediaConnectServicePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-04-03T22:11:40Z",
+    "CreateDate": "2025-10-29T21:34:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/created-for-service": "MediaConnect"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*"
+          ]
+        },
         {
           "Action": [
             "ecs:CreateService",
@@ -31,6 +47,15 @@
               "ecs:cluster": "arn:aws:ecs:*:*:cluster/MediaConnectGateway"
             }
           },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets"
+          ],
           "Effect": "Allow",
           "Resource": "*"
         },
@@ -58,7 +83,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-04-03T22:11:40Z"
+  "UpdateDate": "2025-10-29T21:34:07Z"
 }
