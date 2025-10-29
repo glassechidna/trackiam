@@ -1,15 +1,47 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForUserSubscriptions",
   "CreateDate": "2024-04-25T16:14:06Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4GUDBMDJ7K",
   "PolicyName": "AWSServiceRoleForUserSubscriptions",
   "PolicyVersion": {
-    "CreateDate": "2025-02-21T17:37:06Z",
+    "CreateDate": "2025-10-29T14:34:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:identitystore:identitystore-arn": "arn:*:identitystore::*:identitystore/*"
+            },
+            "StringLike": {
+              "kms:ViaService": "identitystore.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKmsAccessViaIdentityStore"
+        },
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:sso:instance-arn": "arn:*:sso:::instance/*"
+            },
+            "StringLike": {
+              "kms:ViaService": "sso.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKmsAccessViaIdentityCenter"
+        },
         {
           "Action": [
             "identitystore:DescribeGroup",
@@ -32,7 +64,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-02-21T17:37:06Z"
+  "UpdateDate": "2025-10-29T14:34:07Z"
 }
