@@ -1,21 +1,71 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSIoTSiteWiseReadOnlyAccess",
   "CreateDate": "2018-12-04T20:55:11Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJLHEAFKME2QL64WKK",
   "PolicyName": "AWSIoTSiteWiseReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-09-16T19:05:20Z",
+    "CreateDate": "2025-10-29T20:19:06Z",
     "Document": {
       "Statement": [
         {
           "Action": [
-            "iotsitewise:BatchGet*",
-            "iotsitewise:Describe*",
-            "iotsitewise:Get*",
-            "iotsitewise:List*"
+            "iotsitewise:BatchGetAssetPropertyAggregates",
+            "iotsitewise:BatchGetAssetPropertyValue",
+            "iotsitewise:BatchGetAssetPropertyValueHistory",
+            "iotsitewise:DescribeAccessPolicy",
+            "iotsitewise:DescribeAction",
+            "iotsitewise:DescribeAsset",
+            "iotsitewise:DescribeAssetCompositeModel",
+            "iotsitewise:DescribeAssetModel",
+            "iotsitewise:DescribeAssetModelCompositeModel",
+            "iotsitewise:DescribeAssetModelInterfaceRelationship",
+            "iotsitewise:DescribeAssetProperty",
+            "iotsitewise:DescribeBulkImportJob",
+            "iotsitewise:DescribeComputationModel",
+            "iotsitewise:DescribeComputationModelExecutionSummary",
+            "iotsitewise:DescribeDashboard",
+            "iotsitewise:DescribeDataset",
+            "iotsitewise:DescribeDefaultEncryptionConfiguration",
+            "iotsitewise:DescribeExecution",
+            "iotsitewise:DescribeGateway",
+            "iotsitewise:DescribeGatewayCapabilityConfiguration",
+            "iotsitewise:DescribeLoggingOptions",
+            "iotsitewise:DescribePortal",
+            "iotsitewise:DescribeProject",
+            "iotsitewise:DescribeStorageConfiguration",
+            "iotsitewise:DescribeTimeSeries",
+            "iotsitewise:ExecuteQuery",
+            "iotsitewise:GetAssetPropertyAggregates",
+            "iotsitewise:GetAssetPropertyValue",
+            "iotsitewise:GetAssetPropertyValueHistory",
+            "iotsitewise:GetInterpolatedAssetPropertyValues",
+            "iotsitewise:ListAccessPolicies",
+            "iotsitewise:ListActions",
+            "iotsitewise:ListAssetModelCompositeModels",
+            "iotsitewise:ListAssetModelProperties",
+            "iotsitewise:ListAssetModels",
+            "iotsitewise:ListAssetProperties",
+            "iotsitewise:ListAssetRelationships",
+            "iotsitewise:ListAssets",
+            "iotsitewise:ListAssociatedAssets",
+            "iotsitewise:ListBulkImportJobs",
+            "iotsitewise:ListCompositionRelationships",
+            "iotsitewise:ListComputationModelDataBindingUsages",
+            "iotsitewise:ListComputationModelResolveToResources",
+            "iotsitewise:ListComputationModels",
+            "iotsitewise:ListDashboards",
+            "iotsitewise:ListDatasets",
+            "iotsitewise:ListExecutions",
+            "iotsitewise:ListGateways",
+            "iotsitewise:ListInterfaceRelationships",
+            "iotsitewise:ListPortals",
+            "iotsitewise:ListProjectAssets",
+            "iotsitewise:ListProjects",
+            "iotsitewise:ListTagsForResource",
+            "iotsitewise:ListTimeSeries"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -24,7 +74,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2022-09-16T19:05:20Z"
+  "UpdateDate": "2025-10-29T20:19:06Z"
 }
