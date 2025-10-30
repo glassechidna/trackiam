@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSSupplyChainFederationAdminAccess",
   "CreateDate": "2023-03-01T18:54:25Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4ILSYMTZA7",
   "PolicyName": "AWSSupplyChainFederationAdminAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-12-11T21:36:24Z",
+    "CreateDate": "2025-10-30T21:34:06Z",
     "Document": {
       "Statement": [
         {
@@ -77,6 +77,38 @@
           "Effect": "Allow",
           "Resource": "arn:aws:kms:*:*:key/*",
           "Sid": "KMSCreateGrant"
+        },
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:identitystore:identitystore-arn": "arn:*:identitystore::*:identitystore/*"
+            },
+            "StringLike": {
+              "kms:ViaService": "identitystore.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKmsAccessViaIdentityStore"
+        },
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:sso:instance-arn": "arn:*:sso:::instance/*"
+            },
+            "StringLike": {
+              "kms:ViaService": "sso.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKmsAccessViaIdentityCenter"
         },
         {
           "Action": [
@@ -240,7 +272,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2024-12-11T21:36:24Z"
+  "UpdateDate": "2025-10-30T21:34:06Z"
 }
