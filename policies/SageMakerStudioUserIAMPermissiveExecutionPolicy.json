@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMPermissiveExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:08Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MQ2K3CR4F",
   "PolicyName": "SageMakerStudioUserIAMPermissiveExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-08-26T21:34:07Z",
+    "CreateDate": "2025-10-30T19:34:08Z",
     "Document": {
       "Statement": [
         {
@@ -57,8 +57,150 @@
         },
         {
           "Action": [
+            "kms:CreateGrant"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": "sagemaker.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SageMakerCreateGrant"
+        },
+        {
+          "Action": [
+            "kms:CreateGrant",
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "Null": {
+              "kms:EncryptionContextKeys": "false"
+            },
+            "StringLike": {
+              "kms:ViaService": "bedrock.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BedrockKms"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:Encrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "Null": {
+              "kms:EncryptionContext:SecretARN": "false"
+            },
+            "StringLike": {
+              "kms:ViaService": "secretsmanager.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecretsKms"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:Encrypt",
+            "kms:GenerateDataKey",
+            "kms:GenerateDataKeyWithoutPlaintext"
+          ],
+          "Condition": {
+            "Null": {
+              "kms:EncryptionContextKeys": "false"
+            },
+            "StringLike": {
+              "kms:ViaService": "glue.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GlueKms"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:Encrypt",
+            "kms:GenerateDataKey",
+            "kms:GenerateDataKeyWithoutPlaintext"
+          ],
+          "Condition": {
+            "Null": {
+              "kms:EncryptionContextKeys": "false"
+            },
+            "StringLike": {
+              "kms:ViaService": "sagemaker.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SageMakerKms"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "kms:EncryptionContextKeys": "aws:datazone:domainId"
+            },
+            "StringLike": {
+              "kms:ViaService": "datazone.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DataZoneKms"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "Null": {
+              "kms:EncryptionContext:aws:s3:arn": "false"
+            },
+            "StringLike": {
+              "kms:ViaService": "s3.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "S3Kms"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "Null": {
+              "kms:EncryptionContext:aws:scheduler:schedule:arn": "false"
+            },
+            "StringLike": {
+              "kms:ViaService": "scheduler.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SchedulerKms"
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:DeleteSecret",
             "secretsmanager:DescribeSecret",
-            "secretsmanager:GetSecretValue"
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:PutResourcePolicy",
+            "secretsmanager:UpdateSecret"
           ],
           "Condition": {
             "StringEquals": {
@@ -71,8 +213,10 @@
         },
         {
           "Action": [
+            "secretsmanager:CreateSecret",
             "secretsmanager:DescribeSecret",
-            "secretsmanager:GetSecretValue"
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:UpdateSecret"
           ],
           "Condition": {
             "StringEquals": {
@@ -82,6 +226,12 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "SharedSecret"
+        },
+        {
+          "Action": "ec2:Describe*",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Ec2DescribeOnly"
         },
         {
           "Action": "iam:CreateServiceLinkedRole",
@@ -103,7 +253,9 @@
             "athena:*",
             "bedrock:*",
             "codewhisperer:*",
+            "emr-serverless:*",
             "q:*",
+            "sagemaker-mlflow:*",
             "sagemaker:*",
             "scheduler:*",
             "sqlworkbench:*"
@@ -128,21 +280,55 @@
         },
         {
           "Action": [
+            "codeconnections:GetConnection",
+            "codeconnections:GetHost",
+            "codeconnections:ListConnections",
+            "codeconnections:ListTagsForResource",
+            "codeconnections:UseConnection",
+            "codestar-connections:GetConnection",
+            "codestar-connections:GetHost",
+            "codestar-connections:ListConnections",
+            "codestar-connections:ListTagsForResource",
+            "codestar-connections:UseConnection"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeConnectionsUser"
+        },
+        {
+          "Action": [
+            "datazone:AcceptPredictions",
+            "datazone:AcceptSubscriptionRequest",
+            "datazone:CancelMetadataGenerationRun",
+            "datazone:CancelSubscription",
             "datazone:CreateAsset*",
             "datazone:CreateConnection",
+            "datazone:CreateListingChangeSet",
             "datazone:CreateProject",
+            "datazone:CreateSubscriptionGrant",
+            "datazone:CreateSubscriptionRequest",
             "datazone:DeleteAsset*",
             "datazone:DeleteConnection",
+            "datazone:DeleteListing",
             "datazone:DeleteProject",
+            "datazone:DeleteSubscriptionGrant",
+            "datazone:DeleteSubscriptionRequest",
             "datazone:Get*",
             "datazone:List*",
             "datazone:PostLineageEvent",
+            "datazone:RejectPredictions",
+            "datazone:RejectSubscriptionRequest",
+            "datazone:RevokeSubscription",
             "datazone:Search",
             "datazone:SearchListings",
+            "datazone:SearchRules",
+            "datazone:SearchTypes",
             "datazone:SearchUserProfiles",
+            "datazone:StartMetadataGenerationRun",
             "datazone:UpdateAssetFilter",
             "datazone:UpdateConnection",
-            "datazone:UpdateProject"
+            "datazone:UpdateProject",
+            "datazone:UpdateSubscriptionRequest"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -162,6 +348,26 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "FederatedConn"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface",
+            "ec2:DeleteNetworkInterface"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "VpcAccess"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags",
+            "ec2:DeleteTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*"
+          ],
+          "Sid": "EC2TagAccessForVpc"
         },
         {
           "Action": [
@@ -187,9 +393,24 @@
         },
         {
           "Action": [
+            "kms:DescribeKey",
+            "kms:ListAliases",
+            "kms:ListGrants"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "KmsListAndDescribe"
+        },
+        {
+          "Action": [
+            "lakeformation:BatchGrantPermissions",
+            "lakeformation:BatchRevokePermissions",
             "lakeformation:DescribeResource",
             "lakeformation:GetDataAccess",
-            "lakeformation:ListResources"
+            "lakeformation:GrantPermissions",
+            "lakeformation:ListPermissions",
+            "lakeformation:ListResources",
+            "lakeformation:RevokePermissions"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -211,7 +432,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-08-26T21:34:07Z"
+  "UpdateDate": "2025-10-30T19:34:08Z"
 }
