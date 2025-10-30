@@ -1,32 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioEMRContainersSystemNamespaceRolePolicy",
   "CreateDate": "2025-10-23T18:34:06Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4OYAGQIVA2",
   "PolicyName": "SageMakerStudioEMRContainersSystemNamespaceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-10-23T18:34:06Z",
+    "CreateDate": "2025-10-30T20:34:06Z",
     "Document": {
       "Statement": [
         {
           "Action": [
-            "sts:AssumeRole",
-            "sts:TagSession"
+            "sts:AssumeRole"
           ],
           "Condition": {
             "StringEquals": {
-              "aws:CalledViaLast": "emr-containers.amazonaws.com",
               "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
-            },
-            "StringEqualsIfExists": {
-              "aws:RequestTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
             }
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:iam::*:role/datazone_emr_containers_query_engine_role_*",
             "arn:aws:iam::*:role/datazone_usr_role_*"
           ],
           "Sid": "AssumeProjectRoles"
@@ -36,23 +30,50 @@
             "sts:SetContext"
           ],
           "Condition": {
+            "ForAllValues:ArnEquals": {
+              "sts:RequestContextProviders": [
+                "arn:aws:iam::aws:contextProvider/IdentityCenter"
+              ]
+            },
+            "Null": {
+              "sts:RequestContextProviders": "false"
+            },
             "StringEquals": {
-              "aws:CalledViaLast": "emr-containers.amazonaws.com",
               "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
             }
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:iam::*:role/datazone_emr_containers_query_engine_role_*",
             "arn:aws:iam::*:role/datazone_usr_role_*"
           ],
           "Sid": "SetContextProjectRoles"
+        },
+        {
+          "Action": [
+            "sts:TagSession"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "LakeFormationAuthorizedCaller"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/LakeFormationAuthorizedCaller": "EMR on EKS Engine",
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/datazone_usr_role_*"
+          ],
+          "Sid": "TagSessionProjectRoles"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-10-23T18:34:06Z"
+  "UpdateDate": "2025-10-30T20:34:06Z"
 }
