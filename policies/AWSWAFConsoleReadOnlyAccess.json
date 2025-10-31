@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFConsoleReadOnlyAccess",
   "CreateDate": "2020-04-06T18:43:24Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NCJLTIT64",
   "PolicyName": "AWSWAFConsoleReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-05-05T21:52:07Z",
+    "CreateDate": "2025-10-31T21:04:08Z",
     "Document": {
       "Statement": [
         {
@@ -32,7 +32,7 @@
             "apigateway:GET"
           ],
           "Effect": "Allow",
-          "Resource": "*",
+          "Resource": "arn:aws:apigateway:*::/*",
           "Sid": "AllowListActionsForAPIGateway"
         },
         {
@@ -54,11 +54,20 @@
         },
         {
           "Action": [
+            "appsync:ListApis",
             "appsync:ListGraphqlApis"
           ],
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowListActionsForAppSync"
+        },
+        {
+          "Action": [
+            "aws-marketplace:ViewSubscriptions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowMarketplaceViewSubscriptions"
         },
         {
           "Action": [
@@ -156,6 +165,50 @@
         },
         {
           "Action": [
+            "firehose:ListDeliveryStreams"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListActionForFirehoseStream"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogGroups",
+            "logs:DescribeResourcePolicies"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowLogGroupDescribeActions"
+        },
+        {
+          "Action": [
+            "logs:DescribeQueryDefinitions",
+            "logs:GetQueryResults",
+            "logs:StartQuery"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:aws-waf-logs-*",
+          "Sid": "AllowLogQueryActions"
+        },
+        {
+          "Action": [
+            "pricing:GetPriceListFileUrl",
+            "pricing:ListPriceLists"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowActionsForPricing"
+        },
+        {
+          "Action": [
+            "s3:ListAllMyBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowS3ListAllMyBuckets"
+        },
+        {
+          "Action": [
             "waf-regional:Get*",
             "waf-regional:List*",
             "waf:Get*",
@@ -221,7 +274,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2025-05-05T21:52:07Z"
+  "UpdateDate": "2025-10-31T21:04:08Z"
 }

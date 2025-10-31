@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFConsoleFullAccess",
   "CreateDate": "2020-04-06T18:38:38Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AZOTQ7KAT",
   "PolicyName": "AWSWAFConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-05-05T21:37:06Z",
+    "CreateDate": "2025-10-31T21:04:07Z",
     "Document": {
       "Statement": [
         {
@@ -49,7 +49,7 @@
             "apigateway:GET"
           ],
           "Effect": "Allow",
-          "Resource": "*",
+          "Resource": "arn:aws:apigateway:*::/*",
           "Sid": "AllowListActionsForAPIGateway"
         },
         {
@@ -81,6 +81,7 @@
         },
         {
           "Action": [
+            "appsync:ListApis",
             "appsync:ListGraphqlApis"
           ],
           "Effect": "Allow",
@@ -94,6 +95,14 @@
           "Effect": "Allow",
           "Resource": "arn:aws:appsync:*:*:apis/*",
           "Sid": "AllowActionsForAppSync"
+        },
+        {
+          "Action": [
+            "aws-marketplace:ViewSubscriptions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowMarketplaceViewSubscriptions"
         },
         {
           "Action": [
@@ -208,6 +217,14 @@
         },
         {
           "Action": [
+            "firehose:ListDeliveryStreams"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListActionForFirehoseStream"
+        },
+        {
+          "Action": [
             "logs:CreateLogDelivery",
             "logs:DeleteLogDelivery"
           ],
@@ -223,6 +240,25 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowLogGroupDescribeActions"
+        },
+        {
+          "Action": [
+            "logs:DescribeQueryDefinitions",
+            "logs:GetQueryResults",
+            "logs:StartQuery"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:aws-waf-logs-*",
+          "Sid": "AllowLogQueryActions"
+        },
+        {
+          "Action": [
+            "pricing:GetPriceListFileUrl",
+            "pricing:ListPriceLists"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowActionsForPricing"
         },
         {
           "Action": [
@@ -313,7 +349,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2025-05-05T21:37:06Z"
+  "UpdateDate": "2025-10-31T21:04:07Z"
 }
