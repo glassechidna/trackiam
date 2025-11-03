@@ -1,0 +1,46 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonApplicationRecoveryControllerRegionSwitchPlanExecutionPolicy",
+  "CreateDate": "2025-11-03T19:34:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4EL57A4O72",
+  "PolicyName": "AmazonApplicationRecoveryControllerRegionSwitchPlanExecutionPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-11-03T19:34:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:SimulatePrincipalPolicy",
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "PlanEvaluation"
+        },
+        {
+          "Action": [
+            "arc-region-switch:GetPlan",
+            "arc-region-switch:GetPlanExecution",
+            "arc-region-switch:ListPlanExecutions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GetPlanAndExecutions"
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarmHistory",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:GetMetricStatistics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatch"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-11-03T19:34:08Z"
+}
