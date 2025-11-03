@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/BedrockAgentCoreFullAccess",
   "CreateDate": "2025-07-16T13:37:07Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BB44GAY7X",
   "PolicyName": "BedrockAgentCoreFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-10-09T18:19:08Z",
+    "CreateDate": "2025-11-03T21:04:07Z",
     "Document": {
       "Statement": [
         {
@@ -56,8 +56,36 @@
         },
         {
           "Action": [
+            "kms:CreateGrant"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "kms:GrantOperations": [
+                "Decrypt",
+                "GenerateDataKey"
+              ]
+            },
+            "StringEquals": {
+              "kms:GrantConstraintType": "EncryptionContextSubset"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:bedrock-agentcore-gateway:arn": "arn:aws:bedrock-agentcore:*:*:gateway/*",
+              "kms:ViaService": [
+                "bedrock-agentcore.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:kms:*:*:key/*"
+          ],
+          "Sid": "BedrockAgentCoreKMSGrantsAccess"
+        },
+        {
+          "Action": [
             "kms:Decrypt",
-            "kms:GenerateDataKey"
+            "kms:GenerateDataKey",
+            "kms:ListGrants"
           ],
           "Condition": {
             "ForAnyValue:StringEquals": {
@@ -93,7 +121,8 @@
         },
         {
           "Action": [
-            "logs:DescribeResourcePolicies"
+            "logs:DescribeResourcePolicies",
+            "logs:PutResourcePolicy"
           ],
           "Condition": {
             "StringEquals": {
@@ -105,6 +134,24 @@
             "*"
           ],
           "Sid": "TransactionSearchLogsPermissions"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:PutBucketPolicy",
+            "s3:PutBucketVersioning",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "s3:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::bedrock-agentcore-runtime-*"
+          ],
+          "Sid": "BedrockAgentCoreRuntimeS3WriteAccess"
         },
         {
           "Action": [
@@ -121,6 +168,35 @@
             "arn:aws:s3:::bedrock-agentcore-gateway-*"
           ],
           "Sid": "BedrockAgentCoreS3Access"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:GetObjectVersion",
+            "s3:ListBucket",
+            "s3:ListBucketVersions"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "s3:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*",
+          "Sid": "BedrockAgentCoreRuntimeS3ReadAccess"
+        },
+        {
+          "Action": [
+            "s3:ListAllMyBuckets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "s3:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BedrockAgentCoreRuntimeS3ListAccess"
         },
         {
           "Action": "iam:GetRole",
@@ -175,6 +251,26 @@
           "Effect": "Allow",
           "Resource": "arn:aws:bedrock-agentcore:*:*:*",
           "Sid": "BedrockAgentCoreFullAccess"
+        },
+        {
+          "Action": [
+            "cloudtrail:CreateServiceLinkedChannel"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudtrail:*:*:channel/aws-service-channel/application-signals/*",
+          "Sid": "CloudWatchApplicationSignalsCloudTrailPermissions"
+        },
+        {
+          "Action": [
+            "ecr:DescribeImages",
+            "ecr:DescribeRepositories",
+            "ecr:ListImages"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ecr:*:*:repository/*"
+          ],
+          "Sid": "BedrockAgentCoreRuntimeECRAccess"
         },
         {
           "Action": [
@@ -254,8 +350,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v3"
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
   },
-  "UpdateDate": "2025-10-09T18:19:08Z"
+  "UpdateDate": "2025-11-03T21:04:07Z"
 }
