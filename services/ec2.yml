@@ -632,6 +632,8 @@ Actions:
   - Name: ec2:AssociateSecurityGroupVpc
   - Name: ec2:AssociateVerifiedAccessInstanceWebAcl
   - Name: ec2:CancelDeclarativePoliciesReport
+  - Name: ec2:CopyVolumes
+  - Name: ec2:CreateCapacityManagerDataExport
   - Name: ec2:CreateCapacityReservationBySplitting
   - Name: ec2:CreateCoipPoolPermission
   - Name: ec2:CreateDelegateMacVolumeOwnershipTask
@@ -644,6 +646,7 @@ Actions:
   - Name: ec2:CreateRouteServerEndpoint
   - Name: ec2:CreateRouteServerPeer
   - Name: ec2:CreateVpcBlockPublicAccessExclusion
+  - Name: ec2:DeleteCapacityManagerDataExport
   - Name: ec2:DeleteCoipPoolPermission
   - Name: ec2:DeleteImageUsageReport
   - Name: ec2:DeleteLocalGatewayRouteTablePermission
@@ -658,6 +661,7 @@ Actions:
   - Name: ec2:DescribeCapacityBlockExtensionOfferings
   - Name: ec2:DescribeCapacityBlockStatus
   - Name: ec2:DescribeCapacityBlocks
+  - Name: ec2:DescribeCapacityManagerDataExports
   - Name: ec2:DescribeCapacityReservationBillingRequests
   - Name: ec2:DescribeDeclarativePoliciesReports
   - Name: ec2:DescribeImageReferences
@@ -677,16 +681,21 @@ Actions:
   - Name: ec2:DescribeVpcBlockPublicAccessOptions
   - Name: ec2:DescribeVpcEndpointAssociations
   - Name: ec2:DisableAllowedImagesSettings
+  - Name: ec2:DisableCapacityManager
   - Name: ec2:DisableRouteServerPropagation
   - Name: ec2:DisassociateCapacityReservationBillingOwner
   - Name: ec2:DisassociateRouteServer
   - Name: ec2:DisassociateSecurityGroupVpc
   - Name: ec2:DisassociateVerifiedAccessInstanceWebAcl
   - Name: ec2:EnableAllowedImagesSettings
+  - Name: ec2:EnableCapacityManager
   - Name: ec2:EnableRouteServerPropagation
   - Name: ec2:ExportVerifiedAccessInstanceClientConfiguration
   - Name: ec2:GetActiveVpnTunnelStatus
   - Name: ec2:GetAllowedImagesSettings
+  - Name: ec2:GetCapacityManagerAttributes
+  - Name: ec2:GetCapacityManagerMetricData
+  - Name: ec2:GetCapacityManagerMetricDimensions
   - Name: ec2:GetDeclarativePoliciesReportSummary
   - Name: ec2:GetResourcePolicy
   - Name: ec2:GetRouteServerAssociations
@@ -711,3 +720,4 @@ Actions:
   - Name: ec2:ReplaceImageCriteriaInAllowedImagesSettings
   - Name: ec2:SendSpotInstanceInterruptions
   - Name: ec2:StartDeclarativePoliciesReport
+  - Name: ec2:UpdateCapacityManagerOrganizationsAccess
