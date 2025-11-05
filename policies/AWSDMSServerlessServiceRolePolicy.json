@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSDMSServerlessServiceRolePolicy",
   "CreateDate": "2023-05-18T20:28:05Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AIKMNBTIJ",
   "PolicyName": "AWSDMSServerlessServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-02-07T17:52:06Z",
+    "CreateDate": "2025-11-05T14:19:08Z",
     "Document": {
       "Statement": [
         {
@@ -50,13 +50,13 @@
             "dms:StartReplicationTaskAssessmentRun"
           ],
           "Condition": {
-            "StringEqualsIgnoreCase": {
-              "aws:ResourceTag/ResourceCreatedBy": "DMSServerless"
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
             }
           },
           "Effect": "Allow",
           "Resource": [
-            "*"
+            "arn:aws:dms:*:*:task:*"
           ],
           "Sid": "id6"
         },
@@ -74,6 +74,7 @@
           },
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:s3:::dms-premigration-results-*",
             "arn:aws:s3:::dms-serverless-premigration-results-*"
           ],
           "Sid": "id5"
@@ -92,6 +93,7 @@
           },
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:s3:::dms-premigration-results-*",
             "arn:aws:s3:::dms-serverless-premigration-results-*"
           ],
           "Sid": "id4"
@@ -121,7 +123,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2025-02-07T17:52:06Z"
+  "UpdateDate": "2025-11-05T14:19:08Z"
 }
