@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonFSxConsoleFullAccess",
   "CreateDate": "2018-11-28T16:36:05Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAITDDJ23Y5UZ2WCZRQ",
   "PolicyName": "AmazonFSxConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-06-25T17:52:08Z",
+    "CreateDate": "2025-11-05T20:19:08Z",
     "Document": {
       "Statement": [
         {
@@ -88,7 +88,8 @@
             "firehose:ListDeliveryStreams",
             "kms:ListAliases",
             "logs:DescribeLogGroups",
-            "s3:ListBucket"
+            "s3:ListBucket",
+            "secretsmanager:ListSecrets"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -156,7 +157,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2025-06-25T17:52:08Z"
+  "UpdateDate": "2025-11-05T20:19:08Z"
 }
