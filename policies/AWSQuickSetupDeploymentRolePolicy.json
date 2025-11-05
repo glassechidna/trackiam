@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupDeploymentRolePolicy",
   "CreateDate": "2024-06-26T09:55:21Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CG2CDKZLJ",
   "PolicyName": "AWSQuickSetupDeploymentRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-08-08T12:19:06Z",
+    "CreateDate": "2025-11-05T19:19:09Z",
     "Document": {
       "Statement": [
         {
@@ -227,9 +227,11 @@
             "arn:aws:ssm:*::document/AWS-UpdateSSMAgent",
             "arn:aws:ssm:*::document/AWSEC2-UpdateLaunchAgent",
             "arn:aws:ssm:*::document/AWSQuickSetupType-EnableConfigRecording",
+            "arn:aws:ssm:*::document/AWSQuickSetupType-InstallAndManageCloudWatchAgent",
             "arn:aws:ssm:*::document/AWSQuickSetupType-ManageInstanceProfile",
             "arn:aws:ssm:*::document/AWSQuickSetupType-Scheduler-ApplyInstanceState",
-            "arn:aws:ssm:*::document/AWSQuickSetupType-Scheduler-ChangeCalendarState"
+            "arn:aws:ssm:*::document/AWSQuickSetupType-Scheduler-ChangeCalendarState",
+            "arn:aws:ssm:*::document/AmazonCloudWatch-ManageAgent"
           ],
           "Sid": "QSAssociationsManage"
         },
@@ -342,9 +344,11 @@
             "arn:aws:ssm:*::document/AWSConformancePacks-*",
             "arn:aws:ssm:*::document/AWSEC2-UpdateLaunchAgent",
             "arn:aws:ssm:*::document/AWSQuickSetupType-EnableConfigRecording",
+            "arn:aws:ssm:*::document/AWSQuickSetupType-InstallAndManageCloudWatchAgent",
             "arn:aws:ssm:*::document/AWSQuickSetupType-ManageInstanceProfile",
             "arn:aws:ssm:*::document/AWSQuickSetupType-Scheduler-ApplyInstanceState",
-            "arn:aws:ssm:*::document/AWSQuickSetupType-Scheduler-ChangeCalendarState"
+            "arn:aws:ssm:*::document/AWSQuickSetupType-Scheduler-ChangeCalendarState",
+            "arn:aws:ssm:*::document/AmazonCloudWatch-ManageAgent"
           ],
           "Sid": "QSDocsRead"
         }
@@ -352,7 +356,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2025-08-08T12:19:06Z"
+  "UpdateDate": "2025-11-05T19:19:09Z"
 }

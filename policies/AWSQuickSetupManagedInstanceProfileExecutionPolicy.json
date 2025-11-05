@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupManagedInstanceProfileExecutionPolicy",
   "CreateDate": "2024-11-15T21:51:23Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KKPPGQNXT",
   "PolicyName": "AWSQuickSetupManagedInstanceProfileExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-09-12T15:19:05Z",
+    "CreateDate": "2025-11-05T19:19:08Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,8 @@
                 "arn:aws:iam::aws:policy/AWSQuickSetupPatchPolicyBaselineAccess",
                 "arn:aws:iam::aws:policy/AmazonElasticFileSystemsUtils",
                 "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore",
-                "arn:aws:iam::aws:policy/AmazonSSMPatchAssociation"
+                "arn:aws:iam::aws:policy/AmazonSSMPatchAssociation",
+                "arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy"
               ]
             }
           },
@@ -31,6 +32,7 @@
           "Condition": {
             "StringEquals": {
               "iam:ResourceTag/QuickSetupDocument": [
+                "AWSQuickSetupType-CWASetup",
                 "AWSQuickSetupType-Distributor",
                 "AWSQuickSetupType-PatchPolicy",
                 "AWSQuickSetupType-SSM",
@@ -96,6 +98,7 @@
                 "ssm.amazonaws.com"
               ],
               "iam:ResourceTag/QuickSetupDocument": [
+                "AWSQuickSetupType-CWASetup",
                 "AWSQuickSetupType-Distributor",
                 "AWSQuickSetupType-PatchPolicy",
                 "AWSQuickSetupType-SSM",
@@ -181,7 +184,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-09-12T15:19:05Z"
+  "UpdateDate": "2025-11-05T19:19:08Z"
 }
