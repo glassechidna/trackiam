@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSControlTowerServiceRolePolicy",
   "CreateDate": "2019-05-03T18:19:11Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4MW35THVLF",
   "PolicyName": "AWSControlTowerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-10-09T21:04:07Z",
+    "CreateDate": "2025-11-05T22:49:07Z",
     "Document": {
       "Statement": [
         {
@@ -123,7 +123,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:cloudtrail:*:*:trail/aws-controltower*",
-            "arn:aws:logs:*:*:log-group:aws-controltower/CloudTrailLogs:*"
+            "arn:aws:logs:*:*:log-group:aws-controltower/CloudTrailLogs*:*"
           ]
         },
         {
@@ -217,7 +217,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2025-10-09T21:04:07Z"
+  "UpdateDate": "2025-11-05T22:49:07Z"
 }
