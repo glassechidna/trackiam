@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 437
-* Unique actions: 19818
+* Unique actions: 19820
 * Managed policies: 1403
 
 Most common managed policy name prefixes:
@@ -412,6 +412,7 @@ The following table summarises the AWS APIs.
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 14 |
 | [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
 | [`workspaces-instances`](services/workspaces-instances.yml) | 0 | 0 | 13 |
+| [`support-console`](services/support-console.yml) | 0 | 0 | 13 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 13 |
 | [`evs`](services/evs.yml) | 0 | 0 | 13 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 13 |
@@ -419,7 +420,6 @@ The following table summarises the AWS APIs.
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
 | [`transform`](services/transform.yml) | 0 | 0 | 12 |
 | [`backup-search`](services/backup-search.yml) | 0 | 0 | 12 |
-| [`support-console`](services/support-console.yml) | 0 | 0 | 11 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 11 |
 | [`ts`](services/ts.yml) | 0 | 0 | 9 |
 | [`notifications-contacts`](services/notifications-contacts.yml) | 0 | 0 | 9 |
@@ -479,7 +479,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3262 |
-| `Get` | 2966 |
+| `Get` | 2968 |
 | `Delete` | 2282 |
 | `Create` | 2135 |
 | `Update` | 1844 |
