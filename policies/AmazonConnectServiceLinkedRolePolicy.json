@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v29",
+  "DefaultVersionId": "v30",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-10-27T21:19:07Z",
+    "CreateDate": "2025-11-06T22:49:10Z",
     "Document": {
       "Statement": [
         {
@@ -31,6 +31,27 @@
           "Effect": "Allow",
           "Resource": "arn:aws:mobiletargeting:*:*:apps/*",
           "Sid": "AllowMobileTargetingOperationsForConnect"
+        },
+        {
+          "Action": [
+            "app-integrations:CreateDataIntegrationSchedule",
+            "app-integrations:GetDataIntegration",
+            "app-integrations:GetDataIntegrationExecution",
+            "app-integrations:GetDataIntegrationSchedule",
+            "app-integrations:ListDataIntegrationAssociations",
+            "app-integrations:ListDataIntegrationExecutions",
+            "app-integrations:ListDataIntegrationSchedules",
+            "app-integrations:StartDataIntegrationExecution",
+            "app-integrations:UpdateDataIntegrationSchedule"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonConnectEnabled": "True"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowAppIntegrationsForConnectEnabledTaggedResources"
         },
         {
           "Action": [
@@ -333,6 +354,8 @@
             "profile:DetectProfileObjectType",
             "profile:GetDomain",
             "profile:GetIntegration",
+            "profile:GetProfileInsights",
+            "profile:GetProfileRecommendations",
             "profile:GetSegmentEstimate",
             "profile:GetSegmentMembership",
             "profile:GetSimilarProfiles",
@@ -345,6 +368,7 @@
             "profile:ListIntegrations",
             "profile:ListProfileAttributeValues",
             "profile:ListProfileObjectTypes",
+            "profile:ListRecommenders",
             "profile:ListSegmentDefinitions",
             "profile:ListUploadJobs",
             "profile:PutIntegration",
@@ -399,6 +423,21 @@
         },
         {
           "Action": [
+            "profile:CreateRecommender",
+            "profile:DeleteRecommender",
+            "profile:GetRecommender",
+            "profile:StartRecommender",
+            "profile:StopRecommender",
+            "profile:UpdateRecommender"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:profile:*:*:domains/amazon-connect-*/recommenders/*"
+          ],
+          "Sid": "AllowReadPermissionForCustomerProfilePredictiveInsights"
+        },
+        {
+          "Action": [
             "profile:CreateSegmentDefinition",
             "profile:CreateSegmentSnapshot",
             "profile:DeleteSegmentDefinition",
@@ -414,6 +453,7 @@
         {
           "Action": [
             "profile:GetProfileObjectType",
+            "profile:ListObjectTypeAttributeValues",
             "profile:ListObjectTypeAttributes",
             "profile:ListProfileObjects"
           ],
@@ -452,6 +492,16 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowListIntegrationForCustomerProfile"
+        },
+        {
+          "Action": [
+            "profile:ListRecommenderRecipes"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:profile:*:*:*"
+          ],
+          "Sid": "AllowReadPermissionForCustomerProfilesPersonalizeForRecommenderRecipes"
         },
         {
           "Action": [
@@ -501,7 +551,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v29"
+    "VersionId": "v30"
   },
-  "UpdateDate": "2025-10-27T21:19:07Z"
+  "UpdateDate": "2025-11-06T22:49:10Z"
 }
