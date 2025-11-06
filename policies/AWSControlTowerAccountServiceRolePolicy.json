@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSControlTowerAccountServiceRolePolicy",
   "CreateDate": "2023-06-05T22:04:50Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ITRUSWZXG",
   "PolicyName": "AWSControlTowerAccountServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-06-03T17:07:06Z",
+    "CreateDate": "2025-11-05T23:19:09Z",
     "Document": {
       "Statement": [
         {
@@ -41,6 +41,38 @@
         },
         {
           "Action": [
+            "config:DeleteConfigurationAggregator",
+            "config:DescribeAggregateComplianceByConfigRules",
+            "config:SelectAggregateResourceConfig"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:config:*:*:config-aggregator/aws-service-config-aggregator/controltower.amazonaws.com/config-aggregator-*"
+          ],
+          "Sid": "AllowControlTowerToManageConfigAggregator"
+        },
+        {
+          "Action": [
+            "config:PutConfigurationAggregator"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:config:*:*:config-aggregator/aws-service-config-aggregator/controltower.amazonaws.com/*"
+          ],
+          "Sid": "AllowControlTowerToCreateConfigAggregator"
+        },
+        {
+          "Action": [
             "config:TagResource"
           ],
           "Condition": {
@@ -51,6 +83,22 @@
           "Effect": "Allow",
           "Resource": "arn:aws:config:*:*:config-rule/aws-service-rule/controltower.*/*",
           "Sid": "AllowConfigTagResource"
+        },
+        {
+          "Action": [
+            "config:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/aws-control-tower": "managed-by-control-tower",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:config:*:*:config-aggregator/aws-service-config-aggregator/controltower.amazonaws.com/*"
+          ],
+          "Sid": "AllowControlTowerToTagConfigAggregator"
         },
         {
           "Action": [
@@ -71,6 +119,47 @@
         },
         {
           "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "iam:PassedToService": "config.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig"
+          ],
+          "Sid": "AllowControlTowerToPassAggregatorRoleToConfig"
+        },
+        {
+          "Action": [
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": "config.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowListDelegatedAdministratorsForConfig"
+        },
+        {
+          "Action": [
+            "cloudformation:ActivateType",
+            "cloudformation:DeactivateType",
+            "cloudformation:SetTypeConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:type/hook/AWS-ControlTower*",
+          "Sid": "AllowActionsForCloudFormationHooksIntegration"
+        },
+        {
+          "Action": [
             "config:DeleteConfigRule"
           ],
           "Effect": "Allow",
@@ -84,6 +173,16 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowConfigRulesDescribe"
+        },
+        {
+          "Action": [
+            "config:DescribeConfigurationAggregators"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowDescribeConfigurationAggregators"
         },
         {
           "Action": [
@@ -104,6 +203,16 @@
         },
         {
           "Action": [
+            "organizations:DescribeOrganization"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowListDescribeOrganization"
+        },
+        {
+          "Action": [
             "securityhub:DescribeStandardsControls",
             "securityhub:GetEnabledStandards"
           ],
@@ -115,7 +224,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-06-03T17:07:06Z"
+  "UpdateDate": "2025-11-05T23:19:09Z"
 }
