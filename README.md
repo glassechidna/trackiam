@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 437
-* Unique actions: 19820
+* Unique actions: 19821
 * Managed policies: 1403
 
 Most common managed policy name prefixes:
@@ -429,11 +429,11 @@ The following table summarises the AWS APIs.
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 9 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
+| [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 7 |
 | [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 7 |
 | [`qdeveloper`](services/qdeveloper.yml) | 0 | 0 | 7 |
 | [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
 | [`geo-places`](services/geo-places.yml) | 0 | 0 | 7 |
-| [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 6 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`cloudfront-keyvaluestore`](services/cloudfront-keyvaluestore.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
