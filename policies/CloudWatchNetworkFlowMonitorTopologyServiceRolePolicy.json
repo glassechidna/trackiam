@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudWatchNetworkFlowMonitorTopologyServiceRolePolicy",
   "CreateDate": "2024-12-01T22:51:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AP4XHASGC",
   "PolicyName": "CloudWatchNetworkFlowMonitorTopologyServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-12-01T22:51:07Z",
+    "CreateDate": "2025-11-06T23:19:08Z",
     "Document": {
       "Statement": [
         {
@@ -26,12 +26,21 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeManagedPrefixLists",
+            "ec2:GetManagedPrefixListEntries"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PrefixListStatement"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-12-01T22:51:07Z"
+  "UpdateDate": "2025-11-06T23:19:08Z"
 }
