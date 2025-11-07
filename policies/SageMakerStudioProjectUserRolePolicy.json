@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v18",
+  "DefaultVersionId": "v19",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-09-17T21:04:07Z",
+    "CreateDate": "2025-11-07T17:34:09Z",
     "Document": {
       "Statement": [
         {
@@ -961,6 +961,24 @@
         },
         {
           "Action": [
+            "emr-containers:DescribeManagedEndpoint",
+            "emr-containers:DescribeSecurityConfiguration",
+            "emr-containers:DescribeVirtualCluster",
+            "emr-containers:GetManagedEndpointSessionCredentials",
+            "redshift-serverless:GetCredentials",
+            "redshift:GetClusterCredentialsWithIAM"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ComputeCredentials"
+        },
+        {
+          "Action": [
             "emr-serverless:AccessInteractiveEndpoints",
             "emr-serverless:AccessLivyEndpoints",
             "emr-serverless:GetApplication",
@@ -1478,7 +1496,6 @@
           ],
           "Condition": {
             "StringEquals": {
-              "aws:ResourceAccount": "${aws:PrincipalAccount}",
               "kms:EncryptionContext:glue_catalog_id": "${aws:PrincipalAccount}"
             },
             "StringLike": {
@@ -1971,20 +1988,6 @@
         },
         {
           "Action": [
-            "redshift-serverless:GetCredentials",
-            "redshift:GetClusterCredentialsWithIAM"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "RedshiftGetCredentials"
-        },
-        {
-          "Action": [
             "redshift-serverless:GetNamespace",
             "redshift-serverless:GetWorkgroup",
             "redshift-serverless:ListTagsForResource",
@@ -2247,6 +2250,26 @@
         },
         {
           "Action": [
+            "sqlworkbench:BatchGetNotebookCell",
+            "sqlworkbench:CreateNotebook*",
+            "sqlworkbench:DeleteNotebook*",
+            "sqlworkbench:ExportNotebook",
+            "sqlworkbench:GetNotebook",
+            "sqlworkbench:TagResource",
+            "sqlworkbench:UpdateNotebook*"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}",
+              "aws:ResourceTag/sqlworkbench-resource-owner": "${aws:userid}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SQLWorkBenchNotebookActions"
+        },
+        {
+          "Action": [
             "sqs:ChangeMessageVisibility",
             "sqs:DeleteMessage",
             "sqs:GetQueueAttributes",
@@ -2264,6 +2287,21 @@
             "arn:aws:sqs:*:*:airflow-celery-*"
           ],
           "Sid": "AirflowSqsActions"
+        },
+        {
+          "Action": [
+            "sso:DescribeApplication"
+          ],
+          "Condition": {
+            "ForAnyValue:StringLike": {
+              "aws:CalledVia": [
+                "emr-containers.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EmrContainersSSO"
         },
         {
           "Action": [
@@ -2309,6 +2347,12 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowListSecrets"
+        },
+        {
+          "Action": "sqlworkbench:AssociateNotebookWithTab",
+          "Effect": "Allow",
+          "Resource": "arn:*:sqlworkbench:*:*:notebook/*",
+          "Sid": "SQLWorkBenchActions"
         },
         {
           "Action": [
@@ -2708,22 +2752,18 @@
         },
         {
           "Action": [
+            "sqlworkbench:*QCustomContext",
             "sqlworkbench:CreateConnection",
-            "sqlworkbench:DeleteQCustomContext",
             "sqlworkbench:DeleteTab",
             "sqlworkbench:DriverExecute",
-            "sqlworkbench:GetAutocompletionMetadata",
-            "sqlworkbench:GetAutocompletionResource",
-            "sqlworkbench:GetQCustomContext",
-            "sqlworkbench:GetQSqlPromptQuotas",
-            "sqlworkbench:GetQSqlRecommendations",
+            "sqlworkbench:GetAutocompletion*",
+            "sqlworkbench:GetQSql*",
             "sqlworkbench:GetQueryExecutionHistory",
             "sqlworkbench:GetSchemaInference",
             "sqlworkbench:GetUserInfo",
             "sqlworkbench:ListQueryExecutionHistory",
             "sqlworkbench:ListTabs",
             "sqlworkbench:PassAccountSettings",
-            "sqlworkbench:PutQCustomContext",
             "sqlworkbench:PutTab"
           ],
           "Effect": "Allow",
@@ -2734,7 +2774,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v18"
+    "VersionId": "v19"
   },
-  "UpdateDate": "2025-09-17T21:04:07Z"
+  "UpdateDate": "2025-11-07T17:34:09Z"
 }
