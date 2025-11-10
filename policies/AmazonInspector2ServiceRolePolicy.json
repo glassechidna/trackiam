@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonInspector2ServiceRolePolicy",
   "CreateDate": "2021-11-16T20:27:48Z",
-  "DefaultVersionId": "v16",
+  "DefaultVersionId": "v17",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4BINOILVQW",
   "PolicyName": "AmazonInspector2ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-04-29T17:37:06Z",
+    "CreateDate": "2025-11-10T18:19:10Z",
     "Document": {
       "Statement": [
         {
@@ -110,6 +110,22 @@
             "*"
           ],
           "Sid": "CodeGuruCodeVulnerabilityScanning"
+        },
+        {
+          "Action": [
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Condition": {
+            "StringLikeIfExists": {
+              "organizations:ServicePrincipal": [
+                "agentless.inspector2.amazonaws.com",
+                "inspector2.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowInspectorServiceDelegatedAdminFromAwsOrg"
         },
         {
           "Action": [
@@ -275,6 +291,17 @@
         },
         {
           "Action": [
+            "inspector2:AssociateMember",
+            "inspector2:Disable",
+            "inspector2:Enable",
+            "inspector2:EnableDelegatedAdminAccount"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowInspectorEnablementForAwsOrgPolicy"
+        },
+        {
+          "Action": [
             "ssm:CreateAssociation",
             "ssm:StartAssociationsOnce",
             "ssm:UpdateAssociation"
@@ -325,7 +352,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v16"
+    "VersionId": "v17"
   },
-  "UpdateDate": "2025-04-29T17:37:06Z"
+  "UpdateDate": "2025-11-10T18:19:10Z"
 }
