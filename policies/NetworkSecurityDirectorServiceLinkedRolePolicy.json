@@ -1,15 +1,57 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/NetworkSecurityDirectorServiceLinkedRolePolicy",
   "CreateDate": "2025-06-13T20:07:06Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4CFAV7CLUC",
   "PolicyName": "NetworkSecurityDirectorServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-06-13T20:07:06Z",
+    "CreateDate": "2025-11-10T19:49:08Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "config:DeleteServiceLinkedConfigurationRecorder",
+            "config:DescribeConfigurationRecorderStatus",
+            "config:DescribeConfigurationRecorders",
+            "config:PutServiceLinkedConfigurationRecorder"
+          ],
+          "Condition": {
+            "StringLikeIfExists": {
+              "config:ConfigurationRecorderServicePrincipal": [
+                "network-security-director.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowConfigRecorderScopedAccess"
+        },
+        {
+          "Action": [
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Condition": {
+            "StringLikeIfExists": {
+              "organizations:ServicePrincipal": [
+                "network-security-director.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowOrganizationsAdmins"
+        },
+        {
+          "Action": [
+            "account:GetAccountInformation",
+            "account:GetRegionOptStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowAccountInformationRead"
+        },
         {
           "Action": [
             "apigateway:GET"
@@ -84,6 +126,14 @@
         },
         {
           "Action": [
+            "config:ListConfigurationRecorders"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowConfigRecorderList"
+        },
+        {
+          "Action": [
             "directconnect:DescribeConnections",
             "directconnect:DescribeDirectConnectGatewayAssociations",
             "directconnect:DescribeDirectConnectGatewayAttachments",
@@ -125,6 +175,25 @@
         },
         {
           "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListAccountsForParent",
+            "organizations:ListChildren",
+            "organizations:ListDelegatedAdministrators",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListParents",
+            "organizations:ListRoots",
+            "organizations:ListTargetsForPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowOrganizationsReadAccess"
+        },
+        {
+          "Action": [
             "waf:GetWebACL",
             "waf:ListWebACLs"
           ],
@@ -162,7 +231,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-06-13T20:07:06Z"
+  "UpdateDate": "2025-11-10T19:49:08Z"
 }

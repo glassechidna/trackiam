@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupOperatorAccess",
   "CreateDate": "2019-11-18T22:23:17Z",
-  "DefaultVersionId": "v18",
+  "DefaultVersionId": "v19",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KHXVYMY4O",
   "PolicyName": "AWSBackupOperatorAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-05-22T00:37:07Z",
+    "CreateDate": "2025-11-10T19:19:07Z",
     "Document": {
       "Statement": [
         {
@@ -175,6 +175,16 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "EC2Access"
+        },
+        {
+          "Action": [
+            "eks:DescribeCluster",
+            "eks:ListClusters",
+            "eks:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:cluster/*",
+          "Sid": "EKSClusterPermissions"
         },
         {
           "Action": [
@@ -376,7 +386,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v18"
+    "VersionId": "v19"
   },
-  "UpdateDate": "2025-05-22T00:37:07Z"
+  "UpdateDate": "2025-11-10T19:19:07Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForRestores",
   "CreateDate": "2019-01-12T00:23:54Z",
-  "DefaultVersionId": "v24",
+  "DefaultVersionId": "v25",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJZCCL6F2WPVOUXZKI",
   "PolicyName": "AWSBackupServiceRolePolicyForRestores",
   "PolicyVersion": {
-    "CreateDate": "2025-07-14T22:22:07Z",
+    "CreateDate": "2025-11-10T19:34:08Z",
     "Document": {
       "Statement": [
         {
@@ -55,6 +55,25 @@
             "ec2:CreateTags"
           ],
           "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "RunInstances"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "EKSNodeGroupTagOnCreate"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
             "StringLike": {
               "ec2:CreateAction": [
                 "CreateVolume",
@@ -83,6 +102,21 @@
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*::snapshot/*",
           "Sid": "EC2DeleteAndRestorePermissions"
+        },
+        {
+          "Action": [
+            "eks:AssociateAccessPolicy",
+            "eks:DisassociateAccessPolicy"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "eks:accessScope": "cluster",
+              "eks:policyArn": "arn:aws:eks::aws:cluster-access-policy/AWSBackupFullAccessPolicyForRestore"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:access-entry/*",
+          "Sid": "AssociateRestoreAccessPolicy"
         },
         {
           "Action": [
@@ -129,6 +163,24 @@
           "Effect": "Allow",
           "Resource": "arn:aws:fsx:*:*:volume/*",
           "Sid": "FsxVolumePermissions"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "backup.amazonaws.com",
+                "ec2.amazonaws.com",
+                "eks.amazonaws.com",
+                "pods.eks.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "CreateClusterIAMPerms"
         },
         {
           "Action": [
@@ -182,6 +234,17 @@
           "Effect": "Allow",
           "Resource": "arn:aws:backup-gateway:*:*:hypervisor/*",
           "Sid": "GatewayRestorePermissions"
+        },
+        {
+          "Action": [
+            "backup:DescribeRestoreJob",
+            "backup:ListRecoveryPointsByBackupVault",
+            "backup:ListRestoreJobs",
+            "backup:StartRestoreJob"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BackupRestoreJobManagementPermissions"
         },
         {
           "Action": [
@@ -288,6 +351,18 @@
         },
         {
           "Action": [
+            "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribeSubnets",
+            "ec2:RunInstances",
+            "iam:GetRole",
+            "iam:ListAttachedRolePolicies"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CreateEKSNodeGroupPermissions"
+        },
+        {
+          "Action": [
             "ec2:RunInstances"
           ],
           "Effect": "Allow",
@@ -301,6 +376,35 @@
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*:*:instance/*",
           "Sid": "EC2TerminateInstancesPermissions"
+        },
+        {
+          "Action": [
+            "eks:AssociateAccessPolicy",
+            "eks:CreateAccessEntry",
+            "eks:CreateAddon",
+            "eks:CreateCluster",
+            "eks:CreateFargateProfile",
+            "eks:CreateNodegroup",
+            "eks:CreatePodIdentityAssociation",
+            "eks:DescribeAccessEntry",
+            "eks:DescribeAddon",
+            "eks:DescribeCluster",
+            "eks:DescribeFargateProfile",
+            "eks:DescribeNodegroup",
+            "eks:DescribePodIdentityAssociation",
+            "eks:ListAssociatedAccessPolicies",
+            "eks:TagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:eks:*:*:access-entry/*",
+            "arn:aws:eks:*:*:addon/*",
+            "arn:aws:eks:*:*:cluster/*",
+            "arn:aws:eks:*:*:fargateprofile/*",
+            "arn:aws:eks:*:*:nodegroup/*",
+            "arn:aws:eks:*:*:podidentityassociation/*"
+          ],
+          "Sid": "EKSClusterRestore"
         },
         {
           "Action": [
@@ -506,7 +610,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v24"
+    "VersionId": "v25"
   },
-  "UpdateDate": "2025-07-14T22:22:07Z"
+  "UpdateDate": "2025-11-10T19:34:08Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBackupServiceLinkedRolePolicyForBackup",
   "CreateDate": "2020-06-02T23:08:40Z",
-  "DefaultVersionId": "v20",
+  "DefaultVersionId": "v21",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ONJBD4ZY2",
   "PolicyName": "AWSBackupServiceLinkedRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2025-09-09T18:49:07Z",
+    "CreateDate": "2025-11-10T19:19:07Z",
     "Document": {
       "Statement": [
         {
@@ -267,6 +267,28 @@
         },
         {
           "Action": [
+            "ec2:DescribeLaunchTemplateVersions",
+            "eks:DescribeAccessEntry",
+            "eks:DescribeAddon",
+            "eks:DescribeCluster",
+            "eks:DescribeFargateProfile",
+            "eks:DescribeNodegroup",
+            "eks:DescribePodIdentityAssociation",
+            "eks:ListAccessEntries",
+            "eks:ListAddons",
+            "eks:ListAssociatedAccessPolicies",
+            "eks:ListClusters",
+            "eks:ListFargateProfiles",
+            "eks:ListNodegroups",
+            "eks:ListPodIdentityAssociations",
+            "eks:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EKSClusterConfigurationBackup"
+        },
+        {
+          "Action": [
             "events:DeleteRule",
             "events:DescribeRule",
             "events:DisableRule",
@@ -429,7 +451,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v20"
+    "VersionId": "v21"
   },
-  "UpdateDate": "2025-09-09T18:49:07Z"
+  "UpdateDate": "2025-11-10T19:19:07Z"
 }

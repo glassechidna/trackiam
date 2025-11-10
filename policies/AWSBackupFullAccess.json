@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupFullAccess",
   "CreateDate": "2019-11-18T22:21:52Z",
-  "DefaultVersionId": "v20",
+  "DefaultVersionId": "v21",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LL52EIPJX",
   "PolicyName": "AWSBackupFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-05-22T00:37:07Z",
+    "CreateDate": "2025-11-10T19:19:06Z",
     "Document": {
       "Statement": [
         {
@@ -282,6 +282,16 @@
         },
         {
           "Action": [
+            "eks:DescribeCluster",
+            "eks:ListClusters",
+            "eks:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:cluster/*",
+          "Sid": "EKSClusterPermissions"
+        },
+        {
+          "Action": [
             "elasticfilesystem:DescribeFilesystems"
           ],
           "Effect": "Allow",
@@ -495,7 +505,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v20"
+    "VersionId": "v21"
   },
-  "UpdateDate": "2025-05-22T00:37:07Z"
+  "UpdateDate": "2025-11-10T19:19:06Z"
 }
