@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMConsolePolicy",
   "CreateDate": "2025-08-18T22:49:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FQHIZO6RE",
   "PolicyName": "SageMakerStudioUserIAMConsolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-08-18T22:49:07Z",
+    "CreateDate": "2025-11-10T22:19:10Z",
     "Document": {
       "Statement": [
         {
@@ -25,15 +25,40 @@
         },
         {
           "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "kms:EncryptionContextKeys": "aws:datazone:domainId"
+            },
+            "StringLike": {
+              "kms:ViaService": "datazone.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DataZoneKMSPermissions"
+        },
+        {
+          "Action": [
             "datazone:CreateProject",
             "datazone:DeleteProject",
             "datazone:GetDomain",
+            "datazone:GetEnvironment",
+            "datazone:GetEnvironmentCredentials",
+            "datazone:GetGroupProfile",
             "datazone:GetIamPortalLoginUrl",
             "datazone:GetProject",
             "datazone:GetUserProfile",
             "datazone:ListDomains",
+            "datazone:ListEnvironmentBlueprints",
+            "datazone:ListEnvironments",
+            "datazone:ListProjectMemberships",
             "datazone:ListProjectProfiles",
-            "datazone:ListProjects"
+            "datazone:ListProjects",
+            "datazone:SearchGroupProfiles",
+            "datazone:SearchUserProfiles"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -57,7 +82,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-08-18T22:49:07Z"
+  "UpdateDate": "2025-11-10T22:19:10Z"
 }
