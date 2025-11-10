@@ -1,0 +1,1074 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSApplicationMigrationNetworkMigrationMultiAccount",
+  "CreateDate": "2025-11-10T09:04:09Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CTZCLDWVS",
+  "PolicyName": "AWSApplicationMigrationNetworkMigrationMultiAccount",
+  "PolicyVersion": {
+    "CreateDate": "2025-11-10T09:04:09Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudformation:CreateStack"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService",
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/Nmd*",
+          "Sid": "CFNCreate"
+        },
+        {
+          "Action": [
+            "cloudformation:DeleteStack",
+            "cloudformation:DescribeStackEvents",
+            "cloudformation:DescribeStackResources",
+            "cloudformation:GetTemplateSummary",
+            "cloudformation:ListStackResources",
+            "cloudformation:UpdateStack",
+            "cloudformation:UpdateTerminationProtection"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/Nmd*",
+          "Sid": "CFNOperations"
+        },
+        {
+          "Action": [
+            "ec2:AcceptTransitGatewayVpcAttachment",
+            "ec2:AssociateNatGatewayAddress",
+            "ec2:AssociateRouteTable",
+            "ec2:AssociateSubnetCidrBlock",
+            "ec2:AssociateTransitGatewayRouteTable",
+            "ec2:AssociateVpcCidrBlock",
+            "ec2:AttachInternetGateway",
+            "ec2:AttachVolume",
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:DeleteInternetGateway",
+            "ec2:DeleteLaunchTemplate",
+            "ec2:DeleteLaunchTemplateVersions",
+            "ec2:DeleteNatGateway",
+            "ec2:DeleteNetworkAcl",
+            "ec2:DeleteNetworkAclEntry",
+            "ec2:DeleteNetworkInsightsAnalysis",
+            "ec2:DeleteNetworkInsightsPath",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteRoute",
+            "ec2:DeleteRouteTable",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DeleteSnapshot",
+            "ec2:DeleteSubnet",
+            "ec2:DeleteTransitGateway",
+            "ec2:DeleteTransitGatewayRoute",
+            "ec2:DeleteTransitGatewayRouteTable",
+            "ec2:DeleteTransitGatewayVpcAttachment",
+            "ec2:DeleteVolume",
+            "ec2:DeleteVpc",
+            "ec2:DetachInternetGateway",
+            "ec2:DetachVolume",
+            "ec2:DisableTransitGatewayRouteTablePropagation",
+            "ec2:DisassociateNatGatewayAddress",
+            "ec2:DisassociateRouteTable",
+            "ec2:DisassociateTransitGatewayRouteTable",
+            "ec2:EnableTransitGatewayRouteTablePropagation",
+            "ec2:ModifyInstanceAttribute",
+            "ec2:ModifyLaunchTemplate",
+            "ec2:ModifySubnetAttribute",
+            "ec2:ModifyTransitGateway",
+            "ec2:ModifyTransitGatewayVpcAttachment",
+            "ec2:ModifyVolume",
+            "ec2:ModifyVpcAttribute",
+            "ec2:RejectTransitGatewayVpcAttachment",
+            "ec2:ReleaseAddress",
+            "ec2:ReplaceNetworkAclAssociation",
+            "ec2:ReplaceNetworkAclEntry",
+            "ec2:ReplaceRoute",
+            "ec2:ReplaceTransitGatewayRoute",
+            "ec2:RevokeSecurityGroupEgress",
+            "ec2:RevokeSecurityGroupIngress",
+            "ec2:SearchTransitGatewayRoutes",
+            "ec2:StartNetworkInsightsAnalysis"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:elastic-ip/*",
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:internet-gateway/*",
+            "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*:*:natgateway/*",
+            "arn:aws:ec2:*:*:network-acl/*",
+            "arn:aws:ec2:*:*:network-insights-access-scope-analysis/*",
+            "arn:aws:ec2:*:*:network-insights-access-scope/*",
+            "arn:aws:ec2:*:*:network-insights-analysis/*",
+            "arn:aws:ec2:*:*:network-insights-path/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:route-table/*",
+            "arn:aws:ec2:*:*:security-group-rule/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:snapshot/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:transit-gateway-attachment/*",
+            "arn:aws:ec2:*:*:transit-gateway-connect-peer/*",
+            "arn:aws:ec2:*:*:transit-gateway-policy-table/*",
+            "arn:aws:ec2:*:*:transit-gateway-route-table/*",
+            "arn:aws:ec2:*:*:transit-gateway/*",
+            "arn:aws:ec2:*:*:volume/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ],
+          "Sid": "MGNCFNBasedResourcesProvision"
+        },
+        {
+          "Action": [
+            "ec2:AllocateAddress"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:elastic-ip/*"
+          ],
+          "Sid": "CFNProvision"
+        },
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:DeleteSecurityGroup",
+            "ec2:RevokeSecurityGroupEgress",
+            "ec2:RevokeSecurityGroupIngress"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group-rule/*",
+            "arn:aws:ec2:*:*:security-group/*"
+          ],
+          "Sid": "AnalyzerEC2ResourceOperations"
+        },
+        {
+          "Action": [
+            "ec2:CreateInternetGateway",
+            "ec2:CreateTransitGateway",
+            "ec2:CreateVpc"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:internet-gateway/*",
+            "arn:aws:ec2:*:*:transit-gateway/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ],
+          "Sid": "CFNProvisionNetworking"
+        },
+        {
+          "Action": [
+            "ec2:CreateNatGateway"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:elastic-ip/*",
+            "arn:aws:ec2:*:*:natgateway/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "CreatePermissionsByRequestTagNAT"
+        },
+        {
+          "Action": [
+            "ec2:CreateNatGateway",
+            "ec2:CreateNetworkAcl",
+            "ec2:CreateNetworkAclEntry",
+            "ec2:CreateNetworkInsightsPath",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateRoute",
+            "ec2:CreateRouteTable",
+            "ec2:CreateSubnet",
+            "ec2:CreateTransitGatewayRoute",
+            "ec2:CreateTransitGatewayRouteTable",
+            "ec2:CreateTransitGatewayVpcAttachment"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "ec2:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:elastic-ip/*",
+            "arn:aws:ec2:*:*:natgateway/*",
+            "arn:aws:ec2:*:*:network-acl/*",
+            "arn:aws:ec2:*:*:network-insights-path/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:route-table/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:transit-gateway-attachment/*",
+            "arn:aws:ec2:*:*:transit-gateway-route-table/*",
+            "arn:aws:ec2:*:*:transit-gateway/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ],
+          "Sid": "CreatePermissionsByResourceTag"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkAcl",
+            "ec2:CreateRouteTable",
+            "ec2:CreateSubnet"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-acl/*",
+            "arn:aws:ec2:*:*:route-table/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ],
+          "Sid": "CreatePermissionsByRequestTagNetworking"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkAclEntry",
+            "ec2:CreateRoute"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-acl/*",
+            "arn:aws:ec2:*:*:route-table/*"
+          ],
+          "Sid": "CreatePermissionsByRequestTagRouting"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInsightsPath"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-insights-path/*"
+          ],
+          "Sid": "CreatePermissionsByRequestTagInsights"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*"
+          ],
+          "Sid": "CreatePermissionsByRequestTagNetworkInterface"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "AnalyzerENIResourceTag"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ],
+          "Sid": "CreatePermissionsByCFN"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group-rule/*",
+            "arn:aws:ec2:*:*:security-group/*"
+          ],
+          "Sid": "AnalyzerEC2RequestSgTag"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:vpc/*"
+          ],
+          "Sid": "AnalyzerEC2ResourceSgTag"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group-rule/*",
+            "arn:aws:ec2:*:*:security-group/*"
+          ],
+          "Sid": "EC2TagCFNSG"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService",
+              "ec2:CreateAction": [
+                "AllocateAddress",
+                "CreateInternetGateway",
+                "CreateLaunchTemplate",
+                "CreateNatGateway",
+                "CreateNetworkAcl",
+                "CreateNetworkInsightsAccessScope",
+                "CreateNetworkInsightsPath",
+                "CreateNetworkInterface",
+                "CreateRouteTable",
+                "CreateSubnet",
+                "CreateTransitGateway",
+                "CreateTransitGatewayConnect",
+                "CreateTransitGatewayConnectPeer",
+                "CreateTransitGatewayPeeringAttachment",
+                "CreateTransitGatewayPolicyTable",
+                "CreateTransitGatewayPrefixListReference",
+                "CreateTransitGatewayRoute",
+                "CreateTransitGatewayRouteTable",
+                "CreateTransitGatewayRouteTableAnnouncement",
+                "CreateTransitGatewayVpcAttachment",
+                "CreateVpc",
+                "StartNetworkInsightsAnalysis"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:elastic-ip/*",
+            "arn:aws:ec2:*:*:internet-gateway/*",
+            "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*:*:natgateway/*",
+            "arn:aws:ec2:*:*:network-acl/*",
+            "arn:aws:ec2:*:*:network-insights-access-scope-analysis/*",
+            "arn:aws:ec2:*:*:network-insights-access-scope/*",
+            "arn:aws:ec2:*:*:network-insights-analysis/*",
+            "arn:aws:ec2:*:*:network-insights-path/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:route-table/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:transit-gateway-attachment/*",
+            "arn:aws:ec2:*:*:transit-gateway-connect-peer/*",
+            "arn:aws:ec2:*:*:transit-gateway-policy-table/*",
+            "arn:aws:ec2:*:*:transit-gateway-route-table/*",
+            "arn:aws:ec2:*:*:transit-gateway/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ],
+          "Sid": "EC2TagCFN"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService",
+              "ec2:CreateAction": [
+                "CreateSecurityGroup"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group-rule/*",
+            "arn:aws:ec2:*:*:security-group/*"
+          ],
+          "Sid": "AnalyzerEC2SecurityGroupTags"
+        },
+        {
+          "Action": [
+            "ec2:CreateTransitGatewayRoute",
+            "ec2:CreateTransitGatewayRouteTable"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:transit-gateway-route-table/*",
+            "arn:aws:ec2:*:*:transit-gateway/*"
+          ],
+          "Sid": "CreatePermissionsByRequestTagTransitGateway"
+        },
+        {
+          "Action": [
+            "ec2:CreateTransitGatewayVpcAttachment"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:transit-gateway-attachment/*",
+            "arn:aws:ec2:*:*:transit-gateway/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ],
+          "Sid": "CreatePermissionsByRequestTagTGWAttachment"
+        },
+        {
+          "Action": [
+            "ec2:CreateTransitGatewayVpcAttachment"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceOrgID": "${aws:PrincipalOrgID}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:transit-gateway-attachment/*",
+            "arn:aws:ec2:*:*:transit-gateway/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ],
+          "Sid": "AllowCreateTGWVpcAttachmentSameOrg"
+        },
+        {
+          "Action": [
+            "ec2:DeleteNetworkInterface"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*"
+          ],
+          "Sid": "DeleteENI"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAddresses",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeCustomerGateways",
+            "ec2:DescribeEgressOnlyInternetGateways",
+            "ec2:DescribeHosts",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstanceAttribute",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstanceTypes",
+            "ec2:DescribeInstances",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribeLaunchTemplates",
+            "ec2:DescribeManagedPrefixLists",
+            "ec2:DescribeNatGateways",
+            "ec2:DescribeNetworkAcls",
+            "ec2:DescribeNetworkInsightsAnalyses",
+            "ec2:DescribeNetworkInsightsPaths",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribePrefixLists",
+            "ec2:DescribeRegions",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroupRules",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeTransitGatewayAttachments",
+            "ec2:DescribeTransitGatewayConnects",
+            "ec2:DescribeTransitGatewayPeeringAttachments",
+            "ec2:DescribeTransitGatewayRouteTables",
+            "ec2:DescribeTransitGatewayVpcAttachments",
+            "ec2:DescribeTransitGateways",
+            "ec2:DescribeVolumes",
+            "ec2:DescribeVpcEndpointServiceConfigurations",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcPeeringConnections",
+            "ec2:DescribeVpcs",
+            "ec2:DescribeVpnConnections",
+            "ec2:DescribeVpnGateways",
+            "ec2:GetTransitGatewayRouteTableAssociations",
+            "ec2:GetTransitGatewayRouteTablePropagations"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "EC2CFNReadonly"
+        },
+        {
+          "Action": [
+            "ec2:GetManagedPrefixListEntries"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:prefix-list/*"
+          ],
+          "Sid": "EC2CFNReadonlyPrefixList"
+        },
+        {
+          "Action": [
+            "ec2:PutResourcePolicy"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*"
+          ],
+          "Sid": "AnalyzerEC2PutResourcePolicy"
+        },
+        {
+          "Action": [
+            "ec2:ReplaceNetworkAclAssociation"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-acl/*"
+          ],
+          "Sid": "CreatePermissionsByCFNNACL"
+        },
+        {
+          "Action": [
+            "ec2:ReplaceNetworkAclAssociation"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "CreatePermissionsByCFNNACLSN"
+        },
+        {
+          "Action": [
+            "iam:AttachRolePolicy"
+          ],
+          "Condition": {
+            "ArnEquals": {
+              "iam:PolicyARN": [
+                "arn:aws:iam::aws:policy/AWSApplicationMigrationNetworkMigrationCustomResource",
+                "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/Nmd*modifyTransitGateway*",
+          "Sid": "AttachCustomResourceRole"
+        },
+        {
+          "Action": [
+            "iam:CreateRole",
+            "iam:TagRole"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService",
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/Nmd*modifyTransitGateway*",
+          "Sid": "CreateRoleCustomResource"
+        },
+        {
+          "Action": [
+            "iam:DeleteRole",
+            "iam:DeleteRolePolicy",
+            "iam:DetachRolePolicy",
+            "iam:GetRolePolicy",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListRolePolicies"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/Nmd*modifyTransitGateway*",
+          "Sid": "OperationsRoleCustomResource"
+        },
+        {
+          "Action": [
+            "iam:GetRole"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/Nmd*modifyTransitGateway*",
+          "Sid": "PassGetRoleCustomResource"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "iam:PassedToService": "lambda.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/Nmd*modifyTransitGateway*",
+          "Sid": "PassRoleCustomResource"
+        },
+        {
+          "Action": [
+            "lambda:AddPermission",
+            "lambda:DeleteFunction",
+            "lambda:GetFunctionConfiguration",
+            "lambda:InvokeFunction"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:network-migration*"
+          ],
+          "Sid": "OperationsCustomResourceLambda"
+        },
+        {
+          "Action": [
+            "lambda:CreateFunction",
+            "lambda:TagResource"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService",
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:network-migration*"
+          ],
+          "Sid": "CreateCustomResourceLambda"
+        },
+        {
+          "Action": [
+            "lambda:GetFunction"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:network-migration*"
+          ],
+          "Sid": "GetCustomResource"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/lambda/network-migration-modify-tgw*"
+          ],
+          "Sid": "CreateCustomResourceLogGroup"
+        },
+        {
+          "Action": [
+            "ram:AssociateResourceShare"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService",
+              "ram:RequestedResourceType": [
+                "ec2:TransitGateway",
+                "ssm:Parameter"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ram:*:*:resource-share/*",
+          "Sid": "AssociateResourceShare"
+        },
+        {
+          "Action": [
+            "ram:CreateResourceShare"
+          ],
+          "Condition": {
+            "Bool": {
+              "ram:RequestedAllowsExternalPrincipals": "false"
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ram:*:*:resource-share/*",
+          "Sid": "CreateResourceShareTransitGateway"
+        },
+        {
+          "Action": [
+            "ram:DeleteResourceShare",
+            "ram:DisassociateResourceShare",
+            "ram:UpdateResourceShare"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ram:*:*:resource-share/*",
+          "Sid": "CreateResourceShareWithResourceTag"
+        },
+        {
+          "Action": [
+            "ram:TagResource"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService",
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ram:*:*:resource-share/*",
+          "Sid": "ramTAgReource"
+        },
+        {
+          "Action": [
+            "ssm:AddTagsToResource",
+            "ssm:PutParameter"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService",
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:parameter/network-migration/*"
+          ],
+          "Sid": "putParameter"
+        },
+        {
+          "Action": [
+            "ssm:DeleteParameter",
+            "ssm:DeleteResourcePolicy",
+            "ssm:GetResourcePolicies",
+            "ssm:ListTagsForResource",
+            "ssm:PutResourcePolicy"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:parameter/network-migration/*"
+          ],
+          "Sid": "deleteParameter"
+        },
+        {
+          "Action": [
+            "ssm:GetParameters"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:parameter/network-migration/*"
+          ],
+          "Sid": "deployerWorkload"
+        },
+        {
+          "Action": [
+            "cloudformation:DescribeStacks",
+            "cloudformation:ListStacks"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/Nmd*",
+          "Sid": "MGNCFNDescribe"
+        },
+        {
+          "Action": [
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroupRules",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "NetworkAnalyzer"
+        },
+        {
+          "Action": [
+            "ram:GetResourceShares"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ram:*:*:resource-share/*",
+          "Sid": "AllowGetResourceShares"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-11-10T09:04:09Z"
+}
