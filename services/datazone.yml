@@ -128,26 +128,41 @@ Actions:
   - Name: datazone:AddPolicyGrant
   - Name: datazone:AssociateGovernedTerms
   - Name: datazone:BatchDeleteLinkedTypes
+  - Name: datazone:BatchGetAttributesMetadata
+  - Name: datazone:BatchGetCell
+  - Name: datazone:BatchGetCellRun
+  - Name: datazone:BatchPutAttributesMetadata
   - Name: datazone:BatchPutLinkedTypes
   - Name: datazone:CreateAccountPool
+  - Name: datazone:CreateCell
+  - Name: datazone:CreateCellRun
   - Name: datazone:CreateConnection
   - Name: datazone:CreateDataProduct
   - Name: datazone:CreateDataProductRevision
   - Name: datazone:CreateDomainUnit
   - Name: datazone:CreateEnvironmentBlueprint
+  - Name: datazone:CreateNotebook
   - Name: datazone:CreateProjectProfile
   - Name: datazone:CreateRule
   - Name: datazone:DeleteAccountPool
+  - Name: datazone:DeleteCell
+  - Name: datazone:DeleteCellRun
   - Name: datazone:DeleteConnection
   - Name: datazone:DeleteDataProduct
   - Name: datazone:DeleteDomainSharingPolicy
   - Name: datazone:DeleteDomainUnit
   - Name: datazone:DeleteEnvironmentBlueprint
+  - Name: datazone:DeleteNotebook
   - Name: datazone:DeleteProjectProfile
   - Name: datazone:DeleteRule
   - Name: datazone:DisassociateGovernedTerms
+  - Name: datazone:GenerateCode
   - Name: datazone:GetAccountPool
+  - Name: datazone:GetCell
+  - Name: datazone:GetCellRun
+  - Name: datazone:GetCellRunResult
   - Name: datazone:GetConnection
+  - Name: datazone:GetConversation
   - Name: datazone:GetDataProduct
   - Name: datazone:GetDomainExecutionRoleCredentials
   - Name: datazone:GetDomainSharingPolicy
@@ -155,6 +170,8 @@ Actions:
   - Name: datazone:GetEnvironmentActionLink
   - Name: datazone:GetJobRun
   - Name: datazone:GetLineageEvent
+  - Name: datazone:GetNotebook
+  - Name: datazone:GetNotebookCompute
   - Name: datazone:GetProjectProfile
   - Name: datazone:GetRule
   - Name: datazone:GetSubscriptionEligibility
@@ -162,7 +179,9 @@ Actions:
   - Name: datazone:ListAccountEnvironments
   - Name: datazone:ListAccountPools
   - Name: datazone:ListAccountsInAccountPool
+  - Name: datazone:ListCellRuns
   - Name: datazone:ListConnections
+  - Name: datazone:ListConversations
   - Name: datazone:ListDataProductRevisions
   - Name: datazone:ListDomainUnitsForParent
   - Name: datazone:ListEntityOwners
@@ -171,27 +190,36 @@ Actions:
   - Name: datazone:ListJobRuns
   - Name: datazone:ListLineageEvents
   - Name: datazone:ListLinkedTypes
+  - Name: datazone:ListNotebooks
   - Name: datazone:ListPolicyGrants
   - Name: datazone:ListProjectProfiles
   - Name: datazone:ListRules
   - Name: datazone:ListWarehouseMetadata
   - Name: datazone:ProvisionDomain
+  - Name: datazone:PutCellRunResult
   - Name: datazone:PutDomainSharingPolicy
   - Name: datazone:RefreshToken
   - Name: datazone:RemoveEntityOwner
   - Name: datazone:RemovePolicyGrant
   - Name: datazone:SearchRules
+  - Name: datazone:SendMessage
   - Name: datazone:SsoLogin
   - Name: datazone:SsoLogout
   - Name: datazone:StartAccountBootstrapAction
+  - Name: datazone:StartConversation
+  - Name: datazone:StartNotebookCompute
   - Name: datazone:StopMetadataGenerationRun
+  - Name: datazone:StopNotebookCompute
   - Name: datazone:UpdateAccountPool
+  - Name: datazone:UpdateCell
+  - Name: datazone:UpdateCellRun
   - Name: datazone:UpdateConnection
   - Name: datazone:UpdateDataSourceRunActivities
   - Name: datazone:UpdateDomainUnit
   - Name: datazone:UpdateEnvironmentBlueprint
   - Name: datazone:UpdateEnvironmentConfiguration
   - Name: datazone:UpdateEnvironmentDeploymentStatus
+  - Name: datazone:UpdateNotebook
   - Name: datazone:UpdateProjectProfile
   - Name: datazone:UpdateRule
   - Name: datazone:ValidatePassRole
