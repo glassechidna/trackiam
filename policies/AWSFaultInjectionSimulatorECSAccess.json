@@ -1,15 +1,33 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSFaultInjectionSimulatorECSAccess",
   "CreateDate": "2022-10-26T20:37:56Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4O4WAPQIW3",
   "PolicyName": "AWSFaultInjectionSimulatorECSAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-03-07T14:52:07Z",
+    "CreateDate": "2025-11-11T09:49:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ec2:DescribeInstances",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeInstances"
+        },
+        {
+          "Action": "ec2:DescribeSubnets",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeSubnets"
+        },
+        {
+          "Action": "ecs:DescribeContainerInstances",
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecs:*:*:container-instance/*/*",
+          "Sid": "DescribeContainerInstances"
+        },
         {
           "Action": "ssm:SendCommand",
           "Effect": "Allow",
@@ -80,7 +98,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2025-03-07T14:52:07Z"
+  "UpdateDate": "2025-11-11T09:49:07Z"
 }

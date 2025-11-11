@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSFaultInjectionSimulatorEC2Access",
   "CreateDate": "2022-10-26T20:39:26Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4JRMRLWKEY",
   "PolicyName": "AWSFaultInjectionSimulatorEC2Access",
   "PolicyVersion": {
-    "CreateDate": "2025-02-12T10:07:06Z",
+    "CreateDate": "2025-11-11T09:49:07Z",
     "Document": {
       "Statement": [
         {
@@ -33,6 +33,12 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "DescribeInstances"
+        },
+        {
+          "Action": "ec2:DescribeSubnets",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeSubnets"
         },
         {
           "Action": [
@@ -70,7 +76,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2025-02-12T10:07:06Z"
+  "UpdateDate": "2025-11-11T09:49:07Z"
 }
