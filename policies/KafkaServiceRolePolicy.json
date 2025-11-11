@@ -1,15 +1,32 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/KafkaServiceRolePolicy",
   "CreateDate": "2018-11-15T23:31:48Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJUXPRZ76MAP2EVQJU",
   "PolicyName": "KafkaServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-04-28T00:39:35Z",
+    "CreateDate": "2025-11-10T23:19:09Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "ec2:AssignIpv6Addresses",
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "ec2:UnassignIpv6Addresses"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/AWSMSKManaged": "true"
+            },
+            "StringLike": {
+              "ec2:ResourceTag/ClusterArn": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:ec2:*:*:network-interface/*"
+        },
         {
           "Action": [
             "ec2:DeleteVpcEndpoints",
@@ -67,7 +84,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2023-04-28T00:39:35Z"
+  "UpdateDate": "2025-11-10T23:19:09Z"
 }
