@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 437
-* Unique actions: 19882
+* Unique services: 438
+* Unique actions: 19885
 * Managed policies: 1404
 
 Most common managed policy name prefixes:
@@ -448,6 +448,7 @@ The following table summarises the AWS APIs.
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
 | [`a2c`](services/a2c.yml) | 0 | 0 | 4 |
 | [`uxc`](services/uxc.yml) | 0 | 0 | 3 |
+| [`sagemaker-unified-studio-mcp`](services/sagemaker-unified-studio-mcp.yml) | 0 | 0 | 3 |
 | [`resource-explorer`](services/resource-explorer.yml) | 0 | 0 | 3 |
 | [`partnercentral-account-management`](services/partnercentral-account-management.yml) | 0 | 0 | 3 |
 | [`mapcredits`](services/mapcredits.yml) | 0 | 0 | 3 |
