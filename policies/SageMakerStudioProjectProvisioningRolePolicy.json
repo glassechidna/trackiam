@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy",
   "CreateDate": "2024-11-20T21:58:39Z",
-  "DefaultVersionId": "v22",
+  "DefaultVersionId": "v23",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQZUIPVLH",
   "PolicyName": "SageMakerStudioProjectProvisioningRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-10-30T22:19:07Z",
+    "CreateDate": "2025-11-11T23:04:09Z",
     "Document": {
       "Statement": [
         {
@@ -997,7 +997,9 @@
             "emr-containers:DeleteManagedEndpoint",
             "emr-containers:DeleteSecurityConfiguration",
             "emr-containers:DeleteVirtualCluster",
+            "emr-containers:DescribeManagedEndpoint",
             "emr-containers:DescribeSecurityConfiguration",
+            "emr-containers:DescribeVirtualCluster",
             "emr-containers:TagResource"
           ],
           "Condition": {
@@ -1406,7 +1408,6 @@
                 "arn:aws:iam::aws:policy/service-role/AmazonEMRServicePolicy_v2",
                 "arn:aws:iam::aws:policy/service-role/AmazonS3TablesLakeFormationServiceRole",
                 "arn:aws:iam::aws:policy/service-role/SageMakerStudioBedrockKnowledgeBaseServiceRolePolicy",
-                "arn:aws:iam::aws:policy/service-role/SageMakerStudioEMRContainersQueryEngineRolePolicy",
                 "arn:aws:iam::aws:policy/service-role/SageMakerStudioEMRContainersSystemNamespaceRolePolicy",
                 "arn:aws:iam::aws:policy/service-role/SageMakerStudioEMRInstanceRolePolicy",
                 "arn:aws:iam::aws:policy/service-role/SageMakerStudioEMRServiceRolePolicy"
@@ -1677,6 +1678,7 @@
           },
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:iam::*:role/datazone_emr_containers_system_namespace_role_*",
             "arn:aws:iam::*:role/datazone_emr_ec2_instance_role_*",
             "arn:aws:iam::*:role/datazone_emr_service_role_*"
           ],
@@ -2412,6 +2414,25 @@
         },
         {
           "Action": [
+            "sagemaker:AddTags"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:domain/*",
+            "arn:aws:sagemaker:*:*:mlflow-tracking-server/*"
+          ],
+          "Sid": "TagSMD"
+        },
+        {
+          "Action": [
             "sagemaker:AddTags",
             "sagemaker:CreateDomain"
           ],
@@ -2429,26 +2450,6 @@
             "arn:aws:sagemaker:*:*:mlflow-tracking-server/*"
           ],
           "Sid": "TagSMDForUpdate"
-        },
-        {
-          "Action": [
-            "sagemaker:AddTags",
-            "sagemaker:CreateDomain"
-          ],
-          "Condition": {
-            "Null": {
-              "aws:ResourceTag/AmazonDataZoneProject": "false"
-            },
-            "StringEquals": {
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:sagemaker:*:*:domain/*",
-            "arn:aws:sagemaker:*:*:mlflow-tracking-server/*"
-          ],
-          "Sid": "TagSMD"
         },
         {
           "Action": [
@@ -2742,6 +2743,7 @@
           "Resource": [
             "arn:aws:iam::*:role/aws-service-role/airflow.amazonaws.com/AWSServiceRoleForAmazonMWAA",
             "arn:aws:iam::*:role/aws-service-role/elasticmapreduce.amazonaws.com/AWSServiceRoleForEMRCleanup",
+            "arn:aws:iam::*:role/aws-service-role/emr-containers.amazonaws.com/AWSServiceRoleForAmazonEMRContainers",
             "arn:aws:iam::*:role/aws-service-role/neptune-graph.amazonaws.com/AWSServiceRoleForNeptuneGraph",
             "arn:aws:iam::*:role/aws-service-role/ops.emr-serverless.amazonaws.com/AWSServiceRoleForAmazonEMRServerless",
             "arn:aws:iam::*:role/aws-service-role/redshift.amazonaws.com/AWSServiceRoleForRedshift",
@@ -3069,7 +3071,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v22"
+    "VersionId": "v23"
   },
-  "UpdateDate": "2025-10-30T22:19:07Z"
+  "UpdateDate": "2025-11-11T23:04:09Z"
 }
