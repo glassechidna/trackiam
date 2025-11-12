@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AdministratorAccess-AWSElasticBeanstalk",
   "CreateDate": "2021-01-22T19:36:54Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AX52KWGWY",
   "PolicyName": "AdministratorAccess-AWSElasticBeanstalk",
   "PolicyVersion": {
-    "CreateDate": "2024-12-11T14:36:06Z",
+    "CreateDate": "2025-11-12T19:34:07Z",
     "Document": {
       "Statement": [
         {
@@ -313,7 +313,9 @@
             "s3:CreateBucket",
             "s3:GetBucket*",
             "s3:ListBucket",
-            "s3:PutBucketPolicy"
+            "s3:PutBucketOwnershipControls",
+            "s3:PutBucketPolicy",
+            "s3:PutBucketPublicAccessBlock"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:s3:::elasticbeanstalk-*"
@@ -358,7 +360,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2024-12-11T14:36:06Z"
+  "UpdateDate": "2025-11-12T19:34:07Z"
 }
