@@ -1,0 +1,89 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSEC2SqlHaServiceRolePolicy",
+  "CreateDate": "2025-11-13T01:34:10Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4PBS3QRMFV",
+  "PolicyName": "AWSEC2SqlHaServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-11-13T01:34:10Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ssm:SendCommand",
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/SqlHaMonitored": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "AllowSSMSendCommandToTaggedInstances"
+        },
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalAccount": "${aws:ResourceAccount}",
+              "events:ManagedBy": "ec2sqlha.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/AWSEC2SqlHa*",
+          "Sid": "AllowEventsMutateManagedRule"
+        },
+        {
+          "Action": "ssm:SendCommand",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/AWSEC2-DetectSqlHa*"
+          ],
+          "Sid": "AllowSSMSendCommandOfOwnedDoc"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstanceAttribute",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstances",
+            "ec2:DescribeTags"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowEC2NonMutating"
+        },
+        {
+          "Action": [
+            "events:DescribeRule",
+            "events:ListTargetsByRule"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/AWSEC2SqlHa*",
+          "Sid": "AllowEventsNonMutatingManagedRule"
+        },
+        {
+          "Action": [
+            "ssm:DescribeInstanceInformation",
+            "ssm:GetCommandInvocation",
+            "ssm:ListCommandInvocations",
+            "ssm:ListCommands"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowSSMNonMutating"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-11-13T01:34:10Z"
+}
