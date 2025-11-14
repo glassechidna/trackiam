@@ -1,28 +1,15 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMConsolePolicy",
   "CreateDate": "2025-08-18T22:49:07Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FQHIZO6RE",
   "PolicyName": "SageMakerStudioUserIAMConsolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-11-10T22:19:10Z",
+    "CreateDate": "2025-11-14T22:49:06Z",
     "Document": {
       "Statement": [
-        {
-          "Action": "iam:PassRole",
-          "Condition": {
-            "StringEquals": {
-              "iam:passedToService": "datazone.amazonaws.com"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:iam::*:role/service-role/AmazonSageMaker*"
-          ],
-          "Sid": "IAMPassRoleStatement"
-        },
         {
           "Action": [
             "kms:Decrypt",
@@ -82,7 +69,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-11-10T22:19:10Z"
+  "UpdateDate": "2025-11-14T22:49:06Z"
 }

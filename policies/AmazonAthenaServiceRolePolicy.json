@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonAthenaServiceRolePolicy",
+  "CreateDate": "2025-11-14T22:34:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4EB5TVDLSZ",
+  "PolicyName": "AmazonAthenaServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-11-14T22:34:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": [
+                "AWS/Athena",
+                "AWS/Usage"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchPolicyStatement"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-11-14T22:34:08Z"
+}
