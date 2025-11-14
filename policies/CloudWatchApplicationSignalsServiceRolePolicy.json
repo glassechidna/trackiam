@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudWatchApplicationSignalsServiceRolePolicy",
   "CreateDate": "2023-11-09T18:09:57Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4LAFFLXUGT",
   "PolicyName": "CloudWatchApplicationSignalsServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-03-17T15:07:06Z",
+    "CreateDate": "2025-11-14T21:19:07Z",
     "Document": {
       "Statement": [
         {
@@ -105,6 +105,16 @@
         },
         {
           "Action": [
+            "cloudtrail:CreateServiceLinkedChannel"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudtrail:*:*:channel/aws-service-channel/application-signals/*"
+          ],
+          "Sid": "CloudTrailServiceLinkedChannelCreationPermission"
+        },
+        {
+          "Action": [
             "cloudwatch:GetMetricData"
           ],
           "Effect": "Allow",
@@ -112,12 +122,22 @@
             "*"
           ],
           "Sid": "CWGetMetricDataPermission"
+        },
+        {
+          "Action": [
+            "resource-explorer-2:Search"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "ResourceExplorerReadOnlyAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2025-03-17T15:07:06Z"
+  "UpdateDate": "2025-11-14T21:19:07Z"
 }

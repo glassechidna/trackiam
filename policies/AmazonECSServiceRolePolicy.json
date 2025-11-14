@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonECSServiceRolePolicy",
   "CreateDate": "2017-10-14T01:18:58Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIVUWKCAI7URU4WUEI",
   "PolicyName": "AmazonECSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-06-24T21:22:07Z",
+    "CreateDate": "2025-11-14T21:04:09Z",
     "Document": {
       "Statement": [
         {
@@ -128,6 +128,7 @@
         },
         {
           "Action": [
+            "ec2:AssociateTrunkInterface",
             "ec2:AttachNetworkInterface",
             "ec2:CreateNetworkInterface",
             "ec2:CreateNetworkInterfacePermission",
@@ -135,6 +136,7 @@
             "ec2:DeleteNetworkInterfacePermission",
             "ec2:Describe*",
             "ec2:DetachNetworkInterface",
+            "ec2:DisassociateTrunkInterface",
             "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
             "elasticloadbalancing:DeregisterTargets",
             "elasticloadbalancing:Describe*",
@@ -225,7 +227,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2025-06-24T21:22:07Z"
+  "UpdateDate": "2025-11-14T21:04:09Z"
 }
