@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioAdminIAMPermissiveExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DPB4UTXYO",
   "PolicyName": "SageMakerStudioAdminIAMPermissiveExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-10-30T19:34:08Z",
+    "CreateDate": "2025-11-15T03:04:09Z",
     "Document": {
       "Statement": [
         {
@@ -31,6 +31,9 @@
             "StringEquals": {
               "aws:ResourceAccount": "${aws:PrincipalAccount}",
               "iam:PassedToService": [
+                "airflow-serverless.amazonaws.com",
+                "athena.amazonaws.com",
+                "datazone.amazonaws.com",
                 "glue.amazonaws.com",
                 "lakeformation.amazonaws.com",
                 "sagemaker.amazonaws.com"
@@ -46,8 +49,10 @@
           "Condition": {
             "StringEquals": {
               "iam:PassedToService": [
+                "airflow-serverless.amazonaws.com",
                 "bedrock.amazonaws.com",
                 "datazone.amazonaws.com",
+                "emr-serverless.amazonaws.com",
                 "redshift-serverless.amazonaws.com",
                 "redshift.amazonaws.com",
                 "scheduler.amazonaws.com"
@@ -71,6 +76,41 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "SourceIdentity"
+        },
+        {
+          "Action": [
+            "athena:GetResourceDashboard",
+            "athena:GetSession",
+            "athena:GetSessionEndpoint",
+            "athena:GetSessionStatus",
+            "athena:StartSession",
+            "athena:TerminateSession"
+          ],
+          "Condition": {
+            "StringNotEquals": {
+              "aws:RequestTag/AmazonDataZoneSessionOwner": "${aws:SourceIdentity}",
+              "aws:ResourceTag/AmazonDataZoneSessionOwner": "${aws:SourceIdentity}"
+            }
+          },
+          "Effect": "Deny",
+          "Resource": [
+            "arn:aws:athena:*:*:workgroup/*/session/*"
+          ],
+          "Sid": "AthenaSessionIsolation"
+        },
+        {
+          "Action": [
+            "athena:TagResource",
+            "athena:UntagResource"
+          ],
+          "Condition": {
+            "StringNotEquals": {
+              "aws:ResourceTag/AmazonDataZoneSessionOwner": "${aws:SourceIdentity}"
+            }
+          },
+          "Effect": "Deny",
+          "Resource": "arn:aws:athena:*:*:workgroup/*/session/*",
+          "Sid": "DenyTaggingUntaggingForeignAthenaSessions"
         },
         {
           "Action": [
@@ -106,6 +146,43 @@
         },
         {
           "Action": [
+            "glue:CancelStatement",
+            "glue:CreateSession",
+            "glue:DeleteSession",
+            "glue:GetDashboardUrl",
+            "glue:GetSession",
+            "glue:GetStatement",
+            "glue:RunStatement",
+            "glue:StopSession"
+          ],
+          "Condition": {
+            "StringNotEquals": {
+              "aws:RequestTag/AmazonDataZoneSessionOwner": "${aws:SourceIdentity}",
+              "aws:ResourceTag/AmazonDataZoneSessionOwner": "${aws:SourceIdentity}"
+            }
+          },
+          "Effect": "Deny",
+          "Resource": [
+            "arn:aws:glue:*:*:session/*"
+          ],
+          "Sid": "GlueSessionIsolation"
+        },
+        {
+          "Action": [
+            "glue:TagResource",
+            "glue:UntagResource"
+          ],
+          "Condition": {
+            "StringNotEquals": {
+              "aws:ResourceTag/AmazonDataZoneSessionOwner": "${aws:SourceIdentity}"
+            }
+          },
+          "Effect": "Deny",
+          "Resource": "arn:aws:glue:*:*:session/*",
+          "Sid": "DenyTaggingUntaggingForeignSessions"
+        },
+        {
+          "Action": [
             "iam:TagRole",
             "sts:TagSession"
           ],
@@ -119,6 +196,30 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "TagRoleAndSession"
+        },
+        {
+          "Action": [
+            "kms:CreateGrant"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "kms:GrantOperations": [
+                "kms:Decrypt",
+                "kms:Encrypt",
+                "kms:GenerateDataKey",
+                "kms:GenerateDataKeyWithoutPlaintext"
+              ]
+            },
+            "ForAnyValue:StringEquals": {
+              "kms:EncryptionContextKeys": "aws:airflow-serverless:workflow-arn"
+            },
+            "StringLike": {
+              "kms:ViaService": "airflow-serverless.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:kms:*:*:key/*",
+          "Sid": "WorkflowsCreateGrant"
         },
         {
           "Action": [
@@ -177,6 +278,25 @@
             "kms:GenerateDataKeyWithoutPlaintext"
           ],
           "Condition": {
+            "ForAnyValue:StringEquals": {
+              "kms:EncryptionContextKeys": "aws:airflow-serverless:workflow-arn"
+            },
+            "StringLike": {
+              "kms:ViaService": "airflow-serverless.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:kms:*:*:key/*",
+          "Sid": "WorkflowsKms"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:Encrypt",
+            "kms:GenerateDataKey",
+            "kms:GenerateDataKeyWithoutPlaintext"
+          ],
+          "Condition": {
             "Null": {
               "kms:EncryptionContextKeys": "false"
             },
@@ -193,7 +313,9 @@
             "kms:Decrypt",
             "kms:Encrypt",
             "kms:GenerateDataKey",
-            "kms:GenerateDataKeyWithoutPlaintext"
+            "kms:GenerateDataKeyWithoutPlaintext",
+            "kms:ReEncryptFrom",
+            "kms:ReEncryptTo"
           ],
           "Condition": {
             "Null": {
@@ -314,10 +436,12 @@
           "Action": "iam:CreateServiceLinkedRole",
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/airflow-serverless.amazonaws.com/AWSServiceRoleForAmazonMWAAServerless",
             "arn:aws:iam::*:role/aws-service-role/airflow.amazonaws.com/AWSServiceRoleForAmazonMWAA",
             "arn:aws:iam::*:role/aws-service-role/elasticmapreduce.amazonaws.com/AWSServiceRoleForEMRCleanup",
             "arn:aws:iam::*:role/aws-service-role/neptune-graph.amazonaws.com/AWSServiceRoleForNeptuneGraph",
             "arn:aws:iam::*:role/aws-service-role/observability.aoss.amazonaws.com/AWSServiceRoleForAmazonOpenSearchServerless",
+            "arn:aws:iam::*:role/aws-service-role/ops.athena.amazonaws.com/AWSServiceRoleForAmazonAthena",
             "arn:aws:iam::*:role/aws-service-role/ops.emr-serverless.amazonaws.com/AWSServiceRoleForAmazonEMRServerless",
             "arn:aws:iam::*:role/aws-service-role/redshift.amazonaws.com/AWSServiceRoleForRedshift",
             "arn:aws:iam::*:role/aws-service-role/sagemaker.amazonaws.com/AWSServiceRoleForAmazonSageMakerNotebooks",
@@ -327,6 +451,7 @@
         },
         {
           "Action": [
+            "airflow-serverless:*",
             "athena:*",
             "bedrock:*",
             "codewhisperer:*",
@@ -334,6 +459,7 @@
             "emr-serverless:*",
             "q:*",
             "sagemaker-mlflow:*",
+            "sagemaker-unified-studio-mcp:*",
             "sagemaker:*",
             "scheduler:*",
             "sqlworkbench:*"
@@ -393,7 +519,9 @@
         {
           "Action": [
             "ec2:CreateNetworkInterface",
-            "ec2:DeleteNetworkInterface"
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -458,7 +586,9 @@
         {
           "Action": [
             "iam:GetRole",
+            "iam:GetUser",
             "iam:ListRoles",
+            "iam:ListUsers",
             "sts:AssumeRole"
           ],
           "Effect": "Allow",
@@ -528,7 +658,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2025-10-30T19:34:08Z"
+  "UpdateDate": "2025-11-15T03:04:09Z"
 }
