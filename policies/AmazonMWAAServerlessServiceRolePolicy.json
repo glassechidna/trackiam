@@ -1,0 +1,37 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonMWAAServerlessServiceRolePolicy",
+  "CreateDate": "2025-11-15T20:34:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4GGLJ3RRQG",
+  "PolicyName": "AmazonMWAAServerlessServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-11-15T20:34:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:AttachNetworkInterface",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission",
+            "ec2:DescribeDhcpOptions",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "ec2:DetachNetworkInterface"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-11-15T20:34:07Z"
+}
