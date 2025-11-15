@@ -1,15 +1,41 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonInspector2ReadOnlyAccess",
   "CreateDate": "2022-01-21T14:45:14Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4IASIMCEPM",
   "PolicyName": "AmazonInspector2ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-09-22T20:56:53Z",
+    "CreateDate": "2025-11-14T23:34:08Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "organizations:DescribeEffectivePolicy",
+          "Condition": {
+            "StringEquals": {
+              "organizations:PolicyType": [
+                "INSPECTOR_POLICY"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowDescribeEffectivePolicyForInspector"
+        },
+        {
+          "Action": "organizations:ListPolicies",
+          "Condition": {
+            "StringEquals": {
+              "organizations:PolicyType": [
+                "INSPECTOR_POLICY"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListPoliciesForInspectorPolicyType"
+        },
         {
           "Action": [
             "codeguru-security:BatchGetFindings",
@@ -27,12 +53,18 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": "organizations:DescribeResourcePolicy",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowDescribeResourcePolicyForDelegation"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2023-09-22T20:56:53Z"
+  "UpdateDate": "2025-11-14T23:34:08Z"
 }

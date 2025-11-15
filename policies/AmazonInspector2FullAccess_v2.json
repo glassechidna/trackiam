@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonInspector2FullAccess_v2",
   "CreateDate": "2025-07-03T16:07:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LAYOUDP4B",
   "PolicyName": "AmazonInspector2FullAccess_v2",
   "PolicyVersion": {
-    "CreateDate": "2025-07-03T16:07:07Z",
+    "CreateDate": "2025-11-14T23:34:08Z",
     "Document": {
       "Statement": [
         {
@@ -23,6 +23,32 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowAccessToCreateSlr"
+        },
+        {
+          "Action": "organizations:DescribeEffectivePolicy",
+          "Condition": {
+            "StringEquals": {
+              "organizations:PolicyType": [
+                "INSPECTOR_POLICY"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowDescribeEffectivePolicyForInspector"
+        },
+        {
+          "Action": "organizations:ListPolicies",
+          "Condition": {
+            "StringEquals": {
+              "organizations:PolicyType": [
+                "INSPECTOR_POLICY"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListPoliciesForInspectorPolicyType"
         },
         {
           "Action": [
@@ -49,6 +75,12 @@
           "Sid": "AllowFullAccessToInspectorApis"
         },
         {
+          "Action": "organizations:DescribeResourcePolicy",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowDescribeResourcePolicyForDelegation"
+        },
+        {
           "Action": [
             "codeguru-security:BatchGetFindings",
             "codeguru-security:GetAccountConfiguration"
@@ -62,7 +94,7 @@
             "organizations:DescribeAccount"
           ],
           "Effect": "Allow",
-          "Resource": "arn:*:organizations::*:account/o-*/*",
+          "Resource": "arn:aws:organizations::*:account/o-*/*",
           "Sid": "AllowAccountsBasedAccessToOrganizationApis"
         },
         {
@@ -79,14 +111,14 @@
             "organizations:DescribeOrganizationalUnit"
           ],
           "Effect": "Allow",
-          "Resource": "arn:*:organizations::*:ou/o-*/ou-*",
+          "Resource": "arn:aws:organizations::*:ou/o-*/ou-*",
           "Sid": "AllowOrganizationalBasedAccessToOrganizationApis"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-07-03T16:07:07Z"
+  "UpdateDate": "2025-11-14T23:34:08Z"
 }

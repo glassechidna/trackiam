@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v19",
+  "DefaultVersionId": "v20",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-11-07T17:34:09Z",
+    "CreateDate": "2025-11-14T23:04:07Z",
     "Document": {
       "Statement": [
         {
@@ -2752,6 +2752,16 @@
         },
         {
           "Action": [
+            "sagemaker-unified-studio-mcp:CallPrivilegedTool",
+            "sagemaker-unified-studio-mcp:CallReadOnlyTool",
+            "sagemaker-unified-studio-mcp:InvokeMcp"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SageMakerUnifiedStudioMcp"
+        },
+        {
+          "Action": [
             "sqlworkbench:*QCustomContext",
             "sqlworkbench:CreateConnection",
             "sqlworkbench:DeleteTab",
@@ -2773,8 +2783,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v19"
+    "IsDefaultVersion": true,
+    "VersionId": "v20"
   },
-  "UpdateDate": "2025-11-07T17:34:09Z"
+  "UpdateDate": "2025-11-14T23:04:07Z"
 }
