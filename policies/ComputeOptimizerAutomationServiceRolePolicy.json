@@ -1,0 +1,84 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/ComputeOptimizerAutomationServiceRolePolicy",
+  "CreateDate": "2025-11-15T01:19:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4JXGYFYPGD",
+  "PolicyName": "ComputeOptimizerAutomationServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-11-15T01:19:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "CreateSnapshot",
+                "CreateVolume"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:snapshot/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "Tag"
+        },
+        {
+          "Action": [
+            "ec2:CreateVolume"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RollbackEBSVolumeDeletion"
+        },
+        {
+          "Action": [
+            "ec2:DeleteVolume",
+            "ec2:ModifyVolume"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/exclude-from-compute-optimizer-automation": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EBSVolumeModification"
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshot"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CreateEBSSnapshot"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeVolumes",
+            "ec2:DescribeVolumesModifications"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EBSReadOnly"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-11-15T01:19:07Z"
+}

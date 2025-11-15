@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 439
-* Unique actions: 19916
-* Managed policies: 1409
+* Unique actions: 19918
+* Managed policies: 1410
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 379 |
 | `arn:aws:iam::aws:policy/Amazon*` | 347 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 325 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 326 |
 | `arn:aws:iam::aws:policy/service-role/*` | 213 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
 | Other | 137 |
@@ -96,7 +96,7 @@ The following table summarises the AWS APIs.
 | [`wellarchitected`](services/wellarchitected.yml) | 72 | 0 | 1 |
 | [`mgn`](services/mgn.yml) | 70 | 0 | 58 |
 | [`route53`](services/route53.yml) | 70 | 0 | 0 |
-| [`athena`](services/athena.yml) | 68 | 0 | 11 |
+| [`athena`](services/athena.yml) | 68 | 0 | 13 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
 | [`ds`](services/ds.yml) | 67 | 0 | 24 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 66 | 0 | 7 |
@@ -481,7 +481,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3279 |
-| `Get` | 2988 |
+| `Get` | 2990 |
 | `Delete` | 2289 |
 | `Create` | 2140 |
 | `Update` | 1850 |
