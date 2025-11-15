@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonECSInfrastructureRoleforExpressGatewayServices",
   "CreateDate": "2025-11-12T20:34:08Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4CC3NUMV6O",
   "PolicyName": "AmazonECSInfrastructureRoleforExpressGatewayServices",
   "PolicyVersion": {
-    "CreateDate": "2025-11-12T20:34:08Z",
+    "CreateDate": "2025-11-15T19:34:09Z",
     "Document": {
       "Statement": [
         {
@@ -61,7 +61,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "CreateSLRForAutoscaling"
+          "Sid": "ServiceLinkedRoleCreateOperations"
         },
         {
           "Action": [
@@ -264,7 +264,8 @@
             "elasticloadbalancing:DescribeListeners",
             "elasticloadbalancing:DescribeLoadBalancers",
             "elasticloadbalancing:DescribeRules",
-            "elasticloadbalancing:DescribeTargetGroups"
+            "elasticloadbalancing:DescribeTargetGroups",
+            "elasticloadbalancing:DescribeTargetHealth"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -282,7 +283,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-11-12T20:34:08Z"
+  "UpdateDate": "2025-11-15T19:34:09Z"
 }
