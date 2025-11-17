@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary",
   "CreateDate": "2024-04-23T23:01:14Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BVNAOGKEU",
   "PolicyName": "AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary",
   "PolicyVersion": {
-    "CreateDate": "2024-11-21T23:06:06Z",
+    "CreateDate": "2025-11-17T18:34:06Z",
     "Document": {
       "Statement": [
         {
@@ -25,7 +25,7 @@
           "Action": "ram:AcceptResourceShareInvitation",
           "Condition": {
             "StringLike": {
-              "ram:ResourceShareName": "dzd_*"
+              "ram:ResourceShareName": "dzd*"
             }
           },
           "Effect": "Allow",
@@ -349,8 +349,8 @@
               "aws:TagKeys": "false"
             },
             "StringLike": {
-              "aws:RequestTag/AmazonDataZoneDomain": "dzd_*",
-              "aws:ResourceTag/AmazonDataZoneDomain": "dzd_*"
+              "aws:RequestTag/AmazonDataZoneDomain": "dzd*",
+              "aws:ResourceTag/AmazonDataZoneDomain": "dzd*"
             }
           },
           "Effect": "Allow",
@@ -1032,7 +1032,6 @@
             "ecr:TagResource",
             "ecr:UntagResource",
             "ecr:UploadLayerPart",
-            "elastic-inference:Connect",
             "elasticfilesystem:DescribeFileSystems",
             "elasticfilesystem:DescribeMountTargets",
             "elasticmapreduce:DescribeCluster",
@@ -1198,7 +1197,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2024-11-21T23:06:06Z"
+  "UpdateDate": "2025-11-17T18:34:06Z"
 }

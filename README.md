@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 439
-* Unique actions: 19918
+* Unique services: 440
+* Unique actions: 19921
 * Managed policies: 1411
 
 Most common managed policy name prefixes:
@@ -454,6 +454,7 @@ The following table summarises the AWS APIs.
 | [`partnercentral-account-management`](services/partnercentral-account-management.yml) | 0 | 0 | 3 |
 | [`mapcredits`](services/mapcredits.yml) | 0 | 0 | 3 |
 | [`identitystore-auth`](services/identitystore-auth.yml) | 0 | 0 | 3 |
+| [`eks-mcp`](services/eks-mcp.yml) | 0 | 0 | 3 |
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |
 | [`vpc-lattice-svcs`](services/vpc-lattice-svcs.yml) | 0 | 0 | 2 |
 | [`signin`](services/signin.yml) | 0 | 0 | 2 |
