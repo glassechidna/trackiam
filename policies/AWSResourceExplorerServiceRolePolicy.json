@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSResourceExplorerServiceRolePolicy",
   "CreateDate": "2022-10-25T20:35:29Z",
-  "DefaultVersionId": "v20",
+  "DefaultVersionId": "v21",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4K2H54PAUL",
   "PolicyName": "AWSResourceExplorerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-10-23T21:49:07Z",
+    "CreateDate": "2025-11-17T22:49:09Z",
     "Document": {
       "Statement": [
         {
@@ -727,6 +727,7 @@
             "dynamodb:DescribeContributorInsights",
             "dynamodb:DescribeKinesisStreamingDestination",
             "dynamodb:DescribeTable",
+            "dynamodb:DescribeTimeToLive",
             "dynamodb:GetResourcePolicy",
             "dynamodb:ListTagsOfResource",
             "ecs:DescribeClusters",
@@ -754,8 +755,10 @@
             "lambda:GetFunction",
             "lambda:GetFunctionCodeSigningConfig",
             "lambda:GetFunctionRecursionConfig",
+            "lambda:GetRuntimeManagementConfig",
             "lambda:ListTags",
             "logs:DescribeIndexPolicies",
+            "logs:DescribeResourcePolicies",
             "logs:GetDataProtectionPolicy",
             "route53:GetHostedZone",
             "route53:ListQueryLoggingConfigs",
@@ -830,7 +833,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v20"
+    "VersionId": "v21"
   },
-  "UpdateDate": "2025-10-23T21:49:07Z"
+  "UpdateDate": "2025-11-17T22:49:09Z"
 }
