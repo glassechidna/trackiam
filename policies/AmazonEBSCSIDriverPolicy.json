@@ -1,15 +1,41 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy",
   "CreateDate": "2022-04-04T17:24:29Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4IV6FHD2UE",
   "PolicyName": "AmazonEBSCSIDriverPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-07-15T20:37:06Z",
+    "CreateDate": "2025-11-17T17:04:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "ec2:CopyVolumes",
+            "ec2:CreateVolume"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/CSIVolumeName": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*"
+        },
+        {
+          "Action": [
+            "ec2:CopyVolumes",
+            "ec2:CreateVolume"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/ebs.csi.aws.com/cluster": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*"
+        },
         {
           "Action": [
             "ec2:CreateSnapshot"
@@ -41,6 +67,7 @@
           "Condition": {
             "StringEquals": {
               "ec2:CreateAction": [
+                "CopyVolumes",
                 "CreateSnapshot",
                 "CreateVolume"
               ]
@@ -51,30 +78,6 @@
             "arn:aws:ec2:*:*:snapshot/*",
             "arn:aws:ec2:*:*:volume/*"
           ]
-        },
-        {
-          "Action": [
-            "ec2:CreateVolume"
-          ],
-          "Condition": {
-            "StringLike": {
-              "aws:RequestTag/CSIVolumeName": "*"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:volume/*"
-        },
-        {
-          "Action": [
-            "ec2:CreateVolume"
-          ],
-          "Condition": {
-            "StringLike": {
-              "aws:RequestTag/ebs.csi.aws.com/cluster": "true"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:volume/*"
         },
         {
           "Action": [
@@ -149,6 +152,15 @@
         },
         {
           "Action": [
+            "ec2:CopyVolumes"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:volume/vol-*"
+          ]
+        },
+        {
+          "Action": [
             "ec2:CreateSnapshot",
             "ec2:ModifyVolume"
           ],
@@ -189,8 +201,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v4"
+    "IsDefaultVersion": true,
+    "VersionId": "v5"
   },
-  "UpdateDate": "2025-07-15T20:37:06Z"
+  "UpdateDate": "2025-11-17T17:04:07Z"
 }
