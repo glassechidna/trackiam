@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 441
-* Unique actions: 19951
+* Unique actions: 19957
 * Managed policies: 1411
 
 Most common managed policy name prefixes:
@@ -393,6 +393,7 @@ The following table summarises the AWS APIs.
 | [`gameliftstreams`](services/gameliftstreams.yml) | 0 | 0 | 24 |
 | [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 23 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 22 |
+| [`invoicing`](services/invoicing.yml) | 0 | 0 | 22 |
 | [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 21 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 20 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
@@ -404,7 +405,6 @@ The following table summarises the AWS APIs.
 | [`ds-data`](services/ds-data.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 16 |
-| [`invoicing`](services/invoicing.yml) | 0 | 0 | 16 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 16 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 15 |
 | [`airflow-serverless`](services/airflow-serverless.yml) | 0 | 0 | 15 |
@@ -482,13 +482,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3284 |
-| `Get` | 2993 |
-| `Delete` | 2290 |
-| `Create` | 2144 |
-| `Update` | 1852 |
+| `List` | 3285 |
+| `Get` | 2994 |
+| `Delete` | 2291 |
+| `Create` | 2145 |
+| `Update` | 1853 |
 | `Describe` | 1840 |
-| `Put` | 547 |
+| `Put` | 548 |
 | `Start` | 492 |
 | `Tag` | 309 |
 | `Untag` | 304 |
