@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AIOpsConsoleAdminPolicy",
   "CreateDate": "2024-12-02T23:51:06Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4C4AWCZMJB",
   "PolicyName": "AIOpsConsoleAdminPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-06-24T00:52:06Z",
+    "CreateDate": "2025-11-17T23:04:07Z",
     "Document": {
       "Statement": [
         {
@@ -207,6 +207,20 @@
         },
         {
           "Action": [
+            "q:DeleteConversation",
+            "q:GetConversation",
+            "q:ListConversations",
+            "q:PassRequest",
+            "q:SendMessage",
+            "q:StartConversation",
+            "q:UpdateConversation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonQAccess"
+        },
+        {
+          "Action": [
             "secretsmanager:CreateSecret",
             "secretsmanager:DeleteSecret",
             "secretsmanager:PutResourcePolicy",
@@ -252,8 +266,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v2"
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-06-24T00:52:06Z"
+  "UpdateDate": "2025-11-17T23:04:07Z"
 }
