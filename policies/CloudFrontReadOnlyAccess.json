@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:55Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJJZMNYOTZCNQP36LG",
   "PolicyName": "CloudFrontReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-04-28T17:07:06Z",
+    "CreateDate": "2025-11-18T17:19:10Z",
     "Document": {
       "Statement": [
         {
@@ -20,7 +20,11 @@
             "cloudfront:Describe*",
             "cloudfront:Get*",
             "cloudfront:List*",
+            "ec2:DescribeIpamPools",
+            "ec2:GetIpamPoolCidrs",
             "iam:ListServerCertificates",
+            "pricingplanmanager:GetSubscription",
+            "pricingplanmanager:ListSubscriptions",
             "route53:List*",
             "waf:GetWebACL",
             "waf:ListWebACLs",
@@ -35,7 +39,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2025-04-28T17:07:06Z"
+  "UpdateDate": "2025-11-18T17:19:10Z"
 }

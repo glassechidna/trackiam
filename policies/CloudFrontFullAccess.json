@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudFrontFullAccess",
   "CreateDate": "2015-02-06T18:39:50Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIPRV52SH6HDCCFY6U",
   "PolicyName": "CloudFrontFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-04-28T16:52:07Z",
+    "CreateDate": "2025-11-18T17:19:09Z",
     "Document": {
       "Statement": [
         {
@@ -31,11 +31,16 @@
             "cloudfront:*",
             "ec2:DescribeInstances",
             "ec2:DescribeInternetGateways",
+            "ec2:DescribeIpamPools",
+            "ec2:GetIpamPoolCidrs",
             "elasticloadbalancing:DescribeLoadBalancers",
             "iam:ListServerCertificates",
             "kinesis:ListStreams",
+            "pricingplanmanager:CreateSubscription",
+            "pricingplanmanager:ListSubscriptions",
             "waf:GetWebACL",
             "waf:ListWebACLs",
+            "wafv2:CreateWebACL",
             "wafv2:GetWebACL",
             "wafv2:ListWebACLs"
           ],
@@ -61,6 +66,19 @@
         },
         {
           "Action": [
+            "pricingplanmanager:AssociateResourcesToSubscription",
+            "pricingplanmanager:CancelSubscription",
+            "pricingplanmanager:CancelSubscriptionChange",
+            "pricingplanmanager:DisassociateResourcesFromSubscription",
+            "pricingplanmanager:GetSubscription",
+            "pricingplanmanager:UpdateSubscription"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:pricingplanmanager::*:subscription:*",
+          "Sid": "ppmFullAccess"
+        },
+        {
+          "Action": [
             "s3:ListAllMyBuckets"
           ],
           "Effect": "Allow",
@@ -71,7 +89,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2025-04-28T16:52:07Z"
+  "UpdateDate": "2025-11-18T17:19:09Z"
 }
