@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFConsoleReadOnlyAccess",
   "CreateDate": "2020-04-06T18:43:24Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NCJLTIT64",
   "PolicyName": "AWSWAFConsoleReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-10-31T21:04:08Z",
+    "CreateDate": "2025-11-18T16:49:06Z",
     "Document": {
       "Statement": [
         {
@@ -71,6 +71,7 @@
         },
         {
           "Action": [
+            "cloudfront:GetDistribution",
             "cloudfront:GetDistributionConfig"
           ],
           "Effect": "Allow",
@@ -201,6 +202,24 @@
         },
         {
           "Action": [
+            "pricingplanmanager:GetSubscription",
+            "pricingplanmanager:ListSubscriptions"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:pricingplanmanager::*:subscription:*",
+          "Sid": "AllowListActionsForPricingPlanManager"
+        },
+        {
+          "Action": [
+            "route53:GetHostedZone",
+            "route53:ListHostedZones"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListActionsForRoute53"
+        },
+        {
+          "Action": [
             "s3:ListAllMyBuckets"
           ],
           "Effect": "Allow",
@@ -274,7 +293,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2025-10-31T21:04:08Z"
+  "UpdateDate": "2025-11-18T16:49:06Z"
 }

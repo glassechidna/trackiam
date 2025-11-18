@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFConsoleFullAccess",
   "CreateDate": "2020-04-06T18:38:38Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AZOTQ7KAT",
   "PolicyName": "AWSWAFConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-10-31T21:04:07Z",
+    "CreateDate": "2025-11-18T16:49:08Z",
     "Document": {
       "Statement": [
         {
@@ -118,6 +118,7 @@
           "Action": [
             "cloudfront:AssociateDistributionWebACL",
             "cloudfront:DisassociateDistributionWebACL",
+            "cloudfront:GetDistribution",
             "cloudfront:GetDistributionConfig",
             "cloudfront:UpdateDistribution"
           ],
@@ -262,6 +263,27 @@
         },
         {
           "Action": [
+            "pricingplanmanager:CancelSubscription",
+            "pricingplanmanager:CancelSubscriptionChange",
+            "pricingplanmanager:GetSubscription",
+            "pricingplanmanager:ListSubscriptions",
+            "pricingplanmanager:UpdateSubscription"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:pricingplanmanager::*:subscription:*",
+          "Sid": "AllowActionsForPricingPlanManager"
+        },
+        {
+          "Action": [
+            "route53:GetHostedZone",
+            "route53:ListHostedZones"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListActionsForRoute53"
+        },
+        {
+          "Action": [
             "s3:GetBucketPolicy",
             "s3:PutBucketPolicy"
           ],
@@ -349,7 +371,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2025-10-31T21:04:07Z"
+  "UpdateDate": "2025-11-18T16:49:08Z"
 }
