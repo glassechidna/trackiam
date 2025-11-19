@@ -1,0 +1,199 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerSpacesControllerPolicy",
+  "CreateDate": "2025-11-19T04:34:09Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4MXEIQEWRT",
+  "PolicyName": "AmazonSageMakerSpacesControllerPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-11-19T04:34:09Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "ssm.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/sagemaker-space-*",
+          "Sid": "AllowOperatorToPassSsmManagedNodeRole"
+        },
+        {
+          "Action": "ssm:AddTagsToResource",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/sagemaker.amazonaws.com/eks-cluster-arn": "${aws:PrincipalTag/eks-cluster-arn}",
+              "aws:RequestTag/sagemaker.amazonaws.com/managed-by": "amazon-sagemaker-spaces"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/sagemaker-space-*",
+            "arn:aws:ssm:*:*:managed-instance/*"
+          ],
+          "Sid": "AllowOperatorToAddTagsToActivation"
+        },
+        {
+          "Action": "ssm:AddTagsToResource",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/sagemaker.amazonaws.com/managed-by": "amazon-sagemaker-spaces"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:document/SageMaker-Space*",
+          "Sid": "AllowOperatorToAddTagsToSSMDocument"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "kms:EncryptionContext:sagemaker:component": "amazon-sagemaker-spaces",
+              "kms:EncryptionContext:sagemaker:eks-cluster-arn": "${aws:PrincipalTag/eks-cluster-arn}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSKeyOperations"
+        },
+        {
+          "Action": [
+            "ssm:CreateActivation"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/sagemaker.amazonaws.com/eks-cluster-arn": "${aws:PrincipalTag/eks-cluster-arn}",
+              "aws:RequestTag/sagemaker.amazonaws.com/managed-by": "amazon-sagemaker-spaces"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowOperatorToSSMCreateActivationForSpaces"
+        },
+        {
+          "Action": [
+            "ssm:CreateDocument"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/sagemaker.amazonaws.com/eks-cluster-arn": "${aws:PrincipalTag/eks-cluster-arn}",
+              "aws:RequestTag/sagemaker.amazonaws.com/managed-by": "amazon-sagemaker-spaces"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:document/SageMaker-Space*",
+          "Sid": "AllowOperatorToSSMCreateDocument"
+        },
+        {
+          "Action": [
+            "ssm:DeregisterManagedInstance"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ssm:resourceTag/sagemaker.amazonaws.com/eks-cluster-arn": "${aws:PrincipalTag/eks-cluster-arn}",
+              "ssm:resourceTag/sagemaker.amazonaws.com/managed-by": "amazon-sagemaker-spaces"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:managed-instance/*",
+          "Sid": "AllowOperatorToSSMDeregisterWorkspaceInstances"
+        },
+        {
+          "Action": [
+            "ssm:StartSession"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ssm:resourceTag/sagemaker.amazonaws.com/eks-cluster-arn": "${aws:PrincipalTag/eks-cluster-arn}",
+              "ssm:resourceTag/sagemaker.amazonaws.com/managed-by": "amazon-sagemaker-spaces"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:managed-instance/*",
+          "Sid": "AllowOperatorToSSMStartSession"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSDescribeKey"
+        },
+        {
+          "Action": [
+            "ssm:DeleteActivation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowOperatorToSSMDeleteActivation"
+        },
+        {
+          "Action": [
+            "ssm:DescribeActivations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowOperatorToSSMDescribeActivations"
+        },
+        {
+          "Action": [
+            "ssm:DescribeDocument"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/SageMaker-Space*"
+          ],
+          "Sid": "AllowOperatorToSSMDescribeDocument"
+        },
+        {
+          "Action": [
+            "ssm:DescribeInstanceInformation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowOperatorToSSMDescribeManagedNodes"
+        },
+        {
+          "Action": [
+            "ssm:DescribeSessions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowOperatorToSSMDescribeSessions"
+        },
+        {
+          "Action": [
+            "ssm:GetServiceSetting",
+            "ssm:ResetServiceSetting",
+            "ssm:UpdateServiceSetting"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:servicesetting/ssm/managed-instance/activation-tier",
+          "Sid": "AllowOperatorToEnableAdvancedTierForManagedInstances"
+        },
+        {
+          "Action": [
+            "ssm:StartSession"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/SageMaker-Space*",
+            "arn:aws:ssm:*::document/AWS-StartSSHSession"
+          ],
+          "Sid": "AllowStartSessionDocuments"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-11-19T04:34:09Z"
+}
