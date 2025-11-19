@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMPermissiveExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:08Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MQ2K3CR4F",
   "PolicyName": "SageMakerStudioUserIAMPermissiveExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-11-15T03:04:07Z",
+    "CreateDate": "2025-11-18T23:34:09Z",
     "Document": {
       "Statement": [
         {
@@ -136,10 +136,11 @@
           "Condition": {
             "ForAllValues:StringEquals": {
               "kms:GrantOperations": [
-                "kms:Decrypt",
-                "kms:Encrypt",
-                "kms:GenerateDataKey",
-                "kms:GenerateDataKeyWithoutPlaintext"
+                "Decrypt",
+                "Encrypt",
+                "GenerateDataKey",
+                "GenerateDataKeyWithoutPlaintext",
+                "RetireGrant"
               ]
             },
             "ForAnyValue:StringEquals": {
@@ -152,6 +153,32 @@
           "Effect": "Allow",
           "Resource": "arn:*:kms:*:*:key/*",
           "Sid": "WorkflowsCreateGrant"
+        },
+        {
+          "Action": [
+            "kms:CreateGrant"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "kms:GrantOperations": [
+                "CreateGrant",
+                "Decrypt",
+                "DescribeKey",
+                "Encrypt",
+                "GenerateDataKey",
+                "GenerateDataKeyWithoutPlaintext",
+                "ReEncryptFrom",
+                "ReEncryptTo",
+                "RetireGrant"
+              ]
+            },
+            "StringLike": {
+              "kms:ViaService": "datazone.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DataZoneCreateGrant"
         },
         {
           "Action": [
@@ -212,9 +239,6 @@
           "Condition": {
             "ForAnyValue:StringEquals": {
               "kms:EncryptionContextKeys": "aws:airflow-serverless:workflow-arn"
-            },
-            "StringLike": {
-              "kms:ViaService": "airflow-serverless.*.amazonaws.com"
             }
           },
           "Effect": "Allow",
@@ -250,6 +274,27 @@
             "kms:ReEncryptTo"
           ],
           "Condition": {
+            "ForAnyValue:StringEquals": {
+              "kms:EncryptionContextKeys": "aws:datazone:domainId"
+            },
+            "StringLike": {
+              "kms:ViaService": "datazone.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DataZoneKms"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:Encrypt",
+            "kms:GenerateDataKey",
+            "kms:GenerateDataKeyWithoutPlaintext",
+            "kms:ReEncryptFrom",
+            "kms:ReEncryptTo"
+          ],
+          "Condition": {
             "Null": {
               "kms:EncryptionContextKeys": "false"
             },
@@ -267,16 +312,13 @@
             "kms:GenerateDataKey"
           ],
           "Condition": {
-            "ForAnyValue:StringEquals": {
-              "kms:EncryptionContextKeys": "aws:datazone:domainId"
-            },
-            "StringLike": {
-              "kms:ViaService": "datazone.*.amazonaws.com"
+            "Null": {
+              "kms:EncryptionContext:aws:scheduler:schedule:arn": "false"
             }
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "DataZoneKms"
+          "Sid": "SchedulerKms"
         },
         {
           "Action": [
@@ -294,23 +336,6 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "S3Kms"
-        },
-        {
-          "Action": [
-            "kms:Decrypt",
-            "kms:GenerateDataKey"
-          ],
-          "Condition": {
-            "Null": {
-              "kms:EncryptionContext:aws:scheduler:schedule:arn": "false"
-            },
-            "StringLike": {
-              "kms:ViaService": "scheduler.*.amazonaws.com"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "SchedulerKms"
         },
         {
           "Action": [
@@ -593,7 +618,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2025-11-15T03:04:07Z"
+  "UpdateDate": "2025-11-18T23:34:09Z"
 }
