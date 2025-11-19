@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 441
-* Unique actions: 19964
+* Unique actions: 19966
 * Managed policies: 1411
 
 Most common managed policy name prefixes:
@@ -446,6 +446,7 @@ The following table summarises the AWS APIs.
 | [`customer-verification`](services/customer-verification.yml) | 0 | 0 | 5 |
 | [`appstudio`](services/appstudio.yml) | 0 | 0 | 5 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
+| [`signin`](services/signin.yml) | 0 | 0 | 4 |
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
 | [`a2c`](services/a2c.yml) | 0 | 0 | 4 |
@@ -458,7 +459,6 @@ The following table summarises the AWS APIs.
 | [`eks-mcp`](services/eks-mcp.yml) | 0 | 0 | 3 |
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |
 | [`vpc-lattice-svcs`](services/vpc-lattice-svcs.yml) | 0 | 0 | 2 |
-| [`signin`](services/signin.yml) | 0 | 0 | 2 |
 | [`geo-maps`](services/geo-maps.yml) | 0 | 0 | 2 |
 | [`consolidatedbilling`](services/consolidatedbilling.yml) | 0 | 0 | 2 |
 | [`consoleapp`](services/consoleapp.yml) | 0 | 0 | 2 |
@@ -485,7 +485,7 @@ Most common action prefixes:
 | `List` | 3286 |
 | `Get` | 2997 |
 | `Delete` | 2292 |
-| `Create` | 2146 |
+| `Create` | 2147 |
 | `Update` | 1854 |
 | `Describe` | 1840 |
 | `Put` | 548 |

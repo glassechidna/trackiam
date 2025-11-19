@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/ComputeOptimizerServiceRolePolicy",
   "CreateDate": "2019-12-03T08:45:19Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4HPOQZNRNJ",
   "PolicyName": "ComputeOptimizerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-01-03T21:37:06Z",
+    "CreateDate": "2025-11-19T01:04:07Z",
     "Document": {
       "Statement": [
         {
@@ -41,6 +41,8 @@
         {
           "Action": [
             "ec2:DescribeInstances",
+            "ec2:DescribeNatGateways",
+            "ec2:DescribeRouteTables",
             "ec2:DescribeVolumes"
           ],
           "Effect": "Allow",
@@ -64,7 +66,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2025-01-03T21:37:06Z"
+  "UpdateDate": "2025-11-19T01:04:07Z"
 }
