@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 441
-* Unique actions: 19988
+* Unique actions: 19995
 * Managed policies: 1415
 
 Most common managed policy name prefixes:
@@ -124,7 +124,7 @@ The following table summarises the AWS APIs.
 | [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 38 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 10 |
 | [`resiliencehub`](services/resiliencehub.yml) | 55 | 0 | 8 |
-| [`organizations`](services/organizations.yml) | 55 | 0 | 2 |
+| [`organizations`](services/organizations.yml) | 55 | 0 | 8 |
 | [`wafv2`](services/wafv2.yml) | 54 | 0 | 2 |
 | [`lakeformation`](services/lakeformation.yml) | 52 | 3 | 7 |
 | [`kms`](services/kms.yml) | 52 | 1 | 3 |
@@ -330,7 +330,7 @@ The following table summarises the AWS APIs.
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
 | [`tax`](services/tax.yml) | 7 | 0 | 16 |
 | [`cur`](services/cur.yml) | 7 | 0 | 5 |
-| [`cost-optimization-hub`](services/cost-optimization-hub.yml) | 7 | 0 | 0 |
+| [`cost-optimization-hub`](services/cost-optimization-hub.yml) | 7 | 0 | 1 |
 | [`artifact`](services/artifact.yml) | 6 | 0 | 8 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
@@ -482,12 +482,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3290 |
+| `List` | 3293 |
 | `Get` | 3001 |
 | `Delete` | 2295 |
 | `Create` | 2151 |
-| `Update` | 1857 |
-| `Describe` | 1840 |
+| `Update` | 1858 |
+| `Describe` | 1841 |
 | `Put` | 548 |
 | `Start` | 492 |
 | `Tag` | 309 |
