@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFConsoleFullAccess",
   "CreateDate": "2020-04-06T18:38:38Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AZOTQ7KAT",
   "PolicyName": "AWSWAFConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-11-18T16:49:08Z",
+    "CreateDate": "2025-11-19T02:34:07Z",
     "Document": {
       "Statement": [
         {
@@ -24,6 +24,12 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "GrantLogDeliveryPermissionForCloudWatchLogGroup"
+        },
+        {
+          "Action": "pricingplanmanager:ListSubscriptions",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListActionsForPricingPlanManager"
         },
         {
           "Action": [
@@ -266,7 +272,6 @@
             "pricingplanmanager:CancelSubscription",
             "pricingplanmanager:CancelSubscriptionChange",
             "pricingplanmanager:GetSubscription",
-            "pricingplanmanager:ListSubscriptions",
             "pricingplanmanager:UpdateSubscription"
           ],
           "Effect": "Allow",
@@ -371,7 +376,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2025-11-18T16:49:08Z"
+  "UpdateDate": "2025-11-19T02:34:07Z"
 }

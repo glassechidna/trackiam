@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFConsoleReadOnlyAccess",
   "CreateDate": "2020-04-06T18:43:24Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NCJLTIT64",
   "PolicyName": "AWSWAFConsoleReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-11-18T16:49:06Z",
+    "CreateDate": "2025-11-19T02:34:08Z",
     "Document": {
       "Statement": [
         {
@@ -202,12 +202,19 @@
         },
         {
           "Action": [
-            "pricingplanmanager:GetSubscription",
-            "pricingplanmanager:ListSubscriptions"
+            "pricingplanmanager:GetSubscription"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:pricingplanmanager::*:subscription:*",
           "Sid": "AllowListActionsForPricingPlanManager"
+        },
+        {
+          "Action": [
+            "pricingplanmanager:ListSubscriptions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListSubscriptionsForPricingPlanManager"
         },
         {
           "Action": [
@@ -293,7 +300,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2025-11-18T16:49:06Z"
+  "UpdateDate": "2025-11-19T02:34:08Z"
 }
