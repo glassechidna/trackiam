@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralFullAccess",
   "CreateDate": "2024-11-18T23:33:28Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DRJMXIHNK",
   "PolicyName": "AWSPartnerCentralFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-12-10T18:21:17Z",
+    "CreateDate": "2025-11-19T16:34:12Z",
     "Document": {
       "Statement": [
         {
@@ -63,12 +63,23 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "PartnerUserRoleAssociation"
+        },
+        {
+          "Action": [
+            "sts:AssumeRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/PartnerCentralChannelBillingTransferManagement",
+            "arn:aws:iam::*:role/PartnerCentralChannelBillingTransferReadOnly"
+          ],
+          "Sid": "ChannelBillingTransferRoleAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-12-10T18:21:17Z"
+  "UpdateDate": "2025-11-19T16:34:12Z"
 }

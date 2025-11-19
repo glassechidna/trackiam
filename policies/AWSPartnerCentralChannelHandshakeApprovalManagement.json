@@ -1,0 +1,38 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralChannelHandshakeApprovalManagement",
+  "CreateDate": "2025-11-19T16:34:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4JFRYUV3CT",
+  "PolicyName": "AWSPartnerCentralChannelHandshakeApprovalManagement",
+  "PolicyVersion": {
+    "CreateDate": "2025-11-19T16:34:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "partnercentral:AcceptChannelHandshake",
+            "partnercentral:ListChannelHandshakes",
+            "partnercentral:RejectChannelHandshake"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ChannelHandshakeManagement"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-11-19T16:34:07Z"
+}

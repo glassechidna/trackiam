@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 441
-* Unique actions: 19973
-* Managed policies: 1413
+* Unique actions: 19988
+* Managed policies: 1415
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 379 |
+| `arn:aws:iam::aws:policy/AWS*` | 381 |
 | `arn:aws:iam::aws:policy/Amazon*` | 349 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 327 |
 | `arn:aws:iam::aws:policy/service-role/*` | 213 |
@@ -367,11 +367,11 @@ The following table summarises the AWS APIs.
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 61 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
+| [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 53 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 53 |
 | [`odb`](services/odb.yml) | 0 | 0 | 47 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 41 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
-| [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 38 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 38 |
 | [`q`](services/q.yml) | 0 | 0 | 37 |
 | [`s3tables`](services/s3tables.yml) | 0 | 0 | 36 |
@@ -482,11 +482,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3287 |
-| `Get` | 2999 |
-| `Delete` | 2293 |
-| `Create` | 2148 |
-| `Update` | 1855 |
+| `List` | 3290 |
+| `Get` | 3001 |
+| `Delete` | 2295 |
+| `Create` | 2151 |
+| `Update` | 1857 |
 | `Describe` | 1840 |
 | `Put` | 548 |
 | `Start` | 492 |

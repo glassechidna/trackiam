@@ -1,0 +1,82 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralChannelManagement",
+  "CreateDate": "2025-11-19T16:34:09Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4EKQNXSK5L",
+  "PolicyName": "AWSPartnerCentralChannelManagement",
+  "PolicyVersion": {
+    "CreateDate": "2025-11-19T16:34:09Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "partnercentral:AcceptChannelHandshake",
+            "partnercentral:CancelChannelHandshake",
+            "partnercentral:CreateChannelHandshake",
+            "partnercentral:CreateProgramManagementAccount",
+            "partnercentral:CreateRelationship",
+            "partnercentral:DeleteProgramManagementAccount",
+            "partnercentral:DeleteRelationship",
+            "partnercentral:GetProgramManagementAccount",
+            "partnercentral:GetRelationship",
+            "partnercentral:ListChannelHandshakes",
+            "partnercentral:ListProgramManagementAccounts",
+            "partnercentral:ListRelationships",
+            "partnercentral:RejectChannelHandshake",
+            "partnercentral:UpdateProgramManagementAccount",
+            "partnercentral:UpdateRelationship"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ChannelManagement"
+        },
+        {
+          "Action": [
+            "partnercentral:ListTagsForResource",
+            "partnercentral:TagResource",
+            "partnercentral:UntagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:partnercentral:*:*:catalog/*/channel-handshake/*",
+            "arn:aws:partnercentral:*:*:catalog/*/program-management-account/*"
+          ],
+          "Sid": "TaggingAccess"
+        },
+        {
+          "Action": [
+            "sts:AssumeRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/PartnerCentralChannelBillingTransferManagement",
+            "arn:aws:iam::*:role/PartnerCentralChannelBillingTransferReadOnly"
+          ],
+          "Sid": "ChannelBillingTransferRoleAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-11-19T16:34:09Z"
+}
