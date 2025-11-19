@@ -1,15 +1,34 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPrivateMarketplaceRequests",
   "CreateDate": "2019-10-28T21:44:03Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AV6W3DAIW",
   "PolicyName": "AWSPrivateMarketplaceRequests",
   "PolicyVersion": {
-    "CreateDate": "2019-10-28T21:44:03Z",
+    "CreateDate": "2025-11-19T19:19:11Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "aws-marketplace:StartChangeSet"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "catalog:ChangeType": [
+                "CancelProductProcurementRequest",
+                "CreateProductProcurementRequest"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/ChangeSet/*",
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/ProductProcurementRequest/*"
+          ],
+          "Sid": "PrivateMarketplaceManageRequestsPermissions"
+        },
         {
           "Action": [
             "aws-marketplace:CreatePrivateMarketplaceRequests",
@@ -17,13 +36,55 @@
             "aws-marketplace:ListPrivateMarketplaceRequests"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "LegacyPrivateMarketplaceRequestsPermissions"
+        },
+        {
+          "Action": [
+            "aws-marketplace:DescribeChangeSet"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/ChangeSet/*"
+          ],
+          "Sid": "PrivateMarketplaceReadChangeSetPermissions"
+        },
+        {
+          "Action": [
+            "aws-marketplace:DescribeEntity"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/ProductProcurementRequest/*"
+          ],
+          "Sid": "PrivateMarketplaceReadRequestsPermissions"
+        },
+        {
+          "Action": [
+            "aws-marketplace:ListChangeSets",
+            "aws-marketplace:ListEntities"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PrivateMarketplaceListRequestsPermissions"
+        },
+        {
+          "Action": [
+            "aws-marketplace:ListTagsForResource",
+            "aws-marketplace:TagResource",
+            "aws-marketplace:UntagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/ProductProcurementRequest/*"
+          ],
+          "Sid": "PrivateMarketplaceTaggingRequestsPermissions"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-10-28T21:44:03Z"
+  "UpdateDate": "2025-11-19T19:19:11Z"
 }

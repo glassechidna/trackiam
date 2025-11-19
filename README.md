@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 441
-* Unique actions: 19996
+* Unique actions: 19997
 * Managed policies: 1416
 
 Most common managed policy name prefixes:
@@ -41,7 +41,7 @@ The following table summarises the AWS APIs.
 | [`iot`](services/iot.yml) | 262 | 3 | 28 |
 | [`chime`](services/chime.yml) | 259 | 0 | 57 |
 | [`connect`](services/connect.yml) | 256 | 0 | 41 |
-| [`glue`](services/glue.yml) | 214 | 4 | 82 |
+| [`glue`](services/glue.yml) | 214 | 4 | 83 |
 | [`ses`](services/ses.yml) | 193 | 0 | 32 |
 | [`quicksight`](services/quicksight.yml) | 174 | 3 | 90 |
 | [`rds`](services/rds.yml) | 162 | 0 | 7 |
@@ -125,8 +125,8 @@ The following table summarises the AWS APIs.
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 10 |
 | [`resiliencehub`](services/resiliencehub.yml) | 55 | 0 | 8 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 8 |
+| [`lakeformation`](services/lakeformation.yml) | 54 | 1 | 7 |
 | [`wafv2`](services/wafv2.yml) | 54 | 0 | 2 |
-| [`lakeformation`](services/lakeformation.yml) | 52 | 3 | 7 |
 | [`kms`](services/kms.yml) | 52 | 1 | 3 |
 | [`profile`](services/profile.yml) | 52 | 0 | 50 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 4 |
