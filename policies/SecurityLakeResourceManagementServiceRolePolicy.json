@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/SecurityLakeResourceManagementServiceRolePolicy",
   "CreateDate": "2024-11-14T22:10:14Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4INIYQBUHP",
   "PolicyName": "SecurityLakeResourceManagementServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-09-25T17:19:07Z",
+    "CreateDate": "2025-11-19T18:49:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "lambda:DeleteFunction",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:function:SecurityLake_Glue_Partition_Updater_Lambda*",
+          "Sid": "DeletePartitionUpdaterLambda"
+        },
         {
           "Action": [
             "events:ListRules"
@@ -232,7 +243,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-09-25T17:19:07Z"
+  "UpdateDate": "2025-11-19T18:49:07Z"
 }

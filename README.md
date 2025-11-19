@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 441
-* Unique actions: 19995
-* Managed policies: 1415
+* Unique actions: 19996
+* Managed policies: 1416
 
 Most common managed policy name prefixes:
 
@@ -24,7 +24,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 327 |
 | `arn:aws:iam::aws:policy/service-role/*` | 213 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
-| Other | 137 |
+| Other | 138 |
 
 The following table summarises the AWS APIs. 
 
@@ -325,7 +325,7 @@ The following table summarises the AWS APIs.
 | [`managedblockchain-query`](services/managedblockchain-query.yml) | 9 | 0 | 0 |
 | [`kendra-ranking`](services/kendra-ranking.yml) | 9 | 0 | 0 |
 | [`sts`](services/sts.yml) | 8 | 0 | 8 |
-| [`tag`](services/tag.yml) | 8 | 0 | 0 |
+| [`tag`](services/tag.yml) | 8 | 0 | 1 |
 | [`iotfleethub`](services/iotfleethub.yml) | 8 | 0 | 0 |
 | [`dlm`](services/dlm.yml) | 8 | 0 | 0 |
 | [`tax`](services/tax.yml) | 7 | 0 | 16 |
@@ -482,7 +482,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3293 |
+| `List` | 3294 |
 | `Get` | 3001 |
 | `Delete` | 2295 |
 | `Create` | 2151 |

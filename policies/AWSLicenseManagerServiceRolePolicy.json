@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSLicenseManagerServiceRolePolicy",
   "CreateDate": "2018-11-26T19:02:53Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIM7JPETWHTYNBQSZE",
   "PolicyName": "AWSLicenseManagerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-07-30T01:43:19Z",
+    "CreateDate": "2025-11-19T18:34:07Z",
     "Document": {
       "Statement": [
         {
@@ -131,6 +131,7 @@
         {
           "Action": [
             "ssm:CreateAssociation",
+            "ssm:GetCommandInvocation",
             "ssm:GetInventory",
             "ssm:ListInventoryEntries"
           ],
@@ -139,12 +140,24 @@
             "*"
           ],
           "Sid": "SSMPermissions"
+        },
+        {
+          "Action": [
+            "ssm:SendCommand"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ssm:*:*:managed-instance/*",
+            "arn:aws:ssm:*::document/AWSLicenseManager-*"
+          ],
+          "Sid": "SSMSendCommandPermission"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2021-07-30T01:43:19Z"
+  "UpdateDate": "2025-11-19T18:34:07Z"
 }
