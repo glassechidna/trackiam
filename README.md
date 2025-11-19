@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 441
-* Unique actions: 19997
+* Unique actions: 20009
 * Managed policies: 1416
 
 Most common managed policy name prefixes:
@@ -46,7 +46,7 @@ The following table summarises the AWS APIs.
 | [`quicksight`](services/quicksight.yml) | 174 | 3 | 90 |
 | [`rds`](services/rds.yml) | 162 | 0 | 7 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
-| [`iam`](services/iam.yml) | 159 | 0 | 17 |
+| [`iam`](services/iam.yml) | 159 | 0 | 28 |
 | [`ssm`](services/ssm.yml) | 140 | 0 | 16 |
 | [`lex`](services/lex.yml) | 139 | 2 | 8 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 30 |
@@ -369,7 +369,7 @@ The following table summarises the AWS APIs.
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 53 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 53 |
-| [`odb`](services/odb.yml) | 0 | 0 | 47 |
+| [`odb`](services/odb.yml) | 0 | 0 | 48 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 41 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 38 |
@@ -482,11 +482,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3294 |
-| `Get` | 3001 |
+| `List` | 3295 |
+| `Get` | 3004 |
 | `Delete` | 2295 |
-| `Create` | 2151 |
-| `Update` | 1858 |
+| `Create` | 2152 |
+| `Update` | 1859 |
 | `Describe` | 1841 |
 | `Put` | 548 |
 | `Start` | 492 |
