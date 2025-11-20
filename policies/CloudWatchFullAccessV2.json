@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchFullAccessV2",
   "CreateDate": "2023-08-01T11:32:57Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4K5ELCXZSW",
   "PolicyName": "CloudWatchFullAccessV2",
   "PolicyVersion": {
-    "CreateDate": "2025-10-16T21:49:07Z",
+    "CreateDate": "2025-11-20T19:34:08Z",
     "Document": {
       "Statement": [
         {
@@ -31,6 +31,21 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/events.amazonaws.com/AWSServiceRoleForCloudWatchEvents*",
           "Sid": "EventsServicePermissions"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "resource-explorer-2.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "Sid": "CloudWatchResourceExplorerSLRPermissions"
         },
         {
           "Action": [
@@ -113,6 +128,26 @@
         },
         {
           "Action": [
+            "resource-explorer-2:CreateIndex"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:resource-explorer-2:*:*:index/*",
+          "Sid": "CloudWatchResourceExplorerCreateIndexPermissions"
+        },
+        {
+          "Action": [
+            "resource-explorer-2:ListIndexes",
+            "resource-explorer-2:Search"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:resource-explorer-2:*::view/AWSServiceViewForApplicationSignals/service-view",
+            "arn:aws:resource-explorer-2:*::view/AWSServiceViewForApplicationSignalsOrgScopeProd/service-view"
+          ],
+          "Sid": "CloudWatchResourceExplorerPermissions"
+        },
+        {
+          "Action": [
             "servicequotas:GetServiceQuota"
           ],
           "Effect": "Allow",
@@ -133,7 +168,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2025-10-16T21:49:07Z"
+  "UpdateDate": "2025-11-20T19:34:08Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess",
   "CreateDate": "2015-02-06T18:40:01Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJN23PDQP7SZQAE3QE",
   "PolicyName": "CloudWatchReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-10-08T17:34:07Z",
+    "CreateDate": "2025-11-20T19:34:11Z",
     "Document": {
       "Statement": [
         {
@@ -87,6 +87,18 @@
         },
         {
           "Action": [
+            "resource-explorer-2:ListIndexes",
+            "resource-explorer-2:Search"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:resource-explorer-2:*::view/AWSServiceViewForApplicationSignals/service-view",
+            "arn:aws:resource-explorer-2:*::view/AWSServiceViewForApplicationSignalsOrgScopeProd/service-view"
+          ],
+          "Sid": "CloudWatchResourceExplorerPermissions"
+        },
+        {
+          "Action": [
             "servicequotas:GetServiceQuota"
           ],
           "Effect": "Allow",
@@ -107,7 +119,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2025-10-08T17:34:07Z"
+  "UpdateDate": "2025-11-20T19:34:11Z"
 }

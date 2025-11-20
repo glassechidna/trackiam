@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchApplicationSignalsReadOnlyAccess",
   "CreateDate": "2024-06-06T22:48:30Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CTDPXTPP7",
   "PolicyName": "CloudWatchApplicationSignalsReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-09-29T16:19:08Z",
+    "CreateDate": "2025-11-20T19:34:12Z",
     "Document": {
       "Statement": [
         {
@@ -40,9 +40,11 @@
             "application-signals:GetService",
             "application-signals:GetServiceLevelObjective",
             "application-signals:ListAuditFindings",
+            "application-signals:ListEntityEvents",
             "application-signals:ListGroupingAttributeDefinitions",
             "application-signals:ListServiceDependencies",
             "application-signals:ListServiceDependents",
+            "application-signals:ListServiceLevelObjectiveExclusionWindows",
             "application-signals:ListServiceLevelObjectives",
             "application-signals:ListServiceOperations",
             "application-signals:ListServiceStates",
@@ -99,6 +101,34 @@
         },
         {
           "Action": [
+            "oam:ListAttachedLinks"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:oam:*:*:sink/*",
+          "Sid": "CloudWatchApplicationSignalsOAMAttachedLinksPermissions"
+        },
+        {
+          "Action": [
+            "oam:ListSinks"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchApplicationSignalsOAMListSinksPermissions"
+        },
+        {
+          "Action": [
+            "resource-explorer-2:ListIndexes",
+            "resource-explorer-2:Search"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:resource-explorer-2:*::view/AWSServiceViewForApplicationSignals/service-view",
+            "arn:aws:resource-explorer-2:*::view/AWSServiceViewForApplicationSignalsOrgScopeProd/service-view"
+          ],
+          "Sid": "CloudWatchApplicationSignalsResourceExplorerPermissions"
+        },
+        {
+          "Action": [
             "rum:BatchGetRumMetricDefinitions",
             "rum:GetAppMonitor",
             "rum:GetAppMonitorData",
@@ -148,7 +178,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-09-29T16:19:08Z"
+  "UpdateDate": "2025-11-20T19:34:12Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchApplicationSignalsFullAccess",
   "CreateDate": "2024-06-06T22:50:16Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JEEZZVUG6",
   "PolicyName": "CloudWatchApplicationSignalsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-09-29T16:19:07Z",
+    "CreateDate": "2025-11-20T19:34:08Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,21 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/application-signals.cloudwatch.amazonaws.com/AWSServiceRoleForCloudWatchApplicationSignals",
           "Sid": "CloudWatchApplicationSignalsCreateServiceLinkedRolePermissions"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "resource-explorer-2.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+          "Sid": "CloudWatchApplicationSignalsResourceExplorerSLRPermissions"
         },
         {
           "Action": [
@@ -112,6 +127,42 @@
         },
         {
           "Action": [
+            "oam:ListAttachedLinks"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:oam:*:*:sink/*",
+          "Sid": "CloudWatchApplicationSignalsOAMAttachedLinksPermissions"
+        },
+        {
+          "Action": [
+            "oam:ListSinks"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchApplicationSignalsOAMListSinksPermissions"
+        },
+        {
+          "Action": [
+            "resource-explorer-2:CreateIndex"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:resource-explorer-2:*:*:index/*",
+          "Sid": "CloudWatchApplicationSignalsResourceExplorerCreateIndexPermissions"
+        },
+        {
+          "Action": [
+            "resource-explorer-2:ListIndexes",
+            "resource-explorer-2:Search"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:resource-explorer-2:*::view/AWSServiceViewForApplicationSignals/service-view",
+            "arn:aws:resource-explorer-2:*::view/AWSServiceViewForApplicationSignalsOrgScopeProd/service-view"
+          ],
+          "Sid": "CloudWatchApplicationSignalsResourceExplorerPermissions"
+        },
+        {
+          "Action": [
             "rum:BatchCreateRumMetricDefinitions",
             "rum:BatchDeleteRumMetricDefinitions",
             "rum:BatchGetRumMetricDefinitions",
@@ -174,7 +225,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-09-29T16:19:07Z"
+  "UpdateDate": "2025-11-20T19:34:08Z"
 }
