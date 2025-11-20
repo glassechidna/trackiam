@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRDSPerformanceInsightsReadOnly",
   "CreateDate": "2022-04-05T00:02:08Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4M2AUBSW6R",
   "PolicyName": "AmazonRDSPerformanceInsightsReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2023-10-23T21:17:06Z",
+    "CreateDate": "2025-11-20T22:19:10Z",
     "Document": {
       "Statement": [
         {
@@ -67,20 +67,36 @@
         {
           "Action": "rds:DescribeDBClusters",
           "Effect": "Allow",
-          "Resource": "*",
+          "Resource": "arn:aws:rds:*:*:cluster:*",
           "Sid": "AmazonRDSDescribeDBClusters"
         },
         {
           "Action": "rds:DescribeDBInstances",
           "Effect": "Allow",
-          "Resource": "*",
+          "Resource": "arn:aws:rds:*:*:db:*",
           "Sid": "AmazonRDSDescribeDBInstances"
+        },
+        {
+          "Action": "rds:DescribeDBShardGroups",
+          "Effect": "Allow",
+          "Resource": "arn:aws:rds:*:*:shard-group:*",
+          "Sid": "AmazonRDSDescribeDBShardGroups"
+        },
+        {
+          "Action": "rds:ListTagsForResource",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:rds:*:*:cluster:*",
+            "arn:aws:rds:*:*:db:*",
+            "arn:aws:rds:*:*:shard-group:*"
+          ],
+          "Sid": "AmazonRDSListTagsForResource"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-10-23T21:17:06Z"
+  "UpdateDate": "2025-11-20T22:19:10Z"
 }

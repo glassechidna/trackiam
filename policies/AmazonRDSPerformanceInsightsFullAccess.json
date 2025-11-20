@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRDSPerformanceInsightsFullAccess",
   "CreateDate": "2023-08-15T23:41:34Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AOEG27H7E",
   "PolicyName": "AmazonRDSPerformanceInsightsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-10-23T21:14:27Z",
+    "CreateDate": "2025-11-20T22:04:08Z",
     "Document": {
       "Statement": [
         {
@@ -57,17 +57,23 @@
         {
           "Action": [
             "rds:DescribeDBClusters",
-            "rds:DescribeDBInstances"
+            "rds:DescribeDBInstances",
+            "rds:DescribeDBShardGroups",
+            "rds:ListTagsForResource"
           ],
           "Effect": "Allow",
-          "Resource": "*",
+          "Resource": [
+            "arn:aws:rds:*:*:cluster:*",
+            "arn:aws:rds:*:*:db:*",
+            "arn:aws:rds:*:*:shard-group:*"
+          ],
           "Sid": "AmazonRDSDescribeInstanceAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-10-23T21:14:27Z"
+  "UpdateDate": "2025-11-20T22:04:08Z"
 }
