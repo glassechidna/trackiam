@@ -1,0 +1,182 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSBackupGuardDutyRolePolicyForScans",
+  "CreateDate": "2025-11-20T03:34:12Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4N3UZUTJU2",
+  "PolicyName": "AWSBackupGuardDutyRolePolicyForScans",
+  "PolicyVersion": {
+    "CreateDate": "2025-11-20T03:34:12Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "kms:CreateGrant",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "kms:GrantOperations": [
+                "CreateGrant",
+                "Decrypt",
+                "DescribeKey",
+                "GenerateDataKeyWithoutPlaintext",
+                "ReEncryptFrom",
+                "ReEncryptTo",
+                "RetireGrant"
+              ]
+            },
+            "Null": {
+              "kms:GrantOperations": "false"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:guardduty:id": "snap-*",
+              "kms:ViaService": [
+                "backup.*.amazonaws.com",
+                "guardduty.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "CreateGrantForEncryptedVolumeCreation"
+        },
+        {
+          "Action": "kms:CreateGrant",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "kms:GrantOperations": [
+                "Decrypt",
+                "DescribeKey",
+                "ReEncryptFrom",
+                "ReEncryptTo",
+                "RetireGrant"
+              ]
+            },
+            "Null": {
+              "kms:GrantOperations": "false"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:ebs:id": "snap-*",
+              "kms:ViaService": [
+                "backup.*.amazonaws.com",
+                "guardduty.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "CreateGrantForReEncryptAndEBSDirect"
+        },
+        {
+          "Action": [
+            "ebs:GetSnapshotBlock",
+            "ebs:ListChangedBlocks",
+            "ebs:ListSnapshotBlocks"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/aws:backup:source-resource": "false"
+            },
+            "StringLike": {
+              "aws:ResourceTag/aws:backup:source-resource": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::snapshot/*",
+          "Sid": "EBSDirectReadAPIPermissions"
+        },
+        {
+          "Action": [
+            "ec2:ModifySnapshotAttribute"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/aws:backup:source-resource": "false"
+            },
+            "StringLike": {
+              "aws:ResourceTag/aws:backup:source-resource": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "ShareSnapshotPermissions"
+        },
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:EncryptionContext:aws:backup:backup-vault": "*",
+              "kms:ViaService": "backup.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DecryptKMSEncryptedDataByAWSBackup"
+        },
+        {
+          "Action": [
+            "kms:ReEncryptFrom",
+            "kms:ReEncryptTo"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:EncryptionContext:aws:ebs:id": [
+                "snap-*",
+                "vol-*"
+              ],
+              "kms:ViaService": "ec2.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "ShareSnapshotKMSPermissions"
+        },
+        {
+          "Action": "kms:DescribeKey",
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DescribeKeyPermissions"
+        },
+        {
+          "Action": [
+            "backup:CreateBackupAccessPoint"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:backup:*:*:recovery-point:*",
+          "Sid": "CreateBackupAccessPointPermissions"
+        },
+        {
+          "Action": [
+            "backup:DeleteBackupAccessPoint",
+            "backup:DescribeBackupAccessPoint"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReadAndDeleteBackupAccessPointPermissions"
+        },
+        {
+          "Action": [
+            "backup:DescribeRecoveryPoint"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:backup:*:*:recovery-point:*",
+          "Sid": "BackupRecoveryPointApiPermissions"
+        },
+        {
+          "Action": [
+            "ec2:DescribeImages",
+            "ec2:DescribeSnapshots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2ReadAPIPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-11-20T03:34:12Z"
+}

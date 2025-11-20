@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupFullAccess",
   "CreateDate": "2019-11-18T22:21:52Z",
-  "DefaultVersionId": "v21",
+  "DefaultVersionId": "v22",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LL52EIPJX",
   "PolicyName": "AWSBackupFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-11-10T19:19:06Z",
+    "CreateDate": "2025-11-20T03:34:07Z",
     "Document": {
       "Statement": [
         {
@@ -36,6 +36,20 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "IamCreateServiceLinkedRolePermissions"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "malware-protection.guardduty.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/*AWSBackupGuardDuty*",
+            "arn:aws:iam::*:role/*AwsBackupGuardDuty*"
+          ],
+          "Sid": "IamPassRolePermissionsForGuardDuty"
         },
         {
           "Action": "iam:PassRole",
@@ -505,7 +519,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v21"
+    "VersionId": "v22"
   },
-  "UpdateDate": "2025-11-10T19:19:06Z"
+  "UpdateDate": "2025-11-20T03:34:07Z"
 }
