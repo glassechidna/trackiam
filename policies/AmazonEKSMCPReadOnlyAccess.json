@@ -1,0 +1,88 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonEKSMCPReadOnlyAccess",
+  "CreateDate": "2025-11-20T17:19:10Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4JYUFALDPB",
+  "PolicyName": "AmazonEKSMCPReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2025-11-20T17:19:10Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:GetMetricData"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "eks-mcp:CallReadOnlyTool",
+            "eks-mcp:InvokeMcp"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "eks:AccessKubernetesApi",
+            "eks:DescribeAccessEntry",
+            "eks:DescribeAddon",
+            "eks:DescribeCluster",
+            "eks:DescribeInsight",
+            "eks:DescribeNodegroup",
+            "eks:ListAccessEntries",
+            "eks:ListAddons",
+            "eks:ListClusters",
+            "eks:ListInsights",
+            "eks:ListNodegroups"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "iam:GetPolicy",
+            "iam:GetPolicyVersion",
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListRolePolicies"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:GetQueryResults",
+            "logs:StartQuery"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sts:GetCallerIdentity"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-11-20T17:19:10Z"
+}
