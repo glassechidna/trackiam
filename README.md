@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 441
-* Unique actions: 20036
+* Unique actions: 20040
 * Managed policies: 1419
 
 Most common managed policy name prefixes:
@@ -61,7 +61,7 @@ The following table summarises the AWS APIs.
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 15 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 13 |
 | [`bedrock`](services/bedrock.yml) | 97 | 2 | 130 |
-| [`dms`](services/dms.yml) | 92 | 14 | 30 |
+| [`dms`](services/dms.yml) | 92 | 14 | 32 |
 | [`medialive`](services/medialive.yml) | 92 | 0 | 33 |
 | [`config`](services/config.yml) | 92 | 0 | 5 |
 | [`backup`](services/backup.yml) | 91 | 0 | 27 |
@@ -139,7 +139,7 @@ The following table summarises the AWS APIs.
 | [`finspace`](services/finspace.yml) | 50 | 0 | 9 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 49 | 0 | 0 |
-| [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 17 |
+| [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 18 |
 | [`codeartifact`](services/codeartifact.yml) | 48 | 0 | 3 |
 | [`wisdom`](services/wisdom.yml) | 47 | 0 | 46 |
 | [`ecr`](services/ecr.yml) | 47 | 0 | 5 |
@@ -284,7 +284,7 @@ The following table summarises the AWS APIs.
 | [`kafkaconnect`](services/kafkaconnect.yml) | 16 | 0 | 2 |
 | [`internetmonitor`](services/internetmonitor.yml) | 16 | 0 | 1 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
-| [`application-signals`](services/application-signals.yml) | 15 | 0 | 9 |
+| [`application-signals`](services/application-signals.yml) | 15 | 0 | 10 |
 | [`acm`](services/acm.yml) | 15 | 0 | 1 |
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
 | [`osis`](services/osis.yml) | 14 | 0 | 9 |
@@ -482,10 +482,10 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3302 |
+| `List` | 3304 |
 | `Get` | 3008 |
 | `Delete` | 2299 |
-| `Create` | 2156 |
+| `Create` | 2157 |
 | `Update` | 1862 |
 | `Describe` | 1844 |
 | `Put` | 549 |
