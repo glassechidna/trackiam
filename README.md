@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 441
-* Unique actions: 20009
+* Unique actions: 20021
 * Managed policies: 1416
 
 Most common managed policy name prefixes:
@@ -135,8 +135,8 @@ The following table summarises the AWS APIs.
 | [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 2 | 6 |
 | [`drs`](services/drs.yml) | 50 | 0 | 40 |
 | [`codebuild`](services/codebuild.yml) | 50 | 0 | 17 |
+| [`license-manager`](services/license-manager.yml) | 50 | 0 | 12 |
 | [`finspace`](services/finspace.yml) | 50 | 0 | 9 |
-| [`license-manager`](services/license-manager.yml) | 50 | 0 | 0 |
 | [`nimble`](services/nimble.yml) | 49 | 0 | 2 |
 | [`lookoutequipment`](services/lookoutequipment.yml) | 49 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 17 |
@@ -482,11 +482,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3295 |
-| `Get` | 3004 |
-| `Delete` | 2295 |
-| `Create` | 2152 |
-| `Update` | 1859 |
+| `List` | 3299 |
+| `Get` | 3006 |
+| `Delete` | 2297 |
+| `Create` | 2154 |
+| `Update` | 1861 |
 | `Describe` | 1841 |
 | `Put` | 548 |
 | `Start` | 492 |
