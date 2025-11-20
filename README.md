@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 441
-* Unique actions: 20040
+* Unique actions: 20045
 * Managed policies: 1419
 
 Most common managed policy name prefixes:
@@ -60,7 +60,7 @@ The following table summarises the AWS APIs.
 | [`gamelift`](services/gamelift.yml) | 108 | 0 | 10 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 15 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 13 |
-| [`bedrock`](services/bedrock.yml) | 97 | 2 | 130 |
+| [`bedrock`](services/bedrock.yml) | 97 | 2 | 131 |
 | [`dms`](services/dms.yml) | 92 | 14 | 32 |
 | [`medialive`](services/medialive.yml) | 92 | 0 | 33 |
 | [`config`](services/config.yml) | 92 | 0 | 5 |
@@ -294,7 +294,7 @@ The following table summarises the AWS APIs.
 | [`health`](services/health.yml) | 14 | 0 | 0 |
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 31 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 16 |
-| [`braket`](services/braket.yml) | 13 | 0 | 3 |
+| [`braket`](services/braket.yml) | 13 | 0 | 7 |
 | [`codeguru-security`](services/codeguru-security.yml) | 13 | 0 | 2 |
 | [`arc-zonal-shift`](services/arc-zonal-shift.yml) | 13 | 0 | 2 |
 | [`application-autoscaling`](services/application-autoscaling.yml) | 13 | 0 | 1 |
@@ -484,9 +484,9 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 3304 |
 | `Get` | 3008 |
-| `Delete` | 2299 |
-| `Create` | 2157 |
-| `Update` | 1862 |
+| `Delete` | 2300 |
+| `Create` | 2158 |
+| `Update` | 1863 |
 | `Describe` | 1844 |
 | `Put` | 549 |
 | `Start` | 493 |
