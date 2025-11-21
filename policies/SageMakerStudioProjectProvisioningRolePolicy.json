@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy",
   "CreateDate": "2024-11-20T21:58:39Z",
-  "DefaultVersionId": "v23",
+  "DefaultVersionId": "v24",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQZUIPVLH",
   "PolicyName": "SageMakerStudioProjectProvisioningRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-11-11T23:04:09Z",
+    "CreateDate": "2025-11-21T00:04:06Z",
     "Document": {
       "Statement": [
         {
@@ -890,7 +890,12 @@
             "ec2:DescribeNetworkInterfaces",
             "ec2:RevokeSecurityGroupEgress",
             "ec2:RevokeSecurityGroupIngress",
-            "eks:DescribeAccessEntry"
+            "eks:AssociateAccessPolicy",
+            "eks:CreateAccessEntry",
+            "eks:DeleteAccessEntry",
+            "eks:DescribeAccessEntry",
+            "eks:DisassociateAccessPolicy",
+            "eks:ListAssociatedAccessPolicies"
           ],
           "Condition": {
             "ForAnyValue:StringLike": {
@@ -3071,7 +3076,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v23"
+    "VersionId": "v24"
   },
-  "UpdateDate": "2025-11-11T23:04:09Z"
+  "UpdateDate": "2025-11-21T00:04:06Z"
 }

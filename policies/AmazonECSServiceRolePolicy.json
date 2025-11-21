@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonECSServiceRolePolicy",
   "CreateDate": "2017-10-14T01:18:58Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIVUWKCAI7URU4WUEI",
   "PolicyName": "AmazonECSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-11-14T21:04:09Z",
+    "CreateDate": "2025-11-20T23:49:10Z",
     "Document": {
       "Statement": [
         {
@@ -168,6 +168,14 @@
         },
         {
           "Action": [
+            "ec2:DescribeInstanceEventWindows"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReadOnlyPermissionsForInstanceEventWindows"
+        },
+        {
+          "Action": [
             "events:DescribeRule",
             "events:ListTargetsByRule"
           ],
@@ -227,7 +235,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2025-11-14T21:04:09Z"
+  "UpdateDate": "2025-11-20T23:49:10Z"
 }
