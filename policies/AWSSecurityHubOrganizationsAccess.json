@@ -1,20 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSecurityHubOrganizationsAccess",
   "CreateDate": "2021-03-15T20:53:03Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KVIUTRVOZ",
   "PolicyName": "AWSSecurityHubOrganizationsAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-06-24T22:22:08Z",
+    "CreateDate": "2025-11-21T21:19:08Z",
     "Document": {
       "Statement": [
         {
           "Action": "organizations:EnableAWSServiceAccess",
           "Condition": {
             "StringEquals": {
-              "organizations:ServicePrincipal": "securityhub.amazonaws.com"
+              "organizations:ServicePrincipal": [
+                "guardduty.amazonaws.com",
+                "inspector2.amazonaws.com",
+                "malware-protection.guardduty.amazonaws.com",
+                "securityhub.amazonaws.com"
+              ]
             }
           },
           "Effect": "Allow",
@@ -35,13 +40,17 @@
           ],
           "Condition": {
             "StringLikeIfExists": {
-              "organizations:PolicyType": "SECURITYHUB_POLICY"
+              "organizations:PolicyType": [
+                "INSPECTOR_POLICY",
+                "SECURITYHUB_POLICY"
+              ]
             }
           },
           "Effect": "Allow",
           "Resource": [
             "arn:aws:organizations::*:account/o-*/*",
             "arn:aws:organizations::*:ou/o-*/*",
+            "arn:aws:organizations::*:policy/o-*/inspector_policy/*",
             "arn:aws:organizations::*:policy/o-*/securityhub_policy/*",
             "arn:aws:organizations::*:root/o-*/*"
           ],
@@ -54,7 +63,12 @@
           ],
           "Condition": {
             "StringEquals": {
-              "organizations:ServicePrincipal": "securityhub.amazonaws.com"
+              "organizations:ServicePrincipal": [
+                "guardduty.amazonaws.com",
+                "inspector2.amazonaws.com",
+                "malware-protection.guardduty.amazonaws.com",
+                "securityhub.amazonaws.com"
+              ]
             }
           },
           "Effect": "Allow",
@@ -66,6 +80,7 @@
             "organizations:DescribeAccount",
             "organizations:DescribeOrganization",
             "organizations:DescribeOrganizationalUnit",
+            "organizations:DescribeResourcePolicy",
             "organizations:ListAWSServiceAccessForOrganization",
             "organizations:ListAccounts",
             "organizations:ListAccountsForParent",
@@ -89,6 +104,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:organizations::*:policy/o-*/inspector_policy/*",
             "arn:aws:organizations::*:policy/o-*/securityhub_policy/*"
           ],
           "Sid": "OrganizationPolicyTaggingPermissions"
@@ -97,7 +113,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2025-06-24T22:22:08Z"
+  "UpdateDate": "2025-11-21T21:19:08Z"
 }
