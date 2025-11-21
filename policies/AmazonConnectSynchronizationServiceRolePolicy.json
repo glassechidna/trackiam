@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectSynchronizationServiceRolePolicy",
   "CreateDate": "2023-10-27T22:38:25Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4J2PE2WH3Y",
   "PolicyName": "AmazonConnectSynchronizationServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-12T22:22:17Z",
+    "CreateDate": "2025-11-21T20:19:09Z",
     "Document": {
       "Statement": [
         {
@@ -62,12 +62,17 @@
         {
           "Action": [
             "connect:Associate*",
+            "connect:BatchCreate*",
+            "connect:BatchDelete*",
+            "connect:BatchDescribe*",
             "connect:BatchGet*",
+            "connect:BatchUpdate*",
             "connect:Create*",
             "connect:Delete*",
             "connect:Describe*",
             "connect:Disassociate*",
             "connect:Get*",
+            "connect:Import*",
             "connect:List*",
             "connect:Search*",
             "connect:TagResource",
@@ -82,7 +87,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2024-11-12T22:22:17Z"
+  "UpdateDate": "2025-11-21T20:19:09Z"
 }
