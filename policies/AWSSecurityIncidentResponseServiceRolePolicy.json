@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSecurityIncidentResponseServiceRolePolicy",
   "CreateDate": "2024-12-01T16:36:06Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4PN7K2GF47",
   "PolicyName": "AWSSecurityIncidentResponseServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-08-08T18:49:07Z",
+    "CreateDate": "2025-11-21T04:34:10Z",
     "Document": {
       "Statement": [
         {
@@ -32,6 +32,23 @@
         },
         {
           "Action": [
+            "security-ir:CreateCaseComment",
+            "security-ir:GetCase",
+            "security-ir:ListCases",
+            "security-ir:ListComments",
+            "security-ir:UpdateCase"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:security-ir:*:*:case/*",
+          "Sid": "SecurityIncidentResponseOperationsPolicy"
+        },
+        {
+          "Action": [
             "organizations:DescribeAccount",
             "organizations:ListAccounts",
             "organizations:ListChildren",
@@ -45,7 +62,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2025-08-08T18:49:07Z"
+  "UpdateDate": "2025-11-21T04:34:10Z"
 }
