@@ -1,0 +1,81 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSIdentityCenterExternalManagementPolicy",
+  "CreateDate": "2025-11-22T00:34:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4PMHBEPQXC",
+  "PolicyName": "AWSIdentityCenterExternalManagementPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-11-22T00:34:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "kms:Decrypt",
+          "Condition": {
+            "StringEquals": {
+              "kms:EncryptionContext:aws:identitystore:identitystore-arn": [
+                "arn:aws:identitystore::${aws:PrincipalAccount}:identitystore/${aws:PrincipalTag/IdentityStoreId}"
+              ]
+            },
+            "StringLike": {
+              "kms:ViaService": "identitystore.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IdentityStoreCMKAccess"
+        },
+        {
+          "Action": [
+            "identitystore:CreateUser"
+          ],
+          "Condition": {
+            "ForAllValues:ArnEquals": {
+              "identitystore:UserExternalIdIssuers": [
+                "arn:aws:identitystore::*:provisioningtenant/${aws:PrincipalTag/IdentityStoreId}/${aws:PrincipalTag/IdentityStoreExternalIdIssuer}"
+              ]
+            },
+            "Null": {
+              "identitystore:ReservedUserId": "false",
+              "identitystore:UserExternalIdIssuers": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:identitystore::*:identitystore/${aws:PrincipalTag/IdentityStoreId}",
+            "arn:aws:identitystore:::user/*"
+          ],
+          "Sid": "IdentityStoreUserCreation"
+        },
+        {
+          "Action": [
+            "identitystore:DeleteUser",
+            "identitystore:DescribeUser",
+            "identitystore:UpdateUser"
+          ],
+          "Condition": {
+            "ForAllValues:ArnEquals": {
+              "identitystore:UserExternalIdIssuers": [
+                "arn:aws:identitystore::*:provisioningtenant/${aws:PrincipalTag/IdentityStoreId}/${aws:PrincipalTag/IdentityStoreExternalIdIssuer}"
+              ]
+            },
+            "Null": {
+              "identitystore:UserExternalIdIssuers": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:identitystore::*:identitystore/${aws:PrincipalTag/IdentityStoreId}",
+            "arn:aws:identitystore:::user/*"
+          ],
+          "Sid": "IdentityStoreUserManagement"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-11-22T00:34:08Z"
+}
