@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSTransformApplicationDeploymentPolicy",
   "CreateDate": "2025-08-28T06:34:07Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4C2JTRAIVR",
   "PolicyName": "AWSTransformApplicationDeploymentPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-09-29T22:19:07Z",
+    "CreateDate": "2025-11-21T23:34:07Z",
     "Document": {
       "Statement": [
         {
@@ -159,7 +159,10 @@
         {
           "Action": [
             "iam:GetInstanceProfile",
-            "iam:GetRole"
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListRolePolicies"
           ],
           "Condition": {
             "StringEquals": {
@@ -192,7 +195,78 @@
         },
         {
           "Action": [
+            "kms:CreateGrant"
+          ],
+          "Condition": {
+            "Bool": {
+              "kms:GrantIsForAWSResource": "true"
+            },
+            "ForAllValues:StringEquals": {
+              "kms:GrantOperations": [
+                "Decrypt"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "kms:GrantConstraintType": "EncryptionContextSubset"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:ebs:id": "*",
+              "kms:ViaService": [
+                "ec2.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/CreatedFor": "AWSTransform"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws-transform": "*",
+              "kms:ViaService": "s3.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*"
+        },
+        {
+          "Action": [
+            "kms:GenerateDataKeyWithoutPlaintext"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:EncryptionContext:aws:ebs:id": "*",
+              "kms:ViaService": "ec2.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*"
+        },
+        {
+          "Action": [
             "s3:AbortMultipartUpload",
+            "s3:GetBucketLocation",
             "s3:ListBucketMultipartUploads",
             "s3:ListMultipartUploadParts",
             "s3:PutBucketTagging",
@@ -211,6 +285,18 @@
         },
         {
           "Action": [
+            "s3:ListAllMyBuckets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "ssm:SendCommand"
           ],
           "Condition": {
@@ -225,6 +311,8 @@
           "Action": [
             "ec2:DescribeImages",
             "ec2:DescribeInstances",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeRouteTables",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcs"
@@ -263,7 +351,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-09-29T22:19:07Z"
+  "UpdateDate": "2025-11-21T23:34:07Z"
 }

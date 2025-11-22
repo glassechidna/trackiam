@@ -1,0 +1,58 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonRedshiftFederatedAuthorization",
+  "CreateDate": "2025-11-22T00:04:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4NB3RXXWOP",
+  "PolicyName": "AmazonRedshiftFederatedAuthorization",
+  "PolicyVersion": {
+    "CreateDate": "2025-11-22T00:04:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "glue:CreateDatabase",
+            "glue:CreateTable",
+            "glue:DeleteDatabase",
+            "glue:DeleteTable",
+            "glue:FederateAuthorization",
+            "glue:GetCatalog",
+            "glue:GetCatalogs",
+            "glue:GetDatabase",
+            "glue:GetDatabases",
+            "glue:GetTable",
+            "glue:GetTables",
+            "glue:GetUserDefinedFunctions",
+            "glue:RenameTable",
+            "glue:UpdateCatalog",
+            "glue:UpdateDatabase",
+            "glue:UpdateTable"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "glue:FederatedAuthorizationSource": "Redshift"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:*"
+          ],
+          "Sid": "AmazonRedshiftFederatedAuthorization"
+        },
+        {
+          "Action": [
+            "sts:SetContext"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sts::*:self",
+          "Sid": "AmazonRedshiftIdentityCenterSetContext"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-11-22T00:04:08Z"
+}

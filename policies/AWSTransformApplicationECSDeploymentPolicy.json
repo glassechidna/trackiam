@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSTransformApplicationECSDeploymentPolicy",
   "CreateDate": "2025-09-29T22:49:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4HITIWX2FY",
   "PolicyName": "AWSTransformApplicationECSDeploymentPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-09-29T22:49:07Z",
+    "CreateDate": "2025-11-21T23:34:10Z",
     "Document": {
       "Statement": [
         {
@@ -93,19 +93,6 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:ecs:*:*:task-definition/AWSTransform*"
-        },
-        {
-          "Action": "iam:GetRole",
-          "Condition": {
-            "StringEquals": {
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:iam::*:role/AWSTransform-Deploy-ECS-Execution-Role",
-            "arn:aws:iam::*:role/AWSTransform-Deploy-ECS-Task-Role"
-          ]
         },
         {
           "Action": "iam:PassRole",
@@ -254,6 +241,64 @@
         },
         {
           "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "ecs.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS"
+        },
+        {
+          "Action": [
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListRolePolicies"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AWSTransform-Deploy-ECS-Execution-Role",
+            "arn:aws:iam::*:role/AWSTransform-Deploy-ECS-Task-Role"
+          ]
+        },
+        {
+          "Action": [
+            "kms:CreateGrant"
+          ],
+          "Condition": {
+            "Bool": {
+              "kms:GrantIsForAWSResource": "true"
+            },
+            "ForAllValues:StringEquals": {
+              "kms:GrantOperations": [
+                "Decrypt",
+                "GenerateDataKey"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "kms:GrantConstraintType": "EncryptionContextSubset"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:ecr:arn": "*",
+              "kms:ViaService": [
+                "ecr.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*"
+        },
+        {
+          "Action": [
             "logs:CreateLogGroup",
             "logs:TagResource"
           ],
@@ -303,7 +348,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-09-29T22:49:07Z"
+  "UpdateDate": "2025-11-21T23:34:10Z"
 }

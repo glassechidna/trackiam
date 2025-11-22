@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 441
-* Unique actions: 20053
-* Managed policies: 1420
+* Unique actions: 20061
+* Managed policies: 1421
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 384 |
-| `arn:aws:iam::aws:policy/Amazon*` | 350 |
+| `arn:aws:iam::aws:policy/Amazon*` | 351 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 327 |
 | `arn:aws:iam::aws:policy/service-role/*` | 213 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
@@ -142,7 +142,7 @@ The following table summarises the AWS APIs.
 | [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 18 |
 | [`codeartifact`](services/codeartifact.yml) | 48 | 0 | 3 |
 | [`wisdom`](services/wisdom.yml) | 47 | 0 | 46 |
-| [`ecr`](services/ecr.yml) | 47 | 0 | 5 |
+| [`ecr`](services/ecr.yml) | 47 | 0 | 13 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`transcribe`](services/transcribe.yml) | 46 | 0 | 5 |
@@ -482,13 +482,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3305 |
-| `Get` | 3008 |
-| `Delete` | 2300 |
+| `List` | 3306 |
+| `Get` | 3009 |
+| `Delete` | 2301 |
 | `Create` | 2158 |
-| `Update` | 1864 |
-| `Describe` | 1846 |
-| `Put` | 550 |
+| `Update` | 1865 |
+| `Describe` | 1847 |
+| `Put` | 551 |
 | `Start` | 493 |
 | `Tag` | 309 |
 | `Untag` | 304 |
