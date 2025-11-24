@@ -1,30 +1,15 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonS3TablesFullAccess",
   "CreateDate": "2024-12-03T15:21:07Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v1",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4OUBBEQLZN",
   "PolicyName": "AmazonS3TablesFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-11-22T01:04:08Z",
+    "CreateDate": "2024-12-03T15:21:07Z",
     "Document": {
       "Statement": [
-        {
-          "Action": [
-            "iam:PassRole"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "iam:PassedToService": [
-                "replication.s3tables.amazonaws.com"
-              ]
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "PassRoleToS3TablesReplication"
-        },
         {
           "Action": [
             "s3tables:*"
@@ -36,7 +21,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v1"
   },
-  "UpdateDate": "2025-11-22T01:04:08Z"
+  "UpdateDate": "2025-11-24T18:34:08Z"
 }
