@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/NovaActServiceRolePolicy",
+  "CreateDate": "2025-11-26T16:19:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4JBDCA4HQY",
+  "PolicyName": "NovaActServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-11-26T16:19:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/NovaAct"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowPublishCloudWatchMetrics"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-11-26T16:19:08Z"
+}
