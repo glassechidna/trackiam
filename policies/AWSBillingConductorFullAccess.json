@@ -1,21 +1,23 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBillingConductorFullAccess",
   "CreateDate": "2022-04-13T18:02:29Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4D2AMFVFND",
   "PolicyName": "AWSBillingConductorFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-09-18T00:19:07Z",
+    "CreateDate": "2025-11-27T01:34:08Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "billingconductor:*",
             "organizations:DescribeAccount",
+            "organizations:DescribeResponsibilityTransfer",
             "organizations:ListAccounts",
             "organizations:ListChildren",
+            "organizations:ListInboundResponsibilityTransfers",
             "organizations:ListOrganizationalUnitsForParent",
             "organizations:ListRoots",
             "pricing:DescribeServices",
@@ -29,7 +31,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-09-18T00:19:07Z"
+  "UpdateDate": "2025-11-27T01:34:08Z"
 }
