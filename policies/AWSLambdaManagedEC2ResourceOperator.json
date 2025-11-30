@@ -1,0 +1,77 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSLambdaManagedEC2ResourceOperator",
+  "CreateDate": "2025-11-30T08:34:09Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4LOIC3J7IX",
+  "PolicyName": "AWSLambdaManagedEC2ResourceOperator",
+  "PolicyVersion": {
+    "CreateDate": "2025-11-30T08:34:09Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:AttachNetworkInterface",
+            "ec2:CreateTags",
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ManagedResourceOperator": "scaler.lambda.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:Owner": "amazon"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:image/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface",
+            "ec2:RunInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeCapacityReservations",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstanceTypeOfferings",
+            "ec2:DescribeInstanceTypes",
+            "ec2:DescribeInstances",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-11-30T08:34:09Z"
+}
