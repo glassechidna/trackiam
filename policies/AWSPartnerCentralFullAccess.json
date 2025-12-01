@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralFullAccess",
   "CreateDate": "2024-11-18T23:33:28Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DRJMXIHNK",
   "PolicyName": "AWSPartnerCentralFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-11-19T16:34:12Z",
+    "CreateDate": "2025-12-01T00:34:08Z",
     "Document": {
       "Statement": [
         {
@@ -66,6 +66,59 @@
         },
         {
           "Action": [
+            "aws-marketplace:DescribeEntity"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace*/Offer/*",
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace*/OfferSet/*",
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace*/Solution/*"
+          ],
+          "Sid": "DescribeEntityAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:ListEntities"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListEntitiesAccess"
+        },
+        {
+          "Action": [
+            "partnercentral-account-management:AccessLegacyPartnerCentral"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LegacyPartnerCentralAccess"
+        },
+        {
+          "Action": [
+            "partnercentral-account-management:AccessMarketingCentral"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PartnerCentralMarketingAccess"
+        },
+        {
+          "Action": [
+            "partnercentral:GetVerification",
+            "partnercentral:StartVerification"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "VerificationAccess"
+        },
+        {
+          "Action": [
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::aws-partner-central-marketplace-ephemeral-writeonly-files/${aws:PrincipalAccount}/*",
+          "Sid": "PartnerCentralEphemeralWriteS3Access"
+        },
+        {
+          "Action": [
             "sts:AssumeRole"
           ],
           "Effect": "Allow",
@@ -74,12 +127,25 @@
             "arn:aws:iam::*:role/PartnerCentralChannelBillingTransferReadOnly"
           ],
           "Sid": "ChannelBillingTransferRoleAccess"
+        },
+        {
+          "Action": [
+            "support:AddAttachmentsToSet",
+            "support:AddCommunicationToCase",
+            "support:CreateCase",
+            "support:DescribeCases",
+            "support:DescribeCommunications",
+            "support:ResolveCase"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SupportAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2025-11-19T16:34:12Z"
+  "UpdateDate": "2025-12-01T00:34:08Z"
 }

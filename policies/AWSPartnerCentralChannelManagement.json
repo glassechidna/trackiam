@@ -1,15 +1,28 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralChannelManagement",
   "CreateDate": "2025-11-19T16:34:09Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4EKQNXSK5L",
   "PolicyName": "AWSPartnerCentralChannelManagement",
   "PolicyVersion": {
-    "CreateDate": "2025-11-19T16:34:09Z",
+    "CreateDate": "2025-12-01T00:34:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "partnercentral-account-management:AccessLegacyPartnerCentral"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "partnercentral-account-management:LegacyPartnerCentralRole": "ChannelUser"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LegacyPartnerCentralAccess"
+        },
         {
           "Action": [
             "partnercentral:AcceptChannelHandshake",
@@ -42,6 +55,23 @@
         },
         {
           "Action": [
+            "partnercentral:GetPartner",
+            "partnercentral:ListPartners"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PartnerResourceAccess"
+        },
+        {
+          "Action": [
             "partnercentral:ListTagsForResource",
             "partnercentral:TagResource",
             "partnercentral:UntagResource"
@@ -63,6 +93,16 @@
         },
         {
           "Action": [
+            "partnercentral:GetPartnerDashboard"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:partnercentral::*:catalog/AWS/ReportingData/Resell_V1/Dashboard/*"
+          ],
+          "Sid": "PartnerDashboardAccess"
+        },
+        {
+          "Action": [
             "sts:AssumeRole"
           ],
           "Effect": "Allow",
@@ -76,7 +116,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-11-19T16:34:09Z"
+  "UpdateDate": "2025-12-01T00:34:07Z"
 }

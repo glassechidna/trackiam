@@ -11,15 +11,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 442
-* Unique actions: 20156
-* Managed policies: 1425
+* Unique services: 443
+* Unique actions: 20224
+* Managed policies: 1426
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 385 |
+| `arn:aws:iam::aws:policy/AWS*` | 386 |
 | `arn:aws:iam::aws:policy/Amazon*` | 351 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 329 |
 | `arn:aws:iam::aws:policy/service-role/*` | 214 |
@@ -249,7 +249,7 @@ The following table summarises the AWS APIs.
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 16 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 22 | 0 | 9 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 33 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 39 |
 | [`mgh`](services/mgh.yml) | 21 | 0 | 25 |
 | [`resource-explorer-2`](services/resource-explorer-2.yml) | 21 | 0 | 16 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
@@ -360,6 +360,7 @@ The following table summarises the AWS APIs.
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 0 | 6 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
+| [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 110 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
 | [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 92 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
@@ -367,7 +368,6 @@ The following table summarises the AWS APIs.
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 61 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
-| [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 53 |
 | [`deepracer`](services/deepracer.yml) | 0 | 0 | 53 |
 | [`route53globalresolver`](services/route53globalresolver.yml) | 0 | 0 | 48 |
 | [`odb`](services/odb.yml) | 0 | 0 | 48 |
@@ -441,6 +441,7 @@ The following table summarises the AWS APIs.
 | [`cloudfront-keyvaluestore`](services/cloudfront-keyvaluestore.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
 | [`supportplans`](services/supportplans.yml) | 0 | 0 | 5 |
+| [`partnercentral-account-management`](services/partnercentral-account-management.yml) | 0 | 0 | 5 |
 | [`opensearch`](services/opensearch.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
 | [`geo-routes`](services/geo-routes.yml) | 0 | 0 | 5 |
@@ -454,11 +455,11 @@ The following table summarises the AWS APIs.
 | [`uxc`](services/uxc.yml) | 0 | 0 | 3 |
 | [`sagemaker-unified-studio-mcp`](services/sagemaker-unified-studio-mcp.yml) | 0 | 0 | 3 |
 | [`resource-explorer`](services/resource-explorer.yml) | 0 | 0 | 3 |
-| [`partnercentral-account-management`](services/partnercentral-account-management.yml) | 0 | 0 | 3 |
 | [`mapcredits`](services/mapcredits.yml) | 0 | 0 | 3 |
 | [`identitystore-auth`](services/identitystore-auth.yml) | 0 | 0 | 3 |
 | [`eks-mcp`](services/eks-mcp.yml) | 0 | 0 | 3 |
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |
+| [`aws-mcp`](services/aws-mcp.yml) | 0 | 0 | 3 |
 | [`vpc-lattice-svcs`](services/vpc-lattice-svcs.yml) | 0 | 0 | 2 |
 | [`geo-maps`](services/geo-maps.yml) | 0 | 0 | 2 |
 | [`consolidatedbilling`](services/consolidatedbilling.yml) | 0 | 0 | 2 |
@@ -483,14 +484,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3324 |
-| `Get` | 3024 |
+| `List` | 3335 |
+| `Get` | 3040 |
 | `Delete` | 2313 |
-| `Create` | 2170 |
-| `Update` | 1879 |
+| `Create` | 2177 |
+| `Update` | 1882 |
 | `Describe` | 1849 |
-| `Put` | 552 |
-| `Start` | 495 |
+| `Put` | 555 |
+| `Start` | 498 |
 | `Tag` | 310 |
 | `Untag` | 305 |
 

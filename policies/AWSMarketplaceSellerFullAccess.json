@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerFullAccess",
   "CreateDate": "2019-07-02T20:40:09Z",
-  "DefaultVersionId": "v16",
+  "DefaultVersionId": "v17",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JF7OFUANW",
   "PolicyName": "AWSMarketplaceSellerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-01-14T19:52:06Z",
+    "CreateDate": "2025-12-01T00:49:11Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,27 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "CreateServiceLinkedRole"
+        },
+        {
+          "Action": [
+            "aws-marketplace:CancelAgreementPaymentRequest",
+            "aws-marketplace:GetAgreementPaymentRequest",
+            "aws-marketplace:ListAgreementPaymentRequests",
+            "aws-marketplace:SendAgreementPaymentRequest"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws-marketplace:AgreementType": [
+                "PurchaseAgreement"
+              ]
+            },
+            "StringEquals": {
+              "aws-marketplace:PartyType": "Proposer"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AgreementPaymentRequestAccess"
         },
         {
           "Action": [
@@ -154,7 +175,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v16"
+    "VersionId": "v17"
   },
-  "UpdateDate": "2025-01-14T19:52:06Z"
+  "UpdateDate": "2025-12-01T00:49:11Z"
 }

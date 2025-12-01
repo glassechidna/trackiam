@@ -1,18 +1,22 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceManageSubscriptions",
   "CreateDate": "2015-02-06T18:40:32Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJRDW2WIFN7QLUAKBQ",
   "PolicyName": "AWSMarketplaceManageSubscriptions",
   "PolicyVersion": {
-    "CreateDate": "2024-11-20T19:22:33Z",
+    "CreateDate": "2025-12-01T00:49:10Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "aws-marketplace:AcceptAgreementPaymentRequest",
+            "aws-marketplace:GetAgreementPaymentRequest",
             "aws-marketplace:ListAgreementCharges",
+            "aws-marketplace:ListAgreementPaymentRequests",
+            "aws-marketplace:RejectAgreementPaymentRequest",
             "aws-marketplace:UpdatePurchaseOrders"
           ],
           "Condition": {
@@ -27,6 +31,26 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "aws-marketplace:StartChangeSet"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "catalog:ChangeType": [
+                "CreateAgentTokenContainer",
+                "ExpireToken",
+                "RequestExpressPrivateOffer"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/AgentTokenContainer/*",
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/ChangeSet/*"
+          ],
+          "Sid": "AWSMarketplaceTokenManagement"
         },
         {
           "Action": [
@@ -52,12 +76,30 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "aws-marketplace:DescribeChangeSet",
+            "aws-marketplace:ListChangeSets"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace/ChangeSet/*",
+          "Sid": "AWSMarketplaceChangeSetReadAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:DescribeEntity",
+            "aws-marketplace:ListEntities"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSMarketplaceEntityReadAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2024-11-20T19:22:33Z"
+  "UpdateDate": "2025-12-01T00:49:10Z"
 }

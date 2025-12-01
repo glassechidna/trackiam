@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerProductsFullAccess",
   "CreateDate": "2019-07-02T21:06:25Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DS2YFEG4N",
   "PolicyName": "AWSMarketplaceSellerProductsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-12-10T19:06:12Z",
+    "CreateDate": "2025-12-01T00:49:07Z",
     "Document": {
       "Statement": [
         {
@@ -20,25 +20,32 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/*"
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "IAMPassRoleAccess"
+        },
+        {
+          "Action": [
+            "partnercentral-account-management:AccessLegacyPartnerCentral"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "partnercentral-account-management:LegacyPartnerCentralRole": "TechnicalStaff"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LegacyPartnerCentralAccess"
         },
         {
           "Action": [
             "aws-marketplace:CancelChangeSet",
-            "aws-marketplace:DescribeAssessment",
             "aws-marketplace:DescribeChangeSet",
             "aws-marketplace:DescribeEntity",
-            "aws-marketplace:ListAssessments",
-            "aws-marketplace:ListChangeSets",
-            "aws-marketplace:ListEntities",
-            "aws-marketplace:StartChangeSet",
-            "ec2:DescribeImages",
-            "ec2:DescribeSnapshots",
-            "ec2:ModifyImageAttribute",
-            "ec2:ModifySnapshotAttribute"
+            "aws-marketplace:StartChangeSet"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace*/*",
+          "Sid": "MarketplaceResourceAccess"
         },
         {
           "Action": [
@@ -47,7 +54,26 @@
             "aws-marketplace:PutResourcePolicy"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace/*"
+          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace*/*",
+          "Sid": "ResourceSharingAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:DescribeAssessment"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MarketplaceAssessmentAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:ListAssessments",
+            "aws-marketplace:ListChangeSets",
+            "aws-marketplace:ListEntities"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MarketplaceListAccess"
         },
         {
           "Action": [
@@ -56,14 +82,37 @@
             "aws-marketplace:UntagResource"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace/*"
+          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace*/*",
+          "Sid": "TagAccess"
+        },
+        {
+          "Action": [
+            "ec2:DescribeImages",
+            "ec2:DescribeSnapshots",
+            "ec2:ModifyImageAttribute",
+            "ec2:ModifySnapshotAttribute"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2ResourceAccess"
         },
         {
           "Action": [
             "iam:GetRole"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/*"
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "GetIAMRoleAccess"
+        },
+        {
+          "Action": [
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-partner-central-marketplace-ephemeral-writeonly-files/${aws:PrincipalAccount}/*"
+          ],
+          "Sid": "MarketplaceEphemeralWriteS3Access"
         },
         {
           "Action": [
@@ -75,13 +124,14 @@
             "vendor-insights:ListSecurityProfiles"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "VendorInsightsAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2024-12-10T19:06:12Z"
+  "UpdateDate": "2025-12-01T00:49:07Z"
 }
