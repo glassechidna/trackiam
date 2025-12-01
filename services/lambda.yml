@@ -64,12 +64,21 @@ Actions:
   - Name: lambda:UpdateFunctionUrlConfig
 
   # actions with no corresponding API
+  - Name: lambda:CreateCapacityProvider
+  - Name: lambda:DeleteCapacityProvider
   - Name: lambda:DisableReplication
   - Name: lambda:EnableReplication
+  - Name: lambda:GetCapacityProvider
   - Name: lambda:GetFunctionRecursionConfig
+  - Name: lambda:GetFunctionScalingConfig
   - Name: lambda:InvokeFunction
   - Name: lambda:InvokeFunctionUrl
+  - Name: lambda:ListCapacityProviders
+  - Name: lambda:ListFunctionVersionsByCapacityProvider
+  - Name: lambda:PassCapacityProvider
   - Name: lambda:PutFunctionRecursionConfig
+  - Name: lambda:PutFunctionScalingConfig
+  - Name: lambda:UpdateCapacityProvider
   - Name: lambda:UpdateFunctionCodeSigningConfig
 
   # APIs without an IAM action
