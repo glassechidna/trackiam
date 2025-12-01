@@ -1,15 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSLambda_FullAccess",
   "CreateDate": "2020-11-17T21:14:08Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4OXQPYWZ5D",
   "PolicyName": "AWSLambda_FullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-03-17T21:37:06Z",
+    "CreateDate": "2025-12-01T16:04:11Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "lambda.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/lambda.amazonaws.com/AWSServiceRoleForLambda"
+        },
         {
           "Action": "iam:PassRole",
           "Condition": {
@@ -36,6 +46,7 @@
             "iam:ListAttachedRolePolicies",
             "iam:ListRolePolicies",
             "iam:ListRoles",
+            "kms:DescribeKey",
             "kms:ListAliases",
             "lambda:*",
             "logs:DescribeLogGroups",
@@ -63,7 +74,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2025-03-17T21:37:06Z"
+  "UpdateDate": "2025-12-01T16:04:11Z"
 }
