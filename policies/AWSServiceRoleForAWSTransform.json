@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForAWSTransform",
   "CreateDate": "2025-05-15T13:37:07Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4MY6VRFQPB",
   "PolicyName": "AWSServiceRoleForAWSTransform",
   "PolicyVersion": {
-    "CreateDate": "2025-09-18T20:34:07Z",
+    "CreateDate": "2025-12-01T13:19:12Z",
     "Document": {
       "Statement": [
         {
@@ -59,6 +59,20 @@
         },
         {
           "Action": [
+            "secretsmanager:GetSecretValue"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "secretsmanager:ResourceTag/aws:secretsmanager:owningService": "transform"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:transform!*",
+          "Sid": "ExternalIdpSecretsAccess"
+        },
+        {
+          "Action": [
             "sso:DescribeApplication",
             "sso:GetApplicationAssignmentConfiguration",
             "sso:ListApplicationAssignmentsForPrincipal"
@@ -68,12 +82,24 @@
             "*"
           ],
           "Sid": "UserManagementPolicy"
+        },
+        {
+          "Action": [
+            "support:AddCommunicationToCase",
+            "support:CreateCase",
+            "support:DescribeCases",
+            "support:DescribeCommunications",
+            "support:ResolveCase"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SupportCaseManagement"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2025-09-18T20:34:07Z"
+  "UpdateDate": "2025-12-01T13:19:12Z"
 }
