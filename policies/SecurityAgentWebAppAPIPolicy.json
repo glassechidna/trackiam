@@ -1,0 +1,79 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/SecurityAgentWebAppAPIPolicy",
+  "CreateDate": "2025-12-02T15:04:06Z",
+  "DefaultVersionId": "v12",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4FGUTKOEEI",
+  "PolicyName": "SecurityAgentWebAppAPIPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-02-12T18:02:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "securityagent:AddArtifact",
+            "securityagent:BatchDeletePentests",
+            "securityagent:BatchGetAgentInstances",
+            "securityagent:BatchGetArtifactMetadata",
+            "securityagent:BatchGetFindings",
+            "securityagent:BatchGetPentestJobs",
+            "securityagent:BatchGetPentests",
+            "securityagent:BatchGetSecurityTestContentMetadata",
+            "securityagent:BatchGetTasks",
+            "securityagent:CreateDocumentReview",
+            "securityagent:CreatePentest",
+            "securityagent:DeleteArtifact",
+            "securityagent:DeleteDocumentReview",
+            "securityagent:GetArtifact",
+            "securityagent:GetCodeReviewTask",
+            "securityagent:GetDocReviewTask",
+            "securityagent:GetDocumentReview",
+            "securityagent:GetDocumentReviewArtifact",
+            "securityagent:ListArtifacts",
+            "securityagent:ListControls",
+            "securityagent:ListDiscoveredEndpoints",
+            "securityagent:ListDocumentReviewComments",
+            "securityagent:ListDocumentReviews",
+            "securityagent:ListFindings",
+            "securityagent:ListIntegratedResources",
+            "securityagent:ListPentestJobsForPentest",
+            "securityagent:ListPentests",
+            "securityagent:ListTasks",
+            "securityagent:StartCodeRemediation",
+            "securityagent:StartPentestExecution",
+            "securityagent:StopPentestExecution",
+            "securityagent:UpdateFinding",
+            "securityagent:UpdatePentest"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:securityagent:*:*:agent-instance*",
+          "Sid": "AgentInstanceAccess"
+        },
+        {
+          "Action": [
+            "securityagent:ListAgentInstances",
+            "securityagent:ListControls"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ApplicationAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v12"
+  },
+  "UpdateDate": "2026-02-12T18:02:14Z"
+}

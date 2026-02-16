@@ -1,0 +1,32 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSHealthImagingServiceRolePolicy",
+  "CreateDate": "2026-01-30T18:34:13Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4MP4HVV2XZ",
+  "PolicyName": "AWSHealthImagingServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-01-30T18:34:13Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/HealthImaging"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-01-30T18:34:13Z"
+}

@@ -1,0 +1,46 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AccountManagementFromVercel",
+  "CreateDate": "2025-12-11T16:34:19Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4JAHPPZRBR",
+  "PolicyName": "AccountManagementFromVercel",
+  "PolicyVersion": {
+    "CreateDate": "2026-02-12T18:00:32Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:GetSamlProvider",
+            "iam:UpdateSamlProvider"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/VercelInstallId": "${aws:PrincipalTag/VercelInstallId}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "account:CloseAccount",
+            "bcm-recommended-actions:ListRecommendedActions",
+            "ce:GetCostAndUsage",
+            "cur:GetUsageReport",
+            "freetier:GetAccountPlanState",
+            "freetier:GetFreeTierUsage",
+            "iam:ListSAMLProviders"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2026-02-12T18:00:32Z"
+}

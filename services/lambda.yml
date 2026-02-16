@@ -64,20 +64,29 @@ Actions:
   - Name: lambda:UpdateFunctionUrlConfig
 
   # actions with no corresponding API
+  - Name: lambda:CheckpointDurableExecution
   - Name: lambda:CreateCapacityProvider
   - Name: lambda:DeleteCapacityProvider
   - Name: lambda:DisableReplication
   - Name: lambda:EnableReplication
   - Name: lambda:GetCapacityProvider
+  - Name: lambda:GetDurableExecution
+  - Name: lambda:GetDurableExecutionHistory
+  - Name: lambda:GetDurableExecutionState
   - Name: lambda:GetFunctionRecursionConfig
   - Name: lambda:GetFunctionScalingConfig
   - Name: lambda:InvokeFunction
   - Name: lambda:InvokeFunctionUrl
   - Name: lambda:ListCapacityProviders
+  - Name: lambda:ListDurableExecutionsByFunction
   - Name: lambda:ListFunctionVersionsByCapacityProvider
   - Name: lambda:PassCapacityProvider
   - Name: lambda:PutFunctionRecursionConfig
   - Name: lambda:PutFunctionScalingConfig
+  - Name: lambda:SendDurableExecutionCallbackFailure
+  - Name: lambda:SendDurableExecutionCallbackHeartbeat
+  - Name: lambda:SendDurableExecutionCallbackSuccess
+  - Name: lambda:StopDurableExecution
   - Name: lambda:UpdateCapacityProvider
   - Name: lambda:UpdateFunctionCodeSigningConfig
 

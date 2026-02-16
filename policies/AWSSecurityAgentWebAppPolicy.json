@@ -1,0 +1,77 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSSecurityAgentWebAppPolicy",
+  "CreateDate": "2026-02-05T23:19:09Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4CTYAYXEAG",
+  "PolicyName": "AWSSecurityAgentWebAppPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-02-12T17:59:32Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "securityagent:AddArtifact",
+            "securityagent:BatchDeletePentests",
+            "securityagent:BatchGetAgentSpaces",
+            "securityagent:BatchGetArtifactMetadata",
+            "securityagent:BatchGetFindings",
+            "securityagent:BatchGetPentestJobContentMetadata",
+            "securityagent:BatchGetPentestJobTasks",
+            "securityagent:BatchGetPentestJobs",
+            "securityagent:BatchGetPentests",
+            "securityagent:CreateDesignReview",
+            "securityagent:CreatePentest",
+            "securityagent:DeleteArtifact",
+            "securityagent:DeleteDesignReview",
+            "securityagent:GetArtifact",
+            "securityagent:GetDesignReview",
+            "securityagent:GetDesignReviewArtifact",
+            "securityagent:ListArtifacts",
+            "securityagent:ListDesignReviewComments",
+            "securityagent:ListDesignReviews",
+            "securityagent:ListDiscoveredEndpoints",
+            "securityagent:ListFindings",
+            "securityagent:ListIntegratedResources",
+            "securityagent:ListPentestJobTasks",
+            "securityagent:ListPentestJobsForPentest",
+            "securityagent:ListPentests",
+            "securityagent:ListSecurityRequirements",
+            "securityagent:StartCodeRemediation",
+            "securityagent:StartPentestJob",
+            "securityagent:StopPentestJob",
+            "securityagent:UpdateFinding",
+            "securityagent:UpdatePentest"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:securityagent:*:*:agent-space*",
+          "Sid": "AgentSpaceAccess"
+        },
+        {
+          "Action": [
+            "securityagent:ListAgentSpaces",
+            "securityagent:ListSecurityRequirements"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ApplicationAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2026-02-12T17:59:32Z"
+}

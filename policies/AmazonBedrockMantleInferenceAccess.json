@@ -1,0 +1,38 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonBedrockMantleInferenceAccess",
+  "CreateDate": "2025-12-04T07:19:08Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4ARGXXIJUP",
+  "PolicyName": "AmazonBedrockMantleInferenceAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-02-12T17:57:27Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "bedrock-mantle:CallWithBearerToken"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BedrockMantleCallWithBearerToken"
+        },
+        {
+          "Action": [
+            "bedrock-mantle:CreateInference",
+            "bedrock-mantle:Get*",
+            "bedrock-mantle:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock-mantle:*:*:project/*",
+          "Sid": "BedrockMantleInference"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2026-02-12T17:57:27Z"
+}

@@ -1,15 +1,31 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralFullAccess",
   "CreateDate": "2024-11-18T23:33:28Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DRJMXIHNK",
   "PolicyName": "AWSPartnerCentralFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-12-01T00:34:08Z",
+    "CreateDate": "2026-02-12T17:59:12Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "aws-marketplace:DescribeAgreement",
+            "aws-marketplace:SearchAgreements"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws-marketplace:AgreementType": [
+                "PurchaseAgreement"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSMarketplaceAgreementsReadAccess"
+        },
         {
           "Action": [
             "iam:PassRole"
@@ -111,6 +127,18 @@
         },
         {
           "Action": [
+            "q:GetConversation",
+            "q:ListConversations",
+            "q:PassRequest",
+            "q:SendMessage",
+            "q:StartConversation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonQPartnerAssistantAccess"
+        },
+        {
+          "Action": [
             "s3:PutObject"
           ],
           "Effect": "Allow",
@@ -145,7 +173,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2025-12-01T00:34:08Z"
+  "UpdateDate": "2026-02-12T17:59:12Z"
 }

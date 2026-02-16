@@ -1,15 +1,47 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForMonitronPolicy",
   "CreateDate": "2020-12-02T19:06:08Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NYRIH2RCH",
   "PolicyName": "AWSServiceRoleForMonitronPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-10-02T10:06:59Z",
+    "CreateDate": "2026-01-07T09:34:09Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:identitystore:identitystore-arn": "arn:*:identitystore::*:identitystore/*"
+            },
+            "StringLike": {
+              "kms:ViaService": "identitystore.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKmsAccessViaIdentityStore"
+        },
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:sso:instance-arn": "arn:*:sso:::instance/*"
+            },
+            "StringLike": {
+              "kms:ViaService": "sso.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKmsAccessViaIdentityCenter"
+        },
         {
           "Action": [
             "sso-directory:DescribeUsers",
@@ -30,7 +62,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2024-10-02T10:06:59Z"
+  "UpdateDate": "2026-01-07T09:34:09Z"
 }

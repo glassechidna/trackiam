@@ -2,6 +2,7 @@ Actions:
 
   # actions with no corresponding API
   - Name: bedrock-agentcore:AllowVendedLogDeliveryForResource
+  - Name: bedrock-agentcore:AuthorizeAction
   - Name: bedrock-agentcore:BatchCreateMemoryRecords
   - Name: bedrock-agentcore:BatchDeleteMemoryRecords
   - Name: bedrock-agentcore:BatchUpdateMemoryRecords
@@ -12,41 +13,60 @@ Actions:
   - Name: bedrock-agentcore:CreateAgentRuntimeEndpoint
   - Name: bedrock-agentcore:CreateApiKeyCredentialProvider
   - Name: bedrock-agentcore:CreateBrowser
+  - Name: bedrock-agentcore:CreateBrowserProfile
   - Name: bedrock-agentcore:CreateCodeInterpreter
+  - Name: bedrock-agentcore:CreateEvaluator
   - Name: bedrock-agentcore:CreateEvent
   - Name: bedrock-agentcore:CreateGateway
   - Name: bedrock-agentcore:CreateGatewayTarget
   - Name: bedrock-agentcore:CreateMemory
   - Name: bedrock-agentcore:CreateOauth2CredentialProvider
+  - Name: bedrock-agentcore:CreateOnlineEvaluationConfig
+  - Name: bedrock-agentcore:CreatePolicy
+  - Name: bedrock-agentcore:CreatePolicyEngine
   - Name: bedrock-agentcore:CreateWorkloadIdentity
   - Name: bedrock-agentcore:DeleteAgentRuntime
   - Name: bedrock-agentcore:DeleteAgentRuntimeEndpoint
   - Name: bedrock-agentcore:DeleteApiKeyCredentialProvider
   - Name: bedrock-agentcore:DeleteBrowser
+  - Name: bedrock-agentcore:DeleteBrowserProfile
   - Name: bedrock-agentcore:DeleteCodeInterpreter
+  - Name: bedrock-agentcore:DeleteEvaluator
   - Name: bedrock-agentcore:DeleteEvent
   - Name: bedrock-agentcore:DeleteGateway
   - Name: bedrock-agentcore:DeleteGatewayTarget
   - Name: bedrock-agentcore:DeleteMemory
   - Name: bedrock-agentcore:DeleteMemoryRecord
   - Name: bedrock-agentcore:DeleteOauth2CredentialProvider
+  - Name: bedrock-agentcore:DeleteOnlineEvaluationConfig
+  - Name: bedrock-agentcore:DeletePolicy
+  - Name: bedrock-agentcore:DeletePolicyEngine
+  - Name: bedrock-agentcore:DeleteResourcePolicy
   - Name: bedrock-agentcore:DeleteWorkloadIdentity
+  - Name: bedrock-agentcore:Evaluate
   - Name: bedrock-agentcore:GetAgentCard
   - Name: bedrock-agentcore:GetAgentRuntime
   - Name: bedrock-agentcore:GetAgentRuntimeEndpoint
   - Name: bedrock-agentcore:GetApiKeyCredentialProvider
   - Name: bedrock-agentcore:GetBrowser
+  - Name: bedrock-agentcore:GetBrowserProfile
   - Name: bedrock-agentcore:GetBrowserSession
   - Name: bedrock-agentcore:GetCodeInterpreter
   - Name: bedrock-agentcore:GetCodeInterpreterSession
+  - Name: bedrock-agentcore:GetEvaluator
   - Name: bedrock-agentcore:GetEvent
   - Name: bedrock-agentcore:GetGateway
   - Name: bedrock-agentcore:GetGatewayTarget
   - Name: bedrock-agentcore:GetMemory
   - Name: bedrock-agentcore:GetMemoryRecord
   - Name: bedrock-agentcore:GetOauth2CredentialProvider
+  - Name: bedrock-agentcore:GetOnlineEvaluationConfig
+  - Name: bedrock-agentcore:GetPolicy
+  - Name: bedrock-agentcore:GetPolicyEngine
+  - Name: bedrock-agentcore:GetPolicyGeneration
   - Name: bedrock-agentcore:GetResourceApiKey
   - Name: bedrock-agentcore:GetResourceOauth2Token
+  - Name: bedrock-agentcore:GetResourcePolicy
   - Name: bedrock-agentcore:GetTokenVault
   - Name: bedrock-agentcore:GetWorkloadAccessToken
   - Name: bedrock-agentcore:GetWorkloadAccessTokenForJWT
@@ -54,6 +74,8 @@ Actions:
   - Name: bedrock-agentcore:GetWorkloadIdentity
   - Name: bedrock-agentcore:InvokeAgentRuntime
   - Name: bedrock-agentcore:InvokeAgentRuntimeForUser
+  - Name: bedrock-agentcore:InvokeAgentRuntimeWithWebSocketStream
+  - Name: bedrock-agentcore:InvokeAgentRuntimeWithWebSocketStreamForUser
   - Name: bedrock-agentcore:InvokeCodeInterpreter
   - Name: bedrock-agentcore:InvokeGateway
   - Name: bedrock-agentcore:ListActors
@@ -61,23 +83,38 @@ Actions:
   - Name: bedrock-agentcore:ListAgentRuntimeVersions
   - Name: bedrock-agentcore:ListAgentRuntimes
   - Name: bedrock-agentcore:ListApiKeyCredentialProviders
+  - Name: bedrock-agentcore:ListBrowserProfiles
   - Name: bedrock-agentcore:ListBrowserSessions
   - Name: bedrock-agentcore:ListBrowsers
   - Name: bedrock-agentcore:ListCodeInterpreterSessions
   - Name: bedrock-agentcore:ListCodeInterpreters
+  - Name: bedrock-agentcore:ListEvaluators
   - Name: bedrock-agentcore:ListEvents
   - Name: bedrock-agentcore:ListGatewayTargets
   - Name: bedrock-agentcore:ListGateways
   - Name: bedrock-agentcore:ListMemories
+  - Name: bedrock-agentcore:ListMemoryExtractionJobs
   - Name: bedrock-agentcore:ListMemoryRecords
   - Name: bedrock-agentcore:ListOauth2CredentialProviders
+  - Name: bedrock-agentcore:ListOnlineEvaluationConfigs
+  - Name: bedrock-agentcore:ListPolicies
+  - Name: bedrock-agentcore:ListPolicyEngines
+  - Name: bedrock-agentcore:ListPolicyGenerationAssets
+  - Name: bedrock-agentcore:ListPolicyGenerations
   - Name: bedrock-agentcore:ListSessions
   - Name: bedrock-agentcore:ListTagsForResource
   - Name: bedrock-agentcore:ListWorkloadIdentities
+  - Name: bedrock-agentcore:ManageAdminPolicy
+  - Name: bedrock-agentcore:ManageResourceScopedPolicy
+  - Name: bedrock-agentcore:PartiallyAuthorizeActions
+  - Name: bedrock-agentcore:PutResourcePolicy
   - Name: bedrock-agentcore:RetrieveMemoryRecords
+  - Name: bedrock-agentcore:SaveBrowserSessionProfile
   - Name: bedrock-agentcore:SetTokenVaultCMK
   - Name: bedrock-agentcore:StartBrowserSession
   - Name: bedrock-agentcore:StartCodeInterpreterSession
+  - Name: bedrock-agentcore:StartMemoryExtractionJob
+  - Name: bedrock-agentcore:StartPolicyGeneration
   - Name: bedrock-agentcore:StopBrowserSession
   - Name: bedrock-agentcore:StopCodeInterpreterSession
   - Name: bedrock-agentcore:StopRuntimeSession
@@ -88,8 +125,12 @@ Actions:
   - Name: bedrock-agentcore:UpdateAgentRuntimeEndpoint
   - Name: bedrock-agentcore:UpdateApiKeyCredentialProvider
   - Name: bedrock-agentcore:UpdateBrowserStream
+  - Name: bedrock-agentcore:UpdateEvaluator
   - Name: bedrock-agentcore:UpdateGateway
   - Name: bedrock-agentcore:UpdateGatewayTarget
   - Name: bedrock-agentcore:UpdateMemory
   - Name: bedrock-agentcore:UpdateOauth2CredentialProvider
+  - Name: bedrock-agentcore:UpdateOnlineEvaluationConfig
+  - Name: bedrock-agentcore:UpdatePolicy
+  - Name: bedrock-agentcore:UpdatePolicyEngine
   - Name: bedrock-agentcore:UpdateWorkloadIdentity

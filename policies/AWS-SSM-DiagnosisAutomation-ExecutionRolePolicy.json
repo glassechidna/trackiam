@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWS-SSM-DiagnosisAutomation-ExecutionRolePolicy",
   "CreateDate": "2024-11-16T00:08:07Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4H4ILJBF7U",
   "PolicyName": "AWS-SSM-DiagnosisAutomation-ExecutionRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-07-16T17:37:07Z",
+    "CreateDate": "2026-02-12T18:02:31Z",
     "Document": {
       "Statement": [
         {
@@ -46,8 +46,10 @@
         },
         {
           "Action": [
+            "ec2:DescribeInstanceStatus",
             "ec2:DescribeInstances",
             "ec2:DescribeInternetGateways",
+            "ec2:DescribeNetworkAcls",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcAttribute",
@@ -60,10 +62,12 @@
         },
         {
           "Action": [
+            "ssm:DescribeActivations",
             "ssm:DescribeAutomationExecutions",
             "ssm:DescribeAutomationStepExecutions",
             "ssm:DescribeInstanceInformation",
-            "ssm:GetAutomationExecution"
+            "ssm:GetAutomationExecution",
+            "ssm:GetServiceSetting"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -85,7 +89,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2025-07-16T17:37:07Z"
+  "UpdateDate": "2026-02-12T18:02:31Z"
 }

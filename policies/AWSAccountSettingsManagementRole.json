@@ -1,0 +1,114 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSAccountSettingsManagementRole",
+  "CreateDate": "2025-12-11T17:49:09Z",
+  "DefaultVersionId": "v6",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CVFC7PYPE",
+  "PolicyName": "AWSAccountSettingsManagementRole",
+  "PolicyVersion": {
+    "CreateDate": "2026-02-12T18:02:39Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "account:CloseAccount",
+            "account:GetAccountInformation",
+            "account:GetContactInformation",
+            "account:PutContactInformation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "billing:GetSellerOfRecord"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "ce:GetCostAndUsage"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "customer-verification:CreateCustomerVerificationDetails",
+            "customer-verification:CreateUploadUrls",
+            "customer-verification:GetCustomerVerificationDetails",
+            "customer-verification:GetCustomerVerificationEligibility",
+            "customer-verification:UpdateCustomerVerificationDetails"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "freetier:GetAccountPlanState"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "invoicing:GetInvoicePDF"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "payments:CreatePaymentInstrument",
+            "payments:GetPaymentInstrument",
+            "payments:GetPaymentStatus",
+            "payments:ListPaymentPreferences",
+            "payments:ListTagsForResource",
+            "payments:MakePayment",
+            "payments:TagResource",
+            "payments:UntagResource",
+            "payments:UpdatePaymentInstrument",
+            "payments:UpdatePaymentPreferences"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "pricing:GetProducts"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "sso:DescribeApplication",
+            "sso:DescribeInstance",
+            "sso:ListApplications",
+            "sso:ListInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "tax:BatchPutTaxRegistration",
+            "tax:DeleteTaxRegistration",
+            "tax:GetTaxRegistration",
+            "tax:GetTaxRegistrationDocument",
+            "tax:ListTaxRegistrations",
+            "tax:PutTaxRegistration"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v6"
+  },
+  "UpdateDate": "2026-02-12T18:02:39Z"
+}

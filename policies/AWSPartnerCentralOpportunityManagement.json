@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralOpportunityManagement",
   "CreateDate": "2024-11-14T19:09:05Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4OANYBNL3Z",
   "PolicyName": "AWSPartnerCentralOpportunityManagement",
   "PolicyVersion": {
-    "CreateDate": "2025-12-01T00:49:06Z",
+    "CreateDate": "2026-02-14T00:57:09Z",
     "Document": {
       "Statement": [
         {
@@ -154,12 +154,24 @@
             "arn:aws:partnercentral::*:catalog/AWS/ReportingData/Opportunity_V1/Dashboard/*"
           ],
           "Sid": "PartnerDashboardAccess"
+        },
+        {
+          "Action": [
+            "q:GetConversation",
+            "q:ListConversations",
+            "q:PassRequest",
+            "q:SendMessage",
+            "q:StartConversation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonQPartnerAssistantAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2025-12-01T00:49:06Z"
+  "UpdateDate": "2026-02-14T00:57:09Z"
 }

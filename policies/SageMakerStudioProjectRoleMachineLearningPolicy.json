@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectRoleMachineLearningPolicy",
   "CreateDate": "2024-11-20T21:55:27Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v37",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NSSEENOX7",
   "PolicyName": "SageMakerStudioProjectRoleMachineLearningPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-11-21T17:19:10Z",
+    "CreateDate": "2026-02-12T18:02:49Z",
     "Document": {
       "Statement": [
         {
@@ -595,6 +595,24 @@
         },
         {
           "Action": [
+            "sagemaker:CallMlflowAppApi",
+            "sagemaker:CreateMlflowApp",
+            "sagemaker:CreatePresignedMlflowAppUrl",
+            "sagemaker:DeleteMlflowApp",
+            "sagemaker:DescribeMlflowApp",
+            "sagemaker:UpdateMlflowApp"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:mlflow-app/*",
+          "Sid": "SageMakerMlflowServerlessPermission"
+        },
+        {
+          "Action": [
             "sagemaker:CreateApp",
             "sagemaker:DeleteApp"
           ],
@@ -864,6 +882,7 @@
             "sagemaker:ListHubs",
             "sagemaker:ListHyperParameterTuningJobs",
             "sagemaker:ListInferenceComponents",
+            "sagemaker:ListMlflowApps",
             "sagemaker:ListMlflowTrackingServers",
             "sagemaker:ListModelMetadata",
             "sagemaker:ListModelPackageGroups",
@@ -1106,7 +1125,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v37"
   },
-  "UpdateDate": "2025-11-21T17:19:10Z"
+  "UpdateDate": "2026-02-12T18:02:49Z"
 }

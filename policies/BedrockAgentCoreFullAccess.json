@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/BedrockAgentCoreFullAccess",
   "CreateDate": "2025-07-16T13:37:07Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BB44GAY7X",
   "PolicyName": "BedrockAgentCoreFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-11-03T21:04:07Z",
+    "CreateDate": "2026-02-12T17:58:03Z",
     "Document": {
       "Statement": [
         {
@@ -206,6 +206,16 @@
         },
         {
           "Action": [
+            "apigateway:GET"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:apigateway:*::/restapis/*/stages/*/exports/*"
+          ],
+          "Sid": "BedrockAgentCoreGatewayApiGateway"
+        },
+        {
+          "Action": [
             "application-autoscaling:DescribeScalingPolicies",
             "application-signals:BatchGet*",
             "application-signals:Get*",
@@ -254,6 +264,18 @@
         },
         {
           "Action": [
+            "bedrock:InvokeModel",
+            "bedrock:InvokeModelWithResponseStream"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:bedrock:*:*:inference-profile/*",
+            "arn:aws:bedrock:*::foundation-model/*"
+          ],
+          "Sid": "AgentCoreEvaluationBedrockInvokeAccess"
+        },
+        {
+          "Action": [
             "cloudtrail:CreateServiceLinkedChannel"
           ],
           "Effect": "Allow",
@@ -296,6 +318,16 @@
         },
         {
           "Action": [
+            "logs:CreateLogGroup"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/bedrock-agentcore/evaluations/*"
+          ],
+          "Sid": "AgentCoreEvaluationCloudWatchLogCreate"
+        },
+        {
+          "Action": [
             "logs:CreateLogGroup",
             "logs:CreateLogStream",
             "logs:PutRetentionPolicy"
@@ -327,6 +359,18 @@
         },
         {
           "Action": [
+            "logs:DescribeIndexPolicies",
+            "logs:PutIndexPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:aws/spans",
+            "arn:aws:logs:*:*:log-group:aws/spans:*"
+          ],
+          "Sid": "AgentCoreEvaluationCloudWatchLogIndexAccess"
+        },
+        {
+          "Action": [
             "secretsmanager:CreateSecret",
             "secretsmanager:DeleteSecret",
             "secretsmanager:GetSecretValue",
@@ -351,7 +395,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v15"
   },
-  "UpdateDate": "2025-11-03T21:04:07Z"
+  "UpdateDate": "2026-02-12T17:58:03Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy",
   "CreateDate": "2022-04-04T17:24:29Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4IV6FHD2UE",
   "PolicyName": "AmazonEBSCSIDriverPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-11-17T17:04:07Z",
+    "CreateDate": "2026-02-12T18:02:41Z",
     "Document": {
       "Statement": [
         {
@@ -81,7 +81,8 @@
         },
         {
           "Action": [
-            "ec2:DeleteSnapshot"
+            "ec2:DeleteSnapshot",
+            "ec2:LockSnapshot"
           ],
           "Condition": {
             "StringLike": {
@@ -93,7 +94,8 @@
         },
         {
           "Action": [
-            "ec2:DeleteSnapshot"
+            "ec2:DeleteSnapshot",
+            "ec2:LockSnapshot"
           ],
           "Condition": {
             "StringLike": {
@@ -202,7 +204,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2025-11-17T17:04:07Z"
+  "UpdateDate": "2026-02-12T18:02:41Z"
 }

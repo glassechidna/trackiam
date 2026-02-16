@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudWatchNetworkMonitorServiceRolePolicy",
   "CreateDate": "2023-12-21T18:53:19Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4N6T4VFSYW",
   "PolicyName": "CloudWatchNetworkMonitorServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-12-21T18:53:19Z",
+    "CreateDate": "2025-12-12T22:04:10Z",
     "Document": {
       "Statement": [
         {
@@ -48,9 +48,13 @@
             "ec2:DescribeNetworkInterfaceAttribute",
             "ec2:DescribeNetworkInterfacePermissions",
             "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeRouteTables",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
-            "ec2:DescribeVpcs"
+            "ec2:DescribeTransitGatewayAttachments",
+            "ec2:DescribeTransitGatewayRouteTables",
+            "ec2:DescribeVpcs",
+            "ec2:SearchTransitGatewayRoutes"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -60,7 +64,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-12-21T18:53:19Z"
+  "UpdateDate": "2025-12-12T22:04:10Z"
 }

@@ -75,22 +75,32 @@ Actions:
   - Name: logs:UpdateLogAnomalyDetector
 
   # actions with no corresponding API
+  - Name: logs:AssociateSourceToS3TableIntegration
+  - Name: logs:CancelImportTask
+  - Name: logs:CreateImportTask
   - Name: logs:CreateLogDelivery
   - Name: logs:CreateScheduledQuery
   - Name: logs:DeleteIndexPolicy
   - Name: logs:DeleteIntegration
   - Name: logs:DeleteLogDelivery
+  - Name: logs:DeletePipelineRule
   - Name: logs:DeleteScheduledQuery
   - Name: logs:DeleteTransformer
   - Name: logs:DescribeConfigurationTemplates
   - Name: logs:DescribeFieldIndexes
+  - Name: logs:DescribeImportTaskBatches
+  - Name: logs:DescribeImportTasks
   - Name: logs:DescribeIndexPolicies
+  - Name: logs:DisassociateSourceFromS3TableIntegration
   - Name: logs:GetIntegration
   - Name: logs:GetLogDelivery
+  - Name: logs:GetLogFields
   - Name: logs:GetScheduledQuery
   - Name: logs:GetScheduledQueryHistory
   - Name: logs:GetTransformer
+  - Name: logs:IntegrateWithS3Table
   - Name: logs:Link
+  - Name: logs:ListAggregateLogGroupSummaries
   - Name: logs:ListEntitiesForLogGroup
   - Name: logs:ListIntegrations
   - Name: logs:ListLogDeliveries
@@ -98,9 +108,12 @@ Actions:
   - Name: logs:ListLogGroupsForEntity
   - Name: logs:ListLogGroupsForQuery
   - Name: logs:ListScheduledQueries
+  - Name: logs:ListSourcesForS3TableIntegration
+  - Name: logs:ProcessWithPipeline
   - Name: logs:PutIndexPolicy
   - Name: logs:PutIntegration
   - Name: logs:PutLogGroupDeletionProtection
+  - Name: logs:PutPipelineRule
   - Name: logs:PutTransformer
   - Name: logs:StopLiveTail
   - Name: logs:TestTransformer

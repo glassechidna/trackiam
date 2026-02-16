@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AIOpsAssistantPolicy",
   "CreateDate": "2024-12-02T16:21:06Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LSO5ZZZOE",
   "PolicyName": "AIOpsAssistantPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-09-24T15:34:07Z",
+    "CreateDate": "2026-02-12T17:57:22Z",
     "Document": {
       "Statement": [
         {
@@ -80,6 +80,7 @@
             "appsync:GetDomainName",
             "appsync:GetFunction",
             "appsync:GetGraphqlApi",
+            "appsync:GetGraphqlApiEnvironmentVariables",
             "appsync:GetIntrospectionSchema",
             "appsync:GetResolver",
             "appsync:GetSourceApiAssociation",
@@ -160,6 +161,7 @@
             "cloudfront:List*",
             "cloudtrail:Describe*",
             "cloudtrail:GetChannel",
+            "cloudtrail:GetEventConfiguration",
             "cloudtrail:GetEventDataStore",
             "cloudtrail:GetEventSelectors",
             "cloudtrail:GetInsightSelectors",
@@ -473,6 +475,10 @@
             "kinesisanalytics:List*",
             "kinesisvideo:Describe*",
             "kms:DescribeKey",
+            "kms:GetKeyPolicy",
+            "kms:GetKeyRotationStatus",
+            "kms:ListAliases",
+            "kms:ListKeyRotations",
             "kms:ListKeys",
             "kms:ListResourceTags",
             "lakeformation:Describe*",
@@ -710,6 +716,7 @@
             "s3:GetAccessPointPolicyForObjectLambda",
             "s3:GetAccessPointPolicyStatusForObjectLambda",
             "s3:GetAnalyticsConfiguration",
+            "s3:GetBucketAbac",
             "s3:GetBucketAcl",
             "s3:GetBucketCORS",
             "s3:GetBucketLocation",
@@ -907,7 +914,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v15"
   },
-  "UpdateDate": "2025-09-24T15:34:07Z"
+  "UpdateDate": "2026-02-12T17:57:22Z"
 }

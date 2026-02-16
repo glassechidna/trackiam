@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSDeadlineCloud-UserAccessFarms",
   "CreateDate": "2024-04-01T16:54:00Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4A7BV6IHOE",
   "PolicyName": "AWSDeadlineCloud-UserAccessFarms",
   "PolicyVersion": {
-    "CreateDate": "2024-10-07T17:57:52Z",
+    "CreateDate": "2026-02-12T18:00:18Z",
     "Document": {
       "Statement": [
         {
@@ -219,6 +219,42 @@
         },
         {
           "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:identitystore:identitystore-arn": "arn:*:identitystore::*:identitystore/*"
+            },
+            "StringLike": {
+              "kms:ViaService": "identitystore.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowKmsAccessViaIdentityStore"
+        },
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:sso:instance-arn": "arn:*:sso:::instance/*"
+            },
+            "StringLike": {
+              "kms:ViaService": "sso.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowKmsAccessViaIdentityCenter"
+        },
+        {
+          "Action": [
             "deadline:GetApplicationVersion",
             "ec2:DescribeInstanceTypes",
             "identitystore:DescribeGroup",
@@ -236,7 +272,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2024-10-07T17:57:52Z"
+  "UpdateDate": "2026-02-12T18:00:18Z"
 }

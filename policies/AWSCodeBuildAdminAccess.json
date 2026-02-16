@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess",
   "CreateDate": "2016-12-01T19:04:44Z",
-  "DefaultVersionId": "v15",
+  "DefaultVersionId": "v20",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJQJGIOIE3CD2TQXDS",
   "PolicyName": "AWSCodeBuildAdminAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-12-16T20:07:07Z",
+    "CreateDate": "2026-02-12T18:01:51Z",
     "Document": {
       "Statement": [
         {
@@ -145,12 +145,20 @@
           "Effect": "Allow",
           "Resource": "arn:aws:ecs:*:*:task/*/*",
           "Sid": "SSMStartSessionAccess"
+        },
+        {
+          "Action": [
+            "ssmmessages:OpenDataChannel"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:session/*",
+          "Sid": "SSMOpenDataChannelAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v15"
+    "VersionId": "v20"
   },
-  "UpdateDate": "2024-12-16T20:07:07Z"
+  "UpdateDate": "2026-02-12T18:01:51Z"
 }

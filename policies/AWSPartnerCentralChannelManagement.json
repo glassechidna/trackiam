@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralChannelManagement",
   "CreateDate": "2025-11-19T16:34:09Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4EKQNXSK5L",
   "PolicyName": "AWSPartnerCentralChannelManagement",
   "PolicyVersion": {
-    "CreateDate": "2025-12-01T00:34:07Z",
+    "CreateDate": "2026-02-14T00:57:09Z",
     "Document": {
       "Statement": [
         {
@@ -103,6 +103,18 @@
         },
         {
           "Action": [
+            "q:GetConversation",
+            "q:ListConversations",
+            "q:PassRequest",
+            "q:SendMessage",
+            "q:StartConversation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonQPartnerAssistantAccess"
+        },
+        {
+          "Action": [
             "sts:AssumeRole"
           ],
           "Effect": "Allow",
@@ -116,7 +128,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2025-12-01T00:34:07Z"
+  "UpdateDate": "2026-02-14T00:57:09Z"
 }

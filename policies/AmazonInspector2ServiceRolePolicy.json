@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonInspector2ServiceRolePolicy",
   "CreateDate": "2021-11-16T20:27:48Z",
-  "DefaultVersionId": "v17",
+  "DefaultVersionId": "v26",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4BINOILVQW",
   "PolicyName": "AmazonInspector2ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-11-10T18:19:10Z",
+    "CreateDate": "2026-02-13T17:12:07Z",
     "Document": {
       "Statement": [
         {
@@ -234,6 +234,7 @@
             "elasticloadbalancing:DescribeTargetGroups",
             "elasticloadbalancing:DescribeTargetHealth",
             "network-firewall:DescribeFirewall",
+            "network-firewall:DescribeFirewallMetadata",
             "network-firewall:DescribeFirewallPolicy",
             "network-firewall:DescribeResourcePolicy",
             "network-firewall:DescribeRuleGroup",
@@ -310,6 +311,7 @@
           "Resource": [
             "arn:aws:ec2:*:*:instance/*",
             "arn:aws:ssm:*:*:association/*",
+            "arn:aws:ssm:*:*:document/AWS-ConfigureAWSPackage",
             "arn:aws:ssm:*:*:document/AWS-GatherSoftwareInventory",
             "arn:aws:ssm:*:*:document/AmazonInspector2-*",
             "arn:aws:ssm:*:*:managed-instance/*"
@@ -352,7 +354,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v17"
+    "VersionId": "v26"
   },
-  "UpdateDate": "2025-11-10T18:19:10Z"
+  "UpdateDate": "2026-02-13T17:12:07Z"
 }

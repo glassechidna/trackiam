@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SecurityAudit",
   "CreateDate": "2015-02-06T18:41:01Z",
-  "DefaultVersionId": "v56",
+  "DefaultVersionId": "v84",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIX2T3QCXHR2OGGCTO",
   "PolicyName": "SecurityAudit",
   "PolicyVersion": {
-    "CreateDate": "2025-10-13T18:19:07Z",
+    "CreateDate": "2026-02-12T18:00:22Z",
     "Document": {
       "Statement": [
         {
@@ -292,6 +292,7 @@
             "dynamodb:DescribeKinesisStreamingDestination",
             "dynamodb:DescribeTable",
             "dynamodb:DescribeTimeToLive",
+            "dynamodb:GetResourcePolicy",
             "dynamodb:ListBackups",
             "dynamodb:ListExports",
             "dynamodb:ListGlobalTables",
@@ -342,6 +343,8 @@
             "eks:DescribeCluster",
             "eks:DescribeFargateProfile",
             "eks:DescribeNodeGroup",
+            "eks:ListAccessEntries",
+            "eks:ListAssociatedAccessPolicies",
             "eks:ListClusters",
             "eks:ListFargateProfiles",
             "eks:ListNodeGroups",
@@ -965,7 +968,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v56"
+    "VersionId": "v84"
   },
-  "UpdateDate": "2025-10-13T18:19:07Z"
+  "UpdateDate": "2026-02-12T18:00:22Z"
 }

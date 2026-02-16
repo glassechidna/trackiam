@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSCleanRoomsServiceRolePolicy",
+  "CreateDate": "2025-12-15T17:49:09Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4IO4Y3P4KL",
+  "PolicyName": "AWSCleanRoomsServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2025-12-15T17:49:09Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": [
+                "AWS/Clean Rooms"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2025-12-15T17:49:09Z"
+}

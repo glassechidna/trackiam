@@ -1,0 +1,173 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/ConsoleFullAccessFromVercel",
+  "CreateDate": "2025-12-11T16:49:10Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CSYHH4JUN",
+  "PolicyName": "ConsoleFullAccessFromVercel",
+  "PolicyVersion": {
+    "CreateDate": "2026-02-12T18:00:58Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "application-autoscaling:DeleteScalingPolicy",
+            "application-autoscaling:DeregisterScalableTarget",
+            "application-autoscaling:PutScalingPolicy",
+            "application-autoscaling:RegisterScalableTarget"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "application-autoscaling:service-namespace": "dynamodb"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ApplicationAutoscalingIntegration"
+        },
+        {
+          "Action": [
+            "rds:CreateDBInstance"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "rds:DatabaseEngine": "aurora-postgresql"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AuroraRestricted"
+        },
+        {
+          "Action": [
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingActivities",
+            "application-autoscaling:DescribeScalingPolicies"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ApplicationAutoscalingDescribeActions"
+        },
+        {
+          "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics",
+            "cloudwatch:PutMetricAlarm",
+            "logs:DescribeLogStreams",
+            "logs:GetLogEvents",
+            "tag:GetTagKeys",
+            "tag:GetTagValues"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "Observability"
+        },
+        {
+          "Action": [
+            "dsql:DbConnect",
+            "dsql:DbConnectAdmin",
+            "dsql:GetCluster",
+            "dsql:ListClusters",
+            "dsql:ListTagsForResource",
+            "dsql:UpdateCluster"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "DSQL"
+        },
+        {
+          "Action": [
+            "dynamodb:BatchGetItem",
+            "dynamodb:BatchWriteItem",
+            "dynamodb:ConditionCheckItem",
+            "dynamodb:DeleteItem",
+            "dynamodb:DescribeLimits",
+            "dynamodb:DescribeTable",
+            "dynamodb:DescribeTimeToLive",
+            "dynamodb:GetItem",
+            "dynamodb:GetRecords",
+            "dynamodb:ListTables",
+            "dynamodb:ListTagsOfResource",
+            "dynamodb:PutItem",
+            "dynamodb:Query",
+            "dynamodb:Scan",
+            "dynamodb:TagResource",
+            "dynamodb:UntagResource",
+            "dynamodb:UpdateItem",
+            "dynamodb:UpdateTable",
+            "dynamodb:UpdateTimeToLive"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "DynamoDB"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "rds-db:connect",
+            "rds:ApplyPendingMaintenanceAction",
+            "rds:CopyDBClusterParameterGroup",
+            "rds:CopyDBClusterSnapshot",
+            "rds:CopyDBParameterGroup",
+            "rds:CreateDBClusterEndpoint",
+            "rds:CreateDBClusterParameterGroup",
+            "rds:CreateDBClusterSnapshot",
+            "rds:CreateDBParameterGroup",
+            "rds:DeleteDBCluster",
+            "rds:DeleteDBClusterAutomatedBackup",
+            "rds:DeleteDBClusterEndpoint",
+            "rds:DeleteDBClusterParameterGroup",
+            "rds:DeleteDBClusterSnapshot",
+            "rds:DeleteDBInstance",
+            "rds:DeleteDBParameterGroup",
+            "rds:Describe*",
+            "rds:FailoverDBCluster",
+            "rds:ListTagsForResource",
+            "rds:ModifyDBCluster",
+            "rds:ModifyDBClusterEndpoint",
+            "rds:ModifyDBClusterParameterGroup",
+            "rds:ModifyDBInstance",
+            "rds:ModifyDBParameterGroup",
+            "rds:RebootDBCluster",
+            "rds:RebootDBInstance",
+            "rds:ResetDBClusterParameterGroup",
+            "rds:ResetDBParameterGroup",
+            "rds:RestoreDBClusterFromSnapshot",
+            "rds:RestoreDBClusterToPointInTime",
+            "rds:StartDBCluster",
+            "rds:StartDBInstance"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "Aurora"
+        },
+        {
+          "Action": [
+            "freetier:GetAccountPlanState"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ViewFreeTierState"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2026-02-12T18:00:58Z"
+}

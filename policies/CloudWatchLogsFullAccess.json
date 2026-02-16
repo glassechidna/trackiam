@@ -1,20 +1,23 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchLogsFullAccess",
   "CreateDate": "2015-02-06T18:40:02Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ3ZGNWK2R5HW5BQFO",
   "PolicyName": "CloudWatchLogsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-05-20T17:07:06Z",
+    "CreateDate": "2026-02-12T18:00:33Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "cloudwatch:GenerateQuery",
             "cloudwatch:GenerateQueryResultsSummary",
-            "logs:*"
+            "logs:*",
+            "observabilityadmin:GetS3TableIntegration",
+            "observabilityadmin:ListS3TableIntegrations",
+            "observabilityadmin:ListTelemetryPipelines"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -24,7 +27,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2025-05-20T17:07:06Z"
+  "UpdateDate": "2026-02-12T18:00:33Z"
 }

@@ -11,20 +11,20 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 444
-* Unique actions: 20309
-* Managed policies: 1426
+* Unique services: 449
+* Unique actions: 20760
+* Managed policies: 1448
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 386 |
-| `arn:aws:iam::aws:policy/Amazon*` | 351 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 329 |
-| `arn:aws:iam::aws:policy/service-role/*` | 214 |
+| `arn:aws:iam::aws:policy/AWS*` | 390 |
+| `arn:aws:iam::aws:policy/Amazon*` | 357 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 333 |
+| `arn:aws:iam::aws:policy/service-role/*` | 217 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
-| Other | 138 |
+| Other | 143 |
 
 The following table summarises the AWS APIs. 
 
@@ -36,31 +36,31 @@ The following table summarises the AWS APIs.
 
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
-| [`ec2`](services/ec2.yml) | 625 | 0 | 95 |
-| [`sagemaker`](services/sagemaker.yml) | 351 | 0 | 54 |
+| [`ec2`](services/ec2.yml) | 625 | 0 | 146 |
+| [`sagemaker`](services/sagemaker.yml) | 351 | 0 | 61 |
 | [`iot`](services/iot.yml) | 262 | 3 | 28 |
 | [`chime`](services/chime.yml) | 259 | 0 | 57 |
 | [`connect`](services/connect.yml) | 256 | 0 | 95 |
-| [`glue`](services/glue.yml) | 214 | 4 | 83 |
-| [`ses`](services/ses.yml) | 193 | 0 | 32 |
-| [`quicksight`](services/quicksight.yml) | 174 | 3 | 90 |
+| [`glue`](services/glue.yml) | 214 | 4 | 85 |
+| [`ses`](services/ses.yml) | 193 | 0 | 33 |
+| [`quicksight`](services/quicksight.yml) | 174 | 3 | 97 |
 | [`rds`](services/rds.yml) | 162 | 0 | 7 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
 | [`iam`](services/iam.yml) | 159 | 0 | 28 |
 | [`ssm`](services/ssm.yml) | 140 | 0 | 16 |
 | [`lex`](services/lex.yml) | 139 | 2 | 8 |
-| [`redshift`](services/redshift.yml) | 133 | 0 | 30 |
-| [`datazone`](services/datazone.yml) | 123 | 0 | 99 |
+| [`redshift`](services/redshift.yml) | 133 | 0 | 33 |
+| [`datazone`](services/datazone.yml) | 123 | 0 | 103 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 3 |
-| [`s3`](services/s3.yml) | 113 | 60 | 54 |
+| [`s3`](services/s3.yml) | 113 | 60 | 55 |
 | [`iotwireless`](services/iotwireless.yml) | 112 | 0 | 1 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`cloudfront`](services/cloudfront.yml) | 110 | 1 | 63 |
 | [`gamelift`](services/gamelift.yml) | 108 | 0 | 10 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 15 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 13 |
-| [`bedrock`](services/bedrock.yml) | 97 | 2 | 131 |
+| [`bedrock`](services/bedrock.yml) | 97 | 2 | 135 |
 | [`dms`](services/dms.yml) | 92 | 14 | 32 |
 | [`medialive`](services/medialive.yml) | 92 | 0 | 33 |
 | [`config`](services/config.yml) | 92 | 0 | 5 |
@@ -70,7 +70,7 @@ The following table summarises the AWS APIs.
 | [`es`](services/es.yml) | 87 | 0 | 27 |
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
 | [`sms-voice`](services/sms-voice.yml) | 87 | 0 | 8 |
-| [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 3 |
+| [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 10 |
 | [`comprehend`](services/comprehend.yml) | 85 | 0 | 0 |
 | [`workmail`](services/workmail.yml) | 84 | 0 | 42 |
 | [`iotsitewise`](services/iotsitewise.yml) | 84 | 0 | 22 |
@@ -83,29 +83,29 @@ The following table summarises the AWS APIs.
 | [`personalize`](services/personalize.yml) | 78 | 0 | 5 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
-| [`cleanrooms`](services/cleanrooms.yml) | 76 | 0 | 15 |
+| [`cleanrooms`](services/cleanrooms.yml) | 76 | 0 | 16 |
 | [`appstream`](services/appstream.yml) | 75 | 0 | 14 |
 | [`elasticache`](services/elasticache.yml) | 75 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
-| [`logs`](services/logs.yml) | 74 | 0 | 33 |
+| [`logs`](services/logs.yml) | 74 | 0 | 46 |
 | [`guardduty`](services/guardduty.yml) | 74 | 0 | 14 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
-| [`sso`](services/sso.yml) | 73 | 0 | 49 |
+| [`sso`](services/sso.yml) | 73 | 0 | 53 |
 | [`imagebuilder`](services/imagebuilder.yml) | 73 | 0 | 4 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
 | [`wellarchitected`](services/wellarchitected.yml) | 72 | 0 | 1 |
-| [`mgn`](services/mgn.yml) | 70 | 0 | 62 |
+| [`mgn`](services/mgn.yml) | 70 | 0 | 64 |
 | [`route53`](services/route53.yml) | 70 | 0 | 1 |
 | [`athena`](services/athena.yml) | 68 | 0 | 13 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 0 |
 | [`ds`](services/ds.yml) | 67 | 0 | 24 |
-| [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 66 | 0 | 7 |
+| [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 66 | 0 | 11 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 3 |
-| [`appsync`](services/appsync.yml) | 64 | 0 | 19 |
-| [`lambda`](services/lambda.yml) | 63 | 3 | 16 |
+| [`appsync`](services/appsync.yml) | 64 | 0 | 23 |
+| [`lambda`](services/lambda.yml) | 63 | 3 | 25 |
 | [`ivs`](services/ivs.yml) | 63 | 0 | 8 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
@@ -116,20 +116,20 @@ The following table summarises the AWS APIs.
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 17 |
 | [`events`](services/events.yml) | 57 | 0 | 3 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
-| [`dynamodb`](services/dynamodb.yml) | 56 | 5 | 17 |
+| [`dynamodb`](services/dynamodb.yml) | 56 | 5 | 22 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 56 | 0 | 27 |
 | [`eks`](services/eks.yml) | 56 | 0 | 12 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 11 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
 | [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 38 |
-| [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 10 |
+| [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 13 |
 | [`resiliencehub`](services/resiliencehub.yml) | 55 | 0 | 8 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 8 |
 | [`lakeformation`](services/lakeformation.yml) | 54 | 1 | 7 |
 | [`wafv2`](services/wafv2.yml) | 54 | 0 | 2 |
 | [`kms`](services/kms.yml) | 52 | 1 | 3 |
 | [`profile`](services/profile.yml) | 52 | 0 | 50 |
-| [`kafka`](services/kafka.yml) | 52 | 0 | 4 |
+| [`kafka`](services/kafka.yml) | 52 | 0 | 7 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 24 |
 | [`mediaconnect`](services/mediaconnect.yml) | 51 | 0 | 29 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 2 | 6 |
@@ -154,7 +154,7 @@ The following table summarises the AWS APIs.
 | [`codepipeline`](services/codepipeline.yml) | 43 | 0 | 1 |
 | [`fms`](services/fms.yml) | 42 | 0 | 0 |
 | [`sns`](services/sns.yml) | 41 | 1 | 0 |
-| [`ce`](services/ce.yml) | 41 | 0 | 17 |
+| [`ce`](services/ce.yml) | 41 | 0 | 18 |
 | [`kinesisvideo`](services/kinesisvideo.yml) | 40 | 0 | 6 |
 | [`iottwinmaker`](services/iottwinmaker.yml) | 40 | 0 | 0 |
 | [`swf`](services/swf.yml) | 39 | 0 | 12 |
@@ -165,12 +165,12 @@ The following table summarises the AWS APIs.
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 4 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
 | [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
-| [`aoss`](services/aoss.yml) | 37 | 0 | 6 |
+| [`aoss`](services/aoss.yml) | 37 | 0 | 12 |
 | [`apprunner`](services/apprunner.yml) | 37 | 0 | 5 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 4 |
 | [`states`](services/states.yml) | 37 | 0 | 2 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
-| [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 21 |
+| [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 43 |
 | [`entityresolution`](services/entityresolution.yml) | 36 | 0 | 4 |
 | [`shield`](services/shield.yml) | 36 | 0 | 3 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
@@ -181,19 +181,19 @@ The following table summarises the AWS APIs.
 | [`ram`](services/ram.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 33 | 2 | 2 |
+| [`groundstation`](services/groundstation.yml) | 33 | 0 | 2 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
 | [`kinesisanalytics`](services/kinesisanalytics.yml) | 33 | 0 | 1 |
-| [`groundstation`](services/groundstation.yml) | 33 | 0 | 1 |
 | [`applicationinsights`](services/applicationinsights.yml) | 33 | 0 | 1 |
 | [`tnb`](services/tnb.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
 | [`kinesis`](services/kinesis.yml) | 32 | 0 | 8 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`billingconductor`](services/billingconductor.yml) | 32 | 0 | 0 |
+| [`payment-cryptography`](services/payment-cryptography.yml) | 31 | 0 | 9 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 31 | 0 | 7 |
 | [`outposts`](services/outposts.yml) | 31 | 0 | 5 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 31 | 0 | 3 |
-| [`payment-cryptography`](services/payment-cryptography.yml) | 31 | 0 | 1 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 31 | 0 | 0 |
 | [`securitylake`](services/securitylake.yml) | 31 | 0 | 0 |
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
@@ -258,8 +258,8 @@ The following table summarises the AWS APIs.
 | [`dax`](services/dax.yml) | 21 | 0 | 9 |
 | [`synthetics`](services/synthetics.yml) | 21 | 0 | 1 |
 | [`sqs`](services/sqs.yml) | 20 | 3 | 0 |
-| [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 5 |
-| [`identitystore`](services/identitystore.yml) | 19 | 0 | 3 |
+| [`identitystore`](services/identitystore.yml) | 19 | 0 | 8 |
+| [`servicequotas`](services/servicequotas.yml) | 19 | 0 | 7 |
 | [`datapipeline`](services/datapipeline.yml) | 19 | 0 | 2 |
 | [`translate`](services/translate.yml) | 19 | 0 | 0 |
 | [`signer`](services/signer.yml) | 19 | 0 | 0 |
@@ -301,8 +301,8 @@ The following table summarises the AWS APIs.
 | [`snow-device-management`](services/snow-device-management.yml) | 13 | 0 | 0 |
 | [`pi`](services/pi.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
-| [`launchwizard`](services/launchwizard.yml) | 12 | 0 | 25 |
-| [`account`](services/account.yml) | 12 | 0 | 3 |
+| [`launchwizard`](services/launchwizard.yml) | 12 | 0 | 28 |
+| [`account`](services/account.yml) | 12 | 0 | 4 |
 | [`scheduler`](services/scheduler.yml) | 12 | 0 | 0 |
 | [`pca-connector-scep`](services/pca-connector-scep.yml) | 12 | 0 | 0 |
 | [`networkmonitor`](services/networkmonitor.yml) | 12 | 0 | 0 |
@@ -310,8 +310,8 @@ The following table summarises the AWS APIs.
 | [`bcm-data-exports`](services/bcm-data-exports.yml) | 12 | 0 | 0 |
 | [`budgets`](services/budgets.yml) | 11 | 15 | 2 |
 | [`trustedadvisor`](services/trustedadvisor.yml) | 11 | 0 | 41 |
+| [`timestream-influxdb`](services/timestream-influxdb.yml) | 11 | 0 | 8 |
 | [`repostspace`](services/repostspace.yml) | 11 | 0 | 8 |
-| [`timestream-influxdb`](services/timestream-influxdb.yml) | 11 | 0 | 6 |
 | [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 11 | 0 | 6 |
 | [`airflow`](services/airflow.yml) | 11 | 0 | 1 |
 | [`license-manager-linux-subscriptions`](services/license-manager-linux-subscriptions.yml) | 11 | 0 | 0 |
@@ -331,7 +331,7 @@ The following table summarises the AWS APIs.
 | [`tax`](services/tax.yml) | 7 | 0 | 16 |
 | [`cur`](services/cur.yml) | 7 | 0 | 5 |
 | [`cost-optimization-hub`](services/cost-optimization-hub.yml) | 7 | 0 | 1 |
-| [`artifact`](services/artifact.yml) | 6 | 0 | 8 |
+| [`artifact`](services/artifact.yml) | 6 | 0 | 9 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
 | [`ebs`](services/ebs.yml) | 6 | 0 | 0 |
@@ -351,7 +351,7 @@ The following table summarises the AWS APIs.
 | [`mobileanalytics`](services/mobileanalytics.yml) | 1 | 0 | 2 |
 | [`eks-auth`](services/eks-auth.yml) | 1 | 0 | 0 |
 | [`cloudtrail-data`](services/cloudtrail-data.yml) | 1 | 0 | 0 |
-| [`apigateway`](services/apigateway.yml) | 0 | 152 | 18 |
+| [`apigateway`](services/apigateway.yml) | 0 | 152 | 44 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
 | [`iot1click`](services/iot1click.yml) | 0 | 26 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 12 | 3 |
@@ -360,27 +360,29 @@ The following table summarises the AWS APIs.
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 0 | 6 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
+| [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 133 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 110 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
-| [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 92 |
+| [`securityagent`](services/securityagent.yml) | 0 | 0 | 85 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 61 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
-| [`deepracer`](services/deepracer.yml) | 0 | 0 | 53 |
+| [`s3tables`](services/s3tables.yml) | 0 | 0 | 53 |
+| [`odb`](services/odb.yml) | 0 | 0 | 51 |
 | [`route53globalresolver`](services/route53globalresolver.yml) | 0 | 0 | 48 |
-| [`odb`](services/odb.yml) | 0 | 0 | 48 |
+| [`wickr`](services/wickr.yml) | 0 | 0 | 46 |
+| [`aidevops`](services/aidevops.yml) | 0 | 0 | 45 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 41 |
+| [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 40 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 38 |
 | [`q`](services/q.yml) | 0 | 0 | 37 |
-| [`s3tables`](services/s3tables.yml) | 0 | 0 | 36 |
 | [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
-| [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 29 |
 | [`one`](services/one.yml) | 0 | 0 | 28 |
 | [`billing`](services/billing.yml) | 0 | 0 | 28 |
 | [`rtbfabric`](services/rtbfabric.yml) | 0 | 0 | 27 |
@@ -393,57 +395,58 @@ The following table summarises the AWS APIs.
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
 | [`mpa`](services/mpa.yml) | 0 | 0 | 24 |
 | [`gameliftstreams`](services/gameliftstreams.yml) | 0 | 0 | 24 |
-| [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 23 |
+| [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 24 |
+| [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 23 |
 | [`transform-custom`](services/transform-custom.yml) | 0 | 0 | 22 |
 | [`invoicing`](services/invoicing.yml) | 0 | 0 | 22 |
 | [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 21 |
+| [`transform`](services/transform.yml) | 0 | 0 | 20 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 20 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
+| [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 19 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 18 |
-| [`deepcomposer`](services/deepcomposer.yml) | 0 | 0 | 18 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 18 |
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 17 |
 | [`ds-data`](services/ds-data.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
-| [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 16 |
+| [`nova-act`](services/nova-act.yml) | 0 | 0 | 16 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 16 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 15 |
 | [`airflow-serverless`](services/airflow-serverless.yml) | 0 | 0 | 15 |
 | [`ssm-quicksetup`](services/ssm-quicksetup.yml) | 0 | 0 | 14 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 14 |
+| [`evs`](services/evs.yml) | 0 | 0 | 14 |
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 14 |
 | [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
 | [`workspaces-instances`](services/workspaces-instances.yml) | 0 | 0 | 13 |
 | [`support-console`](services/support-console.yml) | 0 | 0 | 13 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 13 |
-| [`evs`](services/evs.yml) | 0 | 0 | 13 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
-| [`transform`](services/transform.yml) | 0 | 0 | 12 |
 | [`backup-search`](services/backup-search.yml) | 0 | 0 | 12 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 11 |
+| [`opensearch`](services/opensearch.yml) | 0 | 0 | 10 |
 | [`ts`](services/ts.yml) | 0 | 0 | 9 |
 | [`notifications-contacts`](services/notifications-contacts.yml) | 0 | 0 | 9 |
-| [`network-security-director`](services/network-security-director.yml) | 0 | 0 | 9 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 9 |
 | [`bcm-dashboards`](services/bcm-dashboards.yml) | 0 | 0 | 9 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 9 |
-| [`wickr`](services/wickr.yml) | 0 | 0 | 8 |
 | [`pricingplanmanager`](services/pricingplanmanager.yml) | 0 | 0 | 8 |
+| [`network-security-director`](services/network-security-director.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 7 |
 | [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 7 |
 | [`qdeveloper`](services/qdeveloper.yml) | 0 | 0 | 7 |
 | [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
 | [`geo-places`](services/geo-places.yml) | 0 | 0 | 7 |
+| [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 7 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`cloudfront-keyvaluestore`](services/cloudfront-keyvaluestore.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
 | [`supportplans`](services/supportplans.yml) | 0 | 0 | 5 |
 | [`partnercentral-account-management`](services/partnercentral-account-management.yml) | 0 | 0 | 5 |
-| [`opensearch`](services/opensearch.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
 | [`geo-routes`](services/geo-routes.yml) | 0 | 0 | 5 |
 | [`customer-verification`](services/customer-verification.yml) | 0 | 0 | 5 |
@@ -451,6 +454,7 @@ The following table summarises the AWS APIs.
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
 | [`signin`](services/signin.yml) | 0 | 0 | 4 |
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
+| [`inspector2-telemetry`](services/inspector2-telemetry.yml) | 0 | 0 | 4 |
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
 | [`a2c`](services/a2c.yml) | 0 | 0 | 4 |
 | [`uxc`](services/uxc.yml) | 0 | 0 | 3 |
@@ -463,6 +467,7 @@ The following table summarises the AWS APIs.
 | [`aws-mcp`](services/aws-mcp.yml) | 0 | 0 | 3 |
 | [`vpc-lattice-svcs`](services/vpc-lattice-svcs.yml) | 0 | 0 | 2 |
 | [`geo-maps`](services/geo-maps.yml) | 0 | 0 | 2 |
+| [`ecs-mcp`](services/ecs-mcp.yml) | 0 | 0 | 2 |
 | [`consolidatedbilling`](services/consolidatedbilling.yml) | 0 | 0 | 2 |
 | [`consoleapp`](services/consoleapp.yml) | 0 | 0 | 2 |
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
@@ -485,14 +490,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3353 |
-| `Get` | 3045 |
-| `Delete` | 2324 |
-| `Create` | 2186 |
-| `Update` | 1895 |
-| `Describe` | 1853 |
-| `Put` | 556 |
-| `Start` | 499 |
+| `List` | 3432 |
+| `Get` | 3118 |
+| `Delete` | 2379 |
+| `Create` | 2235 |
+| `Update` | 1945 |
+| `Describe` | 1876 |
+| `Put` | 569 |
+| `Start` | 505 |
 | `Tag` | 311 |
 | `Untag` | 306 |
 

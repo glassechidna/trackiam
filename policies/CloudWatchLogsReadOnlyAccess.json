@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchLogsReadOnlyAccess",
   "CreateDate": "2015-02-06T18:40:03Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ2YIYDYSNNEHK3VKW",
   "PolicyName": "CloudWatchLogsReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2025-05-20T16:52:06Z",
+    "CreateDate": "2026-02-12T17:59:13Z",
     "Document": {
       "Statement": [
         {
@@ -22,7 +22,10 @@
             "logs:StartQuery",
             "logs:StopLiveTail",
             "logs:StopQuery",
-            "logs:TestMetricFilter"
+            "logs:TestMetricFilter",
+            "observabilityadmin:GetS3TableIntegration",
+            "observabilityadmin:ListS3TableIntegrations",
+            "observabilityadmin:ListTelemetryPipelines"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -32,7 +35,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2025-05-20T16:52:06Z"
+  "UpdateDate": "2026-02-12T17:59:13Z"
 }

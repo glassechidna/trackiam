@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonECSInfrastructureRolePolicyForManagedInstances",
   "CreateDate": "2025-09-26T18:04:07Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KN4F4RUVF",
   "PolicyName": "AmazonECSInfrastructureRolePolicyForManagedInstances",
   "PolicyVersion": {
-    "CreateDate": "2025-09-29T21:04:07Z",
+    "CreateDate": "2026-02-12T17:59:11Z",
     "Document": {
       "Statement": [
         {
@@ -22,12 +22,9 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ec2:*:*:fleet/*",
-            "arn:aws:ec2:*:*:image/*",
             "arn:aws:ec2:*:*:instance/*",
             "arn:aws:ec2:*:*:launch-template/*",
             "arn:aws:ec2:*:*:network-interface/*",
-            "arn:aws:ec2:*:*:security-group/*",
-            "arn:aws:ec2:*:*:subnet/*",
             "arn:aws:ec2:*:*:volume/*"
           ],
           "Sid": "ProvisionEC2InstancesForManagedInstances"
@@ -135,6 +132,18 @@
         },
         {
           "Action": [
+            "ec2:CreateFleet"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*::image/*"
+          ],
+          "Sid": "CreateFleetForSupportingResources"
+        },
+        {
+          "Action": [
             "ec2:DescribeAvailabilityZones",
             "ec2:DescribeInstanceTypeOfferings",
             "ec2:DescribeInstanceTypes",
@@ -175,7 +184,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2025-09-29T21:04:07Z"
+  "UpdateDate": "2026-02-12T17:59:11Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSEntityResolutionConsoleFullAccess",
   "CreateDate": "2023-08-17T17:54:14Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HPFJ6XDUE",
   "PolicyName": "AWSEntityResolutionConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-10-16T18:46:10Z",
+    "CreateDate": "2026-02-12T18:02:20Z",
     "Document": {
       "Statement": [
         {
@@ -24,6 +24,19 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/*entityresolution*",
           "Sid": "PassRoleToEntityResolutionService"
+        },
+        {
+          "Action": [
+            "connect:ListInstances",
+            "profile:GetDomain",
+            "profile:ListAccountIntegrations",
+            "profile:ListDomains",
+            "profile:ListIntegrations",
+            "profile:ListProfileObjectTypes"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CustomerProfilesIntegrationReadAccess"
         },
         {
           "Action": [
@@ -90,6 +103,16 @@
         },
         {
           "Action": [
+            "profile:PutProfileObjectType"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:profile:*:*:domains/*/object-types/*"
+          ],
+          "Sid": "CustomerProfilesIntegrationWriteAccess"
+        },
+        {
+          "Action": [
             "s3:GetBucketLocation",
             "s3:GetBucketVersioning",
             "s3:ListBucket",
@@ -120,7 +143,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2023-10-16T18:46:10Z"
+  "UpdateDate": "2026-02-12T18:02:20Z"
 }

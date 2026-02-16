@@ -1,0 +1,85 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/ConsoleViewOnlyAccessFromVercel",
+  "CreateDate": "2025-12-11T16:49:11Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4BUPY7IZ5Y",
+  "PolicyName": "ConsoleViewOnlyAccessFromVercel",
+  "PolicyVersion": {
+    "CreateDate": "2026-02-12T17:58:04Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingActivities",
+            "application-autoscaling:DescribeScalingPolicies"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ApplicationAutoscalingDescribeActions"
+        },
+        {
+          "Action": [
+            "cloudwatch:DescribeAlarms",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics",
+            "logs:DescribeLogStreams",
+            "logs:GetLogEvents",
+            "tag:GetTagKeys",
+            "tag:GetTagValues"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "Observability"
+        },
+        {
+          "Action": [
+            "dsql:GetCluster",
+            "dsql:ListClusters",
+            "dsql:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "DSQL"
+        },
+        {
+          "Action": [
+            "dynamodb:DescribeLimits",
+            "dynamodb:DescribeTable",
+            "dynamodb:DescribeTimeToLive",
+            "dynamodb:ListTables",
+            "dynamodb:ListTagsOfResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "DynamoDB"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "rds:Describe*",
+            "rds:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "Aurora"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2026-02-12T17:58:04Z"
+}

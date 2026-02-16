@@ -1,0 +1,35 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForAIDevOpsPolicy",
+  "CreateDate": "2026-02-16T14:27:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4NGASD5CCH",
+  "PolicyName": "AWSServiceRoleForAIDevOpsPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-02-16T14:27:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": [
+                "AWS/AIDevOps"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "sid1"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-02-16T14:27:07Z"
+}

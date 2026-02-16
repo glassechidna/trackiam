@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonECSServiceRolePolicy",
   "CreateDate": "2017-10-14T01:18:58Z",
-  "DefaultVersionId": "v14",
+  "DefaultVersionId": "v23",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIVUWKCAI7URU4WUEI",
   "PolicyName": "AmazonECSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-11-20T23:49:10Z",
+    "CreateDate": "2026-02-12T17:58:05Z",
     "Document": {
       "Statement": [
         {
@@ -96,6 +96,21 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "CloudMapResourceAttributeManagement"
+        },
+        {
+          "Action": [
+            "ssmmessages:OpenDataChannel"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalAccount": "${aws:ResourceAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:session/*"
+          ],
+          "Sid": "OpenDataChannel"
         },
         {
           "Action": [
@@ -235,7 +250,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v14"
+    "VersionId": "v23"
   },
-  "UpdateDate": "2025-11-20T23:49:10Z"
+  "UpdateDate": "2026-02-12T17:58:05Z"
 }

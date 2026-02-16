@@ -631,6 +631,7 @@ Actions:
   - Name: ec2:AssociateRouteServer
   - Name: ec2:AssociateSecurityGroupVpc
   - Name: ec2:AssociateVerifiedAccessInstanceWebAcl
+  - Name: ec2:AttachApplianceToNatGateway
   - Name: ec2:CancelDeclarativePoliciesReport
   - Name: ec2:CopyVolumes
   - Name: ec2:CreateCapacityManagerDataExport
@@ -638,36 +639,59 @@ Actions:
   - Name: ec2:CreateCoipPoolPermission
   - Name: ec2:CreateDelegateMacVolumeOwnershipTask
   - Name: ec2:CreateImageUsageReport
+  - Name: ec2:CreateInterruptibleCapacityReservationAllocation
+  - Name: ec2:CreateIpamPolicy
+  - Name: ec2:CreateIpamPrefixListResolver
+  - Name: ec2:CreateIpamPrefixListResolverTarget
   - Name: ec2:CreateLocalGatewayRouteTablePermission
   - Name: ec2:CreateLocalGatewayVirtualInterface
   - Name: ec2:CreateLocalGatewayVirtualInterfaceGroup
   - Name: ec2:CreateMacSystemIntegrityProtectionModificationTask
+  - Name: ec2:CreateOdbNetworkPeering
   - Name: ec2:CreateRouteServer
   - Name: ec2:CreateRouteServerEndpoint
   - Name: ec2:CreateRouteServerPeer
+  - Name: ec2:CreateTransitGatewayMeteringPolicy
+  - Name: ec2:CreateTransitGatewayMeteringPolicyEntry
   - Name: ec2:CreateVpcBlockPublicAccessExclusion
+  - Name: ec2:CreateVpcEncryptionControl
+  - Name: ec2:CreateVpnConcentrator
   - Name: ec2:DeleteCapacityManagerDataExport
   - Name: ec2:DeleteCoipPoolPermission
   - Name: ec2:DeleteImageUsageReport
+  - Name: ec2:DeleteIpamPolicy
+  - Name: ec2:DeleteIpamPrefixListResolver
+  - Name: ec2:DeleteIpamPrefixListResolverTarget
   - Name: ec2:DeleteLocalGatewayRouteTablePermission
   - Name: ec2:DeleteLocalGatewayVirtualInterface
   - Name: ec2:DeleteLocalGatewayVirtualInterfaceGroup
+  - Name: ec2:DeleteOdbNetworkPeering
   - Name: ec2:DeleteResourcePolicy
   - Name: ec2:DeleteRouteServer
   - Name: ec2:DeleteRouteServerEndpoint
   - Name: ec2:DeleteRouteServerPeer
+  - Name: ec2:DeleteTransitGatewayMeteringPolicy
+  - Name: ec2:DeleteTransitGatewayMeteringPolicyEntry
   - Name: ec2:DeleteVpcBlockPublicAccessExclusion
+  - Name: ec2:DeleteVpcEncryptionControl
+  - Name: ec2:DeleteVpnConcentrator
   - Name: ec2:DescribeCapacityBlockExtensionHistory
   - Name: ec2:DescribeCapacityBlockExtensionOfferings
   - Name: ec2:DescribeCapacityBlockStatus
   - Name: ec2:DescribeCapacityBlocks
   - Name: ec2:DescribeCapacityManagerDataExports
   - Name: ec2:DescribeCapacityReservationBillingRequests
+  - Name: ec2:DescribeCapacityReservationTopology
   - Name: ec2:DescribeDeclarativePoliciesReports
   - Name: ec2:DescribeImageReferences
   - Name: ec2:DescribeImageUsageReportEntries
   - Name: ec2:DescribeImageUsageReports
   - Name: ec2:DescribeInstanceImageMetadata
+  - Name: ec2:DescribeInstanceSqlHaHistoryStates
+  - Name: ec2:DescribeInstanceSqlHaStates
+  - Name: ec2:DescribeIpamPolicies
+  - Name: ec2:DescribeIpamPrefixListResolverTargets
+  - Name: ec2:DescribeIpamPrefixListResolvers
   - Name: ec2:DescribeLocalGatewayRouteTablePermissions
   - Name: ec2:DescribeMacModificationTasks
   - Name: ec2:DescribeOutpostLags
@@ -676,12 +700,18 @@ Actions:
   - Name: ec2:DescribeRouteServers
   - Name: ec2:DescribeSecurityGroupVpcAssociations
   - Name: ec2:DescribeServiceLinkVirtualInterfaces
+  - Name: ec2:DescribeTransitGatewayMeteringPolicies
   - Name: ec2:DescribeVerifiedAccessInstanceWebAclAssociations
   - Name: ec2:DescribeVpcBlockPublicAccessExclusions
   - Name: ec2:DescribeVpcBlockPublicAccessOptions
+  - Name: ec2:DescribeVpcEncryptionControls
   - Name: ec2:DescribeVpcEndpointAssociations
+  - Name: ec2:DescribeVpnConcentrators
+  - Name: ec2:DetachApplianceFromNatGateway
   - Name: ec2:DisableAllowedImagesSettings
   - Name: ec2:DisableCapacityManager
+  - Name: ec2:DisableInstanceSqlHaStandbyDetections
+  - Name: ec2:DisableIpamPolicy
   - Name: ec2:DisableRouteServerPropagation
   - Name: ec2:DisassociateCapacityReservationBillingOwner
   - Name: ec2:DisassociateRouteServer
@@ -689,6 +719,8 @@ Actions:
   - Name: ec2:DisassociateVerifiedAccessInstanceWebAcl
   - Name: ec2:EnableAllowedImagesSettings
   - Name: ec2:EnableCapacityManager
+  - Name: ec2:EnableInstanceSqlHaStandbyDetections
+  - Name: ec2:EnableIpamPolicy
   - Name: ec2:EnableRouteServerPropagation
   - Name: ec2:ExportVerifiedAccessInstanceClientConfiguration
   - Name: ec2:GetActiveVpnTunnelStatus
@@ -697,27 +729,46 @@ Actions:
   - Name: ec2:GetCapacityManagerMetricData
   - Name: ec2:GetCapacityManagerMetricDimensions
   - Name: ec2:GetDeclarativePoliciesReportSummary
+  - Name: ec2:GetEnabledIpamPolicy
+  - Name: ec2:GetImageAncestry
+  - Name: ec2:GetIpamPolicyAllocationRules
+  - Name: ec2:GetIpamPolicyOrganizationTargets
+  - Name: ec2:GetIpamPrefixListResolverRules
+  - Name: ec2:GetIpamPrefixListResolverVersionEntries
+  - Name: ec2:GetIpamPrefixListResolverVersions
   - Name: ec2:GetResourcePolicy
   - Name: ec2:GetRouteServerAssociations
   - Name: ec2:GetRouteServerPropagations
   - Name: ec2:GetRouteServerRoutingDatabase
+  - Name: ec2:GetTransitGatewayMeteringPolicyEntries
   - Name: ec2:GetVerifiedAccessEndpointTargets
   - Name: ec2:GetVerifiedAccessInstanceWebAcl
+  - Name: ec2:GetVpcResourcesBlockingEncryptionEnforcement
   - Name: ec2:ImportByoipCidrToIpam
   - Name: ec2:InjectApiError
+  - Name: ec2:InjectVolumeIOLatency
+  - Name: ec2:ListVolumesInRecycleBin
   - Name: ec2:ModifyInstanceConnectEndpoint
   - Name: ec2:ModifyInstanceCpuOptions
   - Name: ec2:ModifyInstanceNetworkPerformanceOptions
+  - Name: ec2:ModifyIpamPolicyAllocationRules
+  - Name: ec2:ModifyIpamPrefixListResolver
+  - Name: ec2:ModifyIpamPrefixListResolverTarget
+  - Name: ec2:ModifyOdbNetworkPeering
   - Name: ec2:ModifyPublicIpDnsNameOptions
   - Name: ec2:ModifyRouteServer
+  - Name: ec2:ModifyTransitGatewayMeteringPolicy
   - Name: ec2:ModifyVpcBlockPublicAccessExclusion
   - Name: ec2:ModifyVpcBlockPublicAccessOptions
+  - Name: ec2:ModifyVpcEncryptionControl
   - Name: ec2:MoveCapacityReservationInstances
   - Name: ec2:PauseVolumeIO
   - Name: ec2:PurchaseCapacityBlockExtension
   - Name: ec2:PutResourcePolicy
   - Name: ec2:RejectCapacityReservationBillingOwnership
   - Name: ec2:ReplaceImageCriteriaInAllowedImagesSettings
+  - Name: ec2:RestoreVolumeFromRecycleBin
   - Name: ec2:SendSpotInstanceInterruptions
   - Name: ec2:StartDeclarativePoliciesReport
   - Name: ec2:UpdateCapacityManagerOrganizationsAccess
+  - Name: ec2:UpdateInterruptibleCapacityReservationAllocation

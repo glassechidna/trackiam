@@ -1,18 +1,21 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSControlTowerAccountServiceRolePolicy",
   "CreateDate": "2023-06-05T22:04:50Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ITRUSWZXG",
   "PolicyName": "AWSControlTowerAccountServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-11-05T23:19:09Z",
+    "CreateDate": "2026-02-12T18:01:38Z",
     "Document": {
       "Statement": [
         {
           "Action": "events:PutRule",
           "Condition": {
+            "ForAllValues:StringEquals": {
+              "events:detail-type": "Security Hub Findings - Imported"
+            },
             "ForAnyValue:StringEquals": {
               "events:source": "aws.securityhub"
             },
@@ -20,8 +23,7 @@
               "events:detail-type": "false"
             },
             "StringEquals": {
-              "events:ManagedBy": "controltower.amazonaws.com",
-              "events:detail-type": "Security Hub Findings - Imported"
+              "events:ManagedBy": "controltower.amazonaws.com"
             }
           },
           "Effect": "Allow",
@@ -224,7 +226,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2025-11-05T23:19:09Z"
+  "UpdateDate": "2026-02-12T18:01:38Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonSageMakerNotebooksServiceRolePolicy",
   "CreateDate": "2019-10-18T20:27:37Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4MYB7OEJED",
   "PolicyName": "AmazonSageMakerNotebooksServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-14T20:33:45Z",
+    "CreateDate": "2025-12-10T18:34:11Z",
     "Document": {
       "Statement": [
         {
@@ -109,6 +109,38 @@
         },
         {
           "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:identitystore:identitystore-arn": "arn:*:identitystore::*:identitystore/*"
+            },
+            "StringLike": {
+              "kms:ViaService": "identitystore.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKmsAccessViaIdentityStore"
+        },
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:sso:instance-arn": "arn:*:sso:::instance/*"
+            },
+            "StringLike": {
+              "kms:ViaService": "sso.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKmsAccessViaIdentityCenter"
+        },
+        {
+          "Action": [
             "sagemaker:AddTags"
           ],
           "Condition": {
@@ -197,7 +229,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2024-11-14T20:33:45Z"
+  "UpdateDate": "2025-12-10T18:34:11Z"
 }

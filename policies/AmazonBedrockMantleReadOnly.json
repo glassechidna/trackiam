@@ -1,0 +1,37 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonBedrockMantleReadOnly",
+  "CreateDate": "2025-12-04T07:19:12Z",
+  "DefaultVersionId": "v3",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4G5KGRFG7P",
+  "PolicyName": "AmazonBedrockMantleReadOnly",
+  "PolicyVersion": {
+    "CreateDate": "2026-02-12T17:58:26Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "bedrock-mantle:CallWithBearerToken"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BedrockMantleCallWithBearerToken"
+        },
+        {
+          "Action": [
+            "bedrock-mantle:Get*",
+            "bedrock-mantle:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock-mantle:*:*:project/*",
+          "Sid": "BedrockMantleReadOnly"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v3"
+  },
+  "UpdateDate": "2026-02-12T17:58:26Z"
+}

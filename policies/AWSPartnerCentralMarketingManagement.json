@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralMarketingManagement",
   "CreateDate": "2025-12-01T00:34:10Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4EDTAKOI7T",
   "PolicyName": "AWSPartnerCentralMarketingManagement",
   "PolicyVersion": {
-    "CreateDate": "2025-12-01T00:34:10Z",
+    "CreateDate": "2026-02-14T00:57:08Z",
     "Document": {
       "Statement": [
         {
@@ -89,6 +89,18 @@
         },
         {
           "Action": [
+            "q:GetConversation",
+            "q:ListConversations",
+            "q:PassRequest",
+            "q:SendMessage",
+            "q:StartConversation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonQPartnerAssistantAccess"
+        },
+        {
+          "Action": [
             "s3:PutObject"
           ],
           "Effect": "Allow",
@@ -99,7 +111,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2025-12-01T00:34:10Z"
+  "UpdateDate": "2026-02-14T00:57:08Z"
 }

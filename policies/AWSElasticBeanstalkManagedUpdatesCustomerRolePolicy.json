@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticBeanstalkManagedUpdatesCustomerRolePolicy",
   "CreateDate": "2021-03-03T22:18:00Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AKB7QD2CZ",
   "PolicyName": "AWSElasticBeanstalkManagedUpdatesCustomerRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-02-27T16:07:07Z",
+    "CreateDate": "2026-02-12T17:58:35Z",
     "Document": {
       "Statement": [
         {
@@ -26,6 +26,7 @@
           "Condition": {
             "StringEquals": {
               "ec2:CreateAction": [
+                "AllocateAddress",
                 "CreateLaunchTemplate",
                 "RunInstances"
               ]
@@ -309,7 +310,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2025-02-27T16:07:07Z"
+  "UpdateDate": "2026-02-12T17:58:35Z"
 }

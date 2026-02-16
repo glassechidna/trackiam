@@ -1,15 +1,57 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchFullAccessV2",
   "CreateDate": "2023-08-01T11:32:57Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4K5ELCXZSW",
   "PolicyName": "CloudWatchFullAccessV2",
   "PolicyVersion": {
-    "CreateDate": "2025-11-20T19:34:08Z",
+    "CreateDate": "2026-02-12T18:00:06Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "ArnLike": {
+              "iam:AssociatedResourceArn": "arn:aws:observabilityadmin:*:*:s3tableintegration/*"
+            },
+            "StringEquals": {
+              "iam:PassedToService": "logs.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "ArnLike": {
+              "iam:AssociatedResourceArn": "arn:aws:observabilityadmin:*:*:telemetry-pipeline/*"
+            },
+            "StringEquals": {
+              "iam:PassedToService": [
+                "logs.amazonaws.com",
+                "telemetry-pipelines.observabilityadmin.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "s3tables:CreateTableBucket",
+            "s3tables:PutTableBucketEncryption"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "observabilityadmin.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3tables:*:*:bucket/aws-cloudwatch"
+        },
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
@@ -49,6 +91,13 @@
         },
         {
           "Action": [
+            "s3tables:PutTableBucketPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3tables:*:*:bucket/aws-cloudwatch"
+        },
+        {
+          "Action": [
             "application-autoscaling:DescribeScalingPolicies",
             "application-signals:*",
             "autoscaling:DescribeAutoScalingGroups",
@@ -60,21 +109,29 @@
             "logs:*",
             "oam:ListSinks",
             "observabilityadmin:CreateCentralizationRuleForOrganization",
+            "observabilityadmin:CreateS3TableIntegration",
+            "observabilityadmin:CreateTelemetryPipeline",
             "observabilityadmin:CreateTelemetryRule",
             "observabilityadmin:CreateTelemetryRuleForOrganization",
             "observabilityadmin:DeleteCentralizationRuleForOrganization",
+            "observabilityadmin:DeleteS3TableIntegration",
+            "observabilityadmin:DeleteTelemetryPipeline",
             "observabilityadmin:DeleteTelemetryRule",
             "observabilityadmin:DeleteTelemetryRuleForOrganization",
             "observabilityadmin:GetCentralizationRuleForOrganization",
+            "observabilityadmin:GetS3TableIntegration",
             "observabilityadmin:GetTelemetryEnrichmentStatus",
             "observabilityadmin:GetTelemetryEvaluationStatus",
             "observabilityadmin:GetTelemetryEvaluationStatusForOrganization",
+            "observabilityadmin:GetTelemetryPipeline",
             "observabilityadmin:GetTelemetryRule",
             "observabilityadmin:GetTelemetryRuleForOrganization",
             "observabilityadmin:ListCentralizationRulesForOrganization",
             "observabilityadmin:ListResourceTelemetry",
             "observabilityadmin:ListResourceTelemetryForOrganization",
+            "observabilityadmin:ListS3TableIntegrations",
             "observabilityadmin:ListTagsForResource",
+            "observabilityadmin:ListTelemetryPipelines",
             "observabilityadmin:ListTelemetryRules",
             "observabilityadmin:ListTelemetryRulesForOrganization",
             "observabilityadmin:StartTelemetryEnrichment",
@@ -84,10 +141,13 @@
             "observabilityadmin:StopTelemetryEvaluation",
             "observabilityadmin:StopTelemetryEvaluationForOrganization",
             "observabilityadmin:TagResource",
+            "observabilityadmin:TestTelemetryPipeline",
             "observabilityadmin:UntagResource",
             "observabilityadmin:UpdateCentralizationRuleForOrganization",
+            "observabilityadmin:UpdateTelemetryPipeline",
             "observabilityadmin:UpdateTelemetryRule",
             "observabilityadmin:UpdateTelemetryRuleForOrganization",
+            "observabilityadmin:ValidateTelemetryPipelineConfiguration",
             "rum:*",
             "sns:CreateTopic",
             "sns:ListSubscriptions",
@@ -168,7 +228,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v15"
   },
-  "UpdateDate": "2025-11-20T19:34:08Z"
+  "UpdateDate": "2026-02-12T18:00:06Z"
 }

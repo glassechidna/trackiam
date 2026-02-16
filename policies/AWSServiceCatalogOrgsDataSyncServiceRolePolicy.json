@@ -1,15 +1,28 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceCatalogOrgsDataSyncServiceRolePolicy",
   "CreateDate": "2023-04-10T20:48:28Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4DUDGJ66JJ",
   "PolicyName": "AWSServiceCatalogOrgsDataSyncServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-04-10T20:48:28Z",
+    "CreateDate": "2025-12-08T19:04:09Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "account:ListRegions"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "OrganizationsDataSyncToServiceCatalogRegions"
+        },
         {
           "Action": [
             "organizations:DescribeAccount",
@@ -27,7 +40,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-04-10T20:48:28Z"
+  "UpdateDate": "2025-12-08T19:04:09Z"
 }
