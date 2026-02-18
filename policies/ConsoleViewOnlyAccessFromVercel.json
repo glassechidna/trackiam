@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ConsoleViewOnlyAccessFromVercel",
   "CreateDate": "2025-12-11T16:49:11Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BUPY7IZ5Y",
   "PolicyName": "ConsoleViewOnlyAccessFromVercel",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:58:04Z",
+    "CreateDate": "2026-02-18T19:27:07Z",
     "Document": {
       "Statement": [
         {
@@ -74,12 +74,20 @@
             "*"
           ],
           "Sid": "Aurora"
+        },
+        {
+          "Action": [
+            "freetier:GetAccountPlanState"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ViewFreeTierState"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-02-12T17:58:04Z"
+  "UpdateDate": "2026-02-18T19:27:07Z"
 }
