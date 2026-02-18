@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 449
-* Unique actions: 20760
+* Unique actions: 20768
 * Managed policies: 1448
 
 Most common managed policy name prefixes:
@@ -412,6 +412,7 @@ The following table summarises the AWS APIs.
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`nova-act`](services/nova-act.yml) | 0 | 0 | 16 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 16 |
+| [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 15 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 15 |
 | [`airflow-serverless`](services/airflow-serverless.yml) | 0 | 0 | 15 |
 | [`ssm-quicksetup`](services/ssm-quicksetup.yml) | 0 | 0 | 14 |
@@ -441,7 +442,6 @@ The following table summarises the AWS APIs.
 | [`qdeveloper`](services/qdeveloper.yml) | 0 | 0 | 7 |
 | [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
 | [`geo-places`](services/geo-places.yml) | 0 | 0 | 7 |
-| [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 7 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`cloudfront-keyvaluestore`](services/cloudfront-keyvaluestore.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
@@ -490,10 +490,10 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3432 |
-| `Get` | 3118 |
-| `Delete` | 2379 |
-| `Create` | 2235 |
+| `List` | 3434 |
+| `Get` | 3120 |
+| `Delete` | 2380 |
+| `Create` | 2237 |
 | `Update` | 1945 |
 | `Describe` | 1876 |
 | `Put` | 569 |
