@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerFullAccess",
   "CreateDate": "2019-07-02T20:40:09Z",
-  "DefaultVersionId": "v23",
+  "DefaultVersionId": "v24",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JF7OFUANW",
   "PolicyName": "AWSMarketplaceSellerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:58:54Z",
+    "CreateDate": "2026-02-19T18:27:11Z",
     "Document": {
       "Statement": [
         {
@@ -152,6 +152,18 @@
         },
         {
           "Action": [
+            "q:GetConversation",
+            "q:ListConversations",
+            "q:PassRequest",
+            "q:SendMessage",
+            "q:StartConversation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonQPartnerAssistantAccess"
+        },
+        {
+          "Action": [
             "support:CreateCase"
           ],
           "Effect": "Allow",
@@ -175,7 +187,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v23"
+    "VersionId": "v24"
   },
-  "UpdateDate": "2026-02-12T17:58:54Z"
+  "UpdateDate": "2026-02-19T18:27:11Z"
 }
