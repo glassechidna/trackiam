@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 449
-* Unique actions: 20772
-* Managed policies: 1448
+* Unique actions: 20775
+* Managed policies: 1449
 
 Most common managed policy name prefixes:
 
@@ -24,7 +24,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 333 |
 | `arn:aws:iam::aws:policy/service-role/*` | 217 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
-| Other | 143 |
+| Other | 144 |
 
 The following table summarises the AWS APIs. 
 
@@ -60,7 +60,7 @@ The following table summarises the AWS APIs.
 | [`gamelift`](services/gamelift.yml) | 108 | 0 | 10 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 15 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 13 |
-| [`bedrock`](services/bedrock.yml) | 97 | 2 | 135 |
+| [`bedrock`](services/bedrock.yml) | 97 | 2 | 138 |
 | [`dms`](services/dms.yml) | 92 | 14 | 32 |
 | [`medialive`](services/medialive.yml) | 92 | 0 | 33 |
 | [`config`](services/config.yml) | 92 | 0 | 5 |
@@ -491,7 +491,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3435 |
-| `Get` | 3120 |
+| `Get` | 3121 |
 | `Delete` | 2381 |
 | `Create` | 2237 |
 | `Update` | 1945 |

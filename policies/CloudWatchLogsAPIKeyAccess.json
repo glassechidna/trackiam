@@ -1,0 +1,59 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CloudWatchLogsAPIKeyAccess",
+  "CreateDate": "2026-02-20T19:42:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4OZENND4WI",
+  "PolicyName": "CloudWatchLogsAPIKeyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-02-20T19:42:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:logs:arn": "arn:aws:logs:*:*:log-group:*"
+            },
+            "StringLike": {
+              "kms:ViaService": "logs.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSAPIs"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": "logs.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSDescribeAPIs"
+        },
+        {
+          "Action": [
+            "logs:CallWithBearerToken",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LogsAPIs"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-02-20T19:42:07Z"
+}
