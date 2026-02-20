@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEKSNetworkingPolicy",
   "CreateDate": "2024-10-28T22:34:33Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4F2Z756CMC",
   "PolicyName": "AmazonEKSNetworkingPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-10-28T22:34:33Z",
+    "CreateDate": "2026-02-20T19:12:09Z",
     "Document": {
       "Statement": [
         {
@@ -40,6 +40,19 @@
           "Resource": "*"
         },
         {
+          "Action": "ec2:ModifyNetworkInterfaceAttribute",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/eks:eks-cluster-name": "${aws:PrincipalTag/eks:eks-cluster-name}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:network-interface/*"
+          ]
+        },
+        {
           "Action": [
             "ec2:AssignIpv6Addresses",
             "ec2:AssignPrivateIpAddresses",
@@ -68,7 +81,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-10-28T22:34:33Z"
+  "UpdateDate": "2026-02-20T19:12:09Z"
 }
