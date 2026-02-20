@@ -261,6 +261,7 @@ Actions:
   - Name: connect:AssociateContactWithUser
   - Name: connect:AssociateCustomerProfilesDomain
   - Name: connect:AssociateEmailAddressAlias
+  - Name: connect:AssociateQueueEmailAddresses
   - Name: connect:AssociateSecurityProfiles
   - Name: connect:AssociateWorkspace
   - Name: connect:BatchCreateDataTableValue
@@ -276,6 +277,7 @@ Actions:
   - Name: connect:CreateDataTableAttribute
   - Name: connect:CreateEmailAddress
   - Name: connect:CreateHoursOfOperationOverride
+  - Name: connect:CreateNotification
   - Name: connect:CreatePushNotificationRegistration
   - Name: connect:CreateWorkspace
   - Name: connect:CreateWorkspacePage
@@ -286,6 +288,7 @@ Actions:
   - Name: connect:DeleteDataTableAttribute
   - Name: connect:DeleteEmailAddress
   - Name: connect:DeleteHoursOfOperationOverride
+  - Name: connect:DeleteNotification
   - Name: connect:DeletePushNotificationRegistration
   - Name: connect:DeleteWorkspace
   - Name: connect:DeleteWorkspaceMedia
@@ -296,9 +299,11 @@ Actions:
   - Name: connect:DescribeEmailAddress
   - Name: connect:DescribeForecastingPlanningSchedulingIntegration
   - Name: connect:DescribeHoursOfOperationOverride
+  - Name: connect:DescribeNotification
   - Name: connect:DescribeWorkspace
   - Name: connect:DisassociateCustomerProfilesDomain
   - Name: connect:DisassociateEmailAddressAlias
+  - Name: connect:DisassociateQueueEmailAddresses
   - Name: connect:DisassociateSecurityProfiles
   - Name: connect:DisassociateWorkspace
   - Name: connect:EvaluateDataTableValues
@@ -316,8 +321,11 @@ Actions:
   - Name: connect:ListDataTables
   - Name: connect:ListEntitySecurityProfiles
   - Name: connect:ListHoursOfOperationOverrides
+  - Name: connect:ListNotifications
+  - Name: connect:ListQueueEmailAddresses
   - Name: connect:ListRoutingProfileManualAssignmentQueues
   - Name: connect:ListSecurityProfileFlowModules
+  - Name: connect:ListUserNotifications
   - Name: connect:ListWorkspaceMedia
   - Name: connect:ListWorkspacePages
   - Name: connect:ListWorkspaces
@@ -326,6 +334,7 @@ Actions:
   - Name: connect:SearchEmailAddresses
   - Name: connect:SearchEvaluationForms
   - Name: connect:SearchHoursOfOperationOverrides
+  - Name: connect:SearchNotifications
   - Name: connect:SearchViews
   - Name: connect:SearchWorkspaceAssociations
   - Name: connect:SearchWorkspaces
@@ -346,8 +355,10 @@ Actions:
   - Name: connect:UpdateDataTablePrimaryValues
   - Name: connect:UpdateEmailAddressMetadata
   - Name: connect:UpdateHoursOfOperationOverride
+  - Name: connect:UpdateNotificationContent
   - Name: connect:UpdateParticipantAuthentication
   - Name: connect:UpdateQueueOutboundEmailConfig
+  - Name: connect:UpdateUserNotificationStatus
   - Name: connect:UpdateWorkspaceMetadata
   - Name: connect:UpdateWorkspacePage
   - Name: connect:UpdateWorkspaceTheme
