@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForImageBuilder",
   "CreateDate": "2019-11-29T22:02:13Z",
-  "DefaultVersionId": "v25",
+  "DefaultVersionId": "v26",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NE22WISEW",
   "PolicyName": "AWSServiceRoleForImageBuilder",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:58:14Z",
+    "CreateDate": "2026-02-23T22:27:06Z",
     "Document": {
       "Statement": [
         {
@@ -296,11 +296,6 @@
           ]
         },
         {
-          "Action": "ssm:StartAutomationExecution",
-          "Effect": "Allow",
-          "Resource": "arn:aws:ssm:*:*:automation-definition/ImageBuilder*"
-        },
-        {
           "Action": "sts:AssumeRole",
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/EC2ImageBuilderDistributionCrossAccountRole"
@@ -463,7 +458,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v25"
+    "VersionId": "v26"
   },
-  "UpdateDate": "2026-02-12T17:58:14Z"
+  "UpdateDate": "2026-02-23T22:27:06Z"
 }
