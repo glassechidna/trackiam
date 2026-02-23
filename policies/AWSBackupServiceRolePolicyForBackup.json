@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
   "CreateDate": "2019-01-10T21:01:28Z",
-  "DefaultVersionId": "v29",
+  "DefaultVersionId": "v30",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIOOYZSLZZXWFJJ5N2",
   "PolicyName": "AWSBackupServiceRolePolicyForBackup",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:59:19Z",
+    "CreateDate": "2026-02-23T19:42:11Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "malware-protection.guardduty.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "GuardDutyMalwareScanIAMPassPermissions"
+        },
         {
           "Action": "kms:CreateGrant",
           "Condition": {
@@ -409,6 +420,15 @@
         },
         {
           "Action": [
+            "guardduty:GetMalwareScan",
+            "guardduty:StartMalwareScan"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GuardDutyMalwareScanPermissions"
+        },
+        {
+          "Action": [
             "rds:AddTagsToResource",
             "rds:CopyDBClusterSnapshot",
             "rds:CopyDBSnapshot",
@@ -628,7 +648,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v29"
+    "VersionId": "v30"
   },
-  "UpdateDate": "2026-02-12T17:59:19Z"
+  "UpdateDate": "2026-02-23T19:42:11Z"
 }
