@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonECSInfrastructureRolePolicyForManagedInstances",
   "CreateDate": "2025-09-26T18:04:07Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KN4F4RUVF",
   "PolicyName": "AmazonECSInfrastructureRolePolicyForManagedInstances",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:59:11Z",
+    "CreateDate": "2026-02-24T19:42:09Z",
     "Document": {
       "Statement": [
         {
@@ -132,6 +132,17 @@
         },
         {
           "Action": [
+            "cloudformation:DescribeStacks",
+            "cloudformation:ListStackResources",
+            "resource-groups:ListGroupResources",
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListResourceGroupResources"
+        },
+        {
+          "Action": [
             "ec2:CreateFleet"
           ],
           "Effect": "Allow",
@@ -145,6 +156,7 @@
         {
           "Action": [
             "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeCapacityReservations",
             "ec2:DescribeInstanceTypeOfferings",
             "ec2:DescribeInstanceTypes",
             "ec2:DescribeInstances",
@@ -166,7 +178,8 @@
           "Resource": [
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:subnet/*",
-            "arn:aws:ec2:*::image/*"
+            "arn:aws:ec2:*::image/*",
+            "arn:aws:resource-groups:*:*:group/*"
           ],
           "Sid": "RunInstancesForSupportingResources"
         },
@@ -184,7 +197,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-02-12T17:59:11Z"
+  "UpdateDate": "2026-02-24T19:42:09Z"
 }

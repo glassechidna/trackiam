@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 449
-* Unique actions: 20786
+* Unique services: 450
+* Unique actions: 20798
 * Managed policies: 1449
 
 Most common managed policy name prefixes:
@@ -426,6 +426,7 @@ The following table summarises the AWS APIs.
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
+| [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 12 |
 | [`backup-search`](services/backup-search.yml) | 0 | 0 | 12 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 11 |
 | [`opensearch`](services/opensearch.yml) | 0 | 0 | 10 |
@@ -490,14 +491,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3438 |
-| `Get` | 3121 |
-| `Delete` | 2382 |
-| `Create` | 2238 |
-| `Update` | 1947 |
+| `List` | 3440 |
+| `Get` | 3123 |
+| `Delete` | 2383 |
+| `Create` | 2239 |
+| `Update` | 1948 |
 | `Describe` | 1877 |
-| `Put` | 570 |
+| `Put` | 571 |
 | `Start` | 505 |
-| `Tag` | 311 |
-| `Untag` | 306 |
+| `Tag` | 312 |
+| `Untag` | 307 |
 
