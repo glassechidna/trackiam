@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonECSInfrastructureRolePolicyForManagedInstances",
   "CreateDate": "2025-09-26T18:04:07Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KN4F4RUVF",
   "PolicyName": "AmazonECSInfrastructureRolePolicyForManagedInstances",
   "PolicyVersion": {
-    "CreateDate": "2026-02-24T19:42:09Z",
+    "CreateDate": "2026-02-26T18:27:10Z",
     "Document": {
       "Statement": [
         {
@@ -120,8 +120,8 @@
             "iam:PassRole"
           ],
           "Condition": {
-            "StringEquals": {
-              "iam:PassedToService": "ec2.amazonaws.com"
+            "StringLike": {
+              "iam:PassedToService": "ec2.*"
             }
           },
           "Effect": "Allow",
@@ -197,7 +197,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2026-02-24T19:42:09Z"
+  "UpdateDate": "2026-02-26T18:27:10Z"
 }
