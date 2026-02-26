@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 450
-* Unique actions: 20820
+* Unique actions: 20828
 * Managed policies: 1449
 
 Most common managed policy name prefixes:
@@ -396,6 +396,7 @@ The following table summarises the AWS APIs.
 | [`mpa`](services/mpa.yml) | 0 | 0 | 24 |
 | [`gameliftstreams`](services/gameliftstreams.yml) | 0 | 0 | 24 |
 | [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 24 |
+| [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 23 |
 | [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 23 |
 | [`transform-custom`](services/transform-custom.yml) | 0 | 0 | 22 |
 | [`invoicing`](services/invoicing.yml) | 0 | 0 | 22 |
@@ -412,7 +413,6 @@ The following table summarises the AWS APIs.
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`nova-act`](services/nova-act.yml) | 0 | 0 | 16 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 16 |
-| [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 15 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 15 |
 | [`airflow-serverless`](services/airflow-serverless.yml) | 0 | 0 | 15 |
 | [`ssm-quicksetup`](services/ssm-quicksetup.yml) | 0 | 0 | 14 |
@@ -491,14 +491,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3442 |
-| `Get` | 3125 |
+| `List` | 3444 |
+| `Get` | 3126 |
 | `Delete` | 2387 |
-| `Create` | 2241 |
-| `Update` | 1948 |
+| `Create` | 2242 |
+| `Update` | 1949 |
 | `Describe` | 1881 |
 | `Put` | 572 |
 | `Start` | 506 |
-| `Tag` | 312 |
-| `Untag` | 307 |
+| `Tag` | 313 |
+| `Untag` | 308 |
 
