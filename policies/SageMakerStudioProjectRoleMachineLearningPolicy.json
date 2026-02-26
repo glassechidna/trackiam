@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectRoleMachineLearningPolicy",
   "CreateDate": "2024-11-20T21:55:27Z",
-  "DefaultVersionId": "v37",
+  "DefaultVersionId": "v38",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NSSEENOX7",
   "PolicyName": "SageMakerStudioProjectRoleMachineLearningPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:02:49Z",
+    "CreateDate": "2026-02-26T21:42:10Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,29 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/sagemaker.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_SageMakerEndpoint",
           "Sid": "SageMakerSLRForAutoScalingPermissions"
+        },
+        {
+          "Action": [
+            "airflow-serverless:CreateWorkflow",
+            "airflow-serverless:DeleteWorkflow",
+            "airflow-serverless:GetTaskInstance",
+            "airflow-serverless:GetWorkflow",
+            "airflow-serverless:GetWorkflowRun",
+            "airflow-serverless:ListTagsForResource",
+            "airflow-serverless:StartWorkflowRun",
+            "airflow-serverless:StopWorkflowRun",
+            "airflow-serverless:TagResource",
+            "airflow-serverless:UntagResource",
+            "airflow-serverless:UpdateWorkflow"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AirflowServerlessPermissions"
         },
         {
           "Action": [
@@ -53,6 +76,21 @@
           "Effect": "Allow",
           "Resource": "arn:aws:application-autoscaling:*:*:scalable-target/*",
           "Sid": "SageMakerAutoScalingPermissions"
+        },
+        {
+          "Action": [
+            "athena:GetResourceDashboard",
+            "athena:GetSessionEndpoint",
+            "athena:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AthenaSession"
         },
         {
           "Action": [
@@ -210,6 +248,31 @@
             "kms:CreateGrant"
           ],
           "Condition": {
+            "ForAllValues:StringEquals": {
+              "kms:GrantOperations": [
+                "Decrypt",
+                "Encrypt",
+                "GenerateDataKey",
+                "GenerateDataKeyWithoutPlaintext",
+                "RetireGrant"
+              ]
+            },
+            "ForAnyValue:StringEquals": {
+              "kms:EncryptionContextKeys": "aws:airflow-serverless:workflow-arn"
+            },
+            "StringLike": {
+              "kms:ViaService": "airflow-serverless.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/${aws:PrincipalTag/KmsKeyId}",
+          "Sid": "WorkflowsCreateGrant"
+        },
+        {
+          "Action": [
+            "kms:CreateGrant"
+          ],
+          "Condition": {
             "StringEquals": {
               "aws:ResourceAccount": "${aws:PrincipalAccount}"
             },
@@ -222,6 +285,22 @@
           "Effect": "Allow",
           "Resource": "arn:aws:kms:*:*:key/${aws:PrincipalTag/KmsKeyId}",
           "Sid": "SageMakerKmsPermissions"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:Encrypt",
+            "kms:GenerateDataKey",
+            "kms:GenerateDataKeyWithoutPlaintext"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "kms:EncryptionContextKeys": "aws:airflow-serverless:workflow-arn"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/${aws:PrincipalTag/KmsKeyId}",
+          "Sid": "WorkflowsKms"
         },
         {
           "Action": [
@@ -981,6 +1060,49 @@
         },
         {
           "Action": [
+            "sqlworkbench:GetConnection"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}",
+              "aws:ResourceTag/sqlworkbench-resource-owner": "${aws:userid}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SQLWorkBenchMLActionsWithResourceType"
+        },
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/airflow-serverless.amazonaws.com/AWSServiceRoleForAmazonMWAAServerless"
+          ],
+          "Sid": "CreateSLR"
+        },
+        {
+          "Action": [
+            "airflow-serverless:ListTask*",
+            "airflow-serverless:ListWorkflow*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MLAccountDiscovery"
+        },
+        {
+          "Action": [
+            "datazone:*Cell*",
+            "datazone:*Conversation*",
+            "datazone:*Notebook*",
+            "datazone:GenerateCode",
+            "datazone:SendMessage"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DataZoneUserPermissions"
+        },
+        {
+          "Action": [
             "ec2:DescribeDhcpOptions",
             "ec2:DescribeNetworkInterfaces",
             "ec2:DescribeRouteTables",
@@ -1011,6 +1133,22 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "SageMakerBYOFSPermissions"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:GetLogEvents",
+            "logs:GetLogGroupFields",
+            "logs:GetLogRecord",
+            "logs:GetQueryResults",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/mwaa-serverless/${aws:PrincipalTag/AmazonDataZoneDomain}-${aws:PrincipalTag/AmazonDataZoneProject}/*"
+          ],
+          "Sid": "AirflowCloudwatchLogsActions"
         },
         {
           "Action": [
@@ -1125,7 +1263,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v37"
+    "VersionId": "v38"
   },
-  "UpdateDate": "2026-02-12T18:02:49Z"
+  "UpdateDate": "2026-02-26T21:42:10Z"
 }
