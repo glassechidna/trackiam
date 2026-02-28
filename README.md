@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 450
-* Unique actions: 20828
+* Unique actions: 20833
 * Managed policies: 1449
 
 Most common managed policy name prefixes:
@@ -371,9 +371,9 @@ The following table summarises the AWS APIs.
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
 | [`s3tables`](services/s3tables.yml) | 0 | 0 | 53 |
 | [`odb`](services/odb.yml) | 0 | 0 | 51 |
+| [`aidevops`](services/aidevops.yml) | 0 | 0 | 50 |
 | [`route53globalresolver`](services/route53globalresolver.yml) | 0 | 0 | 48 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 46 |
-| [`aidevops`](services/aidevops.yml) | 0 | 0 | 45 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 41 |
 | [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 40 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
@@ -491,11 +491,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3444 |
+| `List` | 3445 |
 | `Get` | 3126 |
 | `Delete` | 2387 |
-| `Create` | 2242 |
-| `Update` | 1949 |
+| `Create` | 2243 |
+| `Update` | 1950 |
 | `Describe` | 1881 |
 | `Put` | 572 |
 | `Start` | 506 |
