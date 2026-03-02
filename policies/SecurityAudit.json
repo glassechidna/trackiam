@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SecurityAudit",
   "CreateDate": "2015-02-06T18:41:01Z",
-  "DefaultVersionId": "v84",
+  "DefaultVersionId": "v85",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIX2T3QCXHR2OGGCTO",
   "PolicyName": "SecurityAudit",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:00:22Z",
+    "CreateDate": "2026-03-02T17:12:11Z",
     "Document": {
       "Statement": [
         {
@@ -516,10 +516,13 @@
             "kms:Get*",
             "kms:List*",
             "lambda:GetAccountSettings",
+            "lambda:GetFunctionCodeSigningConfig",
+            "lambda:GetFunctionConcurrency",
             "lambda:GetFunctionConfiguration",
             "lambda:GetFunctionEventInvokeConfig",
             "lambda:GetLayerVersionPolicy",
             "lambda:GetPolicy",
+            "lambda:GetRuntimeManagementConfig",
             "lambda:List*",
             "lex:DescribeBot",
             "lex:DescribeResourcePolicy",
@@ -797,11 +800,13 @@
             "sso:DescribeInstanceAccessControlAttributeConfiguration",
             "sso:DescribePermissionSet",
             "sso:DescribePermissionSetProvisioningStatus",
+            "sso:DescribeRegion",
             "sso:DescribeTrustedTokenIssuer",
             "sso:GetApplicationAccessScope",
             "sso:GetApplicationAssignmentConfiguration",
             "sso:GetApplicationAuthenticationMethod",
             "sso:GetApplicationGrant",
+            "sso:GetApplicationSessionConfiguration",
             "sso:GetInlinePolicyForPermissionSet",
             "sso:GetPermissionsBoundaryForPermissionSet",
             "sso:ListAccountAssignmentCreationStatus",
@@ -828,6 +833,7 @@
             "sso:ListPermissionSetsProvisionedToAccount",
             "sso:ListProfileAssociations",
             "sso:ListProfiles",
+            "sso:ListRegions",
             "sso:ListTagsForResource",
             "sso:ListTrustedTokenIssuers",
             "states:DescribeStateMachine",
@@ -968,7 +974,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v84"
+    "VersionId": "v85"
   },
-  "UpdateDate": "2026-02-12T18:00:22Z"
+  "UpdateDate": "2026-03-02T17:12:11Z"
 }
