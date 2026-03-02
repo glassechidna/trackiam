@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v61",
+  "DefaultVersionId": "v63",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:00:03Z",
+    "CreateDate": "2026-03-02T20:27:10Z",
     "Document": {
       "Statement": [
         {
@@ -734,7 +734,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "CommonUserCodeCommitPermissions"
+          "Sid": "CodeCommit"
         },
         {
           "Action": [
@@ -1368,6 +1368,7 @@
               "aws:ResourceAccount": "${aws:PrincipalAccount}",
               "iam:PassedToService": [
                 "access-grants.s3.amazonaws.com",
+                "airflow-serverless.amazonaws.com",
                 "airflow.amazonaws.com",
                 "emr-serverless.amazonaws.com",
                 "glue.amazonaws.com",
@@ -1548,7 +1549,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:kms:*:*:key/${aws:PrincipalTag/KmsKeyId}",
-          "Sid": "CodeCommitKmsPermissions"
+          "Sid": "CodeCommitKms"
         },
         {
           "Action": [
@@ -1664,10 +1665,10 @@
           ],
           "Condition": {
             "StringEquals": {
-              "kms:EncryptionContext:aws:datazone:domainId": "${aws:PrincipalTag/AmazonDataZoneDomain}",
-              "kms:ViaService": [
-                "datazone.*.amazonaws.com"
-              ]
+              "kms:EncryptionContext:aws:datazone:domainId": "${aws:PrincipalTag/AmazonDataZoneDomain}"
+            },
+            "StringLike": {
+              "kms:ViaService": "datazone.*.amazonaws.com"
             }
           },
           "Effect": "Allow",
@@ -1935,7 +1936,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "RedshiftDataActionsForResources"
+          "Sid": "RedshiftDataActions"
         },
         {
           "Action": [
@@ -2426,7 +2427,7 @@
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "AllowCodeWhispererGenerateRecommendations"
+          "Sid": "CodeWhisperer"
         },
         {
           "Action": [
@@ -2797,7 +2798,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v61"
+    "VersionId": "v63"
   },
-  "UpdateDate": "2026-02-17T06:57:11Z"
+  "UpdateDate": "2026-03-02T20:27:10Z"
 }
