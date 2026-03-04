@@ -1,0 +1,98 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSHealthOmicsServiceLinkedRolePolicy",
+  "CreateDate": "2026-03-04T22:57:11Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4LLSHBKWZK",
+  "PolicyName": "AWSHealthOmicsServiceLinkedRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-03-04T22:57:11Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:CreateNetworkInterface",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/Service": "HealthOmics"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "AllowCreateNetworkInterfaceWithTag"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": "CreateNetworkInterface"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "AllowCreateTags"
+        },
+        {
+          "Action": "ec2:DeleteNetworkInterface",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/Service": "HealthOmics"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "AllowDeleteNetworkInterface"
+        },
+        {
+          "Action": [
+            "ec2:AssignPrivateIpAddresses",
+            "ec2:UnassignPrivateIpAddresses"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/Service": "HealthOmics"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "AllowAssignUnassignPrivateIpAddresses"
+        },
+        {
+          "Action": "ec2:CreateNetworkInterface",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "AllowCreateNetworkInterfaceSubnetSecurityGroup"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroupRules",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeTags",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowEC2DescribeActions"
+        },
+        {
+          "Action": [
+            "ec2:GetSecurityGroupsForVpc"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc/*",
+          "Sid": "AllowVpcGetActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-03-04T22:57:11Z"
+}
