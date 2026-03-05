@@ -1,15 +1,21 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSOrganizationsServiceTrustPolicy",
   "CreateDate": "2017-10-10T23:04:07Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIQH6ROMVVECFVRJPK",
   "PolicyName": "AWSOrganizationsServiceTrustPolicy",
   "PolicyVersion": {
-    "CreateDate": "2017-11-01T06:01:18Z",
+    "CreateDate": "2026-03-05T19:12:09Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:ListRoles",
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/*",
+          "Sid": "ListRolesSLR"
+        },
         {
           "Action": [
             "iam:CreateServiceLinkedRole"
@@ -32,7 +38,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2017-11-01T06:01:18Z"
+  "UpdateDate": "2026-03-05T19:12:09Z"
 }
