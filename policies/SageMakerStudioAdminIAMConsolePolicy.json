@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioAdminIAMConsolePolicy",
   "CreateDate": "2025-08-18T22:49:07Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FF4BJSUBG",
   "PolicyName": "SageMakerStudioAdminIAMConsolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:59:21Z",
+    "CreateDate": "2026-03-05T17:42:10Z",
     "Document": {
       "Statement": [
         {
@@ -439,6 +439,14 @@
         },
         {
           "Action": [
+            "glue:GetCatalog"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GlueCatalogPermissions"
+        },
+        {
+          "Action": [
             "iam:GetRole",
             "iam:GetUser",
             "iam:ListRoles"
@@ -475,7 +483,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-02-12T17:59:21Z"
+  "UpdateDate": "2026-03-05T17:42:10Z"
 }
