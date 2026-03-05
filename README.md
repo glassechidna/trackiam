@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 450
-* Unique actions: 20833
+* Unique actions: 20834
 * Managed policies: 1451
 
 Most common managed policy name prefixes:
@@ -388,12 +388,12 @@ The following table summarises the AWS APIs.
 | [`rtbfabric`](services/rtbfabric.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
+| [`mpa`](services/mpa.yml) | 0 | 0 | 25 |
 | [`dsql`](services/dsql.yml) | 0 | 0 | 25 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 24 |
 | [`s3express`](services/s3express.yml) | 0 | 0 | 24 |
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
-| [`mpa`](services/mpa.yml) | 0 | 0 | 24 |
 | [`gameliftstreams`](services/gameliftstreams.yml) | 0 | 0 | 24 |
 | [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 24 |
 | [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 23 |
@@ -498,7 +498,7 @@ Most common action prefixes:
 | `Update` | 1950 |
 | `Describe` | 1881 |
 | `Put` | 572 |
-| `Start` | 506 |
+| `Start` | 507 |
 | `Tag` | 313 |
 | `Untag` | 308 |
 
