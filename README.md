@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 450
-* Unique actions: 20834
+* Unique services: 451
+* Unique actions: 20876
 * Managed policies: 1451
 
 Most common managed policy name prefixes:
@@ -374,6 +374,7 @@ The following table summarises the AWS APIs.
 | [`aidevops`](services/aidevops.yml) | 0 | 0 | 50 |
 | [`route53globalresolver`](services/route53globalresolver.yml) | 0 | 0 | 48 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 46 |
+| [`health-agent`](services/health-agent.yml) | 0 | 0 | 42 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 41 |
 | [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 40 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
@@ -491,14 +492,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3445 |
-| `Get` | 3126 |
-| `Delete` | 2387 |
-| `Create` | 2243 |
-| `Update` | 1950 |
+| `List` | 3454 |
+| `Get` | 3136 |
+| `Delete` | 2390 |
+| `Create` | 2248 |
+| `Update` | 1953 |
 | `Describe` | 1881 |
 | `Put` | 572 |
-| `Start` | 507 |
-| `Tag` | 313 |
-| `Untag` | 308 |
+| `Start` | 509 |
+| `Tag` | 314 |
+| `Untag` | 309 |
 
