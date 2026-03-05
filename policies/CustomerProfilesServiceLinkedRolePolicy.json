@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CustomerProfilesServiceLinkedRolePolicy",
   "CreateDate": "2023-03-07T22:56:52Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4GN7CNQPYF",
   "PolicyName": "CustomerProfilesServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-26T22:21:06Z",
+    "CreateDate": "2026-03-05T21:12:08Z",
     "Document": {
       "Statement": [
         {
@@ -40,7 +40,10 @@
         },
         {
           "Action": [
-            "profile:BatchGetProfile"
+            "profile:BatchGetProfile",
+            "profile:GetCalculatedAttributeForProfile",
+            "profile:GetProfileRecommendations",
+            "profile:GetRecommender"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -49,7 +52,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-11-26T22:21:06Z"
+  "UpdateDate": "2026-03-05T21:12:08Z"
 }
