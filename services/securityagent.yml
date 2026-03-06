@@ -13,6 +13,7 @@ Actions:
   - Name: securityagent:BatchGetPentestJobs
   - Name: securityagent:BatchGetPentests
   - Name: securityagent:BatchGetSecurityTestContentMetadata
+  - Name: securityagent:BatchGetTargetDomains
   - Name: securityagent:BatchGetTasks
   - Name: securityagent:CreateAgentInstance
   - Name: securityagent:CreateAgentSpace
@@ -24,6 +25,7 @@ Actions:
   - Name: securityagent:CreateOneTimeLoginSession
   - Name: securityagent:CreatePentest
   - Name: securityagent:CreateSecurityRequirement
+  - Name: securityagent:CreateTargetDomain
   - Name: securityagent:DeleteAgentInstance
   - Name: securityagent:DeleteAgentSpace
   - Name: securityagent:DeleteApplication
@@ -34,6 +36,7 @@ Actions:
   - Name: securityagent:DeleteIntegration
   - Name: securityagent:DeleteMembership
   - Name: securityagent:DeleteSecurityRequirement
+  - Name: securityagent:DeleteTargetDomain
   - Name: securityagent:DescribeFindings
   - Name: securityagent:GetApplication
   - Name: securityagent:GetArtifact
@@ -41,6 +44,7 @@ Actions:
   - Name: securityagent:GetControl
   - Name: securityagent:GetDesignReview
   - Name: securityagent:GetDesignReviewArtifact
+  - Name: securityagent:GetDesignReviewFeedback
   - Name: securityagent:GetDocReviewTask
   - Name: securityagent:GetDocumentReview
   - Name: securityagent:GetDocumentReviewArtifact
@@ -69,7 +73,9 @@ Actions:
   - Name: securityagent:ListPentests
   - Name: securityagent:ListResourcesFromIntegration
   - Name: securityagent:ListSecurityRequirements
+  - Name: securityagent:ListTargetDomains
   - Name: securityagent:ListTasks
+  - Name: securityagent:PutDesignReviewFeedback
   - Name: securityagent:StartCodeRemediation
   - Name: securityagent:StartPentestExecution
   - Name: securityagent:StartPentestJob
@@ -85,4 +91,5 @@ Actions:
   - Name: securityagent:UpdateIntegratedResources
   - Name: securityagent:UpdatePentest
   - Name: securityagent:UpdateSecurityRequirement
+  - Name: securityagent:UpdateTargetDomain
   - Name: securityagent:VerifyTargetDomain
