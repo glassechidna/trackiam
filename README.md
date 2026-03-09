@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 451
-* Unique actions: 20887
-* Managed policies: 1451
+* Unique actions: 20889
+* Managed policies: 1453
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 391 |
-| `arn:aws:iam::aws:policy/Amazon*` | 357 |
+| `arn:aws:iam::aws:policy/Amazon*` | 359 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 334 |
 | `arn:aws:iam::aws:policy/service-role/*` | 217 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
@@ -67,7 +67,7 @@ The following table summarises the AWS APIs.
 | [`backup`](services/backup.yml) | 91 | 0 | 27 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 7 |
 | [`workspaces`](services/workspaces.yml) | 88 | 0 | 10 |
-| [`es`](services/es.yml) | 87 | 0 | 27 |
+| [`es`](services/es.yml) | 87 | 0 | 29 |
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
 | [`sms-voice`](services/sms-voice.yml) | 87 | 0 | 8 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 10 |
