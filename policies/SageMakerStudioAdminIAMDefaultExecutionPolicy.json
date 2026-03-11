@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioAdminIAMDefaultExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v18",
+  "DefaultVersionId": "v19",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NZY6YGCPE",
   "PolicyName": "SageMakerStudioAdminIAMDefaultExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:00:15Z",
+    "CreateDate": "2026-03-11T17:27:12Z",
     "Document": {
       "Statement": [
         {
@@ -682,8 +682,16 @@
         },
         {
           "Action": [
+            "emr-serverless:AccessLivyEndpoints",
             "emr-serverless:GetApplication",
-            "emr-serverless:ListApplications"
+            "emr-serverless:GetDashboardForJobRun",
+            "emr-serverless:GetJobRun",
+            "emr-serverless:ListApplications",
+            "emr-serverless:ListJobRunAttempts",
+            "emr-serverless:ListJobRuns",
+            "emr-serverless:ListTagsForResource",
+            "emr-serverless:StartApplication",
+            "emr-serverless:StartJobRun"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -915,7 +923,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v18"
+    "VersionId": "v19"
   },
-  "UpdateDate": "2026-02-12T18:00:15Z"
+  "UpdateDate": "2026-03-11T17:27:12Z"
 }
