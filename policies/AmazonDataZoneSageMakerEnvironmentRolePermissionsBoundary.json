@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary",
   "CreateDate": "2024-04-23T23:01:14Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BVNAOGKEU",
   "PolicyName": "AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:02:52Z",
+    "CreateDate": "2026-03-11T21:12:10Z",
     "Document": {
       "Statement": [
         {
@@ -873,6 +873,14 @@
         },
         {
           "Action": [
+            "sagemaker:UpdateNotebookInstanceLifecycleConfig"
+          ],
+          "Effect": "Deny",
+          "Resource": "*",
+          "Sid": "DenyUpdateNotebookInstanceLifecycleConfig"
+        },
+        {
+          "Action": [
             "secretsmanager:CreateSecret",
             "secretsmanager:DescribeSecret",
             "secretsmanager:GetSecretValue",
@@ -1197,7 +1205,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2026-02-12T18:02:52Z"
+  "UpdateDate": "2026-03-11T21:12:10Z"
 }
