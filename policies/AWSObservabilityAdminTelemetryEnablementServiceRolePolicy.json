@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSObservabilityAdminTelemetryEnablementServiceRolePolicy",
   "CreateDate": "2025-08-01T18:04:06Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ABS5BMRXG",
   "PolicyName": "AWSObservabilityAdminTelemetryEnablementServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:01:51Z",
+    "CreateDate": "2026-03-11T22:27:18Z",
     "Document": {
       "Statement": [
         {
@@ -148,6 +148,8 @@
           "Action": [
             "ec2:DescribeFlowLogs",
             "ec2:DescribeVpcs",
+            "ec2:MonitorInstances",
+            "logs:DescribeDeliverySources",
             "logs:DescribeLogGroups",
             "logs:DescribeResourcePolicies",
             "logs:ListLogGroups"
@@ -434,7 +436,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-02-12T18:01:51Z"
+  "UpdateDate": "2026-03-11T22:27:18Z"
 }
