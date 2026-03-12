@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticBeanstalkMulticontainerDocker",
   "CreateDate": "2016-02-08T23:15:29Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ45SBYG72SD6SHJEY",
   "PolicyName": "AWSElasticBeanstalkMulticontainerDocker",
   "PolicyVersion": {
-    "CreateDate": "2023-03-23T22:04:20Z",
+    "CreateDate": "2026-03-12T14:12:13Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "bedrock:InvokeModel",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock:*:*:inference-profile/*anthropic.claude-*",
+          "Sid": "AIEnvironmentAnalysisInvokeInferenceProfile"
+        },
         {
           "Action": [
             "ecs:TagResource"
@@ -25,6 +36,22 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowECSTagResource"
+        },
+        {
+          "Action": "bedrock:InvokeModel",
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock:*::foundation-model/anthropic.claude-*",
+          "Sid": "AIEnvironmentAnalysisInvokeFoundationModel"
+        },
+        {
+          "Action": [
+            "bedrock:ListFoundationModels",
+            "elasticbeanstalk:DescribeEnvironmentHealth",
+            "elasticbeanstalk:DescribeEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AIEnvironmentAnalysisReadOnly"
         },
         {
           "Action": [
@@ -47,7 +74,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-03-23T22:04:20Z"
+  "UpdateDate": "2026-03-12T14:12:13Z"
 }
