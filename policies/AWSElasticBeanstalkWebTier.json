@@ -1,15 +1,42 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier",
   "CreateDate": "2016-02-08T23:08:54Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIUF4325SJYOREKW3A",
   "PolicyName": "AWSElasticBeanstalkWebTier",
   "PolicyVersion": {
-    "CreateDate": "2020-09-09T19:38:36Z",
+    "CreateDate": "2026-03-12T14:27:13Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "bedrock:InvokeModel",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock:*:*:inference-profile/*anthropic.claude-*",
+          "Sid": "AIEnvironmentAnalysisInvokeInferenceProfile"
+        },
+        {
+          "Action": "bedrock:InvokeModel",
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock:*::foundation-model/anthropic.claude-*",
+          "Sid": "AIEnvironmentAnalysisInvokeFoundationModel"
+        },
+        {
+          "Action": [
+            "bedrock:ListFoundationModels",
+            "elasticbeanstalk:DescribeEnvironmentHealth",
+            "elasticbeanstalk:DescribeEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AIEnvironmentAnalysisReadOnly"
+        },
         {
           "Action": [
             "elasticbeanstalk:PutInstanceStatistics"
@@ -63,7 +90,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2020-09-09T19:38:36Z"
+  "UpdateDate": "2026-03-12T14:27:13Z"
 }
