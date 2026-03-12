@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralOpportunityManagement",
   "CreateDate": "2024-11-14T19:09:05Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4OANYBNL3Z",
   "PolicyName": "AWSPartnerCentralOpportunityManagement",
   "PolicyVersion": {
-    "CreateDate": "2026-02-14T00:57:09Z",
+    "CreateDate": "2026-03-12T17:12:09Z",
     "Document": {
       "Statement": [
         {
@@ -115,6 +115,25 @@
         },
         {
           "Action": [
+            "partnercentral:UseSession"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:IsMcpServiceAction": "true"
+            },
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PartnerCentralAgentsSessionAccess"
+        },
+        {
+          "Action": [
             "aws-marketplace:DescribeEntity"
           ],
           "Effect": "Allow",
@@ -171,7 +190,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2026-02-14T00:57:09Z"
+  "UpdateDate": "2026-03-12T17:12:09Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralFullAccess",
   "CreateDate": "2024-11-18T23:33:28Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DRJMXIHNK",
   "PolicyName": "AWSPartnerCentralFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:59:12Z",
+    "CreateDate": "2026-03-12T17:12:13Z",
     "Document": {
       "Statement": [
         {
@@ -69,6 +69,25 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AWSPartnerCentralAccess"
+        },
+        {
+          "Action": [
+            "partnercentral:UseSession"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:IsMcpServiceAction": "true"
+            },
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PartnerCentralAgentsSessionAccess"
         },
         {
           "Action": [
@@ -173,7 +192,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2026-02-12T17:59:12Z"
+  "UpdateDate": "2026-03-12T17:12:13Z"
 }

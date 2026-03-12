@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralSandboxFullAccess",
   "CreateDate": "2024-11-14T19:10:37Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DX7TQBP3V",
   "PolicyName": "AWSPartnerCentralSandboxFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:59:18Z",
+    "CreateDate": "2026-03-12T17:12:12Z",
     "Document": {
       "Statement": [
         {
@@ -37,12 +37,28 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AWSPartnerCentralSandboxAccess"
+        },
+        {
+          "Action": [
+            "partnercentral:UseSession"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:IsMcpServiceAction": "true"
+            },
+            "StringEquals": {
+              "partnercentral:Catalog": "Sandbox"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PartnerCentralAgentsSandboxSessionAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-02-12T17:59:18Z"
+  "UpdateDate": "2026-03-12T17:12:12Z"
 }
