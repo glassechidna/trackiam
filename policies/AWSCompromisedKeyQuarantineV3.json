@@ -1,15 +1,27 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCompromisedKeyQuarantineV3",
   "CreateDate": "2024-08-21T17:36:49Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JAJQG37HX",
   "PolicyName": "AWSCompromisedKeyQuarantineV3",
   "PolicyVersion": {
-    "CreateDate": "2024-10-02T16:52:27Z",
+    "CreateDate": "2026-03-16T16:27:14Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "kms:CreateGrant"
+          ],
+          "Condition": {
+            "Null": {
+              "kms:ViaService": "true"
+            }
+          },
+          "Effect": "Deny",
+          "Resource": "*"
+        },
         {
           "Action": [
             "amplify:CreateBackendEnvironment",
@@ -58,6 +70,11 @@
             "iam:UpdateAssumeRolePolicy",
             "iam:UpdateLoginProfile",
             "iam:UpdateUser",
+            "kms:DeleteImportedKeyMaterial",
+            "kms:PutKeyPolicy",
+            "kms:RetireGrant",
+            "kms:RevokeGrant",
+            "kms:ScheduleKeyDeletion",
             "lambda:AddLayerVersionPermission",
             "lambda:AddPermission",
             "lambda:CreateFunction",
@@ -74,10 +91,13 @@
             "lightsail:GetInstanceAccessDetails",
             "lightsail:Start*",
             "lightsail:Update*",
+            "logs:PutLogEvents",
             "mediapackagev2:CreateChannel",
+            "organizations:AcceptHandshake",
             "organizations:CreateAccount",
             "organizations:CreateOrganization",
             "organizations:InviteAccountToOrganization",
+            "organizations:LeaveOrganization",
             "s3:CreateBucket",
             "s3:DeleteBucket",
             "s3:DeleteBucketPolicy",
@@ -92,6 +112,7 @@
             "s3:PutBucketCors",
             "s3:PutBucketOwnershipControls",
             "s3:PutBucketPolicy",
+            "s3:PutEncryptionConfiguration",
             "s3:PutLifecycleConfiguration",
             "sagemaker:CreateEndpointConfig",
             "sagemaker:CreateProcessingJob",
@@ -111,7 +132,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-10-02T16:52:27Z"
+  "UpdateDate": "2026-03-16T16:27:14Z"
 }
