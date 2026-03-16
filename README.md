@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 452
-* Unique actions: 20909
+* Unique actions: 20914
 * Managed policies: 1452
 
 Most common managed policy name prefixes:
@@ -67,7 +67,7 @@ The following table summarises the AWS APIs.
 | [`backup`](services/backup.yml) | 91 | 0 | 27 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 7 |
 | [`workspaces`](services/workspaces.yml) | 88 | 0 | 10 |
-| [`es`](services/es.yml) | 87 | 0 | 29 |
+| [`es`](services/es.yml) | 87 | 0 | 31 |
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
 | [`sms-voice`](services/sms-voice.yml) | 87 | 0 | 8 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 10 |
@@ -445,6 +445,7 @@ The following table summarises the AWS APIs.
 | [`qdeveloper`](services/qdeveloper.yml) | 0 | 0 | 7 |
 | [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
 | [`geo-places`](services/geo-places.yml) | 0 | 0 | 7 |
+| [`uxc`](services/uxc.yml) | 0 | 0 | 6 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`cloudfront-keyvaluestore`](services/cloudfront-keyvaluestore.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
@@ -460,7 +461,6 @@ The following table summarises the AWS APIs.
 | [`inspector2-telemetry`](services/inspector2-telemetry.yml) | 0 | 0 | 4 |
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
 | [`a2c`](services/a2c.yml) | 0 | 0 | 4 |
-| [`uxc`](services/uxc.yml) | 0 | 0 | 3 |
 | [`sagemaker-unified-studio-mcp`](services/sagemaker-unified-studio-mcp.yml) | 0 | 0 | 3 |
 | [`resource-explorer`](services/resource-explorer.yml) | 0 | 0 | 3 |
 | [`mapcredits`](services/mapcredits.yml) | 0 | 0 | 3 |
@@ -493,13 +493,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3462 |
-| `Get` | 3141 |
+| `List` | 3463 |
+| `Get` | 3143 |
 | `Delete` | 2393 |
 | `Create` | 2250 |
-| `Update` | 1955 |
+| `Update` | 1956 |
 | `Describe` | 1881 |
-| `Put` | 573 |
+| `Put` | 574 |
 | `Start` | 512 |
 | `Tag` | 315 |
 | `Untag` | 310 |
