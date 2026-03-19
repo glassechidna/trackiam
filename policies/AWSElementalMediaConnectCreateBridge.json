@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSElementalMediaConnectCreateBridge",
+  "CreateDate": "2026-03-19T16:57:15Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4H7EOQWY3A",
+  "PolicyName": "AWSElementalMediaConnectCreateBridge",
+  "PolicyVersion": {
+    "CreateDate": "2026-03-19T16:57:15Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "mediaconnect:AddBridgeOutputs",
+            "mediaconnect:AddBridgeSources",
+            "mediaconnect:CreateBridge"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:mediaconnect:*:*:bridge:*:*",
+            "arn:aws:mediaconnect:*:*:bridge:*:*/bridgeOutput/*",
+            "arn:aws:mediaconnect:*:*:bridge:*:*/bridgeSource/*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-03-19T16:57:15Z"
+}
