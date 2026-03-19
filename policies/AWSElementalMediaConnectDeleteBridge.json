@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSElementalMediaConnectDeleteBridge",
+  "CreateDate": "2026-03-19T19:57:17Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CLB3WOK7W",
+  "PolicyName": "AWSElementalMediaConnectDeleteBridge",
+  "PolicyVersion": {
+    "CreateDate": "2026-03-19T19:57:17Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "mediaconnect:DeleteBridge",
+            "mediaconnect:RemoveBridgeOutput",
+            "mediaconnect:RemoveBridgeSource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:mediaconnect:*:*:bridge:*:*",
+            "arn:aws:mediaconnect:*:*:bridge:*:*/bridgeOutput/*",
+            "arn:aws:mediaconnect:*:*:bridge:*:*/bridgeSource/*"
+          ]
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-03-19T19:57:17Z"
+}
