@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmazonSSMAutomationRole",
   "CreateDate": "2016-12-05T22:09:55Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJIBQCTBCXD2XRNB6W",
   "PolicyName": "AmazonSSMAutomationRole",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:59:30Z",
+    "CreateDate": "2026-03-20T17:42:14Z",
     "Document": {
       "Statement": [
         {
@@ -16,6 +16,8 @@
             "cloudformation:DeleteStack",
             "cloudformation:DescribeStackEvents",
             "cloudformation:DescribeStacks",
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource",
             "cloudformation:UpdateStack",
             "ec2:CopyImage",
             "ec2:CreateImage",
@@ -76,7 +78,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2026-02-12T17:59:30Z"
+  "UpdateDate": "2026-03-20T17:42:14Z"
 }

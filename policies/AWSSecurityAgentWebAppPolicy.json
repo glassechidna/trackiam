@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSSecurityAgentWebAppPolicy",
   "CreateDate": "2026-02-05T23:19:09Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4CTYAYXEAG",
   "PolicyName": "AWSSecurityAgentWebAppPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:59:32Z",
+    "CreateDate": "2026-03-20T17:27:10Z",
     "Document": {
       "Statement": [
         {
@@ -28,6 +28,7 @@
             "securityagent:GetArtifact",
             "securityagent:GetDesignReview",
             "securityagent:GetDesignReviewArtifact",
+            "securityagent:GetDesignReviewFeedback",
             "securityagent:ListArtifacts",
             "securityagent:ListDesignReviewComments",
             "securityagent:ListDesignReviews",
@@ -37,7 +38,7 @@
             "securityagent:ListPentestJobTasks",
             "securityagent:ListPentestJobsForPentest",
             "securityagent:ListPentests",
-            "securityagent:ListSecurityRequirements",
+            "securityagent:PutDesignReviewFeedback",
             "securityagent:StartCodeRemediation",
             "securityagent:StartPentestJob",
             "securityagent:StopPentestJob",
@@ -55,8 +56,10 @@
         },
         {
           "Action": [
+            "securityagent:BatchGetTargetDomains",
             "securityagent:ListAgentSpaces",
-            "securityagent:ListSecurityRequirements"
+            "securityagent:ListSecurityRequirements",
+            "securityagent:ListTargetDomains"
           ],
           "Condition": {
             "StringEquals": {
@@ -71,7 +74,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-02-12T17:59:32Z"
+  "UpdateDate": "2026-03-20T17:27:10Z"
 }
