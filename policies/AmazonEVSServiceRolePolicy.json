@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEVSServiceRolePolicy",
   "CreateDate": "2025-05-16T23:37:06Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4HOHZBKDBX",
   "PolicyName": "AmazonEVSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:58:28Z",
+    "CreateDate": "2026-03-22T18:12:13Z",
     "Document": {
       "Statement": [
         {
@@ -119,6 +119,46 @@
         },
         {
           "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/EvsAccess": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:SecretARN": "arn:aws:secretsmanager:*:*:secret:*",
+              "kms:EncryptionContext:SecretVersionId": "*",
+              "kms:ViaService": "secretsmanager.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DecryptSecretWithKmsKeyStatement"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/EvsAccess": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:ViaService": "secretsmanager.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DescribeKmsKeyStatement"
+        },
+        {
+          "Action": [
             "secretsmanager:DeleteSecret"
           ],
           "Condition": {
@@ -131,6 +171,21 @@
             "arn:aws:secretsmanager:*:*:secret:*"
           ],
           "Sid": "ManageSecretStatement"
+        },
+        {
+          "Action": [
+            "secretsmanager:GetSecretValue"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/EvsAccess": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:secretsmanager:*:*:secret:*"
+          ],
+          "Sid": "AccessSecretStatement"
         },
         {
           "Action": [
@@ -174,7 +229,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-02-12T17:58:28Z"
+  "UpdateDate": "2026-03-22T18:12:13Z"
 }
