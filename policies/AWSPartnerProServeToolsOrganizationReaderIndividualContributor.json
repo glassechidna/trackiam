@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSPartnerProServeToolsOrganizationReaderIndividualContributor",
+  "CreateDate": "2026-03-23T22:12:10Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4NHTOS5IT6",
+  "PolicyName": "AWSPartnerProServeToolsOrganizationReaderIndividualContributor",
+  "PolicyVersion": {
+    "CreateDate": "2026-03-23T22:12:10Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "partnercentral-account-management:AccessProServeTools",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "partnercentral-account-management:ProServeRole": [
+                "AssessmentIndividualContributor",
+                "AssessmentOrganizationReader"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowProServeToolsOrgReaderIndividualContributorAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-03-23T22:12:10Z"
+}
