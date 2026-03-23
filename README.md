@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 452
-* Unique actions: 20924
-* Managed policies: 1456
+* Unique actions: 20925
+* Managed policies: 1458
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 395 |
+| `arn:aws:iam::aws:policy/AWS*` | 397 |
 | `arn:aws:iam::aws:policy/Amazon*` | 358 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 334 |
 | `arn:aws:iam::aws:policy/service-role/*` | 217 |
@@ -446,11 +446,11 @@ The following table summarises the AWS APIs.
 | [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
 | [`geo-places`](services/geo-places.yml) | 0 | 0 | 7 |
 | [`uxc`](services/uxc.yml) | 0 | 0 | 6 |
+| [`partnercentral-account-management`](services/partnercentral-account-management.yml) | 0 | 0 | 6 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`cloudfront-keyvaluestore`](services/cloudfront-keyvaluestore.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
 | [`supportplans`](services/supportplans.yml) | 0 | 0 | 5 |
-| [`partnercentral-account-management`](services/partnercentral-account-management.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
 | [`geo-routes`](services/geo-routes.yml) | 0 | 0 | 5 |
 | [`customer-verification`](services/customer-verification.yml) | 0 | 0 | 5 |
