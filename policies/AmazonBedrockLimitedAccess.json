@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonBedrockLimitedAccess",
   "CreateDate": "2025-06-29T22:22:06Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ITL2W5IGN",
   "PolicyName": "AmazonBedrockLimitedAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:58:28Z",
+    "CreateDate": "2026-03-23T19:42:09Z",
     "Document": {
       "Statement": [
         {
@@ -41,6 +41,10 @@
             "bedrock:ApplyGuardrail",
             "bedrock:BatchDeleteEvaluationJob",
             "bedrock:CallWithBearerToken",
+            "bedrock:CancelAutomatedReasoningPolicyBuildWorkflow",
+            "bedrock:CreateAutomatedReasoningPolicy",
+            "bedrock:CreateAutomatedReasoningPolicyTestCase",
+            "bedrock:CreateAutomatedReasoningPolicyVersion",
             "bedrock:CreateEvaluationJob",
             "bedrock:CreateGuardrail",
             "bedrock:CreateGuardrailVersion",
@@ -51,21 +55,31 @@
             "bedrock:CreateModelInvocationJob",
             "bedrock:CreatePromptRouter",
             "bedrock:CreateProvisionedModelThroughput",
+            "bedrock:DeleteAutomatedReasoningPolicy",
+            "bedrock:DeleteAutomatedReasoningPolicyBuildWorkflow",
+            "bedrock:DeleteAutomatedReasoningPolicyTestCase",
             "bedrock:DeleteCustomModel",
             "bedrock:DeleteGuardrail",
             "bedrock:DeleteImportedModel",
             "bedrock:DeleteInferenceProfile",
             "bedrock:DeletePromptRouter",
             "bedrock:DeleteProvisionedModelThroughput",
+            "bedrock:ExportAutomatedReasoningPolicyVersion",
             "bedrock:Get*",
+            "bedrock:InvokeAutomatedReasoningPolicy",
             "bedrock:InvokeModel",
             "bedrock:InvokeModelWithResponseStream",
             "bedrock:List*",
+            "bedrock:StartAutomatedReasoningPolicyBuildWorkflow",
+            "bedrock:StartAutomatedReasoningPolicyTestWorkflow",
             "bedrock:StopEvaluationJob",
             "bedrock:StopModelCustomizationJob",
             "bedrock:StopModelInvocationJob",
             "bedrock:TagResource",
             "bedrock:UntagResource",
+            "bedrock:UpdateAutomatedReasoningPolicy",
+            "bedrock:UpdateAutomatedReasoningPolicyAnnotations",
+            "bedrock:UpdateAutomatedReasoningPolicyTestCase",
             "bedrock:UpdateGuardrail",
             "bedrock:UpdateProvisionedModelThroughput"
           ],
@@ -96,7 +110,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-02-12T17:58:28Z"
+  "UpdateDate": "2026-03-23T19:42:09Z"
 }
