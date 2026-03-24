@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v178",
+  "DefaultVersionId": "v179",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:01:33Z",
+    "CreateDate": "2026-03-24T18:57:14Z",
     "Document": {
       "Statement": [
         {
@@ -198,10 +198,15 @@
             "apptest:ListTestRuns",
             "apptest:ListTestSuites",
             "aps:DescribeAlertManagerDefinition",
+            "aps:DescribeAnomalyDetector",
             "aps:DescribeLoggingConfiguration",
+            "aps:DescribeQueryLoggingConfiguration",
+            "aps:DescribeResourcePolicy",
             "aps:DescribeRuleGroupsNamespace",
             "aps:DescribeScraper",
+            "aps:DescribeScraperLoggingConfiguration",
             "aps:DescribeWorkspace",
+            "aps:DescribeWorkspaceConfiguration",
             "aps:GetAlertManagerSilence",
             "aps:GetAlertManagerStatus",
             "aps:GetDefaultScraperConfiguration",
@@ -213,11 +218,13 @@
             "aps:ListAlertManagerReceivers",
             "aps:ListAlertManagerSilences",
             "aps:ListAlerts",
+            "aps:ListAnomalyDetectors",
             "aps:ListRuleGroupsNamespaces",
             "aps:ListRules",
             "aps:ListScrapers",
             "aps:ListTagsForResource",
             "aps:ListWorkspaces",
+            "aps:PreviewAnomalyDetector",
             "aps:QueryMetrics",
             "arc-region-switch:GetPlan",
             "arc-region-switch:GetPlanEvaluationStatus",
@@ -291,6 +298,7 @@
             "bedrock-agentcore:GetAgentRuntimeEndpoint",
             "bedrock-agentcore:GetApiKeyCredentialProvider",
             "bedrock-agentcore:GetBrowser",
+            "bedrock-agentcore:GetBrowserProfile",
             "bedrock-agentcore:GetBrowserSession",
             "bedrock-agentcore:GetCodeInterpreter",
             "bedrock-agentcore:GetCodeInterpreterSession",
@@ -306,6 +314,7 @@
             "bedrock-agentcore:ListAgentRuntimeVersions",
             "bedrock-agentcore:ListAgentRuntimes",
             "bedrock-agentcore:ListApiKeyCredentialProviders",
+            "bedrock-agentcore:ListBrowserProfiles",
             "bedrock-agentcore:ListBrowserSessions",
             "bedrock-agentcore:ListBrowsers",
             "bedrock-agentcore:ListCodeInterpreterSessions",
@@ -566,6 +575,18 @@
             "codecommit:Get*",
             "codecommit:GitPull",
             "codecommit:List*",
+            "codeconnections:GetConnection",
+            "codeconnections:GetHost",
+            "codeconnections:GetRepositoryLink",
+            "codeconnections:GetRepositorySyncStatus",
+            "codeconnections:GetResourceSyncStatus",
+            "codeconnections:GetSyncConfiguration",
+            "codeconnections:ListConnections",
+            "codeconnections:ListHosts",
+            "codeconnections:ListRepositoryLinks",
+            "codeconnections:ListRepositorySyncDefinitions",
+            "codeconnections:ListSyncConfigurations",
+            "codeconnections:ListTagsForResource",
             "codedeploy:BatchGet*",
             "codedeploy:Get*",
             "codedeploy:List*",
@@ -2705,7 +2726,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v178"
+    "VersionId": "v179"
   },
-  "UpdateDate": "2026-02-12T18:01:33Z"
+  "UpdateDate": "2026-03-24T18:57:14Z"
 }
