@@ -1,0 +1,219 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/DBModProvisioningAndMigration",
+  "CreateDate": "2026-03-25T20:42:12Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4GFJN6TPQN",
+  "PolicyName": "DBModProvisioningAndMigration",
+  "PolicyVersion": {
+    "CreateDate": "2026-03-25T20:42:12Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "iam:AWSServiceName": "rds.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/rds.amazonaws.com/AWSServiceRoleForRDS"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "iam:PassedToService": [
+                "dms.*.amazonaws.com",
+                "dms.amazonaws.com",
+                "schema-conversion.dms.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/DMSPremigrationAssessmentS3Role",
+            "arn:aws:iam::*:role/dms-cloudwatch-logs-role",
+            "arn:aws:iam::*:role/dms-s3-access-role",
+            "arn:aws:iam::*:role/dms-secrets-manager-role",
+            "arn:aws:iam::*:role/dms-vpc-role"
+          ]
+        },
+        {
+          "Action": "secretsmanager:UpdateSecret",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/Owner": "database-connector",
+              "aws:ResourceTag/Project": "atx-db-modernization"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:atx-db-modernization-*"
+        },
+        {
+          "Action": [
+            "dms:AddTagsToResource",
+            "dms:CreateDataProvider",
+            "dms:CreateEndpoint",
+            "dms:CreateInstanceProfile",
+            "dms:CreateMigrationProject",
+            "dms:CreateReplicationInstance",
+            "dms:CreateReplicationSubnetGroup",
+            "dms:CreateReplicationTask",
+            "rds:AddTagsToResource",
+            "rds:CreateDBCluster",
+            "rds:CreateDBInstance",
+            "rds:CreateDBSubnetGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/Owner": "database-connector",
+              "aws:RequestTag/Project": "atx-db-modernization",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:dms:*:*:data-provider:*",
+            "arn:aws:dms:*:*:endpoint:*",
+            "arn:aws:dms:*:*:instance-profile:*",
+            "arn:aws:dms:*:*:migration-project:*",
+            "arn:aws:dms:*:*:rep:*",
+            "arn:aws:dms:*:*:subgrp:*",
+            "arn:aws:dms:*:*:task:*",
+            "arn:aws:ec2:*:*:vpc-endpoint:*",
+            "arn:aws:rds:*:*:cluster:*",
+            "arn:aws:rds:*:*:db:*",
+            "arn:aws:rds:*:*:subgrp:*"
+          ]
+        },
+        {
+          "Action": [
+            "dms:AddTagsToResource",
+            "dms:DeleteDataProvider",
+            "dms:DeleteEndpoint",
+            "dms:DeleteInstanceProfile",
+            "dms:DeleteMigrationProject",
+            "dms:ExportMetadataModelAssessment",
+            "dms:ListTagsForResource",
+            "dms:StartMetadataModelAssessment",
+            "dms:StartMetadataModelConversion",
+            "dms:StartMetadataModelCreation",
+            "dms:StartMetadataModelExportAsScripts",
+            "dms:StartMetadataModelExportToTarget",
+            "dms:StartMetadataModelImport",
+            "dms:UpdateConversionConfiguration",
+            "dms:UpdateDataProvider",
+            "dms:UpdateInstanceProfile",
+            "dms:UpdateMigrationProject",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/Owner": "database-connector",
+              "aws:ResourceTag/Project": "atx-db-modernization"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:dms:*:*:data-provider:*",
+            "arn:aws:dms:*:*:endpoint:*",
+            "arn:aws:dms:*:*:instance-profile:*",
+            "arn:aws:dms:*:*:migration-project:*",
+            "arn:aws:secretsmanager:*:*:secret:*"
+          ]
+        },
+        {
+          "Action": [
+            "dms:CancelReplicationTaskAssessmentRun",
+            "dms:DeleteReplicationTask",
+            "dms:StartReplicationTask",
+            "dms:StartReplicationTaskAssessmentRun",
+            "dms:StopReplicationTask"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "dms:task-tag/Project": "atx-db-modernization"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:dms:*:*:assessment-run:*",
+            "arn:aws:dms:*:*:task:*"
+          ]
+        },
+        {
+          "Action": [
+            "dms:CreateReplicationInstance",
+            "dms:DeleteReplicationInstance",
+            "dms:ModifyReplicationInstance",
+            "dms:RebootReplicationInstance"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "dms:rep-tag/Project": "atx-db-modernization"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:dms:*:*:rep:*"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:DeleteObject",
+            "s3:GetBucketLocation",
+            "s3:GetBucketVersioning",
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutBucketTagging",
+            "s3:PutBucketVersioning",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::atx-db-modernization-*",
+            "arn:aws:s3:::atx-db-modernization-*/*"
+          ]
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/Owner": "database-connector",
+              "aws:RequestTag/Project": "atx-db-modernization",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/Owner": "database-connector",
+              "aws:ResourceTag/Project": "atx-db-modernization"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:atx-db-modernization-*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-03-25T20:42:12Z"
+}

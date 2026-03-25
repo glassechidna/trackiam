@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonGuardDutyServiceRolePolicy",
   "CreateDate": "2017-11-28T20:12:59Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIHZREZOWNSSA6FWQO",
   "PolicyName": "AmazonGuardDutyServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-08-12T20:01:11Z",
+    "CreateDate": "2026-03-25T20:57:15Z",
     "Document": {
       "Statement": [
         {
@@ -111,6 +111,19 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "GuardDutyCreateSLRPolicy"
+        },
+        {
+          "Action": [
+            "cloudtrail:CreateServiceLinkedChannel"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudtrail:*:*:channel/aws-service-channel/guardduty/*",
+          "Sid": "CloudTrailCreateServiceLinkedChannelSid"
         },
         {
           "Action": [
@@ -268,7 +281,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2024-08-12T20:01:11Z"
+  "UpdateDate": "2026-03-25T20:57:15Z"
 }

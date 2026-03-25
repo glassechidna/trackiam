@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 452
-* Unique actions: 20925
-* Managed policies: 1460
+* Unique actions: 20908
+* Managed policies: 1462
 
 Most common managed policy name prefixes:
 
@@ -24,7 +24,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 335 |
 | `arn:aws:iam::aws:policy/service-role/*` | 217 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
-| Other | 144 |
+| Other | 146 |
 
 The following table summarises the AWS APIs. 
 
@@ -363,9 +363,9 @@ The following table summarises the AWS APIs.
 | [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 134 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 111 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
-| [`securityagent`](services/securityagent.yml) | 0 | 0 | 92 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
+| [`securityagent`](services/securityagent.yml) | 0 | 0 | 75 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 61 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
@@ -493,14 +493,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3466 |
-| `Get` | 3144 |
-| `Delete` | 2394 |
-| `Create` | 2250 |
-| `Update` | 1958 |
+| `List` | 3462 |
+| `Get` | 3140 |
+| `Delete` | 2391 |
+| `Create` | 2248 |
+| `Update` | 1956 |
 | `Describe` | 1882 |
 | `Put` | 574 |
 | `Start` | 513 |
-| `Tag` | 316 |
-| `Untag` | 311 |
+| `Tag` | 317 |
+| `Untag` | 312 |
 

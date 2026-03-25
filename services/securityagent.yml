@@ -2,9 +2,7 @@ Actions:
 
   # actions with no corresponding API
   - Name: securityagent:AddArtifact
-  - Name: securityagent:AddControl
   - Name: securityagent:BatchDeletePentests
-  - Name: securityagent:BatchGetAgentInstances
   - Name: securityagent:BatchGetAgentSpaces
   - Name: securityagent:BatchGetArtifactMetadata
   - Name: securityagent:BatchGetFindings
@@ -15,24 +13,19 @@ Actions:
   - Name: securityagent:BatchGetSecurityTestContentMetadata
   - Name: securityagent:BatchGetTargetDomains
   - Name: securityagent:BatchGetTasks
-  - Name: securityagent:CreateAgentInstance
   - Name: securityagent:CreateAgentSpace
   - Name: securityagent:CreateApplication
   - Name: securityagent:CreateDesignReview
-  - Name: securityagent:CreateDocumentReview
   - Name: securityagent:CreateIntegration
   - Name: securityagent:CreateMembership
   - Name: securityagent:CreateOneTimeLoginSession
   - Name: securityagent:CreatePentest
   - Name: securityagent:CreateSecurityRequirement
   - Name: securityagent:CreateTargetDomain
-  - Name: securityagent:DeleteAgentInstance
   - Name: securityagent:DeleteAgentSpace
   - Name: securityagent:DeleteApplication
   - Name: securityagent:DeleteArtifact
-  - Name: securityagent:DeleteControl
   - Name: securityagent:DeleteDesignReview
-  - Name: securityagent:DeleteDocumentReview
   - Name: securityagent:DeleteIntegration
   - Name: securityagent:DeleteMembership
   - Name: securityagent:DeleteSecurityRequirement
@@ -41,29 +34,19 @@ Actions:
   - Name: securityagent:GetApplication
   - Name: securityagent:GetArtifact
   - Name: securityagent:GetCodeReviewTask
-  - Name: securityagent:GetControl
   - Name: securityagent:GetDesignReview
   - Name: securityagent:GetDesignReviewArtifact
   - Name: securityagent:GetDesignReviewFeedback
   - Name: securityagent:GetDocReviewTask
-  - Name: securityagent:GetDocumentReview
-  - Name: securityagent:GetDocumentReviewArtifact
   - Name: securityagent:GetIntegration
-  - Name: securityagent:GetLoginSessionCredentials
   - Name: securityagent:GetSecurityRequirement
-  - Name: securityagent:HandleOneTimeLoginSession
   - Name: securityagent:InitiateProviderRegistration
-  - Name: securityagent:ListAgentInstanceTasks
-  - Name: securityagent:ListAgentInstances
   - Name: securityagent:ListAgentSpaces
   - Name: securityagent:ListApplications
   - Name: securityagent:ListArtifacts
-  - Name: securityagent:ListControls
   - Name: securityagent:ListDesignReviewComments
   - Name: securityagent:ListDesignReviews
   - Name: securityagent:ListDiscoveredEndpoints
-  - Name: securityagent:ListDocumentReviewComments
-  - Name: securityagent:ListDocumentReviews
   - Name: securityagent:ListFindings
   - Name: securityagent:ListIntegratedResources
   - Name: securityagent:ListIntegrations
@@ -73,6 +56,7 @@ Actions:
   - Name: securityagent:ListPentests
   - Name: securityagent:ListResourcesFromIntegration
   - Name: securityagent:ListSecurityRequirements
+  - Name: securityagent:ListTagsForResource
   - Name: securityagent:ListTargetDomains
   - Name: securityagent:ListTasks
   - Name: securityagent:PutDesignReviewFeedback
@@ -81,12 +65,11 @@ Actions:
   - Name: securityagent:StartPentestJob
   - Name: securityagent:StopPentestExecution
   - Name: securityagent:StopPentestJob
-  - Name: securityagent:ToggleManagedControl
+  - Name: securityagent:TagResource
   - Name: securityagent:ToggleManagedSecurityRequirement
-  - Name: securityagent:UpdateAgentInstance
+  - Name: securityagent:UntagResource
   - Name: securityagent:UpdateAgentSpace
   - Name: securityagent:UpdateApplication
-  - Name: securityagent:UpdateControl
   - Name: securityagent:UpdateFinding
   - Name: securityagent:UpdateIntegratedResources
   - Name: securityagent:UpdatePentest
