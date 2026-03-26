@@ -1,0 +1,87 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AIDevOpsOperatorAppAccessPolicy",
+  "CreateDate": "2026-03-26T03:42:13Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4ELWEUAH5T",
+  "PolicyName": "AIDevOpsOperatorAppAccessPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-03-26T03:42:13Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aidevops:CreateBacklogTask",
+            "aidevops:CreateChat",
+            "aidevops:CreateKnowledgeItem",
+            "aidevops:DeleteKnowledgeItem",
+            "aidevops:DescribeSupportLevel",
+            "aidevops:DiscoverTopology",
+            "aidevops:EndChatForCase",
+            "aidevops:GetAgentSpace",
+            "aidevops:GetAssociation",
+            "aidevops:GetBacklogTask",
+            "aidevops:GetKnowledgeItem",
+            "aidevops:GetRecommendation",
+            "aidevops:InitiateChatForCase",
+            "aidevops:ListAssociations",
+            "aidevops:ListBacklogTasks",
+            "aidevops:ListChats",
+            "aidevops:ListExecutions",
+            "aidevops:ListGoals",
+            "aidevops:ListJournalRecords",
+            "aidevops:ListKnowledgeItemVersions",
+            "aidevops:ListKnowledgeItems",
+            "aidevops:ListPendingMessages",
+            "aidevops:ListRecommendations",
+            "aidevops:SendMessage",
+            "aidevops:UpdateBacklogTask",
+            "aidevops:UpdateKnowledgeItem",
+            "aidevops:UpdateRecommendation"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:aidevops:*:*:agentspace/${aws:PrincipalTag/AgentSpaceId}",
+          "Sid": "AllowOperatorAgentSpaceActions"
+        },
+        {
+          "Action": [
+            "aidevops:GetAccountUsage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowOperatorAccountActions"
+        },
+        {
+          "Action": [
+            "support:DescribeCases",
+            "support:DescribeSupportLevel",
+            "support:InitiateChatForCase"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowSupportOperatorActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-03-26T03:42:13Z"
+}

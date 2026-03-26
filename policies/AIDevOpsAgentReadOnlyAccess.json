@@ -1,0 +1,30 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AIDevOpsAgentReadOnlyAccess",
+  "CreateDate": "2026-03-26T03:42:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4OY4V5OH2U",
+  "PolicyName": "AIDevOpsAgentReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-03-26T03:42:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aidevops:Get*",
+            "aidevops:List*",
+            "aidevops:SearchServiceAccessibleResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AIDevOpsAgentReadOnlyAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-03-26T03:42:07Z"
+}
