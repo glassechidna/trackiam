@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForAIDevOpsPolicy",
   "CreateDate": "2026-02-16T14:27:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NGASD5CCH",
   "PolicyName": "AWSServiceRoleForAIDevOpsPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-16T14:27:07Z",
+    "CreateDate": "2026-03-27T00:42:09Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "vpc-lattice.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/vpc-lattice.amazonaws.com/AWSServiceRoleForVpcLattice",
+          "Sid": "CreateLatticeServiceLinkedRole"
+        },
         {
           "Action": [
             "cloudwatch:PutMetricData"
@@ -24,12 +35,74 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "sid1"
+        },
+        {
+          "Action": [
+            "vpc-lattice:CreateResourceGateway"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/AWSAIDevOpsManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:vpc-lattice:*:*:resourcegateway/*",
+          "Sid": "LatticeCreateResourceGateway"
+        },
+        {
+          "Action": [
+            "vpc-lattice:DeleteResourceGateway"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AWSAIDevOpsManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:vpc-lattice:*:*:resourcegateway/*",
+          "Sid": "LatticeManageTaggedResourceGateways"
+        },
+        {
+          "Action": [
+            "vpc-lattice:GetResourceGateway"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AWSAIDevOpsManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:vpc-lattice:*:*:resourcegateway/*",
+          "Sid": "LatticeGetResourceGateway"
+        },
+        {
+          "Action": [
+            "vpc-lattice:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/AWSAIDevOpsManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:vpc-lattice:*:*:resourcegateway/*",
+          "Sid": "LatticeTagResourceGateway"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeApis"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-02-16T14:27:07Z"
+  "UpdateDate": "2026-03-27T00:42:09Z"
 }
