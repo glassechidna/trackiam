@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMDefaultExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v22",
+  "DefaultVersionId": "v23",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BV3PMY4IB",
   "PolicyName": "SageMakerStudioUserIAMDefaultExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-03-11T17:42:09Z",
+    "CreateDate": "2026-03-27T17:27:15Z",
     "Document": {
       "Statement": [
         {
@@ -597,6 +597,7 @@
         },
         {
           "Action": [
+            "cloudwatch:GetMetricData",
             "cloudwatch:PutMetricData",
             "logs:CreateLogGroup",
             "logs:CreateLogStream",
@@ -680,6 +681,8 @@
             "datazone:StartConversation",
             "datazone:StartMetadataGenerationRun",
             "datazone:StartNotebookCompute",
+            "datazone:StartNotebookExport",
+            "datazone:StartNotebookImport",
             "datazone:StopNotebookCompute",
             "datazone:UpdateAssetFilter",
             "datazone:UpdateCell",
@@ -886,10 +889,12 @@
             "sagemaker:*Association*",
             "sagemaker:*Context*",
             "sagemaker:*Endpoint*",
+            "sagemaker:*Feature*",
             "sagemaker:*InferenceComponent*",
             "sagemaker:*Job*",
             "sagemaker:*MlflowApp*",
             "sagemaker:*Model*",
+            "sagemaker:*Record",
             "sagemaker:Batch*",
             "sagemaker:CreatePresignedMlflowTrackingServerUrl",
             "sagemaker:Describe*",
@@ -949,7 +954,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v22"
+    "VersionId": "v23"
   },
-  "UpdateDate": "2026-03-11T17:42:09Z"
+  "UpdateDate": "2026-03-27T17:27:15Z"
 }

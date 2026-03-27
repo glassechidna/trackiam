@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioAdminIAMDefaultExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v19",
+  "DefaultVersionId": "v20",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NZY6YGCPE",
   "PolicyName": "SageMakerStudioAdminIAMDefaultExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-03-11T17:27:12Z",
+    "CreateDate": "2026-03-27T17:27:16Z",
     "Document": {
       "Statement": [
         {
@@ -304,6 +304,22 @@
         },
         {
           "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "Null": {
+              "kms:EncryptionContext:aws:sso:instance-arn": "false"
+            },
+            "StringLike": {
+              "kms:ViaService": "sso.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSOKMSPermissions"
+        },
+        {
+          "Action": [
             "kms:Decrypt",
             "kms:Encrypt",
             "kms:GenerateDataKey"
@@ -484,6 +500,26 @@
           "Sid": "ManageSharedSecret"
         },
         {
+          "Action": [
+            "sso:CreateApplication",
+            "sso:CreateApplicationAssignment",
+            "sso:DeleteApplicationAssignment",
+            "sso:PutApplicationAccessScope",
+            "sso:PutApplicationAssignmentConfiguration",
+            "sso:PutApplicationAuthenticationMethod",
+            "sso:PutApplicationGrant",
+            "sso:UpdateApplication"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSOApplicationPermissions"
+        },
+        {
           "Action": "bedrock:*",
           "Effect": "Allow",
           "Resource": "*",
@@ -565,12 +601,14 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:cloudformation:*:*:stack/DataZone*"
+            "arn:aws:cloudformation:*:*:stack/DataZone*",
+            "arn:aws:cloudformation:*:*:transform/*"
           ],
           "Sid": "CfnManage"
         },
         {
           "Action": [
+            "cloudwatch:GetMetricData",
             "cloudwatch:PutMetricData",
             "logs:CreateLogGroup",
             "logs:CreateLogStream",
@@ -780,6 +818,7 @@
         },
         {
           "Action": [
+            "lakeformation:*DataCellsFilter",
             "lakeformation:BatchGrantPermissions",
             "lakeformation:BatchRevokePermissions",
             "lakeformation:CreateLakeFormationOptIn",
@@ -799,6 +838,15 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "LFManage"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "sso:ListInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSOReadOnlyPermissions"
         },
         {
           "Action": [
@@ -857,10 +905,12 @@
             "sagemaker:*Association*",
             "sagemaker:*Context*",
             "sagemaker:*Endpoint*",
+            "sagemaker:*Feature*",
             "sagemaker:*InferenceComponent*",
             "sagemaker:*Job*",
             "sagemaker:*MlflowApp*",
             "sagemaker:*Model*",
+            "sagemaker:*Record",
             "sagemaker:AddTags",
             "sagemaker:Batch*",
             "sagemaker:CreatePresignedMlflowTrackingServerUrl",
@@ -923,7 +973,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v19"
+    "VersionId": "v20"
   },
-  "UpdateDate": "2026-03-11T17:27:12Z"
+  "UpdateDate": "2026-03-27T17:27:16Z"
 }

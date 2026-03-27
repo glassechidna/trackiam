@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioAdminIAMConsolePolicy",
   "CreateDate": "2025-08-18T22:49:07Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FF4BJSUBG",
   "PolicyName": "SageMakerStudioAdminIAMConsolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-03-05T17:42:10Z",
+    "CreateDate": "2026-03-27T17:42:13Z",
     "Document": {
       "Statement": [
         {
@@ -366,6 +366,22 @@
         },
         {
           "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "Null": {
+              "kms:EncryptionContext:aws:sso:instance-arn": "false"
+            },
+            "StringLike": {
+              "kms:ViaService": "sso.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSOKMSPermissions"
+        },
+        {
+          "Action": [
             "kms:Decrypt",
             "kms:GenerateDataKey"
           ],
@@ -396,6 +412,24 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "S3ReadCFNTemplate"
+        },
+        {
+          "Action": [
+            "sso:DeleteApplication"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "datazone.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sso::*:application/*/*"
+          ],
+          "Sid": "SSOApplicationPermissions"
         },
         {
           "Action": [
@@ -483,7 +517,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2026-03-05T17:42:10Z"
+  "UpdateDate": "2026-03-27T17:42:13Z"
 }
