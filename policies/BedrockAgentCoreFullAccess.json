@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/BedrockAgentCoreFullAccess",
   "CreateDate": "2025-07-16T13:37:07Z",
-  "DefaultVersionId": "v15",
+  "DefaultVersionId": "v16",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BB44GAY7X",
   "PolicyName": "BedrockAgentCoreFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:58:03Z",
+    "CreateDate": "2026-03-27T21:12:10Z",
     "Document": {
       "Statement": [
         {
@@ -308,6 +308,15 @@
         },
         {
           "Action": [
+            "lambda:GetFunction",
+            "lambda:InvokeFunction"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:function:*",
+          "Sid": "AgentCoreEvaluationLambdaAccess"
+        },
+        {
+          "Action": [
             "lambda:ListFunctions"
           ],
           "Effect": "Allow",
@@ -395,7 +404,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v15"
+    "VersionId": "v16"
   },
-  "UpdateDate": "2026-02-12T17:58:03Z"
+  "UpdateDate": "2026-03-27T21:12:10Z"
 }
