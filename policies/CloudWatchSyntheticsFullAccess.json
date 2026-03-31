@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchSyntheticsFullAccess",
   "CreateDate": "2019-11-25T17:39:46Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MAGQWEZP4",
   "PolicyName": "CloudWatchSyntheticsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:59:27Z",
+    "CreateDate": "2026-03-31T21:12:14Z",
     "Document": {
       "Statement": [
         {
@@ -62,14 +62,15 @@
         },
         {
           "Action": [
-            "apigateway:GET",
-            "iam:ListRoles",
-            "s3:ListAllMyBuckets",
-            "xray:BatchGetTraces",
-            "xray:GetTraceSummaries"
+            "apigateway:GET"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": [
+            "arn:aws:apigateway:*::/apis",
+            "arn:aws:apigateway:*::/restapis",
+            "arn:aws:apigateway:*::/restapis/*/stages",
+            "arn:aws:apigateway:*::/restapis/*/stages/*/exports/swagger"
+          ]
         },
         {
           "Action": [
@@ -93,7 +94,8 @@
         {
           "Action": [
             "cloudwatch:GetMetricData",
-            "cloudwatch:GetMetricStatistics"
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -118,6 +120,16 @@
           "Resource": [
             "arn:aws:iam::*:role/service-role/CloudWatchSyntheticsRole*"
           ]
+        },
+        {
+          "Action": [
+            "iam:ListRoles",
+            "s3:ListAllMyBuckets",
+            "xray:BatchGetTraces",
+            "xray:GetTraceSummaries"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         },
         {
           "Action": [
@@ -229,7 +241,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2026-02-12T17:59:27Z"
+  "UpdateDate": "2026-03-31T21:12:14Z"
 }
