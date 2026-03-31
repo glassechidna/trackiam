@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceManageSubscriptions",
   "CreateDate": "2015-02-06T18:40:32Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJRDW2WIFN7QLUAKBQ",
   "PolicyName": "AWSMarketplaceManageSubscriptions",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:59:49Z",
+    "CreateDate": "2026-03-31T17:12:11Z",
     "Document": {
       "Statement": [
         {
@@ -31,6 +31,28 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "aws-marketplace:AcceptAgreementCancellationRequest",
+            "aws-marketplace:CancelAgreement",
+            "aws-marketplace:GetAgreementCancellationRequest",
+            "aws-marketplace:ListAgreementCancellationRequests",
+            "aws-marketplace:RejectAgreementCancellationRequest"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws-marketplace:AgreementType": [
+                "PurchaseAgreement"
+              ]
+            },
+            "StringEquals": {
+              "aws-marketplace:PartyType": "Acceptor"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSMarketplaceAgreementCancellationRequestAccess"
         },
         {
           "Action": [
@@ -99,7 +121,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2026-02-12T17:59:49Z"
+  "UpdateDate": "2026-03-31T17:12:11Z"
 }

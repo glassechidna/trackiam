@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceRead-only",
   "CreateDate": "2015-02-06T18:40:31Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJOOM6LETKURTJ3XZ2",
   "PolicyName": "AWSMarketplaceRead-only",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:01:12Z",
+    "CreateDate": "2026-03-31T16:42:07Z",
     "Document": {
       "Statement": [
         {
@@ -16,6 +16,14 @@
             "aws-marketplace:GetAgreementPaymentRequest",
             "aws-marketplace:ListAgreementPaymentRequests",
             "aws-marketplace:ListPrivateMarketplaceRequests"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "aws-marketplace:GetAgreementCancellationRequest",
+            "aws-marketplace:ListAgreementCancellationRequests"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -57,7 +65,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2026-02-12T18:01:12Z"
+  "UpdateDate": "2026-03-31T16:42:07Z"
 }
