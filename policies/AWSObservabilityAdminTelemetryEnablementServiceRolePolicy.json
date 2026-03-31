@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSObservabilityAdminTelemetryEnablementServiceRolePolicy",
   "CreateDate": "2025-08-01T18:04:06Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ABS5BMRXG",
   "PolicyName": "AWSObservabilityAdminTelemetryEnablementServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-03-11T22:27:18Z",
+    "CreateDate": "2026-03-31T18:27:09Z",
     "Document": {
       "Statement": [
         {
@@ -22,6 +22,19 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "TelemetryOperationsForBedrock"
+        },
+        {
+          "Action": [
+            "cloudfront:AllowVendedLogDeliveryForResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TelemetryOperationsForCloudfront"
         },
         {
           "Action": [
@@ -409,6 +422,20 @@
         },
         {
           "Action": [
+            "securityhub:AllowVendedLogDeliveryForResource",
+            "securityhub:DescribeHub"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TelemetryOperationsForSecurityHub"
+        },
+        {
+          "Action": [
             "wafv2:PutLoggingConfiguration"
           ],
           "Condition": {
@@ -436,7 +463,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2026-03-11T22:27:18Z"
+  "UpdateDate": "2026-03-31T18:27:09Z"
 }
