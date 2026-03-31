@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerFullAccess",
   "CreateDate": "2019-07-02T20:40:09Z",
-  "DefaultVersionId": "v25",
+  "DefaultVersionId": "v26",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JF7OFUANW",
   "PolicyName": "AWSMarketplaceSellerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-03-02T23:42:11Z",
+    "CreateDate": "2026-03-31T17:42:16Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,31 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "CreateServiceLinkedRole"
+        },
+        {
+          "Action": [
+            "aws-marketplace:BatchCreateBillingAdjustmentRequest",
+            "aws-marketplace:CancelAgreementCancellationRequest",
+            "aws-marketplace:GetAgreementCancellationRequest",
+            "aws-marketplace:GetBillingAdjustmentRequest",
+            "aws-marketplace:ListAgreementCancellationRequests",
+            "aws-marketplace:ListAgreementInvoiceLineItems",
+            "aws-marketplace:ListBillingAdjustmentRequests",
+            "aws-marketplace:SendAgreementCancellationRequest"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws-marketplace:AgreementType": [
+                "PurchaseAgreement"
+              ]
+            },
+            "StringEquals": {
+              "aws-marketplace:PartyType": "Proposer"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSMarketplaceAgreementsCancellationAndAdjustmentAccess"
         },
         {
           "Action": [
@@ -196,7 +221,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v25"
+    "VersionId": "v26"
   },
-  "UpdateDate": "2026-03-02T23:42:11Z"
+  "UpdateDate": "2026-03-31T17:42:16Z"
 }
