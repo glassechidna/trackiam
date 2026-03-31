@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 452
-* Unique actions: 20920
+* Unique actions: 20927
 * Managed policies: 1468
 
 Most common managed policy name prefixes:
@@ -43,7 +43,7 @@ The following table summarises the AWS APIs.
 | [`connect`](services/connect.yml) | 256 | 0 | 106 |
 | [`glue`](services/glue.yml) | 214 | 4 | 87 |
 | [`ses`](services/ses.yml) | 193 | 0 | 33 |
-| [`quicksight`](services/quicksight.yml) | 174 | 3 | 97 |
+| [`quicksight`](services/quicksight.yml) | 174 | 3 | 99 |
 | [`rds`](services/rds.yml) | 162 | 0 | 7 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
 | [`iam`](services/iam.yml) | 159 | 0 | 28 |
@@ -87,7 +87,7 @@ The following table summarises the AWS APIs.
 | [`appstream`](services/appstream.yml) | 75 | 0 | 14 |
 | [`elasticache`](services/elasticache.yml) | 75 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
-| [`logs`](services/logs.yml) | 74 | 0 | 48 |
+| [`logs`](services/logs.yml) | 74 | 0 | 53 |
 | [`guardduty`](services/guardduty.yml) | 74 | 0 | 14 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`sso`](services/sso.yml) | 73 | 0 | 53 |
@@ -494,13 +494,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3466 |
-| `Get` | 3143 |
-| `Delete` | 2392 |
-| `Create` | 2250 |
-| `Update` | 1956 |
-| `Describe` | 1882 |
+| `Get` | 3144 |
+| `Delete` | 2393 |
+| `Create` | 2251 |
+| `Update` | 1957 |
+| `Describe` | 1884 |
 | `Put` | 574 |
-| `Start` | 512 |
+| `Start` | 513 |
 | `Tag` | 317 |
 | `Untag` | 312 |
 

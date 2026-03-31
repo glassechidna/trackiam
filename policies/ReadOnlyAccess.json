@@ -1,15 +1,28 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v180",
+  "DefaultVersionId": "v181",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-03-31T19:27:15Z",
+    "CreateDate": "2026-03-31T22:51:50Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "s3express:CreateSession"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "s3express:SessionMode": "ReadOnly"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "S3ExpressReadOnlySessionObjectAccess"
+        },
         {
           "Action": [
             "a4b:Get*",
@@ -2359,7 +2372,6 @@
             "s3:DescribeJob",
             "s3:Get*",
             "s3:List*",
-            "s3express:CreateSession",
             "s3express:GetAccessPoint",
             "s3express:GetAccessPointPolicy",
             "s3express:GetAccessPointScope",
@@ -2770,7 +2782,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v180"
+    "VersionId": "v181"
   },
-  "UpdateDate": "2026-03-31T19:27:15Z"
+  "UpdateDate": "2026-03-31T22:51:50Z"
 }
