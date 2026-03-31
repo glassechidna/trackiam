@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 452
-* Unique actions: 20918
+* Unique actions: 20920
 * Managed policies: 1468
 
 Most common managed policy name prefixes:
@@ -461,6 +461,7 @@ The following table summarises the AWS APIs.
 | [`inspector2-telemetry`](services/inspector2-telemetry.yml) | 0 | 0 | 4 |
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
 | [`a2c`](services/a2c.yml) | 0 | 0 | 4 |
+| [`sustainability`](services/sustainability.yml) | 0 | 0 | 3 |
 | [`sagemaker-unified-studio-mcp`](services/sagemaker-unified-studio-mcp.yml) | 0 | 0 | 3 |
 | [`resource-explorer`](services/resource-explorer.yml) | 0 | 0 | 3 |
 | [`mapcredits`](services/mapcredits.yml) | 0 | 0 | 3 |
@@ -476,7 +477,6 @@ The following table summarises the AWS APIs.
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
 | [`vpce`](services/vpce.yml) | 0 | 0 | 1 |
 | [`verified-access`](services/verified-access.yml) | 0 | 0 | 1 |
-| [`sustainability`](services/sustainability.yml) | 0 | 0 | 1 |
 | [`serviceextract`](services/serviceextract.yml) | 0 | 0 | 1 |
 | [`sagemaker-data-science-assistant`](services/sagemaker-data-science-assistant.yml) | 0 | 0 | 1 |
 | [`rhelkb`](services/rhelkb.yml) | 0 | 0 | 1 |
@@ -494,7 +494,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3466 |
-| `Get` | 3141 |
+| `Get` | 3143 |
 | `Delete` | 2392 |
 | `Create` | 2250 |
 | `Update` | 1956 |
