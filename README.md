@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 453
-* Unique actions: 20960
+* Unique actions: 20962
 * Managed policies: 1472
 
 Most common managed policy name prefixes:
@@ -388,13 +388,13 @@ The following table summarises the AWS APIs.
 | [`one`](services/one.yml) | 0 | 0 | 28 |
 | [`billing`](services/billing.yml) | 0 | 0 | 28 |
 | [`rtbfabric`](services/rtbfabric.yml) | 0 | 0 | 27 |
+| [`s3express`](services/s3express.yml) | 0 | 0 | 26 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
 | [`mpa`](services/mpa.yml) | 0 | 0 | 25 |
 | [`dsql`](services/dsql.yml) | 0 | 0 | 25 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 24 |
-| [`s3express`](services/s3express.yml) | 0 | 0 | 24 |
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
 | [`gameliftstreams`](services/gameliftstreams.yml) | 0 | 0 | 24 |
 | [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 24 |
@@ -495,12 +495,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3472 |
-| `Get` | 3151 |
+| `Get` | 3152 |
 | `Delete` | 2398 |
 | `Create` | 2257 |
 | `Update` | 1960 |
 | `Describe` | 1884 |
-| `Put` | 574 |
+| `Put` | 575 |
 | `Start` | 514 |
 | `Tag` | 317 |
 | `Untag` | 312 |
