@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEKSLoadBalancingPolicy",
   "CreateDate": "2024-10-30T20:18:06Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BAR6P5E2F",
   "PolicyName": "AmazonEKSLoadBalancingPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:57:21Z",
+    "CreateDate": "2026-04-01T22:57:10Z",
     "Document": {
       "Statement": [
         {
@@ -91,6 +91,8 @@
         {
           "Action": [
             "elasticloadbalancing:AddListenerCertificates",
+            "elasticloadbalancing:ModifyCapacityReservation",
+            "elasticloadbalancing:ModifyIpPools",
             "elasticloadbalancing:ModifyListener",
             "elasticloadbalancing:ModifyListenerAttributes",
             "elasticloadbalancing:ModifyLoadBalancerAttributes",
@@ -126,18 +128,6 @@
           },
           "Effect": "Allow",
           "Resource": "*"
-        },
-        {
-          "Action": [
-            "elasticloadbalancing:RegisterTargets"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "aws:ResourceTag/eks:eks-cluster-name": "${aws:PrincipalTag/eks:eks-cluster-name}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:elasticloadbalancing:*:*:targetgroup/*/*"
         },
         {
           "Action": [
@@ -248,6 +238,13 @@
         },
         {
           "Action": [
+            "elasticloadbalancing:RegisterTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticloadbalancing:*:*:targetgroup/*/*"
+        },
+        {
+          "Action": [
             "wafv2:AssociateWebACL",
             "wafv2:DisassociateWebACL"
           ],
@@ -261,7 +258,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-02-12T17:57:21Z"
+  "UpdateDate": "2026-04-01T22:57:10Z"
 }

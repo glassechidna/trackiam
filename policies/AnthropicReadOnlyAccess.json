@@ -1,15 +1,38 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AnthropicReadOnlyAccess",
   "CreateDate": "2026-04-01T04:57:09Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ALSUBTRPI",
   "PolicyName": "AnthropicReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-04-01T04:57:09Z",
+    "CreateDate": "2026-04-01T22:42:18Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "sts:GetWebIdentityToken",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "sts:IdentityTokenAudience": [
+                "https://api.anthropic.com",
+                "https://platform.claude.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:CalledViaLast": "aws-external-anthropic.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AnthropicReadOnlyGetToken"
+        },
+        {
+          "Action": "sts:TagGetWebIdentityToken",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AnthropicReadOnlyTagToken"
+        },
         {
           "Action": [
             "aws-external-anthropic:CallWithBearerToken",
@@ -32,7 +55,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-04-01T04:57:09Z"
+  "UpdateDate": "2026-04-01T22:42:18Z"
 }
