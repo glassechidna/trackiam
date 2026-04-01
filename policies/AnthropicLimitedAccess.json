@@ -1,15 +1,21 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AnthropicLimitedAccess",
   "CreateDate": "2026-04-01T04:57:18Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4PVRRB6AVZ",
   "PolicyName": "AnthropicLimitedAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-04-01T04:57:18Z",
+    "CreateDate": "2026-04-01T19:57:14Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "sts:GetWebIdentityToken",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AnthropicLimitedOutboundFederation"
+        },
         {
           "Action": [
             "aws-external-anthropic:CallWithBearerToken",
@@ -44,7 +50,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-04-01T04:57:18Z"
+  "UpdateDate": "2026-04-01T19:57:14Z"
 }
