@@ -1,0 +1,50 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AnthropicLimitedAccess",
+  "CreateDate": "2026-04-01T04:57:18Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4PVRRB6AVZ",
+  "PolicyName": "AnthropicLimitedAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-04-01T04:57:18Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aws-external-anthropic:CallWithBearerToken",
+            "aws-external-anthropic:GetAccountStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AnthropicInferenceResourceless"
+        },
+        {
+          "Action": [
+            "aws-external-anthropic:CancelBatchInference",
+            "aws-external-anthropic:CountTokens",
+            "aws-external-anthropic:CreateBatchInference",
+            "aws-external-anthropic:CreateFile",
+            "aws-external-anthropic:CreateInference",
+            "aws-external-anthropic:CreateSkill",
+            "aws-external-anthropic:CreateUserProfile",
+            "aws-external-anthropic:DeleteBatchInference",
+            "aws-external-anthropic:DeleteFile",
+            "aws-external-anthropic:DeleteSkill",
+            "aws-external-anthropic:Get*",
+            "aws-external-anthropic:List*",
+            "aws-external-anthropic:UpdateSkill",
+            "aws-external-anthropic:UpdateUserProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-external-anthropic:*:*:workspace/*",
+          "Sid": "AnthropicLimitedWorkspace"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-04-01T04:57:18Z"
+}

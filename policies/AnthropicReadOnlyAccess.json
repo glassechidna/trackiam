@@ -1,0 +1,38 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AnthropicReadOnlyAccess",
+  "CreateDate": "2026-04-01T04:57:09Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4ALSUBTRPI",
+  "PolicyName": "AnthropicReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-04-01T04:57:09Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aws-external-anthropic:CallWithBearerToken",
+            "aws-external-anthropic:GetAccountStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AnthropicReadOnlyResourceless"
+        },
+        {
+          "Action": [
+            "aws-external-anthropic:Get*",
+            "aws-external-anthropic:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-external-anthropic:*:*:workspace/*",
+          "Sid": "AnthropicReadOnlyWorkspace"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-04-01T04:57:09Z"
+}

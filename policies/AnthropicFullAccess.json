@@ -1,0 +1,52 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AnthropicFullAccess",
+  "CreateDate": "2026-04-01T04:57:18Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4APZN2J3D4",
+  "PolicyName": "AnthropicFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-04-01T04:57:18Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aws-marketplace:Subscribe",
+            "aws-marketplace:Unsubscribe"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws-marketplace:ProductId": [
+                "prod-3qbeiztufnva6"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AnthropicSubscriptionManagement"
+        },
+        {
+          "Action": [
+            "aws-external-anthropic:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AnthropicFullAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:ViewSubscriptions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AnthropicSubscriptionView"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-04-01T04:57:18Z"
+}
