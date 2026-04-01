@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 452
-* Unique actions: 20930
+* Unique services: 453
+* Unique actions: 20960
 * Managed policies: 1468
 
 Most common managed policy name prefixes:
@@ -384,6 +384,7 @@ The following table summarises the AWS APIs.
 | [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
+| [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 30 |
 | [`one`](services/one.yml) | 0 | 0 | 28 |
 | [`billing`](services/billing.yml) | 0 | 0 | 28 |
 | [`rtbfabric`](services/rtbfabric.yml) | 0 | 0 | 27 |
@@ -493,11 +494,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3466 |
-| `Get` | 3144 |
-| `Delete` | 2395 |
-| `Create` | 2251 |
-| `Update` | 1957 |
+| `List` | 3472 |
+| `Get` | 3151 |
+| `Delete` | 2398 |
+| `Create` | 2257 |
+| `Update` | 1960 |
 | `Describe` | 1884 |
 | `Put` | 574 |
 | `Start` | 514 |
