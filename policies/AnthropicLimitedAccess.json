@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AnthropicLimitedAccess",
   "CreateDate": "2026-04-01T04:57:18Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4PVRRB6AVZ",
   "PolicyName": "AnthropicLimitedAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-04-01T22:42:15Z",
+    "CreateDate": "2026-04-02T20:12:08Z",
     "Document": {
       "Statement": [
         {
@@ -35,6 +35,15 @@
         },
         {
           "Action": [
+            "aws-external-anthropic:CallWithBearerToken",
+            "aws-external-anthropic:GetAccountStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AnthropicLimitedResourceless"
+        },
+        {
+          "Action": [
             "aws-external-anthropic:CancelBatchInference",
             "aws-external-anthropic:CountTokens",
             "aws-external-anthropic:CreateBatchInference",
@@ -58,7 +67,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-04-01T22:42:15Z"
+  "UpdateDate": "2026-04-02T20:12:08Z"
 }

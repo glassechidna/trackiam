@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 453
-* Unique actions: 20976
+* Unique actions: 20988
 * Managed policies: 1472
 
 Most common managed policy name prefixes:
@@ -381,6 +381,7 @@ The following table summarises the AWS APIs.
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 38 |
 | [`q`](services/q.yml) | 0 | 0 | 37 |
 | [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
+| [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 35 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
@@ -398,7 +399,6 @@ The following table summarises the AWS APIs.
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
 | [`gameliftstreams`](services/gameliftstreams.yml) | 0 | 0 | 24 |
 | [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 24 |
-| [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 23 |
 | [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 23 |
 | [`transform-custom`](services/transform-custom.yml) | 0 | 0 | 22 |
 | [`invoicing`](services/invoicing.yml) | 0 | 0 | 22 |
@@ -494,11 +494,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3475 |
-| `Get` | 3152 |
-| `Delete` | 2400 |
-| `Create` | 2258 |
-| `Update` | 1961 |
+| `List` | 3478 |
+| `Get` | 3154 |
+| `Delete` | 2402 |
+| `Create` | 2260 |
+| `Update` | 1962 |
 | `Describe` | 1889 |
 | `Put` | 575 |
 | `Start` | 515 |
