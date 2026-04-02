@@ -1,22 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEventBridgeSchedulerReadOnlyAccess",
   "CreateDate": "2022-11-10T18:50:12Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KNL3CVTKG",
   "PolicyName": "AmazonEventBridgeSchedulerReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:58:16Z",
+    "CreateDate": "2026-04-02T17:57:20Z",
     "Document": {
       "Statement": [
         {
           "Action": [
-            "scheduler:GetSchedule",
-            "scheduler:GetScheduleGroup",
-            "scheduler:ListScheduleGroups",
-            "scheduler:ListSchedules",
-            "scheduler:ListTagsForResource"
+            "scheduler:Get*",
+            "scheduler:List*"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -25,7 +22,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-02-12T17:58:16Z"
+  "UpdateDate": "2026-04-02T17:57:20Z"
 }
