@@ -1,0 +1,47 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonS3ExpressReadOnlyAccess",
+  "CreateDate": "2026-04-03T20:42:10Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4GMA22CLQJ",
+  "PolicyName": "AmazonS3ExpressReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-04-03T20:42:10Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "s3express:CreateSession",
+          "Condition": {
+            "StringEquals": {
+              "s3express:SessionMode": "ReadOnly"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "S3ExpressReadOnlySessionObjectAccess"
+        },
+        {
+          "Action": [
+            "s3express:GetAccessPoint",
+            "s3express:GetAccessPointPolicy",
+            "s3express:GetAccessPointScope",
+            "s3express:GetBucketPolicy",
+            "s3express:GetEncryptionConfiguration",
+            "s3express:GetLifecycleConfiguration",
+            "s3express:ListAccessPointsForDirectoryBuckets",
+            "s3express:ListAllMyDirectoryBuckets",
+            "s3express:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "S3ExpressReadOnlyControlPlaneAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-04-03T20:42:10Z"
+}
