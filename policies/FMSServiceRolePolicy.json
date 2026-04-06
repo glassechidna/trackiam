@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/FMSServiceRolePolicy",
   "CreateDate": "2018-03-28T23:01:12Z",
-  "DefaultVersionId": "v36",
+  "DefaultVersionId": "v37",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAI62NTGYJB446ACUEA",
   "PolicyName": "FMSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:57:48Z",
+    "CreateDate": "2026-04-06T21:57:08Z",
     "Document": {
       "Statement": [
         {
@@ -376,6 +376,14 @@
         },
         {
           "Action": [
+            "cloudfront:GetVpcOrigin"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudfront::*:vpcorigin/*",
+          "Sid": "CloudfrontVpcOriginAccess"
+        },
+        {
+          "Action": [
             "config:BatchGetResourceConfig",
             "config:DescribeComplianceByConfigRule",
             "config:DescribeConfigRuleEvaluationStatus",
@@ -725,7 +733,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v36"
+    "VersionId": "v37"
   },
-  "UpdateDate": "2026-02-12T17:57:48Z"
+  "UpdateDate": "2026-04-06T21:57:08Z"
 }
