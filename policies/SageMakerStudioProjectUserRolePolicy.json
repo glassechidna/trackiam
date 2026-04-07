@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v64",
+  "DefaultVersionId": "v65",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-03-25T21:12:09Z",
+    "CreateDate": "2026-04-07T21:12:19Z",
     "Document": {
       "Statement": [
         {
@@ -138,7 +138,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*:*:*/*",
-          "Sid": "FederatedConnectionDeleteENIPermissions"
+          "Sid": "DataConnectionDeleteENI"
         },
         {
           "Action": "ecr:CreateRepository",
@@ -195,7 +195,7 @@
             "arn:aws:iam::*:role/AmazonBedrockEvaluationRole-${aws:PrincipalTag/AmazonDataZoneProject}-*",
             "arn:aws:iam::*:role/AmazonBedrockServiceRole-${aws:PrincipalTag/AmazonDataZoneProject}-*"
           ],
-          "Sid": "IamPassRoleToBedrockPermissions"
+          "Sid": "IamPassRoleToBedrock"
         },
         {
           "Action": "lambda:InvokeFunction",
@@ -208,7 +208,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:lambda:*:*:function:amazon-bedrock-ide-*",
-          "Sid": "InvokeFunctionPermissionsForAmazonBedrockIDE"
+          "Sid": "InvokeFunctionForAmazonBedrockIDE"
         },
         {
           "Action": "lambda:InvokeFunction",
@@ -221,7 +221,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:lambda:*:*:function:amazon-bedrock*",
-          "Sid": "LambdaInvokeFunctionViaBedrockPermissions"
+          "Sid": "LambdaInvokeFunctionViaBedrock"
         },
         {
           "Action": "ram:AssociateResourceSharePermission",
@@ -617,7 +617,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:cloudformation:*:*:stack/DataZone-Env-*",
-          "Sid": "GetDataZoneEnvironmentCloudFormationStackPermissions"
+          "Sid": "GetDataZoneEnvironmentCFNStackPermissions"
         },
         {
           "Action": [
@@ -632,7 +632,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:cloudformation:*:*:stack/DataZone-Env-*",
-          "Sid": "CloudFormationGetDataZoneEnvironmentStackPermissions"
+          "Sid": "CFNGetDataZoneEnvironmentStack"
         },
         {
           "Action": [
@@ -661,7 +661,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "GlueJobCloudwatchPutMetricActions"
+          "Sid": "GlueJobCWPutMetricActions"
         },
         {
           "Action": [
@@ -827,7 +827,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "FederatedConnectionEC2Permissions"
+          "Sid": "DataConnectionEC2"
         },
         {
           "Action": [
@@ -944,7 +944,7 @@
           "Resource": [
             "arn:aws:elasticmapreduce:*:*:cluster/*"
           ],
-          "Sid": "EMRGetClusterSessionCredentials"
+          "Sid": "EMRGetClusterSessionCreds"
         },
         {
           "Action": [
@@ -1229,7 +1229,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "FederatedDataConnectionPermissions"
+          "Sid": "GlueConnectionPermissions"
         },
         {
           "Action": [
@@ -1248,6 +1248,20 @@
         },
         {
           "Action": [
+            "glue:GetConnections",
+            "secretsmanager:GetSecretValue"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/for-use-with-all-datazone-projects": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DataConnectionAllProjectResources"
+        },
+        {
+          "Action": [
             "glue:GetUserDefinedFunction",
             "glue:GetUserDefinedFunctions"
           ],
@@ -1260,7 +1274,7 @@
           "Resource": [
             "arn:aws:glue:*:*:userDefinedFunction/*"
           ],
-          "Sid": "GetGlueUserDefinedFuncPermissions"
+          "Sid": "GlueGetUserDefinedFunc"
         },
         {
           "Action": [
@@ -1279,7 +1293,7 @@
             "arn:aws:glue:*:*:catalog/*",
             "arn:aws:glue:*:*:database/*"
           ],
-          "Sid": "GetGlueUserDefinedFuncLakeFormationPermissions"
+          "Sid": "GetGlueUserDefinedFuncLF"
         },
         {
           "Action": [
@@ -1591,7 +1605,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:kms:*:*:key/${aws:PrincipalTag/KmsKeyId}",
-          "Sid": "AccessSecretKmsPermissionsForAmazonBedrockIDE"
+          "Sid": "SecretKmsPermissionsForBedrockIDE"
         },
         {
           "Action": [
@@ -1611,7 +1625,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:kms:*:*:key/${aws:PrincipalTag/KmsKeyId}",
-          "Sid": "AccessDomainS3BucketKmsPermissions"
+          "Sid": "DomainS3BucketKmsPermissions"
         },
         {
           "Action": [
@@ -2053,7 +2067,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}/${aws:PrincipalTag/AmazonDataZoneDomain}/${aws:PrincipalTag/AmazonDataZoneProject}/*",
-          "Sid": "AccessDomainS3BucketPermissions"
+          "Sid": "DomainS3BucketPermissions"
         },
         {
           "Action": [
@@ -2113,7 +2127,7 @@
           "Resource": [
             "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}"
           ],
-          "Sid": "ListDomainBucketFromAthenaFederatedCatalog"
+          "Sid": "ListDomainBucketFromAthenaCatalog"
         },
         {
           "Action": [
@@ -2129,7 +2143,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}",
-          "Sid": "AirflowListDomainS3BucketPermissions"
+          "Sid": "AirflowListDomainS3Permissions"
         },
         {
           "Action": [
@@ -2218,7 +2232,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:secretsmanager:*:*:secret:amazon-bedrock-ide/*",
-          "Sid": "AccessSecretPermissionsForAmazonBedrockIDE"
+          "Sid": "SecretPermissionsForBedrockIDE"
         },
         {
           "Action": [
@@ -2248,19 +2262,6 @@
           "Effect": "Allow",
           "Resource": "arn:aws:secretsmanager:*:*:secret:*",
           "Sid": "AllowGetSecretForRedShift"
-        },
-        {
-          "Action": [
-            "secretsmanager:GetSecretValue"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "aws:ResourceTag/for-use-with-all-datazone-projects": "true"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:*:secretsmanager:*:*:secret:*",
-          "Sid": "FederatedConnectionGetSecretPermissions"
         },
         {
           "Action": [
@@ -2400,7 +2401,7 @@
             "arn:aws:athena:*:*:datacatalog/AwsDataCatalog",
             "arn:aws:athena:*:*:datacatalog/awsdatacatalog"
           ],
-          "Sid": "DefaultAthenaDataCatalogPermissions"
+          "Sid": "AthenaDataCatalogPermissions"
         },
         {
           "Action": [
@@ -2453,11 +2454,12 @@
         },
         {
           "Action": [
-            "dynamodb:ListTables"
+            "dynamodb:ListTables",
+            "glue:ManagedConnector"
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "FederatedConnectionDDBPermissions"
+          "Sid": "UnrestrictedDataConnectionPermissions"
         },
         {
           "Action": [
@@ -2473,7 +2475,7 @@
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "FederatedConnectionDescribeENIPermissions"
+          "Sid": "DataConnectionDescribeENI"
         },
         {
           "Action": [
@@ -2547,7 +2549,7 @@
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "UnRestrictedAccessForGlueEntities"
+          "Sid": "UnrestrictedAccessGlueEntities"
         },
         {
           "Action": [
@@ -2641,7 +2643,7 @@
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "LakeformationResourceSharingPermissions"
+          "Sid": "LFResourceSharingPermissions"
         },
         {
           "Action": [
@@ -2708,7 +2710,7 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:logs:*:*:log-group:/aws/lambda/athenafederatedcatalog*",
-          "Sid": "FederatedConnectionLambdaLogsPermissions"
+          "Sid": "DataConnectionLambdaLogs"
         },
         {
           "Action": [
@@ -2811,7 +2813,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v64"
+    "VersionId": "v65"
   },
-  "UpdateDate": "2026-03-25T21:12:09Z"
+  "UpdateDate": "2026-04-07T21:12:19Z"
 }
