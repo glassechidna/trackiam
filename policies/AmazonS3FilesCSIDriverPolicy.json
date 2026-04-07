@@ -1,0 +1,75 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonS3FilesCSIDriverPolicy",
+  "CreateDate": "2026-04-07T13:12:12Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4IWTABJLAH",
+  "PolicyName": "AmazonS3FilesCSIDriverPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-04-07T13:12:12Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "s3files:DeleteAccessPoint",
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/efs.csi.aws.com/cluster": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowDeleteAccessPoint"
+        },
+        {
+          "Action": [
+            "s3files:CreateAccessPoint"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "efs.csi.aws.com/cluster"
+            },
+            "Null": {
+              "aws:RequestTag/efs.csi.aws.com/cluster": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowCreateAccessPoint"
+        },
+        {
+          "Action": [
+            "s3files:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "efs.csi.aws.com/cluster"
+            },
+            "Null": {
+              "aws:RequestTag/efs.csi.aws.com/cluster": "false"
+            },
+            "StringEquals": {
+              "s3files:CreateAction": "CreateAccessPoint"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowTagNewAccessPoints"
+        },
+        {
+          "Action": [
+            "s3files:ListAccessPoints",
+            "s3files:ListFileSystems"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowList"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-04-07T13:12:12Z"
+}

@@ -1,0 +1,44 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonS3FilesReadOnlyAccess",
+  "CreateDate": "2026-04-07T12:57:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4JQLHUWJS2",
+  "PolicyName": "AmazonS3FilesReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-04-07T12:57:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeNetworkInterfaceAttribute",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2ReadOnlyPermissions"
+        },
+        {
+          "Action": [
+            "s3files:Get*",
+            "s3files:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "S3FilesPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-04-07T12:57:08Z"
+}

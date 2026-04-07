@@ -1,15 +1,28 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonElasticFileSystemsUtils",
   "CreateDate": "2020-09-29T15:16:47Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KVOAQRKXW",
   "PolicyName": "AmazonElasticFileSystemsUtils",
   "PolicyVersion": {
-    "CreateDate": "2020-09-29T15:16:47Z",
+    "CreateDate": "2026-04-07T13:12:14Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "cloudwatch:PutMetricData",
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": [
+                "efs-utils/EFS",
+                "efs-utils/S3Files"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
         {
           "Action": [
             "ec2:DescribeAvailabilityZones"
@@ -83,7 +96,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-09-29T15:16:47Z"
+  "UpdateDate": "2026-04-07T13:12:14Z"
 }
