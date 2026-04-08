@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFFullAccess",
   "CreateDate": "2015-10-06T20:44:00Z",
-  "DefaultVersionId": "v14",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJMIKIAFXZEGOLRH7C",
   "PolicyName": "AWSWAFFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:01:47Z",
+    "CreateDate": "2026-04-08T22:27:12Z",
     "Document": {
       "Statement": [
         {
@@ -72,11 +72,22 @@
         },
         {
           "Action": [
+            "appsync:AssociateWebACL",
+            "appsync:DisassociateWebACL",
+            "appsync:GetWebACLForResource",
             "appsync:SetWebACL"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:appsync:*:*:apis/*",
           "Sid": "AllowActionsForAppSync"
+        },
+        {
+          "Action": [
+            "appsync:ListResourcesForWebACL"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListActionsForAppSync"
         },
         {
           "Action": [
@@ -116,11 +127,22 @@
         },
         {
           "Action": [
+            "elasticloadbalancing:CreateWebACLAssociation",
+            "elasticloadbalancing:DeleteWebACLAssociation",
+            "elasticloadbalancing:GetLoadBalancerWebACL",
             "elasticloadbalancing:SetWebAcl"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:elasticloadbalancing:*:*:loadbalancer/app/*/*",
           "Sid": "AllowActionsForALB"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:DescribeWebACLAssociation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListActionsForALB"
         },
         {
           "Action": [
@@ -221,7 +243,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v14"
+    "VersionId": "v15"
   },
-  "UpdateDate": "2026-02-12T18:01:47Z"
+  "UpdateDate": "2026-04-08T22:27:12Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFReadOnlyAccess",
   "CreateDate": "2015-10-06T20:43:45Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAINZVDMX2SBF7EU2OC",
   "PolicyName": "AWSWAFReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:01:13Z",
+    "CreateDate": "2026-04-08T22:27:09Z",
     "Document": {
       "Statement": [
         {
@@ -45,6 +45,22 @@
         },
         {
           "Action": [
+            "appsync:GetWebACLForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:appsync:*:*:apis/*",
+          "Sid": "AllowGetActionsForAppSync"
+        },
+        {
+          "Action": [
+            "appsync:ListResourcesForWebACL"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListActionsForAppSync"
+        },
+        {
+          "Action": [
             "cognito-idp:GetWebACLForResource"
           ],
           "Effect": "Allow",
@@ -74,6 +90,22 @@
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*:*:verified-access-instance/*",
           "Sid": "AllowGetActionForAVA"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:DescribeWebACLAssociation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListActionsForELB"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:GetLoadBalancerWebACL"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticloadbalancing:*:*:loadbalancer/app/*/*",
+          "Sid": "AllowGetActionsForELB"
         },
         {
           "Action": [
@@ -142,7 +174,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2026-02-12T18:01:13Z"
+  "UpdateDate": "2026-04-08T22:27:09Z"
 }
