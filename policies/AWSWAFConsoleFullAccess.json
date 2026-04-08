@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFConsoleFullAccess",
   "CreateDate": "2020-04-06T18:38:38Z",
-  "DefaultVersionId": "v20",
+  "DefaultVersionId": "v21",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AZOTQ7KAT",
   "PolicyName": "AWSWAFConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:03:13Z",
+    "CreateDate": "2026-04-08T22:12:10Z",
     "Document": {
       "Statement": [
         {
@@ -87,20 +87,24 @@
         },
         {
           "Action": [
-            "appsync:ListApis",
-            "appsync:ListGraphqlApis"
-          ],
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "AllowListActionsForAppSync"
-        },
-        {
-          "Action": [
+            "appsync:AssociateWebACL",
+            "appsync:DisassociateWebACL",
+            "appsync:GetWebACLForResource",
             "appsync:SetWebACL"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:appsync:*:*:apis/*",
           "Sid": "AllowActionsForAppSync"
+        },
+        {
+          "Action": [
+            "appsync:ListApis",
+            "appsync:ListGraphqlApis",
+            "appsync:ListResourcesForWebACL"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListActionsForAppSync"
         },
         {
           "Action": [
@@ -208,19 +212,23 @@
         },
         {
           "Action": [
-            "elasticloadbalancing:DescribeLoadBalancers"
-          ],
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "AllowListActionsForALB"
-        },
-        {
-          "Action": [
+            "elasticloadbalancing:CreateWebACLAssociation",
+            "elasticloadbalancing:DeleteWebACLAssociation",
+            "elasticloadbalancing:GetLoadBalancerWebACL",
             "elasticloadbalancing:SetWebAcl"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:elasticloadbalancing:*:*:loadbalancer/app/*/*",
           "Sid": "AllowActionsForALB"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "elasticloadbalancing:DescribeWebACLAssociation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListActionsForALB"
         },
         {
           "Action": [
@@ -376,7 +384,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v20"
+    "VersionId": "v21"
   },
-  "UpdateDate": "2026-02-12T18:03:13Z"
+  "UpdateDate": "2026-04-08T22:12:10Z"
 }
