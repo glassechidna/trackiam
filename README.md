@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 454
-* Unique actions: 21026
-* Managed policies: 1480
+* Unique actions: 21038
+* Managed policies: 1481
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 399 |
 | `arn:aws:iam::aws:policy/Amazon*` | 365 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 336 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 337 |
 | `arn:aws:iam::aws:policy/service-role/*` | 218 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
 | Other | 154 |
@@ -66,7 +66,7 @@ The following table summarises the AWS APIs.
 | [`config`](services/config.yml) | 92 | 0 | 5 |
 | [`backup`](services/backup.yml) | 91 | 0 | 27 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 7 |
-| [`workspaces`](services/workspaces.yml) | 88 | 0 | 10 |
+| [`workspaces`](services/workspaces.yml) | 88 | 0 | 13 |
 | [`es`](services/es.yml) | 87 | 0 | 33 |
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
 | [`sms-voice`](services/sms-voice.yml) | 87 | 0 | 8 |
@@ -249,7 +249,7 @@ The following table summarises the AWS APIs.
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 16 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 22 | 0 | 9 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 49 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 58 |
 | [`mgh`](services/mgh.yml) | 21 | 0 | 25 |
 | [`resource-explorer-2`](services/resource-explorer-2.yml) | 21 | 0 | 16 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
@@ -495,8 +495,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3485 |
-| `Get` | 3164 |
+| `List` | 3488 |
+| `Get` | 3170 |
 | `Delete` | 2407 |
 | `Create` | 2264 |
 | `Update` | 1965 |
