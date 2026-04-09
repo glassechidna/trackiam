@@ -1,15 +1,29 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonBedrockMantleFullAccess",
   "CreateDate": "2025-12-04T07:19:09Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LNP2QFHX7",
   "PolicyName": "AmazonBedrockMantleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:00:54Z",
+    "CreateDate": "2026-04-09T04:42:15Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "aws-marketplace:Subscribe",
+            "aws-marketplace:ViewSubscriptions"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaLast": "bedrock-mantle.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MarketplaceOperationsFromBedrockMantleFor3pModels"
+        },
         {
           "Action": [
             "bedrock-mantle:*"
@@ -22,7 +36,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-02-12T18:00:54Z"
+  "UpdateDate": "2026-04-09T04:42:15Z"
 }

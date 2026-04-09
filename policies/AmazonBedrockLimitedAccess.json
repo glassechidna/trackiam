@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonBedrockLimitedAccess",
   "CreateDate": "2025-06-29T22:22:06Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ITL2W5IGN",
   "PolicyName": "AmazonBedrockLimitedAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-03-23T19:42:09Z",
+    "CreateDate": "2026-04-09T04:42:19Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,10 @@
           ],
           "Condition": {
             "StringEquals": {
-              "aws:CalledViaLast": "bedrock.amazonaws.com"
+              "aws:CalledViaLast": [
+                "bedrock-mantle.amazonaws.com",
+                "bedrock.amazonaws.com"
+              ]
             }
           },
           "Effect": "Allow",
@@ -110,7 +113,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2026-03-23T19:42:09Z"
+  "UpdateDate": "2026-04-09T04:42:19Z"
 }
