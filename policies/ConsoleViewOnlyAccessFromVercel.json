@@ -1,15 +1,35 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ConsoleViewOnlyAccessFromVercel",
   "CreateDate": "2025-12-11T16:49:11Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BUPY7IZ5Y",
   "PolicyName": "ConsoleViewOnlyAccessFromVercel",
   "PolicyVersion": {
-    "CreateDate": "2026-02-18T19:27:07Z",
+    "CreateDate": "2026-04-09T18:27:08Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "aoss:BatchGetCollection",
+            "aoss:BatchGetCollectionGroup",
+            "aoss:GetAccessPolicy",
+            "aoss:GetIndex",
+            "aoss:GetSecurityPolicy",
+            "aoss:ListAccessPolicies",
+            "aoss:ListCollectionGroups",
+            "aoss:ListCollections",
+            "aoss:ListSecurityConfigs",
+            "aoss:ListSecurityPolicies",
+            "aoss:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "OpenSearchServerless"
+        },
         {
           "Action": [
             "application-autoscaling:DescribeScalableTargets",
@@ -77,6 +97,17 @@
         },
         {
           "Action": [
+            "es:GetApplication",
+            "es:ListApplications"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "OpenSearchApplications"
+        },
+        {
+          "Action": [
             "freetier:GetAccountPlanState"
           ],
           "Effect": "Allow",
@@ -87,7 +118,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-02-18T19:27:07Z"
+  "UpdateDate": "2026-04-09T18:27:08Z"
 }

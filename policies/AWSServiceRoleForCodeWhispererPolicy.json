@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForCodeWhispererPolicy",
   "CreateDate": "2023-03-24T19:39:12Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4MTPH2EDJ3",
   "PolicyName": "AWSServiceRoleForCodeWhispererPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-03-29T22:13:56Z",
+    "CreateDate": "2026-04-09T18:27:19Z",
     "Document": {
       "Statement": [
         {
@@ -24,6 +24,38 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "sid5"
+        },
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:identitystore:identitystore-arn": "arn:*:identitystore::*:identitystore/*"
+            },
+            "StringLike": {
+              "kms:ViaService": "identitystore.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKmsAccessViaIdentityStore"
+        },
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:sso:instance-arn": "arn:*:sso:::instance/*"
+            },
+            "StringLike": {
+              "kms:ViaService": "sso.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKmsAccessViaIdentityCenter"
         },
         {
           "Action": [
@@ -80,7 +112,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2024-03-29T22:13:56Z"
+  "UpdateDate": "2026-04-09T18:27:19Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ConsoleFullAccessFromVercel",
   "CreateDate": "2025-12-11T16:49:10Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CSYHH4JUN",
   "PolicyName": "ConsoleFullAccessFromVercel",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:00:58Z",
+    "CreateDate": "2026-04-09T18:57:11Z",
     "Document": {
       "Statement": [
         {
@@ -40,6 +40,38 @@
             "*"
           ],
           "Sid": "AuroraRestricted"
+        },
+        {
+          "Action": [
+            "aoss:APIAccessAll",
+            "aoss:AddCollectionToCollectionGroup",
+            "aoss:BatchGetCollection",
+            "aoss:BatchGetCollectionGroup",
+            "aoss:CreateIndex",
+            "aoss:DashboardsAccessAll",
+            "aoss:DeleteIndex",
+            "aoss:GetAccessPolicy",
+            "aoss:GetIndex",
+            "aoss:GetSecurityPolicy",
+            "aoss:ListAccessPolicies",
+            "aoss:ListCollectionGroups",
+            "aoss:ListCollections",
+            "aoss:ListSecurityConfigs",
+            "aoss:ListSecurityPolicies",
+            "aoss:ListTagsForResource",
+            "aoss:TagResource",
+            "aoss:UntagResource",
+            "aoss:UpdateAccessPolicy",
+            "aoss:UpdateCollection",
+            "aoss:UpdateCollectionGroup",
+            "aoss:UpdateIndex",
+            "aoss:UpdateSecurityPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "OpenSearchServerless"
         },
         {
           "Action": [
@@ -157,6 +189,19 @@
         },
         {
           "Action": [
+            "es:GetApplication",
+            "es:GetDefaultApplicationSetting",
+            "es:ListApplications",
+            "es:UpdateApplication"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "OpenSearchApplications"
+        },
+        {
+          "Action": [
             "freetier:GetAccountPlanState"
           ],
           "Effect": "Allow",
@@ -167,7 +212,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-02-12T18:00:58Z"
+  "UpdateDate": "2026-04-09T18:57:11Z"
 }
