@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 454
-* Unique actions: 21063
+* Unique actions: 21069
 * Managed policies: 1481
 
 Most common managed policy name prefixes:
@@ -416,6 +416,7 @@ The following table summarises the AWS APIs.
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`nova-act`](services/nova-act.yml) | 0 | 0 | 16 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 16 |
+| [`bcm-dashboards`](services/bcm-dashboards.yml) | 0 | 0 | 15 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 15 |
 | [`airflow-serverless`](services/airflow-serverless.yml) | 0 | 0 | 15 |
 | [`ssm-quicksetup`](services/ssm-quicksetup.yml) | 0 | 0 | 14 |
@@ -437,7 +438,6 @@ The following table summarises the AWS APIs.
 | [`ts`](services/ts.yml) | 0 | 0 | 9 |
 | [`notifications-contacts`](services/notifications-contacts.yml) | 0 | 0 | 9 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 9 |
-| [`bcm-dashboards`](services/bcm-dashboards.yml) | 0 | 0 | 9 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 9 |
 | [`pricingplanmanager`](services/pricingplanmanager.yml) | 0 | 0 | 8 |
 | [`network-security-director`](services/network-security-director.yml) | 0 | 0 | 8 |
@@ -495,11 +495,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3493 |
-| `Get` | 3174 |
-| `Delete` | 2412 |
-| `Create` | 2267 |
-| `Update` | 1968 |
+| `List` | 3494 |
+| `Get` | 3175 |
+| `Delete` | 2413 |
+| `Create` | 2268 |
+| `Update` | 1969 |
 | `Describe` | 1889 |
 | `Put` | 577 |
 | `Start` | 516 |
