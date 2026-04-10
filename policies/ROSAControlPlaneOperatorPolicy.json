@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/ROSAControlPlaneOperatorPolicy",
   "CreateDate": "2023-04-24T23:02:49Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4KA4P7YA2C",
   "PolicyName": "ROSAControlPlaneOperatorPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:59:10Z",
+    "CreateDate": "2026-04-10T16:12:18Z",
     "Document": {
       "Statement": [
         {
@@ -42,6 +42,19 @@
             "arn:aws:ec2:*:*:security-group*/*"
           ],
           "Sid": "CreateSecurityGroups"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*",
+          "Sid": "AddTagsToRedHatManagedSecurityGroups"
         },
         {
           "Action": [
@@ -119,6 +132,7 @@
           },
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:vpc-endpoint/*"
           ],
           "Sid": "ManageVPCEndpointWithCondition"
@@ -181,7 +195,7 @@
           "Resource": [
             "arn:aws:ec2:*:*:subnet/*"
           ],
-          "Sid": "ModifyVPCEndpoingNoCondition"
+          "Sid": "ModifyVPCEndpointNoCondition"
         },
         {
           "Action": [
@@ -197,7 +211,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2026-02-12T17:59:10Z"
+  "UpdateDate": "2026-04-10T16:12:18Z"
 }
