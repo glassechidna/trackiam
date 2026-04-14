@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEKSLoadBalancingPolicy",
   "CreateDate": "2024-10-30T20:18:06Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BAR6P5E2F",
   "PolicyName": "AmazonEKSLoadBalancingPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-04-01T22:57:10Z",
+    "CreateDate": "2026-04-14T20:27:17Z",
     "Document": {
       "Statement": [
         {
@@ -143,39 +143,6 @@
         },
         {
           "Action": [
-            "shield:CreateProtection"
-          ],
-          "Condition": {
-            "ForAllValues:StringEquals": {
-              "aws:TagKeys": [
-                "eks:eks-cluster-name",
-                "ingress.eks.amazonaws.com/resource",
-                "ingress.eks.amazonaws.com/stack",
-                "service.eks.amazonaws.com/resource",
-                "service.eks.amazonaws.com/stack"
-              ]
-            },
-            "StringEquals": {
-              "aws:RequestTag/eks:eks-cluster-name": "${aws:PrincipalTag/eks:eks-cluster-name}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
-            "shield:DeleteProtection"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "aws:ResourceTag/eks:eks-cluster-name": "${aws:PrincipalTag/eks:eks-cluster-name}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
             "shield:TagResource"
           ],
           "Condition": {
@@ -245,6 +212,14 @@
         },
         {
           "Action": [
+            "shield:CreateProtection",
+            "shield:DeleteProtection"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "wafv2:AssociateWebACL",
             "wafv2:DisassociateWebACL"
           ],
@@ -258,7 +233,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2026-04-01T22:57:10Z"
+  "UpdateDate": "2026-04-14T20:27:17Z"
 }
