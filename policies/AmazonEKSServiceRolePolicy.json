@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEKSServiceRolePolicy",
   "CreateDate": "2020-02-21T20:10:47Z",
-  "DefaultVersionId": "v23",
+  "DefaultVersionId": "v24",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4KZBLSP26Y",
   "PolicyName": "AmazonEKSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:02:18Z",
+    "CreateDate": "2026-04-15T18:42:09Z",
     "Document": {
       "Statement": [
         {
@@ -149,9 +149,7 @@
             "elasticloadbalancing:DeleteListener",
             "elasticloadbalancing:DeleteLoadBalancer",
             "elasticloadbalancing:DeleteRule",
-            "elasticloadbalancing:DeleteTargetGroup",
-            "elasticloadbalancing:DeregisterTargets",
-            "shield:DescribeProtection"
+            "elasticloadbalancing:DeleteTargetGroup"
           ],
           "Condition": {
             "StringLike": {
@@ -273,9 +271,11 @@
             "ec2:DescribeInstanceTypes",
             "ec2:DescribeInstances",
             "ec2:DescribeInternetGateways",
+            "ec2:DescribeIpamPools",
             "ec2:DescribeLaunchTemplates",
             "ec2:DescribeNetworkAcls",
             "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribePlacementGroups",
             "ec2:DescribeRouteTables",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSnapshots",
@@ -289,6 +289,7 @@
             "ec2:GetCoipPoolUsage",
             "ec2:GetSecurityGroupsForVpc",
             "eks:DescribeCluster",
+            "elasticloadbalancing:DeregisterTargets",
             "elasticloadbalancing:DescribeListenerAttributes",
             "elasticloadbalancing:DescribeListenerCertificates",
             "elasticloadbalancing:DescribeListeners",
@@ -303,6 +304,7 @@
             "elasticloadbalancing:DescribeTrustStores",
             "iam:ListAttachedRolePolicies",
             "pricing:GetProducts",
+            "shield:DescribeProtection",
             "shield:GetSubscriptionState",
             "tag:GetResources"
           ],
@@ -337,7 +339,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v23"
+    "VersionId": "v24"
   },
-  "UpdateDate": "2026-02-12T18:02:18Z"
+  "UpdateDate": "2026-04-15T18:42:09Z"
 }
