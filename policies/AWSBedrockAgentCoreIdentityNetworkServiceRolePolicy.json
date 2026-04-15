@@ -1,0 +1,80 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBedrockAgentCoreIdentityNetworkServiceRolePolicy",
+  "CreateDate": "2026-04-15T00:42:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4M3BHUSYD5",
+  "PolicyName": "AWSBedrockAgentCoreIdentityNetworkServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-04-15T00:42:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "vpc-lattice.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/vpc-lattice.amazonaws.com/AWSServiceRoleForVpcLattice"
+          ],
+          "Sid": "AllowSLRActionsForLattice"
+        },
+        {
+          "Action": [
+            "vpc-lattice:CreateResourceGateway",
+            "vpc-lattice:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/BedrockAgentCoreIdentityManaged": "true",
+              "aws:ResourceTag/BedrockAgentCoreIdentityManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:vpc-lattice:*:*:resourcegateway/*"
+          ],
+          "Sid": "AllowResourceGatewayCreate"
+        },
+        {
+          "Action": [
+            "vpc-lattice:DeleteResourceGateway",
+            "vpc-lattice:GetResourceGateway"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/BedrockAgentCoreIdentityManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowResourceGatewayDelete"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowEC2PermissionsForResourceGatewayCreate"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-04-15T00:42:19Z"
+}
