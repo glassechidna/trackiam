@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSObservabilityAdminTelemetryEnablementServiceRolePolicy",
   "CreateDate": "2025-08-01T18:04:06Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ABS5BMRXG",
   "PolicyName": "AWSObservabilityAdminTelemetryEnablementServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-03-31T18:27:09Z",
+    "CreateDate": "2026-04-16T17:42:10Z",
     "Document": {
       "Statement": [
         {
@@ -423,7 +423,8 @@
         {
           "Action": [
             "securityhub:AllowVendedLogDeliveryForResource",
-            "securityhub:DescribeHub"
+            "securityhub:DescribeHub",
+            "securityhub:DescribeSecurityHubV2"
           ],
           "Condition": {
             "StringEquals": {
@@ -463,7 +464,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2026-03-31T18:27:09Z"
+  "UpdateDate": "2026-04-16T17:42:10Z"
 }
