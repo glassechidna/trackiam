@@ -1,0 +1,213 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonEBSCSIDriverPolicyV2",
+  "CreateDate": "2026-04-16T17:27:15Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4FFRTSYDTQ",
+  "PolicyName": "AmazonEBSCSIDriverPolicyV2",
+  "PolicyVersion": {
+    "CreateDate": "2026-04-16T17:27:15Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:AttachVolume",
+            "ec2:DeleteVolume",
+            "ec2:DetachVolume",
+            "ec2:ModifyVolume"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/ebs.csi.aws.com/cluster": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "ManageManagedVolumes"
+        },
+        {
+          "Action": [
+            "ec2:AttachVolume",
+            "ec2:DeleteVolume",
+            "ec2:DetachVolume",
+            "ec2:ModifyVolume"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/kubernetes.io/created-for/pvc/name": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "ManageCSIMigratedVolumes"
+        },
+        {
+          "Action": [
+            "ec2:CopyVolumes"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/ebs.csi.aws.com/cluster": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/vol-*",
+          "Sid": "CopyManagedVolumes"
+        },
+        {
+          "Action": [
+            "ec2:CopyVolumes"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/kubernetes.io/created-for/pvc/name": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/vol-*",
+          "Sid": "CopyCSIMigratedVolumes"
+        },
+        {
+          "Action": [
+            "ec2:CopyVolumes",
+            "ec2:CreateVolume"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/ebs.csi.aws.com/cluster": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "CreateAndCopyVolumesWithManagedTag"
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshot"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/ebs.csi.aws.com/cluster": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "CreateSnapshotsWithManagedTag"
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshot"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/ebs.csi.aws.com/cluster": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "CreateSnapshotsFromManagedVolumes"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "CopyVolumes",
+                "CreateSnapshot",
+                "CreateVolume"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:snapshot/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "TagResourcesOnCreation"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags",
+            "ec2:DeleteTags"
+          ],
+          "Condition": {
+            "ForAllValues:StringNotEquals": {
+              "aws:TagKeys": [
+                "ebs.csi.aws.com/cluster",
+                "ebs.csi.aws.com/cluster-name",
+                "kubernetes.io/created-for/pvc/name"
+              ]
+            },
+            "Null": {
+              "aws:TagKeys": "false"
+            },
+            "StringEquals": {
+              "ec2:ResourceTag/ebs.csi.aws.com/cluster": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "ModifyTagsOnManagedVolumes"
+        },
+        {
+          "Action": [
+            "ec2:CreateVolume",
+            "ec2:EnableFastSnapshotRestores"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/ebs.csi.aws.com/cluster": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "CreateVolumesFromAndEnableFSROnManagedSnapshots"
+        },
+        {
+          "Action": [
+            "ec2:DeleteSnapshot",
+            "ec2:LockSnapshot"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/ebs.csi.aws.com/cluster": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "DeleteAndLockManagedSnapshots"
+        },
+        {
+          "Action": [
+            "ec2:AttachVolume",
+            "ec2:DetachVolume"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "AttachDetachVolumesToAnyInstance"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeInstanceTypes",
+            "ec2:DescribeInstances",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeVolumeStatus",
+            "ec2:DescribeVolumes",
+            "ec2:DescribeVolumesModifications"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReadOnlyDescribeOperations"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-04-16T17:27:15Z"
+}
