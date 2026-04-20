@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 454
-* Unique actions: 21084
+* Unique actions: 21087
 * Managed policies: 1484
 
 Most common managed policy name prefixes:
@@ -50,7 +50,7 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 140 | 0 | 16 |
 | [`lex`](services/lex.yml) | 139 | 2 | 13 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 33 |
-| [`datazone`](services/datazone.yml) | 123 | 0 | 106 |
+| [`datazone`](services/datazone.yml) | 123 | 0 | 107 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 3 |
 | [`s3`](services/s3.yml) | 113 | 60 | 55 |
@@ -386,10 +386,10 @@ The following table summarises the AWS APIs.
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
 | [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 30 |
+| [`s3express`](services/s3express.yml) | 0 | 0 | 28 |
 | [`one`](services/one.yml) | 0 | 0 | 28 |
 | [`billing`](services/billing.yml) | 0 | 0 | 28 |
 | [`rtbfabric`](services/rtbfabric.yml) | 0 | 0 | 27 |
-| [`s3express`](services/s3express.yml) | 0 | 0 | 26 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
 | [`mpa`](services/mpa.yml) | 0 | 0 | 25 |
@@ -496,12 +496,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3497 |
-| `Get` | 3177 |
+| `Get` | 3178 |
 | `Delete` | 2414 |
 | `Create` | 2268 |
 | `Update` | 1972 |
 | `Describe` | 1890 |
-| `Put` | 577 |
+| `Put` | 578 |
 | `Start` | 517 |
 | `Tag` | 318 |
 | `Untag` | 313 |
