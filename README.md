@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 454
-* Unique actions: 21087
+* Unique actions: 21094
 * Managed policies: 1484
 
 Most common managed policy name prefixes:
@@ -405,6 +405,7 @@ The following table summarises the AWS APIs.
 | [`invoicing`](services/invoicing.yml) | 0 | 0 | 22 |
 | [`transform`](services/transform.yml) | 0 | 0 | 21 |
 | [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 21 |
+| [`evs`](services/evs.yml) | 0 | 0 | 21 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 20 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 19 |
@@ -421,7 +422,6 @@ The following table summarises the AWS APIs.
 | [`airflow-serverless`](services/airflow-serverless.yml) | 0 | 0 | 15 |
 | [`ssm-quicksetup`](services/ssm-quicksetup.yml) | 0 | 0 | 14 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 14 |
-| [`evs`](services/evs.yml) | 0 | 0 | 14 |
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 14 |
 | [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
 | [`workspaces-instances`](services/workspaces-instances.yml) | 0 | 0 | 13 |
@@ -495,11 +495,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3497 |
+| `List` | 3499 |
 | `Get` | 3178 |
-| `Delete` | 2414 |
-| `Create` | 2268 |
-| `Update` | 1972 |
+| `Delete` | 2416 |
+| `Create` | 2270 |
+| `Update` | 1973 |
 | `Describe` | 1890 |
 | `Put` | 578 |
 | `Start` | 517 |
