@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEKSServiceRolePolicy",
   "CreateDate": "2020-02-21T20:10:47Z",
-  "DefaultVersionId": "v24",
+  "DefaultVersionId": "v25",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4KZBLSP26Y",
   "PolicyName": "AmazonEKSServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-04-15T18:42:09Z",
+    "CreateDate": "2026-04-21T22:57:08Z",
     "Document": {
       "Statement": [
         {
@@ -267,6 +267,7 @@
             "ec2:DescribeAvailabilityZones",
             "ec2:DescribeCapacityReservations",
             "ec2:DescribeCoipPools",
+            "ec2:DescribeInstanceStatus",
             "ec2:DescribeInstanceTypeOfferings",
             "ec2:DescribeInstanceTypes",
             "ec2:DescribeInstances",
@@ -290,6 +291,7 @@
             "ec2:GetSecurityGroupsForVpc",
             "eks:DescribeCluster",
             "elasticloadbalancing:DeregisterTargets",
+            "elasticloadbalancing:DescribeCapacityReservation",
             "elasticloadbalancing:DescribeListenerAttributes",
             "elasticloadbalancing:DescribeListenerCertificates",
             "elasticloadbalancing:DescribeListeners",
@@ -322,6 +324,7 @@
           "Action": [
             "iam:CreateInstanceProfile",
             "iam:DeleteInstanceProfile",
+            "iam:ListInstanceProfiles",
             "iam:RemoveRoleFromInstanceProfile"
           ],
           "Effect": "Allow",
@@ -339,7 +342,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v24"
+    "VersionId": "v25"
   },
-  "UpdateDate": "2026-04-15T18:42:09Z"
+  "UpdateDate": "2026-04-21T22:57:08Z"
 }

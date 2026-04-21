@@ -1,19 +1,22 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceProcurementSystemAdminFullAccess",
   "CreateDate": "2019-06-25T13:07:47Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FIYNR3TC4",
   "PolicyName": "AWSMarketplaceProcurementSystemAdminFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-06-25T13:07:47Z",
+    "CreateDate": "2026-04-21T22:27:10Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "aws-marketplace:DescribeProcurementSystemConfiguration",
             "aws-marketplace:PutProcurementSystemConfiguration",
+            "invoicing:CreateProcurementPortalPreference",
+            "invoicing:GetProcurementPortalPreference",
+            "invoicing:ListProcurementPortalPreferences",
             "organizations:Describe*",
             "organizations:List*"
           ],
@@ -26,7 +29,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2019-06-25T13:07:47Z"
+  "UpdateDate": "2026-04-21T22:27:10Z"
 }
