@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerFullAccess",
   "CreateDate": "2019-07-02T20:40:09Z",
-  "DefaultVersionId": "v26",
+  "DefaultVersionId": "v27",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JF7OFUANW",
   "PolicyName": "AWSMarketplaceSellerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-03-31T17:42:16Z",
+    "CreateDate": "2026-04-21T18:12:11Z",
     "Document": {
       "Statement": [
         {
@@ -110,6 +110,7 @@
             "aws-marketplace-management:PutBankAccountVerificationDetails",
             "aws-marketplace-management:PutSecondaryUserVerificationDetails",
             "aws-marketplace-management:PutSellerVerificationDetails",
+            "aws-marketplace:ListPayables",
             "payments:CreatePaymentInstrument",
             "payments:GetPaymentInstrument",
             "tax:DeleteSupplementalTaxRegistration",
@@ -154,8 +155,21 @@
             "aws-marketplace:PutResourcePolicy"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace/*",
+          "Resource": [
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace*/*",
+            "arn:aws:aws-marketplace:*:*:catalog/AWSMarketplace*/*"
+          ],
           "Sid": "ResourcePolicyManagement"
+        },
+        {
+          "Action": [
+            "aws-marketplace:GetInvoiceSubmissionTask",
+            "aws-marketplace:ListInvoiceSubmissionTasks",
+            "aws-marketplace:StartInvoiceSubmissionTask"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-marketplace:*:*:catalog/AWSMarketplace*/invoice-submission-task/*",
+          "Sid": "InvoiceSubmissionManagement"
         },
         {
           "Action": [
@@ -164,7 +178,10 @@
             "aws-marketplace:UntagResource"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace/*",
+          "Resource": [
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace*/*",
+            "arn:aws:aws-marketplace:*:*:catalog/AWSMarketplace*/*"
+          ],
           "Sid": "TagManagement"
         },
         {
@@ -221,7 +238,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v26"
+    "VersionId": "v27"
   },
-  "UpdateDate": "2026-03-31T17:42:16Z"
+  "UpdateDate": "2026-04-21T18:12:11Z"
 }

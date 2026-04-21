@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/BedrockAgentCoreFullAccess",
   "CreateDate": "2025-07-16T13:37:07Z",
-  "DefaultVersionId": "v16",
+  "DefaultVersionId": "v17",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BB44GAY7X",
   "PolicyName": "BedrockAgentCoreFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-03-27T21:12:10Z",
+    "CreateDate": "2026-04-21T17:42:20Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "bedrock-agentcore.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/bedrock-agentcore.amazonaws.com/AWSServiceRoleForBedrockAgentCoreGatewayNetwork",
+          "Sid": "CreateBedrockAgentCoreGatewayNetworkServiceLinkedRolePermissions"
+        },
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
@@ -404,7 +415,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v16"
+    "VersionId": "v17"
   },
-  "UpdateDate": "2026-03-27T21:12:10Z"
+  "UpdateDate": "2026-04-21T17:42:20Z"
 }
