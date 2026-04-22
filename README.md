@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 454
-* Unique actions: 21120
+* Unique actions: 21131
 * Managed policies: 1484
 
 Most common managed policy name prefixes:
@@ -106,7 +106,7 @@ The following table summarises the AWS APIs.
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 3 |
 | [`appsync`](services/appsync.yml) | 64 | 0 | 23 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 25 |
-| [`ivs`](services/ivs.yml) | 63 | 0 | 8 |
+| [`ivs`](services/ivs.yml) | 63 | 0 | 13 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 60 | 0 | 11 |
@@ -277,7 +277,7 @@ The following table summarises the AWS APIs.
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`neptune-db`](services/neptune-db.yml) | 16 | 24 | 17 |
 | [`support`](services/support.yml) | 16 | 0 | 18 |
-| [`emr-serverless`](services/emr-serverless.yml) | 16 | 0 | 3 |
+| [`emr-serverless`](services/emr-serverless.yml) | 16 | 0 | 9 |
 | [`docdb-elastic`](services/docdb-elastic.yml) | 16 | 0 | 3 |
 | [`thinclient`](services/thinclient.yml) | 16 | 0 | 2 |
 | [`route53profiles`](services/route53profiles.yml) | 16 | 0 | 2 |
@@ -495,14 +495,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3506 |
-| `Get` | 3181 |
-| `Delete` | 2421 |
-| `Create` | 2275 |
+| `List` | 3508 |
+| `Get` | 3185 |
+| `Delete` | 2422 |
+| `Create` | 2276 |
 | `Update` | 1973 |
 | `Describe` | 1893 |
 | `Put` | 578 |
-| `Start` | 518 |
+| `Start` | 519 |
 | `Tag` | 318 |
 | `Untag` | 313 |
 
