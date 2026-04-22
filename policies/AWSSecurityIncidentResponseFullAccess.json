@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSecurityIncidentResponseFullAccess",
   "CreateDate": "2024-12-01T23:21:06Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CFW7Y32C3",
   "PolicyName": "AWSSecurityIncidentResponseFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:02:16Z",
+    "CreateDate": "2026-04-22T16:12:08Z",
     "Document": {
       "Statement": [
         {
@@ -42,33 +42,16 @@
         },
         {
           "Action": [
-            "security-ir:CancelMembership",
-            "security-ir:CloseCase",
-            "security-ir:CreateCase",
-            "security-ir:CreateCaseComment",
-            "security-ir:CreateMembership",
-            "security-ir:GetCaseAttachmentUploadUrl",
-            "security-ir:TagResource",
-            "security-ir:UntagResource",
-            "security-ir:UpdateCase",
-            "security-ir:UpdateCaseComment",
-            "security-ir:UpdateCaseStatus",
-            "security-ir:UpdateMembership",
-            "security-ir:UpdateResolverType"
-          ],
-          "Condition": {
-            "Bool": {
-              "aws:MultiFactorAuthPresent": "true"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "SecurityIRWriteAccess"
-        },
-        {
-          "Action": [
+            "organizations:DescribeAccount",
             "organizations:DescribeOrganization",
-            "organizations:ListDelegatedAdministrators"
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListAccountsForParent",
+            "organizations:ListChildren",
+            "organizations:ListDelegatedAdministrators",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListRoots"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -76,25 +59,17 @@
         },
         {
           "Action": [
-            "security-ir:BatchGetMemberAccountDetails",
-            "security-ir:GetCase",
-            "security-ir:GetCaseAttachmentDownloadUrl",
-            "security-ir:GetMembership",
-            "security-ir:ListCaseEdits",
-            "security-ir:ListCases",
-            "security-ir:ListComments",
-            "security-ir:ListMemberships",
-            "security-ir:ListTagsForResource"
+            "security-ir:*"
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "SecurityIRReadAccess"
+          "Sid": "SecurityIRFullAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-02-12T18:02:16Z"
+  "UpdateDate": "2026-04-22T16:12:08Z"
 }
