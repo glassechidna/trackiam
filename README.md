@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 454
-* Unique actions: 21131
+* Unique actions: 21141
 * Managed policies: 1484
 
 Most common managed policy name prefixes:
@@ -111,7 +111,7 @@ The following table summarises the AWS APIs.
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 60 | 0 | 11 |
 | [`datasync`](services/datasync.yml) | 60 | 0 | 6 |
-| [`geo`](services/geo.yml) | 60 | 0 | 0 |
+| [`geo`](services/geo.yml) | 60 | 0 | 4 |
 | [`inspector2`](services/inspector2.yml) | 59 | 0 | 16 |
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 17 |
 | [`events`](services/events.yml) | 57 | 0 | 3 |
@@ -360,7 +360,7 @@ The following table summarises the AWS APIs.
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 0 | 6 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
-| [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 148 |
+| [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 154 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 111 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
@@ -495,14 +495,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3508 |
-| `Get` | 3185 |
-| `Delete` | 2422 |
-| `Create` | 2276 |
-| `Update` | 1973 |
+| `List` | 3510 |
+| `Get` | 3187 |
+| `Delete` | 2423 |
+| `Create` | 2277 |
+| `Update` | 1974 |
 | `Describe` | 1893 |
 | `Put` | 578 |
-| `Start` | 519 |
+| `Start` | 520 |
 | `Tag` | 318 |
 | `Untag` | 313 |
 
