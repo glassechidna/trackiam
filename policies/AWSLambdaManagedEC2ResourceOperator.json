@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSLambdaManagedEC2ResourceOperator",
   "CreateDate": "2025-11-30T08:34:09Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LOIC3J7IX",
   "PolicyName": "AWSLambdaManagedEC2ResourceOperator",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:01:08Z",
+    "CreateDate": "2026-04-23T20:42:16Z",
     "Document": {
       "Statement": [
         {
@@ -62,7 +62,8 @@
             "ec2:DescribeInstanceTypes",
             "ec2:DescribeInstances",
             "ec2:DescribeSecurityGroups",
-            "ec2:DescribeSubnets"
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcEncryptionControls"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -71,7 +72,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-02-12T18:01:08Z"
+  "UpdateDate": "2026-04-23T20:42:16Z"
 }
