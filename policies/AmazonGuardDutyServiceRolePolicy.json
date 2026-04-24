@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonGuardDutyServiceRolePolicy",
   "CreateDate": "2017-11-28T20:12:59Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIHZREZOWNSSA6FWQO",
   "PolicyName": "AmazonGuardDutyServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-03-25T20:57:15Z",
+    "CreateDate": "2026-04-24T20:12:17Z",
     "Document": {
       "Statement": [
         {
@@ -237,6 +237,8 @@
             "ec2:DescribeVpcPeeringConnections",
             "ec2:DescribeVpcs",
             "ecs:DescribeClusters",
+            "ecs:DescribeTaskDefinition",
+            "ecs:DescribeTasks",
             "ecs:ListClusters",
             "eks:DescribeCluster",
             "eks:ListClusters",
@@ -252,7 +254,8 @@
             "s3:GetBucketPublicAccessBlock",
             "s3:GetBucketTagging",
             "s3:GetEncryptionConfiguration",
-            "s3:ListAllMyBuckets"
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -281,7 +284,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2026-03-25T20:57:15Z"
+  "UpdateDate": "2026-04-24T20:12:17Z"
 }
