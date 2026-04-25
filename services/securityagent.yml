@@ -2,9 +2,13 @@ Actions:
 
   # actions with no corresponding API
   - Name: securityagent:AddArtifact
+  - Name: securityagent:BatchDeleteCodeReviews
   - Name: securityagent:BatchDeletePentests
   - Name: securityagent:BatchGetAgentSpaces
   - Name: securityagent:BatchGetArtifactMetadata
+  - Name: securityagent:BatchGetCodeReviewJobTasks
+  - Name: securityagent:BatchGetCodeReviewJobs
+  - Name: securityagent:BatchGetCodeReviews
   - Name: securityagent:BatchGetFindings
   - Name: securityagent:BatchGetPentestJobContentMetadata
   - Name: securityagent:BatchGetPentestJobTasks
@@ -13,6 +17,7 @@ Actions:
   - Name: securityagent:BatchGetTargetDomains
   - Name: securityagent:CreateAgentSpace
   - Name: securityagent:CreateApplication
+  - Name: securityagent:CreateCodeReview
   - Name: securityagent:CreateDesignReview
   - Name: securityagent:CreateIntegration
   - Name: securityagent:CreateMembership
@@ -39,6 +44,9 @@ Actions:
   - Name: securityagent:ListAgentSpaces
   - Name: securityagent:ListApplications
   - Name: securityagent:ListArtifacts
+  - Name: securityagent:ListCodeReviewJobTasks
+  - Name: securityagent:ListCodeReviewJobsForCodeReview
+  - Name: securityagent:ListCodeReviews
   - Name: securityagent:ListDesignReviewComments
   - Name: securityagent:ListDesignReviews
   - Name: securityagent:ListDiscoveredEndpoints
@@ -55,13 +63,16 @@ Actions:
   - Name: securityagent:ListTargetDomains
   - Name: securityagent:PutDesignReviewFeedback
   - Name: securityagent:StartCodeRemediation
+  - Name: securityagent:StartCodeReviewJob
   - Name: securityagent:StartPentestJob
+  - Name: securityagent:StopCodeReviewJob
   - Name: securityagent:StopPentestJob
   - Name: securityagent:TagResource
   - Name: securityagent:ToggleManagedSecurityRequirement
   - Name: securityagent:UntagResource
   - Name: securityagent:UpdateAgentSpace
   - Name: securityagent:UpdateApplication
+  - Name: securityagent:UpdateCodeReview
   - Name: securityagent:UpdateFinding
   - Name: securityagent:UpdateIntegratedResources
   - Name: securityagent:UpdatePentest
