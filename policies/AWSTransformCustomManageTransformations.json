@@ -1,15 +1,30 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSTransformCustomManageTransformations",
   "CreateDate": "2025-12-05T15:49:07Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MBD6F5EQV",
   "PolicyName": "AWSTransformCustomManageTransformations",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:57:08Z",
+    "CreateDate": "2026-04-27T19:27:10Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "transform-custom.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/transform-custom.amazonaws.com/AWSServiceRoleForAWSTransformCustom"
+          ],
+          "Sid": "AllowCreateServiceLinkedRole"
+        },
         {
           "Action": [
             "transform-custom:CompleteTransformationPackageUpload",
@@ -41,7 +56,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-02-12T17:57:08Z"
+  "UpdateDate": "2026-04-27T19:27:10Z"
 }
