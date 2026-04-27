@@ -1,15 +1,30 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSTransformCustomExecuteTransformations",
   "CreateDate": "2025-12-05T15:34:10Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4IIT37LRVJ",
   "PolicyName": "AWSTransformCustomExecuteTransformations",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:59:21Z",
+    "CreateDate": "2026-04-27T19:42:16Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "transform-custom.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/transform-custom.amazonaws.com/AWSServiceRoleForAWSTransformCustom"
+          ],
+          "Sid": "AllowCreateServiceLinkedRole"
+        },
         {
           "Action": [
             "transform-custom:ConverseStream",
@@ -28,7 +43,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-02-12T17:59:21Z"
+  "UpdateDate": "2026-04-27T19:42:16Z"
 }
