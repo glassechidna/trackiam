@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 454
-* Unique actions: 21158
+* Unique actions: 21147
 * Managed policies: 1484
 
 Most common managed policy name prefixes:
@@ -309,7 +309,7 @@ The following table summarises the AWS APIs.
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`bcm-data-exports`](services/bcm-data-exports.yml) | 12 | 0 | 0 |
 | [`budgets`](services/budgets.yml) | 11 | 15 | 2 |
-| [`trustedadvisor`](services/trustedadvisor.yml) | 11 | 0 | 41 |
+| [`trustedadvisor`](services/trustedadvisor.yml) | 11 | 0 | 30 |
 | [`timestream-influxdb`](services/timestream-influxdb.yml) | 11 | 0 | 8 |
 | [`repostspace`](services/repostspace.yml) | 11 | 0 | 8 |
 | [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 11 | 0 | 6 |
@@ -495,11 +495,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3514 |
-| `Get` | 3188 |
+| `List` | 3511 |
+| `Get` | 3185 |
 | `Delete` | 2424 |
-| `Create` | 2279 |
-| `Update` | 1976 |
+| `Create` | 2276 |
+| `Update` | 1974 |
 | `Describe` | 1894 |
 | `Put` | 578 |
 | `Start` | 521 |
