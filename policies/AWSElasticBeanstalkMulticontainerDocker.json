@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticBeanstalkMulticontainerDocker",
   "CreateDate": "2016-02-08T23:15:29Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ45SBYG72SD6SHJEY",
   "PolicyName": "AWSElasticBeanstalkMulticontainerDocker",
   "PolicyVersion": {
-    "CreateDate": "2026-03-12T14:12:13Z",
+    "CreateDate": "2026-04-29T19:27:11Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:bedrock:*:*:inference-profile/*anthropic.claude-*",
+          "Resource": [
+            "arn:aws:bedrock:*:*:inference-profile/*amazon.nova-*",
+            "arn:aws:bedrock:*:*:inference-profile/*anthropic.claude-*"
+          ],
           "Sid": "AIEnvironmentAnalysisInvokeInferenceProfile"
         },
         {
@@ -40,8 +43,21 @@
         {
           "Action": "bedrock:InvokeModel",
           "Effect": "Allow",
-          "Resource": "arn:aws:bedrock:*::foundation-model/anthropic.claude-*",
+          "Resource": [
+            "arn:aws:bedrock:*::foundation-model/amazon.nova-*",
+            "arn:aws:bedrock:*::foundation-model/anthropic.claude-*"
+          ],
           "Sid": "AIEnvironmentAnalysisInvokeFoundationModel"
+        },
+        {
+          "Action": [
+            "aws-marketplace:Subscribe",
+            "aws-marketplace:Unsubscribe",
+            "aws-marketplace:ViewSubscriptions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MarketplaceOperationsFromBedrock"
         },
         {
           "Action": [
@@ -74,7 +90,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-03-12T14:12:13Z"
+  "UpdateDate": "2026-04-29T19:27:11Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticBeanstalkWorkerTier",
   "CreateDate": "2016-02-08T23:12:02Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJQDLBRSJVKVF4JMSK",
   "PolicyName": "AWSElasticBeanstalkWorkerTier",
   "PolicyVersion": {
-    "CreateDate": "2026-03-12T14:27:08Z",
+    "CreateDate": "2026-04-29T19:27:06Z",
     "Document": {
       "Statement": [
         {
@@ -18,14 +18,30 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:bedrock:*:*:inference-profile/*anthropic.claude-*",
+          "Resource": [
+            "arn:aws:bedrock:*:*:inference-profile/*amazon.nova-*",
+            "arn:aws:bedrock:*:*:inference-profile/*anthropic.claude-*"
+          ],
           "Sid": "AIEnvironmentAnalysisInvokeInferenceProfile"
         },
         {
           "Action": "bedrock:InvokeModel",
           "Effect": "Allow",
-          "Resource": "arn:aws:bedrock:*::foundation-model/anthropic.claude-*",
+          "Resource": [
+            "arn:aws:bedrock:*::foundation-model/amazon.nova-*",
+            "arn:aws:bedrock:*::foundation-model/anthropic.claude-*"
+          ],
           "Sid": "AIEnvironmentAnalysisInvokeFoundationModel"
+        },
+        {
+          "Action": [
+            "aws-marketplace:Subscribe",
+            "aws-marketplace:Unsubscribe",
+            "aws-marketplace:ViewSubscriptions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MarketplaceOperationsFromBedrock"
         },
         {
           "Action": [
@@ -124,7 +140,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2026-03-12T14:27:08Z"
+  "UpdateDate": "2026-04-29T19:27:06Z"
 }
