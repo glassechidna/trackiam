@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerFullAccess",
   "CreateDate": "2019-07-02T20:40:09Z",
-  "DefaultVersionId": "v27",
+  "DefaultVersionId": "v28",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JF7OFUANW",
   "PolicyName": "AWSMarketplaceSellerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-04-21T18:12:11Z",
+    "CreateDate": "2026-04-29T21:12:06Z",
     "Document": {
       "Statement": [
         {
@@ -110,6 +110,7 @@
             "aws-marketplace-management:PutBankAccountVerificationDetails",
             "aws-marketplace-management:PutSecondaryUserVerificationDetails",
             "aws-marketplace-management:PutSellerVerificationDetails",
+            "aws-marketplace:ListInvoiceSubmissionTasks",
             "aws-marketplace:ListPayables",
             "payments:CreatePaymentInstrument",
             "payments:GetPaymentInstrument",
@@ -164,7 +165,6 @@
         {
           "Action": [
             "aws-marketplace:GetInvoiceSubmissionTask",
-            "aws-marketplace:ListInvoiceSubmissionTasks",
             "aws-marketplace:StartInvoiceSubmissionTask"
           ],
           "Effect": "Allow",
@@ -215,6 +215,16 @@
         },
         {
           "Action": [
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-partner-central-marketplace-ephemeral-writeonly-files/${aws:PrincipalAccount}/*"
+          ],
+          "Sid": "MarketplaceEphemeralWriteS3Access"
+        },
+        {
+          "Action": [
             "support:CreateCase"
           ],
           "Effect": "Allow",
@@ -238,7 +248,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v27"
+    "VersionId": "v28"
   },
-  "UpdateDate": "2026-04-21T18:12:11Z"
+  "UpdateDate": "2026-04-29T21:12:06Z"
 }
