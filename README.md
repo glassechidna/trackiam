@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 454
-* Unique actions: 21149
+* Unique actions: 21167
 * Managed policies: 1485
 
 Most common managed policy name prefixes:
@@ -303,7 +303,7 @@ The following table summarises the AWS APIs.
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`launchwizard`](services/launchwizard.yml) | 12 | 0 | 28 |
 | [`account`](services/account.yml) | 12 | 0 | 4 |
-| [`scheduler`](services/scheduler.yml) | 12 | 0 | 0 |
+| [`scheduler`](services/scheduler.yml) | 12 | 0 | 1 |
 | [`pca-connector-scep`](services/pca-connector-scep.yml) | 12 | 0 | 0 |
 | [`networkmonitor`](services/networkmonitor.yml) | 12 | 0 | 0 |
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
@@ -370,6 +370,7 @@ The following table summarises the AWS APIs.
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 61 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
 | [`aidevops`](services/aidevops.yml) | 0 | 0 | 57 |
+| [`q`](services/q.yml) | 0 | 0 | 54 |
 | [`s3tables`](services/s3tables.yml) | 0 | 0 | 53 |
 | [`odb`](services/odb.yml) | 0 | 0 | 51 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 48 |
@@ -379,7 +380,6 @@ The following table summarises the AWS APIs.
 | [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 40 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 38 |
-| [`q`](services/q.yml) | 0 | 0 | 37 |
 | [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
 | [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 35 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
@@ -495,11 +495,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3511 |
-| `Get` | 3186 |
-| `Delete` | 2424 |
-| `Create` | 2276 |
-| `Update` | 1974 |
+| `List` | 3516 |
+| `Get` | 3188 |
+| `Delete` | 2425 |
+| `Create` | 2278 |
+| `Update` | 1975 |
 | `Describe` | 1894 |
 | `Put` | 578 |
 | `Start` | 521 |

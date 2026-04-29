@@ -2,16 +2,27 @@ Actions:
 
   # actions with no corresponding API
   - Name: q:AssociateConnectorResource
+  - Name: q:AssociateLoginDomain
+  - Name: q:BatchDescribeGroups
+  - Name: q:BatchDescribeUsers
+  - Name: q:BatchGetGroups
+  - Name: q:BatchGetUsers
+  - Name: q:CreateArtifact
   - Name: q:CreateAssignment
   - Name: q:CreateAuthGrant
   - Name: q:CreateOAuthAppConnection
   - Name: q:CreatePlugin
+  - Name: q:CreateScimAccessToken
   - Name: q:DeleteAssignment
   - Name: q:DeleteConversation
   - Name: q:DeleteOAuthAppConnection
   - Name: q:DeletePlugin
+  - Name: q:DeleteScimAccessToken
+  - Name: q:DisassociateLoginDomain
   - Name: q:GenerateCodeFromCommands
   - Name: q:GenerateCodeRecommendations
+  - Name: q:GetArtifact
+  - Name: q:GetArtifactActionResult
   - Name: q:GetConnector
   - Name: q:GetConversation
   - Name: q:GetIdentityMetadata
@@ -19,10 +30,15 @@ Actions:
   - Name: q:GetTroubleshootingResults
   - Name: q:ListConversations
   - Name: q:ListDashboardMetrics
+  - Name: q:ListGroups
+  - Name: q:ListLoginDomains
   - Name: q:ListPluginProviders
   - Name: q:ListPlugins
+  - Name: q:ListScimAccessTokens
   - Name: q:ListTagsForResource
+  - Name: q:ListUsers
   - Name: q:PassRequest
+  - Name: q:PerformArtifactAction
   - Name: q:RejectConnector
   - Name: q:SendEvent
   - Name: q:SendMessage
@@ -31,6 +47,7 @@ Actions:
   - Name: q:StartTroubleshootingResolutionExplanation
   - Name: q:TagResource
   - Name: q:UntagResource
+  - Name: q:UpdateAssignment
   - Name: q:UpdateAuthGrant
   - Name: q:UpdateConversation
   - Name: q:UpdateOAuthAppConnection
