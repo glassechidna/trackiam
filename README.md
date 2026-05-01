@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 455
-* Unique actions: 21216
+* Unique services: 456
+* Unique actions: 21218
 * Managed policies: 1485
 
 Most common managed policy name prefixes:
@@ -477,6 +477,7 @@ The following table summarises the AWS APIs.
 | [`ecs-mcp`](services/ecs-mcp.yml) | 0 | 0 | 2 |
 | [`consolidatedbilling`](services/consolidatedbilling.yml) | 0 | 0 | 2 |
 | [`consoleapp`](services/consoleapp.yml) | 0 | 0 | 2 |
+| [`application-signals-mcp`](services/application-signals-mcp.yml) | 0 | 0 | 2 |
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
 | [`vpce`](services/vpce.yml) | 0 | 0 | 1 |
 | [`verified-access`](services/verified-access.yml) | 0 | 0 | 1 |
