@@ -9,15 +9,18 @@ Actions:
   - Name: bedrock-agentcore:CompleteResourceTokenAuth
   - Name: bedrock-agentcore:ConnectBrowserAutomationStream
   - Name: bedrock-agentcore:ConnectBrowserLiveViewStream
+  - Name: bedrock-agentcore:CreateABTest
   - Name: bedrock-agentcore:CreateAgentRuntime
   - Name: bedrock-agentcore:CreateAgentRuntimeEndpoint
   - Name: bedrock-agentcore:CreateApiKeyCredentialProvider
   - Name: bedrock-agentcore:CreateBrowser
   - Name: bedrock-agentcore:CreateBrowserProfile
   - Name: bedrock-agentcore:CreateCodeInterpreter
+  - Name: bedrock-agentcore:CreateConfigurationBundle
   - Name: bedrock-agentcore:CreateEvaluator
   - Name: bedrock-agentcore:CreateEvent
   - Name: bedrock-agentcore:CreateGateway
+  - Name: bedrock-agentcore:CreateGatewayRule
   - Name: bedrock-agentcore:CreateGatewayTarget
   - Name: bedrock-agentcore:CreateHarness
   - Name: bedrock-agentcore:CreateMemory
@@ -28,15 +31,19 @@ Actions:
   - Name: bedrock-agentcore:CreateRegistry
   - Name: bedrock-agentcore:CreateRegistryRecord
   - Name: bedrock-agentcore:CreateWorkloadIdentity
+  - Name: bedrock-agentcore:DeleteABTest
   - Name: bedrock-agentcore:DeleteAgentRuntime
   - Name: bedrock-agentcore:DeleteAgentRuntimeEndpoint
   - Name: bedrock-agentcore:DeleteApiKeyCredentialProvider
+  - Name: bedrock-agentcore:DeleteBatchEvaluation
   - Name: bedrock-agentcore:DeleteBrowser
   - Name: bedrock-agentcore:DeleteBrowserProfile
   - Name: bedrock-agentcore:DeleteCodeInterpreter
+  - Name: bedrock-agentcore:DeleteConfigurationBundle
   - Name: bedrock-agentcore:DeleteEvaluator
   - Name: bedrock-agentcore:DeleteEvent
   - Name: bedrock-agentcore:DeleteGateway
+  - Name: bedrock-agentcore:DeleteGatewayRule
   - Name: bedrock-agentcore:DeleteGatewayTarget
   - Name: bedrock-agentcore:DeleteHarness
   - Name: bedrock-agentcore:DeleteMemory
@@ -45,23 +52,29 @@ Actions:
   - Name: bedrock-agentcore:DeleteOnlineEvaluationConfig
   - Name: bedrock-agentcore:DeletePolicy
   - Name: bedrock-agentcore:DeletePolicyEngine
+  - Name: bedrock-agentcore:DeleteRecommendation
   - Name: bedrock-agentcore:DeleteRegistry
   - Name: bedrock-agentcore:DeleteRegistryRecord
   - Name: bedrock-agentcore:DeleteResourcePolicy
   - Name: bedrock-agentcore:DeleteWorkloadIdentity
   - Name: bedrock-agentcore:Evaluate
+  - Name: bedrock-agentcore:GetABTest
   - Name: bedrock-agentcore:GetAgentCard
   - Name: bedrock-agentcore:GetAgentRuntime
   - Name: bedrock-agentcore:GetAgentRuntimeEndpoint
   - Name: bedrock-agentcore:GetApiKeyCredentialProvider
+  - Name: bedrock-agentcore:GetBatchEvaluation
   - Name: bedrock-agentcore:GetBrowser
   - Name: bedrock-agentcore:GetBrowserProfile
   - Name: bedrock-agentcore:GetBrowserSession
   - Name: bedrock-agentcore:GetCodeInterpreter
   - Name: bedrock-agentcore:GetCodeInterpreterSession
+  - Name: bedrock-agentcore:GetConfigurationBundle
+  - Name: bedrock-agentcore:GetConfigurationBundleVersion
   - Name: bedrock-agentcore:GetEvaluator
   - Name: bedrock-agentcore:GetEvent
   - Name: bedrock-agentcore:GetGateway
+  - Name: bedrock-agentcore:GetGatewayRule
   - Name: bedrock-agentcore:GetGatewayTarget
   - Name: bedrock-agentcore:GetHarness
   - Name: bedrock-agentcore:GetMemory
@@ -71,6 +84,7 @@ Actions:
   - Name: bedrock-agentcore:GetPolicy
   - Name: bedrock-agentcore:GetPolicyEngine
   - Name: bedrock-agentcore:GetPolicyGeneration
+  - Name: bedrock-agentcore:GetRecommendation
   - Name: bedrock-agentcore:GetRegistry
   - Name: bedrock-agentcore:GetRegistryRecord
   - Name: bedrock-agentcore:GetResourceApiKey
@@ -90,18 +104,23 @@ Actions:
   - Name: bedrock-agentcore:InvokeGateway
   - Name: bedrock-agentcore:InvokeHarness
   - Name: bedrock-agentcore:InvokeRegistryMcp
+  - Name: bedrock-agentcore:ListABTests
   - Name: bedrock-agentcore:ListActors
   - Name: bedrock-agentcore:ListAgentRuntimeEndpoints
   - Name: bedrock-agentcore:ListAgentRuntimeVersions
   - Name: bedrock-agentcore:ListAgentRuntimes
   - Name: bedrock-agentcore:ListApiKeyCredentialProviders
+  - Name: bedrock-agentcore:ListBatchEvaluations
   - Name: bedrock-agentcore:ListBrowserProfiles
   - Name: bedrock-agentcore:ListBrowserSessions
   - Name: bedrock-agentcore:ListBrowsers
   - Name: bedrock-agentcore:ListCodeInterpreterSessions
   - Name: bedrock-agentcore:ListCodeInterpreters
+  - Name: bedrock-agentcore:ListConfigurationBundleVersions
+  - Name: bedrock-agentcore:ListConfigurationBundles
   - Name: bedrock-agentcore:ListEvaluators
   - Name: bedrock-agentcore:ListEvents
+  - Name: bedrock-agentcore:ListGatewayRules
   - Name: bedrock-agentcore:ListGatewayTargets
   - Name: bedrock-agentcore:ListGateways
   - Name: bedrock-agentcore:ListHarnesses
@@ -114,6 +133,7 @@ Actions:
   - Name: bedrock-agentcore:ListPolicyEngines
   - Name: bedrock-agentcore:ListPolicyGenerationAssets
   - Name: bedrock-agentcore:ListPolicyGenerations
+  - Name: bedrock-agentcore:ListRecommendations
   - Name: bedrock-agentcore:ListRegistries
   - Name: bedrock-agentcore:ListRegistryRecords
   - Name: bedrock-agentcore:ListSessions
@@ -127,10 +147,13 @@ Actions:
   - Name: bedrock-agentcore:SaveBrowserSessionProfile
   - Name: bedrock-agentcore:SearchRegistryRecords
   - Name: bedrock-agentcore:SetTokenVaultCMK
+  - Name: bedrock-agentcore:StartBatchEvaluation
   - Name: bedrock-agentcore:StartBrowserSession
   - Name: bedrock-agentcore:StartCodeInterpreterSession
   - Name: bedrock-agentcore:StartMemoryExtractionJob
   - Name: bedrock-agentcore:StartPolicyGeneration
+  - Name: bedrock-agentcore:StartRecommendation
+  - Name: bedrock-agentcore:StopBatchEvaluation
   - Name: bedrock-agentcore:StopBrowserSession
   - Name: bedrock-agentcore:StopCodeInterpreterSession
   - Name: bedrock-agentcore:StopRuntimeSession
@@ -138,12 +161,15 @@ Actions:
   - Name: bedrock-agentcore:SynchronizeGatewayTargets
   - Name: bedrock-agentcore:TagResource
   - Name: bedrock-agentcore:UntagResource
+  - Name: bedrock-agentcore:UpdateABTest
   - Name: bedrock-agentcore:UpdateAgentRuntime
   - Name: bedrock-agentcore:UpdateAgentRuntimeEndpoint
   - Name: bedrock-agentcore:UpdateApiKeyCredentialProvider
   - Name: bedrock-agentcore:UpdateBrowserStream
+  - Name: bedrock-agentcore:UpdateConfigurationBundle
   - Name: bedrock-agentcore:UpdateEvaluator
   - Name: bedrock-agentcore:UpdateGateway
+  - Name: bedrock-agentcore:UpdateGatewayRule
   - Name: bedrock-agentcore:UpdateGatewayTarget
   - Name: bedrock-agentcore:UpdateHarness
   - Name: bedrock-agentcore:UpdateMemory

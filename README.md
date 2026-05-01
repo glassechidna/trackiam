@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 454
-* Unique actions: 21174
+* Unique services: 455
+* Unique actions: 21215
 * Managed policies: 1485
 
 Most common managed policy name prefixes:
@@ -360,7 +360,7 @@ The following table summarises the AWS APIs.
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 0 | 6 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
-| [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 154 |
+| [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 180 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 111 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
@@ -420,6 +420,7 @@ The following table summarises the AWS APIs.
 | [`bcm-dashboards`](services/bcm-dashboards.yml) | 0 | 0 | 15 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 15 |
 | [`airflow-serverless`](services/airflow-serverless.yml) | 0 | 0 | 15 |
+| [`agentaccess-mcp`](services/agentaccess-mcp.yml) | 0 | 0 | 15 |
 | [`ssm-quicksetup`](services/ssm-quicksetup.yml) | 0 | 0 | 14 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 14 |
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 14 |
@@ -495,14 +496,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3516 |
-| `Get` | 3190 |
-| `Delete` | 2426 |
-| `Create` | 2278 |
-| `Update` | 1975 |
+| `List` | 3522 |
+| `Get` | 3197 |
+| `Delete` | 2431 |
+| `Create` | 2281 |
+| `Update` | 1978 |
 | `Describe` | 1895 |
 | `Put` | 579 |
-| `Start` | 521 |
+| `Start` | 523 |
 | `Tag` | 318 |
 | `Untag` | 313 |
 
