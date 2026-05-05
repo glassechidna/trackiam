@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForAWSTransformCustom",
   "CreateDate": "2026-03-25T02:57:08Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ES3EBGHBU",
   "PolicyName": "AWSServiceRoleForAWSTransformCustom",
   "PolicyVersion": {
-    "CreateDate": "2026-03-25T02:57:08Z",
+    "CreateDate": "2026-05-05T19:42:14Z",
     "Document": {
       "Statement": [
         {
@@ -20,14 +20,31 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "PublishCloudWatchMetrics"
+          "Resource": "*"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents",
+            "logs:PutRetentionPolicy"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/TransformCustom",
+            "arn:aws:logs:*:*:log-group:/aws/TransformCustom:log-stream:*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-03-25T02:57:08Z"
+  "UpdateDate": "2026-05-05T19:42:14Z"
 }
