@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSecurityHubV2ServiceRolePolicy",
   "CreateDate": "2025-06-10T17:37:06Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AAHRX2W6F",
   "PolicyName": "AWSSecurityHubV2ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:57:50Z",
+    "CreateDate": "2026-05-05T20:57:18Z",
     "Document": {
       "Statement": [
         {
@@ -22,6 +22,23 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig",
           "Sid": "SecurityHubV2ServiceRoleAssetsIamPermissions"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "access-analyzer.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/access-analyzer.amazonaws.com/AWSServiceRoleForAccessAnalyzer"
+          ],
+          "Sid": "SecurityHubV2ServiceRoleIA2IamPermissions"
         },
         {
           "Action": [
@@ -52,6 +69,32 @@
           "Effect": "Allow",
           "Resource": "arn:aws:securityhub:*:*:hubv2/*",
           "Sid": "SecurityHubV2ServiceRoleSecurityHubPermissions"
+        },
+        {
+          "Action": [
+            "access-analyzer:CreateServiceLinkedAnalyzer",
+            "access-analyzer:DeleteServiceLinkedAnalyzer"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:*:access-analyzer:*:*:analyzer/*",
+          "Sid": "SecurityHubV2ServiceRoleIA2ResAPermissions"
+        },
+        {
+          "Action": [
+            "access-analyzer:GenerateFindingRecommendation",
+            "access-analyzer:GetFindingRecommendation"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:*:access-analyzer:*:*:analyzer/_AccessAnalyzerForSecurityHubV2*",
+          "Sid": "SecurityHubV2ServiceRoleIA2APIPermissions"
+        },
+        {
+          "Action": [
+            "access-analyzer:ListAnalyzers"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecurityHubV2ServiceRoleIA2ResAListPermissions"
         },
         {
           "Action": [
@@ -95,6 +138,21 @@
         },
         {
           "Action": [
+            "iam:GetPolicy",
+            "iam:GetPolicyVersion",
+            "iam:GetRolePolicy",
+            "iam:GetUserPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:policy/*",
+            "arn:aws:iam::*:role/*",
+            "arn:aws:iam::*:user/*"
+          ],
+          "Sid": "SecurityHubV2ServiceRoleAPIPolicyPermissions"
+        },
+        {
+          "Action": [
             "lambda:ListFunctions"
           ],
           "Effect": "Allow",
@@ -133,7 +191,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-02-12T17:57:50Z"
+  "UpdateDate": "2026-05-05T20:57:18Z"
 }
