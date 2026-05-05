@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 455
-* Unique actions: 21221
+* Unique services: 456
+* Unique actions: 21227
 * Managed policies: 1485
 
 Most common managed policy name prefixes:
@@ -449,6 +449,7 @@ The following table summarises the AWS APIs.
 | [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
 | [`geo-places`](services/geo-places.yml) | 0 | 0 | 7 |
 | [`uxc`](services/uxc.yml) | 0 | 0 | 6 |
+| [`researchstudio`](services/researchstudio.yml) | 0 | 0 | 6 |
 | [`partnercentral-account-management`](services/partnercentral-account-management.yml) | 0 | 0 | 6 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`cloudfront-keyvaluestore`](services/cloudfront-keyvaluestore.yml) | 0 | 0 | 6 |
@@ -496,10 +497,10 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3523 |
-| `Get` | 3199 |
-| `Delete` | 2432 |
-| `Create` | 2282 |
+| `List` | 3524 |
+| `Get` | 3200 |
+| `Delete` | 2434 |
+| `Create` | 2283 |
 | `Update` | 1978 |
 | `Describe` | 1895 |
 | `Put` | 579 |
