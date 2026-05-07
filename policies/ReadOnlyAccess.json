@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v183",
+  "DefaultVersionId": "v184",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-05-05T20:12:11Z",
+    "CreateDate": "2026-05-07T16:12:21Z",
     "Document": {
       "Statement": [
         {
@@ -980,6 +980,7 @@
             "ecr:Get*",
             "ecr:List*",
             "ecs:Describe*",
+            "ecs:GetTaskProtection",
             "ecs:List*",
             "eks:AccessKubernetesApi",
             "eks:Describe*",
@@ -1160,7 +1161,9 @@
             "glue:BatchGetTriggers",
             "glue:BatchGetWorkflows",
             "glue:CheckSchemaVersionValidity",
+            "glue:GetCatalog",
             "glue:GetCatalogImportStatus",
+            "glue:GetCatalogs",
             "glue:GetClassifier",
             "glue:GetClassifiers",
             "glue:GetCrawler",
@@ -1235,14 +1238,20 @@
             "greengrass:Get*",
             "greengrass:List*",
             "groundstation:DescribeContact",
+            "groundstation:DescribeContactVersion",
+            "groundstation:DescribeEphemeris",
             "groundstation:GetConfig",
             "groundstation:GetDataflowEndpointGroup",
             "groundstation:GetMinuteUsage",
             "groundstation:GetMissionProfile",
             "groundstation:GetSatellite",
+            "groundstation:ListAntennas",
             "groundstation:ListConfigs",
+            "groundstation:ListContactVersions",
             "groundstation:ListContacts",
             "groundstation:ListDataflowEndpointGroups",
+            "groundstation:ListEphemerides",
+            "groundstation:ListGroundStationReservations",
             "groundstation:ListGroundStations",
             "groundstation:ListMissionProfiles",
             "groundstation:ListSatellites",
@@ -2840,7 +2849,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v183"
+    "VersionId": "v184"
   },
-  "UpdateDate": "2026-05-05T20:12:11Z"
+  "UpdateDate": "2026-05-07T16:12:21Z"
 }
