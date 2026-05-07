@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy",
   "CreateDate": "2024-11-20T21:58:39Z",
-  "DefaultVersionId": "v79",
+  "DefaultVersionId": "v80",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQZUIPVLH",
   "PolicyName": "SageMakerStudioProjectProvisioningRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-05-04T16:42:16Z",
+    "CreateDate": "2026-05-07T00:27:11Z",
     "Document": {
       "Statement": [
         {
@@ -1447,6 +1447,7 @@
           "Condition": {
             "ArnEquals": {
               "iam:PolicyARN": [
+                "arn:aws:iam::aws:policy/SageMakerStudioAdminIAMDefaultExecutionPolicy",
                 "arn:aws:iam::aws:policy/SageMakerStudioAdminProjectUserRolePolicy"
               ]
             },
@@ -2798,7 +2799,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:cloudformation:*:*:transform/Serverless*"
+            "arn:aws:cloudformation:*:*:transform/*"
           ],
           "Sid": "CfnChangeSet"
         },
@@ -3005,7 +3006,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v79"
+    "VersionId": "v80"
   },
-  "UpdateDate": "2026-05-04T16:42:16Z"
+  "UpdateDate": "2026-05-07T00:27:11Z"
 }

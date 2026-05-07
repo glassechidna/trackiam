@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AIDevOpsOperatorAppAccessPolicy",
   "CreateDate": "2026-03-26T03:42:13Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ELWEUAH5T",
   "PolicyName": "AIDevOpsOperatorAppAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-03-29T03:57:08Z",
+    "CreateDate": "2026-05-07T00:42:18Z",
     "Document": {
       "Statement": [
         {
@@ -16,6 +16,7 @@
             "aidevops:CreateChat",
             "aidevops:CreateKnowledgeItem",
             "aidevops:DeleteKnowledgeItem",
+            "aidevops:DescribeServices",
             "aidevops:DescribeSupportLevel",
             "aidevops:DiscoverTopology",
             "aidevops:EndChatForCase",
@@ -66,6 +67,7 @@
         {
           "Action": [
             "support:DescribeCases",
+            "support:DescribeServices",
             "support:DescribeSupportLevel",
             "support:InitiateChatForCase"
           ],
@@ -82,7 +84,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2026-03-29T03:57:08Z"
+  "UpdateDate": "2026-05-07T00:42:18Z"
 }
