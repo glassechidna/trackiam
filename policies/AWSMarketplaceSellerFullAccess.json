@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerFullAccess",
   "CreateDate": "2019-07-02T20:40:09Z",
-  "DefaultVersionId": "v28",
+  "DefaultVersionId": "v29",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JF7OFUANW",
   "PolicyName": "AWSMarketplaceSellerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-04-29T21:12:06Z",
+    "CreateDate": "2026-05-07T18:27:21Z",
     "Document": {
       "Statement": [
         {
@@ -111,7 +111,10 @@
             "aws-marketplace-management:PutSecondaryUserVerificationDetails",
             "aws-marketplace-management:PutSellerVerificationDetails",
             "aws-marketplace:ListInvoiceSubmissionTasks",
+            "aws-marketplace:ListIssuedTaxInvoices",
             "aws-marketplace:ListPayables",
+            "invoicing:GetInvoicePDF",
+            "invoicing:ListInvoiceSummaries",
             "payments:CreatePaymentInstrument",
             "payments:GetPaymentInstrument",
             "tax:DeleteSupplementalTaxRegistration",
@@ -170,6 +173,14 @@
           "Effect": "Allow",
           "Resource": "arn:aws:aws-marketplace:*:*:catalog/AWSMarketplace*/invoice-submission-task/*",
           "Sid": "InvoiceSubmissionManagement"
+        },
+        {
+          "Action": [
+            "aws-marketplace:GetIssuedTaxInvoice"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-marketplace:*:*:catalog/AWSMarketplace*/issued-tax-invoice/*",
+          "Sid": "SellerSettingsGetIssuedTaxInvoice"
         },
         {
           "Action": [
@@ -248,7 +259,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v28"
+    "VersionId": "v29"
   },
-  "UpdateDate": "2026-04-29T21:12:06Z"
+  "UpdateDate": "2026-05-07T18:27:21Z"
 }
