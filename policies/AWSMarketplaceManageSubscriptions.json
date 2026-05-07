@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceManageSubscriptions",
   "CreateDate": "2015-02-06T18:40:32Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJRDW2WIFN7QLUAKBQ",
   "PolicyName": "AWSMarketplaceManageSubscriptions",
   "PolicyVersion": {
-    "CreateDate": "2026-03-31T17:12:11Z",
+    "CreateDate": "2026-05-07T16:42:22Z",
     "Document": {
       "Statement": [
         {
@@ -85,6 +85,27 @@
         },
         {
           "Action": [
+            "aws-marketplace:GetListing",
+            "aws-marketplace:GetOffer",
+            "aws-marketplace:GetOfferSet",
+            "aws-marketplace:GetOfferTerms",
+            "aws-marketplace:GetProduct",
+            "aws-marketplace:ListFulfillmentOptions",
+            "aws-marketplace:ListPurchaseOptions",
+            "aws-marketplace:SearchFacets",
+            "aws-marketplace:SearchListings"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aws-marketplace:::catalog/AWSMarketplace*/listing/*",
+            "arn:aws:aws-marketplace:::catalog/AWSMarketplace*/offer/*",
+            "arn:aws:aws-marketplace:::catalog/AWSMarketplace*/offerSet/*",
+            "arn:aws:aws-marketplace:::catalog/AWSMarketplace*/product/*",
+            "arn:aws:aws-marketplace:::catalog/AWSMarketplace*/purchaseOption/*"
+          ]
+        },
+        {
+          "Action": [
             "aws-marketplace:ListPrivateListings"
           ],
           "Effect": "Allow",
@@ -121,7 +142,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2026-03-31T17:12:11Z"
+  "UpdateDate": "2026-05-07T16:42:22Z"
 }
