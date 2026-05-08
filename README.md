@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 456
-* Unique actions: 21258
+* Unique actions: 21291
 * Managed policies: 1487
 
 Most common managed policy name prefixes:
@@ -367,6 +367,7 @@ The following table summarises the AWS APIs.
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
 | [`securityagent`](services/securityagent.yml) | 0 | 0 | 78 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
+| [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 63 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 61 |
 | [`aidevops`](services/aidevops.yml) | 0 | 0 | 58 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
@@ -385,7 +386,6 @@ The following table summarises the AWS APIs.
 | [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
-| [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 30 |
 | [`s3express`](services/s3express.yml) | 0 | 0 | 28 |
 | [`one`](services/one.yml) | 0 | 0 | 28 |
 | [`billing`](services/billing.yml) | 0 | 0 | 28 |
@@ -497,14 +497,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3532 |
-| `Get` | 3208 |
-| `Delete` | 2439 |
-| `Create` | 2288 |
-| `Update` | 1981 |
+| `List` | 3538 |
+| `Get` | 3213 |
+| `Delete` | 2443 |
+| `Create` | 2294 |
+| `Update` | 1986 |
 | `Describe` | 1896 |
 | `Put` | 579 |
 | `Start` | 523 |
-| `Tag` | 318 |
-| `Untag` | 313 |
+| `Tag` | 319 |
+| `Untag` | 314 |
 

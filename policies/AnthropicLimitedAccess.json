@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AnthropicLimitedAccess",
   "CreateDate": "2026-04-01T04:57:18Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4PVRRB6AVZ",
   "PolicyName": "AnthropicLimitedAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-04-02T20:12:08Z",
+    "CreateDate": "2026-05-08T22:27:10Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "aws-external-anthropic:AssumeConsole",
+          "Condition": {
+            "StringEquals": {
+              "aws-external-anthropic:Capability": "developer"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AnthropicLimitedConsoleAccess"
+        },
         {
           "Action": "sts:GetWebIdentityToken",
           "Condition": {
@@ -35,39 +46,58 @@
         },
         {
           "Action": [
+            "aws-external-anthropic:ArchiveAgent",
+            "aws-external-anthropic:ArchiveEnvironment",
+            "aws-external-anthropic:ArchiveMemoryStore",
+            "aws-external-anthropic:ArchiveSession",
+            "aws-external-anthropic:ArchiveVault",
+            "aws-external-anthropic:CancelBatchInference",
+            "aws-external-anthropic:CountTokens",
+            "aws-external-anthropic:CreateAgent",
+            "aws-external-anthropic:CreateBatchInference",
+            "aws-external-anthropic:CreateEnvironment",
+            "aws-external-anthropic:CreateFile",
+            "aws-external-anthropic:CreateInference",
+            "aws-external-anthropic:CreateMemoryStore",
+            "aws-external-anthropic:CreateSession",
+            "aws-external-anthropic:CreateSkill",
+            "aws-external-anthropic:CreateUserProfile",
+            "aws-external-anthropic:CreateVault",
+            "aws-external-anthropic:DeleteBatchInference",
+            "aws-external-anthropic:DeleteEnvironment",
+            "aws-external-anthropic:DeleteFile",
+            "aws-external-anthropic:DeleteMemoryStore",
+            "aws-external-anthropic:DeleteSession",
+            "aws-external-anthropic:DeleteSkill",
+            "aws-external-anthropic:DeleteVault",
+            "aws-external-anthropic:Get*",
+            "aws-external-anthropic:List*",
+            "aws-external-anthropic:UpdateAgent",
+            "aws-external-anthropic:UpdateEnvironment",
+            "aws-external-anthropic:UpdateMemoryStore",
+            "aws-external-anthropic:UpdateSession",
+            "aws-external-anthropic:UpdateSkill",
+            "aws-external-anthropic:UpdateUserProfile",
+            "aws-external-anthropic:UpdateVault"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-external-anthropic:*:*:workspace/*",
+          "Sid": "AnthropicLimitedWorkspace"
+        },
+        {
+          "Action": [
             "aws-external-anthropic:CallWithBearerToken",
             "aws-external-anthropic:GetAccountStatus"
           ],
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AnthropicLimitedResourceless"
-        },
-        {
-          "Action": [
-            "aws-external-anthropic:CancelBatchInference",
-            "aws-external-anthropic:CountTokens",
-            "aws-external-anthropic:CreateBatchInference",
-            "aws-external-anthropic:CreateFile",
-            "aws-external-anthropic:CreateInference",
-            "aws-external-anthropic:CreateSkill",
-            "aws-external-anthropic:CreateUserProfile",
-            "aws-external-anthropic:DeleteBatchInference",
-            "aws-external-anthropic:DeleteFile",
-            "aws-external-anthropic:DeleteSkill",
-            "aws-external-anthropic:Get*",
-            "aws-external-anthropic:List*",
-            "aws-external-anthropic:UpdateSkill",
-            "aws-external-anthropic:UpdateUserProfile"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:aws-external-anthropic:*:*:workspace/*",
-          "Sid": "AnthropicLimitedWorkspace"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-04-02T20:12:08Z"
+  "UpdateDate": "2026-05-08T22:27:10Z"
 }
