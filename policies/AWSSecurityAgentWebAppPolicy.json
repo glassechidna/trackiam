@@ -1,26 +1,31 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSSecurityAgentWebAppPolicy",
   "CreateDate": "2026-02-05T23:19:09Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4CTYAYXEAG",
   "PolicyName": "AWSSecurityAgentWebAppPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-03-20T17:27:10Z",
+    "CreateDate": "2026-05-08T17:57:21Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "securityagent:AddArtifact",
+            "securityagent:BatchDeleteCodeReviews",
             "securityagent:BatchDeletePentests",
             "securityagent:BatchGetAgentSpaces",
             "securityagent:BatchGetArtifactMetadata",
+            "securityagent:BatchGetCodeReviewJobTasks",
+            "securityagent:BatchGetCodeReviewJobs",
+            "securityagent:BatchGetCodeReviews",
             "securityagent:BatchGetFindings",
             "securityagent:BatchGetPentestJobContentMetadata",
             "securityagent:BatchGetPentestJobTasks",
             "securityagent:BatchGetPentestJobs",
             "securityagent:BatchGetPentests",
+            "securityagent:CreateCodeReview",
             "securityagent:CreateDesignReview",
             "securityagent:CreatePentest",
             "securityagent:DeleteArtifact",
@@ -30,6 +35,9 @@
             "securityagent:GetDesignReviewArtifact",
             "securityagent:GetDesignReviewFeedback",
             "securityagent:ListArtifacts",
+            "securityagent:ListCodeReviewJobTasks",
+            "securityagent:ListCodeReviewJobsForCodeReview",
+            "securityagent:ListCodeReviews",
             "securityagent:ListDesignReviewComments",
             "securityagent:ListDesignReviews",
             "securityagent:ListDiscoveredEndpoints",
@@ -40,8 +48,11 @@
             "securityagent:ListPentests",
             "securityagent:PutDesignReviewFeedback",
             "securityagent:StartCodeRemediation",
+            "securityagent:StartCodeReviewJob",
             "securityagent:StartPentestJob",
+            "securityagent:StopCodeReviewJob",
             "securityagent:StopPentestJob",
+            "securityagent:UpdateCodeReview",
             "securityagent:UpdateFinding",
             "securityagent:UpdatePentest"
           ],
@@ -74,7 +85,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-03-20T17:27:10Z"
+  "UpdateDate": "2026-05-08T17:57:21Z"
 }
