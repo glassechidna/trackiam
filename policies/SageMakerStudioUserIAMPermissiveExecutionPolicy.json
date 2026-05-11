@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMPermissiveExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:08Z",
-  "DefaultVersionId": "v17",
+  "DefaultVersionId": "v18",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MQ2K3CR4F",
   "PolicyName": "SageMakerStudioUserIAMPermissiveExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-03-27T17:27:10Z",
+    "CreateDate": "2026-05-11T21:42:12Z",
     "Document": {
       "Statement": [
         {
@@ -64,36 +64,9 @@
             "athena:GetSessionEndpoint",
             "athena:GetSessionStatus",
             "athena:StartSession",
-            "athena:TerminateSession"
-          ],
-          "Condition": {
-            "StringNotEquals": {
-              "aws:RequestTag/AmazonDataZoneSessionOwner": "${aws:SourceIdentity}",
-              "aws:ResourceTag/AmazonDataZoneSessionOwner": "${aws:SourceIdentity}"
-            }
-          },
-          "Effect": "Deny",
-          "Resource": [
-            "arn:aws:athena:*:*:workgroup/*/session/*"
-          ],
-          "Sid": "AthenaSessionIsolation"
-        },
-        {
-          "Action": [
-            "athena:TagResource",
-            "athena:UntagResource"
-          ],
-          "Condition": {
-            "StringNotEquals": {
-              "aws:ResourceTag/AmazonDataZoneSessionOwner": "${aws:SourceIdentity}"
-            }
-          },
-          "Effect": "Deny",
-          "Resource": "arn:aws:athena:*:*:workgroup/*/session/*",
-          "Sid": "DenyTaggingUntaggingForeignAthenaSessions"
-        },
-        {
-          "Action": [
+            "athena:TerminateSession",
+            "emr-serverless:*Dashboard*",
+            "emr-serverless:*Session*",
             "glue:CancelStatement",
             "glue:CreateSession",
             "glue:DeleteSession",
@@ -111,12 +84,17 @@
           },
           "Effect": "Deny",
           "Resource": [
+            "arn:aws:athena:*:*:workgroup/*/session/*",
+            "arn:aws:emr-serverless:*:*:/applications/*/sessions/*",
             "arn:aws:glue:*:*:session/*"
           ],
-          "Sid": "GlueSessionIsolation"
+          "Sid": "DenyForeignSessionAccess"
         },
         {
           "Action": [
+            "athena:TagResource",
+            "athena:UntagResource",
+            "emr-serverless:*Resource",
             "glue:TagResource",
             "glue:UntagResource"
           ],
@@ -126,7 +104,11 @@
             }
           },
           "Effect": "Deny",
-          "Resource": "arn:aws:glue:*:*:session/*",
+          "Resource": [
+            "arn:aws:athena:*:*:workgroup/*/session/*",
+            "arn:aws:emr-serverless:*:*:/applications/*/sessions/*",
+            "arn:aws:glue:*:*:session/*"
+          ],
           "Sid": "DenyTaggingUntaggingForeignSessions"
         },
         {
@@ -621,7 +603,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v17"
+    "VersionId": "v18"
   },
-  "UpdateDate": "2026-03-27T17:27:10Z"
+  "UpdateDate": "2026-05-11T21:42:12Z"
 }
