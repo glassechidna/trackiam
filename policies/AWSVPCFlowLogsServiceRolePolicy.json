@@ -1,0 +1,76 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSVPCFlowLogsServiceRolePolicy",
+  "CreateDate": "2026-05-11T15:57:14Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4AR2QCOAVA",
+  "PolicyName": "AWSVPCFlowLogsServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-05-11T15:57:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "events:PutRule",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "events:detail-type": [
+                "AWS API Call via CloudTrail",
+                "Tag Change on Resource"
+              ],
+              "events:source": [
+                "aws.autoscaling",
+                "aws.tag"
+              ]
+            },
+            "Null": {
+              "events:detail-type": "false",
+              "events:source": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:events:*:*:rule/VPCFlowLogsASGTagsManagedRule",
+            "arn:aws:events:*:*:rule/VPCFlowLogsEC2TagsManagedRule"
+          ],
+          "Sid": "AllowPutRuleOnSpecificSourcesAndDetailTypes"
+        },
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:DescribeRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:events:*:*:rule/VPCFlowLogsASGTagsManagedRule",
+            "arn:aws:events:*:*:rule/VPCFlowLogsEC2TagsManagedRule"
+          ],
+          "Sid": "AllowOtherOperationsOnRulesManagedByVPCFlowLogs"
+        },
+        {
+          "Action": [
+            "autoscaling:DescribeTags",
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowDescribeTagsOnAllEC2Resources"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-05-11T15:57:14Z"
+}
