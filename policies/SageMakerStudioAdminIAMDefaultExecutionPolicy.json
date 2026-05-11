@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioAdminIAMDefaultExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v20",
+  "DefaultVersionId": "v21",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NZY6YGCPE",
   "PolicyName": "SageMakerStudioAdminIAMDefaultExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-03-27T17:27:16Z",
+    "CreateDate": "2026-05-11T20:42:19Z",
     "Document": {
       "Statement": [
         {
@@ -66,6 +66,22 @@
           "Sid": "PassRole"
         },
         {
+          "Action": "ram:AssociateResourceSharePermission",
+          "Condition": {
+            "StringEquals": {
+              "ram:PermissionArn": [
+                "arn:aws:ram::aws:permission/AWSRAMDefaultPermissionAmazonDataZoneDomain",
+                "arn:aws:ram::aws:permission/AWSRAMPermissionAmazonDataZoneDomainFullAccessWithPortalAccess",
+                "arn:aws:ram::aws:permission/AWSRAMPermissionsAmazonDatazoneDomainExtendedServiceAccess",
+                "arn:aws:ram::aws:permission/AWSRAMPermissionsAmazonDatazoneDomainExtendedServiceWithPortalAccess"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RAMAssociateResourceSharePermission"
+        },
+        {
           "Action": "redshift-data:*",
           "Condition": {
             "StringEquals": {
@@ -94,7 +110,17 @@
             "athena:GetSessionEndpoint",
             "athena:GetSessionStatus",
             "athena:StartSession",
-            "athena:TerminateSession"
+            "athena:TerminateSession",
+            "emr-serverless:*Dashboard*",
+            "emr-serverless:*Session*",
+            "glue:CancelStatement",
+            "glue:CreateSession",
+            "glue:DeleteSession",
+            "glue:GetDashboardUrl",
+            "glue:GetSession",
+            "glue:GetStatement",
+            "glue:RunStatement",
+            "glue:StopSession"
           ],
           "Condition": {
             "StringNotEquals": {
@@ -104,14 +130,19 @@
           },
           "Effect": "Deny",
           "Resource": [
-            "arn:aws:athena:*:*:workgroup/*/session/*"
+            "arn:aws:athena:*:*:workgroup/*/session/*",
+            "arn:aws:emr-serverless:*:*:/applications/*/sessions/*",
+            "arn:aws:glue:*:*:session/*"
           ],
-          "Sid": "AthenaSessionIsolation"
+          "Sid": "DenyForeignSessionAccess"
         },
         {
           "Action": [
             "athena:TagResource",
-            "athena:UntagResource"
+            "athena:UntagResource",
+            "emr-serverless:*Resource",
+            "glue:TagResource",
+            "glue:UntagResource"
           ],
           "Condition": {
             "StringNotEquals": {
@@ -119,8 +150,12 @@
             }
           },
           "Effect": "Deny",
-          "Resource": "arn:aws:athena:*:*:workgroup/*/session/*",
-          "Sid": "DenyTaggingUntaggingForeignAthenaSessions"
+          "Resource": [
+            "arn:aws:athena:*:*:workgroup/*/session/*",
+            "arn:aws:emr-serverless:*:*:/applications/*/sessions/*",
+            "arn:aws:glue:*:*:session/*"
+          ],
+          "Sid": "DenyTaggingUntaggingForeignSessions"
         },
         {
           "Action": [
@@ -166,43 +201,6 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "GlueLakeFormation"
-        },
-        {
-          "Action": [
-            "glue:CancelStatement",
-            "glue:CreateSession",
-            "glue:DeleteSession",
-            "glue:GetDashboardUrl",
-            "glue:GetSession",
-            "glue:GetStatement",
-            "glue:RunStatement",
-            "glue:StopSession"
-          ],
-          "Condition": {
-            "StringNotEquals": {
-              "aws:RequestTag/AmazonDataZoneSessionOwner": "${aws:SourceIdentity}",
-              "aws:ResourceTag/AmazonDataZoneSessionOwner": "${aws:SourceIdentity}"
-            }
-          },
-          "Effect": "Deny",
-          "Resource": [
-            "arn:aws:glue:*:*:session/*"
-          ],
-          "Sid": "GlueSessionIsolation"
-        },
-        {
-          "Action": [
-            "glue:TagResource",
-            "glue:UntagResource"
-          ],
-          "Condition": {
-            "StringNotEquals": {
-              "aws:ResourceTag/AmazonDataZoneSessionOwner": "${aws:SourceIdentity}"
-            }
-          },
-          "Effect": "Deny",
-          "Resource": "arn:aws:glue:*:*:session/*",
-          "Sid": "DenyTaggingUntaggingForeignSessions"
         },
         {
           "Action": [
@@ -301,6 +299,22 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "BedrockKms"
+        },
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "Null": {
+              "kms:EncryptionContext:aws:identitystore:identitystore-arn": "false"
+            },
+            "StringLike": {
+              "kms:ViaService": "identitystore.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IdentityStoreKMSPermissions"
         },
         {
           "Action": [
@@ -446,6 +460,36 @@
         },
         {
           "Action": [
+            "ram:AssociateResourceShare",
+            "ram:DeleteResourceShare",
+            "ram:DisassociateResourceShare"
+          ],
+          "Condition": {
+            "StringLike": {
+              "ram:ResourceShareName": [
+                "DataZone*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RAMResourceSharePermissions"
+        },
+        {
+          "Action": [
+            "ram:CreateResourceShare"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ram:RequestedResourceType": "datazone:Domain"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RAMCreateResourcePermission"
+        },
+        {
+          "Action": [
             "s3:GetObject*",
             "s3:List*",
             "s3:PutObject*"
@@ -457,7 +501,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "S3CrossAccount"
+          "Sid": "CrossAccount"
         },
         {
           "Action": [
@@ -586,6 +630,17 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AirflowServerless"
+        },
+        {
+          "Action": [
+            "airflow:CreateWebLoginToken",
+            "airflow:GetEnvironment",
+            "airflow:InvokeRestApi",
+            "airflow:ListEnvironments"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AirflowMWAA"
         },
         {
           "Action": [
@@ -720,16 +775,12 @@
         },
         {
           "Action": [
-            "emr-serverless:AccessLivyEndpoints",
-            "emr-serverless:GetApplication",
-            "emr-serverless:GetDashboardForJobRun",
-            "emr-serverless:GetJobRun",
-            "emr-serverless:ListApplications",
-            "emr-serverless:ListJobRunAttempts",
-            "emr-serverless:ListJobRuns",
-            "emr-serverless:ListTagsForResource",
-            "emr-serverless:StartApplication",
-            "emr-serverless:StartJobRun"
+            "emr-serverless:*Resource",
+            "emr-serverless:Access*",
+            "emr-serverless:Get*",
+            "emr-serverless:List*",
+            "emr-serverless:Start*",
+            "emr-serverless:Terminate*"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -751,7 +802,9 @@
         },
         {
           "Action": [
+            "glue:*DataQuality*",
             "glue:*Job*",
+            "glue:*Resource",
             "glue:CancelStatement",
             "glue:CreateSession",
             "glue:DeleteSession",
@@ -762,9 +815,7 @@
             "glue:RunStatement",
             "glue:StartCompletion",
             "glue:StopSession",
-            "glue:TagResource",
             "glue:TestConnection",
-            "glue:UntagResource",
             "glue:UseGlueStudio"
           ],
           "Effect": "Allow",
@@ -847,6 +898,15 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "SSOReadOnlyPermissions"
+        },
+        {
+          "Action": [
+            "ram:Get*",
+            "ram:List*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RAMReadOnlyPermissions"
         },
         {
           "Action": [
@@ -973,7 +1033,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v20"
+    "VersionId": "v21"
   },
-  "UpdateDate": "2026-03-27T17:27:16Z"
+  "UpdateDate": "2026-05-11T20:42:19Z"
 }

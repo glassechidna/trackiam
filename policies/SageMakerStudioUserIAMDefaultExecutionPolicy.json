@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMDefaultExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v23",
+  "DefaultVersionId": "v24",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BV3PMY4IB",
   "PolicyName": "SageMakerStudioUserIAMDefaultExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-03-27T17:27:15Z",
+    "CreateDate": "2026-05-11T20:42:23Z",
     "Document": {
       "Statement": [
         {
@@ -52,49 +52,9 @@
             "athena:GetSessionEndpoint",
             "athena:GetSessionStatus",
             "athena:StartSession",
-            "athena:TerminateSession"
-          ],
-          "Condition": {
-            "StringNotEquals": {
-              "aws:RequestTag/AmazonDataZoneSessionOwner": "${aws:SourceIdentity}",
-              "aws:ResourceTag/AmazonDataZoneSessionOwner": "${aws:SourceIdentity}"
-            }
-          },
-          "Effect": "Deny",
-          "Resource": [
-            "arn:aws:athena:*:*:workgroup/*/session/*"
-          ],
-          "Sid": "AthenaSessionIsolation"
-        },
-        {
-          "Action": [
-            "athena:TagResource",
-            "athena:UntagResource"
-          ],
-          "Condition": {
-            "StringNotEquals": {
-              "aws:ResourceTag/AmazonDataZoneSessionOwner": "${aws:SourceIdentity}"
-            }
-          },
-          "Effect": "Deny",
-          "Resource": "arn:aws:athena:*:*:workgroup/*/session/*",
-          "Sid": "DenyTaggingUntaggingForeignAthenaSessions"
-        },
-        {
-          "Action": [
-            "glue:*"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "glue:LakeFormationPermissions": "Enabled"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "GlueLakeFormation"
-        },
-        {
-          "Action": [
+            "athena:TerminateSession",
+            "emr-serverless:*Dashboard*",
+            "emr-serverless:*Session*",
             "glue:CancelStatement",
             "glue:CreateSession",
             "glue:DeleteSession",
@@ -112,12 +72,17 @@
           },
           "Effect": "Deny",
           "Resource": [
+            "arn:aws:athena:*:*:workgroup/*/session/*",
+            "arn:aws:emr-serverless:*:*:/applications/*/sessions/*",
             "arn:aws:glue:*:*:session/*"
           ],
-          "Sid": "GlueSessionIsolation"
+          "Sid": "DenyForeignSessionAccess"
         },
         {
           "Action": [
+            "athena:TagResource",
+            "athena:UntagResource",
+            "emr-serverless:*Resource",
             "glue:TagResource",
             "glue:UntagResource"
           ],
@@ -127,8 +92,25 @@
             }
           },
           "Effect": "Deny",
-          "Resource": "arn:aws:glue:*:*:session/*",
+          "Resource": [
+            "arn:aws:athena:*:*:workgroup/*/session/*",
+            "arn:aws:emr-serverless:*:*:/applications/*/sessions/*",
+            "arn:aws:glue:*:*:session/*"
+          ],
           "Sid": "DenyTaggingUntaggingForeignSessions"
+        },
+        {
+          "Action": [
+            "glue:*"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "glue:LakeFormationPermissions": "Enabled"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GlueLakeFormation"
         },
         {
           "Action": [
@@ -393,7 +375,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "S3CrossAccount"
+          "Sid": "CrossAccount"
         },
         {
           "Action": [
@@ -557,6 +539,17 @@
         },
         {
           "Action": [
+            "airflow:CreateWebLoginToken",
+            "airflow:GetEnvironment",
+            "airflow:InvokeRestApi",
+            "airflow:ListEnvironments"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AirflowMWAA"
+        },
+        {
+          "Action": [
             "athena:BatchGet*",
             "athena:CreateNamedQuery",
             "athena:CreateNotebook",
@@ -637,10 +630,12 @@
         },
         {
           "Action": [
+            "datazone:*Notebook*",
             "datazone:AcceptPredictions",
             "datazone:AcceptSubscriptionRequest",
             "datazone:BatchGetCell",
             "datazone:BatchGetCellRun",
+            "datazone:CancelMessage",
             "datazone:CancelMetadataGenerationRun",
             "datazone:CancelSubscription",
             "datazone:CreateAsset*",
@@ -649,7 +644,6 @@
             "datazone:CreateConnection",
             "datazone:CreateEnvironment",
             "datazone:CreateListingChangeSet",
-            "datazone:CreateNotebook",
             "datazone:CreateProject",
             "datazone:CreateSubscriptionGrant",
             "datazone:CreateSubscriptionRequest",
@@ -659,7 +653,6 @@
             "datazone:DeleteConnection",
             "datazone:DeleteEnvironment",
             "datazone:DeleteListing",
-            "datazone:DeleteNotebook",
             "datazone:DeleteProject",
             "datazone:DeleteSubscriptionGrant",
             "datazone:DeleteSubscriptionRequest",
@@ -680,16 +673,11 @@
             "datazone:SendMessage",
             "datazone:StartConversation",
             "datazone:StartMetadataGenerationRun",
-            "datazone:StartNotebookCompute",
-            "datazone:StartNotebookExport",
-            "datazone:StartNotebookImport",
-            "datazone:StopNotebookCompute",
             "datazone:UpdateAssetFilter",
             "datazone:UpdateCell",
             "datazone:UpdateCellRun",
             "datazone:UpdateConnection",
             "datazone:UpdateEnvironment",
-            "datazone:UpdateNotebook",
             "datazone:UpdateProject",
             "datazone:UpdateSubscriptionRequest"
           ],
@@ -746,16 +734,12 @@
         },
         {
           "Action": [
-            "emr-serverless:AccessLivyEndpoints",
-            "emr-serverless:GetApplication",
-            "emr-serverless:GetDashboardForJobRun",
-            "emr-serverless:GetJobRun",
-            "emr-serverless:ListApplications",
-            "emr-serverless:ListJobRunAttempts",
-            "emr-serverless:ListJobRuns",
-            "emr-serverless:ListTagsForResource",
-            "emr-serverless:StartApplication",
-            "emr-serverless:StartJobRun"
+            "emr-serverless:*Resource",
+            "emr-serverless:Access*Endpoints",
+            "emr-serverless:Get*",
+            "emr-serverless:List*",
+            "emr-serverless:Start*",
+            "emr-serverless:Terminate*"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -776,7 +760,9 @@
         },
         {
           "Action": [
+            "glue:*DataQuality*",
             "glue:*Job*",
+            "glue:*Resource",
             "glue:CancelStatement",
             "glue:CreateCatalog",
             "glue:CreateSession",
@@ -788,9 +774,7 @@
             "glue:RunStatement",
             "glue:StartCompletion",
             "glue:StopSession",
-            "glue:TagResource",
             "glue:TestConnection",
-            "glue:UntagResource",
             "glue:UseGlueStudio"
           ],
           "Effect": "Allow",
@@ -954,7 +938,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v23"
+    "VersionId": "v24"
   },
-  "UpdateDate": "2026-03-27T17:27:15Z"
+  "UpdateDate": "2026-05-11T20:42:23Z"
 }

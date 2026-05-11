@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v66",
+  "DefaultVersionId": "v67",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-04-23T22:12:13Z",
+    "CreateDate": "2026-05-11T20:42:10Z",
     "Document": {
       "Statement": [
         {
@@ -181,6 +181,17 @@
           "Effect": "Allow",
           "Resource": "arn:aws:glue:*:*:crawler/*",
           "Sid": "GlueCrawler"
+        },
+        {
+          "Action": "glue:ListDataQuality*",
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalTag/EnableGlueWorkloadsPermissions": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GlueDQ"
         },
         {
           "Action": "iam:PassRole",
@@ -655,7 +666,8 @@
             "StringLike": {
               "cloudwatch:namespace": [
                 "AWS/Glue",
-                "Glue"
+                "Glue",
+                "Glue Data Quality"
               ]
             }
           },
@@ -852,7 +864,7 @@
           "Resource": [
             "arn:aws:ec2:*:*:network-interface/*"
           ],
-          "Sid": "EC2TagsPermissionsForGlue"
+          "Sid": "EC2TagsForGlue"
         },
         {
           "Action": [
@@ -979,25 +991,16 @@
         },
         {
           "Action": [
+            "emr-serverless:*Session*",
             "emr-serverless:AccessInteractiveEndpoints",
             "emr-serverless:AccessLivyEndpoints",
             "emr-serverless:GetApplication",
-            "emr-serverless:StartApplication",
-            "emr-serverless:StopApplication"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:emr-serverless:*:*:/applications/*",
-          "Sid": "EmrServerlessInteractivePermissions"
-        },
-        {
-          "Action": [
             "emr-serverless:GetDashboardForJobRun",
-            "emr-serverless:GetJobRun"
+            "emr-serverless:GetJobRun",
+            "emr-serverless:GetResourceDashboard",
+            "emr-serverless:StartApplication",
+            "emr-serverless:StopApplication",
+            "emr-serverless:TagResource"
           ],
           "Condition": {
             "StringEquals": {
@@ -1005,10 +1008,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": [
-            "arn:aws:emr-serverless:*:*:/applications/*/jobruns/*"
-          ],
-          "Sid": "EmrServerlessJobAccessPermissions"
+          "Resource": "*",
+          "Sid": "EMRS"
         },
         {
           "Action": [
@@ -1085,10 +1086,6 @@
             "glue:GetJobRuns",
             "glue:GetSession",
             "glue:GetStatement",
-            "glue:ListDataQualityResults",
-            "glue:ListDataQualityRuleRecommendationRuns",
-            "glue:ListDataQualityRulesetEvaluationRuns",
-            "glue:ListDataQualityRulesets",
             "glue:ListStatements",
             "glue:NotifyEvent",
             "glue:PublishDataQuality",
@@ -1262,6 +1259,22 @@
         },
         {
           "Action": [
+            "glue:GetDataQualityResult",
+            "glue:PublishDataQuality"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalTag/EnableGlueWorkloadsPermissions": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:dataQualityRuleset/dq_etl_ruleset_${aws:PrincipalTag/AmazonDataZoneProject}_*"
+          ],
+          "Sid": "GlueDQVetl"
+        },
+        {
+          "Action": [
             "glue:GetUserDefinedFunction",
             "glue:GetUserDefinedFunctions"
           ],
@@ -1307,7 +1320,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "GlueListJobsPermissions"
+          "Sid": "GlueListJobs"
         },
         {
           "Action": [
@@ -2582,7 +2595,7 @@
             "arn:aws:glue:*:*:completion/*",
             "arn:aws:glue:*:*:job/*"
           ],
-          "Sid": "GlueCompletionsPermissions"
+          "Sid": "GlueCompletions"
         },
         {
           "Action": [
@@ -2618,7 +2631,7 @@
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "GlueVisualETLPermissions"
+          "Sid": "GlueVisualETL"
         },
         {
           "Action": [
@@ -2670,17 +2683,15 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:logs:*:*:log-group:${aws:PrincipalTag/LogGroupName}/error",
-            "arn:aws:logs:*:*:log-group:${aws:PrincipalTag/LogGroupName}/error:log-stream:*",
-            "arn:aws:logs:*:*:log-group:${aws:PrincipalTag/LogGroupName}/output",
-            "arn:aws:logs:*:*:log-group:${aws:PrincipalTag/LogGroupName}/output:log-stream:*"
+            "arn:aws:logs:*:*:log-group:${aws:PrincipalTag/LogGroupName}/*"
           ],
-          "Sid": "GlueJobLogGroupPermissions"
+          "Sid": "GlueJobLogGroup"
         },
         {
           "Action": [
             "logs:CreateLogGroup",
             "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
             "logs:GetLogEvents",
             "logs:GetLogGroupFields",
             "logs:GetLogRecord",
@@ -2701,7 +2712,7 @@
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:logs:*:*:log-group:/aws-glue/*",
-          "Sid": "GlueJobRunnerSessionLogPermissions"
+          "Sid": "GlueJobRunnerSessionLog"
         },
         {
           "Action": [
@@ -2730,7 +2741,7 @@
             "arn:aws:logs:*:*:log-group:${aws:PrincipalTag/LogGroupName}",
             "arn:aws:logs:*:*:log-group:${aws:PrincipalTag/LogGroupName}:log-stream:*"
           ],
-          "Sid": "ProjectLogGroupPermissions"
+          "Sid": "ProjectLogGroup"
         },
         {
           "Action": [
@@ -2814,7 +2825,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v66"
+    "VersionId": "v67"
   },
-  "UpdateDate": "2026-04-23T22:12:13Z"
+  "UpdateDate": "2026-05-11T20:42:10Z"
 }
