@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 456
-* Unique actions: 21291
+* Unique actions: 21293
 * Managed policies: 1489
 
 Most common managed policy name prefixes:
@@ -386,9 +386,9 @@ The following table summarises the AWS APIs.
 | [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
+| [`billing`](services/billing.yml) | 0 | 0 | 29 |
 | [`s3express`](services/s3express.yml) | 0 | 0 | 28 |
 | [`one`](services/one.yml) | 0 | 0 | 28 |
-| [`billing`](services/billing.yml) | 0 | 0 | 28 |
 | [`rtbfabric`](services/rtbfabric.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
@@ -456,13 +456,13 @@ The following table summarises the AWS APIs.
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
 | [`supportplans`](services/supportplans.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
+| [`inspector2-telemetry`](services/inspector2-telemetry.yml) | 0 | 0 | 5 |
 | [`geo-routes`](services/geo-routes.yml) | 0 | 0 | 5 |
 | [`customer-verification`](services/customer-verification.yml) | 0 | 0 | 5 |
 | [`appstudio`](services/appstudio.yml) | 0 | 0 | 5 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
 | [`signin`](services/signin.yml) | 0 | 0 | 4 |
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
-| [`inspector2-telemetry`](services/inspector2-telemetry.yml) | 0 | 0 | 4 |
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
 | [`a2c`](services/a2c.yml) | 0 | 0 | 4 |
 | [`sustainability`](services/sustainability.yml) | 0 | 0 | 3 |
@@ -498,7 +498,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3538 |
-| `Get` | 3213 |
+| `Get` | 3214 |
 | `Delete` | 2443 |
 | `Create` | 2294 |
 | `Update` | 1986 |
