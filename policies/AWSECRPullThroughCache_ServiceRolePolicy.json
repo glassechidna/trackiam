@@ -1,28 +1,15 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSECRPullThroughCache_ServiceRolePolicy",
   "CreateDate": "2021-11-26T21:51:09Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4G6RNU4BVN",
   "PolicyName": "AWSECRPullThroughCache_ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-03-06T21:22:07Z",
+    "CreateDate": "2026-05-12T18:12:08Z",
     "Document": {
       "Statement": [
-        {
-          "Action": [
-            "secretsmanager:GetSecretValue"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:secretsmanager:*:*:secret:ecr-pullthroughcache/*",
-          "Sid": "SecretsManager"
-        },
         {
           "Action": [
             "ecr:BatchCheckLayerAvailability",
@@ -36,15 +23,33 @@
             "ecr:PutImage",
             "ecr:UploadLayerPart"
           ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "ECR"
+        },
+        {
+          "Action": [
+            "secretsmanager:GetSecretValue"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:ecr-pullthroughcache/*",
+          "Sid": "SecretsManager"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2025-03-06T21:22:07Z"
+  "UpdateDate": "2026-05-12T18:12:08Z"
 }
