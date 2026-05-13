@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonAuroraDSQLFullAccess",
   "CreateDate": "2024-12-03T15:36:07Z",
-  "DefaultVersionId": "v15",
+  "DefaultVersionId": "v16",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4OL6SKRIYE",
   "PolicyName": "AmazonAuroraDSQLFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:59:57Z",
+    "CreateDate": "2026-05-13T18:57:08Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,17 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "CreateDsqlServiceLinkedRole"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "dsql.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PassRoleForChangeStreams"
         },
         {
           "Action": [
@@ -70,17 +81,21 @@
           "Action": [
             "dsql:AddPeerCluster",
             "dsql:CreateCluster",
+            "dsql:CreateStream",
             "dsql:DbConnect",
             "dsql:DbConnectAdmin",
             "dsql:DeleteCluster",
             "dsql:DeleteClusterPolicy",
+            "dsql:DeleteStream",
             "dsql:GetBackupJob",
             "dsql:GetCluster",
             "dsql:GetClusterPolicy",
             "dsql:GetRestoreJob",
+            "dsql:GetStream",
             "dsql:GetVpcEndpointServiceName",
             "dsql:InjectError",
             "dsql:ListClusters",
+            "dsql:ListStreams",
             "dsql:ListTagsForResource",
             "dsql:PutClusterPolicy",
             "dsql:PutMultiRegionProperties",
@@ -92,7 +107,8 @@
             "dsql:StopRestoreJob",
             "dsql:TagResource",
             "dsql:UntagResource",
-            "dsql:UpdateCluster"
+            "dsql:UpdateCluster",
+            "dsql:UpdateStream"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -102,7 +118,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v15"
+    "VersionId": "v16"
   },
-  "UpdateDate": "2026-02-12T17:59:57Z"
+  "UpdateDate": "2026-05-13T18:57:08Z"
 }

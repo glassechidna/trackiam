@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 456
-* Unique actions: 21295
+* Unique actions: 21309
 * Managed policies: 1489
 
 Most common managed policy name prefixes:
@@ -381,19 +381,19 @@ The following table summarises the AWS APIs.
 | [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 40 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 38 |
+| [`rtbfabric`](services/rtbfabric.yml) | 0 | 0 | 36 |
 | [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
 | [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 35 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
+| [`dsql`](services/dsql.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
 | [`billing`](services/billing.yml) | 0 | 0 | 29 |
 | [`s3express`](services/s3express.yml) | 0 | 0 | 28 |
 | [`one`](services/one.yml) | 0 | 0 | 28 |
-| [`rtbfabric`](services/rtbfabric.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
 | [`mpa`](services/mpa.yml) | 0 | 0 | 25 |
-| [`dsql`](services/dsql.yml) | 0 | 0 | 25 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 24 |
 | [`s3files`](services/s3files.yml) | 0 | 0 | 24 |
@@ -497,11 +497,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3538 |
-| `Get` | 3214 |
-| `Delete` | 2443 |
-| `Create` | 2294 |
-| `Update` | 1986 |
+| `List` | 3541 |
+| `Get` | 3217 |
+| `Delete` | 2445 |
+| `Create` | 2296 |
+| `Update` | 1988 |
 | `Describe` | 1896 |
 | `Put` | 579 |
 | `Start` | 523 |

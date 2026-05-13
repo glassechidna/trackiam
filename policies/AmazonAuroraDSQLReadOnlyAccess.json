@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonAuroraDSQLReadOnlyAccess",
   "CreateDate": "2024-12-03T15:21:07Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HJLOJCTKI",
   "PolicyName": "AmazonAuroraDSQLReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:58:42Z",
+    "CreateDate": "2026-05-13T18:57:20Z",
     "Document": {
       "Statement": [
         {
@@ -22,8 +22,10 @@
           "Action": [
             "dsql:GetCluster",
             "dsql:GetClusterPolicy",
+            "dsql:GetStream",
             "dsql:GetVpcEndpointServiceName",
             "dsql:ListClusters",
+            "dsql:ListStreams",
             "dsql:ListTagsForResource"
           ],
           "Effect": "Allow",
@@ -34,7 +36,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-02-12T17:58:42Z"
+  "UpdateDate": "2026-05-13T18:57:20Z"
 }
