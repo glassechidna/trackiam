@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForLogDeliveryPolicy",
   "CreateDate": "2019-10-04T17:31:19Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4EMA7ANTDG",
   "PolicyName": "AWSServiceRoleForLogDeliveryPolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-01-16T21:37:06Z",
+    "CreateDate": "2026-05-15T21:57:13Z",
     "Document": {
       "Statement": [
         {
@@ -24,12 +24,26 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "LogDeliveryToFirehose"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": "firehose.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "KMSForFirehoseSSECMK"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2025-01-16T21:37:06Z"
+  "UpdateDate": "2026-05-15T21:57:13Z"
 }
