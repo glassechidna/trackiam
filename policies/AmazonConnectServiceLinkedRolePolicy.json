@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v53",
+  "DefaultVersionId": "v54",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:59:17Z",
+    "CreateDate": "2026-05-18T21:12:24Z",
     "Document": {
       "Statement": [
         {
@@ -210,79 +210,7 @@
         },
         {
           "Action": [
-            "wisdom:ActivateMessageTemplate",
-            "wisdom:CreateAIAgent",
-            "wisdom:CreateAIAgentVersion",
-            "wisdom:CreateAIGuardrail",
-            "wisdom:CreateAIGuardrailVersion",
-            "wisdom:CreateAIPrompt",
-            "wisdom:CreateAIPromptVersion",
-            "wisdom:CreateAssistant",
-            "wisdom:CreateContent",
-            "wisdom:CreateKnowledgeBase",
-            "wisdom:CreateMessageTemplate",
-            "wisdom:CreateMessageTemplateAttachment",
-            "wisdom:CreateMessageTemplateVersion",
-            "wisdom:CreateQuickResponse",
-            "wisdom:CreateSession",
-            "wisdom:DeactivateMessageTemplate",
-            "wisdom:DeleteAIAgent",
-            "wisdom:DeleteAIAgentVersion",
-            "wisdom:DeleteAIGuardrail",
-            "wisdom:DeleteAIGuardrailVersion",
-            "wisdom:DeleteAIPrompt",
-            "wisdom:DeleteAIPromptVersion",
-            "wisdom:DeleteContent",
-            "wisdom:DeleteMessageTemplate",
-            "wisdom:DeleteMessageTemplateAttachment",
-            "wisdom:DeleteQuickResponse",
-            "wisdom:GetAIAgent",
-            "wisdom:GetAIGuardrail",
-            "wisdom:GetAIPrompt",
-            "wisdom:GetAssistant",
-            "wisdom:GetContent",
-            "wisdom:GetImportJob",
-            "wisdom:GetKnowledgeBase",
-            "wisdom:GetMessageTemplate",
-            "wisdom:GetNextMessage",
-            "wisdom:GetQuickResponse",
-            "wisdom:GetRecommendations",
-            "wisdom:GetSession",
-            "wisdom:ListAIAgentVersions",
-            "wisdom:ListAIAgents",
-            "wisdom:ListAIGuardrailVersions",
-            "wisdom:ListAIGuardrails",
-            "wisdom:ListAIPromptVersions",
-            "wisdom:ListAIPrompts",
-            "wisdom:ListAssistantAssociations",
-            "wisdom:ListContentAssociations",
-            "wisdom:ListImportJobs",
-            "wisdom:ListMessageTemplateVersions",
-            "wisdom:ListMessageTemplates",
-            "wisdom:ListMessages",
-            "wisdom:ListQuickResponses",
-            "wisdom:ListTagsForResource",
-            "wisdom:NotifyRecommendationsReceived",
-            "wisdom:PutFeedback",
-            "wisdom:QueryAssistant",
-            "wisdom:RemoveAssistantAIAgent",
-            "wisdom:RenderMessageTemplate",
-            "wisdom:Retrieve",
-            "wisdom:SearchMessageTemplates",
-            "wisdom:SearchQuickResponses",
-            "wisdom:SendMessage",
-            "wisdom:StartContentUpload",
-            "wisdom:StartImportJob",
-            "wisdom:TagResource",
-            "wisdom:UntagResource",
-            "wisdom:UpdateAIAgent",
-            "wisdom:UpdateAIGuardrail",
-            "wisdom:UpdateAIPrompt",
-            "wisdom:UpdateAssistantAIAgent",
-            "wisdom:UpdateContent",
-            "wisdom:UpdateMessageTemplate",
-            "wisdom:UpdateMessageTemplateMetadata",
-            "wisdom:UpdateQuickResponse"
+            "wisdom:*"
           ],
           "Condition": {
             "StringEquals": {
@@ -292,6 +220,20 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowWisdomForConnectEnabledTaggedResources"
+        },
+        {
+          "Action": [
+            "wisdom:DeleteAssistant",
+            "wisdom:DeleteKnowledgeBase"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonConnectEnabled": "True"
+            }
+          },
+          "Effect": "Deny",
+          "Resource": "*",
+          "Sid": "DenyWisdomForConnectEnabledTaggedResources"
         },
         {
           "Action": [
@@ -553,7 +495,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v53"
+    "VersionId": "v54"
   },
-  "UpdateDate": "2026-02-12T17:59:17Z"
+  "UpdateDate": "2026-05-18T21:12:24Z"
 }

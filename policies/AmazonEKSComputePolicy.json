@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEKSComputePolicy",
   "CreateDate": "2024-11-01T21:46:52Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HYRJHGSOQ",
   "PolicyName": "AmazonEKSComputePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-04-17T21:27:07Z",
+    "CreateDate": "2026-05-18T21:12:10Z",
     "Document": {
       "Statement": [
         {
@@ -91,6 +91,11 @@
           ]
         },
         {
+          "Action": "ec2:DescribeCapacityReservations",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
           "Action": "iam:AddRoleToInstanceProfile",
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:instance-profile/eks*"
@@ -113,7 +118,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-04-17T21:27:07Z"
+  "UpdateDate": "2026-05-18T21:12:10Z"
 }
