@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AdministratorAccess-AWSElasticBeanstalk",
   "CreateDate": "2021-01-22T19:36:54Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AX52KWGWY",
   "PolicyName": "AdministratorAccess-AWSElasticBeanstalk",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:00:37Z",
+    "CreateDate": "2026-05-19T20:12:27Z",
     "Document": {
       "Statement": [
         {
@@ -101,11 +101,11 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:iam::*:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling*",
-            "arn:aws:iam::*:role/aws-service-role/elasticbeanstalk.amazonaws.com/AWSServiceRoleForElasticBeanstalk*",
-            "arn:aws:iam::*:role/aws-service-role/elasticloadbalancing.amazonaws.com/AWSServiceRoleForElasticLoadBalancing*",
-            "arn:aws:iam::*:role/aws-service-role/maintenance.elasticbeanstalk.amazonaws.com/AWSServiceRoleForElasticBeanstalk*",
-            "arn:aws:iam::*:role/aws-service-role/managedupdates.elasticbeanstalk.amazonaws.com/AWSServiceRoleForElasticBeanstalk*"
+            "arn:aws:iam::*:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling",
+            "arn:aws:iam::*:role/aws-service-role/elasticbeanstalk.amazonaws.com/AWSServiceRoleForElasticBeanstalk",
+            "arn:aws:iam::*:role/aws-service-role/elasticloadbalancing.amazonaws.com/AWSServiceRoleForElasticLoadBalancing",
+            "arn:aws:iam::*:role/aws-service-role/maintenance.elasticbeanstalk.amazonaws.com/AWSServiceRoleForElasticBeanstalk",
+            "arn:aws:iam::*:role/aws-service-role/managedupdates.elasticbeanstalk.amazonaws.com/AWSServiceRoleForElasticBeanstalk"
           ]
         },
         {
@@ -289,6 +289,13 @@
         },
         {
           "Action": [
+            "logs:GetLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/elasticbeanstalk/*:log-stream:*"
+        },
+        {
+          "Action": [
             "rds:*DBSubnetGroup",
             "rds:AuthorizeDBSecurityGroupIngress",
             "rds:CreateDBInstance",
@@ -360,7 +367,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-02-12T18:00:37Z"
+  "UpdateDate": "2026-05-19T20:12:27Z"
 }
