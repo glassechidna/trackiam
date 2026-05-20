@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonQDeveloperAccess",
   "CreateDate": "2024-07-09T08:35:15Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4C4YINGFPW",
   "PolicyName": "AmazonQDeveloperAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:00:28Z",
+    "CreateDate": "2026-05-20T23:12:16Z",
     "Document": {
       "Statement": [
         {
@@ -18,6 +18,17 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowCloudControlReadAccess"
+        },
+        {
+          "Action": [
+            "q:CreateArtifact",
+            "q:GetArtifact",
+            "q:GetArtifactActionResult",
+            "q:PerformArtifactAction"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowQArtifactsAccess"
         },
         {
           "Action": [
@@ -52,7 +63,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-02-12T18:00:28Z"
+  "UpdateDate": "2026-05-20T23:12:16Z"
 }
