@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSApplicationAutoscalingECSServicePolicy",
   "CreateDate": "2017-10-25T23:53:08Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJFXLLV7AKH5PSFOYG",
   "PolicyName": "AWSApplicationAutoscalingECSServicePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-10-24T20:05:50Z",
+    "CreateDate": "2026-05-20T21:27:13Z",
     "Document": {
       "Statement": [
         {
@@ -16,6 +16,7 @@
             "cloudwatch:DescribeAlarms",
             "cloudwatch:GetMetricData",
             "cloudwatch:PutMetricAlarm",
+            "ecs:DescribeServiceRevisions",
             "ecs:DescribeServices",
             "ecs:UpdateService"
           ],
@@ -28,7 +29,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-10-24T20:05:50Z"
+  "UpdateDate": "2026-05-20T21:27:13Z"
 }
