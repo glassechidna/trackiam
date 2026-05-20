@@ -1,15 +1,29 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/WAFLoggingServiceRolePolicy",
   "CreateDate": "2018-08-24T21:05:47Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJZ7N545GUNUHNTYOM",
   "PolicyName": "WAFLoggingServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2018-08-24T21:05:47Z",
+    "CreateDate": "2026-05-20T19:12:17Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": "firehose.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "KMSForFirehoseSSECMK"
+        },
         {
           "Action": [
             "firehose:PutRecord",
@@ -24,7 +38,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2018-08-24T21:05:47Z"
+  "UpdateDate": "2026-05-20T19:12:17Z"
 }

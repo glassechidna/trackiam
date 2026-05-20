@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSControlTowerAccountServiceRolePolicy",
   "CreateDate": "2023-06-05T22:04:50Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ITRUSWZXG",
   "PolicyName": "AWSControlTowerAccountServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:01:38Z",
+    "CreateDate": "2026-05-20T19:27:15Z",
     "Document": {
       "Statement": [
         {
@@ -151,6 +151,12 @@
           "Sid": "AllowListDelegatedAdministratorsForConfig"
         },
         {
+          "Action": "cloudformation:BatchDescribeTypeConfigurations",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowBatchDescribeTypeConfigurationsForHookConfigFetch"
+        },
+        {
           "Action": [
             "cloudformation:ActivateType",
             "cloudformation:DeactivateType",
@@ -226,7 +232,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2026-02-12T18:01:38Z"
+  "UpdateDate": "2026-05-20T19:27:15Z"
 }
