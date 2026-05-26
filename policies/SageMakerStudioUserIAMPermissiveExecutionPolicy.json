@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMPermissiveExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:08Z",
-  "DefaultVersionId": "v18",
+  "DefaultVersionId": "v19",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MQ2K3CR4F",
   "PolicyName": "SageMakerStudioUserIAMPermissiveExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-05-11T21:42:12Z",
+    "CreateDate": "2026-05-26T17:27:19Z",
     "Document": {
       "Statement": [
         {
@@ -384,6 +384,7 @@
         {
           "Action": [
             "airflow-serverless:*",
+            "airflow:*",
             "athena:*",
             "bedrock:*",
             "codewhisperer:*",
@@ -443,10 +444,12 @@
         },
         {
           "Action": [
+            "datazone:*Notebook*",
             "datazone:AcceptPredictions",
             "datazone:AcceptSubscriptionRequest",
             "datazone:BatchGetCell",
             "datazone:BatchGetCellRun",
+            "datazone:CancelMessage",
             "datazone:CancelMetadataGenerationRun",
             "datazone:CancelSubscription",
             "datazone:CreateAsset*",
@@ -455,7 +458,6 @@
             "datazone:CreateConnection",
             "datazone:CreateEnvironment",
             "datazone:CreateListingChangeSet",
-            "datazone:CreateNotebook",
             "datazone:CreateProject",
             "datazone:CreateSubscriptionGrant",
             "datazone:CreateSubscriptionRequest",
@@ -465,7 +467,6 @@
             "datazone:DeleteConnection",
             "datazone:DeleteEnvironment",
             "datazone:DeleteListing",
-            "datazone:DeleteNotebook",
             "datazone:DeleteProject",
             "datazone:DeleteSubscriptionGrant",
             "datazone:DeleteSubscriptionRequest",
@@ -474,6 +475,7 @@
             "datazone:List*",
             "datazone:PostLineageEvent",
             "datazone:PutCellRunResult",
+            "datazone:QueryGraph",
             "datazone:RejectPredictions",
             "datazone:RejectSubscriptionRequest",
             "datazone:RevokeSubscription",
@@ -486,16 +488,11 @@
             "datazone:SendMessage",
             "datazone:StartConversation",
             "datazone:StartMetadataGenerationRun",
-            "datazone:StartNotebookCompute",
-            "datazone:StartNotebookExport",
-            "datazone:StartNotebookImport",
-            "datazone:StopNotebookCompute",
             "datazone:UpdateAssetFilter",
             "datazone:UpdateCell",
             "datazone:UpdateCellRun",
             "datazone:UpdateConnection",
             "datazone:UpdateEnvironment",
-            "datazone:UpdateNotebook",
             "datazone:UpdateProject",
             "datazone:UpdateSubscriptionRequest"
           ],
@@ -603,7 +600,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v18"
+    "VersionId": "v19"
   },
-  "UpdateDate": "2026-05-11T21:42:12Z"
+  "UpdateDate": "2026-05-26T17:27:19Z"
 }
