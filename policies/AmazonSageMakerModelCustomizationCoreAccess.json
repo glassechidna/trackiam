@@ -1,0 +1,516 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerModelCustomizationCoreAccess",
+  "CreateDate": "2026-05-26T18:57:29Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4ONDDHBDFH",
+  "PolicyName": "AmazonSageMakerModelCustomizationCoreAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-05-26T18:57:29Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "application-autoscaling:DescribeScalableTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:application-autoscaling:*:*:scalable-target/*"
+          ],
+          "Sid": "SageMakerInferenceAutoscaling"
+        },
+        {
+          "Action": [
+            "bedrock:CreateCustomModel",
+            "bedrock:CreateEvaluationJob",
+            "bedrock:GetCustomModel",
+            "bedrock:GetEvaluationJob",
+            "bedrock:GetImportedModel",
+            "bedrock:GetModelImportJob",
+            "bedrock:InvokeModel",
+            "bedrock:InvokeModelWithResponseStream"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:bedrock:*:*:custom-model/*",
+            "arn:aws:bedrock:*:*:evaluation-job/*",
+            "arn:aws:bedrock:*:*:foundation-model/*",
+            "arn:aws:bedrock:*:*:imported-model/*",
+            "arn:aws:bedrock:*:*:model-import-job/*"
+          ],
+          "Sid": "BedrockCustomModelAndEvaluation"
+        },
+        {
+          "Action": [
+            "bedrock:CreateModelImportJob",
+            "bedrock:ListCustomModelDeployments",
+            "bedrock:ListCustomModels",
+            "bedrock:ListModelImportJobs",
+            "bedrock:ListProvisionedModelThroughputs"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BedrockModelImportAndList"
+        },
+        {
+          "Action": [
+            "ec2:DescribeVpcs",
+            "iam:ListRoles",
+            "kms:DescribeKey",
+            "kms:ListAliases"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SageMakerJobAdvancedSettings"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "iam:AssociatedResourceArn": "arn:aws:lambda:*:*:function:*"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "iam:PassedToService": "lambda.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/SageMakerForLambda*",
+          "Sid": "PassRoleForAWSLambda"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "iam:AssociatedResourceArn": "arn:aws:sagemaker:*:*:*"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "iam:PassedToService": [
+                "job.sagemaker.amazonaws.com",
+                "sagemaker.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/service-role/*SageMaker*",
+            "arn:aws:iam::*:role/service-role/*Sagemaker*",
+            "arn:aws:iam::*:role/service-role/*sagemaker*"
+          ],
+          "Sid": "PassRoleForSageMaker"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "iam:PassedToService": "bedrock.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/SageMakerForBedrock*",
+          "Sid": "PassRoleForBedrock"
+        },
+        {
+          "Action": [
+            "lambda:CreateFunction",
+            "lambda:DeleteFunction",
+            "lambda:GetFunction",
+            "lambda:InvokeFunction"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:*SageMaker*",
+            "arn:aws:lambda:*:*:function:*Sagemaker*",
+            "arn:aws:lambda:*:*:function:*sagemaker*"
+          ],
+          "Sid": "LambdaPermissionsForRewardFunction"
+        },
+        {
+          "Action": [
+            "lambda:ListFunctions"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LambdaListFunctions"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/sagemaker/*"
+          ],
+          "Sid": "CloudWatchLogWriteAccess"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogGroups",
+            "logs:DescribeLogStreams",
+            "logs:GetLogEvents"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/sagemaker/*",
+            "arn:aws:logs:*:*:log-group::log-stream:"
+          ],
+          "Sid": "CloudWatchLogReadAccess"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::*SageMaker*",
+            "arn:aws:s3:::*Sagemaker*",
+            "arn:aws:s3:::*sagemaker*"
+          ],
+          "Sid": "BYODataSetS3Access"
+        },
+        {
+          "Action": [
+            "sagemaker-mlflow:AccessUI",
+            "sagemaker-mlflow:CreateExperiment",
+            "sagemaker-mlflow:CreateRun",
+            "sagemaker-mlflow:GetExperiment",
+            "sagemaker-mlflow:GetExperimentByName",
+            "sagemaker-mlflow:GetLoggedModel",
+            "sagemaker-mlflow:GetMetricHistory",
+            "sagemaker-mlflow:GetRun",
+            "sagemaker-mlflow:ListArtifacts",
+            "sagemaker-mlflow:LogBatch",
+            "sagemaker-mlflow:LogInputs",
+            "sagemaker-mlflow:LogMetric",
+            "sagemaker-mlflow:LogModel",
+            "sagemaker-mlflow:LogParam",
+            "sagemaker-mlflow:SearchExperiments",
+            "sagemaker-mlflow:SearchRuns",
+            "sagemaker-mlflow:SetTag",
+            "sagemaker-mlflow:UpdateRun",
+            "sagemaker:CallMlflowAppApi",
+            "sagemaker:CreatePresignedMlflowAppUrl",
+            "sagemaker:DescribeMlflowApp",
+            "sagemaker:UpdateMlflowApp"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:mlflow-app/*"
+          ],
+          "Sid": "SageMakerMLFlow"
+        },
+        {
+          "Action": [
+            "sagemaker:AddAssociation",
+            "sagemaker:CreateAction",
+            "sagemaker:CreateArtifact",
+            "sagemaker:CreateContext",
+            "sagemaker:DescribeAction",
+            "sagemaker:DescribeArtifact",
+            "sagemaker:DescribeTrialComponent",
+            "sagemaker:QueryLineage",
+            "sagemaker:UpdateArtifact"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:action/*",
+            "arn:aws:sagemaker:*:*:artifact/*",
+            "arn:aws:sagemaker:*:*:context/*",
+            "arn:aws:sagemaker:*:*:endpoint/*",
+            "arn:aws:sagemaker:*:*:experiment-trial-component/*",
+            "arn:aws:sagemaker:*:*:model-package/*",
+            "arn:aws:sagemaker:*:*:pipeline/*"
+          ],
+          "Sid": "SageMakerLineage"
+        },
+        {
+          "Action": [
+            "sagemaker:AddTags",
+            "sagemaker:ListTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:action/*",
+            "arn:aws:sagemaker:*:*:endpoint-config/*",
+            "arn:aws:sagemaker:*:*:endpoint/*",
+            "arn:aws:sagemaker:*:*:hub-content/*",
+            "arn:aws:sagemaker:*:*:hub/*",
+            "arn:aws:sagemaker:*:*:inference-component/*",
+            "arn:aws:sagemaker:*:*:model-package-group/*",
+            "arn:aws:sagemaker:*:*:model-package/*",
+            "arn:aws:sagemaker:*:*:model/*",
+            "arn:aws:sagemaker:*:*:pipeline/*",
+            "arn:aws:sagemaker:*:*:training-job/*"
+          ],
+          "Sid": "SageMakerTagsPermission"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateEndpoint",
+            "sagemaker:CreateEndpointConfig",
+            "sagemaker:CreateInferenceComponent",
+            "sagemaker:DeleteEndpoint",
+            "sagemaker:DeleteInferenceComponent",
+            "sagemaker:DescribeEndpoint",
+            "sagemaker:DescribeEndpointConfig",
+            "sagemaker:DescribeInferenceComponent",
+            "sagemaker:InvokeEndpoint"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:endpoint-config/*",
+            "arn:aws:sagemaker:*:*:endpoint/*",
+            "arn:aws:sagemaker:*:*:inference-component/*"
+          ],
+          "Sid": "SageMakerInference"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateModel",
+            "sagemaker:CreateModelPackage",
+            "sagemaker:CreateModelPackageGroup",
+            "sagemaker:DeleteModelPackage",
+            "sagemaker:DeleteModelPackageGroup",
+            "sagemaker:DescribeModel",
+            "sagemaker:DescribeModelPackage",
+            "sagemaker:DescribeModelPackageGroup",
+            "sagemaker:ListModelPackageGroups",
+            "sagemaker:ListModelPackages",
+            "sagemaker:UpdateModelPackage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:model-package-group/*",
+            "arn:aws:sagemaker:*:*:model-package/*",
+            "arn:aws:sagemaker:*:*:model/*"
+          ],
+          "Sid": "SageMakerModelPackage"
+        },
+        {
+          "Action": [
+            "sagemaker:CreatePipeline",
+            "sagemaker:DescribePipeline",
+            "sagemaker:DescribePipelineDefinitionForExecution",
+            "sagemaker:DescribePipelineExecution",
+            "sagemaker:StartPipelineExecution",
+            "sagemaker:UpdatePipeline"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:pipeline/*"
+          ],
+          "Sid": "SageMakerPipelines"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateTrainingJob",
+            "sagemaker:DescribeTrainingJob",
+            "sagemaker:ListTrainingJobs",
+            "sagemaker:StopTrainingJob"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:training-job/*"
+          ],
+          "Sid": "SageMakerTrainingJob"
+        },
+        {
+          "Action": [
+            "sagemaker:DeleteHubContent",
+            "sagemaker:DescribeHubContent",
+            "sagemaker:ImportHubContent",
+            "sagemaker:ListHubContentVersions",
+            "sagemaker:ListHubContents",
+            "sagemaker:ListHubs"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:hub-content/*",
+            "arn:aws:sagemaker:*:*:hub/*"
+          ],
+          "Sid": "SageMakerHubPermissions"
+        },
+        {
+          "Action": [
+            "sagemaker:ListActions",
+            "sagemaker:ListArtifacts",
+            "sagemaker:ListAssociations",
+            "sagemaker:ListEndpoints",
+            "sagemaker:ListInferenceComponents",
+            "sagemaker:ListMlflowApps",
+            "sagemaker:ListMlflowTrackingServers",
+            "sagemaker:ListPipelineExecutionSteps",
+            "sagemaker:ListPipelineExecutions",
+            "sagemaker:ListWorkforces",
+            "sagemaker:Search"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "SageMakerListPermissions"
+        },
+        {
+          "Action": [
+            "bedrock:GetFoundationModelAvailability",
+            "bedrock:ListFoundationModels"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "BedrockFoundationModelOperations"
+        },
+        {
+          "Action": [
+            "ecr:BatchCheckLayerAvailability",
+            "ecr:BatchGetImage",
+            "ecr:GetAuthorizationToken",
+            "ecr:GetDownloadUrlForLayer"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SageMakerInferenceEcrReadAccess"
+        },
+        {
+          "Action": [
+            "lambda:GetLayerVersion"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:lambda:*:336392948345:layer:AWSSDK*"
+          ],
+          "Sid": "LambdaLayerForAWSSDK"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:ListBucket"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::jumpstart*"
+          ],
+          "Sid": "JumpStartS3Access"
+        },
+        {
+          "Action": [
+            "sagemaker:ListHubContents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:aws:hub/SageMakerPublicHub"
+          ],
+          "Sid": "SageMakerPublicHubPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-05-26T18:57:29Z"
+}
