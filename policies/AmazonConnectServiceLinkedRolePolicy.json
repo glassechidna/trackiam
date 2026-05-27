@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v54",
+  "DefaultVersionId": "v55",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-05-18T21:12:24Z",
+    "CreateDate": "2026-05-27T21:57:16Z",
     "Document": {
       "Statement": [
         {
@@ -22,6 +22,17 @@
           "Sid": "AllowPutMetricsForConnectNamespace"
         },
         {
+          "Action": "kms:ListRetirableGrants",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowKMSListRetirableGrants"
+        },
+        {
           "Action": "mobiletargeting:SendMessages",
           "Condition": {
             "StringEquals": {
@@ -31,6 +42,21 @@
           "Effect": "Allow",
           "Resource": "arn:aws:mobiletargeting:*:*:apps/*",
           "Sid": "AllowMobileTargetingOperationsForConnect"
+        },
+        {
+          "Action": "profile:*",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:profile:*:*:/domains/amazon-connect-*",
+            "arn:aws:profile:*:*:/templates*",
+            "arn:aws:profile:*:*:domains/amazon-connect-*"
+          ],
+          "Sid": "AllowCustomerProfilesForConnectDomain"
         },
         {
           "Action": [
@@ -108,6 +134,21 @@
             "arn:aws:iam::*:role/service-role/AmazonConnectEmailSESAccessRole"
           ],
           "Sid": "PassRoleToSESForReceiptRuleManagement"
+        },
+        {
+          "Action": [
+            "profile:ListAccountIntegrations",
+            "profile:ListDomains",
+            "profile:ListRecommenderRecipes"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowCustomerProfilesListOperations"
         },
         {
           "Action": [
@@ -288,174 +329,20 @@
         },
         {
           "Action": [
-            "profile:AddProfileKey",
-            "profile:BatchGetCalculatedAttributeForProfile",
-            "profile:BatchGetProfile",
-            "profile:CreateProfile",
-            "profile:CreateSegmentEstimate",
-            "profile:CreateUploadJob",
-            "profile:DeleteIntegration",
-            "profile:DetectProfileObjectType",
-            "profile:GetDomain",
-            "profile:GetIntegration",
-            "profile:GetProfileInsights",
-            "profile:GetProfileRecommendations",
-            "profile:GetSegmentEstimate",
-            "profile:GetSegmentMembership",
-            "profile:GetSimilarProfiles",
-            "profile:GetUploadJob",
-            "profile:GetUploadJobPath",
-            "profile:ListCalculatedAttributeDefinitions",
-            "profile:ListCalculatedAttributesForProfile",
-            "profile:ListDomainLayouts",
-            "profile:ListEventTriggers",
-            "profile:ListIntegrations",
-            "profile:ListProfileAttributeValues",
-            "profile:ListProfileObjectTypes",
-            "profile:ListRecommenders",
-            "profile:ListSegmentDefinitions",
-            "profile:ListUploadJobs",
-            "profile:PutIntegration",
-            "profile:SearchProfiles",
-            "profile:StartUploadJob",
-            "profile:StopUploadJob",
-            "profile:UpdateProfile"
+            "profile:CreateDomain",
+            "profile:CreateEventStream",
+            "profile:CreateIntegrationWorkflow",
+            "profile:DeleteDomain",
+            "profile:DeleteEventStream",
+            "profile:DeleteProfileKey",
+            "profile:DeleteWorkflow",
+            "profile:TagResource",
+            "profile:UntagResource",
+            "profile:UpdateDomain"
           ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:profile:*:*:domains/amazon-connect-*",
-          "Sid": "AllowCustomerProfilesForConnectDomain"
-        },
-        {
-          "Action": [
-            "profile:CreateCalculatedAttributeDefinition",
-            "profile:DeleteCalculatedAttributeDefinition",
-            "profile:GetCalculatedAttributeDefinition",
-            "profile:GetCalculatedAttributeForProfile",
-            "profile:UpdateCalculatedAttributeDefinition"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:profile:*:*:domains/amazon-connect-*/calculated-attributes/*"
-          ],
-          "Sid": "AllowCustomerProfilesCalculatedAttributesForConnectDomain"
-        },
-        {
-          "Action": [
-            "profile:CreateDomainLayout",
-            "profile:DeleteDomainLayout",
-            "profile:GetDomainLayout",
-            "profile:UpdateDomainLayout"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:profile:*:*:domains/amazon-connect-*/layouts/*"
-          ],
-          "Sid": "AllowCustomerProfilesDomainLayoutsForConnectDomain"
-        },
-        {
-          "Action": [
-            "profile:CreateEventTrigger",
-            "profile:DeleteEventTrigger",
-            "profile:GetEventTrigger",
-            "profile:UpdateEventTrigger"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:profile:*:*:domains/amazon-connect-*/event-triggers/*"
-          ],
-          "Sid": "AllowCustomerProfilesEventTriggerForConnectDomain"
-        },
-        {
-          "Action": [
-            "profile:CreateRecommender",
-            "profile:DeleteRecommender",
-            "profile:GetRecommender",
-            "profile:StartRecommender",
-            "profile:StopRecommender",
-            "profile:UpdateRecommender"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:profile:*:*:domains/amazon-connect-*/recommenders/*"
-          ],
-          "Sid": "AllowReadPermissionForCustomerProfilePredictiveInsights"
-        },
-        {
-          "Action": [
-            "profile:CreateSegmentDefinition",
-            "profile:CreateSegmentSnapshot",
-            "profile:DeleteSegmentDefinition",
-            "profile:GetSegmentDefinition",
-            "profile:GetSegmentSnapshot"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:profile:*:*:domains/amazon-connect-*/segment-definitions/*"
-          ],
-          "Sid": "AllowCustomerProfilesSegmentationForConnectDomain"
-        },
-        {
-          "Action": [
-            "profile:GetProfileObjectType",
-            "profile:ListObjectTypeAttributeValues",
-            "profile:ListObjectTypeAttributes",
-            "profile:ListProfileObjects"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:profile:*:*:domains/amazon-connect-*/object-types/*"
-          ],
-          "Sid": "AllowReadPermissionForCustomerProfileObjects"
-        },
-        {
-          "Action": [
-            "profile:GetProfileObjectTypeTemplate",
-            "profile:ListProfileObjectTypeTemplates"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:profile:*:*:/templates*",
-          "Sid": "AllowReadForCustomerProfileObjectTemplates"
-        },
-        {
-          "Action": [
-            "profile:GetUploadJob",
-            "profile:GetUploadJobPath",
-            "profile:StartUploadJob",
-            "profile:StopUploadJob"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:profile:*:*:domains/amazon-connect-*/upload-jobs/*"
-          ],
-          "Sid": "AllowCustomerProfilesSegmentationImportForConnectDomain"
-        },
-        {
-          "Action": [
-            "profile:ListAccountIntegrations"
-          ],
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "AllowListIntegrationForCustomerProfile"
-        },
-        {
-          "Action": [
-            "profile:ListRecommenderRecipes"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:profile:*:*:*"
-          ],
-          "Sid": "AllowReadPermissionForCustomerProfilesPersonalizeForRecommenderRecipes"
-        },
-        {
-          "Action": [
-            "profile:PutProfileObject"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:profile:*:*:domains/amazon-connect-*/object-types/*"
-          ],
-          "Sid": "AllowWritePermissionForCustomerProfileObjects"
+          "Effect": "Deny",
+          "Resource": "arn:aws:profile:*:*:domains/*",
+          "Sid": "DenyCustomerProfilesForConnectDomain"
         },
         {
           "Action": [
@@ -495,7 +382,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v54"
+    "VersionId": "v55"
   },
-  "UpdateDate": "2026-05-18T21:12:24Z"
+  "UpdateDate": "2026-05-27T21:57:16Z"
 }
