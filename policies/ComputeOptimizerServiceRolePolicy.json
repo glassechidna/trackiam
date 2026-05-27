@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/ComputeOptimizerServiceRolePolicy",
   "CreateDate": "2019-12-03T08:45:19Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4HPOQZNRNJ",
   "PolicyName": "ComputeOptimizerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:59:19Z",
+    "CreateDate": "2026-05-27T17:42:11Z",
     "Document": {
       "Statement": [
         {
@@ -40,6 +40,15 @@
         },
         {
           "Action": [
+            "dynamodb:DescribeTable",
+            "dynamodb:ListTables"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DynamoDBAccess"
+        },
+        {
+          "Action": [
             "ec2:DescribeInstances",
             "ec2:DescribeNatGateways",
             "ec2:DescribeRouteTables",
@@ -48,6 +57,23 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "Ec2Access"
+        },
+        {
+          "Action": [
+            "elasticache:DescribeCacheClusters",
+            "elasticache:DescribeServerlessCaches"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ElastiCacheAccess"
+        },
+        {
+          "Action": [
+            "memorydb:DescribeClusters"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MemoryDBAccess"
         },
         {
           "Action": [
@@ -61,12 +87,38 @@
             "*"
           ],
           "Sid": "AwsOrgsAccess"
+        },
+        {
+          "Action": [
+            "rds:DescribeDBClusters"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DocumentDBAccess"
+        },
+        {
+          "Action": [
+            "sagemaker:DescribeEndpoint",
+            "sagemaker:ListEndpoints"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SageMakerAccess"
+        },
+        {
+          "Action": [
+            "workspaces:DescribeWorkspaces",
+            "workspaces:DescribeWorkspacesConnectionStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "WorkSpacesAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-02-12T17:59:19Z"
+  "UpdateDate": "2026-05-27T17:42:11Z"
 }

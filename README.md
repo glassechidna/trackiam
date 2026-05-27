@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 456
-* Unique actions: 21321
+* Unique actions: 21327
 * Managed policies: 1490
 
 Most common managed policy name prefixes:
@@ -411,6 +411,7 @@ The following table summarises the AWS APIs.
 | [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 19 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 18 |
+| [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 18 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 18 |
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 17 |
 | [`ds-data`](services/ds-data.yml) | 0 | 0 | 17 |
@@ -432,7 +433,6 @@ The following table summarises the AWS APIs.
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
-| [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 12 |
 | [`backup-search`](services/backup-search.yml) | 0 | 0 | 12 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 11 |
 | [`opensearch`](services/opensearch.yml) | 0 | 0 | 10 |
@@ -497,11 +497,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3545 |
-| `Get` | 3222 |
-| `Delete` | 2445 |
-| `Create` | 2296 |
-| `Update` | 1988 |
+| `List` | 3546 |
+| `Get` | 3223 |
+| `Delete` | 2446 |
+| `Create` | 2297 |
+| `Update` | 1989 |
 | `Describe` | 1896 |
 | `Put` | 579 |
 | `Start` | 523 |
