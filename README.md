@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 456
-* Unique actions: 21327
-* Managed policies: 1490
+* Unique actions: 21375
+* Managed policies: 1491
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 400 |
 | `arn:aws:iam::aws:policy/Amazon*` | 369 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 341 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 342 |
 | `arn:aws:iam::aws:policy/service-role/*` | 218 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
 | Other | 154 |
@@ -121,9 +121,9 @@ The following table summarises the AWS APIs.
 | [`ecs`](services/ecs.yml) | 56 | 0 | 24 |
 | [`eks`](services/eks.yml) | 56 | 0 | 12 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
+| [`resiliencehub`](services/resiliencehub.yml) | 55 | 0 | 56 |
 | [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 38 |
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 13 |
-| [`resiliencehub`](services/resiliencehub.yml) | 55 | 0 | 8 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 8 |
 | [`lakeformation`](services/lakeformation.yml) | 54 | 1 | 7 |
 | [`wafv2`](services/wafv2.yml) | 54 | 0 | 3 |
@@ -497,14 +497,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3546 |
-| `Get` | 3223 |
-| `Delete` | 2446 |
-| `Create` | 2297 |
-| `Update` | 1989 |
+| `List` | 3561 |
+| `Get` | 3228 |
+| `Delete` | 2454 |
+| `Create` | 2306 |
+| `Update` | 1997 |
 | `Describe` | 1896 |
 | `Put` | 579 |
-| `Start` | 523 |
+| `Start` | 524 |
 | `Tag` | 319 |
 | `Untag` | 314 |
 

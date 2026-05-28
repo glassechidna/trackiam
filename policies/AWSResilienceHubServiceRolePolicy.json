@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSResilienceHubServiceRolePolicy",
+  "CreateDate": "2026-05-28T17:42:17Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4IUOIIBLV4",
+  "PolicyName": "AWSResilienceHubServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-05-28T17:42:17Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:ListAccounts",
+            "organizations:ListChildren",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListParents",
+            "organizations:ListRoots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSResilienceHubOrganizationsReadStatement"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-05-28T17:42:17Z"
+}

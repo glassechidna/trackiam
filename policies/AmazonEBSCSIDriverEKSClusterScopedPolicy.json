@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEBSCSIDriverEKSClusterScopedPolicy",
   "CreateDate": "2026-04-16T17:27:16Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KUWAGAMWF",
   "PolicyName": "AmazonEBSCSIDriverEKSClusterScopedPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-04-16T17:27:16Z",
+    "CreateDate": "2026-05-28T17:27:10Z",
     "Document": {
       "Statement": [
         {
@@ -53,6 +53,20 @@
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*:*:instance/*",
           "Sid": "AttachDetachVolumesToClusterInstance"
+        },
+        {
+          "Action": [
+            "ec2:AttachVolume",
+            "ec2:DetachVolume"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/eks:eks-cluster-name": "${aws:PrincipalTag/eks-cluster-name}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "AttachDetachVolumesToEKSStandardTaggedInstance"
         },
         {
           "Action": [
@@ -197,7 +211,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-04-16T17:27:16Z"
+  "UpdateDate": "2026-05-28T17:27:10Z"
 }
