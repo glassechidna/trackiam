@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSApplicationMigrationFullAccess",
   "CreateDate": "2021-04-07T06:56:05Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HPQNMM2HL",
   "PolicyName": "AWSApplicationMigrationFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:03:17Z",
+    "CreateDate": "2026-05-31T13:12:11Z",
     "Document": {
       "Statement": [
         {
@@ -53,6 +53,21 @@
           "Effect": "Allow",
           "Resource": "arn:aws:drs:*:*:source-server/*",
           "Sid": "VisualEditor12"
+        },
+        {
+          "Action": [
+            "fsx:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "map-migrated"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:storage-virtual-machine/*",
+          "Sid": "AllowTagSVMWithMapMigrated"
         },
         {
           "Action": [
@@ -203,6 +218,16 @@
         },
         {
           "Action": [
+            "fsx:DescribeStorageVirtualMachines"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "FSxReadPermissions"
+        },
+        {
+          "Action": [
             "kms:DescribeKey",
             "kms:ListAliases"
           ],
@@ -266,7 +291,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2026-02-12T18:03:17Z"
+  "UpdateDate": "2026-05-31T13:12:11Z"
 }

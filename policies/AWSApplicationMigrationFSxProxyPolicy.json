@@ -1,0 +1,85 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSApplicationMigrationFSxProxyPolicy",
+  "CreateDate": "2026-05-31T13:12:14Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4NQPHG73TS",
+  "PolicyName": "AWSApplicationMigrationFSxProxyPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-05-31T13:12:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "fsx:CreateVolume",
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/AWSApplicationMigrationServiceManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:volume/*/*",
+          "Sid": "FSxCreateVolume"
+        },
+        {
+          "Action": "secretsmanager:GetSecretValue",
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AWSApplicationMigrationServiceManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:*",
+          "Sid": "FSxSecret"
+        },
+        {
+          "Action": [
+            "fsx:DeleteVolume",
+            "fsx:UpdateVolume"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AWSApplicationMigrationServiceManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:volume/*/*",
+          "Sid": "FSxUpdateAndDeleteVolume"
+        },
+        {
+          "Action": [
+            "fsx:TagResource",
+            "fsx:UntagResource"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AWSApplicationMigrationServiceManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:volume/*/*",
+          "Sid": "FSxTagging"
+        },
+        {
+          "Action": "fsx:CreateVolume",
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:storage-virtual-machine/*/*",
+          "Sid": "FSxCreateVolumeSVM"
+        },
+        {
+          "Action": [
+            "fsx:DescribeStorageVirtualMachines",
+            "fsx:DescribeVolumes"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "FSxDescribe"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-05-31T13:12:14Z"
+}

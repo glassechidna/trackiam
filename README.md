@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 456
-* Unique actions: 21383
-* Managed policies: 1491
+* Unique actions: 21384
+* Managed policies: 1493
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 400 |
 | `arn:aws:iam::aws:policy/Amazon*` | 369 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 342 |
-| `arn:aws:iam::aws:policy/service-role/*` | 218 |
+| `arn:aws:iam::aws:policy/service-role/*` | 220 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
 | Other | 154 |
 
@@ -94,7 +94,7 @@ The following table summarises the AWS APIs.
 | [`imagebuilder`](services/imagebuilder.yml) | 73 | 0 | 4 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
 | [`wellarchitected`](services/wellarchitected.yml) | 72 | 0 | 1 |
-| [`mgn`](services/mgn.yml) | 70 | 0 | 64 |
+| [`mgn`](services/mgn.yml) | 70 | 0 | 65 |
 | [`route53`](services/route53.yml) | 70 | 0 | 1 |
 | [`athena`](services/athena.yml) | 68 | 0 | 13 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 1 |
@@ -504,7 +504,7 @@ Most common action prefixes:
 | `Update` | 1997 |
 | `Describe` | 1896 |
 | `Put` | 580 |
-| `Start` | 524 |
+| `Start` | 525 |
 | `Tag` | 319 |
 | `Untag` | 314 |
 

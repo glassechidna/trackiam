@@ -1,0 +1,197 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSApplicationMigrationFSxProxyVPCPolicy",
+  "CreateDate": "2026-05-31T13:27:13Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4L3KO63LXL",
+  "PolicyName": "AWSApplicationMigrationFSxProxyVPCPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-05-31T13:27:13Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "CreateSecurityGroup",
+                "CreateVpcEndpointServiceConfiguration"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:vpc-endpoint-service/*"
+          ],
+          "Sid": "EC2AllowTaggingOnCreate"
+        },
+        {
+          "Action": "elasticloadbalancing:AddTags",
+          "Condition": {
+            "StringEquals": {
+              "elasticloadbalancing:CreateAction": [
+                "CreateListener",
+                "CreateLoadBalancer",
+                "CreateTargetGroup"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticloadbalancing:*:*:listener/net/MgnFSxProxy*/*/*",
+            "arn:aws:elasticloadbalancing:*:*:loadbalancer/net/MgnFSxProxy*NLB/*",
+            "arn:aws:elasticloadbalancing:*:*:targetgroup/MgnFSxProxy*TG/*"
+          ],
+          "Sid": "FSxNLBAllowTaggingOnCreate"
+        },
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "elasticloadbalancing.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/elasticloadbalancing.amazonaws.com/AWSServiceRoleForElasticLoadBalancing",
+          "Sid": "FSxNLBRole"
+        },
+        {
+          "Action": [
+            "ec2:AcceptVpcEndpointConnections",
+            "ec2:ModifyVpcEndpointServicePermissions"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AWSApplicationMigrationServiceManaged": "false",
+              "aws:ResourceTag/file_system_id": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-endpoint-service/*",
+          "Sid": "ModifyVpcEndpointOperations"
+        },
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DeleteVpcEndpointServiceConfigurations"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AWSApplicationMigrationServiceManaged": "false",
+              "aws:ResourceTag/file_system_id": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:vpc-endpoint-service/*"
+          ],
+          "Sid": "EC2AllowOperationsOnTaggedResources"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup",
+            "ec2:CreateVpcEndpointServiceConfiguration"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/AWSApplicationMigrationServiceManaged": "false",
+              "aws:RequestTag/file_system_id": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:vpc-endpoint-service/*"
+          ],
+          "Sid": "CreateServiceEndpointResources"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:CreateListener",
+            "elasticloadbalancing:CreateLoadBalancer",
+            "elasticloadbalancing:CreateTargetGroup"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/AWSApplicationMigrationServiceManaged": "false",
+              "aws:RequestTag/file_system_id": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticloadbalancing:*:*:loadbalancer/net/MgnFSxProxy*NLB/*",
+            "arn:aws:elasticloadbalancing:*:*:targetgroup/MgnFSxProxy*/*"
+          ],
+          "Sid": "CreateFSxNLB"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:DeleteLoadBalancer",
+            "elasticloadbalancing:DeleteTargetGroup"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AWSApplicationMigrationServiceManaged": "false",
+              "aws:ResourceTag/file_system_id": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticloadbalancing:*:*:listener/net/MgnFSxProxy*/*/*",
+            "arn:aws:elasticloadbalancing:*:*:loadbalancer/net/MgnFSxProxy*/*",
+            "arn:aws:elasticloadbalancing:*:*:targetgroup/MgnFSxProxy*/*"
+          ],
+          "Sid": "ELBv2AllowOperationsOnTaggedResources"
+        },
+        {
+          "Action": "ec2:CreateSecurityGroup",
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc/*",
+          "Sid": "AllowlistAllVPCsforSGCreation"
+        },
+        {
+          "Action": "elasticloadbalancing:ModifyLoadBalancerAttributes",
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticloadbalancing:*:*:loadbalancer/net/MgnFSxProxy*/*",
+          "Sid": "ELBv2AllowModify"
+        },
+        {
+          "Action": "elasticloadbalancing:RegisterTargets",
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticloadbalancing:*:*:targetgroup/MgnFSxProxy*/*",
+          "Sid": "RegisterFSxTargetGroup"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcEndpointConnections",
+            "ec2:DescribeVpcEndpointServiceConfigurations",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs",
+            "ec2:GetSecurityGroupsForVpc",
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "elasticloadbalancing:DescribeTags",
+            "elasticloadbalancing:DescribeTargetGroups",
+            "fsx:DescribeFileSystems",
+            "fsx:DescribeStorageVirtualMachines"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeOperations"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-05-31T13:27:13Z"
+}
