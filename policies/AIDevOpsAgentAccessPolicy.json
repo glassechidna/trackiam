@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AIDevOpsAgentAccessPolicy",
   "CreateDate": "2026-03-26T03:42:09Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KEX6FTLTS",
   "PolicyName": "AIDevOpsAgentAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-05-11T21:12:21Z",
+    "CreateDate": "2026-06-01T22:42:11Z",
     "Document": {
       "Statement": [
         {
@@ -360,6 +360,7 @@
             "guardduty:GetMembers",
             "guardduty:GetThreatIntelSet",
             "guardduty:List*",
+            "health:DescribeAffectedEntities",
             "health:DescribeEventDetails",
             "health:DescribeEvents",
             "healthlake:Describe*",
@@ -710,6 +711,7 @@
             "securityhub:GetConfigurationPolicyAssociation",
             "securityhub:GetEnabledStandards",
             "securityhub:GetFindingAggregator",
+            "securityhub:GetFindings",
             "securityhub:GetInsights",
             "securityhub:List*",
             "securitylake:GetSubscriber",
@@ -866,7 +868,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-05-11T21:12:21Z"
+  "UpdateDate": "2026-06-01T22:42:11Z"
 }
