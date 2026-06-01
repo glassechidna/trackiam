@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSNetworkFirewallServiceRolePolicy",
   "CreateDate": "2020-11-17T17:17:26Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4DF6QQZAL3",
   "PolicyName": "AWSNetworkFirewallServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-03-30T17:19:09Z",
+    "CreateDate": "2026-06-01T21:57:07Z",
     "Document": {
       "Statement": [
         {
@@ -66,12 +66,26 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "ecs:DescribeContainerInstances",
+            "ecs:DescribeTasks",
+            "ecs:ListContainerInstances",
+            "ecs:ListTasks"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ecs:*:*:cluster/*",
+            "arn:aws:ecs:*:*:container-instance/*/*",
+            "arn:aws:ecs:*:*:task/*/*"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2023-03-30T17:19:09Z"
+  "UpdateDate": "2026-06-01T21:57:07Z"
 }
