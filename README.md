@@ -11,15 +11,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 456
-* Unique actions: 21414
-* Managed policies: 1495
+* Unique services: 457
+* Unique actions: 21460
+* Managed policies: 1497
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 400 |
+| `arn:aws:iam::aws:policy/AWS*` | 402 |
 | `arn:aws:iam::aws:policy/Amazon*` | 371 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 342 |
 | `arn:aws:iam::aws:policy/service-role/*` | 220 |
@@ -376,6 +376,7 @@ The following table summarises the AWS APIs.
 | [`odb`](services/odb.yml) | 0 | 0 | 53 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 48 |
 | [`route53globalresolver`](services/route53globalresolver.yml) | 0 | 0 | 48 |
+| [`finops-agent`](services/finops-agent.yml) | 0 | 0 | 46 |
 | [`health-agent`](services/health-agent.yml) | 0 | 0 | 42 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 41 |
 | [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 40 |
@@ -497,11 +498,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3568 |
-| `Get` | 3230 |
-| `Delete` | 2459 |
-| `Create` | 2310 |
-| `Update` | 2003 |
+| `List` | 3578 |
+| `Get` | 3241 |
+| `Delete` | 2465 |
+| `Create` | 2319 |
+| `Update` | 2007 |
 | `Describe` | 1901 |
 | `Put` | 580 |
 | `Start` | 525 |
