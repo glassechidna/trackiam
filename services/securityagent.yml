@@ -4,6 +4,8 @@ Actions:
   - Name: securityagent:AddArtifact
   - Name: securityagent:BatchDeleteCodeReviews
   - Name: securityagent:BatchDeletePentests
+  - Name: securityagent:BatchDeleteThreatModels
+  - Name: securityagent:BatchDeleteThreats
   - Name: securityagent:BatchGetAgentSpaces
   - Name: securityagent:BatchGetArtifactMetadata
   - Name: securityagent:BatchGetCodeReviewJobTasks
@@ -15,6 +17,10 @@ Actions:
   - Name: securityagent:BatchGetPentestJobs
   - Name: securityagent:BatchGetPentests
   - Name: securityagent:BatchGetTargetDomains
+  - Name: securityagent:BatchGetThreatModelJobTasks
+  - Name: securityagent:BatchGetThreatModelJobs
+  - Name: securityagent:BatchGetThreatModels
+  - Name: securityagent:BatchGetThreats
   - Name: securityagent:CreateAgentSpace
   - Name: securityagent:CreateApplication
   - Name: securityagent:CreateCodeReview
@@ -25,6 +31,8 @@ Actions:
   - Name: securityagent:CreatePentest
   - Name: securityagent:CreateSecurityRequirement
   - Name: securityagent:CreateTargetDomain
+  - Name: securityagent:CreateThreat
+  - Name: securityagent:CreateThreatModel
   - Name: securityagent:DeleteAgentSpace
   - Name: securityagent:DeleteApplication
   - Name: securityagent:DeleteArtifact
@@ -61,12 +69,18 @@ Actions:
   - Name: securityagent:ListSecurityRequirements
   - Name: securityagent:ListTagsForResource
   - Name: securityagent:ListTargetDomains
+  - Name: securityagent:ListThreatModelJobTasks
+  - Name: securityagent:ListThreatModelJobs
+  - Name: securityagent:ListThreatModels
+  - Name: securityagent:ListThreats
   - Name: securityagent:PutDesignReviewFeedback
   - Name: securityagent:StartCodeRemediation
   - Name: securityagent:StartCodeReviewJob
   - Name: securityagent:StartPentestJob
+  - Name: securityagent:StartThreatModelJob
   - Name: securityagent:StopCodeReviewJob
   - Name: securityagent:StopPentestJob
+  - Name: securityagent:StopThreatModelJob
   - Name: securityagent:TagResource
   - Name: securityagent:ToggleManagedSecurityRequirement
   - Name: securityagent:UntagResource
@@ -78,4 +92,6 @@ Actions:
   - Name: securityagent:UpdatePentest
   - Name: securityagent:UpdateSecurityRequirement
   - Name: securityagent:UpdateTargetDomain
+  - Name: securityagent:UpdateThreat
+  - Name: securityagent:UpdateThreatModel
   - Name: securityagent:VerifyTargetDomain

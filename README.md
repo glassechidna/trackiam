@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 457
-* Unique actions: 21473
-* Managed policies: 1497
+* Unique actions: 21489
+* Managed policies: 1499
 
 Most common managed policy name prefixes:
 
@@ -24,7 +24,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 342 |
 | `arn:aws:iam::aws:policy/service-role/*` | 220 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
-| Other | 154 |
+| Other | 156 |
 
 The following table summarises the AWS APIs. 
 
@@ -363,9 +363,9 @@ The following table summarises the AWS APIs.
 | [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 212 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 111 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
+| [`securityagent`](services/securityagent.yml) | 0 | 0 | 94 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
-| [`securityagent`](services/securityagent.yml) | 0 | 0 | 78 |
 | [`aidevops`](services/aidevops.yml) | 0 | 0 | 71 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 63 |
@@ -498,14 +498,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3582 |
+| `List` | 3586 |
 | `Get` | 3244 |
 | `Delete` | 2467 |
-| `Create` | 2321 |
-| `Update` | 2009 |
+| `Create` | 2323 |
+| `Update` | 2011 |
 | `Describe` | 1901 |
 | `Put` | 580 |
-| `Start` | 525 |
+| `Start` | 526 |
 | `Tag` | 319 |
 | `Untag` | 314 |
 

@@ -1,0 +1,58 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/FinOpsAgentOperatorPolicy",
+  "CreateDate": "2026-06-03T19:57:09Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4NUDOPM2D2",
+  "PolicyName": "FinOpsAgentOperatorPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-06-03T19:57:09Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "finops-agent:AcceptAgentRequest",
+            "finops-agent:CancelTask",
+            "finops-agent:CancelTurn",
+            "finops-agent:CreateAutomation",
+            "finops-agent:CreateConversation",
+            "finops-agent:CreateDocument",
+            "finops-agent:CreateTask",
+            "finops-agent:CreateTurn",
+            "finops-agent:DeleteArtifact",
+            "finops-agent:DeleteAutomation",
+            "finops-agent:DeleteDocument",
+            "finops-agent:GetAgentRequest",
+            "finops-agent:GetArtifactContent",
+            "finops-agent:GetArtifactMetadata",
+            "finops-agent:GetAutomation",
+            "finops-agent:GetDocumentContent",
+            "finops-agent:GetDocumentMetadata",
+            "finops-agent:GetTask",
+            "finops-agent:GetTurn",
+            "finops-agent:ListArtifacts",
+            "finops-agent:ListAutomations",
+            "finops-agent:ListConversations",
+            "finops-agent:ListDocuments",
+            "finops-agent:ListRecords",
+            "finops-agent:ListTasks",
+            "finops-agent:ListTurns",
+            "finops-agent:RejectAgentRequest",
+            "finops-agent:RestoreDocument",
+            "finops-agent:SendFeedback",
+            "finops-agent:UpdateAutomation",
+            "finops-agent:UpdateDocument"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "FinOpsAgentOperatorAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-06-03T19:57:09Z"
+}

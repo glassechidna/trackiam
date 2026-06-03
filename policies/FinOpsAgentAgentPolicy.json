@@ -1,0 +1,133 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/FinOpsAgentAgentPolicy",
+  "CreateDate": "2026-06-03T19:57:12Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4KRTUHDRKJ",
+  "PolicyName": "FinOpsAgentAgentPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-06-03T19:57:12Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:DisableRule",
+            "events:EnableRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "events:ManagedBy": "finops-agent.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/*",
+          "Sid": "EventBridgeManagedRuleManagementWritePermissions"
+        },
+        {
+          "Action": [
+            "events:DescribeRule",
+            "events:ListTargetsByRule"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/*",
+          "Sid": "EventBridgeManagedRuleManagementReadPermissions"
+        },
+        {
+          "Action": [
+            "autoscaling:DescribeAutoScalingGroups",
+            "autoscaling:DescribeAutoScalingInstances",
+            "bcm-pricing-calculator:GetPreferences",
+            "bcm-pricing-calculator:GetWorkloadEstimate",
+            "bcm-pricing-calculator:ListWorkloadEstimateUsage",
+            "bcm-pricing-calculator:ListWorkloadEstimates",
+            "budgets:ViewBudget",
+            "ce:DescribeCostCategoryDefinition",
+            "ce:GetAnomalies",
+            "ce:GetAnomalyMonitors",
+            "ce:GetCostAndUsage",
+            "ce:GetCostAndUsageComparisons",
+            "ce:GetCostAndUsageWithResources",
+            "ce:GetCostCategories",
+            "ce:GetCostComparisonDrivers",
+            "ce:GetCostForecast",
+            "ce:GetDimensionValues",
+            "ce:GetReservationCoverage",
+            "ce:GetReservationPurchaseRecommendation",
+            "ce:GetReservationUtilization",
+            "ce:GetSavingsPlansCoverage",
+            "ce:GetSavingsPlansPurchaseRecommendation",
+            "ce:GetSavingsPlansUtilization",
+            "ce:GetSavingsPlansUtilizationDetails",
+            "ce:GetTags",
+            "ce:GetUsageForecast",
+            "ce:ListCostAllocationTagBackfillHistory",
+            "ce:ListCostAllocationTags",
+            "ce:ListCostCategoryDefinitions",
+            "cloudtrail:DescribeTrails",
+            "cloudtrail:GetEventSelectors",
+            "cloudtrail:GetTrailStatus",
+            "cloudtrail:LookupEvents",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics",
+            "compute-optimizer:DescribeRecommendationExportJobs",
+            "compute-optimizer:GetAutoScalingGroupRecommendations",
+            "compute-optimizer:GetEBSVolumeRecommendations",
+            "compute-optimizer:GetEC2InstanceRecommendations",
+            "compute-optimizer:GetEC2RecommendationProjectedMetrics",
+            "compute-optimizer:GetECSServiceRecommendationProjectedMetrics",
+            "compute-optimizer:GetECSServiceRecommendations",
+            "compute-optimizer:GetEffectiveRecommendationPreferences",
+            "compute-optimizer:GetEnrollmentStatus",
+            "compute-optimizer:GetEnrollmentStatusesForOrganization",
+            "compute-optimizer:GetIdleRecommendations",
+            "compute-optimizer:GetLambdaFunctionRecommendations",
+            "compute-optimizer:GetLicenseRecommendations",
+            "compute-optimizer:GetRDSDatabaseRecommendationProjectedMetrics",
+            "compute-optimizer:GetRDSDatabaseRecommendations",
+            "compute-optimizer:GetRecommendationPreferences",
+            "compute-optimizer:GetRecommendationSummaries",
+            "cost-optimization-hub:GetRecommendation",
+            "cost-optimization-hub:ListRecommendationSummaries",
+            "cost-optimization-hub:ListRecommendations",
+            "ec2:DescribeInstances",
+            "ec2:DescribeVolumes",
+            "ecs:ListClusters",
+            "ecs:ListServices",
+            "freetier:GetFreeTierUsage",
+            "lambda:ListFunctions",
+            "lambda:ListProvisionedConcurrencyConfigs",
+            "logs:GetQueryResults",
+            "logs:StartQuery",
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAccounts",
+            "pricing:DescribeServices",
+            "pricing:GetAttributeValues",
+            "pricing:GetProducts",
+            "rds:DescribeDBClusters",
+            "rds:DescribeDBInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "FinOpsAgentDataAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-06-03T19:57:12Z"
+}
