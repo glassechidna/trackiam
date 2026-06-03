@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 457
-* Unique actions: 21460
+* Unique actions: 21473
 * Managed policies: 1497
 
 Most common managed policy name prefixes:
@@ -366,10 +366,10 @@ The following table summarises the AWS APIs.
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
 | [`securityagent`](services/securityagent.yml) | 0 | 0 | 78 |
+| [`aidevops`](services/aidevops.yml) | 0 | 0 | 71 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 63 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 61 |
-| [`aidevops`](services/aidevops.yml) | 0 | 0 | 58 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
 | [`q`](services/q.yml) | 0 | 0 | 54 |
 | [`s3tables`](services/s3tables.yml) | 0 | 0 | 53 |
@@ -498,11 +498,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3578 |
-| `Get` | 3241 |
-| `Delete` | 2465 |
-| `Create` | 2319 |
-| `Update` | 2007 |
+| `List` | 3582 |
+| `Get` | 3244 |
+| `Delete` | 2467 |
+| `Create` | 2321 |
+| `Update` | 2009 |
 | `Describe` | 1901 |
 | `Put` | 580 |
 | `Start` | 525 |
