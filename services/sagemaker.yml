@@ -359,12 +359,15 @@ Actions:
   - Name: sagemaker:BatchGetMetrics
   - Name: sagemaker:CallMlflowAppApi
   - Name: sagemaker:CallPartnerAppApi
+  - Name: sagemaker:CallWithBearerToken
+  - Name: sagemaker:CompleteRollout
   - Name: sagemaker:CreateAIBenchmarkJob
   - Name: sagemaker:CreateAIRecommendationJob
   - Name: sagemaker:CreateAIWorkloadConfig
   - Name: sagemaker:CreateClusterSchedulerConfig
   - Name: sagemaker:CreateComputeQuota
   - Name: sagemaker:CreateHubContentPresignedUrls
+  - Name: sagemaker:CreateJob
   - Name: sagemaker:CreateLineageGroupPolicy
   - Name: sagemaker:CreateMlflowApp
   - Name: sagemaker:CreatePartnerApp
@@ -378,6 +381,7 @@ Actions:
   - Name: sagemaker:DeleteAIWorkloadConfig
   - Name: sagemaker:DeleteClusterSchedulerConfig
   - Name: sagemaker:DeleteComputeQuota
+  - Name: sagemaker:DeleteJob
   - Name: sagemaker:DeleteLineageGroupPolicy
   - Name: sagemaker:DeleteMlflowApp
   - Name: sagemaker:DeletePartnerApp
@@ -392,6 +396,8 @@ Actions:
   - Name: sagemaker:DescribeClusterInference
   - Name: sagemaker:DescribeClusterSchedulerConfig
   - Name: sagemaker:DescribeComputeQuota
+  - Name: sagemaker:DescribeJob
+  - Name: sagemaker:DescribeJobSchemaVersion
   - Name: sagemaker:DescribeMlflowApp
   - Name: sagemaker:DescribePartnerApp
   - Name: sagemaker:DescribeReservedCapacity
@@ -405,6 +411,8 @@ Actions:
   - Name: sagemaker:ListClusterEvents
   - Name: sagemaker:ListClusterSchedulerConfigs
   - Name: sagemaker:ListComputeQuotas
+  - Name: sagemaker:ListJobSchemaVersions
+  - Name: sagemaker:ListJobs
   - Name: sagemaker:ListMlflowApps
   - Name: sagemaker:ListPartnerApps
   - Name: sagemaker:ListPipelineVersions
@@ -415,12 +423,15 @@ Actions:
   - Name: sagemaker:ListUltraServersByReservedCapacity
   - Name: sagemaker:PutLineageGroupPolicy
   - Name: sagemaker:PutResourcePolicy
+  - Name: sagemaker:Sample
+  - Name: sagemaker:SampleWithResponseStream
   - Name: sagemaker:SearchTrainingPlanOfferings
   - Name: sagemaker:SendSharedModelEvent
   - Name: sagemaker:StartClusterHealthCheck
   - Name: sagemaker:StartSession
   - Name: sagemaker:StopAIBenchmarkJob
   - Name: sagemaker:StopAIRecommendationJob
+  - Name: sagemaker:StopJob
   - Name: sagemaker:TrainHubModel
   - Name: sagemaker:UpdateClusterInference
   - Name: sagemaker:UpdateClusterSchedulerConfig
@@ -430,4 +441,5 @@ Actions:
   - Name: sagemaker:UpdateMlflowApp
   - Name: sagemaker:UpdatePartnerApp
   - Name: sagemaker:UpdatePipelineVersion
+  - Name: sagemaker:UpdateReward
   - Name: sagemaker:UpdateSharedModel

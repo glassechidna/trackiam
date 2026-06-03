@@ -1,0 +1,216 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerJobFullAccess",
+  "CreateDate": "2026-06-03T02:42:30Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4KMERVPAO2",
+  "PolicyName": "AmazonSageMakerJobFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-06-03T02:42:30Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "kms:DescribeKey",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSDescribeKey"
+        },
+        {
+          "Action": [
+            "bedrock-agentcore:GetAgentRuntime",
+            "bedrock-agentcore:InvokeAgentRuntime",
+            "bedrock-agentcore:StopRuntimeSession"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock-agentcore:*:*:runtime/*",
+          "Sid": "BedrockAgentCorePermissions"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DescribeDhcpOptions",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2NetworkPermissions"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "ec2:CreateAction": "CreateNetworkInterface"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "EC2NetworkInterfaceTagPermissions"
+        },
+        {
+          "Action": [
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2NetworkInterfaceDeletePermissions"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:ViaService": "s3.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSPermissions"
+        },
+        {
+          "Action": [
+            "lambda:InvokeFunction"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:function:*",
+          "Sid": "LambdaPermissions"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/sagemaker/*",
+          "Sid": "CloudWatchLogsPermissions"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "s3:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "S3Permissions"
+        },
+        {
+          "Action": [
+            "sagemaker-mlflow:CreateExperiment",
+            "sagemaker-mlflow:CreateRun",
+            "sagemaker-mlflow:EndTrace",
+            "sagemaker-mlflow:GetExperimentByName",
+            "sagemaker-mlflow:GetMetricHistory",
+            "sagemaker-mlflow:GetRun",
+            "sagemaker-mlflow:ListArtifacts",
+            "sagemaker-mlflow:LogBatch",
+            "sagemaker-mlflow:SearchTraces",
+            "sagemaker-mlflow:StartTrace",
+            "sagemaker-mlflow:UpdateRun",
+            "sagemaker:CallMlflowAppApi",
+            "sagemaker:DescribeMlflowApp"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:mlflow-app/*"
+          ],
+          "Sid": "MLflowPermissions"
+        },
+        {
+          "Action": [
+            "sagemaker:AccessModelPackage",
+            "sagemaker:CreateModelPackage",
+            "sagemaker:DescribeModelPackage",
+            "sagemaker:DescribeModelPackageGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:model-package-group/*",
+            "arn:aws:sagemaker:*:*:model-package/*"
+          ],
+          "Sid": "SageMakerModelPackagePermissions"
+        },
+        {
+          "Action": [
+            "sagemaker:DescribeHubContent"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:hub-content/*",
+            "arn:aws:sagemaker:*:*:hub/*"
+          ],
+          "Sid": "SageMakerHubPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-06-03T02:42:30Z"
+}
