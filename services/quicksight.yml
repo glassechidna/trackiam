@@ -177,6 +177,7 @@ Actions:
   # actions with no corresponding API
   - Name: quicksight:AccountConfigurations
   - Name: quicksight:AllowVendedLogDeliveryForResource
+  - Name: quicksight:BatchDeleteKnowledgeBase
   - Name: quicksight:BatchGetPreferences
   - Name: quicksight:BatchUpdatePreferences
   - Name: quicksight:CreateActionConnector
@@ -187,6 +188,7 @@ Actions:
   - Name: quicksight:CreateEmailCustomizationTemplate
   - Name: quicksight:CreateExtensionAccess
   - Name: quicksight:CreateFlow
+  - Name: quicksight:CreateOAuthClientApplication
   - Name: quicksight:CreateReader
   - Name: quicksight:CreateSpace
   - Name: quicksight:CreateUser
@@ -200,6 +202,8 @@ Actions:
   - Name: quicksight:DeleteEmailCustomizationTemplate
   - Name: quicksight:DeleteExtensionAccess
   - Name: quicksight:DeleteFlow
+  - Name: quicksight:DeleteKnowledgeBase
+  - Name: quicksight:DeleteOAuthClientApplication
   - Name: quicksight:DeleteSpace
   - Name: quicksight:DeleteUserCustomPermission
   - Name: quicksight:DescribeAccountCustomPermission
@@ -218,6 +222,9 @@ Actions:
   - Name: quicksight:DescribeEmailCustomizationTemplate
   - Name: quicksight:DescribeExtensionAccess
   - Name: quicksight:DescribeFlow
+  - Name: quicksight:DescribeKnowledgeBase
+  - Name: quicksight:DescribeKnowledgeBasePermissions
+  - Name: quicksight:DescribeOAuthClientApplication
   - Name: quicksight:DescribeQPersonalizationConfiguration
   - Name: quicksight:DescribeQuickIndexCapacity
   - Name: quicksight:DescribeQuickSightQSearchConfiguration
@@ -241,9 +248,12 @@ Actions:
   - Name: quicksight:ListFlows
   - Name: quicksight:ListFoldersForResource
   - Name: quicksight:ListKMSKeysForUser
+  - Name: quicksight:ListKnowledgeBases
+  - Name: quicksight:ListOAuthClientApplications
   - Name: quicksight:ListSelfUpgrades
   - Name: quicksight:ListSpaceResources
   - Name: quicksight:ListSpaces
+  - Name: quicksight:ListUsersIndexCapacity
   - Name: quicksight:PassDataSet
   - Name: quicksight:PassDataSource
   - Name: quicksight:PredictQAResults
@@ -255,6 +265,7 @@ Actions:
   - Name: quicksight:SearchAgents
   - Name: quicksight:SearchDirectoryGroups
   - Name: quicksight:SearchFlows
+  - Name: quicksight:SearchKnowledgeBases
   - Name: quicksight:SearchSpaces
   - Name: quicksight:SearchTopics
   - Name: quicksight:SearchUsers
@@ -281,6 +292,8 @@ Actions:
   - Name: quicksight:UpdateExtensionAccess
   - Name: quicksight:UpdateFlow
   - Name: quicksight:UpdateFlowPermissions
+  - Name: quicksight:UpdateKnowledgeBasePermissions
+  - Name: quicksight:UpdateOAuthClientApplication
   - Name: quicksight:UpdateQPersonalizationConfiguration
   - Name: quicksight:UpdateQuickIndexCapacity
   - Name: quicksight:UpdateQuickSightQSearchConfiguration
