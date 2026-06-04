@@ -1,0 +1,666 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/EC2ImageBuilderExecutionPolicy",
+  "CreateDate": "2026-06-04T17:12:14Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4GT75OHC7J",
+  "PolicyName": "EC2ImageBuilderExecutionPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-06-04T17:12:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CancelExportTask"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:export-image-task/*"
+          ],
+          "Sid": "CancelExportImageTaskPermissions"
+        },
+        {
+          "Action": [
+            "ec2:CreateImage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*::image/*",
+            "arn:aws:ec2:*::snapshot/*"
+          ],
+          "Sid": "EC2CreateImagePermissionsForImage"
+        },
+        {
+          "Action": [
+            "ec2:CreateImage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "EC2CreateImagePermissionsForInstance"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": [
+                "EC2 Fast Launch",
+                "EC2 Image Builder"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*::snapshot/*"
+          ],
+          "Sid": "CreateEC2ImageBuilderTagsPermissions"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": [
+                "EC2 Fast Launch",
+                "EC2 Image Builder"
+              ],
+              "ec2:CreateAction": [
+                "CreateImage",
+                "RunInstances"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CreateTagsOnCreatePermissions"
+        },
+        {
+          "Action": [
+            "ec2:DeregisterImage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*::image/*"
+          ],
+          "Sid": "EC2DeregisterImagePermissions"
+        },
+        {
+          "Action": [
+            "ec2:EnableFastLaunch"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*::image/*"
+          ],
+          "Sid": "EnableFastLaunchPermissions"
+        },
+        {
+          "Action": [
+            "ec2:ExportImage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*::image/*"
+          ],
+          "Sid": "ExportImageBuilderImagePermissions"
+        },
+        {
+          "Action": [
+            "ec2:ModifyImageAttribute"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2ModifyImageAttributePermissions"
+        },
+        {
+          "Action": [
+            "ec2:ModifySnapshotAttribute"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*::snapshot/*"
+          ],
+          "Sid": "EC2SnapshotAttributeModificationPermissions"
+        },
+        {
+          "Action": [
+            "ec2:RegisterImage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*::image/*"
+          ],
+          "Sid": "EC2RegisterImagePermissionsForImage"
+        },
+        {
+          "Action": [
+            "ec2:RegisterImage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*::snapshot/*"
+          ],
+          "Sid": "EC2RegisterImagePermissionsForSnapshot"
+        },
+        {
+          "Action": [
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": [
+                "EC2 Fast Launch",
+                "EC2 Image Builder"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "RunInstancesWithEC2ImageBuilderRequestTagsPermissions"
+        },
+        {
+          "Action": [
+            "ec2:StartInstances",
+            "ec2:StopInstances",
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2InstanceStateChangePermissions"
+        },
+        {
+          "Action": [
+            "ecr:BatchDeleteImage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ecr:*:*:repository/image-builder-*"
+          ],
+          "Sid": "DeleteECRImageForInspectorScanningPermissions"
+        },
+        {
+          "Action": [
+            "ecr:CreateRepository",
+            "ecr:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ecr:*:*:repository/image-builder-*"
+          ],
+          "Sid": "CreateECRImageForInspectorScanningPermissions"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "ec2fastlaunch.amazonaws.com",
+                "ssm.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/*"
+          ],
+          "Sid": "CreateSLRForOtherServicesPermissions"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "ec2.amazonaws.com",
+                "ec2.amazonaws.com.cn",
+                "vmie.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/*"
+          ],
+          "Sid": "IAMPassRolePermissions"
+        },
+        {
+          "Action": [
+            "imagebuilder:StartImagePipelineExecution",
+            "imagebuilder:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:imagebuilder:*:*:image-pipeline/*"
+          ],
+          "Sid": "StartImagePipelineExecutionPermissions"
+        },
+        {
+          "Action": [
+            "kms:CreateGrant"
+          ],
+          "Condition": {
+            "Bool": {
+              "kms:GrantIsForAWSResource": true
+            },
+            "StringLike": {
+              "kms:ViaService": [
+                "ec2.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:kms:*:*:key/*"
+          ],
+          "Sid": "EC2KMSGrantKeyPermissions"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:Encrypt",
+            "kms:GenerateDataKeyWithoutPlaintext",
+            "kms:ReEncryptFrom",
+            "kms:ReEncryptTo"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "kms:EncryptionContextKeys": [
+                "aws:ebs:id"
+              ]
+            },
+            "StringLike": {
+              "kms:ViaService": [
+                "ec2.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:kms:*:*:key/*"
+          ],
+          "Sid": "EC2KMSPermissions"
+        },
+        {
+          "Action": [
+            "kms:DescribeKey"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": [
+                "ec2.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:kms:*:*:key/*"
+          ],
+          "Sid": "EC2KMSDescribeKeyPermissions"
+        },
+        {
+          "Action": [
+            "sns:Publish"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sns:*:*:*"
+          ],
+          "Sid": "PublishNotificationToCustomerSNSPermissions"
+        },
+        {
+          "Action": [
+            "ssm:AddTagsToResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:association/*"
+          ],
+          "Sid": "InventoryCollectionTagPermissions"
+        },
+        {
+          "Action": [
+            "ssm:CreateAssociation"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "InventoryCollectionInstancePermissions"
+        },
+        {
+          "Action": [
+            "ssm:SendCommand"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/CreatedBy": "EC2 Image Builder"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "SendCommandEC2ImageBuilderInstancePermissions"
+        },
+        {
+          "Action": [
+            "ec2:CopyImage"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2CopyPermissions"
+        },
+        {
+          "Action": [
+            "ec2:CreateLaunchTemplateVersion",
+            "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribeLaunchTemplates",
+            "ec2:ModifyLaunchTemplate"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LaunchTemplatePermissions"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:export-image-task/*",
+            "arn:aws:ec2:*::image/*"
+          ],
+          "Sid": "CreateCustomerTagsPermissions"
+        },
+        {
+          "Action": [
+            "ec2:DescribeExportImageTasks",
+            "ec2:DescribeHosts",
+            "ec2:DescribeImages",
+            "ec2:DescribeImportImageTasks",
+            "ec2:DescribeInstanceAttribute",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstanceTypeOfferings",
+            "ec2:DescribeInstanceTypes",
+            "ec2:DescribeInstances",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeTags"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2ReadOnlyPermissions"
+        },
+        {
+          "Action": [
+            "ec2:ExportImage"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:export-image-task/*"
+          ],
+          "Sid": "CreateExportImageTaskPermissions"
+        },
+        {
+          "Action": [
+            "ec2:RunInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:key-pair/*",
+            "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*::image/*",
+            "arn:aws:ec2:*::snapshot/*",
+            "arn:aws:license-manager:*:*:license-configuration:*"
+          ],
+          "Sid": "RunInstancesPermissions"
+        },
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:DescribeRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:events:*:*:rule/ImageBuilder-*"
+          ],
+          "Sid": "EventBridgePermissionsForInspectorScanning"
+        },
+        {
+          "Action": [
+            "inspector2:ListCoverage",
+            "inspector2:ListFindings"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListInspectorFindingsPermissions"
+        },
+        {
+          "Action": [
+            "license-manager:UpdateLicenseSpecificationsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:license-manager:*:*:license-configuration:*"
+          ],
+          "Sid": "UpdateCustomerLicensePermissions"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/imagebuilder/*"
+          ],
+          "Sid": "CloudWatchLogsPermissions"
+        },
+        {
+          "Action": [
+            "ssm:CreateAssociation"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:association/*",
+            "arn:aws:ssm:*:*:document/AWS-GatherSoftwareInventory"
+          ],
+          "Sid": "InventoryCollectionAssociationPermissions"
+        },
+        {
+          "Action": [
+            "ssm:DeleteAssociation"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:association/*"
+          ],
+          "Sid": "DeleteInventoryCollectionAssociationPermissions"
+        },
+        {
+          "Action": [
+            "ssm:DescribeAssociationExecutions"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:association/*"
+          ],
+          "Sid": "SystemsManagerPermissionsForAssociation"
+        },
+        {
+          "Action": [
+            "ssm:DescribeInstanceAssociationsStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "SystemsManagerPermissionsForInstance"
+        },
+        {
+          "Action": [
+            "ssm:DescribeInstanceInformation",
+            "ssm:GetCommandInvocation",
+            "ssm:ListCommandInvocations",
+            "ssm:ListInventoryEntries"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SystemsManagerPermissions"
+        },
+        {
+          "Action": [
+            "ssm:GetParameter"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*::parameter/aws/service/*"
+          ],
+          "Sid": "ParameterStorePermissionsForServiceManagedParameters"
+        },
+        {
+          "Action": [
+            "ssm:GetParameter",
+            "ssm:PutParameter"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:parameter/imagebuilder/*"
+          ],
+          "Sid": "ParameterStorePermissionsForImageBuilderParameters"
+        },
+        {
+          "Action": [
+            "ssm:SendCommand"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/AWS-RunPowerShellScript",
+            "arn:aws:ssm:*:*:document/AWS-RunShellScript",
+            "arn:aws:ssm:*:*:document/AWSEC2-RunSysprep"
+          ],
+          "Sid": "SendCommandDocumentPermissions"
+        },
+        {
+          "Action": [
+            "sts:AssumeRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/EC2ImageBuilderDistributionCrossAccountRole"
+          ],
+          "Sid": "CrossAccountAssumeRolePermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-06-04T17:12:14Z"
+}
