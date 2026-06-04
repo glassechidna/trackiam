@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMPermissiveExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:08Z",
-  "DefaultVersionId": "v20",
+  "DefaultVersionId": "v21",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MQ2K3CR4F",
   "PolicyName": "SageMakerStudioUserIAMPermissiveExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-05-29T20:27:23Z",
+    "CreateDate": "2026-06-04T21:27:28Z",
     "Document": {
       "Statement": [
         {
@@ -17,6 +17,7 @@
               "iam:PassedToService": [
                 "airflow-serverless.amazonaws.com",
                 "bedrock.amazonaws.com",
+                "elasticmapreduce.amazonaws.com",
                 "emr-serverless.amazonaws.com",
                 "glue.amazonaws.com",
                 "lakeformation.amazonaws.com",
@@ -65,6 +66,7 @@
             "athena:GetSessionStatus",
             "athena:StartSession",
             "athena:TerminateSession",
+            "elasticmapreduce:*Session*",
             "emr-serverless:*Dashboard*",
             "emr-serverless:*Session*",
             "glue:CancelStatement",
@@ -72,6 +74,7 @@
             "glue:DeleteSession",
             "glue:GetDashboardUrl",
             "glue:GetSession",
+            "glue:GetSessionEndpoint",
             "glue:GetStatement",
             "glue:RunStatement",
             "glue:StopSession"
@@ -85,6 +88,7 @@
           "Effect": "Deny",
           "Resource": [
             "arn:aws:athena:*:*:workgroup/*/session/*",
+            "arn:aws:elasticmapreduce:*:*:cluster/*/session/*",
             "arn:aws:emr-serverless:*:*:/applications/*/sessions/*",
             "arn:aws:glue:*:*:session/*"
           ],
@@ -94,6 +98,8 @@
           "Action": [
             "athena:TagResource",
             "athena:UntagResource",
+            "elasticmapreduce:AddTags",
+            "elasticmapreduce:RemoveTags",
             "emr-serverless:*Resource",
             "glue:TagResource",
             "glue:UntagResource"
@@ -106,6 +112,7 @@
           "Effect": "Deny",
           "Resource": [
             "arn:aws:athena:*:*:workgroup/*/session/*",
+            "arn:aws:elasticmapreduce:*:*:cluster/*/session/*",
             "arn:aws:emr-serverless:*:*:/applications/*/sessions/*",
             "arn:aws:glue:*:*:session/*"
           ],
@@ -390,6 +397,7 @@
             "athena:*",
             "bedrock:*",
             "codewhisperer:*",
+            "elasticmapreduce:*",
             "emr-serverless:*",
             "q:*",
             "sagemaker-mlflow:*",
@@ -602,7 +610,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v20"
+    "VersionId": "v21"
   },
-  "UpdateDate": "2026-05-29T20:27:23Z"
+  "UpdateDate": "2026-06-04T21:27:28Z"
 }

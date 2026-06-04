@@ -1,28 +1,43 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchAPIKeyAccess",
   "CreateDate": "2026-05-08T08:57:08Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4EOV7OM4RW",
   "PolicyName": "CloudWatchAPIKeyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-05-08T08:57:08Z",
+    "CreateDate": "2026-06-04T20:42:29Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:EncryptionContext:aws:cloudwatch:arn": "arn:aws:cloudwatch:*:*:dataset/*",
+              "kms:ViaService": "cloudwatch.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSDecryptForCMKDatasets"
+        },
         {
           "Action": [
             "cloudwatch:CallWithBearerToken",
             "cloudwatch:PutMetricData"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "CloudWatchMetricsAPIs"
         }
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v1"
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-05-08T08:57:08Z"
+  "UpdateDate": "2026-06-04T20:42:29Z"
 }

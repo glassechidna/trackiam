@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioAdminIAMDefaultExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v21",
+  "DefaultVersionId": "v22",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NZY6YGCPE",
   "PolicyName": "SageMakerStudioAdminIAMDefaultExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-05-11T20:42:19Z",
+    "CreateDate": "2026-06-04T21:27:17Z",
     "Document": {
       "Statement": [
         {
@@ -52,6 +52,7 @@
                 "airflow-serverless.amazonaws.com",
                 "bedrock.amazonaws.com",
                 "datazone.amazonaws.com",
+                "elasticmapreduce.amazonaws.com",
                 "emr-serverless.amazonaws.com",
                 "redshift.amazonaws.com",
                 "scheduler.amazonaws.com"
@@ -111,6 +112,7 @@
             "athena:GetSessionStatus",
             "athena:StartSession",
             "athena:TerminateSession",
+            "elasticmapreduce:*Session*",
             "emr-serverless:*Dashboard*",
             "emr-serverless:*Session*",
             "glue:CancelStatement",
@@ -118,6 +120,7 @@
             "glue:DeleteSession",
             "glue:GetDashboardUrl",
             "glue:GetSession",
+            "glue:GetSessionEndpoint",
             "glue:GetStatement",
             "glue:RunStatement",
             "glue:StopSession"
@@ -131,6 +134,7 @@
           "Effect": "Deny",
           "Resource": [
             "arn:aws:athena:*:*:workgroup/*/session/*",
+            "arn:aws:elasticmapreduce:*:*:cluster/*/session/*",
             "arn:aws:emr-serverless:*:*:/applications/*/sessions/*",
             "arn:aws:glue:*:*:session/*"
           ],
@@ -140,6 +144,8 @@
           "Action": [
             "athena:TagResource",
             "athena:UntagResource",
+            "elasticmapreduce:AddTags",
+            "elasticmapreduce:RemoveTags",
             "emr-serverless:*Resource",
             "glue:TagResource",
             "glue:UntagResource"
@@ -152,6 +158,7 @@
           "Effect": "Deny",
           "Resource": [
             "arn:aws:athena:*:*:workgroup/*/session/*",
+            "arn:aws:elasticmapreduce:*:*:cluster/*/session/*",
             "arn:aws:emr-serverless:*:*:/applications/*/sessions/*",
             "arn:aws:glue:*:*:session/*"
           ],
@@ -181,7 +188,8 @@
             "ForAllValues:StringLike": {
               "aws:TagKeys": [
                 "AmazonDataZone*",
-                "aws:cloudformation:*"
+                "aws:cloudformation:*",
+                "for-use-with-amazon-emr-managed-policies"
               ]
             }
           },
@@ -775,6 +783,13 @@
         },
         {
           "Action": [
+            "elasticmapreduce:*PersistentAppUI*",
+            "elasticmapreduce:*Tag*",
+            "elasticmapreduce:Describe*",
+            "elasticmapreduce:Get*",
+            "elasticmapreduce:List*",
+            "elasticmapreduce:Start*",
+            "elasticmapreduce:Terminate*",
             "emr-serverless:*Resource",
             "emr-serverless:Access*",
             "emr-serverless:Get*",
@@ -784,7 +799,7 @@
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "EMRServerless"
+          "Sid": "EMR"
         },
         {
           "Action": [
@@ -1033,7 +1048,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v21"
+    "VersionId": "v22"
   },
-  "UpdateDate": "2026-05-11T20:42:19Z"
+  "UpdateDate": "2026-06-04T21:27:17Z"
 }

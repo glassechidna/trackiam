@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v68",
+  "DefaultVersionId": "v69",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-05-28T16:27:24Z",
+    "CreateDate": "2026-06-04T21:27:16Z",
     "Document": {
       "Statement": [
         {
@@ -921,6 +921,8 @@
         },
         {
           "Action": [
+            "elasticmapreduce:*Session*",
+            "elasticmapreduce:AddTags",
             "elasticmapreduce:DescribeCluster",
             "elasticmapreduce:GetManagedScalingPolicy",
             "elasticmapreduce:GetOnClusterAppUIPresignedURL",
@@ -1013,6 +1015,62 @@
         },
         {
           "Action": [
+            "glue:*Session*",
+            "glue:*Statement*",
+            "glue:BatchGetJobs",
+            "glue:BatchStopJobRun",
+            "glue:CancelDataQualityRuleRecommendationRun",
+            "glue:CancelDataQualityRulesetEvaluationRun",
+            "glue:DeleteBlueprint",
+            "glue:DeleteDataQualityRuleset",
+            "glue:DeleteJob",
+            "glue:DeleteWorkflow",
+            "glue:GetDashboardUrl",
+            "glue:GetDataQualityModel",
+            "glue:GetDataQualityModelResult",
+            "glue:GetDataQualityResult",
+            "glue:GetDataQualityRuleRecommendationRun",
+            "glue:GetDataQualityRuleset",
+            "glue:GetDataQualityRulesetEvaluationRun",
+            "glue:GetJob",
+            "glue:GetJobRun",
+            "glue:GetJobRuns",
+            "glue:NotifyEvent",
+            "glue:PublishDataQuality",
+            "glue:PutDataQualityProfileAnnotation",
+            "glue:PutDataQualityStatisticAnnotation",
+            "glue:PutWorkflowRunProperties",
+            "glue:ResumeWorkflowRun",
+            "glue:StartBlueprintRun",
+            "glue:StartDataQualityRuleRecommendationRun",
+            "glue:StartDataQualityRulesetEvaluationRun",
+            "glue:StartJobRun",
+            "glue:StartWorkflowRun",
+            "glue:StopWorkflowRun",
+            "glue:UpdateBlueprint",
+            "glue:UpdateDataQualityRuleset",
+            "glue:UpdateJob",
+            "glue:UpdateWorkflow"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalTag/EnableGlueWorkloadsPermissions": "true",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:blueprint/*",
+            "arn:aws:glue:*:*:dataQualityRuleset/*",
+            "arn:aws:glue:*:*:job/*",
+            "arn:aws:glue:*:*:session/*",
+            "arn:aws:glue:*:*:workflow/*"
+          ],
+          "Sid": "GluePermissions"
+        },
+        {
+          "Action": [
             "glue:BatchCreatePartition",
             "glue:BatchDeletePartition",
             "glue:BatchDeleteTable",
@@ -1061,67 +1119,6 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "GlueDatalakePermissions"
-        },
-        {
-          "Action": [
-            "glue:BatchGetJobs",
-            "glue:BatchStopJobRun",
-            "glue:CancelDataQualityRuleRecommendationRun",
-            "glue:CancelDataQualityRulesetEvaluationRun",
-            "glue:CancelStatement",
-            "glue:DeleteBlueprint",
-            "glue:DeleteDataQualityRuleset",
-            "glue:DeleteJob",
-            "glue:DeleteSession",
-            "glue:DeleteWorkflow",
-            "glue:GetDashboardUrl",
-            "glue:GetDataQualityModel",
-            "glue:GetDataQualityModelResult",
-            "glue:GetDataQualityResult",
-            "glue:GetDataQualityRuleRecommendationRun",
-            "glue:GetDataQualityRuleset",
-            "glue:GetDataQualityRulesetEvaluationRun",
-            "glue:GetJob",
-            "glue:GetJobRun",
-            "glue:GetJobRuns",
-            "glue:GetSession",
-            "glue:GetStatement",
-            "glue:ListStatements",
-            "glue:NotifyEvent",
-            "glue:PublishDataQuality",
-            "glue:PutDataQualityProfileAnnotation",
-            "glue:PutDataQualityStatisticAnnotation",
-            "glue:PutWorkflowRunProperties",
-            "glue:ResumeWorkflowRun",
-            "glue:RunStatement",
-            "glue:StartBlueprintRun",
-            "glue:StartDataQualityRuleRecommendationRun",
-            "glue:StartDataQualityRulesetEvaluationRun",
-            "glue:StartJobRun",
-            "glue:StartWorkflowRun",
-            "glue:StopSession",
-            "glue:StopWorkflowRun",
-            "glue:UpdateBlueprint",
-            "glue:UpdateDataQualityRuleset",
-            "glue:UpdateJob",
-            "glue:UpdateWorkflow"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "aws:PrincipalTag/EnableGlueWorkloadsPermissions": "true",
-              "aws:ResourceAccount": "${aws:PrincipalAccount}",
-              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:glue:*:*:blueprint/*",
-            "arn:aws:glue:*:*:dataQualityRuleset/*",
-            "arn:aws:glue:*:*:job/*",
-            "arn:aws:glue:*:*:session/*",
-            "arn:aws:glue:*:*:workflow/*"
-          ],
-          "Sid": "GluePermissions"
         },
         {
           "Action": [
@@ -1397,6 +1394,7 @@
                 "access-grants.s3.amazonaws.com",
                 "airflow-serverless.amazonaws.com",
                 "airflow.amazonaws.com",
+                "elasticmapreduce.amazonaws.com",
                 "emr-serverless.amazonaws.com",
                 "glue.amazonaws.com",
                 "sagemaker.amazonaws.com",
@@ -2826,7 +2824,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v68"
+    "VersionId": "v69"
   },
-  "UpdateDate": "2026-05-28T16:27:24Z"
+  "UpdateDate": "2026-06-04T21:27:16Z"
 }

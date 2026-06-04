@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMDefaultExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v25",
+  "DefaultVersionId": "v26",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BV3PMY4IB",
   "PolicyName": "SageMakerStudioUserIAMDefaultExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-05-26T17:27:26Z",
+    "CreateDate": "2026-06-04T21:27:14Z",
     "Document": {
       "Statement": [
         {
@@ -53,6 +53,7 @@
             "athena:GetSessionStatus",
             "athena:StartSession",
             "athena:TerminateSession",
+            "elasticmapreduce:*Session*",
             "emr-serverless:*Dashboard*",
             "emr-serverless:*Session*",
             "glue:CancelStatement",
@@ -60,6 +61,7 @@
             "glue:DeleteSession",
             "glue:GetDashboardUrl",
             "glue:GetSession",
+            "glue:GetSessionEndpoint",
             "glue:GetStatement",
             "glue:RunStatement",
             "glue:StopSession"
@@ -73,6 +75,7 @@
           "Effect": "Deny",
           "Resource": [
             "arn:aws:athena:*:*:workgroup/*/session/*",
+            "arn:aws:elasticmapreduce:*:*:cluster/*/session/*",
             "arn:aws:emr-serverless:*:*:/applications/*/sessions/*",
             "arn:aws:glue:*:*:session/*"
           ],
@@ -82,6 +85,8 @@
           "Action": [
             "athena:TagResource",
             "athena:UntagResource",
+            "elasticmapreduce:AddTags",
+            "elasticmapreduce:RemoveTags",
             "emr-serverless:*Resource",
             "glue:TagResource",
             "glue:UntagResource"
@@ -94,6 +99,7 @@
           "Effect": "Deny",
           "Resource": [
             "arn:aws:athena:*:*:workgroup/*/session/*",
+            "arn:aws:elasticmapreduce:*:*:cluster/*/session/*",
             "arn:aws:emr-serverless:*:*:/applications/*/sessions/*",
             "arn:aws:glue:*:*:session/*"
           ],
@@ -122,6 +128,7 @@
               "iam:PassedToService": [
                 "airflow-serverless.amazonaws.com",
                 "bedrock.amazonaws.com",
+                "elasticmapreduce.amazonaws.com",
                 "emr-serverless.amazonaws.com",
                 "glue.amazonaws.com",
                 "lakeformation.amazonaws.com",
@@ -735,6 +742,13 @@
         },
         {
           "Action": [
+            "elasticmapreduce:*PersistentAppUI*",
+            "elasticmapreduce:*Tag*",
+            "elasticmapreduce:Describe*",
+            "elasticmapreduce:Get*",
+            "elasticmapreduce:List*",
+            "elasticmapreduce:Start*",
+            "elasticmapreduce:Terminate*",
             "emr-serverless:*Resource",
             "emr-serverless:Access*Endpoints",
             "emr-serverless:Get*",
@@ -744,7 +758,7 @@
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "EMRServerless"
+          "Sid": "EMR"
         },
         {
           "Action": [
@@ -939,7 +953,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v25"
+    "VersionId": "v26"
   },
-  "UpdateDate": "2026-05-26T17:27:26Z"
+  "UpdateDate": "2026-06-04T21:27:14Z"
 }
