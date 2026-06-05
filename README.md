@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 457
-* Unique actions: 21510
+* Unique actions: 21546
 * Managed policies: 1500
 
 Most common managed policy name prefixes:
@@ -249,7 +249,7 @@ The following table summarises the AWS APIs.
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 18 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 22 | 0 | 9 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 64 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 71 |
 | [`mgh`](services/mgh.yml) | 21 | 0 | 25 |
 | [`resource-explorer-2`](services/resource-explorer-2.yml) | 21 | 0 | 16 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
@@ -374,6 +374,7 @@ The following table summarises the AWS APIs.
 | [`q`](services/q.yml) | 0 | 0 | 54 |
 | [`s3tables`](services/s3tables.yml) | 0 | 0 | 53 |
 | [`odb`](services/odb.yml) | 0 | 0 | 53 |
+| [`transform-custom`](services/transform-custom.yml) | 0 | 0 | 51 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 48 |
 | [`route53globalresolver`](services/route53globalresolver.yml) | 0 | 0 | 48 |
 | [`finops-agent`](services/finops-agent.yml) | 0 | 0 | 46 |
@@ -402,7 +403,6 @@ The following table summarises the AWS APIs.
 | [`gameliftstreams`](services/gameliftstreams.yml) | 0 | 0 | 24 |
 | [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 24 |
 | [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 23 |
-| [`transform-custom`](services/transform-custom.yml) | 0 | 0 | 22 |
 | [`transform`](services/transform.yml) | 0 | 0 | 22 |
 | [`invoicing`](services/invoicing.yml) | 0 | 0 | 22 |
 | [`evs`](services/evs.yml) | 0 | 0 | 22 |
@@ -498,14 +498,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3591 |
-| `Get` | 3246 |
-| `Delete` | 2470 |
-| `Create` | 2325 |
-| `Update` | 2015 |
+| `List` | 3599 |
+| `Get` | 3254 |
+| `Delete` | 2475 |
+| `Create` | 2330 |
+| `Update` | 2020 |
 | `Describe` | 1904 |
 | `Put` | 580 |
-| `Start` | 526 |
+| `Start` | 527 |
 | `Tag` | 319 |
 | `Untag` | 314 |
 

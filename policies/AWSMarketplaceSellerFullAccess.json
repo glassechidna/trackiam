@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerFullAccess",
   "CreateDate": "2019-07-02T20:40:09Z",
-  "DefaultVersionId": "v29",
+  "DefaultVersionId": "v30",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JF7OFUANW",
   "PolicyName": "AWSMarketplaceSellerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-05-07T18:27:21Z",
+    "CreateDate": "2026-06-05T18:12:20Z",
     "Document": {
       "Statement": [
         {
@@ -154,6 +154,16 @@
         },
         {
           "Action": [
+            "aws-marketplace:CreateVerificationEvidence",
+            "aws-marketplace:GetVerificationEvidence",
+            "aws-marketplace:UpdateVerificationEvidence"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-marketplace:*:*:verification-type/*/verification-evidence/*",
+          "Sid": "MarketplaceSellerVerificationEvidenceManagement"
+        },
+        {
+          "Action": [
             "aws-marketplace:DeleteResourcePolicy",
             "aws-marketplace:GetResourcePolicy",
             "aws-marketplace:PutResourcePolicy"
@@ -184,6 +194,17 @@
         },
         {
           "Action": [
+            "aws-marketplace:GetVerification",
+            "aws-marketplace:ListVerificationEvidence",
+            "aws-marketplace:ListVerifications",
+            "aws-marketplace:StartVerification"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MarketplaceSellerVerificationManagement"
+        },
+        {
+          "Action": [
             "aws-marketplace:ListTagsForResource",
             "aws-marketplace:TagResource",
             "aws-marketplace:UntagResource"
@@ -191,7 +212,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:aws-marketplace:*:*:AWSMarketplace*/*",
-            "arn:aws:aws-marketplace:*:*:catalog/AWSMarketplace*/*"
+            "arn:aws:aws-marketplace:*:*:catalog/AWSMarketplace*/*",
+            "arn:aws:aws-marketplace:*:*:verification-type/*/verification-evidence/*"
           ],
           "Sid": "TagManagement"
         },
@@ -259,7 +281,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v29"
+    "VersionId": "v30"
   },
-  "UpdateDate": "2026-05-07T18:27:21Z"
+  "UpdateDate": "2026-06-05T18:12:20Z"
 }
