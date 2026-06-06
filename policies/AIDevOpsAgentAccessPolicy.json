@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AIDevOpsAgentAccessPolicy",
   "CreateDate": "2026-03-26T03:42:09Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KEX6FTLTS",
   "PolicyName": "AIDevOpsAgentAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-01T22:42:11Z",
+    "CreateDate": "2026-06-06T02:27:33Z",
     "Document": {
       "Statement": [
         {
@@ -21,7 +21,14 @@
             "acm-pca:List*",
             "acm:DescribeCertificate",
             "acm:GetAccountConfiguration",
+            "aidevops:GetAsset",
+            "aidevops:GetAssetContent",
+            "aidevops:GetAssetFile",
             "aidevops:GetKnowledgeItem",
+            "aidevops:ListAssetFiles",
+            "aidevops:ListAssetTypes",
+            "aidevops:ListAssetVersions",
+            "aidevops:ListAssets",
             "aidevops:ListKnowledgeItems",
             "airflow:List*",
             "amplify:GetApp",
@@ -620,6 +627,7 @@
             "rekognition:Describe*",
             "rekognition:List*",
             "resiliencehub:Describe*",
+            "resiliencehub:Get*",
             "resiliencehub:List*",
             "resource-explorer-2:GetDefaultView",
             "resource-explorer-2:GetIndex",
@@ -868,7 +876,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2026-06-01T22:42:11Z"
+  "UpdateDate": "2026-06-06T02:27:33Z"
 }
