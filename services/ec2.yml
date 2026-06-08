@@ -627,6 +627,7 @@ Actions:
 
   # actions with no corresponding API
   - Name: ec2:AcceptCapacityReservationBillingOwnership
+  - Name: ec2:AcceptTransitGatewayClientVpnAttachment
   - Name: ec2:AssociateCapacityReservationBillingOwner
   - Name: ec2:AssociateRouteServer
   - Name: ec2:AssociateSecurityGroupVpc
@@ -637,6 +638,7 @@ Actions:
   - Name: ec2:CopyVolumes
   - Name: ec2:CreateCapacityManagerDataExport
   - Name: ec2:CreateCapacityReservationBySplitting
+  - Name: ec2:CreateCapacityReservationCancellationQuote
   - Name: ec2:CreateCoipPoolPermission
   - Name: ec2:CreateDelegateMacVolumeOwnershipTask
   - Name: ec2:CreateImageUsageReport
@@ -675,6 +677,7 @@ Actions:
   - Name: ec2:DeleteRouteServerPeer
   - Name: ec2:DeleteSecondaryNetwork
   - Name: ec2:DeleteSecondarySubnet
+  - Name: ec2:DeleteTransitGatewayClientVpnAttachment
   - Name: ec2:DeleteTransitGatewayMeteringPolicy
   - Name: ec2:DeleteTransitGatewayMeteringPolicyEntry
   - Name: ec2:DeleteVpcBlockPublicAccessExclusion
@@ -686,6 +689,7 @@ Actions:
   - Name: ec2:DescribeCapacityBlocks
   - Name: ec2:DescribeCapacityManagerDataExports
   - Name: ec2:DescribeCapacityReservationBillingRequests
+  - Name: ec2:DescribeCapacityReservationCancellationQuotes
   - Name: ec2:DescribeCapacityReservationTopology
   - Name: ec2:DescribeDeclarativePoliciesReports
   - Name: ec2:DescribeImageReferences
@@ -695,6 +699,7 @@ Actions:
   - Name: ec2:DescribeInstanceSqlHaHistoryStates
   - Name: ec2:DescribeInstanceSqlHaStates
   - Name: ec2:DescribeIpamPolicies
+  - Name: ec2:DescribeIpamPoolAllocations
   - Name: ec2:DescribeIpamPrefixListResolverTargets
   - Name: ec2:DescribeIpamPrefixListResolvers
   - Name: ec2:DescribeLocalGatewayRouteTablePermissions
@@ -737,6 +742,7 @@ Actions:
   - Name: ec2:GetCapacityManagerAttributes
   - Name: ec2:GetCapacityManagerMetricData
   - Name: ec2:GetCapacityManagerMetricDimensions
+  - Name: ec2:GetCapacityManagerMonitoredTagKeys
   - Name: ec2:GetDeclarativePoliciesReportSummary
   - Name: ec2:GetEnabledIpamPolicy
   - Name: ec2:GetImageAncestry
@@ -745,6 +751,7 @@ Actions:
   - Name: ec2:GetIpamPrefixListResolverRules
   - Name: ec2:GetIpamPrefixListResolverVersionEntries
   - Name: ec2:GetIpamPrefixListResolverVersions
+  - Name: ec2:GetManagedResourceVisibility
   - Name: ec2:GetResourcePolicy
   - Name: ec2:GetRouteServerAssociations
   - Name: ec2:GetRouteServerPropagations
@@ -761,8 +768,10 @@ Actions:
   - Name: ec2:ModifyInstanceCpuOptions
   - Name: ec2:ModifyInstanceNetworkPerformanceOptions
   - Name: ec2:ModifyIpamPolicyAllocationRules
+  - Name: ec2:ModifyIpamPoolAllocation
   - Name: ec2:ModifyIpamPrefixListResolver
   - Name: ec2:ModifyIpamPrefixListResolverTarget
+  - Name: ec2:ModifyManagedResourceVisibility
   - Name: ec2:ModifyOdbNetworkPeering
   - Name: ec2:ModifyPublicIpDnsNameOptions
   - Name: ec2:ModifyRouteServer
@@ -775,9 +784,11 @@ Actions:
   - Name: ec2:PurchaseCapacityBlockExtension
   - Name: ec2:PutResourcePolicy
   - Name: ec2:RejectCapacityReservationBillingOwnership
+  - Name: ec2:RejectTransitGatewayClientVpnAttachment
   - Name: ec2:ReplaceImageCriteriaInAllowedImagesSettings
   - Name: ec2:RestoreVolumeFromRecycleBin
   - Name: ec2:SendSpotInstanceInterruptions
   - Name: ec2:StartDeclarativePoliciesReport
+  - Name: ec2:UpdateCapacityManagerMonitoredTagKeys
   - Name: ec2:UpdateCapacityManagerOrganizationsAccess
   - Name: ec2:UpdateInterruptibleCapacityReservationAllocation
