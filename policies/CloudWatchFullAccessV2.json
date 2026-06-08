@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchFullAccessV2",
   "CreateDate": "2023-08-01T11:32:57Z",
-  "DefaultVersionId": "v15",
+  "DefaultVersionId": "v16",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4K5ELCXZSW",
   "PolicyName": "CloudWatchFullAccessV2",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:00:06Z",
+    "CreateDate": "2026-06-08T13:27:16Z",
     "Document": {
       "Statement": [
         {
@@ -73,6 +73,34 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/events.amazonaws.com/AWSServiceRoleForCloudWatchEvents*",
           "Sid": "EventsServicePermissions"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "ArnLike": {
+              "iam:AssociatedResourceArn": "arn:aws:cloudwatch:*:*:alarm:*"
+            },
+            "StringEquals": {
+              "iam:PassedToService": "cloudwatch.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LogAlarmLogLinesPassRolePermissions"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "ArnLike": {
+              "iam:AssociatedResourceArn": "arn:aws:logs:*:*:scheduled-query:*"
+            },
+            "StringEquals": {
+              "iam:PassedToService": "logs.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LogAlarmScheduledQueryPassRolePermissions"
         },
         {
           "Action": [
@@ -228,7 +256,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v15"
+    "VersionId": "v16"
   },
-  "UpdateDate": "2026-02-12T18:00:06Z"
+  "UpdateDate": "2026-06-08T13:27:16Z"
 }
