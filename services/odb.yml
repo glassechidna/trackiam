@@ -3,6 +3,9 @@ Actions:
   # actions with no corresponding API
   - Name: odb:AcceptMarketplaceRegistration
   - Name: odb:AssociateIamRoleToResource
+  - Name: odb:CreateAutonomousDatabase
+  - Name: odb:CreateAutonomousDatabaseBackup
+  - Name: odb:CreateAutonomousDatabaseWallet
   - Name: odb:CreateCloudAutonomousVmCluster
   - Name: odb:CreateCloudExadataInfrastructure
   - Name: odb:CreateCloudVmCluster
@@ -11,6 +14,8 @@ Actions:
   - Name: odb:CreateOdbNetwork
   - Name: odb:CreateOdbPeeringConnection
   - Name: odb:CreateOutboundIntegration
+  - Name: odb:DeleteAutonomousDatabase
+  - Name: odb:DeleteAutonomousDatabaseBackup
   - Name: odb:DeleteCloudAutonomousVmCluster
   - Name: odb:DeleteCloudExadataInfrastructure
   - Name: odb:DeleteCloudVmCluster
@@ -20,6 +25,10 @@ Actions:
   - Name: odb:DeleteOdbPeeringConnection
   - Name: odb:DeleteResourcePolicy
   - Name: odb:DisassociateIamRoleFromResource
+  - Name: odb:FailoverAutonomousDatabase
+  - Name: odb:GetAutonomousDatabase
+  - Name: odb:GetAutonomousDatabaseBackup
+  - Name: odb:GetAutonomousDatabaseWalletDetails
   - Name: odb:GetCloudAutonomousVmCluster
   - Name: odb:GetCloudExadataInfrastructure
   - Name: odb:GetCloudExadataInfrastructureUnallocatedResources
@@ -31,6 +40,12 @@ Actions:
   - Name: odb:GetOdbPeeringConnection
   - Name: odb:GetResourcePolicy
   - Name: odb:InitializeService
+  - Name: odb:ListAutonomousDatabaseBackups
+  - Name: odb:ListAutonomousDatabaseCharacterSets
+  - Name: odb:ListAutonomousDatabaseClones
+  - Name: odb:ListAutonomousDatabasePeers
+  - Name: odb:ListAutonomousDatabaseVersions
+  - Name: odb:ListAutonomousDatabases
   - Name: odb:ListAutonomousVirtualMachines
   - Name: odb:ListCloudAutonomousVmClusters
   - Name: odb:ListCloudExadataInfrastructures
@@ -44,11 +59,19 @@ Actions:
   - Name: odb:ListSystemVersions
   - Name: odb:ListTagsForResource
   - Name: odb:PutResourcePolicy
+  - Name: odb:RebootAutonomousDatabase
   - Name: odb:RebootDbNode
+  - Name: odb:RestoreAutonomousDatabase
+  - Name: odb:ShrinkAutonomousDatabase
+  - Name: odb:StartAutonomousDatabase
   - Name: odb:StartDbNode
+  - Name: odb:StopAutonomousDatabase
   - Name: odb:StopDbNode
+  - Name: odb:SwitchoverAutonomousDatabase
   - Name: odb:TagResource
   - Name: odb:UntagResource
+  - Name: odb:UpdateAutonomousDatabase
+  - Name: odb:UpdateAutonomousDatabaseBackup
   - Name: odb:UpdateCloudExadataInfrastructure
   - Name: odb:UpdateGrantShare
   - Name: odb:UpdateOdbNetwork

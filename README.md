@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 458
-* Unique actions: 21564
-* Managed policies: 1500
+* Unique actions: 21587
+* Managed policies: 1501
 
 Most common managed policy name prefixes:
 
@@ -24,7 +24,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 342 |
 | `arn:aws:iam::aws:policy/service-role/*` | 220 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
-| Other | 157 |
+| Other | 158 |
 
 The following table summarises the AWS APIs. 
 
@@ -366,6 +366,7 @@ The following table summarises the AWS APIs.
 | [`securityagent`](services/securityagent.yml) | 0 | 0 | 94 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
+| [`odb`](services/odb.yml) | 0 | 0 | 76 |
 | [`aidevops`](services/aidevops.yml) | 0 | 0 | 71 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 63 |
@@ -373,7 +374,6 @@ The following table summarises the AWS APIs.
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
 | [`q`](services/q.yml) | 0 | 0 | 54 |
 | [`s3tables`](services/s3tables.yml) | 0 | 0 | 53 |
-| [`odb`](services/odb.yml) | 0 | 0 | 53 |
 | [`transform-custom`](services/transform-custom.yml) | 0 | 0 | 51 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 48 |
 | [`route53globalresolver`](services/route53globalresolver.yml) | 0 | 0 | 48 |
@@ -499,14 +499,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3599 |
-| `Get` | 3258 |
-| `Delete` | 2476 |
-| `Create` | 2331 |
-| `Update` | 2021 |
+| `List` | 3605 |
+| `Get` | 3261 |
+| `Delete` | 2478 |
+| `Create` | 2334 |
+| `Update` | 2023 |
 | `Describe` | 1906 |
 | `Put` | 582 |
-| `Start` | 527 |
+| `Start` | 528 |
 | `Tag` | 319 |
 | `Untag` | 314 |
 
