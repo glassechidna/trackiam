@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSSecurityAgentWebAppPolicy",
   "CreateDate": "2026-02-05T23:19:09Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4CTYAYXEAG",
   "PolicyName": "AWSSecurityAgentWebAppPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-05-08T17:57:21Z",
+    "CreateDate": "2026-06-11T18:27:14Z",
     "Document": {
       "Statement": [
         {
@@ -15,6 +15,7 @@
             "securityagent:AddArtifact",
             "securityagent:BatchDeleteCodeReviews",
             "securityagent:BatchDeletePentests",
+            "securityagent:BatchDeleteThreatModels",
             "securityagent:BatchGetAgentSpaces",
             "securityagent:BatchGetArtifactMetadata",
             "securityagent:BatchGetCodeReviewJobTasks",
@@ -25,9 +26,15 @@
             "securityagent:BatchGetPentestJobTasks",
             "securityagent:BatchGetPentestJobs",
             "securityagent:BatchGetPentests",
+            "securityagent:BatchGetThreatModelJobTasks",
+            "securityagent:BatchGetThreatModelJobs",
+            "securityagent:BatchGetThreatModels",
+            "securityagent:BatchGetThreats",
             "securityagent:CreateCodeReview",
             "securityagent:CreateDesignReview",
             "securityagent:CreatePentest",
+            "securityagent:CreateThreat",
+            "securityagent:CreateThreatModel",
             "securityagent:DeleteArtifact",
             "securityagent:DeleteDesignReview",
             "securityagent:GetArtifact",
@@ -46,15 +53,23 @@
             "securityagent:ListPentestJobTasks",
             "securityagent:ListPentestJobsForPentest",
             "securityagent:ListPentests",
+            "securityagent:ListThreatModelJobTasks",
+            "securityagent:ListThreatModelJobs",
+            "securityagent:ListThreatModels",
+            "securityagent:ListThreats",
             "securityagent:PutDesignReviewFeedback",
             "securityagent:StartCodeRemediation",
             "securityagent:StartCodeReviewJob",
             "securityagent:StartPentestJob",
+            "securityagent:StartThreatModelJob",
             "securityagent:StopCodeReviewJob",
             "securityagent:StopPentestJob",
+            "securityagent:StopThreatModelJob",
             "securityagent:UpdateCodeReview",
             "securityagent:UpdateFinding",
-            "securityagent:UpdatePentest"
+            "securityagent:UpdatePentest",
+            "securityagent:UpdateThreat",
+            "securityagent:UpdateThreatModel"
           ],
           "Condition": {
             "StringEquals": {
@@ -85,7 +100,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2026-05-08T17:57:21Z"
+  "UpdateDate": "2026-06-11T18:27:14Z"
 }
