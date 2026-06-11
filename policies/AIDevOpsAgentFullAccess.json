@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AIDevOpsAgentFullAccess",
   "CreateDate": "2026-03-26T03:42:16Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4G7KA3NAK3",
   "PolicyName": "AIDevOpsAgentFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-06-06T02:27:20Z",
+    "CreateDate": "2026-06-11T00:57:23Z",
     "Document": {
       "Statement": [
         {
@@ -22,11 +22,13 @@
             "aidevops:CreateKnowledgeItem",
             "aidevops:CreateOneTimeLoginSession",
             "aidevops:CreatePrivateConnection",
+            "aidevops:CreateTrigger",
             "aidevops:DeleteAgentSpace",
             "aidevops:DeleteAsset",
             "aidevops:DeleteAssetFile",
             "aidevops:DeleteKnowledgeItem",
             "aidevops:DeletePrivateConnection",
+            "aidevops:DeleteTrigger",
             "aidevops:DeregisterService",
             "aidevops:DescribePrivateConnection",
             "aidevops:DescribeServices",
@@ -47,6 +49,7 @@
             "aidevops:GetOperatorApp",
             "aidevops:GetRecommendation",
             "aidevops:GetService",
+            "aidevops:GetTrigger",
             "aidevops:InitiateChatForCase",
             "aidevops:ListAgentSpaces",
             "aidevops:ListAssetFiles",
@@ -66,6 +69,7 @@
             "aidevops:ListRecommendations",
             "aidevops:ListServices",
             "aidevops:ListTagsForResource",
+            "aidevops:ListTriggers",
             "aidevops:ListWebhooks",
             "aidevops:RegisterService",
             "aidevops:SearchServiceAccessibleResource",
@@ -82,6 +86,7 @@
             "aidevops:UpdateOperatorAppIdpConfig",
             "aidevops:UpdatePrivateConnectionCertificate",
             "aidevops:UpdateRecommendation",
+            "aidevops:UpdateTrigger",
             "aidevops:ValidateAwsAssociations"
           ],
           "Effect": "Allow",
@@ -92,7 +97,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-06-06T02:27:20Z"
+  "UpdateDate": "2026-06-11T00:57:23Z"
 }

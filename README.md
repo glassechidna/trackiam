@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 458
-* Unique actions: 21587
+* Unique actions: 21600
 * Managed policies: 1501
 
 Most common managed policy name prefixes:
@@ -191,8 +191,8 @@ The following table summarises the AWS APIs.
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`billingconductor`](services/billingconductor.yml) | 32 | 0 | 0 |
 | [`payment-cryptography`](services/payment-cryptography.yml) | 31 | 0 | 15 |
+| [`outposts`](services/outposts.yml) | 31 | 0 | 13 |
 | [`elasticfilesystem`](services/elasticfilesystem.yml) | 31 | 0 | 7 |
-| [`outposts`](services/outposts.yml) | 31 | 0 | 5 |
 | [`migrationhub-orchestrator`](services/migrationhub-orchestrator.yml) | 31 | 0 | 3 |
 | [`ssm-incidents`](services/ssm-incidents.yml) | 31 | 0 | 0 |
 | [`securitylake`](services/securitylake.yml) | 31 | 0 | 0 |
@@ -367,7 +367,7 @@ The following table summarises the AWS APIs.
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
 | [`odb`](services/odb.yml) | 0 | 0 | 76 |
-| [`aidevops`](services/aidevops.yml) | 0 | 0 | 71 |
+| [`aidevops`](services/aidevops.yml) | 0 | 0 | 76 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 63 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 61 |
@@ -499,11 +499,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3605 |
-| `Get` | 3261 |
-| `Delete` | 2478 |
-| `Create` | 2334 |
-| `Update` | 2023 |
+| `List` | 3608 |
+| `Get` | 3264 |
+| `Delete` | 2480 |
+| `Create` | 2337 |
+| `Update` | 2025 |
 | `Describe` | 1906 |
 | `Put` | 582 |
 | `Start` | 528 |

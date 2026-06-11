@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AIDevOpsOperatorAppAccessPolicy",
   "CreateDate": "2026-03-26T03:42:13Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ELWEUAH5T",
   "PolicyName": "AIDevOpsOperatorAppAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-06T02:27:16Z",
+    "CreateDate": "2026-06-11T00:57:20Z",
     "Document": {
       "Statement": [
         {
@@ -17,9 +17,11 @@
             "aidevops:CreateBacklogTask",
             "aidevops:CreateChat",
             "aidevops:CreateKnowledgeItem",
+            "aidevops:CreateTrigger",
             "aidevops:DeleteAsset",
             "aidevops:DeleteAssetFile",
             "aidevops:DeleteKnowledgeItem",
+            "aidevops:DeleteTrigger",
             "aidevops:DescribeServices",
             "aidevops:DescribeSupportLevel",
             "aidevops:DiscoverTopology",
@@ -32,6 +34,7 @@
             "aidevops:GetBacklogTask",
             "aidevops:GetKnowledgeItem",
             "aidevops:GetRecommendation",
+            "aidevops:GetTrigger",
             "aidevops:InitiateChatForCase",
             "aidevops:ListAssetFiles",
             "aidevops:ListAssetTypes",
@@ -47,13 +50,15 @@
             "aidevops:ListKnowledgeItems",
             "aidevops:ListPendingMessages",
             "aidevops:ListRecommendations",
+            "aidevops:ListTriggers",
             "aidevops:SendMessage",
             "aidevops:UpdateAsset",
             "aidevops:UpdateAssetFile",
             "aidevops:UpdateBacklogTask",
             "aidevops:UpdateGoal",
             "aidevops:UpdateKnowledgeItem",
-            "aidevops:UpdateRecommendation"
+            "aidevops:UpdateRecommendation",
+            "aidevops:UpdateTrigger"
           ],
           "Condition": {
             "StringEquals": {
@@ -124,7 +129,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-06-06T02:27:16Z"
+  "UpdateDate": "2026-06-11T00:57:20Z"
 }
