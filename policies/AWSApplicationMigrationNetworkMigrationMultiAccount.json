@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSApplicationMigrationNetworkMigrationMultiAccount",
   "CreateDate": "2025-11-10T09:04:09Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CTZCLDWVS",
   "PolicyName": "AWSApplicationMigrationNetworkMigrationMultiAccount",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:58:43Z",
+    "CreateDate": "2026-06-11T07:42:18Z",
     "Document": {
       "Statement": [
         {
@@ -854,7 +854,8 @@
         },
         {
           "Action": [
-            "lambda:GetFunction"
+            "lambda:GetFunction",
+            "lambda:ListTags"
           ],
           "Condition": {
             "ForAnyValue:StringEquals": {
@@ -1068,7 +1069,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-02-12T17:58:43Z"
+  "UpdateDate": "2026-06-11T07:42:18Z"
 }
