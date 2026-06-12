@@ -1,0 +1,93 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSecurityAgentServiceRolePolicy",
+  "CreateDate": "2026-06-11T23:42:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4AFGJ3N5RC",
+  "PolicyName": "AWSSecurityAgentServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-06-11T23:42:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "vpc-lattice.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/vpc-lattice.amazonaws.com/AWSServiceRoleForVpcLattice",
+          "Sid": "CreateLatticeServiceLinkedRole"
+        },
+        {
+          "Action": [
+            "vpc-lattice:CreateResourceGateway"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/AWSSecurityAgentManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:vpc-lattice:*:*:resourcegateway/*",
+          "Sid": "LatticeCreateResourceGateway"
+        },
+        {
+          "Action": [
+            "vpc-lattice:DeleteResourceGateway"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AWSSecurityAgentManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:vpc-lattice:*:*:resourcegateway/*",
+          "Sid": "LatticeManageTaggedResourceGateways"
+        },
+        {
+          "Action": [
+            "vpc-lattice:GetResourceGateway"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AWSSecurityAgentManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:vpc-lattice:*:*:resourcegateway/*",
+          "Sid": "LatticeGetResourceGateway"
+        },
+        {
+          "Action": [
+            "vpc-lattice:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/AWSSecurityAgentManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:vpc-lattice:*:*:resourcegateway/*",
+          "Sid": "LatticeTagResourceGateway"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeApis"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-06-11T23:42:19Z"
+}
