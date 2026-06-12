@@ -1,19 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AIDevOpsAgentFullAccess",
   "CreateDate": "2026-03-26T03:42:16Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4G7KA3NAK3",
   "PolicyName": "AIDevOpsAgentFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-06-11T00:57:23Z",
+    "CreateDate": "2026-06-12T23:27:07Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "aidevops:AllowVendedLogDeliveryForResource",
             "aidevops:AssociateService",
+            "aidevops:CreateAccessToken",
             "aidevops:CreateAgentSpace",
             "aidevops:CreateAsset",
             "aidevops:CreateAssetFile",
@@ -38,6 +39,7 @@
             "aidevops:DiscoverTopology",
             "aidevops:EnableOperatorApp",
             "aidevops:EndChatForCase",
+            "aidevops:GetAccessToken",
             "aidevops:GetAccountUsage",
             "aidevops:GetAgentSpace",
             "aidevops:GetAsset",
@@ -51,6 +53,7 @@
             "aidevops:GetService",
             "aidevops:GetTrigger",
             "aidevops:InitiateChatForCase",
+            "aidevops:ListAccessTokens",
             "aidevops:ListAgentSpaces",
             "aidevops:ListAssetFiles",
             "aidevops:ListAssetTypes",
@@ -72,6 +75,8 @@
             "aidevops:ListTriggers",
             "aidevops:ListWebhooks",
             "aidevops:RegisterService",
+            "aidevops:RevokeAccessToken",
+            "aidevops:RotateAccessToken",
             "aidevops:SearchServiceAccessibleResource",
             "aidevops:SendMessage",
             "aidevops:TagResource",
@@ -97,7 +102,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-06-11T00:57:23Z"
+  "UpdateDate": "2026-06-12T23:27:07Z"
 }
