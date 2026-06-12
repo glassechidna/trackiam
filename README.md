@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 458
-* Unique actions: 21609
+* Unique actions: 21618
 * Managed policies: 1503
 
 Most common managed policy name prefixes:
@@ -429,6 +429,7 @@ The following table summarises the AWS APIs.
 | [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
 | [`workspaces-instances`](services/workspaces-instances.yml) | 0 | 0 | 13 |
 | [`support-console`](services/support-console.yml) | 0 | 0 | 13 |
+| [`signin`](services/signin.yml) | 0 | 0 | 13 |
 | [`interconnect`](services/interconnect.yml) | 0 | 0 | 13 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 13 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 13 |
@@ -462,7 +463,6 @@ The following table summarises the AWS APIs.
 | [`customer-verification`](services/customer-verification.yml) | 0 | 0 | 5 |
 | [`appstudio`](services/appstudio.yml) | 0 | 0 | 5 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
-| [`signin`](services/signin.yml) | 0 | 0 | 4 |
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
 | [`a2c`](services/a2c.yml) | 0 | 0 | 4 |
@@ -499,13 +499,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3609 |
-| `Get` | 3265 |
-| `Delete` | 2481 |
-| `Create` | 2338 |
+| `List` | 3610 |
+| `Get` | 3267 |
+| `Delete` | 2483 |
+| `Create` | 2339 |
 | `Update` | 2027 |
 | `Describe` | 1906 |
-| `Put` | 582 |
+| `Put` | 584 |
 | `Start` | 528 |
 | `Tag` | 319 |
 | `Untag` | 314 |
