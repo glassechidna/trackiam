@@ -1,0 +1,40 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AnthropicSelfHostedEnvironmentAccess",
+  "CreateDate": "2026-06-12T17:12:29Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4N7XFKNX2G",
+  "PolicyName": "AnthropicSelfHostedEnvironmentAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-06-12T17:12:29Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aws-external-anthropic:CallWithBearerToken"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AnthropicSelfHostedEnvironmentResourceless"
+        },
+        {
+          "Action": [
+            "aws-external-anthropic:GetEnvironment",
+            "aws-external-anthropic:GetSession",
+            "aws-external-anthropic:GetSkill",
+            "aws-external-anthropic:ProcessEnvironmentWork",
+            "aws-external-anthropic:UpdateSession"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-external-anthropic:*:*:workspace/*",
+          "Sid": "AnthropicSelfHostedEnvironmentWorkspace"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-06-12T17:12:29Z"
+}

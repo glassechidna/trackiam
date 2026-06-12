@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 458
-* Unique actions: 21602
-* Managed policies: 1502
+* Unique actions: 21609
+* Managed policies: 1503
 
 Most common managed policy name prefixes:
 
@@ -24,7 +24,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 343 |
 | `arn:aws:iam::aws:policy/service-role/*` | 220 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
-| Other | 158 |
+| Other | 159 |
 
 The following table summarises the AWS APIs. 
 
@@ -368,8 +368,8 @@ The following table summarises the AWS APIs.
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
 | [`odb`](services/odb.yml) | 0 | 0 | 76 |
 | [`aidevops`](services/aidevops.yml) | 0 | 0 | 76 |
+| [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 70 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
-| [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 63 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 61 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
 | [`q`](services/q.yml) | 0 | 0 | 54 |
@@ -499,11 +499,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3608 |
-| `Get` | 3264 |
-| `Delete` | 2480 |
-| `Create` | 2337 |
-| `Update` | 2026 |
+| `List` | 3609 |
+| `Get` | 3265 |
+| `Delete` | 2481 |
+| `Create` | 2338 |
+| `Update` | 2027 |
 | `Describe` | 1906 |
 | `Put` | 582 |
 | `Start` | 528 |

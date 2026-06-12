@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AnthropicLimitedAccess",
   "CreateDate": "2026-04-01T04:57:18Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4PVRRB6AVZ",
   "PolicyName": "AnthropicLimitedAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-05-08T22:27:10Z",
+    "CreateDate": "2026-06-12T16:57:32Z",
     "Document": {
       "Statement": [
         {
@@ -63,6 +63,7 @@
             "aws-external-anthropic:CreateSkill",
             "aws-external-anthropic:CreateUserProfile",
             "aws-external-anthropic:CreateVault",
+            "aws-external-anthropic:CreateWebhook",
             "aws-external-anthropic:DeleteBatchInference",
             "aws-external-anthropic:DeleteEnvironment",
             "aws-external-anthropic:DeleteFile",
@@ -70,15 +71,19 @@
             "aws-external-anthropic:DeleteSession",
             "aws-external-anthropic:DeleteSkill",
             "aws-external-anthropic:DeleteVault",
+            "aws-external-anthropic:DeleteWebhook",
             "aws-external-anthropic:Get*",
             "aws-external-anthropic:List*",
+            "aws-external-anthropic:ProcessEnvironmentWork",
+            "aws-external-anthropic:RotateWebhookSecret",
             "aws-external-anthropic:UpdateAgent",
             "aws-external-anthropic:UpdateEnvironment",
             "aws-external-anthropic:UpdateMemoryStore",
             "aws-external-anthropic:UpdateSession",
             "aws-external-anthropic:UpdateSkill",
             "aws-external-anthropic:UpdateUserProfile",
-            "aws-external-anthropic:UpdateVault"
+            "aws-external-anthropic:UpdateVault",
+            "aws-external-anthropic:UpdateWebhook"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:aws-external-anthropic:*:*:workspace/*",
@@ -96,8 +101,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v5"
+    "IsDefaultVersion": true,
+    "VersionId": "v6"
   },
-  "UpdateDate": "2026-05-08T22:27:10Z"
+  "UpdateDate": "2026-06-12T16:57:32Z"
 }
