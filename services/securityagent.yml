@@ -2,8 +2,10 @@ Actions:
 
   # actions with no corresponding API
   - Name: securityagent:AddArtifact
+  - Name: securityagent:BatchCreateSecurityRequirements
   - Name: securityagent:BatchDeleteCodeReviews
   - Name: securityagent:BatchDeletePentests
+  - Name: securityagent:BatchDeleteSecurityRequirements
   - Name: securityagent:BatchDeleteThreatModels
   - Name: securityagent:BatchDeleteThreats
   - Name: securityagent:BatchGetAgentSpaces
@@ -16,11 +18,13 @@ Actions:
   - Name: securityagent:BatchGetPentestJobTasks
   - Name: securityagent:BatchGetPentestJobs
   - Name: securityagent:BatchGetPentests
+  - Name: securityagent:BatchGetSecurityRequirements
   - Name: securityagent:BatchGetTargetDomains
   - Name: securityagent:BatchGetThreatModelJobTasks
   - Name: securityagent:BatchGetThreatModelJobs
   - Name: securityagent:BatchGetThreatModels
   - Name: securityagent:BatchGetThreats
+  - Name: securityagent:BatchUpdateSecurityRequirements
   - Name: securityagent:CreateAgentSpace
   - Name: securityagent:CreateApplication
   - Name: securityagent:CreateCodeReview
@@ -29,7 +33,9 @@ Actions:
   - Name: securityagent:CreateMembership
   - Name: securityagent:CreateOneTimeLoginSession
   - Name: securityagent:CreatePentest
+  - Name: securityagent:CreatePrivateConnection
   - Name: securityagent:CreateSecurityRequirement
+  - Name: securityagent:CreateSecurityRequirementPack
   - Name: securityagent:CreateTargetDomain
   - Name: securityagent:CreateThreat
   - Name: securityagent:CreateThreatModel
@@ -39,15 +45,22 @@ Actions:
   - Name: securityagent:DeleteDesignReview
   - Name: securityagent:DeleteIntegration
   - Name: securityagent:DeleteMembership
+  - Name: securityagent:DeletePrivateConnection
   - Name: securityagent:DeleteSecurityRequirement
+  - Name: securityagent:DeleteSecurityRequirementPack
   - Name: securityagent:DeleteTargetDomain
+  - Name: securityagent:DescribePrivateConnection
   - Name: securityagent:GetApplication
   - Name: securityagent:GetArtifact
   - Name: securityagent:GetDesignReview
   - Name: securityagent:GetDesignReviewArtifact
   - Name: securityagent:GetDesignReviewFeedback
   - Name: securityagent:GetIntegration
+  - Name: securityagent:GetProviderRegistrationManifest
   - Name: securityagent:GetSecurityRequirement
+  - Name: securityagent:GetSecurityRequirementPack
+  - Name: securityagent:HandleProviderRegistrationCallback
+  - Name: securityagent:ImportSecurityRequirements
   - Name: securityagent:InitiateProviderRegistration
   - Name: securityagent:ListAgentSpaces
   - Name: securityagent:ListApplications
@@ -65,7 +78,9 @@ Actions:
   - Name: securityagent:ListPentestJobTasks
   - Name: securityagent:ListPentestJobsForPentest
   - Name: securityagent:ListPentests
+  - Name: securityagent:ListPrivateConnections
   - Name: securityagent:ListResourcesFromIntegration
+  - Name: securityagent:ListSecurityRequirementPacks
   - Name: securityagent:ListSecurityRequirements
   - Name: securityagent:ListTagsForResource
   - Name: securityagent:ListTargetDomains
@@ -90,7 +105,9 @@ Actions:
   - Name: securityagent:UpdateFinding
   - Name: securityagent:UpdateIntegratedResources
   - Name: securityagent:UpdatePentest
+  - Name: securityagent:UpdatePrivateConnectionCertificate
   - Name: securityagent:UpdateSecurityRequirement
+  - Name: securityagent:UpdateSecurityRequirementPack
   - Name: securityagent:UpdateTargetDomain
   - Name: securityagent:UpdateThreat
   - Name: securityagent:UpdateThreatModel

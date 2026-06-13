@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 458
-* Unique actions: 21623
+* Unique actions: 21640
 * Managed policies: 1503
 
 Most common managed policy name prefixes:
@@ -361,9 +361,9 @@ The following table summarises the AWS APIs.
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 0 | 6 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 213 |
+| [`securityagent`](services/securityagent.yml) | 0 | 0 | 111 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 111 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
-| [`securityagent`](services/securityagent.yml) | 0 | 0 | 94 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
 | [`aidevops`](services/aidevops.yml) | 0 | 0 | 81 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
@@ -499,14 +499,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3611 |
-| `Get` | 3268 |
-| `Delete` | 2483 |
-| `Create` | 2340 |
-| `Update` | 2027 |
-| `Describe` | 1906 |
+| `List` | 3613 |
+| `Get` | 3270 |
+| `Delete` | 2485 |
+| `Create` | 2342 |
+| `Update` | 2029 |
+| `Describe` | 1907 |
 | `Put` | 584 |
 | `Start` | 528 |
 | `Tag` | 319 |
-| `Untag` | 314 |
+| `Batch` | 316 |
 
