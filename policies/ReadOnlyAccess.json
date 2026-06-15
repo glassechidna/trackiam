@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v185",
+  "DefaultVersionId": "v186",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-05-18T15:42:10Z",
+    "CreateDate": "2026-06-15T20:27:24Z",
     "Document": {
       "Statement": [
         {
@@ -2436,6 +2436,15 @@
             "s3express:ListAccessPointsForDirectoryBuckets",
             "s3express:ListAllMyDirectoryBuckets",
             "s3express:ListTagsForResource",
+            "s3files:GetAccessPoint",
+            "s3files:GetFileSystem",
+            "s3files:GetFileSystemPolicy",
+            "s3files:GetMountTarget",
+            "s3files:GetSynchronizationConfiguration",
+            "s3files:ListAccessPoints",
+            "s3files:ListFileSystems",
+            "s3files:ListMountTargets",
+            "s3files:ListTagsForResource",
             "s3tables:GetNamespace",
             "s3tables:GetTable",
             "s3tables:GetTableBucket",
@@ -2493,6 +2502,9 @@
             "secretsmanager:List*",
             "securityagent:BatchGetAgentSpaces",
             "securityagent:BatchGetArtifactMetadata",
+            "securityagent:BatchGetCodeReviewJobTasks",
+            "securityagent:BatchGetCodeReviewJobs",
+            "securityagent:BatchGetCodeReviews",
             "securityagent:BatchGetFindings",
             "securityagent:BatchGetPentestJobContentMetadata",
             "securityagent:BatchGetPentestJobTasks",
@@ -2508,6 +2520,9 @@
             "securityagent:ListAgentSpaces",
             "securityagent:ListApplications",
             "securityagent:ListArtifacts",
+            "securityagent:ListCodeReviewJobTasks",
+            "securityagent:ListCodeReviewJobsForCodeReview",
+            "securityagent:ListCodeReviews",
             "securityagent:ListDesignReviewComments",
             "securityagent:ListDesignReviews",
             "securityagent:ListDiscoveredEndpoints",
@@ -2875,7 +2890,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v185"
+    "VersionId": "v186"
   },
-  "UpdateDate": "2026-05-18T15:42:10Z"
+  "UpdateDate": "2026-06-15T20:27:24Z"
 }
