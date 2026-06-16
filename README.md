@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 458
-* Unique actions: 21647
+* Unique actions: 21656
 * Managed policies: 1503
 
 Most common managed policy name prefixes:
@@ -50,7 +50,7 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 140 | 0 | 16 |
 | [`lex`](services/lex.yml) | 139 | 2 | 13 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 33 |
-| [`datazone`](services/datazone.yml) | 123 | 0 | 107 |
+| [`datazone`](services/datazone.yml) | 123 | 0 | 108 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 3 |
 | [`s3`](services/s3.yml) | 113 | 60 | 56 |
@@ -60,7 +60,7 @@ The following table summarises the AWS APIs.
 | [`gamelift`](services/gamelift.yml) | 108 | 0 | 12 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 22 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 18 |
-| [`bedrock`](services/bedrock.yml) | 97 | 2 | 150 |
+| [`bedrock`](services/bedrock.yml) | 97 | 2 | 158 |
 | [`dms`](services/dms.yml) | 92 | 14 | 32 |
 | [`medialive`](services/medialive.yml) | 92 | 0 | 33 |
 | [`config`](services/config.yml) | 92 | 0 | 5 |
@@ -499,14 +499,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3615 |
-| `Get` | 3274 |
-| `Delete` | 2485 |
-| `Create` | 2342 |
+| `List` | 3616 |
+| `Get` | 3276 |
+| `Delete` | 2486 |
+| `Create` | 2343 |
 | `Update` | 2029 |
 | `Describe` | 1907 |
 | `Put` | 584 |
 | `Start` | 529 |
 | `Tag` | 319 |
-| `Batch` | 316 |
+| `Batch` | 317 |
 

@@ -98,14 +98,17 @@ Actions:
   - Name: bedrock:UpdateProvisionedModelThroughput
 
   # actions with no corresponding API
+  - Name: bedrock:AgenticRetrieveStream
   - Name: bedrock:AllowVendedLogDeliveryForResource
   - Name: bedrock:AssociateAgentCollaborator
   - Name: bedrock:AssociateThirdPartyKnowledgeBase
+  - Name: bedrock:BatchDeleteAdvancedPromptOptimizationJob
   - Name: bedrock:BatchDeleteEvaluationJob
   - Name: bedrock:CallWithBearerToken
   - Name: bedrock:CancelAutomatedReasoningPolicyBuildWorkflow
   - Name: bedrock:CopyBlueprintStage
   - Name: bedrock:CountTokens
+  - Name: bedrock:CreateAdvancedPromptOptimizationJob
   - Name: bedrock:CreateAutomatedReasoningPolicy
   - Name: bedrock:CreateAutomatedReasoningPolicyTestCase
   - Name: bedrock:CreateAutomatedReasoningPolicyVersion
@@ -149,6 +152,7 @@ Actions:
   - Name: bedrock:ExportAutomatedReasoningPolicyVersion
   - Name: bedrock:GenerateQuery
   - Name: bedrock:GetAccountDataRetention
+  - Name: bedrock:GetAdvancedPromptOptimizationJob
   - Name: bedrock:GetAgentCollaborator
   - Name: bedrock:GetAsyncInvoke
   - Name: bedrock:GetAutomatedReasoningPolicy
@@ -167,6 +171,7 @@ Actions:
   - Name: bedrock:GetDataAutomationLibraryIngestionJob
   - Name: bedrock:GetDataAutomationProject
   - Name: bedrock:GetDataAutomationStatus
+  - Name: bedrock:GetDocumentContent
   - Name: bedrock:GetExecutionFlowSnapshot
   - Name: bedrock:GetFlowExecution
   - Name: bedrock:GetFoundationModelAvailability
@@ -191,8 +196,10 @@ Actions:
   - Name: bedrock:InvokeDataAutomation
   - Name: bedrock:InvokeDataAutomationAsync
   - Name: bedrock:InvokeDataAutomationLibraryIngestionJob
+  - Name: bedrock:InvokeGuardrailChecks
   - Name: bedrock:InvokeInlineAgent
   - Name: bedrock:InvokeTool
+  - Name: bedrock:ListAdvancedPromptOptimizationJobs
   - Name: bedrock:ListAgentCollaborators
   - Name: bedrock:ListAsyncInvokes
   - Name: bedrock:ListAutomatedReasoningPolicies
@@ -234,6 +241,7 @@ Actions:
   - Name: bedrock:StartAutomatedReasoningPolicyBuildWorkflow
   - Name: bedrock:StartAutomatedReasoningPolicyTestWorkflow
   - Name: bedrock:StartFlowExecution
+  - Name: bedrock:StopAdvancedPromptOptimizationJob
   - Name: bedrock:StopFlowExecution
   - Name: bedrock:StopIngestionJob
   - Name: bedrock:StopModelInvocationJob
