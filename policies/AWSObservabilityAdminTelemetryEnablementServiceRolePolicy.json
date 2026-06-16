@@ -1,18 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSObservabilityAdminTelemetryEnablementServiceRolePolicy",
   "CreateDate": "2025-08-01T18:04:06Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ABS5BMRXG",
   "PolicyName": "AWSObservabilityAdminTelemetryEnablementServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-04-29T21:12:11Z",
+    "CreateDate": "2026-06-16T20:42:10Z",
     "Document": {
       "Statement": [
         {
           "Action": [
-            "bedrock-agentcore:AllowVendedLogDeliveryForResource"
+            "bedrock-agentcore:AllowVendedLogDeliveryForResource",
+            "bedrock:AllowVendedLogDeliveryForResource"
           ],
           "Condition": {
             "StringEquals": {
@@ -500,6 +501,19 @@
         },
         {
           "Action": [
+            "s3:AllowVendedLogDeliveryForResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TelemetryOperationsForS3"
+        },
+        {
+          "Action": [
             "securityhub:AllowVendedLogDeliveryForResource",
             "securityhub:DescribeHub",
             "securityhub:DescribeSecurityHubV2"
@@ -542,7 +556,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2026-04-29T21:12:11Z"
+  "UpdateDate": "2026-06-16T20:42:10Z"
 }
