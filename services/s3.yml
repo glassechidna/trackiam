@@ -118,7 +118,9 @@ Actions:
   - Name: s3:BypassGovernanceRetention
   - Name: s3:CreateBucketMetadataTableConfiguration
   - Name: s3:DeleteBucketMetadataTableConfiguration
+  - Name: s3:DeleteObjectAnnotation
   - Name: s3:DeleteObjectVersion
+  - Name: s3:DeleteObjectVersionAnnotation
   - Name: s3:DeleteObjectVersionTagging
   - Name: s3:GetAccelerateConfiguration
   - Name: s3:GetAccountPublicAccessBlock
@@ -132,8 +134,11 @@ Actions:
   - Name: s3:GetInventoryConfiguration
   - Name: s3:GetLifecycleConfiguration
   - Name: s3:GetMetricsConfiguration
+  - Name: s3:GetObjectAnnotation
   - Name: s3:GetObjectVersion
   - Name: s3:GetObjectVersionAcl
+  - Name: s3:GetObjectVersionAnnotation
+  - Name: s3:GetObjectVersionAnnotationForReplication
   - Name: s3:GetObjectVersionAttributes
   - Name: s3:GetObjectVersionForReplication
   - Name: s3:GetObjectVersionTagging
@@ -147,6 +152,8 @@ Actions:
   - Name: s3:ListBucketVersions
   - Name: s3:ListCallerAccessGrants
   - Name: s3:ListMultipartUploadParts
+  - Name: s3:ListObjectAnnotations
+  - Name: s3:ListObjectVersionAnnotations
   - Name: s3:ObjectOwnerOverrideToBucketOwner
   - Name: s3:PauseReplication
   - Name: s3:PutAccelerateConfiguration
@@ -161,12 +168,16 @@ Actions:
   - Name: s3:PutInventoryConfiguration
   - Name: s3:PutLifecycleConfiguration
   - Name: s3:PutMetricsConfiguration
+  - Name: s3:PutObjectAnnotation
   - Name: s3:PutObjectVersionAcl
+  - Name: s3:PutObjectVersionAnnotation
   - Name: s3:PutObjectVersionTagging
   - Name: s3:PutReplicationConfiguration
   - Name: s3:ReplicateDelete
   - Name: s3:ReplicateObject
+  - Name: s3:ReplicateObjectAnnotation
   - Name: s3:ReplicateTags
+  - Name: s3:UpdateBucketMetadataAnnotationTableConfiguration
   - Name: s3:UpdateBucketMetadataInventoryTableConfiguration
   - Name: s3:UpdateBucketMetadataJournalTableConfiguration
   - Name: s3:UpdateObjectEncryption
