@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSElasticDisasterRecoveryConsoleFullAccess_v2",
   "CreateDate": "2023-11-27T13:35:19Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4GNEJEKJLM",
   "PolicyName": "AWSElasticDisasterRecoveryConsoleFullAccess_v2",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:02:32Z",
+    "CreateDate": "2026-06-18T22:57:18Z",
     "Document": {
       "Statement": [
         {
@@ -538,6 +538,14 @@
           "Resource": [
             "arn:aws:ssm:*:*:automation-definition/AWS-CreateImage:$DEFAULT",
             "arn:aws:ssm:*:*:automation-execution/*",
+            "arn:aws:ssm:*:*:document/AWSDRS-InstallDRAgentOnInstance",
+            "arn:aws:ssm:*:*:document/AWSDRS-LinuxTimeSyncSetting",
+            "arn:aws:ssm:*:*:document/AWSDRS-ValidateDiskSpace",
+            "arn:aws:ssm:*:*:document/AWSDRS-ValidateHttpResponse",
+            "arn:aws:ssm:*:*:document/AWSDRS-ValidateNetworkConnectivity",
+            "arn:aws:ssm:*:*:document/AWSDRS-VerifyMountedVolumes",
+            "arn:aws:ssm:*:*:document/AWSDRS-VerifyProcessIsRunning",
+            "arn:aws:ssm:*:*:document/AWSDRS-VerifyTags",
             "arn:aws:ssm:*:*:document/AWSEC2-ApplicationInsightsCloudwatchAgentInstallAndConfigure",
             "arn:aws:ssm:*:*:document/AWSMigration-LinuxTimeSyncSetting",
             "arn:aws:ssm:*:*:document/AWSMigration-ValidateDiskSpace",
@@ -676,7 +684,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-02-12T18:02:32Z"
+  "UpdateDate": "2026-06-18T22:57:18Z"
 }

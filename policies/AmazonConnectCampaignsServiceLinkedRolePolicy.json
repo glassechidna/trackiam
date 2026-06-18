@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectCampaignsServiceLinkedRolePolicy",
   "CreateDate": "2021-09-23T20:54:26Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4PT3AZPOPK",
   "PolicyName": "AmazonConnectCampaignsServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-05-27T01:42:13Z",
+    "CreateDate": "2026-06-18T23:12:23Z",
     "Document": {
       "Statement": [
         {
@@ -142,12 +142,20 @@
           "Effect": "Allow",
           "Resource": "arn:aws:connect:*:*:instance/*",
           "Sid": "ConnectAccess"
+        },
+        {
+          "Action": [
+            "connect:GetMetricDataV2"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:connect-campaigns:*:*:campaign/*",
+          "Sid": "ConnectCampaignsMetricsAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-05-27T01:42:13Z"
+  "UpdateDate": "2026-06-18T23:12:23Z"
 }
