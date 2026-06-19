@@ -177,8 +177,10 @@ Actions:
   # actions with no corresponding API
   - Name: quicksight:AccountConfigurations
   - Name: quicksight:AllowVendedLogDeliveryForResource
+  - Name: quicksight:BatchAssignLimitsProfile
   - Name: quicksight:BatchDeleteKnowledgeBase
   - Name: quicksight:BatchGetPreferences
+  - Name: quicksight:BatchUnassignLimitsProfile
   - Name: quicksight:BatchUpdatePreferences
   - Name: quicksight:CreateActionConnector
   - Name: quicksight:CreateAdmin
@@ -188,6 +190,7 @@ Actions:
   - Name: quicksight:CreateEmailCustomizationTemplate
   - Name: quicksight:CreateExtensionAccess
   - Name: quicksight:CreateFlow
+  - Name: quicksight:CreateLimitsProfile
   - Name: quicksight:CreateOAuthClientApplication
   - Name: quicksight:CreateReader
   - Name: quicksight:CreateSpace
@@ -203,6 +206,7 @@ Actions:
   - Name: quicksight:DeleteExtensionAccess
   - Name: quicksight:DeleteFlow
   - Name: quicksight:DeleteKnowledgeBase
+  - Name: quicksight:DeleteLimitsProfile
   - Name: quicksight:DeleteOAuthClientApplication
   - Name: quicksight:DeleteSpace
   - Name: quicksight:DeleteUserCustomPermission
@@ -211,6 +215,8 @@ Actions:
   - Name: quicksight:DescribeActionConnectorPermissions
   - Name: quicksight:DescribeAgent
   - Name: quicksight:DescribeAgentPermissions
+  - Name: quicksight:DescribeAutomationGroup
+  - Name: quicksight:DescribeAutomationGroupPermissions
   - Name: quicksight:DescribeAutomationJob
   - Name: quicksight:DescribeBrand
   - Name: quicksight:DescribeBrandAssignment
@@ -224,6 +230,7 @@ Actions:
   - Name: quicksight:DescribeFlow
   - Name: quicksight:DescribeKnowledgeBase
   - Name: quicksight:DescribeKnowledgeBasePermissions
+  - Name: quicksight:DescribeLimitsProfile
   - Name: quicksight:DescribeOAuthClientApplication
   - Name: quicksight:DescribeQPersonalizationConfiguration
   - Name: quicksight:DescribeQuickIndexCapacity
@@ -241,6 +248,8 @@ Actions:
   - Name: quicksight:GetIdentityContext
   - Name: quicksight:ListActionConnectors
   - Name: quicksight:ListAgents
+  - Name: quicksight:ListAssignmentsForPrincipal
+  - Name: quicksight:ListAutomationGroups
   - Name: quicksight:ListBrands
   - Name: quicksight:ListCustomPermissions
   - Name: quicksight:ListCustomerManagedKeys
@@ -249,7 +258,9 @@ Actions:
   - Name: quicksight:ListFoldersForResource
   - Name: quicksight:ListKMSKeysForUser
   - Name: quicksight:ListKnowledgeBases
+  - Name: quicksight:ListLimitsProfiles
   - Name: quicksight:ListOAuthClientApplications
+  - Name: quicksight:ListProfileAssignments
   - Name: quicksight:ListSelfUpgrades
   - Name: quicksight:ListSpaceResources
   - Name: quicksight:ListSpaces
@@ -263,6 +274,7 @@ Actions:
   - Name: quicksight:ScopeDownPolicy
   - Name: quicksight:SearchActionConnectors
   - Name: quicksight:SearchAgents
+  - Name: quicksight:SearchAutomationGroups
   - Name: quicksight:SearchDirectoryGroups
   - Name: quicksight:SearchFlows
   - Name: quicksight:SearchKnowledgeBases
@@ -281,6 +293,7 @@ Actions:
   - Name: quicksight:UpdateAgent
   - Name: quicksight:UpdateAgentPermissions
   - Name: quicksight:UpdateApplicationWithTokenExchangeGrant
+  - Name: quicksight:UpdateAutomationGroupPermissions
   - Name: quicksight:UpdateBrand
   - Name: quicksight:UpdateBrandAssignment
   - Name: quicksight:UpdateBrandPublishedVersion
@@ -293,6 +306,7 @@ Actions:
   - Name: quicksight:UpdateFlow
   - Name: quicksight:UpdateFlowPermissions
   - Name: quicksight:UpdateKnowledgeBasePermissions
+  - Name: quicksight:UpdateLimitsProfile
   - Name: quicksight:UpdateOAuthClientApplication
   - Name: quicksight:UpdateQPersonalizationConfiguration
   - Name: quicksight:UpdateQuickIndexCapacity

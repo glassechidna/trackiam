@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 458
-* Unique actions: 21686
+* Unique actions: 21704
 * Managed policies: 1504
 
 Most common managed policy name prefixes:
@@ -43,14 +43,14 @@ The following table summarises the AWS APIs.
 | [`connect`](services/connect.yml) | 256 | 0 | 107 |
 | [`glue`](services/glue.yml) | 214 | 4 | 89 |
 | [`ses`](services/ses.yml) | 193 | 0 | 34 |
-| [`quicksight`](services/quicksight.yml) | 174 | 3 | 129 |
+| [`quicksight`](services/quicksight.yml) | 174 | 3 | 143 |
 | [`rds`](services/rds.yml) | 162 | 0 | 7 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
 | [`iam`](services/iam.yml) | 159 | 0 | 28 |
 | [`ssm`](services/ssm.yml) | 140 | 0 | 16 |
 | [`lex`](services/lex.yml) | 139 | 2 | 13 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 33 |
-| [`datazone`](services/datazone.yml) | 123 | 0 | 108 |
+| [`datazone`](services/datazone.yml) | 123 | 0 | 112 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 3 |
 | [`s3`](services/s3.yml) | 113 | 60 | 67 |
@@ -499,14 +499,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3620 |
-| `Get` | 3281 |
-| `Delete` | 2489 |
-| `Create` | 2344 |
-| `Update` | 2031 |
-| `Describe` | 1909 |
+| `List` | 3624 |
+| `Get` | 3282 |
+| `Delete` | 2490 |
+| `Create` | 2345 |
+| `Update` | 2033 |
+| `Describe` | 1912 |
 | `Put` | 587 |
-| `Start` | 529 |
+| `Start` | 531 |
 | `Tag` | 319 |
-| `Batch` | 317 |
+| `Batch` | 319 |
 
