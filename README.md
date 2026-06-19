@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 458
-* Unique actions: 21681
+* Unique actions: 21685
 * Managed policies: 1504
 
 Most common managed policy name prefixes:
@@ -160,7 +160,7 @@ The following table summarises the AWS APIs.
 | [`swf`](services/swf.yml) | 39 | 0 | 12 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
-| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 25 |
+| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 27 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 9 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 4 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
@@ -417,12 +417,12 @@ The following table summarises the AWS APIs.
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 17 |
 | [`ds-data`](services/ds-data.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
+| [`agentaccess-mcp`](services/agentaccess-mcp.yml) | 0 | 0 | 17 |
 | [`nova-act`](services/nova-act.yml) | 0 | 0 | 16 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 16 |
 | [`bcm-dashboards`](services/bcm-dashboards.yml) | 0 | 0 | 15 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 15 |
 | [`airflow-serverless`](services/airflow-serverless.yml) | 0 | 0 | 15 |
-| [`agentaccess-mcp`](services/agentaccess-mcp.yml) | 0 | 0 | 15 |
 | [`ssm-quicksetup`](services/ssm-quicksetup.yml) | 0 | 0 | 14 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 14 |
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 14 |
@@ -500,12 +500,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3620 |
-| `Get` | 3280 |
+| `Get` | 3281 |
 | `Delete` | 2489 |
 | `Create` | 2344 |
 | `Update` | 2031 |
 | `Describe` | 1908 |
-| `Put` | 586 |
+| `Put` | 587 |
 | `Start` | 529 |
 | `Tag` | 319 |
 | `Batch` | 317 |

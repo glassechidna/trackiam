@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEMRContainersServiceRolePolicy",
   "CreateDate": "2020-12-09T00:38:19Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4P24YZ52G4",
   "PolicyName": "AmazonEMRContainersServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-02-06T21:07:07Z",
+    "CreateDate": "2026-06-19T16:27:19Z",
     "Document": {
       "Statement": [
         {
@@ -37,9 +37,51 @@
         },
         {
           "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": "CreateVpcEndpointServiceConfiguration"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-endpoint-service/*",
+          "Sid": "VPCEndpointServiceTagOnCreate"
+        },
+        {
+          "Action": [
+            "ec2:CreateVpcEndpointServiceConfiguration"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/emr-containers:managed-endpoint-resource": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-endpoint-service/*",
+          "Sid": "VPCEndpointServiceCreate"
+        },
+        {
+          "Action": [
+            "ec2:DeleteVpcEndpointServiceConfigurations",
+            "ec2:ModifyVpcEndpointServicePermissions"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/emr-containers:managed-endpoint-resource": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-endpoint-service/*",
+          "Sid": "VPCEndpointServiceManage"
+        },
+        {
+          "Action": [
             "ec2:DescribeRouteTables",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
+            "ec2:DescribeVpcEndpointServiceConfigurations",
+            "ec2:DescribeVpcEndpointServicePermissions",
             "eks:DescribeCluster",
             "eks:DescribeNodeGroup",
             "eks:DescribePodIdentityAssociation",
@@ -57,7 +99,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2025-02-06T21:07:07Z"
+  "UpdateDate": "2026-06-19T16:27:19Z"
 }
