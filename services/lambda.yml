@@ -65,8 +65,16 @@ Actions:
 
   # actions with no corresponding API
   - Name: lambda:CheckpointDurableExecution
+  - Name: lambda:ConnectMicrovm
   - Name: lambda:CreateCapacityProvider
+  - Name: lambda:CreateMicrovmAuthToken
+  - Name: lambda:CreateMicrovmImage
+  - Name: lambda:CreateMicrovmShellAuthToken
+  - Name: lambda:CreateNetworkConnector
   - Name: lambda:DeleteCapacityProvider
+  - Name: lambda:DeleteMicrovmImage
+  - Name: lambda:DeleteMicrovmImageVersion
+  - Name: lambda:DeleteNetworkConnector
   - Name: lambda:DisableReplication
   - Name: lambda:EnableReplication
   - Name: lambda:GetCapacityProvider
@@ -75,20 +83,40 @@ Actions:
   - Name: lambda:GetDurableExecutionState
   - Name: lambda:GetFunctionRecursionConfig
   - Name: lambda:GetFunctionScalingConfig
+  - Name: lambda:GetMicrovm
+  - Name: lambda:GetMicrovmImage
+  - Name: lambda:GetMicrovmImageBuild
+  - Name: lambda:GetMicrovmImageVersion
+  - Name: lambda:GetNetworkConnector
   - Name: lambda:InvokeFunction
   - Name: lambda:InvokeFunctionUrl
   - Name: lambda:ListCapacityProviders
   - Name: lambda:ListDurableExecutionsByFunction
   - Name: lambda:ListFunctionVersionsByCapacityProvider
+  - Name: lambda:ListManagedMicrovmImageVersions
+  - Name: lambda:ListManagedMicrovmImages
+  - Name: lambda:ListMicrovmImageBuilds
+  - Name: lambda:ListMicrovmImageVersions
+  - Name: lambda:ListMicrovmImages
+  - Name: lambda:ListMicrovms
+  - Name: lambda:ListNetworkConnectors
   - Name: lambda:PassCapacityProvider
+  - Name: lambda:PassNetworkConnector
   - Name: lambda:PutFunctionRecursionConfig
   - Name: lambda:PutFunctionScalingConfig
+  - Name: lambda:ResumeMicrovm
+  - Name: lambda:RunMicrovm
   - Name: lambda:SendDurableExecutionCallbackFailure
   - Name: lambda:SendDurableExecutionCallbackHeartbeat
   - Name: lambda:SendDurableExecutionCallbackSuccess
   - Name: lambda:StopDurableExecution
+  - Name: lambda:SuspendMicrovm
+  - Name: lambda:TerminateMicrovm
   - Name: lambda:UpdateCapacityProvider
   - Name: lambda:UpdateFunctionCodeSigningConfig
+  - Name: lambda:UpdateMicrovmImage
+  - Name: lambda:UpdateMicrovmImageVersion
+  - Name: lambda:UpdateNetworkConnector
 
   # APIs without an IAM action
   - Name: lambda:GetLayerVersionByArn

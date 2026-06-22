@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 458
-* Unique actions: 21711
-* Managed policies: 1506
+* Unique actions: 21742
+* Managed policies: 1507
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 404 |
 | `arn:aws:iam::aws:policy/Amazon*` | 371 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 344 |
-| `arn:aws:iam::aws:policy/service-role/*` | 220 |
+| `arn:aws:iam::aws:policy/service-role/*` | 221 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
 | Other | 159 |
 
@@ -87,7 +87,7 @@ The following table summarises the AWS APIs.
 | [`appstream`](services/appstream.yml) | 75 | 0 | 14 |
 | [`elasticache`](services/elasticache.yml) | 75 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
-| [`logs`](services/logs.yml) | 74 | 0 | 53 |
+| [`logs`](services/logs.yml) | 74 | 0 | 56 |
 | [`guardduty`](services/guardduty.yml) | 74 | 0 | 14 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`sso`](services/sso.yml) | 73 | 0 | 53 |
@@ -105,7 +105,7 @@ The following table summarises the AWS APIs.
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 3 |
 | [`appsync`](services/appsync.yml) | 64 | 0 | 23 |
-| [`lambda`](services/lambda.yml) | 63 | 3 | 25 |
+| [`lambda`](services/lambda.yml) | 63 | 3 | 53 |
 | [`ivs`](services/ivs.yml) | 63 | 0 | 14 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 0 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
@@ -499,13 +499,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3625 |
-| `Get` | 3284 |
-| `Delete` | 2491 |
-| `Create` | 2346 |
-| `Update` | 2033 |
+| `List` | 3633 |
+| `Get` | 3289 |
+| `Delete` | 2495 |
+| `Create` | 2350 |
+| `Update` | 2036 |
 | `Describe` | 1912 |
-| `Put` | 587 |
+| `Put` | 588 |
 | `Start` | 531 |
 | `Batch` | 320 |
 | `Tag` | 319 |

@@ -1,0 +1,167 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmazonEMRServicePolicyForSessions",
+  "CreateDate": "2026-06-22T19:57:31Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4APNK3CDXF",
+  "PolicyName": "AmazonEMRServicePolicyForSessions",
+  "PolicyVersion": {
+    "CreateDate": "2026-06-22T19:57:31Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "elasticloadbalancing.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/elasticloadbalancing.amazonaws.com/AWSServiceRoleForElasticLoadBalancing",
+          "Sid": "CreateServiceLinkedRoleForELB"
+        },
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:DeleteSecurityGroup",
+            "elasticloadbalancing:AddTags",
+            "elasticloadbalancing:CreateListener",
+            "elasticloadbalancing:DeleteListener",
+            "elasticloadbalancing:DeleteLoadBalancer",
+            "elasticloadbalancing:DeleteTargetGroup",
+            "elasticloadbalancing:DeregisterTargets",
+            "elasticloadbalancing:RegisterTargets",
+            "elasticloadbalancing:SetSecurityGroups"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/for-use-with-amazon-emr-managed-policies": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:elasticloadbalancing:*:*:listener/*",
+            "arn:aws:elasticloadbalancing:*:*:loadbalancer/*",
+            "arn:aws:elasticloadbalancing:*:*:targetgroup/*"
+          ],
+          "Sid": "NLBManagement"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup",
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/for-use-with-amazon-emr-managed-policies": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*",
+          "Sid": "SecurityGroupProvisioning"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "CreateVpcEndpointServiceConfiguration"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:vpc-endpoint-service/*"
+          ],
+          "Sid": "TagOnCreateEndpointServiceResources"
+        },
+        {
+          "Action": [
+            "ec2:CreateVpcEndpointServiceConfiguration"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/for-use-with-amazon-emr-managed-policies": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:vpc-endpoint-service/*",
+            "arn:aws:elasticloadbalancing:*:*:loadbalancer/net/*"
+          ],
+          "Sid": "VPCEndpointServiceProvisioning"
+        },
+        {
+          "Action": [
+            "ec2:DeleteVpcEndpointServiceConfigurations",
+            "ec2:ModifyVpcEndpointServicePermissions"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/for-use-with-amazon-emr-managed-policies": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc-endpoint-service/*",
+          "Sid": "VPCEndpointServiceManagement"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:AddTags",
+            "elasticloadbalancing:CreateLoadBalancer",
+            "elasticloadbalancing:CreateTargetGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/for-use-with-amazon-emr-managed-policies": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticloadbalancing:*:*:listener/*",
+            "arn:aws:elasticloadbalancing:*:*:loadbalancer/*",
+            "arn:aws:elasticloadbalancing:*:*:targetgroup/*"
+          ],
+          "Sid": "NLBProvisioning"
+        },
+        {
+          "Action": "ec2:CreateSecurityGroup",
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc/*",
+          "Sid": "SecurityGroupCreateInVpc"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeVpcs",
+            "elasticloadbalancing:DescribeListeners",
+            "elasticloadbalancing:DescribeLoadBalancerAttributes",
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "elasticloadbalancing:DescribeTargetGroups",
+            "elasticloadbalancing:DescribeTargetHealth"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "NLBDescribes"
+        },
+        {
+          "Action": [
+            "ec2:DescribeVpcEndpointServiceConfigurations",
+            "ec2:DescribeVpcEndpointServicePermissions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "VPCEndpointServiceDescribes"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-06-22T19:57:31Z"
+}
