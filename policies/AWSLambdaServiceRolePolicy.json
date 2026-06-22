@@ -1,15 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSLambdaServiceRolePolicy",
   "CreateDate": "2025-11-30T08:04:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4CUXRY3KLO",
   "PolicyName": "AWSLambdaServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-11-30T08:04:07Z",
+    "CreateDate": "2026-06-22T15:12:14Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ec2:DeleteNetworkInterface",
+          "Condition": {
+            "StringEquals": {
+              "ec2:ManagedResourceOperator": "network-connectors.lambda.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*"
+        },
         {
           "Action": [
             "ec2:TerminateInstances"
@@ -33,12 +43,21 @@
           "Resource": [
             "*"
           ]
+        },
+        {
+          "Action": [
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2025-11-30T08:04:07Z"
+  "UpdateDate": "2026-06-22T15:12:14Z"
 }
