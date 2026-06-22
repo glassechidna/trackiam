@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForUserSubscriptions",
   "CreateDate": "2024-04-25T16:14:06Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4GUDBMDJ7K",
   "PolicyName": "AWSServiceRoleForUserSubscriptions",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:58:18Z",
+    "CreateDate": "2026-06-22T08:27:22Z",
     "Document": {
       "Statement": [
         {
@@ -52,6 +52,7 @@
             "sso-directory:DescribeUser",
             "sso:DescribeApplication",
             "sso:DescribeInstance",
+            "sso:ListApplicationAssignments",
             "sso:ListInstances"
           ],
           "Effect": "Allow",
@@ -64,7 +65,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2026-02-12T17:58:18Z"
+  "UpdateDate": "2026-06-22T08:27:22Z"
 }
