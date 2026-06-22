@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 458
-* Unique actions: 21704
-* Managed policies: 1505
+* Unique actions: 21711
+* Managed policies: 1506
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 404 |
 | `arn:aws:iam::aws:policy/Amazon*` | 371 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 343 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 344 |
 | `arn:aws:iam::aws:policy/service-role/*` | 220 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
 | Other | 159 |
@@ -284,7 +284,7 @@ The following table summarises the AWS APIs.
 | [`kafkaconnect`](services/kafkaconnect.yml) | 16 | 0 | 2 |
 | [`internetmonitor`](services/internetmonitor.yml) | 16 | 0 | 1 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
-| [`application-signals`](services/application-signals.yml) | 15 | 0 | 10 |
+| [`application-signals`](services/application-signals.yml) | 15 | 0 | 17 |
 | [`acm`](services/acm.yml) | 15 | 0 | 2 |
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
 | [`osis`](services/osis.yml) | 14 | 0 | 9 |
@@ -499,14 +499,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3624 |
-| `Get` | 3282 |
-| `Delete` | 2490 |
-| `Create` | 2345 |
+| `List` | 3625 |
+| `Get` | 3284 |
+| `Delete` | 2491 |
+| `Create` | 2346 |
 | `Update` | 2033 |
 | `Describe` | 1912 |
 | `Put` | 587 |
 | `Start` | 531 |
+| `Batch` | 320 |
 | `Tag` | 319 |
-| `Batch` | 319 |
 

@@ -1,0 +1,55 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSConfigThirdPartyServiceRolePolicy",
+  "CreateDate": "2026-06-22T17:57:23Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4LUUEA7F4N",
+  "PolicyName": "AWSConfigThirdPartyServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-06-22T17:57:23Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "sts:GetWebIdentityToken",
+          "Condition": {
+            "ForAnyValue:StringLike": {
+              "sts:IdentityTokenAudience": [
+                "api://AzureADTokenExchange"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowGetWebIdentityTokenByConfig"
+        },
+        {
+          "Action": [
+            "cloudwatch:PutMetricData"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/Config"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowCloudwatchActionsForMetrics"
+        },
+        {
+          "Action": [
+            "config:GetComplianceDetailsByConfigRule",
+            "config:PutEvaluations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowConfigActionsForRules"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-06-22T17:57:23Z"
+}
