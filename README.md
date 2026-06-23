@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 458
-* Unique actions: 21745
+* Unique actions: 21747
 * Managed policies: 1507
 
 Most common managed policy name prefixes:
@@ -387,10 +387,10 @@ The following table summarises the AWS APIs.
 | [`rtbfabric`](services/rtbfabric.yml) | 0 | 0 | 36 |
 | [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
+| [`billing`](services/billing.yml) | 0 | 0 | 31 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`dsql`](services/dsql.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
-| [`billing`](services/billing.yml) | 0 | 0 | 29 |
 | [`s3express`](services/s3express.yml) | 0 | 0 | 28 |
 | [`one`](services/one.yml) | 0 | 0 | 28 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
@@ -500,7 +500,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3634 |
-| `Get` | 3290 |
+| `Get` | 3292 |
 | `Delete` | 2495 |
 | `Create` | 2351 |
 | `Update` | 2036 |
