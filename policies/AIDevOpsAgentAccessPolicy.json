@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AIDevOpsAgentAccessPolicy",
   "CreateDate": "2026-03-26T03:42:09Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KEX6FTLTS",
   "PolicyName": "AIDevOpsAgentAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-06T02:27:33Z",
+    "CreateDate": "2026-06-24T04:57:22Z",
     "Document": {
       "Statement": [
         {
@@ -108,6 +108,7 @@
             "bedrock:List*",
             "budgets:Describe*",
             "budgets:List*",
+            "budgets:ViewBudget",
             "ce:Describe*",
             "ce:Get*",
             "ce:List*",
@@ -155,7 +156,6 @@
             "cloudtrail:GetTrailStatus",
             "cloudtrail:List*",
             "cloudtrail:LookupEvents",
-            "cloudtrail:StartQuery",
             "cloudwatch:Describe*",
             "cloudwatch:GenerateQuery",
             "cloudwatch:GetDashboard",
@@ -339,6 +339,7 @@
             "gamelift:List*",
             "globalaccelerator:Describe*",
             "globalaccelerator:List*",
+            "glue:GetCrawler",
             "glue:GetDatabase",
             "glue:GetDatabases",
             "glue:GetJob",
@@ -361,15 +362,14 @@
             "groundstation:List*",
             "guardduty:GetDetector",
             "guardduty:GetFilter",
+            "guardduty:GetFindings",
             "guardduty:GetIPSet",
             "guardduty:GetMalwareProtectionPlan",
             "guardduty:GetMasterAccount",
             "guardduty:GetMembers",
             "guardduty:GetThreatIntelSet",
             "guardduty:List*",
-            "health:DescribeAffectedEntities",
-            "health:DescribeEventDetails",
-            "health:DescribeEvents",
+            "health:Describe*",
             "healthlake:Describe*",
             "healthlake:List*",
             "iam:GetGroup",
@@ -386,11 +386,13 @@
             "iam:GetServiceLinkedRoleDeletionStatus",
             "iam:GetUser",
             "iam:GetUserPolicy",
+            "iam:ListAccountAliases",
             "iam:ListAttachedRolePolicies",
             "iam:ListOpenIDConnectProviders",
             "iam:ListRolePolicies",
             "iam:ListRoles",
             "iam:ListServerCertificates",
+            "iam:ListUsers",
             "iam:ListVirtualMFADevices",
             "identitystore:DescribeGroup",
             "identitystore:DescribeGroupMembership",
@@ -407,6 +409,7 @@
             "imagebuilder:GetWorkflow",
             "imagebuilder:List*",
             "inspector2:List*",
+            "inspector2:SearchVulnerabilities",
             "inspector:Describe*",
             "inspector:List*",
             "internetmonitor:GetMonitor",
@@ -509,6 +512,7 @@
             "logs:GetDeliverySource",
             "logs:GetLogAnomalyDetector",
             "logs:GetLogDelivery",
+            "logs:GetLogEvents",
             "logs:GetLogGroupFields",
             "logs:GetQueryResults",
             "logs:List*",
@@ -728,8 +732,8 @@
             "servicecatalog:GetApplication",
             "servicecatalog:GetAttributeGroup",
             "servicecatalog:List*",
-            "servicequotas:GetServiceQuota",
-            "servicequotas:ListServiceQuotas",
+            "servicequotas:Get*",
+            "servicequotas:List*",
             "ses:Describe*",
             "ses:GetAccount",
             "ses:GetAddonInstance",
@@ -768,12 +772,15 @@
             "ssm-sap:GetApplication",
             "ssm-sap:List*",
             "ssm:Describe*",
+            "ssm:GetCommandInvocation",
             "ssm:GetDefaultPatchBaseline",
             "ssm:GetDocument",
             "ssm:GetParameters",
             "ssm:GetPatchBaseline",
             "ssm:GetResourcePolicies",
             "ssm:List*",
+            "sso:DescribeAccountAssignmentCreationStatus",
+            "sso:DescribePermissionSet",
             "sso:GetInlinePolicyForPermissionSet",
             "sso:GetManagedApplicationInstance",
             "sso:GetPermissionsBoundaryForPermissionSet",
@@ -784,11 +791,11 @@
             "sso:ListCustomerManagedPolicyReferencesInPermissionSet",
             "sso:ListInstances",
             "sso:ListManagedPoliciesInPermissionSet",
+            "sso:ListPermissionSets",
             "sso:ListTagsForResource",
             "states:Describe*",
             "states:GetExecutionHistory",
             "states:List*",
-            "support:CreateCase",
             "support:DescribeCases",
             "synthetics:Describe*",
             "synthetics:GetCanary",
@@ -871,12 +878,21 @@
             "arn:aws:apigateway:*::/restapis/*/stages/*"
           ],
           "Sid": "AIOPSAPIGatewayAccess"
+        },
+        {
+          "Action": [
+            "cloudtrail:StartQuery",
+            "support:CreateCase"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AIOPSServiceWriteAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-06-06T02:27:33Z"
+  "UpdateDate": "2026-06-24T04:57:22Z"
 }
