@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 458
-* Unique actions: 21747
+* Unique actions: 21758
 * Managed policies: 1508
 
 Most common managed policy name prefixes:
@@ -63,7 +63,7 @@ The following table summarises the AWS APIs.
 | [`bedrock`](services/bedrock.yml) | 97 | 2 | 158 |
 | [`dms`](services/dms.yml) | 92 | 14 | 32 |
 | [`medialive`](services/medialive.yml) | 92 | 0 | 33 |
-| [`config`](services/config.yml) | 92 | 0 | 5 |
+| [`config`](services/config.yml) | 92 | 0 | 10 |
 | [`backup`](services/backup.yml) | 91 | 0 | 28 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 7 |
 | [`workspaces`](services/workspaces.yml) | 88 | 0 | 13 |
@@ -112,7 +112,7 @@ The following table summarises the AWS APIs.
 | [`transfer`](services/transfer.yml) | 60 | 0 | 11 |
 | [`datasync`](services/datasync.yml) | 60 | 0 | 6 |
 | [`geo`](services/geo.yml) | 60 | 0 | 4 |
-| [`inspector2`](services/inspector2.yml) | 59 | 0 | 16 |
+| [`inspector2`](services/inspector2.yml) | 59 | 0 | 22 |
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 17 |
 | [`events`](services/events.yml) | 57 | 0 | 3 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
@@ -499,13 +499,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3634 |
-| `Get` | 3292 |
-| `Delete` | 2495 |
-| `Create` | 2351 |
-| `Update` | 2036 |
+| `List` | 3637 |
+| `Get` | 3293 |
+| `Delete` | 2497 |
+| `Create` | 2352 |
+| `Update` | 2038 |
 | `Describe` | 1912 |
-| `Put` | 588 |
+| `Put` | 590 |
 | `Start` | 531 |
 | `Batch` | 320 |
 | `Tag` | 319 |
