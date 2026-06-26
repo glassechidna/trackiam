@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 458
-* Unique actions: 21771
+* Unique actions: 21781
 * Managed policies: 1509
 
 Most common managed policy name prefixes:
@@ -414,6 +414,7 @@ The following table summarises the AWS APIs.
 | [`monitron`](services/monitron.yml) | 0 | 0 | 18 |
 | [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 18 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 18 |
+| [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 17 |
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 17 |
 | [`ds-data`](services/ds-data.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
@@ -445,7 +446,6 @@ The following table summarises the AWS APIs.
 | [`pricingplanmanager`](services/pricingplanmanager.yml) | 0 | 0 | 8 |
 | [`network-security-director`](services/network-security-director.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
-| [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 7 |
 | [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 7 |
 | [`qdeveloper`](services/qdeveloper.yml) | 0 | 0 | 7 |
 | [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
@@ -499,10 +499,10 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3639 |
-| `Get` | 3295 |
-| `Delete` | 2499 |
-| `Create` | 2354 |
+| `List` | 3642 |
+| `Get` | 3298 |
+| `Delete` | 2500 |
+| `Create` | 2355 |
 | `Update` | 2040 |
 | `Describe` | 1912 |
 | `Put` | 590 |
