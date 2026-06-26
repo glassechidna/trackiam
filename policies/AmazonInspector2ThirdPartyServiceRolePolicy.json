@@ -1,0 +1,209 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonInspector2ThirdPartyServiceRolePolicy",
+  "CreateDate": "2026-06-26T15:27:27Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4E3NMS7BB2",
+  "PolicyName": "AmazonInspector2ThirdPartyServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-06-26T15:27:27Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/ssm.amazonaws.com/AWSServiceRoleForAmazonSSM"
+          ],
+          "Sid": "MultiCloudSsmSLRCreation"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "ssm.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/Inspector2SSMAssumeRole*",
+            "arn:aws:iam::*:role/Inspector2SSMDispatchRole*",
+            "arn:aws:iam::*:role/Inspector2SSMFederationRole*",
+            "arn:aws:iam::*:role/Inspector2VmScannerRole*"
+          ],
+          "Sid": "MultiCloudSsmPassRole"
+        },
+        {
+          "Action": "sts:GetWebIdentityToken",
+          "Condition": {
+            "ForAnyValue:StringLike": {
+              "sts:IdentityTokenAudience": [
+                "api://AzureADTokenExchange"
+              ]
+            },
+            "Null": {
+              "sts:IdentityTokenAudience": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowGetWebIdentityToken"
+        },
+        {
+          "Action": [
+            "config:DeleteServiceLinkedConfigurationRecorder",
+            "config:DescribeConfigurationRecorders",
+            "config:PutThirdPartyServiceLinkedConfigurationRecorder"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MultiCloudConfigSLRecWrite"
+        },
+        {
+          "Action": [
+            "ssm:AddTagsToResource",
+            "ssm:CreateCloudConnector",
+            "ssm:DeleteCloudConnector",
+            "ssm:GetCloudConnector",
+            "ssm:ListCloudConnectors",
+            "ssm:ListTagsForResource",
+            "ssm:RemoveTagsFromResource",
+            "ssm:UpdateCloudConnector"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:cloud-connector/*",
+          "Sid": "MultiCloudCloudConnectorManagement"
+        },
+        {
+          "Action": [
+            "ssm:GetDocument"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:document/AWS-InstallDistributorPackageOnAzure*",
+            "arn:aws:ssm:*:*:document/AmazonInspector2-*"
+          ],
+          "Sid": "MultiCloudSsmGetDocument"
+        },
+        {
+          "Action": "iam:GetRole",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/Inspector2SSMAssumeRole*",
+            "arn:aws:iam::*:role/Inspector2SSMDispatchRole*",
+            "arn:aws:iam::*:role/Inspector2SSMFederationRole*",
+            "arn:aws:iam::*:role/Inspector2VmScannerRole*"
+          ],
+          "Sid": "MultiCloudIamGetRole"
+        },
+        {
+          "Action": [
+            "cloudwatch:GetMetricData"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MultiCloudConfigMetrics"
+        },
+        {
+          "Action": [
+            "config:GetConnector",
+            "config:ListConfigurationRecorders"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MultiCloudConfigConnectorRead"
+        },
+        {
+          "Action": [
+            "resource-explorer-2:CreateStreamingAccessForService",
+            "resource-explorer-2:DeleteStreamingAccessForService",
+            "resource-explorer-2:ListStreamingAccessForServices"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MultiCloudStreamingAccess"
+        },
+        {
+          "Action": [
+            "resource-explorer-2:Search"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:resource-explorer-2:*:*:view/ServiceViewForInspector*/service-view",
+          "Sid": "MultiCloudResourceDiscovery"
+        },
+        {
+          "Action": [
+            "ssm:CreateAssociation",
+            "ssm:DeleteAssociation",
+            "ssm:StartAssociationsOnce",
+            "ssm:UpdateAssociation"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:association/*",
+            "arn:aws:ssm:*:*:document/AWS-InstallDistributorPackageOnAzure*"
+          ],
+          "Sid": "MultiCloudSsmAssociationWrite"
+        },
+        {
+          "Action": [
+            "ssm:DescribeAssociation"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:association/*",
+          "Sid": "MultiCloudSsmAssociationDescribe"
+        },
+        {
+          "Action": [
+            "ssm:DescribeAssociationExecutionTargets",
+            "ssm:DescribeAssociationExecutions",
+            "ssm:ListAssociations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MultiCloudSsmAssociationList"
+        },
+        {
+          "Action": [
+            "ssm:DescribeAutomationExecutions",
+            "ssm:DescribeAutomationStepExecutions",
+            "ssm:GetAutomationExecution",
+            "ssm:StartAutomationExecution",
+            "ssm:StopAutomationExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:automation-execution/*",
+            "arn:aws:ssm:*:*:document/AWS-InstallDistributorPackageOnAzure*"
+          ],
+          "Sid": "MultiCloudSsmAutomation"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-06-26T15:27:27Z"
+}
