@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSecurityHubServiceRolePolicy",
   "CreateDate": "2018-11-27T23:47:51Z",
-  "DefaultVersionId": "v15",
+  "DefaultVersionId": "v16",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJQPCESDDYDLLSOGYO",
   "PolicyName": "AWSSecurityHubServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-04-29T14:27:11Z",
+    "CreateDate": "2026-06-27T00:42:14Z",
     "Document": {
       "Statement": [
         {
@@ -37,6 +37,12 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "SecurityHubServiceRoleOrganizationsPermissions"
+        },
+        {
+          "Action": "cloudwatch:GetMetricData",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecurityHubCSPMServiceRoleConfigMetricsPermissions"
         },
         {
           "Action": [
@@ -105,19 +111,29 @@
             "config:DeleteServiceLinkedConfigurationRecorder",
             "config:DescribeConfigurationRecorderStatus",
             "config:DescribeConfigurationRecorders",
-            "config:PutServiceLinkedConfigurationRecorder"
+            "config:PutServiceLinkedConfigurationRecorder",
+            "config:PutThirdPartyServiceLinkedConfigurationRecorder"
           ],
           "Effect": "Allow",
           "Resource": [
             "arn:aws:config:*:*:configuration-recorder/*ConfigurationRecorderForSecurityHubCSPM*"
           ],
           "Sid": "SecurityHubCSPMServiceRoleConfig"
+        },
+        {
+          "Action": [
+            "config:GetConnector",
+            "config:ListConfigurationRecorders"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecurityHubCSPMServiceRoleConfigListAndGet"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v15"
+    "VersionId": "v16"
   },
-  "UpdateDate": "2026-04-29T14:27:11Z"
+  "UpdateDate": "2026-06-27T00:42:14Z"
 }

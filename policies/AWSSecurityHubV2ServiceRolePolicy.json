@@ -1,15 +1,28 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSecurityHubV2ServiceRolePolicy",
   "CreateDate": "2025-06-10T17:37:06Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AAHRX2W6F",
   "PolicyName": "AWSSecurityHubV2ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-05-05T20:57:18Z",
+    "CreateDate": "2026-06-27T00:42:11Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "sts:GetWebIdentityToken",
+          "Condition": {
+            "ForAnyValue:StringLike": {
+              "sts:IdentityTokenAudience": [
+                "api://AzureADTokenExchange"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecurityHubV2ServiceRoleOutboundIdentityFederationPermission"
+        },
         {
           "Action": [
             "iam:CreateServiceLinkedRole"
@@ -22,6 +35,19 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig",
           "Sid": "SecurityHubV2ServiceRoleAssetsIamPermissions"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "thirdparty.inspector2.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/thirdparty.inspector2.amazonaws.com/*",
+          "Sid": "SecurityHubV2ServiceRoleInspectorIamPermissions"
         },
         {
           "Action": [
@@ -42,6 +68,24 @@
         },
         {
           "Action": [
+            "inspector2:CreateConnector",
+            "inspector2:DeleteConnector",
+            "inspector2:ListConnectorScanConfigurations",
+            "inspector2:ListConnectors",
+            "inspector2:UpdateConnector",
+            "inspector2:UpdateConnectorScanConfiguration"
+          ],
+          "Condition": {
+            "StringLikeIfExists": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecurityHubV2ServiceRoleInspectorConnectorPermissions"
+        },
+        {
+          "Action": [
             "organizations:ListDelegatedAdministrators"
           ],
           "Condition": {
@@ -57,8 +101,25 @@
         },
         {
           "Action": [
+            "securityhub:CreateConnector",
+            "securityhub:DeleteConnector",
+            "securityhub:UpdateConnector"
+          ],
+          "Condition": {
+            "StringLikeIfExists": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:securityhub:*:*:connector/*",
+          "Sid": "SecurityHubConnectorPermissions"
+        },
+        {
+          "Action": [
             "securityhub:DescribeSecurityHubV2",
+            "securityhub:DisableSecurityHubFeatureV2",
             "securityhub:DisableSecurityHubV2",
+            "securityhub:EnableSecurityHubFeatureV2",
             "securityhub:EnableSecurityHubV2"
           ],
           "Condition": {
@@ -102,21 +163,28 @@
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "SecurityHubV2ServiceRoleLambdaMetricPermissions"
+          "Sid": "SecurityHubV2ServiceRoleLambdaAndConfigMetricPermissions"
         },
         {
           "Action": [
             "config:DeleteServiceLinkedConfigurationRecorder",
             "config:DescribeConfigurationRecorderStatus",
             "config:DescribeConfigurationRecorders",
-            "config:PutServiceLinkedConfigurationRecorder"
+            "config:PutServiceLinkedConfigurationRecorder",
+            "config:PutThirdPartyServiceLinkedConfigurationRecorder"
           ],
           "Effect": "Allow",
-          "Resource": [
-            "arn:aws:config:*:*:configuration-recorder/AWSConfigurationRecorderForSecurityHubAssets/*",
-            "arn:aws:config:*:*:configuration-recorder/AWSConfigurationRecorderForSecurityHubAssetsGlobal/*"
-          ],
+          "Resource": "arn:aws:config:*:*:configuration-recorder/*ConfigurationRecorderForSecurityHubAssets*",
           "Sid": "SecurityHubV2ServiceRoleAssetsConfig"
+        },
+        {
+          "Action": [
+            "config:GetConnector",
+            "config:ListConfigurationRecorders"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecurityHubV2ServiceRoleAssetsConfigListAndGet"
         },
         {
           "Action": [
@@ -191,7 +259,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2026-05-05T20:57:18Z"
+  "UpdateDate": "2026-06-27T00:42:11Z"
 }
