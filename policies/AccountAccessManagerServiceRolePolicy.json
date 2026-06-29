@@ -1,0 +1,38 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AccountAccessManagerServiceRolePolicy",
+  "CreateDate": "2026-06-29T19:12:30Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4OT3T5EF3K",
+  "PolicyName": "AccountAccessManagerServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-06-29T19:12:30Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "organizations:DescribeAccount",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:account/o-*/*"
+        },
+        {
+          "Action": [
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-06-29T19:12:30Z"
+}

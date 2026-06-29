@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 458
-* Unique actions: 21793
-* Managed policies: 1509
+* Unique actions: 21794
+* Managed policies: 1510
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 404 |
 | `arn:aws:iam::aws:policy/Amazon*` | 371 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 345 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 346 |
 | `arn:aws:iam::aws:policy/service-role/*` | 221 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
 | Other | 160 |
@@ -374,7 +374,7 @@ The following table summarises the AWS APIs.
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
 | [`q`](services/q.yml) | 0 | 0 | 54 |
 | [`s3tables`](services/s3tables.yml) | 0 | 0 | 53 |
-| [`transform-custom`](services/transform-custom.yml) | 0 | 0 | 51 |
+| [`transform-custom`](services/transform-custom.yml) | 0 | 0 | 52 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 48 |
 | [`route53globalresolver`](services/route53globalresolver.yml) | 0 | 0 | 48 |
 | [`finops-agent`](services/finops-agent.yml) | 0 | 0 | 46 |
