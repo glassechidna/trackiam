@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v69",
+  "DefaultVersionId": "v70",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-04T21:27:16Z",
+    "CreateDate": "2026-06-29T16:12:27Z",
     "Document": {
       "Statement": [
         {
@@ -33,7 +33,7 @@
             "arn:aws:bedrock:*:*:custom-model/*",
             "arn:aws:bedrock:*::foundation-model/*"
           ],
-          "Sid": "BedrockCreateEvaluationJobPermissions"
+          "Sid": "BRCreateEval"
         },
         {
           "Action": "bedrock:InvokeInlineAgent",
@@ -85,7 +85,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "BedrockRetrieveAndGeneratePermissions"
+          "Sid": "BRRAG"
         },
         {
           "Action": "bedrock:TagResource",
@@ -248,7 +248,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "CrossAccountRAMResourceSharingViaLakeFormationHybrid"
+          "Sid": "XAcctRAMLFHybrid"
         },
         {
           "Action": "s3:GetAccountPublicAccessBlock",
@@ -270,7 +270,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}",
-          "Sid": "AccessLevelControlS3BucketPermissions"
+          "Sid": "S3BucketAcl"
         },
         {
           "Action": "s3:PutObjectTagging",
@@ -299,7 +299,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}/${aws:PrincipalTag/AmazonDataZoneDomain}/${aws:PrincipalTag/AmazonDataZoneProject}/genAI/assets/evaluations/*",
-          "Sid": "TagS3ObjectPermissionsForBedrockEvaluation"
+          "Sid": "BREvalS3Tag"
         },
         {
           "Action": "sts:SetContext",
@@ -541,7 +541,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:bedrock:*:*:application-inference-profile/*",
-          "Sid": "BedrockInvokeModelAppInferenceProfilePermissions"
+          "Sid": "BRInvokeAppProfile"
         },
         {
           "Action": [
@@ -628,7 +628,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:cloudformation:*:*:stack/DataZone-Env-*",
-          "Sid": "GetDataZoneEnvironmentCFNStackPermissions"
+          "Sid": "DZEnvCfn"
         },
         {
           "Action": [
@@ -747,6 +747,22 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "CodeCommit"
+        },
+        {
+          "Action": [
+            "codeconnections:GetConnection",
+            "codeconnections:UseConnection",
+            "codestar-connections:GetConnection",
+            "codestar-connections:UseConnection"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/for-use-with-all-datazone-projects": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeConnectionsUser"
         },
         {
           "Action": [
@@ -1015,40 +1031,41 @@
         },
         {
           "Action": [
+            "glue:*DataQuality*"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalTag/EnableGlueWorkloadsPermissions": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:glue:*:*:dataQualityRuleset/dq_etl_ruleset_${aws:PrincipalTag/AmazonDataZoneProject}_*"
+          ],
+          "Sid": "GlueDQVetl"
+        },
+        {
+          "Action": [
+            "glue:*DataQuality*",
             "glue:*Session*",
             "glue:*Statement*",
             "glue:BatchGetJobs",
             "glue:BatchStopJobRun",
-            "glue:CancelDataQualityRuleRecommendationRun",
-            "glue:CancelDataQualityRulesetEvaluationRun",
             "glue:DeleteBlueprint",
-            "glue:DeleteDataQualityRuleset",
             "glue:DeleteJob",
             "glue:DeleteWorkflow",
             "glue:GetDashboardUrl",
-            "glue:GetDataQualityModel",
-            "glue:GetDataQualityModelResult",
-            "glue:GetDataQualityResult",
-            "glue:GetDataQualityRuleRecommendationRun",
-            "glue:GetDataQualityRuleset",
-            "glue:GetDataQualityRulesetEvaluationRun",
             "glue:GetJob",
             "glue:GetJobRun",
             "glue:GetJobRuns",
             "glue:NotifyEvent",
-            "glue:PublishDataQuality",
-            "glue:PutDataQualityProfileAnnotation",
-            "glue:PutDataQualityStatisticAnnotation",
             "glue:PutWorkflowRunProperties",
             "glue:ResumeWorkflowRun",
             "glue:StartBlueprintRun",
-            "glue:StartDataQualityRuleRecommendationRun",
-            "glue:StartDataQualityRulesetEvaluationRun",
             "glue:StartJobRun",
             "glue:StartWorkflowRun",
             "glue:StopWorkflowRun",
             "glue:UpdateBlueprint",
-            "glue:UpdateDataQualityRuleset",
             "glue:UpdateJob",
             "glue:UpdateWorkflow"
           ],
@@ -1175,7 +1192,7 @@
             "arn:aws:glue:*:*:database/*",
             "arn:aws:glue:*:*:table/*"
           ],
-          "Sid": "CrossAccountRAMResourceSharingPermissions"
+          "Sid": "XAcctRAMGlue"
         },
         {
           "Action": [
@@ -1253,22 +1270,6 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "DataConnectionAllProjectResources"
-        },
-        {
-          "Action": [
-            "glue:GetDataQualityResult",
-            "glue:PublishDataQuality"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "aws:PrincipalTag/EnableGlueWorkloadsPermissions": "true"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:glue:*:*:dataQualityRuleset/dq_etl_ruleset_${aws:PrincipalTag/AmazonDataZoneProject}_*"
-          ],
-          "Sid": "GlueDQVetl"
         },
         {
           "Action": [
@@ -1513,7 +1514,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "DataLakeCrossAccountDecryptKMSPermissions"
+          "Sid": "XAcctKmsDecrypt"
         },
         {
           "Action": [
@@ -1596,7 +1597,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:kms:*:*:key/${aws:PrincipalTag/KmsKeyId}",
-          "Sid": "KmsViaSecretsManagerPermissionsForBedrock"
+          "Sid": "BRKmsSM"
         },
         {
           "Action": [
@@ -1835,7 +1836,7 @@
             "arn:aws:quicksight:*:*:datasource/*",
             "arn:aws:quicksight:*:*:folder/*"
           ],
-          "Sid": "ManageQuickSightFolderAndDataSourceResources"
+          "Sid": "QSFolderDS"
         },
         {
           "Action": [
@@ -1864,7 +1865,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:ram:*:*:resource-share-invitation/*",
-          "Sid": "CrossAccountRAMResourceShareInvitationPermission"
+          "Sid": "XAcctRAMInvite"
         },
         {
           "Action": [
@@ -1888,7 +1889,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "CrossAccountRAMResourceSharingViaLakeFormationPermissions"
+          "Sid": "XAcctRAMLF"
         },
         {
           "Action": [
@@ -1910,7 +1911,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "CrossAccountLakeFormationResourceSharingPermissions"
+          "Sid": "XAcctLFCreate"
         },
         {
           "Action": [
@@ -1944,7 +1945,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "RedshiftDataActionsForManagedWorkgroup"
+          "Sid": "RSDataMWg"
         },
         {
           "Action": [
@@ -2005,7 +2006,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "RedshiftDataActionsIAMSessionRestriction"
+          "Sid": "RSDataIAMSession"
         },
         {
           "Action": [
@@ -2040,7 +2041,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "RedshiftServerlessWorkgroupWithResourceType"
+          "Sid": "RSWgTagged"
         },
         {
           "Action": [
@@ -2053,7 +2054,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:redshift:*:*:dbname:*/*",
-          "Sid": "RedshiftExistingComputeConnectToCatalog"
+          "Sid": "RSExistCatalog"
         },
         {
           "Action": [
@@ -2367,7 +2368,7 @@
             "arn:aws:bedrock:*:*:custom-model/*",
             "arn:aws:bedrock:*::foundation-model/*"
           ],
-          "Sid": "CreateEvaluationJobForFoundationModelPermissions"
+          "Sid": "BREvalFM"
         },
         {
           "Action": "secretsmanager:ListSecrets",
@@ -2436,6 +2437,22 @@
         },
         {
           "Action": [
+            "codeconnections:GetHost",
+            "codeconnections:ListConnections",
+            "codeconnections:ListTagsForResource",
+            "codestar-connections:GetHost",
+            "codestar-connections:ListConnections",
+            "codestar-connections:ListTagsForResource",
+            "dynamodb:ListTables",
+            "glue:ManagedConnector",
+            "glue:TestConnection"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DataConnOpen"
+        },
+        {
+          "Action": [
             "codewhisperer:GenerateRecommendations"
           ],
           "Effect": "Allow",
@@ -2463,16 +2480,6 @@
           "Effect": "Allow",
           "Resource": "arn:aws:datazone:*:*:domain/${aws:PrincipalTag/AmazonDataZoneDomain}",
           "Sid": "DataZoneUserPermissions"
-        },
-        {
-          "Action": [
-            "dynamodb:ListTables",
-            "glue:ManagedConnector",
-            "glue:TestConnection"
-          ],
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "UnrestrictedDataConnectionPermissions"
         },
         {
           "Action": [
@@ -2792,16 +2799,6 @@
         },
         {
           "Action": [
-            "sagemaker-unified-studio-mcp:CallPrivilegedTool",
-            "sagemaker-unified-studio-mcp:CallReadOnlyTool",
-            "sagemaker-unified-studio-mcp:InvokeMcp"
-          ],
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "SageMakerUnifiedStudioMcp"
-        },
-        {
-          "Action": [
             "sqlworkbench:*QCustomContext",
             "sqlworkbench:CreateConnection",
             "sqlworkbench:DeleteTab",
@@ -2824,7 +2821,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v69"
+    "VersionId": "v70"
   },
-  "UpdateDate": "2026-06-04T21:27:16Z"
+  "UpdateDate": "2026-06-29T16:12:27Z"
 }

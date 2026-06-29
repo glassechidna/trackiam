@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMDefaultExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v26",
+  "DefaultVersionId": "v27",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BV3PMY4IB",
   "PolicyName": "SageMakerStudioUserIAMDefaultExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-04T21:27:14Z",
+    "CreateDate": "2026-06-29T16:12:28Z",
     "Document": {
       "Statement": [
         {
@@ -107,6 +107,63 @@
         },
         {
           "Action": [
+            "codeconnections:GetConnection",
+            "codeconnections:UseConnection",
+            "codestar-connections:GetConnection",
+            "codestar-connections:UseConnection"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/for-use-with-all-datazone-projects": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeConnectionsUser"
+        },
+        {
+          "Action": [
+            "events:DescribeRule",
+            "events:PutTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/sagemaker:is-canvas-data-prep-job": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/*",
+          "Sid": "CanvasEventBridgeOperations"
+        },
+        {
+          "Action": [
+            "events:PutRule"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/sagemaker:is-canvas-data-prep-job": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/*",
+          "Sid": "CanvasEventBridgePutOperation"
+        },
+        {
+          "Action": [
+            "events:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/sagemaker:is-canvas-data-prep-job": "true",
+              "aws:ResourceTag/sagemaker:is-canvas-data-prep-job": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/*",
+          "Sid": "CanvasEventBridgeTagBasedOperations"
+        },
+        {
+          "Action": [
             "glue:*"
           ],
           "Condition": {
@@ -130,6 +187,7 @@
                 "bedrock.amazonaws.com",
                 "elasticmapreduce.amazonaws.com",
                 "emr-serverless.amazonaws.com",
+                "events.amazonaws.com",
                 "glue.amazonaws.com",
                 "lakeformation.amazonaws.com",
                 "redshift.amazonaws.com",
@@ -414,6 +472,25 @@
             "sagemaker:CreateApp",
             "sagemaker:CreateSpace",
             "sagemaker:DeleteApp",
+            "sagemaker:DeleteSpace"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonDataZoneUser": "${aws:PrincipalTag/datazone:userId}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:app/*/Canvas/*",
+            "arn:aws:sagemaker:*:*:space/*/CanvasManagedSpace*"
+          ],
+          "Sid": "CanvasUserProfileApp"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateApp",
+            "sagemaker:CreateSpace",
+            "sagemaker:DeleteApp",
             "sagemaker:DeleteSpace",
             "sagemaker:UpdateSpace"
           ],
@@ -436,7 +513,8 @@
           "Action": [
             "sagemaker:CreatePresignedDomainUrl",
             "sagemaker:CreateUserProfile",
-            "sagemaker:DeleteUserProfile"
+            "sagemaker:DeleteUserProfile",
+            "sagemaker:UpdateUserProfile"
           ],
           "Condition": {
             "StringEquals": {
@@ -467,6 +545,7 @@
             "secretsmanager:DescribeSecret",
             "secretsmanager:GetSecretValue",
             "secretsmanager:PutResourcePolicy",
+            "secretsmanager:PutSecretValue",
             "secretsmanager:UpdateSecret"
           ],
           "Condition": {
@@ -483,6 +562,7 @@
             "secretsmanager:CreateSecret",
             "secretsmanager:DescribeSecret",
             "secretsmanager:GetSecretValue",
+            "secretsmanager:PutSecretValue",
             "secretsmanager:UpdateSecret"
           ],
           "Condition": {
@@ -557,6 +637,26 @@
         },
         {
           "Action": [
+            "application-autoscaling:DescribeScalingActivities",
+            "application-autoscaling:PutScalingPolicy",
+            "application-autoscaling:RegisterScalableTarget",
+            "comprehend:BatchDetect*",
+            "comprehend:Detect*",
+            "events:ListTagsForResource",
+            "quicksight:ListNamespaces",
+            "rds:DescribeDBInstances",
+            "rekognition:Detect*",
+            "sagemaker-data-science-assistant:*",
+            "textract:Analyze*",
+            "textract:Get*",
+            "textract:Start*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CanvasGeneralPermissions"
+        },
+        {
+          "Action": [
             "athena:BatchGet*",
             "athena:CreateNamedQuery",
             "athena:CreateNotebook",
@@ -597,7 +697,10 @@
         },
         {
           "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
             "cloudwatch:GetMetricData",
+            "cloudwatch:PutMetricAlarm",
             "cloudwatch:PutMetricData",
             "logs:CreateLogGroup",
             "logs:CreateLogStream",
@@ -612,20 +715,16 @@
         },
         {
           "Action": [
-            "codeconnections:GetConnection",
             "codeconnections:GetHost",
             "codeconnections:ListConnections",
             "codeconnections:ListTagsForResource",
-            "codeconnections:UseConnection",
-            "codestar-connections:GetConnection",
             "codestar-connections:GetHost",
             "codestar-connections:ListConnections",
-            "codestar-connections:ListTagsForResource",
-            "codestar-connections:UseConnection"
+            "codestar-connections:ListTagsForResource"
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "CodeConnectionsUser"
+          "Sid": "CodeConnectionsUserList"
         },
         {
           "Action": [
@@ -679,8 +778,10 @@
             "datazone:SearchTypes",
             "datazone:SearchUserProfiles",
             "datazone:SendMessage",
+            "datazone:StartCompute",
             "datazone:StartConversation",
             "datazone:StartMetadataGenerationRun",
+            "datazone:StopCompute",
             "datazone:UpdateAssetFilter",
             "datazone:UpdateCell",
             "datazone:UpdateCellRun",
@@ -710,6 +811,7 @@
           "Action": [
             "ec2:CreateNetworkInterface",
             "ec2:CreateNetworkInterfacePermission",
+            "ec2:CreateVpcEndpoint",
             "ec2:DeleteNetworkInterface",
             "ec2:DeleteNetworkInterfacePermission"
           ],
@@ -864,6 +966,17 @@
         },
         {
           "Action": [
+            "redshift:GetClusterCredentials"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift:*:*:dbname:*",
+            "arn:aws:redshift:*:*:dbuser:*/sagemaker_access*"
+          ],
+          "Sid": "CanvasRedshiftAccess"
+        },
+        {
+          "Action": [
             "resource-groups:GetGroupQuery",
             "resource-groups:ListGroupResources"
           ],
@@ -909,16 +1022,6 @@
         },
         {
           "Action": [
-            "sagemaker-unified-studio-mcp:CallPrivilegedTool",
-            "sagemaker-unified-studio-mcp:CallReadOnlyTool",
-            "sagemaker-unified-studio-mcp:InvokeMcp"
-          ],
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "SageMakerUnifiedStudioMcp"
-        },
-        {
-          "Action": [
             "scheduler:CreateSchedule",
             "scheduler:DeleteSchedule",
             "scheduler:Get*",
@@ -953,7 +1056,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v26"
+    "VersionId": "v27"
   },
-  "UpdateDate": "2026-06-04T21:27:14Z"
+  "UpdateDate": "2026-06-29T16:12:28Z"
 }

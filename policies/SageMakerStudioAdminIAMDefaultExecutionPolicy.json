@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioAdminIAMDefaultExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v22",
+  "DefaultVersionId": "v23",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NZY6YGCPE",
   "PolicyName": "SageMakerStudioAdminIAMDefaultExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-04T21:27:17Z",
+    "CreateDate": "2026-06-29T16:12:16Z",
     "Document": {
       "Statement": [
         {
@@ -54,6 +54,7 @@
                 "datazone.amazonaws.com",
                 "elasticmapreduce.amazonaws.com",
                 "emr-serverless.amazonaws.com",
+                "events.amazonaws.com",
                 "redshift.amazonaws.com",
                 "scheduler.amazonaws.com"
               ]
@@ -518,6 +519,7 @@
             "secretsmanager:DescribeSecret",
             "secretsmanager:GetSecretValue",
             "secretsmanager:PutResourcePolicy",
+            "secretsmanager:PutSecretValue",
             "secretsmanager:TagResource",
             "secretsmanager:UpdateSecret"
           ],
@@ -536,6 +538,7 @@
             "secretsmanager:DeleteSecret",
             "secretsmanager:DescribeSecret",
             "secretsmanager:GetSecretValue",
+            "secretsmanager:PutSecretValue",
             "secretsmanager:TagResource",
             "secretsmanager:UpdateSecret"
           ],
@@ -652,6 +655,27 @@
         },
         {
           "Action": [
+            "application-autoscaling:DescribeScalingActivities",
+            "application-autoscaling:PutScalingPolicy",
+            "application-autoscaling:RegisterScalableTarget",
+            "comprehend:*",
+            "events:DescribeRule",
+            "events:ListTagsForResource",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:TagResource",
+            "quicksight:ListNamespaces",
+            "rds:DescribeDBInstances",
+            "rekognition:*",
+            "sagemaker-data-science-assistant:*",
+            "textract:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CanvasGeneralPermissions"
+        },
+        {
+          "Action": [
             "athena:*"
           ],
           "Effect": "Allow",
@@ -671,7 +695,10 @@
         },
         {
           "Action": [
+            "cloudwatch:DeleteAlarms",
+            "cloudwatch:DescribeAlarms",
             "cloudwatch:GetMetricData",
+            "cloudwatch:PutMetricAlarm",
             "cloudwatch:PutMetricData",
             "logs:CreateLogGroup",
             "logs:CreateLogStream",
@@ -728,6 +755,7 @@
           "Action": [
             "ec2:CreateNetworkInterface",
             "ec2:CreateNetworkInterfacePermission",
+            "ec2:CreateVpcEndpoint",
             "ec2:DeleteNetworkInterface",
             "ec2:DeleteNetworkInterfacePermission"
           ],
@@ -943,6 +971,17 @@
         },
         {
           "Action": [
+            "redshift:GetClusterCredentials"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:redshift:*:*:dbname:*",
+            "arn:aws:redshift:*:*:dbuser:*/sagemaker_access*"
+          ],
+          "Sid": "CanvasRedshiftAccess"
+        },
+        {
+          "Action": [
             "resource-groups:GetGroupQuery",
             "resource-groups:ListGroupResources"
           ],
@@ -952,8 +991,10 @@
         },
         {
           "Action": [
+            "s3:AbortMultipartUpload",
             "s3:CreateBucket",
             "s3:DeleteBucketPolicy",
+            "s3:DeleteObject",
             "s3:Get*",
             "s3:Put*"
           ],
@@ -1048,7 +1089,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v22"
+    "VersionId": "v23"
   },
-  "UpdateDate": "2026-06-04T21:27:17Z"
+  "UpdateDate": "2026-06-29T16:12:16Z"
 }

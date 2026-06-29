@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMPermissiveExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:08Z",
-  "DefaultVersionId": "v21",
+  "DefaultVersionId": "v22",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MQ2K3CR4F",
   "PolicyName": "SageMakerStudioUserIAMPermissiveExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-04T21:27:28Z",
+    "CreateDate": "2026-06-29T16:12:34Z",
     "Document": {
       "Statement": [
         {
@@ -117,6 +117,22 @@
             "arn:aws:glue:*:*:session/*"
           ],
           "Sid": "DenyTaggingUntaggingForeignSessions"
+        },
+        {
+          "Action": [
+            "codeconnections:GetConnection",
+            "codeconnections:UseConnection",
+            "codestar-connections:GetConnection",
+            "codestar-connections:UseConnection"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/for-use-with-all-datazone-projects": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeConnectionsUser"
         },
         {
           "Action": [
@@ -394,6 +410,7 @@
           "Action": [
             "airflow-serverless:*",
             "airflow:*",
+            "application-autoscaling:*",
             "athena:*",
             "bedrock:*",
             "codewhisperer:*",
@@ -423,13 +440,20 @@
         {
           "Action": [
             "cloudwatch:*",
+            "comprehend:*",
+            "events:*",
             "glue:*",
             "logs:*",
+            "quicksight:*",
+            "rds:*",
             "redshift-data:*",
             "redshift-serverless:*",
             "redshift:*",
+            "rekognition:*",
             "s3:*",
-            "s3tables:*"
+            "s3tables:*",
+            "sagemaker-data-science-assistant:*",
+            "textract:*"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -437,20 +461,16 @@
         },
         {
           "Action": [
-            "codeconnections:GetConnection",
             "codeconnections:GetHost",
             "codeconnections:ListConnections",
             "codeconnections:ListTagsForResource",
-            "codeconnections:UseConnection",
-            "codestar-connections:GetConnection",
             "codestar-connections:GetHost",
             "codestar-connections:ListConnections",
-            "codestar-connections:ListTagsForResource",
-            "codestar-connections:UseConnection"
+            "codestar-connections:ListTagsForResource"
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "CodeConnectionsUser"
+          "Sid": "CodeConnectionsUserList"
         },
         {
           "Action": [
@@ -496,8 +516,10 @@
             "datazone:SearchTypes",
             "datazone:SearchUserProfiles",
             "datazone:SendMessage",
+            "datazone:StartCompute",
             "datazone:StartConversation",
             "datazone:StartMetadataGenerationRun",
+            "datazone:StopCompute",
             "datazone:UpdateAssetFilter",
             "datazone:UpdateCell",
             "datazone:UpdateCellRun",
@@ -529,6 +551,7 @@
           "Action": [
             "ec2:CreateNetworkInterface",
             "ec2:CreateNetworkInterfacePermission",
+            "ec2:CreateVpcEndpoint",
             "ec2:DeleteNetworkInterface",
             "ec2:DeleteNetworkInterfacePermission"
           ],
@@ -610,7 +633,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v21"
+    "VersionId": "v22"
   },
-  "UpdateDate": "2026-06-04T21:27:28Z"
+  "UpdateDate": "2026-06-29T16:12:34Z"
 }

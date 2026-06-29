@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioAdminIAMPermissiveExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v19",
+  "DefaultVersionId": "v20",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DPB4UTXYO",
   "PolicyName": "SageMakerStudioAdminIAMPermissiveExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-04T21:27:15Z",
+    "CreateDate": "2026-06-29T16:12:11Z",
     "Document": {
       "Statement": [
         {
@@ -480,6 +480,7 @@
             "secretsmanager:DescribeSecret",
             "secretsmanager:GetSecretValue",
             "secretsmanager:PutResourcePolicy",
+            "secretsmanager:PutSecretValue",
             "secretsmanager:TagResource",
             "secretsmanager:UpdateSecret"
           ],
@@ -498,6 +499,7 @@
             "secretsmanager:DeleteSecret",
             "secretsmanager:DescribeSecret",
             "secretsmanager:GetSecretValue",
+            "secretsmanager:PutSecretValue",
             "secretsmanager:TagResource",
             "secretsmanager:UpdateSecret"
           ],
@@ -566,6 +568,7 @@
           "Action": [
             "airflow-serverless:*",
             "airflow:*",
+            "application-autoscaling:*",
             "athena:*",
             "bedrock:*",
             "codewhisperer:*",
@@ -597,13 +600,20 @@
         {
           "Action": [
             "cloudwatch:*",
+            "comprehend:*",
+            "events:*",
             "glue:*",
             "logs:*",
+            "quicksight:*",
+            "rds:*",
             "redshift-data:*",
             "redshift-serverless:*",
             "redshift:*",
+            "rekognition:*",
             "s3:*",
-            "s3tables:*"
+            "s3tables:*",
+            "sagemaker-data-science-assistant:*",
+            "textract:*"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -637,6 +647,7 @@
           "Action": [
             "ec2:CreateNetworkInterface",
             "ec2:CreateNetworkInterfacePermission",
+            "ec2:CreateVpcEndpoint",
             "ec2:DeleteNetworkInterface",
             "ec2:DeleteNetworkInterfacePermission"
           ],
@@ -794,7 +805,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v19"
+    "VersionId": "v20"
   },
-  "UpdateDate": "2026-06-04T21:27:15Z"
+  "UpdateDate": "2026-06-29T16:12:11Z"
 }

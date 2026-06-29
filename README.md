@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 458
-* Unique actions: 21785
+* Unique actions: 21793
 * Managed policies: 1509
 
 Most common managed policy name prefixes:
@@ -331,7 +331,7 @@ The following table summarises the AWS APIs.
 | [`tax`](services/tax.yml) | 7 | 0 | 16 |
 | [`cur`](services/cur.yml) | 7 | 0 | 5 |
 | [`cost-optimization-hub`](services/cost-optimization-hub.yml) | 7 | 0 | 1 |
-| [`artifact`](services/artifact.yml) | 6 | 0 | 9 |
+| [`artifact`](services/artifact.yml) | 6 | 0 | 17 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
 | [`ebs`](services/ebs.yml) | 6 | 0 | 0 |
@@ -499,14 +499,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3642 |
-| `Get` | 3298 |
+| `List` | 3645 |
+| `Get` | 3299 |
 | `Delete` | 2500 |
-| `Create` | 2355 |
+| `Create` | 2356 |
 | `Update` | 2041 |
 | `Describe` | 1912 |
 | `Put` | 590 |
 | `Start` | 531 |
+| `Tag` | 320 |
 | `Batch` | 320 |
-| `Tag` | 319 |
 
