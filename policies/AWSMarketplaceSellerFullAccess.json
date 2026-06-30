@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerFullAccess",
   "CreateDate": "2019-07-02T20:40:09Z",
-  "DefaultVersionId": "v30",
+  "DefaultVersionId": "v31",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JF7OFUANW",
   "PolicyName": "AWSMarketplaceSellerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-06-05T18:12:20Z",
+    "CreateDate": "2026-06-30T17:12:18Z",
     "Document": {
       "Statement": [
         {
@@ -122,8 +122,10 @@
             "tax:GetTaxInterview",
             "tax:GetTaxRegistration",
             "tax:ListSupplementalTaxRegistrations",
+            "tax:ListTaxRegistrations",
             "tax:PutSupplementalTaxRegistration",
-            "tax:PutTaxInterview"
+            "tax:PutTaxInterview",
+            "tax:PutTaxRegistration"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -281,7 +283,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v30"
+    "VersionId": "v31"
   },
-  "UpdateDate": "2026-06-05T18:12:20Z"
+  "UpdateDate": "2026-06-30T17:12:18Z"
 }

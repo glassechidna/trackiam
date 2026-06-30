@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 458
-* Unique actions: 21809
-* Managed policies: 1510
+* Unique actions: 21832
+* Managed policies: 1511
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 404 |
+| `arn:aws:iam::aws:policy/AWS*` | 405 |
 | `arn:aws:iam::aws:policy/Amazon*` | 371 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 346 |
 | `arn:aws:iam::aws:policy/service-role/*` | 221 |
@@ -284,8 +284,8 @@ The following table summarises the AWS APIs.
 | [`kafkaconnect`](services/kafkaconnect.yml) | 16 | 0 | 2 |
 | [`internetmonitor`](services/internetmonitor.yml) | 16 | 0 | 1 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
+| [`acm`](services/acm.yml) | 15 | 0 | 25 |
 | [`application-signals`](services/application-signals.yml) | 15 | 0 | 17 |
-| [`acm`](services/acm.yml) | 15 | 0 | 2 |
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
 | [`osis`](services/osis.yml) | 14 | 0 | 9 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
@@ -499,14 +499,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3649 |
-| `Get` | 3304 |
-| `Delete` | 2500 |
-| `Create` | 2359 |
-| `Update` | 2043 |
-| `Describe` | 1912 |
+| `List` | 3654 |
+| `Get` | 3305 |
+| `Delete` | 2503 |
+| `Create` | 2362 |
+| `Update` | 2046 |
+| `Describe` | 1916 |
 | `Put` | 590 |
 | `Start` | 532 |
-| `Tag` | 320 |
+| `Tag` | 321 |
 | `Batch` | 320 |
 

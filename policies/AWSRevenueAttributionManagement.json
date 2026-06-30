@@ -1,0 +1,89 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSRevenueAttributionManagement",
+  "CreateDate": "2026-06-30T16:57:13Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4G2SDEN2I2",
+  "PolicyName": "AWSRevenueAttributionManagement",
+  "PolicyVersion": {
+    "CreateDate": "2026-06-30T16:57:13Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "partnercentral:CreateRevenueAttribution"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RevenueAttributionCreation"
+        },
+        {
+          "Action": [
+            "partnercentral:GetRevenueAttribution",
+            "partnercentral:UpdateRevenueAttribution"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:partnercentral:*:*:catalog/*/revenue-attribution/*",
+          "Sid": "RevenueAttributionManagement"
+        },
+        {
+          "Action": [
+            "partnercentral:ListRevenueAttributions"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RevenueAttributionListing"
+        },
+        {
+          "Action": [
+            "partnercentral:ListTagsForResource",
+            "partnercentral:TagResource",
+            "partnercentral:UntagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:partnercentral:*:*:catalog/*/revenue-attribution/*"
+          ],
+          "Sid": "TaggingAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-06-30T16:57:13Z"
+}
