@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 458
-* Unique actions: 21845
-* Managed policies: 1513
+* Unique actions: 21847
+* Managed policies: 1514
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 407 |
+| `arn:aws:iam::aws:policy/AWS*` | 408 |
 | `arn:aws:iam::aws:policy/Amazon*` | 371 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 346 |
 | `arn:aws:iam::aws:policy/service-role/*` | 221 |
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 625 | 0 | 168 |
-| [`sagemaker`](services/sagemaker.yml) | 351 | 0 | 91 |
+| [`sagemaker`](services/sagemaker.yml) | 351 | 0 | 93 |
 | [`iot`](services/iot.yml) | 262 | 3 | 31 |
 | [`chime`](services/chime.yml) | 259 | 0 | 57 |
 | [`connect`](services/connect.yml) | 256 | 0 | 107 |
@@ -499,7 +499,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3656 |
+| `List` | 3657 |
 | `Get` | 3307 |
 | `Delete` | 2505 |
 | `Create` | 2364 |
@@ -508,5 +508,5 @@ Most common action prefixes:
 | `Put` | 590 |
 | `Start` | 532 |
 | `Tag` | 321 |
-| `Batch` | 320 |
+| `Batch` | 321 |
 

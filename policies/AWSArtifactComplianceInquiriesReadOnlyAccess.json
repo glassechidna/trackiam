@@ -1,0 +1,38 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSArtifactComplianceInquiriesReadOnlyAccess",
+  "CreateDate": "2026-06-30T19:42:13Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CLI3PC32O",
+  "PolicyName": "AWSArtifactComplianceInquiriesReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-06-30T19:42:13Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "artifact:ExportComplianceInquiry",
+            "artifact:GetComplianceInquiryMetadata",
+            "artifact:ListComplianceInquiryQueries"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:artifact:*:*:compliance-inquiry/*",
+          "Sid": "GetComplianceInquiryActions"
+        },
+        {
+          "Action": [
+            "artifact:ListComplianceInquiries"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListComplianceInquiryActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-06-30T19:42:13Z"
+}
