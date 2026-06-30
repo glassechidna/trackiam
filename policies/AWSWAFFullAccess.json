@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFFullAccess",
   "CreateDate": "2015-10-06T20:44:00Z",
-  "DefaultVersionId": "v15",
+  "DefaultVersionId": "v16",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJMIKIAFXZEGOLRH7C",
   "PolicyName": "AWSWAFFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-04-08T22:27:12Z",
+    "CreateDate": "2026-06-30T22:42:20Z",
     "Document": {
       "Statement": [
         {
@@ -88,6 +88,24 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowListActionsForAppSync"
+        },
+        {
+          "Action": [
+            "bedrock-agentcore:GatewayAssociateWebACL",
+            "bedrock-agentcore:GatewayDisassociateWebACL",
+            "bedrock-agentcore:GatewayGetWebACLForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock-agentcore:*:*:gateway/*",
+          "Sid": "AllowActionsForAgentCoreGateway"
+        },
+        {
+          "Action": [
+            "bedrock-agentcore:GatewayListResourcesForWebACL"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListActionsForAgentCoreGateway"
         },
         {
           "Action": [
@@ -243,7 +261,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v15"
+    "VersionId": "v16"
   },
-  "UpdateDate": "2026-04-08T22:27:12Z"
+  "UpdateDate": "2026-06-30T22:42:20Z"
 }
