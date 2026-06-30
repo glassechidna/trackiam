@@ -1,15 +1,51 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRolePolicyForWorkspacesInstances",
   "CreateDate": "2025-06-11T20:37:06Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4GHC77ROUU",
   "PolicyName": "AWSServiceRolePolicyForWorkspacesInstances",
   "PolicyVersion": {
-    "CreateDate": "2026-04-07T17:27:17Z",
+    "CreateDate": "2026-06-29T23:42:20Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ec2:CreateCapacityReservation",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/ManagedBy": "workspaces-instances"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CreateCapacityReservation"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/ManagedBy": "workspaces-instances"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:capacity-reservation/*",
+          "Sid": "TagRemediation"
+        },
+        {
+          "Action": [
+            "ec2:CancelCapacityReservation",
+            "ec2:ModifyCapacityReservation"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/ManagedBy": "workspaces-instances"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ManageTaggedCapacityReservations"
+        },
         {
           "Action": [
             "ec2:CreateTags",
@@ -24,23 +60,26 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "ManagedInstanceOperations"
         },
         {
           "Action": [
+            "ec2:DescribeCapacityReservations",
             "ec2:DescribeInstanceStatus",
             "ec2:DescribeInstances",
             "ec2:DescribeTags",
             "ec2:DescribeVolumes"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "DescribeResources"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2026-04-07T17:27:17Z"
+  "UpdateDate": "2026-06-29T23:42:20Z"
 }
