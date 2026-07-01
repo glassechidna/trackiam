@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFConsoleFullAccess",
   "CreateDate": "2020-04-06T18:38:38Z",
-  "DefaultVersionId": "v21",
+  "DefaultVersionId": "v22",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AZOTQ7KAT",
   "PolicyName": "AWSWAFConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-04-08T22:12:10Z",
+    "CreateDate": "2026-07-01T04:12:13Z",
     "Document": {
       "Statement": [
         {
@@ -113,6 +113,26 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowMarketplaceViewSubscriptions"
+        },
+        {
+          "Action": [
+            "bedrock-agentcore:GatewayAssociateWebACL",
+            "bedrock-agentcore:GatewayDisassociateWebACL",
+            "bedrock-agentcore:GatewayGetWebACLForResource",
+            "bedrock-agentcore:GetGateway"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock-agentcore:*:*:gateway/*",
+          "Sid": "AllowActionsForAgentCoreGateway"
+        },
+        {
+          "Action": [
+            "bedrock-agentcore:GatewayListResourcesForWebACL",
+            "bedrock-agentcore:ListGateways"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListActionsForAgentCoreGateway"
         },
         {
           "Action": [
@@ -384,7 +404,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v21"
+    "VersionId": "v22"
   },
-  "UpdateDate": "2026-04-08T22:12:10Z"
+  "UpdateDate": "2026-07-01T04:12:13Z"
 }
