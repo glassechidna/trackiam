@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 458
-* Unique actions: 21853
+* Unique actions: 21860
 * Managed policies: 1515
 
 Most common managed policy name prefixes:
@@ -118,7 +118,7 @@ The following table summarises the AWS APIs.
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 56 | 5 | 22 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 56 | 0 | 27 |
-| [`ecs`](services/ecs.yml) | 56 | 0 | 24 |
+| [`ecs`](services/ecs.yml) | 56 | 0 | 25 |
 | [`eks`](services/eks.yml) | 56 | 0 | 13 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
 | [`resiliencehub`](services/resiliencehub.yml) | 55 | 0 | 56 |
@@ -170,7 +170,7 @@ The following table summarises the AWS APIs.
 | [`amplify`](services/amplify.yml) | 37 | 0 | 4 |
 | [`states`](services/states.yml) | 37 | 0 | 2 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
-| [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 43 |
+| [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 48 |
 | [`entityresolution`](services/entityresolution.yml) | 36 | 0 | 4 |
 | [`shield`](services/shield.yml) | 36 | 0 | 3 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
@@ -396,11 +396,11 @@ The following table summarises the AWS APIs.
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
 | [`mpa`](services/mpa.yml) | 0 | 0 | 25 |
+| [`gameliftstreams`](services/gameliftstreams.yml) | 0 | 0 | 25 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 24 |
 | [`s3files`](services/s3files.yml) | 0 | 0 | 24 |
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
-| [`gameliftstreams`](services/gameliftstreams.yml) | 0 | 0 | 24 |
 | [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 24 |
 | [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 23 |
 | [`transform`](services/transform.yml) | 0 | 0 | 22 |
@@ -499,12 +499,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3657 |
+| `List` | 3658 |
 | `Get` | 3308 |
-| `Delete` | 2506 |
-| `Create` | 2365 |
-| `Update` | 2048 |
-| `Describe` | 1916 |
+| `Delete` | 2507 |
+| `Create` | 2367 |
+| `Update` | 2049 |
+| `Describe` | 1917 |
 | `Put` | 591 |
 | `Start` | 534 |
 | `Tag` | 321 |
