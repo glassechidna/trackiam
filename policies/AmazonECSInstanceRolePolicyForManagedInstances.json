@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonECSInstanceRolePolicyForManagedInstances",
   "CreateDate": "2025-09-26T23:49:07Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HILO25VPF",
   "PolicyName": "AmazonECSInstanceRolePolicyForManagedInstances",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:58:24Z",
+    "CreateDate": "2026-07-02T02:57:22Z",
     "Document": {
       "Statement": [
         {
@@ -23,7 +23,10 @@
             "ecs:Poll"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ecs:*:*:container-instance/*",
+          "Resource": [
+            "arn:aws:ecs:*:*:container-instance/*",
+            "arn:aws:ecs:*:*:task-set/*"
+          ],
           "Sid": "ECSAgentPollPermissions"
         },
         {
@@ -56,7 +59,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-02-12T17:58:24Z"
+  "UpdateDate": "2026-07-02T02:57:22Z"
 }
