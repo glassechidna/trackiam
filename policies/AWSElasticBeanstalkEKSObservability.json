@@ -1,0 +1,82 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSElasticBeanstalkEKSObservability",
+  "CreateDate": "2026-07-02T21:27:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4HALQONKPX",
+  "PolicyName": "AWSElasticBeanstalkEKSObservability",
+  "PolicyVersion": {
+    "CreateDate": "2026-07-02T21:27:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aps:CreateWorkspace",
+            "aps:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "ElasticBeanstalk",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "APSCreateWorkspace"
+        },
+        {
+          "Action": [
+            "aps:DeleteWorkspace",
+            "aps:Describe*"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/CreatedBy": "ElasticBeanstalk"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:aps:*:*:workspace/*",
+          "Sid": "APSManageWorkspace"
+        },
+        {
+          "Action": [
+            "aps:RemoteWrite"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/CreatedBy": "ElasticBeanstalk"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:aps:*:*:workspace/*",
+          "Sid": "APSRemoteWrite"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:ListBucket",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::elasticbeanstalk-logs-*",
+            "arn:aws:s3:::elasticbeanstalk-logs-*/*"
+          ],
+          "Sid": "FluentBitS3Plugin"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-07-02T21:27:19Z"
+}

@@ -1,0 +1,113 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSElasticBeanstalkEKSTagging",
+  "CreateDate": "2026-07-02T21:27:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4PI2CMPPDZ",
+  "PolicyName": "AWSElasticBeanstalkEKSTagging",
+  "PolicyVersion": {
+    "CreateDate": "2026-07-02T21:27:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:CreateNetworkInterface",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/eks:eks-cluster-name": "${aws:PrincipalTag/eks:eks-cluster-name}"
+            },
+            "StringLike": {
+              "aws:RequestTag/eks:kubernetes-cni-node-name": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Networking"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet",
+            "ec2:CreateLaunchTemplate",
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/eks:eks-cluster-name": "${aws:PrincipalTag/eks:eks-cluster-name}"
+            },
+            "StringLike": {
+              "aws:RequestTag/eks:kubernetes-node-class-name": "*",
+              "aws:RequestTag/eks:kubernetes-node-pool-name": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Compute"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup",
+            "elasticloadbalancing:CreateListener",
+            "elasticloadbalancing:CreateLoadBalancer",
+            "elasticloadbalancing:CreateRule",
+            "elasticloadbalancing:CreateTargetGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/eks:eks-cluster-name": "${aws:PrincipalTag/eks:eks-cluster-name}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LoadBalancer"
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshot",
+            "ec2:CreateVolume"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/eks:eks-cluster-name": "${aws:PrincipalTag/eks:eks-cluster-name}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:snapshot/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "Storage"
+        },
+        {
+          "Action": [
+            "shield:CreateProtection"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/eks:eks-cluster-name": "${aws:PrincipalTag/eks:eks-cluster-name}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ShieldProtection"
+        },
+        {
+          "Action": [
+            "shield:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/eks:eks-cluster-name": "${aws:PrincipalTag/eks:eks-cluster-name}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:shield::*:protection/*",
+          "Sid": "ShieldTagResource"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-07-02T21:27:19Z"
+}
