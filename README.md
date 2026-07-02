@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 458
-* Unique actions: 21860
+* Unique actions: 21870
 * Managed policies: 1518
 
 Most common managed policy name prefixes:
@@ -387,6 +387,7 @@ The following table summarises the AWS APIs.
 | [`rtbfabric`](services/rtbfabric.yml) | 0 | 0 | 36 |
 | [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
+| [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 31 |
 | [`billing`](services/billing.yml) | 0 | 0 | 31 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`dsql`](services/dsql.yml) | 0 | 0 | 30 |
@@ -406,7 +407,6 @@ The following table summarises the AWS APIs.
 | [`transform`](services/transform.yml) | 0 | 0 | 22 |
 | [`invoicing`](services/invoicing.yml) | 0 | 0 | 22 |
 | [`evs`](services/evs.yml) | 0 | 0 | 22 |
-| [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 21 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 20 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 19 |
@@ -499,11 +499,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3658 |
-| `Get` | 3308 |
-| `Delete` | 2507 |
-| `Create` | 2367 |
-| `Update` | 2049 |
+| `List` | 3660 |
+| `Get` | 3310 |
+| `Delete` | 2508 |
+| `Create` | 2368 |
+| `Update` | 2051 |
 | `Describe` | 1917 |
 | `Put` | 591 |
 | `Start` | 534 |
