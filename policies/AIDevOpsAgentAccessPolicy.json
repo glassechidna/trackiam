@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AIDevOpsAgentAccessPolicy",
   "CreateDate": "2026-03-26T03:42:09Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KEX6FTLTS",
   "PolicyName": "AIDevOpsAgentAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-26T23:42:27Z",
+    "CreateDate": "2026-07-02T23:42:24Z",
     "Document": {
       "Statement": [
         {
@@ -264,6 +264,15 @@
             "devops-guru:Describe*",
             "devops-guru:GetResourceCollection",
             "devops-guru:List*",
+            "directconnect:DescribeConnections",
+            "directconnect:DescribeDirectConnectGatewayAssociations",
+            "directconnect:DescribeDirectConnectGatewayAttachments",
+            "directconnect:DescribeDirectConnectGateways",
+            "directconnect:DescribeHostedConnections",
+            "directconnect:DescribeInterconnects",
+            "directconnect:DescribeLags",
+            "directconnect:DescribeTags",
+            "directconnect:DescribeVirtualInterfaces",
             "dms:Describe*",
             "dms:List*",
             "ds:Describe*",
@@ -366,6 +375,7 @@
             "glue:GetJobBookmark",
             "glue:GetJobRun",
             "glue:GetJobRuns",
+            "glue:GetPartitions",
             "glue:GetRegistry",
             "glue:GetResourcePolicy",
             "glue:GetSchema",
@@ -373,6 +383,7 @@
             "glue:GetSecurityConfiguration",
             "glue:GetSecurityConfigurations",
             "glue:GetTable",
+            "glue:GetTables",
             "glue:GetTags",
             "glue:GetTrigger",
             "glue:GetWorkflow",
@@ -724,6 +735,8 @@
             "s3:GetBucketTagging",
             "s3:GetBucketVersioning",
             "s3:GetEncryptionConfiguration",
+            "s3:GetIntelligentTieringConfiguration",
+            "s3:GetInventoryConfiguration",
             "s3:GetLifecycleConfiguration",
             "s3:GetMultiRegionAccessPoint",
             "s3:GetMultiRegionAccessPointPolicy",
@@ -895,6 +908,7 @@
             "arn:aws:apigateway:*::/apis/*/integrations/*",
             "arn:aws:apigateway:*::/apis/*/stages",
             "arn:aws:apigateway:*::/apis/*/stages/*",
+            "arn:aws:apigateway:*::/domainnames",
             "arn:aws:apigateway:*::/domainnames/*",
             "arn:aws:apigateway:*::/restapis",
             "arn:aws:apigateway:*::/restapis/*",
@@ -920,7 +934,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2026-06-26T23:42:27Z"
+  "UpdateDate": "2026-07-02T23:42:24Z"
 }
