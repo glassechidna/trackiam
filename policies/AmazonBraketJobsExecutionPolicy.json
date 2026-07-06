@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonBraketJobsExecutionPolicy",
   "CreateDate": "2021-11-26T19:34:41Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CBFQZHJ3B",
   "PolicyName": "AmazonBraketJobsExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2021-11-28T05:34:55Z",
+    "CreateDate": "2026-07-06T19:12:15Z",
     "Document": {
       "Statement": [
         {
@@ -33,6 +33,23 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/service-role/AmazonBraketJobsExecutionRole*"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutBucketPolicy",
+            "s3:PutBucketPublicAccessBlock",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEqualsIgnoreCase": {
+              "aws:ResourceTag/AmazonBraket": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*"
         },
         {
           "Action": [
@@ -114,7 +131,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2021-11-28T05:34:55Z"
+  "UpdateDate": "2026-07-06T19:12:15Z"
 }

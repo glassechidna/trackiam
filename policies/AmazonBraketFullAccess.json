@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonBraketFullAccess",
   "CreateDate": "2020-08-06T20:12:37Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HUAKO7NZO",
   "PolicyName": "AmazonBraketFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:01:26Z",
+    "CreateDate": "2026-07-06T19:57:33Z",
     "Document": {
       "Statement": [
         {
@@ -74,6 +74,26 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:s3:::amazon-braket-*"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutBucketPolicy",
+            "s3:PutBucketPublicAccessBlock",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringEqualsIgnoreCase": {
+              "aws:ResourceTag/AmazonBraket": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*"
         },
         {
           "Action": "braket:*",
@@ -186,7 +206,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2026-02-12T18:01:26Z"
+  "UpdateDate": "2026-07-06T19:57:33Z"
 }
