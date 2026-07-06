@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonBraketServiceRolePolicy",
   "CreateDate": "2020-08-04T17:12:23Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NIYU42I3S",
   "PolicyName": "AmazonBraketServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-07-11T21:37:07Z",
+    "CreateDate": "2026-07-06T18:42:30Z",
     "Document": {
       "Statement": [
         {
@@ -39,12 +39,29 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:s3:::amazon-braket-*"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringEqualsIgnoreCase": {
+              "aws:ResourceTag/AmazonBraket": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2025-07-11T21:37:07Z"
+  "UpdateDate": "2026-07-06T18:42:30Z"
 }
