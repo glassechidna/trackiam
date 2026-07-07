@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonInspector2ReadOnlyAccess",
   "CreateDate": "2022-01-21T14:45:14Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4IASIMCEPM",
   "PolicyName": "AmazonInspector2ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:58:22Z",
+    "CreateDate": "2026-07-07T18:57:19Z",
     "Document": {
       "Statement": [
         {
@@ -59,12 +59,26 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowDescribeResourcePolicyForDelegation"
+        },
+        {
+          "Action": [
+            "config:DescribeConfigurationRecorderStatus",
+            "config:DescribeConfigurationRecorders",
+            "config:GetConnector",
+            "config:ListConfigurationRecorders",
+            "config:ListConnectors",
+            "ssm:GetCloudConnector",
+            "ssm:ListCloudConnectors"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowCrossServiceReadsForConnectorHealth"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2026-02-12T17:58:22Z"
+  "UpdateDate": "2026-07-07T18:57:19Z"
 }

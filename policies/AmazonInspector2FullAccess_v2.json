@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonInspector2FullAccess_v2",
   "CreateDate": "2025-07-03T16:07:07Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LAYOUDP4B",
   "PolicyName": "AmazonInspector2FullAccess_v2",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:03:17Z",
+    "CreateDate": "2026-07-07T20:12:29Z",
     "Document": {
       "Statement": [
         {
@@ -16,7 +16,8 @@
             "StringEquals": {
               "iam:AWSServiceName": [
                 "agentless.inspector2.amazonaws.com",
-                "inspector2.amazonaws.com"
+                "inspector2.amazonaws.com",
+                "thirdparty.inspector2.amazonaws.com"
               ]
             }
           },
@@ -60,7 +61,8 @@
             "StringEquals": {
               "organizations:ServicePrincipal": [
                 "agentless.inspector2.amazonaws.com",
-                "inspector2.amazonaws.com"
+                "inspector2.amazonaws.com",
+                "thirdparty.inspector2.amazonaws.com"
               ]
             }
           },
@@ -118,7 +120,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2026-02-12T18:03:17Z"
+  "UpdateDate": "2026-07-07T20:12:29Z"
 }
