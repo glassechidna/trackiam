@@ -1,0 +1,193 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/DBModVirtualSource",
+  "CreateDate": "2026-07-06T23:12:26Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4MOCHDDA55",
+  "PolicyName": "DBModVirtualSource",
+  "PolicyVersion": {
+    "CreateDate": "2026-07-06T23:12:26Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "iam:AWSServiceName": "rds.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/rds.amazonaws.com/AWSServiceRoleForRDS"
+        },
+        {
+          "Action": "kms:Decrypt",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:SecretArn": "arn:aws:secretsmanager:*:${aws:PrincipalAccount}:secret:*",
+              "kms:ViaService": "secretsmanager.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*"
+        },
+        {
+          "Action": "rds:ModifyDBSubnetGroup",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:rds:*:*:subgrp:*"
+        },
+        {
+          "Action": "secretsmanager:UpdateSecret",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/Owner": "database-connector",
+              "aws:ResourceTag/Project": "atx-db-modernization"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:atx-db-modernization-*"
+        },
+        {
+          "Action": [
+            "iam:GetPolicy",
+            "iam:GetPolicyVersion"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:policy/*"
+        },
+        {
+          "Action": [
+            "rds-data:ExecuteStatement",
+            "rds:DisableHttpEndpoint",
+            "rds:EnableHttpEndpoint"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/Owner": "database-connector",
+              "aws:ResourceTag/Project": "atx-db-modernization"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:rds:*:*:cluster:*"
+        },
+        {
+          "Action": [
+            "rds:AddTagsToResource",
+            "rds:CreateDBCluster",
+            "rds:CreateDBInstance",
+            "rds:CreateDBSubnetGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/Owner": "database-connector",
+              "aws:RequestTag/Project": "atx-db-modernization",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:rds:*:*:cluster:*",
+            "arn:aws:rds:*:*:db:*",
+            "arn:aws:rds:*:*:subgrp:*"
+          ]
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:DeleteObject",
+            "s3:GetBucketLocation",
+            "s3:GetBucketVersioning",
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutBucketTagging",
+            "s3:PutBucketVersioning",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::atx-db-modernization-*",
+            "arn:aws:s3:::atx-db-modernization-*/*"
+          ]
+        },
+        {
+          "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/Owner": "database-connector",
+              "aws:RequestTag/Project": "atx-db-modernization",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/Owner": "database-connector",
+              "aws:ResourceTag/Project": "atx-db-modernization"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:atx-db-modernization-*"
+        },
+        {
+          "Action": [
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/Owner": "database-connector",
+              "aws:ResourceTag/Project": "atx-db-modernization"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:*"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeInstances",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs",
+            "kms:DescribeKey",
+            "kms:ListAliases",
+            "rds:DescribeDBClusters",
+            "rds:DescribeDBInstances",
+            "rds:DescribeDBSubnetGroups",
+            "secretsmanager:ListSecrets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-07-06T23:12:26Z"
+}

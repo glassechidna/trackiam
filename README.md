@@ -11,9 +11,9 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 458
-* Unique actions: 21872
-* Managed policies: 1518
+* Unique services: 459
+* Unique actions: 21886
+* Managed policies: 1519
 
 Most common managed policy name prefixes:
 
@@ -24,7 +24,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 346 |
 | `arn:aws:iam::aws:policy/service-role/*` | 221 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
-| Other | 160 |
+| Other | 161 |
 
 The following table summarises the AWS APIs. 
 
@@ -58,7 +58,7 @@ The following table summarises the AWS APIs.
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`cloudfront`](services/cloudfront.yml) | 110 | 1 | 63 |
 | [`gamelift`](services/gamelift.yml) | 108 | 0 | 12 |
-| [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 22 |
+| [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 24 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 18 |
 | [`bedrock`](services/bedrock.yml) | 97 | 2 | 158 |
 | [`dms`](services/dms.yml) | 92 | 14 | 32 |
@@ -436,6 +436,7 @@ The following table summarises the AWS APIs.
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 13 |
 | [`dbqms`](services/dbqms.yml) | 0 | 0 | 13 |
 | [`aws-marketplace-management`](services/aws-marketplace-management.yml) | 0 | 0 | 13 |
+| [`supportauthz`](services/supportauthz.yml) | 0 | 0 | 12 |
 | [`backup-search`](services/backup-search.yml) | 0 | 0 | 12 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 11 |
 | [`opensearch`](services/opensearch.yml) | 0 | 0 | 10 |
@@ -499,14 +500,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3660 |
-| `Get` | 3311 |
-| `Delete` | 2508 |
-| `Create` | 2368 |
-| `Update` | 2051 |
+| `List` | 3664 |
+| `Get` | 3314 |
+| `Delete` | 2509 |
+| `Create` | 2369 |
+| `Update` | 2052 |
 | `Describe` | 1917 |
 | `Put` | 592 |
 | `Start` | 534 |
-| `Tag` | 321 |
+| `Tag` | 322 |
 | `Batch` | 321 |
 
