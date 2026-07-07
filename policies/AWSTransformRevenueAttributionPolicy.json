@@ -1,0 +1,39 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSTransformRevenueAttributionPolicy",
+  "CreateDate": "2026-07-07T16:42:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4OIQSQSA4A",
+  "PolicyName": "AWSTransformRevenueAttributionPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-07-07T16:42:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "partnercentral:CreateRevenueAttribution",
+            "partnercentral:GetRevenueAttribution",
+            "partnercentral:ListRevenueAttributions",
+            "partnercentral:UpdateRevenueAttribution"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:partnercentral:*:*:catalog/*/revenue-attribution/*",
+          "Sid": "PartnerCentralRevenueManagementAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-07-07T16:42:19Z"
+}
