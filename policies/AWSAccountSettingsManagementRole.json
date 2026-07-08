@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSAccountSettingsManagementRole",
   "CreateDate": "2025-12-11T17:49:09Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CVFC7PYPE",
   "PolicyName": "AWSAccountSettingsManagementRole",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:02:39Z",
+    "CreateDate": "2026-07-08T19:12:27Z",
     "Document": {
       "Statement": [
         {
@@ -94,6 +94,18 @@
         },
         {
           "Action": [
+            "support:AddCommunicationToCase",
+            "support:CreateCase",
+            "support:DescribeCases",
+            "support:DescribeServices",
+            "support:DescribeSeverityLevels",
+            "support:ResolveCase"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": [
             "tax:BatchPutTaxRegistration",
             "tax:DeleteTaxRegistration",
             "tax:GetTaxRegistration",
@@ -108,7 +120,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-02-12T18:02:39Z"
+  "UpdateDate": "2026-07-08T19:12:27Z"
 }

@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonInspector2FullAccess_v2",
   "CreateDate": "2025-07-03T16:07:07Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LAYOUDP4B",
   "PolicyName": "AmazonInspector2FullAccess_v2",
   "PolicyVersion": {
-    "CreateDate": "2026-07-07T20:12:29Z",
+    "CreateDate": "2026-07-08T19:12:18Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "thirdparty.config.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/thirdparty.config.amazonaws.com/AWSServiceRoleForConfigThirdParty",
+          "Sid": "AllowCreateConfigThirdPartySLR"
+        },
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
@@ -71,6 +82,12 @@
           "Sid": "AllowServicePrincipalBasedAccessToOrganizationApis"
         },
         {
+          "Action": "config:GetConnector",
+          "Effect": "Allow",
+          "Resource": "arn:aws:config:*:*:connector/*",
+          "Sid": "AllowConfigConnectorRead"
+        },
+        {
           "Action": "inspector2:*",
           "Effect": "Allow",
           "Resource": "*",
@@ -90,6 +107,15 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowAccessToCodeGuruApis"
+        },
+        {
+          "Action": [
+            "config:ListConnectors",
+            "config:PutConnector"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowConfigConnectorWriteAndList"
         },
         {
           "Action": [
@@ -120,7 +146,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2026-07-07T20:12:29Z"
+  "UpdateDate": "2026-07-08T19:12:18Z"
 }
