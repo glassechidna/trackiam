@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 459
-* Unique actions: 21886
+* Unique actions: 21907
 * Managed policies: 1520
 
 Most common managed policy name prefixes:
@@ -93,7 +93,7 @@ The following table summarises the AWS APIs.
 | [`sso`](services/sso.yml) | 73 | 0 | 53 |
 | [`imagebuilder`](services/imagebuilder.yml) | 73 | 0 | 4 |
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
-| [`wellarchitected`](services/wellarchitected.yml) | 72 | 0 | 1 |
+| [`wellarchitected`](services/wellarchitected.yml) | 72 | 0 | 24 |
 | [`mgn`](services/mgn.yml) | 70 | 0 | 65 |
 | [`route53`](services/route53.yml) | 70 | 0 | 1 |
 | [`athena`](services/athena.yml) | 68 | 0 | 13 |
@@ -468,7 +468,6 @@ The following table summarises the AWS APIs.
 | [`codedeploy-commands-secure`](services/codedeploy-commands-secure.yml) | 0 | 0 | 4 |
 | [`a2c`](services/a2c.yml) | 0 | 0 | 4 |
 | [`sustainability`](services/sustainability.yml) | 0 | 0 | 3 |
-| [`sagemaker-unified-studio-mcp`](services/sagemaker-unified-studio-mcp.yml) | 0 | 0 | 3 |
 | [`resource-explorer`](services/resource-explorer.yml) | 0 | 0 | 3 |
 | [`mapcredits`](services/mapcredits.yml) | 0 | 0 | 3 |
 | [`identitystore-auth`](services/identitystore-auth.yml) | 0 | 0 | 3 |
@@ -485,6 +484,7 @@ The following table summarises the AWS APIs.
 | [`vpce`](services/vpce.yml) | 0 | 0 | 1 |
 | [`verified-access`](services/verified-access.yml) | 0 | 0 | 1 |
 | [`serviceextract`](services/serviceextract.yml) | 0 | 0 | 1 |
+| [`sagemaker-unified-studio-mcp`](services/sagemaker-unified-studio-mcp.yml) | 0 | 0 | 1 |
 | [`sagemaker-data-science-assistant`](services/sagemaker-data-science-assistant.yml) | 0 | 0 | 1 |
 | [`rhelkb`](services/rhelkb.yml) | 0 | 0 | 1 |
 | [`rds-db`](services/rds-db.yml) | 0 | 0 | 1 |
@@ -500,14 +500,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3664 |
-| `Get` | 3314 |
-| `Delete` | 2509 |
-| `Create` | 2369 |
-| `Update` | 2052 |
+| `List` | 3670 |
+| `Get` | 3319 |
+| `Delete` | 2512 |
+| `Create` | 2372 |
+| `Update` | 2056 |
 | `Describe` | 1917 |
-| `Put` | 592 |
-| `Start` | 534 |
+| `Put` | 593 |
+| `Start` | 535 |
 | `Tag` | 322 |
 | `Batch` | 321 |
 
