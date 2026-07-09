@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 459
-* Unique actions: 21907
+* Unique actions: 21910
 * Managed policies: 1520
 
 Most common managed policy name prefixes:
@@ -419,6 +419,7 @@ The following table summarises the AWS APIs.
 | [`ds-data`](services/ds-data.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`agentaccess-mcp`](services/agentaccess-mcp.yml) | 0 | 0 | 17 |
+| [`signin`](services/signin.yml) | 0 | 0 | 16 |
 | [`nova-act`](services/nova-act.yml) | 0 | 0 | 16 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 16 |
 | [`bcm-dashboards`](services/bcm-dashboards.yml) | 0 | 0 | 15 |
@@ -430,7 +431,6 @@ The following table summarises the AWS APIs.
 | [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
 | [`workspaces-instances`](services/workspaces-instances.yml) | 0 | 0 | 13 |
 | [`support-console`](services/support-console.yml) | 0 | 0 | 13 |
-| [`signin`](services/signin.yml) | 0 | 0 | 13 |
 | [`interconnect`](services/interconnect.yml) | 0 | 0 | 13 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 13 |
 | [`elemental-activations`](services/elemental-activations.yml) | 0 | 0 | 13 |
@@ -503,7 +503,7 @@ Most common action prefixes:
 | `List` | 3670 |
 | `Get` | 3319 |
 | `Delete` | 2512 |
-| `Create` | 2372 |
+| `Create` | 2373 |
 | `Update` | 2056 |
 | `Describe` | 1917 |
 | `Put` | 593 |
