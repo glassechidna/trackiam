@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectRoleMachineLearningPolicy",
   "CreateDate": "2024-11-20T21:55:27Z",
-  "DefaultVersionId": "v40",
+  "DefaultVersionId": "v41",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NSSEENOX7",
   "PolicyName": "SageMakerStudioProjectRoleMachineLearningPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-05-21T16:57:25Z",
+    "CreateDate": "2026-07-09T17:27:13Z",
     "Document": {
       "Statement": [
         {
@@ -569,6 +569,20 @@
         },
         {
           "Action": [
+            "sagemaker:*Feature*",
+            "sagemaker:*Record"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SageMakerFeatureStorePermission"
+        },
+        {
+          "Action": [
             "sagemaker:AddAssociation",
             "sagemaker:CreateAction",
             "sagemaker:CreateArtifact",
@@ -912,6 +926,24 @@
         },
         {
           "Action": [
+            "sagemaker:DescribeHub",
+            "sagemaker:DescribeHubContent",
+            "sagemaker:ListHubContents"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalTag/EnableSageMakerMLWorkloadsPermissions": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:aws:hub-content/SageMakerPublicHub/*",
+            "arn:aws:sagemaker:*:aws:hub/SageMakerPublicHub"
+          ],
+          "Sid": "SageMakerPublicHubReadPermissions"
+        },
+        {
+          "Action": [
             "sagemaker:DescribeModelPackageGroup"
           ],
           "Condition": {
@@ -954,10 +986,12 @@
           "Action": [
             "sagemaker:GetSearchSuggestions",
             "sagemaker:ListArtifacts",
+            "sagemaker:ListAssociations",
             "sagemaker:ListAutoMLJobs",
             "sagemaker:ListContexts",
             "sagemaker:ListEndpointConfigs",
             "sagemaker:ListEndpoints",
+            "sagemaker:ListFeatureGroups",
             "sagemaker:ListHubs",
             "sagemaker:ListHyperParameterTuningJobs",
             "sagemaker:ListInferenceComponents",
@@ -970,7 +1004,8 @@
             "sagemaker:ListPipelines",
             "sagemaker:ListProcessingJobs",
             "sagemaker:ListTrainingJobs",
-            "sagemaker:ListTransformJobs"
+            "sagemaker:ListTransformJobs",
+            "scheduler:ListSchedules"
           ],
           "Condition": {
             "StringEquals": {
@@ -983,7 +1018,6 @@
         },
         {
           "Action": [
-            "sagemaker:ListAssociations",
             "sagemaker:ListCandidatesForAutoMLJob",
             "sagemaker:ListHubContents",
             "sagemaker:ListPipelineExecutionSteps",
@@ -1266,7 +1300,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v40"
+    "VersionId": "v41"
   },
-  "UpdateDate": "2026-05-21T16:57:25Z"
+  "UpdateDate": "2026-07-09T17:27:13Z"
 }

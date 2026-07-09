@@ -1,17 +1,27 @@
 {
   "Arn": "arn:aws:iam::aws:policy/WellArchitectedConsoleReadOnlyAccess",
   "CreateDate": "2018-11-29T18:21:08Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIUTK35NDTYF6T2GFY",
   "PolicyName": "WellArchitectedConsoleReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2023-06-29T17:16:13Z",
+    "CreateDate": "2026-07-09T17:27:19Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListAccountsForParent",
+            "organizations:ListDelegatedAdministrators",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListRoots",
+            "trustedadvisor:Get*",
+            "trustedadvisor:List*",
             "wellarchitected:ExportLens",
             "wellarchitected:Get*",
             "wellarchitected:List*"
@@ -23,7 +33,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-06-29T17:16:13Z"
+  "UpdateDate": "2026-07-09T17:27:19Z"
 }
