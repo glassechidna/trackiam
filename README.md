@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 459
-* Unique actions: 21910
+* Unique actions: 21915
 * Managed policies: 1521
 
 Most common managed policy name prefixes:
@@ -361,7 +361,7 @@ The following table summarises the AWS APIs.
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 0 | 6 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 223 |
-| [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 129 |
+| [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 134 |
 | [`securityagent`](services/securityagent.yml) | 0 | 0 | 111 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
@@ -501,13 +501,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3670 |
-| `Get` | 3319 |
+| `Get` | 3322 |
 | `Delete` | 2512 |
 | `Create` | 2373 |
 | `Update` | 2056 |
 | `Describe` | 1917 |
 | `Put` | 593 |
-| `Start` | 535 |
+| `Start` | 537 |
 | `Tag` | 322 |
 | `Batch` | 321 |
 
