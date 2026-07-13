@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 459
-* Unique actions: 21919
+* Unique actions: 21929
 * Managed policies: 1521
 
 Most common managed policy name prefixes:
@@ -50,7 +50,7 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 140 | 0 | 22 |
 | [`lex`](services/lex.yml) | 139 | 2 | 13 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 33 |
-| [`datazone`](services/datazone.yml) | 123 | 0 | 112 |
+| [`datazone`](services/datazone.yml) | 123 | 0 | 119 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 3 |
 | [`s3`](services/s3.yml) | 113 | 60 | 67 |
@@ -377,8 +377,8 @@ The following table summarises the AWS APIs.
 | [`transform-custom`](services/transform-custom.yml) | 0 | 0 | 52 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 48 |
 | [`route53globalresolver`](services/route53globalresolver.yml) | 0 | 0 | 48 |
+| [`health-agent`](services/health-agent.yml) | 0 | 0 | 47 |
 | [`finops-agent`](services/finops-agent.yml) | 0 | 0 | 46 |
-| [`health-agent`](services/health-agent.yml) | 0 | 0 | 44 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 41 |
 | [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 40 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
@@ -500,11 +500,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3670 |
-| `Get` | 3322 |
-| `Delete` | 2512 |
-| `Create` | 2374 |
-| `Update` | 2057 |
+| `List` | 3672 |
+| `Get` | 3324 |
+| `Delete` | 2513 |
+| `Create` | 2375 |
+| `Update` | 2058 |
 | `Describe` | 1917 |
 | `Put` | 593 |
 | `Start` | 537 |
