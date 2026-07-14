@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v71",
+  "DefaultVersionId": "v72",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-29T20:27:23Z",
+    "CreateDate": "2026-07-14T19:12:29Z",
     "Document": {
       "Statement": [
         {
@@ -991,10 +991,10 @@
         },
         {
           "Action": [
-            "emr-containers:DescribeManagedEndpoint",
+            "emr-containers:*ManagedEndpoint*",
             "emr-containers:DescribeSecurityConfiguration",
             "emr-containers:DescribeVirtualCluster",
-            "emr-containers:GetManagedEndpointSessionCredentials",
+            "emr-containers:TagResource",
             "redshift-serverless:GetCredentials",
             "redshift:GetClusterCredentialsWithIAM"
           ],
@@ -1398,6 +1398,7 @@
                 "elasticmapreduce.amazonaws.com",
                 "emr-serverless.amazonaws.com",
                 "glue.amazonaws.com",
+                "pods.eks.amazonaws.com",
                 "sagemaker.amazonaws.com",
                 "scheduler.amazonaws.com"
               ]
@@ -2822,7 +2823,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v71"
+    "VersionId": "v72"
   },
-  "UpdateDate": "2026-06-29T20:27:23Z"
+  "UpdateDate": "2026-07-14T19:12:29Z"
 }
