@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSObservabilityAdminServiceRolePolicy",
   "CreateDate": "2024-11-27T19:36:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4MSF2FZK2R",
   "PolicyName": "AWSObservabilityAdminServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-27T19:36:07Z",
+    "CreateDate": "2026-07-14T22:42:17Z",
     "Document": {
       "Statement": [
         {
@@ -96,6 +96,7 @@
           "Action": [
             "organizations:DescribeOrganization",
             "organizations:DescribeOrganizationalUnit",
+            "organizations:ListAWSServiceAccessForOrganization",
             "organizations:ListAccounts",
             "organizations:ListAccountsForParent",
             "organizations:ListChildren",
@@ -108,7 +109,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-11-27T19:36:07Z"
+  "UpdateDate": "2026-07-14T22:42:17Z"
 }
