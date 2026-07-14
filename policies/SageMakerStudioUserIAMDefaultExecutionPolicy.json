@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMDefaultExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v27",
+  "DefaultVersionId": "v28",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BV3PMY4IB",
   "PolicyName": "SageMakerStudioUserIAMDefaultExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-29T16:12:28Z",
+    "CreateDate": "2026-07-14T18:57:28Z",
     "Document": {
       "Statement": [
         {
@@ -54,6 +54,7 @@
             "athena:StartSession",
             "athena:TerminateSession",
             "elasticmapreduce:*Session*",
+            "emr-containers:*ManagedEndpoint*",
             "emr-serverless:*Dashboard*",
             "emr-serverless:*Session*",
             "glue:CancelStatement",
@@ -76,6 +77,7 @@
           "Resource": [
             "arn:aws:athena:*:*:workgroup/*/session/*",
             "arn:aws:elasticmapreduce:*:*:cluster/*/session/*",
+            "arn:aws:emr-containers:*:*:/virtualclusters/*/endpoints/*",
             "arn:aws:emr-serverless:*:*:/applications/*/sessions/*",
             "arn:aws:glue:*:*:session/*"
           ],
@@ -87,6 +89,7 @@
             "athena:UntagResource",
             "elasticmapreduce:AddTags",
             "elasticmapreduce:RemoveTags",
+            "emr-containers:*Resource",
             "emr-serverless:*Resource",
             "glue:TagResource",
             "glue:UntagResource"
@@ -100,6 +103,7 @@
           "Resource": [
             "arn:aws:athena:*:*:workgroup/*/session/*",
             "arn:aws:elasticmapreduce:*:*:cluster/*/session/*",
+            "arn:aws:emr-containers:*:*:/virtualclusters/*/endpoints/*",
             "arn:aws:emr-serverless:*:*:/applications/*/sessions/*",
             "arn:aws:glue:*:*:session/*"
           ],
@@ -190,6 +194,7 @@
                 "events.amazonaws.com",
                 "glue.amazonaws.com",
                 "lakeformation.amazonaws.com",
+                "pods.eks.amazonaws.com",
                 "redshift.amazonaws.com",
                 "sagemaker.amazonaws.com",
                 "scheduler.amazonaws.com"
@@ -450,7 +455,14 @@
           "Condition": {
             "ForAllValues:StringLike": {
               "aws:TagKeys": [
+                "Canvas",
+                "CanvasModelName",
+                "Owner",
+                "ProjectS3Path",
                 "ProjectUserTag*",
+                "SageMaker",
+                "Source",
+                "aws-jumpstart*",
                 "endpoint-has-jumpstart-model",
                 "sagemaker*",
                 "sm-jumpstart*"
@@ -851,6 +863,10 @@
             "elasticmapreduce:List*",
             "elasticmapreduce:Start*",
             "elasticmapreduce:Terminate*",
+            "emr-containers:*ManagedEndpoint*",
+            "emr-containers:*Resource",
+            "emr-containers:*SecurityConfiguration*",
+            "emr-containers:*VirtualCluster*",
             "emr-serverless:*Resource",
             "emr-serverless:Access*Endpoints",
             "emr-serverless:Get*",
@@ -1056,7 +1072,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v27"
+    "VersionId": "v28"
   },
-  "UpdateDate": "2026-06-29T16:12:28Z"
+  "UpdateDate": "2026-07-14T18:57:28Z"
 }

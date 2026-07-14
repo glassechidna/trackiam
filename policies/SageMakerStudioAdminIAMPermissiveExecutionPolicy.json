@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioAdminIAMPermissiveExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v20",
+  "DefaultVersionId": "v21",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DPB4UTXYO",
   "PolicyName": "SageMakerStudioAdminIAMPermissiveExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-29T16:12:11Z",
+    "CreateDate": "2026-07-14T18:57:27Z",
     "Document": {
       "Statement": [
         {
@@ -54,6 +54,7 @@
                 "datazone.amazonaws.com",
                 "elasticmapreduce.amazonaws.com",
                 "emr-serverless.amazonaws.com",
+                "pods.eks.amazonaws.com",
                 "redshift-serverless.amazonaws.com",
                 "redshift.amazonaws.com",
                 "scheduler.amazonaws.com"
@@ -103,6 +104,7 @@
             "athena:StartSession",
             "athena:TerminateSession",
             "elasticmapreduce:*Session*",
+            "emr-containers:*ManagedEndpoint*",
             "emr-serverless:*Dashboard*",
             "emr-serverless:*Session*",
             "glue:CancelStatement",
@@ -125,6 +127,7 @@
           "Resource": [
             "arn:aws:athena:*:*:workgroup/*/session/*",
             "arn:aws:elasticmapreduce:*:*:cluster/*/session/*",
+            "arn:aws:emr-containers:*:*:/virtualclusters/*/endpoints/*",
             "arn:aws:emr-serverless:*:*:/applications/*/sessions/*",
             "arn:aws:glue:*:*:session/*"
           ],
@@ -136,6 +139,7 @@
             "athena:UntagResource",
             "elasticmapreduce:AddTags",
             "elasticmapreduce:RemoveTags",
+            "emr-containers:*Resource",
             "emr-serverless:*Resource",
             "glue:TagResource",
             "glue:UntagResource"
@@ -149,6 +153,7 @@
           "Resource": [
             "arn:aws:athena:*:*:workgroup/*/session/*",
             "arn:aws:elasticmapreduce:*:*:cluster/*/session/*",
+            "arn:aws:emr-containers:*:*:/virtualclusters/*/endpoints/*",
             "arn:aws:emr-serverless:*:*:/applications/*/sessions/*",
             "arn:aws:glue:*:*:session/*"
           ],
@@ -195,7 +200,8 @@
           "Condition": {
             "ForAllValues:StringLike": {
               "aws:TagKeys": [
-                "AmazonDataZone*"
+                "AmazonDataZone*",
+                "SageMakerSpacesDomainId"
               ]
             }
           },
@@ -574,6 +580,7 @@
             "codewhisperer:*",
             "datazone:*",
             "elasticmapreduce:*",
+            "emr-containers:*",
             "emr-serverless:*",
             "q:*",
             "sagemaker-mlflow:*",
@@ -805,7 +812,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v20"
+    "VersionId": "v21"
   },
-  "UpdateDate": "2026-06-29T16:12:11Z"
+  "UpdateDate": "2026-07-14T18:57:27Z"
 }
