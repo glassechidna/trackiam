@@ -16,8 +16,11 @@ Actions:
   # actions with no corresponding API
   - Name: healthlake:CancelFHIRExportJobWithDelete
   - Name: healthlake:ConfirmAttributionList
+  - Name: healthlake:CreateDataTransformationProfile
   - Name: healthlake:CreateResource
+  - Name: healthlake:DeleteDataTransformationProfile
   - Name: healthlake:DeleteResource
+  - Name: healthlake:DescribeDataTransformationJob
   - Name: healthlake:DescribeFHIRBulkDeleteJob
   - Name: healthlake:DescribeFHIRBulkMemberMatchJob
   - Name: healthlake:DescribeFHIRExportJobWithGet
@@ -26,9 +29,13 @@ Actions:
   - Name: healthlake:GenerateDocumentWithGet
   - Name: healthlake:GenerateDocumentWithPost
   - Name: healthlake:GetCapabilities
+  - Name: healthlake:GetDataTransformationProfile
   - Name: healthlake:GetExportedFile
   - Name: healthlake:GetHistoryByResourceId
   - Name: healthlake:InquirePreAuthClaim
+  - Name: healthlake:ListDataTransformationJobs
+  - Name: healthlake:ListDataTransformationProfileVersions
+  - Name: healthlake:ListDataTransformationProfiles
   - Name: healthlake:LookupCodeSystemWithGet
   - Name: healthlake:LookupCodeSystemWithPost
   - Name: healthlake:MemberAdd
@@ -36,18 +43,24 @@ Actions:
   - Name: healthlake:MemberRemove
   - Name: healthlake:PatchResource
   - Name: healthlake:ProcessBundle
+  - Name: healthlake:PublishDataTransformationProfile
   - Name: healthlake:QuestionnairePackage
   - Name: healthlake:ReadResource
   - Name: healthlake:RetrieveAttributionStatus
   - Name: healthlake:SearchEverything
   - Name: healthlake:SearchWithGet
   - Name: healthlake:SearchWithPost
+  - Name: healthlake:StartDataTransformationJob
   - Name: healthlake:StartFHIRBulkDeleteJob
   - Name: healthlake:StartFHIRBulkMemberMatchJob
   - Name: healthlake:StartFHIRExportJobWithGet
   - Name: healthlake:StartFHIRExportJobWithPost
   - Name: healthlake:SubmitPreAuthClaim
+  - Name: healthlake:TransformData
+  - Name: healthlake:UpdateDataTransformationProfile
   - Name: healthlake:UpdateFHIRDatastore
+  - Name: healthlake:UpdateProfileWithAgent
   - Name: healthlake:UpdateResource
   - Name: healthlake:ValidateResource
+  - Name: healthlake:ValidateSource
   - Name: healthlake:VersionReadResource

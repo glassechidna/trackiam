@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 459
-* Unique actions: 21929
+* Unique actions: 21944
 * Managed policies: 1521
 
 Most common managed policy name prefixes:
@@ -78,7 +78,7 @@ The following table summarises the AWS APIs.
 | [`cloudformation`](services/cloudformation.yml) | 82 | 0 | 20 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 81 | 0 | 0 |
-| [`securityhub`](services/securityhub.yml) | 79 | 0 | 47 |
+| [`securityhub`](services/securityhub.yml) | 79 | 0 | 49 |
 | [`codecommit`](services/codecommit.yml) | 79 | 0 | 11 |
 | [`personalize`](services/personalize.yml) | 78 | 0 | 5 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
@@ -292,7 +292,7 @@ The following table summarises the AWS APIs.
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 14 | 0 | 0 |
 | [`health`](services/health.yml) | 14 | 0 | 0 |
-| [`healthlake`](services/healthlake.yml) | 13 | 0 | 37 |
+| [`healthlake`](services/healthlake.yml) | 13 | 0 | 50 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 16 |
 | [`braket`](services/braket.yml) | 13 | 0 | 7 |
 | [`codeguru-security`](services/codeguru-security.yml) | 13 | 0 | 2 |
@@ -500,14 +500,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3672 |
-| `Get` | 3324 |
-| `Delete` | 2513 |
-| `Create` | 2375 |
-| `Update` | 2058 |
-| `Describe` | 1917 |
+| `List` | 3675 |
+| `Get` | 3326 |
+| `Delete` | 2514 |
+| `Create` | 2376 |
+| `Update` | 2060 |
+| `Describe` | 1918 |
 | `Put` | 593 |
-| `Start` | 537 |
+| `Start` | 538 |
 | `Tag` | 322 |
-| `Batch` | 321 |
+| `Batch` | 322 |
 
