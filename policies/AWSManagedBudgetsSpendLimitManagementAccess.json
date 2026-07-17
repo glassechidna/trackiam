@@ -1,0 +1,51 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSManagedBudgetsSpendLimitManagementAccess",
+  "CreateDate": "2026-07-17T21:12:21Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4MQDCPVMBJ",
+  "PolicyName": "AWSManagedBudgetsSpendLimitManagementAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-07-17T21:12:21Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "organizations:AttachPolicy",
+            "organizations:DescribePolicy",
+            "organizations:DetachPolicy",
+            "organizations:ListPolicies"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/ManagedBy": "SpendLimit"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:policy/*/service_control_policy/*",
+          "Sid": "SCPActions"
+        },
+        {
+          "Action": "organizations:CloseAccount",
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:account/*",
+          "Sid": "AccountActions"
+        },
+        {
+          "Action": [
+            "organizations:AttachPolicy",
+            "organizations:DetachPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:account/*",
+          "Sid": "SCPTargetActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-07-17T21:12:21Z"
+}

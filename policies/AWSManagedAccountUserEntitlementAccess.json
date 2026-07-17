@@ -1,0 +1,33 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSManagedAccountUserEntitlementAccess",
+  "CreateDate": "2026-07-17T21:42:25Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4JA4XXIXLY",
+  "PolicyName": "AWSManagedAccountUserEntitlementAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-07-17T21:42:25Z",
+    "Document": {
+      "Statement": {
+        "Action": [
+          "account-access:CreateEntitlement",
+          "account-access:ListApplications",
+          "account-access:ListEntitlements",
+          "identitystore:CreateGroup",
+          "identitystore:CreateGroupMembership",
+          "identitystore:GetGroupId",
+          "identitystore:GetUserId",
+          "sso-directory:ListProvisioningTenants",
+          "sso:ListInstances"
+        ],
+        "Effect": "Allow",
+        "Resource": "*"
+      },
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-07-17T21:42:25Z"
+}
