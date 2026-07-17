@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonBedrockAgentCoreMemoryBedrockModelInferenceExecutionRolePolicy",
   "CreateDate": "2025-07-16T13:37:07Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4I6LK2RZUW",
   "PolicyName": "AmazonBedrockAgentCoreMemoryBedrockModelInferenceExecutionRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:59:11Z",
+    "CreateDate": "2026-07-17T17:12:16Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "bedrock-mantle:CreateInference",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock-mantle:*:*:project/*",
+          "Sid": "BedrockMantleInference"
+        },
         {
           "Action": [
             "bedrock:InvokeModel",
@@ -24,13 +35,20 @@
           "Resource": [
             "arn:aws:bedrock:*:*:inference-profile/*",
             "arn:aws:bedrock:*::foundation-model/*"
-          ]
+          ],
+          "Sid": "BedrockInvokeModel"
+        },
+        {
+          "Action": "bedrock-mantle:CallWithBearerToken",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BedrockMantleCallWithBearerToken"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-02-12T17:59:11Z"
+  "UpdateDate": "2026-07-17T17:12:16Z"
 }
