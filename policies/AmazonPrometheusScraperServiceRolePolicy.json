@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonPrometheusScraperServiceRolePolicy",
   "CreateDate": "2023-11-26T14:19:52Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4MXDZTGPJI",
   "PolicyName": "AmazonPrometheusScraperServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-04-26T20:25:54Z",
+    "CreateDate": "2026-07-17T08:27:27Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,17 @@
           "Effect": "Allow",
           "Resource": "arn:aws:aps:*:*:workspace/*",
           "Sid": "APSWriting"
+        },
+        {
+          "Action": "cloudwatch:PutMetricData",
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalAccount": "${aws:ResourceAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch:*:*:dataset/*",
+          "Sid": "CloudWatchMetricsWriting"
         },
         {
           "Action": "ec2:CreateNetworkInterface",
@@ -104,7 +115,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-04-26T20:25:54Z"
+  "UpdateDate": "2026-07-17T08:27:27Z"
 }
