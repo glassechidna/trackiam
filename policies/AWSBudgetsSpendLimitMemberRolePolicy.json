@@ -1,0 +1,192 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBudgetsSpendLimitMemberRolePolicy",
+  "CreateDate": "2026-07-18T00:57:16Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4I5EGUOK5S",
+  "PolicyName": "AWSBudgetsSpendLimitMemberRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-07-18T00:57:16Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "account:GetAccountInformation",
+            "account:GetPrimaryEmail"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AccountActions"
+        },
+        {
+          "Action": [
+            "aco-automation:GetAutomationEvent",
+            "aco-automation:ListRecommendedActions",
+            "aco-automation:StartAutomationEvent"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ComputeOptimizerAutomationActions"
+        },
+        {
+          "Action": [
+            "bedrock:GetEvaluationJob",
+            "bedrock:GetModelCustomizationJob",
+            "bedrock:GetModelInvocationJob",
+            "bedrock:GetProvisionedModelThroughput",
+            "bedrock:ListEvaluationJobs",
+            "bedrock:ListModelCustomizationJobs",
+            "bedrock:ListModelInvocationJobs",
+            "bedrock:ListProvisionedModelThroughputs",
+            "bedrock:StopEvaluationJob",
+            "bedrock:StopModelCustomizationJob",
+            "bedrock:StopModelInvocationJob",
+            "bedrock:UpdateProvisionedModelThroughput"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BedrockActions"
+        },
+        {
+          "Action": [
+            "compute-optimizer:GetEnrollmentStatus",
+            "compute-optimizer:GetIdleRecommendations",
+            "compute-optimizer:GetRecommendationSummaries"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ComputeOptimizerActions"
+        },
+        {
+          "Action": [
+            "dsql:GetCluster",
+            "dsql:ListClusters"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DSQLActions"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAddresses",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstances",
+            "ec2:DescribeNatGateways",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeVpnGateways",
+            "ec2:StopInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2Actions"
+        },
+        {
+          "Action": [
+            "lambda:DeleteFunctionConcurrency",
+            "lambda:DeleteProvisionedConcurrencyConfig",
+            "lambda:GetEventSourceMapping",
+            "lambda:GetFunctionConcurrency",
+            "lambda:GetFunctionConfiguration",
+            "lambda:GetProvisionedConcurrencyConfig",
+            "lambda:ListEventSourceMappings",
+            "lambda:ListFunctions",
+            "lambda:ListProvisionedConcurrencyConfigs",
+            "lambda:PutFunctionConcurrency",
+            "lambda:PutProvisionedConcurrencyConfig"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LambdaActions"
+        },
+        {
+          "Action": [
+            "rds:CreateDBClusterSnapshot",
+            "rds:DescribeDBClusterSnapshots",
+            "rds:DescribeDBClusters",
+            "rds:DescribeDBInstances",
+            "rds:DescribeDBProxies",
+            "rds:DescribeIntegrations",
+            "rds:RestoreDBClusterFromSnapshot",
+            "rds:RestoreDBClusterToPointInTime",
+            "rds:StopDBCluster",
+            "rds:StopDBInstance"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RDSActions"
+        },
+        {
+          "Action": [
+            "sagemaker:AttachClusterNodeVolume",
+            "sagemaker:DescribeApp",
+            "sagemaker:DescribeCluster",
+            "sagemaker:DescribeClusterNode",
+            "sagemaker:DescribeEndpointConfig",
+            "sagemaker:DescribeMlflowTrackingServer",
+            "sagemaker:DescribeNotebookInstance",
+            "sagemaker:DescribeProcessingJob",
+            "sagemaker:DescribeTrainingJob",
+            "sagemaker:DescribeTransformJob",
+            "sagemaker:DescribeUserProfile",
+            "sagemaker:DetachClusterNodeVolume",
+            "sagemaker:ListApps",
+            "sagemaker:ListClusterNodes",
+            "sagemaker:ListClusters",
+            "sagemaker:ListEndpointConfigs",
+            "sagemaker:ListEndpoints",
+            "sagemaker:ListMlflowTrackingServers",
+            "sagemaker:ListNotebookInstances",
+            "sagemaker:ListProcessingJobs",
+            "sagemaker:ListTrainingJobs",
+            "sagemaker:ListTransformJobs",
+            "sagemaker:StartNotebookInstance",
+            "sagemaker:StopLabelingJob",
+            "sagemaker:StopMlflowTrackingServer",
+            "sagemaker:StopNotebookInstance",
+            "sagemaker:StopProcessingJob",
+            "sagemaker:StopTrainingJob",
+            "sagemaker:StopTransformJob"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SageMakerActions"
+        },
+        {
+          "Action": [
+            "ssm:DescribeAutomationExecutions",
+            "ssm:DescribeAutomationStepExecutions",
+            "ssm:GetAutomationExecution",
+            "ssm:StartAutomationExecution",
+            "ssm:StopAutomationExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:automation-definition/AWS-StartEC2Instance:*",
+            "arn:aws:ssm:*:*:automation-definition/AWS-StartRdsInstance:*",
+            "arn:aws:ssm:*:*:automation-definition/AWS-StopEC2Instance:*",
+            "arn:aws:ssm:*:*:automation-definition/AWS-StopRdsInstance:*",
+            "arn:aws:ssm:*:*:automation-execution/*",
+            "arn:aws:ssm:*:*:document/AWS-StartEC2Instance",
+            "arn:aws:ssm:*:*:document/AWS-StartRdsInstance",
+            "arn:aws:ssm:*:*:document/AWS-StopEC2Instance",
+            "arn:aws:ssm:*:*:document/AWS-StopRdsInstance"
+          ],
+          "Sid": "SSMAutomation"
+        },
+        {
+          "Action": [
+            "sso:ListInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSOActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-07-18T00:57:16Z"
+}
