@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 459
-* Unique actions: 21947
+* Unique actions: 21955
 * Managed policies: 1526
 
 Most common managed policy name prefixes:
@@ -430,6 +430,7 @@ The following table summarises the AWS APIs.
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 14 |
 | [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
 | [`workspaces-instances`](services/workspaces-instances.yml) | 0 | 0 | 13 |
+| [`supportplans`](services/supportplans.yml) | 0 | 0 | 13 |
 | [`support-console`](services/support-console.yml) | 0 | 0 | 13 |
 | [`interconnect`](services/interconnect.yml) | 0 | 0 | 13 |
 | [`identity-sync`](services/identity-sync.yml) | 0 | 0 | 13 |
@@ -458,7 +459,6 @@ The following table summarises the AWS APIs.
 | [`cloudfront-keyvaluestore`](services/cloudfront-keyvaluestore.yml) | 0 | 0 | 6 |
 | [`tiros`](services/tiros.yml) | 0 | 0 | 5 |
 | [`sustainability`](services/sustainability.yml) | 0 | 0 | 5 |
-| [`supportplans`](services/supportplans.yml) | 0 | 0 | 5 |
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
 | [`inspector2-telemetry`](services/inspector2-telemetry.yml) | 0 | 0 | 5 |
 | [`geo-routes`](services/geo-routes.yml) | 0 | 0 | 5 |
@@ -500,11 +500,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3675 |
-| `Get` | 3328 |
+| `List` | 3677 |
+| `Get` | 3329 |
 | `Delete` | 2514 |
-| `Create` | 2376 |
-| `Update` | 2060 |
+| `Create` | 2377 |
+| `Update` | 2061 |
 | `Describe` | 1918 |
 | `Put` | 593 |
 | `Start` | 538 |
