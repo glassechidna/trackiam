@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForAmazonQDeveloper",
   "CreateDate": "2024-04-25T07:40:41Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4BSUWAE437",
   "PolicyName": "AWSServiceRoleForAmazonQDeveloper",
   "PolicyVersion": {
-    "CreateDate": "2024-04-25T07:40:41Z",
+    "CreateDate": "2026-07-20T20:27:30Z",
     "Document": {
       "Statement": [
         {
@@ -24,12 +24,20 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "sid1"
+        },
+        {
+          "Action": [
+            "identitystore:ListGroupMembershipsForMember"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "sid2"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-04-25T07:40:41Z"
+  "UpdateDate": "2026-07-20T20:27:30Z"
 }

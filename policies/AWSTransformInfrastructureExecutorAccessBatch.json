@@ -1,0 +1,256 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSTransformInfrastructureExecutorAccessBatch",
+  "CreateDate": "2026-07-20T20:12:13Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4IFSDRNYQT",
+  "PolicyName": "AWSTransformInfrastructureExecutorAccessBatch",
+  "PolicyVersion": {
+    "CreateDate": "2026-07-20T20:12:13Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "cloudformation:DescribeStacks",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/AtxInfrastructureStack/*",
+          "Sid": "CheckInfrastructureStatus"
+        },
+        {
+          "Action": "cloudformation:ListStacks",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CFNListStacksForDetect"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "iam:PassedToService": "scheduler.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AtxSchedulerInvocationRole",
+          "Sid": "PassSchedulerRole"
+        },
+        {
+          "Action": "tag:GetResources",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TagGetATXStacks"
+        },
+        {
+          "Action": [
+            "batch:DescribeComputeEnvironments",
+            "batch:DescribeJobDefinitions",
+            "batch:DescribeJobQueues",
+            "batch:DescribeJobs",
+            "batch:ListJobs"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BatchDescribe"
+        },
+        {
+          "Action": [
+            "cloudwatch:GetDashboard",
+            "cloudwatch:ListDashboards"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch::*:dashboard/ATX-Transform-CLI-Dashboard",
+          "Sid": "CloudWatchDashboard"
+        },
+        {
+          "Action": [
+            "ec2:DescribeNatGateways",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2NetworkDiscovery"
+        },
+        {
+          "Action": [
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:ListAttachedRolePolicies"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/ATX*",
+            "arn:aws:iam::*:role/Atx*"
+          ],
+          "Sid": "IAMReadRoles"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:Encrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "kms:ResourceAliases": "alias/atx-encryption-key"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSEncryptDecrypt"
+        },
+        {
+          "Action": [
+            "lambda:GetFunctionConfiguration",
+            "lambda:InvokeFunction"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:function:atx-*",
+          "Sid": "LambdaInvokeATXFunctions"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogStreams",
+            "logs:FilterLogEvents",
+            "logs:GetLogEvents"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/batch/atx-transform*",
+            "arn:aws:logs:*:*:log-group:/aws/batch/job*",
+            "arn:aws:logs:*:*:log-group:/aws/lambda/atx-*",
+            "arn:aws:logs:*:*:log-group:AtxVpc*"
+          ],
+          "Sid": "CloudWatchReadLogs"
+        },
+        {
+          "Action": [
+            "s3:AbortMultipartUpload",
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::atx-source-code-*",
+            "arn:aws:s3:::atx-source-code-*/*"
+          ],
+          "Sid": "S3UploadSourceCode"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:ListBucket"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::atx-ct-output-*",
+            "arn:aws:s3:::atx-ct-output-*/*",
+            "arn:aws:s3:::atx-custom-output-*",
+            "arn:aws:s3:::atx-custom-output-*/*"
+          ],
+          "Sid": "S3DownloadResults"
+        },
+        {
+          "Action": [
+            "scheduler:CreateSchedule",
+            "scheduler:DeleteSchedule",
+            "scheduler:GetSchedule",
+            "scheduler:GetScheduleGroup",
+            "scheduler:ListSchedules",
+            "scheduler:UpdateSchedule"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:scheduler:*:*:schedule-group/atx-ct",
+            "arn:aws:scheduler:*:*:schedule/atx-ct/*"
+          ],
+          "Sid": "SchedulerManage"
+        },
+        {
+          "Action": [
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:atx/*",
+          "Sid": "SecretsManagerATXSecrets"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-07-20T20:12:13Z"
+}

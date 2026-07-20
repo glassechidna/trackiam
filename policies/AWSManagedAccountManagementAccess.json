@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSManagedAccountManagementAccess",
+  "CreateDate": "2026-07-20T19:57:12Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4DHB27L5MN",
+  "PolicyName": "AWSManagedAccountManagementAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-07-20T19:57:12Z",
+    "Document": {
+      "Statement": {
+        "Action": [
+          "iam:AttachRolePolicy",
+          "iam:CreateRole",
+          "iam:DeleteRole",
+          "iam:DeleteRolePermissionsBoundary",
+          "iam:DeleteRolePolicy",
+          "iam:DetachRolePolicy",
+          "iam:PutRolePermissionsBoundary",
+          "iam:PutRolePolicy",
+          "iam:TagRole",
+          "iam:UntagRole",
+          "iam:UpdateAssumeRolePolicy",
+          "iam:UpdateRole"
+        ],
+        "Effect": "Allow",
+        "Resource": "arn:*:iam::*:role/managed/*"
+      },
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-07-20T19:57:12Z"
+}

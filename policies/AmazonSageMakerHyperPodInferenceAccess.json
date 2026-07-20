@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerHyperPodInferenceAccess",
   "CreateDate": "2026-01-27T20:34:09Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4IM2JDABFS",
   "PolicyName": "AmazonSageMakerHyperPodInferenceAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:01:18Z",
+    "CreateDate": "2026-07-20T20:57:13Z",
     "Document": {
       "Statement": [
         {
@@ -21,6 +21,19 @@
           "Effect": "Allow",
           "Resource": "arn:aws:acm:*:*:certificate/*",
           "Sid": "CertificateDeletePermission"
+        },
+        {
+          "Action": "s3:PutObject",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::hyperpod-tls*/data-capture/*"
+          ],
+          "Sid": "DataCaptureS3"
         },
         {
           "Action": [
@@ -57,7 +70,8 @@
         {
           "Action": [
             "ec2:CreateNetworkInterface",
-            "ec2:CreateNetworkInterfacePermission"
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface"
           ],
           "Condition": {
             "StringEquals": {
@@ -120,6 +134,19 @@
         },
         {
           "Action": [
+            "eks:ListAssociatedAccessPolicies"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:access-entry/*",
+          "Sid": "EKSAccessEntryListPolicies"
+        },
+        {
+          "Action": [
             "elasticloadbalancing:DescribeLoadBalancers"
           ],
           "Condition": {
@@ -156,6 +183,24 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/SageMakerHyperPodInference*",
           "Sid": "AllowPassRoleToSageMaker"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:s3:arn": "arn:aws:s3:::hyperpod-tls*",
+              "kms:ViaService": "s3.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DataCaptureKMS"
         },
         {
           "Action": [
@@ -204,6 +249,21 @@
             "arn:aws:s3:::hyperpod-tls*/*"
           ],
           "Sid": "S3GetObjectAccess"
+        },
+        {
+          "Action": [
+            "s3:ListBucket"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::hyperpod-tls*"
+          ],
+          "Sid": "S3ListBucketAccess"
         },
         {
           "Action": [
@@ -329,7 +389,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-02-12T18:01:18Z"
+  "UpdateDate": "2026-07-20T20:57:13Z"
 }

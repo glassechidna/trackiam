@@ -1,0 +1,86 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSManagedSignUpAdminAccess",
+  "CreateDate": "2026-07-20T19:27:24Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4PEW6IZMH6",
+  "PolicyName": "AWSManagedSignUpAdminAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-07-20T19:27:24Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "account:GetContactInformation"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:account::*:account",
+          "Sid": "AccountPermissions"
+        },
+        {
+          "Action": [
+            "billing:GetSellerOfRecord"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BillingPermissions"
+        },
+        {
+          "Action": [
+            "customer-verification:CreateCustomerVerificationDetails",
+            "customer-verification:CreateUploadUrls",
+            "customer-verification:GetCustomerVerificationDetails",
+            "customer-verification:GetCustomerVerificationEligibility",
+            "customer-verification:UpdateCustomerVerificationDetails"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CustomerVerificationWidgetPermissions"
+        },
+        {
+          "Action": [
+            "invoicing:GetInvoicePDF"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "InvoicingPermissions"
+        },
+        {
+          "Action": [
+            "payments:CreatePaymentInstrument",
+            "payments:GetPaymentInstrument",
+            "payments:GetPaymentStatus",
+            "payments:ListPaymentPreferences",
+            "payments:ListTagsForResource",
+            "payments:MakePayment",
+            "payments:TagResource",
+            "payments:UntagResource",
+            "payments:UpdatePaymentInstrument",
+            "payments:UpdatePaymentPreferences"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PaymentWidgetPermissions"
+        },
+        {
+          "Action": [
+            "tax:BatchPutTaxRegistration",
+            "tax:DeleteTaxRegistration",
+            "tax:GetTaxRegistration",
+            "tax:GetTaxRegistrationDocument",
+            "tax:ListTaxRegistrations",
+            "tax:PutTaxRegistration"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TaxWidgetPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-07-20T19:27:24Z"
+}
