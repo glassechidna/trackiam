@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 459
-* Unique actions: 21957
-* Managed policies: 1532
+* Unique actions: 21961
+* Managed policies: 1533
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 421 |
 | `arn:aws:iam::aws:policy/Amazon*` | 371 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 348 |
-| `arn:aws:iam::aws:policy/service-role/*` | 222 |
+| `arn:aws:iam::aws:policy/service-role/*` | 223 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
 | Other | 162 |
 
@@ -249,7 +249,7 @@ The following table summarises the AWS APIs.
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 18 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 22 | 0 | 9 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 71 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 75 |
 | [`mgh`](services/mgh.yml) | 21 | 0 | 25 |
 | [`resource-explorer-2`](services/resource-explorer-2.yml) | 21 | 0 | 16 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
@@ -500,14 +500,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3677 |
-| `Get` | 3329 |
+| `List` | 3679 |
+| `Get` | 3330 |
 | `Delete` | 2514 |
 | `Create` | 2377 |
 | `Update` | 2061 |
 | `Describe` | 1918 |
 | `Put` | 593 |
-| `Start` | 538 |
+| `Start` | 539 |
 | `Tag` | 322 |
 | `Batch` | 322 |
 

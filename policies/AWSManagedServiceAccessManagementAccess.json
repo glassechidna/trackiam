@@ -1,0 +1,83 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSManagedServiceAccessManagementAccess",
+  "CreateDate": "2026-07-21T17:57:17Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4OKIZC76YK",
+  "PolicyName": "AWSManagedServiceAccessManagementAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-07-21T17:57:17Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "organizations:AttachPolicy",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/ManagedBy": "service-access"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:policy/*/service_control_policy/*",
+          "Sid": "AllowSCPAttachTaggedPolicy"
+        },
+        {
+          "Action": "organizations:UpdatePolicy",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/ManagedBy": "service-access"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:policy/*/service_control_policy/*",
+          "Sid": "AllowSCPUpdateTagged"
+        },
+        {
+          "Action": [
+            "organizations:CreatePolicy",
+            "organizations:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/ManagedBy": "service-access",
+              "organizations:PolicyType": "SERVICE_CONTROL_POLICY"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowSCPCreateWithTag"
+        },
+        {
+          "Action": [
+            "organizations:ListPolicies",
+            "organizations:ListPoliciesForTarget"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:PolicyType": "SERVICE_CONTROL_POLICY"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowSCPList"
+        },
+        {
+          "Action": "organizations:AttachPolicy",
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:root/*",
+          "Sid": "AllowSCPAttachRoot"
+        },
+        {
+          "Action": "organizations:ListRoots",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListRoots"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-07-21T17:57:17Z"
+}

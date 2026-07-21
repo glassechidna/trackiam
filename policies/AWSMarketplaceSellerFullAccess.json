@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerFullAccess",
   "CreateDate": "2019-07-02T20:40:09Z",
-  "DefaultVersionId": "v31",
+  "DefaultVersionId": "v32",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JF7OFUANW",
   "PolicyName": "AWSMarketplaceSellerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-06-30T17:12:18Z",
+    "CreateDate": "2026-07-21T16:42:13Z",
     "Document": {
       "Statement": [
         {
@@ -196,6 +196,14 @@
         },
         {
           "Action": [
+            "aws-marketplace:GetTaxComplianceProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-marketplace:*:*:tax-compliance-profile/*",
+          "Sid": "TaxComplianceProfileRead"
+        },
+        {
+          "Action": [
             "aws-marketplace:GetVerification",
             "aws-marketplace:ListVerificationEvidence",
             "aws-marketplace:ListVerifications",
@@ -215,9 +223,28 @@
           "Resource": [
             "arn:aws:aws-marketplace:*:*:AWSMarketplace*/*",
             "arn:aws:aws-marketplace:*:*:catalog/AWSMarketplace*/*",
+            "arn:aws:aws-marketplace:*:*:tax-compliance-profile-change-task/*",
+            "arn:aws:aws-marketplace:*:*:tax-compliance-profile/*",
             "arn:aws:aws-marketplace:*:*:verification-type/*/verification-evidence/*"
           ],
           "Sid": "TagManagement"
+        },
+        {
+          "Action": [
+            "aws-marketplace:ListTaxComplianceProfileChangeTasks",
+            "aws-marketplace:ListTaxComplianceProfiles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TaxComplianceProfileList"
+        },
+        {
+          "Action": [
+            "aws-marketplace:StartTaxComplianceProfileChangeTask"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-marketplace:*:*:tax-compliance-profile-change-task/*",
+          "Sid": "TaxComplianceProfileChangeTaskManagement"
         },
         {
           "Action": [
@@ -283,7 +310,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v31"
+    "VersionId": "v32"
   },
-  "UpdateDate": "2026-06-30T17:12:18Z"
+  "UpdateDate": "2026-07-21T16:42:13Z"
 }
