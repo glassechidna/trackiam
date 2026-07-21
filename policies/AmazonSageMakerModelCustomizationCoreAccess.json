@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerModelCustomizationCoreAccess",
   "CreateDate": "2026-05-26T18:57:29Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ONDDHBDFH",
   "PolicyName": "AmazonSageMakerModelCustomizationCoreAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-06-30T16:57:19Z",
+    "CreateDate": "2026-07-21T19:57:28Z",
     "Document": {
       "Statement": [
         {
@@ -99,7 +99,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/SageMakerForLambda*",
+          "Resource": [
+            "arn:aws:iam::*:role/SageMakerForLambda*",
+            "arn:aws:iam::*:role/service-role/SageMakerForLambda*"
+          ],
           "Sid": "PassRoleForAWSLambda"
         },
         {
@@ -137,7 +140,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/SageMakerForBedrock*",
+          "Resource": [
+            "arn:aws:iam::*:role/SageMakerForBedrock*",
+            "arn:aws:iam::*:role/service-role/SageMakerForBedrock*"
+          ],
           "Sid": "PassRoleForBedrock"
         },
         {
@@ -511,7 +517,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2026-06-30T16:57:19Z"
+  "UpdateDate": "2026-07-21T19:57:28Z"
 }
