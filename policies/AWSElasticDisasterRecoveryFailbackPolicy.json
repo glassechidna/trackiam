@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticDisasterRecoveryFailbackPolicy",
   "CreateDate": "2021-11-17T10:41:40Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4FSEIUN7KZ",
   "PolicyName": "AWSElasticDisasterRecoveryFailbackPolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-11-27T12:56:46Z",
+    "CreateDate": "2026-07-22T18:42:25Z",
     "Document": {
       "Statement": [
         {
@@ -21,15 +21,7 @@
         },
         {
           "Action": [
-            "drs:GetChannelCommandsForDrs",
-            "drs:SendChannelCommandResultForDrs"
-          ],
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "DRSFailbackPolicy2"
-        },
-        {
-          "Action": [
+            "drs:GetAgentSnapshotCreditsForDrs",
             "drs:GetFailbackCommandForDrs",
             "drs:GetFailbackLaunchRequestedForDrs",
             "drs:IssueAgentCertificateForDrs",
@@ -38,12 +30,22 @@
             "drs:NotifyAgentDisconnectedForDrs",
             "drs:NotifyAgentReplicationProgressForDrs",
             "drs:NotifyConsistencyAttainedForDrs",
+            "drs:SendVolumeStatsForDrs",
             "drs:UpdateAgentReplicationProcessStateForDrs",
             "drs:UpdateFailbackClientLastSeenForDrs"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:drs:*:*:recovery-instance/${aws:SourceIdentity}",
           "Sid": "DRSFailbackPolicy4"
+        },
+        {
+          "Action": [
+            "drs:GetChannelCommandsForDrs",
+            "drs:SendChannelCommandResultForDrs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DRSFailbackPolicy2"
         },
         {
           "Action": [
@@ -58,7 +60,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-11-27T12:56:46Z"
+  "UpdateDate": "2026-07-22T18:42:25Z"
 }
