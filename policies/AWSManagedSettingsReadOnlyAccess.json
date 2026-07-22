@@ -1,0 +1,57 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSManagedSettingsReadOnlyAccess",
+  "CreateDate": "2026-07-22T01:12:28Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CA7JUMT6O",
+  "PolicyName": "AWSManagedSettingsReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-07-22T01:12:28Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "account:GetAccountInformation",
+            "account:GetContactInformation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AccountReadOnly"
+        },
+        {
+          "Action": [
+            "identitystore:DescribeUser",
+            "identitystore:ListGroupMemberships",
+            "identitystore:ListGroups",
+            "identitystore:ListUsers"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IdentityStoreReadOnly"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:ListAccounts"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "OrganizationsReadOnly"
+        },
+        {
+          "Action": [
+            "sso:DescribeInstance"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSOReadOnly"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-07-22T01:12:28Z"
+}

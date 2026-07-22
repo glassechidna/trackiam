@@ -1,0 +1,358 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSManagedSettingsAdminAccess",
+  "CreateDate": "2026-07-22T01:27:25Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4GA3LE2K77",
+  "PolicyName": "AWSManagedSettingsAdminAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-07-22T01:27:25Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "budgets:ModifyBudget",
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaLast": "account.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:budgets::*:budget/sla-*",
+          "Sid": "TransitionBudgetsAccess"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "budgets.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/managed/AWSManagedBudgetsSpendLimitManagementRole",
+          "Sid": "AWSSettingsIAMPassRole"
+        },
+        {
+          "Action": "sts:AssumeRole",
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaLast": "account.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/OrganizationAccountAccessRole",
+          "Sid": "TransitionMemberAccountAssume"
+        },
+        {
+          "Action": [
+            "account-access:CreateApplication",
+            "account-access:CreateEntitlement",
+            "account-access:ListApplications",
+            "identitystore:GetUserId",
+            "organizations:CreateBuilderIdOwnedAccount",
+            "organizations:DescribeCreateAccountStatus",
+            "organizations:ListAccounts",
+            "signin:DeleteConsoleAuthorizationConfiguration",
+            "sso-directory:ListProvisioningTenants",
+            "sso:ListInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaLast": "account.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TransitionProvisioningAccess"
+        },
+        {
+          "Action": [
+            "iam:AttachRolePolicy",
+            "iam:CreateRole",
+            "iam:DeleteRole",
+            "iam:DeleteRolePolicy",
+            "iam:DetachRolePolicy",
+            "iam:GetRole",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListRolePolicies"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaLast": "account.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/ManagedAccountAdmin",
+            "arn:aws:iam::*:role/managed/*"
+          ],
+          "Sid": "TransitionManagedRoleAccess"
+        },
+        {
+          "Action": [
+            "organizations:AttachPolicy",
+            "organizations:DetachPolicy",
+            "organizations:DisablePolicyType",
+            "organizations:EnablePolicyType"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:PolicyType": "AISERVICES_OPT_OUT_POLICY"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSSettingsOrganizationsAiOptOutPolicyManagement"
+        },
+        {
+          "Action": [
+            "organizations:DeletePolicy",
+            "organizations:DetachPolicy",
+            "organizations:ListPolicies",
+            "organizations:ListRoots"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaLast": "account.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TransitionSCPCleanupAccess"
+        },
+        {
+          "Action": [
+            "organizations:ListDelegatedAdministrators",
+            "organizations:RegisterDelegatedAdministrator"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaLast": "account.amazonaws.com",
+              "organizations:ServicePrincipal": "sso.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TransitionDelegatedAdminAccess"
+        },
+        {
+          "Action": [
+            "account:AcceptPrimaryEmailUpdate",
+            "account:CloseAccount",
+            "account:GetAccountInformation",
+            "account:GetContactInformation",
+            "account:GetPrimaryEmailUpdateStatus",
+            "account:PutAccountName",
+            "account:PutContactInformation",
+            "account:StartPrimaryEmailUpdate"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSSettingsAccountAccess"
+        },
+        {
+          "Action": [
+            "billing:GetCredits",
+            "billing:GetSellerOfRecord",
+            "billing:RedeemCredits"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSSettingsBillingAccess"
+        },
+        {
+          "Action": [
+            "budgets:CreateBudget",
+            "budgets:CreateBudgetAction",
+            "budgets:DeleteBudget",
+            "budgets:DeleteBudgetAction",
+            "budgets:DescribeBudget",
+            "budgets:DescribeBudgetActionsForAccount",
+            "budgets:DescribeBudgetActionsForBudget",
+            "budgets:DescribeBudgets",
+            "budgets:ModifyBudget",
+            "budgets:UpdateBudget",
+            "budgets:ViewBudget"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSSettingsBudgetsAccess"
+        },
+        {
+          "Action": [
+            "builderid:CreateInvitation",
+            "builderid:DeleteInvitation",
+            "builderid:DisassociateCollaborator",
+            "builderid:ListInvitations",
+            "identitystore:CreateGroup",
+            "identitystore:CreateGroupMembership",
+            "identitystore:CreateUser",
+            "identitystore:DeleteGroup",
+            "identitystore:DeleteGroupMembership",
+            "identitystore:DeleteUser",
+            "identitystore:DescribeGroup",
+            "identitystore:DescribeUser",
+            "identitystore:GetGroupId",
+            "identitystore:GetUserId",
+            "identitystore:ListGroupMemberships",
+            "identitystore:ListGroupMembershipsForMember",
+            "identitystore:ListGroups",
+            "identitystore:ListUsers",
+            "identitystore:ReserveUser",
+            "identitystore:UpdateGroup",
+            "identitystore:UpdateIdentityStore",
+            "identitystore:UpdateUser",
+            "sso-directory:DescribeUsers",
+            "sso-directory:SearchGroups",
+            "sso-directory:SearchUsers",
+            "sso:UpdateInstance"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSSettingsIdentityStoreAccess"
+        },
+        {
+          "Action": [
+            "ce:GetCostAndUsage",
+            "ce:GetCostForecast"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSSettingsCostExplorerAccess"
+        },
+        {
+          "Action": [
+            "customer-verification:CreateCustomerVerificationDetails",
+            "customer-verification:CreateUploadUrls",
+            "customer-verification:GetCustomerVerificationDetails",
+            "customer-verification:GetCustomerVerificationEligibility",
+            "customer-verification:UpdateCustomerVerificationDetails"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSSettingsCustomerVerificationAccess"
+        },
+        {
+          "Action": [
+            "freetier:GetAccountPlanState",
+            "freetier:UpgradeAccountPlan"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSSettingsFreeTierAccess"
+        },
+        {
+          "Action": [
+            "invoicing:GetInvoicePDF"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSSettingsInvoicingAccess"
+        },
+        {
+          "Action": [
+            "organizations:CloseAccount",
+            "organizations:CreateBuilderIdOwnedAccount",
+            "organizations:CreatePolicy",
+            "organizations:DescribeAccount",
+            "organizations:DescribeCreateAccountStatus",
+            "organizations:DescribeEffectivePolicy",
+            "organizations:DescribeOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListPolicies",
+            "organizations:ListPoliciesForTarget",
+            "organizations:ListRoots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSSettingsOrganizationsAccess"
+        },
+        {
+          "Action": [
+            "payments:AcceptTermsAndConditionsForProgramByAccountId",
+            "payments:BatchGetPaymentProfiles",
+            "payments:CreatePaymentAttempt",
+            "payments:CreatePaymentInstrument",
+            "payments:CreatePaymentProfile",
+            "payments:Get",
+            "payments:GetAcceptedTermsAndConditionsForProgramByAccountId",
+            "payments:GetAccountBalance",
+            "payments:GetEligibleCurrencies",
+            "payments:GetPaymentAttempt",
+            "payments:GetPaymentInstrument",
+            "payments:GetPaymentPreferences",
+            "payments:GetPaymentStatus",
+            "payments:GetPreferredCurrency",
+            "payments:GetRecommendedTermsAndConditionsForProgram",
+            "payments:ListPaymentPreferences",
+            "payments:ListPaymentProfiles",
+            "payments:ListTagsForResource",
+            "payments:MakePayment",
+            "payments:SearchFinancialRecords",
+            "payments:SetPreferredCurrency",
+            "payments:TagResource",
+            "payments:UntagResource",
+            "payments:UpdatePaymentInstrument",
+            "payments:UpdatePaymentPreferences",
+            "payments:UpdatePaymentProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSSettingsPaymentsAccess"
+        },
+        {
+          "Action": [
+            "ses:SendEmail"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSSettingsSESAccess"
+        },
+        {
+          "Action": [
+            "sso:CreateApplicationAssignment",
+            "sso:DeleteApplicationAssignment",
+            "sso:DescribeApplication",
+            "sso:DescribeInstance",
+            "sso:GetApplicationAssignmentConfiguration",
+            "sso:ListApplicationAssignments",
+            "sso:ListApplications"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSSettingsSSOAccess"
+        },
+        {
+          "Action": [
+            "support:AddCommunicationToCase",
+            "support:CreateCase",
+            "support:DescribeCases",
+            "support:DescribeServices",
+            "support:DescribeSeverityLevels",
+            "support:ResolveCase"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSSettingsSupportAccess"
+        },
+        {
+          "Action": [
+            "tax:BatchPutTaxRegistration",
+            "tax:DeleteTaxRegistration",
+            "tax:GetTaxRegistration",
+            "tax:GetTaxRegistrationDocument",
+            "tax:ListTaxRegistrations",
+            "tax:PutTaxRegistration"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSSettingsTaxAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-07-22T01:27:25Z"
+}
