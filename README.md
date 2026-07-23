@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 459
-* Unique actions: 21967
+* Unique actions: 21978
 * Managed policies: 1535
 
 Most common managed policy name prefixes:
@@ -360,7 +360,7 @@ The following table summarises the AWS APIs.
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 0 | 6 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
-| [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 223 |
+| [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 234 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 134 |
 | [`securityagent`](services/securityagent.yml) | 0 | 0 | 111 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
@@ -500,11 +500,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3680 |
-| `Get` | 3328 |
-| `Delete` | 2515 |
-| `Create` | 2377 |
-| `Update` | 2062 |
+| `List` | 3683 |
+| `Get` | 3329 |
+| `Delete` | 2517 |
+| `Create` | 2379 |
+| `Update` | 2064 |
 | `Describe` | 1920 |
 | `Put` | 594 |
 | `Start` | 539 |
