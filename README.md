@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 459
-* Unique actions: 21960
+* Unique actions: 21967
 * Managed policies: 1535
 
 Most common managed policy name prefixes:
@@ -43,7 +43,7 @@ The following table summarises the AWS APIs.
 | [`connect`](services/connect.yml) | 256 | 0 | 112 |
 | [`glue`](services/glue.yml) | 214 | 4 | 90 |
 | [`ses`](services/ses.yml) | 193 | 0 | 34 |
-| [`quicksight`](services/quicksight.yml) | 174 | 3 | 145 |
+| [`quicksight`](services/quicksight.yml) | 174 | 3 | 151 |
 | [`rds`](services/rds.yml) | 162 | 0 | 7 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
 | [`iam`](services/iam.yml) | 159 | 0 | 28 |
@@ -331,7 +331,7 @@ The following table summarises the AWS APIs.
 | [`tax`](services/tax.yml) | 7 | 0 | 16 |
 | [`cur`](services/cur.yml) | 7 | 0 | 5 |
 | [`cost-optimization-hub`](services/cost-optimization-hub.yml) | 7 | 0 | 1 |
-| [`artifact`](services/artifact.yml) | 6 | 0 | 17 |
+| [`artifact`](services/artifact.yml) | 6 | 0 | 18 |
 | [`rds-data`](services/rds-data.yml) | 6 | 0 | 0 |
 | [`importexport`](services/importexport.yml) | 6 | 0 | 0 |
 | [`ebs`](services/ebs.yml) | 6 | 0 | 0 |
@@ -500,13 +500,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3679 |
+| `List` | 3680 |
 | `Get` | 3328 |
-| `Delete` | 2514 |
+| `Delete` | 2515 |
 | `Create` | 2377 |
-| `Update` | 2061 |
-| `Describe` | 1918 |
-| `Put` | 593 |
+| `Update` | 2062 |
+| `Describe` | 1920 |
+| `Put` | 594 |
 | `Start` | 539 |
 | `Tag` | 322 |
 | `Batch` | 322 |
