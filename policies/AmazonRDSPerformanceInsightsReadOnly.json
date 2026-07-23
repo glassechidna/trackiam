@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonRDSPerformanceInsightsReadOnly",
   "CreateDate": "2022-04-05T00:02:08Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4M2AUBSW6R",
   "PolicyName": "AmazonRDSPerformanceInsightsReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:02:56Z",
+    "CreateDate": "2026-07-22T23:42:28Z",
     "Document": {
       "Statement": [
         {
@@ -53,6 +53,12 @@
           "Sid": "AmazonRDSPerformanceInsightsListAvailableResourceMetrics"
         },
         {
+          "Action": "pi:ListPerformanceAnalysisReportRecommendations",
+          "Effect": "Allow",
+          "Resource": "arn:aws:pi:*:*:perf-reports/rds/*/*",
+          "Sid": "AmazonRDSPerformanceInsightsListPerformanceAnalysisReportRecommendations"
+        },
+        {
           "Action": "pi:ListPerformanceAnalysisReports",
           "Effect": "Allow",
           "Resource": "arn:aws:pi:*:*:perf-reports/rds/*/*",
@@ -96,7 +102,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-02-12T18:02:56Z"
+  "UpdateDate": "2026-07-22T23:42:28Z"
 }
