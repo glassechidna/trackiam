@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSManagedSettingsAdminAccess",
   "CreateDate": "2026-07-22T01:27:25Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4GA3LE2K77",
   "PolicyName": "AWSManagedSettingsAdminAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-07-22T01:27:25Z",
+    "CreateDate": "2026-07-23T00:42:22Z",
     "Document": {
       "Statement": [
         {
@@ -19,7 +19,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:budgets::*:budget/sla-*",
-          "Sid": "TransitionBudgetsAccess"
+          "Sid": "ActivateAdvancedBudgetsAccess"
         },
         {
           "Action": "iam:PassRole",
@@ -40,8 +40,8 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/OrganizationAccountAccessRole",
-          "Sid": "TransitionMemberAccountAssume"
+          "Resource": "arn:aws:iam::*:role/managed/AWSManagedAdvancedFeaturesActivationRole",
+          "Sid": "ActivateAdvancedMemberAccountAssume"
         },
         {
           "Action": [
@@ -63,7 +63,20 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "TransitionProvisioningAccess"
+          "Sid": "ActivateAdvancedProvisioningAccess"
+        },
+        {
+          "Action": [
+            "account:PutAccountName"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaLast": "account.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ActivateAdvancedUpdateAccountName"
         },
         {
           "Action": [
@@ -83,10 +96,11 @@
           },
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:iam::*:role/AccountFullAccessRole",
             "arn:aws:iam::*:role/ManagedAccountAdmin",
             "arn:aws:iam::*:role/managed/*"
           ],
-          "Sid": "TransitionManagedRoleAccess"
+          "Sid": "ActivateAdvancedManagedRoleAccess"
         },
         {
           "Action": [
@@ -118,7 +132,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "TransitionSCPCleanupAccess"
+          "Sid": "ActivateAdvancedSCPCleanupAccess"
         },
         {
           "Action": [
@@ -133,7 +147,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "TransitionDelegatedAdminAccess"
+          "Sid": "ActivateAdvancedDelegatedAdminAccess"
         },
         {
           "Action": [
@@ -167,6 +181,7 @@
             "budgets:DeleteBudget",
             "budgets:DeleteBudgetAction",
             "budgets:DescribeBudget",
+            "budgets:DescribeBudgetActionHistories",
             "budgets:DescribeBudgetActionsForAccount",
             "budgets:DescribeBudgetActionsForBudget",
             "budgets:DescribeBudgets",
@@ -204,8 +219,7 @@
             "identitystore:UpdateUser",
             "sso-directory:DescribeUsers",
             "sso-directory:SearchGroups",
-            "sso-directory:SearchUsers",
-            "sso:UpdateInstance"
+            "sso-directory:SearchUsers"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -258,6 +272,7 @@
             "organizations:DescribeCreateAccountStatus",
             "organizations:DescribeEffectivePolicy",
             "organizations:DescribeOrganization",
+            "organizations:InviteAccountToOrganization",
             "organizations:ListAccounts",
             "organizations:ListPolicies",
             "organizations:ListPoliciesForTarget",
@@ -316,7 +331,8 @@
             "sso:DescribeInstance",
             "sso:GetApplicationAssignmentConfiguration",
             "sso:ListApplicationAssignments",
-            "sso:ListApplications"
+            "sso:ListApplications",
+            "sso:UpdateInstance"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -352,7 +368,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-07-22T01:27:25Z"
+  "UpdateDate": "2026-07-23T00:42:22Z"
 }
