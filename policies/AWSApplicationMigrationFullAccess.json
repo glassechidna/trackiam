@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSApplicationMigrationFullAccess",
   "CreateDate": "2021-04-07T06:56:05Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HPQNMM2HL",
   "PolicyName": "AWSApplicationMigrationFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-05-31T13:12:11Z",
+    "CreateDate": "2026-07-23T07:27:10Z",
     "Document": {
       "Statement": [
         {
@@ -61,13 +61,14 @@
           "Condition": {
             "ForAllValues:StringEquals": {
               "aws:TagKeys": [
+                "aws-apn-id",
                 "map-migrated"
               ]
             }
           },
           "Effect": "Allow",
           "Resource": "arn:aws:fsx:*:*:storage-virtual-machine/*",
-          "Sid": "AllowTagSVMWithMapMigrated"
+          "Sid": "AllowTagSVMWithMapKeys"
         },
         {
           "Action": [
@@ -291,7 +292,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2026-05-31T13:12:11Z"
+  "UpdateDate": "2026-07-23T07:27:10Z"
 }
