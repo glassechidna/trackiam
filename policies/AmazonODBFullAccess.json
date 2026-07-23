@@ -1,0 +1,136 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonODBFullAccess",
+  "CreateDate": "2026-07-23T22:57:25Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4JGUWSXDPO",
+  "PolicyName": "AmazonODBFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-07-23T22:57:25Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateOdbNetworkPeering",
+            "ec2:DeleteOdbNetworkPeering",
+            "ec2:ModifyOdbNetworkPeering"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "odb.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowOdbNetworkPeeringActions"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "odb.amazonaws.com",
+                "vpc-lattice.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowSLRActions"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowEC2Actions"
+        },
+        {
+          "Action": [
+            "odb:CreateAutonomousDatabase",
+            "odb:CreateAutonomousDatabaseBackup",
+            "odb:CreateAutonomousDatabaseWallet",
+            "odb:CreateCloudAutonomousVmCluster",
+            "odb:CreateCloudExadataInfrastructure",
+            "odb:CreateCloudVmCluster",
+            "odb:CreateDbNode",
+            "odb:CreateOdbNetwork",
+            "odb:CreateOdbPeeringConnection",
+            "odb:CreateOutboundIntegration",
+            "odb:DeleteAutonomousDatabase",
+            "odb:DeleteAutonomousDatabaseBackup",
+            "odb:DeleteCloudAutonomousVmCluster",
+            "odb:DeleteCloudExadataInfrastructure",
+            "odb:DeleteCloudVmCluster",
+            "odb:DeleteDbNode",
+            "odb:DeleteOdbNetwork",
+            "odb:DeleteOdbPeeringConnection",
+            "odb:DeleteResourcePolicy",
+            "odb:FailoverAutonomousDatabase",
+            "odb:GetAutonomousDatabase",
+            "odb:GetAutonomousDatabaseBackup",
+            "odb:GetAutonomousDatabaseWalletDetails",
+            "odb:GetCloudAutonomousVmCluster",
+            "odb:GetCloudExadataInfrastructure",
+            "odb:GetCloudExadataInfrastructureUnallocatedResources",
+            "odb:GetCloudVmCluster",
+            "odb:GetDbNode",
+            "odb:GetDbServer",
+            "odb:GetOciOnboardingStatus",
+            "odb:GetOdbNetwork",
+            "odb:GetOdbPeeringConnection",
+            "odb:GetResourcePolicy",
+            "odb:InitializeService",
+            "odb:ListAutonomousDatabaseBackups",
+            "odb:ListAutonomousDatabaseCharacterSets",
+            "odb:ListAutonomousDatabaseClones",
+            "odb:ListAutonomousDatabasePeers",
+            "odb:ListAutonomousDatabaseVersions",
+            "odb:ListAutonomousDatabases",
+            "odb:ListAutonomousVirtualMachines",
+            "odb:ListCloudAutonomousVmClusters",
+            "odb:ListCloudExadataInfrastructures",
+            "odb:ListCloudVmClusters",
+            "odb:ListDbNodes",
+            "odb:ListDbServers",
+            "odb:ListDbSystemShapes",
+            "odb:ListGiVersions",
+            "odb:ListOdbNetworks",
+            "odb:ListOdbPeeringConnections",
+            "odb:ListSystemVersions",
+            "odb:ListTagsForResource",
+            "odb:PutResourcePolicy",
+            "odb:RebootAutonomousDatabase",
+            "odb:RebootDbNode",
+            "odb:RestoreAutonomousDatabase",
+            "odb:ShrinkAutonomousDatabase",
+            "odb:StartAutonomousDatabase",
+            "odb:StartDbNode",
+            "odb:StopAutonomousDatabase",
+            "odb:StopDbNode",
+            "odb:SwitchoverAutonomousDatabase",
+            "odb:TagResource",
+            "odb:UntagResource",
+            "odb:UpdateAutonomousDatabase",
+            "odb:UpdateAutonomousDatabaseBackup",
+            "odb:UpdateCloudExadataInfrastructure",
+            "odb:UpdateOdbNetwork",
+            "odb:UpdateOdbPeeringConnection"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowODBActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-07-23T22:57:25Z"
+}

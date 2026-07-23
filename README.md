@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 459
-* Unique actions: 21978
-* Managed policies: 1535
+* Unique actions: 21979
+* Managed policies: 1536
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 423 |
-| `arn:aws:iam::aws:policy/Amazon*` | 371 |
+| `arn:aws:iam::aws:policy/Amazon*` | 372 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 348 |
 | `arn:aws:iam::aws:policy/service-role/*` | 223 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
@@ -317,7 +317,7 @@ The following table summarises the AWS APIs.
 | [`license-manager-linux-subscriptions`](services/license-manager-linux-subscriptions.yml) | 11 | 0 | 0 |
 | [`supportapp`](services/supportapp.yml) | 10 | 0 | 3 |
 | [`sdb`](services/sdb.yml) | 10 | 0 | 3 |
-| [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 1 |
+| [`redshift-data`](services/redshift-data.yml) | 10 | 0 | 2 |
 | [`savingsplans`](services/savingsplans.yml) | 10 | 0 | 0 |
 | [`rbin`](services/rbin.yml) | 10 | 0 | 0 |
 | [`pipes`](services/pipes.yml) | 10 | 0 | 0 |
@@ -500,7 +500,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3683 |
+| `List` | 3684 |
 | `Get` | 3329 |
 | `Delete` | 2517 |
 | `Create` | 2379 |
