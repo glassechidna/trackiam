@@ -1,0 +1,144 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSDMPServiceRolePolicy",
+  "CreateDate": "2026-07-24T20:57:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4ALQZ3XIEH",
+  "PolicyName": "AWSSDMPServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-07-24T20:57:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:AttachRolePolicy",
+          "Condition": {
+            "ArnEquals": {
+              "iam:PolicyARN": "arn:aws:iam::aws:policy/AWSDenyAll"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "aws:ResourceTag/CreatedBy": "arn:aws:iam::*:role/SDMPServiceRole*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/SDMP-*",
+          "Sid": "AttachAWSDenyAll"
+        },
+        {
+          "Action": "iam:TagRole",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "CreatedBy"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/SDMP-*",
+          "Sid": "AllowSDMPRoleTagging"
+        },
+        {
+          "Action": [
+            "cloudtrail:CreateServiceLinkedChannel",
+            "cloudtrail:DeleteServiceLinkedChannel",
+            "cloudtrail:GetServiceLinkedChannel",
+            "cloudtrail:UpdateServiceLinkedChannel"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudtrail:*:*:channel/aws-service-channel/sdmp/*",
+          "Sid": "ManageServiceLinkedChannel"
+        },
+        {
+          "Action": [
+            "iam:AttachRolePolicy",
+            "iam:CreateRole",
+            "iam:PutRolePolicy"
+          ],
+          "Condition": {
+            "ArnEquals": {
+              "iam:PermissionsBoundary": "arn:aws:iam::aws:policy/AWSDenyAll"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "aws:ResourceTag/CreatedBy": "arn:aws:iam::*:role/SDMPServiceRole*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/SDMP-*",
+          "Sid": "CreateRoleWithConditions"
+        },
+        {
+          "Action": [
+            "account:ListRegions",
+            "cloudtrail:ListServiceLinkedChannels",
+            "iam:ListPolicies",
+            "iam:ListPolicyTags",
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListOperations"
+        },
+        {
+          "Action": [
+            "cloudtrail:DescribeTrails",
+            "cloudtrail:GetTrailStatus",
+            "config:DescribeConfigurationRecorderStatus",
+            "config:DescribeConfigurationRecorders",
+            "detective:ListGraphs",
+            "guardduty:GetDetector",
+            "guardduty:ListDetectors",
+            "inspector2:BatchGetAccountStatus",
+            "macie2:GetMacieSession",
+            "securityhub:DescribeHub",
+            "securityhub:ListFindingAggregators"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowSecurityServiceVerification"
+        },
+        {
+          "Action": [
+            "iam:GetPolicy",
+            "iam:GetPolicyVersion",
+            "iam:ListPolicyVersions"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:policy/SDMP*"
+          ],
+          "Sid": "ReadSDMPPolicies"
+        },
+        {
+          "Action": [
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListRolePolicies",
+            "iam:ListRoleTags"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/SDMP-*",
+            "arn:aws:iam::*:role/SDMPServiceRole*"
+          ],
+          "Sid": "ReadSDMPRoles"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-07-24T20:57:19Z"
+}
