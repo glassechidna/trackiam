@@ -1,0 +1,287 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/ROSAKarpenterControllerPolicy",
+  "CreateDate": "2026-07-27T16:42:18Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4B2BQBU263",
+  "PolicyName": "ROSAKarpenterControllerPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-07-27T16:42:18Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "kms:CreateGrant",
+          "Condition": {
+            "Bool": {
+              "kms:GrantIsForAWSResource": true
+            },
+            "ForAllValues:StringEquals": {
+              "kms:EncryptionContextKeys": [
+                "aws:ebs:id"
+              ],
+              "kms:GrantOperations": [
+                "Decrypt",
+                "GenerateDataKeyWithoutPlaintext",
+                "ReEncryptFrom",
+                "ReEncryptTo"
+              ]
+            },
+            "StringEquals": {
+              "kms:GrantConstraintType": "EncryptionContextSubset"
+            },
+            "StringLike": {
+              "kms:ViaService": "ec2.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "CreateGrantForEBSVolumeEncryption"
+        },
+        {
+          "Action": "kms:DescribeKey",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat": "true"
+            },
+            "StringLike": {
+              "kms:ViaService": "ec2.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DescribeKMSKeysForEBSVolumeEncryption"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet",
+            "ec2:CreateLaunchTemplate",
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:fleet/*",
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:spot-instances-request/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "CreateEC2ResourcesWithTags"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet",
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:launch-template/*",
+          "Sid": "CreateEC2ResourcesLaunchTemplate"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet",
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:Owner": [
+                "210686502322",
+                "251351625822",
+                "531415883065"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::image/*",
+          "Sid": "CreateEC2ResourcesWithApprovedAMIs"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/red-hat-managed": "true",
+              "ec2:CreateAction": [
+                "CreateFleet",
+                "CreateLaunchTemplate",
+                "RunInstances"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:fleet/*",
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:spot-instances-request/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "CreateTagsOnResources"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "ManageTagsOnManagedResources"
+        },
+        {
+          "Action": [
+            "ec2:DeleteLaunchTemplate",
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:launch-template/*"
+          ],
+          "Sid": "TerminateManagedResources"
+        },
+        {
+          "Action": [
+            "iam:CreateInstanceProfile",
+            "iam:TagInstanceProfile"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:instance-profile/rosa-service-managed-*"
+          ],
+          "Sid": "CreateInstanceProfiles"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": [
+                "ec2.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*-ROSA-Worker-Role",
+          "Sid": "PassInstanceRole"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKeyWithoutPlaintext",
+            "kms:ReEncryptFrom",
+            "kms:ReEncryptTo"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "kms:EncryptionContextKeys": [
+                "aws:ebs:id"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceTag/red-hat": "true"
+            },
+            "StringLike": {
+              "kms:ViaService": "ec2.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "CryptoOpsForEBSVolumeEncryption"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet",
+            "ec2:RunInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:capacity-reservation/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "CreateEC2Resources"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeCapacityReservations",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstanceTypeOfferings",
+            "ec2:DescribeInstanceTypes",
+            "ec2:DescribeInstances",
+            "ec2:DescribeLaunchTemplates",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeSpotPriceHistory",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReadPermissions"
+        },
+        {
+          "Action": [
+            "iam:AddRoleToInstanceProfile",
+            "iam:DeleteInstanceProfile",
+            "iam:RemoveRoleFromInstanceProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:instance-profile/rosa-service-managed-*"
+          ],
+          "Sid": "ManageInstanceProfiles"
+        },
+        {
+          "Action": [
+            "iam:GetInstanceProfile",
+            "iam:ListInstanceProfiles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReadInstanceProfiles"
+        },
+        {
+          "Action": [
+            "pricing:GetProducts"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PricingReadActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-07-27T16:42:18Z"
+}
