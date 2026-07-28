@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/BedrockAgentCoreFullAccess",
   "CreateDate": "2025-07-16T13:37:07Z",
-  "DefaultVersionId": "v17",
+  "DefaultVersionId": "v18",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BB44GAY7X",
   "PolicyName": "BedrockAgentCoreFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-04-21T17:42:20Z",
+    "CreateDate": "2026-07-28T16:57:19Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "bedrock-mantle:CreateInference",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock-mantle:*:*:project/*",
+          "Sid": "AgentCoreEvaluationBedrockMantleInference"
+        },
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
@@ -208,6 +219,12 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "BedrockAgentCoreRuntimeS3ListAccess"
+        },
+        {
+          "Action": "bedrock-mantle:CallWithBearerToken",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AgentCoreEvaluationBedrockMantleCallWithBearerToken"
         },
         {
           "Action": "iam:GetRole",
@@ -415,7 +432,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v17"
+    "VersionId": "v18"
   },
-  "UpdateDate": "2026-04-21T17:42:20Z"
+  "UpdateDate": "2026-07-28T16:57:19Z"
 }
