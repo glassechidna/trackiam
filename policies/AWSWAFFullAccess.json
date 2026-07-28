@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFFullAccess",
   "CreateDate": "2015-10-06T20:44:00Z",
-  "DefaultVersionId": "v16",
+  "DefaultVersionId": "v17",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJMIKIAFXZEGOLRH7C",
   "PolicyName": "AWSWAFFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-06-30T22:42:20Z",
+    "CreateDate": "2026-07-28T21:42:26Z",
     "Document": {
       "Statement": [
         {
@@ -22,7 +22,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*",
+          "Resource": "arn:aws:logs:*:*:log-group:*",
           "Sid": "GrantLogDeliveryPermissionForCloudWatchLogGroup"
         },
         {
@@ -261,7 +261,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v16"
+    "VersionId": "v17"
   },
-  "UpdateDate": "2026-06-30T22:42:20Z"
+  "UpdateDate": "2026-07-28T21:42:26Z"
 }
