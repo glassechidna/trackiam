@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 459
-* Unique actions: 21988
+* Unique actions: 21990
 * Managed policies: 1538
 
 Most common managed policy name prefixes:
@@ -309,7 +309,7 @@ The following table summarises the AWS APIs.
 | [`firehose`](services/firehose.yml) | 12 | 0 | 0 |
 | [`bcm-data-exports`](services/bcm-data-exports.yml) | 12 | 0 | 0 |
 | [`budgets`](services/budgets.yml) | 11 | 15 | 2 |
-| [`trustedadvisor`](services/trustedadvisor.yml) | 11 | 0 | 30 |
+| [`trustedadvisor`](services/trustedadvisor.yml) | 11 | 0 | 31 |
 | [`timestream-influxdb`](services/timestream-influxdb.yml) | 11 | 0 | 8 |
 | [`repostspace`](services/repostspace.yml) | 11 | 0 | 8 |
 | [`license-manager-user-subscriptions`](services/license-manager-user-subscriptions.yml) | 11 | 0 | 6 |
@@ -367,7 +367,7 @@ The following table summarises the AWS APIs.
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
 | [`aidevops`](services/aidevops.yml) | 0 | 0 | 82 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
-| [`odb`](services/odb.yml) | 0 | 0 | 76 |
+| [`odb`](services/odb.yml) | 0 | 0 | 77 |
 | [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 70 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 61 |
@@ -500,7 +500,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3686 |
+| `List` | 3688 |
 | `Get` | 3331 |
 | `Delete` | 2517 |
 | `Create` | 2379 |
