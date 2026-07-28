@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/ROSAControlPlaneOperatorPolicy",
   "CreateDate": "2023-04-24T23:02:49Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4KA4P7YA2C",
   "PolicyName": "ROSAControlPlaneOperatorPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-04-10T16:12:18Z",
+    "CreateDate": "2026-07-28T23:12:18Z",
     "Document": {
       "Statement": [
         {
@@ -49,19 +49,6 @@
           ],
           "Condition": {
             "StringEquals": {
-              "aws:ResourceTag/red-hat-managed": "true"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:ec2:*:*:security-group/*",
-          "Sid": "AddTagsToRedHatManagedSecurityGroups"
-        },
-        {
-          "Action": [
-            "ec2:CreateTags"
-          ],
-          "Condition": {
-            "StringEquals": {
               "ec2:CreateAction": [
                 "CreateSecurityGroup",
                 "CreateVpcEndpoint"
@@ -74,6 +61,30 @@
             "arn:aws:ec2:*:*:vpc-endpoint/*"
           ],
           "Sid": "CreateTagsRestrictedActions"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags",
+            "ec2:DeleteTags"
+          ],
+          "Condition": {
+            "ForAllValues:StringNotEquals": {
+              "aws:TagKeys": [
+                "red-hat-managed"
+              ]
+            },
+            "Null": {
+              "aws:TagKeys": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*"
+          ],
+          "Sid": "AddDeleteTagsRedHatManagedSecurityGroups"
         },
         {
           "Action": [
@@ -179,6 +190,7 @@
         {
           "Action": [
             "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
             "ec2:DescribeVpcEndpoints",
             "ec2:DescribeVpcs",
             "route53:ListHostedZones"
@@ -211,7 +223,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-04-10T16:12:18Z"
+  "UpdateDate": "2026-07-28T23:12:18Z"
 }
