@@ -1,15 +1,37 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSTransformSecurityAgentExecutorAccess",
   "CreateDate": "2026-06-30T21:27:39Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CZUYVER2J",
   "PolicyName": "AWSTransformSecurityAgentExecutorAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-06-30T21:27:39Z",
+    "CreateDate": "2026-07-28T15:42:11Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "cloudformation:DescribeStacks",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/AtxSecurityAgentStack-*/*",
+          "Sid": "CFNDescribeSecurityAgentStack"
+        },
+        {
+          "Action": "cloudformation:ListStacks",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CFNDiscoverSecurityAgentStack"
+        },
         {
           "Action": "iam:PassRole",
           "Condition": {
@@ -30,7 +52,7 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:s3:::kct-security-agent-*/security-scans/*",
+          "Resource": "arn:aws:s3:::atx-security-agent-*/security-scans/*",
           "Sid": "S3SecurityAgentUpload"
         },
         {
@@ -45,8 +67,8 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:s3:::kct-security-agent-*",
-            "arn:aws:s3:::kct-security-agent-*/*"
+            "arn:aws:s3:::atx-security-agent-*",
+            "arn:aws:s3:::atx-security-agent-*/*"
           ],
           "Sid": "S3SecurityAgentBucketRead"
         },
@@ -73,7 +95,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-06-30T21:27:39Z"
+  "UpdateDate": "2026-07-28T15:42:11Z"
 }

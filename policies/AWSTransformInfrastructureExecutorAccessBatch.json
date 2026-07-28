@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSTransformInfrastructureExecutorAccessBatch",
   "CreateDate": "2026-07-20T20:12:13Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4IFSDRNYQT",
   "PolicyName": "AWSTransformInfrastructureExecutorAccessBatch",
   "PolicyVersion": {
-    "CreateDate": "2026-07-20T20:12:13Z",
+    "CreateDate": "2026-07-28T15:42:28Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,13 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:cloudformation:*:*:stack/AtxInfrastructureStack/*",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/AtxInfrastructureStack-*/*",
+            "arn:aws:cloudformation:*:*:stack/AtxInfrastructureStack/*",
+            "arn:aws:cloudformation:*:*:stack/AtxSecurityAgentStack-*/*",
+            "arn:aws:cloudformation:*:*:stack/atx-*",
+            "arn:aws:cloudformation:*:*:stack/atx-*/*"
+          ],
           "Sid": "CheckInfrastructureStatus"
         },
         {
@@ -41,7 +47,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/AtxSchedulerInvocationRole",
+          "Resource": [
+            "arn:aws:iam::*:role/AtxSchedulerInvocationRole",
+            "arn:aws:iam::*:role/AtxSchedulerInvocationRole-*"
+          ],
           "Sid": "PassSchedulerRole"
         },
         {
@@ -83,7 +92,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:cloudwatch::*:dashboard/ATX-Transform-CLI-Dashboard",
+          "Resource": [
+            "arn:aws:cloudwatch::*:dashboard/ATX-Transform-CLI-Dashboard",
+            "arn:aws:cloudwatch::*:dashboard/ATX-Transform-CLI-Dashboard-*"
+          ],
           "Sid": "CloudWatchDashboard"
         },
         {
@@ -128,8 +140,11 @@
             "kms:GenerateDataKey"
           ],
           "Condition": {
-            "ForAnyValue:StringEquals": {
-              "kms:ResourceAliases": "alias/atx-encryption-key"
+            "ForAnyValue:StringLike": {
+              "kms:ResourceAliases": [
+                "alias/atx-encryption-key",
+                "alias/atx-encryption-key-*"
+              ]
             },
             "StringEquals": {
               "aws:ResourceAccount": "${aws:PrincipalAccount}"
@@ -150,7 +165,14 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:lambda:*:*:function:atx-*",
+          "Resource": [
+            "arn:aws:lambda:*:*:function:atx-get-batch-status-*",
+            "arn:aws:lambda:*:*:function:atx-get-job-status-*",
+            "arn:aws:lambda:*:*:function:atx-list-batches-*",
+            "arn:aws:lambda:*:*:function:atx-list-jobs-*",
+            "arn:aws:lambda:*:*:function:atx-trigger-batch-jobs-*",
+            "arn:aws:lambda:*:*:function:atx-trigger-job-*"
+          ],
           "Sid": "LambdaInvokeATXFunctions"
         },
         {
@@ -194,6 +216,22 @@
         },
         {
           "Action": [
+            "s3:AbortMultipartUpload",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::atx-custom-output-*/*"
+          ],
+          "Sid": "S3WriteBatchSidecar"
+        },
+        {
+          "Action": [
             "s3:GetObject",
             "s3:ListBucket"
           ],
@@ -228,6 +266,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:scheduler:*:*:schedule-group/atx-ct",
+            "arn:aws:scheduler:*:*:schedule-group/atx-ct-*",
+            "arn:aws:scheduler:*:*:schedule/atx-ct-*/*",
             "arn:aws:scheduler:*:*:schedule/atx-ct/*"
           ],
           "Sid": "SchedulerManage"
@@ -250,7 +290,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-07-20T20:12:13Z"
+  "UpdateDate": "2026-07-28T15:42:28Z"
 }

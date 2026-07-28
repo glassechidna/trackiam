@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSTransformInfrastructureExecutorAccessEC2",
   "CreateDate": "2026-07-20T20:12:18Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4GTBMEWC7X",
   "PolicyName": "AWSTransformInfrastructureExecutorAccessEC2",
   "PolicyVersion": {
-    "CreateDate": "2026-07-20T20:12:18Z",
+    "CreateDate": "2026-07-28T15:42:16Z",
     "Document": {
       "Statement": [
         {
@@ -45,7 +45,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/atx-transform-role*",
+          "Resource": [
+            "arn:aws:iam::*:role/atx-transform-role",
+            "arn:aws:iam::*:role/atx-transform-role-*"
+          ],
           "Sid": "IAMPassEC2InstanceRole"
         },
         {
@@ -57,7 +60,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/AtxSchedulerInvocationRole",
+          "Resource": [
+            "arn:aws:iam::*:role/AtxSchedulerInvocationRole",
+            "arn:aws:iam::*:role/AtxSchedulerInvocationRole-*"
+          ],
           "Sid": "IAMPassSchedulerRole"
         },
         {
@@ -68,7 +74,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:scheduler:*:*:schedule-group/atx-ct",
+          "Resource": [
+            "arn:aws:scheduler:*:*:schedule-group/atx-ct",
+            "arn:aws:scheduler:*:*:schedule-group/atx-ct-*"
+          ],
           "Sid": "SchedGroupRead"
         },
         {
@@ -155,8 +164,11 @@
             "kms:GenerateDataKey"
           ],
           "Condition": {
-            "ForAnyValue:StringEquals": {
-              "kms:ResourceAliases": "alias/atx-encryption-key"
+            "ForAnyValue:StringLike": {
+              "kms:ResourceAliases": [
+                "alias/atx-encryption-key",
+                "alias/atx-encryption-key-*"
+              ]
             },
             "StringEquals": {
               "aws:ResourceAccount": "${aws:PrincipalAccount}"
@@ -200,7 +212,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:scheduler:*:*:schedule/atx-ct/*",
+          "Resource": [
+            "arn:aws:scheduler:*:*:schedule/atx-ct-*/*",
+            "arn:aws:scheduler:*:*:schedule/atx-ct/*"
+          ],
           "Sid": "SchedLifecycle"
         },
         {
@@ -282,14 +297,17 @@
             "cloudformation:DescribeStacks"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:cloudformation:*:*:stack/atx-*/*",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/AtxSecurityAgentStack-*/*",
+            "arn:aws:cloudformation:*:*:stack/atx-*/*"
+          ],
           "Sid": "CFNRead"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-07-20T20:12:18Z"
+  "UpdateDate": "2026-07-28T15:42:16Z"
 }
