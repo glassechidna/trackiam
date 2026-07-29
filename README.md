@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 459
-* Unique actions: 22034
+* Unique actions: 22044
 * Managed policies: 1538
 
 Most common managed policy name prefixes:
@@ -129,7 +129,7 @@ The following table summarises the AWS APIs.
 | [`wafv2`](services/wafv2.yml) | 54 | 0 | 7 |
 | [`kms`](services/kms.yml) | 52 | 1 | 4 |
 | [`profile`](services/profile.yml) | 52 | 0 | 58 |
-| [`kafka`](services/kafka.yml) | 52 | 0 | 7 |
+| [`kafka`](services/kafka.yml) | 52 | 0 | 12 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 24 |
 | [`mediaconnect`](services/mediaconnect.yml) | 51 | 0 | 29 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 2 | 6 |
@@ -389,6 +389,7 @@ The following table summarises the AWS APIs.
 | [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
 | [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 31 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
+| [`gameliftstreams`](services/gameliftstreams.yml) | 0 | 0 | 30 |
 | [`dsql`](services/dsql.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
 | [`billing`](services/billing.yml) | 0 | 0 | 29 |
@@ -397,7 +398,6 @@ The following table summarises the AWS APIs.
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
 | [`mpa`](services/mpa.yml) | 0 | 0 | 25 |
-| [`gameliftstreams`](services/gameliftstreams.yml) | 0 | 0 | 25 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 24 |
 | [`s3files`](services/s3files.yml) | 0 | 0 | 24 |
@@ -500,12 +500,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3699 |
-| `Get` | 3334 |
-| `Delete` | 2521 |
-| `Create` | 2385 |
-| `Update` | 2068 |
-| `Describe` | 1930 |
+| `List` | 3702 |
+| `Get` | 3335 |
+| `Delete` | 2522 |
+| `Create` | 2387 |
+| `Update` | 2069 |
+| `Describe` | 1931 |
 | `Put` | 594 |
 | `Start` | 543 |
 | `Batch` | 325 |
