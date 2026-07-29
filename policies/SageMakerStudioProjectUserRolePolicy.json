@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v72",
+  "DefaultVersionId": "v73",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-07-14T19:12:29Z",
+    "CreateDate": "2026-07-29T21:12:28Z",
     "Document": {
       "Statement": [
         {
@@ -1260,7 +1260,8 @@
         {
           "Action": [
             "glue:GetConnections",
-            "secretsmanager:GetSecretValue"
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:PutSecretValue"
           ],
           "Condition": {
             "StringEquals": {
@@ -2265,7 +2266,8 @@
         },
         {
           "Action": [
-            "secretsmanager:GetSecretValue"
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:PutSecretValue"
           ],
           "Condition": {
             "StringEquals": {
@@ -2823,7 +2825,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v72"
+    "VersionId": "v73"
   },
-  "UpdateDate": "2026-07-14T19:12:29Z"
+  "UpdateDate": "2026-07-29T21:12:28Z"
 }
