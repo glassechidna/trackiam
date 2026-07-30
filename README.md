@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 459
-* Unique actions: 22044
-* Managed policies: 1538
+* Unique actions: 22045
+* Managed policies: 1540
 
 Most common managed policy name prefixes:
 
@@ -24,7 +24,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 349 |
 | `arn:aws:iam::aws:policy/service-role/*` | 224 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
-| Other | 162 |
+| Other | 164 |
 
 The following table summarises the AWS APIs. 
 
@@ -442,10 +442,10 @@ The following table summarises the AWS APIs.
 | [`opensearch`](services/opensearch.yml) | 0 | 0 | 11 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 11 |
 | [`ts`](services/ts.yml) | 0 | 0 | 9 |
+| [`pricingplanmanager`](services/pricingplanmanager.yml) | 0 | 0 | 9 |
 | [`notifications-contacts`](services/notifications-contacts.yml) | 0 | 0 | 9 |
 | [`iq-permission`](services/iq-permission.yml) | 0 | 0 | 9 |
 | [`aws-portal`](services/aws-portal.yml) | 0 | 0 | 9 |
-| [`pricingplanmanager`](services/pricingplanmanager.yml) | 0 | 0 | 8 |
 | [`network-security-director`](services/network-security-director.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 7 |
