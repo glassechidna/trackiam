@@ -1,0 +1,166 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonInspector2AmiScanServiceRolePolicy",
+  "CreateDate": "2026-07-30T17:57:10Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4J27MIOIP5",
+  "PolicyName": "AmazonInspector2AmiScanServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-07-30T17:57:10Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "kms:Decrypt",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/InspectorEc2Exclusion": "true"
+            }
+          },
+          "Effect": "Deny",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DenyKmsDecryptForExcludedKeys"
+        },
+        {
+          "Action": "kms:Decrypt",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:ebs:id": "snap-*",
+              "kms:ViaService": "ec2.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DecryptSnapshotBlocksSnapContext"
+        },
+        {
+          "Action": "kms:Decrypt",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:ebs:id": "vol-*",
+              "kms:ViaService": "ec2.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DecryptSnapshotBlocksVolContext"
+        },
+        {
+          "Action": "kms:DescribeKey",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:ViaService": "ec2.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DescribeKeysForEbsOperations"
+        },
+        {
+          "Action": [
+            "ebs:GetSnapshotBlock",
+            "ebs:ListSnapshotBlocks"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/InspectorEc2Exclusion": "true"
+            }
+          },
+          "Effect": "Deny",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "DenyGetSnapshotDataOnExcludedSnapshots"
+        },
+        {
+          "Action": [
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Condition": {
+            "StringLikeIfExists": {
+              "organizations:ServicePrincipal": [
+                "ami.inspector2.amazonaws.com",
+                "inspector2.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowInspectorServiceDelegatedAdminFromAwsOrg"
+        },
+        {
+          "Action": "kms:ListResourceTags",
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "ListKeyResourceTags"
+        },
+        {
+          "Action": [
+            "ebs:GetSnapshotBlock",
+            "ebs:ListSnapshotBlocks"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "GetSnapshotData"
+        },
+        {
+          "Action": [
+            "ec2:DescribeImages",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeVolumes"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmiIdentification"
+        },
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:DescribeRule",
+            "events:ListTargetsByRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:events:*:*:rule/DO-NOT-DELETE-AmazonInspector*ManagedRule"
+          ],
+          "Sid": "ManagedRules"
+        },
+        {
+          "Action": [
+            "inspector2:AssociateMember",
+            "inspector2:Disable",
+            "inspector2:Enable",
+            "inspector2:EnableDelegatedAdminAccount"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowInspectorEnablementForAwsOrgPolicy"
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAccounts"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowInspectorServiceGetAwsOrg"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-07-30T17:57:10Z"
+}
