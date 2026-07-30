@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 459
-* Unique actions: 22045
-* Managed policies: 1541
+* Unique actions: 22047
+* Managed policies: 1542
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 423 |
 | `arn:aws:iam::aws:policy/Amazon*` | 372 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 350 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 351 |
 | `arn:aws:iam::aws:policy/service-role/*` | 224 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
 | Other | 164 |
@@ -397,12 +397,12 @@ The following table summarises the AWS APIs.
 | [`one`](services/one.yml) | 0 | 0 | 28 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
+| [`invoicing`](services/invoicing.yml) | 0 | 0 | 26 |
 | [`mpa`](services/mpa.yml) | 0 | 0 | 25 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 24 |
 | [`s3files`](services/s3files.yml) | 0 | 0 | 24 |
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
-| [`invoicing`](services/invoicing.yml) | 0 | 0 | 24 |
 | [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 24 |
 | [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 23 |
 | [`transform`](services/transform.yml) | 0 | 0 | 22 |
@@ -500,7 +500,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3702 |
+| `List` | 3704 |
 | `Get` | 3335 |
 | `Delete` | 2522 |
 | `Create` | 2387 |
