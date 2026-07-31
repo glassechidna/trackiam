@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSupportPlansServiceRolePolicy",
+  "CreateDate": "2026-07-31T17:12:23Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4J5LLCOJFF",
+  "PolicyName": "AWSSupportPlansServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-07-31T17:12:23Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "organizations:ListAccounts",
+            "supportplans:AcceptSupportAgreement",
+            "supportplans:CancelSupportAgreement",
+            "supportplans:CreateSupportAgreement",
+            "supportplans:GetSupportAgreement",
+            "supportplans:ListSupportAgreementRevisions",
+            "supportplans:ListSupportAgreements",
+            "supportplans:RejectSupportAgreement",
+            "supportplans:StartSupportPlanUpdate",
+            "supportplans:UpdateSupportAgreement"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-07-31T17:12:23Z"
+}
