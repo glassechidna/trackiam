@@ -1,15 +1,53 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSApplicationMigrationFullAccess",
   "CreateDate": "2021-04-07T06:56:05Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HPQNMM2HL",
   "PolicyName": "AWSApplicationMigrationFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-07-23T07:27:10Z",
+    "CreateDate": "2026-08-03T10:57:21Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "fsx:CreateSnapshot",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "Null": {
+              "aws:RequestTag/AWSApplicationMigrationServiceManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:fsx:*:*:snapshot/*/*",
+            "arn:aws:fsx:*:*:volume/*/*"
+          ],
+          "Sid": "FSxCreateSnapshot"
+        },
+        {
+          "Action": "fsx:CreateVolume",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "Null": {
+              "aws:RequestTag/AWSApplicationMigrationServiceManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:fsx:*:*:storage-virtual-machine/*/*",
+            "arn:aws:fsx:*:*:volume/*/*"
+          ],
+          "Sid": "FSxCreateVolume"
+        },
         {
           "Action": "iam:PassRole",
           "Condition": {
@@ -53,6 +91,41 @@
           "Effect": "Allow",
           "Resource": "arn:aws:drs:*:*:source-server/*",
           "Sid": "VisualEditor12"
+        },
+        {
+          "Action": [
+            "fsx:DeleteVolume",
+            "fsx:TagResource"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "Null": {
+              "aws:ResourceTag/AWSApplicationMigrationServiceManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:volume/*/*",
+          "Sid": "FSxDeleteVolumeAndTag"
+        },
+        {
+          "Action": [
+            "fsx:DescribeSnapshots",
+            "fsx:DescribeVolumes"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "FSxDescribeOperations"
         },
         {
           "Action": [
@@ -292,7 +365,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2026-07-23T07:27:10Z"
+  "UpdateDate": "2026-08-03T10:57:21Z"
 }
