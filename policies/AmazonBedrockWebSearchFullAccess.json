@@ -1,0 +1,29 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonBedrockWebSearchFullAccess",
+  "CreateDate": "2026-08-03T16:42:26Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4MPWGJK43I",
+  "PolicyName": "AmazonBedrockWebSearchFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-08-03T16:42:26Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "bedrock-websearch:InvokeFetch",
+            "bedrock-websearch:InvokeSearch"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock-websearch:*:*:*",
+          "Sid": "AmazonBedrockWebSearchFullAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-08-03T16:42:26Z"
+}

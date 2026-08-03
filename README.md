@@ -11,16 +11,16 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 459
-* Unique actions: 22070
-* Managed policies: 1544
+* Unique services: 460
+* Unique actions: 22074
+* Managed policies: 1548
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 424 |
-| `arn:aws:iam::aws:policy/Amazon*` | 372 |
+| `arn:aws:iam::aws:policy/Amazon*` | 376 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 352 |
 | `arn:aws:iam::aws:policy/service-role/*` | 224 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
@@ -43,7 +43,7 @@ The following table summarises the AWS APIs.
 | [`connect`](services/connect.yml) | 256 | 0 | 115 |
 | [`glue`](services/glue.yml) | 214 | 4 | 90 |
 | [`ses`](services/ses.yml) | 193 | 0 | 35 |
-| [`quicksight`](services/quicksight.yml) | 174 | 3 | 151 |
+| [`quicksight`](services/quicksight.yml) | 174 | 3 | 152 |
 | [`rds`](services/rds.yml) | 162 | 0 | 7 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
 | [`iam`](services/iam.yml) | 159 | 0 | 28 |
@@ -472,6 +472,7 @@ The following table summarises the AWS APIs.
 | [`mapcredits`](services/mapcredits.yml) | 0 | 0 | 3 |
 | [`identitystore-auth`](services/identitystore-auth.yml) | 0 | 0 | 3 |
 | [`eks-mcp`](services/eks-mcp.yml) | 0 | 0 | 3 |
+| [`bedrock-websearch`](services/bedrock-websearch.yml) | 0 | 0 | 3 |
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |
 | [`vpc-lattice-svcs`](services/vpc-lattice-svcs.yml) | 0 | 0 | 2 |
 | [`geo-maps`](services/geo-maps.yml) | 0 | 0 | 2 |
