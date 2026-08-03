@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonTimestreamInfluxDBFullAccessWithoutMarketplaceAccess",
   "CreateDate": "2025-04-17T17:52:07Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LUL3RNNBP",
   "PolicyName": "AmazonTimestreamInfluxDBFullAccessWithoutMarketplaceAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:59:52Z",
+    "CreateDate": "2026-08-03T22:57:25Z",
     "Document": {
       "Statement": [
         {
@@ -65,14 +65,18 @@
         },
         {
           "Action": [
+            "timestream-influxdb:CreateDbBackup",
             "timestream-influxdb:CreateDbCluster",
             "timestream-influxdb:CreateDbInstance",
             "timestream-influxdb:CreateDbParameterGroup",
+            "timestream-influxdb:DeleteDbBackup",
             "timestream-influxdb:DeleteDbCluster",
             "timestream-influxdb:DeleteDbInstance",
+            "timestream-influxdb:GetDbBackup",
             "timestream-influxdb:GetDbCluster",
             "timestream-influxdb:GetDbInstance",
             "timestream-influxdb:GetDbParameterGroup",
+            "timestream-influxdb:ListDbBackups",
             "timestream-influxdb:ListDbClusters",
             "timestream-influxdb:ListDbInstances",
             "timestream-influxdb:ListDbInstancesForCluster",
@@ -80,6 +84,7 @@
             "timestream-influxdb:ListTagsForResource",
             "timestream-influxdb:RebootDbCluster",
             "timestream-influxdb:RebootDbInstance",
+            "timestream-influxdb:RestoreFromDbBackup",
             "timestream-influxdb:TagResource",
             "timestream-influxdb:UntagResource",
             "timestream-influxdb:UpdateDbCluster",
@@ -95,7 +100,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-02-12T17:59:52Z"
+  "UpdateDate": "2026-08-03T22:57:25Z"
 }
