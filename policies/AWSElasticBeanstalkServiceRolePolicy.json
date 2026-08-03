@@ -1,15 +1,556 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSElasticBeanstalkServiceRolePolicy",
   "CreateDate": "2017-09-13T23:46:37Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIID62QSI3OSIPQXTM",
   "PolicyName": "AWSElasticBeanstalkServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2019-06-06T21:59:51Z",
+    "CreateDate": "2026-08-03T18:57:27Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "cloudwatch:PutDashboard",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch::*:dashboard/ElasticBeanstalk-Observability-*",
+          "Sid": "EBEKSCreateDashboard"
+        },
+        {
+          "Action": "codebuild:UpdateProject",
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/elasticbeanstalk:application-name": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CodeBuildTagMutation"
+        },
+        {
+          "Action": [
+            "acm:AddTagsToCertificate",
+            "acm:DeleteCertificate"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/elasticbeanstalk:environment-id": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EBEKSDefaultHTTPSCertModifyDelete"
+        },
+        {
+          "Action": [
+            "acm:AddTagsToCertificate",
+            "acm:RemoveTagsFromCertificate",
+            "ec2:CreateTags",
+            "ec2:DeleteTags",
+            "elasticloadbalancing:AddTags",
+            "elasticloadbalancing:RemoveTags"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/elasticbeanstalk:environment-id": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TagMutation"
+        },
+        {
+          "Action": [
+            "acm:DescribeCertificate",
+            "acm:ListCertificates",
+            "acm:ListTagsForCertificate",
+            "codebuild:BatchGetProjects",
+            "codebuild:ListProjects",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs",
+            "ecr:BatchCheckLayerAvailability",
+            "ecr:BatchGetImage",
+            "ecr:DescribeRepositories",
+            "ecr:GetDownloadUrlForLayer",
+            "ecr:ListTagsForResource",
+            "elasticbeanstalk:DescribeConfigurationSettings",
+            "elasticbeanstalk:DescribeEnvironments",
+            "elasticbeanstalk:DescribeEvents",
+            "elasticloadbalancing:DescribeListeners",
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "elasticloadbalancing:DescribeRules",
+            "elasticloadbalancing:DescribeTags",
+            "elasticloadbalancing:DescribeTargetGroups",
+            "elasticloadbalancing:DescribeTargetHealth",
+            "iam:GetRole",
+            "tag:GetResources",
+            "tag:TagResources",
+            "tag:UntagResources"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EBEKSGeneralOperations"
+        },
+        {
+          "Action": [
+            "acm:RequestCertificate"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/elasticbeanstalk:environment-id": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EBEKSDefaultHTTPSCertCreate"
+        },
+        {
+          "Action": [
+            "aps:CreateWorkspace",
+            "aps:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "ElasticBeanstalk",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EBEKSAPSCreateWorkspace"
+        },
+        {
+          "Action": [
+            "aps:DeleteWorkspace",
+            "aps:Describe*"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/CreatedBy": "ElasticBeanstalk"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:aps:*:*:workspace/*",
+          "Sid": "EBEKSAPSManageWorkspace"
+        },
+        {
+          "Action": [
+            "aps:RemoteWrite"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/CreatedBy": "ElasticBeanstalk"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:aps:*:*:workspace/*",
+          "Sid": "EBEKSAPSRemoteWrite"
+        },
+        {
+          "Action": [
+            "cloudformation:CreateStack",
+            "cloudformation:DeleteStack",
+            "cloudformation:DescribeStackEvents",
+            "cloudformation:DescribeStacks",
+            "cloudformation:ListStacks",
+            "cloudformation:UpdateStack"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/beanstalk-*"
+          ],
+          "Sid": "EBEKSCFNStackManagementClusterSetup"
+        },
+        {
+          "Action": [
+            "cloudformation:CreateStack",
+            "cloudformation:DescribeStackEvents",
+            "cloudformation:DescribeStacks",
+            "cloudformation:UpdateStack"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/elasticbeanstalk-*-image-build",
+            "arn:aws:cloudformation:*:*:stack/elasticbeanstalk-*-image-build/*"
+          ],
+          "Sid": "EBEKSCFNStackManagementImageBuild"
+        },
+        {
+          "Action": [
+            "codebuild:BatchGetBuilds",
+            "codebuild:BatchGetProjects",
+            "codebuild:CreateProject",
+            "codebuild:StartBuild",
+            "codebuild:UpdateProject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:codebuild:*:*:project/elasticbeanstalk-*",
+          "Sid": "EBEKSCodeBuildProjectManagement"
+        },
+        {
+          "Action": [
+            "ec2:AuthorizeSecurityGroupEgress"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/elasticbeanstalk:byo-alb-arn": "false",
+              "aws:ResourceTag/elasticbeanstalk:managed": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*",
+          "Sid": "EBEKSByoAlbEC2SecurityGroupEgress"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/elasticbeanstalk:byo-alb-arn": "false",
+              "aws:RequestTag/elasticbeanstalk:managed": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*",
+          "Sid": "EBEKSByoAlbEC2CreateSecurityGroup"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc/*",
+          "Sid": "EBEKSByoAlbEC2CreateSecurityGroupVpc"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "kubernetes.io/role/elb",
+                "kubernetes.io/role/internal-elb"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:subnet/*",
+          "Sid": "EBEKSSubnetTag"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/elasticbeanstalk:byo-alb-arn": "false",
+              "aws:RequestTag/elasticbeanstalk:managed": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "ec2:CreateAction": "CreateSecurityGroup"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*",
+          "Sid": "EBEKSByoAlbEC2CreateTags"
+        },
+        {
+          "Action": [
+            "ecr:CreateRepository",
+            "ecr:DescribeImages",
+            "ecr:DescribeRepositories",
+            "ecr:PutLifecyclePolicy",
+            "ecr:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecr:*:*:repository/elasticbeanstalk-*",
+          "Sid": "EBEKSECRRepositoryManagement"
+        },
+        {
+          "Action": [
+            "ecr:TagResource",
+            "ecr:UntagResource"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/elasticbeanstalk:application-name": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ECRTagMutation"
+        },
+        {
+          "Action": [
+            "eks:AssociateAccessPolicy",
+            "eks:DescribeAccessEntry",
+            "eks:ListAssociatedAccessPolicies"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:access-entry/beanstalk-cluster*/*",
+          "Sid": "EBEKSEKSAccessEntryManagement"
+        },
+        {
+          "Action": [
+            "eks:CreateAccessEntry",
+            "eks:CreateAddon",
+            "eks:CreateCluster",
+            "eks:CreatePodIdentityAssociation",
+            "eks:DeleteAccessEntry",
+            "eks:DeleteCluster",
+            "eks:DescribeCluster",
+            "eks:DescribeUpdate",
+            "eks:ListPodIdentityAssociations"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:cluster/beanstalk-cluster*",
+          "Sid": "EBEKSEKSClusterManagement"
+        },
+        {
+          "Action": [
+            "eks:DeleteAddon",
+            "eks:DescribeAddon",
+            "eks:UpdateAddon"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:addon/beanstalk-cluster*",
+          "Sid": "EBEKSEKSAddonManagement"
+        },
+        {
+          "Action": [
+            "eks:DeletePodIdentityAssociation",
+            "eks:DescribePodIdentityAssociation",
+            "eks:UpdatePodIdentityAssociation"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:podidentityassociation/beanstalk-cluster*/*",
+          "Sid": "EBEKSEKSPodIdentityManagement"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:AddTags",
+            "elasticloadbalancing:CreateRule"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/elasticbeanstalk:environment-id": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:elasticloadbalancing:*:*:listener-rule/app/*/*/*",
+            "arn:aws:elasticloadbalancing:*:*:listener/app/*/*/*"
+          ],
+          "Sid": "EBEKSByoAlbListenerRuleCreate"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:AddTags",
+            "elasticloadbalancing:CreateTargetGroup"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/elasticbeanstalk:environment-id": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticloadbalancing:*:*:targetgroup/*/*",
+          "Sid": "EBEKSByoAlbTargetGroupCreate"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:AddTags",
+            "elasticloadbalancing:DeleteTargetGroup",
+            "elasticloadbalancing:ModifyTargetGroup"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/elasticbeanstalk:environment-id": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticloadbalancing:*:*:targetgroup/*/*",
+          "Sid": "EBEKSByoAlbTargetGroupModifyDelete"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:AddTags",
+            "elasticloadbalancing:SetSecurityGroups"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticloadbalancing:*:*:loadbalancer/app/*",
+          "Sid": "EBEKSByoAlbLoadBalancerWrite"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:DeleteRule"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/elasticbeanstalk:environment-id": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticloadbalancing:*:*:listener-rule/app/*/*/*",
+          "Sid": "EBEKSByoAlbListenerRuleDelete"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "iam:AWSServiceName": "eks.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EBEKSIamCreateServiceLinkedRole"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "iam:PassedToService": [
+                "codebuild.amazonaws.com",
+                "ec2.amazonaws.com",
+                "eks.amazonaws.com",
+                "elasticbeanstalk.amazonaws.com",
+                "pods.eks.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EBEKSIamPermissionsImageBuild"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:GetObjectVersion",
+            "s3:ListBucket",
+            "s3:PutObject",
+            "s3:PutObjectAcl"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::elasticbeanstalk-*",
+            "arn:aws:s3:::elasticbeanstalk-*/*"
+          ],
+          "Sid": "EBEKSS3Permissions"
+        },
         {
           "Action": [
             "autoscaling:DescribeAutoScalingGroups",
@@ -66,7 +607,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2019-06-06T21:59:51Z"
+  "UpdateDate": "2026-08-03T18:57:27Z"
 }
