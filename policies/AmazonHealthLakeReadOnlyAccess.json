@@ -1,25 +1,31 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonHealthLakeReadOnlyAccess",
   "CreateDate": "2021-02-17T02:43:31Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MIFB6JFLV",
   "PolicyName": "AmazonHealthLakeReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-02-17T02:43:31Z",
+    "CreateDate": "2026-08-04T21:12:23Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "healthlake:DescribeDataTransformationJob",
             "healthlake:DescribeFHIRDatastore",
             "healthlake:DescribeFHIRExportJob",
             "healthlake:DescribeFHIRImportJob",
             "healthlake:GetCapabilities",
+            "healthlake:GetDataTransformationProfile",
+            "healthlake:ListDataTransformationJobs",
+            "healthlake:ListDataTransformationProfileVersions",
+            "healthlake:ListDataTransformationProfiles",
             "healthlake:ListFHIRDatastores",
             "healthlake:ReadResource",
             "healthlake:SearchWithGet",
-            "healthlake:SearchWithPost"
+            "healthlake:SearchWithPost",
+            "healthlake:ValidateSource"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -28,7 +34,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2021-02-17T02:43:31Z"
+  "UpdateDate": "2026-08-04T21:12:23Z"
 }
