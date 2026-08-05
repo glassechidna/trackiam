@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 460
-* Unique actions: 22101
-* Managed policies: 1552
+* Unique actions: 22102
+* Managed policies: 1553
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 424 |
 | `arn:aws:iam::aws:policy/Amazon*` | 376 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 354 |
-| `arn:aws:iam::aws:policy/service-role/*` | 224 |
+| `arn:aws:iam::aws:policy/service-role/*` | 225 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
 | Other | 166 |
 
@@ -116,7 +116,7 @@ The following table summarises the AWS APIs.
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 17 |
 | [`events`](services/events.yml) | 57 | 0 | 3 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
-| [`dynamodb`](services/dynamodb.yml) | 56 | 5 | 22 |
+| [`dynamodb`](services/dynamodb.yml) | 56 | 5 | 23 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 56 | 0 | 27 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 25 |
 | [`eks`](services/eks.yml) | 56 | 0 | 13 |

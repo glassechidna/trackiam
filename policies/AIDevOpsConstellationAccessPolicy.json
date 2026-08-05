@@ -1,0 +1,38 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AIDevOpsConstellationAccessPolicy",
+  "CreateDate": "2026-08-05T16:27:17Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4OPHV5P744",
+  "PolicyName": "AIDevOpsConstellationAccessPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-08-05T16:27:17Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aidevops:CreateBacklogTask",
+            "aidevops:GetAgentSpace",
+            "aidevops:GetAsset",
+            "aidevops:GetAssetContent",
+            "aidevops:GetAssetFile",
+            "aidevops:GetBacklogTask",
+            "aidevops:ListAssetFiles",
+            "aidevops:ListAssets",
+            "aidevops:ListBacklogTasks",
+            "aidevops:ListExecutions",
+            "aidevops:ListJournalRecords"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aidevops:*:*:agentspace/*",
+          "Sid": "ConstellationCoordination"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-08-05T16:27:17Z"
+}

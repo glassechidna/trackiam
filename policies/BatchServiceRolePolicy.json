@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/BatchServiceRolePolicy",
   "CreateDate": "2021-03-10T06:55:36Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4COHHXEWBT",
   "PolicyName": "BatchServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2023-12-05T22:52:40Z",
+    "CreateDate": "2026-08-05T17:12:14Z",
     "Document": {
       "Statement": [
         {
@@ -27,6 +27,7 @@
             "StringEquals": {
               "iam:AWSServiceName": [
                 "autoscaling.amazonaws.com",
+                "ecs-compute.amazonaws.com",
                 "ecs.amazonaws.com",
                 "spot.amazonaws.com",
                 "spotfleet.amazonaws.com"
@@ -44,7 +45,8 @@
               "iam:PassedToService": [
                 "ec2.amazonaws.com",
                 "ec2.amazonaws.com.cn",
-                "ecs-tasks.amazonaws.com"
+                "ecs-tasks.amazonaws.com",
+                "ecs.amazonaws.com"
               ]
             }
           },
@@ -197,6 +199,7 @@
             "ec2:DescribeVpcClassicLink",
             "ec2:RequestSpotFleet",
             "ecs:DeregisterTaskDefinition",
+            "ecs:DescribeCapacityProviders",
             "ecs:DescribeClusters",
             "ecs:DescribeContainerInstances",
             "ecs:DescribeTaskDefinition",
@@ -219,11 +222,23 @@
         },
         {
           "Action": [
+            "ecs:CreateCapacityProvider",
+            "ecs:DeleteCapacityProvider",
+            "ecs:UpdateCapacityProvider"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecs:*:*:capacity-provider/AWSBatch*",
+          "Sid": "AWSBatchPolicyStatement18"
+        },
+        {
+          "Action": [
             "ecs:DeleteCluster",
             "ecs:DeregisterContainerInstance",
+            "ecs:PutClusterCapacityProviders",
             "ecs:RunTask",
             "ecs:StartTask",
-            "ecs:StopTask"
+            "ecs:StopTask",
+            "ecs:UpdateCluster"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:ecs:*:*:cluster/AWSBatch*",
@@ -249,6 +264,17 @@
         },
         {
           "Action": [
+            "ecs:TagResource",
+            "ecs:UntagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ecs:*:*:capacity-provider/AWSBatch*"
+          ],
+          "Sid": "AWSBatchPolicyStatement19"
+        },
+        {
+          "Action": [
             "logs:CreateLogGroup",
             "logs:CreateLogStream"
           ],
@@ -268,7 +294,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2023-12-05T22:52:40Z"
+  "UpdateDate": "2026-08-05T17:12:14Z"
 }
