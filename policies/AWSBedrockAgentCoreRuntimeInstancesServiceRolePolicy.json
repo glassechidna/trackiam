@@ -1,0 +1,124 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBedrockAgentCoreRuntimeInstancesServiceRolePolicy",
+  "CreateDate": "2026-08-05T09:57:23Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4DKZ6RCVMI",
+  "PolicyName": "AWSBedrockAgentCoreRuntimeInstancesServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-08-05T09:57:23Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "autoscaling:CompleteLifecycleAction",
+            "autoscaling:DeleteAutoScalingGroup"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/bedrock-agentcore:capacity-provider-id": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:autoscaling:*:*:autoScalingGroup:*",
+          "Sid": "AllowCleanupAutoScalingGroup"
+        },
+        {
+          "Action": [
+            "ec2:DeleteLaunchTemplate",
+            "ec2:DeleteLaunchTemplateVersions"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ManagedResourceOperator": "bedrock-agentcore.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:launch-template/*",
+          "Sid": "AllowCleanupManagedLaunchTemplate"
+        },
+        {
+          "Action": [
+            "ec2:DeleteVolume"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ManagedResourceOperator": "bedrock-agentcore.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "AllowCleanupEBSVolumes"
+        },
+        {
+          "Action": [
+            "ec2:DetachVolume"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ManagedResourceOperator": "bedrock-agentcore.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "AllowDetachEBSVolumes"
+        },
+        {
+          "Action": [
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ManagedResourceOperator": "bedrock-agentcore.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "AllowTerminateManagedInstances"
+        },
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:RemoveTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "events:ManagedBy": "bedrock-agentcore.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/*",
+          "Sid": "AllowCleanupEventBridge"
+        },
+        {
+          "Action": [
+            "autoscaling:DescribeAutoScalingGroups",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstances",
+            "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribeLaunchTemplates",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeVolumes"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowDescribeResources"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-08-05T09:57:23Z"
+}
