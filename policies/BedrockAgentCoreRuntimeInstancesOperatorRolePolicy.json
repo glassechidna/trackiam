@@ -1,0 +1,315 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/BedrockAgentCoreRuntimeInstancesOperatorRolePolicy",
+  "CreateDate": "2026-08-05T11:27:19Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4DAGC2BWAZ",
+  "PolicyName": "BedrockAgentCoreRuntimeInstancesOperatorRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-08-05T11:27:19Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "autoscaling:CompleteLifecycleAction",
+            "autoscaling:LaunchInstances",
+            "autoscaling:PutLifecycleHook",
+            "autoscaling:UpdateAutoScalingGroup"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/bedrock-agentcore:capacity-provider-id": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:autoscaling:*:*:autoScalingGroup:*:autoScalingGroupName/agentcore-managed-instances-*",
+          "Sid": "UpdateAndLaunchAutoScaling"
+        },
+        {
+          "Action": [
+            "autoscaling:CreateAutoScalingGroup"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/bedrock-agentcore:capacity-provider-id": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:autoscaling:*:*:autoScalingGroup:*:autoScalingGroupName/agentcore-managed-instances-*",
+          "Sid": "CreateAutoScalingForManagedInstances"
+        },
+        {
+          "Action": [
+            "ec2:AttachNetworkInterface"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ManagedResourceOperator": "bedrock-agentcore.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:network-interface/*"
+          ],
+          "Sid": "AttachNetworkInterfaceToManagedInstance"
+        },
+        {
+          "Action": [
+            "ec2:AttachVolume"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ManagedResourceOperator": "bedrock-agentcore.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "AttachVolumeForManagedInstances"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet",
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/bedrock-agentcore:capacity-provider-id": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "ProvisionEC2InstancesForManagedInstances"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet",
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/bedrock-agentcore:capacity-provider-id": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:launch-template/*"
+          ],
+          "Sid": "LaunchWithManagedLaunchTemplate"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet",
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:Owner": "amazon"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:image/*"
+          ],
+          "Sid": "AmazonAMIsAccessForManagedInstances"
+        },
+        {
+          "Action": [
+            "ec2:CreateLaunchTemplate"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/bedrock-agentcore:capacity-provider-id": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:launch-template/*"
+          ],
+          "Sid": "CreateLaunchTemplateForManagedInstances"
+        },
+        {
+          "Action": [
+            "ec2:CreateLaunchTemplateVersion",
+            "ec2:ModifyLaunchTemplate"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:ManagedResourceOperator": "bedrock-agentcore.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:launch-template/*"
+          ],
+          "Sid": "ModifyLaunchTemplateForManagedInstances"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "aws:TagKeys": "bedrock-agentcore:*"
+            },
+            "StringEquals": {
+              "ec2:ManagedResourceOperator": "bedrock-agentcore.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:fleet/*",
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "TagAfterCreateManagedResources"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": [
+                "CreateFleet",
+                "CreateLaunchTemplate",
+                "CreateNetworkInterface",
+                "CreateVolume",
+                "RunInstances"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:fleet/*",
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "TagOnCreateManagedResources"
+        },
+        {
+          "Action": [
+            "ec2:CreateVolume"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:RequestTag/bedrock-agentcore:capacity-provider-id": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "CreateVolumeForManagedInstances"
+        },
+        {
+          "Action": [
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "events:ManagedBy": "bedrock-agentcore.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:events:*:*:rule/agentcore-lifecycle-events-*",
+          "Sid": "EventBridgeAccessForManagedRule"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringLike": {
+              "iam:PassedToService": "ec2.*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/AmazonBedrockAgentCoreCapacityProviderDefaultInstanceRole*"
+          ],
+          "Sid": "PassRoleToManagedInstances"
+        },
+        {
+          "Action": [
+            "autoscaling:DescribeAutoScalingGroups",
+            "autoscaling:DescribeAutoScalingInstances",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeCapacityReservations",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstanceTypeOfferings",
+            "ec2:DescribeInstanceTypes",
+            "ec2:DescribeInstances",
+            "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVolumes"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeComputeResources"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:fleet/*"
+          ],
+          "Sid": "CreateFleetAccess"
+        },
+        {
+          "Action": [
+            "ec2:CreateFleet",
+            "ec2:CreateNetworkInterface",
+            "ec2:RunInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "NetworkingAccessForManagedInstances"
+        },
+        {
+          "Action": [
+            "events:DescribeRule"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:*:events:*:*:rule/agentcore-lifecycle-events-*",
+          "Sid": "DescribeEventBridgeRule"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling"
+          ],
+          "Sid": "ServiceLinkedRoleAccessForAutoScaling"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-08-05T11:27:19Z"
+}
