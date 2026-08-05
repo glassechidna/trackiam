@@ -1,0 +1,28 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/BedrockAgentCoreRuntimeInstancesInstanceRolePolicy",
+  "CreateDate": "2026-08-05T13:27:25Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4PPZNUHWB3",
+  "PolicyName": "BedrockAgentCoreRuntimeInstancesInstanceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-08-05T13:27:25Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "bedrock-agentcore:PutSystemLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock-agentcore:*:*:capacity-provider/*",
+          "Sid": "AllowWritingSystemLogs"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-08-05T13:27:25Z"
+}
