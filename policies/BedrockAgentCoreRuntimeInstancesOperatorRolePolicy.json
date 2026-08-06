@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/BedrockAgentCoreRuntimeInstancesOperatorRolePolicy",
   "CreateDate": "2026-08-05T11:27:19Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DAGC2BWAZ",
   "PolicyName": "BedrockAgentCoreRuntimeInstancesOperatorRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-08-05T11:27:19Z",
+    "CreateDate": "2026-08-06T10:12:23Z",
     "Document": {
       "Statement": [
         {
@@ -240,7 +240,8 @@
           },
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:iam::*:role/AmazonBedrockAgentCoreCapacityProviderDefaultInstanceRole*"
+            "arn:aws:iam::*:role/AmazonBedrockAgentCoreCapacityProviderDefaultInstanceRole*",
+            "arn:aws:iam::*:role/service-role/AmazonBedrockAgentCoreCapacityProviderDefaultInstanceRole*"
           ],
           "Sid": "PassRoleToManagedInstances"
         },
@@ -309,7 +310,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-08-05T11:27:19Z"
+  "UpdateDate": "2026-08-06T10:12:23Z"
 }
