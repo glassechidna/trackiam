@@ -1,0 +1,915 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSTransformServerMigrationAgentPolicy",
+  "CreateDate": "2026-08-06T15:27:14Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4KVIHBDOCE",
+  "PolicyName": "AWSTransformServerMigrationAgentPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-08-06T15:27:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:AttachVolume",
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:CreateSnapshot",
+            "ec2:DeleteLaunchTemplateVersions",
+            "ec2:DeleteVolume",
+            "ec2:DetachVolume",
+            "ec2:ModifyInstanceAttribute",
+            "ec2:RevokeSecurityGroupEgress",
+            "ec2:RunInstances",
+            "ec2:StartInstances",
+            "ec2:StopInstances",
+            "ec2:TerminateInstances"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:ResourceTag/CreatedBy": "AWSTransform"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "Ec2ViaMgnInstanceLifecycleOperationsWrite"
+        },
+        {
+          "Action": [
+            "ec2:CreateLaunchTemplateVersion",
+            "ec2:ModifyLaunchTemplate"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AWSApplicationMigrationServiceManaged": "false"
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Ec2LaunchTemplateOperationsWrite"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "Null": {
+              "aws:RequestTag/AWSApplicationMigrationServiceManaged": "false"
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*",
+          "Sid": "Ec2ViaMgnSecurityGroupCreate"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup",
+            "ec2:CreateSnapshot",
+            "ec2:CreateVolume",
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:RequestTag/CreatedBy": "AWSTransform",
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:volume/*",
+            "arn:aws:ec2:*::snapshot/*"
+          ],
+          "Sid": "Ec2ViaMgnInstanceProvisionCreateWithRequestTag"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup",
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:ResourceTag/CreatedFor": "AWSTransform"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ],
+          "Sid": "Ec2ViaMgnLaunchOnWorkspaceVpc"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "Null": {
+              "aws:RequestTag/AWSApplicationMigrationServiceManaged": "false"
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "ec2:CreateAction": "CreateSecurityGroup"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*",
+          "Sid": "Ec2ViaMgnTagOnCreateSecurityGroup"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:RequestTag/CreatedBy": "AWSTransform",
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "ec2:CreateAction": [
+                "CreateSecurityGroup",
+                "CreateSnapshot",
+                "CreateVolume",
+                "RunInstances"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:volume/*",
+            "arn:aws:ec2:*::snapshot/*"
+          ],
+          "Sid": "Ec2ViaMgnTagOnCreate"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSApplicationMigrationService",
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "ec2:CreateAction": [
+                "CreateLaunchTemplate",
+                "CreateSecurityGroup"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:launch-template/*",
+            "arn:aws:ec2:*:*:security-group-rule/*",
+            "arn:aws:ec2:*:*:security-group/*"
+          ],
+          "Sid": "Ec2TagOnCreateServerMigration"
+        },
+        {
+          "Action": [
+            "ec2:CreateVolume"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:ResourceTag/CreatedBy": "AWSTransform",
+              "ec2:Owner": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::snapshot/*",
+          "Sid": "Ec2ViaMgnVolumeFromSnapshotCreate"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstances",
+            "ec2:DescribeLaunchTemplates",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVolumes",
+            "ec2:GetEbsDefaultKmsKeyId",
+            "ec2:GetEbsEncryptionByDefault",
+            "ec2:GetSubnetCidrReservations"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Ec2ViaMgnOperationsReadOnly"
+        },
+        {
+          "Action": [
+            "ec2:DescribeInstanceTypes",
+            "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Ec2OperationsReadOnly"
+        },
+        {
+          "Action": [
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*::image/*",
+          "Sid": "Ec2ViaMgnRunInstancesOnImage"
+        },
+        {
+          "Action": [
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*",
+          "Sid": "Ec2ViaMgnRunInstancesOnSg"
+        },
+        {
+          "Action": [
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ],
+          "Sid": "Ec2ViaMgnRunInstancesOnAmsSubnet"
+        },
+        {
+          "Action": [
+            "fsx:DescribeStorageVirtualMachines"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "FsxStorageVmOperationsReadOnly"
+        },
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "iam:PassedToService": "ec2.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/service-role/AWSApplicationMigrationConversionServerRole",
+            "arn:aws:iam::*:role/service-role/AWSApplicationMigrationLaunchInstanceWithDrsRole",
+            "arn:aws:iam::*:role/service-role/AWSApplicationMigrationLaunchInstanceWithSsmRole"
+          ],
+          "Sid": "IamViaMgnEc2PassRole"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:DescribeKey",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": "s3.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/${aws:PrincipalTag/EncryptionKeyId}",
+          "Sid": "KmsS3EncryptionOperationsServerMigration"
+        },
+        {
+          "Action": [
+            "mgn:AssociateApplications",
+            "mgn:AssociateSourceServers",
+            "mgn:DeleteApplication",
+            "mgn:DeleteWave",
+            "mgn:DisassociateApplications",
+            "mgn:DisassociateSourceServers",
+            "mgn:TerminateTargetInstances",
+            "mgn:UpdateApplication",
+            "mgn:UpdateLaunchConfiguration",
+            "mgn:UpdateWave"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:ResourceTag/CreatedBy": "AWSTransform"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ServerMigrationOperationsWrite"
+        },
+        {
+          "Action": [
+            "mgn:ChangeServerLifecycleState",
+            "mgn:FinalizeCutover",
+            "mgn:GetReplicationConfiguration",
+            "mgn:ListSourceServerActions",
+            "mgn:ListTagsForResource",
+            "mgn:MarkAsArchived",
+            "mgn:PauseReplication",
+            "mgn:PutSourceServerAction",
+            "mgn:RemoveSourceServerAction",
+            "mgn:ResumeReplication",
+            "mgn:StartCutover",
+            "mgn:StartReplication",
+            "mgn:StartTest",
+            "mgn:StopReplication",
+            "mgn:UpdateReplicationConfiguration",
+            "mgn:UpdateSourceServer"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:ResourceTag/CreatedBy": "AWSTransform"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:mgn:*:*:source-server/*",
+          "Sid": "MgnSourceServerLifecycleOperations"
+        },
+        {
+          "Action": [
+            "mgn:CreateApplication",
+            "mgn:CreateWave"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:RequestTag/CreatedBy": "AWSTransform",
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MgnAppWaveCreate"
+        },
+        {
+          "Action": [
+            "mgn:DescribeJobLogItems",
+            "mgn:ListExportErrors",
+            "mgn:ListImportErrors"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:ResourceTag/CreatedBy": "AWSTransform"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:mgn:*:*:export/*",
+            "arn:aws:mgn:*:*:import/*",
+            "arn:aws:mgn:*:*:job/*"
+          ],
+          "Sid": "MgnJobAndErrorOperationsReadOnly"
+        },
+        {
+          "Action": [
+            "mgn:DescribeJobs",
+            "mgn:DescribeLaunchConfigurationTemplates",
+            "mgn:DescribeReplicationConfigurationTemplates",
+            "mgn:DescribeReplicationServerAssociationsForMgn",
+            "mgn:DescribeSourceServers",
+            "mgn:DescribeVcenterClients",
+            "mgn:GetLaunchConfiguration",
+            "mgn:ListApplications",
+            "mgn:ListConnectors",
+            "mgn:ListExports",
+            "mgn:ListImportFileEnrichments",
+            "mgn:ListImports",
+            "mgn:ListTemplateActions",
+            "mgn:ListWaves"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ServerMigrationOperationsReadOnly"
+        },
+        {
+          "Action": [
+            "mgn:GetAccountSettings",
+            "mgn:RegisterAgentForMgn",
+            "mgn:UpdateAccountSettings"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MgnAccountSettingsOperations"
+        },
+        {
+          "Action": [
+            "mgn:PutTemplateAction",
+            "mgn:RemoveTemplateAction",
+            "mgn:UpdateLaunchConfigurationTemplate",
+            "mgn:UpdateReplicationConfigurationTemplate"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ServerMigrationTemplateOperationsWrite"
+        },
+        {
+          "Action": [
+            "mgn:StartExport",
+            "mgn:StartImport",
+            "mgn:StartImportFileEnrichment"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MgnImportExportOperationWrite"
+        },
+        {
+          "Action": [
+            "mgn:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:RequestTag/CreatedBy": "AWSTransform",
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/CreatedBy": "AWSTransform"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:mgn:*:*:application/*",
+            "arn:aws:mgn:*:*:source-server/*",
+            "arn:aws:mgn:*:*:wave/*"
+          ],
+          "Sid": "MgnAppWaveServerTagOperationsWrite"
+        },
+        {
+          "Action": [
+            "mgn:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:RequestTag/CreatedBy": "AWSTransform",
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "mgn:CreateAction": [
+                "StartExport",
+                "StartImport"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:mgn:*:*:export/*",
+            "arn:aws:mgn:*:*:import/*"
+          ],
+          "Sid": "MgnImportExportTagOperationsWrite"
+        },
+        {
+          "Action": [
+            "mgn:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:ResourceTag/CreatedBy": "AWSTransform",
+              "mgn:CreateAction": [
+                "StartCutover",
+                "StartTest",
+                "TerminateTargetInstances"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:mgn:*:*:job/*",
+          "Sid": "MgnJobTagOperationsWrite"
+        },
+        {
+          "Action": [
+            "s3:AbortMultipartUpload",
+            "s3:DeleteObject",
+            "s3:GetObject",
+            "s3:GetObjectAttributes",
+            "s3:GetObjectVersion",
+            "s3:ListBucketMultipartUploads",
+            "s3:ListMultipartUploadParts",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::transform-vmware-target-*/*",
+          "Sid": "S3TargetObjectOperationsServerMigration"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:GetBucketLocation",
+            "s3:GetBucketPublicAccessBlock",
+            "s3:GetBucketTagging",
+            "s3:ListBucket",
+            "s3:PutBucketTagging",
+            "s3:PutEncryptionConfiguration"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::transform-vmware-target-*",
+          "Sid": "S3TargetBucketOperationsServerMigration"
+        },
+        {
+          "Action": [
+            "secretsmanager:ListSecrets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecretsManagerOperationsReadOnly"
+        },
+        {
+          "Action": [
+            "servicequotas:GetServiceQuota"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:servicequotas:*:*:vpc/L-2AFB9258",
+          "Sid": "ServiceQuotasViaMgnOperationsReadOnly"
+        },
+        {
+          "Action": [
+            "ssm:DeleteParameters",
+            "ssm:GetParameters",
+            "ssm:PutParameter"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:parameter/ManagedByAWSApplicationMigrationService-*",
+          "Sid": "SsmParameterServerMigrationOperationsWrite"
+        },
+        {
+          "Action": [
+            "ssm:DescribeDocument",
+            "ssm:GetDocument",
+            "ssm:ListDocumentVersions"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*::document/AWS*",
+          "Sid": "SsmViaMgnDocumentOnAwsManagedOperationsReadOnly"
+        },
+        {
+          "Action": [
+            "ssm:DescribeDocument",
+            "ssm:GetDocument",
+            "ssm:ListDocumentVersions"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:document/*",
+          "Sid": "SsmViaMgnDocumentOperationsReadOnly"
+        },
+        {
+          "Action": [
+            "ssm:DescribeInstanceInformation",
+            "ssm:GetCommandInvocation",
+            "ssm:ListCommandInvocations",
+            "ssm:ListCommands"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SsmAgentCommandOperationsReadOnly"
+        },
+        {
+          "Action": [
+            "ssm:GetDocument",
+            "ssm:SendCommand"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*::document/AWSMigration-RunSourceServerAction",
+          "Sid": "SsmMigrationDocumentOperations"
+        },
+        {
+          "Action": [
+            "ssm:SendCommand"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "Null": {
+              "aws:ResourceTag/AWSApplicationMigrationServiceManaged": "false"
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:ResourceTag/CreatedBy": "AWSTransform"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "SsmViaMgnPostLaunchSendCommandToInstances"
+        },
+        {
+          "Action": [
+            "ssm:SendCommand"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:ResourceTag/CreatedFor": "AWSTransform"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:managed-instance/*",
+          "Sid": "SsmAgentCommandOperationsWrite"
+        },
+        {
+          "Action": [
+            "ssm:SendCommand",
+            "ssm:StartAutomationExecution"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*::automation-definition/AWS*:*",
+            "arn:aws:ssm:*::document/AWS*"
+          ],
+          "Sid": "SsmViaMgnPostLaunchCommandAndAutomationOnAwsManaged"
+        },
+        {
+          "Action": [
+            "ssm:SendCommand",
+            "ssm:StartAutomationExecution"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ssm:*:*:automation-definition/*:*",
+            "arn:aws:ssm:*:*:automation-execution/*",
+            "arn:aws:ssm:*:*:document/*"
+          ],
+          "Sid": "SsmViaMgnPostLaunchCommandAndAutomation"
+        },
+        {
+          "Action": [
+            "sts:AssumeRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceOrgID": "${aws:PrincipalOrgID}",
+              "sts:ExternalId": "${aws:PrincipalAccount}:workspace/${aws:PrincipalTag/WorkspaceId}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AWSTransformRehostSharingRole_${aws:PrincipalAccount}",
+          "Sid": "StsCrossAccountAssumeRole"
+        },
+        {
+          "Action": [
+            "organizations:ListAccounts"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "OrganizationsOperationsReadOnlyServerMigration"
+        },
+        {
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::aws-application-migration-service-*/latest/source-automation-client/linux/ssaf-client/ssaf_client.sig",
+          "Sid": "S3AgentSignatureOperationsReadOnly"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-08-06T15:27:14Z"
+}

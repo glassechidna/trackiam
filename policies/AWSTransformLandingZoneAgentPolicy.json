@@ -1,0 +1,350 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSTransformLandingZoneAgentPolicy",
+  "CreateDate": "2026-08-06T15:12:26Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4DQL5AE6YX",
+  "PolicyName": "AWSTransformLandingZoneAgentPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-08-06T15:12:26Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudformation:CreateChangeSet",
+            "cloudformation:DescribeChangeSet",
+            "cloudformation:DescribeStackEvents",
+            "cloudformation:DescribeStacks",
+            "cloudformation:ExecuteChangeSet",
+            "cloudformation:GetTemplate",
+            "cloudformation:ListChangeSets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/AtxLz*",
+          "Sid": "CfnLandingZoneStackOperationsAndChangeSets"
+        },
+        {
+          "Action": [
+            "cloudformation:CreateStack",
+            "cloudformation:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSTransform",
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/AtxLz*",
+          "Sid": "CfnLandingZoneStackCreate"
+        },
+        {
+          "Action": [
+            "cloudformation:UpdateStack"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "AWSTransform",
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/CreatedBy": "AWSTransform"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/AtxLz*",
+          "Sid": "CfnLandingZoneStackUpdate"
+        },
+        {
+          "Action": [
+            "controltower:EnableBaseline",
+            "controltower:TagResource",
+            "organizations:CreateAccount"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:RequestTag/CreatedBy": "AWSTransform"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ControlTowerEnableBaselineAndOrganizationsAccountCreate"
+        },
+        {
+          "Action": [
+            "controltower:EnableControl"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:RequestTag/CreatedBy": "AWSTransform",
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:controltower:*:*:enabledcontrol/*",
+          "Sid": "ControlTowerEnableControlWithRequestTag"
+        },
+        {
+          "Action": [
+            "controltower:GetBaseline"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:controltower:*::baseline/*",
+          "Sid": "ControlTowerBaselineOperationsReadOnly"
+        },
+        {
+          "Action": [
+            "controltower:GetEnabledBaseline",
+            "controltower:GetEnabledControl",
+            "controltower:GetLandingZone",
+            "controltower:ListTagsForResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:controltower:*:*:enabledbaseline/*",
+            "arn:aws:controltower:*:*:enabledcontrol/*",
+            "arn:aws:controltower:*:*:landingzone/*"
+          ],
+          "Sid": "ControlTowerResourceOperationsReadOnly"
+        },
+        {
+          "Action": [
+            "organizations:AttachPolicy"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "controltower.amazonaws.com"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "organizations:PolicyType": "SERVICE_CONTROL_POLICY"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:organizations::*:account/o-*/*",
+            "arn:aws:organizations::*:ou/o-*/*",
+            "arn:aws:organizations::*:policy/o-*/*",
+            "arn:aws:organizations::*:root/o-*/*"
+          ],
+          "Sid": "OrganizationsServiceControlPolicyAttachViaControlTower"
+        },
+        {
+          "Action": [
+            "organizations:CreateOrganizationalUnit",
+            "organizations:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:RequestTag/CreatedBy": "AWSTransform",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:organizations::*:account/o-*/*",
+            "arn:aws:organizations::*:ou/o-*/*",
+            "arn:aws:organizations::*:policy/o-*/*",
+            "arn:aws:organizations::*:root/o-*/*"
+          ],
+          "Sid": "OrganizationsTagAndCreateOrganizationalUnit"
+        },
+        {
+          "Action": [
+            "organizations:CreatePolicy"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "controltower.amazonaws.com"
+            },
+            "StringEquals": {
+              "organizations:PolicyType": "SERVICE_CONTROL_POLICY"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "OrganizationsServiceControlPolicyCreateViaControlTower"
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:DescribePolicy"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:organizations::*:account/*",
+            "arn:aws:organizations::*:ou/*",
+            "arn:aws:organizations::*:policy/*"
+          ],
+          "Sid": "OrganizationsResourceDescribeReadOnly"
+        },
+        {
+          "Action": [
+            "organizations:ListAccountsForParent",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListParents"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:organizations::*:account/*",
+            "arn:aws:organizations::*:ou/*",
+            "arn:aws:organizations::*:root/*"
+          ],
+          "Sid": "OrganizationsHierarchyOperationsReadOnly"
+        },
+        {
+          "Action": [
+            "organizations:ListTagsForResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:organizations::*:account/o-*/*",
+            "arn:aws:organizations::*:ou/o-*/*",
+            "arn:aws:organizations::*:policy/o-*/*",
+            "arn:aws:organizations::*:root/o-*/*"
+          ],
+          "Sid": "OrganizationsListTagsForResource"
+        },
+        {
+          "Action": [
+            "organizations:MoveAccount"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:ResourceTag/CreatedBy": "AWSTransform"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:organizations::*:account/*",
+            "arn:aws:organizations::*:ou/*",
+            "arn:aws:organizations::*:root/*"
+          ],
+          "Sid": "OrganizationsMoveAccountWithResourceTag"
+        },
+        {
+          "Action": [
+            "organizations:UpdatePolicy"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "controltower.amazonaws.com"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "organizations:PolicyType": "SERVICE_CONTROL_POLICY"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:policy/*",
+          "Sid": "OrganizationsPolicyUpdateViaControlTower"
+        },
+        {
+          "Action": [
+            "s3:AbortMultipartUpload",
+            "s3:CreateBucket",
+            "s3:DeleteObject",
+            "s3:GetBucketLocation",
+            "s3:GetBucketPublicAccessBlock",
+            "s3:GetBucketTagging",
+            "s3:GetObject",
+            "s3:GetObjectAttributes",
+            "s3:GetObjectVersion",
+            "s3:ListBucket",
+            "s3:ListBucketMultipartUploads",
+            "s3:ListMultipartUploadParts",
+            "s3:PutBucketTagging",
+            "s3:PutEncryptionConfiguration",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::transform-vmware-landing-zone-*",
+          "Sid": "S3LandingZoneBucketAndObjectOperations"
+        },
+        {
+          "Action": [
+            "servicecatalog:CreateProvisioningArtifact",
+            "servicecatalog:DeleteProvisioningArtifact",
+            "servicecatalog:ListProvisioningArtifacts",
+            "servicecatalog:UpdateProvisioningArtifact"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:catalog:*:*:product/*",
+          "Sid": "ServiceCatalogProvisioningArtifactOperations"
+        },
+        {
+          "Action": [
+            "controltower:GetBaselineOperation",
+            "controltower:GetControlOperation",
+            "controltower:ListBaselines",
+            "controltower:ListEnabledBaselines",
+            "controltower:ListEnabledControls",
+            "controltower:ListLandingZones",
+            "organizations:DescribeCreateAccountStatus",
+            "organizations:DescribeOrganization",
+            "organizations:ListPolicies",
+            "organizations:ListRoots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ControlTowerAndOrganizationsOperationsReadOnly"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-08-06T15:12:26Z"
+}

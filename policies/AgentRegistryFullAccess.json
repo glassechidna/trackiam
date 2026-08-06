@@ -1,0 +1,104 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AgentRegistryFullAccess",
+  "CreateDate": "2026-08-06T18:12:14Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CXNIJLWPU",
+  "PolicyName": "AgentRegistryFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-08-06T18:12:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "agent-registry.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/agent-registry.amazonaws.com/AWSServiceRoleForAgentRegistry",
+          "Sid": "AgentRegistryServiceLinkedRoleAccess"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "agent-registry.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "AgentRegistryPassRoleAccess"
+        },
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": "agent-registry.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "AgentRegistryKMSAccess"
+        },
+        {
+          "Action": "agent-registry:*",
+          "Effect": "Allow",
+          "Resource": "arn:aws:agent-registry:*:*:*",
+          "Sid": "AgentRegistryFullAccess"
+        },
+        {
+          "Action": [
+            "bedrock-agentcore:CreateWorkloadIdentity",
+            "bedrock-agentcore:DeleteWorkloadIdentity",
+            "bedrock-agentcore:GetWorkloadAccessToken",
+            "bedrock-agentcore:GetWorkloadIdentity"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock-agentcore:*:*:workload-identity-directory/*",
+          "Sid": "AgentRegistryWorkloadIdentityAccess"
+        },
+        {
+          "Action": [
+            "bedrock-agentcore:GetResourceOauth2Token"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock-agentcore:*:*:credential-provider/*",
+          "Sid": "AllowGetResourceOauth2TokenForOauthBasedSynchronization"
+        },
+        {
+          "Action": [
+            "bedrock-agentcore:ListOauth2CredentialProviders"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock-agentcore:*:*:*",
+          "Sid": "AllowListOauth2CredentialsProvidersForConsolePicker"
+        },
+        {
+          "Action": [
+            "iam:ListRoles"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "IAMListAccess"
+        },
+        {
+          "Action": [
+            "secretsmanager:GetSecretValue"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:*",
+          "Sid": "AgentRegistrySecretsManagerAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-08-06T18:12:14Z"
+}

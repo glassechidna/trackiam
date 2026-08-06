@@ -1,0 +1,77 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSBackupAccessPointOperatorAccess",
+  "CreateDate": "2026-08-06T16:12:24Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4PKJYD7YYM",
+  "PolicyName": "AWSBackupAccessPointOperatorAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-08-06T16:12:24Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "StringLike": {
+              "kms:EncryptionContext:aws:backup:backup-vault": "*",
+              "kms:ViaService": "backup.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DecryptKMSEncryptedDataByAWSBackup"
+        },
+        {
+          "Action": [
+            "s3:CreateAccessPoint",
+            "s3:DeleteAccessPoint",
+            "s3:GetAccessPoint",
+            "s3:PutAccessPointPolicy"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "backup.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:*:*:accesspoint/*",
+          "Sid": "S3AccessPointPermissions"
+        },
+        {
+          "Action": [
+            "backup:CreateBackupAccessPoint"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:backup:*:*:recovery-point:*",
+          "Sid": "CreateBackupAccessPointPermissions"
+        },
+        {
+          "Action": [
+            "backup:DeleteBackupAccessPoint",
+            "backup:DescribeBackupAccessPoint"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:backup:*:*:accesspoint/*",
+          "Sid": "BackupAccessPointPermissions"
+        },
+        {
+          "Action": [
+            "backup:ListBackupAccessPoints",
+            "backup:ListBackupAccessPointsByRecoveryPoint",
+            "backup:ListBackupAccessPointsByResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListBackupAccessPointPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-08-06T16:12:24Z"
+}

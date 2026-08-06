@@ -11,20 +11,20 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 460
-* Unique actions: 22114
-* Managed policies: 1554
+* Unique services: 461
+* Unique actions: 22153
+* Managed policies: 1560
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 424 |
+| `arn:aws:iam::aws:policy/AWS*` | 428 |
 | `arn:aws:iam::aws:policy/Amazon*` | 376 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 355 |
 | `arn:aws:iam::aws:policy/service-role/*` | 225 |
 | `arn:aws:iam::aws:policy/job-function/*` | 8 |
-| Other | 166 |
+| Other | 168 |
 
 The following table summarises the AWS APIs. 
 
@@ -61,10 +61,10 @@ The following table summarises the AWS APIs.
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 25 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 18 |
 | [`bedrock`](services/bedrock.yml) | 97 | 2 | 158 |
-| [`dms`](services/dms.yml) | 92 | 14 | 32 |
+| [`dms`](services/dms.yml) | 92 | 14 | 33 |
 | [`medialive`](services/medialive.yml) | 92 | 0 | 33 |
 | [`config`](services/config.yml) | 92 | 0 | 10 |
-| [`backup`](services/backup.yml) | 91 | 0 | 28 |
+| [`backup`](services/backup.yml) | 91 | 0 | 31 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 7 |
 | [`workspaces`](services/workspaces.yml) | 88 | 0 | 13 |
 | [`es`](services/es.yml) | 87 | 0 | 44 |
@@ -78,7 +78,7 @@ The following table summarises the AWS APIs.
 | [`cloudformation`](services/cloudformation.yml) | 82 | 0 | 20 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 81 | 0 | 0 |
-| [`securityhub`](services/securityhub.yml) | 79 | 0 | 49 |
+| [`securityhub`](services/securityhub.yml) | 79 | 0 | 50 |
 | [`codecommit`](services/codecommit.yml) | 79 | 0 | 11 |
 | [`personalize`](services/personalize.yml) | 78 | 0 | 5 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
@@ -360,7 +360,7 @@ The following table summarises the AWS APIs.
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 0 | 6 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
-| [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 235 |
+| [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 250 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 134 |
 | [`securityagent`](services/securityagent.yml) | 0 | 0 | 111 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
@@ -411,6 +411,7 @@ The following table summarises the AWS APIs.
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 19 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
+| [`agent-registry`](services/agent-registry.yml) | 0 | 0 | 19 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 18 |
 | [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 18 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 18 |
@@ -501,14 +502,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3720 |
-| `Get` | 3344 |
-| `Delete` | 2530 |
-| `Create` | 2392 |
-| `Update` | 2073 |
+| `List` | 3731 |
+| `Get` | 3350 |
+| `Delete` | 2535 |
+| `Create` | 2396 |
+| `Update` | 2078 |
 | `Describe` | 1937 |
-| `Put` | 596 |
+| `Put` | 597 |
 | `Start` | 547 |
-| `Batch` | 324 |
-| `Tag` | 322 |
+| `Batch` | 325 |
+| `Tag` | 323 |
 

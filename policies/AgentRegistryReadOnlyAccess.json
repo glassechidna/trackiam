@@ -1,0 +1,36 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AgentRegistryReadOnlyAccess",
+  "CreateDate": "2026-08-06T18:12:29Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4C3CDXY7QJ",
+  "PolicyName": "AgentRegistryReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-08-06T18:12:29Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "agent-registry:GetDiscoverableRegistryRecord",
+            "agent-registry:GetRegistry",
+            "agent-registry:GetRegistryRecord",
+            "agent-registry:InvokeRegistryMcp",
+            "agent-registry:ListDiscoverableRegistryRecords",
+            "agent-registry:ListRegistries",
+            "agent-registry:ListRegistryRecords",
+            "agent-registry:ListTagsForResource",
+            "agent-registry:SearchDiscoverableRegistryRecords"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:agent-registry:*:*:*",
+          "Sid": "AgentRegistryReadOnlyAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-08-06T18:12:29Z"
+}

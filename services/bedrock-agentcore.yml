@@ -6,6 +6,7 @@ Actions:
   - Name: bedrock-agentcore:AuthorizeAction
   - Name: bedrock-agentcore:BatchCreateMemoryRecords
   - Name: bedrock-agentcore:BatchDeleteMemoryRecords
+  - Name: bedrock-agentcore:BatchPutGatewayRateLimits
   - Name: bedrock-agentcore:BatchUpdateMemoryRecords
   - Name: bedrock-agentcore:CompleteResourceTokenAuth
   - Name: bedrock-agentcore:ConnectBrowserAutomationStream
@@ -16,6 +17,7 @@ Actions:
   - Name: bedrock-agentcore:CreateApiKeyCredentialProvider
   - Name: bedrock-agentcore:CreateBrowser
   - Name: bedrock-agentcore:CreateBrowserProfile
+  - Name: bedrock-agentcore:CreateCapacityProvider
   - Name: bedrock-agentcore:CreateCodeInterpreter
   - Name: bedrock-agentcore:CreateConfigurationBundle
   - Name: bedrock-agentcore:CreateDataset
@@ -23,6 +25,7 @@ Actions:
   - Name: bedrock-agentcore:CreateEvaluator
   - Name: bedrock-agentcore:CreateEvent
   - Name: bedrock-agentcore:CreateGateway
+  - Name: bedrock-agentcore:CreateGatewayRateLimit
   - Name: bedrock-agentcore:CreateGatewayRule
   - Name: bedrock-agentcore:CreateGatewayTarget
   - Name: bedrock-agentcore:CreateHarness
@@ -47,6 +50,8 @@ Actions:
   - Name: bedrock-agentcore:DeleteBatchEvaluation
   - Name: bedrock-agentcore:DeleteBrowser
   - Name: bedrock-agentcore:DeleteBrowserProfile
+  - Name: bedrock-agentcore:DeleteCapacityProvider
+  - Name: bedrock-agentcore:DeleteCapacityProviderSession
   - Name: bedrock-agentcore:DeleteCodeInterpreter
   - Name: bedrock-agentcore:DeleteConfigurationBundle
   - Name: bedrock-agentcore:DeleteDataset
@@ -54,6 +59,7 @@ Actions:
   - Name: bedrock-agentcore:DeleteEvaluator
   - Name: bedrock-agentcore:DeleteEvent
   - Name: bedrock-agentcore:DeleteGateway
+  - Name: bedrock-agentcore:DeleteGatewayRateLimit
   - Name: bedrock-agentcore:DeleteGatewayRule
   - Name: bedrock-agentcore:DeleteGatewayTarget
   - Name: bedrock-agentcore:DeleteHarness
@@ -88,6 +94,7 @@ Actions:
   - Name: bedrock-agentcore:GetBrowser
   - Name: bedrock-agentcore:GetBrowserProfile
   - Name: bedrock-agentcore:GetBrowserSession
+  - Name: bedrock-agentcore:GetCapacityProvider
   - Name: bedrock-agentcore:GetCodeInterpreter
   - Name: bedrock-agentcore:GetCodeInterpreterSession
   - Name: bedrock-agentcore:GetConfigurationBundle
@@ -96,6 +103,7 @@ Actions:
   - Name: bedrock-agentcore:GetEvaluator
   - Name: bedrock-agentcore:GetEvent
   - Name: bedrock-agentcore:GetGateway
+  - Name: bedrock-agentcore:GetGatewayRateLimit
   - Name: bedrock-agentcore:GetGatewayRule
   - Name: bedrock-agentcore:GetGatewayTarget
   - Name: bedrock-agentcore:GetHarness
@@ -143,12 +151,14 @@ Actions:
   - Name: bedrock-agentcore:ListActors
   - Name: bedrock-agentcore:ListAgentRuntimeEndpoints
   - Name: bedrock-agentcore:ListAgentRuntimeVersions
+  - Name: bedrock-agentcore:ListAgentRuntimeVersionsByCapacityProvider
   - Name: bedrock-agentcore:ListAgentRuntimes
   - Name: bedrock-agentcore:ListApiKeyCredentialProviders
   - Name: bedrock-agentcore:ListBatchEvaluations
   - Name: bedrock-agentcore:ListBrowserProfiles
   - Name: bedrock-agentcore:ListBrowserSessions
   - Name: bedrock-agentcore:ListBrowsers
+  - Name: bedrock-agentcore:ListCapacityProviders
   - Name: bedrock-agentcore:ListCodeInterpreterSessions
   - Name: bedrock-agentcore:ListCodeInterpreters
   - Name: bedrock-agentcore:ListConfigurationBundleVersions
@@ -158,6 +168,7 @@ Actions:
   - Name: bedrock-agentcore:ListDatasets
   - Name: bedrock-agentcore:ListEvaluators
   - Name: bedrock-agentcore:ListEvents
+  - Name: bedrock-agentcore:ListGatewayRateLimits
   - Name: bedrock-agentcore:ListGatewayRules
   - Name: bedrock-agentcore:ListGatewayTargets
   - Name: bedrock-agentcore:ListGateways
@@ -190,8 +201,10 @@ Actions:
   - Name: bedrock-agentcore:ManageAdminPolicy
   - Name: bedrock-agentcore:ManageResourceScopedPolicy
   - Name: bedrock-agentcore:PartiallyAuthorizeActions
+  - Name: bedrock-agentcore:PassCapacityProvider
   - Name: bedrock-agentcore:ProcessPayment
   - Name: bedrock-agentcore:PutResourcePolicy
+  - Name: bedrock-agentcore:PutSystemLogEvents
   - Name: bedrock-agentcore:RetrieveMemoryRecords
   - Name: bedrock-agentcore:SaveBrowserSessionProfile
   - Name: bedrock-agentcore:SearchRegistryRecords
@@ -215,11 +228,13 @@ Actions:
   - Name: bedrock-agentcore:UpdateAgentRuntimeEndpoint
   - Name: bedrock-agentcore:UpdateApiKeyCredentialProvider
   - Name: bedrock-agentcore:UpdateBrowserStream
+  - Name: bedrock-agentcore:UpdateCapacityProvider
   - Name: bedrock-agentcore:UpdateConfigurationBundle
   - Name: bedrock-agentcore:UpdateDataset
   - Name: bedrock-agentcore:UpdateDatasetExamples
   - Name: bedrock-agentcore:UpdateEvaluator
   - Name: bedrock-agentcore:UpdateGateway
+  - Name: bedrock-agentcore:UpdateGatewayRateLimit
   - Name: bedrock-agentcore:UpdateGatewayRule
   - Name: bedrock-agentcore:UpdateGatewayTarget
   - Name: bedrock-agentcore:UpdateHarness
