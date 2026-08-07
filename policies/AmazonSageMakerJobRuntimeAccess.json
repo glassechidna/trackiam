@@ -1,15 +1,32 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerJobRuntimeAccess",
   "CreateDate": "2026-06-03T02:42:10Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4GOOZRIVXT",
   "PolicyName": "AmazonSageMakerJobRuntimeAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-06-03T02:42:10Z",
+    "CreateDate": "2026-08-07T18:42:15Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:ViaService": "sagemaker.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSPermissionsForMTRLRuntime"
+        },
         {
           "Action": [
             "sagemaker:CallWithBearerToken"
@@ -42,8 +59,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v1"
+    "IsDefaultVersion": true,
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-06-03T02:42:10Z"
+  "UpdateDate": "2026-08-07T18:42:15Z"
 }
