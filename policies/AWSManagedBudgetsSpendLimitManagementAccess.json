@@ -1,21 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSManagedBudgetsSpendLimitManagementAccess",
   "CreateDate": "2026-07-17T21:12:21Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MQDCPVMBJ",
   "PolicyName": "AWSManagedBudgetsSpendLimitManagementAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-07-17T21:12:21Z",
+    "CreateDate": "2026-08-07T21:07:17Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "organizations:AttachPolicy",
             "organizations:DescribePolicy",
-            "organizations:DetachPolicy",
-            "organizations:ListPolicies"
+            "organizations:DetachPolicy"
           ],
           "Condition": {
             "StringEquals": {
@@ -33,6 +32,12 @@
           "Sid": "AccountActions"
         },
         {
+          "Action": "organizations:ListPolicies",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SCPListPolicyAction"
+        },
+        {
           "Action": [
             "organizations:AttachPolicy",
             "organizations:DetachPolicy"
@@ -45,7 +50,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-07-17T21:12:21Z"
+  "UpdateDate": "2026-08-07T21:07:17Z"
 }
