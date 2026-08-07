@@ -1,0 +1,66 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonODBReadOnlyAccess",
+  "CreateDate": "2026-08-07T01:12:14Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4LKRA2HIGH",
+  "PolicyName": "AmazonODBReadOnlyAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-08-07T01:12:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowEC2Reads"
+        },
+        {
+          "Action": [
+            "odb:GetAutonomousDatabase",
+            "odb:GetAutonomousDatabaseBackup",
+            "odb:GetCloudAutonomousVmCluster",
+            "odb:GetCloudExadataInfrastructure",
+            "odb:GetCloudExadataInfrastructureUnallocatedResources",
+            "odb:GetCloudVmCluster",
+            "odb:GetDbNode",
+            "odb:GetDbServer",
+            "odb:GetOciOnboardingStatus",
+            "odb:GetOdbNetwork",
+            "odb:GetOdbPeeringConnection",
+            "odb:GetResourcePolicy",
+            "odb:ListAutonomousDatabaseBackups",
+            "odb:ListAutonomousDatabaseCharacterSets",
+            "odb:ListAutonomousDatabaseClones",
+            "odb:ListAutonomousDatabasePeers",
+            "odb:ListAutonomousDatabaseVersions",
+            "odb:ListAutonomousDatabases",
+            "odb:ListAutonomousVirtualMachines",
+            "odb:ListCloudAutonomousVmClusters",
+            "odb:ListCloudExadataInfrastructures",
+            "odb:ListCloudVmClusters",
+            "odb:ListDbNodes",
+            "odb:ListDbServers",
+            "odb:ListDbSystemShapes",
+            "odb:ListGiVersions",
+            "odb:ListOdbNetworks",
+            "odb:ListOdbPeeringConnections",
+            "odb:ListSystemVersions",
+            "odb:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowODBReads"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-08-07T01:12:14Z"
+}

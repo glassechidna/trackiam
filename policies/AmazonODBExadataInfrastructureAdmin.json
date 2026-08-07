@@ -1,0 +1,78 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/job-function/AmazonODBExadataInfrastructureAdmin",
+  "CreateDate": "2026-08-07T01:12:27Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/job-function/",
+  "PolicyId": "ANPAZKAPJZG4NR6JPAQAV",
+  "PolicyName": "AmazonODBExadataInfrastructureAdmin",
+  "PolicyVersion": {
+    "CreateDate": "2026-08-07T01:12:27Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "odb.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowSLRActions"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowEC2Actions"
+        },
+        {
+          "Action": [
+            "odb:CreateCloudExadataInfrastructure",
+            "odb:DeleteCloudExadataInfrastructure",
+            "odb:DeleteResourcePolicy",
+            "odb:GetCloudExadataInfrastructure",
+            "odb:GetCloudExadataInfrastructureUnallocatedResources",
+            "odb:GetDbServer",
+            "odb:GetOciOnboardingStatus",
+            "odb:GetResourcePolicy",
+            "odb:InitializeService",
+            "odb:ListCloudAutonomousVmClusters",
+            "odb:ListCloudExadataInfrastructures",
+            "odb:ListCloudVmClusters",
+            "odb:ListDbServers",
+            "odb:ListDbSystemShapes",
+            "odb:ListTagsForResource",
+            "odb:PutResourcePolicy",
+            "odb:UpdateCloudExadataInfrastructure"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowODBActions"
+        },
+        {
+          "Action": [
+            "odb:TagResource",
+            "odb:UntagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:odb:*:*:cloud-exadata-infrastructure/*"
+          ],
+          "Sid": "AllowTaggingActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-08-07T01:12:27Z"
+}

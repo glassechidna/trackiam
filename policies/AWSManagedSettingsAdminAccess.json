@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSManagedSettingsAdminAccess",
   "CreateDate": "2026-07-22T01:27:25Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4GA3LE2K77",
   "PolicyName": "AWSManagedSettingsAdminAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-07-23T00:42:22Z",
+    "CreateDate": "2026-08-07T00:27:26Z",
     "Document": {
       "Statement": [
         {
@@ -142,7 +142,10 @@
           "Condition": {
             "StringEquals": {
               "aws:CalledViaLast": "account.amazonaws.com",
-              "organizations:ServicePrincipal": "sso.amazonaws.com"
+              "organizations:ServicePrincipal": [
+                "account-access.amazonaws.com",
+                "sso.amazonaws.com"
+              ]
             }
           },
           "Effect": "Allow",
@@ -368,7 +371,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2026-07-23T00:42:22Z"
+  "UpdateDate": "2026-08-07T00:27:26Z"
 }

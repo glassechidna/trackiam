@@ -1,0 +1,73 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/job-function/AmazonODBAutonomousVmClusterAdmin",
+  "CreateDate": "2026-08-07T01:12:28Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/job-function/",
+  "PolicyId": "ANPAZKAPJZG4JAWKED5BV",
+  "PolicyName": "AmazonODBAutonomousVmClusterAdmin",
+  "PolicyVersion": {
+    "CreateDate": "2026-08-07T01:12:28Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowEC2Actions"
+        },
+        {
+          "Action": [
+            "odb:CreateCloudAutonomousVmCluster",
+            "odb:DeleteCloudAutonomousVmCluster",
+            "odb:GetCloudAutonomousVmCluster",
+            "odb:GetCloudExadataInfrastructure",
+            "odb:GetCloudExadataInfrastructureUnallocatedResources",
+            "odb:GetOciOnboardingStatus",
+            "odb:GetOdbNetwork",
+            "odb:InitializeService",
+            "odb:ListAutonomousVirtualMachines",
+            "odb:ListCloudAutonomousVmClusters",
+            "odb:ListCloudExadataInfrastructures",
+            "odb:ListDbServers",
+            "odb:ListDbSystemShapes",
+            "odb:ListGiVersions",
+            "odb:ListOdbNetworks",
+            "odb:ListSystemVersions",
+            "odb:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowODBActions"
+        },
+        {
+          "Action": [
+            "odb:CreateOutboundIntegration"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:odb:*:*:cloud-autonomous-vm-cluster/*"
+          ],
+          "Sid": "AllowOutboundIntegrationActions"
+        },
+        {
+          "Action": [
+            "odb:TagResource",
+            "odb:UntagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:odb:*:*:cloud-autonomous-vm-cluster/*"
+          ],
+          "Sid": "AllowTaggingActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-08-07T01:12:28Z"
+}

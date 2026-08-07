@@ -1,0 +1,95 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/job-function/AmazonODBNetworkAdmin",
+  "CreateDate": "2026-08-07T01:12:22Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/job-function/",
+  "PolicyId": "ANPAZKAPJZG4GJFCROY3T",
+  "PolicyName": "AmazonODBNetworkAdmin",
+  "PolicyVersion": {
+    "CreateDate": "2026-08-07T01:12:22Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "ec2:CreateOdbNetworkPeering",
+            "ec2:DeleteOdbNetworkPeering",
+            "ec2:ModifyOdbNetworkPeering"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "odb.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowOdbNetworkPeeringActions"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "odb.amazonaws.com",
+                "vpc-lattice.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowSLRActions"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowEC2Actions"
+        },
+        {
+          "Action": [
+            "odb:CreateOdbNetwork",
+            "odb:CreateOdbPeeringConnection",
+            "odb:DeleteOdbNetwork",
+            "odb:DeleteOdbPeeringConnection",
+            "odb:DeleteResourcePolicy",
+            "odb:GetOciOnboardingStatus",
+            "odb:GetOdbNetwork",
+            "odb:GetOdbPeeringConnection",
+            "odb:GetResourcePolicy",
+            "odb:InitializeService",
+            "odb:ListOdbNetworks",
+            "odb:ListOdbPeeringConnections",
+            "odb:ListTagsForResource",
+            "odb:PutResourcePolicy",
+            "odb:UpdateOdbNetwork",
+            "odb:UpdateOdbPeeringConnection"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowODBActions"
+        },
+        {
+          "Action": [
+            "odb:TagResource",
+            "odb:UntagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:odb:*:*:odb-network/*",
+            "arn:aws:odb:*:*:odb-peering-connection/*"
+          ],
+          "Sid": "AllowTaggingActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-08-07T01:12:22Z"
+}
