@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSManagedSettingsAdminAccess",
   "CreateDate": "2026-07-22T01:27:25Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4GA3LE2K77",
   "PolicyName": "AWSManagedSettingsAdminAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-08-07T00:27:26Z",
+    "CreateDate": "2026-08-07T23:47:14Z",
     "Document": {
       "Statement": [
         {
@@ -348,7 +348,10 @@
             "support:DescribeCases",
             "support:DescribeServices",
             "support:DescribeSeverityLevels",
-            "support:ResolveCase"
+            "support:ResolveCase",
+            "supportplans:GetSupportPlan",
+            "supportplans:GetSupportPlanUpdateStatus",
+            "supportplans:StartSupportPlanUpdate"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -371,7 +374,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-08-07T00:27:26Z"
+  "UpdateDate": "2026-08-07T23:47:14Z"
 }

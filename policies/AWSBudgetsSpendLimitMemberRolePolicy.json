@@ -1,15 +1,21 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBudgetsSpendLimitMemberRolePolicy",
   "CreateDate": "2026-07-18T00:57:16Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4I5EGUOK5S",
   "PolicyName": "AWSBudgetsSpendLimitMemberRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-07-18T00:57:16Z",
+    "CreateDate": "2026-08-07T23:57:21Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "cost-optimization-hub:UpdateEnrollmentStatus",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CostOptimizationHubActions"
+        },
         {
           "Action": [
             "account:GetAccountInformation",
@@ -23,7 +29,8 @@
           "Action": [
             "aco-automation:GetAutomationEvent",
             "aco-automation:ListRecommendedActions",
-            "aco-automation:StartAutomationEvent"
+            "aco-automation:StartAutomationEvent",
+            "aco-automation:UpdateEnrollmentConfiguration"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -52,7 +59,8 @@
           "Action": [
             "compute-optimizer:GetEnrollmentStatus",
             "compute-optimizer:GetIdleRecommendations",
-            "compute-optimizer:GetRecommendationSummaries"
+            "compute-optimizer:GetRecommendationSummaries",
+            "compute-optimizer:UpdateEnrollmentStatus"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -74,6 +82,7 @@
             "ec2:DescribeInstances",
             "ec2:DescribeNatGateways",
             "ec2:DescribeSnapshots",
+            "ec2:DescribeVolumes",
             "ec2:DescribeVpnGateways",
             "ec2:StopInstances"
           ],
@@ -186,7 +195,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-07-18T00:57:16Z"
+  "UpdateDate": "2026-08-07T23:57:21Z"
 }
