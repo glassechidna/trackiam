@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 461
-* Unique actions: 22156
+* Unique services: 462
+* Unique actions: 22167
 * Managed policies: 1564
 
 Most common managed policy name prefixes:
@@ -442,6 +442,7 @@ The following table summarises the AWS APIs.
 | [`backup-search`](services/backup-search.yml) | 0 | 0 | 12 |
 | [`opensearch`](services/opensearch.yml) | 0 | 0 | 11 |
 | [`cloudshell`](services/cloudshell.yml) | 0 | 0 | 11 |
+| [`account-access`](services/account-access.yml) | 0 | 0 | 11 |
 | [`ts`](services/ts.yml) | 0 | 0 | 9 |
 | [`pricingplanmanager`](services/pricingplanmanager.yml) | 0 | 0 | 9 |
 | [`notifications-contacts`](services/notifications-contacts.yml) | 0 | 0 | 9 |
@@ -502,14 +503,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3732 |
-| `Get` | 3351 |
-| `Delete` | 2535 |
-| `Create` | 2396 |
+| `List` | 3735 |
+| `Get` | 3353 |
+| `Delete` | 2537 |
+| `Create` | 2398 |
 | `Update` | 2078 |
 | `Describe` | 1937 |
 | `Put` | 597 |
 | `Start` | 547 |
 | `Batch` | 326 |
-| `Tag` | 323 |
+| `Tag` | 324 |
 
