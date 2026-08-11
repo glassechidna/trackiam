@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 462
-* Unique actions: 22167
+* Unique actions: 22173
 * Managed policies: 1564
 
 Most common managed policy name prefixes:
@@ -43,7 +43,7 @@ The following table summarises the AWS APIs.
 | [`connect`](services/connect.yml) | 256 | 0 | 115 |
 | [`glue`](services/glue.yml) | 214 | 4 | 90 |
 | [`ses`](services/ses.yml) | 193 | 0 | 35 |
-| [`quicksight`](services/quicksight.yml) | 174 | 3 | 159 |
+| [`quicksight`](services/quicksight.yml) | 174 | 3 | 162 |
 | [`rds`](services/rds.yml) | 162 | 0 | 7 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
 | [`iam`](services/iam.yml) | 159 | 0 | 28 |
@@ -83,7 +83,7 @@ The following table summarises the AWS APIs.
 | [`personalize`](services/personalize.yml) | 78 | 0 | 5 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
-| [`cleanrooms`](services/cleanrooms.yml) | 76 | 0 | 28 |
+| [`cleanrooms`](services/cleanrooms.yml) | 76 | 0 | 31 |
 | [`appstream`](services/appstream.yml) | 75 | 0 | 14 |
 | [`elasticache`](services/elasticache.yml) | 75 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
@@ -504,13 +504,13 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3735 |
-| `Get` | 3353 |
-| `Delete` | 2537 |
-| `Create` | 2398 |
-| `Update` | 2078 |
-| `Describe` | 1937 |
+| `Get` | 3354 |
+| `Delete` | 2538 |
+| `Create` | 2399 |
+| `Update` | 2079 |
+| `Describe` | 1938 |
 | `Put` | 597 |
-| `Start` | 547 |
+| `Start` | 548 |
 | `Batch` | 326 |
 | `Tag` | 324 |
 
