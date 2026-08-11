@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 462
-* Unique actions: 22173
+* Unique actions: 22180
 * Managed policies: 1564
 
 Most common managed policy name prefixes:
@@ -40,7 +40,7 @@ The following table summarises the AWS APIs.
 | [`sagemaker`](services/sagemaker.yml) | 351 | 0 | 93 |
 | [`iot`](services/iot.yml) | 262 | 3 | 31 |
 | [`chime`](services/chime.yml) | 259 | 0 | 57 |
-| [`connect`](services/connect.yml) | 256 | 0 | 115 |
+| [`connect`](services/connect.yml) | 256 | 0 | 122 |
 | [`glue`](services/glue.yml) | 214 | 4 | 90 |
 | [`ses`](services/ses.yml) | 193 | 0 | 35 |
 | [`quicksight`](services/quicksight.yml) | 174 | 3 | 162 |
@@ -503,12 +503,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3735 |
+| `List` | 3736 |
 | `Get` | 3354 |
-| `Delete` | 2538 |
-| `Create` | 2399 |
-| `Update` | 2079 |
-| `Describe` | 1938 |
+| `Delete` | 2539 |
+| `Create` | 2400 |
+| `Update` | 2081 |
+| `Describe` | 1939 |
 | `Put` | 597 |
 | `Start` | 548 |
 | `Batch` | 326 |
