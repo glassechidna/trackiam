@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/BedrockAgentCoreFullAccess",
   "CreateDate": "2025-07-16T13:37:07Z",
-  "DefaultVersionId": "v18",
+  "DefaultVersionId": "v19",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BB44GAY7X",
   "PolicyName": "BedrockAgentCoreFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-07-28T16:57:19Z",
+    "CreateDate": "2026-08-11T19:07:29Z",
     "Document": {
       "Statement": [
         {
@@ -53,6 +53,17 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/runtime-identity.bedrock-agentcore.amazonaws.com/AWSServiceRoleForBedrockAgentCoreRuntimeIdentity",
           "Sid": "CreateBedrockAgentCoreRuntimeIdentityServiceLinkedRolePermissions"
+        },
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "runtime-instances.bedrock-agentcore.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/runtime-instances.bedrock-agentcore.amazonaws.com/AWSServiceRoleForBedrockAgentCoreRuntimeInstances",
+          "Sid": "CreateBedrockAgentCoreRuntimeInstancesServiceLinkedRolePermissions"
         },
         {
           "Action": "iam:CreateServiceLinkedRole",
@@ -432,7 +443,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v18"
+    "VersionId": "v19"
   },
-  "UpdateDate": "2026-07-28T16:57:19Z"
+  "UpdateDate": "2026-08-11T19:07:29Z"
 }
