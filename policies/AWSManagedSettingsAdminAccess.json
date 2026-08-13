@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSManagedSettingsAdminAccess",
   "CreateDate": "2026-07-22T01:27:25Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4GA3LE2K77",
   "PolicyName": "AWSManagedSettingsAdminAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-08-07T23:47:14Z",
+    "CreateDate": "2026-08-13T22:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,39 @@
           "Effect": "Allow",
           "Resource": "arn:aws:budgets::*:budget/sla-*",
           "Sid": "ActivateAdvancedBudgetsAccess"
+        },
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "aco-automation.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/aco-automation.amazonaws.com/AWSServiceRoleForComputeOptimizerAutomation",
+          "Sid": "AllowCreateServiceLinkedRoleForComputeOptimizerAutomation"
+        },
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "compute-optimizer.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/compute-optimizer.amazonaws.com/AWSServiceRoleForComputeOptimizer",
+          "Sid": "AllowCreateServiceLinkedRoleForComputeOptimizer"
+        },
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringLike": {
+              "iam:AWSServiceName": "cost-optimization-hub.bcm.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/cost-optimization-hub.bcm.amazonaws.com/AWSServiceRoleForCostOptimizationHub",
+          "Sid": "AllowCreateServiceLinkedRoleForCostOptimizationHub"
         },
         {
           "Action": "iam:PassRole",
@@ -136,6 +169,22 @@
         },
         {
           "Action": [
+            "organizations:EnableAWSServiceAccess"
+          ],
+          "Condition": {
+            "StringLike": {
+              "organizations:ServicePrincipal": [
+                "compute-optimizer.amazonaws.com",
+                "cost-optimization-hub.bcm.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowAWSServiceAccessForCostOptimizationHub"
+        },
+        {
+          "Action": [
             "organizations:ListDelegatedAdministrators",
             "organizations:RegisterDelegatedAdministrator"
           ],
@@ -166,6 +215,19 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AWSSettingsAccountAccess"
+        },
+        {
+          "Action": [
+            "aco-automation:GetEnrollmentConfiguration",
+            "aco-automation:UpdateEnrollmentConfiguration",
+            "compute-optimizer:GetEnrollmentStatus",
+            "compute-optimizer:UpdateEnrollmentStatus",
+            "cost-optimization-hub:ListEnrollmentStatuses",
+            "cost-optimization-hub:UpdateEnrollmentStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GetAndUpdateEnrollmentStatusForACOCOH"
         },
         {
           "Action": [
@@ -295,6 +357,7 @@
             "payments:Get",
             "payments:GetAcceptedTermsAndConditionsForProgramByAccountId",
             "payments:GetAccountBalance",
+            "payments:GetDefaultPaymentProfile",
             "payments:GetEligibleCurrencies",
             "payments:GetPaymentAttempt",
             "payments:GetPaymentInstrument",
@@ -374,7 +437,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-08-07T23:47:14Z"
+  "UpdateDate": "2026-08-13T22:37:08Z"
 }
