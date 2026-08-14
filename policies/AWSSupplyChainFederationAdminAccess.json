@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSSupplyChainFederationAdminAccess",
   "CreateDate": "2023-03-01T18:54:25Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4ILSYMTZA7",
   "PolicyName": "AWSSupplyChainFederationAdminAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:02:20Z",
+    "CreateDate": "2026-08-14T21:07:21Z",
     "Document": {
       "Statement": [
         {
@@ -58,6 +58,20 @@
             "arn:aws:chime:*:*:app-instance/*"
           ],
           "Sid": "ChimeAppInstance"
+        },
+        {
+          "Action": [
+            "identitystore:DeleteUser",
+            "identitystore:ReserveUser"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IdentityStoreCollaboration"
         },
         {
           "Action": [
@@ -195,6 +209,17 @@
         },
         {
           "Action": [
+            "builderid:CreateInvitation",
+            "builderid:DeleteInvitation",
+            "builderid:DisassociateCollaborator",
+            "builderid:ListInvitations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BuilderIDCollaboration"
+        },
+        {
+          "Action": [
             "chime:DescribeChannel"
           ],
           "Effect": "Allow",
@@ -272,7 +297,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-02-12T18:02:20Z"
+  "UpdateDate": "2026-08-14T21:07:21Z"
 }
