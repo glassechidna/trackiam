@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonVPCReachabilityAnalyzerFullAccessPolicy",
   "CreateDate": "2023-06-14T20:12:17Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LYY3MKOH7",
   "PolicyName": "AmazonVPCReachabilityAnalyzerFullAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-05-15T20:47:28Z",
+    "CreateDate": "2026-08-14T17:07:19Z",
     "Document": {
       "Statement": [
         {
@@ -28,6 +28,7 @@
             "ec2:CreateNetworkInsightsPath",
             "ec2:DeleteNetworkInsightsAnalysis",
             "ec2:DeleteNetworkInsightsPath",
+            "ec2:DescribeAddresses",
             "ec2:DescribeAvailabilityZones",
             "ec2:DescribeCustomerGateways",
             "ec2:DescribeInstances",
@@ -46,6 +47,7 @@
             "ec2:DescribeTransitGatewayAttachments",
             "ec2:DescribeTransitGatewayConnects",
             "ec2:DescribeTransitGatewayPeeringAttachments",
+            "ec2:DescribeTransitGatewayPolicyTables",
             "ec2:DescribeTransitGatewayRouteTables",
             "ec2:DescribeTransitGatewayVpcAttachments",
             "ec2:DescribeTransitGateways",
@@ -56,6 +58,8 @@
             "ec2:DescribeVpnConnections",
             "ec2:DescribeVpnGateways",
             "ec2:GetManagedPrefixListEntries",
+            "ec2:GetTransitGatewayPolicyTableAssociations",
+            "ec2:GetTransitGatewayPolicyTableEntries",
             "ec2:GetTransitGatewayRouteTablePropagations",
             "ec2:SearchTransitGatewayRoutes",
             "ec2:StartNetworkInsightsAnalysis"
@@ -108,6 +112,7 @@
         {
           "Action": [
             "network-firewall:DescribeFirewall",
+            "network-firewall:DescribeFirewallMetadata",
             "network-firewall:DescribeFirewallPolicy",
             "network-firewall:DescribeResourcePolicy",
             "network-firewall:DescribeRuleGroup",
@@ -135,7 +140,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2024-05-15T20:47:28Z"
+  "UpdateDate": "2026-08-14T17:07:19Z"
 }

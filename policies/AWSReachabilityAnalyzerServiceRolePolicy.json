@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSReachabilityAnalyzerServiceRolePolicy",
   "CreateDate": "2022-11-23T17:12:28Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4CQCKOPHMV",
   "PolicyName": "AWSReachabilityAnalyzerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-09-10T16:04:52Z",
+    "CreateDate": "2026-08-14T17:17:24Z",
     "Document": {
       "Statement": [
         {
@@ -33,6 +33,7 @@
             "directconnect:DescribeDirectConnectGateways",
             "directconnect:DescribeVirtualGateways",
             "directconnect:DescribeVirtualInterfaces",
+            "ec2:DescribeAddresses",
             "ec2:DescribeAvailabilityZones",
             "ec2:DescribeCustomerGateways",
             "ec2:DescribeInstances",
@@ -49,6 +50,7 @@
             "ec2:DescribeTransitGatewayAttachments",
             "ec2:DescribeTransitGatewayConnects",
             "ec2:DescribeTransitGatewayPeeringAttachments",
+            "ec2:DescribeTransitGatewayPolicyTables",
             "ec2:DescribeTransitGatewayRouteTables",
             "ec2:DescribeTransitGatewayVpcAttachments",
             "ec2:DescribeTransitGateways",
@@ -59,6 +61,8 @@
             "ec2:DescribeVpnConnections",
             "ec2:DescribeVpnGateways",
             "ec2:GetManagedPrefixListEntries",
+            "ec2:GetTransitGatewayPolicyTableAssociations",
+            "ec2:GetTransitGatewayPolicyTableEntries",
             "ec2:GetTransitGatewayRouteTablePropagations",
             "ec2:SearchTransitGatewayRoutes",
             "elasticloadbalancing:DescribeListeners",
@@ -70,6 +74,7 @@
             "elasticloadbalancing:DescribeTargetGroups",
             "elasticloadbalancing:DescribeTargetHealth",
             "network-firewall:DescribeFirewall",
+            "network-firewall:DescribeFirewallMetadata",
             "network-firewall:DescribeFirewallPolicy",
             "network-firewall:DescribeResourcePolicy",
             "network-firewall:DescribeRuleGroup",
@@ -98,7 +103,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2024-09-10T16:04:52Z"
+  "UpdateDate": "2026-08-14T17:17:24Z"
 }
