@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SecurityAudit",
   "CreateDate": "2015-02-06T18:41:01Z",
-  "DefaultVersionId": "v91",
+  "DefaultVersionId": "v92",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIX2T3QCXHR2OGGCTO",
   "PolicyName": "SecurityAudit",
   "PolicyVersion": {
-    "CreateDate": "2026-07-21T17:42:29Z",
+    "CreateDate": "2026-08-17T15:27:26Z",
     "Document": {
       "Statement": [
         {
@@ -135,6 +135,7 @@
             "bedrock-agentcore:ListRecommendations",
             "bedrock-agentcore:ListRegistries",
             "bedrock-agentcore:ListRegistryRecords",
+            "bedrock:GetAgent",
             "bedrock:GetAgentAlias",
             "bedrock:GetAgentKnowledgeBase",
             "bedrock:GetCustomModel",
@@ -229,6 +230,7 @@
             "cloudformation:GetStackPolicy",
             "cloudformation:GetTemplate",
             "cloudformation:ListStack*",
+            "cloudformation:ListStackResources",
             "cloudfront:Get*",
             "cloudfront:List*",
             "cloudsearch:DescribeDomainEndpointOptions",
@@ -465,6 +467,7 @@
             "glue:GetDataCatalogEncryptionSettings",
             "glue:GetDatabases",
             "glue:GetDevEndpoints",
+            "glue:GetJobBookmark",
             "glue:GetJobs",
             "glue:GetResourcePolicy",
             "glue:GetSecurityConfiguration",
@@ -575,6 +578,7 @@
             "lambda:GetFunctionConcurrency",
             "lambda:GetFunctionConfiguration",
             "lambda:GetFunctionEventInvokeConfig",
+            "lambda:GetFunctionUrlConfig",
             "lambda:GetLayerVersionPolicy",
             "lambda:GetPolicy",
             "lambda:GetRuntimeManagementConfig",
@@ -920,6 +924,7 @@
             "sso:ListTrustedTokenIssuers",
             "states:DescribeStateMachine",
             "states:ListStateMachines",
+            "states:ListTagsForResource",
             "storagegateway:DescribeBandwidthRateLimit",
             "storagegateway:DescribeCache",
             "storagegateway:DescribeCachediSCSIVolumes",
@@ -1056,7 +1061,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v91"
+    "VersionId": "v92"
   },
-  "UpdateDate": "2026-07-21T17:42:29Z"
+  "UpdateDate": "2026-08-17T15:27:26Z"
 }
