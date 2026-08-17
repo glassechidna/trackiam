@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonSageMakerInferenceServiceRolePolicy",
   "CreateDate": "2026-07-30T19:42:26Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4OVZ22IKHX",
   "PolicyName": "AmazonSageMakerInferenceServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-07-30T19:42:26Z",
+    "CreateDate": "2026-08-17T21:07:28Z",
     "Document": {
       "Statement": [
         {
@@ -48,7 +48,6 @@
             "StringEquals": {
               "aws:ResourceAccount": "${aws:PrincipalAccount}",
               "aws:ResourceTag/AmazonSageMakerManaged": "true",
-              "ec2:AuthorizedService": "sagemaker.amazonaws.com",
               "ec2:Permission": "INSTANCE-ATTACH"
             }
           },
@@ -122,7 +121,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-07-30T19:42:26Z"
+  "UpdateDate": "2026-08-17T21:07:28Z"
 }
