@@ -1,0 +1,387 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/NetworkSecurityManagerServiceRolePolicy",
+  "CreateDate": "2026-08-18T18:27:18Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4N7QSJELX4",
+  "PolicyName": "NetworkSecurityManagerServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-08-18T18:27:18Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "config.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/config.amazonaws.com/*",
+          "Sid": "AllowCreateConfigServiceLinkedRole"
+        },
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "shield.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/shield.amazonaws.com/*",
+          "Sid": "ShieldSlrCreation"
+        },
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "wafv2.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/wafv2.amazonaws.com/*",
+          "Sid": "WafV2LoggingSlrCreation"
+        },
+        {
+          "Action": "organizations:ListDelegatedAdministrators",
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": [
+                "network-security-manager.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListDelegatedAdministratorsScoped"
+        },
+        {
+          "Action": "apigateway:GET",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:apigateway:*::/restapis",
+            "arn:aws:apigateway:*::/restapis/*/stages",
+            "arn:aws:apigateway:*::/restapis/*/stages/*",
+            "arn:aws:apigateway:*::/tags/*"
+          ],
+          "Sid": "ApiGatewayStageNonMutationApiAccess"
+        },
+        {
+          "Action": "apigateway:SetWebACL",
+          "Effect": "Allow",
+          "Resource": "arn:aws:apigateway:*::/restapis/*/stages/*",
+          "Sid": "ApiGatewayWebAclRemediation"
+        },
+        {
+          "Action": "config:ListConfigurationRecorders",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowConfigRecorderList"
+        },
+        {
+          "Action": "config:PutServiceLinkedConfigurationRecorder",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowPutServiceLinkedConfigRecorder"
+        },
+        {
+          "Action": "elasticloadbalancing:GetLoadBalancerWebACL",
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticloadbalancing:*:*:loadbalancer/app/*/*",
+          "Sid": "LoadBalancerGetWebACLScoped"
+        },
+        {
+          "Action": "elasticloadbalancing:SetWebACL",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ElbSetWebAcl"
+        },
+        {
+          "Action": "organizations:DescribeAccount",
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:account/o-*/*",
+          "Sid": "DescribeAccountScoped"
+        },
+        {
+          "Action": "organizations:DescribeOrganizationalUnit",
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:ou/o-*/ou-*",
+          "Sid": "DescribeOrganizationUnitScoped"
+        },
+        {
+          "Action": "wafv2:GetWebACLForResource",
+          "Effect": "Allow",
+          "Resource": "arn:aws:wafv2:*:*:*/webacl/*",
+          "Sid": "Wafv2WebaclDescribe"
+        },
+        {
+          "Action": "wafv2:ListLoggingConfigurations",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Wafv2ListLogging"
+        },
+        {
+          "Action": "wafv2:ListWebACLs",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Wafv2ListWebACLs"
+        },
+        {
+          "Action": [
+            "amplify:GetWebACLForResource",
+            "amplify:ListResourcesForWebACL"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmplifyWebAclIntegration"
+        },
+        {
+          "Action": [
+            "apprunner:DescribeWebAclForService",
+            "apprunner:ListAssociatedServicesForWebAcl"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AppRunnerWebAclIntegration"
+        },
+        {
+          "Action": [
+            "appsync:GetWebACLForResource",
+            "appsync:ListResourcesForWebACL"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AppSyncWebAclIntegration"
+        },
+        {
+          "Action": [
+            "bedrock-agentcore:GatewayGetWebACLForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock-agentcore:*:*:gateway/*",
+          "Sid": "AllowGetActionForAgentCoreGateway"
+        },
+        {
+          "Action": [
+            "bedrock-agentcore:GatewayListResourcesForWebACL"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListActionsForAgentCoreGateway"
+        },
+        {
+          "Action": [
+            "cloudfront:AssociateDistributionWebACL",
+            "cloudfront:DisassociateDistributionWebACL"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudfront::*:distribution/*",
+          "Sid": "CloudFrontDistributionMutation"
+        },
+        {
+          "Action": [
+            "cloudfront:GetDistribution",
+            "cloudfront:GetDistributionConfig",
+            "cloudfront:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudfront::*:distribution/*",
+          "Sid": "CloudFrontDistributionNonMutationApiAccess"
+        },
+        {
+          "Action": [
+            "cloudfront:GetVpcOrigin"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudfront::*:vpcorigin/*",
+          "Sid": "CloudfrontVpcOriginAccess"
+        },
+        {
+          "Action": [
+            "cloudfront:ListDistributions",
+            "cloudfront:ListDistributionsByWebACLId"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudFrontListDistributions"
+        },
+        {
+          "Action": [
+            "cognito-idp:GetWebACLForResource",
+            "cognito-idp:ListResourcesForWebACL"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CognitoWebAclIntegration"
+        },
+        {
+          "Action": [
+            "config:AssociateResourceTypes",
+            "config:DeleteServiceLinkedConfigurationRecorder",
+            "config:DescribeConfigurationRecorderStatus",
+            "config:DescribeConfigurationRecorders",
+            "config:DisassociateResourceTypes"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:config:*:*:configuration-recorder/*",
+          "Sid": "AllowConfigRecorderScopedAccess"
+        },
+        {
+          "Action": [
+            "config:SelectResourceConfig"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ConfigUnscoped"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAddresses",
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "elasticloadbalancing:DescribeTags",
+            "shield:CreateProtection",
+            "shield:CreateSubscription",
+            "shield:DeleteProtection",
+            "shield:DescribeProtection",
+            "shield:DescribeSubscription",
+            "shield:GetSubscriptionState",
+            "shield:ListProtections"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ShieldGeneral"
+        },
+        {
+          "Action": [
+            "ec2:DescribeVerifiedAccessInstanceWebAclAssociations",
+            "ec2:GetVerifiedAccessInstanceWebAcl"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "VerifiedAccessWebAclIntegration"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:CreateWebACLAssociation",
+            "elasticloadbalancing:DeleteWebACLAssociation"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticloadbalancing:*:*:loadbalancer/app/*/*",
+          "Sid": "ElbWebAclRemediationScoped"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "elasticloadbalancing:DescribeTags",
+            "elasticloadbalancing:DescribeWebACLAssociation"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LoadBalancerNonMutationApiAccess"
+        },
+        {
+          "Action": [
+            "logs:CreateLogDelivery",
+            "logs:DeleteLogDelivery",
+            "logs:GetLogDelivery",
+            "logs:ListLogDeliveries",
+            "logs:UpdateLogDelivery"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LogsGeneral"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListChildren",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListParents",
+            "organizations:ListRoots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DescribeOrganizationUnScoped"
+        },
+        {
+          "Action": [
+            "s3:GetBucketPolicy",
+            "s3:PutBucketPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::aws-waf-logs-*",
+          "Sid": "S3LogBucketGeneral"
+        },
+        {
+          "Action": [
+            "wafv2:AssociateWebACL",
+            "wafv2:DeleteWebACL",
+            "wafv2:DisassociateFirewallManager",
+            "wafv2:DisassociateWebACL",
+            "wafv2:GetWebACL",
+            "wafv2:ListResourcesForWebACL",
+            "wafv2:ListTagsForResource",
+            "wafv2:TagResource",
+            "wafv2:UntagResource",
+            "wafv2:ValidateNetworkSecurityManagerRuleConfiguration",
+            "wafv2:ValidateNetworkSecurityManagerWebACLConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:wafv2:*:*:*/webacl/*",
+          "Sid": "Wafv2General"
+        },
+        {
+          "Action": [
+            "wafv2:CreateWebACL",
+            "wafv2:DeleteFirewallManagerRuleGroups",
+            "wafv2:PutFirewallManagerRuleGroups",
+            "wafv2:UpdateWebACL"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:wafv2:*:*:*/webacl/*",
+            "arn:aws:wafv2:*:*:global/ipset/*",
+            "arn:aws:wafv2:*:*:global/managedruleset/*",
+            "arn:aws:wafv2:*:*:global/regexpatternset/*",
+            "arn:aws:wafv2:*:*:global/rulegroup/*",
+            "arn:aws:wafv2:*:*:regional/ipset/*",
+            "arn:aws:wafv2:*:*:regional/managedruleset/*",
+            "arn:aws:wafv2:*:*:regional/regexpatternset/*",
+            "arn:aws:wafv2:*:*:regional/rulegroup/*"
+          ],
+          "Sid": "Wafv2WebAclAndRuleGroupMutation"
+        },
+        {
+          "Action": [
+            "wafv2:DeleteLoggingConfiguration",
+            "wafv2:GetLoggingConfiguration",
+            "wafv2:PutLoggingConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:wafv2:*:*:*/webacl/*",
+          "Sid": "Wafv2Logging"
+        },
+        {
+          "Action": [
+            "wafv2:DeletePermissionPolicy",
+            "wafv2:GetPermissionPolicy",
+            "wafv2:PutPermissionPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:wafv2:*:*:global/rulegroup/*",
+            "arn:aws:wafv2:*:*:regional/rulegroup/*"
+          ],
+          "Sid": "Wafv2PermissionPolicy"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-08-18T18:27:18Z"
+}
