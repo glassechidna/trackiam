@@ -1,15 +1,45 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEC2RolePolicyForLaunchWizard",
   "CreateDate": "2019-11-13T08:05:53Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CBGI56NFS",
   "PolicyName": "AmazonEC2RolePolicyForLaunchWizard",
   "PolicyVersion": {
-    "CreateDate": "2024-09-25T22:40:50Z",
+    "CreateDate": "2026-08-18T19:27:15Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": "CreateVolume"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/LaunchWizardResourceGroupID": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*"
+        },
+        {
+          "Action": "ec2:CreateVolume",
+          "Condition": {
+            "StringLike": {
+              "aws:RequestTag/LaunchWizardResourceGroupID": "*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*"
+        },
         {
           "Action": "ssm:SendCommand",
           "Condition": {
@@ -175,7 +205,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2024-09-25T22:40:50Z"
+  "UpdateDate": "2026-08-18T19:27:15Z"
 }
