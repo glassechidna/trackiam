@@ -54,9 +54,15 @@ Actions:
   - Name: drs:AssociateFailbackClientToRecoveryInstanceForDrs
   - Name: drs:BatchCreateVolumeSnapshotGroupForDrs
   - Name: drs:BatchDeleteSnapshotRequestForDrs
+  - Name: drs:CancelRecoveryPlanExecution
   - Name: drs:CreateConvertedSnapshotForDrs
   - Name: drs:CreateRecoveryInstanceForDrs
+  - Name: drs:CreateRecoveryPlan
+  - Name: drs:CreateRecoveryPlanStep
   - Name: drs:CreateSourceServerForDrs
+  - Name: drs:DeleteRecoveryPlan
+  - Name: drs:DeleteRecoveryPlanExecution
+  - Name: drs:DeleteRecoveryPlanStep
   - Name: drs:DescribeReplicationServerAssociationsForDrs
   - Name: drs:DescribeSnapshotRequestsForDrs
   - Name: drs:GetAgentCommandForDrs
@@ -68,8 +74,16 @@ Actions:
   - Name: drs:GetChannelCommandsForDrs
   - Name: drs:GetFailbackCommandForDrs
   - Name: drs:GetFailbackLaunchRequestedForDrs
+  - Name: drs:GetRecoveryPlan
+  - Name: drs:GetRecoveryPlanExecution
+  - Name: drs:GetRecoveryPlanExecutionStep
+  - Name: drs:GetRecoveryPlanStep
   - Name: drs:GetSuggestedFailbackClientDeviceMappingForDrs
   - Name: drs:IssueAgentCertificateForDrs
+  - Name: drs:ListRecoveryPlanExecutionSteps
+  - Name: drs:ListRecoveryPlanExecutions
+  - Name: drs:ListRecoveryPlanSteps
+  - Name: drs:ListRecoveryPlans
   - Name: drs:NotifyAgentAuthenticationForDrs
   - Name: drs:NotifyAgentConnectedForDrs
   - Name: drs:NotifyAgentDisconnectedForDrs
@@ -77,12 +91,15 @@ Actions:
   - Name: drs:NotifyConsistencyAttainedForDrs
   - Name: drs:NotifyReplicationServerAuthenticationForDrs
   - Name: drs:NotifyVolumeEventForDrs
+  - Name: drs:ReorderRecoveryPlanSteps
+  - Name: drs:RetryRecoveryPlanExecutionStep
   - Name: drs:SendAgentLogsForDrs
   - Name: drs:SendAgentMetricsForDrs
   - Name: drs:SendChannelCommandResultForDrs
   - Name: drs:SendClientLogsForDrs
   - Name: drs:SendClientMetricsForDrs
   - Name: drs:SendVolumeStatsForDrs
+  - Name: drs:StartRecoveryPlanExecution
   - Name: drs:UpdateAgentBacklogForDrs
   - Name: drs:UpdateAgentConversionInfoForDrs
   - Name: drs:UpdateAgentReplicationInfoForDrs
@@ -90,4 +107,7 @@ Actions:
   - Name: drs:UpdateAgentSourcePropertiesForDrs
   - Name: drs:UpdateFailbackClientDeviceMappingForDrs
   - Name: drs:UpdateFailbackClientLastSeenForDrs
+  - Name: drs:UpdateRecoveryPlan
+  - Name: drs:UpdateRecoveryPlanExecutionStep
+  - Name: drs:UpdateRecoveryPlanStep
   - Name: drs:UpdateReplicationCertificateForDrs
