@@ -1,0 +1,88 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonBioDiscoveryInAppFullAccess",
+  "CreateDate": "2026-08-18T06:47:14Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4GSPTHQNLM",
+  "PolicyName": "AmazonBioDiscoveryInAppFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-08-18T06:47:14Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:identitystore:identitystore-arn": "arn:aws:identitystore::*:identitystore/*"
+            },
+            "StringLike": {
+              "kms:ViaService": "identitystore.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonBioDiscoveryIdentityStoreKMSInAppAccess"
+        },
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:sso:instance-arn": "arn:aws:sso:::instance/*"
+            },
+            "StringLike": {
+              "kms:ViaService": "sso.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonBioDiscoveryIdentityCenterKMSInAppAccess"
+        },
+        {
+          "Action": [
+            "identitystore:ListGroupMembershipsForMember",
+            "identitystore:ListGroups",
+            "identitystore:ListUsers"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:identitystore::*:identitystore/*",
+            "arn:aws:identitystore:::group/*",
+            "arn:aws:identitystore:::membership/*",
+            "arn:aws:identitystore:::user/*"
+          ],
+          "Sid": "AmazonBioDiscoveryIdentityStoreInAppAccess"
+        },
+        {
+          "Action": [
+            "researchstudio:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonBioDiscoveryInAppFullAccess"
+        },
+        {
+          "Action": [
+            "sso:CreateApplicationAssignment",
+            "sso:DeleteApplicationAssignment",
+            "sso:ListApplicationAssignments"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sso::*:application/*/*",
+            "arn:aws:sso:::instance/*"
+          ],
+          "Sid": "AmazonBioDiscoveryIdentityCenterInAppAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-08-18T06:47:14Z"
+}

@@ -1,0 +1,122 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonBioDiscoveryFullAccess",
+  "CreateDate": "2026-08-18T06:27:20Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4IJ6IKJL6C",
+  "PolicyName": "AmazonBioDiscoveryFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-08-18T06:27:20Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:PassedToService": "researchstudio.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "AmazonBioDiscoveryPassRoleAccess"
+        },
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:identitystore:identitystore-arn": "arn:aws:identitystore::*:identitystore/*"
+            },
+            "StringLike": {
+              "kms:ViaService": "identitystore.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonBioDiscoveryIdentityStoreKMSAccess"
+        },
+        {
+          "Action": [
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "kms:EncryptionContext:aws:sso:instance-arn": "arn:aws:sso:::instance/*"
+            },
+            "StringLike": {
+              "kms:ViaService": "sso.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonBioDiscoveryIdentityCenterKMSAccess"
+        },
+        {
+          "Action": [
+            "identitystore:DescribeGroup",
+            "identitystore:DescribeUser",
+            "identitystore:ListGroupMembershipsForMember",
+            "identitystore:ListGroups",
+            "identitystore:ListUsers"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:identitystore::*:identitystore/*",
+            "arn:aws:identitystore:::group/*",
+            "arn:aws:identitystore:::membership/*",
+            "arn:aws:identitystore:::user/*"
+          ],
+          "Sid": "AmazonBioDiscoveryIdentityStoreAccess"
+        },
+        {
+          "Action": [
+            "researchstudio:*"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonBioDiscoveryFullAccess"
+        },
+        {
+          "Action": [
+            "sso:CreateApplication",
+            "sso:CreateApplicationAssignment",
+            "sso:DeleteApplication",
+            "sso:DeleteApplicationAccessScope",
+            "sso:DeleteApplicationAssignment",
+            "sso:DeleteApplicationAuthenticationMethod",
+            "sso:DeleteApplicationGrant",
+            "sso:DescribeApplication",
+            "sso:DescribeApplicationAssignment",
+            "sso:DescribeInstance",
+            "sso:DescribeRegisteredRegions",
+            "sso:GetApplicationAuthenticationMethod",
+            "sso:GetApplicationGrant",
+            "sso:ListApplicationAccessScopes",
+            "sso:ListApplicationAssignments",
+            "sso:ListApplicationGrants",
+            "sso:ListApplications",
+            "sso:ListInstances",
+            "sso:PutApplicationAccessScope",
+            "sso:PutApplicationAuthenticationMethod",
+            "sso:PutApplicationGrant"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sso::*:application/*/*",
+            "arn:aws:sso:::instance/*",
+            "arn:aws:sso::aws:applicationProvider/ResearchStudio"
+          ],
+          "Sid": "AmazonBioDiscoveryIdentityCenterAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-08-18T06:27:20Z"
+}
