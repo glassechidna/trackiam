@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 462
-* Unique actions: 22251
+* Unique actions: 22256
 * Managed policies: 1567
 
 Most common managed policy name prefixes:
@@ -119,7 +119,7 @@ The following table summarises the AWS APIs.
 | [`dynamodb`](services/dynamodb.yml) | 56 | 5 | 23 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 56 | 0 | 32 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 25 |
-| [`eks`](services/eks.yml) | 56 | 0 | 13 |
+| [`eks`](services/eks.yml) | 56 | 0 | 18 |
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
 | [`resiliencehub`](services/resiliencehub.yml) | 55 | 0 | 73 |
 | [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 38 |
@@ -503,12 +503,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3747 |
+| `List` | 3748 |
 | `Get` | 3366 |
-| `Delete` | 2548 |
-| `Create` | 2407 |
+| `Delete` | 2549 |
+| `Create` | 2408 |
 | `Update` | 2089 |
-| `Describe` | 1942 |
+| `Describe` | 1943 |
 | `Put` | 598 |
 | `Start` | 550 |
 | `Batch` | 326 |
