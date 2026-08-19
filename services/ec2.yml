@@ -628,6 +628,7 @@ Actions:
   # actions with no corresponding API
   - Name: ec2:AcceptCapacityReservationBillingOwnership
   - Name: ec2:AcceptTransitGatewayClientVpnAttachment
+  - Name: ec2:AssociateApplicationStatusCheck
   - Name: ec2:AssociateCapacityReservationBillingOwner
   - Name: ec2:AssociateRouteServer
   - Name: ec2:AssociateSecurityGroupVpc
@@ -637,6 +638,7 @@ Actions:
   - Name: ec2:AttachResourcesToPlacementGroup
   - Name: ec2:CancelDeclarativePoliciesReport
   - Name: ec2:CopyVolumes
+  - Name: ec2:CreateApplicationStatusCheck
   - Name: ec2:CreateCapacityManagerDataExport
   - Name: ec2:CreateCapacityReservationBySplitting
   - Name: ec2:CreateCapacityReservationCancellationQuote
@@ -659,9 +661,11 @@ Actions:
   - Name: ec2:CreateSecondarySubnet
   - Name: ec2:CreateTransitGatewayMeteringPolicy
   - Name: ec2:CreateTransitGatewayMeteringPolicyEntry
+  - Name: ec2:CreateTransitGatewayPolicyTableEntry
   - Name: ec2:CreateVpcBlockPublicAccessExclusion
   - Name: ec2:CreateVpcEncryptionControl
   - Name: ec2:CreateVpnConcentrator
+  - Name: ec2:DeleteApplicationStatusCheck
   - Name: ec2:DeleteCapacityManagerDataExport
   - Name: ec2:DeleteCoipPoolPermission
   - Name: ec2:DeleteImageUsageReport
@@ -681,9 +685,13 @@ Actions:
   - Name: ec2:DeleteTransitGatewayClientVpnAttachment
   - Name: ec2:DeleteTransitGatewayMeteringPolicy
   - Name: ec2:DeleteTransitGatewayMeteringPolicyEntry
+  - Name: ec2:DeleteTransitGatewayPolicyTableEntry
   - Name: ec2:DeleteVpcBlockPublicAccessExclusion
   - Name: ec2:DeleteVpcEncryptionControl
   - Name: ec2:DeleteVpnConcentrator
+  - Name: ec2:DescribeApplicationStatus
+  - Name: ec2:DescribeApplicationStatusCheckAssociations
+  - Name: ec2:DescribeApplicationStatusChecks
   - Name: ec2:DescribeCapacityBlockExtensionHistory
   - Name: ec2:DescribeCapacityBlockExtensionOfferings
   - Name: ec2:DescribeCapacityBlockStatus
@@ -725,15 +733,18 @@ Actions:
   - Name: ec2:DetachImageWatermark
   - Name: ec2:DetachResourcesFromPlacementGroup
   - Name: ec2:DisableAllowedImagesSettings
+  - Name: ec2:DisableApplicationStatusCheckSuppression
   - Name: ec2:DisableCapacityManager
   - Name: ec2:DisableInstanceSqlHaStandbyDetections
   - Name: ec2:DisableIpamPolicy
   - Name: ec2:DisableRouteServerPropagation
+  - Name: ec2:DisassociateApplicationStatusCheck
   - Name: ec2:DisassociateCapacityReservationBillingOwner
   - Name: ec2:DisassociateRouteServer
   - Name: ec2:DisassociateSecurityGroupVpc
   - Name: ec2:DisassociateVerifiedAccessInstanceWebAcl
   - Name: ec2:EnableAllowedImagesSettings
+  - Name: ec2:EnableApplicationStatusCheckSuppression
   - Name: ec2:EnableCapacityManager
   - Name: ec2:EnableInstanceSqlHaStandbyDetections
   - Name: ec2:EnableIpamPolicy
@@ -766,6 +777,7 @@ Actions:
   - Name: ec2:InjectApiError
   - Name: ec2:InjectVolumeIOLatency
   - Name: ec2:ListVolumesInRecycleBin
+  - Name: ec2:ModifyApplicationStatusCheck
   - Name: ec2:ModifyInstanceConnectEndpoint
   - Name: ec2:ModifyInstanceCpuOptions
   - Name: ec2:ModifyInstanceNetworkPerformanceOptions
@@ -778,9 +790,11 @@ Actions:
   - Name: ec2:ModifyPublicIpDnsNameOptions
   - Name: ec2:ModifyRouteServer
   - Name: ec2:ModifyTransitGatewayMeteringPolicy
+  - Name: ec2:ModifyTransitGatewayPolicyTableEntry
   - Name: ec2:ModifyVpcBlockPublicAccessExclusion
   - Name: ec2:ModifyVpcBlockPublicAccessOptions
   - Name: ec2:ModifyVpcEncryptionControl
+  - Name: ec2:ModifyVpcEndpointPayerResponsibility
   - Name: ec2:MoveCapacityReservationInstances
   - Name: ec2:PauseVolumeIO
   - Name: ec2:PurchaseCapacityBlockExtension
