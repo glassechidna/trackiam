@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/FinOpsAgentAgentPolicy",
   "CreateDate": "2026-06-03T19:57:12Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KRTUHDRKJ",
   "PolicyName": "FinOpsAgentAgentPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-03T19:57:12Z",
+    "CreateDate": "2026-08-19T19:27:11Z",
     "Document": {
       "Statement": [
         {
@@ -45,12 +45,42 @@
         },
         {
           "Action": [
+            "aco-automation:GetAutomationEvent",
+            "aco-automation:GetAutomationRule",
+            "aco-automation:GetEnrollmentConfiguration",
+            "aco-automation:ListAccounts",
+            "aco-automation:ListAutomationEventSteps",
+            "aco-automation:ListAutomationEventSummaries",
+            "aco-automation:ListAutomationEvents",
+            "aco-automation:ListAutomationRulePreview",
+            "aco-automation:ListAutomationRulePreviewSummaries",
+            "aco-automation:ListAutomationRules",
+            "aco-automation:ListRecommendedActionSummaries",
+            "aco-automation:ListRecommendedActions",
+            "aco-automation:ListTagsForResource",
             "autoscaling:DescribeAutoScalingGroups",
             "autoscaling:DescribeAutoScalingInstances",
             "bcm-pricing-calculator:GetPreferences",
             "bcm-pricing-calculator:GetWorkloadEstimate",
             "bcm-pricing-calculator:ListWorkloadEstimateUsage",
             "bcm-pricing-calculator:ListWorkloadEstimates",
+            "billing:GetBillingView",
+            "billing:GetCreditAllocationHistory",
+            "billing:GetCredits",
+            "billing:GetResourcePolicy",
+            "billing:ListBillingViews",
+            "billing:ListSourceViewsForBillingView",
+            "billingconductor:GetBillingGroupCostReport",
+            "billingconductor:ListAccountAssociations",
+            "billingconductor:ListBillingGroupCostReports",
+            "billingconductor:ListBillingGroups",
+            "billingconductor:ListCustomLineItemVersions",
+            "billingconductor:ListCustomLineItems",
+            "billingconductor:ListPricingPlans",
+            "billingconductor:ListPricingPlansAssociatedWithPricingRule",
+            "billingconductor:ListPricingRules",
+            "billingconductor:ListPricingRulesAssociatedToPricingPlan",
+            "billingconductor:ListResourcesAssociatedToCustomLineItem",
             "budgets:ViewBudget",
             "ce:DescribeCostCategoryDefinition",
             "ce:GetAnomalies",
@@ -106,6 +136,13 @@
             "ecs:ListClusters",
             "ecs:ListServices",
             "freetier:GetFreeTierUsage",
+            "health:DescribeEvents",
+            "invoicing:BatchGetInvoiceProfile",
+            "invoicing:GetInvoiceUnit",
+            "invoicing:GetProcurementPortalPreference",
+            "invoicing:ListInvoiceSummaries",
+            "invoicing:ListInvoiceUnits",
+            "invoicing:ListProcurementPortalPreferences",
             "lambda:ListFunctions",
             "lambda:ListProvisionedConcurrencyConfigs",
             "logs:GetQueryResults",
@@ -127,7 +164,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-06-03T19:57:12Z"
+  "UpdateDate": "2026-08-19T19:27:11Z"
 }
