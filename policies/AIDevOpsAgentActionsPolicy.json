@@ -1,37 +1,51 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AIDevOpsAgentActionsPolicy",
   "CreateDate": "2026-06-23T22:27:27Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CFKTYWRT7",
   "PolicyName": "AIDevOpsAgentActionsPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-23T22:27:27Z",
+    "CreateDate": "2026-08-19T22:47:28Z",
     "Document": {
       "Statement": [
         {
           "Action": [
-            "autoscaling:UpdateAutoScalingGroup",
-            "cloudformation:UpdateStack",
-            "cloudwatch:PutMetricAlarm",
-            "ec2:CreateTags",
-            "ec2:ModifyInstanceAttribute",
-            "ecs:UpdateService",
-            "elasticloadbalancing:ModifyTargetGroup",
-            "lambda:UpdateFunctionConfiguration",
-            "logs:PutMetricFilter",
-            "rds:ModifyDBInstance"
+            "account:GetAccountInformation",
+            "account:GetGovCloudAccountInformation",
+            "account:GetPrimaryEmail",
+            "account:ListRegions",
+            "iam:ListRoles",
+            "organizations:DescribeEffectivePolicy",
+            "organizations:DescribeOrganization",
+            "sts:DecodeAuthorizationMessage"
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "AIDevOpsMutativeAccess"
+          "Sid": "AIDevOpsElevatedCarveBacks"
+        },
+        {
+          "Effect": "Allow",
+          "NotAction": [
+            "account:*",
+            "cognito-identity:*",
+            "iam:*",
+            "identitystore:*",
+            "organizations:*",
+            "ram:*",
+            "rolesanywhere:*",
+            "sso:*",
+            "sts:*"
+          ],
+          "Resource": "*",
+          "Sid": "AIDevOpsElevatedAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-06-23T22:27:27Z"
+  "UpdateDate": "2026-08-19T22:47:28Z"
 }
