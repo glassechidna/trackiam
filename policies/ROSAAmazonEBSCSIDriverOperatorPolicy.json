@@ -1,15 +1,61 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/ROSAAmazonEBSCSIDriverOperatorPolicy",
   "CreateDate": "2023-04-20T22:36:00Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4F2443B4WJ",
   "PolicyName": "ROSAAmazonEBSCSIDriverOperatorPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:58:07Z",
+    "CreateDate": "2026-08-19T05:07:11Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "kms:DescribeKey",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat": "true"
+            },
+            "StringLike": {
+              "kms:ViaService": "ec2.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DescribeKMSKeysForEBSVolumeEncryption"
+        },
+        {
+          "Action": [
+            "ec2:AttachVolume",
+            "ec2:DeleteVolume",
+            "ec2:DetachVolume",
+            "ec2:ModifyVolume"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "ManageUserBroughtVolumes"
+        },
+        {
+          "Action": [
+            "ec2:AttachVolume",
+            "ec2:DeleteVolume",
+            "ec2:DetachVolume",
+            "ec2:ModifyVolume"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "ManageManagedVolumes"
+        },
         {
           "Action": [
             "ec2:AttachVolume",
@@ -21,10 +67,87 @@
             }
           },
           "Effect": "Allow",
-          "Resource": [
-            "arn:aws:ec2:*:*:instance/*",
-            "arn:aws:ec2:*:*:volume/*"
-          ]
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "AttachDetachVolumesToManagedInstances"
+        },
+        {
+          "Action": [
+            "ec2:CopyVolumes"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/vol-*",
+          "Sid": "CopyUserBroughtVolumes"
+        },
+        {
+          "Action": [
+            "ec2:CopyVolumes"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/vol-*",
+          "Sid": "CopyManagedVolumes"
+        },
+        {
+          "Action": [
+            "ec2:CopyVolumes",
+            "ec2:CreateVolume"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "CreateAndCopyVolumesWithManagedTag"
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshot"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "CreateSnapshotsWithManagedTag"
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshot"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "CreateSnapshotsFromUserBroughtVolumes"
+        },
+        {
+          "Action": [
+            "ec2:CreateSnapshot"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "CreateSnapshotsFromManagedVolumes"
         },
         {
           "Action": [
@@ -33,6 +156,7 @@
           "Condition": {
             "StringEquals": {
               "ec2:CreateAction": [
+                "CopyVolumes",
                 "CreateSnapshot",
                 "CreateVolume"
               ]
@@ -42,25 +166,76 @@
           "Resource": [
             "arn:aws:ec2:*:*:snapshot/*",
             "arn:aws:ec2:*:*:volume/*"
-          ]
+          ],
+          "Sid": "TagResourcesOnCreation"
         },
         {
           "Action": [
-            "ec2:CreateVolume"
+            "ec2:CreateTags",
+            "ec2:DeleteTags"
           ],
           "Condition": {
+            "ForAllValues:StringNotEquals": {
+              "aws:TagKeys": [
+                "ebs.csi.aws.com/cluster",
+                "kubernetes.io/created-for/pvc/name",
+                "red-hat",
+                "red-hat-managed"
+              ]
+            },
+            "Null": {
+              "aws:TagKeys": "false"
+            },
             "StringEquals": {
-              "aws:RequestTag/red-hat-managed": "true"
+              "aws:ResourceTag/red-hat": "true"
             }
           },
           "Effect": "Allow",
-          "Resource": [
-            "arn:aws:ec2:*:*:volume/*"
-          ]
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "ModifyTagsOnUserBroughtVolumes"
         },
         {
           "Action": [
-            "ec2:DeleteSnapshot"
+            "ec2:CreateTags",
+            "ec2:DeleteTags"
+          ],
+          "Condition": {
+            "ForAllValues:StringNotEquals": {
+              "aws:TagKeys": [
+                "ebs.csi.aws.com/cluster",
+                "kubernetes.io/created-for/pvc/name",
+                "red-hat-managed"
+              ]
+            },
+            "Null": {
+              "aws:TagKeys": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:volume/*",
+          "Sid": "ModifyTagsOnManagedVolumes"
+        },
+        {
+          "Action": [
+            "ec2:CreateVolume",
+            "ec2:EnableFastSnapshotRestores"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "CreateVolumesFromAndEnableFSROnUserBroughtSnapshots"
+        },
+        {
+          "Action": [
+            "ec2:CreateVolume",
+            "ec2:EnableFastSnapshotRestores"
           ],
           "Condition": {
             "StringEquals": {
@@ -68,14 +243,27 @@
             }
           },
           "Effect": "Allow",
-          "Resource": [
-            "arn:aws:ec2:*:*:snapshot/*"
-          ]
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "CreateVolumesFromAndEnableFSROnManagedSnapshots"
         },
         {
           "Action": [
-            "ec2:DeleteVolume",
-            "ec2:ModifyVolume"
+            "ec2:DeleteSnapshot",
+            "ec2:LockSnapshot"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "DeleteAndLockUserBroughtSnapshots"
+        },
+        {
+          "Action": [
+            "ec2:DeleteSnapshot",
+            "ec2:LockSnapshot"
           ],
           "Condition": {
             "StringEquals": {
@@ -83,66 +271,90 @@
             }
           },
           "Effect": "Allow",
-          "Resource": [
-            "arn:aws:ec2:*:*:volume/*"
-          ]
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "DeleteAndLockManagedSnapshots"
         },
         {
           "Action": [
-            "ec2:CreateSnapshot"
+            "kms:CreateGrant"
           ],
           "Condition": {
+            "Bool": {
+              "kms:GrantIsForAWSResource": true
+            },
+            "ForAllValues:StringEquals": {
+              "kms:EncryptionContextKeys": [
+                "aws:ebs:id"
+              ],
+              "kms:GrantOperations": [
+                "Decrypt",
+                "GenerateDataKeyWithoutPlaintext",
+                "ReEncryptFrom",
+                "ReEncryptTo"
+              ]
+            },
+            "Null": {
+              "kms:EncryptionContextKeys": false
+            },
             "StringEquals": {
-              "aws:RequestTag/red-hat-managed": "true"
+              "aws:ResourceTag/red-hat": "true",
+              "kms:GrantConstraintType": "EncryptionContextSubset"
+            },
+            "StringLike": {
+              "kms:ViaService": "ec2.*.amazonaws.com"
             }
           },
           "Effect": "Allow",
-          "Resource": [
-            "arn:aws:ec2:*:*:snapshot/*"
-          ],
-          "Sid": "CreateSnapshotRequestTag"
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSCreateGrant"
         },
         {
           "Action": [
-            "ec2:CreateSnapshot"
+            "kms:Decrypt",
+            "kms:GenerateDataKeyWithoutPlaintext",
+            "kms:ReEncryptFrom",
+            "kms:ReEncryptTo"
           ],
           "Condition": {
+            "ForAllValues:StringEquals": {
+              "kms:EncryptionContextKeys": [
+                "aws:ebs:id"
+              ]
+            },
+            "Null": {
+              "kms:EncryptionContextKeys": false
+            },
             "StringEquals": {
-              "aws:ResourceTag/red-hat-managed": "true"
+              "aws:ResourceTag/red-hat": "true"
+            },
+            "StringLike": {
+              "kms:ViaService": "ec2.*.amazonaws.com"
             }
           },
           "Effect": "Allow",
-          "Resource": [
-            "arn:aws:ec2:*:*:volume/*"
-          ],
-          "Sid": "CreateSnapshotResourceTag"
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSEncryptedVolumes"
         },
         {
           "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeInstanceTypes",
             "ec2:DescribeInstances",
             "ec2:DescribeSnapshots",
             "ec2:DescribeTags",
+            "ec2:DescribeVolumeStatus",
             "ec2:DescribeVolumes",
             "ec2:DescribeVolumesModifications"
           ],
           "Effect": "Allow",
-          "Resource": "*"
-        },
-        {
-          "Action": [
-            "ec2:CreateVolume"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:ec2:*:*:snapshot/*"
-          ],
-          "Sid": "CreateVolumeFromSnapshot"
+          "Resource": "*",
+          "Sid": "ReadOnlyDescribeOperations"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-02-12T17:58:07Z"
+  "UpdateDate": "2026-08-19T05:07:11Z"
 }
