@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEKSLoadBalancingPolicy",
   "CreateDate": "2024-10-30T20:18:06Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BAR6P5E2F",
   "PolicyName": "AmazonEKSLoadBalancingPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-16T00:12:08Z",
+    "CreateDate": "2026-08-20T23:07:13Z",
     "Document": {
       "Statement": [
         {
@@ -60,6 +60,10 @@
             "ForAllValues:StringEquals": {
               "aws:TagKeys": [
                 "eks:eks-cluster-name",
+                "gateway.eks.amazonaws.com.alb/resource",
+                "gateway.eks.amazonaws.com.alb/stack",
+                "gateway.eks.amazonaws.com.nlb/resource",
+                "gateway.eks.amazonaws.com.nlb/stack",
                 "ingress.eks.amazonaws.com/resource",
                 "ingress.eks.amazonaws.com/stack",
                 "service.eks.amazonaws.com/resource",
@@ -150,6 +154,10 @@
             "ForAllValues:StringEquals": {
               "aws:TagKeys": [
                 "eks:eks-cluster-name",
+                "gateway.eks.amazonaws.com.alb/resource",
+                "gateway.eks.amazonaws.com.alb/stack",
+                "gateway.eks.amazonaws.com.nlb/resource",
+                "gateway.eks.amazonaws.com.nlb/stack",
                 "ingress.eks.amazonaws.com/resource",
                 "ingress.eks.amazonaws.com/stack",
                 "service.eks.amazonaws.com/resource",
@@ -172,7 +180,8 @@
             "elasticloadbalancing:SetRulePriorities",
             "elasticloadbalancing:SetWebAcl",
             "wafv2:GetWebACL",
-            "wafv2:GetWebACLForResource"
+            "wafv2:GetWebACLForResource",
+            "wafv2:ListWebACLs"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -236,7 +245,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-06-16T00:12:08Z"
+  "UpdateDate": "2026-08-20T23:07:13Z"
 }
