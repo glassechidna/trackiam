@@ -1,15 +1,34 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSAgentRegistryServiceRolePolicy",
   "CreateDate": "2026-08-06T14:27:17Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4PFFBTXAWO",
   "PolicyName": "AWSAgentRegistryServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-08-06T14:27:17Z",
+    "CreateDate": "2026-08-21T16:57:22Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "agent-registry:CreateRegistryRecord",
+            "agent-registry:DeleteRegistryRecord",
+            "agent-registry:GetRegistryRecord",
+            "agent-registry:ListRegistryRecords",
+            "agent-registry:UpdateRegistryRecord"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:agent-registry:*:*:registry/*"
+          ],
+          "Sid": "AllowRegistryRecordReadWrite"
+        },
         {
           "Action": [
             "cloudwatch:PutMetricData"
@@ -26,12 +45,65 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowPublishCloudWatchMetrics"
+        },
+        {
+          "Action": [
+            "config:DeleteServiceLinkedConfigurationRecorder",
+            "config:PutServiceLinkedConfigurationRecorder"
+          ],
+          "Condition": {
+            "StringLike": {
+              "config:ConfigurationRecorderServicePrincipal": [
+                "agent-registry.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "AllowConfigRecorderWrite"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "config.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig",
+          "Sid": "AllowSLRCreationForAWSConfig"
+        },
+        {
+          "Action": [
+            "config:DescribeConfigurationRecorderStatus",
+            "config:DescribeConfigurationRecorders"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:config:*:*:configuration-recorder/AWSConfigurationRecorderForAgentRegistry*"
+          ],
+          "Sid": "AllowConfigRecorderRead"
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowOrganizationsReadAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-08-06T14:27:17Z"
+  "UpdateDate": "2026-08-21T16:57:22Z"
 }
