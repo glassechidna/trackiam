@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonDataZoneRedshiftGlueProvisioningPolicy",
   "CreateDate": "2023-09-22T20:19:54Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4FVY5HLLBC",
   "PolicyName": "AmazonDataZoneRedshiftGlueProvisioningPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-10-23T18:29:09Z",
+    "CreateDate": "2026-08-21T22:27:22Z",
     "Document": {
       "Statement": [
         {
@@ -69,7 +69,8 @@
         {
           "Action": [
             "cloudformation:CreateStack",
-            "cloudformation:TagResource"
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource"
           ],
           "Condition": {
             "ForAnyValue:StringLike": {
@@ -340,7 +341,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2024-10-23T18:29:09Z"
+  "UpdateDate": "2026-08-21T22:27:22Z"
 }
