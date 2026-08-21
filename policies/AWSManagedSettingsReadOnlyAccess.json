@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSManagedSettingsReadOnlyAccess",
   "CreateDate": "2026-07-22T01:12:28Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CA7JUMT6O",
   "PolicyName": "AWSManagedSettingsReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-07-23T00:42:16Z",
+    "CreateDate": "2026-08-21T18:07:16Z",
     "Document": {
       "Statement": [
         {
@@ -33,7 +33,9 @@
         {
           "Action": [
             "organizations:DescribeOrganization",
-            "organizations:ListAccounts"
+            "organizations:ListAccounts",
+            "organizations:ListDelegatedAdministrators",
+            "organizations:ListPolicies"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -61,7 +63,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2026-07-23T00:42:16Z"
+  "UpdateDate": "2026-08-21T18:07:16Z"
 }

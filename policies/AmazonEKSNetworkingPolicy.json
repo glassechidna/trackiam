@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEKSNetworkingPolicy",
   "CreateDate": "2024-10-28T22:34:33Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4F2Z756CMC",
   "PolicyName": "AmazonEKSNetworkingPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-20T19:12:09Z",
+    "CreateDate": "2026-08-21T17:27:32Z",
     "Document": {
       "Statement": [
         {
@@ -16,7 +16,12 @@
             "ForAllValues:StringEquals": {
               "aws:TagKeys": [
                 "eks:eks-cluster-name",
-                "eks:kubernetes-cni-node-name"
+                "eks:kubernetes-cni-node-name",
+                "sgp.eks.amazonaws.com/instance-id",
+                "sgp.eks.amazonaws.com/managed",
+                "sgp.eks.amazonaws.com/policy-ref",
+                "sgp.eks.amazonaws.com/trunk-eni-id",
+                "sgp.eks.amazonaws.com/vlan-id"
               ]
             },
             "StringEquals": {
@@ -76,12 +81,20 @@
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:subnet/*"
           ]
+        },
+        {
+          "Action": [
+            "ec2:AssociateTrunkInterface",
+            "ec2:DisassociateTrunkInterface"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2026-02-20T19:12:09Z"
+  "UpdateDate": "2026-08-21T17:27:32Z"
 }
