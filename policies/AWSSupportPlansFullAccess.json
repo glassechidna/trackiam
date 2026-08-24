@@ -1,22 +1,45 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSupportPlansFullAccess",
   "CreateDate": "2022-09-27T18:19:30Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4K42KXJODL",
   "PolicyName": "AWSSupportPlansFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-09-09T21:15:14Z",
+    "CreateDate": "2026-08-24T18:27:14Z",
     "Document": {
       "Statement": [
         {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "supportplans.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/supportplans.amazonaws.com/AWSServiceRoleForSupportPlans"
+        },
+        {
+          "Action": "iam:GetRole",
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/supportplans.amazonaws.com/AWSServiceRoleForSupportPlans"
+        },
+        {
           "Action": [
+            "supportplans:AcceptSupportAgreement",
+            "supportplans:CancelSupportAgreement",
+            "supportplans:CreateSupportAgreement",
             "supportplans:CreateSupportPlanSchedule",
+            "supportplans:GetSupportAgreement",
             "supportplans:GetSupportPlan",
             "supportplans:GetSupportPlanUpdateStatus",
+            "supportplans:ListSupportAgreementRevisions",
+            "supportplans:ListSupportAgreements",
             "supportplans:ListSupportPlanModifiers",
-            "supportplans:StartSupportPlanUpdate"
+            "supportplans:RejectSupportAgreement",
+            "supportplans:StartSupportPlanUpdate",
+            "supportplans:UpdateSupportAgreement"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -24,8 +47,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v3"
+    "IsDefaultVersion": true,
+    "VersionId": "v4"
   },
-  "UpdateDate": "2024-09-09T21:15:14Z"
+  "UpdateDate": "2026-08-24T18:27:14Z"
 }
