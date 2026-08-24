@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy",
   "CreateDate": "2024-11-20T21:58:39Z",
-  "DefaultVersionId": "v81",
+  "DefaultVersionId": "v82",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQZUIPVLH",
   "PolicyName": "SageMakerStudioProjectProvisioningRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-04T21:27:16Z",
+    "CreateDate": "2026-08-24T20:37:11Z",
     "Document": {
       "Statement": [
         {
@@ -404,25 +404,6 @@
           "Sid": "DzTemplate"
         },
         {
-          "Action": "sagemaker:DeleteApp",
-          "Condition": {
-            "Null": {
-              "aws:ResourceTag/AmazonDataZoneProject": "false"
-            },
-            "StringEquals": {
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:sagemaker:*:*:app/*/*/CodeEditor/*",
-            "arn:aws:sagemaker:*:*:app/*/*/JupyterLab/*",
-            "arn:aws:sagemaker:*:*:app/*/*/codeeditor/*",
-            "arn:aws:sagemaker:*:*:app/*/*/jupyterlab/*"
-          ],
-          "Sid": "SMAppDelete"
-        },
-        {
           "Action": "sagemaker:DeleteSpace",
           "Condition": {
             "Null": {
@@ -776,7 +757,8 @@
         {
           "Action": [
             "cloudformation:CreateStack",
-            "cloudformation:TagResource"
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource"
           ],
           "Condition": {
             "ForAllValues:StringLike": {
@@ -2418,6 +2400,24 @@
         {
           "Action": [
             "sagemaker:AddTags",
+            "sagemaker:CreateApp",
+            "sagemaker:DeleteApp"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:app/*",
+          "Sid": "SMApp"
+        },
+        {
+          "Action": [
+            "sagemaker:AddTags",
             "sagemaker:CreateDomain"
           ],
           "Condition": {
@@ -3008,7 +3008,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v81"
+    "VersionId": "v82"
   },
-  "UpdateDate": "2026-06-04T21:27:16Z"
+  "UpdateDate": "2026-08-24T20:37:11Z"
 }
