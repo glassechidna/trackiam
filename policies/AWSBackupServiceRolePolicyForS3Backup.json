@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupServiceRolePolicyForS3Backup",
   "CreateDate": "2022-02-18T17:40:24Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CGZAHUZ2D",
   "PolicyName": "AWSBackupServiceRolePolicyForS3Backup",
   "PolicyVersion": {
-    "CreateDate": "2024-05-17T17:12:03Z",
+    "CreateDate": "2026-08-24T18:17:18Z",
     "Document": {
       "Statement": [
         {
@@ -36,6 +36,19 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "KmsPermissions"
+        },
+        {
+          "Action": [
+            "s3:ListTagsForResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalAccount": "${aws:ResourceAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*",
+          "Sid": "S3BucketTagReadPermissions"
         },
         {
           "Action": "cloudwatch:GetMetricData",
@@ -106,7 +119,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2024-05-17T17:12:03Z"
+  "UpdateDate": "2026-08-24T18:17:18Z"
 }

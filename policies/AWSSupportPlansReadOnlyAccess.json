@@ -1,19 +1,22 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSupportPlansReadOnlyAccess",
   "CreateDate": "2022-09-27T18:08:29Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HILAV7PNB",
   "PolicyName": "AWSSupportPlansReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-09-09T21:21:02Z",
+    "CreateDate": "2026-08-24T18:17:10Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "supportplans:GetSupportAgreement",
             "supportplans:GetSupportPlan",
             "supportplans:GetSupportPlanUpdateStatus",
+            "supportplans:ListSupportAgreementRevisions",
+            "supportplans:ListSupportAgreements",
             "supportplans:ListSupportPlanModifiers"
           ],
           "Effect": "Allow",
@@ -23,7 +26,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2024-09-09T21:21:02Z"
+  "UpdateDate": "2026-08-24T18:17:10Z"
 }
