@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 462
-* Unique actions: 22270
+* Unique actions: 22269
 * Managed policies: 1568
 
 Most common managed policy name prefixes:
@@ -365,8 +365,8 @@ The following table summarises the AWS APIs.
 | [`securityagent`](services/securityagent.yml) | 0 | 0 | 111 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
 | [`odb`](services/odb.yml) | 0 | 0 | 90 |
-| [`aidevops`](services/aidevops.yml) | 0 | 0 | 85 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
+| [`aidevops`](services/aidevops.yml) | 0 | 0 | 82 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
 | [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 70 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
@@ -454,6 +454,7 @@ The following table summarises the AWS APIs.
 | [`qdeveloper`](services/qdeveloper.yml) | 0 | 0 | 7 |
 | [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
 | [`geo-places`](services/geo-places.yml) | 0 | 0 | 7 |
+| [`customer-verification`](services/customer-verification.yml) | 0 | 0 | 7 |
 | [`uxc`](services/uxc.yml) | 0 | 0 | 6 |
 | [`researchstudio`](services/researchstudio.yml) | 0 | 0 | 6 |
 | [`partnercentral-account-management`](services/partnercentral-account-management.yml) | 0 | 0 | 6 |
@@ -464,7 +465,6 @@ The following table summarises the AWS APIs.
 | [`iot-device-tester`](services/iot-device-tester.yml) | 0 | 0 | 5 |
 | [`inspector2-telemetry`](services/inspector2-telemetry.yml) | 0 | 0 | 5 |
 | [`geo-routes`](services/geo-routes.yml) | 0 | 0 | 5 |
-| [`customer-verification`](services/customer-verification.yml) | 0 | 0 | 5 |
 | [`appstudio`](services/appstudio.yml) | 0 | 0 | 5 |
 | [`ssmmessages`](services/ssmmessages.yml) | 0 | 0 | 4 |
 | [`iotjobsdata`](services/iotjobsdata.yml) | 0 | 0 | 4 |
@@ -503,13 +503,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3749 |
-| `Get` | 3369 |
-| `Delete` | 2552 |
-| `Create` | 2410 |
+| `List` | 3748 |
+| `Get` | 3370 |
+| `Delete` | 2551 |
+| `Create` | 2409 |
 | `Update` | 2089 |
 | `Describe` | 1943 |
-| `Put` | 600 |
+| `Put` | 601 |
 | `Start` | 550 |
 | `Batch` | 326 |
 | `Tag` | 324 |
