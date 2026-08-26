@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AIDevOpsChannelAccessPolicy",
+  "CreateDate": "2026-08-26T21:07:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4LFYJ5QTSC",
+  "PolicyName": "AIDevOpsChannelAccessPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-08-26T21:07:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aidevops:CreateChat",
+            "aidevops:SendMessage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:aidevops:*:*:agentspace/${aws:PrincipalTag/AgentSpaceId}",
+          "Sid": "AllowChatActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-08-26T21:07:07Z"
+}
