@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWS_ConfigRole",
   "CreateDate": "2020-09-15T20:30:30Z",
-  "DefaultVersionId": "v71",
+  "DefaultVersionId": "v72",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4PP7QZ4FBG",
   "PolicyName": "AWS_ConfigRole",
   "PolicyVersion": {
-    "CreateDate": "2026-07-30T23:27:21Z",
+    "CreateDate": "2026-08-27T22:07:08Z",
     "Document": {
       "Statement": [
         {
@@ -262,6 +262,7 @@
             "bedrock-agentcore:GetPolicy",
             "bedrock-agentcore:GetPolicyEngine",
             "bedrock-agentcore:GetPolicyEngineSummary",
+            "bedrock-agentcore:GetPolicyGeneration",
             "bedrock-agentcore:GetPolicySummary",
             "bedrock-agentcore:GetTokenVault",
             "bedrock-agentcore:GetWorkloadIdentity",
@@ -280,6 +281,7 @@
             "bedrock-agentcore:ListPolicies",
             "bedrock-agentcore:ListPolicyEngineSummaries",
             "bedrock-agentcore:ListPolicyEngines",
+            "bedrock-agentcore:ListPolicyGenerations",
             "bedrock-agentcore:ListPolicySummaries",
             "bedrock-agentcore:ListTagsForResource",
             "bedrock-agentcore:ListWorkloadIdentities",
@@ -1179,14 +1181,7 @@
             "iotevents:ListAlarmModels",
             "iotevents:ListDetectorModels",
             "iotevents:ListInputs",
-            "iotevents:ListTagsForResource"
-          ],
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "AWSConfigRoleStatementID1"
-        },
-        {
-          "Action": [
+            "iotevents:ListTagsForResource",
             "iotfleethub:DescribeApplication",
             "iotfleethub:ListApplications",
             "iotfleetwise:GetCampaign",
@@ -1195,7 +1190,14 @@
             "iotfleetwise:GetModelManifest",
             "iotfleetwise:GetSignalCatalog",
             "iotfleetwise:GetStateTemplate",
-            "iotfleetwise:GetVehicle",
+            "iotfleetwise:GetVehicle"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSConfigRoleStatementID1"
+        },
+        {
+          "Action": [
             "iotfleetwise:ListCampaigns",
             "iotfleetwise:ListDecoderManifestNetworkInterfaces",
             "iotfleetwise:ListDecoderManifestSignals",
@@ -1983,6 +1985,7 @@
             "sagemaker:DescribeCluster",
             "sagemaker:DescribeClusterSchedulerConfig",
             "sagemaker:DescribeCodeRepository",
+            "sagemaker:DescribeComputeQuota",
             "sagemaker:DescribeContext",
             "sagemaker:DescribeDataQualityJobDefinition",
             "sagemaker:DescribeDeviceFleet",
@@ -2016,11 +2019,13 @@
             "sagemaker:DescribeOptimizationJob",
             "sagemaker:DescribePartnerApp",
             "sagemaker:DescribePipeline",
+            "sagemaker:DescribePipelineExecution",
             "sagemaker:DescribeProcessingJob",
             "sagemaker:DescribeProject",
             "sagemaker:DescribeSpace",
             "sagemaker:DescribeStudioLifecycleConfig",
             "sagemaker:DescribeTrainingJob",
+            "sagemaker:DescribeTrainingPlan",
             "sagemaker:DescribeTrial",
             "sagemaker:DescribeTrialComponent",
             "sagemaker:DescribeUserProfile",
@@ -2036,6 +2041,7 @@
             "sagemaker:ListClusterSchedulerConfigs",
             "sagemaker:ListClusters",
             "sagemaker:ListCodeRepositories",
+            "sagemaker:ListComputeQuotas",
             "sagemaker:ListContexts",
             "sagemaker:ListDataQualityJobDefinitions",
             "sagemaker:ListDeviceFleets",
@@ -2070,6 +2076,7 @@
             "sagemaker:ListNotebookInstances",
             "sagemaker:ListOptimizationJobs",
             "sagemaker:ListPartnerApps",
+            "sagemaker:ListPipelineExecutions",
             "sagemaker:ListPipelines",
             "sagemaker:ListProcessingJobs",
             "sagemaker:ListProjects",
@@ -2077,6 +2084,7 @@
             "sagemaker:ListStudioLifecycleConfigs",
             "sagemaker:ListTags",
             "sagemaker:ListTrainingJobs",
+            "sagemaker:ListTrainingPlans",
             "sagemaker:ListTrialComponents",
             "sagemaker:ListTrials",
             "sagemaker:ListUserProfiles",
@@ -2381,7 +2389,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v71"
+    "VersionId": "v72"
   },
-  "UpdateDate": "2026-07-30T23:27:21Z"
+  "UpdateDate": "2026-08-27T22:07:08Z"
 }

@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 462
-* Unique actions: 22267
+* Unique actions: 22268
 * Managed policies: 1570
 
 Most common managed policy name prefixes:
@@ -383,7 +383,7 @@ The following table summarises the AWS APIs.
 | [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 40 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 38 |
-| [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 37 |
+| [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 38 |
 | [`rtbfabric`](services/rtbfabric.yml) | 0 | 0 | 36 |
 | [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
