@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForRestores",
   "CreateDate": "2019-01-12T00:23:54Z",
-  "DefaultVersionId": "v35",
+  "DefaultVersionId": "v36",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAJZCCL6F2WPVOUXZKI",
   "PolicyName": "AWSBackupServiceRolePolicyForRestores",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:57:30Z",
+    "CreateDate": "2026-08-27T23:57:07Z",
     "Document": {
       "Statement": [
         {
@@ -250,7 +250,8 @@
           "Action": [
             "cloudformation:CreateChangeSet",
             "cloudformation:DescribeChangeSet",
-            "cloudformation:TagResource"
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:cloudformation:*:*:*/*/*",
@@ -610,7 +611,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v35"
+    "VersionId": "v36"
   },
-  "UpdateDate": "2026-02-12T17:57:30Z"
+  "UpdateDate": "2026-08-27T23:57:07Z"
 }
