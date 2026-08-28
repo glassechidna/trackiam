@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 462
-* Unique actions: 22268
+* Unique actions: 22274
 * Managed policies: 1570
 
 Most common managed policy name prefixes:
@@ -276,7 +276,7 @@ The following table summarises the AWS APIs.
 | [`ivschat`](services/ivschat.yml) | 17 | 0 | 0 |
 | [`elastictranscoder`](services/elastictranscoder.yml) | 17 | 0 | 0 |
 | [`neptune-db`](services/neptune-db.yml) | 16 | 24 | 17 |
-| [`support`](services/support.yml) | 16 | 0 | 18 |
+| [`support`](services/support.yml) | 16 | 0 | 23 |
 | [`emr-serverless`](services/emr-serverless.yml) | 16 | 0 | 9 |
 | [`docdb-elastic`](services/docdb-elastic.yml) | 16 | 0 | 3 |
 | [`thinclient`](services/thinclient.yml) | 16 | 0 | 2 |
@@ -292,7 +292,7 @@ The following table summarises the AWS APIs.
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 14 | 0 | 0 |
 | [`health`](services/health.yml) | 14 | 0 | 0 |
-| [`healthlake`](services/healthlake.yml) | 13 | 0 | 52 |
+| [`healthlake`](services/healthlake.yml) | 13 | 0 | 53 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 16 |
 | [`braket`](services/braket.yml) | 13 | 0 | 7 |
 | [`codeguru-security`](services/codeguru-security.yml) | 13 | 0 | 2 |
@@ -508,7 +508,7 @@ Most common action prefixes:
 | `Delete` | 2551 |
 | `Create` | 2409 |
 | `Update` | 2088 |
-| `Describe` | 1941 |
+| `Describe` | 1942 |
 | `Put` | 601 |
 | `Start` | 550 |
 | `Batch` | 326 |
