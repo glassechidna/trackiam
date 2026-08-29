@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 462
-* Unique actions: 22278
+* Unique actions: 22285
 * Managed policies: 1570
 
 Most common managed policy name prefixes:
@@ -128,7 +128,7 @@ The following table summarises the AWS APIs.
 | [`lakeformation`](services/lakeformation.yml) | 54 | 1 | 7 |
 | [`wafv2`](services/wafv2.yml) | 54 | 0 | 7 |
 | [`kms`](services/kms.yml) | 52 | 1 | 4 |
-| [`profile`](services/profile.yml) | 52 | 0 | 58 |
+| [`profile`](services/profile.yml) | 52 | 0 | 65 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 12 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 24 |
 | [`mediaconnect`](services/mediaconnect.yml) | 51 | 0 | 29 |
@@ -503,13 +503,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3749 |
-| `Get` | 3371 |
-| `Delete` | 2551 |
+| `List` | 3750 |
+| `Get` | 3373 |
+| `Delete` | 2552 |
 | `Create` | 2409 |
 | `Update` | 2088 |
 | `Describe` | 1943 |
-| `Put` | 601 |
+| `Put` | 602 |
 | `Start` | 550 |
 | `Batch` | 328 |
 | `Tag` | 324 |
