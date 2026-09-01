@@ -636,6 +636,7 @@ Actions:
   - Name: ec2:AttachApplianceToNatGateway
   - Name: ec2:AttachImageWatermark
   - Name: ec2:AttachResourcesToPlacementGroup
+  - Name: ec2:BatchModifyIpamRoutingPolicyRegistrations
   - Name: ec2:CancelDeclarativePoliciesReport
   - Name: ec2:CopyVolumes
   - Name: ec2:CreateApplicationStatusCheck
@@ -646,9 +647,11 @@ Actions:
   - Name: ec2:CreateDelegateMacVolumeOwnershipTask
   - Name: ec2:CreateImageUsageReport
   - Name: ec2:CreateInterruptibleCapacityReservationAllocation
+  - Name: ec2:CreateIpamInternetRegistryAssociation
   - Name: ec2:CreateIpamPolicy
   - Name: ec2:CreateIpamPrefixListResolver
   - Name: ec2:CreateIpamPrefixListResolverTarget
+  - Name: ec2:CreateIpamRoutingPolicyRegistration
   - Name: ec2:CreateLocalGatewayRouteTablePermission
   - Name: ec2:CreateLocalGatewayVirtualInterface
   - Name: ec2:CreateLocalGatewayVirtualInterfaceGroup
@@ -669,9 +672,11 @@ Actions:
   - Name: ec2:DeleteCapacityManagerDataExport
   - Name: ec2:DeleteCoipPoolPermission
   - Name: ec2:DeleteImageUsageReport
+  - Name: ec2:DeleteIpamInternetRegistryAssociation
   - Name: ec2:DeleteIpamPolicy
   - Name: ec2:DeleteIpamPrefixListResolver
   - Name: ec2:DeleteIpamPrefixListResolverTarget
+  - Name: ec2:DeleteIpamRoutingPolicyRegistration
   - Name: ec2:DeleteLocalGatewayRouteTablePermission
   - Name: ec2:DeleteLocalGatewayVirtualInterface
   - Name: ec2:DeleteLocalGatewayVirtualInterfaceGroup
@@ -689,6 +694,7 @@ Actions:
   - Name: ec2:DeleteVpcBlockPublicAccessExclusion
   - Name: ec2:DeleteVpcEncryptionControl
   - Name: ec2:DeleteVpnConcentrator
+  - Name: ec2:DescribeAccountVpcEncryptionControl
   - Name: ec2:DescribeApplicationStatus
   - Name: ec2:DescribeApplicationStatusCheckAssociations
   - Name: ec2:DescribeApplicationStatusChecks
@@ -707,6 +713,7 @@ Actions:
   - Name: ec2:DescribeInstanceImageMetadata
   - Name: ec2:DescribeInstanceSqlHaHistoryStates
   - Name: ec2:DescribeInstanceSqlHaStates
+  - Name: ec2:DescribeIpamInternetRegistryAssociations
   - Name: ec2:DescribeIpamPolicies
   - Name: ec2:DescribeIpamPoolAllocations
   - Name: ec2:DescribeIpamPrefixListResolverTargets
@@ -747,6 +754,7 @@ Actions:
   - Name: ec2:EnableApplicationStatusCheckSuppression
   - Name: ec2:EnableCapacityManager
   - Name: ec2:EnableInstanceSqlHaStandbyDetections
+  - Name: ec2:EnableIpamInternetRegistryAssociation
   - Name: ec2:EnableIpamPolicy
   - Name: ec2:EnableRouteServerPropagation
   - Name: ec2:ExportVerifiedAccessInstanceClientConfiguration
@@ -759,11 +767,18 @@ Actions:
   - Name: ec2:GetDeclarativePoliciesReportSummary
   - Name: ec2:GetEnabledIpamPolicy
   - Name: ec2:GetImageAncestry
+  - Name: ec2:GetIpamDiscoveredRoutes
+  - Name: ec2:GetIpamInternetRegistryAssociationAsns
+  - Name: ec2:GetIpamInternetRegistryAssociationCidrs
   - Name: ec2:GetIpamPolicyAllocationRules
   - Name: ec2:GetIpamPolicyOrganizationTargets
   - Name: ec2:GetIpamPrefixListResolverRules
   - Name: ec2:GetIpamPrefixListResolverVersionEntries
   - Name: ec2:GetIpamPrefixListResolverVersions
+  - Name: ec2:GetIpamRouteOriginAuthorizations
+  - Name: ec2:GetIpamRouteProtectionFindings
+  - Name: ec2:GetIpamRoutingPolicyRegistrationDeltas
+  - Name: ec2:GetIpamRoutingPolicyRegistrations
   - Name: ec2:GetManagedResourceVisibility
   - Name: ec2:GetResourcePolicy
   - Name: ec2:GetRouteServerAssociations
@@ -777,6 +792,7 @@ Actions:
   - Name: ec2:InjectApiError
   - Name: ec2:InjectVolumeIOLatency
   - Name: ec2:ListVolumesInRecycleBin
+  - Name: ec2:ModifyAccountVpcEncryptionControl
   - Name: ec2:ModifyApplicationStatusCheck
   - Name: ec2:ModifyInstanceConnectEndpoint
   - Name: ec2:ModifyInstanceCpuOptions
@@ -785,6 +801,7 @@ Actions:
   - Name: ec2:ModifyIpamPoolAllocation
   - Name: ec2:ModifyIpamPrefixListResolver
   - Name: ec2:ModifyIpamPrefixListResolverTarget
+  - Name: ec2:ModifyIpamRoutingPolicyRegistration
   - Name: ec2:ModifyManagedResourceVisibility
   - Name: ec2:ModifyOdbNetworkPeering
   - Name: ec2:ModifyPublicIpDnsNameOptions
