@@ -1,15 +1,54 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudWatchNetworkFlowMonitorTopologyServiceRolePolicy",
   "CreateDate": "2024-12-01T22:51:07Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AP4XHASGC",
   "PolicyName": "CloudWatchNetworkFlowMonitorTopologyServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:57:28Z",
+    "CreateDate": "2026-09-01T01:47:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "config.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig"
+          ],
+          "Sid": "ConfigRecorderSlrCreation"
+        },
+        {
+          "Action": [
+            "config:DeleteServiceLinkedConfigurationRecorder",
+            "config:PutServiceLinkedConfigurationRecorder"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:config:*:*:configuration-recorder/AWSConfigurationRecorderForNetworkFlowMonitorTopologyService/*"
+          ],
+          "Sid": "ConfigRecorderCreateDelete"
+        },
+        {
+          "Action": [
+            "config:DescribeConfigurationRecorderStatus",
+            "config:DescribeConfigurationRecorders"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "ConfigRecorderDescribe"
+        },
         {
           "Action": [
             "ec2:DescribeCustomerGateways",
@@ -25,7 +64,8 @@
             "ec2:SearchTransitGatewayRoutes"
           ],
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "TransitGatewayAndVPNStatement"
         },
         {
           "Action": [
@@ -44,12 +84,40 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "VPCEndpointStatement"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:DescribeListeners",
+            "elasticloadbalancing:DescribeLoadBalancerAttributes",
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "elasticloadbalancing:DescribeRules",
+            "elasticloadbalancing:DescribeTags",
+            "elasticloadbalancing:DescribeTargetGroupAttributes",
+            "elasticloadbalancing:DescribeTargetGroups",
+            "elasticloadbalancing:DescribeTargetHealth"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LoadBalancerStatement"
+        },
+        {
+          "Action": [
+            "networkmanager:GetCoreNetwork",
+            "networkmanager:GetCoreNetworkPolicy",
+            "networkmanager:GetNetworkRoutes",
+            "networkmanager:GetVpcAttachment",
+            "networkmanager:ListAttachments",
+            "networkmanager:ListCoreNetworks"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWANStatement"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-02-12T17:57:28Z"
+  "UpdateDate": "2026-09-01T01:47:07Z"
 }
