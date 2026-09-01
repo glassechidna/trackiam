@@ -1,15 +1,61 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSTransformServerMigrationAgentPolicy",
   "CreateDate": "2026-08-06T15:27:14Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KVIHBDOCE",
   "PolicyName": "AWSTransformServerMigrationAgentPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-08-06T15:27:14Z",
+    "CreateDate": "2026-09-01T10:37:08Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "fsx:CreateSnapshot",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "Null": {
+              "aws:RequestTag/AWSApplicationMigrationServiceManaged": "false"
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:fsx:*:*:snapshot/*/*",
+            "arn:aws:fsx:*:*:volume/*/*"
+          ],
+          "Sid": "FsxViaMgnCreateSnapshot"
+        },
+        {
+          "Action": "fsx:CreateVolume",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "Null": {
+              "aws:RequestTag/AWSApplicationMigrationServiceManaged": "false"
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:fsx:*:*:storage-virtual-machine/*/*",
+            "arn:aws:fsx:*:*:volume/*/*"
+          ],
+          "Sid": "FsxViaMgnCreateVolume"
+        },
         {
           "Action": [
             "ec2:AttachVolume",
@@ -141,6 +187,32 @@
             "arn:aws:ec2:*:*:vpc/*"
           ],
           "Sid": "Ec2ViaMgnLaunchOnWorkspaceVpc"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup",
+            "ec2:RunInstances"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceOrgID": "${aws:PrincipalOrgID}",
+              "aws:ResourceTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:ResourceTag/CreatedFor": "AWSTransform"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*",
+            "arn:aws:ec2:*:*:subnet/*",
+            "arn:aws:ec2:*:*:vpc/*"
+          ],
+          "Sid": "Ec2ViaMgnLaunchOnSharedVpc"
         },
         {
           "Action": [
@@ -351,6 +423,30 @@
         },
         {
           "Action": [
+            "fsx:DeleteVolume",
+            "fsx:TagResource"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "Null": {
+              "aws:ResourceTag/AWSApplicationMigrationServiceManaged": "false"
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:volume/*/*",
+          "Sid": "FsxViaMgnDeleteVolumeAndTag"
+        },
+        {
+          "Action": [
+            "fsx:DescribeFileSystems",
             "fsx:DescribeStorageVirtualMachines"
           ],
           "Condition": {
@@ -360,7 +456,26 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "FsxStorageVmOperationsReadOnly"
+          "Sid": "FsxOperationsReadOnly"
+        },
+        {
+          "Action": [
+            "fsx:DescribeSnapshots",
+            "fsx:DescribeVolumes"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "FsxViaMgnDescribeOperations"
         },
         {
           "Action": [
@@ -705,6 +820,7 @@
         {
           "Action": [
             "ssm:DeleteParameters",
+            "ssm:GetParameter",
             "ssm:GetParameters",
             "ssm:PutParameter"
           ],
@@ -725,18 +841,13 @@
             "ssm:ListDocumentVersions"
           ],
           "Condition": {
-            "ForAnyValue:StringEquals": {
-              "aws:CalledVia": [
-                "mgn.amazonaws.com"
-              ]
-            },
             "StringEquals": {
               "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
             }
           },
           "Effect": "Allow",
           "Resource": "arn:aws:ssm:*::document/AWS*",
-          "Sid": "SsmViaMgnDocumentOnAwsManagedOperationsReadOnly"
+          "Sid": "SsmDocumentOnAwsManagedOperationsReadOnly"
         },
         {
           "Action": [
@@ -745,11 +856,6 @@
             "ssm:ListDocumentVersions"
           ],
           "Condition": {
-            "ForAnyValue:StringEquals": {
-              "aws:CalledVia": [
-                "mgn.amazonaws.com"
-              ]
-            },
             "StringEquals": {
               "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
               "aws:ResourceAccount": "${aws:PrincipalAccount}"
@@ -757,7 +863,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:ssm:*:*:document/*",
-          "Sid": "SsmViaMgnDocumentOperationsReadOnly"
+          "Sid": "SsmDocumentOperationsReadOnly"
         },
         {
           "Action": [
@@ -777,6 +883,25 @@
         },
         {
           "Action": [
+            "ssm:GetAutomationExecution"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:automation-execution/*",
+          "Sid": "PostLaunchAutomationMonitoring"
+        },
+        {
+          "Action": [
             "ssm:GetDocument",
             "ssm:SendCommand"
           ],
@@ -788,6 +913,19 @@
           "Effect": "Allow",
           "Resource": "arn:aws:ssm:*::document/AWSMigration-RunSourceServerAction",
           "Sid": "SsmMigrationDocumentOperations"
+        },
+        {
+          "Action": [
+            "ssm:ListDocuments"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SsmDocumentListOperationsReadOnly"
         },
         {
           "Action": [
@@ -909,7 +1047,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-08-06T15:27:14Z"
+  "UpdateDate": "2026-09-01T10:37:08Z"
 }

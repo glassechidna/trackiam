@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSTransformNetworkMigrationAgentPolicy",
   "CreateDate": "2026-08-06T15:27:26Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LTRDJQXTV",
   "PolicyName": "AWSTransformNetworkMigrationAgentPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-08-06T15:27:26Z",
+    "CreateDate": "2026-09-01T10:37:07Z",
     "Document": {
       "Statement": [
         {
@@ -803,7 +803,8 @@
         },
         {
           "Action": [
-            "lambda:GetFunction"
+            "lambda:GetFunction",
+            "lambda:ListTags"
           ],
           "Condition": {
             "ForAnyValue:StringEquals": {
@@ -818,7 +819,7 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:lambda:*:*:function:network-migration*",
-          "Sid": "LambdaViaCfnNetworkMigrationFunctionOperationsReadOnly"
+          "Sid": "LambdaViaCfnNetworkMigrationFunctionReadOnly"
         },
         {
           "Action": [
@@ -926,6 +927,7 @@
             "mgn:ListNetworkMigrationDeployedStacks",
             "mgn:ListNetworkMigrationDeployedStacksDeletions",
             "mgn:ListNetworkMigrationDeployments",
+            "mgn:ListNetworkMigrationExecutionArtifacts",
             "mgn:ListNetworkMigrationExecutions",
             "mgn:ListNetworkMigrationMapperSegmentConstructs",
             "mgn:ListNetworkMigrationMapperSegments",
@@ -1145,9 +1147,7 @@
           "Action": [
             "ssm:DeleteParameter",
             "ssm:DeleteResourcePolicy",
-            "ssm:GetResourcePolicies",
-            "ssm:ListTagsForResource",
-            "ssm:PutResourcePolicy"
+            "ssm:ListTagsForResource"
           ],
           "Condition": {
             "ForAnyValue:StringEquals": {
@@ -1185,6 +1185,26 @@
         },
         {
           "Action": [
+            "ssm:GetResourcePolicies",
+            "ssm:PutResourcePolicy"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudformation.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:parameter/network-migration/*",
+          "Sid": "SsmParametersViaCfnRamSharingOperations"
+        },
+        {
+          "Action": [
             "sts:AssumeRole"
           ],
           "Condition": {
@@ -1209,7 +1229,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-08-06T15:27:26Z"
+  "UpdateDate": "2026-09-01T10:37:07Z"
 }
