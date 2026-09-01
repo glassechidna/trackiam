@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/FinOpsAgentAgentPolicy",
   "CreateDate": "2026-06-03T19:57:12Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KRTUHDRKJ",
   "PolicyName": "FinOpsAgentAgentPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-08-19T19:27:11Z",
+    "CreateDate": "2026-09-01T16:27:06Z",
     "Document": {
       "Statement": [
         {
@@ -67,8 +67,11 @@
             "billing:GetBillingView",
             "billing:GetCreditAllocationHistory",
             "billing:GetCredits",
+            "billing:GetEnterpriseSupportChargeSummary",
+            "billing:GetEnterpriseSupportContractDetails",
             "billing:GetResourcePolicy",
             "billing:ListBillingViews",
+            "billing:ListEnterpriseSupportLinkedAccountCharges",
             "billing:ListSourceViewsForBillingView",
             "billingconductor:GetBillingGroupCostReport",
             "billingconductor:ListAccountAssociations",
@@ -81,10 +84,13 @@
             "billingconductor:ListPricingRules",
             "billingconductor:ListPricingRulesAssociatedToPricingPlan",
             "billingconductor:ListResourcesAssociatedToCustomLineItem",
+            "budgets:DescribeBudgetActionsForAccount",
+            "budgets:DescribeBudgetActionsForBudget",
             "budgets:ViewBudget",
             "ce:DescribeCostCategoryDefinition",
             "ce:GetAnomalies",
             "ce:GetAnomalyMonitors",
+            "ce:GetCommitmentPurchaseAnalysis",
             "ce:GetCostAndUsage",
             "ce:GetCostAndUsageComparisons",
             "ce:GetCostAndUsageWithResources",
@@ -95,15 +101,20 @@
             "ce:GetReservationCoverage",
             "ce:GetReservationPurchaseRecommendation",
             "ce:GetReservationUtilization",
+            "ce:GetSavingsPlanPurchaseRecommendationDetails",
             "ce:GetSavingsPlansCoverage",
             "ce:GetSavingsPlansPurchaseRecommendation",
             "ce:GetSavingsPlansUtilization",
             "ce:GetSavingsPlansUtilizationDetails",
             "ce:GetTags",
             "ce:GetUsageForecast",
+            "ce:ListCommitmentPurchaseAnalyses",
             "ce:ListCostAllocationTagBackfillHistory",
             "ce:ListCostAllocationTags",
             "ce:ListCostCategoryDefinitions",
+            "ce:ListSavingsPlansPurchaseRecommendationGeneration",
+            "ce:StartCommitmentPurchaseAnalysis",
+            "ce:StartSavingsPlansPurchaseRecommendationGeneration",
             "cloudtrail:DescribeTrails",
             "cloudtrail:GetEventSelectors",
             "cloudtrail:GetTrailStatus",
@@ -154,7 +165,12 @@
             "pricing:GetAttributeValues",
             "pricing:GetProducts",
             "rds:DescribeDBClusters",
-            "rds:DescribeDBInstances"
+            "rds:DescribeDBInstances",
+            "savingsplans:DescribeSavingsPlanRates",
+            "savingsplans:DescribeSavingsPlans",
+            "savingsplans:DescribeSavingsPlansOfferingRates",
+            "savingsplans:DescribeSavingsPlansOfferings",
+            "savingsplans:ListTagsForResource"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -164,7 +180,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2026-08-19T19:27:11Z"
+  "UpdateDate": "2026-09-01T16:27:06Z"
 }
