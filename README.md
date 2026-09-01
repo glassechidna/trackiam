@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 462
-* Unique actions: 22313
+* Unique actions: 22316
 * Managed policies: 1570
 
 Most common managed policy name prefixes:
@@ -40,7 +40,7 @@ The following table summarises the AWS APIs.
 | [`sagemaker`](services/sagemaker.yml) | 351 | 0 | 97 |
 | [`iot`](services/iot.yml) | 262 | 3 | 31 |
 | [`chime`](services/chime.yml) | 259 | 0 | 57 |
-| [`connect`](services/connect.yml) | 256 | 0 | 127 |
+| [`connect`](services/connect.yml) | 256 | 0 | 129 |
 | [`glue`](services/glue.yml) | 214 | 4 | 90 |
 | [`ses`](services/ses.yml) | 193 | 0 | 35 |
 | [`quicksight`](services/quicksight.yml) | 174 | 3 | 158 |
@@ -58,7 +58,7 @@ The following table summarises the AWS APIs.
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`cloudfront`](services/cloudfront.yml) | 110 | 1 | 63 |
 | [`gamelift`](services/gamelift.yml) | 108 | 0 | 12 |
-| [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 25 |
+| [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 26 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 18 |
 | [`bedrock`](services/bedrock.yml) | 97 | 2 | 165 |
 | [`dms`](services/dms.yml) | 92 | 14 | 33 |
@@ -504,10 +504,10 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3752 |
-| `Get` | 3380 |
+| `Get` | 3381 |
 | `Delete` | 2556 |
 | `Create` | 2413 |
-| `Update` | 2090 |
+| `Update` | 2091 |
 | `Describe` | 1947 |
 | `Put` | 602 |
 | `Start` | 550 |
