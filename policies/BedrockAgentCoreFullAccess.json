@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/BedrockAgentCoreFullAccess",
   "CreateDate": "2025-07-16T13:37:07Z",
-  "DefaultVersionId": "v19",
+  "DefaultVersionId": "v20",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BB44GAY7X",
   "PolicyName": "BedrockAgentCoreFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-08-11T19:07:29Z",
+    "CreateDate": "2026-09-01T22:17:08Z",
     "Document": {
       "Statement": [
         {
@@ -86,6 +86,37 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/*BedrockAgentCore*",
           "Sid": "BedrockAgentCorePassRoleAccess"
+        },
+        {
+          "Action": [
+            "kms:CreateGrant"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "kms:GrantOperations": [
+                "Decrypt",
+                "Encrypt",
+                "GenerateDataKey",
+                "GenerateDataKeyWithoutPlaintext",
+                "ReEncryptFrom",
+                "ReEncryptTo"
+              ]
+            },
+            "StringEquals": {
+              "kms:GrantConstraintType": "EncryptionContextSubset"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:bedrock-agentcore-policy:policy-engine-arn": "arn:aws*:bedrock-agentcore:*:*:policy-engine/*",
+              "kms:ViaService": [
+                "bedrock-agentcore.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:kms:*:*:key/*"
+          ],
+          "Sid": "BedrockAgentCorePolicyKMSGrantsAccess"
         },
         {
           "Action": [
@@ -443,7 +474,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v19"
+    "VersionId": "v20"
   },
-  "UpdateDate": "2026-08-11T19:07:29Z"
+  "UpdateDate": "2026-09-01T22:17:08Z"
 }
