@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonECS_FullAccess",
   "CreateDate": "2017-11-07T21:36:54Z",
-  "DefaultVersionId": "v21",
+  "DefaultVersionId": "v22",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ7S7AN6YQPTJC7IFS",
   "PolicyName": "AmazonECS_FullAccess",
   "PolicyVersion": {
-    "CreateDate": "2024-08-13T19:39:37Z",
+    "CreateDate": "2026-09-02T14:47:07Z",
     "Document": {
       "Statement": [
         {
@@ -84,6 +84,23 @@
             "arn:aws:iam::*:role/ecsInstanceRole*"
           ],
           "Sid": "InstancePassRolePolicy"
+        },
+        {
+          "Action": [
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudformation:CreateAction": [
+                "CreateStack",
+                "UpdateStack"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudFormationTagOnCreate"
         },
         {
           "Action": [
@@ -258,7 +275,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v21"
+    "VersionId": "v22"
   },
-  "UpdateDate": "2024-08-13T19:39:37Z"
+  "UpdateDate": "2026-09-02T14:47:07Z"
 }
