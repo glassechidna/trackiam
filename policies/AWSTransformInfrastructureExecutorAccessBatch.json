@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSTransformInfrastructureExecutorAccessBatch",
   "CreateDate": "2026-07-20T20:12:13Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4IFSDRNYQT",
   "PolicyName": "AWSTransformInfrastructureExecutorAccessBatch",
   "PolicyVersion": {
-    "CreateDate": "2026-07-28T15:42:28Z",
+    "CreateDate": "2026-09-02T21:27:07Z",
     "Document": {
       "Statement": [
         {
@@ -19,6 +19,7 @@
           },
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:cloudformation:*:*:stack/AtxDispatcherStack/*",
             "arn:aws:cloudformation:*:*:stack/AtxInfrastructureStack-*/*",
             "arn:aws:cloudformation:*:*:stack/AtxInfrastructureStack/*",
             "arn:aws:cloudformation:*:*:stack/AtxSecurityAgentStack-*/*",
@@ -52,6 +53,17 @@
             "arn:aws:iam::*:role/AtxSchedulerInvocationRole-*"
           ],
           "Sid": "PassSchedulerRole"
+        },
+        {
+          "Action": "sqs:SendMessage",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sqs:*:*:atx-dispatcher-queue",
+          "Sid": "SQSEnqueueToDispatcher"
         },
         {
           "Action": "tag:GetResources",
@@ -290,7 +302,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2026-07-28T15:42:28Z"
+  "UpdateDate": "2026-09-02T21:27:07Z"
 }

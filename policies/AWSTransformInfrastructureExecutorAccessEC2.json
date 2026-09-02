@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSTransformInfrastructureExecutorAccessEC2",
   "CreateDate": "2026-07-20T20:12:18Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4GTBMEWC7X",
   "PolicyName": "AWSTransformInfrastructureExecutorAccessEC2",
   "PolicyVersion": {
-    "CreateDate": "2026-07-28T15:42:16Z",
+    "CreateDate": "2026-09-02T21:27:07Z",
     "Document": {
       "Statement": [
         {
@@ -90,6 +90,17 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "SMList"
+        },
+        {
+          "Action": "sqs:SendMessage",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sqs:*:*:atx-dispatcher-queue",
+          "Sid": "SQSEnqueueToDispatcher"
         },
         {
           "Action": "tag:GetResources",
@@ -298,6 +309,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:cloudformation:*:*:stack/AtxDispatcherStack/*",
             "arn:aws:cloudformation:*:*:stack/AtxSecurityAgentStack-*/*",
             "arn:aws:cloudformation:*:*:stack/atx-*/*"
           ],
@@ -307,7 +319,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2026-07-28T15:42:16Z"
+  "UpdateDate": "2026-09-02T21:27:07Z"
 }
