@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSForWordPressPluginPolicy",
   "CreateDate": "2019-10-30T00:27:46Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KEKYXDWNJ",
   "PolicyName": "AWSForWordPressPluginPolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-01-20T23:20:47Z",
+    "CreateDate": "2026-09-03T20:17:07Z",
     "Document": {
       "Statement": [
         {
@@ -53,6 +53,36 @@
         },
         {
           "Action": [
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "us-east-1",
+              "cloudformation:CreateAction": "CreateStack"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudFormationTagOnCreateStack"
+        },
+        {
+          "Action": [
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/createdBy": "AWSForWordPressPlugin",
+              "cloudformation:CreateAction": "UpdateStack"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudFormationTagOnUpdateStack"
+        },
+        {
+          "Action": [
             "polly:DescribeVoices",
             "polly:SynthesizeSpeech",
             "translate:TranslateText"
@@ -82,7 +112,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2020-01-20T23:20:47Z"
+  "UpdateDate": "2026-09-03T20:17:07Z"
 }
