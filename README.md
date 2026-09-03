@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 462
-* Unique actions: 22328
+* Unique actions: 22336
 * Managed policies: 1570
 
 Most common managed policy name prefixes:
@@ -43,7 +43,7 @@ The following table summarises the AWS APIs.
 | [`connect`](services/connect.yml) | 256 | 0 | 129 |
 | [`glue`](services/glue.yml) | 214 | 4 | 90 |
 | [`ses`](services/ses.yml) | 193 | 0 | 35 |
-| [`quicksight`](services/quicksight.yml) | 174 | 3 | 158 |
+| [`quicksight`](services/quicksight.yml) | 174 | 3 | 166 |
 | [`rds`](services/rds.yml) | 162 | 0 | 7 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
 | [`iam`](services/iam.yml) | 159 | 0 | 31 |
@@ -503,14 +503,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3755 |
+| `List` | 3756 |
 | `Get` | 3384 |
-| `Delete` | 2558 |
-| `Create` | 2415 |
-| `Update` | 2093 |
-| `Describe` | 1947 |
+| `Delete` | 2559 |
+| `Create` | 2416 |
+| `Update` | 2095 |
+| `Describe` | 1949 |
 | `Put` | 602 |
-| `Start` | 550 |
+| `Start` | 551 |
 | `Batch` | 329 |
 | `Tag` | 324 |
 
