@@ -1,13 +1,13 @@
 {
-  "Arn": "arn:aws:iam::aws:policy/job-function/AmazonODBAutonomousVmClusterAdmin",
-  "CreateDate": "2026-08-07T01:12:28Z",
-  "DefaultVersionId": "v2",
+  "Arn": "arn:aws:iam::aws:policy/job-function/AmazonODBExadataVmClusterAdmin",
+  "CreateDate": "2026-09-04T21:37:08Z",
+  "DefaultVersionId": "v1",
   "IsAttachable": true,
   "Path": "/job-function/",
-  "PolicyId": "ANPAZKAPJZG4JAWKED5BV",
-  "PolicyName": "AmazonODBAutonomousVmClusterAdmin",
+  "PolicyId": "ANPAZKAPJZG4KTLF2X7ZI",
+  "PolicyName": "AmazonODBExadataVmClusterAdmin",
   "PolicyVersion": {
-    "CreateDate": "2026-09-04T21:17:07Z",
+    "CreateDate": "2026-09-04T21:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -21,24 +21,32 @@
         {
           "Action": [
             "odb:AssociateIamRoleToResource",
-            "odb:CreateCloudAutonomousVmCluster",
-            "odb:DeleteCloudAutonomousVmCluster",
+            "odb:CreateCloudVmCluster",
+            "odb:CreateDbNode",
+            "odb:DeleteCloudVmCluster",
+            "odb:DeleteDbNode",
             "odb:DisassociateIamRoleFromResource",
-            "odb:GetCloudAutonomousVmCluster",
             "odb:GetCloudExadataInfrastructure",
             "odb:GetCloudExadataInfrastructureUnallocatedResources",
+            "odb:GetCloudVmCluster",
+            "odb:GetDbNode",
+            "odb:GetDbServer",
             "odb:GetOciOnboardingStatus",
             "odb:GetOdbNetwork",
             "odb:InitializeService",
-            "odb:ListAutonomousVirtualMachines",
-            "odb:ListCloudAutonomousVmClusters",
             "odb:ListCloudExadataInfrastructures",
+            "odb:ListCloudVmClusters",
+            "odb:ListDbNodes",
             "odb:ListDbServers",
             "odb:ListDbSystemShapes",
+            "odb:ListFlexComponents",
             "odb:ListGiVersions",
             "odb:ListOdbNetworks",
             "odb:ListSystemVersions",
-            "odb:ListTagsForResource"
+            "odb:ListTagsForResource",
+            "odb:RebootDbNode",
+            "odb:StartDbNode",
+            "odb:StopDbNode"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -51,7 +59,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:odb:*:*:cloud-autonomous-vm-cluster/*"
+            "arn:aws:odb:*:*:cloud-vm-cluster/*"
           ],
           "Sid": "AllowOutboundIntegrationActions"
         },
@@ -62,7 +70,8 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:odb:*:*:cloud-autonomous-vm-cluster/*"
+            "arn:aws:odb:*:*:cloud-vm-cluster/*",
+            "arn:aws:odb:*:*:db-node/*"
           ],
           "Sid": "AllowTaggingActions"
         }
@@ -70,7 +79,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v1"
   },
-  "UpdateDate": "2026-09-04T21:17:07Z"
+  "UpdateDate": "2026-09-04T21:37:08Z"
 }

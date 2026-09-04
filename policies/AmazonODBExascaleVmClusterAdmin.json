@@ -1,13 +1,13 @@
 {
-  "Arn": "arn:aws:iam::aws:policy/job-function/AmazonODBAutonomousVmClusterAdmin",
-  "CreateDate": "2026-08-07T01:12:28Z",
-  "DefaultVersionId": "v2",
+  "Arn": "arn:aws:iam::aws:policy/job-function/AmazonODBExascaleVmClusterAdmin",
+  "CreateDate": "2026-09-04T21:37:07Z",
+  "DefaultVersionId": "v1",
   "IsAttachable": true,
   "Path": "/job-function/",
-  "PolicyId": "ANPAZKAPJZG4JAWKED5BV",
-  "PolicyName": "AmazonODBAutonomousVmClusterAdmin",
+  "PolicyId": "ANPAZKAPJZG4NVQDF6L6N",
+  "PolicyName": "AmazonODBExascaleVmClusterAdmin",
   "PolicyVersion": {
-    "CreateDate": "2026-09-04T21:17:07Z",
+    "CreateDate": "2026-09-04T21:37:07Z",
     "Document": {
       "Statement": [
         {
@@ -21,24 +21,35 @@
         {
           "Action": [
             "odb:AssociateIamRoleToResource",
-            "odb:CreateCloudAutonomousVmCluster",
-            "odb:DeleteCloudAutonomousVmCluster",
+            "odb:AssociateVirtualMachinesToExadbVmCluster",
+            "odb:CreateDbNode",
+            "odb:CreateExadbVmCluster",
+            "odb:DeleteDbNode",
+            "odb:DeleteExadbVmCluster",
             "odb:DisassociateIamRoleFromResource",
-            "odb:GetCloudAutonomousVmCluster",
-            "odb:GetCloudExadataInfrastructure",
-            "odb:GetCloudExadataInfrastructureUnallocatedResources",
+            "odb:DisassociateVirtualMachinesFromExadbVmCluster",
+            "odb:GetDbNode",
+            "odb:GetDbServer",
+            "odb:GetExadbVmCluster",
+            "odb:GetExascaleDbStorageVault",
             "odb:GetOciOnboardingStatus",
             "odb:GetOdbNetwork",
             "odb:InitializeService",
-            "odb:ListAutonomousVirtualMachines",
-            "odb:ListCloudAutonomousVmClusters",
-            "odb:ListCloudExadataInfrastructures",
+            "odb:ListDbNodes",
             "odb:ListDbServers",
             "odb:ListDbSystemShapes",
+            "odb:ListExadbVmClusters",
+            "odb:ListExascaleDbStorageVaults",
+            "odb:ListFlexComponents",
+            "odb:ListGiMinorVersions",
             "odb:ListGiVersions",
             "odb:ListOdbNetworks",
             "odb:ListSystemVersions",
-            "odb:ListTagsForResource"
+            "odb:ListTagsForResource",
+            "odb:RebootDbNode",
+            "odb:StartDbNode",
+            "odb:StopDbNode",
+            "odb:UpdateExadbVmCluster"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -51,7 +62,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:odb:*:*:cloud-autonomous-vm-cluster/*"
+            "arn:aws:odb:*:*:exadb-vm-cluster/*"
           ],
           "Sid": "AllowOutboundIntegrationActions"
         },
@@ -62,7 +73,8 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:odb:*:*:cloud-autonomous-vm-cluster/*"
+            "arn:aws:odb:*:*:db-node/*",
+            "arn:aws:odb:*:*:exadb-vm-cluster/*"
           ],
           "Sid": "AllowTaggingActions"
         }
@@ -70,7 +82,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v1"
   },
-  "UpdateDate": "2026-09-04T21:17:07Z"
+  "UpdateDate": "2026-09-04T21:37:07Z"
 }

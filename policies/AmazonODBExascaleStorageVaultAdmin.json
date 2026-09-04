@@ -1,13 +1,13 @@
 {
-  "Arn": "arn:aws:iam::aws:policy/job-function/AmazonODBNetworkAdmin",
-  "CreateDate": "2026-08-07T01:12:22Z",
-  "DefaultVersionId": "v2",
+  "Arn": "arn:aws:iam::aws:policy/job-function/AmazonODBExascaleStorageVaultAdmin",
+  "CreateDate": "2026-09-04T21:37:07Z",
+  "DefaultVersionId": "v1",
   "IsAttachable": true,
   "Path": "/job-function/",
-  "PolicyId": "ANPAZKAPJZG4GJFCROY3T",
-  "PolicyName": "AmazonODBNetworkAdmin",
+  "PolicyId": "ANPAZKAPJZG4PPHO7I6ZR",
+  "PolicyName": "AmazonODBExascaleStorageVaultAdmin",
   "PolicyVersion": {
-    "CreateDate": "2026-09-04T21:37:08Z",
+    "CreateDate": "2026-09-04T21:37:07Z",
     "Document": {
       "Statement": [
         {
@@ -17,8 +17,7 @@
           "Condition": {
             "StringEquals": {
               "iam:AWSServiceName": [
-                "odb.amazonaws.com",
-                "vpc-lattice.amazonaws.com"
+                "odb.amazonaws.com"
               ]
             }
           },
@@ -28,18 +27,7 @@
         },
         {
           "Action": [
-            "ec2:CreateOdbNetworkPeering",
-            "ec2:DeleteOdbNetworkPeering",
-            "ec2:ModifyOdbNetworkPeering"
-          ],
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "AllowOdbNetworkPeeringActions"
-        },
-        {
-          "Action": [
-            "ec2:DescribeAvailabilityZones",
-            "ec2:DescribeVpcs"
+            "ec2:DescribeAvailabilityZones"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -47,22 +35,22 @@
         },
         {
           "Action": [
-            "odb:CreateOdbNetwork",
-            "odb:CreateOdbPeeringConnection",
-            "odb:DeleteOdbNetwork",
-            "odb:DeleteOdbPeeringConnection",
+            "odb:CreateExascaleDbStorageVault",
+            "odb:DeleteExascaleDbStorageVault",
             "odb:DeleteResourcePolicy",
+            "odb:GetDbServer",
+            "odb:GetExascaleDbStorageVault",
             "odb:GetOciOnboardingStatus",
-            "odb:GetOdbNetwork",
-            "odb:GetOdbPeeringConnection",
             "odb:GetResourcePolicy",
             "odb:InitializeService",
-            "odb:ListOdbNetworks",
-            "odb:ListOdbPeeringConnections",
+            "odb:ListDbServers",
+            "odb:ListDbSystemShapes",
+            "odb:ListExadbVmClusters",
+            "odb:ListExascaleDbStorageVaults",
+            "odb:ListFlexComponents",
             "odb:ListTagsForResource",
             "odb:PutResourcePolicy",
-            "odb:UpdateOdbNetwork",
-            "odb:UpdateOdbPeeringConnection"
+            "odb:UpdateExascaleDbStorageVault"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -75,8 +63,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:odb:*:*:odb-network/*",
-            "arn:aws:odb:*:*:odb-peering-connection/*"
+            "arn:aws:odb:*:*:exascale-db-storage-vault/*"
           ],
           "Sid": "AllowTaggingActions"
         }
@@ -84,7 +71,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v1"
   },
-  "UpdateDate": "2026-09-04T21:37:08Z"
+  "UpdateDate": "2026-09-04T21:37:07Z"
 }

@@ -1,0 +1,101 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/job-function/AmazonODBAutonomousDatabaseAdmin",
+  "CreateDate": "2026-09-04T21:47:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/job-function/",
+  "PolicyId": "ANPAZKAPJZG4M5PKHGQAB",
+  "PolicyName": "AmazonODBAutonomousDatabaseAdmin",
+  "PolicyVersion": {
+    "CreateDate": "2026-09-04T21:47:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "odb.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowSLRActions"
+        },
+        {
+          "Action": [
+            "ec2:DescribeAvailabilityZones"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowEC2Actions"
+        },
+        {
+          "Action": [
+            "odb:CreateAutonomousDatabase",
+            "odb:CreateAutonomousDatabaseBackup",
+            "odb:CreateAutonomousDatabaseWallet",
+            "odb:DeleteAutonomousDatabase",
+            "odb:DeleteAutonomousDatabaseBackup",
+            "odb:FailoverAutonomousDatabase",
+            "odb:GetAutonomousDatabase",
+            "odb:GetAutonomousDatabaseBackup",
+            "odb:GetAutonomousDatabaseWalletDetails",
+            "odb:GetOciOnboardingStatus",
+            "odb:GetOdbNetwork",
+            "odb:InitializeService",
+            "odb:ListAutonomousDatabaseBackups",
+            "odb:ListAutonomousDatabaseCharacterSets",
+            "odb:ListAutonomousDatabaseClones",
+            "odb:ListAutonomousDatabasePeers",
+            "odb:ListAutonomousDatabaseVersions",
+            "odb:ListAutonomousDatabases",
+            "odb:ListOdbNetworks",
+            "odb:ListTagsForResource",
+            "odb:RebootAutonomousDatabase",
+            "odb:RestoreAutonomousDatabase",
+            "odb:ShrinkAutonomousDatabase",
+            "odb:StartAutonomousDatabase",
+            "odb:StopAutonomousDatabase",
+            "odb:SwitchoverAutonomousDatabase",
+            "odb:UpdateAutonomousDatabase",
+            "odb:UpdateAutonomousDatabaseBackup"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowODBActions"
+        },
+        {
+          "Action": [
+            "odb:CreateOutboundIntegration",
+            "odb:UpdateOutboundIntegration"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:odb:*:*:autonomous-database/*"
+          ],
+          "Sid": "AllowOutboundIntegrationActions"
+        },
+        {
+          "Action": [
+            "odb:TagResource",
+            "odb:UntagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:odb:*:*:autonomous-database-backup/*",
+            "arn:aws:odb:*:*:autonomous-database/*"
+          ],
+          "Sid": "AllowTaggingActions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-09-04T21:47:07Z"
+}
