@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 462
-* Unique actions: 22336
+* Unique actions: 22338
 * Managed policies: 1570
 
 Most common managed policy name prefixes:
@@ -403,10 +403,10 @@ The following table summarises the AWS APIs.
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 24 |
 | [`s3files`](services/s3files.yml) | 0 | 0 | 24 |
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
+| [`evs`](services/evs.yml) | 0 | 0 | 24 |
 | [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 24 |
 | [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 23 |
 | [`transform`](services/transform.yml) | 0 | 0 | 22 |
-| [`evs`](services/evs.yml) | 0 | 0 | 22 |
 | [`agent-registry`](services/agent-registry.yml) | 0 | 0 | 22 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 20 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
@@ -504,12 +504,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3756 |
-| `Get` | 3384 |
+| `Get` | 3385 |
 | `Delete` | 2559 |
 | `Create` | 2416 |
 | `Update` | 2095 |
 | `Describe` | 1949 |
-| `Put` | 602 |
+| `Put` | 603 |
 | `Start` | 551 |
 | `Batch` | 329 |
 | `Tag` | 324 |

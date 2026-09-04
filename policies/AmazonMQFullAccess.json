@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonMQFullAccess",
   "CreateDate": "2017-11-28T15:28:29Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJLKBROJNQYDDXOOGG",
   "PolicyName": "AmazonMQFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-11-04T16:34:09Z",
+    "CreateDate": "2026-09-03T22:47:07Z",
     "Document": {
       "Statement": [
         {
@@ -18,7 +18,23 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "arn:aws:iam::*:role/aws-service-role/mq.amazonaws.com/AWSServiceRoleForAmazonMQ"
+        },
+        {
+          "Action": [
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudformation:CreateAction": [
+                "CreateStack"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudFormationTagOnCreate"
         },
         {
           "Action": [
@@ -55,7 +71,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2020-11-04T16:34:09Z"
+  "UpdateDate": "2026-09-03T22:47:07Z"
 }

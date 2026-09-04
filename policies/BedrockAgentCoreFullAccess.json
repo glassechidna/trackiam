@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/BedrockAgentCoreFullAccess",
   "CreateDate": "2025-07-16T13:37:07Z",
-  "DefaultVersionId": "v20",
+  "DefaultVersionId": "v21",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BB44GAY7X",
   "PolicyName": "BedrockAgentCoreFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-09-01T22:17:08Z",
+    "CreateDate": "2026-09-03T22:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -182,6 +182,23 @@
             "arn:aws:kms:*:*:key/*"
           ],
           "Sid": "BedrockAgentCoreKMSReadAccess"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:*"
+          ],
+          "Sid": "AgentCoreEvaluationCloudWatchLogCustomLogGroupCreate"
         },
         {
           "Action": [
@@ -474,7 +491,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v20"
+    "VersionId": "v21"
   },
-  "UpdateDate": "2026-09-01T22:17:08Z"
+  "UpdateDate": "2026-09-03T22:07:07Z"
 }
