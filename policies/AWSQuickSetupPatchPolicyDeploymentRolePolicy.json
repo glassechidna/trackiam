@@ -1,15 +1,36 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupPatchPolicyDeploymentRolePolicy",
   "CreateDate": "2024-06-26T09:57:02Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LEOGWOWLC",
   "PolicyName": "AWSQuickSetupPatchPolicyDeploymentRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-06-26T09:57:02Z",
+    "CreateDate": "2026-09-04T08:47:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudformation:CreateAction": [
+                "CreateChangeSet",
+                "CreateStack",
+                "ExecuteChangeSet",
+                "UpdateStack"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/StackSet-AWS-QuickSetup-*"
+          ],
+          "Sid": "CfnTagOnMutate"
+        },
         {
           "Action": [
             "iam:AttachRolePolicy",
@@ -349,7 +370,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-06-26T09:57:02Z"
+  "UpdateDate": "2026-09-04T08:47:07Z"
 }
