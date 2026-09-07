@@ -1,15 +1,36 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupDeploymentRolePolicy",
   "CreateDate": "2024-06-26T09:55:21Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CG2CDKZLJ",
   "PolicyName": "AWSQuickSetupDeploymentRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:00:53Z",
+    "CreateDate": "2026-09-07T15:07:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudformation:CreateAction": [
+                "CreateChangeSet",
+                "CreateStack",
+                "ExecuteChangeSet",
+                "UpdateStack"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/StackSet-AWS-QuickSetup-*"
+          ],
+          "Sid": "CfnTagOnMutate"
+        },
         {
           "Action": [
             "config:DeleteConformancePack",
@@ -360,7 +381,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2026-02-12T18:00:53Z"
+  "UpdateDate": "2026-09-07T15:07:07Z"
 }

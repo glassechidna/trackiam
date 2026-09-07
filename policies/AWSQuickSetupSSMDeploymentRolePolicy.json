@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupSSMDeploymentRolePolicy",
   "CreateDate": "2024-11-15T22:53:20Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4GPQ3OIOC6",
   "PolicyName": "AWSQuickSetupSSMDeploymentRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:58:38Z",
+    "CreateDate": "2026-09-07T12:27:07Z",
     "Document": {
       "Statement": [
         {
@@ -44,6 +44,26 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:lambda:*:*:function:aws-quicksetup-lifecycle*"
+          ]
+        },
+        {
+          "Action": [
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudformation:CreateAction": [
+                "CreateChangeSet",
+                "CreateStack",
+                "ExecuteChangeSet",
+                "UpdateStack"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/StackSet-AWS-QuickSetup-SSM-*"
           ]
         },
         {
@@ -463,7 +483,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2026-02-12T17:58:38Z"
+  "UpdateDate": "2026-09-07T12:27:07Z"
 }
