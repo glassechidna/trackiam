@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSCodeStarServiceRole",
   "CreateDate": "2017-04-19T15:20:50Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAIN6D4M2KD3NBOC4M4",
   "PolicyName": "AWSCodeStarServiceRole",
   "PolicyVersion": {
-    "CreateDate": "2021-09-20T19:11:03Z",
+    "CreateDate": "2026-09-08T12:47:08Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,30 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "ProjectCodeStarConnectionsPassConnections"
+        },
+        {
+          "Action": [
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudformation:CreateAction": [
+                "CreateChangeSet",
+                "CreateStack",
+                "ExecuteChangeSet",
+                "UpdateStack"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/aws-cloud9-*",
+            "arn:aws:cloudformation:*:*:stack/awscodestar-*",
+            "arn:aws:cloudformation:*:*:stack/awseb-*",
+            "arn:aws:cloudformation:*:aws:transform/CodeStar*"
+          ],
+          "Sid": "CloudFormationTagOnCreate"
         },
         {
           "Action": [
@@ -213,7 +237,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2021-09-20T19:11:03Z"
+  "UpdateDate": "2026-09-08T12:47:08Z"
 }
