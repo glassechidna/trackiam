@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonGuardDutyServiceRolePolicy",
   "CreateDate": "2017-11-28T20:12:59Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIHZREZOWNSSA6FWQO",
   "PolicyName": "AmazonGuardDutyServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-04-24T20:12:17Z",
+    "CreateDate": "2026-09-09T21:27:07Z",
     "Document": {
       "Statement": [
         {
@@ -113,6 +113,17 @@
           "Sid": "GuardDutyCreateSLRPolicy"
         },
         {
+          "Action": "vpc-lattice:CreateServiceNetworkVpcAssociation",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:vpc-lattice:*:*:servicenetworkvpcassociation/*",
+          "Sid": "GdLatticeCreateManagedSnvaAssociation"
+        },
+        {
           "Action": [
             "cloudtrail:CreateServiceLinkedChannel"
           ],
@@ -213,6 +224,12 @@
           "Sid": "SsmSendCommandPermission"
         },
         {
+          "Action": "vpc-lattice:AssociateViaAWSService",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GdLatticeAssociateViaAwsService"
+        },
+        {
           "Action": [
             "ec2:CreateVpcEndpoint",
             "ec2:ModifyVpcEndpoint"
@@ -284,7 +301,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2026-04-24T20:12:17Z"
+  "UpdateDate": "2026-09-09T21:27:07Z"
 }

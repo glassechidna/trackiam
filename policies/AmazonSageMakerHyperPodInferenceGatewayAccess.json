@@ -1,0 +1,70 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerHyperPodInferenceGatewayAccess",
+  "CreateDate": "2026-09-09T23:27:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4KOBHM6WG6",
+  "PolicyName": "AmazonSageMakerHyperPodInferenceGatewayAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-09-09T23:27:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "acm:AddTagsToCertificate",
+            "acm:ImportCertificate"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "CreatedBy"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/CreatedBy": "HyperPodInference",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:acm:*:*:certificate/*",
+          "Sid": "ImportOwnedCert"
+        },
+        {
+          "Action": [
+            "acm:DeleteCertificate"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "acm:CertificateKeyPairOrigin": "CUSTOMER_PROVIDED",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/CreatedBy": "HyperPodInference"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:acm:*:*:certificate/*",
+          "Sid": "DeleteOwnedImportedCerts"
+        },
+        {
+          "Action": [
+            "acm:DescribeCertificate",
+            "acm:ListTagsForCertificate"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/CreatedBy": "HyperPodInference"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:acm:*:*:certificate/*",
+          "Sid": "ReadOwnedCerts"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-09-09T23:27:07Z"
+}
