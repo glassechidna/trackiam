@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSElasticDisasterRecoveryStagingAccountPolicy_v2",
   "CreateDate": "2023-01-05T12:11:44Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4BNQEQ6SEE",
   "PolicyName": "AWSElasticDisasterRecoveryStagingAccountPolicy_v2",
   "PolicyVersion": {
-    "CreateDate": "2023-11-27T13:32:09Z",
+    "CreateDate": "2026-09-09T13:47:07Z",
     "Document": {
       "Statement": [
         {
@@ -46,12 +46,21 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "DRSStagingAccountPolicyv21"
+        },
+        {
+          "Action": [
+            "drs:CreateSourceServerForDrs",
+            "drs:DescribeReplicationConfigurationTemplates"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DRSStagingAccountPolicyv24"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2023-11-27T13:32:09Z"
+  "UpdateDate": "2026-09-09T13:47:07Z"
 }
