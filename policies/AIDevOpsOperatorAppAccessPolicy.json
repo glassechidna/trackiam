@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AIDevOpsOperatorAppAccessPolicy",
   "CreateDate": "2026-03-26T03:42:13Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ELWEUAH5T",
   "PolicyName": "AIDevOpsOperatorAppAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-26T23:57:22Z",
+    "CreateDate": "2026-09-10T17:47:07Z",
     "Document": {
       "Statement": [
         {
@@ -54,6 +54,7 @@
             "aidevops:ListPendingMessages",
             "aidevops:ListRecommendations",
             "aidevops:ListTriggers",
+            "aidevops:ListWebhooks",
             "aidevops:RevokeAccessToken",
             "aidevops:RotateAccessToken",
             "aidevops:SendMessage",
@@ -72,7 +73,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:aidevops:*:*:agentspace/${aws:PrincipalTag/AgentSpaceId}",
+          "Resource": [
+            "arn:aws:aidevops:*:*:agentspace/${aws:PrincipalTag/AgentSpaceId}",
+            "arn:aws:aidevops:*:*:agentspace/${aws:PrincipalTag/AgentSpaceId}/*"
+          ],
           "Sid": "AllowOperatorAgentSpaceActions"
         },
         {
@@ -135,7 +139,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-06-26T23:57:22Z"
+  "UpdateDate": "2026-09-10T17:47:07Z"
 }
