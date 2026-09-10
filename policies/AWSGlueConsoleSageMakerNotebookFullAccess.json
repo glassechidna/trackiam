@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSGlueConsoleSageMakerNotebookFullAccess",
   "CreateDate": "2018-10-05T17:52:35Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJELFOHJC42QS3ZSYY",
   "PolicyName": "AWSGlueConsoleSageMakerNotebookFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2021-07-15T15:24:19Z",
+    "CreateDate": "2026-09-10T20:27:07Z",
     "Document": {
       "Statement": [
         {
@@ -102,6 +102,22 @@
           "Resource": [
             "*"
           ]
+        },
+        {
+          "Action": [
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudformation:CreateAction": [
+                "CreateStack"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/aws-glue*/*",
+          "Sid": "CloudFormationTagOnCreate"
         },
         {
           "Action": [
@@ -229,7 +245,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2021-07-15T15:24:19Z"
+  "UpdateDate": "2026-09-10T20:27:07Z"
 }

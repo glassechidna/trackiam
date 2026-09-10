@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSControlTowerServiceRolePolicy",
   "CreateDate": "2019-05-03T18:19:11Z",
-  "DefaultVersionId": "v21",
+  "DefaultVersionId": "v22",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4MW35THVLF",
   "PolicyName": "AWSControlTowerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-05-20T20:12:23Z",
+    "CreateDate": "2026-09-10T19:47:08Z",
     "Document": {
       "Statement": [
         {
@@ -49,6 +49,29 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudformation:CreateAction": [
+                "CreateStack",
+                "UpdateStack"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/AWSControlTower*/*",
+            "arn:aws:cloudformation:*:*:stack/StackSet-AWSControlTower*/*",
+            "arn:aws:cloudformation:*:*:stackset-target/AWSControlTower*/*",
+            "arn:aws:cloudformation:*:*:stackset/AWSControlTower*:*",
+            "arn:aws:cloudformation:*:*:type/resource/AWS-IAM-Role"
+          ],
+          "Sid": "CloudFormationTagOnCreate"
         },
         {
           "Action": [
@@ -223,7 +246,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v21"
+    "VersionId": "v22"
   },
-  "UpdateDate": "2026-05-20T20:12:23Z"
+  "UpdateDate": "2026-09-10T19:47:08Z"
 }
