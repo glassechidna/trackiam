@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonElasticMapReduceFullAccess",
   "CreateDate": "2015-02-06T18:40:22Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIZP5JFP3AMSGINBB2",
   "PolicyName": "AmazonElasticMapReduceFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2019-10-11T15:19:30Z",
+    "CreateDate": "2026-09-11T17:07:08Z",
     "Document": {
       "Statement": [
         {
@@ -22,6 +22,22 @@
           },
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudformation:CreateAction": [
+                "CreateStack"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudFormationTagOnCreate"
         },
         {
           "Action": [
@@ -73,7 +89,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2019-10-11T15:19:30Z"
+  "UpdateDate": "2026-09-11T17:07:08Z"
 }
