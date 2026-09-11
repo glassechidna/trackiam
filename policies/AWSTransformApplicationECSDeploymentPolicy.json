@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSTransformApplicationECSDeploymentPolicy",
   "CreateDate": "2025-09-29T22:49:07Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4HITIWX2FY",
   "PolicyName": "AWSTransformApplicationECSDeploymentPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:02:41Z",
+    "CreateDate": "2026-09-11T00:27:08Z",
     "Document": {
       "Statement": [
         {
@@ -333,6 +333,23 @@
         },
         {
           "Action": [
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudformation:CreateAction": [
+                "CreateStack",
+                "UpdateStack"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/AWSTransform*",
+          "Sid": "CloudFormationTagOnCreate"
+        },
+        {
+          "Action": [
             "ec2:DescribeNetworkInterfaces",
             "ec2:DescribeSecurityGroups",
             "ecs:DescribeClusters",
@@ -348,7 +365,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-02-12T18:02:41Z"
+  "UpdateDate": "2026-09-11T00:27:08Z"
 }

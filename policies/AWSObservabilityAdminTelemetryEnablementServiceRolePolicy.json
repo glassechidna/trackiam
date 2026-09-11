@@ -1,15 +1,133 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSObservabilityAdminTelemetryEnablementServiceRolePolicy",
   "CreateDate": "2025-08-01T18:04:06Z",
-  "DefaultVersionId": "v14",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ABS5BMRXG",
   "PolicyName": "AWSObservabilityAdminTelemetryEnablementServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-07-24T19:12:23Z",
+    "CreateDate": "2026-09-11T00:37:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "eks:CreateAddon",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:cluster/*",
+          "Sid": "InstallAddon"
+        },
+        {
+          "Action": "eks:CreatePodIdentityAssociation",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:cluster/*",
+          "Sid": "CreatePodIdentityAssociation"
+        },
+        {
+          "Action": "eks:DescribeAddon",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:addon/*/amazon-cloudwatch-observability/*",
+          "Sid": "EvaluateAddon"
+        },
+        {
+          "Action": "eks:DescribePodIdentityAssociation",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:podidentityassociation/*/*",
+          "Sid": "EvaluatePodIdentityAssociation"
+        },
+        {
+          "Action": "eks:ListPodIdentityAssociations",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:cluster/*",
+          "Sid": "ListPodIdentityAssociations"
+        },
+        {
+          "Action": "eks:UpdateAddon",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:addon/*/amazon-cloudwatch-observability/*",
+          "Sid": "FixAddon"
+        },
+        {
+          "Action": "eks:UpdatePodIdentityAssociation",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:podidentityassociation/*/*",
+          "Sid": "FixPodIdentityAssociation"
+        },
+        {
+          "Action": "iam:AttachRolePolicy",
+          "Condition": {
+            "ArnEquals": {
+              "iam:PolicyARN": "arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "iam:RoleTemplateARN": "arn:aws:iam::aws:role-template/telemetry-enablement.observabilityadmin.amazonaws.com/CloudWatchTelemetryRuleEKSAddonRoleTemplate:1"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/service-role/CloudWatchTelemetryRuleEKSAddonRole",
+          "Sid": "AttachManagedPolicyFromTemplate"
+        },
+        {
+          "Action": "iam:GetRole",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/CloudWatchTelemetryRuleEKSAddonRole",
+            "arn:aws:iam::*:role/service-role/CloudWatchTelemetryRuleEKSAddonRole"
+          ],
+          "Sid": "ReadRole"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "iam:PassedToService": "pods.eks.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/service-role/CloudWatchTelemetryRuleEKSAddonRole",
+          "Sid": "PassRoleToPodIdentity"
+        },
         {
           "Action": [
             "bedrock-agentcore:AllowVendedLogDeliveryForResource",
@@ -285,6 +403,21 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "TelemetryOperationsForELB"
+        },
+        {
+          "Action": [
+            "iam:CreateRole",
+            "iam:TagRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "iam:RoleTemplateARN": "arn:aws:iam::aws:role-template/telemetry-enablement.observabilityadmin.amazonaws.com/CloudWatchTelemetryRuleEKSAddonRoleTemplate:1"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/service-role/CloudWatchTelemetryRuleEKSAddonRole",
+          "Sid": "AcquireRoleFromTemplate"
         },
         {
           "Action": [
@@ -573,6 +706,19 @@
         },
         {
           "Action": [
+            "wafv2:ListLoggingConfigurations"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TelemetryReadForWafLoggingConfigurations"
+        },
+        {
+          "Action": [
             "wafv2:PutLoggingConfiguration"
           ],
           "Condition": {
@@ -589,6 +735,12 @@
           "Sid": "TelemetryOperationsForWafLoggingConfigurations"
         },
         {
+          "Action": "iam:GetRoleTemplateVersion",
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::aws:role-template/telemetry-enablement.observabilityadmin.amazonaws.com/CloudWatchTelemetryRuleEKSAddonRoleTemplate:1",
+          "Sid": "InspectTemplate"
+        },
+        {
           "Action": [
             "logs:CreateLogDelivery"
           ],
@@ -600,7 +752,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v14"
+    "VersionId": "v15"
   },
-  "UpdateDate": "2026-07-24T19:12:23Z"
+  "UpdateDate": "2026-09-11T00:37:07Z"
 }

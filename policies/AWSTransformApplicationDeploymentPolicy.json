@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSTransformApplicationDeploymentPolicy",
   "CreateDate": "2025-08-28T06:34:07Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4C2JTRAIVR",
   "PolicyName": "AWSTransformApplicationDeploymentPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:59:09Z",
+    "CreateDate": "2026-09-11T00:27:08Z",
     "Document": {
       "Statement": [
         {
@@ -309,6 +309,23 @@
         },
         {
           "Action": [
+            "cloudformation:TagResource",
+            "cloudformation:UntagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "cloudformation:CreateAction": [
+                "CreateStack",
+                "UpdateStack"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/AWSTransform*",
+          "Sid": "CloudFormationTagOnCreate"
+        },
+        {
+          "Action": [
             "ec2:DescribeImages",
             "ec2:DescribeInstances",
             "ec2:DescribeInternetGateways",
@@ -351,7 +368,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-02-12T17:59:09Z"
+  "UpdateDate": "2026-09-11T00:27:08Z"
 }
