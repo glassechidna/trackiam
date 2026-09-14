@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectRoleMachineLearningPolicy",
   "CreateDate": "2024-11-20T21:55:27Z",
-  "DefaultVersionId": "v43",
+  "DefaultVersionId": "v44",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NSSEENOX7",
   "PolicyName": "SageMakerStudioProjectRoleMachineLearningPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-09-04T18:57:08Z",
+    "CreateDate": "2026-09-14T20:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -851,7 +851,8 @@
         {
           "Action": [
             "sagemaker:CreateUserProfile",
-            "sagemaker:DeleteUserProfile"
+            "sagemaker:DeleteUserProfile",
+            "sagemaker:UpdateUserProfile"
           ],
           "Condition": {
             "StringEquals": {
@@ -865,7 +866,8 @@
         {
           "Action": [
             "sagemaker:CreateUserProfile",
-            "sagemaker:DeleteUserProfile"
+            "sagemaker:DeleteUserProfile",
+            "sagemaker:UpdateUserProfile"
           ],
           "Condition": {
             "StringEquals": {
@@ -1302,7 +1304,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v43"
+    "VersionId": "v44"
   },
-  "UpdateDate": "2026-09-04T18:57:08Z"
+  "UpdateDate": "2026-09-14T20:37:08Z"
 }
