@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSApplicationMigrationNetworkMigrationMultiAccount",
   "CreateDate": "2025-11-10T09:04:09Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CTZCLDWVS",
   "PolicyName": "AWSApplicationMigrationNetworkMigrationMultiAccount",
   "PolicyVersion": {
-    "CreateDate": "2026-07-30T07:42:10Z",
+    "CreateDate": "2026-09-15T13:17:07Z",
     "Document": {
       "Statement": [
         {
@@ -770,6 +770,21 @@
         },
         {
           "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "transitgateway.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/transitgateway.amazonaws.com/AWSServiceRoleForVPCTransitGateway"
+          ],
+          "Sid": "CreateTransitGatewaySLR"
+        },
+        {
+          "Action": [
             "iam:DeleteRole",
             "iam:DeleteRolePolicy",
             "iam:DetachRolePolicy",
@@ -1103,7 +1118,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-07-30T07:42:10Z"
+  "UpdateDate": "2026-09-15T13:17:07Z"
 }
