@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ReadOnlyAccess",
   "CreateDate": "2015-02-06T18:39:48Z",
-  "DefaultVersionId": "v188",
+  "DefaultVersionId": "v189",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAILL3HVNFSB6DCOWYQ",
   "PolicyName": "ReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-07-21T18:42:30Z",
+    "CreateDate": "2026-09-15T18:47:08Z",
     "Document": {
       "Statement": [
         {
@@ -343,6 +343,7 @@
             "bedrock-agentcore:GetBrowser",
             "bedrock-agentcore:GetBrowserProfile",
             "bedrock-agentcore:GetBrowserSession",
+            "bedrock-agentcore:GetCapacityProvider",
             "bedrock-agentcore:GetCodeInterpreter",
             "bedrock-agentcore:GetCodeInterpreterSession",
             "bedrock-agentcore:GetConfigurationBundle",
@@ -366,12 +367,14 @@
             "bedrock-agentcore:ListABTests",
             "bedrock-agentcore:ListAgentRuntimeEndpoints",
             "bedrock-agentcore:ListAgentRuntimeVersions",
+            "bedrock-agentcore:ListAgentRuntimeVersionsByCapacityProvider",
             "bedrock-agentcore:ListAgentRuntimes",
             "bedrock-agentcore:ListApiKeyCredentialProviders",
             "bedrock-agentcore:ListBatchEvaluations",
             "bedrock-agentcore:ListBrowserProfiles",
             "bedrock-agentcore:ListBrowserSessions",
             "bedrock-agentcore:ListBrowsers",
+            "bedrock-agentcore:ListCapacityProviders",
             "bedrock-agentcore:ListCodeInterpreterSessions",
             "bedrock-agentcore:ListCodeInterpreters",
             "bedrock-agentcore:ListConfigurationBundleVersions",
@@ -959,6 +962,8 @@
             "devops-guru:SearchInsights",
             "devops-guru:StartCostEstimation",
             "directconnect:Describe*",
+            "directconnect:ListVirtualInterfaceRoutes",
+            "directconnect:ListVirtualInterfaceTestHistory",
             "discovery:Describe*",
             "discovery:Get*",
             "discovery:List*",
@@ -2759,6 +2764,8 @@
             "sustainability:GetCarbonFootprintSummary",
             "sustainability:GetEstimatedCarbonEmissions",
             "sustainability:GetEstimatedCarbonEmissionsDimensionValues",
+            "sustainability:GetEstimatedWaterAllocation",
+            "sustainability:GetEstimatedWaterAllocationDimensionValues",
             "swf:Count*",
             "swf:Describe*",
             "swf:Get*",
@@ -2954,7 +2961,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v188"
+    "VersionId": "v189"
   },
-  "UpdateDate": "2026-07-21T18:42:30Z"
+  "UpdateDate": "2026-09-15T18:47:08Z"
 }

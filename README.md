@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 462
-* Unique actions: 22352
-* Managed policies: 1575
+* Unique actions: 22361
+* Managed policies: 1576
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 428 |
 | `arn:aws:iam::aws:policy/Amazon*` | 380 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 357 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 358 |
 | `arn:aws:iam::aws:policy/service-role/*` | 226 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
 | Other | 169 |
@@ -107,7 +107,7 @@ The following table summarises the AWS APIs.
 | [`appsync`](services/appsync.yml) | 64 | 0 | 23 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 56 |
 | [`ivs`](services/ivs.yml) | 63 | 0 | 14 |
-| [`directconnect`](services/directconnect.yml) | 63 | 0 | 1 |
+| [`directconnect`](services/directconnect.yml) | 63 | 0 | 10 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 60 | 0 | 11 |
 | [`datasync`](services/datasync.yml) | 60 | 0 | 6 |
@@ -503,11 +503,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3761 |
-| `Get` | 3386 |
-| `Delete` | 2560 |
-| `Create` | 2417 |
-| `Update` | 2097 |
+| `List` | 3763 |
+| `Get` | 3387 |
+| `Delete` | 2561 |
+| `Create` | 2418 |
+| `Update` | 2099 |
 | `Describe` | 1949 |
 | `Put` | 603 |
 | `Start` | 551 |
