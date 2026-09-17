@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 462
-* Unique actions: 22372
+* Unique actions: 22377
 * Managed policies: 1576
 
 Most common managed policy name prefixes:
@@ -68,7 +68,7 @@ The following table summarises the AWS APIs.
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 7 |
 | [`workspaces`](services/workspaces.yml) | 88 | 0 | 15 |
 | [`es`](services/es.yml) | 87 | 0 | 44 |
-| [`sms-voice`](services/sms-voice.yml) | 87 | 0 | 27 |
+| [`sms-voice`](services/sms-voice.yml) | 87 | 0 | 28 |
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 10 |
 | [`comprehend`](services/comprehend.yml) | 85 | 0 | 0 |
@@ -362,7 +362,7 @@ The following table summarises the AWS APIs.
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 255 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 134 |
-| [`securityagent`](services/securityagent.yml) | 0 | 0 | 111 |
+| [`securityagent`](services/securityagent.yml) | 0 | 0 | 115 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
 | [`odb`](services/odb.yml) | 0 | 0 | 90 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
@@ -503,14 +503,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3763 |
+| `List` | 3765 |
 | `Get` | 3389 |
 | `Delete` | 2561 |
 | `Create` | 2420 |
-| `Update` | 2100 |
+| `Update` | 2101 |
 | `Describe` | 1950 |
 | `Put` | 603 |
-| `Start` | 552 |
-| `Batch` | 329 |
+| `Start` | 553 |
+| `Batch` | 330 |
 | `Tag` | 324 |
 
