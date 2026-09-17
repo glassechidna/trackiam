@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 462
-* Unique actions: 22366
+* Unique actions: 22372
 * Managed policies: 1576
 
 Most common managed policy name prefixes:
@@ -405,6 +405,7 @@ The following table summarises the AWS APIs.
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
 | [`evs`](services/evs.yml) | 0 | 0 | 24 |
 | [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 24 |
+| [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 23 |
 | [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 23 |
 | [`transform`](services/transform.yml) | 0 | 0 | 22 |
 | [`agent-registry`](services/agent-registry.yml) | 0 | 0 | 22 |
@@ -415,7 +416,6 @@ The following table summarises the AWS APIs.
 | [`monitron`](services/monitron.yml) | 0 | 0 | 18 |
 | [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 18 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 18 |
-| [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 17 |
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 17 |
 | [`ds-data`](services/ds-data.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
@@ -504,9 +504,9 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3763 |
-| `Get` | 3387 |
+| `Get` | 3389 |
 | `Delete` | 2561 |
-| `Create` | 2418 |
+| `Create` | 2420 |
 | `Update` | 2100 |
 | `Describe` | 1950 |
 | `Put` | 603 |
