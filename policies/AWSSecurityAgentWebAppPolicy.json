@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSSecurityAgentWebAppPolicy",
   "CreateDate": "2026-02-05T23:19:09Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4CTYAYXEAG",
   "PolicyName": "AWSSecurityAgentWebAppPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-11T18:27:14Z",
+    "CreateDate": "2026-09-18T17:17:08Z",
     "Document": {
       "Statement": [
         {
@@ -30,6 +30,7 @@
             "securityagent:BatchGetThreatModelJobs",
             "securityagent:BatchGetThreatModels",
             "securityagent:BatchGetThreats",
+            "securityagent:BatchGetValidationRuns",
             "securityagent:CreateCodeReview",
             "securityagent:CreateDesignReview",
             "securityagent:CreatePentest",
@@ -47,6 +48,7 @@
             "securityagent:ListCodeReviews",
             "securityagent:ListDesignReviewComments",
             "securityagent:ListDesignReviews",
+            "securityagent:ListDiscoveredDomains",
             "securityagent:ListDiscoveredEndpoints",
             "securityagent:ListFindings",
             "securityagent:ListIntegratedResources",
@@ -62,10 +64,12 @@
             "securityagent:StartCodeReviewJob",
             "securityagent:StartPentestJob",
             "securityagent:StartThreatModelJob",
+            "securityagent:StartValidationRun",
             "securityagent:StopCodeReviewJob",
             "securityagent:StopPentestJob",
             "securityagent:StopThreatModelJob",
             "securityagent:UpdateCodeReview",
+            "securityagent:UpdateDiscoveredDomains",
             "securityagent:UpdateFinding",
             "securityagent:UpdatePentest",
             "securityagent:UpdateThreat",
@@ -100,7 +104,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-06-11T18:27:14Z"
+  "UpdateDate": "2026-09-18T17:17:08Z"
 }
