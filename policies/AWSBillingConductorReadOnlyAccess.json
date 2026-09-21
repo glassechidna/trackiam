@@ -1,22 +1,25 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBillingConductorReadOnlyAccess",
   "CreateDate": "2022-04-13T18:02:59Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CR7OZHOL2",
   "PolicyName": "AWSBillingConductorReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:57:37Z",
+    "CreateDate": "2026-09-21T18:17:07Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "billingconductor:GetBillingGroupCostReport",
+            "billingconductor:GetBillingTransferPreference",
             "billingconductor:List*",
             "organizations:DescribeAccount",
+            "organizations:DescribeResponsibilityTransfer",
             "organizations:ListAccounts",
             "organizations:ListChildren",
+            "organizations:ListInboundResponsibilityTransfers",
             "organizations:ListOrganizationalUnitsForParent",
             "organizations:ListRoots",
             "pricing:DescribeServices",
@@ -30,7 +33,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-02-12T17:57:37Z"
+  "UpdateDate": "2026-09-21T18:17:07Z"
 }

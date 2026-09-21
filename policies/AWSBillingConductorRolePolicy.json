@@ -1,0 +1,38 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBillingConductorRolePolicy",
+  "CreateDate": "2026-09-21T19:07:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4BLOTO2NQY",
+  "PolicyName": "AWSBillingConductorRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-09-21T19:07:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "billingconductor:CreateBillingGroup",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:billingconductor::*:billinggroup/*",
+            "arn:aws:billingconductor::*:pricingplan/*"
+          ]
+        },
+        {
+          "Action": "billingconductor:GetBillingTransferPreference",
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Action": "organizations:DescribeResponsibilityTransfer",
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-09-21T19:07:08Z"
+}
