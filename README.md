@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 462
-* Unique actions: 22462
-* Managed policies: 1582
+* Unique actions: 22469
+* Managed policies: 1583
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 428 |
 | `arn:aws:iam::aws:policy/Amazon*` | 380 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 360 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 361 |
 | `arn:aws:iam::aws:policy/service-role/*` | 226 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
 | Other | 173 |
@@ -40,7 +40,7 @@ The following table summarises the AWS APIs.
 | [`sagemaker`](services/sagemaker.yml) | 351 | 0 | 97 |
 | [`iot`](services/iot.yml) | 262 | 3 | 31 |
 | [`chime`](services/chime.yml) | 259 | 0 | 57 |
-| [`connect`](services/connect.yml) | 256 | 0 | 130 |
+| [`connect`](services/connect.yml) | 256 | 0 | 131 |
 | [`glue`](services/glue.yml) | 214 | 4 | 90 |
 | [`ses`](services/ses.yml) | 193 | 0 | 40 |
 | [`quicksight`](services/quicksight.yml) | 174 | 3 | 166 |
@@ -87,7 +87,7 @@ The following table summarises the AWS APIs.
 | [`appstream`](services/appstream.yml) | 75 | 0 | 14 |
 | [`elasticache`](services/elasticache.yml) | 75 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
-| [`logs`](services/logs.yml) | 74 | 0 | 58 |
+| [`logs`](services/logs.yml) | 74 | 0 | 59 |
 | [`guardduty`](services/guardduty.yml) | 74 | 0 | 29 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`sso`](services/sso.yml) | 73 | 0 | 53 |
@@ -379,8 +379,8 @@ The following table summarises the AWS APIs.
 | [`route53globalresolver`](services/route53globalresolver.yml) | 0 | 0 | 48 |
 | [`health-agent`](services/health-agent.yml) | 0 | 0 | 47 |
 | [`finops-agent`](services/finops-agent.yml) | 0 | 0 | 46 |
+| [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 45 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 44 |
-| [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 40 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 38 |
 | [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 38 |
@@ -503,11 +503,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3781 |
-| `Get` | 3410 |
-| `Delete` | 2573 |
-| `Create` | 2433 |
-| `Update` | 2113 |
+| `List` | 3783 |
+| `Get` | 3411 |
+| `Delete` | 2574 |
+| `Create` | 2434 |
+| `Update` | 2114 |
 | `Describe` | 1950 |
 | `Put` | 604 |
 | `Start` | 556 |

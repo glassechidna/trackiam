@@ -1,0 +1,72 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSTransferServiceRolePolicy",
+  "CreateDate": "2026-09-22T17:07:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4GXKVSEHWZ",
+  "PolicyName": "AWSTransferServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-09-22T17:07:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "secretsmanager:BatchGetSecretValue",
+            "secretsmanager:ListSecrets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ],
+          "Sid": "TransferSecretsManagerBatchAccess"
+        },
+        {
+          "Action": [
+            "secretsmanager:DeleteSecret"
+          ],
+          "Condition": {
+            "Bool": {
+              "secretsmanager:ForceDeleteWithoutRecovery": false
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "secretsmanager:ResourceTag/aws:secretsmanager:owningService": "transfer"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:secretsmanager:*:*:secret:transfer!*"
+          ],
+          "Sid": "TransferSecretsManagerDeleteAccess"
+        },
+        {
+          "Action": [
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:GetSecretValue"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "secretsmanager:ResourceTag/aws:secretsmanager:owningService": "transfer"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:secretsmanager:*:*:secret:transfer!*"
+          ],
+          "Sid": "TransferSecretsManagerReadAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-09-22T17:07:07Z"
+}

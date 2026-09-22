@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess",
   "CreateDate": "2015-02-06T18:40:01Z",
-  "DefaultVersionId": "v24",
+  "DefaultVersionId": "v25",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJN23PDQP7SZQAE3QE",
   "PolicyName": "CloudWatchReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:01:50Z",
+    "CreateDate": "2026-09-22T16:57:07Z",
     "Document": {
       "Statement": [
         {
@@ -25,6 +25,7 @@
             "autoscaling:Describe*",
             "cloudtrail:ListChannels",
             "cloudwatch:BatchGet*",
+            "cloudwatch:CreateOneTimeDeepLinkCode",
             "cloudwatch:Describe*",
             "cloudwatch:GenerateQuery",
             "cloudwatch:Get*",
@@ -40,6 +41,7 @@
             "logs:TestMetricFilter",
             "oam:ListSinks",
             "observabilityadmin:GetCentralizationRuleForOrganization",
+            "observabilityadmin:GetDatasetIntegration",
             "observabilityadmin:GetS3TableIntegration",
             "observabilityadmin:GetTelemetryEnrichmentStatus",
             "observabilityadmin:GetTelemetryEvaluationStatus",
@@ -48,6 +50,7 @@
             "observabilityadmin:GetTelemetryRule",
             "observabilityadmin:GetTelemetryRuleForOrganization",
             "observabilityadmin:ListCentralizationRulesForOrganization",
+            "observabilityadmin:ListDatasetIntegrations",
             "observabilityadmin:ListResourceTelemetry",
             "observabilityadmin:ListResourceTelemetryForOrganization",
             "observabilityadmin:ListS3TableIntegrations",
@@ -125,7 +128,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v24"
+    "VersionId": "v25"
   },
-  "UpdateDate": "2026-02-12T18:01:50Z"
+  "UpdateDate": "2026-09-22T16:57:07Z"
 }
