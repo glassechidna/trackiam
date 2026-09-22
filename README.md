@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 462
-* Unique actions: 22379
-* Managed policies: 1577
+* Unique actions: 22462
+* Managed policies: 1582
 
 Most common managed policy name prefixes:
 
@@ -21,10 +21,10 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 428 |
 | `arn:aws:iam::aws:policy/Amazon*` | 380 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 359 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 360 |
 | `arn:aws:iam::aws:policy/service-role/*` | 226 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
-| Other | 169 |
+| Other | 173 |
 
 The following table summarises the AWS APIs. 
 
@@ -160,7 +160,7 @@ The following table summarises the AWS APIs.
 | [`swf`](services/swf.yml) | 39 | 0 | 12 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
-| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 29 |
+| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 112 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 9 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 4 |
 | [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
@@ -503,14 +503,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3765 |
-| `Get` | 3390 |
-| `Delete` | 2561 |
-| `Create` | 2420 |
-| `Update` | 2102 |
+| `List` | 3781 |
+| `Get` | 3410 |
+| `Delete` | 2573 |
+| `Create` | 2433 |
+| `Update` | 2113 |
 | `Describe` | 1950 |
-| `Put` | 603 |
-| `Start` | 553 |
+| `Put` | 604 |
+| `Start` | 556 |
 | `Batch` | 330 |
 | `Tag` | 324 |
 

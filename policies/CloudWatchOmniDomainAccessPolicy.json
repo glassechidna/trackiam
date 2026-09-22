@@ -1,0 +1,38 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CloudWatchOmniDomainAccessPolicy",
+  "CreateDate": "2026-09-22T01:47:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4LKVGKZSG3",
+  "PolicyName": "CloudWatchOmniDomainAccessPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-09-22T01:47:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:CreateDomainAccessGrantForOrganization",
+            "cloudwatch:DeleteDomainAccessGrantForOrganization",
+            "cloudwatch:GetDomainAccessGrantForOrganization",
+            "cloudwatch:ListDomainAccessGrantsForOrganization",
+            "cloudwatch:ListSpacesForOrganization"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "cloudwatch:HasAccessGrant": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchOmniDomainAccessPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-09-22T01:47:08Z"
+}

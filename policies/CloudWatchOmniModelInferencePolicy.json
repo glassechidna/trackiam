@@ -1,0 +1,54 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CloudWatchOmniModelInferencePolicy",
+  "CreateDate": "2026-09-22T01:47:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4N6II26HRN",
+  "PolicyName": "CloudWatchOmniModelInferencePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-09-22T01:47:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "bedrock-mantle:CreateInference",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock-mantle:*:*:project/*",
+          "Sid": "AgentCoreEvaluationBedrockMantleInference"
+        },
+        {
+          "Action": [
+            "bedrock:InvokeModel",
+            "bedrock:InvokeModelWithResponseStream"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:bedrock:*:*:inference-profile/*",
+            "arn:aws:bedrock:*::foundation-model/*"
+          ],
+          "Sid": "AgentCoreEvaluationBedrockInvoke"
+        },
+        {
+          "Action": "bedrock-mantle:CallWithBearerToken",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AgentCoreEvaluationBedrockMantleCallWithBearerToken"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-09-22T01:47:08Z"
+}
