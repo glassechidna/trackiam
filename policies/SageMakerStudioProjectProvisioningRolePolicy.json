@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy",
   "CreateDate": "2024-11-20T21:58:39Z",
-  "DefaultVersionId": "v82",
+  "DefaultVersionId": "v83",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQZUIPVLH",
   "PolicyName": "SageMakerStudioProjectProvisioningRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-08-24T20:37:11Z",
+    "CreateDate": "2026-09-22T21:57:07Z",
     "Document": {
       "Statement": [
         {
@@ -225,6 +225,7 @@
             "StringEquals": {
               "iam:PassedToService": [
                 "bedrock.amazonaws.com",
+                "datazone.amazonaws.com",
                 "redshift-serverless.amazonaws.com",
                 "sagemaker.amazonaws.com"
               ]
@@ -2807,6 +2808,16 @@
         },
         {
           "Action": [
+            "datazone:*Connection",
+            "datazone:*DataSource",
+            "datazone:*SubscriptionTarget"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DataZoneEnvironmentResources"
+        },
+        {
+          "Action": [
             "ec2:CreateNetworkInterface"
           ],
           "Effect": "Allow",
@@ -3008,7 +3019,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v82"
+    "VersionId": "v83"
   },
-  "UpdateDate": "2026-08-24T20:37:11Z"
+  "UpdateDate": "2026-09-22T21:57:07Z"
 }
