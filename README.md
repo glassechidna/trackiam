@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 462
-* Unique actions: 22471
+* Unique services: 463
+* Unique actions: 22518
 * Managed policies: 1583
 
 Most common managed policy name prefixes:
@@ -378,6 +378,7 @@ The following table summarises the AWS APIs.
 | [`wickr`](services/wickr.yml) | 0 | 0 | 48 |
 | [`route53globalresolver`](services/route53globalresolver.yml) | 0 | 0 | 48 |
 | [`health-agent`](services/health-agent.yml) | 0 | 0 | 47 |
+| [`network-security-manager`](services/network-security-manager.yml) | 0 | 0 | 46 |
 | [`finops-agent`](services/finops-agent.yml) | 0 | 0 | 46 |
 | [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 45 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 44 |
@@ -386,8 +387,8 @@ The following table summarises the AWS APIs.
 | [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 38 |
 | [`rtbfabric`](services/rtbfabric.yml) | 0 | 0 | 36 |
 | [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
+| [`billing`](services/billing.yml) | 0 | 0 | 33 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
-| [`billing`](services/billing.yml) | 0 | 0 | 32 |
 | [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 31 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`gameliftstreams`](services/gameliftstreams.yml) | 0 | 0 | 30 |
@@ -503,14 +504,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3783 |
-| `Get` | 3411 |
-| `Delete` | 2574 |
-| `Create` | 2434 |
-| `Update` | 2114 |
+| `List` | 3799 |
+| `Get` | 3417 |
+| `Delete` | 2580 |
+| `Create` | 2444 |
+| `Update` | 2119 |
 | `Describe` | 1950 |
-| `Put` | 604 |
+| `Put` | 605 |
 | `Start` | 556 |
 | `Batch` | 330 |
-| `Tag` | 324 |
+| `Tag` | 325 |
 
