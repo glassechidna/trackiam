@@ -139,6 +139,7 @@ Actions:
   - Name: datazone:CreateCell
   - Name: datazone:CreateCellRun
   - Name: datazone:CreateConnection
+  - Name: datazone:CreateDataApp
   - Name: datazone:CreateDataProduct
   - Name: datazone:CreateDataProductRevision
   - Name: datazone:CreateDesignation
@@ -151,6 +152,8 @@ Actions:
   - Name: datazone:DeleteCell
   - Name: datazone:DeleteCellRun
   - Name: datazone:DeleteConnection
+  - Name: datazone:DeleteConversation
+  - Name: datazone:DeleteDataApp
   - Name: datazone:DeleteDataExportConfiguration
   - Name: datazone:DeleteDataProduct
   - Name: datazone:DeleteDesignation
@@ -161,6 +164,7 @@ Actions:
   - Name: datazone:DeleteNotebook
   - Name: datazone:DeleteProjectProfile
   - Name: datazone:DeleteRule
+  - Name: datazone:DeregisterAgentArtifact
   - Name: datazone:DisassociateGovernedTerms
   - Name: datazone:GenerateCode
   - Name: datazone:GetAccountPool
@@ -171,6 +175,7 @@ Actions:
   - Name: datazone:GetConnection
   - Name: datazone:GetConversation
   - Name: datazone:GetCurrentEffectivePolicy
+  - Name: datazone:GetDataApp
   - Name: datazone:GetDataExportConfiguration
   - Name: datazone:GetDataProduct
   - Name: datazone:GetDesignation
@@ -188,12 +193,16 @@ Actions:
   - Name: datazone:GetRule
   - Name: datazone:GetSubscriptionEligibility
   - Name: datazone:GetUpdateEligibility
+  - Name: datazone:InvokeAgent
   - Name: datazone:ListAccountEnvironments
   - Name: datazone:ListAccountPools
   - Name: datazone:ListAccountsInAccountPool
+  - Name: datazone:ListAgentArtifacts
+  - Name: datazone:ListAgentSessionRecords
   - Name: datazone:ListCellRuns
   - Name: datazone:ListConnections
   - Name: datazone:ListConversations
+  - Name: datazone:ListDataApps
   - Name: datazone:ListDataProductRevisions
   - Name: datazone:ListDesignations
   - Name: datazone:ListDomainUnitsForParent
@@ -208,6 +217,7 @@ Actions:
   - Name: datazone:ListPolicyGrants
   - Name: datazone:ListProjectProfiles
   - Name: datazone:ListRules
+  - Name: datazone:ListSharedDataApps
   - Name: datazone:ListWarehouseMetadata
   - Name: datazone:ProvisionDomain
   - Name: datazone:PutCellRunResult
@@ -215,6 +225,7 @@ Actions:
   - Name: datazone:PutDomainSharingPolicy
   - Name: datazone:QueryGraph
   - Name: datazone:RefreshToken
+  - Name: datazone:RegisterAgentArtifact
   - Name: datazone:RemoveEntityOwner
   - Name: datazone:RemovePolicyGrant
   - Name: datazone:SearchRules
@@ -229,6 +240,7 @@ Actions:
   - Name: datazone:StartNotebookImport
   - Name: datazone:StartNotebookRun
   - Name: datazone:StartNotebookSync
+  - Name: datazone:StopAgent
   - Name: datazone:StopCompute
   - Name: datazone:StopMetadataGenerationRun
   - Name: datazone:StopNotebookCompute
@@ -237,6 +249,8 @@ Actions:
   - Name: datazone:UpdateCell
   - Name: datazone:UpdateCellRun
   - Name: datazone:UpdateConnection
+  - Name: datazone:UpdateConversation
+  - Name: datazone:UpdateDataApp
   - Name: datazone:UpdateDataSourceRunActivities
   - Name: datazone:UpdateDesignation
   - Name: datazone:UpdateDomainUnit

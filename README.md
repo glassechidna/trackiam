@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 463
-* Unique actions: 22535
+* Unique actions: 22555
 * Managed policies: 1583
 
 Most common managed policy name prefixes:
@@ -50,7 +50,7 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 140 | 0 | 24 |
 | [`lex`](services/lex.yml) | 139 | 2 | 13 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 33 |
-| [`datazone`](services/datazone.yml) | 123 | 0 | 124 |
+| [`datazone`](services/datazone.yml) | 123 | 0 | 138 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 3 |
 | [`s3`](services/s3.yml) | 113 | 60 | 67 |
@@ -362,13 +362,13 @@ The following table summarises the AWS APIs.
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 255 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 134 |
-| [`securityagent`](services/securityagent.yml) | 0 | 0 | 115 |
+| [`securityagent`](services/securityagent.yml) | 0 | 0 | 116 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
 | [`odb`](services/odb.yml) | 0 | 0 | 90 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
 | [`aidevops`](services/aidevops.yml) | 0 | 0 | 82 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
-| [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 70 |
+| [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 75 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 61 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
@@ -504,11 +504,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3802 |
-| `Get` | 3418 |
-| `Delete` | 2583 |
-| `Create` | 2446 |
-| `Update` | 2122 |
+| `List` | 3808 |
+| `Get` | 3420 |
+| `Delete` | 2585 |
+| `Create` | 2447 |
+| `Update` | 2125 |
 | `Describe` | 1952 |
 | `Put` | 607 |
 | `Start` | 556 |
