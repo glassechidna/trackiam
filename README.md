@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 463
-* Unique actions: 22518
+* Unique actions: 22533
 * Managed policies: 1583
 
 Most common managed policy name prefixes:
@@ -114,7 +114,7 @@ The following table summarises the AWS APIs.
 | [`geo`](services/geo.yml) | 60 | 0 | 4 |
 | [`inspector2`](services/inspector2.yml) | 59 | 0 | 22 |
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 17 |
-| [`events`](services/events.yml) | 57 | 0 | 3 |
+| [`events`](services/events.yml) | 57 | 0 | 17 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 56 | 5 | 23 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 56 | 0 | 32 |
@@ -187,7 +187,7 @@ The following table summarises the AWS APIs.
 | [`applicationinsights`](services/applicationinsights.yml) | 33 | 0 | 1 |
 | [`tnb`](services/tnb.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
-| [`kinesis`](services/kinesis.yml) | 32 | 0 | 14 |
+| [`kinesis`](services/kinesis.yml) | 32 | 0 | 15 |
 | [`billingconductor`](services/billingconductor.yml) | 32 | 0 | 2 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`payment-cryptography`](services/payment-cryptography.yml) | 31 | 0 | 16 |
@@ -504,13 +504,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3799 |
-| `Get` | 3417 |
-| `Delete` | 2580 |
-| `Create` | 2444 |
-| `Update` | 2119 |
-| `Describe` | 1950 |
-| `Put` | 605 |
+| `List` | 3801 |
+| `Get` | 3418 |
+| `Delete` | 2583 |
+| `Create` | 2446 |
+| `Update` | 2122 |
+| `Describe` | 1951 |
+| `Put` | 607 |
 | `Start` | 556 |
 | `Batch` | 330 |
 | `Tag` | 325 |
