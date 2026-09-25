@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 463
-* Unique actions: 22555
+* Unique actions: 22558
 * Managed policies: 1583
 
 Most common managed policy name prefixes:
@@ -410,12 +410,12 @@ The following table summarises the AWS APIs.
 | [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 23 |
 | [`transform`](services/transform.yml) | 0 | 0 | 22 |
 | [`agent-registry`](services/agent-registry.yml) | 0 | 0 | 22 |
+| [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 21 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 20 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 19 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 18 |
-| [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 18 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 18 |
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 17 |
 | [`ds-data`](services/ds-data.yml) | 0 | 0 | 17 |
@@ -505,12 +505,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3808 |
-| `Get` | 3420 |
-| `Delete` | 2585 |
+| `Get` | 3421 |
+| `Delete` | 2586 |
 | `Create` | 2447 |
 | `Update` | 2125 |
 | `Describe` | 1952 |
-| `Put` | 607 |
+| `Put` | 608 |
 | `Start` | 556 |
 | `Batch` | 330 |
 | `Tag` | 325 |
