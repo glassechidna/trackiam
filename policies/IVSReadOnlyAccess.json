@@ -1,18 +1,19 @@
 {
   "Arn": "arn:aws:iam::aws:policy/IVSReadOnlyAccess",
   "CreateDate": "2023-12-05T18:00:37Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KSFZMGQOA",
   "PolicyName": "IVSReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:03:11Z",
+    "CreateDate": "2026-09-25T19:47:08Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "ivs:BatchGetChannel",
+            "ivs:GetAdConfiguration",
             "ivs:GetChannel",
             "ivs:GetComposition",
             "ivs:GetEncoderConfiguration",
@@ -27,6 +28,7 @@
             "ivs:GetStorageConfiguration",
             "ivs:GetStream",
             "ivs:GetStreamSession",
+            "ivs:ListAdConfigurations",
             "ivs:ListChannels",
             "ivs:ListCompositions",
             "ivs:ListEncoderConfigurations",
@@ -54,7 +56,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-02-12T18:03:11Z"
+  "UpdateDate": "2026-09-25T19:47:08Z"
 }
