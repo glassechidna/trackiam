@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 463
-* Unique actions: 22563
+* Unique actions: 22566
 * Managed policies: 1584
 
 Most common managed policy name prefixes:
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 625 | 0 | 201 |
-| [`sagemaker`](services/sagemaker.yml) | 351 | 0 | 97 |
+| [`sagemaker`](services/sagemaker.yml) | 351 | 0 | 98 |
 | [`iot`](services/iot.yml) | 262 | 3 | 31 |
 | [`chime`](services/chime.yml) | 259 | 0 | 57 |
 | [`connect`](services/connect.yml) | 256 | 0 | 131 |
@@ -362,7 +362,7 @@ The following table summarises the AWS APIs.
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 255 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 134 |
-| [`securityagent`](services/securityagent.yml) | 0 | 0 | 116 |
+| [`securityagent`](services/securityagent.yml) | 0 | 0 | 118 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
 | [`odb`](services/odb.yml) | 0 | 0 | 90 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
@@ -508,7 +508,7 @@ Most common action prefixes:
 | `Get` | 3422 |
 | `Delete` | 2586 |
 | `Create` | 2447 |
-| `Update` | 2126 |
+| `Update` | 2127 |
 | `Describe` | 1952 |
 | `Put` | 608 |
 | `Start` | 556 |
