@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 463
-* Unique actions: 22566
+* Unique services: 464
+* Unique actions: 22568
 * Managed policies: 1584
 
 Most common managed policy name prefixes:
@@ -400,12 +400,12 @@ The following table summarises the AWS APIs.
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
 | [`invoicing`](services/invoicing.yml) | 0 | 0 | 26 |
 | [`mpa`](services/mpa.yml) | 0 | 0 | 25 |
+| [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 25 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 24 |
 | [`s3files`](services/s3files.yml) | 0 | 0 | 24 |
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
 | [`evs`](services/evs.yml) | 0 | 0 | 24 |
-| [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 24 |
 | [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 23 |
 | [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 23 |
 | [`transform`](services/transform.yml) | 0 | 0 | 22 |
@@ -487,6 +487,7 @@ The following table summarises the AWS APIs.
 | [`wam`](services/wam.yml) | 0 | 0 | 1 |
 | [`vpce`](services/vpce.yml) | 0 | 0 | 1 |
 | [`verified-access`](services/verified-access.yml) | 0 | 0 | 1 |
+| [`startups`](services/startups.yml) | 0 | 0 | 1 |
 | [`serviceextract`](services/serviceextract.yml) | 0 | 0 | 1 |
 | [`sagemaker-unified-studio-mcp`](services/sagemaker-unified-studio-mcp.yml) | 0 | 0 | 1 |
 | [`sagemaker-data-science-assistant`](services/sagemaker-data-science-assistant.yml) | 0 | 0 | 1 |
@@ -504,8 +505,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3808 |
-| `Get` | 3422 |
+| `List` | 3809 |
+| `Get` | 3423 |
 | `Delete` | 2586 |
 | `Create` | 2447 |
 | `Update` | 2127 |
