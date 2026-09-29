@@ -1,0 +1,30 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/EndUserMessagingServiceRolePolicy",
+  "CreateDate": "2026-09-29T19:37:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4CPA5ZQ67I",
+  "PolicyName": "EndUserMessagingServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-09-29T19:37:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "cloudwatch:PutMetricData",
+          "Condition": {
+            "StringEquals": {
+              "cloudwatch:namespace": "AWS/EndUserMessaging"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-09-29T19:37:07Z"
+}

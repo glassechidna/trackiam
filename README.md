@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 464
-* Unique actions: 22572
-* Managed policies: 1581
+* Unique actions: 22559
+* Managed policies: 1582
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 428 |
 | `arn:aws:iam::aws:policy/Amazon*` | 379 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 360 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 361 |
 | `arn:aws:iam::aws:policy/service-role/*` | 226 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
 | Other | 173 |
@@ -50,7 +50,7 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 140 | 0 | 24 |
 | [`lex`](services/lex.yml) | 139 | 2 | 13 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 33 |
-| [`datazone`](services/datazone.yml) | 123 | 0 | 138 |
+| [`datazone`](services/datazone.yml) | 123 | 0 | 124 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 3 |
 | [`s3`](services/s3.yml) | 113 | 60 | 67 |
@@ -78,7 +78,7 @@ The following table summarises the AWS APIs.
 | [`cloudformation`](services/cloudformation.yml) | 82 | 0 | 20 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 81 | 0 | 0 |
-| [`securityhub`](services/securityhub.yml) | 79 | 0 | 50 |
+| [`securityhub`](services/securityhub.yml) | 79 | 0 | 52 |
 | [`codecommit`](services/codecommit.yml) | 79 | 0 | 12 |
 | [`personalize`](services/personalize.yml) | 78 | 0 | 5 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
@@ -163,8 +163,6 @@ The following table summarises the AWS APIs.
 | [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 112 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 9 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 4 |
-| [`iotevents`](services/iotevents.yml) | 38 | 0 | 1 |
-| [`evidently`](services/evidently.yml) | 38 | 0 | 0 |
 | [`aoss`](services/aoss.yml) | 37 | 0 | 12 |
 | [`apprunner`](services/apprunner.yml) | 37 | 0 | 5 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 4 |
@@ -352,6 +350,8 @@ The following table summarises the AWS APIs.
 | [`eks-auth`](services/eks-auth.yml) | 1 | 0 | 0 |
 | [`cloudtrail-data`](services/cloudtrail-data.yml) | 1 | 0 | 0 |
 | [`apigateway`](services/apigateway.yml) | 0 | 152 | 44 |
+| [`iotevents`](services/iotevents.yml) | 0 | 38 | 0 |
+| [`evidently`](services/evidently.yml) | 0 | 38 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
 | [`iot1click`](services/iot1click.yml) | 0 | 26 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 12 | 3 |
@@ -505,11 +505,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3809 |
+| `List` | 3806 |
 | `Get` | 3424 |
-| `Delete` | 2586 |
-| `Create` | 2448 |
-| `Update` | 2127 |
+| `Delete` | 2584 |
+| `Create` | 2447 |
+| `Update` | 2124 |
 | `Describe` | 1952 |
 | `Put` | 609 |
 | `Start` | 556 |
