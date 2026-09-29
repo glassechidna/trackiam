@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSAccountSettingsManagementRole",
   "CreateDate": "2025-12-11T17:49:09Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CVFC7PYPE",
   "PolicyName": "AWSAccountSettingsManagementRole",
   "PolicyVersion": {
-    "CreateDate": "2026-09-01T15:17:07Z",
+    "CreateDate": "2026-09-29T15:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -62,8 +62,10 @@
         {
           "Action": [
             "payments:CreatePaymentInstrument",
+            "payments:DeletePaymentInstrument",
             "payments:GetPaymentInstrument",
             "payments:GetPaymentStatus",
+            "payments:ListPaymentInstruments",
             "payments:ListPaymentPreferences",
             "payments:ListTagsForResource",
             "payments:MakePayment",
@@ -123,7 +125,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-09-01T15:17:07Z"
+  "UpdateDate": "2026-09-29T15:07:07Z"
 }
