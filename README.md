@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 464
-* Unique actions: 22568
+* Unique actions: 22572
 * Managed policies: 1584
 
 Most common managed policy name prefixes:
@@ -383,11 +383,11 @@ The following table summarises the AWS APIs.
 | [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 45 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 44 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
+| [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 38 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 38 |
 | [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 38 |
 | [`rtbfabric`](services/rtbfabric.yml) | 0 | 0 | 36 |
 | [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
-| [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 34 |
 | [`billing`](services/billing.yml) | 0 | 0 | 33 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
@@ -506,12 +506,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3809 |
-| `Get` | 3423 |
+| `Get` | 3424 |
 | `Delete` | 2586 |
-| `Create` | 2447 |
+| `Create` | 2448 |
 | `Update` | 2127 |
 | `Describe` | 1952 |
-| `Put` | 608 |
+| `Put` | 609 |
 | `Start` | 556 |
 | `Batch` | 330 |
 | `Tag` | 325 |
