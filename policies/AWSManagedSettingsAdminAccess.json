@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSManagedSettingsAdminAccess",
   "CreateDate": "2026-07-22T01:27:25Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4GA3LE2K77",
   "PolicyName": "AWSManagedSettingsAdminAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-09-01T00:37:08Z",
+    "CreateDate": "2026-09-30T22:27:07Z",
     "Document": {
       "Statement": [
         {
@@ -214,7 +214,12 @@
             "account:GetPrimaryEmailUpdateStatus",
             "account:PutAccountName",
             "account:PutContactInformation",
-            "account:StartPrimaryEmailUpdate"
+            "account:SendPhoneNumberVerification",
+            "account:StartPrimaryEmailUpdate",
+            "account:VerifyPhoneNumber",
+            "notifications:AssociateManagedNotificationAccountContact",
+            "notifications:DisassociateManagedNotificationAccountContact",
+            "notifications:ListManagedNotificationChannelAssociations"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -443,7 +448,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2026-09-01T00:37:08Z"
+  "UpdateDate": "2026-09-30T22:27:07Z"
 }
