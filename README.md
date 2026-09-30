@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 464
-* Unique actions: 22559
+* Unique actions: 22563
 * Managed policies: 1582
 
 Most common managed policy name prefixes:
@@ -300,7 +300,7 @@ The following table summarises the AWS APIs.
 | [`snow-device-management`](services/snow-device-management.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`launchwizard`](services/launchwizard.yml) | 12 | 0 | 28 |
-| [`account`](services/account.yml) | 12 | 0 | 5 |
+| [`account`](services/account.yml) | 12 | 0 | 7 |
 | [`scheduler`](services/scheduler.yml) | 12 | 0 | 1 |
 | [`pca-connector-scep`](services/pca-connector-scep.yml) | 12 | 0 | 0 |
 | [`networkmonitor`](services/networkmonitor.yml) | 12 | 0 | 0 |
@@ -410,10 +410,10 @@ The following table summarises the AWS APIs.
 | [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 23 |
 | [`transform`](services/transform.yml) | 0 | 0 | 22 |
 | [`agent-registry`](services/agent-registry.yml) | 0 | 0 | 22 |
+| [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 21 |
 | [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 21 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 20 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
-| [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 19 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 18 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 18 |
@@ -509,9 +509,9 @@ Most common action prefixes:
 | `Get` | 3424 |
 | `Delete` | 2584 |
 | `Create` | 2447 |
-| `Update` | 2124 |
+| `Update` | 2125 |
 | `Describe` | 1952 |
-| `Put` | 609 |
+| `Put` | 610 |
 | `Start` | 556 |
 | `Batch` | 330 |
 | `Tag` | 325 |
