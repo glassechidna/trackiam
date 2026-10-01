@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 464
-* Unique actions: 22583
+* Unique actions: 22586
 * Managed policies: 1583
 
 Most common managed policy name prefixes:
@@ -388,7 +388,7 @@ The following table summarises the AWS APIs.
 | [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 38 |
 | [`rtbfabric`](services/rtbfabric.yml) | 0 | 0 | 36 |
 | [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
-| [`billing`](services/billing.yml) | 0 | 0 | 33 |
+| [`billing`](services/billing.yml) | 0 | 0 | 35 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`gameliftstreams`](services/gameliftstreams.yml) | 0 | 0 | 30 |
@@ -399,10 +399,10 @@ The following table summarises the AWS APIs.
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
 | [`invoicing`](services/invoicing.yml) | 0 | 0 | 26 |
+| [`security-ir`](services/security-ir.yml) | 0 | 0 | 25 |
 | [`mpa`](services/mpa.yml) | 0 | 0 | 25 |
 | [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 25 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
-| [`security-ir`](services/security-ir.yml) | 0 | 0 | 24 |
 | [`s3files`](services/s3files.yml) | 0 | 0 | 24 |
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
 | [`evs`](services/evs.yml) | 0 | 0 | 24 |
@@ -505,8 +505,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3809 |
-| `Get` | 3429 |
+| `List` | 3811 |
+| `Get` | 3430 |
 | `Delete` | 2588 |
 | `Create` | 2451 |
 | `Update` | 2128 |
