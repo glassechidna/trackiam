@@ -71,11 +71,17 @@ Actions:
   - Name: lambda:CreateMicrovmImage
   - Name: lambda:CreateMicrovmShellAuthToken
   - Name: lambda:CreateNetworkConnector
+  - Name: lambda:CreateWebFunction
+  - Name: lambda:CreateWebFunctionEndpoint
+  - Name: lambda:CreateWebFunctionRevision
   - Name: lambda:DeleteCapacityProvider
   - Name: lambda:DeleteMicrovmImage
   - Name: lambda:DeleteMicrovmImageVersion
   - Name: lambda:DeleteNetworkConnector
   - Name: lambda:DeleteResourcePolicy
+  - Name: lambda:DeleteWebFunction
+  - Name: lambda:DeleteWebFunctionEndpoint
+  - Name: lambda:DeleteWebFunctionRevision
   - Name: lambda:DisableReplication
   - Name: lambda:EnableReplication
   - Name: lambda:GetCapacityProvider
@@ -90,8 +96,13 @@ Actions:
   - Name: lambda:GetMicrovmImageVersion
   - Name: lambda:GetNetworkConnector
   - Name: lambda:GetResourcePolicy
+  - Name: lambda:GetWebAccountSettings
+  - Name: lambda:GetWebFunction
+  - Name: lambda:GetWebFunctionEndpoint
+  - Name: lambda:GetWebFunctionRevision
   - Name: lambda:InvokeFunction
   - Name: lambda:InvokeFunctionUrl
+  - Name: lambda:InvokeWebFunctionEndpoint
   - Name: lambda:ListCapacityProviders
   - Name: lambda:ListDurableExecutionsByFunction
   - Name: lambda:ListFunctionVersionsByCapacityProvider
@@ -102,6 +113,9 @@ Actions:
   - Name: lambda:ListMicrovmImages
   - Name: lambda:ListMicrovms
   - Name: lambda:ListNetworkConnectors
+  - Name: lambda:ListWebFunctionEndpoints
+  - Name: lambda:ListWebFunctionRevisions
+  - Name: lambda:ListWebFunctions
   - Name: lambda:PassCapacityProvider
   - Name: lambda:PassNetworkConnector
   - Name: lambda:PutFunctionRecursionConfig
@@ -120,6 +134,7 @@ Actions:
   - Name: lambda:UpdateMicrovmImage
   - Name: lambda:UpdateMicrovmImageVersion
   - Name: lambda:UpdateNetworkConnector
+  - Name: lambda:UpdateWebFunctionEndpoint
 
   # APIs without an IAM action
   - Name: lambda:GetLayerVersionByArn

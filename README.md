@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 464
-* Unique actions: 22563
-* Managed policies: 1582
+* Unique actions: 22583
+* Managed policies: 1583
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 428 |
+| `arn:aws:iam::aws:policy/AWS*` | 429 |
 | `arn:aws:iam::aws:policy/Amazon*` | 379 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 361 |
 | `arn:aws:iam::aws:policy/service-role/*` | 226 |
@@ -105,7 +105,7 @@ The following table summarises the AWS APIs.
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 3 |
 | [`appsync`](services/appsync.yml) | 64 | 0 | 23 |
-| [`lambda`](services/lambda.yml) | 63 | 3 | 56 |
+| [`lambda`](services/lambda.yml) | 63 | 3 | 71 |
 | [`ivs`](services/ivs.yml) | 63 | 0 | 14 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 10 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
@@ -160,7 +160,7 @@ The following table summarises the AWS APIs.
 | [`swf`](services/swf.yml) | 39 | 0 | 12 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
-| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 112 |
+| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 117 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 9 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 4 |
 | [`aoss`](services/aoss.yml) | 37 | 0 | 12 |
@@ -505,11 +505,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3806 |
-| `Get` | 3424 |
-| `Delete` | 2584 |
-| `Create` | 2447 |
-| `Update` | 2125 |
+| `List` | 3809 |
+| `Get` | 3429 |
+| `Delete` | 2588 |
+| `Create` | 2451 |
+| `Update` | 2128 |
 | `Describe` | 1952 |
 | `Put` | 610 |
 | `Start` | 556 |
