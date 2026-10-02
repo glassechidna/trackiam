@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/FinOpsAgentAgentPolicy",
   "CreateDate": "2026-06-03T19:57:12Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KRTUHDRKJ",
   "PolicyName": "FinOpsAgentAgentPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-09-24T13:27:07Z",
+    "CreateDate": "2026-10-02T18:27:07Z",
     "Document": {
       "Statement": [
         {
@@ -71,6 +71,7 @@
             "billing:GetEnterpriseSupportChargeSummary",
             "billing:GetEnterpriseSupportContractDetails",
             "billing:GetResourcePolicy",
+            "billing:ListBillingViewSegments",
             "billing:ListBillingViews",
             "billing:ListEnterpriseSupportLinkedAccountCharges",
             "billing:ListSourceViewsForBillingView",
@@ -140,8 +141,10 @@
             "compute-optimizer:GetRDSDatabaseRecommendations",
             "compute-optimizer:GetRecommendationPreferences",
             "compute-optimizer:GetRecommendationSummaries",
+            "cost-optimization-hub:GetPreferences",
             "cost-optimization-hub:GetRecommendation",
             "cost-optimization-hub:ListEfficiencyMetrics",
+            "cost-optimization-hub:ListEnrollmentStatuses",
             "cost-optimization-hub:ListRecommendationSummaries",
             "cost-optimization-hub:ListRecommendations",
             "ec2:DescribeInstances",
@@ -168,6 +171,7 @@
             "pricing:GetProducts",
             "rds:DescribeDBClusters",
             "rds:DescribeDBInstances",
+            "rds:DescribeDBMajorEngineVersions",
             "savingsplans:DescribeSavingsPlanRates",
             "savingsplans:DescribeSavingsPlans",
             "savingsplans:DescribeSavingsPlansOfferingRates",
@@ -182,7 +186,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-09-24T13:27:07Z"
+  "UpdateDate": "2026-10-02T18:27:07Z"
 }

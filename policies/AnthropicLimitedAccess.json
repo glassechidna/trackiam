@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AnthropicLimitedAccess",
   "CreateDate": "2026-04-01T04:57:18Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4PVRRB6AVZ",
   "PolicyName": "AnthropicLimitedAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-09-25T20:17:08Z",
+    "CreateDate": "2026-10-02T16:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -61,7 +61,6 @@
             "aws-external-anthropic:CreateMemoryStore",
             "aws-external-anthropic:CreateSession",
             "aws-external-anthropic:CreateSkill",
-            "aws-external-anthropic:CreateUserProfile",
             "aws-external-anthropic:CreateVault",
             "aws-external-anthropic:CreateWebhook",
             "aws-external-anthropic:DeleteBatchInference",
@@ -81,7 +80,6 @@
             "aws-external-anthropic:UpdateMemoryStore",
             "aws-external-anthropic:UpdateSession",
             "aws-external-anthropic:UpdateSkill",
-            "aws-external-anthropic:UpdateUserProfile",
             "aws-external-anthropic:UpdateVault",
             "aws-external-anthropic:UpdateWebhook"
           ],
@@ -92,9 +90,13 @@
         {
           "Action": [
             "aws-external-anthropic:CallWithBearerToken",
+            "aws-external-anthropic:CreateUserProfile",
             "aws-external-anthropic:GetAccountStatus",
             "aws-external-anthropic:GetKey",
-            "aws-external-anthropic:ListKeys"
+            "aws-external-anthropic:GetUserProfile",
+            "aws-external-anthropic:ListKeys",
+            "aws-external-anthropic:ListUserProfiles",
+            "aws-external-anthropic:UpdateUserProfile"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -104,7 +106,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2026-09-25T20:17:08Z"
+  "UpdateDate": "2026-10-02T16:37:08Z"
 }

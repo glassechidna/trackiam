@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonApplicationRecoveryControllerRegionSwitchPlanExecutionPolicy",
   "CreateDate": "2025-11-03T19:34:08Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4EL57A4O72",
   "PolicyName": "AmazonApplicationRecoveryControllerRegionSwitchPlanExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-03-05T19:27:12Z",
+    "CreateDate": "2026-10-02T18:57:08Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "servicequotas:RequestServiceQuotaIncrease",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ServiceQuotasWrite"
+        },
         {
           "Action": "iam:SimulatePrincipalPolicy",
           "Effect": "Allow",
@@ -35,12 +46,21 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "CloudWatch"
+        },
+        {
+          "Action": [
+            "servicequotas:GetRequestedServiceQuotaChange",
+            "servicequotas:GetServiceQuota"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ServiceQuotasRead"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-03-05T19:27:12Z"
+  "UpdateDate": "2026-10-02T18:57:08Z"
 }
