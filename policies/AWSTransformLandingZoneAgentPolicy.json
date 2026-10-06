@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSTransformLandingZoneAgentPolicy",
   "CreateDate": "2026-08-06T15:12:26Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DQL5AE6YX",
   "PolicyName": "AWSTransformLandingZoneAgentPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-09-01T10:27:08Z",
+    "CreateDate": "2026-10-06T07:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -195,7 +195,7 @@
           ],
           "Condition": {
             "StringEquals": {
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+              "aws:ResourceOrgID": "${aws:PrincipalOrgID}"
             }
           },
           "Effect": "Allow",
@@ -214,7 +214,7 @@
           ],
           "Condition": {
             "StringEquals": {
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+              "aws:ResourceOrgID": "${aws:PrincipalOrgID}"
             }
           },
           "Effect": "Allow",
@@ -231,7 +231,7 @@
           ],
           "Condition": {
             "StringEquals": {
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+              "aws:ResourceOrgID": "${aws:PrincipalOrgID}"
             }
           },
           "Effect": "Allow",
@@ -345,7 +345,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2026-09-01T10:27:08Z"
+  "UpdateDate": "2026-10-06T07:37:08Z"
 }
