@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForAWSTransformCustom",
   "CreateDate": "2026-03-25T02:57:08Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ES3EBGHBU",
   "PolicyName": "AWSServiceRoleForAWSTransformCustom",
   "PolicyVersion": {
-    "CreateDate": "2026-05-05T19:42:14Z",
+    "CreateDate": "2026-10-06T18:47:08Z",
     "Document": {
       "Statement": [
         {
@@ -16,7 +16,10 @@
           ],
           "Condition": {
             "StringEquals": {
-              "cloudwatch:namespace": "AWS/TransformCustom"
+              "cloudwatch:namespace": [
+                "AWS/TransformContinuousModernization",
+                "AWS/TransformCustom"
+              ]
             }
           },
           "Effect": "Allow",
@@ -44,7 +47,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2026-05-05T19:42:14Z"
+  "UpdateDate": "2026-10-06T18:47:08Z"
 }

@@ -1,15 +1,65 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSSecurityAgentWebAppPolicy",
   "CreateDate": "2026-02-05T23:19:09Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4CTYAYXEAG",
   "PolicyName": "AWSSecurityAgentWebAppPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-09-24T23:37:07Z",
+    "CreateDate": "2026-10-06T17:27:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:GetRole",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/service-role/continuum-schedule-as-*",
+          "Sid": "ReadSchedulerExecutionRoles"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "iam:PassedToService": "scheduler.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/service-role/continuum-schedule-as-*",
+          "Sid": "PassSchedulerExecutionRoles"
+        },
+        {
+          "Action": "scheduler:CreateScheduleGroup",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:scheduler:*:*:schedule-group/as-*",
+          "Sid": "CreateAgentSpaceScheduleGroups"
+        },
+        {
+          "Action": [
+            "scheduler:CreateSchedule",
+            "scheduler:DeleteSchedule",
+            "scheduler:GetSchedule",
+            "scheduler:UpdateSchedule"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:scheduler:*:*:schedule/as-*/aws-continuum-pt-*",
+          "Sid": "ManageAgentSpacePentestSchedules"
+        },
         {
           "Action": [
             "securityagent:AddArtifact",
@@ -105,7 +155,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2026-09-24T23:37:07Z"
+  "UpdateDate": "2026-10-06T17:27:07Z"
 }

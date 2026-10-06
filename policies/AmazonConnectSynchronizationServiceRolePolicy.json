@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectSynchronizationServiceRolePolicy",
   "CreateDate": "2023-10-27T22:38:25Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4J2PE2WH3Y",
   "PolicyName": "AmazonConnectSynchronizationServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2025-11-21T20:19:09Z",
+    "CreateDate": "2026-10-06T17:57:08Z",
     "Document": {
       "Statement": [
         {
@@ -24,20 +24,24 @@
         {
           "Action": [
             "connect:*AnalyticsData*",
-            "connect:*AttachedFile*",
             "connect:*Contact",
             "connect:*ContactAttributes*",
             "connect:*ContactEvaluation",
             "connect:*MetricData*",
             "connect:*RealtimeContact*",
             "connect:*UserData*",
+            "connect:BatchGetAttachedFileMetadata",
             "connect:ClaimPhoneNumber",
+            "connect:CompleteAttachedFileUpload",
+            "connect:CreateAttachedFile",
             "connect:CreateInstance",
             "connect:CreateParticipant",
             "connect:CreatePersistentContactAssociation",
             "connect:CreateTrafficDistributionGroup",
+            "connect:DeleteAttachedFile",
             "connect:DeleteInstance",
             "connect:DeleteTrafficDistributionGroup",
+            "connect:GetAttachedFile",
             "connect:GetFederationToken",
             "connect:GetTrafficDistribution",
             "connect:ImportPhoneNumber",
@@ -87,7 +91,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2025-11-21T20:19:09Z"
+  "UpdateDate": "2026-10-06T17:57:08Z"
 }
