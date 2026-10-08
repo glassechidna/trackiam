@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AccountManagementFromVercel",
   "CreateDate": "2025-12-11T16:34:19Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JAHPPZRBR",
   "PolicyName": "AccountManagementFromVercel",
   "PolicyVersion": {
-    "CreateDate": "2026-05-07T18:57:18Z",
+    "CreateDate": "2026-10-08T13:47:08Z",
     "Document": {
       "Statement": [
         {
@@ -47,6 +47,28 @@
         },
         {
           "Action": [
+            "iam:AttachRolePolicy",
+            "iam:CreateRole",
+            "iam:DeleteRole",
+            "iam:DeleteRolePolicy",
+            "iam:DetachRolePolicy",
+            "iam:GetRole",
+            "iam:PutRolePolicy"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/VercelInstallId": "${aws:PrincipalTag/VercelInstallId}",
+              "iam:PermissionsBoundary": [
+                "arn:aws:iam::partner:policy/permissions-boundary/vercel.com/VercelMarketplaceServiceRoleBoundary_2026_10_05"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/Vercel/Service_2026_10_05",
+          "Sid": "ManageServiceRole20261005"
+        },
+        {
+          "Action": [
             "iam:TagRole"
           ],
           "Condition": {
@@ -55,7 +77,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/Vercel/Service_2026_04_16",
+          "Resource": [
+            "arn:aws:iam::*:role/Vercel/Service_2026_04_16",
+            "arn:aws:iam::*:role/Vercel/Service_2026_10_05"
+          ],
           "Sid": "TagManageServiceRole"
         },
         {
@@ -75,7 +100,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-05-07T18:57:18Z"
+  "UpdateDate": "2026-10-08T13:47:08Z"
 }
