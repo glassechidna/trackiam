@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioAdminIAMPermissiveExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v21",
+  "DefaultVersionId": "v22",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DPB4UTXYO",
   "PolicyName": "SageMakerStudioAdminIAMPermissiveExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-07-14T18:57:27Z",
+    "CreateDate": "2026-10-08T18:57:08Z",
     "Document": {
       "Statement": [
         {
@@ -49,6 +49,7 @@
           "Condition": {
             "StringEquals": {
               "iam:PassedToService": [
+                "access-grants.s3.amazonaws.com",
                 "airflow-serverless.amazonaws.com",
                 "bedrock.amazonaws.com",
                 "datazone.amazonaws.com",
@@ -208,6 +209,30 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "TagRoleAndSession"
+        },
+        {
+          "Action": [
+            "identitystore:DescribeGroup",
+            "identitystore:DescribeUser",
+            "sso:CreateApplication",
+            "sso:CreateApplicationAssignment",
+            "sso:DeleteApplicationAssignment",
+            "sso:DescribeApplication",
+            "sso:DescribeInstance",
+            "sso:PutApplicationAccessScope",
+            "sso:PutApplicationAssignmentConfiguration",
+            "sso:PutApplicationAuthenticationMethod",
+            "sso:PutApplicationGrant",
+            "sso:UpdateApplication"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSOApplicationPermissions"
         },
         {
           "Action": [
@@ -522,26 +547,6 @@
           "Sid": "ManageSharedSecret"
         },
         {
-          "Action": [
-            "sso:CreateApplication",
-            "sso:CreateApplicationAssignment",
-            "sso:DeleteApplicationAssignment",
-            "sso:PutApplicationAccessScope",
-            "sso:PutApplicationAssignmentConfiguration",
-            "sso:PutApplicationAuthenticationMethod",
-            "sso:PutApplicationGrant",
-            "sso:UpdateApplication"
-          ],
-          "Condition": {
-            "Bool": {
-              "aws:ViaAWSService": "true"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "SSOApplicationPermissions"
-        },
-        {
           "Action": "cloudformation:ValidateTemplate",
           "Effect": "Allow",
           "Resource": "*",
@@ -812,7 +817,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v21"
+    "VersionId": "v22"
   },
-  "UpdateDate": "2026-07-14T18:57:27Z"
+  "UpdateDate": "2026-10-08T18:57:08Z"
 }

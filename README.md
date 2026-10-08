@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 465
-* Unique actions: 22615
+* Unique actions: 22622
 * Managed policies: 1584
 
 Most common managed policy name prefixes:
@@ -78,7 +78,7 @@ The following table summarises the AWS APIs.
 | [`cloudformation`](services/cloudformation.yml) | 82 | 0 | 20 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 81 | 0 | 0 |
-| [`securityhub`](services/securityhub.yml) | 79 | 0 | 52 |
+| [`securityhub`](services/securityhub.yml) | 79 | 0 | 56 |
 | [`codecommit`](services/codecommit.yml) | 79 | 0 | 12 |
 | [`personalize`](services/personalize.yml) | 78 | 0 | 5 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
@@ -415,13 +415,13 @@ The following table summarises the AWS APIs.
 | [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 21 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 20 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
+| [`agentaccess-mcp`](services/agentaccess-mcp.yml) | 0 | 0 | 20 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 18 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 18 |
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 17 |
 | [`ds-data`](services/ds-data.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
-| [`agentaccess-mcp`](services/agentaccess-mcp.yml) | 0 | 0 | 17 |
 | [`signin`](services/signin.yml) | 0 | 0 | 16 |
 | [`nova-act`](services/nova-act.yml) | 0 | 0 | 16 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 16 |
@@ -506,14 +506,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3817 |
-| `Get` | 3434 |
+| `List` | 3818 |
+| `Get` | 3436 |
 | `Delete` | 2591 |
 | `Create` | 2456 |
 | `Update` | 2133 |
 | `Describe` | 1953 |
 | `Put` | 610 |
-| `Start` | 556 |
+| `Start` | 557 |
 | `Batch` | 330 |
 | `Tag` | 326 |
 

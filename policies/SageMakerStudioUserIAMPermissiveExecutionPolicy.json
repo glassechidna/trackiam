@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMPermissiveExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:08Z",
-  "DefaultVersionId": "v24",
+  "DefaultVersionId": "v25",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MQ2K3CR4F",
   "PolicyName": "SageMakerStudioUserIAMPermissiveExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-08-13T18:37:09Z",
+    "CreateDate": "2026-10-08T17:57:08Z",
     "Document": {
       "Statement": [
         {
@@ -15,6 +15,7 @@
           "Condition": {
             "StringEquals": {
               "iam:PassedToService": [
+                "access-grants.s3.amazonaws.com",
                 "airflow-serverless.amazonaws.com",
                 "bedrock.amazonaws.com",
                 "elasticmapreduce.amazonaws.com",
@@ -138,6 +139,24 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "CodeConnectionsUser"
+        },
+        {
+          "Action": [
+            "identitystore:DescribeGroup",
+            "identitystore:DescribeUser"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:identitystore::*:identitystore/*",
+            "arn:aws:identitystore:::group/*",
+            "arn:aws:identitystore:::user/*"
+          ],
+          "Sid": "IdentityStoreReadOnlyPermissions"
         },
         {
           "Action": [
@@ -382,6 +401,23 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "SharedSecret"
+        },
+        {
+          "Action": [
+            "sso:DescribeApplication",
+            "sso:DescribeInstance"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sso::*:application/*/*",
+            "arn:aws:sso:::instance/*"
+          ],
+          "Sid": "SSOInstanceReadOnlyPermissions"
         },
         {
           "Action": "cloudformation:ValidateTemplate",
@@ -640,7 +676,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v24"
+    "VersionId": "v25"
   },
-  "UpdateDate": "2026-08-13T18:37:09Z"
+  "UpdateDate": "2026-10-08T17:57:08Z"
 }
