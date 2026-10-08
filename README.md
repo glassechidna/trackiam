@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 464
-* Unique actions: 22587
+* Unique services: 465
+* Unique actions: 22614
 * Managed policies: 1584
 
 Most common managed policy name prefixes:
@@ -396,6 +396,7 @@ The following table summarises the AWS APIs.
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
 | [`s3express`](services/s3express.yml) | 0 | 0 | 28 |
 | [`one`](services/one.yml) | 0 | 0 | 28 |
+| [`end-user-messaging`](services/end-user-messaging.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
 | [`invoicing`](services/invoicing.yml) | 0 | 0 | 26 |
@@ -505,14 +506,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3811 |
-| `Get` | 3430 |
-| `Delete` | 2588 |
-| `Create` | 2451 |
-| `Update` | 2128 |
+| `List` | 3817 |
+| `Get` | 3434 |
+| `Delete` | 2591 |
+| `Create` | 2456 |
+| `Update` | 2133 |
 | `Describe` | 1953 |
 | `Put` | 610 |
 | `Start` | 556 |
 | `Batch` | 330 |
-| `Tag` | 325 |
+| `Tag` | 326 |
 
