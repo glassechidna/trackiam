@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 465
-* Unique actions: 22622
+* Unique actions: 22629
 * Managed policies: 1584
 
 Most common managed policy name prefixes:
@@ -41,7 +41,7 @@ The following table summarises the AWS APIs.
 | [`iot`](services/iot.yml) | 262 | 3 | 31 |
 | [`chime`](services/chime.yml) | 259 | 0 | 57 |
 | [`connect`](services/connect.yml) | 256 | 0 | 131 |
-| [`glue`](services/glue.yml) | 214 | 4 | 90 |
+| [`glue`](services/glue.yml) | 214 | 4 | 92 |
 | [`ses`](services/ses.yml) | 193 | 0 | 40 |
 | [`quicksight`](services/quicksight.yml) | 174 | 3 | 166 |
 | [`rds`](services/rds.yml) | 162 | 0 | 7 |
@@ -160,7 +160,7 @@ The following table summarises the AWS APIs.
 | [`swf`](services/swf.yml) | 39 | 0 | 12 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
-| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 118 |
+| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 119 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 9 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 4 |
 | [`aoss`](services/aoss.yml) | 37 | 0 | 12 |
@@ -382,13 +382,13 @@ The following table summarises the AWS APIs.
 | [`finops-agent`](services/finops-agent.yml) | 0 | 0 | 46 |
 | [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 45 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 44 |
+| [`billing`](services/billing.yml) | 0 | 0 | 39 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
 | [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 38 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 38 |
 | [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 38 |
 | [`rtbfabric`](services/rtbfabric.yml) | 0 | 0 | 36 |
 | [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
-| [`billing`](services/billing.yml) | 0 | 0 | 35 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`gameliftstreams`](services/gameliftstreams.yml) | 0 | 0 | 30 |
@@ -506,13 +506,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3818 |
-| `Get` | 3436 |
+| `List` | 3820 |
+| `Get` | 3438 |
 | `Delete` | 2591 |
 | `Create` | 2456 |
 | `Update` | 2133 |
 | `Describe` | 1953 |
-| `Put` | 610 |
+| `Put` | 611 |
 | `Start` | 557 |
 | `Batch` | 330 |
 | `Tag` | 326 |
