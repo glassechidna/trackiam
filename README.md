@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 465
-* Unique actions: 22629
+* Unique actions: 22631
 * Managed policies: 1584
 
 Most common managed policy name prefixes:
@@ -59,7 +59,7 @@ The following table summarises the AWS APIs.
 | [`cloudfront`](services/cloudfront.yml) | 110 | 1 | 63 |
 | [`gamelift`](services/gamelift.yml) | 108 | 0 | 12 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 26 |
-| [`deadline`](services/deadline.yml) | 102 | 0 | 18 |
+| [`deadline`](services/deadline.yml) | 102 | 0 | 19 |
 | [`bedrock`](services/bedrock.yml) | 97 | 2 | 165 |
 | [`dms`](services/dms.yml) | 92 | 14 | 33 |
 | [`medialive`](services/medialive.yml) | 92 | 0 | 33 |
@@ -300,7 +300,7 @@ The following table summarises the AWS APIs.
 | [`snow-device-management`](services/snow-device-management.yml) | 13 | 0 | 0 |
 | [`codestar-notifications`](services/codestar-notifications.yml) | 13 | 0 | 0 |
 | [`launchwizard`](services/launchwizard.yml) | 12 | 0 | 28 |
-| [`account`](services/account.yml) | 12 | 0 | 7 |
+| [`account`](services/account.yml) | 12 | 0 | 8 |
 | [`scheduler`](services/scheduler.yml) | 12 | 0 | 1 |
 | [`pca-connector-scep`](services/pca-connector-scep.yml) | 12 | 0 | 0 |
 | [`networkmonitor`](services/networkmonitor.yml) | 12 | 0 | 0 |
@@ -506,7 +506,7 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3820 |
+| `List` | 3821 |
 | `Get` | 3438 |
 | `Delete` | 2591 |
 | `Create` | 2456 |

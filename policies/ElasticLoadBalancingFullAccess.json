@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/ElasticLoadBalancingFullAccess",
   "CreateDate": "2018-09-20T20:42:07Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIDPMLA3IUIOQCISJ4",
   "PolicyName": "ElasticLoadBalancingFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-23T18:57:07Z",
+    "CreateDate": "2026-10-09T19:27:08Z",
     "Document": {
       "Statement": [
         {
@@ -56,7 +56,8 @@
             "ec2:DescribeVpcPeeringConnections",
             "ec2:DescribeVpcs",
             "ec2:GetCoipPoolUsage",
-            "ec2:GetSecurityGroupsForVpc"
+            "ec2:GetSecurityGroupsForVpc",
+            "ec2:ValidateSecurityGroupQuotasForInterface"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -65,7 +66,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-02-23T18:57:07Z"
+  "UpdateDate": "2026-10-09T19:27:08Z"
 }

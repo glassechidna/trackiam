@@ -1,15 +1,42 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "CreateDate": "2018-12-01T16:22:12Z",
-  "DefaultVersionId": "v25",
+  "DefaultVersionId": "v26",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJH3SHQERZRQMQOQ44",
   "PolicyName": "CloudwatchApplicationInsightsServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-07-25T16:24:03Z",
+    "CreateDate": "2026-10-09T16:27:08Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "cloudformation:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "ApplicationInsightsManaged"
+              ]
+            },
+            "Null": {
+              "aws:TagKeys": "false"
+            },
+            "StringEquals": {
+              "aws:RequestTag/ApplicationInsightsManaged": "TRUE",
+              "cloudformation:CreateAction": [
+                "CreateStack",
+                "UpdateStack"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/ApplicationInsights-*"
+          ],
+          "Sid": "CloudFormationTagOnCreate"
+        },
         {
           "Action": "ssm:SendCommand",
           "Effect": "Allow",
@@ -464,7 +491,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v25"
+    "VersionId": "v26"
   },
-  "UpdateDate": "2024-07-25T16:24:03Z"
+  "UpdateDate": "2026-10-09T16:27:08Z"
 }
