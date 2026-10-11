@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSTransformServerMigrationAgentPolicy",
   "CreateDate": "2026-08-06T15:27:14Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KVIHBDOCE",
   "PolicyName": "AWSTransformServerMigrationAgentPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-09-01T10:37:08Z",
+    "CreateDate": "2026-10-11T08:47:08Z",
     "Document": {
       "Statement": [
         {
@@ -1018,6 +1018,25 @@
             "sts:AssumeRole"
           ],
           "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceOrgID": "${aws:PrincipalOrgID}",
+              "sts:ExternalId": "${aws:PrincipalAccount}:AWSTransform"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/AWSTransformRehostSharingRole_${aws:PrincipalAccount}",
+          "Sid": "StsCrossAccountAssumeRoleViaMgn"
+        },
+        {
+          "Action": [
+            "sts:AssumeRole"
+          ],
+          "Condition": {
             "StringEquals": {
               "aws:ResourceOrgID": "${aws:PrincipalOrgID}",
               "sts:ExternalId": "${aws:PrincipalAccount}:workspace/${aws:PrincipalTag/WorkspaceId}"
@@ -1047,7 +1066,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2026-09-01T10:37:08Z"
+  "UpdateDate": "2026-10-11T08:47:08Z"
 }
