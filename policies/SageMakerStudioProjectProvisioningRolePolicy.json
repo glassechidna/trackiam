@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy",
   "CreateDate": "2024-11-20T21:58:39Z",
-  "DefaultVersionId": "v83",
+  "DefaultVersionId": "v84",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQZUIPVLH",
   "PolicyName": "SageMakerStudioProjectProvisioningRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-09-22T21:57:07Z",
+    "CreateDate": "2026-10-12T16:17:08Z",
     "Document": {
       "Statement": [
         {
@@ -1037,7 +1037,8 @@
           "Condition": {
             "ForAllValues:StringLike": {
               "aws:TagKeys": [
-                "AmazonDataZone*"
+                "AmazonDataZone*",
+                "aws:cloudformation:*"
               ]
             },
             "Null": {
@@ -1238,7 +1239,8 @@
         },
         {
           "Action": [
-            "glue:DeleteDatabase"
+            "glue:DeleteDatabase",
+            "glue:UpdateDatabase"
           ],
           "Condition": {
             "StringEquals": {
@@ -1247,7 +1249,7 @@
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "GlueDbDelete"
+          "Sid": "GlueDbManage"
         },
         {
           "Action": [
@@ -1375,7 +1377,7 @@
             "arn:aws:iam::*:role/BedrockStudio*",
             "arn:aws:iam::*:role/datazone*"
           ],
-          "Sid": "IAMMng"
+          "Sid": "IamManage"
         },
         {
           "Action": [
@@ -3019,7 +3021,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v83"
+    "VersionId": "v84"
   },
-  "UpdateDate": "2026-09-22T21:57:07Z"
+  "UpdateDate": "2026-10-12T16:17:08Z"
 }
