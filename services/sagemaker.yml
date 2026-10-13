@@ -380,6 +380,7 @@ Actions:
   - Name: sagemaker:CreateReservedCapacity
   - Name: sagemaker:CreateSharedModel
   - Name: sagemaker:CreateTrainingPlan
+  - Name: sagemaker:CreateTrainingSession
   - Name: sagemaker:DeleteAIBenchmarkJob
   - Name: sagemaker:DeleteAIRecommendationJob
   - Name: sagemaker:DeleteAIWorkloadConfig
@@ -392,6 +393,7 @@ Actions:
   - Name: sagemaker:DeleteProcessingJob
   - Name: sagemaker:DeleteResourcePolicy
   - Name: sagemaker:DeleteTrainingJob
+  - Name: sagemaker:DeleteTrainingSession
   - Name: sagemaker:DeployHubModel
   - Name: sagemaker:DescribeAIBenchmarkJob
   - Name: sagemaker:DescribeAIRecommendationJob
@@ -408,9 +410,14 @@ Actions:
   - Name: sagemaker:DescribeSharedModel
   - Name: sagemaker:DescribeTrainingPlan
   - Name: sagemaker:DescribeTrainingPlanExtensionHistory
+  - Name: sagemaker:DescribeTrainingSession
   - Name: sagemaker:DetachClusterNodeVolume
+  - Name: sagemaker:ExecuteSamplingOperation
+  - Name: sagemaker:ExecuteTrainingOperation
   - Name: sagemaker:ExtendTrainingPlan
   - Name: sagemaker:GetResourcePolicy
+  - Name: sagemaker:GetSamplingOperationResult
+  - Name: sagemaker:GetTrainingOperationResult
   - Name: sagemaker:ListAIBenchmarkJobs
   - Name: sagemaker:ListAIRecommendationJobs
   - Name: sagemaker:ListAIWorkloadConfigs
@@ -427,10 +434,13 @@ Actions:
   - Name: sagemaker:ListSharedModelVersions
   - Name: sagemaker:ListSharedModels
   - Name: sagemaker:ListTrainingPlans
+  - Name: sagemaker:ListTrainingSessions
   - Name: sagemaker:ListUltraServersByReservedCapacity
   - Name: sagemaker:PutLineageGroupPolicy
   - Name: sagemaker:PutResourcePolicy
   - Name: sagemaker:Sample
+  - Name: sagemaker:SampleTrainingSession
+  - Name: sagemaker:SampleTrainingSessionWithResponseStream
   - Name: sagemaker:SampleWithResponseStream
   - Name: sagemaker:SearchTrainingPlanOfferings
   - Name: sagemaker:SendSharedModelEvent
@@ -439,6 +449,7 @@ Actions:
   - Name: sagemaker:StopAIBenchmarkJob
   - Name: sagemaker:StopAIRecommendationJob
   - Name: sagemaker:StopJob
+  - Name: sagemaker:StopTrainingSession
   - Name: sagemaker:TrainHubModel
   - Name: sagemaker:UpdateClusterInference
   - Name: sagemaker:UpdateClusterSchedulerConfig

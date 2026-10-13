@@ -1,0 +1,171 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerTrainingSessionAccess",
+  "CreateDate": "2026-10-13T00:37:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4DASXUEWRE",
+  "PolicyName": "AmazonSageMakerTrainingSessionAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-10-13T00:37:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:PassRole"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "iam:AssociatedResourceArn": "arn:aws:sagemaker:*:*:*"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "iam:PassedToService": [
+                "training-session.sagemaker.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/service-role/*SageMaker*",
+            "arn:aws:iam::*:role/service-role/*Sagemaker*",
+            "arn:aws:iam::*:role/service-role/*sagemaker*"
+          ],
+          "Sid": "PassExecutionRolePermissions"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:ViaService": "sagemaker.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "SageMakerTrainingSessionRuntimeKmsPermissions"
+        },
+        {
+          "Action": [
+            "s3:CreateBucket",
+            "s3:DeleteObject",
+            "s3:ListBucket"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "s3:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::sagemaker-*",
+            "arn:aws:s3:::sagemaker-*/*"
+          ],
+          "Sid": "SageMakerTrainingSessionS3Permissions"
+        },
+        {
+          "Action": [
+            "sagemaker:AddTags",
+            "sagemaker:CreateTrainingSession",
+            "sagemaker:DeleteTrainingSession",
+            "sagemaker:DescribeTrainingSession",
+            "sagemaker:StopTrainingSession"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:training-session/*",
+          "Sid": "SageMakerTrainingSessionControlPlanePermissions"
+        },
+        {
+          "Action": [
+            "sagemaker:CallWithBearerToken"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BearerTokenPermissions"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateModelPackageGroup",
+            "sagemaker:DeleteModelPackage",
+            "sagemaker:DescribeModelPackage",
+            "sagemaker:DescribeModelPackageGroup",
+            "sagemaker:ListModelPackages"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:model-package-group/*",
+            "arn:aws:sagemaker:*:*:model-package/*"
+          ],
+          "Sid": "SageMakerTrainingSessionModelPackagePermissions"
+        },
+        {
+          "Action": [
+            "sagemaker:ExecuteSamplingOperation",
+            "sagemaker:ExecuteTrainingOperation",
+            "sagemaker:GetSamplingOperationResult",
+            "sagemaker:GetTrainingOperationResult",
+            "sagemaker:SampleTrainingSession",
+            "sagemaker:SampleTrainingSessionWithResponseStream"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:training-session/*",
+          "Sid": "SageMakerTrainingSessionRuntimePermissions"
+        },
+        {
+          "Action": [
+            "sagemaker:ListTrainingSessions"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SageMakerTrainingSessionListPermissions"
+        },
+        {
+          "Action": [
+            "sagemaker:DescribeHubContent",
+            "sagemaker:ListHubContents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:aws:hub-content/SageMakerPublicHub/*",
+            "arn:aws:sagemaker:*:aws:hub/SageMakerPublicHub"
+          ],
+          "Sid": "SageMakerTrainingSessionPublicHubPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-10-13T00:37:07Z"
+}

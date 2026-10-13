@@ -12,15 +12,15 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 465
-* Unique actions: 22634
-* Managed policies: 1584
+* Unique actions: 22646
+* Managed policies: 1586
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 430 |
-| `arn:aws:iam::aws:policy/Amazon*` | 379 |
+| `arn:aws:iam::aws:policy/Amazon*` | 381 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 361 |
 | `arn:aws:iam::aws:policy/service-role/*` | 226 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 625 | 0 | 201 |
-| [`sagemaker`](services/sagemaker.yml) | 351 | 0 | 98 |
+| [`sagemaker`](services/sagemaker.yml) | 351 | 0 | 109 |
 | [`iot`](services/iot.yml) | 262 | 3 | 31 |
 | [`chime`](services/chime.yml) | 259 | 0 | 57 |
 | [`connect`](services/connect.yml) | 256 | 0 | 131 |
@@ -282,7 +282,7 @@ The following table summarises the AWS APIs.
 | [`kafkaconnect`](services/kafkaconnect.yml) | 16 | 0 | 2 |
 | [`internetmonitor`](services/internetmonitor.yml) | 16 | 0 | 1 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
-| [`acm`](services/acm.yml) | 15 | 0 | 26 |
+| [`acm`](services/acm.yml) | 15 | 0 | 27 |
 | [`application-signals`](services/application-signals.yml) | 15 | 0 | 17 |
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
 | [`osis`](services/osis.yml) | 14 | 0 | 9 |
@@ -506,12 +506,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3822 |
-| `Get` | 3438 |
-| `Delete` | 2591 |
-| `Create` | 2456 |
+| `List` | 3823 |
+| `Get` | 3440 |
+| `Delete` | 2592 |
+| `Create` | 2458 |
 | `Update` | 2133 |
-| `Describe` | 1953 |
+| `Describe` | 1954 |
 | `Put` | 611 |
 | `Start` | 557 |
 | `Batch` | 332 |

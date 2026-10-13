@@ -1,0 +1,140 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerTrainingSessionFullAccess",
+  "CreateDate": "2026-10-13T00:37:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4DKNKCM6Q2",
+  "PolicyName": "AmazonSageMakerTrainingSessionFullAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-10-13T00:37:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "kms:DescribeKey",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSDescribeKey"
+        },
+        {
+          "Action": [
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DescribeDhcpOptions",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2NetworkPermissions"
+        },
+        {
+          "Action": [
+            "ec2:CreateTags"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "ec2:CreateAction": "CreateNetworkInterface"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*",
+          "Sid": "EC2NetworkInterfaceTagPermissions"
+        },
+        {
+          "Action": [
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EC2NetworkInterfaceDeletePermissions"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:ViaService": "s3.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSPermissions"
+        },
+        {
+          "Action": [
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutObject"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "s3:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "S3Permissions"
+        },
+        {
+          "Action": [
+            "sagemaker:AccessModelPackage",
+            "sagemaker:CreateModelPackage",
+            "sagemaker:DescribeModelPackage",
+            "sagemaker:DescribeModelPackageGroup"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:model-package-group/*",
+            "arn:aws:sagemaker:*:*:model-package/*"
+          ],
+          "Sid": "SageMakerModelPackagePermissions"
+        },
+        {
+          "Action": [
+            "sagemaker:DescribeHubContent"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:aws:hub-content/SageMakerPublicHub/*",
+            "arn:aws:sagemaker:*:aws:hub/SageMakerPublicHub"
+          ],
+          "Sid": "SageMakerPublicHubReadPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-10-13T00:37:08Z"
+}
