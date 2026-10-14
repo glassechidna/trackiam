@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchOmniSpaceAccessPolicy",
   "CreateDate": "2026-09-22T01:47:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4PASQMIJJI",
   "PolicyName": "CloudWatchOmniSpaceAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-09-22T01:47:07Z",
+    "CreateDate": "2026-10-14T22:17:08Z",
     "Document": {
       "Statement": [
         {
@@ -21,6 +21,22 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/config.amazonaws.com/*",
           "Sid": "AllowConfigServiceLinkedRoleCreation"
+        },
+        {
+          "Action": "kms:Decrypt",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "kms:EncryptionContextKeys": [
+                "aws:identitystore:identitystore-arn"
+              ]
+            },
+            "StringLike": {
+              "kms:ViaService": "identitystore.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KmsDecryptForIdentityStoreCMK"
         },
         {
           "Action": "kms:DescribeKey",
@@ -249,6 +265,28 @@
         },
         {
           "Action": [
+            "identitystore:DescribeGroup",
+            "identitystore:DescribeUser",
+            "identitystore:ListGroups",
+            "identitystore:ListUsers"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "cloudwatch.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:identitystore::*:identitystore/*",
+            "arn:aws:identitystore:::group/*",
+            "arn:aws:identitystore:::user/*"
+          ],
+          "Sid": "IdentityStoreReadForPrincipalSearch"
+        },
+        {
+          "Action": [
             "kms:Decrypt",
             "kms:GenerateDataKey"
           ],
@@ -460,6 +498,12 @@
           "Sid": "KmsListKeysForOmni"
         },
         {
+          "Action": "sns:ListTopics",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SnsTopicDiscoveryForAlerts"
+        },
+        {
           "Action": [
             "bedrock:ListFoundationModels",
             "bedrock:ListInferenceProfiles"
@@ -491,7 +535,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-09-22T01:47:07Z"
+  "UpdateDate": "2026-10-14T22:17:08Z"
 }
