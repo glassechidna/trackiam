@@ -1,0 +1,45 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioDataAppsAccessRolePolicy",
+  "CreateDate": "2026-10-13T21:57:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4LHBWULZI2",
+  "PolicyName": "SageMakerStudioDataAppsAccessRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-10-13T21:57:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "datazone:CreateSubscriptionRequest",
+            "datazone:GetListing",
+            "datazone:GetSubscription",
+            "datazone:ListGroupsForUser",
+            "datazone:ListProjects",
+            "datazone:ListSharedDataApps",
+            "datazone:ListSubscriptionGrants",
+            "datazone:ListSubscriptions",
+            "datazone:SearchListings"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DataZonePermissions"
+        },
+        {
+          "Action": [
+            "s3:GetDataAccess",
+            "s3:ListCallerAccessGrants"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "S3ControlReadPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-10-13T21:57:08Z"
+}

@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 465
-* Unique actions: 22678
-* Managed policies: 1586
+* Unique actions: 22679
+* Managed policies: 1587
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 430 |
 | `arn:aws:iam::aws:policy/Amazon*` | 381 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 361 |
-| `arn:aws:iam::aws:policy/service-role/*` | 226 |
+| `arn:aws:iam::aws:policy/service-role/*` | 227 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
 | Other | 173 |
 
@@ -175,8 +175,8 @@ The following table summarises the AWS APIs.
 | [`cases`](services/cases.yml) | 34 | 0 | 9 |
 | [`m2`](services/m2.yml) | 34 | 0 | 3 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
+| [`route53domains`](services/route53domains.yml) | 34 | 0 | 1 |
 | [`ram`](services/ram.yml) | 34 | 0 | 1 |
-| [`route53domains`](services/route53domains.yml) | 34 | 0 | 0 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 33 | 2 | 4 |
 | [`groundstation`](services/groundstation.yml) | 33 | 0 | 7 |
@@ -507,7 +507,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3831 |
-| `Get` | 3446 |
+| `Get` | 3447 |
 | `Delete` | 2596 |
 | `Create` | 2460 |
 | `Update` | 2136 |
