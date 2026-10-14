@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectRoleMachineLearningPolicy",
   "CreateDate": "2024-11-20T21:55:27Z",
-  "DefaultVersionId": "v44",
+  "DefaultVersionId": "v45",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NSSEENOX7",
   "PolicyName": "SageMakerStudioProjectRoleMachineLearningPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-09-14T20:37:08Z",
+    "CreateDate": "2026-10-14T19:37:07Z",
     "Document": {
       "Statement": [
         {
@@ -242,6 +242,22 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "SageMakerECRGetAuthorizationTokenPermissions"
+        },
+        {
+          "Action": [
+            "identitystore:DescribeGroup",
+            "identitystore:DescribeUser",
+            "sso:DescribeApplication",
+            "sso:DescribeInstance"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SSOReadOnlyPermissions"
         },
         {
           "Action": [
@@ -1127,14 +1143,20 @@
         },
         {
           "Action": [
+            "datazone:*Agent*",
             "datazone:*Cell*",
             "datazone:*Compute*",
             "datazone:*Conversation*",
+            "datazone:*DataApp*",
             "datazone:*Message*",
             "datazone:*Notebook*",
             "datazone:CreateAsset*",
+            "datazone:CreateListingChangeSet",
+            "datazone:CreateSubscriptionRequest",
             "datazone:GenerateCode",
+            "datazone:Get*",
             "datazone:List*",
+            "datazone:RevokeSubscription",
             "datazone:Search*"
           ],
           "Effect": "Allow",
@@ -1212,8 +1234,10 @@
         {
           "Action": [
             "ram:GetResourceShareInvitations",
+            "s3:GetAccessGrantsInstance",
             "s3:GetAccessGrantsInstanceForPrefix",
             "s3:GetDataAccess",
+            "s3:ListAccessGrants",
             "s3:ListCallerAccessGrants"
           ],
           "Effect": "Allow",
@@ -1304,7 +1328,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v44"
+    "VersionId": "v45"
   },
-  "UpdateDate": "2026-09-14T20:37:08Z"
+  "UpdateDate": "2026-10-14T19:37:07Z"
 }

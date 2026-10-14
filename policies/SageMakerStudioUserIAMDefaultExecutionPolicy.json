@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMDefaultExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v30",
+  "DefaultVersionId": "v31",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BV3PMY4IB",
   "PolicyName": "SageMakerStudioUserIAMDefaultExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-10-08T15:17:08Z",
+    "CreateDate": "2026-10-14T19:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -868,8 +868,10 @@
             "datazone:*Notebook*",
             "datazone:AcceptPredictions",
             "datazone:AcceptSubscriptionRequest",
+            "datazone:BatchGetAttributesMetadata",
             "datazone:BatchGetCell",
             "datazone:BatchGetCellRun",
+            "datazone:BatchPutAttributesMetadata",
             "datazone:BatchUpdateNotifications",
             "datazone:CancelMessage",
             "datazone:CancelMetadataGenerationRun",
@@ -878,26 +880,34 @@
             "datazone:CreateCell",
             "datazone:CreateCellRun",
             "datazone:CreateConnection",
+            "datazone:CreateDataApp",
             "datazone:CreateEnvironment",
             "datazone:CreateListingChangeSet",
             "datazone:CreateProject",
             "datazone:CreateSubscriptionGrant",
             "datazone:CreateSubscriptionRequest",
+            "datazone:DeleteAgentApprovalPolicy",
             "datazone:DeleteAsset*",
             "datazone:DeleteCell",
             "datazone:DeleteCellRun",
             "datazone:DeleteConnection",
+            "datazone:DeleteConversation",
+            "datazone:DeleteDataApp",
             "datazone:DeleteEnvironment",
             "datazone:DeleteListing",
             "datazone:DeleteProject",
             "datazone:DeleteSubscriptionGrant",
             "datazone:DeleteSubscriptionRequest",
+            "datazone:DeregisterAgentArtifact",
             "datazone:GenerateCode",
             "datazone:Get*",
+            "datazone:InvokeAgent",
             "datazone:List*",
             "datazone:PostLineageEvent",
+            "datazone:PutAgentApprovalPolicy",
             "datazone:PutCellRunResult",
             "datazone:QueryGraph",
+            "datazone:RegisterAgentArtifact",
             "datazone:RejectPredictions",
             "datazone:RejectSubscriptionRequest",
             "datazone:RevokeSubscription",
@@ -911,11 +921,14 @@
             "datazone:StartCompute",
             "datazone:StartConversation",
             "datazone:StartMetadataGenerationRun",
+            "datazone:StopAgent",
             "datazone:StopCompute",
             "datazone:UpdateAssetFilter",
             "datazone:UpdateCell",
             "datazone:UpdateCellRun",
             "datazone:UpdateConnection",
+            "datazone:UpdateConversation",
+            "datazone:UpdateDataApp",
             "datazone:UpdateEnvironment",
             "datazone:UpdateProject",
             "datazone:UpdateSubscriptionRequest"
@@ -1193,7 +1206,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v30"
+    "VersionId": "v31"
   },
-  "UpdateDate": "2026-10-08T15:17:08Z"
+  "UpdateDate": "2026-10-14T19:37:08Z"
 }
