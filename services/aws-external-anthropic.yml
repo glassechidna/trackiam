@@ -2,6 +2,7 @@ Actions:
 
   # actions with no corresponding API
   - Name: aws-external-anthropic:ArchiveAgent
+  - Name: aws-external-anthropic:ArchiveDeployment
   - Name: aws-external-anthropic:ArchiveEnvironment
   - Name: aws-external-anthropic:ArchiveMemoryStore
   - Name: aws-external-anthropic:ArchiveSession
@@ -13,6 +14,7 @@ Actions:
   - Name: aws-external-anthropic:CountTokens
   - Name: aws-external-anthropic:CreateAgent
   - Name: aws-external-anthropic:CreateBatchInference
+  - Name: aws-external-anthropic:CreateDeployment
   - Name: aws-external-anthropic:CreateEnvironment
   - Name: aws-external-anthropic:CreateFile
   - Name: aws-external-anthropic:CreateInference
@@ -36,6 +38,7 @@ Actions:
   - Name: aws-external-anthropic:GetAccountStatus
   - Name: aws-external-anthropic:GetAgent
   - Name: aws-external-anthropic:GetBatchInference
+  - Name: aws-external-anthropic:GetDeployment
   - Name: aws-external-anthropic:GetEnvironment
   - Name: aws-external-anthropic:GetFile
   - Name: aws-external-anthropic:GetKey
@@ -49,6 +52,7 @@ Actions:
   - Name: aws-external-anthropic:GetWorkspace
   - Name: aws-external-anthropic:ListAgents
   - Name: aws-external-anthropic:ListBatchInferences
+  - Name: aws-external-anthropic:ListDeployments
   - Name: aws-external-anthropic:ListEnvironments
   - Name: aws-external-anthropic:ListFiles
   - Name: aws-external-anthropic:ListKeys
@@ -61,12 +65,16 @@ Actions:
   - Name: aws-external-anthropic:ListVaults
   - Name: aws-external-anthropic:ListWebhooks
   - Name: aws-external-anthropic:ListWorkspaces
+  - Name: aws-external-anthropic:PauseDeployment
   - Name: aws-external-anthropic:ProcessEnvironmentWork
   - Name: aws-external-anthropic:RegisterKey
   - Name: aws-external-anthropic:RotateWebhookSecret
+  - Name: aws-external-anthropic:RunDeployment
   - Name: aws-external-anthropic:TagResource
+  - Name: aws-external-anthropic:UnpauseDeployment
   - Name: aws-external-anthropic:UntagResource
   - Name: aws-external-anthropic:UpdateAgent
+  - Name: aws-external-anthropic:UpdateDeployment
   - Name: aws-external-anthropic:UpdateEnvironment
   - Name: aws-external-anthropic:UpdateKey
   - Name: aws-external-anthropic:UpdateMemoryStore
