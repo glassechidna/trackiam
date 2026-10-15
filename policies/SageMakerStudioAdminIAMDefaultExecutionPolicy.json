@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioAdminIAMDefaultExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v26",
+  "DefaultVersionId": "v27",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NZY6YGCPE",
   "PolicyName": "SageMakerStudioAdminIAMDefaultExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-10-14T19:37:08Z",
+    "CreateDate": "2026-10-15T21:47:07Z",
     "Document": {
       "Statement": [
         {
@@ -241,6 +241,7 @@
             "identitystore:DescribeUser",
             "sso:CreateApplication",
             "sso:CreateApplicationAssignment",
+            "sso:DeleteApplication",
             "sso:DeleteApplicationAssignment",
             "sso:DescribeApplication",
             "sso:DescribeInstance",
@@ -552,6 +553,21 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "S3AGObjectPermissions"
+        },
+        {
+          "Action": [
+            "s3:AssociateAccessGrantsIdentityCenter"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:*:*:access-grants/default"
+          ],
+          "Sid": "S3AGIdentityCenterAssociation"
         },
         {
           "Action": [
@@ -1183,7 +1199,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v26"
+    "VersionId": "v27"
   },
-  "UpdateDate": "2026-10-14T19:37:08Z"
+  "UpdateDate": "2026-10-15T21:47:07Z"
 }
