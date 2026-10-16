@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/PartnerCentralAccountManagementUserRoleAssociation",
   "CreateDate": "2023-11-10T02:03:40Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MONSUE2UX",
   "PolicyName": "PartnerCentralAccountManagementUserRoleAssociation",
   "PolicyVersion": {
-    "CreateDate": "2023-11-10T02:03:40Z",
+    "CreateDate": "2026-10-16T01:27:08Z",
     "Document": {
       "Statement": [
         {
@@ -25,6 +25,25 @@
         },
         {
           "Action": [
+            "partnercentral:GetPartnerCentralContentDocument",
+            "partnercentral:GetPartnerCentralContentMetadata",
+            "partnercentral:ListPartnerCentralContent",
+            "partnercentral:SearchPartnerCentralContent"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PartnerCentralContentAccess"
+        },
+        {
+          "Action": [
             "iam:ListRoles",
             "partnercentral-account-management:AssociatePartnerUser",
             "partnercentral-account-management:DisassociatePartnerUser"
@@ -37,7 +56,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2023-11-10T02:03:40Z"
+  "UpdateDate": "2026-10-16T01:27:08Z"
 }

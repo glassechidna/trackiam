@@ -1,0 +1,305 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSContinuumCollectorServiceRolePolicy",
+  "CreateDate": "2026-10-16T01:07:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4LKF76PDDW",
+  "PolicyName": "AWSContinuumCollectorServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-10-16T01:07:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "access-analyzer:ListFindings",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:access-analyzer:*:*:analyzer/*",
+          "Sid": "AccessAnalyzerFindingsRead"
+        },
+        {
+          "Action": "apigateway:GET",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:apigateway:*::/apis/*/authorizers",
+            "arn:aws:apigateway:*::/apis/*/exports/*",
+            "arn:aws:apigateway:*::/apis/*/routes",
+            "arn:aws:apigateway:*::/domainnames",
+            "arn:aws:apigateway:*::/domainnames/*/apimappings",
+            "arn:aws:apigateway:*::/domainnames/*/basepathmappings",
+            "arn:aws:apigateway:*::/restapis/*/authorizers",
+            "arn:aws:apigateway:*::/restapis/*/resources",
+            "arn:aws:apigateway:*::/restapis/*/stages/*/exports/*"
+          ],
+          "Sid": "ApiGatewaySupplementalMetadataRead"
+        },
+        {
+          "Action": "ec2:CreateNetworkInsightsPath",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "AWSContinuum"
+            },
+            "StringEquals": {
+              "aws:RequestTag/AWSContinuum": "true",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-insights-path/*",
+          "Sid": "CreateTaggedNetworkInsightsPath"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "AWSContinuum"
+            },
+            "StringEquals": {
+              "aws:RequestTag/AWSContinuum": "true",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "ec2:CreateAction": [
+                "CreateNetworkInsightsPath",
+                "StartNetworkInsightsAnalysis"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-insights-analysis/*",
+            "arn:aws:ec2:*:*:network-insights-path/*"
+          ],
+          "Sid": "TagNetworkInsightsResourcesOnCreate"
+        },
+        {
+          "Action": "ec2:StartNetworkInsightsAnalysis",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "AWSContinuum"
+            },
+            "StringEquals": {
+              "aws:RequestTag/AWSContinuum": "true",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-insights-analysis/*",
+          "Sid": "CreateTaggedNetworkInsightsAnalysis"
+        },
+        {
+          "Action": "ec2:StartNetworkInsightsAnalysis",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/AWSContinuum": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-insights-path/*",
+          "Sid": "UseTaggedNetworkInsightsPath"
+        },
+        {
+          "Action": "ecr:DescribeImages",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ecr:*:*:repository/*",
+          "Sid": "EcrPrivateImageMetadataRead"
+        },
+        {
+          "Action": "wafv2:ListResourcesForWebACL",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:wafv2:*:*:regional/webacl/*/*",
+            "arn:aws:wafv2:us-east-1:*:global/webacl/*/*"
+          ],
+          "Sid": "Wafv2ResourceAssociationRead"
+        },
+        {
+          "Action": [
+            "ec2:DeleteNetworkInsightsAnalysis",
+            "ec2:DeleteNetworkInsightsPath"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/AWSContinuum": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-insights-analysis/*",
+            "arn:aws:ec2:*:*:network-insights-path/*"
+          ],
+          "Sid": "DeleteTaggedNetworkInsightsResources"
+        },
+        {
+          "Action": [
+            "eks:DescribeAccessEntry",
+            "eks:DescribePodIdentityAssociation",
+            "eks:ListAccessEntries",
+            "eks:ListAssociatedAccessPolicies",
+            "eks:ListPodIdentityAssociations"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:eks:*:*:access-entry/*",
+            "arn:aws:eks:*:*:cluster/*",
+            "arn:aws:eks:*:*:podidentityassociation/*"
+          ],
+          "Sid": "EksSupplementalMetadataRead"
+        },
+        {
+          "Action": [
+            "guardduty:GetFindings",
+            "guardduty:ListFindings"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "GuardDutyFindingsRead"
+        },
+        {
+          "Action": [
+            "lambda:GetFunction",
+            "lambda:GetPolicy",
+            "lambda:ListAliases",
+            "lambda:ListFunctionUrlConfigs",
+            "lambda:ListVersionsByFunction"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:function:*",
+          "Sid": "LambdaFunctionSupplementalMetadataRead"
+        },
+        {
+          "Action": [
+            "lambda:GetLayerVersion",
+            "lambda:GetLayerVersionPolicy"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:layer:*:*",
+          "Sid": "LambdaLayerVersionSupplementalMetadataRead"
+        },
+        {
+          "Action": [
+            "s3:GetBucketAcl",
+            "s3:GetBucketLocation",
+            "s3:GetBucketPolicyStatus",
+            "s3:GetBucketPublicAccessBlock"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*",
+          "Sid": "S3BucketExposureRead"
+        },
+        {
+          "Action": [
+            "tiros:CreateQuery",
+            "tiros:GetQueryAnswer"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TirosQueryRead"
+        },
+        {
+          "Action": "lambda:ListEventSourceMappings",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LambdaEventSourceMappingRead"
+        },
+        {
+          "Action": "s3:GetAccountPublicAccessBlock",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "S3AccountPublicAccessRead"
+        },
+        {
+          "Action": [
+            "access-analyzer:ListAnalyzers",
+            "inspector2:ListFindings"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SecurityServiceDiscoveryAndFindings"
+        },
+        {
+          "Action": [
+            "ec2:DescribeNetworkInsightsAnalyses",
+            "ec2:DescribeNetworkInsightsPaths"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "NetworkInsightsRead"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:DescribeListenerAttributes",
+            "elasticloadbalancing:DescribeLoadBalancerAttributes",
+            "elasticloadbalancing:DescribeTargetGroupAttributes",
+            "elasticloadbalancing:DescribeTargetHealth"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Elbv2SupplementalMetadataRead"
+        },
+        {
+          "Action": [
+            "iam:GetPolicy",
+            "iam:GetPolicyVersion"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::aws:policy/*",
+          "Sid": "IamAwsManagedPolicyDocumentRead"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-10-16T01:07:08Z"
+}
