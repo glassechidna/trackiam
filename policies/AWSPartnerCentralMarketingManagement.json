@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralMarketingManagement",
   "CreateDate": "2025-12-01T00:34:10Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4EDTAKOI7T",
   "PolicyName": "AWSPartnerCentralMarketingManagement",
   "PolicyVersion": {
-    "CreateDate": "2026-02-14T00:57:08Z",
+    "CreateDate": "2026-10-16T02:27:07Z",
     "Document": {
       "Statement": [
         {
@@ -62,6 +62,25 @@
         },
         {
           "Action": [
+            "partnercentral:GetPartnerCentralContentDocument",
+            "partnercentral:GetPartnerCentralContentMetadata",
+            "partnercentral:ListPartnerCentralContent",
+            "partnercentral:SearchPartnerCentralContent"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PartnerCentralContentAccess"
+        },
+        {
+          "Action": [
             "partnercentral-account-management:AccessMarketingCentral"
           ],
           "Effect": "Allow",
@@ -111,7 +130,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-02-14T00:57:08Z"
+  "UpdateDate": "2026-10-16T02:27:07Z"
 }
