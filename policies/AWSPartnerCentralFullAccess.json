@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralFullAccess",
   "CreateDate": "2024-11-18T23:33:28Z",
-  "DefaultVersionId": "v14",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DRJMXIHNK",
   "PolicyName": "AWSPartnerCentralFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-03-12T17:12:13Z",
+    "CreateDate": "2026-10-17T11:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -25,6 +25,28 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AWSMarketplaceAgreementsReadAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:StartChangeSet"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "catalog:ChangeType": [
+                "CreateCaseStudy",
+                "ReleaseCaseStudy",
+                "RestrictCaseStudy",
+                "UpdateInformation",
+                "UpdateVisibility"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace*/CaseStudy/*",
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace*/ChangeSet/*"
+          ],
+          "Sid": "CaseStudyStartChangeSet"
         },
         {
           "Action": [
@@ -101,10 +123,19 @@
         },
         {
           "Action": [
+            "aws-marketplace:DescribeChangeSet"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace*/ChangeSet/*",
+          "Sid": "CaseStudyDescribeChangeSet"
+        },
+        {
+          "Action": [
             "aws-marketplace:DescribeEntity"
           ],
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace*/CaseStudy/*",
             "arn:aws:aws-marketplace:*:*:AWSMarketplace*/Offer/*",
             "arn:aws:aws-marketplace:*:*:AWSMarketplace*/OfferSet/*",
             "arn:aws:aws-marketplace:*:*:AWSMarketplace*/Solution/*"
@@ -113,11 +144,29 @@
         },
         {
           "Action": [
+            "aws-marketplace:ListChangeSets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CaseStudyListChangeSets"
+        },
+        {
+          "Action": [
             "aws-marketplace:ListEntities"
           ],
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "ListEntitiesAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:ListTagsForResource",
+            "aws-marketplace:TagResource",
+            "aws-marketplace:UntagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace*/CaseStudy/*",
+          "Sid": "CaseStudyEntityTagAccess"
         },
         {
           "Action": [
@@ -192,7 +241,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v14"
+    "VersionId": "v15"
   },
-  "UpdateDate": "2026-03-12T17:12:13Z"
+  "UpdateDate": "2026-10-17T11:37:08Z"
 }
