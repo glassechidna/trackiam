@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 465
-* Unique actions: 22702
+* Unique actions: 22703
 * Managed policies: 1586
 
 Most common managed policy name prefixes:
@@ -428,11 +428,11 @@ The following table summarises the AWS APIs.
 | [`bcm-dashboards`](services/bcm-dashboards.yml) | 0 | 0 | 15 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 15 |
 | [`airflow-serverless`](services/airflow-serverless.yml) | 0 | 0 | 15 |
+| [`workspaces-instances`](services/workspaces-instances.yml) | 0 | 0 | 14 |
 | [`ssm-quicksetup`](services/ssm-quicksetup.yml) | 0 | 0 | 14 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 14 |
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 14 |
 | [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
-| [`workspaces-instances`](services/workspaces-instances.yml) | 0 | 0 | 13 |
 | [`supportplans`](services/supportplans.yml) | 0 | 0 | 13 |
 | [`support-console`](services/support-console.yml) | 0 | 0 | 13 |
 | [`interconnect`](services/interconnect.yml) | 0 | 0 | 13 |
