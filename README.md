@@ -11,9 +11,9 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 465
-* Unique actions: 22703
-* Managed policies: 1587
+* Unique services: 466
+* Unique actions: 22811
+* Managed policies: 1588
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 428 |
 | `arn:aws:iam::aws:policy/Amazon*` | 381 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 362 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 363 |
 | `arn:aws:iam::aws:policy/service-role/*` | 228 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
 | Other | 173 |
@@ -49,7 +49,7 @@ The following table summarises the AWS APIs.
 | [`iam`](services/iam.yml) | 159 | 0 | 31 |
 | [`ssm`](services/ssm.yml) | 140 | 0 | 24 |
 | [`lex`](services/lex.yml) | 139 | 2 | 13 |
-| [`redshift`](services/redshift.yml) | 133 | 0 | 33 |
+| [`redshift`](services/redshift.yml) | 133 | 0 | 34 |
 | [`datazone`](services/datazone.yml) | 123 | 0 | 141 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 3 |
@@ -60,7 +60,7 @@ The following table summarises the AWS APIs.
 | [`gamelift`](services/gamelift.yml) | 108 | 0 | 12 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 26 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 19 |
-| [`bedrock`](services/bedrock.yml) | 97 | 2 | 165 |
+| [`bedrock`](services/bedrock.yml) | 97 | 2 | 172 |
 | [`dms`](services/dms.yml) | 92 | 14 | 33 |
 | [`medialive`](services/medialive.yml) | 92 | 0 | 33 |
 | [`config`](services/config.yml) | 92 | 0 | 10 |
@@ -123,7 +123,7 @@ The following table summarises the AWS APIs.
 | [`globalaccelerator`](services/globalaccelerator.yml) | 56 | 0 | 0 |
 | [`resiliencehub`](services/resiliencehub.yml) | 55 | 0 | 78 |
 | [`qbusiness`](services/qbusiness.yml) | 55 | 0 | 38 |
-| [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 13 |
+| [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 14 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 8 |
 | [`lakeformation`](services/lakeformation.yml) | 54 | 1 | 15 |
 | [`wafv2`](services/wafv2.yml) | 54 | 0 | 10 |
@@ -363,6 +363,7 @@ The following table summarises the AWS APIs.
 | [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 258 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 138 |
 | [`securityagent`](services/securityagent.yml) | 0 | 0 | 120 |
+| [`assurance`](services/assurance.yml) | 0 | 0 | 99 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
 | [`odb`](services/odb.yml) | 0 | 0 | 90 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
@@ -506,14 +507,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3835 |
-| `Get` | 3448 |
-| `Delete` | 2597 |
-| `Create` | 2462 |
-| `Update` | 2139 |
+| `List` | 3863 |
+| `Get` | 3466 |
+| `Delete` | 2609 |
+| `Create` | 2475 |
+| `Update` | 2152 |
 | `Describe` | 1957 |
-| `Put` | 612 |
-| `Start` | 558 |
-| `Batch` | 332 |
-| `Tag` | 326 |
+| `Put` | 614 |
+| `Start` | 561 |
+| `Batch` | 335 |
+| `Tag` | 327 |
 

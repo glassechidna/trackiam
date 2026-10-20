@@ -1,0 +1,485 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSFinOpsAgentServiceRolePolicy",
+  "CreateDate": "2026-10-20T16:07:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4IEPXQJW74",
+  "PolicyName": "AWSFinOpsAgentServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-10-20T16:07:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:DisableRule",
+            "events:EnableRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "events:ManagedBy": "finops-agent.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/*",
+          "Sid": "EventBridgeManagedRuleManagementWritePermissions"
+        },
+        {
+          "Action": [
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Condition": {
+            "StringLikeIfExists": {
+              "organizations:ServicePrincipal": [
+                "finops-agent.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AwsOrgsScopedAccess"
+        },
+        {
+          "Action": [
+            "s3:GetBucketLocation",
+            "s3:GetBucketVersioning",
+            "s3:GetIntelligentTieringConfiguration",
+            "s3:GetInventoryConfiguration",
+            "s3:GetLifecycleConfiguration",
+            "s3:GetReplicationConfiguration",
+            "s3:GetStorageLensConfiguration",
+            "s3:ListAllMyBuckets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "StorageResourceReadAccess"
+        },
+        {
+          "Action": [
+            "account:GetRegionOptStatus",
+            "account:ListRegions",
+            "consolidatedbilling:GetAccountBillingRole",
+            "consolidatedbilling:ListLinkedAccounts",
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListChildren",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListParents",
+            "organizations:ListRoots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "OrganizationStructureReadAccess"
+        },
+        {
+          "Action": [
+            "aco-automation:GetAutomationEvent",
+            "aco-automation:GetAutomationRule",
+            "aco-automation:GetEnrollmentConfiguration",
+            "aco-automation:ListAccounts",
+            "aco-automation:ListAutomationEventSteps",
+            "aco-automation:ListAutomationEventSummaries",
+            "aco-automation:ListAutomationEvents",
+            "aco-automation:ListAutomationRulePreview",
+            "aco-automation:ListAutomationRulePreviewSummaries",
+            "aco-automation:ListAutomationRules",
+            "aco-automation:ListRecommendedActionSummaries",
+            "aco-automation:ListRecommendedActions",
+            "aco-automation:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CostOptimizationAutomationReadAccess"
+        },
+        {
+          "Action": [
+            "application-autoscaling:DescribeScalableTargets",
+            "application-autoscaling:DescribeScalingPolicies",
+            "autoscaling:DescribeAutoScalingGroups",
+            "autoscaling:DescribeAutoScalingInstances",
+            "ec2:DescribeAddresses",
+            "ec2:DescribeInstanceTypes",
+            "ec2:DescribeInstances",
+            "ec2:DescribeNatGateways",
+            "ec2:DescribeReservedInstances",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeVolumes",
+            "ec2:DescribeVpcEndpoints"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ComputeResourceReadAccess"
+        },
+        {
+          "Action": [
+            "bcm-data-exports:GetExport",
+            "bcm-data-exports:ListExports",
+            "cur:DescribeReportDefinitions"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CostAndUsageReportReadAccess"
+        },
+        {
+          "Action": [
+            "bcm-pricing-calculator:GetPreferences",
+            "bcm-pricing-calculator:GetWorkloadEstimate",
+            "bcm-pricing-calculator:ListWorkloadEstimateUsage",
+            "bcm-pricing-calculator:ListWorkloadEstimates"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PricingCalculatorReadAccess"
+        },
+        {
+          "Action": [
+            "billing:GetBillingData",
+            "billing:GetBillingDetails",
+            "billing:GetBillingNotifications",
+            "billing:GetBillingPreferences",
+            "billing:GetBillingView",
+            "billing:GetContractInformation",
+            "billing:GetCreditAllocationHistory",
+            "billing:GetCredits",
+            "billing:GetEnterpriseSupportChargeSummary",
+            "billing:GetEnterpriseSupportContractDetails",
+            "billing:GetIAMAccessPreference",
+            "billing:GetResourcePolicy",
+            "billing:GetSellerOfRecord",
+            "billing:ListBillingViews",
+            "billing:ListEnterpriseSupportLinkedAccountCharges",
+            "billing:ListSourceViewsForBillingView"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BillingReadAccess"
+        },
+        {
+          "Action": [
+            "billingconductor:GetBillingGroupCostReport",
+            "billingconductor:ListAccountAssociations",
+            "billingconductor:ListBillingGroupCostReports",
+            "billingconductor:ListBillingGroups",
+            "billingconductor:ListCustomLineItemVersions",
+            "billingconductor:ListCustomLineItems",
+            "billingconductor:ListPricingPlans",
+            "billingconductor:ListPricingPlansAssociatedWithPricingRule",
+            "billingconductor:ListPricingRules",
+            "billingconductor:ListPricingRulesAssociatedToPricingPlan",
+            "billingconductor:ListResourcesAssociatedToCustomLineItem",
+            "billingconductor:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BillingConductorReadAccess"
+        },
+        {
+          "Action": [
+            "budgets:DescribeBudgetAction",
+            "budgets:DescribeBudgetActionHistories",
+            "budgets:DescribeBudgetActionsForAccount",
+            "budgets:DescribeBudgetActionsForBudget",
+            "budgets:ListTagsForResource",
+            "budgets:ViewBudget"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BudgetsReadAccess"
+        },
+        {
+          "Action": [
+            "ce:DescribeCostCategoryDefinition",
+            "ce:GetAnomalies",
+            "ce:GetAnomalyMonitors",
+            "ce:GetCommitmentPurchaseAnalysis",
+            "ce:GetCostAndUsage",
+            "ce:GetCostAndUsageComparisons",
+            "ce:GetCostAndUsageWithResources",
+            "ce:GetCostCategories",
+            "ce:GetCostComparisonDrivers",
+            "ce:GetCostForecast",
+            "ce:GetDimensionValues",
+            "ce:GetReservationCoverage",
+            "ce:GetReservationPurchaseRecommendation",
+            "ce:GetReservationUtilization",
+            "ce:GetSavingsPlanPurchaseRecommendationDetails",
+            "ce:GetSavingsPlansCoverage",
+            "ce:GetSavingsPlansPurchaseRecommendation",
+            "ce:GetSavingsPlansUtilization",
+            "ce:GetSavingsPlansUtilizationDetails",
+            "ce:GetTags",
+            "ce:GetUsageForecast",
+            "ce:ListCommitmentPurchaseAnalyses",
+            "ce:ListCostAllocationTagBackfillHistory",
+            "ce:ListCostAllocationTags",
+            "ce:ListCostCategoryDefinitions",
+            "ce:ListCostCategoryResourceAssociations",
+            "ce:ListSavingsPlansPurchaseRecommendationGeneration",
+            "ce:ListTagsForResource",
+            "ce:StartCommitmentPurchaseAnalysis",
+            "ce:StartSavingsPlansPurchaseRecommendationGeneration"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CostExplorerReadAndAnalyzeAccess"
+        },
+        {
+          "Action": [
+            "cloudtrail:DescribeTrails",
+            "cloudtrail:GetEventSelectors",
+            "cloudtrail:GetTrailStatus",
+            "cloudtrail:LookupEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudTrailConfigurationReadAccess"
+        },
+        {
+          "Action": [
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics",
+            "cloudwatch:ListMetrics"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "UtilizationMetricsReadAccess"
+        },
+        {
+          "Action": [
+            "compute-optimizer:DescribeRecommendationExportJobs",
+            "compute-optimizer:GetAutoScalingGroupRecommendations",
+            "compute-optimizer:GetEBSVolumeRecommendations",
+            "compute-optimizer:GetEC2InstanceRecommendations",
+            "compute-optimizer:GetEC2RecommendationProjectedMetrics",
+            "compute-optimizer:GetECSServiceRecommendationProjectedMetrics",
+            "compute-optimizer:GetECSServiceRecommendations",
+            "compute-optimizer:GetEffectiveRecommendationPreferences",
+            "compute-optimizer:GetEnrollmentStatus",
+            "compute-optimizer:GetEnrollmentStatusesForOrganization",
+            "compute-optimizer:GetIdleRecommendations",
+            "compute-optimizer:GetLambdaFunctionRecommendations",
+            "compute-optimizer:GetLicenseRecommendations",
+            "compute-optimizer:GetRDSDatabaseRecommendationProjectedMetrics",
+            "compute-optimizer:GetRDSDatabaseRecommendations",
+            "compute-optimizer:GetRecommendationPreferences",
+            "compute-optimizer:GetRecommendationSummaries"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ComputeOptimizerReadAccess"
+        },
+        {
+          "Action": [
+            "cost-optimization-hub:GetPreferences",
+            "cost-optimization-hub:GetRecommendation",
+            "cost-optimization-hub:ListEfficiencyMetrics",
+            "cost-optimization-hub:ListEnrollmentStatuses",
+            "cost-optimization-hub:ListRecommendationSummaries",
+            "cost-optimization-hub:ListRecommendations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CostOptimizationHubReadAccess"
+        },
+        {
+          "Action": [
+            "dynamodb:DescribeContinuousBackups",
+            "dynamodb:DescribeTable",
+            "dynamodb:ListTables",
+            "elasticache:DescribeCacheClusters",
+            "elasticache:DescribeReplicationGroups",
+            "elasticache:DescribeReservedCacheNodes",
+            "elasticache:DescribeSnapshots",
+            "memorydb:DescribeClusters",
+            "memorydb:DescribeSnapshots",
+            "rds:DescribeDBClusterSnapshots",
+            "rds:DescribeDBClusters",
+            "rds:DescribeDBEngineVersions",
+            "rds:DescribeDBInstances",
+            "rds:DescribeDBSnapshots",
+            "rds:DescribeReservedDBInstances",
+            "redshift:DescribeClusterSnapshots",
+            "redshift:DescribeClusters",
+            "redshift:DescribeReservedNodes"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DatabaseResourceReadAccess"
+        },
+        {
+          "Action": [
+            "ecs:ListClusters",
+            "ecs:ListServices"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ContainerResourceReadAccess"
+        },
+        {
+          "Action": [
+            "events:DescribeRule",
+            "events:ListTargetsByRule"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/*",
+          "Sid": "EventBridgeManagedRuleManagementReadPermissions"
+        },
+        {
+          "Action": [
+            "freetier:GetAccountActivity",
+            "freetier:GetAccountPlanState",
+            "freetier:GetFreeTierAlertPreference",
+            "freetier:GetFreeTierUsage",
+            "freetier:ListAccountActivities"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "FreeTierReadAccess"
+        },
+        {
+          "Action": [
+            "health:DescribeEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "HealthEventReadAccess"
+        },
+        {
+          "Action": [
+            "invoicing:BatchGetInvoiceProfile",
+            "invoicing:GetInvoiceCorrection",
+            "invoicing:GetInvoiceEmailDeliveryPreferences",
+            "invoicing:GetInvoicePDF",
+            "invoicing:GetInvoiceUnit",
+            "invoicing:GetProcurementPortalPreference",
+            "invoicing:ListInvoiceCorrections",
+            "invoicing:ListInvoiceSummaries",
+            "invoicing:ListInvoiceUnits",
+            "invoicing:ListProcurementPortalPreferences",
+            "invoicing:ListProcurementPortalSuppliers",
+            "invoicing:ListProcurementPortals",
+            "invoicing:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "InvoicingReadAccess"
+        },
+        {
+          "Action": [
+            "lambda:GetFunctionConfiguration",
+            "lambda:ListFunctions",
+            "lambda:ListProvisionedConcurrencyConfigs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LambdaResourceReadAccess"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogGroups",
+            "logs:DescribeSubscriptionFilters"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LogConfigurationReadAccess"
+        },
+        {
+          "Action": [
+            "mapcredits:ListAssociatedPrograms",
+            "mapcredits:ListQuarterCredits",
+            "mapcredits:ListQuarterSpend"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CreditProgramReadAccess"
+        },
+        {
+          "Action": [
+            "pricing:DescribeServices",
+            "pricing:GetAttributeValues",
+            "pricing:GetProducts"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PricingReadAccess"
+        },
+        {
+          "Action": [
+            "purchase-orders:GetPurchaseOrder",
+            "purchase-orders:ListPurchaseOrderInvoices",
+            "purchase-orders:ListPurchaseOrders",
+            "purchase-orders:ListTagsForResource",
+            "purchase-orders:ViewPurchaseOrders"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PurchaseOrderReadAccess"
+        },
+        {
+          "Action": [
+            "ram:GetResourceShares",
+            "resource-explorer-2:GetIndex",
+            "resource-explorer-2:ListIndexes",
+            "resource-explorer-2:Search",
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ResourceDiscoveryReadAccess"
+        },
+        {
+          "Action": [
+            "sagemaker:DescribeEndpoint",
+            "sagemaker:DescribeEndpointConfig",
+            "sagemaker:DescribeNotebookInstance",
+            "sagemaker:ListApps",
+            "sagemaker:ListDomains",
+            "sagemaker:ListEndpointConfigs",
+            "sagemaker:ListEndpoints",
+            "sagemaker:ListNotebookInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MachineLearningResourceReadAccess"
+        },
+        {
+          "Action": [
+            "savingsplans:DescribeSavingsPlanRates",
+            "savingsplans:DescribeSavingsPlans",
+            "savingsplans:DescribeSavingsPlansOfferingRates",
+            "savingsplans:DescribeSavingsPlansOfferings",
+            "savingsplans:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SavingsPlansReadAccess"
+        },
+        {
+          "Action": [
+            "workspaces:DescribeWorkspaces",
+            "workspaces:DescribeWorkspacesConnectionStatus"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "WorkspacesReadAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-10-20T16:07:08Z"
+}
