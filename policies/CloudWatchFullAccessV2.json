@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchFullAccessV2",
   "CreateDate": "2023-08-01T11:32:57Z",
-  "DefaultVersionId": "v17",
+  "DefaultVersionId": "v18",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4K5ELCXZSW",
   "PolicyName": "CloudWatchFullAccessV2",
   "PolicyVersion": {
-    "CreateDate": "2026-09-22T16:57:08Z",
+    "CreateDate": "2026-10-20T18:57:07Z",
     "Document": {
       "Statement": [
         {
@@ -101,6 +101,20 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "LogAlarmScheduledQueryPassRolePermissions"
+        },
+        {
+          "Action": "kms:DescribeKey",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:ViaService": "logs.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "CloudWatchLogsKmsDescribeKeyPermissions"
         },
         {
           "Action": [
@@ -261,7 +275,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v17"
+    "VersionId": "v18"
   },
-  "UpdateDate": "2026-09-22T16:57:08Z"
+  "UpdateDate": "2026-10-20T18:57:07Z"
 }

@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 466
-* Unique actions: 22811
+* Unique actions: 22823
 * Managed policies: 1588
 
 Most common managed policy name prefixes:
@@ -44,7 +44,7 @@ The following table summarises the AWS APIs.
 | [`glue`](services/glue.yml) | 214 | 4 | 92 |
 | [`ses`](services/ses.yml) | 193 | 0 | 40 |
 | [`quicksight`](services/quicksight.yml) | 174 | 3 | 166 |
-| [`rds`](services/rds.yml) | 162 | 0 | 7 |
+| [`rds`](services/rds.yml) | 162 | 0 | 11 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
 | [`iam`](services/iam.yml) | 159 | 0 | 31 |
 | [`ssm`](services/ssm.yml) | 140 | 0 | 24 |
@@ -379,11 +379,11 @@ The following table summarises the AWS APIs.
 | [`wickr`](services/wickr.yml) | 0 | 0 | 48 |
 | [`route53globalresolver`](services/route53globalresolver.yml) | 0 | 0 | 48 |
 | [`health-agent`](services/health-agent.yml) | 0 | 0 | 47 |
+| [`billing`](services/billing.yml) | 0 | 0 | 47 |
 | [`network-security-manager`](services/network-security-manager.yml) | 0 | 0 | 46 |
 | [`finops-agent`](services/finops-agent.yml) | 0 | 0 | 46 |
 | [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 45 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 44 |
-| [`billing`](services/billing.yml) | 0 | 0 | 39 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
 | [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 38 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 38 |
@@ -507,12 +507,12 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3863 |
+| `List` | 3867 |
 | `Get` | 3466 |
 | `Delete` | 2609 |
-| `Create` | 2475 |
+| `Create` | 2477 |
 | `Update` | 2152 |
-| `Describe` | 1957 |
+| `Describe` | 1958 |
 | `Put` | 614 |
 | `Start` | 561 |
 | `Batch` | 335 |
