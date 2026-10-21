@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 466
-* Unique actions: 22824
-* Managed policies: 1588
+* Unique actions: 22825
+* Managed policies: 1589
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 428 |
 | `arn:aws:iam::aws:policy/Amazon*` | 381 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 363 |
-| `arn:aws:iam::aws:policy/service-role/*` | 228 |
+| `arn:aws:iam::aws:policy/service-role/*` | 229 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
 | Other | 173 |
 
@@ -97,7 +97,7 @@ The following table summarises the AWS APIs.
 | [`mgn`](services/mgn.yml) | 70 | 0 | 66 |
 | [`route53`](services/route53.yml) | 70 | 0 | 1 |
 | [`athena`](services/athena.yml) | 68 | 0 | 13 |
-| [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 1 |
+| [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 2 |
 | [`ds`](services/ds.yml) | 67 | 0 | 24 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 66 | 0 | 11 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
