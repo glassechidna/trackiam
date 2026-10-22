@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerFullAccess",
   "CreateDate": "2019-07-02T20:40:09Z",
-  "DefaultVersionId": "v33",
+  "DefaultVersionId": "v34",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JF7OFUANW",
   "PolicyName": "AWSMarketplaceSellerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-08-12T16:47:10Z",
+    "CreateDate": "2026-10-22T17:47:07Z",
     "Document": {
       "Statement": [
         {
@@ -99,6 +99,38 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/*",
           "Sid": "AssetScanning"
+        },
+        {
+          "Action": [
+            "partnercentral:GetConnection"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:partnercentral:*::catalog/*/connection/*",
+          "Sid": "ReadAccountConnections"
+        },
+        {
+          "Action": [
+            "partnercentral:ListConnections"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListAccountConnections"
         },
         {
           "Action": [
@@ -311,7 +343,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v33"
+    "VersionId": "v34"
   },
-  "UpdateDate": "2026-08-12T16:47:10Z"
+  "UpdateDate": "2026-10-22T17:47:07Z"
 }
