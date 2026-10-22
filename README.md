@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 466
-* Unique actions: 22831
+* Unique services: 467
+* Unique actions: 22864
 * Managed policies: 1589
 
 Most common managed policy name prefixes:
@@ -390,6 +390,7 @@ The following table summarises the AWS APIs.
 | [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 38 |
 | [`rtbfabric`](services/rtbfabric.yml) | 0 | 0 | 36 |
 | [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
+| [`continuum`](services/continuum.yml) | 0 | 0 | 33 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`gameliftstreams`](services/gameliftstreams.yml) | 0 | 0 | 30 |
@@ -507,14 +508,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3868 |
-| `Get` | 3466 |
-| `Delete` | 2610 |
-| `Create` | 2478 |
-| `Update` | 2153 |
+| `List` | 3877 |
+| `Get` | 3475 |
+| `Delete` | 2613 |
+| `Create` | 2483 |
+| `Update` | 2156 |
 | `Describe` | 1959 |
-| `Put` | 614 |
-| `Start` | 561 |
+| `Put` | 615 |
+| `Start` | 562 |
 | `Batch` | 334 |
 | `Tag` | 327 |
 
