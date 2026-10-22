@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 22864
+* Unique actions: 22867
 * Managed policies: 1589
 
 Most common managed policy name prefixes:
@@ -70,7 +70,7 @@ The following table summarises the AWS APIs.
 | [`es`](services/es.yml) | 87 | 0 | 44 |
 | [`sms-voice`](services/sms-voice.yml) | 87 | 0 | 28 |
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
-| [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 10 |
+| [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 12 |
 | [`comprehend`](services/comprehend.yml) | 85 | 0 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 84 | 0 | 67 |
 | [`workmail`](services/workmail.yml) | 84 | 0 | 42 |
@@ -106,7 +106,7 @@ The following table summarises the AWS APIs.
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 3 |
 | [`appsync`](services/appsync.yml) | 64 | 0 | 23 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 72 |
-| [`ivs`](services/ivs.yml) | 63 | 0 | 14 |
+| [`ivs`](services/ivs.yml) | 63 | 0 | 15 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 10 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 60 | 0 | 12 |
@@ -508,11 +508,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3877 |
+| `List` | 3878 |
 | `Get` | 3475 |
 | `Delete` | 2613 |
 | `Create` | 2483 |
-| `Update` | 2156 |
+| `Update` | 2157 |
 | `Describe` | 1959 |
 | `Put` | 615 |
 | `Start` | 562 |

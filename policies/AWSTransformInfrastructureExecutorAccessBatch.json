@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSTransformInfrastructureExecutorAccessBatch",
   "CreateDate": "2026-07-20T20:12:13Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4IFSDRNYQT",
   "PolicyName": "AWSTransformInfrastructureExecutorAccessBatch",
   "PolicyVersion": {
-    "CreateDate": "2026-09-02T21:27:07Z",
+    "CreateDate": "2026-10-22T21:47:06Z",
     "Document": {
       "Statement": [
         {
@@ -189,6 +189,37 @@
         },
         {
           "Action": [
+            "logs:CreateLogGroup",
+            "logs:PutRetentionPolicy"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/TransformContinuousModernization",
+          "Sid": "CmodCustomerLogGroupManagement"
+        },
+        {
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/TransformContinuousModernization:log-stream:batch/*",
+            "arn:aws:logs:*:*:log-group:/aws/TransformContinuousModernization:log-stream:local/*"
+          ],
+          "Sid": "CmodCustomerLogStreamWrite"
+        },
+        {
+          "Action": [
             "logs:DescribeLogStreams",
             "logs:FilterLogEvents",
             "logs:GetLogEvents"
@@ -302,7 +333,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-09-02T21:27:07Z"
+  "UpdateDate": "2026-10-22T21:47:06Z"
 }
