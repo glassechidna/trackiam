@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 466
-* Unique actions: 22829
+* Unique actions: 22831
 * Managed policies: 1589
 
 Most common managed policy name prefixes:
@@ -127,7 +127,7 @@ The following table summarises the AWS APIs.
 | [`organizations`](services/organizations.yml) | 55 | 0 | 8 |
 | [`lakeformation`](services/lakeformation.yml) | 54 | 1 | 15 |
 | [`wafv2`](services/wafv2.yml) | 54 | 0 | 10 |
-| [`kms`](services/kms.yml) | 52 | 1 | 4 |
+| [`kms`](services/kms.yml) | 52 | 1 | 6 |
 | [`profile`](services/profile.yml) | 52 | 0 | 65 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 12 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 24 |
