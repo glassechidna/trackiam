@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 22867
+* Unique actions: 22878
 * Managed policies: 1589
 
 Most common managed policy name prefixes:
@@ -141,11 +141,11 @@ The following table summarises the AWS APIs.
 | [`lookoutequipment`](services/lookoutequipment.yml) | 49 | 0 | 0 |
 | [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 18 |
 | [`codeartifact`](services/codeartifact.yml) | 48 | 0 | 3 |
-| [`wisdom`](services/wisdom.yml) | 47 | 0 | 48 |
+| [`wisdom`](services/wisdom.yml) | 47 | 0 | 50 |
 | [`ecr`](services/ecr.yml) | 47 | 0 | 13 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
-| [`transcribe`](services/transcribe.yml) | 46 | 0 | 5 |
+| [`transcribe`](services/transcribe.yml) | 46 | 0 | 6 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 13 |
 | [`fsx`](services/fsx.yml) | 45 | 0 | 11 |
 | [`workdocs`](services/workdocs.yml) | 44 | 0 | 17 |
@@ -163,7 +163,7 @@ The following table summarises the AWS APIs.
 | [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 119 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 9 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 4 |
-| [`aoss`](services/aoss.yml) | 37 | 0 | 12 |
+| [`aoss`](services/aoss.yml) | 37 | 0 | 20 |
 | [`apprunner`](services/apprunner.yml) | 37 | 0 | 5 |
 | [`amplify`](services/amplify.yml) | 37 | 0 | 4 |
 | [`states`](services/states.yml) | 37 | 0 | 2 |
@@ -508,11 +508,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3878 |
-| `Get` | 3475 |
-| `Delete` | 2613 |
-| `Create` | 2483 |
-| `Update` | 2157 |
+| `List` | 3880 |
+| `Get` | 3477 |
+| `Delete` | 2614 |
+| `Create` | 2485 |
+| `Update` | 2158 |
 | `Describe` | 1959 |
 | `Put` | 615 |
 | `Start` | 562 |
