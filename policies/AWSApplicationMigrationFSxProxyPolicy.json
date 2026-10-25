@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AWSApplicationMigrationFSxProxyPolicy",
   "CreateDate": "2026-05-31T13:12:14Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQPHG73TS",
   "PolicyName": "AWSApplicationMigrationFSxProxyPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-08-09T12:17:24Z",
+    "CreateDate": "2026-10-25T09:47:07Z",
     "Document": {
       "Statement": [
         {
@@ -53,6 +53,17 @@
           "Effect": "Allow",
           "Resource": "arn:aws:fsx:*:*:snapshot/*/*",
           "Sid": "FSxDeleteSnapshot"
+        },
+        {
+          "Action": "fsx:ListTagsForResource",
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AWSApplicationMigrationServiceManaged": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:fsx:*:*:snapshot/*/*",
+          "Sid": "FSxListTagsSnapshot"
         },
         {
           "Action": "fsx:TagResource",
@@ -124,7 +135,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2026-08-09T12:17:24Z"
+  "UpdateDate": "2026-10-25T09:47:07Z"
 }
