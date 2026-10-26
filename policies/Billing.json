@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/Billing",
   "CreateDate": "2016-11-10T17:33:18Z",
-  "DefaultVersionId": "v30",
+  "DefaultVersionId": "v31",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAIFTHXT6FFMIRT7ZEA",
   "PolicyName": "Billing",
   "PolicyVersion": {
-    "CreateDate": "2026-07-30T22:12:16Z",
+    "CreateDate": "2026-10-26T17:07:08Z",
     "Document": {
       "Statement": [
         {
@@ -29,6 +29,7 @@
             "billing:GetResourcePolicy",
             "billing:GetSellerOfRecord",
             "billing:ListBillingViews",
+            "billing:ListContracts",
             "billing:ListSourceViewsForBillingView",
             "billing:ListTagsForResource",
             "billing:PutContractInformation",
@@ -169,12 +170,26 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "VisualEditor0"
+        },
+        {
+          "Action": [
+            "billing:AssociateContract",
+            "billing:CancelContractualInvestmentAttestation",
+            "billing:CreateContractualInvestmentAttestation",
+            "billing:DisassociateContract",
+            "billing:ListContractualInvestmentAttestations",
+            "billing:ListContractualInvestmentSummaries",
+            "billing:ListContractualInvestments"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:billing::*:contract/*",
+          "Sid": "ContractAdministration"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v30"
+    "VersionId": "v31"
   },
-  "UpdateDate": "2026-07-30T22:12:16Z"
+  "UpdateDate": "2026-10-26T17:07:08Z"
 }

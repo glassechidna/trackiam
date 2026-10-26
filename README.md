@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 22878
-* Managed policies: 1589
+* Unique actions: 22874
+* Managed policies: 1590
 
 Most common managed policy name prefixes:
 
@@ -22,7 +22,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/AWS*` | 428 |
 | `arn:aws:iam::aws:policy/Amazon*` | 381 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 363 |
-| `arn:aws:iam::aws:policy/service-role/*` | 229 |
+| `arn:aws:iam::aws:policy/service-role/*` | 230 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
 | Other | 173 |
 
@@ -267,7 +267,6 @@ The following table summarises the AWS APIs.
 | [`cloudhsm`](services/cloudhsm.yml) | 18 | 18 | 0 |
 | [`resource-groups`](services/resource-groups.yml) | 18 | 0 | 11 |
 | [`medical-imaging`](services/medical-imaging.yml) | 18 | 0 | 10 |
-| [`codestar`](services/codestar.yml) | 18 | 0 | 4 |
 | [`rum`](services/rum.yml) | 17 | 0 | 3 |
 | [`cognito-sync`](services/cognito-sync.yml) | 17 | 0 | 2 |
 | [`mediapackage-vod`](services/mediapackage-vod.yml) | 17 | 0 | 0 |
@@ -354,6 +353,7 @@ The following table summarises the AWS APIs.
 | [`evidently`](services/evidently.yml) | 0 | 38 | 0 |
 | [`iotthingsgraph`](services/iotthingsgraph.yml) | 0 | 35 | 0 |
 | [`iot1click`](services/iot1click.yml) | 0 | 26 | 0 |
+| [`codestar`](services/codestar.yml) | 0 | 18 | 0 |
 | [`execute-api`](services/execute-api.yml) | 0 | 12 | 3 |
 | [`cloudcontrolapi`](services/cloudcontrolapi.yml) | 0 | 8 | 0 |
 | [`IoTSecuredTunneling`](services/IoTSecuredTunneling.yml) | 0 | 8 | 0 |
@@ -509,12 +509,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3880 |
-| `Get` | 3477 |
-| `Delete` | 2614 |
+| `Get` | 3476 |
+| `Delete` | 2613 |
 | `Create` | 2485 |
 | `Update` | 2158 |
 | `Describe` | 1959 |
-| `Put` | 615 |
+| `Put` | 614 |
 | `Start` | 562 |
 | `Batch` | 334 |
 | `Tag` | 327 |

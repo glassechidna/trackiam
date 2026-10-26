@@ -1,0 +1,117 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AWSMarketplaceSubsidiaryAuthorizationServiceRolePolicy",
+  "CreateDate": "2026-10-26T17:27:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4AXKN5E32L",
+  "PolicyName": "AWSMarketplaceSubsidiaryAuthorizationServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-10-26T17:27:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aws-marketplace:DeleteResourcePolicy",
+            "aws-marketplace:GetResourcePolicy",
+            "aws-marketplace:PutResourcePolicy"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "ram.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aws-marketplace:*:*:*/SubsidiaryAuthorization/*"
+          ],
+          "Sid": "AllowSubsidiaryAuthorizationShareActionsMarketplace"
+        },
+        {
+          "Action": [
+            "ram:AcceptResourceShareInvitation",
+            "ram:DeleteResourceShare"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "ram:ResourceShareName": "AWSMarketplaceSubsidiaryAuthorization"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ram:*:*:*"
+          ],
+          "Sid": "AllowSubsidiaryAuthorizationShareActionsRAMAcceptDelete"
+        },
+        {
+          "Action": [
+            "ram:AssociateResourceShare"
+          ],
+          "Condition": {
+            "Null": {
+              "ram:Principal": "false"
+            },
+            "StringEquals": {
+              "ram:ResourceShareName": "AWSMarketplaceSubsidiaryAuthorization"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ram:*:*:*"
+          ],
+          "Sid": "AllowSubsidiaryAuthorizationShareActionsRAMAssociate"
+        },
+        {
+          "Action": [
+            "ram:CreateResourceShare"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "ram:ResourceArn": [
+                "arn:aws:aws-marketplace:*:*:*/SubsidiaryAuthorization/*"
+              ]
+            },
+            "Null": {
+              "ram:Principal": "true"
+            },
+            "StringEquals": {
+              "ram:RequestedResourceType": "aws-marketplace:Entity"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ram:*:*:*"
+          ],
+          "Sid": "AllowSubsidiaryAuthorizationShareActionsRAMCreate"
+        },
+        {
+          "Action": [
+            "aws-marketplace:DescribeEntity"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aws-marketplace:*:*:*/SubsidiaryAuthorization/*"
+          ],
+          "Sid": "AllowSubsidiaryAuthorizationShareActionsMarketplaceDescribe"
+        },
+        {
+          "Action": [
+            "ram:GetResourceShareAssociations",
+            "ram:GetResourceShareInvitations"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ram:*:*:*"
+          ],
+          "Sid": "AllowSubsidiaryAuthorizationShareActionsRAMGet"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-10-26T17:27:07Z"
+}

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess",
   "CreateDate": "2020-08-27T20:08:51Z",
-  "DefaultVersionId": "v28",
+  "DefaultVersionId": "v29",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LJ3OSZ5SX",
   "PolicyName": "AWSBillingReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-07-30T22:12:29Z",
+    "CreateDate": "2026-10-26T17:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -23,6 +23,7 @@
             "billing:GetIAMAccessPreference",
             "billing:GetSellerOfRecord",
             "billing:ListBillingViews",
+            "billing:ListContracts",
             "budgets:DescribeBudgetAction",
             "budgets:DescribeBudgetActionHistories",
             "budgets:DescribeBudgetActionsForAccount",
@@ -93,12 +94,22 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "VisualEditor0"
+        },
+        {
+          "Action": [
+            "billing:ListContractualInvestmentAttestations",
+            "billing:ListContractualInvestmentSummaries",
+            "billing:ListContractualInvestments"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:billing::*:contract/*",
+          "Sid": "ContractualInvestmentReadOnly"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v28"
+    "VersionId": "v29"
   },
-  "UpdateDate": "2026-07-30T22:12:29Z"
+  "UpdateDate": "2026-10-26T17:07:07Z"
 }
