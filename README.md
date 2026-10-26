@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 22874
+* Unique actions: 22890
 * Managed policies: 1590
 
 Most common managed policy name prefixes:
@@ -67,7 +67,7 @@ The following table summarises the AWS APIs.
 | [`backup`](services/backup.yml) | 91 | 0 | 31 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 7 |
 | [`workspaces`](services/workspaces.yml) | 88 | 0 | 15 |
-| [`es`](services/es.yml) | 87 | 0 | 44 |
+| [`es`](services/es.yml) | 87 | 0 | 50 |
 | [`sms-voice`](services/sms-voice.yml) | 87 | 0 | 28 |
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
 | [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 12 |
@@ -106,7 +106,7 @@ The following table summarises the AWS APIs.
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 3 |
 | [`appsync`](services/appsync.yml) | 64 | 0 | 23 |
 | [`lambda`](services/lambda.yml) | 63 | 3 | 72 |
-| [`ivs`](services/ivs.yml) | 63 | 0 | 15 |
+| [`ivs`](services/ivs.yml) | 63 | 0 | 20 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 10 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
 | [`transfer`](services/transfer.yml) | 60 | 0 | 12 |
@@ -142,7 +142,7 @@ The following table summarises the AWS APIs.
 | [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 18 |
 | [`codeartifact`](services/codeartifact.yml) | 48 | 0 | 3 |
 | [`wisdom`](services/wisdom.yml) | 47 | 0 | 50 |
-| [`ecr`](services/ecr.yml) | 47 | 0 | 13 |
+| [`ecr`](services/ecr.yml) | 47 | 0 | 17 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`transcribe`](services/transcribe.yml) | 46 | 0 | 6 |
@@ -197,7 +197,7 @@ The following table summarises the AWS APIs.
 | [`schemas`](services/schemas.yml) | 31 | 0 | 0 |
 | [`devops-guru`](services/devops-guru.yml) | 31 | 0 | 0 |
 | [`amplifybackend`](services/amplifybackend.yml) | 31 | 0 | 0 |
-| [`xray`](services/xray.yml) | 30 | 0 | 13 |
+| [`xray`](services/xray.yml) | 30 | 0 | 14 |
 | [`dataexchange`](services/dataexchange.yml) | 30 | 0 | 10 |
 | [`rolesanywhere`](services/rolesanywhere.yml) | 30 | 0 | 0 |
 | [`lookoutmetrics`](services/lookoutmetrics.yml) | 30 | 0 | 0 |
@@ -508,14 +508,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3880 |
-| `Get` | 3476 |
-| `Delete` | 2613 |
-| `Create` | 2485 |
-| `Update` | 2158 |
-| `Describe` | 1959 |
+| `List` | 3882 |
+| `Get` | 3477 |
+| `Delete` | 2614 |
+| `Create` | 2486 |
+| `Update` | 2159 |
+| `Describe` | 1961 |
 | `Put` | 614 |
-| `Start` | 562 |
+| `Start` | 563 |
 | `Batch` | 334 |
 | `Tag` | 327 |
 

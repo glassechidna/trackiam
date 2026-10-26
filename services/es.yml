@@ -89,8 +89,10 @@ Actions:
 
   # actions with no corresponding API
   - Name: es:AddDirectQueryDataSource
+  - Name: es:AddReplicationPeer
   - Name: es:AssociatePackages
   - Name: es:AttachDataSource
+  - Name: es:CompareDomainConfiguration
   - Name: es:CreateApplication
   - Name: es:CreateElasticsearchServiceRole
   - Name: es:CreateIndex
@@ -100,6 +102,7 @@ Actions:
   - Name: es:DeleteIndex
   - Name: es:DeregisterCapability
   - Name: es:DescribeDataSourceAttachment
+  - Name: es:DescribeDomainReplication
   - Name: es:DescribeInsightDetails
   - Name: es:DetachDataSource
   - Name: es:DissociatePackages
@@ -110,6 +113,7 @@ Actions:
   - Name: es:ESHttpPatch
   - Name: es:ESHttpPost
   - Name: es:ESHttpPut
+  - Name: es:FailoverReplication
   - Name: es:GetApplication
   - Name: es:GetCapability
   - Name: es:GetDefaultApplicationSetting
@@ -125,9 +129,11 @@ Actions:
   - Name: es:ListMigrations
   - Name: es:PutDefaultApplicationSetting
   - Name: es:RegisterCapability
+  - Name: es:RemoveReplicationPeer
   - Name: es:RollbackElasticsearchServiceSoftwareUpdate
   - Name: es:RollbackServiceSoftwareUpdate
   - Name: es:StartMigration
+  - Name: es:SwitchoverReplication
   - Name: es:UpdateApplication
   - Name: es:UpdateDirectQueryDataSource
   - Name: es:UpdateIndex

@@ -1,15 +1,57 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AIDevOpsChannelAccessPolicy",
   "CreateDate": "2026-08-26T21:07:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4LFYJ5QTSC",
   "PolicyName": "AIDevOpsChannelAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-08-26T21:07:07Z",
+    "CreateDate": "2026-10-26T22:17:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "aidevops:CreateAsset",
+            "aidevops:CreateAssetFile",
+            "aidevops:CreateBacklogTask",
+            "aidevops:CreateTrigger",
+            "aidevops:DeleteAsset",
+            "aidevops:DeleteAssetFile",
+            "aidevops:DeleteTrigger",
+            "aidevops:GetAsset",
+            "aidevops:GetAssetContent",
+            "aidevops:GetAssetFile",
+            "aidevops:GetAssociation",
+            "aidevops:GetBacklogTask",
+            "aidevops:GetRecommendation",
+            "aidevops:ListAssetFiles",
+            "aidevops:ListAssets",
+            "aidevops:ListAssociations",
+            "aidevops:ListBacklogTasks",
+            "aidevops:ListExecutions",
+            "aidevops:ListGoals",
+            "aidevops:ListJournalRecords",
+            "aidevops:ListRecommendations",
+            "aidevops:ListTriggers",
+            "aidevops:UpdateAsset",
+            "aidevops:UpdateAssetFile",
+            "aidevops:UpdateBacklogTask",
+            "aidevops:UpdateRecommendation",
+            "aidevops:UpdateTrigger"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aidevops:*:*:agentspace/${aws:PrincipalTag/AgentSpaceId}",
+            "arn:aws:aidevops:*:*:agentspace/${aws:PrincipalTag/AgentSpaceId}/*"
+          ],
+          "Sid": "AllowAgentSpaceActions"
+        },
         {
           "Action": [
             "aidevops:CreateChat",
@@ -28,7 +70,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-08-26T21:07:07Z"
+  "UpdateDate": "2026-10-26T22:17:07Z"
 }
