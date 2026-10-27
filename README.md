@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 22890
-* Managed policies: 1590
+* Unique actions: 22897
+* Managed policies: 1591
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 428 |
+| `arn:aws:iam::aws:policy/AWS*` | 429 |
 | `arn:aws:iam::aws:policy/Amazon*` | 381 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 363 |
 | `arn:aws:iam::aws:policy/service-role/*` | 230 |
@@ -112,7 +112,7 @@ The following table summarises the AWS APIs.
 | [`transfer`](services/transfer.yml) | 60 | 0 | 12 |
 | [`datasync`](services/datasync.yml) | 60 | 0 | 6 |
 | [`geo`](services/geo.yml) | 60 | 0 | 4 |
-| [`inspector2`](services/inspector2.yml) | 59 | 0 | 22 |
+| [`inspector2`](services/inspector2.yml) | 59 | 0 | 25 |
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 17 |
 | [`events`](services/events.yml) | 57 | 0 | 17 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
@@ -361,7 +361,7 @@ The following table summarises the AWS APIs.
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 0 | 6 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 258 |
-| [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 138 |
+| [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 139 |
 | [`securityagent`](services/securityagent.yml) | 0 | 0 | 119 |
 | [`assurance`](services/assurance.yml) | 0 | 0 | 99 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
@@ -409,12 +409,12 @@ The following table summarises the AWS APIs.
 | [`s3files`](services/s3files.yml) | 0 | 0 | 24 |
 | [`payments`](services/payments.yml) | 0 | 0 | 24 |
 | [`evs`](services/evs.yml) | 0 | 0 | 24 |
+| [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 24 |
 | [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 23 |
 | [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 23 |
 | [`transform`](services/transform.yml) | 0 | 0 | 22 |
 | [`agent-registry`](services/agent-registry.yml) | 0 | 0 | 22 |
 | [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 21 |
-| [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 21 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 20 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`agentaccess-mcp`](services/agentaccess-mcp.yml) | 0 | 0 | 20 |
@@ -508,14 +508,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3882 |
-| `Get` | 3477 |
-| `Delete` | 2614 |
-| `Create` | 2486 |
+| `List` | 3884 |
+| `Get` | 3478 |
+| `Delete` | 2615 |
+| `Create` | 2487 |
 | `Update` | 2159 |
 | `Describe` | 1961 |
 | `Put` | 614 |
-| `Start` | 563 |
+| `Start` | 564 |
 | `Batch` | 334 |
 | `Tag` | 327 |
 

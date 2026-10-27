@@ -1,15 +1,28 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupManagedInstanceProfileExecutionPolicy",
   "CreateDate": "2024-11-15T21:51:23Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KKPPGQNXT",
   "PolicyName": "AWSQuickSetupManagedInstanceProfileExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-03T14:12:12Z",
+    "CreateDate": "2026-10-27T15:57:09Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ssm:GetCalendarState",
+          "Condition": {
+            "StringEquals": {
+              "ssm:DocumentType": "ChangeCalendar"
+            },
+            "StringLike": {
+              "aws:userid": "*:SystemsManager-Automation-ChangeCalendar-Check"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:document/*"
+        },
         {
           "Action": "iam:AttachRolePolicy",
           "Condition": {
@@ -214,7 +227,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2026-06-03T14:12:12Z"
+  "UpdateDate": "2026-10-27T15:57:09Z"
 }

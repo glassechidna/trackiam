@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupEnableDHMCExecutionPolicy",
   "CreateDate": "2024-11-15T21:27:47Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4EJJU5UJ5K",
   "PolicyName": "AWSQuickSetupEnableDHMCExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-11-15T21:27:47Z",
+    "CreateDate": "2026-10-27T15:57:09Z",
     "Document": {
       "Statement": [
         {
@@ -19,6 +19,19 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/AWS-QuickSetup-SSM-DefaultEC2MgmtRole-*"
+        },
+        {
+          "Action": "ssm:GetCalendarState",
+          "Condition": {
+            "StringEquals": {
+              "ssm:DocumentType": "ChangeCalendar"
+            },
+            "StringLike": {
+              "aws:userid": "*:SystemsManager-Automation-ChangeCalendar-Check"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:document/*"
         },
         {
           "Action": [
@@ -52,7 +65,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-11-15T21:27:47Z"
+  "UpdateDate": "2026-10-27T15:57:09Z"
 }

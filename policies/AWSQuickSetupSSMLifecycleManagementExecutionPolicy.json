@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupSSMLifecycleManagementExecutionPolicy",
   "CreateDate": "2024-11-15T21:55:57Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KKAHZNZYJ",
   "PolicyName": "AWSQuickSetupSSMLifecycleManagementExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:01:58Z",
+    "CreateDate": "2026-10-27T15:57:08Z",
     "Document": {
       "Statement": [
         {
@@ -24,6 +24,19 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/AWS-QuickSetup-SSM-ManageResources*"
+        },
+        {
+          "Action": "ssm:GetCalendarState",
+          "Condition": {
+            "StringEquals": {
+              "ssm:DocumentType": "ChangeCalendar"
+            },
+            "StringLike": {
+              "aws:userid": "*:SystemsManager-Automation-ChangeCalendar-Check"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:document/*"
         },
         {
           "Action": [
@@ -59,7 +72,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-02-12T18:01:58Z"
+  "UpdateDate": "2026-10-27T15:57:08Z"
 }

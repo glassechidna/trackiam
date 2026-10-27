@@ -1,15 +1,28 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSSystemsManagerEnableExplorerExecutionPolicy",
   "CreateDate": "2024-06-26T09:42:47Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4EUDBLZ7AR",
   "PolicyName": "AWSSystemsManagerEnableExplorerExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-06-26T09:42:47Z",
+    "CreateDate": "2026-10-27T15:57:08Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ssm:GetCalendarState",
+          "Condition": {
+            "StringEquals": {
+              "ssm:DocumentType": "ChangeCalendar"
+            },
+            "StringLike": {
+              "aws:userid": "*:SystemsManager-Automation-ChangeCalendar-Check"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:document/*"
+        },
         {
           "Action": [
             "iam:CreateServiceLinkedRole"
@@ -58,7 +71,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2024-06-26T09:42:47Z"
+  "UpdateDate": "2026-10-27T15:57:08Z"
 }

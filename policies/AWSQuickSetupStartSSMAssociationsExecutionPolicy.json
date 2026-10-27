@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupStartSSMAssociationsExecutionPolicy",
   "CreateDate": "2025-08-08T12:04:07Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JPUVBQPNJ",
   "PolicyName": "AWSQuickSetupStartSSMAssociationsExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-03-05T16:57:14Z",
+    "CreateDate": "2026-10-27T15:57:08Z",
     "Document": {
       "Statement": [
         {
@@ -32,6 +32,19 @@
           ]
         },
         {
+          "Action": "ssm:GetCalendarState",
+          "Condition": {
+            "StringEquals": {
+              "ssm:DocumentType": "ChangeCalendar"
+            },
+            "StringLike": {
+              "aws:userid": "*:SystemsManager-Automation-ChangeCalendar-Check"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:document/*"
+        },
+        {
           "Action": [
             "ssm:StartAutomationExecution"
           ],
@@ -46,7 +59,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2026-03-05T16:57:14Z"
+  "UpdateDate": "2026-10-27T15:57:08Z"
 }
