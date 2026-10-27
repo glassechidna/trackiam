@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonInspector2ThirdPartyServiceRolePolicy",
   "CreateDate": "2026-06-26T15:27:27Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4E3NMS7BB2",
   "PolicyName": "AmazonInspector2ThirdPartyServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-26T15:27:27Z",
+    "CreateDate": "2026-10-27T20:37:07Z",
     "Document": {
       "Statement": [
         {
@@ -44,7 +44,8 @@
           "Condition": {
             "ForAnyValue:StringLike": {
               "sts:IdentityTokenAudience": [
-                "api://AzureADTokenExchange"
+                "api://AzureADTokenExchange",
+                "https://sts.googleapis.com"
               ]
             },
             "Null": {
@@ -102,6 +103,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ssm:*:*:document/AWS-InstallDistributorPackageOnAzure*",
+            "arn:aws:ssm:*:*:document/AWS-InstallDistributorPackageOnGcp*",
             "arn:aws:ssm:*:*:document/AmazonInspector2-*"
           ],
           "Sid": "MultiCloudSsmGetDocument"
@@ -162,7 +164,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ssm:*:*:association/*",
-            "arn:aws:ssm:*:*:document/AWS-InstallDistributorPackageOnAzure*"
+            "arn:aws:ssm:*:*:document/AWS-InstallDistributorPackageOnAzure*",
+            "arn:aws:ssm:*:*:document/AWS-InstallDistributorPackageOnGcp*"
           ],
           "Sid": "MultiCloudSsmAssociationWrite"
         },
@@ -195,7 +198,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:ssm:*:*:automation-execution/*",
-            "arn:aws:ssm:*:*:document/AWS-InstallDistributorPackageOnAzure*"
+            "arn:aws:ssm:*:*:document/AWS-InstallDistributorPackageOnAzure*",
+            "arn:aws:ssm:*:*:document/AWS-InstallDistributorPackageOnGcp*"
           ],
           "Sid": "MultiCloudSsmAutomation"
         }
@@ -203,7 +207,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-06-26T15:27:27Z"
+  "UpdateDate": "2026-10-27T20:37:07Z"
 }
