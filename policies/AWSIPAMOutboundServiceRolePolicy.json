@@ -1,0 +1,52 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSIPAMOutboundServiceRolePolicy",
+  "CreateDate": "2026-10-28T15:07:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4KJN3B4L3I",
+  "PolicyName": "AWSIPAMOutboundServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-10-28T15:07:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "sts:GetWebIdentityToken",
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "sts:IdentityTokenAudience": [
+                "//iam.googleapis.com/projects/*/locations/*/workloadIdentityPools/*/providers/*"
+              ]
+            },
+            "Null": {
+              "sts:IdentityTokenAudience": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowGetWebIdentityTokenForGcp"
+        },
+        {
+          "Action": "sts:GetWebIdentityToken",
+          "Condition": {
+            "ForAllValues:StringLike": {
+              "sts:IdentityTokenAudience": [
+                "api://AzureADTokenExchange"
+              ]
+            },
+            "Null": {
+              "sts:IdentityTokenAudience": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowGetWebIdentityTokenForAzure"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-10-28T15:07:07Z"
+}

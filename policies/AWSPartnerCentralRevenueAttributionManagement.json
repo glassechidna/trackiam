@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralRevenueAttributionManagement",
   "CreateDate": "2026-06-30T19:12:18Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4A4543BUQP",
   "PolicyName": "AWSPartnerCentralRevenueAttributionManagement",
   "PolicyVersion": {
-    "CreateDate": "2026-06-30T19:12:18Z",
+    "CreateDate": "2026-10-28T13:47:08Z",
     "Document": {
       "Statement": [
         {
@@ -77,6 +77,25 @@
           "Effect": "Allow",
           "Resource": "arn:aws:partnercentral:*:*:catalog/*/partner/*",
           "Sid": "PartnerResourceAccess"
+        },
+        {
+          "Action": [
+            "partnercentral:GetPartnerCentralContentDocument",
+            "partnercentral:GetPartnerCentralContentMetadata",
+            "partnercentral:ListPartnerCentralContent",
+            "partnercentral:SearchPartnerCentralContent"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PartnerCentralContentAccess"
         },
         {
           "Action": [
@@ -204,7 +223,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-06-30T19:12:18Z"
+  "UpdateDate": "2026-10-28T13:47:08Z"
 }
