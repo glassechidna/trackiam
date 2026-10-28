@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForImageBuilder",
   "CreateDate": "2019-11-29T22:02:13Z",
-  "DefaultVersionId": "v28",
+  "DefaultVersionId": "v29",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NE22WISEW",
   "PolicyName": "AWSServiceRoleForImageBuilder",
   "PolicyVersion": {
-    "CreateDate": "2026-07-09T15:27:28Z",
+    "CreateDate": "2026-10-27T23:37:07Z",
     "Document": {
       "Statement": [
         {
@@ -39,7 +39,10 @@
           "Condition": {
             "StringEquals": {
               "iam:AWSServiceName": [
+                "agentless.inspector2.amazonaws.com",
+                "ami.inspector2.amazonaws.com",
                 "ec2fastlaunch.amazonaws.com",
+                "inspector2.amazonaws.com",
                 "ssm.amazonaws.com"
               ]
             }
@@ -413,6 +416,17 @@
         },
         {
           "Action": [
+            "inspector2:GetOnDemandScanStatus",
+            "inspector2:ListOnDemandScans",
+            "inspector2:StartOnDemandScan"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:inspector2:*:*:*"
+          ]
+        },
+        {
+          "Action": [
             "inspector2:ListCoverage",
             "inspector2:ListFindings"
           ],
@@ -490,7 +504,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v28"
+    "VersionId": "v29"
   },
-  "UpdateDate": "2026-07-09T15:27:28Z"
+  "UpdateDate": "2026-10-27T23:37:07Z"
 }

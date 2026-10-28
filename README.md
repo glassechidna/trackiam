@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 22897
+* Unique actions: 22901
 * Managed policies: 1591
 
 Most common managed policy name prefixes:
@@ -275,10 +275,10 @@ The following table summarises the AWS APIs.
 | [`neptune-db`](services/neptune-db.yml) | 16 | 24 | 17 |
 | [`support`](services/support.yml) | 16 | 0 | 23 |
 | [`emr-serverless`](services/emr-serverless.yml) | 16 | 0 | 9 |
+| [`kafkaconnect`](services/kafkaconnect.yml) | 16 | 0 | 5 |
 | [`docdb-elastic`](services/docdb-elastic.yml) | 16 | 0 | 3 |
 | [`thinclient`](services/thinclient.yml) | 16 | 0 | 2 |
 | [`route53profiles`](services/route53profiles.yml) | 16 | 0 | 2 |
-| [`kafkaconnect`](services/kafkaconnect.yml) | 16 | 0 | 2 |
 | [`internetmonitor`](services/internetmonitor.yml) | 16 | 0 | 1 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 27 |
@@ -365,7 +365,7 @@ The following table summarises the AWS APIs.
 | [`securityagent`](services/securityagent.yml) | 0 | 0 | 119 |
 | [`assurance`](services/assurance.yml) | 0 | 0 | 99 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
-| [`odb`](services/odb.yml) | 0 | 0 | 90 |
+| [`odb`](services/odb.yml) | 0 | 0 | 91 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
 | [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 83 |
 | [`aidevops`](services/aidevops.yml) | 0 | 0 | 82 |
@@ -512,7 +512,7 @@ Most common action prefixes:
 | `Get` | 3478 |
 | `Delete` | 2615 |
 | `Create` | 2487 |
-| `Update` | 2159 |
+| `Update` | 2160 |
 | `Describe` | 1961 |
 | `Put` | 614 |
 | `Start` | 564 |

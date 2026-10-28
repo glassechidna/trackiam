@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/EC2ImageBuilderExecutionPolicy",
   "CreateDate": "2026-06-04T17:12:14Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4GT75OHC7J",
   "PolicyName": "EC2ImageBuilderExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-07-08T16:27:23Z",
+    "CreateDate": "2026-10-27T23:47:08Z",
     "Document": {
       "Statement": [
         {
@@ -286,7 +286,10 @@
           "Condition": {
             "StringEquals": {
               "iam:AWSServiceName": [
+                "agentless.inspector2.amazonaws.com",
+                "ami.inspector2.amazonaws.com",
                 "ec2fastlaunch.amazonaws.com",
+                "inspector2.amazonaws.com",
                 "ssm.amazonaws.com"
               ]
             }
@@ -547,6 +550,18 @@
         },
         {
           "Action": [
+            "inspector2:GetOnDemandScanStatus",
+            "inspector2:ListOnDemandScans",
+            "inspector2:StartOnDemandScan"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:inspector2:*:*:*"
+          ],
+          "Sid": "InspectorOnDemandScanningPermissions"
+        },
+        {
+          "Action": [
             "inspector2:ListCoverage",
             "inspector2:ListFindings"
           ],
@@ -675,7 +690,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2026-07-08T16:27:23Z"
+  "UpdateDate": "2026-10-27T23:47:08Z"
 }
