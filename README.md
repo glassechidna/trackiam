@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 22901
+* Unique actions: 22907
 * Managed policies: 1592
 
 Most common managed policy name prefixes:
@@ -142,7 +142,7 @@ The following table summarises the AWS APIs.
 | [`cloudtrail`](services/cloudtrail.yml) | 48 | 1 | 18 |
 | [`codeartifact`](services/codeartifact.yml) | 48 | 0 | 3 |
 | [`wisdom`](services/wisdom.yml) | 47 | 0 | 50 |
-| [`ecr`](services/ecr.yml) | 47 | 0 | 17 |
+| [`ecr`](services/ecr.yml) | 47 | 0 | 18 |
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`transcribe`](services/transcribe.yml) | 46 | 0 | 6 |
@@ -366,9 +366,9 @@ The following table summarises the AWS APIs.
 | [`assurance`](services/assurance.yml) | 0 | 0 | 99 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
 | [`odb`](services/odb.yml) | 0 | 0 | 91 |
+| [`aidevops`](services/aidevops.yml) | 0 | 0 | 87 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
 | [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 83 |
-| [`aidevops`](services/aidevops.yml) | 0 | 0 | 82 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 61 |
@@ -508,8 +508,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3884 |
-| `Get` | 3478 |
+| `List` | 3887 |
+| `Get` | 3479 |
 | `Delete` | 2615 |
 | `Create` | 2487 |
 | `Update` | 2160 |

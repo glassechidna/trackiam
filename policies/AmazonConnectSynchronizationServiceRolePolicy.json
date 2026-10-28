@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectSynchronizationServiceRolePolicy",
   "CreateDate": "2023-10-27T22:38:25Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4J2PE2WH3Y",
   "PolicyName": "AmazonConnectSynchronizationServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-10-06T17:57:08Z",
+    "CreateDate": "2026-10-28T19:17:08Z",
     "Document": {
       "Statement": [
         {
@@ -20,6 +20,312 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowPutMetricsForConnectNamespace"
+        },
+        {
+          "Action": "kms:CreateGrant",
+          "Condition": {
+            "Bool": {
+              "kms:GrantIsForAWSResource": "true"
+            },
+            "ForAllValues:StringEquals": {
+              "kms:EncryptionContextKeys": [
+                "aws:wisdom:assistant:arn"
+              ],
+              "kms:GrantOperations": [
+                "CreateGrant",
+                "Decrypt",
+                "DescribeKey",
+                "GenerateDataKey"
+              ]
+            },
+            "Null": {
+              "kms:EncryptionContextKeys": "false",
+              "kms:GrantOperations": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "kms:GrantConstraintType": "EncryptionContextSubset"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:wisdom:assistant:arn": "arn:aws:wisdom:*:${aws:PrincipalAccount}:assistant/*",
+              "kms:ViaService": "wisdom.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "AllowKmsGrantCreationForQinConnectReplicaAssistant"
+        },
+        {
+          "Action": "kms:CreateGrant",
+          "Condition": {
+            "Bool": {
+              "kms:GrantIsForAWSResource": "true"
+            },
+            "ForAllValues:StringEquals": {
+              "kms:EncryptionContextKeys": [
+                "aws:wisdom:assistant:arn"
+              ],
+              "kms:GrantOperations": [
+                "Decrypt",
+                "DescribeKey",
+                "GenerateDataKey",
+                "GenerateDataKeyPair"
+              ]
+            },
+            "Null": {
+              "kms:EncryptionContextKeys": "false",
+              "kms:GrantOperations": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "kms:GrantConstraintType": "EncryptionContextEquals"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:wisdom:assistant:arn": "arn:aws:wisdom:*:${aws:PrincipalAccount}:assistant/*",
+              "kms:ViaService": "connect.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "AllowKmsGrantCreationForQinConnectInstanceAssociationAssistant"
+        },
+        {
+          "Action": "kms:CreateGrant",
+          "Condition": {
+            "Bool": {
+              "kms:GrantIsForAWSResource": "true"
+            },
+            "ForAllValues:StringEquals": {
+              "kms:EncryptionContextKeys": [
+                "aws:wisdom:knowledgeBase:arn"
+              ],
+              "kms:GrantOperations": [
+                "CreateGrant",
+                "Decrypt",
+                "DescribeKey",
+                "GenerateDataKey"
+              ]
+            },
+            "Null": {
+              "kms:EncryptionContextKeys": "false",
+              "kms:GrantOperations": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "kms:GrantConstraintType": "EncryptionContextSubset"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:wisdom:knowledgeBase:arn": "arn:aws:wisdom:*:${aws:PrincipalAccount}:knowledge-base/*",
+              "kms:ViaService": "wisdom.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "AllowKmsGrantCreationForQinConnectReplicaKnowledgeBase"
+        },
+        {
+          "Action": "kms:CreateGrant",
+          "Condition": {
+            "Bool": {
+              "kms:GrantIsForAWSResource": "true"
+            },
+            "ForAllValues:StringEquals": {
+              "kms:EncryptionContextKeys": [
+                "aws:wisdom:knowledgeBase:arn"
+              ],
+              "kms:GrantOperations": [
+                "Decrypt",
+                "DescribeKey",
+                "GenerateDataKey",
+                "GenerateDataKeyPair"
+              ]
+            },
+            "Null": {
+              "kms:EncryptionContextKeys": "false",
+              "kms:GrantOperations": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "kms:GrantConstraintType": "EncryptionContextEquals"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:wisdom:knowledgeBase:arn": "arn:aws:wisdom:*:${aws:PrincipalAccount}:knowledge-base/*",
+              "kms:ViaService": "connect.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "AllowKmsGrantCreationForQinConnectInstanceAssociationKnowledgeBase"
+        },
+        {
+          "Action": "kms:DescribeKey",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:ViaService": [
+                "wisdom.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "AllowKmsKeyValidationForQinConnectReplicaResources"
+        },
+        {
+          "Action": [
+            "app-integrations:CreateApplication",
+            "app-integrations:DeleteApplication",
+            "app-integrations:GetApplication",
+            "app-integrations:ListTagsForResource",
+            "app-integrations:TagResource",
+            "app-integrations:UntagResource",
+            "app-integrations:UpdateApplication"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:app-integrations:*:*:application/*",
+          "Sid": "AllowAppIntegrationsScopedToApplications"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey",
+            "kms:GenerateDataKeyWithoutPlaintext"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "kms:EncryptionContextKeys": [
+                "aws:wisdom:assistant:arn"
+              ]
+            },
+            "Null": {
+              "kms:EncryptionContextKeys": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:wisdom:assistant:arn": "arn:aws:wisdom:*:${aws:PrincipalAccount}:assistant/*",
+              "kms:ViaService": "wisdom.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "AllowKmsCryptoForQinConnectReplicaAssistant"
+        },
+        {
+          "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey",
+            "kms:GenerateDataKeyWithoutPlaintext"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "kms:EncryptionContextKeys": [
+                "aws:wisdom:knowledgeBase:arn"
+              ]
+            },
+            "Null": {
+              "kms:EncryptionContextKeys": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:wisdom:knowledgeBase:arn": "arn:aws:wisdom:*:${aws:PrincipalAccount}:knowledge-base/*",
+              "kms:ViaService": "wisdom.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "AllowKmsCryptoForQinConnectReplicaKnowledgeBase"
+        },
+        {
+          "Action": [
+            "wisdom:CreateAIAgent",
+            "wisdom:CreateAIAgentVersion",
+            "wisdom:CreateAIGuardrail",
+            "wisdom:CreateAIGuardrailVersion",
+            "wisdom:CreateAIPrompt",
+            "wisdom:CreateAIPromptVersion",
+            "wisdom:CreateAssistant",
+            "wisdom:CreateAssistantAssociation",
+            "wisdom:CreateContent",
+            "wisdom:CreateContentAssociation",
+            "wisdom:CreateKnowledgeBase",
+            "wisdom:CreateQuickResponse",
+            "wisdom:DeleteAIAgent",
+            "wisdom:DeleteAIAgentVersion",
+            "wisdom:DeleteAIGuardrail",
+            "wisdom:DeleteAIGuardrailVersion",
+            "wisdom:DeleteAIPrompt",
+            "wisdom:DeleteAIPromptVersion",
+            "wisdom:DeleteAssistant",
+            "wisdom:DeleteAssistantAssociation",
+            "wisdom:DeleteContent",
+            "wisdom:DeleteContentAssociation",
+            "wisdom:DeleteKnowledgeBase",
+            "wisdom:DeleteQuickResponse",
+            "wisdom:GetAIAgent",
+            "wisdom:GetAIGuardrail",
+            "wisdom:GetAIPrompt",
+            "wisdom:GetAssistant",
+            "wisdom:GetAssistantAssociation",
+            "wisdom:GetContent",
+            "wisdom:GetContentAssociation",
+            "wisdom:GetContentSummary",
+            "wisdom:GetKnowledgeBase",
+            "wisdom:GetQuickResponse",
+            "wisdom:ListAIAgentVersions",
+            "wisdom:ListAIAgents",
+            "wisdom:ListAIGuardrailVersions",
+            "wisdom:ListAIGuardrails",
+            "wisdom:ListAIPromptVersions",
+            "wisdom:ListAIPrompts",
+            "wisdom:ListAssistantAssociations",
+            "wisdom:ListAssistants",
+            "wisdom:ListContentAssociations",
+            "wisdom:ListContents",
+            "wisdom:ListKnowledgeBases",
+            "wisdom:ListModels",
+            "wisdom:ListQuickResponses",
+            "wisdom:ListTagsForResource",
+            "wisdom:RemoveAssistantAIAgent",
+            "wisdom:RemoveKnowledgeBaseTemplateUri",
+            "wisdom:StartContentUpload",
+            "wisdom:TagResource",
+            "wisdom:UntagResource",
+            "wisdom:UpdateAIAgent",
+            "wisdom:UpdateAIGuardrail",
+            "wisdom:UpdateAIPrompt",
+            "wisdom:UpdateAssistantAIAgent",
+            "wisdom:UpdateContent",
+            "wisdom:UpdateKnowledgeBaseTemplateUri",
+            "wisdom:UpdateQuickResponse"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowWisdomActions"
+        },
+        {
+          "Action": [
+            "app-integrations:ListApplicationAssociations",
+            "app-integrations:ListApplications"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowAppIntegrationsListApplications"
         },
         {
           "Action": [
@@ -91,7 +397,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-10-06T17:57:08Z"
+  "UpdateDate": "2026-10-28T19:17:08Z"
 }
