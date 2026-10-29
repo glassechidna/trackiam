@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v75",
+  "DefaultVersionId": "v76",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-08-27T20:57:08Z",
+    "CreateDate": "2026-10-29T22:37:07Z",
     "Document": {
       "Statement": [
         {
@@ -445,6 +445,7 @@
             "bedrock:GetDataAutomationStatus",
             "bedrock:GetEvaluationJob",
             "bedrock:GetIngestionJob",
+            "bedrock:GetKnowledgeBase",
             "bedrock:GetPrompt",
             "bedrock:InvokeAgent",
             "bedrock:InvokeDataAutomationAsync",
@@ -602,8 +603,27 @@
         },
         {
           "Action": [
+            "bedrock:InvokeModel",
+            "bedrock:InvokeModelWithResponseStream"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:PrincipalTag/EnableAmazonBedrockPermissions": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:bedrock:*:*:inference-profile/*",
+            "arn:aws:bedrock:*::foundation-model/*"
+          ],
+          "Sid": "ACInvoke"
+        },
+        {
+          "Action": [
             "bedrock:ListEvaluationJobs",
             "bedrock:ListFoundationModels",
+            "bedrock:ListInferenceProfiles",
+            "bedrock:ListKnowledgeBases",
             "bedrock:RetrieveAndGenerate"
           ],
           "Condition": {
@@ -618,32 +638,17 @@
         {
           "Action": [
             "cloudformation:DescribeStacks",
-            "cloudformation:GetTemplate"
+            "cloudformation:GetTemplate",
+            "cloudformation:ListStackResources"
           ],
           "Condition": {
             "StringEquals": {
-              "aws:PrincipalTag/EnableAmazonBedrockIDEPermissions": "true",
               "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
             }
           },
           "Effect": "Allow",
           "Resource": "arn:aws:cloudformation:*:*:stack/DataZone-Env-*",
           "Sid": "DZEnvCfn"
-        },
-        {
-          "Action": [
-            "cloudformation:DescribeStacks",
-            "cloudformation:GetTemplate"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "aws:PrincipalTag/EnableAmazonBedrockPermissions": "true",
-              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:cloudformation:*:*:stack/DataZone-Env-*",
-          "Sid": "CFNGetDataZoneEnvironmentStack"
         },
         {
           "Action": [
@@ -667,13 +672,14 @@
               "cloudwatch:namespace": [
                 "AWS/Glue",
                 "Glue",
-                "Glue Data Quality"
+                "Glue Data Quality",
+                "bedrock-agentcore"
               ]
             }
           },
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "GlueJobCWPutMetricActions"
+          "Sid": "CWPutMetrics"
         },
         {
           "Action": [
@@ -1396,8 +1402,10 @@
               "aws:ResourceAccount": "${aws:PrincipalAccount}",
               "iam:PassedToService": [
                 "access-grants.s3.amazonaws.com",
+                "agent-registry.amazonaws.com",
                 "airflow-serverless.amazonaws.com",
                 "airflow.amazonaws.com",
+                "bedrock-agentcore.amazonaws.com",
                 "elasticmapreduce.amazonaws.com",
                 "emr-serverless.amazonaws.com",
                 "glue.amazonaws.com",
@@ -2713,9 +2721,24 @@
           ],
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/bedrock-agentcore/agent-builder/${aws:PrincipalTag/AmazonDataZoneProject}/evaluations*",
             "arn:aws:logs:*:*:log-group:airflow-DataZoneMWAAEnv-${aws:PrincipalTag/AmazonDataZoneDomain}-${aws:PrincipalTag/AmazonDataZoneProject}-${aws:PrincipalTag/AmazonDataZoneScopeName}-*"
           ],
           "Sid": "AirflowCloudwatchLogsActions"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:DescribeLogStreams",
+            "logs:PutLogEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/bedrock-agentcore/runtimes/*",
+            "arn:aws:logs:*:*:log-group:/aws/lambda/athenafederatedcatalog*"
+          ],
+          "Sid": "DataConnectionLambdaLogs"
         },
         {
           "Action": [
@@ -2726,16 +2749,6 @@
           "Effect": "Allow",
           "Resource": "arn:aws:logs:*:*:log-group:/aws-glue/*",
           "Sid": "GlueJobRunnerSessionLog"
-        },
-        {
-          "Action": [
-            "logs:CreateLogGroup",
-            "logs:CreateLogStream",
-            "logs:PutLogEvents"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:logs:*:*:log-group:/aws/lambda/athenafederatedcatalog*",
-          "Sid": "DataConnectionLambdaLogs"
         },
         {
           "Action": [
@@ -2752,7 +2765,8 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:logs:*:*:log-group:${aws:PrincipalTag/LogGroupName}",
-            "arn:aws:logs:*:*:log-group:${aws:PrincipalTag/LogGroupName}:log-stream:*"
+            "arn:aws:logs:*:*:log-group:${aws:PrincipalTag/LogGroupName}:log-stream:*",
+            "arn:aws:logs:*:*:log-group:/aws/bedrock-agentcore/agent-builder/${aws:PrincipalTag/AmazonDataZoneProject}/evaluations"
           ],
           "Sid": "ProjectLogGroup"
         },
@@ -2828,7 +2842,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v75"
+    "VersionId": "v76"
   },
-  "UpdateDate": "2026-08-27T20:57:08Z"
+  "UpdateDate": "2026-10-29T22:37:07Z"
 }

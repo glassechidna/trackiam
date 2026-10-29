@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMPermissiveExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:08Z",
-  "DefaultVersionId": "v26",
+  "DefaultVersionId": "v27",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4MQ2K3CR4F",
   "PolicyName": "SageMakerStudioUserIAMPermissiveExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-10-14T19:37:08Z",
+    "CreateDate": "2026-10-29T22:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -16,7 +16,9 @@
             "StringEquals": {
               "iam:PassedToService": [
                 "access-grants.s3.amazonaws.com",
+                "agent-registry.amazonaws.com",
                 "airflow-serverless.amazonaws.com",
+                "bedrock-agentcore.amazonaws.com",
                 "bedrock.amazonaws.com",
                 "elasticmapreduce.amazonaws.com",
                 "emr-serverless.amazonaws.com",
@@ -437,11 +439,15 @@
           "Resource": [
             "arn:aws:iam::*:role/aws-service-role/airflow-serverless.amazonaws.com/AWSServiceRoleForAmazonMWAAServerless",
             "arn:aws:iam::*:role/aws-service-role/airflow.amazonaws.com/AWSServiceRoleForAmazonMWAA",
+            "arn:aws:iam::*:role/aws-service-role/bedrock-agentcore.amazonaws.com/AWSServiceRoleForBedrockAgentCoreGatewayNetwork",
             "arn:aws:iam::*:role/aws-service-role/elasticmapreduce.amazonaws.com/AWSServiceRoleForEMRCleanup",
+            "arn:aws:iam::*:role/aws-service-role/identity-network.bedrock-agentcore.amazonaws.com/AWSServiceRoleForBedrockAgentCoreIdentity",
             "arn:aws:iam::*:role/aws-service-role/neptune-graph.amazonaws.com/AWSServiceRoleForNeptuneGraph",
+            "arn:aws:iam::*:role/aws-service-role/network.bedrock-agentcore.amazonaws.com/AWSServiceRoleForBedrockAgentCoreNetwork",
             "arn:aws:iam::*:role/aws-service-role/observability.aoss.amazonaws.com/AWSServiceRoleForAmazonOpenSearchServerless",
             "arn:aws:iam::*:role/aws-service-role/ops.emr-serverless.amazonaws.com/AWSServiceRoleForAmazonEMRServerless",
             "arn:aws:iam::*:role/aws-service-role/redshift.amazonaws.com/AWSServiceRoleForRedshift",
+            "arn:aws:iam::*:role/aws-service-role/runtime-identity.bedrock-agentcore.amazonaws.com/AWSServiceRoleForBedrockAgentCoreRuntimeIdentity",
             "arn:aws:iam::*:role/aws-service-role/sagemaker.amazonaws.com/AWSServiceRoleForAmazonSageMakerNotebooks",
             "arn:aws:iam::*:role/aws-service-role/sagemaker.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_SageMakerEndpoint"
           ],
@@ -453,6 +459,7 @@
             "airflow:*",
             "application-autoscaling:*",
             "athena:*",
+            "bedrock-agentcore:*",
             "bedrock:*",
             "codewhisperer:*",
             "elasticmapreduce:*",
@@ -495,7 +502,8 @@
             "s3:*",
             "s3tables:*",
             "sagemaker-data-science-assistant:*",
-            "textract:*"
+            "textract:*",
+            "xray:*"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -536,6 +544,7 @@
             "datazone:CreateEnvironment",
             "datazone:CreateListingChangeSet",
             "datazone:CreateProject",
+            "datazone:CreateProjectMembership",
             "datazone:CreateSubscriptionGrant",
             "datazone:CreateSubscriptionRequest",
             "datazone:DeleteAsset*",
@@ -546,6 +555,7 @@
             "datazone:DeleteEnvironment",
             "datazone:DeleteListing",
             "datazone:DeleteProject",
+            "datazone:DeleteProjectMembership",
             "datazone:DeleteSubscriptionGrant",
             "datazone:DeleteSubscriptionRequest",
             "datazone:GenerateCode",
@@ -621,6 +631,18 @@
         },
         {
           "Action": [
+            "ecr-public:GetAuthorizationToken",
+            "iam:GetRole",
+            "iam:ListRoles",
+            "sts:AssumeRole",
+            "sts:GetServiceBearerToken"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IamSts"
+        },
+        {
+          "Action": [
             "ecr:BatchCheckLayerAvailability",
             "ecr:BatchGetImage",
             "ecr:DescribeImages",
@@ -630,16 +652,6 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "Ecr"
-        },
-        {
-          "Action": [
-            "iam:GetRole",
-            "iam:ListRoles",
-            "sts:AssumeRole"
-          ],
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "IamSts"
         },
         {
           "Action": [
@@ -677,12 +689,20 @@
             "arn:aws:ssm:*::parameter/aws/service/sagemaker-distribution/*"
           ],
           "Sid": "SSM"
+        },
+        {
+          "Action": [
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TagLookup"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v26"
+    "VersionId": "v27"
   },
-  "UpdateDate": "2026-10-14T19:37:08Z"
+  "UpdateDate": "2026-10-29T22:37:08Z"
 }

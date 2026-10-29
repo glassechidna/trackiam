@@ -1,15 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/WellArchitectedConsoleReadOnlyAccess",
   "CreateDate": "2018-11-29T18:21:08Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIUTK35NDTYF6T2GFY",
   "PolicyName": "WellArchitectedConsoleReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-07-09T17:27:19Z",
+    "CreateDate": "2026-10-29T22:17:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:GetRole",
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/scanning.agent.wellarchitected.amazonaws.com/AWSServiceRoleForWellArchitectedAgent_ResourceScanning"
+        },
         {
           "Action": [
             "organizations:DescribeAccount",
@@ -33,7 +38,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-07-09T17:27:19Z"
+  "UpdateDate": "2026-10-29T22:17:07Z"
 }
