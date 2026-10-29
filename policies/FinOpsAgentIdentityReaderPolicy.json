@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/FinOpsAgentIdentityReaderPolicy",
+  "CreateDate": "2026-10-29T17:17:06Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4JRZEVQAJU",
+  "PolicyName": "FinOpsAgentIdentityReaderPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-10-29T17:17:06Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "identitystore:DescribeGroup",
+            "identitystore:DescribeUser",
+            "identitystore:IsMemberInGroups"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:identitystore::*:identitystore/*",
+            "arn:aws:identitystore:::group/*",
+            "arn:aws:identitystore:::user/*"
+          ],
+          "Sid": "FinOpsAgentIdentityStoreReads"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-10-29T17:17:06Z"
+}

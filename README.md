@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 22907
-* Managed policies: 1593
+* Unique actions: 22922
+* Managed policies: 1594
 
 Most common managed policy name prefixes:
 
@@ -24,7 +24,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 365 |
 | `arn:aws:iam::aws:policy/service-role/*` | 230 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
-| Other | 173 |
+| Other | 174 |
 
 The following table summarises the AWS APIs. 
 
@@ -131,7 +131,7 @@ The following table summarises the AWS APIs.
 | [`profile`](services/profile.yml) | 52 | 0 | 65 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 12 |
 | [`vpc-lattice`](services/vpc-lattice.yml) | 51 | 1 | 24 |
-| [`mediaconnect`](services/mediaconnect.yml) | 51 | 0 | 29 |
+| [`mediaconnect`](services/mediaconnect.yml) | 51 | 0 | 44 |
 | [`iotfleetwise`](services/iotfleetwise.yml) | 50 | 2 | 6 |
 | [`drs`](services/drs.yml) | 50 | 0 | 60 |
 | [`codebuild`](services/codebuild.yml) | 50 | 0 | 17 |
@@ -508,13 +508,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3887 |
-| `Get` | 3479 |
-| `Delete` | 2615 |
+| `List` | 3889 |
+| `Get` | 3482 |
+| `Delete` | 2616 |
 | `Create` | 2487 |
-| `Update` | 2160 |
+| `Update` | 2162 |
 | `Describe` | 1961 |
-| `Put` | 614 |
+| `Put` | 615 |
 | `Start` | 564 |
 | `Batch` | 334 |
 | `Tag` | 327 |

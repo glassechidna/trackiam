@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSAccountSettingsManagementRole",
   "CreateDate": "2025-12-11T17:49:09Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CVFC7PYPE",
   "PolicyName": "AWSAccountSettingsManagementRole",
   "PolicyVersion": {
-    "CreateDate": "2026-09-30T19:27:08Z",
+    "CreateDate": "2026-10-29T17:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -122,12 +122,24 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "user-subscriptions:CancelPurchaseSession",
+            "user-subscriptions:ConfirmPurchaseSession",
+            "user-subscriptions:CreatePurchaseSession",
+            "user-subscriptions:GetPurchaseSession",
+            "user-subscriptions:ListEntitlements",
+            "user-subscriptions:SetOverageConfig"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2026-09-30T19:27:08Z"
+  "UpdateDate": "2026-10-29T17:37:08Z"
 }

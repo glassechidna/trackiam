@@ -1,19 +1,20 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/ECRReplicationServiceRolePolicy",
   "CreateDate": "2020-12-04T22:11:28Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NS3XDKIDR",
   "PolicyName": "ECRReplicationServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2020-12-04T22:11:28Z",
+    "CreateDate": "2026-10-29T18:47:07Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "ecr:CreateRepository",
-            "ecr:ReplicateImage"
+            "ecr:ReplicateImage",
+            "ecr:ReplicateImageDelete"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -22,7 +23,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2020-12-04T22:11:28Z"
+  "UpdateDate": "2026-10-29T18:47:07Z"
 }
