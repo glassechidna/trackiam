@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSTransformNetworkMigrationAgentPolicy",
   "CreateDate": "2026-08-06T15:27:26Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LTRDJQXTV",
   "PolicyName": "AWSTransformNetworkMigrationAgentPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-09-01T10:37:07Z",
+    "CreateDate": "2026-10-29T10:17:08Z",
     "Document": {
       "Statement": [
         {
@@ -1219,6 +1219,58 @@
         },
         {
           "Action": [
+            "wellarchitected:CreateAgentContext",
+            "wellarchitected:CreateAgentGoal",
+            "wellarchitected:GetAgentProfile",
+            "wellarchitected:GetAgentRecommendationGeneration",
+            "wellarchitected:ListAgentContexts",
+            "wellarchitected:ListAgentGoals",
+            "wellarchitected:ListAgentRecommendations",
+            "wellarchitected:StartAgentRecommendationGeneration",
+            "wellarchitected:UpdateAgentContext",
+            "wellarchitected:UpdateAgentGoal",
+            "wellarchitected:UpdateAgentProfile"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/AWSTransformNetworkMigration": "enabled"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:wellarchitected:*:*:agent-profile/*",
+          "Sid": "WellArchitectedAgentProfileOperationsWithResourceTag"
+        },
+        {
+          "Action": [
+            "wellarchitected:GetAgentRecommendation"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:wellarchitected:*:*:agent-recommendation/*",
+          "Sid": "WellArchitectedAgentRecommendationReadOnly"
+        },
+        {
+          "Action": [
+            "wellarchitected:ListAgentProfiles"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "WellArchitectedAgentProfileListReadOnly"
+        },
+        {
+          "Action": [
             "organizations:ListAccounts"
           ],
           "Effect": "Allow",
@@ -1229,7 +1281,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2026-09-01T10:37:07Z"
+  "UpdateDate": "2026-10-29T10:17:08Z"
 }
