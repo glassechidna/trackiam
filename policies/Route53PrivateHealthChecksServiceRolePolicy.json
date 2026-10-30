@@ -1,0 +1,76 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/Route53PrivateHealthChecksServiceRolePolicy",
+  "CreateDate": "2026-10-30T20:07:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4NPA5LYICW",
+  "PolicyName": "Route53PrivateHealthChecksServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-10-30T20:07:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:CreateNetworkInterface",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "Name"
+              ]
+            },
+            "StringLike": {
+              "aws:RequestTag/Name": "healthchecksource-*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "StringEquals": {
+              "ec2:CreateAction": "CreateNetworkInterface"
+            },
+            "StringLike": {
+              "aws:RequestTag/Name": "healthchecksource-*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*"
+        },
+        {
+          "Action": "ec2:DeleteNetworkInterface",
+          "Condition": {
+            "StringLike": {
+              "ec2:ResourceTag/Name": "healthchecksource-*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:network-interface/*"
+        },
+        {
+          "Action": "ec2:CreateNetworkInterface",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:security-group/*",
+            "arn:aws:ec2:*:*:subnet/*"
+          ]
+        },
+        {
+          "Action": [
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-10-30T20:07:08Z"
+}

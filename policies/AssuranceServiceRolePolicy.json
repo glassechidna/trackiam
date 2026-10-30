@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AssuranceServiceRolePolicy",
   "CreateDate": "2026-08-26T21:07:08Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4CQU24Q4FF",
   "PolicyName": "AssuranceServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-10-28T15:17:08Z",
+    "CreateDate": "2026-10-30T19:57:07Z",
     "Document": {
       "Statement": [
         {
@@ -1679,6 +1679,19 @@
         },
         {
           "Action": [
+            "apigateway:GET"
+          ],
+          "Effect": "Deny",
+          "Resource": [
+            "arn:aws:apigateway:*::/apikeys",
+            "arn:aws:apigateway:*::/apikeys/*",
+            "arn:aws:apigateway:*::/usageplans/*/keys",
+            "arn:aws:apigateway:*::/usageplans/*/keys/*"
+          ],
+          "Sid": "DenyApiGatewayKeys"
+        },
+        {
+          "Action": [
             "assurance:BatchGetComment",
             "assurance:BatchGetControl",
             "assurance:BatchGetTask",
@@ -1759,7 +1772,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-10-28T15:17:08Z"
+  "UpdateDate": "2026-10-30T19:57:07Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSResourceExplorerServiceRolePolicy",
   "CreateDate": "2022-10-25T20:35:29Z",
-  "DefaultVersionId": "v58",
+  "DefaultVersionId": "v59",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4K2H54PAUL",
   "PolicyName": "AWSResourceExplorerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-10-28T19:57:08Z",
+    "CreateDate": "2026-10-30T20:27:08Z",
     "Document": {
       "Statement": [
         {
@@ -3383,15 +3383,10 @@
         },
         {
           "Action": [
-            "cloudtrail:CreateServiceLinkedChannel",
-            "cloudtrail:GetServiceLinkedChannel"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:cloudtrail:*:*:channel/aws-service-channel/resource-explorer-2/*",
-          "Sid": "CloudTrailEventsAccess"
-        },
-        {
-          "Action": [
+            "autoscaling:DescribeNotificationConfigurations",
+            "neptune-graph:GetExportTask",
+            "neptune-graph:ListExportTasks",
+            "neptune-graph:ListGraphs",
             "organizations:DescribeAccount",
             "organizations:DescribeOrganization",
             "organizations:ListAWSServiceAccessForOrganization",
@@ -3399,6 +3394,13 @@
             "organizations:ListDelegatedAdministrators",
             "organizations:ListOrganizationalUnitsForParent",
             "organizations:ListRoots",
+            "quicksight:DescribeAgent",
+            "quicksight:DescribeAgentPermissions",
+            "quicksight:DescribeBrand",
+            "quicksight:DescribeIngestion",
+            "quicksight:DescribeNamespace",
+            "quicksight:ListIngestions",
+            "quicksight:ListNamespaces",
             "resource-explorer-2:AssociateDefaultView",
             "resource-explorer-2:CreateIndex",
             "resource-explorer-2:CreateView",
@@ -3408,12 +3410,21 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "ResourceExplorerAndOrganizationsAccess"
+        },
+        {
+          "Action": [
+            "cloudtrail:CreateServiceLinkedChannel",
+            "cloudtrail:GetServiceLinkedChannel"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudtrail:*:*:channel/aws-service-channel/resource-explorer-2/*",
+          "Sid": "CloudTrailEventsAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v58"
+    "VersionId": "v59"
   },
-  "UpdateDate": "2026-10-28T19:57:08Z"
+  "UpdateDate": "2026-10-30T20:27:08Z"
 }
