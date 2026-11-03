@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 22937
+* Unique actions: 22936
 * Managed policies: 1595
 
 Most common managed policy name prefixes:
@@ -78,7 +78,7 @@ The following table summarises the AWS APIs.
 | [`cloudformation`](services/cloudformation.yml) | 82 | 0 | 20 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 81 | 0 | 0 |
-| [`securityhub`](services/securityhub.yml) | 79 | 0 | 56 |
+| [`securityhub`](services/securityhub.yml) | 79 | 0 | 59 |
 | [`codecommit`](services/codecommit.yml) | 79 | 0 | 12 |
 | [`personalize`](services/personalize.yml) | 78 | 0 | 5 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
@@ -363,8 +363,8 @@ The following table summarises the AWS APIs.
 | [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 258 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 139 |
 | [`securityagent`](services/securityagent.yml) | 0 | 0 | 119 |
-| [`assurance`](services/assurance.yml) | 0 | 0 | 99 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
+| [`assurance`](services/assurance.yml) | 0 | 0 | 95 |
 | [`odb`](services/odb.yml) | 0 | 0 | 91 |
 | [`aidevops`](services/aidevops.yml) | 0 | 0 | 87 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
@@ -508,14 +508,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3891 |
-| `Get` | 3486 |
+| `List` | 3890 |
+| `Get` | 3489 |
 | `Delete` | 2617 |
 | `Create` | 2488 |
 | `Update` | 2163 |
 | `Describe` | 1962 |
 | `Put` | 616 |
-| `Start` | 564 |
+| `Start` | 563 |
 | `Batch` | 334 |
 | `Tag` | 328 |
 
