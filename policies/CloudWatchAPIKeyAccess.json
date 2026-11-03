@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchAPIKeyAccess",
   "CreateDate": "2026-05-08T08:57:08Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4EOV7OM4RW",
   "PolicyName": "CloudWatchAPIKeyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-06-04T20:42:29Z",
+    "CreateDate": "2026-11-03T13:57:07Z",
     "Document": {
       "Statement": [
         {
@@ -32,12 +32,20 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "CloudWatchMetricsAPIs"
+        },
+        {
+          "Action": [
+            "cloudwatch:PutProfileRecords"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch:*:*:dataset/*",
+          "Sid": "CloudWatchProfilesAPIs"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2026-06-04T20:42:29Z"
+  "UpdateDate": "2026-11-03T13:57:07Z"
 }
