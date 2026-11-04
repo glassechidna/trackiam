@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/ROSANodePoolManagementPolicy",
   "CreateDate": "2023-06-08T20:48:08Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4AXLMC5W7P",
   "PolicyName": "ROSANodePoolManagementPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-07-29T16:57:30Z",
+    "CreateDate": "2026-11-04T19:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -89,6 +89,90 @@
             "arn:aws:ec2:*:*:volume/*"
           ],
           "Sid": "CreateTags"
+        },
+        {
+          "Action": [
+            "ec2:DeleteTags"
+          ],
+          "Condition": {
+            "ForAllValues:StringNotEquals": {
+              "aws:TagKeys": [
+                "red-hat-managed"
+              ]
+            },
+            "Null": {
+              "aws:TagKeys": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "DeleteTagsCAPAControllerReconcileInstance"
+        },
+        {
+          "Action": [
+            "ec2:DeleteTags"
+          ],
+          "Condition": {
+            "ForAllValues:StringNotEquals": {
+              "aws:TagKeys": [
+                "red-hat-managed"
+              ]
+            },
+            "Null": {
+              "aws:TagKeys": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:network-interface/*"
+          ],
+          "Sid": "DeleteTagsCAPAControllerReconcileNetworkInterface"
+        },
+        {
+          "Action": [
+            "ec2:DeleteTags"
+          ],
+          "Condition": {
+            "ForAllValues:StringNotEquals": {
+              "aws:TagKeys": [
+                "red-hat-managed"
+              ]
+            },
+            "Null": {
+              "aws:TagKeys": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "DeleteTagsCAPAControllerReconcileVolume"
+        },
+        {
+          "Action": [
+            "ec2:ModifyInstanceMetadataOptions"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/red-hat-managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Sid": "ModifyInstanceMetadataOptions"
         },
         {
           "Action": [
@@ -284,7 +368,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-07-29T16:57:30Z"
+  "UpdateDate": "2026-11-04T19:07:07Z"
 }

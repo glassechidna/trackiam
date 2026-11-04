@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBatchFullAccess",
   "CreateDate": "2016-12-06T19:35:42Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ7K2KIWB3HZVK3CUO",
   "PolicyName": "AWSBatchFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2022-10-24T16:09:09Z",
+    "CreateDate": "2026-11-04T18:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -21,6 +21,29 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/*Batch*"
+        },
+        {
+          "Action": "eks:AssociateAccessPolicy",
+          "Condition": {
+            "StringEquals": {
+              "eks:accessScope": "cluster",
+              "eks:policyArn": "arn:aws:eks::aws:cluster-access-policy/AWSBatchClusterPolicy"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:access-entry/*/role/*/AWSServiceRoleForBatch/*",
+          "Sid": "BatchEksAccessEntryAssociatePolicy"
+        },
+        {
+          "Action": "eks:CreateAccessEntry",
+          "Condition": {
+            "ArnLike": {
+              "eks:principalArn": "arn:aws:iam::*:role/aws-service-role/batch.amazonaws.com/AWSServiceRoleForBatch"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BatchEksAccessEntryCreate"
         },
         {
           "Action": [
@@ -62,12 +85,21 @@
             "arn:aws:iam::*:role/iaws-ec2-spot-fleet-role",
             "arn:aws:iam::*:role/service-role/AWSBatchServiceRole"
           ]
+        },
+        {
+          "Action": [
+            "eks:DeleteAccessEntry",
+            "eks:DescribeAccessEntry"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:eks:*:*:access-entry/*/role/*/AWSServiceRoleForBatch/*",
+          "Sid": "BatchEksAccessEntryManage"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2022-10-24T16:09:09Z"
+  "UpdateDate": "2026-11-04T18:37:08Z"
 }

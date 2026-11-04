@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AssuranceOperatorPolicy",
   "CreateDate": "2026-10-21T15:17:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4O5TRU5TYF",
   "PolicyName": "AssuranceOperatorPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-10-21T15:17:07Z",
+    "CreateDate": "2026-11-04T18:57:08Z",
     "Document": {
       "Statement": [
         {
@@ -37,7 +37,6 @@
             "assurance:DeleteFramework",
             "assurance:DeleteProject",
             "assurance:DisableFramework",
-            "assurance:DownloadEvidence",
             "assurance:EnableFramework",
             "assurance:GetAnnotation",
             "assurance:GetAssessment",
@@ -62,6 +61,7 @@
             "assurance:ListComments",
             "assurance:ListConnectionItems",
             "assurance:ListControlGroups",
+            "assurance:ListControlResources",
             "assurance:ListControls",
             "assurance:ListDiscoveredResources",
             "assurance:ListEnabledFrameworks",
@@ -70,7 +70,6 @@
             "assurance:ListEvidenceAnnotations",
             "assurance:ListFrameworks",
             "assurance:ListProjects",
-            "assurance:ListResourcesForControl",
             "assurance:ListTagsForResource",
             "assurance:ListTaskHistory",
             "assurance:ListTasks",
@@ -86,8 +85,7 @@
             "assurance:UpdateEvidence",
             "assurance:UpdateFramework",
             "assurance:UpdateProject",
-            "assurance:UpdateTask",
-            "assurance:UploadEvidence"
+            "assurance:UpdateTask"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -99,7 +97,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-10-21T15:17:07Z"
+  "UpdateDate": "2026-11-04T18:57:08Z"
 }

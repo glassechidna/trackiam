@@ -8,14 +8,18 @@ Actions:
   - Name: partnercentral:AssignOpportunity
   - Name: partnercentral:AssociateAwsTrainingCertificationEmailDomain
   - Name: partnercentral:AssociateBenefitApplicationResource
+  - Name: partnercentral:AssociateBusinessPlan
   - Name: partnercentral:AssociateOpportunity
   - Name: partnercentral:CancelBenefitApplication
+  - Name: partnercentral:CancelBusinessPlan
+  - Name: partnercentral:CancelBusinessPlanSubmissionTask
   - Name: partnercentral:CancelChannelHandshake
   - Name: partnercentral:CancelConnection
   - Name: partnercentral:CancelConnectionInvitation
   - Name: partnercentral:CancelProfileUpdateTask
   - Name: partnercentral:CreateBenefitApplication
   - Name: partnercentral:CreateBusinessPlan
+  - Name: partnercentral:CreateBusinessPlanItem
   - Name: partnercentral:CreateChannelHandshake
   - Name: partnercentral:CreateCollaborationChannelMembers
   - Name: partnercentral:CreateCollaborationChannelRequest
@@ -32,11 +36,14 @@ Actions:
   - Name: partnercentral:CreateResourceSnapshot
   - Name: partnercentral:CreateResourceSnapshotJob
   - Name: partnercentral:CreateRevenueAttribution
+  - Name: partnercentral:DeleteBusinessPlanAttachment
+  - Name: partnercentral:DeleteBusinessPlanItem
   - Name: partnercentral:DeleteProgramManagementAccount
   - Name: partnercentral:DeleteRelationship
   - Name: partnercentral:DeleteResourceSnapshotJob
   - Name: partnercentral:DisassociateAwsTrainingCertificationEmailDomain
   - Name: partnercentral:DisassociateBenefitApplicationResource
+  - Name: partnercentral:DisassociateBusinessPlan
   - Name: partnercentral:DisassociateOpportunity
   - Name: partnercentral:EnrollInPartnerPath
   - Name: partnercentral:GetAllianceLeadContact
@@ -45,6 +52,12 @@ Actions:
   - Name: partnercentral:GetBenefitAllocation
   - Name: partnercentral:GetBenefitApplication
   - Name: partnercentral:GetBusinessPlan
+  - Name: partnercentral:GetBusinessPlanAttachment
+  - Name: partnercentral:GetBusinessPlanAttachmentImportTask
+  - Name: partnercentral:GetBusinessPlanItem
+  - Name: partnercentral:GetBusinessPlanItemSchema
+  - Name: partnercentral:GetBusinessPlanSettings
+  - Name: partnercentral:GetBusinessPlanSubmissionTask
   - Name: partnercentral:GetCollaborationChannel
   - Name: partnercentral:GetConnection
   - Name: partnercentral:GetConnectionInvitation
@@ -59,6 +72,7 @@ Actions:
   - Name: partnercentral:GetPartnerCentralContentMetadata
   - Name: partnercentral:GetPartnerDashboard
   - Name: partnercentral:GetPartnerProfile
+  - Name: partnercentral:GetPartnerReportingData
   - Name: partnercentral:GetProfileUpdateTask
   - Name: partnercentral:GetProfileVisibility
   - Name: partnercentral:GetProgramManagementAccount
@@ -77,6 +91,12 @@ Actions:
   - Name: partnercentral:ListBenefitAllocations
   - Name: partnercentral:ListBenefitApplications
   - Name: partnercentral:ListBenefits
+  - Name: partnercentral:ListBusinessPlanAssociations
+  - Name: partnercentral:ListBusinessPlanAttachmentImportTasks
+  - Name: partnercentral:ListBusinessPlanAttachments
+  - Name: partnercentral:ListBusinessPlanHistory
+  - Name: partnercentral:ListBusinessPlanItems
+  - Name: partnercentral:ListBusinessPlanSubmissionTasks
   - Name: partnercentral:ListBusinessPlans
   - Name: partnercentral:ListChannelHandshakes
   - Name: partnercentral:ListCollaborationChannels
@@ -106,6 +126,7 @@ Actions:
   - Name: partnercentral:ListTagsForResource
   - Name: partnercentral:PutAllianceLeadContact
   - Name: partnercentral:PutBusinessPlan
+  - Name: partnercentral:PutBusinessPlanSettings
   - Name: partnercentral:PutProfileVisibility
   - Name: partnercentral:PutSellingSystemSettings
   - Name: partnercentral:RecallBenefitApplication
@@ -116,6 +137,8 @@ Actions:
   - Name: partnercentral:SearchPartnerCentralContent
   - Name: partnercentral:SearchPartnerProfiles
   - Name: partnercentral:SendEmailVerificationCode
+  - Name: partnercentral:StartBusinessPlanAttachmentImportTask
+  - Name: partnercentral:StartBusinessPlanSubmissionTask
   - Name: partnercentral:StartEngagementByAcceptingInvitationTask
   - Name: partnercentral:StartEngagementFromOpportunityTask
   - Name: partnercentral:StartOpportunityFromEngagementTask
@@ -132,6 +155,8 @@ Actions:
   - Name: partnercentral:TagResource
   - Name: partnercentral:UntagResource
   - Name: partnercentral:UpdateBenefitApplication
+  - Name: partnercentral:UpdateBusinessPlan
+  - Name: partnercentral:UpdateBusinessPlanItem
   - Name: partnercentral:UpdateConnectionPreferences
   - Name: partnercentral:UpdateEngagementContext
   - Name: partnercentral:UpdateMarketplaceRevenueShareAllocation

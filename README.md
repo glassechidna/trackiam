@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 22936
+* Unique actions: 22970
 * Managed policies: 1595
 
 Most common managed policy name prefixes:
@@ -50,7 +50,7 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 140 | 0 | 24 |
 | [`lex`](services/lex.yml) | 139 | 2 | 13 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 34 |
-| [`datazone`](services/datazone.yml) | 123 | 0 | 147 |
+| [`datazone`](services/datazone.yml) | 123 | 0 | 154 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 3 |
 | [`s3`](services/s3.yml) | 113 | 60 | 67 |
@@ -361,12 +361,12 @@ The following table summarises the AWS APIs.
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 0 | 6 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 258 |
-| [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 139 |
+| [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 164 |
 | [`securityagent`](services/securityagent.yml) | 0 | 0 | 119 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
 | [`assurance`](services/assurance.yml) | 0 | 0 | 95 |
 | [`odb`](services/odb.yml) | 0 | 0 | 91 |
-| [`aidevops`](services/aidevops.yml) | 0 | 0 | 87 |
+| [`aidevops`](services/aidevops.yml) | 0 | 0 | 89 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
 | [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 83 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
@@ -508,14 +508,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3890 |
-| `Get` | 3489 |
-| `Delete` | 2617 |
-| `Create` | 2488 |
-| `Update` | 2163 |
+| `List` | 3897 |
+| `Get` | 3499 |
+| `Delete` | 2619 |
+| `Create` | 2490 |
+| `Update` | 2168 |
 | `Describe` | 1962 |
-| `Put` | 616 |
-| `Start` | 563 |
+| `Put` | 618 |
+| `Start` | 565 |
 | `Batch` | 334 |
 | `Tag` | 328 |
 
