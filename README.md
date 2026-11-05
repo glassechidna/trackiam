@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 22987
+* Unique actions: 23011
 * Managed policies: 1596
 
 Most common managed policy name prefixes:
@@ -40,10 +40,10 @@ The following table summarises the AWS APIs.
 | [`sagemaker`](services/sagemaker.yml) | 351 | 0 | 109 |
 | [`iot`](services/iot.yml) | 262 | 3 | 31 |
 | [`chime`](services/chime.yml) | 259 | 0 | 57 |
-| [`connect`](services/connect.yml) | 256 | 0 | 131 |
+| [`connect`](services/connect.yml) | 256 | 0 | 132 |
 | [`glue`](services/glue.yml) | 214 | 4 | 92 |
 | [`ses`](services/ses.yml) | 193 | 0 | 40 |
-| [`quicksight`](services/quicksight.yml) | 174 | 3 | 166 |
+| [`quicksight`](services/quicksight.yml) | 174 | 3 | 184 |
 | [`rds`](services/rds.yml) | 162 | 0 | 11 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
 | [`iam`](services/iam.yml) | 159 | 0 | 31 |
@@ -174,8 +174,8 @@ The following table summarises the AWS APIs.
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`cases`](services/cases.yml) | 34 | 0 | 9 |
 | [`m2`](services/m2.yml) | 34 | 0 | 3 |
+| [`route53domains`](services/route53domains.yml) | 34 | 0 | 2 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
-| [`route53domains`](services/route53domains.yml) | 34 | 0 | 1 |
 | [`ram`](services/ram.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 33 | 2 | 4 |
@@ -360,11 +360,11 @@ The following table summarises the AWS APIs.
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 0 | 6 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
-| [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 258 |
+| [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 259 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 164 |
 | [`securityagent`](services/securityagent.yml) | 0 | 0 | 119 |
+| [`assurance`](services/assurance.yml) | 0 | 0 | 96 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
-| [`assurance`](services/assurance.yml) | 0 | 0 | 95 |
 | [`odb`](services/odb.yml) | 0 | 0 | 91 |
 | [`aidevops`](services/aidevops.yml) | 0 | 0 | 89 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
@@ -376,9 +376,9 @@ The following table summarises the AWS APIs.
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
 | [`transform-custom`](services/transform-custom.yml) | 0 | 0 | 54 |
 | [`q`](services/q.yml) | 0 | 0 | 54 |
+| [`health-agent`](services/health-agent.yml) | 0 | 0 | 49 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 48 |
 | [`route53globalresolver`](services/route53globalresolver.yml) | 0 | 0 | 48 |
-| [`health-agent`](services/health-agent.yml) | 0 | 0 | 47 |
 | [`billing`](services/billing.yml) | 0 | 0 | 47 |
 | [`network-security-manager`](services/network-security-manager.yml) | 0 | 0 | 46 |
 | [`finops-agent`](services/finops-agent.yml) | 0 | 0 | 46 |
@@ -508,14 +508,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3900 |
-| `Get` | 3501 |
-| `Delete` | 2621 |
-| `Create` | 2491 |
-| `Update` | 2169 |
-| `Describe` | 1963 |
+| `List` | 3904 |
+| `Get` | 3502 |
+| `Delete` | 2624 |
+| `Create` | 2495 |
+| `Update` | 2174 |
+| `Describe` | 1965 |
 | `Put` | 618 |
-| `Start` | 567 |
-| `Batch` | 334 |
+| `Start` | 568 |
+| `Batch` | 335 |
 | `Tag` | 328 |
 

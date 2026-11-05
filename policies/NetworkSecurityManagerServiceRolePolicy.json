@@ -1,15 +1,50 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/NetworkSecurityManagerServiceRolePolicy",
   "CreateDate": "2026-08-18T18:27:18Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4N7QSJELX4",
   "PolicyName": "NetworkSecurityManagerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-08-18T18:27:18Z",
+    "CreateDate": "2026-11-05T19:47:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "NSMManaged",
+                "Name"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/NSMManaged": "true",
+              "ec2:CreateAction": [
+                "CreateRouteTable",
+                "CreateSubnet"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:ec2:*:*:route-table/*",
+            "arn:*:ec2:*:*:subnet/*"
+          ],
+          "Sid": "Ec2TagManagement"
+        },
+        {
+          "Action": "ec2:DeleteRouteTable",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/NSMManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:ec2:*:*:route-table/*",
+          "Sid": "RouteTableCleanup"
+        },
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
@@ -44,6 +79,71 @@
           "Sid": "WafV2LoggingSlrCreation"
         },
         {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": [
+                "igw-firewall.network-firewall.amazonaws.com",
+                "network-firewall.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SlrCreation"
+        },
+        {
+          "Action": "network-firewall:TagResource",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "NSMManaged",
+                "Name"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/NSMManaged": [
+                "true"
+              ],
+              "aws:ResourceTag/NSMManaged": [
+                "true"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:network-firewall:*:*:firewall-policy-v2/*",
+            "arn:*:network-firewall:*:*:firewall-policy/*",
+            "arn:*:network-firewall:*:*:firewall/*",
+            "arn:*:network-firewall:*:*:igw-firewall/*"
+          ],
+          "Sid": "NetworkFirewallTagManagement"
+        },
+        {
+          "Action": "network-firewall:UntagResource",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "NSMManaged",
+                "Name"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceTag/NSMManaged": [
+                "true"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:network-firewall:*:*:firewall-policy-v2/*",
+            "arn:*:network-firewall:*:*:firewall-policy/*",
+            "arn:*:network-firewall:*:*:firewall/*",
+            "arn:*:network-firewall:*:*:igw-firewall/*"
+          ],
+          "Sid": "NetworkFirewallUnTag"
+        },
+        {
           "Action": "organizations:ListDelegatedAdministrators",
           "Condition": {
             "StringEquals": {
@@ -55,6 +155,305 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "ListDelegatedAdministratorsScoped"
+        },
+        {
+          "Action": "ram:CreateResourceShare",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "NSMManaged",
+                "Name"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/NSMManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:ram:*:*:resource-share/*",
+          "Sid": "RamCreation"
+        },
+        {
+          "Action": [
+            "ec2:AssociateRouteTable",
+            "ec2:DisassociateRouteTable",
+            "ec2:ReplaceRouteTableAssociation"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/NSMManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:ec2:*:*:route-table/*",
+            "arn:*:ec2:*:*:subnet/*"
+          ],
+          "Sid": "Ec2RouteTableScoped"
+        },
+        {
+          "Action": [
+            "ec2:CreateRouteTable"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "NSMManaged",
+                "Name"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/NSMManaged": [
+                "true"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:ec2:*:*:route-table/*"
+          ],
+          "Sid": "Ec2RouteTableCreate"
+        },
+        {
+          "Action": [
+            "ec2:CreateSubnet"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "NSMManaged",
+                "Name"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/NSMManaged": [
+                "true"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:ec2:*:*:subnet/*"
+          ],
+          "Sid": "Ec2SubnetCreate"
+        },
+        {
+          "Action": [
+            "ec2:DeleteSubnet"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/NSMManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:ec2:*:*:subnet/*"
+          ],
+          "Sid": "Ec2SubnetCleanup"
+        },
+        {
+          "Action": [
+            "network-firewall:AssociateAvailabilityZones",
+            "network-firewall:AssociateSubnets",
+            "network-firewall:DisassociateAvailabilityZones",
+            "network-firewall:DisassociateSubnets",
+            "network-firewall:UpdateFirewallDeleteProtection",
+            "network-firewall:UpdateFirewallPolicyChangeProtection",
+            "network-firewall:UpdateLoggingConfiguration",
+            "network-firewall:UpdateSubnetChangeProtection"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/NSMManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:network-firewall:*:*:firewall/*",
+            "arn:*:network-firewall:*:*:igw-firewall/*"
+          ],
+          "Sid": "NetworkFirewallUpdateScoped"
+        },
+        {
+          "Action": [
+            "network-firewall:AssociateFirewallPolicy"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/NSMManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:network-firewall:*:*:firewall-policy-v2/*",
+            "arn:*:network-firewall:*:*:firewall-policy/*",
+            "arn:*:network-firewall:*:*:firewall/*",
+            "arn:*:network-firewall:*:*:igw-firewall/*"
+          ],
+          "Sid": "NetworkFirewallAssociateFirewallPolicy"
+        },
+        {
+          "Action": [
+            "network-firewall:CreateFirewall"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "NSMManaged",
+                "Name"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/NSMManaged": [
+                "true"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:network-firewall:*:*:firewall/*",
+            "arn:*:network-firewall:*:*:igw-firewall/*"
+          ],
+          "Sid": "NetworkFirewallCreateScoped"
+        },
+        {
+          "Action": [
+            "network-firewall:CreateFirewall"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/NSMManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:network-firewall:*:*:firewall-policy-v2/*",
+            "arn:*:network-firewall:*:*:firewall-policy/*"
+          ],
+          "Sid": "NetworkFirewallCreateScopedFirewallPolicy"
+        },
+        {
+          "Action": [
+            "network-firewall:CreateFirewallPolicy",
+            "network-firewall:CreateFirewallPolicyV2"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "NSMManaged",
+                "Name"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/NSMManaged": [
+                "true"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:network-firewall:*:*:firewall-policy-v2/*",
+            "arn:*:network-firewall:*:*:firewall-policy/*"
+          ],
+          "Sid": "NetworkFirewallCreateFirewallPolicyResource"
+        },
+        {
+          "Action": [
+            "network-firewall:DeleteFirewall",
+            "network-firewall:DeleteFirewallPolicy",
+            "network-firewall:DeleteFirewallPolicyV2"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/NSMManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:network-firewall:*:*:firewall-policy-v2/*",
+            "arn:*:network-firewall:*:*:firewall-policy/*",
+            "arn:*:network-firewall:*:*:firewall/*",
+            "arn:*:network-firewall:*:*:igw-firewall/*"
+          ],
+          "Sid": "NetworkFirewallCleanup"
+        },
+        {
+          "Action": [
+            "network-firewall:DeleteResourcePolicy",
+            "network-firewall:PutResourcePolicy"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/NSMManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:network-firewall:*:*:firewall-policy-v2/*",
+            "arn:*:network-firewall:*:*:firewall-policy/*",
+            "arn:*:network-firewall:*:*:firewall/*",
+            "arn:*:network-firewall:*:*:igw-firewall/*"
+          ],
+          "Sid": "NetworkFirewallResourcePolicyScoped"
+        },
+        {
+          "Action": [
+            "network-firewall:UpdateFirewallPolicy",
+            "network-firewall:UpdateFirewallPolicyV2"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/NSMManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:network-firewall:*:*:firewall-policy-v2/*",
+            "arn:*:network-firewall:*:*:firewall-policy/*"
+          ],
+          "Sid": "NetworkFirewallPolicyUpdateScoped"
+        },
+        {
+          "Action": [
+            "ram:AssociateResourceShare",
+            "ram:DeleteResourceShare",
+            "ram:UpdateResourceShare"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/NSMManaged": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:ram:*:*:resource-share/*",
+          "Sid": "RamMutation"
+        },
+        {
+          "Action": [
+            "ram:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "NSMManaged",
+                "Name"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/NSMManaged": [
+                "true"
+              ],
+              "aws:ResourceTag/NSMManaged": [
+                "true"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:ram:*:*:resource-share/*"
+          ],
+          "Sid": "RamTagManagement"
         },
         {
           "Action": "apigateway:GET",
@@ -98,6 +497,12 @@
           "Sid": "ElbSetWebAcl"
         },
         {
+          "Action": "iam:GetRole",
+          "Effect": "Allow",
+          "Resource": "arn:*:iam::*:role/aws-service-role/ram.amazonaws.com/*",
+          "Sid": "IamDescribe"
+        },
+        {
           "Action": "organizations:DescribeAccount",
           "Effect": "Allow",
           "Resource": "arn:aws:organizations::*:account/o-*/*",
@@ -108,6 +513,21 @@
           "Effect": "Allow",
           "Resource": "arn:aws:organizations::*:ou/o-*/ou-*",
           "Sid": "DescribeOrganizationUnitScoped"
+        },
+        {
+          "Action": "servicequotas:GetServiceQuota",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:servicequotas:*:*:shield/*",
+            "arn:*:servicequotas:*:*:wafv2/*"
+          ],
+          "Sid": "DependencyQuotaRead"
+        },
+        {
+          "Action": "wafv2:CheckCapacity",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Wafv2CheckCapacity"
         },
         {
           "Action": "wafv2:GetWebACLForResource",
@@ -254,6 +674,20 @@
         },
         {
           "Action": [
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeInternetGateways",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeTags",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Ec2DescribeUnscoped"
+        },
+        {
+          "Action": [
             "ec2:DescribeVerifiedAccessInstanceWebAclAssociations",
             "ec2:GetVerifiedAccessInstanceWebAcl"
           ],
@@ -294,6 +728,56 @@
         },
         {
           "Action": [
+            "network-firewall:CreateFirewallPolicy",
+            "network-firewall:CreateFirewallPolicyV2",
+            "network-firewall:UpdateFirewallPolicy",
+            "network-firewall:UpdateFirewallPolicyV2"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:network-firewall:*:*:firewall-rulegroup/*",
+            "arn:*:network-firewall:*:*:ips-rulegroup/*",
+            "arn:*:network-firewall:*:*:stateful-rulegroup/*",
+            "arn:*:network-firewall:*:*:stateless-rulegroup/*",
+            "arn:*:network-firewall:*:*:tls-configuration/*"
+          ],
+          "Sid": "NetworkFirewallPolicyDependentResource"
+        },
+        {
+          "Action": [
+            "network-firewall:DeleteResourcePolicy",
+            "network-firewall:PutResourcePolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:*:network-firewall:*:*:firewall-rulegroup/*",
+            "arn:*:network-firewall:*:*:ips-rulegroup/*",
+            "arn:*:network-firewall:*:*:stateful-rulegroup/*",
+            "arn:*:network-firewall:*:*:stateless-rulegroup/*"
+          ],
+          "Sid": "NetworkFirewallResourcePolicyRulegroups"
+        },
+        {
+          "Action": [
+            "network-firewall:DescribeFirewall",
+            "network-firewall:DescribeFirewallPolicy",
+            "network-firewall:DescribeFirewallPolicyV2",
+            "network-firewall:DescribeLoggingConfiguration",
+            "network-firewall:DescribeResourcePolicy",
+            "network-firewall:DescribeRuleGroup",
+            "network-firewall:DescribeTLSInspectionConfiguration",
+            "network-firewall:ListFirewallPolicies",
+            "network-firewall:ListFirewallPoliciesV2",
+            "network-firewall:ListFirewalls",
+            "network-firewall:ListRuleGroups",
+            "network-firewall:ListTLSInspectionConfigurations"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "NetworkFirewallRead"
+        },
+        {
+          "Action": [
             "organizations:DescribeOrganization",
             "organizations:ListAWSServiceAccessForOrganization",
             "organizations:ListAccounts",
@@ -305,6 +789,15 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "DescribeOrganizationUnScoped"
+        },
+        {
+          "Action": [
+            "ram:GetResourceShareAssociations",
+            "ram:GetResourceShares"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RamDescribe"
         },
         {
           "Action": [
@@ -381,7 +874,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-08-18T18:27:18Z"
+  "UpdateDate": "2026-11-05T19:47:07Z"
 }

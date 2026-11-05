@@ -177,10 +177,13 @@ Actions:
   # actions with no corresponding API
   - Name: quicksight:AccountConfigurations
   - Name: quicksight:AllowVendedLogDeliveryForResource
+  - Name: quicksight:AuthorizeOAuthAccess
   - Name: quicksight:BatchDeleteKnowledgeBase
   - Name: quicksight:BatchDescribeUserLimits
   - Name: quicksight:BatchGetPreferences
   - Name: quicksight:BatchUpdatePreferences
+  - Name: quicksight:CreateAccessControlApplication
+  - Name: quicksight:CreateAccessControlApplicationSecret
   - Name: quicksight:CreateActionConnector
   - Name: quicksight:CreateAdmin
   - Name: quicksight:CreateAgent
@@ -192,12 +195,16 @@ Actions:
   - Name: quicksight:CreateExtension
   - Name: quicksight:CreateExtensionAccess
   - Name: quicksight:CreateFlow
+  - Name: quicksight:CreateInboundConnector
   - Name: quicksight:CreateKnowledgeBase
   - Name: quicksight:CreateLimitsProfile
   - Name: quicksight:CreateOAuthClientApplication
+  - Name: quicksight:CreateOAuthToken
   - Name: quicksight:CreateReader
   - Name: quicksight:CreateSpace
   - Name: quicksight:CreateUser
+  - Name: quicksight:DeleteAccessControlApplication
+  - Name: quicksight:DeleteAccessControlApplicationSecret
   - Name: quicksight:DeleteAccountCustomPermission
   - Name: quicksight:DeleteActionConnector
   - Name: quicksight:DeleteAgent
@@ -212,11 +219,13 @@ Actions:
   - Name: quicksight:DeleteExtension
   - Name: quicksight:DeleteExtensionAccess
   - Name: quicksight:DeleteFlow
+  - Name: quicksight:DeleteInboundConnector
   - Name: quicksight:DeleteKnowledgeBase
   - Name: quicksight:DeleteLimitsProfile
   - Name: quicksight:DeleteOAuthClientApplication
   - Name: quicksight:DeleteSpace
   - Name: quicksight:DeleteUserCustomPermission
+  - Name: quicksight:DescribeAccessControlApplication
   - Name: quicksight:DescribeAccountCustomPermission
   - Name: quicksight:DescribeActionConnector
   - Name: quicksight:DescribeActionConnectorPermissions
@@ -240,6 +249,7 @@ Actions:
   - Name: quicksight:DescribeExtensionAccess
   - Name: quicksight:DescribeExtensionPermissions
   - Name: quicksight:DescribeFlow
+  - Name: quicksight:DescribeInboundConnector
   - Name: quicksight:DescribeKnowledgeBase
   - Name: quicksight:DescribeKnowledgeBasePermissions
   - Name: quicksight:DescribeLimitsProfile
@@ -258,6 +268,7 @@ Actions:
   - Name: quicksight:GetFlowPermissions
   - Name: quicksight:GetGroupMapping
   - Name: quicksight:GetIdentityContext
+  - Name: quicksight:ListAccessControlApplications
   - Name: quicksight:ListActionConnectors
   - Name: quicksight:ListAgents
   - Name: quicksight:ListApprovalPolicies
@@ -272,6 +283,8 @@ Actions:
   - Name: quicksight:ListExtensions
   - Name: quicksight:ListFlows
   - Name: quicksight:ListFoldersForResource
+  - Name: quicksight:ListInboundConnectorApplicationAssociations
+  - Name: quicksight:ListInboundConnectors
   - Name: quicksight:ListKMSKeysForUser
   - Name: quicksight:ListKnowledgeBases
   - Name: quicksight:ListLimitsProfiles
@@ -287,6 +300,7 @@ Actions:
   - Name: quicksight:QuickSuiteUsageMetrics
   - Name: quicksight:RegisterCustomerManagedKey
   - Name: quicksight:RemoveCustomerManagedKey
+  - Name: quicksight:RevokeOAuthToken
   - Name: quicksight:ScopeDownPolicy
   - Name: quicksight:SearchActionConnectors
   - Name: quicksight:SearchAgents
@@ -305,6 +319,8 @@ Actions:
   - Name: quicksight:Subscribe
   - Name: quicksight:UnpublishFlow
   - Name: quicksight:Unsubscribe
+  - Name: quicksight:UpdateAccessControlApplication
+  - Name: quicksight:UpdateAccessControlApplicationSecret
   - Name: quicksight:UpdateAccountCustomPermission
   - Name: quicksight:UpdateActionConnector
   - Name: quicksight:UpdateActionConnectorPermissions
@@ -327,6 +343,8 @@ Actions:
   - Name: quicksight:UpdateExtensionPermissions
   - Name: quicksight:UpdateFlow
   - Name: quicksight:UpdateFlowPermissions
+  - Name: quicksight:UpdateInboundConnector
+  - Name: quicksight:UpdateInboundConnectorApplicationAssociations
   - Name: quicksight:UpdateKnowledgeBase
   - Name: quicksight:UpdateKnowledgeBasePermissions
   - Name: quicksight:UpdateLimitsProfile

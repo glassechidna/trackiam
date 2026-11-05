@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSBackupFullAccess",
   "CreateDate": "2019-11-18T22:21:52Z",
-  "DefaultVersionId": "v30",
+  "DefaultVersionId": "v31",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4LL52EIPJX",
   "PolicyName": "AWSBackupFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:02:46Z",
+    "CreateDate": "2026-11-05T18:57:07Z",
     "Document": {
       "Statement": [
         {
@@ -67,6 +67,17 @@
             "arn:aws:iam::*:role/*AwsBackup*"
           ],
           "Sid": "IamPassRolePermissions"
+        },
+        {
+          "Action": "s3:GetObject",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "backup.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*/*",
+          "Sid": "S3GetObjectPermissions"
         },
         {
           "Action": [
@@ -519,7 +530,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v30"
+    "VersionId": "v31"
   },
-  "UpdateDate": "2026-02-12T18:02:46Z"
+  "UpdateDate": "2026-11-05T18:57:07Z"
 }

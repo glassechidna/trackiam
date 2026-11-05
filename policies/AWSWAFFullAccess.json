@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFFullAccess",
   "CreateDate": "2015-10-06T20:44:00Z",
-  "DefaultVersionId": "v17",
+  "DefaultVersionId": "v18",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJMIKIAFXZEGOLRH7C",
   "PolicyName": "AWSWAFFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-07-28T21:42:26Z",
+    "CreateDate": "2026-11-05T22:17:08Z",
     "Document": {
       "Statement": [
         {
@@ -182,6 +182,14 @@
         },
         {
           "Action": [
+            "payments:GetConnectedAccount"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:payments::*:connectedaccount/*",
+          "Sid": "AllowGetActionForPaymentsConnectedAccount"
+        },
+        {
+          "Action": [
             "s3:GetBucketPolicy",
             "s3:PutBucketPolicy"
           ],
@@ -261,7 +269,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v17"
+    "VersionId": "v18"
   },
-  "UpdateDate": "2026-07-28T21:42:26Z"
+  "UpdateDate": "2026-11-05T22:17:08Z"
 }
