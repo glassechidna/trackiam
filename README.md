@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 22970
-* Managed policies: 1595
+* Unique actions: 22978
+* Managed policies: 1596
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 429 |
 | `arn:aws:iam::aws:policy/Amazon*` | 381 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 366 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 367 |
 | `arn:aws:iam::aws:policy/service-role/*` | 230 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
 | Other | 174 |
@@ -50,7 +50,7 @@ The following table summarises the AWS APIs.
 | [`ssm`](services/ssm.yml) | 140 | 0 | 24 |
 | [`lex`](services/lex.yml) | 139 | 2 | 13 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 34 |
-| [`datazone`](services/datazone.yml) | 123 | 0 | 154 |
+| [`datazone`](services/datazone.yml) | 123 | 0 | 155 |
 | [`mobiletargeting`](services/mobiletargeting.yml) | 122 | 0 | 1 |
 | [`servicecatalog`](services/servicecatalog.yml) | 114 | 0 | 3 |
 | [`s3`](services/s3.yml) | 113 | 60 | 67 |
@@ -169,8 +169,8 @@ The following table summarises the AWS APIs.
 | [`states`](services/states.yml) | 37 | 0 | 2 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
 | [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 53 |
+| [`shield`](services/shield.yml) | 36 | 0 | 4 |
 | [`entityresolution`](services/entityresolution.yml) | 36 | 0 | 4 |
-| [`shield`](services/shield.yml) | 36 | 0 | 3 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`cases`](services/cases.yml) | 34 | 0 | 9 |
 | [`m2`](services/m2.yml) | 34 | 0 | 3 |
@@ -372,10 +372,10 @@ The following table summarises the AWS APIs.
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 61 |
+| [`s3tables`](services/s3tables.yml) | 0 | 0 | 59 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
 | [`transform-custom`](services/transform-custom.yml) | 0 | 0 | 54 |
 | [`q`](services/q.yml) | 0 | 0 | 54 |
-| [`s3tables`](services/s3tables.yml) | 0 | 0 | 53 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 48 |
 | [`route53globalresolver`](services/route53globalresolver.yml) | 0 | 0 | 48 |
 | [`health-agent`](services/health-agent.yml) | 0 | 0 | 47 |
@@ -508,14 +508,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3897 |
-| `Get` | 3499 |
-| `Delete` | 2619 |
+| `List` | 3898 |
+| `Get` | 3500 |
+| `Delete` | 2620 |
 | `Create` | 2490 |
-| `Update` | 2168 |
+| `Update` | 2169 |
 | `Describe` | 1962 |
 | `Put` | 618 |
-| `Start` | 565 |
+| `Start` | 566 |
 | `Batch` | 334 |
 | `Tag` | 328 |
 

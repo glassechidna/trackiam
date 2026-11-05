@@ -1,6 +1,7 @@
 Actions:
 
   # actions with no corresponding API
+  - Name: s3tables:CompleteTableMigration
   - Name: s3tables:CreateNamespace
   - Name: s3tables:CreateTable
   - Name: s3tables:CreateTableBucket
@@ -27,6 +28,7 @@ Actions:
   - Name: s3tables:GetTableMaintenanceConfiguration
   - Name: s3tables:GetTableMaintenanceJobStatus
   - Name: s3tables:GetTableMetadataLocation
+  - Name: s3tables:GetTableMigration
   - Name: s3tables:GetTablePolicy
   - Name: s3tables:GetTableRecordExpirationConfiguration
   - Name: s3tables:GetTableRecordExpirationJobStatus
@@ -35,6 +37,7 @@ Actions:
   - Name: s3tables:GetTableStorageClass
   - Name: s3tables:ListNamespaces
   - Name: s3tables:ListTableBuckets
+  - Name: s3tables:ListTableMigrations
   - Name: s3tables:ListTables
   - Name: s3tables:ListTagsForResource
   - Name: s3tables:PutTableBucketEncryption
@@ -51,6 +54,9 @@ Actions:
   - Name: s3tables:PutTableReplication
   - Name: s3tables:PutTableStorageClass
   - Name: s3tables:RenameTable
+  - Name: s3tables:StartTableMigration
+  - Name: s3tables:SyncTableMigration
   - Name: s3tables:TagResource
   - Name: s3tables:UntagResource
   - Name: s3tables:UpdateTableMetadataLocation
+  - Name: s3tables:UpdateTableMigration

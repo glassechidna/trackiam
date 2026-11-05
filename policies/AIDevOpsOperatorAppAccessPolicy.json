@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AIDevOpsOperatorAppAccessPolicy",
   "CreateDate": "2026-03-26T03:42:13Z",
-  "DefaultVersionId": "v11",
+  "DefaultVersionId": "v12",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ELWEUAH5T",
   "PolicyName": "AIDevOpsOperatorAppAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-10-29T17:47:08Z",
+    "CreateDate": "2026-11-05T01:07:08Z",
     "Document": {
       "Statement": [
         {
@@ -34,6 +34,7 @@
             "aidevops:GetAssetFile",
             "aidevops:GetAssociation",
             "aidevops:GetBacklogTask",
+            "aidevops:GetChat",
             "aidevops:GetKnowledgeItem",
             "aidevops:GetRecommendation",
             "aidevops:GetTrigger",
@@ -63,6 +64,7 @@
             "aidevops:UpdateAsset",
             "aidevops:UpdateAssetFile",
             "aidevops:UpdateBacklogTask",
+            "aidevops:UpdateChat",
             "aidevops:UpdateGoal",
             "aidevops:UpdateKnowledgeItem",
             "aidevops:UpdateRecommendation",
@@ -82,7 +84,11 @@
         },
         {
           "Action": [
-            "aidevops:GetAccountUsage"
+            "aidevops:GetAccountUsage",
+            "aidevops:GetCatalogCapability",
+            "aidevops:ListCatalogCapabilities",
+            "aidevops:ListCatalogCapabilityFiles",
+            "aidevops:ListCatalogCapabilityTypes"
           ],
           "Condition": {
             "StringEquals": {
@@ -140,7 +146,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v11"
+    "VersionId": "v12"
   },
-  "UpdateDate": "2026-10-29T17:47:08Z"
+  "UpdateDate": "2026-11-05T01:07:08Z"
 }
