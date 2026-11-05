@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 22978
+* Unique actions: 22987
 * Managed policies: 1596
 
 Most common managed policy name prefixes:
@@ -116,7 +116,7 @@ The following table summarises the AWS APIs.
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 17 |
 | [`events`](services/events.yml) | 57 | 0 | 17 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
-| [`dynamodb`](services/dynamodb.yml) | 56 | 5 | 24 |
+| [`dynamodb`](services/dynamodb.yml) | 56 | 5 | 29 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 36 |
 | [`elasticmapreduce`](services/elasticmapreduce.yml) | 56 | 0 | 32 |
 | [`eks`](services/eks.yml) | 56 | 0 | 18 |
@@ -397,6 +397,7 @@ The following table summarises the AWS APIs.
 | [`dsql`](services/dsql.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
 | [`s3express`](services/s3express.yml) | 0 | 0 | 28 |
+| [`payments`](services/payments.yml) | 0 | 0 | 28 |
 | [`one`](services/one.yml) | 0 | 0 | 28 |
 | [`end-user-messaging`](services/end-user-messaging.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
@@ -407,7 +408,6 @@ The following table summarises the AWS APIs.
 | [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 25 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`s3files`](services/s3files.yml) | 0 | 0 | 24 |
-| [`payments`](services/payments.yml) | 0 | 0 | 24 |
 | [`evs`](services/evs.yml) | 0 | 0 | 24 |
 | [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 24 |
 | [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 23 |
@@ -508,14 +508,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3898 |
-| `Get` | 3500 |
-| `Delete` | 2620 |
-| `Create` | 2490 |
+| `List` | 3900 |
+| `Get` | 3501 |
+| `Delete` | 2621 |
+| `Create` | 2491 |
 | `Update` | 2169 |
-| `Describe` | 1962 |
+| `Describe` | 1963 |
 | `Put` | 618 |
-| `Start` | 566 |
+| `Start` | 567 |
 | `Batch` | 334 |
 | `Tag` | 328 |
 
