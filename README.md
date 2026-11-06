@@ -12,19 +12,19 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 23016
-* Managed policies: 1597
+* Unique actions: 23025
+* Managed policies: 1599
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 430 |
+| `arn:aws:iam::aws:policy/AWS*` | 431 |
 | `arn:aws:iam::aws:policy/Amazon*` | 381 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 367 |
 | `arn:aws:iam::aws:policy/service-role/*` | 230 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
-| Other | 174 |
+| Other | 175 |
 
 The following table summarises the AWS APIs. 
 
@@ -96,7 +96,7 @@ The following table summarises the AWS APIs.
 | [`wellarchitected`](services/wellarchitected.yml) | 72 | 0 | 24 |
 | [`mgn`](services/mgn.yml) | 70 | 0 | 66 |
 | [`route53`](services/route53.yml) | 70 | 0 | 1 |
-| [`athena`](services/athena.yml) | 68 | 0 | 13 |
+| [`athena`](services/athena.yml) | 68 | 0 | 18 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 2 |
 | [`ds`](services/ds.yml) | 67 | 0 | 24 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 66 | 0 | 11 |
@@ -173,10 +173,10 @@ The following table summarises the AWS APIs.
 | [`entityresolution`](services/entityresolution.yml) | 36 | 0 | 4 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
 | [`cases`](services/cases.yml) | 34 | 0 | 9 |
+| [`ram`](services/ram.yml) | 34 | 0 | 5 |
 | [`m2`](services/m2.yml) | 34 | 0 | 3 |
 | [`route53domains`](services/route53domains.yml) | 34 | 0 | 2 |
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
-| [`ram`](services/ram.yml) | 34 | 0 | 1 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 33 | 2 | 4 |
 | [`groundstation`](services/groundstation.yml) | 33 | 0 | 7 |
@@ -508,13 +508,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3904 |
-| `Get` | 3502 |
-| `Delete` | 2624 |
-| `Create` | 2495 |
-| `Update` | 2174 |
+| `List` | 3905 |
+| `Get` | 3504 |
+| `Delete` | 2626 |
+| `Create` | 2496 |
+| `Update` | 2176 |
 | `Describe` | 1966 |
-| `Put` | 618 |
+| `Put` | 619 |
 | `Start` | 568 |
 | `Batch` | 335 |
 | `Tag` | 328 |

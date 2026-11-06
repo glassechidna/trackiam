@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectSynchronizationServiceRolePolicy",
   "CreateDate": "2023-10-27T22:38:25Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4J2PE2WH3Y",
   "PolicyName": "AmazonConnectSynchronizationServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-10-28T19:17:08Z",
+    "CreateDate": "2026-11-06T19:27:07Z",
     "Document": {
       "Statement": [
         {
@@ -176,6 +176,7 @@
         {
           "Action": [
             "app-integrations:CreateApplication",
+            "app-integrations:CreateApplicationAssociation",
             "app-integrations:DeleteApplication",
             "app-integrations:GetApplication",
             "app-integrations:ListTagsForResource",
@@ -191,6 +192,22 @@
           "Effect": "Allow",
           "Resource": "arn:aws:app-integrations:*:*:application/*",
           "Sid": "AllowAppIntegrationsScopedToApplications"
+        },
+        {
+          "Action": [
+            "app-integrations:DeleteApplicationAssociation",
+            "app-integrations:ListTagsForResource",
+            "app-integrations:TagResource",
+            "app-integrations:UntagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:app-integrations:*:*:application-association/*",
+          "Sid": "AllowAppIntegrationsScopedToApplicationAssociations"
         },
         {
           "Action": [
@@ -397,7 +414,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2026-10-28T19:17:08Z"
+  "UpdateDate": "2026-11-06T19:27:07Z"
 }

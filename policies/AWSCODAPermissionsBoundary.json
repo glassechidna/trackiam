@@ -1,0 +1,45 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSCODAPermissionsBoundary",
+  "CreateDate": "2026-11-06T18:07:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4OHP7PPRMD",
+  "PolicyName": "AWSCODAPermissionsBoundary",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-06T18:07:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:CreateRole",
+            "iam:CreateUser",
+            "iam:PutRolePermissionsBoundary"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "iam:PermissionsBoundary": "arn:*:iam::aws:policy/AWSCODAPermissionsBoundary"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*"
+        },
+        {
+          "Effect": "Allow",
+          "NotAction": [
+            "iam:CreateRole",
+            "iam:CreateUser",
+            "iam:DeleteRolePermissionsBoundary",
+            "iam:PutRolePermissionsBoundary",
+            "sts:AssumeRoot"
+          ],
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-06T18:07:08Z"
+}

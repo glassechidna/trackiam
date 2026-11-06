@@ -1,0 +1,58 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AIDevOpsOrganizationsAccessPolicy",
+  "CreateDate": "2026-11-06T22:07:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4NLRXFNLXK",
+  "PolicyName": "AIDevOpsOrganizationsAccessPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-06T22:07:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudformation:CreateStackInstances",
+            "cloudformation:CreateStackSet",
+            "cloudformation:DeleteStackInstances",
+            "cloudformation:DeleteStackSet",
+            "cloudformation:DescribeStackSet",
+            "cloudformation:DescribeStackSetOperation",
+            "cloudformation:ListStackInstances",
+            "cloudformation:ListStackSetOperationResults",
+            "cloudformation:ListStackSetOperations",
+            "cloudformation:UpdateStackSet"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stackset-target/AIDevOpsOrgSource-*/*",
+            "arn:aws:cloudformation:*:*:stackset/AIDevOpsOrgSource-*",
+            "arn:aws:cloudformation:*:*:type/resource/AWS-CloudFormation-WaitConditionHandle",
+            "arn:aws:cloudformation:*:*:type/resource/AWS-IAM-Role"
+          ],
+          "Sid": "OrgSourceStackSets"
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListChildren",
+            "organizations:ListDelegatedAdministrators",
+            "organizations:ListDelegatedServicesForAccount",
+            "organizations:ListParents",
+            "organizations:ListRoots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "OrgReads"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-06T22:07:08Z"
+}

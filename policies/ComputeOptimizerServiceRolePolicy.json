@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/ComputeOptimizerServiceRolePolicy",
   "CreateDate": "2019-12-03T08:45:19Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4HPOQZNRNJ",
   "PolicyName": "ComputeOptimizerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-05-27T17:42:11Z",
+    "CreateDate": "2026-11-06T20:57:07Z",
     "Document": {
       "Statement": [
         {
@@ -78,9 +78,12 @@
         {
           "Action": [
             "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
             "organizations:ListAWSServiceAccessForOrganization",
             "organizations:ListAccounts",
-            "organizations:ListDelegatedAdministrators"
+            "organizations:ListChildren",
+            "organizations:ListDelegatedAdministrators",
+            "organizations:ListParents"
           ],
           "Effect": "Allow",
           "Resource": [
@@ -118,7 +121,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2026-05-27T17:42:11Z"
+  "UpdateDate": "2026-11-06T20:57:07Z"
 }
