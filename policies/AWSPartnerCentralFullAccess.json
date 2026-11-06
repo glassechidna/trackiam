@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralFullAccess",
   "CreateDate": "2024-11-18T23:33:28Z",
-  "DefaultVersionId": "v15",
+  "DefaultVersionId": "v16",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DRJMXIHNK",
   "PolicyName": "AWSPartnerCentralFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-10-17T11:37:08Z",
+    "CreateDate": "2026-11-05T23:37:08Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "partnercentral-account.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CreateServiceLinkedRole"
+        },
         {
           "Action": [
             "aws-marketplace:DescribeAgreement",
@@ -170,6 +181,14 @@
         },
         {
           "Action": [
+            "iam:GetRole"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/partnercentral-account.amazonaws.com/AWSServiceRoleForPartnerCentralAccount",
+          "Sid": "IAMGetRole"
+        },
+        {
+          "Action": [
             "partnercentral-account-management:AccessLegacyPartnerCentral"
           ],
           "Effect": "Allow",
@@ -241,7 +260,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v15"
+    "VersionId": "v16"
   },
-  "UpdateDate": "2026-10-17T11:37:08Z"
+  "UpdateDate": "2026-11-05T23:37:08Z"
 }

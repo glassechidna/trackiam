@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy",
   "CreateDate": "2018-09-07T00:21:43Z",
-  "DefaultVersionId": "v56",
+  "DefaultVersionId": "v57",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAJ6R6FMTSRUJSKI72Y",
   "PolicyName": "AmazonConnectServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-10-02T23:27:08Z",
+    "CreateDate": "2026-11-05T23:47:08Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "app-integrations:GetApplication",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:app-integrations:*:*:application/*",
+          "Sid": "AllowAppIntegrationsGetApplication"
+        },
         {
           "Action": "cloudwatch:PutMetricData",
           "Condition": {
@@ -383,7 +394,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v56"
+    "VersionId": "v57"
   },
-  "UpdateDate": "2026-10-02T23:27:08Z"
+  "UpdateDate": "2026-11-05T23:47:08Z"
 }

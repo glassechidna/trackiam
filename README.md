@@ -12,14 +12,14 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 23011
-* Managed policies: 1596
+* Unique actions: 23013
+* Managed policies: 1597
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 429 |
+| `arn:aws:iam::aws:policy/AWS*` | 430 |
 | `arn:aws:iam::aws:policy/Amazon*` | 381 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 367 |
 | `arn:aws:iam::aws:policy/service-role/*` | 230 |
@@ -43,7 +43,7 @@ The following table summarises the AWS APIs.
 | [`connect`](services/connect.yml) | 256 | 0 | 132 |
 | [`glue`](services/glue.yml) | 214 | 4 | 92 |
 | [`ses`](services/ses.yml) | 193 | 0 | 40 |
-| [`quicksight`](services/quicksight.yml) | 174 | 3 | 184 |
+| [`quicksight`](services/quicksight.yml) | 174 | 3 | 185 |
 | [`rds`](services/rds.yml) | 162 | 0 | 11 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
 | [`iam`](services/iam.yml) | 159 | 0 | 31 |
@@ -415,9 +415,9 @@ The following table summarises the AWS APIs.
 | [`transform`](services/transform.yml) | 0 | 0 | 22 |
 | [`agent-registry`](services/agent-registry.yml) | 0 | 0 | 22 |
 | [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 21 |
+| [`agentaccess-mcp`](services/agentaccess-mcp.yml) | 0 | 0 | 21 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 20 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
-| [`agentaccess-mcp`](services/agentaccess-mcp.yml) | 0 | 0 | 20 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 19 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 18 |
@@ -513,7 +513,7 @@ Most common action prefixes:
 | `Delete` | 2624 |
 | `Create` | 2495 |
 | `Update` | 2174 |
-| `Describe` | 1965 |
+| `Describe` | 1966 |
 | `Put` | 618 |
 | `Start` | 568 |
 | `Batch` | 335 |
