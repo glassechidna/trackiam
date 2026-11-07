@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerClusterInstanceRolePolicy",
   "CreateDate": "2023-11-29T15:11:26Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BOMTPPOSS",
   "PolicyName": "AmazonSageMakerClusterInstanceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-10-16T20:17:08Z",
+    "CreateDate": "2026-11-06T22:37:07Z",
     "Document": {
       "Statement": [
         {
@@ -24,6 +24,21 @@
             "*"
           ],
           "Sid": "CloudwatchPutMetricDataAccess"
+        },
+        {
+          "Action": [
+            "cloudwatch:PutProfileRecords"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudwatch:*:*:dataset/*"
+          ],
+          "Sid": "CloudwatchPutProfileRecordsAccess"
         },
         {
           "Action": [
@@ -78,7 +93,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2026-10-16T20:17:08Z"
+  "UpdateDate": "2026-11-06T22:37:07Z"
 }

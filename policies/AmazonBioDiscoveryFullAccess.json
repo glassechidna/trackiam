@@ -1,15 +1,37 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonBioDiscoveryFullAccess",
   "CreateDate": "2026-08-18T06:27:20Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4IJ6IKJL6C",
   "PolicyName": "AmazonBioDiscoveryFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-08-18T06:27:20Z",
+    "CreateDate": "2026-11-06T22:37:08Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "researchstudio.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/researchstudio.amazonaws.com/AWSServiceRoleForAmazonBioDiscovery",
+          "Sid": "AllowCreateAmazonBioDiscoveryServiceLinkedRole"
+        },
+        {
+          "Action": "s3:ListAllMyBuckets",
+          "Condition": {
+            "StringEquals": {
+              "s3:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonBioDiscoveryS3ListBucketsAccess"
+        },
         {
           "Action": [
             "iam:PassRole"
@@ -54,6 +76,30 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AmazonBioDiscoveryIdentityCenterKMSAccess"
+        },
+        {
+          "Action": [
+            "s3:GetEncryptionConfiguration",
+            "s3:ListBucket"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*",
+          "Sid": "AmazonBioDiscoveryS3BucketReadAccess"
+        },
+        {
+          "Action": [
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AmazonBioDiscoveryVpcDescribeAccess"
         },
         {
           "Action": [
@@ -116,7 +162,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-08-18T06:27:20Z"
+  "UpdateDate": "2026-11-06T22:37:08Z"
 }
