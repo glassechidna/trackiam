@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSApplicationMigrationFullAccess",
   "CreateDate": "2021-04-07T06:56:05Z",
-  "DefaultVersionId": "v14",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4HPQNMM2HL",
   "PolicyName": "AWSApplicationMigrationFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-08-03T10:57:21Z",
+    "CreateDate": "2026-11-09T08:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -75,6 +75,37 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "VisualEditor19"
+        },
+        {
+          "Action": "ssm:SendCommand",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ssm:*:*:managed-instance/*",
+          "Sid": "SsmViaMgnSendCommandToConnector"
+        },
+        {
+          "Action": [
+            "cloudwatch:GetMetricData"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchDescribeOperations"
         },
         {
           "Action": [
@@ -319,6 +350,14 @@
         },
         {
           "Action": [
+            "s3-outposts:ListOutpostsWithS3"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "S3OutpostsReadPermissions"
+        },
+        {
+          "Action": [
             "servicequotas:GetServiceQuota"
           ],
           "Effect": "Allow",
@@ -365,7 +404,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v14"
+    "VersionId": "v15"
   },
-  "UpdateDate": "2026-08-03T10:57:21Z"
+  "UpdateDate": "2026-11-09T08:37:08Z"
 }
