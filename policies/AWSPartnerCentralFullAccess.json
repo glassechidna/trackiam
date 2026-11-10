@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralFullAccess",
   "CreateDate": "2024-11-18T23:33:28Z",
-  "DefaultVersionId": "v16",
+  "DefaultVersionId": "v17",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DRJMXIHNK",
   "PolicyName": "AWSPartnerCentralFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-11-05T23:37:08Z",
+    "CreateDate": "2026-11-10T08:27:08Z",
     "Document": {
       "Statement": [
         {
@@ -155,6 +155,18 @@
         },
         {
           "Action": [
+            "aws-marketplace:GetSellerReportingData"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aws-marketplace::*:AWSMarketplace/ReportingData/BillingEvent_V1/Dataset/BilledRevenue_V1",
+            "arn:aws:aws-marketplace::*:AWSMarketplace/ReportingData/Marketing_V1/Dataset/CaseStudy_V1",
+            "arn:aws:aws-marketplace::*:AWSMarketplace/ReportingData/Solution_V1/Dataset/Solution_V1"
+          ],
+          "Sid": "SellerReportingDataAccess"
+        },
+        {
+          "Action": [
             "aws-marketplace:ListChangeSets"
           ],
           "Effect": "Allow",
@@ -260,7 +272,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v16"
+    "VersionId": "v17"
   },
-  "UpdateDate": "2026-11-05T23:37:08Z"
+  "UpdateDate": "2026-11-10T08:27:08Z"
 }

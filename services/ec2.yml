@@ -643,6 +643,7 @@ Actions:
   - Name: ec2:CreateCapacityManagerDataExport
   - Name: ec2:CreateCapacityReservationBySplitting
   - Name: ec2:CreateCapacityReservationCancellationQuote
+  - Name: ec2:CreateCapacityReservationDateChangeQuote
   - Name: ec2:CreateCoipPoolPermission
   - Name: ec2:CreateDelegateMacVolumeOwnershipTask
   - Name: ec2:CreateImageUsageReport
@@ -670,6 +671,7 @@ Actions:
   - Name: ec2:CreateVpnConcentrator
   - Name: ec2:DeleteApplicationStatusCheck
   - Name: ec2:DeleteCapacityManagerDataExport
+  - Name: ec2:DeleteClientVpnEndpointAuthorizationPolicy
   - Name: ec2:DeleteCoipPoolPermission
   - Name: ec2:DeleteImageUsageReport
   - Name: ec2:DeleteIpamInternetRegistryAssociation
@@ -705,6 +707,7 @@ Actions:
   - Name: ec2:DescribeCapacityManagerDataExports
   - Name: ec2:DescribeCapacityReservationBillingRequests
   - Name: ec2:DescribeCapacityReservationCancellationQuotes
+  - Name: ec2:DescribeCapacityReservationDateChangeQuotes
   - Name: ec2:DescribeCapacityReservationTopology
   - Name: ec2:DescribeDeclarativePoliciesReports
   - Name: ec2:DescribeImageReferences
@@ -764,9 +767,11 @@ Actions:
   - Name: ec2:GetCapacityManagerMetricData
   - Name: ec2:GetCapacityManagerMetricDimensions
   - Name: ec2:GetCapacityManagerMonitoredTagKeys
+  - Name: ec2:GetClientVpnEndpointAuthorizationPolicy
   - Name: ec2:GetDeclarativePoliciesReportSummary
   - Name: ec2:GetEnabledIpamPolicy
   - Name: ec2:GetImageAncestry
+  - Name: ec2:GetImageFindings
   - Name: ec2:GetIpamDiscoveredRoutes
   - Name: ec2:GetIpamInternetRegistryAssociationAsns
   - Name: ec2:GetIpamInternetRegistryAssociationCidrs
@@ -784,6 +789,7 @@ Actions:
   - Name: ec2:GetRouteServerAssociations
   - Name: ec2:GetRouteServerPropagations
   - Name: ec2:GetRouteServerRoutingDatabase
+  - Name: ec2:GetTransitGatewayAttachmentNatConfiguration
   - Name: ec2:GetTransitGatewayMeteringPolicyEntries
   - Name: ec2:GetVerifiedAccessEndpointTargets
   - Name: ec2:GetVerifiedAccessInstanceWebAcl
@@ -794,6 +800,7 @@ Actions:
   - Name: ec2:ListVolumesInRecycleBin
   - Name: ec2:ModifyAccountVpcEncryptionControl
   - Name: ec2:ModifyApplicationStatusCheck
+  - Name: ec2:ModifyClientVpnEndpointAuthorizationPolicy
   - Name: ec2:ModifyInstanceConnectEndpoint
   - Name: ec2:ModifyInstanceCpuOptions
   - Name: ec2:ModifyInstanceNetworkPerformanceOptions
@@ -806,6 +813,7 @@ Actions:
   - Name: ec2:ModifyOdbNetworkPeering
   - Name: ec2:ModifyPublicIpDnsNameOptions
   - Name: ec2:ModifyRouteServer
+  - Name: ec2:ModifyTransitGatewayAttachmentNatConfiguration
   - Name: ec2:ModifyTransitGatewayMeteringPolicy
   - Name: ec2:ModifyTransitGatewayPolicyTableEntry
   - Name: ec2:ModifyVpcBlockPublicAccessExclusion
