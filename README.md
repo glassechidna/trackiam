@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 23037
-* Managed policies: 1599
+* Unique actions: 23048
+* Managed policies: 1598
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 431 |
 | `arn:aws:iam::aws:policy/Amazon*` | 381 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 367 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 366 |
 | `arn:aws:iam::aws:policy/service-role/*` | 230 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
 | Other | 175 |
@@ -78,7 +78,7 @@ The following table summarises the AWS APIs.
 | [`cloudformation`](services/cloudformation.yml) | 82 | 0 | 20 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 81 | 0 | 0 |
-| [`securityhub`](services/securityhub.yml) | 79 | 0 | 59 |
+| [`securityhub`](services/securityhub.yml) | 79 | 0 | 60 |
 | [`codecommit`](services/codecommit.yml) | 79 | 0 | 12 |
 | [`personalize`](services/personalize.yml) | 78 | 0 | 5 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
@@ -247,7 +247,7 @@ The following table summarises the AWS APIs.
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 18 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 22 | 0 | 9 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 75 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 76 |
 | [`mgh`](services/mgh.yml) | 21 | 0 | 25 |
 | [`resource-explorer-2`](services/resource-explorer-2.yml) | 21 | 0 | 16 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
@@ -276,9 +276,9 @@ The following table summarises the AWS APIs.
 | [`support`](services/support.yml) | 16 | 0 | 23 |
 | [`emr-serverless`](services/emr-serverless.yml) | 16 | 0 | 9 |
 | [`kafkaconnect`](services/kafkaconnect.yml) | 16 | 0 | 5 |
+| [`route53profiles`](services/route53profiles.yml) | 16 | 0 | 3 |
 | [`docdb-elastic`](services/docdb-elastic.yml) | 16 | 0 | 3 |
 | [`thinclient`](services/thinclient.yml) | 16 | 0 | 2 |
-| [`route53profiles`](services/route53profiles.yml) | 16 | 0 | 2 |
 | [`internetmonitor`](services/internetmonitor.yml) | 16 | 0 | 1 |
 | [`simspaceweaver`](services/simspaceweaver.yml) | 16 | 0 | 0 |
 | [`acm`](services/acm.yml) | 15 | 0 | 27 |
@@ -365,8 +365,8 @@ The following table summarises the AWS APIs.
 | [`securityagent`](services/securityagent.yml) | 0 | 0 | 119 |
 | [`assurance`](services/assurance.yml) | 0 | 0 | 96 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
+| [`aidevops`](services/aidevops.yml) | 0 | 0 | 94 |
 | [`odb`](services/odb.yml) | 0 | 0 | 91 |
-| [`aidevops`](services/aidevops.yml) | 0 | 0 | 89 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
 | [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 83 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
@@ -411,20 +411,20 @@ The following table summarises the AWS APIs.
 | [`evs`](services/evs.yml) | 0 | 0 | 24 |
 | [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 24 |
 | [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 23 |
+| [`agentaccess-mcp`](services/agentaccess-mcp.yml) | 0 | 0 | 23 |
 | [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 23 |
 | [`transform`](services/transform.yml) | 0 | 0 | 22 |
 | [`agent-registry`](services/agent-registry.yml) | 0 | 0 | 22 |
 | [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 21 |
-| [`agentaccess-mcp`](services/agentaccess-mcp.yml) | 0 | 0 | 21 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 20 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 19 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 18 |
+| [`signin`](services/signin.yml) | 0 | 0 | 17 |
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 17 |
 | [`ds-data`](services/ds-data.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
-| [`signin`](services/signin.yml) | 0 | 0 | 16 |
 | [`nova-act`](services/nova-act.yml) | 0 | 0 | 16 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 16 |
 | [`bcm-dashboards`](services/bcm-dashboards.yml) | 0 | 0 | 15 |
@@ -508,11 +508,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3910 |
-| `Get` | 3505 |
+| `List` | 3912 |
+| `Get` | 3508 |
 | `Delete` | 2627 |
-| `Create` | 2497 |
-| `Update` | 2179 |
+| `Create` | 2498 |
+| `Update` | 2181 |
 | `Describe` | 1966 |
 | `Put` | 619 |
 | `Start` | 569 |

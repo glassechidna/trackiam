@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AssuranceServiceRolePolicy",
   "CreateDate": "2026-08-26T21:07:08Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4CQU24Q4FF",
   "PolicyName": "AssuranceServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-10-30T19:57:07Z",
+    "CreateDate": "2026-11-09T20:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -1713,16 +1713,15 @@
             "assurance:ListComments",
             "assurance:ListConnectionItems",
             "assurance:ListControlGroups",
+            "assurance:ListControlResources",
             "assurance:ListControls",
             "assurance:ListDiscoveredResources",
             "assurance:ListEnabledFrameworks",
             "assurance:ListEvidence",
             "assurance:ListEvidenceAnnotations",
             "assurance:ListProjects",
-            "assurance:ListResourcesForControl",
             "assurance:ListTasks",
             "assurance:PutEvidence",
-            "assurance:StartResourceDiscovery",
             "assurance:UpdateAnnotation",
             "assurance:UpdateAssessment",
             "assurance:UpdateTask"
@@ -1733,15 +1732,6 @@
         },
         {
           "Action": [
-            "assurance:DownloadEvidence",
-            "assurance:UploadEvidence"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:assurance:*:*:environment/*",
-          "Sid": "AssuranceLegacyOperations"
-        },
-        {
-          "Action": [
             "config:DeleteServiceLinkedConfigurationRecorder",
             "config:DescribeConfigurationRecorders",
             "config:PutServiceLinkedConfigurationRecorder"
@@ -1749,6 +1739,16 @@
           "Effect": "Allow",
           "Resource": "arn:aws:config:*:*:configuration-recorder/AWSConfigurationRecorderForAssurance/*",
           "Sid": "AssuranceConfigurationRecorderManagement"
+        },
+        {
+          "Action": [
+            "iam:GetPolicy",
+            "iam:GetPolicyVersion",
+            "iam:ListEntitiesForPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:*:iam::aws:policy/*",
+          "Sid": "ReadAwsManagedPolicies"
         },
         {
           "Action": [
@@ -1772,7 +1772,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-10-30T19:57:07Z"
+  "UpdateDate": "2026-11-09T20:07:07Z"
 }

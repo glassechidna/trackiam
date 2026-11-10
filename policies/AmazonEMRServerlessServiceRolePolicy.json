@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AmazonEMRServerlessServiceRolePolicy",
   "CreateDate": "2022-05-20T23:15:42Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4GWPDPIMVL",
   "PolicyName": "AmazonEMRServerlessServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2024-01-25T18:21:43Z",
+    "CreateDate": "2026-11-09T22:17:08Z",
     "Document": {
       "Statement": [
         {
@@ -31,7 +31,9 @@
         {
           "Action": [
             "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
             "ec2:DeleteNetworkInterface",
+            "ec2:DeleteNetworkInterfacePermission",
             "ec2:DescribeDhcpOptions",
             "ec2:DescribeNetworkInterfaces",
             "ec2:DescribeRouteTables",
@@ -47,7 +49,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2024-01-25T18:21:43Z"
+  "UpdateDate": "2026-11-09T22:17:08Z"
 }

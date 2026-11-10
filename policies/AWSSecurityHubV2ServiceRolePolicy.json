@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSSecurityHubV2ServiceRolePolicy",
   "CreateDate": "2025-06-10T17:37:06Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4AAHRX2W6F",
   "PolicyName": "AWSSecurityHubV2ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-27T00:42:11Z",
+    "CreateDate": "2026-11-09T20:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -120,7 +120,8 @@
             "securityhub:DisableSecurityHubFeatureV2",
             "securityhub:DisableSecurityHubV2",
             "securityhub:EnableSecurityHubFeatureV2",
-            "securityhub:EnableSecurityHubV2"
+            "securityhub:EnableSecurityHubV2",
+            "securityhub:UpdateSecurityHubV2"
           ],
           "Condition": {
             "StringEquals": {
@@ -159,7 +160,8 @@
         },
         {
           "Action": [
-            "cloudwatch:GetMetricData"
+            "cloudwatch:GetMetricData",
+            "cloudwatch:ListMetrics"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -259,7 +261,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2026-06-27T00:42:11Z"
+  "UpdateDate": "2026-11-09T20:37:08Z"
 }

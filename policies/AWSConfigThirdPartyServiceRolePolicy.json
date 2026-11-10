@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSConfigThirdPartyServiceRolePolicy",
   "CreateDate": "2026-06-22T17:57:23Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4LUUEA7F4N",
   "PolicyName": "AWSConfigThirdPartyServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-22T17:57:23Z",
+    "CreateDate": "2026-11-09T22:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -15,7 +15,8 @@
           "Condition": {
             "ForAnyValue:StringLike": {
               "sts:IdentityTokenAudience": [
-                "api://AzureADTokenExchange"
+                "api://AzureADTokenExchange",
+                "https://sts.googleapis.com"
               ]
             }
           },
@@ -49,7 +50,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-06-22T17:57:23Z"
+  "UpdateDate": "2026-11-09T22:37:08Z"
 }

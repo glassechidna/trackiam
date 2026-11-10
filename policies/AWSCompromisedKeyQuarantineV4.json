@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSCompromisedKeyQuarantineV4",
   "CreateDate": "2026-11-06T00:37:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NMVABALFW",
   "PolicyName": "AWSCompromisedKeyQuarantineV4",
   "PolicyVersion": {
-    "CreateDate": "2026-11-06T00:37:07Z",
+    "CreateDate": "2026-11-09T22:27:07Z",
     "Document": {
       "Statement": [
         {
@@ -43,8 +43,17 @@
             "aws-marketplace:Subscribe",
             "backup:DeleteBackupVault",
             "backup:DeleteRecoveryPoint",
+            "bedrock-mantle:ArchiveProject",
+            "bedrock-mantle:Associate*",
             "bedrock-mantle:CallWithBearerToken",
-            "bedrock-mantle:CreateInference",
+            "bedrock-mantle:Cancel*",
+            "bedrock-mantle:Create*",
+            "bedrock-mantle:Delete*",
+            "bedrock-mantle:Disassociate*",
+            "bedrock-mantle:Put*",
+            "bedrock-mantle:TagResource",
+            "bedrock-mantle:UntagResource",
+            "bedrock-mantle:Update*",
             "bedrock:CallWithBearerToken",
             "bedrock:CreateFoundationModelAgreement",
             "bedrock:CreateModelInvocationJob",
@@ -109,6 +118,7 @@
             "iam:UpdateAccountPasswordPolicy",
             "iam:UpdateAssumeRolePolicy",
             "iam:UpdateLoginProfile",
+            "iam:UpdateServiceSpecificCredential",
             "iam:UpdateUser",
             "kms:Cancel*",
             "kms:Connect*",
@@ -238,7 +248,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-11-06T00:37:07Z"
+  "UpdateDate": "2026-11-09T22:27:07Z"
 }
