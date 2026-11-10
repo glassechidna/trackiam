@@ -1,0 +1,58 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSCODAServiceRolePolicy",
+  "CreateDate": "2026-11-10T20:07:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4DGAYLDVZ5",
+  "PolicyName": "AWSCODAServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-10T20:07:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "organizations:DescribeAccount",
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:account/o-*/*"
+        },
+        {
+          "Action": "organizations:DescribeOrganizationalUnit",
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:ou/o-*/ou-*"
+        },
+        {
+          "Action": [
+            "cloudformation:DescribeStackInstance",
+            "cloudformation:DescribeStackSet",
+            "cloudformation:DescribeStackSetOperation",
+            "cloudformation:DescribeStacks",
+            "cloudformation:ListStackInstances",
+            "cloudformation:ListStackSetOperations"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:cloudformation:*:*:stack/coda-*/*",
+            "arn:aws:cloudformation:*:*:stackset/coda-*:*"
+          ]
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListAccountsForParent",
+            "organizations:ListChildren",
+            "organizations:ListOrganizationalUnitsForParent",
+            "organizations:ListParents",
+            "organizations:ListRoots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-10T20:07:08Z"
+}

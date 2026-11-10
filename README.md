@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 23056
-* Managed policies: 1598
+* Unique actions: 23059
+* Managed policies: 1599
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 431 |
 | `arn:aws:iam::aws:policy/Amazon*` | 381 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 366 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 367 |
 | `arn:aws:iam::aws:policy/service-role/*` | 230 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
 | Other | 175 |
@@ -57,7 +57,7 @@ The following table summarises the AWS APIs.
 | [`iotwireless`](services/iotwireless.yml) | 112 | 0 | 1 |
 | [`greengrass`](services/greengrass.yml) | 111 | 0 | 1 |
 | [`cloudfront`](services/cloudfront.yml) | 110 | 1 | 63 |
-| [`gamelift`](services/gamelift.yml) | 108 | 0 | 12 |
+| [`gamelift`](services/gamelift.yml) | 108 | 0 | 13 |
 | [`cognito-idp`](services/cognito-idp.yml) | 103 | 0 | 28 |
 | [`deadline`](services/deadline.yml) | 102 | 0 | 19 |
 | [`bedrock`](services/bedrock.yml) | 97 | 2 | 172 |
@@ -74,7 +74,7 @@ The following table summarises the AWS APIs.
 | [`comprehend`](services/comprehend.yml) | 85 | 0 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 84 | 0 | 67 |
 | [`workmail`](services/workmail.yml) | 84 | 0 | 42 |
-| [`omics`](services/omics.yml) | 82 | 0 | 25 |
+| [`omics`](services/omics.yml) | 82 | 0 | 26 |
 | [`cloudformation`](services/cloudformation.yml) | 82 | 0 | 20 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 81 | 0 | 0 |
@@ -160,7 +160,7 @@ The following table summarises the AWS APIs.
 | [`swf`](services/swf.yml) | 39 | 0 | 12 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
-| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 122 |
+| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 123 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 9 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 4 |
 | [`aoss`](services/aoss.yml) | 37 | 0 | 20 |
@@ -509,7 +509,7 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3912 |
-| `Get` | 3511 |
+| `Get` | 3512 |
 | `Delete` | 2628 |
 | `Create` | 2499 |
 | `Update` | 2181 |
