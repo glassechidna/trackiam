@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 23061
+* Unique actions: 23063
 * Managed policies: 1601
 
 Most common managed policy name prefixes:
@@ -403,6 +403,7 @@ The following table summarises the AWS APIs.
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
 | [`invoicing`](services/invoicing.yml) | 0 | 0 | 26 |
+| [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 25 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 25 |
 | [`mpa`](services/mpa.yml) | 0 | 0 | 25 |
 | [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 25 |
@@ -410,7 +411,6 @@ The following table summarises the AWS APIs.
 | [`s3files`](services/s3files.yml) | 0 | 0 | 24 |
 | [`evs`](services/evs.yml) | 0 | 0 | 24 |
 | [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 24 |
-| [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 23 |
 | [`agentaccess-mcp`](services/agentaccess-mcp.yml) | 0 | 0 | 23 |
 | [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 23 |
 | [`transform`](services/transform.yml) | 0 | 0 | 22 |
@@ -508,8 +508,8 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3912 |
-| `Get` | 3513 |
+| `List` | 3913 |
+| `Get` | 3514 |
 | `Delete` | 2628 |
 | `Create` | 2499 |
 | `Update` | 2181 |

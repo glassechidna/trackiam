@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AIDevOpsOperatorAppAccessPolicy",
   "CreateDate": "2026-03-26T03:42:13Z",
-  "DefaultVersionId": "v12",
+  "DefaultVersionId": "v13",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4ELWEUAH5T",
   "PolicyName": "AIDevOpsOperatorAppAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-11-05T01:07:08Z",
+    "CreateDate": "2026-11-11T18:07:08Z",
     "Document": {
       "Statement": [
         {
@@ -35,11 +35,15 @@
             "aidevops:GetAssociation",
             "aidevops:GetBacklogTask",
             "aidevops:GetChat",
+            "aidevops:GetKnowledgeGraph",
             "aidevops:GetKnowledgeItem",
+            "aidevops:GetPlan",
             "aidevops:GetRecommendation",
             "aidevops:GetTrigger",
             "aidevops:InitiateChatForCase",
             "aidevops:ListAccessTokens",
+            "aidevops:ListAgentSpaceMetrics",
+            "aidevops:ListAssetChanges",
             "aidevops:ListAssetFiles",
             "aidevops:ListAssetTypes",
             "aidevops:ListAssetVersions",
@@ -60,6 +64,7 @@
             "aidevops:RotateAccessToken",
             "aidevops:SearchAssets",
             "aidevops:SendMessage",
+            "aidevops:StopPlan",
             "aidevops:UpdateApprovalAction",
             "aidevops:UpdateAsset",
             "aidevops:UpdateAssetFile",
@@ -146,7 +151,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v12"
+    "VersionId": "v13"
   },
-  "UpdateDate": "2026-11-05T01:07:08Z"
+  "UpdateDate": "2026-11-11T18:07:08Z"
 }
