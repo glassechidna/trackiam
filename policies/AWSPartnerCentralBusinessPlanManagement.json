@@ -1,0 +1,114 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralBusinessPlanManagement",
+  "CreateDate": "2026-11-10T23:37:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4APJUBXPKF",
+  "PolicyName": "AWSPartnerCentralBusinessPlanManagement",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-10T23:37:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "partnercentral:AssociateBusinessPlan",
+            "partnercentral:CancelBusinessPlan",
+            "partnercentral:CancelBusinessPlanSubmissionTask",
+            "partnercentral:CreateBusinessPlanItem",
+            "partnercentral:DeleteBusinessPlanAttachment",
+            "partnercentral:DeleteBusinessPlanItem",
+            "partnercentral:DisassociateBusinessPlan",
+            "partnercentral:GetBusinessPlan",
+            "partnercentral:GetBusinessPlanAttachment",
+            "partnercentral:GetBusinessPlanAttachmentImportTask",
+            "partnercentral:GetBusinessPlanItem",
+            "partnercentral:GetBusinessPlanSubmissionTask",
+            "partnercentral:ListBusinessPlanAttachmentImportTasks",
+            "partnercentral:ListBusinessPlanAttachments",
+            "partnercentral:ListBusinessPlanHistory",
+            "partnercentral:ListBusinessPlanSubmissionTasks",
+            "partnercentral:StartBusinessPlanAttachmentImportTask",
+            "partnercentral:StartBusinessPlanSubmissionTask",
+            "partnercentral:TagResource",
+            "partnercentral:UntagResource",
+            "partnercentral:UpdateBusinessPlan",
+            "partnercentral:UpdateBusinessPlanItem"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:partnercentral:*:*:catalog/*/business-plan/*",
+          "Sid": "BusinessPlanResourceAccess"
+        },
+        {
+          "Action": [
+            "partnercentral:CreateBusinessPlan",
+            "partnercentral:GetBusinessPlanItemSchema",
+            "partnercentral:GetBusinessPlanSettings",
+            "partnercentral:ListBusinessPlanAssociations",
+            "partnercentral:ListBusinessPlanItems",
+            "partnercentral:ListBusinessPlans",
+            "partnercentral:PutBusinessPlanSettings"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BusinessPlanAccountAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:GetSellerReportingData"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aws-marketplace::*:AWSMarketplace/ReportingData/BillingEvent_V1/Dataset/BilledRevenue_V1",
+            "arn:aws:aws-marketplace::*:AWSMarketplace/ReportingData/Marketing_V1/Dataset/CaseStudy_V1",
+            "arn:aws:aws-marketplace::*:AWSMarketplace/ReportingData/Solution_V1/Dataset/Solution_V1"
+          ],
+          "Sid": "SellerReportingDataAccess"
+        },
+        {
+          "Action": [
+            "partnercentral:GetPartnerReportingData"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:partnercentral::*:catalog/AWS/ReportingData/AttributedRevenue_V1/Dataset/AttributedRevenue_V1",
+            "arn:aws:partnercentral::*:catalog/AWS/ReportingData/Benefits_V1/Dataset/MapPartnerPerformanceIndex_V1",
+            "arn:aws:partnercentral::*:catalog/AWS/ReportingData/Channel_V1/Dataset/ResellRevenueAndDiscounts_V1",
+            "arn:aws:partnercentral::*:catalog/AWS/ReportingData/Opportunity_V1/Dataset/OpportunityPipelineAnalysis_V1",
+            "arn:aws:partnercentral::*:catalog/AWS/ReportingData/PartnerCompetency_V1/Dataset/Competency_V1",
+            "arn:aws:partnercentral::*:catalog/AWS/ReportingData/TrainingAndCertification_V1/Dataset/TrainingAndCertifications_V1"
+          ],
+          "Sid": "PartnerReportingDataAccess"
+        },
+        {
+          "Action": [
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::aws-partner-central-marketplace-ephemeral-writeonly-files/${aws:PrincipalAccount}/*",
+          "Sid": "PartnerCentralEphemeralWriteS3Access"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-10T23:37:08Z"
+}

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AIDevOpsAgentAccessPolicy",
   "CreateDate": "2026-03-26T03:42:09Z",
-  "DefaultVersionId": "v14",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KEX6FTLTS",
   "PolicyName": "AIDevOpsAgentAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-11-06T21:57:08Z",
+    "CreateDate": "2026-11-11T00:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -182,16 +182,26 @@
             "cloudtrail:LookupEvents",
             "cloudwatch:Describe*",
             "cloudwatch:GenerateQuery",
+            "cloudwatch:GetAlert",
+            "cloudwatch:GetContextGraph",
             "cloudwatch:GetDashboard",
             "cloudwatch:GetInsightRuleReport",
+            "cloudwatch:GetIntelligenceConfiguration",
             "cloudwatch:GetMetricData",
             "cloudwatch:GetMetricStatistics",
             "cloudwatch:GetMetricStream",
             "cloudwatch:GetOTelEnrichment",
             "cloudwatch:GetProfileRecords",
+            "cloudwatch:GetRecords",
             "cloudwatch:GetService",
             "cloudwatch:GetServiceLevelObjective",
+            "cloudwatch:GetSpace",
+            "cloudwatch:GetTelemetryQueryResults",
             "cloudwatch:List*",
+            "cloudwatch:StartTelemetryQuery",
+            "cloudwatch:StartTelemetryQuerySession",
+            "cloudwatch:StopTelemetryQuery",
+            "cloudwatch:StopTelemetryQuerySession",
             "codeartifact:Describe*",
             "codeartifact:GetDomainPermissionsPolicy",
             "codeartifact:GetRepositoryPermissionsPolicy",
@@ -691,6 +701,7 @@
             "oam:GetSink",
             "oam:GetSinkPolicy",
             "oam:List*",
+            "observabilityadmin:ListDatasetIntegrations",
             "omics:GetAnnotationStore",
             "omics:GetReferenceStore",
             "omics:GetRunGroup",
@@ -1021,7 +1032,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v14"
+    "VersionId": "v15"
   },
-  "UpdateDate": "2026-11-06T21:57:08Z"
+  "UpdateDate": "2026-11-11T00:37:08Z"
 }

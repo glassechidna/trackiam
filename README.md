@@ -12,16 +12,16 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 23059
-* Managed policies: 1599
+* Unique actions: 23061
+* Managed policies: 1601
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 431 |
+| `arn:aws:iam::aws:policy/AWS*` | 432 |
 | `arn:aws:iam::aws:policy/Amazon*` | 381 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 367 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 368 |
 | `arn:aws:iam::aws:policy/service-role/*` | 230 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
 | Other | 175 |
@@ -372,7 +372,7 @@ The following table summarises the AWS APIs.
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 61 |
-| [`s3tables`](services/s3tables.yml) | 0 | 0 | 59 |
+| [`s3tables`](services/s3tables.yml) | 0 | 0 | 61 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
 | [`transform-custom`](services/transform-custom.yml) | 0 | 0 | 54 |
 | [`q`](services/q.yml) | 0 | 0 | 54 |
@@ -509,12 +509,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3912 |
-| `Get` | 3512 |
+| `Get` | 3513 |
 | `Delete` | 2628 |
 | `Create` | 2499 |
 | `Update` | 2181 |
 | `Describe` | 1967 |
-| `Put` | 619 |
+| `Put` | 620 |
 | `Start` | 569 |
 | `Batch` | 335 |
 | `Tag` | 328 |
