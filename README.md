@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 23071
-* Managed policies: 1603
+* Unique actions: 23087
+* Managed policies: 1604
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 432 |
 | `arn:aws:iam::aws:policy/Amazon*` | 381 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 370 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 371 |
 | `arn:aws:iam::aws:policy/service-role/*` | 230 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
 | Other | 175 |
@@ -78,13 +78,13 @@ The following table summarises the AWS APIs.
 | [`cloudformation`](services/cloudformation.yml) | 82 | 0 | 20 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 81 | 0 | 0 |
-| [`securityhub`](services/securityhub.yml) | 79 | 0 | 60 |
+| [`securityhub`](services/securityhub.yml) | 79 | 0 | 62 |
 | [`codecommit`](services/codecommit.yml) | 79 | 0 | 12 |
 | [`personalize`](services/personalize.yml) | 78 | 0 | 5 |
 | [`waf`](services/waf.yml) | 77 | 0 | 0 |
 | [`devicefarm`](services/devicefarm.yml) | 77 | 0 | 0 |
 | [`cleanrooms`](services/cleanrooms.yml) | 76 | 0 | 31 |
-| [`appstream`](services/appstream.yml) | 75 | 0 | 14 |
+| [`appstream`](services/appstream.yml) | 75 | 0 | 15 |
 | [`elasticache`](services/elasticache.yml) | 75 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
 | [`logs`](services/logs.yml) | 74 | 0 | 59 |
@@ -160,7 +160,7 @@ The following table summarises the AWS APIs.
 | [`swf`](services/swf.yml) | 39 | 0 | 12 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
-| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 123 |
+| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 127 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 9 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 4 |
 | [`aoss`](services/aoss.yml) | 37 | 0 | 20 |
@@ -237,10 +237,10 @@ The following table summarises the AWS APIs.
 | [`apptest`](services/apptest.yml) | 24 | 0 | 0 |
 | [`controltower`](services/controltower.yml) | 23 | 0 | 42 |
 | [`qapps`](services/qapps.yml) | 23 | 0 | 16 |
+| [`secretsmanager`](services/secretsmanager.yml) | 23 | 0 | 4 |
 | [`mq`](services/mq.yml) | 23 | 0 | 4 |
 | [`cognito-identity`](services/cognito-identity.yml) | 23 | 0 | 3 |
 | [`emr-containers`](services/emr-containers.yml) | 23 | 0 | 2 |
-| [`secretsmanager`](services/secretsmanager.yml) | 23 | 0 | 0 |
 | [`ecr-public`](services/ecr-public.yml) | 23 | 0 | 0 |
 | [`codeguru-profiler`](services/codeguru-profiler.yml) | 23 | 0 | 0 |
 | [`acm-pca`](services/acm-pca.yml) | 23 | 0 | 0 |
@@ -373,8 +373,8 @@ The following table summarises the AWS APIs.
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 61 |
 | [`s3tables`](services/s3tables.yml) | 0 | 0 | 61 |
+| [`transform-custom`](services/transform-custom.yml) | 0 | 0 | 58 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
-| [`transform-custom`](services/transform-custom.yml) | 0 | 0 | 54 |
 | [`q`](services/q.yml) | 0 | 0 | 54 |
 | [`health-agent`](services/health-agent.yml) | 0 | 0 | 49 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 48 |
@@ -427,9 +427,9 @@ The following table summarises the AWS APIs.
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
 | [`nova-act`](services/nova-act.yml) | 0 | 0 | 16 |
 | [`groundtruthlabeling`](services/groundtruthlabeling.yml) | 0 | 0 | 16 |
+| [`airflow-serverless`](services/airflow-serverless.yml) | 0 | 0 | 16 |
 | [`bcm-dashboards`](services/bcm-dashboards.yml) | 0 | 0 | 15 |
 | [`backup-storage`](services/backup-storage.yml) | 0 | 0 | 15 |
-| [`airflow-serverless`](services/airflow-serverless.yml) | 0 | 0 | 15 |
 | [`workspaces-instances`](services/workspaces-instances.yml) | 0 | 0 | 14 |
 | [`ssm-quicksetup`](services/ssm-quicksetup.yml) | 0 | 0 | 14 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 14 |
@@ -508,13 +508,13 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3914 |
-| `Get` | 3516 |
-| `Delete` | 2628 |
-| `Create` | 2499 |
-| `Update` | 2181 |
+| `List` | 3916 |
+| `Get` | 3519 |
+| `Delete` | 2630 |
+| `Create` | 2500 |
+| `Update` | 2182 |
 | `Describe` | 1967 |
-| `Put` | 620 |
+| `Put` | 623 |
 | `Start` | 569 |
 | `Batch` | 335 |
 | `Tag` | 328 |

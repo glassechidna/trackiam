@@ -1,0 +1,113 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSMarketplaceAgenticCommerceServiceRolePolicy",
+  "CreateDate": "2026-11-12T18:37:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4PSP4Z64B2",
+  "PolicyName": "AWSMarketplaceAgenticCommerceServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-12T18:37:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aws-marketplace:AcceptAgreementRequest",
+            "aws-marketplace:CreateAgreementRequest"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws-marketplace:AgreementType": [
+                "PurchaseAgreement"
+              ]
+            },
+            "Null": {
+              "aws-marketplace:AgreementType": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MarketplaceAgreementCreation"
+        },
+        {
+          "Action": [
+            "aws-marketplace:DescribeAgreement",
+            "aws-marketplace:GetAgreementTerms",
+            "aws-marketplace:SearchAgreements"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws-marketplace:AgreementType": [
+                "PurchaseAgreement"
+              ]
+            },
+            "Null": {
+              "aws-marketplace:AgreementType": "false"
+            },
+            "StringEquals": {
+              "aws-marketplace:PartyType": "Acceptor",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MarketplaceAgreementRead"
+        },
+        {
+          "Action": [
+            "aws-marketplace:GetAgreementEntitlements"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws-marketplace:AgreementType": [
+                "PurchaseAgreement"
+              ]
+            },
+            "Null": {
+              "aws-marketplace:AgreementType": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MarketplaceAgreementEntitlements"
+        },
+        {
+          "Action": [
+            "aws-marketplace:GetListing",
+            "aws-marketplace:GetOffer",
+            "aws-marketplace:GetOfferTerms",
+            "aws-marketplace:GetProduct",
+            "aws-marketplace:ListFulfillmentOptions",
+            "aws-marketplace:ListPurchaseOptions"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:aws-marketplace:::catalog/AWSMarketplace*/listing/*",
+            "arn:aws:aws-marketplace:::catalog/AWSMarketplace*/offer/*",
+            "arn:aws:aws-marketplace:::catalog/AWSMarketplace*/product/*",
+            "arn:aws:aws-marketplace:::catalog/AWSMarketplace*/purchaseOption/*"
+          ],
+          "Sid": "MarketplaceDiscovery"
+        },
+        {
+          "Action": [
+            "aws-marketplace:MeterUsage"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "MarketplaceMetering"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-12T18:37:08Z"
+}

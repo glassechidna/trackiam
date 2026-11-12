@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSElasticBeanstalkServiceRolePolicy",
   "CreateDate": "2017-09-13T23:46:37Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIID62QSI3OSIPQXTM",
   "PolicyName": "AWSElasticBeanstalkServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-08-18T17:17:24Z",
+    "CreateDate": "2026-11-12T20:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -533,6 +533,19 @@
         },
         {
           "Action": [
+            "iam:SimulatePrincipalPolicy"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*",
+          "Sid": "EBIamSimulateRolePermissions"
+        },
+        {
+          "Action": [
             "s3:CreateBucket",
             "s3:GetObject",
             "s3:GetObjectVersion",
@@ -608,7 +621,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2026-08-18T17:17:24Z"
+  "UpdateDate": "2026-11-12T20:37:08Z"
 }

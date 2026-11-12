@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/NetworkSecurityManagerServiceRolePolicy",
   "CreateDate": "2026-08-18T18:27:18Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4N7QSJELX4",
   "PolicyName": "NetworkSecurityManagerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-11-05T19:47:07Z",
+    "CreateDate": "2026-11-12T22:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -413,6 +413,19 @@
             "arn:*:network-firewall:*:*:firewall-policy/*"
           ],
           "Sid": "NetworkFirewallPolicyUpdateScoped"
+        },
+        {
+          "Action": [
+            "payments:GetConnectedAccount"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:payments:*:*:connectedaccount/*",
+          "Sid": "Wafv2GetConnectedAccount"
         },
         {
           "Action": [
@@ -874,7 +887,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2026-11-05T19:47:07Z"
+  "UpdateDate": "2026-11-12T22:37:08Z"
 }

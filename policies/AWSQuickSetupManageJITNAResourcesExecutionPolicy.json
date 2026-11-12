@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupManageJITNAResourcesExecutionPolicy",
   "CreateDate": "2025-04-17T21:37:05Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BVH52EPXL",
   "PolicyName": "AWSQuickSetupManageJITNAResourcesExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:57:30Z",
+    "CreateDate": "2026-11-12T17:27:08Z",
     "Document": {
       "Statement": [
         {
@@ -16,7 +16,7 @@
           ],
           "Condition": {
             "ArnEquals": {
-              "iam:PolicyARN": "arn:aws:iam::*:policy/AWSSystemsManagerJustInTimeAccessTokenPolicy"
+              "iam:PolicyARN": "arn:aws:iam::aws:policy/AWSSystemsManagerJustInTimeAccessTokenPolicy"
             }
           },
           "Effect": "Allow",
@@ -90,8 +90,8 @@
       ],
       "Version": "2012-10-17"
     },
-    "IsDefaultVersion": false,
-    "VersionId": "v6"
+    "IsDefaultVersion": true,
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-02-12T17:57:30Z"
+  "UpdateDate": "2026-11-12T17:27:08Z"
 }

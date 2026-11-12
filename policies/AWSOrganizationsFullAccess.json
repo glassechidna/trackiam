@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSOrganizationsFullAccess",
   "CreateDate": "2018-11-06T20:31:57Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJZXBNRCJKNLQHSB5M",
   "PolicyName": "AWSOrganizationsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:59:07Z",
+    "CreateDate": "2026-11-12T18:57:07Z",
     "Document": {
       "Statement": [
         {
@@ -38,7 +38,9 @@
             "account:ListRegions",
             "account:PutAccountName",
             "account:PutAlternateContact",
-            "account:PutContactInformation"
+            "account:PutContactInformation",
+            "account:SendPhoneNumberVerification",
+            "account:VerifyPhoneNumber"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -48,7 +50,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-02-12T17:59:07Z"
+  "UpdateDate": "2026-11-12T18:57:07Z"
 }
