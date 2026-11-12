@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSTransformServerMigrationAgentPolicy",
   "CreateDate": "2026-08-06T15:27:14Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4KVIHBDOCE",
   "PolicyName": "AWSTransformServerMigrationAgentPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-10-11T08:47:08Z",
+    "CreateDate": "2026-11-12T06:37:07Z",
     "Document": {
       "Statement": [
         {
@@ -55,6 +55,38 @@
             "arn:aws:fsx:*:*:volume/*/*"
           ],
           "Sid": "FsxViaMgnCreateVolume"
+        },
+        {
+          "Action": "mgn:StartRemoteSourceActionJob",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:RequestTag/CreatedBy": "AWSTransform",
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:mgn:*:*:remote-source-action-job/*",
+          "Sid": "MgnRemoteSourceActionJobCreateWithRequestTag"
+        },
+        {
+          "Action": [
+            "cloudwatch:GetMetricData"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchViaMgnOperationsReadOnly"
         },
         {
           "Action": [
@@ -131,6 +163,26 @@
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*:*:security-group/*",
           "Sid": "Ec2ViaMgnSecurityGroupCreate"
+        },
+        {
+          "Action": [
+            "ec2:CreateSecurityGroup"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "mgn.amazonaws.com"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:vpc/*",
+          "Sid": "Ec2ViaMgnCreateSecurityGroupOnAmsVpc"
         },
         {
           "Action": [
@@ -346,6 +398,7 @@
         },
         {
           "Action": [
+            "ec2:DescribeInstanceTypeOfferings",
             "ec2:DescribeInstanceTypes",
             "ec2:DescribeLaunchTemplateVersions",
             "ec2:DescribeSecurityGroups",
@@ -420,6 +473,36 @@
             "arn:aws:ec2:*:*:subnet/*"
           ],
           "Sid": "Ec2ViaMgnRunInstancesOnAmsSubnet"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:DescribeTags",
+            "elasticloadbalancing:DescribeTargetGroups",
+            "elasticloadbalancing:DescribeTargetHealth"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ElbOperationsReadOnly"
+        },
+        {
+          "Action": [
+            "elasticloadbalancing:RegisterTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/CreatedBy": "AWSApplicationMigrationService"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticloadbalancing:*:*:targetgroup/*/*",
+          "Sid": "ElbTargetGroupRegisterTargetsWithResourceTag"
         },
         {
           "Action": [
@@ -526,6 +609,7 @@
             "mgn:TerminateTargetInstances",
             "mgn:UpdateApplication",
             "mgn:UpdateLaunchConfiguration",
+            "mgn:UpdateLaunchConfigurationDefaults",
             "mgn:UpdateWave"
           ],
           "Condition": {
@@ -544,6 +628,7 @@
             "mgn:ChangeServerLifecycleState",
             "mgn:FinalizeCutover",
             "mgn:GetReplicationConfiguration",
+            "mgn:ListRemoteSourceActionInvocationResults",
             "mgn:ListSourceServerActions",
             "mgn:ListTagsForResource",
             "mgn:MarkAsArchived",
@@ -552,6 +637,7 @@
             "mgn:RemoveSourceServerAction",
             "mgn:ResumeReplication",
             "mgn:StartCutover",
+            "mgn:StartRemoteSourceActionJob",
             "mgn:StartReplication",
             "mgn:StartTest",
             "mgn:StopReplication",
@@ -567,12 +653,16 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:mgn:*:*:source-server/*",
+          "Resource": [
+            "arn:aws:mgn:*:*:remote-source-action/*",
+            "arn:aws:mgn:*:*:source-server/*"
+          ],
           "Sid": "MgnSourceServerLifecycleOperations"
         },
         {
           "Action": [
             "mgn:CreateApplication",
+            "mgn:CreateRemoteSourceAction",
             "mgn:CreateWave"
           ],
           "Condition": {
@@ -588,9 +678,27 @@
         },
         {
           "Action": [
+            "mgn:DeleteRemoteSourceAction",
+            "mgn:UpdateRemoteSourceAction"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:ResourceTag/CreatedBy": "AWSTransform"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:mgn:*:*:remote-source-action/*",
+          "Sid": "MgnRemoteSourceActionOperationsWithResourceTag"
+        },
+        {
+          "Action": [
             "mgn:DescribeJobLogItems",
             "mgn:ListExportErrors",
-            "mgn:ListImportErrors"
+            "mgn:ListImportErrors",
+            "mgn:ListRemoteSourceActionInvocations"
           ],
           "Condition": {
             "StringEquals": {
@@ -604,7 +712,8 @@
           "Resource": [
             "arn:aws:mgn:*:*:export/*",
             "arn:aws:mgn:*:*:import/*",
-            "arn:aws:mgn:*:*:job/*"
+            "arn:aws:mgn:*:*:job/*",
+            "arn:aws:mgn:*:*:remote-source-action-job/*"
           ],
           "Sid": "MgnJobAndErrorOperationsReadOnly"
         },
@@ -617,11 +726,14 @@
             "mgn:DescribeSourceServers",
             "mgn:DescribeVcenterClients",
             "mgn:GetLaunchConfiguration",
+            "mgn:GetLaunchConfigurationDefaults",
             "mgn:ListApplications",
             "mgn:ListConnectors",
             "mgn:ListExports",
             "mgn:ListImportFileEnrichments",
             "mgn:ListImports",
+            "mgn:ListRemoteSourceActionJobs",
+            "mgn:ListRemoteSourceActions",
             "mgn:ListTemplateActions",
             "mgn:ListWaves"
           ],
@@ -683,6 +795,41 @@
         },
         {
           "Action": [
+            "mgn:StartRemoteSourceActionJob"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:ResourceTag/CreatedFor": "AWSTransform"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:mgn:*:*:connector/*",
+          "Sid": "MgnRemoteSourceActionConnectorOperationsWithResourceTag"
+        },
+        {
+          "Action": [
+            "mgn:StartRemoteSourceActionJob"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
+              "aws:ResourceOrgID": "${aws:PrincipalOrgID}",
+              "aws:ResourceTag/ATWorkspace": "${aws:PrincipalTag/WorkspaceId}",
+              "aws:ResourceTag/CreatedBy": "AWSTransform"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:mgn:*:*:remote-source-action/*",
+            "arn:aws:mgn:*:*:source-server/*"
+          ],
+          "Sid": "MgnRemoteSourceActionCrossAccountOperationsWithResourceTag"
+        },
+        {
+          "Action": [
             "mgn:TagResource"
           ],
           "Condition": {
@@ -713,15 +860,19 @@
               "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}",
               "aws:ResourceAccount": "${aws:PrincipalAccount}",
               "mgn:CreateAction": [
+                "CreateRemoteSourceAction",
                 "StartExport",
-                "StartImport"
+                "StartImport",
+                "StartRemoteSourceActionJob"
               ]
             }
           },
           "Effect": "Allow",
           "Resource": [
             "arn:aws:mgn:*:*:export/*",
-            "arn:aws:mgn:*:*:import/*"
+            "arn:aws:mgn:*:*:import/*",
+            "arn:aws:mgn:*:*:remote-source-action-job/*",
+            "arn:aws:mgn:*:*:remote-source-action/*"
           ],
           "Sid": "MgnImportExportTagOperationsWrite"
         },
@@ -745,6 +896,19 @@
           "Effect": "Allow",
           "Resource": "arn:aws:mgn:*:*:job/*",
           "Sid": "MgnJobTagOperationsWrite"
+        },
+        {
+          "Action": [
+            "s3-outposts:ListOutpostsWithS3"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestedRegion": "${aws:PrincipalTag/TargetRegion}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "S3OutpostsOperationsReadOnly"
         },
         {
           "Action": [
@@ -1066,7 +1230,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-10-11T08:47:08Z"
+  "UpdateDate": "2026-11-12T06:37:07Z"
 }
