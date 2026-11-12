@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AuroraDsqlServiceLinkedRolePolicy",
   "CreateDate": "2024-12-03T15:06:07Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4NLZGIT7C3",
   "PolicyName": "AuroraDsqlServiceLinkedRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:01:12Z",
+    "CreateDate": "2026-11-12T00:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -24,13 +24,33 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "*"
+          "Resource": "*",
+          "Sid": "AllowCloudwatchMetricsAccess"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents",
+            "logs:PutRetentionPolicy"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/dsql/normalized-sql-text",
+            "arn:aws:logs:*:*:log-group:/aws/dsql/normalized-sql-text:*"
+          ],
+          "Sid": "AllowCloudwatchLogsAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-02-12T18:01:12Z"
+  "UpdateDate": "2026-11-12T00:37:08Z"
 }
