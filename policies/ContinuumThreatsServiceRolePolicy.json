@@ -1,0 +1,74 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/ContinuumThreatsServiceRolePolicy",
+  "CreateDate": "2026-11-13T17:27:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4OM5Q5CVHP",
+  "PolicyName": "ContinuumThreatsServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-13T17:27:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "config:PutServiceLinkedConfigurationRecorder",
+          "Condition": {
+            "StringEquals": {
+              "config:ConfigurationRecorderServicePrincipal": "threats.continuum.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PutServiceLinkedConfigurationRecorder"
+        },
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "iam:AWSServiceName": "config.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig",
+          "Sid": "CreateConfigServiceLinkedRole"
+        },
+        {
+          "Action": [
+            "cloudtrail:CreateServiceLinkedChannel",
+            "cloudtrail:DeleteServiceLinkedChannel",
+            "cloudtrail:GetServiceLinkedChannel",
+            "cloudtrail:UpdateServiceLinkedChannel"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudtrail:*:*:channel/aws-service-channel/continuumthreats/*",
+          "Sid": "ManageServiceLinkedChannel"
+        },
+        {
+          "Action": [
+            "config:DeleteServiceLinkedConfigurationRecorder",
+            "config:DescribeConfigurationRecorderStatus"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "config:ConfigurationRecorderServicePrincipal": "threats.continuum.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:config:*:*:configuration-recorder/AWSConfigurationRecorderFor*/*",
+          "Sid": "ManageServiceLinkedConfigurationRecorder"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-13T17:27:08Z"
+}
