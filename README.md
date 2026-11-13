@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 23087
+* Unique actions: 23097
 * Managed policies: 1604
 
 Most common managed policy name prefixes:
@@ -75,7 +75,7 @@ The following table summarises the AWS APIs.
 | [`iotsitewise`](services/iotsitewise.yml) | 84 | 0 | 67 |
 | [`workmail`](services/workmail.yml) | 84 | 0 | 42 |
 | [`omics`](services/omics.yml) | 82 | 0 | 26 |
-| [`cloudformation`](services/cloudformation.yml) | 82 | 0 | 20 |
+| [`cloudformation`](services/cloudformation.yml) | 82 | 0 | 22 |
 | [`waf-regional`](services/waf-regional.yml) | 81 | 0 | 0 |
 | [`macie2`](services/macie2.yml) | 81 | 0 | 0 |
 | [`securityhub`](services/securityhub.yml) | 79 | 0 | 62 |
@@ -88,7 +88,7 @@ The following table summarises the AWS APIs.
 | [`elasticache`](services/elasticache.yml) | 75 | 0 | 2 |
 | [`rekognition`](services/rekognition.yml) | 75 | 0 | 1 |
 | [`logs`](services/logs.yml) | 74 | 0 | 59 |
-| [`guardduty`](services/guardduty.yml) | 74 | 0 | 29 |
+| [`guardduty`](services/guardduty.yml) | 74 | 0 | 30 |
 | [`opsworks`](services/opsworks.yml) | 74 | 0 | 0 |
 | [`sso`](services/sso.yml) | 73 | 0 | 53 |
 | [`imagebuilder`](services/imagebuilder.yml) | 73 | 0 | 4 |
@@ -363,10 +363,10 @@ The following table summarises the AWS APIs.
 | [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 259 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 164 |
 | [`securityagent`](services/securityagent.yml) | 0 | 0 | 119 |
+| [`odb`](services/odb.yml) | 0 | 0 | 96 |
 | [`assurance`](services/assurance.yml) | 0 | 0 | 96 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
 | [`aidevops`](services/aidevops.yml) | 0 | 0 | 94 |
-| [`odb`](services/odb.yml) | 0 | 0 | 91 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
 | [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 83 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
@@ -407,11 +407,11 @@ The following table summarises the AWS APIs.
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 25 |
 | [`mpa`](services/mpa.yml) | 0 | 0 | 25 |
 | [`arc-region-switch`](services/arc-region-switch.yml) | 0 | 0 | 25 |
+| [`agentaccess-mcp`](services/agentaccess-mcp.yml) | 0 | 0 | 25 |
 | [`vendor-insights`](services/vendor-insights.yml) | 0 | 0 | 24 |
 | [`s3files`](services/s3files.yml) | 0 | 0 | 24 |
 | [`evs`](services/evs.yml) | 0 | 0 | 24 |
 | [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 24 |
-| [`agentaccess-mcp`](services/agentaccess-mcp.yml) | 0 | 0 | 23 |
 | [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 23 |
 | [`transform`](services/transform.yml) | 0 | 0 | 22 |
 | [`agent-registry`](services/agent-registry.yml) | 0 | 0 | 22 |
@@ -508,11 +508,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3916 |
-| `Get` | 3519 |
+| `List` | 3917 |
+| `Get` | 3520 |
 | `Delete` | 2630 |
 | `Create` | 2500 |
-| `Update` | 2182 |
+| `Update` | 2185 |
 | `Describe` | 1967 |
 | `Put` | 623 |
 | `Start` | 569 |
