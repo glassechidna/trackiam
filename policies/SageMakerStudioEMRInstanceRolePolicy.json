@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioEMRInstanceRolePolicy",
   "CreateDate": "2025-02-27T00:22:06Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4D45YEDPXD",
   "PolicyName": "SageMakerStudioEMRInstanceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-06-01T23:27:10Z",
+    "CreateDate": "2026-11-13T21:17:07Z",
     "Document": {
       "Statement": [
         {
@@ -143,12 +143,34 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "EMRRuntimeRoleAssumePermissions"
+        },
+        {
+          "Action": [
+            "sts:AssumeRole",
+            "sts:TagSession"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "LakeFormationAuthorizedCaller"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringEqualsIfExists": {
+              "aws:RequestTag/LakeFormationAuthorizedCaller": "Amazon EMR"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/${aws:PrincipalTag/AmazonDataZoneExecutionRolePath}",
+          "Sid": "AssumeTaggedExecutionRole"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-06-01T23:27:10Z"
+  "UpdateDate": "2026-11-13T21:17:07Z"
 }

@@ -1,15 +1,29 @@
 {
   "Arn": "arn:aws:iam::aws:policy/WellArchitectedConsoleFullAccess",
   "CreateDate": "2018-11-29T18:19:23Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIH6HSBHM3VSYC5SKA",
   "PolicyName": "WellArchitectedConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-10-29T22:37:07Z",
+    "CreateDate": "2026-11-13T19:37:08Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:AttachRolePolicy",
+          "Condition": {
+            "ArnLike": {
+              "iam:PolicyARN": [
+                "arn:aws:iam::*:policy/service-role/WAAgentExecutionPolicy*",
+                "arn:aws:iam::*:policy/service-role/WAAgentExecutionRolePolicy*",
+                "arn:aws:iam::aws:policy/WellArchitectedAgentResourceScanning"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/service-role/*"
+        },
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
@@ -54,6 +68,19 @@
           "Resource": "*"
         },
         {
+          "Action": "iam:CreatePolicy",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:policy/service-role/WAAgentExecutionPolicy*",
+            "arn:aws:iam::*:policy/service-role/WAAgentExecutionRolePolicy*"
+          ]
+        },
+        {
+          "Action": "iam:CreateRole",
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/service-role/*"
+        },
+        {
           "Action": "iam:GetRole",
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/scanning.agent.wellarchitected.amazonaws.com/AWSServiceRoleForWellArchitectedAgent_ResourceScanning"
@@ -67,23 +94,6 @@
           "Action": "wellarchitected:*",
           "Effect": "Allow",
           "Resource": "*"
-        },
-        {
-          "Action": [
-            "iam:AttachRolePolicy",
-            "iam:CreateRole"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/service-role/*"
-        },
-        {
-          "Action": [
-            "iam:CreatePolicy",
-            "iam:CreatePolicyVersion",
-            "iam:DeletePolicyVersion"
-          ],
-          "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:policy/service-role/*"
         },
         {
           "Action": [
@@ -120,7 +130,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-10-29T22:37:07Z"
+  "UpdateDate": "2026-11-13T19:37:08Z"
 }

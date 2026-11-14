@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/ROSAControlPlaneOperatorPolicy",
   "CreateDate": "2023-04-24T23:02:49Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4KA4P7YA2C",
   "PolicyName": "ROSAControlPlaneOperatorPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-07-28T23:12:18Z",
+    "CreateDate": "2026-11-13T23:47:08Z",
     "Document": {
       "Statement": [
         {
@@ -155,7 +155,11 @@
           "Condition": {
             "ForAllValues:StringLike": {
               "route53:ChangeResourceRecordSetsNormalizedRecordNames": [
-                "*.hypershift.local"
+                "*.devshift.org",
+                "*.devshiftusgov.com",
+                "*.hypershift.local",
+                "*.openshiftapps.com",
+                "*.openshiftusgov.com"
               ]
             }
           },
@@ -193,6 +197,7 @@
             "ec2:DescribeSubnets",
             "ec2:DescribeVpcEndpoints",
             "ec2:DescribeVpcs",
+            "route53:GetHostedZone",
             "route53:ListHostedZones"
           ],
           "Effect": "Allow",
@@ -211,6 +216,23 @@
         },
         {
           "Action": [
+            "route53:ChangeTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:route53:::hostedzone/*",
+          "Sid": "TagHostedZones"
+        },
+        {
+          "Action": [
+            "route53:CreateHostedZone",
+            "route53:DeleteHostedZone"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ManageHostedZones"
+        },
+        {
+          "Action": [
             "route53:ListResourceRecordSets"
           ],
           "Effect": "Allow",
@@ -223,7 +245,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2026-07-28T23:12:18Z"
+  "UpdateDate": "2026-11-13T23:47:08Z"
 }

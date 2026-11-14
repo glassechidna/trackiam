@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 23114
+* Unique actions: 23123
 * Managed policies: 1605
 
 Most common managed policy name prefixes:
@@ -95,7 +95,7 @@ The following table summarises the AWS APIs.
 | [`frauddetector`](services/frauddetector.yml) | 73 | 0 | 1 |
 | [`wellarchitected`](services/wellarchitected.yml) | 72 | 0 | 41 |
 | [`mgn`](services/mgn.yml) | 70 | 0 | 77 |
-| [`route53`](services/route53.yml) | 70 | 0 | 1 |
+| [`route53`](services/route53.yml) | 70 | 0 | 9 |
 | [`athena`](services/athena.yml) | 68 | 0 | 18 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 2 |
 | [`ds`](services/ds.yml) | 67 | 0 | 24 |
@@ -362,7 +362,7 @@ The following table summarises the AWS APIs.
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 259 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 164 |
-| [`securityagent`](services/securityagent.yml) | 0 | 0 | 119 |
+| [`securityagent`](services/securityagent.yml) | 0 | 0 | 120 |
 | [`odb`](services/odb.yml) | 0 | 0 | 96 |
 | [`assurance`](services/assurance.yml) | 0 | 0 | 96 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
@@ -508,11 +508,11 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3918 |
-| `Get` | 3525 |
-| `Delete` | 2633 |
-| `Create` | 2503 |
-| `Update` | 2186 |
+| `List` | 3920 |
+| `Get` | 3526 |
+| `Delete` | 2635 |
+| `Create` | 2505 |
+| `Update` | 2187 |
 | `Describe` | 1967 |
 | `Put` | 626 |
 | `Start` | 569 |

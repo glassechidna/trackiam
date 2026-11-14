@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy",
   "CreateDate": "2024-11-20T21:59:23Z",
-  "DefaultVersionId": "v76",
+  "DefaultVersionId": "v77",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4L52FJ276H",
   "PolicyName": "SageMakerStudioProjectUserRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-10-29T22:37:07Z",
+    "CreateDate": "2026-11-13T20:47:08Z",
     "Document": {
       "Statement": [
         {
@@ -430,19 +430,24 @@
             "bedrock:CreateBlueprint",
             "bedrock:CreateBlueprintVersion",
             "bedrock:CreateDataAutomationProject",
+            "bedrock:CreateDataSource",
             "bedrock:CreateEvaluationJob",
+            "bedrock:CreateKnowledgeBase",
             "bedrock:CreatePrompt",
             "bedrock:CreatePromptVersion",
             "bedrock:DeleteAgentAlias",
             "bedrock:DeleteAgentVersion",
             "bedrock:DeleteBlueprint",
             "bedrock:DeleteDataAutomationProject",
+            "bedrock:DeleteDataSource",
+            "bedrock:DeleteKnowledgeBase",
             "bedrock:DeletePrompt",
             "bedrock:GetAgentAlias",
             "bedrock:GetAgentVersion",
             "bedrock:GetBlueprint",
             "bedrock:GetDataAutomationProject",
             "bedrock:GetDataAutomationStatus",
+            "bedrock:GetDataSource",
             "bedrock:GetEvaluationJob",
             "bedrock:GetIngestionJob",
             "bedrock:GetKnowledgeBase",
@@ -454,6 +459,7 @@
             "bedrock:ListAgentAliases",
             "bedrock:ListAgentKnowledgeBases",
             "bedrock:ListAgentVersions",
+            "bedrock:ListDataSources",
             "bedrock:ListIngestionJobs",
             "bedrock:ListPrompts",
             "bedrock:ListTagsForResource",
@@ -462,7 +468,9 @@
             "bedrock:StopEvaluationJob",
             "bedrock:UpdateAgentAlias",
             "bedrock:UpdateBlueprint",
-            "bedrock:UpdateDataAutomationProject"
+            "bedrock:UpdateDataAutomationProject",
+            "bedrock:UpdateDataSource",
+            "bedrock:UpdateKnowledgeBase"
           ],
           "Condition": {
             "StringEquals": {
@@ -1047,6 +1055,7 @@
           },
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:glue:*:*:dataQualityEvaluationConfig/sagemaker_unified_studio_profiling_${aws:PrincipalTag/AmazonDataZoneProject}_*",
             "arn:aws:glue:*:*:dataQualityRuleset/dq_etl_ruleset_${aws:PrincipalTag/AmazonDataZoneProject}_*"
           ],
           "Sid": "GlueDQVetl"
@@ -1406,6 +1415,7 @@
                 "airflow-serverless.amazonaws.com",
                 "airflow.amazonaws.com",
                 "bedrock-agentcore.amazonaws.com",
+                "bedrock.amazonaws.com",
                 "elasticmapreduce.amazonaws.com",
                 "emr-serverless.amazonaws.com",
                 "glue.amazonaws.com",
@@ -2842,7 +2852,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v76"
+    "VersionId": "v77"
   },
-  "UpdateDate": "2026-10-29T22:37:07Z"
+  "UpdateDate": "2026-11-13T20:47:08Z"
 }

@@ -1,15 +1,26 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioProjectRoleMachineLearningPolicy",
   "CreateDate": "2024-11-20T21:55:27Z",
-  "DefaultVersionId": "v47",
+  "DefaultVersionId": "v48",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NSSEENOX7",
   "PolicyName": "SageMakerStudioProjectRoleMachineLearningPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-10-29T22:27:07Z",
+    "CreateDate": "2026-11-13T20:47:08Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "agent-registry:CreateRegistryRecord",
+          "Condition": {
+            "StringEquals": {
+              "aws:RequestTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ARCreate"
+        },
         {
           "Action": "bedrock-agentcore:CreateHarnessEndpoint",
           "Condition": {
@@ -62,6 +73,40 @@
           "Sid": "SageMakerSLRForAutoScalingPermissions"
         },
         {
+          "Action": "kms:Decrypt",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "kms:EncryptionContextKeys": [
+                "aws:identitystore:identitystore-arn",
+                "aws:sso:instance-arn"
+              ]
+            },
+            "StringLike": {
+              "kms:ViaService": [
+                "identitystore.*.amazonaws.com",
+                "sso.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IdCKmsDecrypt"
+        },
+        {
+          "Action": "kms:DescribeKey",
+          "Condition": {
+            "StringLike": {
+              "kms:ViaService": [
+                "identitystore.*.amazonaws.com",
+                "sso.*.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IdCKmsDescribe"
+        },
+        {
           "Action": "logs:PutRetentionPolicy",
           "Condition": {
             "ForAnyValue:StringEquals": {
@@ -74,6 +119,23 @@
           "Effect": "Allow",
           "Resource": "arn:aws:logs:*:*:log-group:/aws/bedrock-agentcore/*",
           "Sid": "ACLogRetention"
+        },
+        {
+          "Action": [
+            "agent-registry:DeleteRegistryRecord",
+            "agent-registry:SubmitRegistryRecordForApproval",
+            "agent-registry:TagResource",
+            "agent-registry:UpdateRegistryRecord",
+            "agent-registry:UpdateRegistryRecordStatus"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonDataZoneProject": "${aws:PrincipalTag/AmazonDataZoneProject}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ARPublisher"
         },
         {
           "Action": [
@@ -150,6 +212,7 @@
           "Action": [
             "bedrock-agentcore:*AgentRuntime",
             "bedrock-agentcore:*AgentRuntimeEndpoint",
+            "bedrock-agentcore:*ApiKeyCredentialProvider",
             "bedrock-agentcore:*BatchEvaluation*",
             "bedrock-agentcore:*Dataset*",
             "bedrock-agentcore:*Event",
@@ -161,6 +224,7 @@
             "bedrock-agentcore:*MemoryRecord*",
             "bedrock-agentcore:*WorkloadIdentity",
             "bedrock-agentcore:GetConfigurationBundleVersion",
+            "bedrock-agentcore:GetResourceApiKey",
             "bedrock-agentcore:GetWorkloadAccessToken",
             "bedrock-agentcore:GetWorkloadAccessTokenForJWT",
             "bedrock-agentcore:ListActors",
@@ -182,8 +246,12 @@
         },
         {
           "Action": [
+            "bedrock-agentcore:*ApiKeyCredentialProvider",
+            "bedrock-agentcore:*TokenVault",
             "bedrock-agentcore:CreateWorkloadIdentity",
-            "bedrock-agentcore:DeleteWorkloadIdentity"
+            "bedrock-agentcore:DeleteWorkloadIdentity",
+            "bedrock-agentcore:GetResourceApiKey",
+            "bedrock-agentcore:ListTagsForResource"
           ],
           "Condition": {
             "StringEquals": {
@@ -191,7 +259,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:*:bedrock-agentcore:*:*:workload-identity-directory/default",
+          "Resource": [
+            "arn:*:bedrock-agentcore:*:*:token-vault/default",
+            "arn:*:bedrock-agentcore:*:*:workload-identity-directory/default"
+          ],
           "Sid": "ACIdentityDirectory"
         },
         {
@@ -349,8 +420,13 @@
           "Action": [
             "identitystore:DescribeGroup",
             "identitystore:DescribeUser",
+            "identitystore:GetGroupId",
+            "identitystore:GetUserId",
+            "sso-directory:DescribeGroup",
+            "sso-directory:DescribeUser",
             "sso:DescribeApplication",
-            "sso:DescribeInstance"
+            "sso:DescribeInstance",
+            "sso:ListInstances"
           ],
           "Condition": {
             "Bool": {
@@ -1247,6 +1323,22 @@
         },
         {
           "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:PutSecretValue"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "bedrock-agentcore.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:bedrock-agentcore-identity!*",
+          "Sid": "ACApiKeySecret"
+        },
+        {
+          "Action": [
             "sqlworkbench:GetConnection"
           ],
           "Condition": {
@@ -1264,6 +1356,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:*:iam::*:role/aws-service-role/sagemaker.amazonaws.com/AWSServiceRoleForAmazonSageMakerNotebooks",
+            "arn:aws:iam::*:role/aws-service-role/agent-registry.amazonaws.com/AWSServiceRoleForAgentRegistry",
             "arn:aws:iam::*:role/aws-service-role/airflow-serverless.amazonaws.com/AWSServiceRoleForAmazonMWAAServerless",
             "arn:aws:iam::*:role/aws-service-role/bedrock-agentcore.amazonaws.com/AWSServiceRoleForBedrockAgentCoreGatewayNetwork",
             "arn:aws:iam::*:role/aws-service-role/identity-network.bedrock-agentcore.amazonaws.com/AWSServiceRoleForBedrockAgentCoreIdentity",
@@ -1271,6 +1364,18 @@
             "arn:aws:iam::*:role/aws-service-role/runtime-identity.bedrock-agentcore.amazonaws.com/AWSServiceRoleForBedrockAgentCoreRuntimeIdentity"
           ],
           "Sid": "CreateSLR"
+        },
+        {
+          "Action": [
+            "agent-registry:GetDiscoverableRegistryRecord",
+            "agent-registry:GetRegistry",
+            "agent-registry:GetRegistryRecord",
+            "agent-registry:List*",
+            "agent-registry:SearchDiscoverableRegistryRecords"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ARConsumerPublisher"
         },
         {
           "Action": [
@@ -1286,12 +1391,14 @@
             "bedrock-agentcore:*BrowserSession",
             "bedrock-agentcore:*CodeInterpreterSession",
             "bedrock-agentcore:ConnectBrowserAutomationStream",
-            "bedrock-agentcore:InvokeCodeInterpreter"
+            "bedrock-agentcore:InvokeCodeInterpreter",
+            "bedrock-agentcore:InvokeWebSearch"
           ],
           "Effect": "Allow",
           "Resource": [
             "arn:*:bedrock-agentcore:*:aws:browser/*",
-            "arn:*:bedrock-agentcore:*:aws:code-interpreter/*"
+            "arn:*:bedrock-agentcore:*:aws:code-interpreter/*",
+            "arn:*:bedrock-agentcore:*:aws:tool/web-search.v1"
           ],
           "Sid": "ACManagedBuiltInTools"
         },
@@ -1299,6 +1406,7 @@
           "Action": [
             "bedrock-agentcore:GetEvaluator",
             "bedrock-agentcore:ListAgentRuntimes",
+            "bedrock-agentcore:ListApiKeyCredentialProviders",
             "bedrock-agentcore:ListBatchEvaluations",
             "bedrock-agentcore:ListBrowserSessions",
             "bedrock-agentcore:ListCodeInterpreterSessions",
@@ -1328,7 +1436,8 @@
             "datazone:Get*",
             "datazone:List*",
             "datazone:RevokeSubscription",
-            "datazone:Search*"
+            "datazone:Search*",
+            "datazone:UpdateAssetOwner"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -1514,7 +1623,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v47"
+    "VersionId": "v48"
   },
-  "UpdateDate": "2026-10-29T22:27:07Z"
+  "UpdateDate": "2026-11-13T20:47:08Z"
 }

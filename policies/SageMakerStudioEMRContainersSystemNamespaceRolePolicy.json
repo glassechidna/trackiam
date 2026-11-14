@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioEMRContainersSystemNamespaceRolePolicy",
   "CreateDate": "2025-10-23T18:34:06Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4OYAGQIVA2",
   "PolicyName": "SageMakerStudioEMRContainersSystemNamespaceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:01:48Z",
+    "CreateDate": "2026-11-13T21:17:07Z",
     "Document": {
       "Statement": [
         {
@@ -24,6 +24,34 @@
             "arn:aws:iam::*:role/datazone_usr_role_*"
           ],
           "Sid": "AssumeProjectRoles"
+        },
+        {
+          "Action": [
+            "sts:AssumeRole",
+            "sts:SetContext",
+            "sts:TagSession"
+          ],
+          "Condition": {
+            "ForAllValues:ArnEquals": {
+              "sts:RequestContextProviders": [
+                "arn:aws:iam::aws:contextProvider/IdentityCenter"
+              ]
+            },
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "LakeFormationAuthorizedCaller"
+              ]
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringEqualsIfExists": {
+              "aws:RequestTag/LakeFormationAuthorizedCaller": "EMR on EKS Engine"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/${aws:PrincipalTag/AmazonDataZoneExecutionRolePath}",
+          "Sid": "AssumeTaggedExecutionRole"
         },
         {
           "Action": [
@@ -73,7 +101,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-02-12T18:01:48Z"
+  "UpdateDate": "2026-11-13T21:17:07Z"
 }

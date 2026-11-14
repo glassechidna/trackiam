@@ -1,31 +1,15 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioAdminIAMDefaultExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v28",
+  "DefaultVersionId": "v29",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NZY6YGCPE",
   "PolicyName": "SageMakerStudioAdminIAMDefaultExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-10-29T19:27:07Z",
+    "CreateDate": "2026-11-14T00:07:09Z",
     "Document": {
       "Statement": [
-        {
-          "Action": "iam:AttachRolePolicy",
-          "Condition": {
-            "ArnEquals": {
-              "iam:PolicyARN": [
-                "arn:aws:iam::aws:policy/SageMakerStudioUserIAMDefaultExecutionPolicy",
-                "arn:aws:iam::aws:policy/SageMakerStudioUserIAMPermissiveExecutionPolicy",
-                "arn:aws:iam::aws:policy/service-role/AmazonS3TablesLakeFormationServiceRole",
-                "arn:aws:iam::aws:policy/service-role/SageMakerStudioDataAppsAccessRolePolicy"
-              ]
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/service-role/AmazonSageMaker*",
-          "Sid": "AttachPolicy"
-        },
         {
           "Action": "iam:PassRole",
           "Condition": {
@@ -35,8 +19,12 @@
                 "airflow-serverless.amazonaws.com",
                 "athena.amazonaws.com",
                 "datazone.amazonaws.com",
+                "ec2.amazonaws.com",
+                "elasticmapreduce.amazonaws.com",
                 "glue.amazonaws.com",
                 "lakeformation.amazonaws.com",
+                "pods.eks.amazonaws.com",
+                "redshift-serverless.amazonaws.com",
                 "sagemaker.amazonaws.com"
               ]
             }
@@ -133,7 +121,6 @@
             "athena:StartSession",
             "athena:TerminateSession",
             "elasticmapreduce:*Session*",
-            "emr-containers:*ManagedEndpoint*",
             "emr-serverless:*Dashboard*",
             "emr-serverless:*Session*",
             "glue:CancelStatement",
@@ -156,7 +143,6 @@
           "Resource": [
             "arn:aws:athena:*:*:workgroup/*/session/*",
             "arn:aws:elasticmapreduce:*:*:cluster/*/session/*",
-            "arn:aws:emr-containers:*:*:/virtualclusters/*/endpoints/*",
             "arn:aws:emr-serverless:*:*:/applications/*/sessions/*",
             "arn:aws:glue:*:*:session/*"
           ],
@@ -168,7 +154,6 @@
             "athena:UntagResource",
             "elasticmapreduce:AddTags",
             "elasticmapreduce:RemoveTags",
-            "emr-containers:*Resource",
             "emr-serverless:*Resource",
             "glue:TagResource",
             "glue:UntagResource"
@@ -182,7 +167,6 @@
           "Resource": [
             "arn:aws:athena:*:*:workgroup/*/session/*",
             "arn:aws:elasticmapreduce:*:*:cluster/*/session/*",
-            "arn:aws:emr-containers:*:*:/virtualclusters/*/endpoints/*",
             "arn:aws:emr-serverless:*:*:/applications/*/sessions/*",
             "arn:aws:glue:*:*:session/*"
           ],
@@ -206,6 +190,26 @@
         },
         {
           "Action": [
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "eks:AssociateAccessPolicy",
+            "eks:CreateAccessEntry",
+            "eks:DeleteAccessEntry",
+            "eks:DescribeAccessEntry",
+            "eks:DisassociateAccessPolicy",
+            "eks:ListAssociatedAccessPolicies"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "emr-containers.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ManageViaEmrContainers"
+        },
+        {
+          "Action": [
             "ec2:CreateTags"
           ],
           "Condition": {
@@ -223,6 +227,24 @@
         },
         {
           "Action": [
+            "emr-containers:*Resource",
+            "emr-containers:DeleteManagedEndpoint",
+            "emr-containers:GetManagedEndpointSessionCredentials"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneSessionOwner": "false"
+            },
+            "StringNotEquals": {
+              "aws:ResourceTag/AmazonDataZoneSessionOwner": "${aws:SourceIdentity}"
+            }
+          },
+          "Effect": "Deny",
+          "Resource": "arn:aws:emr-containers:*:*:/virtualclusters/*/endpoints/*",
+          "Sid": "DenyForeignEmrOnEksSessions"
+        },
+        {
+          "Action": [
             "glue:*"
           ],
           "Condition": {
@@ -236,14 +258,49 @@
         },
         {
           "Action": [
+            "iam:AttachRolePolicy",
+            "iam:DetachRolePolicy"
+          ],
+          "Condition": {
+            "ArnEquals": {
+              "iam:PolicyARN": [
+                "arn:aws:iam::aws:policy/SageMakerStudioUserIAMDefaultExecutionPolicy",
+                "arn:aws:iam::aws:policy/SageMakerStudioUserIAMPermissiveExecutionPolicy",
+                "arn:aws:iam::aws:policy/service-role/AmazonEMRServicePolicyForSessions",
+                "arn:aws:iam::aws:policy/service-role/AmazonEMRServicePolicy_v2",
+                "arn:aws:iam::aws:policy/service-role/AmazonS3TablesLakeFormationServiceRole",
+                "arn:aws:iam::aws:policy/service-role/SageMakerStudioDataAppsAccessRolePolicy",
+                "arn:aws:iam::aws:policy/service-role/SageMakerStudioEMRContainersSystemNamespaceRolePolicy",
+                "arn:aws:iam::aws:policy/service-role/SageMakerStudioEMRInstanceRolePolicy",
+                "arn:aws:iam::aws:policy/service-role/SageMakerStudioEMRServiceRolePolicy"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/datazone_emr_containers_system_namespace_role_*",
+            "arn:aws:iam::*:role/datazone_emr_ec2_instance_role_*",
+            "arn:aws:iam::*:role/datazone_emr_service_role_*",
+            "arn:aws:iam::*:role/service-role/AmazonSageMaker*"
+          ],
+          "Sid": "AttachAndDetachPolicy"
+        },
+        {
+          "Action": [
             "iam:TagRole",
+            "iam:UntagRole",
             "sts:TagSession"
           ],
           "Condition": {
             "ForAllValues:StringLike": {
               "aws:TagKeys": [
                 "AmazonDataZone*",
-                "SageMakerSpacesDomainId"
+                "DataZone*",
+                "DomainBucketName",
+                "KmsKeyId",
+                "SageMakerSpacesDomainId",
+                "VpcId",
+                "for-use-with-amazon-emr-managed-policies"
               ]
             }
           },
@@ -255,6 +312,10 @@
           "Action": [
             "identitystore:DescribeGroup",
             "identitystore:DescribeUser",
+            "identitystore:GetGroupId",
+            "identitystore:GetUserId",
+            "sso-directory:DescribeGroup",
+            "sso-directory:DescribeUser",
             "sso:CreateApplication",
             "sso:CreateApplicationAssignment",
             "sso:DeleteApplication",
@@ -518,9 +579,11 @@
         },
         {
           "Action": [
+            "ram:AcceptResourceShareInvitation",
             "ram:AssociateResourceShare",
             "ram:DeleteResourceShare",
-            "ram:DisassociateResourceShare"
+            "ram:DisassociateResourceShare",
+            "ram:TagResource"
           ],
           "Condition": {
             "StringLike": {
@@ -538,8 +601,14 @@
             "ram:CreateResourceShare"
           ],
           "Condition": {
-            "StringEquals": {
-              "ram:RequestedResourceType": "datazone:Domain"
+            "StringEqualsIfExists": {
+              "ram:RequestedResourceType": [
+                "datazone:Domain",
+                "glue:Catalog",
+                "glue:Database",
+                "glue:Table",
+                "s3:AccessGrants"
+              ]
             }
           },
           "Effect": "Allow",
@@ -574,7 +643,8 @@
           "Action": [
             "s3:AssociateAccessGrantsIdentityCenter",
             "s3:CreateAccessGrantsInstance",
-            "s3:GetAccessGrantsInstance"
+            "s3:GetAccessGrantsInstance",
+            "s3:PutAccessGrantsInstanceResourcePolicy"
           ],
           "Condition": {
             "StringEquals": {
@@ -696,6 +766,28 @@
           "Sid": "ManageSharedSecret"
         },
         {
+          "Action": [
+            "secretsmanager:CreateSecret",
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:GetSecretValue",
+            "secretsmanager:PutSecretValue"
+          ],
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "bedrock-agentcore.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:secretsmanager:*:*:secret:bedrock-agentcore-identity!*",
+          "Sid": "ACApiKeySecret"
+        },
+        {
+          "Action": "agent-registry:*",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AgentRegistry"
+        },
+        {
           "Action": "bedrock-agentcore:*",
           "Effect": "Allow",
           "Resource": "*",
@@ -723,10 +815,12 @@
           "Action": "iam:CreateServiceLinkedRole",
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/agent-registry.amazonaws.com/AWSServiceRoleForAgentRegistry",
             "arn:aws:iam::*:role/aws-service-role/airflow-serverless.amazonaws.com/AWSServiceRoleForAmazonMWAAServerless",
             "arn:aws:iam::*:role/aws-service-role/airflow.amazonaws.com/AWSServiceRoleForAmazonMWAA",
             "arn:aws:iam::*:role/aws-service-role/bedrock-agentcore.amazonaws.com/AWSServiceRoleForBedrockAgentCoreGatewayNetwork",
             "arn:aws:iam::*:role/aws-service-role/elasticmapreduce.amazonaws.com/AWSServiceRoleForEMRCleanup",
+            "arn:aws:iam::*:role/aws-service-role/emr-containers.amazonaws.com/AWSServiceRoleForAmazonEMRContainers",
             "arn:aws:iam::*:role/aws-service-role/identity-network.bedrock-agentcore.amazonaws.com/AWSServiceRoleForBedrockAgentCoreIdentity",
             "arn:aws:iam::*:role/aws-service-role/neptune-graph.amazonaws.com/AWSServiceRoleForNeptuneGraph",
             "arn:aws:iam::*:role/aws-service-role/network.bedrock-agentcore.amazonaws.com/AWSServiceRoleForBedrockAgentCoreNetwork",
@@ -746,6 +840,8 @@
           "Resource": [
             "arn:aws:iam::*:role/AmazonSageMakerAdminIAMExecutionRole*",
             "arn:aws:iam::*:role/AmazonSageMakerUserIAMExecutionRole*",
+            "arn:aws:iam::*:role/datazone_emr_containers_system_namespace_role_*",
+            "arn:aws:iam::*:role/datazone_usr_role_*",
             "arn:aws:iam::*:role/service-role/AmazonSageMakerAdminIAMExecutionRole*",
             "arn:aws:iam::*:role/service-role/AmazonSageMakerUserIAMExecutionRole*"
           ],
@@ -767,6 +863,24 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "ManageScheduler"
+        },
+        {
+          "Action": [
+            "access-analyzer:CheckNoNewAccess",
+            "ecr-public:GetAuthorizationToken",
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:GetUser",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListRolePolicies",
+            "iam:ListRoles",
+            "iam:ListUsers",
+            "sts:AssumeRole",
+            "sts:GetServiceBearerToken"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IamSts"
         },
         {
           "Action": [
@@ -931,6 +1045,7 @@
         {
           "Action": [
             "ec2:DeleteSecurityGroup",
+            "ec2:DeleteTags",
             "ec2:RevokeSecurityGroupEgress",
             "ec2:RevokeSecurityGroupIngress"
           ],
@@ -939,20 +1054,6 @@
             "arn:aws:ec2:*:*:security-group/*"
           ],
           "Sid": "SGManage"
-        },
-        {
-          "Action": [
-            "ecr-public:GetAuthorizationToken",
-            "iam:GetRole",
-            "iam:GetUser",
-            "iam:ListRoles",
-            "iam:ListUsers",
-            "sts:AssumeRole",
-            "sts:GetServiceBearerToken"
-          ],
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "IamSts"
         },
         {
           "Action": [
@@ -968,17 +1069,32 @@
         },
         {
           "Action": [
+            "eks:*PodIdentityAssociation*",
+            "eks:DescribeCluster",
+            "eks:TagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EKS"
+        },
+        {
+          "Action": [
             "elasticmapreduce:*PersistentAppUI*",
+            "elasticmapreduce:*SecurityConfiguration",
             "elasticmapreduce:*Tag*",
             "elasticmapreduce:Describe*",
             "elasticmapreduce:Get*",
             "elasticmapreduce:List*",
+            "elasticmapreduce:ModifyInstanceFleet",
+            "elasticmapreduce:RunJobFlow",
+            "elasticmapreduce:SetTerminationProtection",
             "elasticmapreduce:Start*",
             "elasticmapreduce:Terminate*",
             "emr-containers:*ManagedEndpoint*",
             "emr-containers:*Resource",
             "emr-containers:*SecurityConfiguration*",
             "emr-containers:*VirtualCluster*",
+            "emr-serverless:*Application*",
             "emr-serverless:*Resource",
             "emr-serverless:Access*",
             "emr-serverless:Get*",
@@ -1041,10 +1157,25 @@
         },
         {
           "Action": [
+            "iam:AddRoleToInstanceProfile",
+            "iam:CreateInstanceProfile",
+            "iam:DeleteInstanceProfile",
+            "iam:GetInstanceProfile",
+            "iam:RemoveRoleFromInstanceProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:instance-profile/datazone_emr_ec2_instance_profile_*",
+          "Sid": "InstanceProfile"
+        },
+        {
+          "Action": [
             "iam:CreateRole"
           ],
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:iam::*:role/datazone_emr_containers_system_namespace_role_*",
+            "arn:aws:iam::*:role/datazone_emr_ec2_instance_role_*",
+            "arn:aws:iam::*:role/datazone_emr_service_role_*",
             "arn:aws:iam::*:role/service-role/AmazonSageMaker*"
           ],
           "Sid": "CreateRole"
@@ -1106,11 +1237,13 @@
             "redshift-data:Describe*",
             "redshift-data:ExecuteStatement",
             "redshift-data:List*",
+            "redshift-serverless:*Namespace",
+            "redshift-serverless:*Resource",
+            "redshift-serverless:*Workgroup",
             "redshift-serverless:GetCredentials",
-            "redshift-serverless:GetManagedWorkgroup",
-            "redshift-serverless:GetNamespace",
-            "redshift-serverless:GetWorkgroup",
             "redshift-serverless:List*",
+            "redshift:AssociateDataShareConsumer",
+            "redshift:AuthorizeDataShare",
             "redshift:Describe*",
             "redshift:GetClusterCredentialsWithIAM"
           ],
@@ -1173,6 +1306,39 @@
           "Effect": "Allow",
           "Resource": "arn:aws:s3tables:*:*:bucket/aws-sagemaker-unified-studio",
           "Sid": "S3TableBucketPermissions"
+        },
+        {
+          "Action": [
+            "s3tables:GetNamespace",
+            "s3tables:GetTable",
+            "s3tables:GetTableBucket",
+            "s3tables:GetTableData",
+            "s3tables:GetTableMetadataLocation",
+            "s3tables:ListNamespaces",
+            "s3tables:ListTables"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3tables:*:*:bucket/aws-athena",
+            "arn:aws:s3tables:*:*:bucket/aws-athena/table/*",
+            "arn:aws:s3tables:*:*:bucket/aws-emr",
+            "arn:aws:s3tables:*:*:bucket/aws-emr/table/*",
+            "arn:aws:s3tables:*:*:bucket/aws-glue",
+            "arn:aws:s3tables:*:*:bucket/aws-glue/table/*",
+            "arn:aws:s3tables:*:*:bucket/aws-redshift",
+            "arn:aws:s3tables:*:*:bucket/aws-redshift/table/*",
+            "arn:aws:s3tables:*:*:bucket/aws-sagemaker-unified-studio",
+            "arn:aws:s3tables:*:*:bucket/aws-sagemaker-unified-studio/table/*"
+          ],
+          "Sid": "SystemTablesRead"
+        },
+        {
+          "Action": [
+            "s3tables:ListTableBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "S3TablesList"
         },
         {
           "Action": [
@@ -1248,6 +1414,14 @@
         },
         {
           "Action": [
+            "sts:SetContext"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:sts::*:self",
+          "Sid": "AllowSetContextOnSelf"
+        },
+        {
+          "Action": [
             "tag:GetResources"
           ],
           "Effect": "Allow",
@@ -1270,7 +1444,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v28"
+    "VersionId": "v29"
   },
-  "UpdateDate": "2026-10-29T19:27:07Z"
+  "UpdateDate": "2026-11-14T00:07:09Z"
 }

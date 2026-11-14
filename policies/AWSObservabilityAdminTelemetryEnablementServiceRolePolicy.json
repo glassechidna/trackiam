@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSObservabilityAdminTelemetryEnablementServiceRolePolicy",
   "CreateDate": "2025-08-01T18:04:06Z",
-  "DefaultVersionId": "v16",
+  "DefaultVersionId": "v17",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ABS5BMRXG",
   "PolicyName": "AWSObservabilityAdminTelemetryEnablementServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-09-23T20:27:07Z",
+    "CreateDate": "2026-11-13T21:27:08Z",
     "Document": {
       "Statement": [
         {
@@ -139,6 +139,29 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/service-role/CloudWatchTelemetryRuleEKSAddonRole",
           "Sid": "PassRoleToPodIdentity"
+        },
+        {
+          "Action": [
+            "autoscaling:DescribeTags",
+            "ec2:DescribeFlowLogs",
+            "ec2:DescribeTags",
+            "ec2:DescribeVpcs",
+            "ec2:MonitorInstances",
+            "logs:DescribeDeliveries",
+            "logs:DescribeDeliveryDestinations",
+            "logs:DescribeDeliverySources",
+            "logs:DescribeLogGroups",
+            "logs:DescribeResourcePolicies",
+            "logs:ListLogGroups"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TelemetryOperations"
         },
         {
           "Action": [
@@ -304,27 +327,6 @@
         },
         {
           "Action": [
-            "ec2:DescribeFlowLogs",
-            "ec2:DescribeVpcs",
-            "ec2:MonitorInstances",
-            "logs:DescribeDeliveries",
-            "logs:DescribeDeliveryDestinations",
-            "logs:DescribeDeliverySources",
-            "logs:DescribeLogGroups",
-            "logs:DescribeResourcePolicies",
-            "logs:ListLogGroups"
-          ],
-          "Condition": {
-            "StringEquals": {
-              "aws:ResourceAccount": "${aws:PrincipalAccount}"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "*",
-          "Sid": "TelemetryOperations"
-        },
-        {
-          "Action": [
             "eks:UpdateClusterConfig"
           ],
           "Condition": {
@@ -486,6 +488,20 @@
           "Effect": "Allow",
           "Resource": "arn:*:iam::*:role/aws-service-role/route53resolver.amazonaws.com/AWSServiceRoleForRoute53Resolver",
           "Sid": "TelemetryOperationsForRoute53LogDeliverySLR"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "iam:AWSServiceName": "vpc-flow-logs.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:iam::*:role/aws-service-role/vpc-flow-logs.amazonaws.com/AWSServiceRoleForVPCFlowLogs",
+          "Sid": "IAMOperationsForVPCFlowLogsServiceLinkedRole"
         },
         {
           "Action": [
@@ -780,7 +796,7 @@
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "TelemetryOperationsForRoute53LogDelivery"
+          "Sid": "TelemetryOperationsForCreateLogDelivery"
         },
         {
           "Action": [
@@ -808,7 +824,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v16"
+    "VersionId": "v17"
   },
-  "UpdateDate": "2026-10-05T22:17:07Z"
+  "UpdateDate": "2026-11-13T21:27:08Z"
 }
