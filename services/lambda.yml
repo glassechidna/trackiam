@@ -64,6 +64,8 @@ Actions:
   - Name: lambda:UpdateFunctionUrlConfig
 
   # actions with no corresponding API
+  - Name: lambda:AssociateRuntimeAlias
+  - Name: lambda:AssociateRuntimeVersion
   - Name: lambda:CheckpointDurableExecution
   - Name: lambda:ConnectMicrovm
   - Name: lambda:CreateCapacityProvider
@@ -71,6 +73,9 @@ Actions:
   - Name: lambda:CreateMicrovmImage
   - Name: lambda:CreateMicrovmShellAuthToken
   - Name: lambda:CreateNetworkConnector
+  - Name: lambda:CreateRuntime
+  - Name: lambda:CreateRuntimeAlias
+  - Name: lambda:CreateRuntimeVersion
   - Name: lambda:CreateWebFunction
   - Name: lambda:CreateWebFunctionEndpoint
   - Name: lambda:CreateWebFunctionRevision
@@ -79,6 +84,9 @@ Actions:
   - Name: lambda:DeleteMicrovmImageVersion
   - Name: lambda:DeleteNetworkConnector
   - Name: lambda:DeleteResourcePolicy
+  - Name: lambda:DeleteRuntime
+  - Name: lambda:DeleteRuntimeAlias
+  - Name: lambda:DeleteRuntimeVersion
   - Name: lambda:DeleteWebFunction
   - Name: lambda:DeleteWebFunctionEndpoint
   - Name: lambda:DeleteWebFunctionRevision
@@ -96,6 +104,9 @@ Actions:
   - Name: lambda:GetMicrovmImageVersion
   - Name: lambda:GetNetworkConnector
   - Name: lambda:GetResourcePolicy
+  - Name: lambda:GetRuntime
+  - Name: lambda:GetRuntimeAlias
+  - Name: lambda:GetRuntimeVersion
   - Name: lambda:GetWebAccountSettings
   - Name: lambda:GetWebFunction
   - Name: lambda:GetWebFunctionEndpoint
@@ -114,6 +125,9 @@ Actions:
   - Name: lambda:ListMicrovms
   - Name: lambda:ListNetworkConnectorVersions
   - Name: lambda:ListNetworkConnectors
+  - Name: lambda:ListRuntimeAliases
+  - Name: lambda:ListRuntimeVersions
+  - Name: lambda:ListRuntimes
   - Name: lambda:ListWebFunctionEndpoints
   - Name: lambda:ListWebFunctionRevisions
   - Name: lambda:ListWebFunctions
@@ -122,6 +136,7 @@ Actions:
   - Name: lambda:PutFunctionRecursionConfig
   - Name: lambda:PutFunctionScalingConfig
   - Name: lambda:PutResourcePolicy
+  - Name: lambda:RestoreRuntime
   - Name: lambda:ResumeMicrovm
   - Name: lambda:RunMicrovm
   - Name: lambda:SendDurableExecutionCallbackFailure
@@ -135,6 +150,9 @@ Actions:
   - Name: lambda:UpdateMicrovmImage
   - Name: lambda:UpdateMicrovmImageVersion
   - Name: lambda:UpdateNetworkConnector
+  - Name: lambda:UpdateRuntime
+  - Name: lambda:UpdateRuntimeAlias
+  - Name: lambda:UpdateRuntimeVersion
   - Name: lambda:UpdateWebFunctionEndpoint
 
   # APIs without an IAM action

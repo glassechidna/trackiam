@@ -3,12 +3,15 @@ Actions:
   # actions with no corresponding API
   - Name: transform-custom:BatchCreateFindings
   - Name: transform-custom:BatchUpdateFindings
+  - Name: transform-custom:CancelSkillCreationJob
   - Name: transform-custom:CompleteTransformationPackageUpload
+  - Name: transform-custom:ConnectSource
   - Name: transform-custom:ContributeKnowledgeItems
   - Name: transform-custom:ConverseStream
   - Name: transform-custom:CreateAnalysis
   - Name: transform-custom:CreateCampaign
   - Name: transform-custom:CreateRemediation
+  - Name: transform-custom:CreateRemediationPlan
   - Name: transform-custom:CreateRepository
   - Name: transform-custom:CreateSource
   - Name: transform-custom:CreateTransformationPackageUrl
@@ -17,6 +20,7 @@ Actions:
   - Name: transform-custom:DeleteFinding
   - Name: transform-custom:DeleteKnowledgeItem
   - Name: transform-custom:DeleteRemediation
+  - Name: transform-custom:DeleteRemediationPlan
   - Name: transform-custom:DeleteRepository
   - Name: transform-custom:DeleteResourcePolicy
   - Name: transform-custom:DeleteSource
@@ -27,10 +31,13 @@ Actions:
   - Name: transform-custom:GetCampaign
   - Name: transform-custom:GetFinding
   - Name: transform-custom:GetFindingGroups
+  - Name: transform-custom:GetIssueGroup
   - Name: transform-custom:GetKnowledgeItem
   - Name: transform-custom:GetRemediation
+  - Name: transform-custom:GetRemediationPlan
   - Name: transform-custom:GetRepository
   - Name: transform-custom:GetResourcePolicy
+  - Name: transform-custom:GetSkillCreationJob
   - Name: transform-custom:GetSource
   - Name: transform-custom:GetTransformationPackageUrl
   - Name: transform-custom:ListAnalyses
@@ -38,24 +45,33 @@ Actions:
   - Name: transform-custom:ListCampaignRepositories
   - Name: transform-custom:ListCampaigns
   - Name: transform-custom:ListFindings
+  - Name: transform-custom:ListIssueGroups
   - Name: transform-custom:ListKnowledgeItems
+  - Name: transform-custom:ListRemediationPlans
   - Name: transform-custom:ListRemediations
   - Name: transform-custom:ListRepositories
+  - Name: transform-custom:ListSkillCreationJobs
   - Name: transform-custom:ListSources
   - Name: transform-custom:ListTagsForResource
   - Name: transform-custom:ListTransformationPackageMetadata
   - Name: transform-custom:ListTransformationPackageShares
   - Name: transform-custom:PutResourcePolicy
+  - Name: transform-custom:ReadRepositoryContent
   - Name: transform-custom:SendTelemetryEvent
   - Name: transform-custom:ShareTransformationPackage
+  - Name: transform-custom:StartSkillCreationJob
   - Name: transform-custom:TagResource
   - Name: transform-custom:UnshareTransformationPackage
   - Name: transform-custom:UntagResource
   - Name: transform-custom:UpdateAnalysis
   - Name: transform-custom:UpdateCampaign
   - Name: transform-custom:UpdateCampaignRepositoryStatus
+  - Name: transform-custom:UpdateIssueGroup
   - Name: transform-custom:UpdateKnowledgeItemConfiguration
   - Name: transform-custom:UpdateKnowledgeItemStatus
   - Name: transform-custom:UpdateRemediation
+  - Name: transform-custom:UpdateRemediationPlan
   - Name: transform-custom:UpdateRepository
+  - Name: transform-custom:UpdateSkillCreationJob
   - Name: transform-custom:UpdateSource
+  - Name: transform-custom:WriteRepositoryContent

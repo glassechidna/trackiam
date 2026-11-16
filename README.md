@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 467
-* Unique actions: 23124
-* Managed policies: 1605
+* Unique actions: 23188
+* Managed policies: 1606
 
 Most common managed policy name prefixes:
 
@@ -24,7 +24,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 372 |
 | `arn:aws:iam::aws:policy/service-role/*` | 230 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
-| Other | 175 |
+| Other | 176 |
 
 The following table summarises the AWS APIs. 
 
@@ -37,12 +37,12 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 625 | 0 | 209 |
-| [`sagemaker`](services/sagemaker.yml) | 351 | 0 | 109 |
+| [`sagemaker`](services/sagemaker.yml) | 351 | 0 | 119 |
 | [`iot`](services/iot.yml) | 262 | 3 | 31 |
 | [`chime`](services/chime.yml) | 259 | 0 | 57 |
 | [`connect`](services/connect.yml) | 256 | 0 | 132 |
-| [`glue`](services/glue.yml) | 214 | 4 | 92 |
-| [`ses`](services/ses.yml) | 193 | 0 | 40 |
+| [`glue`](services/glue.yml) | 214 | 4 | 98 |
+| [`ses`](services/ses.yml) | 193 | 0 | 41 |
 | [`quicksight`](services/quicksight.yml) | 174 | 3 | 185 |
 | [`rds`](services/rds.yml) | 162 | 0 | 11 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
@@ -105,7 +105,7 @@ The following table summarises the AWS APIs.
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 3 |
 | [`appsync`](services/appsync.yml) | 64 | 0 | 23 |
-| [`lambda`](services/lambda.yml) | 63 | 3 | 72 |
+| [`lambda`](services/lambda.yml) | 63 | 3 | 90 |
 | [`ivs`](services/ivs.yml) | 63 | 0 | 20 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 10 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
@@ -168,7 +168,7 @@ The following table summarises the AWS APIs.
 | [`amplify`](services/amplify.yml) | 37 | 0 | 4 |
 | [`states`](services/states.yml) | 37 | 0 | 2 |
 | [`inspector`](services/inspector.yml) | 37 | 0 | 0 |
-| [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 53 |
+| [`network-firewall`](services/network-firewall.yml) | 36 | 0 | 55 |
 | [`shield`](services/shield.yml) | 36 | 0 | 4 |
 | [`entityresolution`](services/entityresolution.yml) | 36 | 0 | 4 |
 | [`sms`](services/sms.yml) | 35 | 0 | 2 |
@@ -370,10 +370,10 @@ The following table summarises the AWS APIs.
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
 | [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 83 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
+| [`transform-custom`](services/transform-custom.yml) | 0 | 0 | 74 |
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 61 |
 | [`s3tables`](services/s3tables.yml) | 0 | 0 | 61 |
-| [`transform-custom`](services/transform-custom.yml) | 0 | 0 | 58 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
 | [`q`](services/q.yml) | 0 | 0 | 54 |
 | [`health-agent`](services/health-agent.yml) | 0 | 0 | 49 |
@@ -389,6 +389,7 @@ The following table summarises the AWS APIs.
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 38 |
 | [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 38 |
 | [`rtbfabric`](services/rtbfabric.yml) | 0 | 0 | 36 |
+| [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 36 |
 | [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
 | [`continuum`](services/continuum.yml) | 0 | 0 | 33 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
@@ -401,7 +402,6 @@ The following table summarises the AWS APIs.
 | [`one`](services/one.yml) | 0 | 0 | 28 |
 | [`end-user-messaging`](services/end-user-messaging.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
-| [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 26 |
 | [`invoicing`](services/invoicing.yml) | 0 | 0 | 26 |
 | [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 25 |
 | [`security-ir`](services/security-ir.yml) | 0 | 0 | 25 |
@@ -414,8 +414,8 @@ The following table summarises the AWS APIs.
 | [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 24 |
 | [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 23 |
 | [`transform`](services/transform.yml) | 0 | 0 | 22 |
+| [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 22 |
 | [`agent-registry`](services/agent-registry.yml) | 0 | 0 | 22 |
-| [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 21 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 20 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
@@ -508,14 +508,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3920 |
-| `Get` | 3526 |
-| `Delete` | 2635 |
-| `Create` | 2505 |
-| `Update` | 2187 |
-| `Describe` | 1967 |
-| `Put` | 626 |
-| `Start` | 569 |
+| `List` | 3932 |
+| `Get` | 3538 |
+| `Delete` | 2643 |
+| `Create` | 2512 |
+| `Update` | 2197 |
+| `Describe` | 1968 |
+| `Put` | 628 |
+| `Start` | 571 |
 | `Batch` | 335 |
 | `Tag` | 328 |
 
