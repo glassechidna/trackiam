@@ -2,18 +2,23 @@ Actions:
 
   # actions with no corresponding API
   - Name: observabilityadmin:CreateCentralizationRuleForOrganization
+  - Name: observabilityadmin:CreateConnector
   - Name: observabilityadmin:CreateDatasetIntegration
   - Name: observabilityadmin:CreateS3TableIntegration
   - Name: observabilityadmin:CreateTelemetryPipeline
   - Name: observabilityadmin:CreateTelemetryRule
   - Name: observabilityadmin:CreateTelemetryRuleForOrganization
   - Name: observabilityadmin:DeleteCentralizationRuleForOrganization
+  - Name: observabilityadmin:DeleteConnector
   - Name: observabilityadmin:DeleteDatasetIntegration
   - Name: observabilityadmin:DeleteS3TableIntegration
   - Name: observabilityadmin:DeleteTelemetryPipeline
   - Name: observabilityadmin:DeleteTelemetryRule
   - Name: observabilityadmin:DeleteTelemetryRuleForOrganization
   - Name: observabilityadmin:GetCentralizationRuleForOrganization
+  - Name: observabilityadmin:GetConnector
+  - Name: observabilityadmin:GetConnectorTelemetryManifest
+  - Name: observabilityadmin:GetConnectorTelemetrySetup
   - Name: observabilityadmin:GetDatasetIntegration
   - Name: observabilityadmin:GetS3TableIntegration
   - Name: observabilityadmin:GetTelemetryEnrichmentStatus
@@ -22,21 +27,29 @@ Actions:
   - Name: observabilityadmin:GetTelemetryPipeline
   - Name: observabilityadmin:GetTelemetryRule
   - Name: observabilityadmin:GetTelemetryRuleForOrganization
+  - Name: observabilityadmin:GetThirdPartyTelemetryEnrichment
   - Name: observabilityadmin:ListCentralizationRulesForOrganization
+  - Name: observabilityadmin:ListConnectors
   - Name: observabilityadmin:ListDatasetIntegrations
   - Name: observabilityadmin:ListResourceTelemetry
   - Name: observabilityadmin:ListResourceTelemetryForOrganization
+  - Name: observabilityadmin:ListResourcesByConnector
   - Name: observabilityadmin:ListS3TableIntegrations
   - Name: observabilityadmin:ListTagsForResource
   - Name: observabilityadmin:ListTelemetryPipelines
   - Name: observabilityadmin:ListTelemetryRules
   - Name: observabilityadmin:ListTelemetryRulesForOrganization
+  - Name: observabilityadmin:ListThirdPartyTelemetryEnrichments
+  - Name: observabilityadmin:PutConnectorTelemetryManifest
   - Name: observabilityadmin:StartTelemetryEnrichment
   - Name: observabilityadmin:StartTelemetryEvaluation
   - Name: observabilityadmin:StartTelemetryEvaluationForOrganization
+  - Name: observabilityadmin:StartTelemetryPipelineRefresh
+  - Name: observabilityadmin:StartThirdPartyTelemetryEnrichment
   - Name: observabilityadmin:StopTelemetryEnrichment
   - Name: observabilityadmin:StopTelemetryEvaluation
   - Name: observabilityadmin:StopTelemetryEvaluationForOrganization
+  - Name: observabilityadmin:StopThirdPartyTelemetryEnrichment
   - Name: observabilityadmin:TagResource
   - Name: observabilityadmin:TestTelemetryPipeline
   - Name: observabilityadmin:UntagResource

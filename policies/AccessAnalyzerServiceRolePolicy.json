@@ -1,15 +1,52 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AccessAnalyzerServiceRolePolicy",
   "CreateDate": "2019-12-02T17:13:10Z",
-  "DefaultVersionId": "v23",
+  "DefaultVersionId": "v24",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4CAIXDDRI2",
   "PolicyName": "AccessAnalyzerServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T17:59:49Z",
+    "CreateDate": "2026-11-17T20:17:08Z",
     "Document": {
       "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "config.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig",
+          "Sid": "CreateConfigServiceLinkedRole"
+        },
+        {
+          "Action": [
+            "config:DeleteServiceLinkedConfigurationRecorder",
+            "config:PutServiceLinkedConfigurationRecorder"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "config:ConfigurationRecorderServicePrincipal": [
+                "access-analyzer.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowConfigRecorderScopedAccess"
+        },
+        {
+          "Action": [
+            "config:DescribeConfigurationRecorderStatus",
+            "config:DescribeConfigurationRecorders",
+            "config:SelectResourceConfig"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowConfigRecorderReadAccess"
+        },
         {
           "Action": [
             "dynamodb:GetResourcePolicy",
@@ -106,7 +143,8 @@
             "sns:GetTopicAttributes",
             "sns:ListTopics",
             "sqs:GetQueueAttributes",
-            "sqs:ListQueues"
+            "sqs:ListQueues",
+            "tag:GetResources"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -116,7 +154,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v23"
+    "VersionId": "v24"
   },
-  "UpdateDate": "2026-02-12T17:59:49Z"
+  "UpdateDate": "2026-11-17T20:17:08Z"
 }

@@ -1,0 +1,38 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerHyperPodInferenceGatewayMetricsPublisherAccess",
+  "CreateDate": "2026-11-17T21:57:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4FT562D4GF",
+  "PolicyName": "AmazonSageMakerHyperPodInferenceGatewayMetricsPublisherAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-17T21:57:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "kms:GenerateDataKey",
+          "Condition": {
+            "StringLike": {
+              "kms:EncryptionContext:aws:kinesis:arn": "arn:aws:kinesis:*:*:stream/gig-metrics-*",
+              "kms:ViaService": "kinesis.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "EncryptGatewayMetrics"
+        },
+        {
+          "Action": "kinesis:PutRecords",
+          "Effect": "Allow",
+          "Resource": "arn:aws:kinesis:*:*:stream/gig-metrics-*",
+          "Sid": "PublishGatewayMetrics"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-17T21:57:08Z"
+}

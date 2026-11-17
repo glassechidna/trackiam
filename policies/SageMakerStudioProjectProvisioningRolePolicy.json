@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy",
   "CreateDate": "2024-11-20T21:58:39Z",
-  "DefaultVersionId": "v85",
+  "DefaultVersionId": "v86",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4NQZUIPVLH",
   "PolicyName": "SageMakerStudioProjectProvisioningRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-11-13T20:07:08Z",
+    "CreateDate": "2026-11-17T21:17:09Z",
     "Document": {
       "Statement": [
         {
@@ -920,7 +920,8 @@
         {
           "Action": [
             "ec2:DeleteSecurityGroup",
-            "ec2:DeleteTags"
+            "ec2:DeleteTags",
+            "ec2:RevokeSecurityGroupIngress"
           ],
           "Condition": {
             "Null": {
@@ -930,21 +931,6 @@
           "Effect": "Allow",
           "Resource": "arn:aws:ec2:*:*:security-group/*",
           "Sid": "EMRCleanup"
-        },
-        {
-          "Action": [
-            "ec2:RevokeSecurityGroupIngress"
-          ],
-          "Condition": {
-            "Null": {
-              "aws:ResourceTag/AmazonDataZoneProject": "false"
-            }
-          },
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:ec2:*:*:security-group/*"
-          ],
-          "Sid": "SGRevoke"
         },
         {
           "Action": [
@@ -968,27 +954,24 @@
         },
         {
           "Action": [
-            "elasticmapreduce:AddJobFlowSteps",
-            "elasticmapreduce:AddTags",
-            "elasticmapreduce:DescribeCluster",
-            "elasticmapreduce:DescribeJobFlows",
-            "elasticmapreduce:ListInstanceFleets",
-            "elasticmapreduce:ModifyInstanceFleet",
-            "elasticmapreduce:RunJobFlow",
-            "elasticmapreduce:SetTerminationProtection",
-            "elasticmapreduce:TerminateJobFlows"
+            "eks:CreatePodIdentityAssociation",
+            "eks:TagResource"
           ],
           "Condition": {
             "Null": {
-              "aws:ResourceTag/AmazonDataZoneProject": "false"
+              "aws:RequestTag/AmazonDataZoneProject": "false"
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:elasticmapreduce:*:*:cluster/*",
-          "Sid": "EMRClusterMng"
+          "Resource": [
+            "arn:aws:eks:*:*:cluster/*",
+            "arn:aws:eks:*:*:podidentityassociation/*"
+          ],
+          "Sid": "EksPodIdentity"
         },
         {
           "Action": [
+            "eks:DeletePodIdentityAssociation",
             "emr-containers:CreateManagedEndpoint",
             "emr-containers:CreateSecurityConfiguration",
             "emr-containers:CreateVirtualCluster",
@@ -1009,6 +992,27 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "EmrContainersMng"
+        },
+        {
+          "Action": [
+            "elasticmapreduce:AddJobFlowSteps",
+            "elasticmapreduce:AddTags",
+            "elasticmapreduce:DescribeCluster",
+            "elasticmapreduce:DescribeJobFlows",
+            "elasticmapreduce:ListInstanceFleets",
+            "elasticmapreduce:ModifyInstanceFleet",
+            "elasticmapreduce:RunJobFlow",
+            "elasticmapreduce:SetTerminationProtection",
+            "elasticmapreduce:TerminateJobFlows"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:ResourceTag/AmazonDataZoneProject": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:elasticmapreduce:*:*:cluster/*",
+          "Sid": "EMRClusterMng"
         },
         {
           "Action": [
@@ -2146,11 +2150,15 @@
           "Action": [
             "ram:AcceptResourceShareInvitation",
             "ram:DeleteResourceShare",
+            "ram:DisassociateResourceShare",
             "ram:TagResource"
           ],
           "Condition": {
             "StringLike": {
-              "ram:ResourceShareName": "DataZone*"
+              "ram:ResourceShareName": [
+                "DataZone*",
+                "LakeFormation-*"
+              ]
             }
           },
           "Effect": "Allow",
@@ -2171,7 +2179,10 @@
               ]
             },
             "StringLike": {
-              "ram:ResourceShareName": "DataZone*"
+              "ram:ResourceShareName": [
+                "DataZone*",
+                "LakeFormation-*"
+              ]
             }
           },
           "Effect": "Allow",
@@ -2801,14 +2812,16 @@
             "cloudformation:ValidateTemplate",
             "codecommit:ListRepositories",
             "eks:DescribeCluster",
+            "eks:ListPodIdentityAssociations",
             "elasticmapreduce:*SecurityConfiguration",
             "glue:*GlueIdentityCenterConfiguration",
             "glue:DescribeConnectionType",
             "glue:ListConnectionTypes",
             "iam:ListPolicies",
             "logs:DescribeLogGroups",
+            "organizations:DescribeOrganization",
             "ram:GetResourceShare*",
-            "ram:ListResources",
+            "ram:ListResource*",
             "redshift-data:DescribeStatement",
             "redshift-data:GetStatementResult",
             "redshift-serverless:ListNamespaces",
@@ -2963,22 +2976,17 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:iam::*:role/AmazonBedrock*",
+            "arn:aws:iam::*:role/AmazonSageMakerAdminIAMExecutionRole*",
+            "arn:aws:iam::*:role/AmazonSageMakerUserIAMExecutionRole*",
             "arn:aws:iam::*:role/BedrockStudio*",
-            "arn:aws:iam::*:role/datazone*"
+            "arn:aws:iam::*:role/SageMakerStudioQueryExecutionRole",
+            "arn:aws:iam::*:role/datazone*",
+            "arn:aws:iam::*:role/datazone_s3tables_*",
+            "arn:aws:iam::*:role/service-role/AmazonSageMakerAdminIAMExecutionRole*",
+            "arn:aws:iam::*:role/service-role/AmazonSageMakerQueryExecution",
+            "arn:aws:iam::*:role/service-role/AmazonSageMakerUserIAMExecutionRole*"
           ],
           "Sid": "GetIamRole"
-        },
-        {
-          "Action": [
-            "iam:GetRole"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:iam::*:role/SageMakerStudioQueryExecutionRole",
-            "arn:aws:iam::*:role/datazone_s3tables_*",
-            "arn:aws:iam::*:role/service-role/AmazonSageMakerQueryExecution"
-          ],
-          "Sid": "GetRole"
         },
         {
           "Action": [
@@ -3039,7 +3047,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v85"
+    "VersionId": "v86"
   },
-  "UpdateDate": "2026-11-13T20:07:08Z"
+  "UpdateDate": "2026-11-17T21:17:09Z"
 }

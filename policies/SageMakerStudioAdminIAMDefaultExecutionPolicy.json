@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioAdminIAMDefaultExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v29",
+  "DefaultVersionId": "v30",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NZY6YGCPE",
   "PolicyName": "SageMakerStudioAdminIAMDefaultExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-11-14T00:07:09Z",
+    "CreateDate": "2026-11-17T21:17:08Z",
     "Document": {
       "Statement": [
         {
@@ -588,7 +588,8 @@
           "Condition": {
             "StringLike": {
               "ram:ResourceShareName": [
-                "DataZone*"
+                "DataZone*",
+                "LakeFormation-*"
               ]
             }
           },
@@ -1300,6 +1301,27 @@
         },
         {
           "Action": [
+            "s3tables:CreateNamespace",
+            "s3tables:CreateTableBucket",
+            "s3tables:DeleteNamespace",
+            "s3tables:DeleteTableBucket",
+            "s3tables:DeleteTableBucketPolicy",
+            "s3tables:GetNamespace",
+            "s3tables:GetTableBucketPolicy",
+            "s3tables:ListNamespaces",
+            "s3tables:ListTables",
+            "s3tables:ListTagsForResource",
+            "s3tables:PutTableBucketEncryption",
+            "s3tables:PutTableBucketPolicy",
+            "s3tables:TagResource",
+            "s3tables:UntagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3tables:*:*:bucket/amazon-sagemaker*",
+          "Sid": "S3TablesProjectCatalogPermissions"
+        },
+        {
+          "Action": [
             "s3tables:CreateTableBucket",
             "s3tables:PutTableBucketPolicy"
           ],
@@ -1334,6 +1356,7 @@
         },
         {
           "Action": [
+            "s3tables:GetTableBucket",
             "s3tables:ListTableBuckets"
           ],
           "Effect": "Allow",
@@ -1444,7 +1467,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v29"
+    "VersionId": "v30"
   },
-  "UpdateDate": "2026-11-14T00:07:09Z"
+  "UpdateDate": "2026-11-17T21:17:08Z"
 }

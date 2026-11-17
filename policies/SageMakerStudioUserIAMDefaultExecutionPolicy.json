@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMDefaultExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v33",
+  "DefaultVersionId": "v34",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BV3PMY4IB",
   "PolicyName": "SageMakerStudioUserIAMDefaultExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-11-14T00:07:08Z",
+    "CreateDate": "2026-11-17T18:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -1399,6 +1399,15 @@
         },
         {
           "Action": [
+            "s3tables:GetTableBucket",
+            "s3tables:ListTableBuckets"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "S3TablesList"
+        },
+        {
+          "Action": [
             "sagemaker-mlflow:*",
             "sagemaker:*Action*",
             "sagemaker:*Artifact*",
@@ -1480,7 +1489,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v33"
+    "VersionId": "v34"
   },
-  "UpdateDate": "2026-11-14T00:07:08Z"
+  "UpdateDate": "2026-11-17T18:07:07Z"
 }

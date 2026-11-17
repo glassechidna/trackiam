@@ -12,16 +12,16 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 468
-* Unique actions: 23220
-* Managed policies: 1607
+* Unique actions: 23244
+* Managed policies: 1609
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 432 |
-| `arn:aws:iam::aws:policy/Amazon*` | 381 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 372 |
+| `arn:aws:iam::aws:policy/Amazon*` | 382 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 373 |
 | `arn:aws:iam::aws:policy/service-role/*` | 230 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
 | Other | 177 |
@@ -66,7 +66,7 @@ The following table summarises the AWS APIs.
 | [`config`](services/config.yml) | 92 | 0 | 10 |
 | [`backup`](services/backup.yml) | 91 | 0 | 31 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 7 |
-| [`workspaces`](services/workspaces.yml) | 88 | 0 | 15 |
+| [`workspaces`](services/workspaces.yml) | 88 | 0 | 18 |
 | [`es`](services/es.yml) | 87 | 0 | 51 |
 | [`sms-voice`](services/sms-voice.yml) | 87 | 0 | 28 |
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
@@ -247,7 +247,7 @@ The following table summarises the AWS APIs.
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 18 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 22 | 0 | 9 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 76 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 84 |
 | [`mgh`](services/mgh.yml) | 21 | 0 | 25 |
 | [`resource-explorer-2`](services/resource-explorer-2.yml) | 21 | 0 | 16 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
@@ -374,6 +374,7 @@ The following table summarises the AWS APIs.
 | [`iq`](services/iq.yml) | 0 | 0 | 63 |
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 61 |
 | [`s3tables`](services/s3tables.yml) | 0 | 0 | 61 |
+| [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 58 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
 | [`health-agent`](services/health-agent.yml) | 0 | 0 | 56 |
 | [`q`](services/q.yml) | 0 | 0 | 54 |
@@ -382,7 +383,6 @@ The following table summarises the AWS APIs.
 | [`billing`](services/billing.yml) | 0 | 0 | 47 |
 | [`network-security-manager`](services/network-security-manager.yml) | 0 | 0 | 46 |
 | [`finops-agent`](services/finops-agent.yml) | 0 | 0 | 46 |
-| [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 45 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 44 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
 | [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 38 |
@@ -509,14 +509,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3937 |
-| `Get` | 3546 |
-| `Delete` | 2647 |
-| `Create` | 2516 |
+| `List` | 3943 |
+| `Get` | 3555 |
+| `Delete` | 2648 |
+| `Create` | 2517 |
 | `Update` | 2199 |
 | `Describe` | 1968 |
-| `Put` | 629 |
-| `Start` | 572 |
+| `Put` | 630 |
+| `Start` | 575 |
 | `Batch` | 336 |
 | `Tag` | 329 |
 

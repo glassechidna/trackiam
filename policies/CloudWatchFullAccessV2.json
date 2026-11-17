@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchFullAccessV2",
   "CreateDate": "2023-08-01T11:32:57Z",
-  "DefaultVersionId": "v18",
+  "DefaultVersionId": "v19",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4K5ELCXZSW",
   "PolicyName": "CloudWatchFullAccessV2",
   "PolicyVersion": {
-    "CreateDate": "2026-10-20T18:57:07Z",
+    "CreateDate": "2026-11-17T19:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -51,6 +51,17 @@
           },
           "Effect": "Allow",
           "Resource": "arn:aws:s3tables:*:*:bucket/aws-cloudwatch"
+        },
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "config.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig",
+          "Sid": "ObservabilityAdminThirdPartyEnrichmentConfigSLRPermissions"
         },
         {
           "Action": "iam:CreateServiceLinkedRole",
@@ -103,6 +114,20 @@
           "Sid": "LogAlarmScheduledQueryPassRolePermissions"
         },
         {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "ArnLike": {
+              "iam:AssociatedResourceArn": "arn:aws:observabilityadmin:*:*:connector/*"
+            },
+            "StringEquals": {
+              "iam:PassedToService": "observabilityadmin.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ObservabilityAdminConnectorPassRolePermissions"
+        },
+        {
           "Action": "kms:DescribeKey",
           "Condition": {
             "StringEquals": {
@@ -139,6 +164,12 @@
           "Resource": "arn:aws:s3tables:*:*:bucket/aws-cloudwatch"
         },
         {
+          "Action": "config:GetConnector",
+          "Effect": "Allow",
+          "Resource": "arn:aws:config:*:*:connector/*",
+          "Sid": "ObservabilityAdminThirdPartyEnrichmentConfigConnectorRead"
+        },
+        {
           "Action": [
             "application-autoscaling:DescribeScalingPolicies",
             "application-signals:*",
@@ -150,51 +181,7 @@
             "iam:GetRole",
             "logs:*",
             "oam:ListSinks",
-            "observabilityadmin:CreateCentralizationRuleForOrganization",
-            "observabilityadmin:CreateDatasetIntegration",
-            "observabilityadmin:CreateS3TableIntegration",
-            "observabilityadmin:CreateTelemetryPipeline",
-            "observabilityadmin:CreateTelemetryRule",
-            "observabilityadmin:CreateTelemetryRuleForOrganization",
-            "observabilityadmin:DeleteCentralizationRuleForOrganization",
-            "observabilityadmin:DeleteDatasetIntegration",
-            "observabilityadmin:DeleteS3TableIntegration",
-            "observabilityadmin:DeleteTelemetryPipeline",
-            "observabilityadmin:DeleteTelemetryRule",
-            "observabilityadmin:DeleteTelemetryRuleForOrganization",
-            "observabilityadmin:GetCentralizationRuleForOrganization",
-            "observabilityadmin:GetDatasetIntegration",
-            "observabilityadmin:GetS3TableIntegration",
-            "observabilityadmin:GetTelemetryEnrichmentStatus",
-            "observabilityadmin:GetTelemetryEvaluationStatus",
-            "observabilityadmin:GetTelemetryEvaluationStatusForOrganization",
-            "observabilityadmin:GetTelemetryPipeline",
-            "observabilityadmin:GetTelemetryRule",
-            "observabilityadmin:GetTelemetryRuleForOrganization",
-            "observabilityadmin:ListCentralizationRulesForOrganization",
-            "observabilityadmin:ListDatasetIntegrations",
-            "observabilityadmin:ListResourceTelemetry",
-            "observabilityadmin:ListResourceTelemetryForOrganization",
-            "observabilityadmin:ListS3TableIntegrations",
-            "observabilityadmin:ListTagsForResource",
-            "observabilityadmin:ListTelemetryPipelines",
-            "observabilityadmin:ListTelemetryRules",
-            "observabilityadmin:ListTelemetryRulesForOrganization",
-            "observabilityadmin:StartTelemetryEnrichment",
-            "observabilityadmin:StartTelemetryEvaluation",
-            "observabilityadmin:StartTelemetryEvaluationForOrganization",
-            "observabilityadmin:StopTelemetryEnrichment",
-            "observabilityadmin:StopTelemetryEvaluation",
-            "observabilityadmin:StopTelemetryEvaluationForOrganization",
-            "observabilityadmin:TagResource",
-            "observabilityadmin:TestTelemetryPipeline",
-            "observabilityadmin:UntagResource",
-            "observabilityadmin:UpdateCentralizationRuleForOrganization",
-            "observabilityadmin:UpdateDatasetIntegration",
-            "observabilityadmin:UpdateTelemetryPipeline",
-            "observabilityadmin:UpdateTelemetryRule",
-            "observabilityadmin:UpdateTelemetryRuleForOrganization",
-            "observabilityadmin:ValidateTelemetryPipelineConfiguration",
+            "observabilityadmin:*",
             "rum:*",
             "sns:CreateTopic",
             "sns:ListSubscriptions",
@@ -224,6 +211,15 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "CloudWatchApplicationSignalsCloudTrailListPermissions"
+        },
+        {
+          "Action": [
+            "config:DeleteServiceLinkedConfigurationRecorder",
+            "config:PutThirdPartyServiceLinkedConfigurationRecorder"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:config:*:*:configuration-recorder/*ConfigurationRecorderForCloudWatchTelemetryEnrichment*",
+          "Sid": "ObservabilityAdminThirdPartyEnrichmentConfigRecorderPermissions"
         },
         {
           "Action": [
@@ -275,7 +271,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v18"
+    "VersionId": "v19"
   },
-  "UpdateDate": "2026-10-20T18:57:07Z"
+  "UpdateDate": "2026-11-17T19:07:07Z"
 }

@@ -22,6 +22,7 @@ Actions:
   - Name: aws-marketplace:UntagResource
 
   # actions with no corresponding API
+  - Name: aws-marketplace:AcceptAgreementApproval
   - Name: aws-marketplace:AcceptAgreementApprovalRequest
   - Name: aws-marketplace:AcceptAgreementCancellationRequest
   - Name: aws-marketplace:AcceptAgreementPaymentRequest
@@ -40,11 +41,15 @@ Actions:
   - Name: aws-marketplace:DescribePrivateMarketplaceRequests
   - Name: aws-marketplace:DescribeProcurementSystemConfiguration
   - Name: aws-marketplace:DisassociateProductsFromPrivateMarketplace
+  - Name: aws-marketplace:GetAgreementApproval
   - Name: aws-marketplace:GetAgreementApprovalRequest
   - Name: aws-marketplace:GetAgreementCancellationRequest
+  - Name: aws-marketplace:GetAgreementContacts
   - Name: aws-marketplace:GetAgreementEntitlements
   - Name: aws-marketplace:GetAgreementPaymentRequest
   - Name: aws-marketplace:GetAgreementRequest
+  - Name: aws-marketplace:GetAgreementRequestApprovalPlans
+  - Name: aws-marketplace:GetAgreementRequestTerms
   - Name: aws-marketplace:GetBillingAdjustmentRequest
   - Name: aws-marketplace:GetBuyerDashboard
   - Name: aws-marketplace:GetInvoiceSubmissionTask
@@ -60,6 +65,7 @@ Actions:
   - Name: aws-marketplace:GetVerification
   - Name: aws-marketplace:GetVerificationEvidence
   - Name: aws-marketplace:ListAgreementApprovalRequests
+  - Name: aws-marketplace:ListAgreementApprovals
   - Name: aws-marketplace:ListAgreementCancellationRequests
   - Name: aws-marketplace:ListAgreementCharges
   - Name: aws-marketplace:ListAgreementInvoiceLineItems
@@ -81,6 +87,7 @@ Actions:
   - Name: aws-marketplace:ListVerificationEvidence
   - Name: aws-marketplace:ListVerifications
   - Name: aws-marketplace:PutProcurementSystemConfiguration
+  - Name: aws-marketplace:RejectAgreementApproval
   - Name: aws-marketplace:RejectAgreementApprovalRequest
   - Name: aws-marketplace:RejectAgreementCancellationRequest
   - Name: aws-marketplace:RejectAgreementPaymentRequest
@@ -88,6 +95,7 @@ Actions:
   - Name: aws-marketplace:SearchListings
   - Name: aws-marketplace:SendAgreementCancellationRequest
   - Name: aws-marketplace:SendAgreementPaymentRequest
+  - Name: aws-marketplace:StartAgreementApprovals
   - Name: aws-marketplace:StartBuild
   - Name: aws-marketplace:StartInvoiceSubmissionTask
   - Name: aws-marketplace:StartTaxComplianceProfileChangeTask

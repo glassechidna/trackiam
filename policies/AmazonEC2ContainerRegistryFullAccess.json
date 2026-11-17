@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess",
   "CreateDate": "2015-12-21T17:06:48Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIESRL7KD7IIVF6V4W",
   "PolicyName": "AmazonEC2ContainerRegistryFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2020-12-05T00:04:19Z",
+    "CreateDate": "2026-11-17T21:07:08Z",
     "Document": {
       "Statement": [
         {
@@ -31,12 +31,21 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "signin:CreateBearerToken"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:signin:*:*:service-principal/ecr.amazonaws.com"
+          ]
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2020-12-05T00:04:19Z"
+  "UpdateDate": "2026-11-17T21:07:08Z"
 }
