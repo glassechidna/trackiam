@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 468
-* Unique actions: 23215
+* Unique actions: 23220
 * Managed policies: 1607
 
 Most common managed policy name prefixes:
@@ -400,6 +400,7 @@ The following table summarises the AWS APIs.
 | [`s3express`](services/s3express.yml) | 0 | 0 | 28 |
 | [`payments`](services/payments.yml) | 0 | 0 | 28 |
 | [`one`](services/one.yml) | 0 | 0 | 28 |
+| [`transform`](services/transform.yml) | 0 | 0 | 27 |
 | [`end-user-messaging`](services/end-user-messaging.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`invoicing`](services/invoicing.yml) | 0 | 0 | 26 |
@@ -413,7 +414,6 @@ The following table summarises the AWS APIs.
 | [`evs`](services/evs.yml) | 0 | 0 | 24 |
 | [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 24 |
 | [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 23 |
-| [`transform`](services/transform.yml) | 0 | 0 | 22 |
 | [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 22 |
 | [`agent-registry`](services/agent-registry.yml) | 0 | 0 | 22 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 20 |
@@ -510,12 +510,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3937 |
-| `Get` | 3543 |
+| `Get` | 3546 |
 | `Delete` | 2647 |
 | `Create` | 2516 |
 | `Update` | 2199 |
 | `Describe` | 1968 |
-| `Put` | 628 |
+| `Put` | 629 |
 | `Start` | 572 |
 | `Batch` | 336 |
 | `Tag` | 329 |

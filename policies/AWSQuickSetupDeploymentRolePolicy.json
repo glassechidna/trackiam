@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSQuickSetupDeploymentRolePolicy",
   "CreateDate": "2024-06-26T09:55:21Z",
-  "DefaultVersionId": "v14",
+  "DefaultVersionId": "v15",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CG2CDKZLJ",
   "PolicyName": "AWSQuickSetupDeploymentRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-09-07T15:07:07Z",
+    "CreateDate": "2026-11-17T10:17:08Z",
     "Document": {
       "Statement": [
         {
@@ -55,7 +55,12 @@
           "Condition": {
             "ArnEquals": {
               "iam:PolicyARN": [
+                "arn:aws:iam::aws:policy/AWSQuickSetupCFGCPacksDispatchRolePolicy",
+                "arn:aws:iam::aws:policy/AWSQuickSetupCFGRecordingDispatchRolePolicy",
+                "arn:aws:iam::aws:policy/AWSQuickSetupDistributorDispatchRolePolicy",
                 "arn:aws:iam::aws:policy/AWSQuickSetupManagedInstanceProfileExecutionPolicy",
+                "arn:aws:iam::aws:policy/AWSQuickSetupSSMHostMgmtDispatchRolePolicy",
+                "arn:aws:iam::aws:policy/AWSQuickSetupSchedulerDispatchRolePolicy",
                 "arn:aws:iam::aws:policy/AWSQuickSetupStartSSMAssociationsExecutionPolicy",
                 "arn:aws:iam::aws:policy/AWSQuickSetupStartStopInstancesExecutionPolicy",
                 "arn:aws:iam::aws:policy/AWSSystemsManagerEnableConfigRecordingExecutionPolicy",
@@ -381,7 +386,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v14"
+    "VersionId": "v15"
   },
-  "UpdateDate": "2026-09-07T15:07:07Z"
+  "UpdateDate": "2026-11-17T10:17:08Z"
 }
