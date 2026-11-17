@@ -11,9 +11,9 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 467
-* Unique actions: 23188
-* Managed policies: 1606
+* Unique services: 468
+* Unique actions: 23215
+* Managed policies: 1607
 
 Most common managed policy name prefixes:
 
@@ -24,7 +24,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 372 |
 | `arn:aws:iam::aws:policy/service-role/*` | 230 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
-| Other | 176 |
+| Other | 177 |
 
 The following table summarises the AWS APIs. 
 
@@ -375,8 +375,8 @@ The following table summarises the AWS APIs.
 | [`sagemaker-mlflow`](services/sagemaker-mlflow.yml) | 0 | 0 | 61 |
 | [`s3tables`](services/s3tables.yml) | 0 | 0 | 61 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
+| [`health-agent`](services/health-agent.yml) | 0 | 0 | 56 |
 | [`q`](services/q.yml) | 0 | 0 | 54 |
-| [`health-agent`](services/health-agent.yml) | 0 | 0 | 49 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 48 |
 | [`route53globalresolver`](services/route53globalresolver.yml) | 0 | 0 | 48 |
 | [`billing`](services/billing.yml) | 0 | 0 | 47 |
@@ -417,6 +417,7 @@ The following table summarises the AWS APIs.
 | [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 22 |
 | [`agent-registry`](services/agent-registry.yml) | 0 | 0 | 22 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 20 |
+| [`osm`](services/osm.yml) | 0 | 0 | 20 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 19 |
@@ -508,14 +509,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3932 |
-| `Get` | 3538 |
-| `Delete` | 2643 |
-| `Create` | 2512 |
-| `Update` | 2197 |
+| `List` | 3937 |
+| `Get` | 3543 |
+| `Delete` | 2647 |
+| `Create` | 2516 |
+| `Update` | 2199 |
 | `Describe` | 1968 |
 | `Put` | 628 |
-| `Start` | 571 |
-| `Batch` | 335 |
-| `Tag` | 328 |
+| `Start` | 572 |
+| `Batch` | 336 |
+| `Tag` | 329 |
 
