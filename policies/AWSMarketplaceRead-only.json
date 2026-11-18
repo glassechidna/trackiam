@@ -1,15 +1,54 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceRead-only",
   "CreateDate": "2015-02-06T18:40:31Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJOOM6LETKURTJ3XZ2",
   "PolicyName": "AWSMarketplaceRead-only",
   "PolicyVersion": {
-    "CreateDate": "2026-05-07T17:12:10Z",
+    "CreateDate": "2026-11-18T17:57:11Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "aws-marketplace:GetAgreementApproval",
+            "aws-marketplace:GetAgreementRequest",
+            "aws-marketplace:GetAgreementRequestApprovalPlans",
+            "aws-marketplace:GetAgreementRequestTerms"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws-marketplace:AgreementType": [
+                "PurchaseAgreement"
+              ]
+            },
+            "Null": {
+              "aws-marketplace:AgreementType": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSMarketplaceAgreementRequestAndApprovalReadAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:GetAgreementContacts"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws-marketplace:AgreementType": [
+                "PurchaseAgreement"
+              ]
+            },
+            "Null": {
+              "aws-marketplace:AgreementType": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSMarketplaceAgreementContactsReadAccess"
+        },
         {
           "Action": [
             "aws-marketplace:DescribePrivateMarketplaceRequests",
@@ -81,12 +120,29 @@
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "aws-marketplace:GetDeploymentConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-marketplace:*:*:DeploymentConfiguration:catalogs/AWSMarketplace/*",
+          "Sid": "AWSMarketplaceDeploymentConfigurationReadAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:ListAgreementApprovals",
+            "aws-marketplace:ListAgreementRequests"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSMarketplaceAgreementRequestAndApprovalListAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2026-05-07T17:12:10Z"
+  "UpdateDate": "2026-11-18T17:57:11Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchFullAccessV2",
   "CreateDate": "2023-08-01T11:32:57Z",
-  "DefaultVersionId": "v19",
+  "DefaultVersionId": "v20",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4K5ELCXZSW",
   "PolicyName": "CloudWatchFullAccessV2",
   "PolicyVersion": {
-    "CreateDate": "2026-11-17T19:07:07Z",
+    "CreateDate": "2026-11-18T15:07:08Z",
     "Document": {
       "Statement": [
         {
@@ -134,7 +134,10 @@
               "aws:ResourceAccount": "${aws:PrincipalAccount}"
             },
             "StringLike": {
-              "kms:ViaService": "logs.*.amazonaws.com"
+              "kms:ViaService": [
+                "cloudwatch.*.amazonaws.com",
+                "logs.*.amazonaws.com"
+              ]
             }
           },
           "Effect": "Allow",
@@ -271,7 +274,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v19"
+    "VersionId": "v20"
   },
-  "UpdateDate": "2026-11-17T19:07:07Z"
+  "UpdateDate": "2026-11-18T15:07:08Z"
 }

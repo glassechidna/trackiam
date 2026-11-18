@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerOfferManagement",
   "CreateDate": "2024-11-19T00:41:38Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BMTW6QBBN",
   "PolicyName": "AWSMarketplaceSellerOfferManagement",
   "PolicyVersion": {
-    "CreateDate": "2026-10-27T00:47:06Z",
+    "CreateDate": "2026-11-18T20:07:09Z",
     "Document": {
       "Statement": [
         {
@@ -51,6 +51,24 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AWSMarketplaceAgreementsCancellationAndAdjustmentReadAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:GetAgreementContacts"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws-marketplace:AgreementType": [
+                "PurchaseAgreement"
+              ]
+            },
+            "Null": {
+              "aws-marketplace:AgreementType": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSMarketplaceAgreementContactsReadAccess"
         },
         {
           "Action": [
@@ -108,12 +126,22 @@
             "arn:aws:aws-marketplace:*:*:AWSMarketplace/Offer/*"
           ],
           "Sid": "AWSMarketplaceOfferManagement"
+        },
+        {
+          "Action": [
+            "s3:PutObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:s3:::aws-partner-central-marketplace-ephemeral-writeonly-files/${aws:PrincipalAccount}/*"
+          ],
+          "Sid": "MarketplaceEphemeralWriteS3Access"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-10-27T00:47:06Z"
+  "UpdateDate": "2026-11-18T20:07:09Z"
 }

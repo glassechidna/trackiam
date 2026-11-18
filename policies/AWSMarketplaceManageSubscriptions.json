@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceManageSubscriptions",
   "CreateDate": "2015-02-06T18:40:32Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJRDW2WIFN7QLUAKBQ",
   "PolicyName": "AWSMarketplaceManageSubscriptions",
   "PolicyVersion": {
-    "CreateDate": "2026-05-07T16:42:22Z",
+    "CreateDate": "2026-11-18T17:17:08Z",
     "Document": {
       "Statement": [
         {
@@ -53,6 +53,48 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AWSMarketplaceAgreementCancellationRequestAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:AcceptAgreementRequest",
+            "aws-marketplace:CancelAgreementRequest",
+            "aws-marketplace:GetAgreementApproval",
+            "aws-marketplace:GetAgreementRequest",
+            "aws-marketplace:GetAgreementRequestApprovalPlans",
+            "aws-marketplace:GetAgreementRequestTerms",
+            "aws-marketplace:StartAgreementApprovals"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws-marketplace:AgreementType": [
+                "PurchaseAgreement"
+              ]
+            },
+            "Null": {
+              "aws-marketplace:AgreementType": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSMarketplaceAgreementRequestAndApprovalAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:GetAgreementContacts"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws-marketplace:AgreementType": [
+                "PurchaseAgreement"
+              ]
+            },
+            "Null": {
+              "aws-marketplace:AgreementType": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSMarketplaceAgreementContactsReadAccess"
         },
         {
           "Action": [
@@ -137,12 +179,29 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AWSMarketplaceEntityReadAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:GetDeploymentConfiguration"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-marketplace:*:*:DeploymentConfiguration:catalogs/AWSMarketplace/*",
+          "Sid": "AWSMarketplaceDeploymentConfigurationReadAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:ListAgreementApprovals",
+            "aws-marketplace:ListAgreementRequests"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSMarketplaceAgreementRequestAndApprovalListAccess"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-05-07T16:42:22Z"
+  "UpdateDate": "2026-11-18T17:17:08Z"
 }

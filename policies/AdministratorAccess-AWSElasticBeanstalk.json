@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AdministratorAccess-AWSElasticBeanstalk",
   "CreateDate": "2021-01-22T19:36:54Z",
-  "DefaultVersionId": "v10",
+  "DefaultVersionId": "v11",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4AX52KWGWY",
   "PolicyName": "AdministratorAccess-AWSElasticBeanstalk",
   "PolicyVersion": {
-    "CreateDate": "2026-05-19T20:12:27Z",
+    "CreateDate": "2026-11-18T15:27:07Z",
     "Document": {
       "Statement": [
         {
@@ -27,11 +27,14 @@
               "iam:PassedToService": [
                 "autoscaling.amazonaws.com",
                 "cloudformation.amazonaws.com",
+                "codebuild.amazonaws.com",
                 "ec2.amazonaws.com",
                 "ec2.amazonaws.com.cn",
                 "ecs.amazonaws.com",
+                "eks.amazonaws.com",
                 "elasticbeanstalk.amazonaws.com",
-                "elasticloadbalancing.amazonaws.com"
+                "elasticloadbalancing.amazonaws.com",
+                "pods.eks.amazonaws.com"
               ]
             }
           },
@@ -107,6 +110,11 @@
             "arn:aws:iam::*:role/aws-service-role/maintenance.elasticbeanstalk.amazonaws.com/AWSServiceRoleForElasticBeanstalk",
             "arn:aws:iam::*:role/aws-service-role/managedupdates.elasticbeanstalk.amazonaws.com/AWSServiceRoleForElasticBeanstalk"
           ]
+        },
+        {
+          "Action": "iam:SimulatePrincipalPolicy",
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/*"
         },
         {
           "Action": [
@@ -367,7 +375,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v10"
+    "VersionId": "v11"
   },
-  "UpdateDate": "2026-05-19T20:12:27Z"
+  "UpdateDate": "2026-11-18T15:27:07Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AssuranceOperatorPolicy",
   "CreateDate": "2026-10-21T15:17:07Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4O5TRU5TYF",
   "PolicyName": "AssuranceOperatorPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-11-06T16:37:07Z",
+    "CreateDate": "2026-11-18T20:47:09Z",
     "Document": {
       "Statement": [
         {
@@ -18,6 +18,14 @@
             "arn:aws:identitystore:::user/*"
           ],
           "Sid": "IDCUserAccess"
+        },
+        {
+          "Action": "sso:DescribeInstance",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sso:::instance/*"
+          ],
+          "Sid": "SSOUserAccess"
         },
         {
           "Action": [
@@ -98,7 +106,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-11-06T16:37:07Z"
+  "UpdateDate": "2026-11-18T20:47:09Z"
 }

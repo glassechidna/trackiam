@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerProductsReadOnly",
   "CreateDate": "2019-07-02T21:40:47Z",
-  "DefaultVersionId": "v7",
+  "DefaultVersionId": "v8",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4K5Y2Q5F7D",
   "PolicyName": "AWSMarketplaceSellerProductsReadOnly",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:01:38Z",
+    "CreateDate": "2026-11-18T18:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -36,13 +36,26 @@
             "aws-marketplace:ListTagsForResource"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace/*"
+          "Resource": [
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace/*",
+            "arn:aws:aws-marketplace:*:*:DeploymentConfiguration:catalogs/AWSMarketplace/*"
+          ]
+        },
+        {
+          "Action": [
+            "aws-marketplace:GetDeploymentConfiguration",
+            "aws-marketplace:GetDeploymentConfigurationJob",
+            "aws-marketplace:ListDeploymentConfigurationJobs"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-marketplace:*:*:DeploymentConfiguration:catalogs/AWSMarketplace/*",
+          "Sid": "DeploymentConfigurationRead"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v7"
+    "VersionId": "v8"
   },
-  "UpdateDate": "2026-02-12T18:01:38Z"
+  "UpdateDate": "2026-11-18T18:37:08Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSManagedSettingsAdminAccess",
   "CreateDate": "2026-07-22T01:27:25Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4GA3LE2K77",
   "PolicyName": "AWSManagedSettingsAdminAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-10-22T22:57:07Z",
+    "CreateDate": "2026-11-18T18:57:08Z",
     "Document": {
       "Statement": [
         {
@@ -119,10 +119,7 @@
             "iam:CreateRole",
             "iam:DeleteRole",
             "iam:DeleteRolePolicy",
-            "iam:DetachRolePolicy",
-            "iam:GetRole",
-            "iam:ListAttachedRolePolicies",
-            "iam:ListRolePolicies"
+            "iam:DetachRolePolicy"
           ],
           "Condition": {
             "StringEquals": {
@@ -136,6 +133,23 @@
             "arn:aws:iam::*:role/managed/*"
           ],
           "Sid": "ActivateAdvancedManagedRoleAccess"
+        },
+        {
+          "Action": [
+            "iam:GetRole",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListRolePolicies"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaLast": "account.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/*"
+          ],
+          "Sid": "ActivateAdvancedManagedRoleReadAccess"
         },
         {
           "Action": [
@@ -449,7 +463,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-10-22T22:57:07Z"
+  "UpdateDate": "2026-11-18T18:57:08Z"
 }

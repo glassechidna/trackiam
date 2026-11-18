@@ -11,8 +11,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 469
-* Unique actions: 23316
+* Unique services: 470
+* Unique actions: 23359
 * Managed policies: 1612
 
 Most common managed policy name prefixes:
@@ -46,7 +46,7 @@ The following table summarises the AWS APIs.
 | [`quicksight`](services/quicksight.yml) | 174 | 3 | 185 |
 | [`rds`](services/rds.yml) | 162 | 0 | 11 |
 | [`lightsail`](services/lightsail.yml) | 161 | 0 | 0 |
-| [`iam`](services/iam.yml) | 159 | 0 | 31 |
+| [`iam`](services/iam.yml) | 159 | 0 | 33 |
 | [`ssm`](services/ssm.yml) | 140 | 0 | 26 |
 | [`lex`](services/lex.yml) | 139 | 2 | 13 |
 | [`redshift`](services/redshift.yml) | 133 | 0 | 34 |
@@ -105,7 +105,7 @@ The following table summarises the AWS APIs.
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
 | [`autoscaling`](services/autoscaling.yml) | 65 | 0 | 3 |
 | [`appsync`](services/appsync.yml) | 64 | 0 | 23 |
-| [`lambda`](services/lambda.yml) | 63 | 3 | 90 |
+| [`lambda`](services/lambda.yml) | 63 | 3 | 93 |
 | [`ivs`](services/ivs.yml) | 63 | 0 | 20 |
 | [`directconnect`](services/directconnect.yml) | 63 | 0 | 10 |
 | [`auditmanager`](services/auditmanager.yml) | 62 | 0 | 0 |
@@ -247,7 +247,7 @@ The following table summarises the AWS APIs.
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 18 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 22 | 0 | 9 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 84 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 89 |
 | [`mgh`](services/mgh.yml) | 21 | 0 | 25 |
 | [`resource-explorer-2`](services/resource-explorer-2.yml) | 21 | 0 | 16 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
@@ -284,11 +284,11 @@ The following table summarises the AWS APIs.
 | [`acm`](services/acm.yml) | 15 | 0 | 27 |
 | [`application-signals`](services/application-signals.yml) | 15 | 0 | 17 |
 | [`oam`](services/oam.yml) | 15 | 0 | 0 |
+| [`health`](services/health.yml) | 14 | 0 | 12 |
 | [`osis`](services/osis.yml) | 14 | 0 | 9 |
 | [`codeguru-reviewer`](services/codeguru-reviewer.yml) | 14 | 0 | 3 |
 | [`serverlessrepo`](services/serverlessrepo.yml) | 14 | 0 | 1 |
 | [`iotdeviceadvisor`](services/iotdeviceadvisor.yml) | 14 | 0 | 0 |
-| [`health`](services/health.yml) | 14 | 0 | 0 |
 | [`healthlake`](services/healthlake.yml) | 13 | 0 | 55 |
 | [`cloud9`](services/cloud9.yml) | 13 | 0 | 16 |
 | [`braket`](services/braket.yml) | 13 | 0 | 7 |
@@ -377,9 +377,9 @@ The following table summarises the AWS APIs.
 | [`observabilityadmin`](services/observabilityadmin.yml) | 0 | 0 | 58 |
 | [`sso-directory`](services/sso-directory.yml) | 0 | 0 | 57 |
 | [`health-agent`](services/health-agent.yml) | 0 | 0 | 56 |
+| [`route53globalresolver`](services/route53globalresolver.yml) | 0 | 0 | 54 |
 | [`q`](services/q.yml) | 0 | 0 | 54 |
 | [`wickr`](services/wickr.yml) | 0 | 0 | 48 |
-| [`route53globalresolver`](services/route53globalresolver.yml) | 0 | 0 | 48 |
 | [`billing`](services/billing.yml) | 0 | 0 | 47 |
 | [`network-security-manager`](services/network-security-manager.yml) | 0 | 0 | 46 |
 | [`finops-agent`](services/finops-agent.yml) | 0 | 0 | 46 |
@@ -394,9 +394,9 @@ The following table summarises the AWS APIs.
 | [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
 | [`continuum`](services/continuum.yml) | 0 | 0 | 33 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
+| [`dsql`](services/dsql.yml) | 0 | 0 | 31 |
 | [`honeycode`](services/honeycode.yml) | 0 | 0 | 30 |
 | [`gameliftstreams`](services/gameliftstreams.yml) | 0 | 0 | 30 |
-| [`dsql`](services/dsql.yml) | 0 | 0 | 30 |
 | [`codecatalyst`](services/codecatalyst.yml) | 0 | 0 | 30 |
 | [`s3express`](services/s3express.yml) | 0 | 0 | 28 |
 | [`payments`](services/payments.yml) | 0 | 0 | 28 |
@@ -436,6 +436,7 @@ The following table summarises the AWS APIs.
 | [`ssm-quicksetup`](services/ssm-quicksetup.yml) | 0 | 0 | 14 |
 | [`purchase-orders`](services/purchase-orders.yml) | 0 | 0 | 14 |
 | [`elemental-appliances-software`](services/elemental-appliances-software.yml) | 0 | 0 | 14 |
+| [`bcm-data-hub`](services/bcm-data-hub.yml) | 0 | 0 | 14 |
 | [`application-transformation`](services/application-transformation.yml) | 0 | 0 | 14 |
 | [`supportplans`](services/supportplans.yml) | 0 | 0 | 13 |
 | [`support-console`](services/support-console.yml) | 0 | 0 | 13 |
@@ -510,14 +511,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3959 |
-| `Get` | 3568 |
-| `Delete` | 2657 |
-| `Create` | 2524 |
-| `Update` | 2210 |
-| `Describe` | 1969 |
+| `List` | 3965 |
+| `Get` | 3577 |
+| `Delete` | 2660 |
+| `Create` | 2526 |
+| `Update` | 2212 |
+| `Describe` | 1975 |
 | `Put` | 633 |
-| `Start` | 576 |
+| `Start` | 579 |
 | `Batch` | 336 |
-| `Tag` | 330 |
+| `Tag` | 331 |
 

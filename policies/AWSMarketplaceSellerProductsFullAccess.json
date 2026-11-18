@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerProductsFullAccess",
   "CreateDate": "2019-07-02T21:06:25Z",
-  "DefaultVersionId": "v16",
+  "DefaultVersionId": "v17",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DS2YFEG4N",
   "PolicyName": "AWSMarketplaceSellerProductsFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-10-22T17:47:07Z",
+    "CreateDate": "2026-11-18T20:07:09Z",
     "Document": {
       "Statement": [
         {
@@ -73,6 +73,7 @@
             "aws-marketplace:CancelChangeSet",
             "aws-marketplace:DescribeChangeSet",
             "aws-marketplace:DescribeEntity",
+            "aws-marketplace:StartAssessment",
             "aws-marketplace:StartChangeSet"
           ],
           "Effect": "Allow",
@@ -99,6 +100,17 @@
         },
         {
           "Action": [
+            "aws-marketplace:GetDeploymentConfiguration",
+            "aws-marketplace:GetDeploymentConfigurationJob",
+            "aws-marketplace:ListDeploymentConfigurationJobs",
+            "aws-marketplace:StartDeploymentConfigurationJob"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-marketplace:*:*:DeploymentConfiguration:catalogs/AWSMarketplace/*",
+          "Sid": "DeploymentConfigurationManagement"
+        },
+        {
+          "Action": [
             "aws-marketplace:ListAssessments",
             "aws-marketplace:ListChangeSets",
             "aws-marketplace:ListEntities"
@@ -114,7 +126,10 @@
             "aws-marketplace:UntagResource"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace*/*",
+          "Resource": [
+            "arn:aws:aws-marketplace:*:*:AWSMarketplace*/*",
+            "arn:aws:aws-marketplace:*:*:DeploymentConfiguration:catalogs/AWSMarketplace/*"
+          ],
           "Sid": "TagAccess"
         },
         {
@@ -175,7 +190,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v16"
+    "VersionId": "v17"
   },
-  "UpdateDate": "2026-10-22T17:47:07Z"
+  "UpdateDate": "2026-11-18T20:07:09Z"
 }

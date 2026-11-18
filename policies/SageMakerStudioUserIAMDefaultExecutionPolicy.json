@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/SageMakerStudioUserIAMDefaultExecutionPolicy",
   "CreateDate": "2025-08-18T17:19:07Z",
-  "DefaultVersionId": "v34",
+  "DefaultVersionId": "v35",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BV3PMY4IB",
   "PolicyName": "SageMakerStudioUserIAMDefaultExecutionPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-11-17T18:07:07Z",
+    "CreateDate": "2026-11-18T17:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -35,6 +35,33 @@
           "Effect": "Allow",
           "Resource": "arn:aws:logs:*:*:log-group:/aws/bedrock-agentcore/*",
           "Sid": "ACLogRetention"
+        },
+        {
+          "Action": "ram:*ResourceShare*",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": [
+                "lakeformation.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RamViaLf"
+        },
+        {
+          "Action": "ram:AcceptResourceShareInvitation",
+          "Condition": {
+            "StringLike": {
+              "ram:ResourceShareName": [
+                "DataZoneS3AG*",
+                "LakeFormation*"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:*:ram:*:*:resource-share-invitation/*",
+          "Sid": "RamAccept"
         },
         {
           "Action": "ram:CreateResourceShare",
@@ -1349,6 +1376,28 @@
         },
         {
           "Action": [
+            "lakeformation:CreateDataCellsFilter",
+            "lakeformation:DeleteDataCellsFilter",
+            "lakeformation:GetDataCellsFilter",
+            "lakeformation:GetResourceLFTags",
+            "lakeformation:ListDataCellsFilter",
+            "lakeformation:UpdateDataCellsFilter"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LfFilters"
+        },
+        {
+          "Action": [
+            "ram:GetResourceShareInvitations",
+            "ram:ListResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RamRead"
+        },
+        {
+          "Action": [
             "redshift-data:BatchExecuteStatement",
             "redshift-data:Describe*",
             "redshift-data:ExecuteStatement",
@@ -1389,8 +1438,12 @@
           "Action": [
             "s3:GetAccessGrantsInstance",
             "s3:GetAccessGrantsInstanceForPrefix",
+            "s3:GetAccountPublicAccessBlock",
             "s3:GetBucketAcl",
+            "s3:GetBucketLocation",
+            "s3:GetBucketPublicAccessBlock",
             "s3:GetDataAccess",
+            "s3:GetEncryptionConfiguration",
             "s3:List*"
           ],
           "Effect": "Allow",
@@ -1489,7 +1542,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v34"
+    "VersionId": "v35"
   },
-  "UpdateDate": "2026-11-17T18:07:07Z"
+  "UpdateDate": "2026-11-18T17:37:08Z"
 }

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerFullAccess",
   "CreateDate": "2019-07-02T20:40:09Z",
-  "DefaultVersionId": "v36",
+  "DefaultVersionId": "v37",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JF7OFUANW",
   "PolicyName": "AWSMarketplaceSellerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-11-13T18:47:08Z",
+    "CreateDate": "2026-11-18T20:07:09Z",
     "Document": {
       "Statement": [
         {
@@ -86,6 +86,24 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AgreementAccess"
+        },
+        {
+          "Action": [
+            "aws-marketplace:GetAgreementContacts"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws-marketplace:AgreementType": [
+                "PurchaseAgreement"
+              ]
+            },
+            "Null": {
+              "aws-marketplace:AgreementType": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AWSMarketplaceAgreementContactsReadAccess"
         },
         {
           "Action": [
@@ -213,6 +231,17 @@
         },
         {
           "Action": [
+            "aws-marketplace:GetDeploymentConfiguration",
+            "aws-marketplace:GetDeploymentConfigurationJob",
+            "aws-marketplace:ListDeploymentConfigurationJobs",
+            "aws-marketplace:StartDeploymentConfigurationJob"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-marketplace:*:*:DeploymentConfiguration:catalogs/AWSMarketplace/*",
+          "Sid": "DeploymentConfigurationManagement"
+        },
+        {
+          "Action": [
             "aws-marketplace:GetInvoiceSubmissionTask",
             "aws-marketplace:StartInvoiceSubmissionTask"
           ],
@@ -256,6 +285,7 @@
           "Effect": "Allow",
           "Resource": [
             "arn:aws:aws-marketplace:*:*:AWSMarketplace*/*",
+            "arn:aws:aws-marketplace:*:*:DeploymentConfiguration:catalogs/AWSMarketplace/*",
             "arn:aws:aws-marketplace:*:*:catalog/AWSMarketplace*/*",
             "arn:aws:aws-marketplace:*:*:tax-compliance-profile-change-task/*",
             "arn:aws:aws-marketplace:*:*:tax-compliance-profile/*",
@@ -271,6 +301,14 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "TaxComplianceProfileList"
+        },
+        {
+          "Action": [
+            "aws-marketplace:StartAssessment"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:aws-marketplace:*:*:AWSMarketplace*/*",
+          "Sid": "MarketplaceStartAssessment"
         },
         {
           "Action": [
@@ -347,7 +385,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v36"
+    "VersionId": "v37"
   },
-  "UpdateDate": "2026-11-13T18:47:08Z"
+  "UpdateDate": "2026-11-18T20:07:09Z"
 }
