@@ -11,17 +11,17 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 468
-* Unique actions: 23244
-* Managed policies: 1609
+* Unique services: 469
+* Unique actions: 23316
+* Managed policies: 1612
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 432 |
-| `arn:aws:iam::aws:policy/Amazon*` | 382 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 373 |
+| `arn:aws:iam::aws:policy/Amazon*` | 384 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 374 |
 | `arn:aws:iam::aws:policy/service-role/*` | 230 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
 | Other | 177 |
@@ -97,7 +97,7 @@ The following table summarises the AWS APIs.
 | [`mgn`](services/mgn.yml) | 70 | 0 | 77 |
 | [`route53`](services/route53.yml) | 70 | 0 | 9 |
 | [`athena`](services/athena.yml) | 68 | 0 | 18 |
-| [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 2 |
+| [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 3 |
 | [`ds`](services/ds.yml) | 67 | 0 | 24 |
 | [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 66 | 0 | 11 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
@@ -126,7 +126,7 @@ The following table summarises the AWS APIs.
 | [`redshift-serverless`](services/redshift-serverless.yml) | 55 | 0 | 14 |
 | [`organizations`](services/organizations.yml) | 55 | 0 | 8 |
 | [`lakeformation`](services/lakeformation.yml) | 54 | 1 | 15 |
-| [`wafv2`](services/wafv2.yml) | 54 | 0 | 10 |
+| [`wafv2`](services/wafv2.yml) | 54 | 0 | 15 |
 | [`kms`](services/kms.yml) | 52 | 1 | 6 |
 | [`profile`](services/profile.yml) | 52 | 0 | 65 |
 | [`kafka`](services/kafka.yml) | 52 | 0 | 12 |
@@ -185,7 +185,7 @@ The following table summarises the AWS APIs.
 | [`applicationinsights`](services/applicationinsights.yml) | 33 | 0 | 1 |
 | [`tnb`](services/tnb.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
-| [`kinesis`](services/kinesis.yml) | 32 | 0 | 15 |
+| [`kinesis`](services/kinesis.yml) | 32 | 0 | 28 |
 | [`billingconductor`](services/billingconductor.yml) | 32 | 0 | 2 |
 | [`route53-recovery-readiness`](services/route53-recovery-readiness.yml) | 32 | 0 | 0 |
 | [`payment-cryptography`](services/payment-cryptography.yml) | 31 | 0 | 16 |
@@ -360,7 +360,7 @@ The following table summarises the AWS APIs.
 | [`elastic-inference`](services/elastic-inference.yml) | 0 | 6 | 0 |
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 0 | 6 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
-| [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 259 |
+| [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 265 |
 | [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 164 |
 | [`securityagent`](services/securityagent.yml) | 0 | 0 | 120 |
 | [`odb`](services/odb.yml) | 0 | 0 | 96 |
@@ -383,6 +383,7 @@ The following table summarises the AWS APIs.
 | [`billing`](services/billing.yml) | 0 | 0 | 47 |
 | [`network-security-manager`](services/network-security-manager.yml) | 0 | 0 | 46 |
 | [`finops-agent`](services/finops-agent.yml) | 0 | 0 | 46 |
+| [`apiportal`](services/apiportal.yml) | 0 | 0 | 46 |
 | [`notifications`](services/notifications.yml) | 0 | 0 | 44 |
 | [`appmesh-preview`](services/appmesh-preview.yml) | 0 | 0 | 39 |
 | [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 38 |
@@ -456,12 +457,12 @@ The following table summarises the AWS APIs.
 | [`network-security-director`](services/network-security-director.yml) | 0 | 0 | 8 |
 | [`activate`](services/activate.yml) | 0 | 0 | 8 |
 | [`ssm-guiconnect`](services/ssm-guiconnect.yml) | 0 | 0 | 7 |
+| [`researchstudio`](services/researchstudio.yml) | 0 | 0 | 7 |
 | [`qdeveloper`](services/qdeveloper.yml) | 0 | 0 | 7 |
 | [`networkmanager-chat`](services/networkmanager-chat.yml) | 0 | 0 | 7 |
 | [`geo-places`](services/geo-places.yml) | 0 | 0 | 7 |
 | [`customer-verification`](services/customer-verification.yml) | 0 | 0 | 7 |
 | [`uxc`](services/uxc.yml) | 0 | 0 | 6 |
-| [`researchstudio`](services/researchstudio.yml) | 0 | 0 | 6 |
 | [`partnercentral-account-management`](services/partnercentral-account-management.yml) | 0 | 0 | 6 |
 | [`ec2messages`](services/ec2messages.yml) | 0 | 0 | 6 |
 | [`cloudfront-keyvaluestore`](services/cloudfront-keyvaluestore.yml) | 0 | 0 | 6 |
@@ -509,14 +510,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3943 |
-| `Get` | 3555 |
-| `Delete` | 2648 |
-| `Create` | 2517 |
-| `Update` | 2199 |
-| `Describe` | 1968 |
-| `Put` | 630 |
-| `Start` | 575 |
+| `List` | 3959 |
+| `Get` | 3568 |
+| `Delete` | 2657 |
+| `Create` | 2524 |
+| `Update` | 2210 |
+| `Describe` | 1969 |
+| `Put` | 633 |
+| `Start` | 576 |
 | `Batch` | 336 |
-| `Tag` | 329 |
+| `Tag` | 330 |
 

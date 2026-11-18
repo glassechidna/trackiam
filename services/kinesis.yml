@@ -33,18 +33,31 @@ Actions:
   - Name: kinesis:UpdateStreamMode
 
   # actions with no corresponding API
+  - Name: kinesis:AcknowledgeDeadLetterQueueRecords
+  - Name: kinesis:AcknowledgeQueueRecords
   - Name: kinesis:AssociateStreamsWithChannel
+  - Name: kinesis:AssociateStreamsWithQueue
   - Name: kinesis:CreateChannel
+  - Name: kinesis:CreateQueue
   - Name: kinesis:DeleteChannel
+  - Name: kinesis:DeleteQueue
   - Name: kinesis:DescribeAccountSettings
   - Name: kinesis:DescribeChannel
+  - Name: kinesis:DescribeQueue
   - Name: kinesis:InjectApiError
   - Name: kinesis:ListChannels
+  - Name: kinesis:ListQueues
   - Name: kinesis:ListTagsForResource
+  - Name: kinesis:ReceiveDeadLetterQueueRecords
+  - Name: kinesis:ReceiveQueueRecords
+  - Name: kinesis:RestoreDeadLetterQueueRecords
   - Name: kinesis:TagResource
   - Name: kinesis:UntagResource
   - Name: kinesis:UpdateAccountSettings
   - Name: kinesis:UpdateChannel
+  - Name: kinesis:UpdateDeadLetterQueueRecordsVisibility
   - Name: kinesis:UpdateMaxRecordSize
+  - Name: kinesis:UpdateQueue
+  - Name: kinesis:UpdateQueueRecordsVisibility
   - Name: kinesis:UpdateStreamRecordDistributionStrategy
   - Name: kinesis:UpdateStreamWarmThroughput

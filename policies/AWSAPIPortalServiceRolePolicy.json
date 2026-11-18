@@ -1,0 +1,70 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSAPIPortalServiceRolePolicy",
+  "CreateDate": "2026-11-17T23:37:09Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4MD2TDGPAC",
+  "PolicyName": "AWSAPIPortalServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-17T23:37:09Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "config.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig",
+          "Sid": "APIPortalServiceRoleConfigIamPermissions"
+        },
+        {
+          "Action": [
+            "config:AssociateResourceTypes",
+            "config:DeleteServiceLinkedConfigurationRecorder",
+            "config:DescribeConfigurationRecorderStatus",
+            "config:DescribeConfigurationRecorders",
+            "config:DisassociateResourceTypes",
+            "config:PutServiceLinkedConfigurationRecorder"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:config:*:*:configuration-recorder/*ConfigurationRecorderForAPIPortal*"
+          ],
+          "Sid": "APIPortalServiceRoleConfigPermissions"
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:DescribeOrganizationalUnit",
+            "organizations:ListAccounts",
+            "organizations:ListChildren",
+            "organizations:ListDelegatedAdministrators",
+            "organizations:ListParents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "APIPortalServiceRoleOrganizationsPermissions"
+        },
+        {
+          "Action": [
+            "wafv2:ListEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "APIPortalServiceRoleWafPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-17T23:37:09Z"
+}

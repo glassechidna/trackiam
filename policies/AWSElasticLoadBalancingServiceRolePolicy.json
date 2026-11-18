@@ -1,15 +1,34 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSElasticLoadBalancingServiceRolePolicy",
   "CreateDate": "2017-09-19T22:19:04Z",
-  "DefaultVersionId": "v15",
+  "DefaultVersionId": "v16",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAIMHWGGSRHLOQUICJQ",
   "PolicyName": "AWSElasticLoadBalancingServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-10-13T19:47:07Z",
+    "CreateDate": "2026-11-17T22:27:08Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "secretsmanager:DeleteSecret",
+            "secretsmanager:DescribeSecret",
+            "secretsmanager:PutSecretValue",
+            "secretsmanager:RotateSecret",
+            "secretsmanager:UpdateSecretVersionStage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:secretsmanager:*:*:secret:elasticloadbalancing-nlb!*"
+          ],
+          "Sid": "NLBSecretsManagerAccess"
+        },
         {
           "Action": [
             "ec2:AllocateAddress",
@@ -57,7 +76,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v15"
+    "VersionId": "v16"
   },
-  "UpdateDate": "2026-10-13T19:47:07Z"
+  "UpdateDate": "2026-11-17T22:27:08Z"
 }
