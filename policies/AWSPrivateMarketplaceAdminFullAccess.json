@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPrivateMarketplaceAdminFullAccess",
   "CreateDate": "2018-11-27T16:32:32Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJ6VRZDDCYDOVCOCEI",
   "PolicyName": "AWSPrivateMarketplaceAdminFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:01:07Z",
+    "CreateDate": "2026-11-18T21:17:08Z",
     "Document": {
       "Statement": [
         {
@@ -24,6 +24,24 @@
             "arn:aws:iam::*:role/aws-service-role/private-marketplace.marketplace.amazonaws.com/AWSServiceRoleForPrivateMarketplaceAdmin"
           ],
           "Sid": "PrivateMarketplaceCreateSLRPermissions"
+        },
+        {
+          "Action": [
+            "invoicing:CreateProcurementPortalPreference",
+            "invoicing:GetProcurementPortalPreference",
+            "invoicing:ListProcurementPortalPreferences",
+            "invoicing:ListProcurementPortalSuppliers",
+            "invoicing:ListProcurementPortals",
+            "invoicing:PutProcurementPortalPreference"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PrivateMarketplaceProcurementPortalPermissions"
         },
         {
           "Action": [
@@ -51,6 +69,19 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "PrivateMarketplaceEnableServiceAccessPermissions"
+        },
+        {
+          "Action": [
+            "aws-marketplace:AcceptAgreementApproval",
+            "aws-marketplace:GetAgreementApproval",
+            "aws-marketplace:GetAgreementRequest",
+            "aws-marketplace:GetAgreementRequestTerms",
+            "aws-marketplace:ListAgreementApprovals",
+            "aws-marketplace:RejectAgreementApproval"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "PrivateMarketplaceBuyerApprovalPermissions"
         },
         {
           "Action": [
@@ -119,7 +150,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-02-12T18:01:07Z"
+  "UpdateDate": "2026-11-18T21:17:08Z"
 }

@@ -10,6 +10,7 @@ Actions:
   - Name: partnercentral:AssociateBenefitApplicationResource
   - Name: partnercentral:AssociateBusinessPlan
   - Name: partnercentral:AssociateOpportunity
+  - Name: partnercentral:BatchCreateCampaignAsset
   - Name: partnercentral:CancelBenefitApplication
   - Name: partnercentral:CancelBusinessPlan
   - Name: partnercentral:CancelBusinessPlanSubmissionTask
@@ -20,10 +21,13 @@ Actions:
   - Name: partnercentral:CreateBenefitApplication
   - Name: partnercentral:CreateBusinessPlan
   - Name: partnercentral:CreateBusinessPlanItem
+  - Name: partnercentral:CreateCampaign
   - Name: partnercentral:CreateChannelHandshake
   - Name: partnercentral:CreateCollaborationChannelMembers
   - Name: partnercentral:CreateCollaborationChannelRequest
   - Name: partnercentral:CreateConnectionInvitation
+  - Name: partnercentral:CreateCustomerAccount
+  - Name: partnercentral:CreateDataSubscription
   - Name: partnercentral:CreateEngagement
   - Name: partnercentral:CreateEngagementContext
   - Name: partnercentral:CreateEngagementInvitation
@@ -36,11 +40,18 @@ Actions:
   - Name: partnercentral:CreateResourceSnapshot
   - Name: partnercentral:CreateResourceSnapshotJob
   - Name: partnercentral:CreateRevenueAttribution
+  - Name: partnercentral:CreateSocialConnectionAuthorizationUrl
+  - Name: partnercentral:DeactivateCampaignAsset
   - Name: partnercentral:DeleteBusinessPlanAttachment
   - Name: partnercentral:DeleteBusinessPlanItem
+  - Name: partnercentral:DeleteCampaign
+  - Name: partnercentral:DeleteCampaignAsset
+  - Name: partnercentral:DeleteCustomerAccount
+  - Name: partnercentral:DeleteDataSubscription
   - Name: partnercentral:DeleteProgramManagementAccount
   - Name: partnercentral:DeleteRelationship
   - Name: partnercentral:DeleteResourceSnapshotJob
+  - Name: partnercentral:DeleteSocialConnection
   - Name: partnercentral:DisassociateAwsTrainingCertificationEmailDomain
   - Name: partnercentral:DisassociateBenefitApplicationResource
   - Name: partnercentral:DisassociateBusinessPlan
@@ -58,15 +69,26 @@ Actions:
   - Name: partnercentral:GetBusinessPlanItemSchema
   - Name: partnercentral:GetBusinessPlanSettings
   - Name: partnercentral:GetBusinessPlanSubmissionTask
+  - Name: partnercentral:GetCampaign
+  - Name: partnercentral:GetCampaignAsset
+  - Name: partnercentral:GetCampaignAssetActivationTask
+  - Name: partnercentral:GetCampaignAssetExportTask
+  - Name: partnercentral:GetCampaignTemplate
   - Name: partnercentral:GetCollaborationChannel
   - Name: partnercentral:GetConnection
   - Name: partnercentral:GetConnectionInvitation
   - Name: partnercentral:GetConnectionPreferences
+  - Name: partnercentral:GetCustomerAccount
+  - Name: partnercentral:GetCustomerAccountBulkJob
+  - Name: partnercentral:GetCustomerAccountBulkJobReportUrl
+  - Name: partnercentral:GetCustomerAccountStatistics
+  - Name: partnercentral:GetDataSubscription
   - Name: partnercentral:GetEngagement
   - Name: partnercentral:GetEngagementInvitation
   - Name: partnercentral:GetMarketplaceRevenueShare
   - Name: partnercentral:GetMarketplaceRevenueShareAllocation
   - Name: partnercentral:GetOpportunity
+  - Name: partnercentral:GetOpportunityBulkJobReportUrl
   - Name: partnercentral:GetPartner
   - Name: partnercentral:GetPartnerCentralContentDocument
   - Name: partnercentral:GetPartnerCentralContentMetadata
@@ -98,12 +120,18 @@ Actions:
   - Name: partnercentral:ListBusinessPlanItems
   - Name: partnercentral:ListBusinessPlanSubmissionTasks
   - Name: partnercentral:ListBusinessPlans
+  - Name: partnercentral:ListCampaignAssets
+  - Name: partnercentral:ListCampaigns
   - Name: partnercentral:ListChannelHandshakes
   - Name: partnercentral:ListCollaborationChannels
   - Name: partnercentral:ListConnectionInvitations
   - Name: partnercentral:ListConnections
+  - Name: partnercentral:ListCustomerAccountBulkJobResults
+  - Name: partnercentral:ListCustomerAccountBulkJobs
+  - Name: partnercentral:ListDataSubscriptions
   - Name: partnercentral:ListEngagementByAcceptingInvitationTasks
   - Name: partnercentral:ListEngagementFromOpportunityTasks
+  - Name: partnercentral:ListEngagementGroups
   - Name: partnercentral:ListEngagementInvitations
   - Name: partnercentral:ListEngagementMembers
   - Name: partnercentral:ListEngagementResourceAssociations
@@ -111,6 +139,8 @@ Actions:
   - Name: partnercentral:ListMarketplaceRevenueShareAllocations
   - Name: partnercentral:ListMarketplaceRevenueShares
   - Name: partnercentral:ListOpportunities
+  - Name: partnercentral:ListOpportunityBulkJobResults
+  - Name: partnercentral:ListOpportunityBulkJobs
   - Name: partnercentral:ListOpportunityFromEngagementTasks
   - Name: partnercentral:ListPartnerCentralContent
   - Name: partnercentral:ListPartnerPaths
@@ -122,6 +152,7 @@ Actions:
   - Name: partnercentral:ListResourceSnapshots
   - Name: partnercentral:ListRevenueAttributionAllocations
   - Name: partnercentral:ListRevenueAttributions
+  - Name: partnercentral:ListSocialConnections
   - Name: partnercentral:ListSolutions
   - Name: partnercentral:ListTagsForResource
   - Name: partnercentral:PutAllianceLeadContact
@@ -133,14 +164,21 @@ Actions:
   - Name: partnercentral:RejectChannelHandshake
   - Name: partnercentral:RejectConnectionInvitation
   - Name: partnercentral:RejectEngagementInvitation
+  - Name: partnercentral:SearchCampaignTemplates
+  - Name: partnercentral:SearchCustomerAccounts
+  - Name: partnercentral:SearchEngagements
   - Name: partnercentral:SearchOpportunities
   - Name: partnercentral:SearchPartnerCentralContent
   - Name: partnercentral:SearchPartnerProfiles
   - Name: partnercentral:SendEmailVerificationCode
   - Name: partnercentral:StartBusinessPlanAttachmentImportTask
   - Name: partnercentral:StartBusinessPlanSubmissionTask
+  - Name: partnercentral:StartCampaignAssetActivationTask
+  - Name: partnercentral:StartCampaignAssetExportTask
+  - Name: partnercentral:StartCustomerAccountBulkJob
   - Name: partnercentral:StartEngagementByAcceptingInvitationTask
   - Name: partnercentral:StartEngagementFromOpportunityTask
+  - Name: partnercentral:StartOpportunityBulkJob
   - Name: partnercentral:StartOpportunityFromEngagementTask
   - Name: partnercentral:StartProfileUpdateTask
   - Name: partnercentral:StartProspectingFromEngagementTask
@@ -157,8 +195,12 @@ Actions:
   - Name: partnercentral:UpdateBenefitApplication
   - Name: partnercentral:UpdateBusinessPlan
   - Name: partnercentral:UpdateBusinessPlanItem
+  - Name: partnercentral:UpdateCampaign
+  - Name: partnercentral:UpdateCampaignAsset
   - Name: partnercentral:UpdateConnectionPreferences
+  - Name: partnercentral:UpdateCustomerAccount
   - Name: partnercentral:UpdateEngagementContext
+  - Name: partnercentral:UpdateMarketplaceRevenueShare
   - Name: partnercentral:UpdateMarketplaceRevenueShareAllocation
   - Name: partnercentral:UpdateOpportunity
   - Name: partnercentral:UpdateProgramManagementAccount

@@ -1,0 +1,243 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSAccountAccessManagerAdministrator",
+  "CreateDate": "2026-11-18T21:37:09Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4ID6LUB3LR",
+  "PolicyName": "AWSAccountAccessManagerAdministrator",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-18T21:37:09Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "account-access.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/account-access.amazonaws.com/AWSServiceRoleForAccountAccessManager",
+          "Sid": "CreateServiceLinkedRolePermissions"
+        },
+        {
+          "Action": "kms:Decrypt",
+          "Condition": {
+            "StringLike": {
+              "kms:EncryptionContext:aws:identitystore:identitystore-arn": "arn:aws:identitystore::*:identitystore/*",
+              "kms:ViaService": "identitystore.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSDecryptViaIdentityStore"
+        },
+        {
+          "Action": "kms:Decrypt",
+          "Condition": {
+            "StringLike": {
+              "kms:EncryptionContext:aws:sso:instance-arn": "arn:aws:sso:::instance/*",
+              "kms:ViaService": "sso.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "KMSDecryptViaIdentityCenter"
+        },
+        {
+          "Action": "sso:CreateApplication",
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IdentityCenterCreateApplicationViaService"
+        },
+        {
+          "Action": [
+            "organizations:DeregisterDelegatedAdministrator",
+            "organizations:RegisterDelegatedAdministrator"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": "account-access.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:account/o-*/*",
+          "Sid": "AccountAccessManagerManageDelegatedAdministratorPermissions"
+        },
+        {
+          "Action": [
+            "organizations:DisableAWSServiceAccess",
+            "organizations:EnableAWSServiceAccess"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": "account-access.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AccountAccessManagerEnableServiceAccessPermissions"
+        },
+        {
+          "Action": [
+            "sso:DeleteApplication",
+            "sso:PutApplicationAccessScope",
+            "sso:PutApplicationAssignmentConfiguration",
+            "sso:PutApplicationAuthenticationMethod",
+            "sso:PutApplicationGrant"
+          ],
+          "Condition": {
+            "Bool": {
+              "aws:ViaAWSService": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sso::*:application/*/*",
+          "Sid": "IdentityCenterApplicationManagementViaService"
+        },
+        {
+          "Action": [
+            "account-access:CreateApplication",
+            "account-access:ListApplications"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AccountAccessManagerApplicationPermissions"
+        },
+        {
+          "Action": [
+            "account-access:CreateEntitlement",
+            "account-access:DeleteEntitlement",
+            "account-access:GetEntitlement",
+            "account-access:ListEntitlements"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:account-access:*:*:application/*",
+          "Sid": "AccountAccessManagerEntitlementPermissions"
+        },
+        {
+          "Action": [
+            "account-access:DeleteApplication",
+            "account-access:GetApplication"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:account-access:*:*:application/*",
+          "Sid": "AccountAccessManagerApplicationResourcePermissions"
+        },
+        {
+          "Action": [
+            "account-access:ListTagsForResource",
+            "account-access:TagResource",
+            "account-access:UntagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:account-access:*:*:application/*",
+          "Sid": "AccountAccessManagerTagPermissions"
+        },
+        {
+          "Action": [
+            "identitystore:DescribeGroup",
+            "identitystore:DescribeUser"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:identitystore::*:identitystore/*",
+            "arn:aws:identitystore:::group/*",
+            "arn:aws:identitystore:::user/*"
+          ],
+          "Sid": "IdentityStoreDescribePermissions"
+        },
+        {
+          "Action": [
+            "identitystore:ListGroupMemberships",
+            "identitystore:ListGroups",
+            "identitystore:ListUsers"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IdentityStoreListPermissions"
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:ListDelegatedServicesForAccount"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:account/o-*/*",
+          "Sid": "OrganizationsAccountReadPermissions"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListDelegatedAdministrators",
+            "organizations:ListRoots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "OrganizationsPermissions"
+        },
+        {
+          "Action": [
+            "organizations:ListAccountsForParent",
+            "organizations:ListOrganizationalUnitsForParent"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:organizations::*:ou/o-*/ou-*",
+            "arn:aws:organizations::*:root/o-*/r-*"
+          ],
+          "Sid": "OrganizationsParentReadPermissions"
+        },
+        {
+          "Action": [
+            "sso-directory:DescribeGroup",
+            "sso-directory:DescribeGroups",
+            "sso-directory:DescribeUser",
+            "sso-directory:DescribeUsers",
+            "sso-directory:ListGroupsForUser",
+            "sso-directory:ListMembersInGroup",
+            "sso-directory:SearchGroups",
+            "sso-directory:SearchUsers"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IdentityStoreDirectoryConsolePermissions"
+        },
+        {
+          "Action": [
+            "sso:DescribeApplication",
+            "sso:DescribeInstance"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sso::*:application/*/*",
+            "arn:aws:sso:::instance/*"
+          ],
+          "Sid": "IdentityCenterReadPermissions"
+        },
+        {
+          "Action": [
+            "sso:DescribeRegion",
+            "sso:ListApplications",
+            "sso:ListInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IdentityCenterListPermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-18T21:37:09Z"
+}

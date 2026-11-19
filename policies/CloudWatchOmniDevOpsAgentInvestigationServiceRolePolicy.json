@@ -1,0 +1,39 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/CloudWatchOmniDevOpsAgentInvestigationServiceRolePolicy",
+  "CreateDate": "2026-11-19T02:47:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4HIHCB5PI6",
+  "PolicyName": "CloudWatchOmniDevOpsAgentInvestigationServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-19T02:47:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "aidevops:CreateBacklogTask",
+            "aidevops:DiscoverTopology",
+            "aidevops:GetBacklogTask",
+            "aidevops:ListBacklogTasks",
+            "aidevops:ListExecutions",
+            "aidevops:ListJournalRecords",
+            "aidevops:UpdateBacklogTask"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:aidevops:*:*:agentspace/*",
+          "Sid": "DevOpsAgentInvestigation"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-19T02:47:08Z"
+}

@@ -11,18 +11,18 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 470
-* Unique actions: 23359
-* Managed policies: 1612
+* Unique services: 471
+* Unique actions: 23433
+* Managed policies: 1616
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
-| `arn:aws:iam::aws:policy/AWS*` | 432 |
+| `arn:aws:iam::aws:policy/AWS*` | 435 |
 | `arn:aws:iam::aws:policy/Amazon*` | 384 |
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 374 |
-| `arn:aws:iam::aws:policy/service-role/*` | 230 |
+| `arn:aws:iam::aws:policy/service-role/*` | 231 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
 | Other | 177 |
 
@@ -40,7 +40,7 @@ The following table summarises the AWS APIs.
 | [`sagemaker`](services/sagemaker.yml) | 351 | 0 | 119 |
 | [`iot`](services/iot.yml) | 262 | 3 | 31 |
 | [`chime`](services/chime.yml) | 259 | 0 | 57 |
-| [`connect`](services/connect.yml) | 256 | 0 | 132 |
+| [`connect`](services/connect.yml) | 256 | 0 | 138 |
 | [`glue`](services/glue.yml) | 214 | 4 | 98 |
 | [`ses`](services/ses.yml) | 193 | 0 | 41 |
 | [`quicksight`](services/quicksight.yml) | 174 | 3 | 185 |
@@ -63,14 +63,14 @@ The following table summarises the AWS APIs.
 | [`bedrock`](services/bedrock.yml) | 97 | 2 | 172 |
 | [`dms`](services/dms.yml) | 92 | 14 | 33 |
 | [`medialive`](services/medialive.yml) | 92 | 0 | 33 |
-| [`config`](services/config.yml) | 92 | 0 | 10 |
+| [`config`](services/config.yml) | 92 | 0 | 11 |
 | [`backup`](services/backup.yml) | 91 | 0 | 31 |
 | [`storagegateway`](services/storagegateway.yml) | 90 | 0 | 7 |
 | [`workspaces`](services/workspaces.yml) | 88 | 0 | 18 |
 | [`es`](services/es.yml) | 87 | 0 | 51 |
 | [`sms-voice`](services/sms-voice.yml) | 87 | 0 | 28 |
 | [`proton`](services/proton.yml) | 87 | 0 | 24 |
-| [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 12 |
+| [`networkmanager`](services/networkmanager.yml) | 85 | 0 | 24 |
 | [`comprehend`](services/comprehend.yml) | 85 | 0 | 0 |
 | [`iotsitewise`](services/iotsitewise.yml) | 84 | 0 | 67 |
 | [`workmail`](services/workmail.yml) | 84 | 0 | 42 |
@@ -179,9 +179,9 @@ The following table summarises the AWS APIs.
 | [`panorama`](services/panorama.yml) | 34 | 0 | 2 |
 | [`iotanalytics`](services/iotanalytics.yml) | 34 | 0 | 0 |
 | [`access-analyzer`](services/access-analyzer.yml) | 33 | 2 | 4 |
+| [`kinesisanalytics`](services/kinesisanalytics.yml) | 33 | 0 | 11 |
 | [`groundstation`](services/groundstation.yml) | 33 | 0 | 7 |
 | [`worklink`](services/worklink.yml) | 33 | 0 | 1 |
-| [`kinesisanalytics`](services/kinesisanalytics.yml) | 33 | 0 | 1 |
 | [`applicationinsights`](services/applicationinsights.yml) | 33 | 0 | 1 |
 | [`tnb`](services/tnb.yml) | 33 | 0 | 0 |
 | [`glacier`](services/glacier.yml) | 33 | 0 | 0 |
@@ -361,7 +361,7 @@ The following table summarises the AWS APIs.
 | [`application-cost-profiler`](services/application-cost-profiler.yml) | 0 | 6 | 0 |
 | [`awsssoportal`](services/awsssoportal.yml) | 0 | 4 | 0 |
 | [`bedrock-agentcore`](services/bedrock-agentcore.yml) | 0 | 0 | 265 |
-| [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 164 |
+| [`partnercentral`](services/partnercentral.yml) | 0 | 0 | 206 |
 | [`securityagent`](services/securityagent.yml) | 0 | 0 | 120 |
 | [`odb`](services/odb.yml) | 0 | 0 | 96 |
 | [`assurance`](services/assurance.yml) | 0 | 0 | 96 |
@@ -483,6 +483,7 @@ The following table summarises the AWS APIs.
 | [`eks-mcp`](services/eks-mcp.yml) | 0 | 0 | 3 |
 | [`bedrock-websearch`](services/bedrock-websearch.yml) | 0 | 0 | 3 |
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |
+| [`abuse`](services/abuse.yml) | 0 | 0 | 3 |
 | [`vpc-lattice-svcs`](services/vpc-lattice-svcs.yml) | 0 | 0 | 2 |
 | [`geo-maps`](services/geo-maps.yml) | 0 | 0 | 2 |
 | [`eventsbilltoaws`](services/eventsbilltoaws.yml) | 0 | 0 | 2 |
@@ -511,14 +512,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3965 |
-| `Get` | 3577 |
-| `Delete` | 2660 |
-| `Create` | 2526 |
-| `Update` | 2212 |
-| `Describe` | 1975 |
-| `Put` | 633 |
-| `Start` | 579 |
-| `Batch` | 336 |
+| `List` | 3981 |
+| `Get` | 3593 |
+| `Delete` | 2667 |
+| `Create` | 2535 |
+| `Update` | 2217 |
+| `Describe` | 1977 |
+| `Put` | 634 |
+| `Start` | 583 |
+| `Batch` | 337 |
 | `Tag` | 331 |
 

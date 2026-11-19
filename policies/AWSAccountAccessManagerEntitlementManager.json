@@ -1,0 +1,120 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AWSAccountAccessManagerEntitlementManager",
+  "CreateDate": "2026-11-18T21:37:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4NFJ6CTXJY",
+  "PolicyName": "AWSAccountAccessManagerEntitlementManager",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-18T21:37:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "account-access:ListApplications",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AccountAccessManagerListApplicationsPermissions"
+        },
+        {
+          "Action": "organizations:DescribeAccount",
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:account/o-*/*",
+          "Sid": "OrganizationsAccountReadPermissions"
+        },
+        {
+          "Action": "sso:ListInstances",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IdentityCenterListInstancesPermissions"
+        },
+        {
+          "Action": [
+            "account-access:CreateEntitlement",
+            "account-access:DeleteEntitlement",
+            "account-access:GetEntitlement",
+            "account-access:ListEntitlements"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:account-access:*:*:application/*",
+          "Sid": "AccountAccessManagerEntitlementPermissions"
+        },
+        {
+          "Action": [
+            "account-access:GetApplication",
+            "account-access:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:account-access:*:*:application/*",
+          "Sid": "AccountAccessManagerApplicationReadPermissions"
+        },
+        {
+          "Action": [
+            "identitystore:DescribeGroup",
+            "identitystore:DescribeUser"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:identitystore::*:identitystore/*",
+            "arn:aws:identitystore:::group/*",
+            "arn:aws:identitystore:::user/*"
+          ],
+          "Sid": "IdentityStoreDescribePermissions"
+        },
+        {
+          "Action": [
+            "identitystore:ListGroupMemberships",
+            "identitystore:ListGroups",
+            "identitystore:ListUsers"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IdentityStoreListPermissions"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:ListAWSServiceAccessForOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListDelegatedAdministrators",
+            "organizations:ListRoots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "OrganizationsReadPermissions"
+        },
+        {
+          "Action": [
+            "organizations:ListAccountsForParent",
+            "organizations:ListOrganizationalUnitsForParent"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:organizations::*:ou/o-*/ou-*",
+            "arn:aws:organizations::*:root/o-*/r-*"
+          ],
+          "Sid": "OrganizationsParentReadPermissions"
+        },
+        {
+          "Action": [
+            "sso-directory:DescribeGroup",
+            "sso-directory:DescribeGroups",
+            "sso-directory:DescribeUser",
+            "sso-directory:DescribeUsers",
+            "sso-directory:ListGroupsForUser",
+            "sso-directory:ListMembersInGroup",
+            "sso-directory:SearchGroups",
+            "sso-directory:SearchUsers"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IdentityStoreDirectoryConsolePermissions"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-18T21:37:08Z"
+}
