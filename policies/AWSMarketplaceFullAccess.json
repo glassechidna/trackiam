@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceFullAccess",
   "CreateDate": "2015-02-11T17:21:45Z",
-  "DefaultVersionId": "v8",
+  "DefaultVersionId": "v9",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAI2DV5ULJSO2FYVPYG",
   "PolicyName": "AWSMarketplaceFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-09-11T16:27:07Z",
+    "CreateDate": "2026-11-19T15:37:08Z",
     "Document": {
       "Statement": [
         {
@@ -37,6 +37,18 @@
         },
         {
           "Action": [
+            "ec2:RevokeSecurityGroupEgress"
+          ],
+          "Condition": {
+            "StringLike": {
+              "aws:ResourceTag/aws:cloudformation:stack-name": "AgentModeDeployment*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:security-group/*"
+        },
+        {
+          "Action": [
             "iam:PassRole"
           ],
           "Condition": {
@@ -52,6 +64,14 @@
           ]
         },
         {
+          "Action": "servicequotas:GetServiceQuota",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:servicequotas:*:*:ec2/*",
+            "arn:aws:servicequotas:*:*:vpc/*"
+          ]
+        },
+        {
           "Action": [
             "aws-marketplace:*",
             "cloudformation:CreateStack",
@@ -59,6 +79,7 @@
             "cloudformation:DescribeStackResources",
             "cloudformation:DescribeStacks",
             "cloudformation:List*",
+            "cloudwatch:GetMetricStatistics",
             "ec2:AuthorizeSecurityGroupEgress",
             "ec2:AuthorizeSecurityGroupIngress",
             "ec2:CreateSecurityGroup",
@@ -67,8 +88,11 @@
             "ec2:DescribeAccountAttributes",
             "ec2:DescribeAddresses",
             "ec2:DescribeImages",
+            "ec2:DescribeInstanceTypes",
             "ec2:DescribeInstances",
             "ec2:DescribeKeyPairs",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribeRegions",
             "ec2:DescribeSecurityGroups",
             "ec2:DescribeSubnets",
             "ec2:DescribeTags",
@@ -78,10 +102,19 @@
             "ec2:StopInstances",
             "ec2:TerminateInstances",
             "license-manager:ListReceivedLicenses",
-            "payments:ListPaymentProgramStatus"
+            "payments:ListPaymentProgramStatus",
+            "servicequotas:ListServiceQuotas"
           ],
           "Effect": "Allow",
           "Resource": "*"
+        },
+        {
+          "Action": [
+            "cloudformation:DeleteStack",
+            "cloudformation:DescribeStackEvents"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudformation:*:*:stack/AgentModeDeployment*/*"
         },
         {
           "Action": [
@@ -109,7 +142,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v8"
+    "VersionId": "v9"
   },
-  "UpdateDate": "2026-09-11T16:27:07Z"
+  "UpdateDate": "2026-11-19T15:37:08Z"
 }

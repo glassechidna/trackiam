@@ -11,9 +11,9 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 471
-* Unique actions: 23437
-* Managed policies: 1617
+* Unique services: 472
+* Unique actions: 23444
+* Managed policies: 1618
 
 Most common managed policy name prefixes:
 
@@ -21,7 +21,7 @@ Most common managed policy name prefixes:
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 435 |
 | `arn:aws:iam::aws:policy/Amazon*` | 384 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 374 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 375 |
 | `arn:aws:iam::aws:policy/service-role/*` | 231 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
 | Other | 178 |
@@ -114,7 +114,7 @@ The following table summarises the AWS APIs.
 | [`geo`](services/geo.yml) | 60 | 0 | 4 |
 | [`inspector2`](services/inspector2.yml) | 59 | 0 | 25 |
 | [`workspaces-web`](services/workspaces-web.yml) | 58 | 0 | 17 |
-| [`events`](services/events.yml) | 57 | 0 | 17 |
+| [`events`](services/events.yml) | 57 | 0 | 19 |
 | [`robomaker`](services/robomaker.yml) | 57 | 0 | 2 |
 | [`dynamodb`](services/dynamodb.yml) | 56 | 5 | 29 |
 | [`ecs`](services/ecs.yml) | 56 | 0 | 36 |
@@ -389,9 +389,9 @@ The following table summarises the AWS APIs.
 | [`social-messaging`](services/social-messaging.yml) | 0 | 0 | 38 |
 | [`neptune-graph`](services/neptune-graph.yml) | 0 | 0 | 38 |
 | [`bedrock-mantle`](services/bedrock-mantle.yml) | 0 | 0 | 38 |
+| [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 37 |
 | [`rtbfabric`](services/rtbfabric.yml) | 0 | 0 | 36 |
 | [`networkflowmonitor`](services/networkflowmonitor.yml) | 0 | 0 | 36 |
-| [`bcm-pricing-calculator`](services/bcm-pricing-calculator.yml) | 0 | 0 | 36 |
 | [`continuum`](services/continuum.yml) | 0 | 0 | 33 |
 | [`aiops`](services/aiops.yml) | 0 | 0 | 33 |
 | [`dsql`](services/dsql.yml) | 0 | 0 | 31 |
@@ -414,9 +414,9 @@ The following table summarises the AWS APIs.
 | [`s3files`](services/s3files.yml) | 0 | 0 | 24 |
 | [`evs`](services/evs.yml) | 0 | 0 | 24 |
 | [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 24 |
+| [`agent-registry`](services/agent-registry.yml) | 0 | 0 | 23 |
 | [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 23 |
 | [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 22 |
-| [`agent-registry`](services/agent-registry.yml) | 0 | 0 | 22 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 20 |
 | [`osm`](services/osm.yml) | 0 | 0 | 20 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
@@ -483,6 +483,7 @@ The following table summarises the AWS APIs.
 | [`eks-mcp`](services/eks-mcp.yml) | 0 | 0 | 3 |
 | [`bedrock-websearch`](services/bedrock-websearch.yml) | 0 | 0 | 3 |
 | [`awsconnector`](services/awsconnector.yml) | 0 | 0 | 3 |
+| [`apex`](services/apex.yml) | 0 | 0 | 3 |
 | [`abuse`](services/abuse.yml) | 0 | 0 | 3 |
 | [`vpc-lattice-svcs`](services/vpc-lattice-svcs.yml) | 0 | 0 | 2 |
 | [`geo-maps`](services/geo-maps.yml) | 0 | 0 | 2 |
@@ -513,12 +514,12 @@ Most common action prefixes:
 | Prefix | Count |
 | ------ | ----- |
 | `List` | 3982 |
-| `Get` | 3594 |
+| `Get` | 3597 |
 | `Delete` | 2668 |
 | `Create` | 2536 |
 | `Update` | 2217 |
 | `Describe` | 1977 |
-| `Put` | 634 |
+| `Put` | 635 |
 | `Start` | 583 |
 | `Batch` | 337 |
 | `Tag` | 331 |

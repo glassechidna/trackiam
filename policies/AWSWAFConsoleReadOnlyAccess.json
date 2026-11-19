@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSWAFConsoleReadOnlyAccess",
   "CreateDate": "2020-04-06T18:43:24Z",
-  "DefaultVersionId": "v21",
+  "DefaultVersionId": "v22",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4NCJLTIT64",
   "PolicyName": "AWSWAFConsoleReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-07-01T04:12:24Z",
+    "CreateDate": "2026-11-19T17:37:09Z",
     "Document": {
       "Statement": [
         {
@@ -26,6 +26,16 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowListActionsForAmplify"
+        },
+        {
+          "Action": [
+            "apex:GetStatistics",
+            "apex:GetStatisticsTimeSeries",
+            "apex:Search"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowApexQueryActions"
         },
         {
           "Action": [
@@ -69,6 +79,15 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AllowListActionsForAppSync"
+        },
+        {
+          "Action": [
+            "aws-marketplace:ListEntitlementDetails",
+            "aws-marketplace:SearchAgreements"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowMarketplaceAgreementActions"
         },
         {
           "Action": [
@@ -229,6 +248,23 @@
         },
         {
           "Action": [
+            "observabilityadmin:GetTelemetryEvaluationStatus",
+            "observabilityadmin:ListTelemetryRules"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListActionsForObservabilityAdmin"
+        },
+        {
+          "Action": [
+            "payments:ListConnectedAccounts"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowListConnectedAccountsForPayments"
+        },
+        {
+          "Action": [
             "pricing:GetPriceListFileUrl",
             "pricing:ListPriceLists"
           ],
@@ -336,7 +372,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v21"
+    "VersionId": "v22"
   },
-  "UpdateDate": "2026-07-01T04:12:24Z"
+  "UpdateDate": "2026-11-19T17:37:09Z"
 }

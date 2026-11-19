@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AgentRegistryFullAccess",
   "CreateDate": "2026-08-06T18:12:14Z",
-  "DefaultVersionId": "v2",
+  "DefaultVersionId": "v3",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4CXNIJLWPU",
   "PolicyName": "AgentRegistryFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-08-31T17:07:08Z",
+    "CreateDate": "2026-11-19T16:17:08Z",
     "Document": {
       "Statement": [
         {
@@ -111,6 +111,21 @@
         },
         {
           "Action": [
+            "bedrock-agentcore:CompleteResourceTokenAuth",
+            "bedrock-agentcore:GetResourceOauth2Token",
+            "bedrock-agentcore:GetWorkloadAccessTokenForUserId"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:bedrock-agentcore:*:*:credential-provider/*",
+            "arn:aws:bedrock-agentcore:*:*:token-vault/*/oauth2credentialprovider/*",
+            "arn:aws:bedrock-agentcore:*:*:token-vault/default",
+            "arn:aws:bedrock-agentcore:*:*:workload-identity-directory/*"
+          ],
+          "Sid": "AllowGetResourceOauth2TokenForOauthBasedSynchronization"
+        },
+        {
+          "Action": [
             "bedrock-agentcore:CreateWorkloadIdentity",
             "bedrock-agentcore:DeleteWorkloadIdentity",
             "bedrock-agentcore:GetWorkloadAccessToken",
@@ -119,18 +134,6 @@
           "Effect": "Allow",
           "Resource": "arn:aws:bedrock-agentcore:*:*:workload-identity-directory/*",
           "Sid": "AgentRegistryWorkloadIdentityAccess"
-        },
-        {
-          "Action": [
-            "bedrock-agentcore:GetResourceOauth2Token"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:bedrock-agentcore:*:*:credential-provider/*",
-            "arn:aws:bedrock-agentcore:*:*:token-vault/*/oauth2credentialprovider/*",
-            "arn:aws:bedrock-agentcore:*:*:workload-identity-directory/*"
-          ],
-          "Sid": "AllowGetResourceOauth2TokenForOauthBasedSynchronization"
         },
         {
           "Action": [
@@ -160,7 +163,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v2"
+    "VersionId": "v3"
   },
-  "UpdateDate": "2026-08-31T17:07:08Z"
+  "UpdateDate": "2026-11-19T16:17:08Z"
 }
