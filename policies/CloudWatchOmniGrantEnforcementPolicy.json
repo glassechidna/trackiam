@@ -1,0 +1,42 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CloudWatchOmniGrantEnforcementPolicy",
+  "CreateDate": "2026-11-19T03:17:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4MIFE4NFUL",
+  "PolicyName": "CloudWatchOmniGrantEnforcementPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-19T03:17:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:GetAlert",
+            "cloudwatch:GetContextGraph",
+            "cloudwatch:GetIntelligenceConfiguration",
+            "cloudwatch:GetRecords",
+            "cloudwatch:GetSpace",
+            "cloudwatch:GetTelemetryQueryResults",
+            "cloudwatch:List*",
+            "cloudwatch:StartTelemetryQuerySession",
+            "cloudwatch:StopTelemetryQuery",
+            "cloudwatch:StopTelemetryQuerySession"
+          ],
+          "Condition": {
+            "StringNotEquals": {
+              "cloudwatch:HasAccessGrant": "true"
+            }
+          },
+          "Effect": "Deny",
+          "Resource": "*",
+          "Sid": "RequireOmniAccessGrant"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-19T03:17:08Z"
+}

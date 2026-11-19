@@ -12,8 +12,8 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 471
-* Unique actions: 23433
-* Managed policies: 1616
+* Unique actions: 23437
+* Managed policies: 1617
 
 Most common managed policy name prefixes:
 
@@ -24,7 +24,7 @@ Most common managed policy name prefixes:
 | `arn:aws:iam::aws:policy/aws-service-role/*` | 374 |
 | `arn:aws:iam::aws:policy/service-role/*` | 231 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
-| Other | 177 |
+| Other | 178 |
 
 The following table summarises the AWS APIs. 
 
@@ -247,7 +247,7 @@ The following table summarises the AWS APIs.
 | [`connect-campaigns`](services/connect-campaigns.yml) | 22 | 0 | 18 |
 | [`migrationhub-strategy`](services/migrationhub-strategy.yml) | 22 | 0 | 9 |
 | [`lookoutvision`](services/lookoutvision.yml) | 22 | 0 | 3 |
-| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 89 |
+| [`aws-marketplace`](services/aws-marketplace.yml) | 21 | 1 | 93 |
 | [`mgh`](services/mgh.yml) | 21 | 0 | 25 |
 | [`resource-explorer-2`](services/resource-explorer-2.yml) | 21 | 0 | 16 |
 | [`qldb`](services/qldb.yml) | 21 | 0 | 14 |
@@ -512,10 +512,10 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3981 |
-| `Get` | 3593 |
-| `Delete` | 2667 |
-| `Create` | 2535 |
+| `List` | 3982 |
+| `Get` | 3594 |
+| `Delete` | 2668 |
+| `Create` | 2536 |
 | `Update` | 2217 |
 | `Describe` | 1977 |
 | `Put` | 634 |
