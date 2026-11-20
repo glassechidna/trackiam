@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralFullAccess",
   "CreateDate": "2024-11-18T23:33:28Z",
-  "DefaultVersionId": "v17",
+  "DefaultVersionId": "v18",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DRJMXIHNK",
   "PolicyName": "AWSPartnerCentralFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-11-10T08:27:08Z",
+    "CreateDate": "2026-11-20T06:17:06Z",
     "Document": {
       "Statement": [
         {
@@ -58,6 +58,19 @@
             "arn:aws:aws-marketplace:*:*:AWSMarketplace*/ChangeSet/*"
           ],
           "Sid": "CaseStudyStartChangeSet"
+        },
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "partnercentral-marketing.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/partnercentral-marketing.amazonaws.com/AWSServiceRoleForPartnerCentralMarketing",
+          "Sid": "DemandCenterServiceLinkedRoleCreation"
         },
         {
           "Action": [
@@ -201,6 +214,14 @@
         },
         {
           "Action": [
+            "iam:GetRole"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/partnercentral-marketing.amazonaws.com/AWSServiceRoleForPartnerCentralMarketing",
+          "Sid": "DemandCenterServiceLinkedRoleRead"
+        },
+        {
+          "Action": [
             "partnercentral-account-management:AccessLegacyPartnerCentral"
           ],
           "Effect": "Allow",
@@ -257,12 +278,27 @@
         },
         {
           "Action": [
+            "support-console:CheckSubscription",
+            "support-console:GetAccountGovCloudEnabled",
+            "support-console:GetAccountState",
+            "support-console:GetBanner"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SupportConsole"
+        },
+        {
+          "Action": [
             "support:AddAttachmentsToSet",
             "support:AddCommunicationToCase",
             "support:CreateCase",
+            "support:DescribeAttachment",
             "support:DescribeCases",
             "support:DescribeCommunications",
-            "support:ResolveCase"
+            "support:DescribeCreateCaseOptions",
+            "support:DescribeServices",
+            "support:ResolveCase",
+            "support:SearchForCases"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -272,7 +308,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v17"
+    "VersionId": "v18"
   },
-  "UpdateDate": "2026-11-10T08:27:08Z"
+  "UpdateDate": "2026-11-20T06:17:06Z"
 }

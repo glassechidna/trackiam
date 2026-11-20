@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerOfferManagement",
   "CreateDate": "2024-11-19T00:41:38Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BMTW6QBBN",
   "PolicyName": "AWSMarketplaceSellerOfferManagement",
   "PolicyVersion": {
-    "CreateDate": "2026-11-18T20:07:09Z",
+    "CreateDate": "2026-11-20T03:57:07Z",
     "Document": {
       "Statement": [
         {
@@ -136,12 +136,40 @@
             "arn:aws:s3:::aws-partner-central-marketplace-ephemeral-writeonly-files/${aws:PrincipalAccount}/*"
           ],
           "Sid": "MarketplaceEphemeralWriteS3Access"
+        },
+        {
+          "Action": [
+            "support-console:CheckSubscription",
+            "support-console:GetAccountGovCloudEnabled",
+            "support-console:GetAccountState",
+            "support-console:GetBanner"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SupportConsole"
+        },
+        {
+          "Action": [
+            "support:AddAttachmentsToSet",
+            "support:AddCommunicationToCase",
+            "support:CreateCase",
+            "support:DescribeAttachment",
+            "support:DescribeCases",
+            "support:DescribeCommunications",
+            "support:DescribeCreateCaseOptions",
+            "support:DescribeServices",
+            "support:ResolveCase",
+            "support:SearchForCases"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Support"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-11-18T20:07:09Z"
+  "UpdateDate": "2026-11-20T03:57:07Z"
 }

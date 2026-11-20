@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralOpportunityManagement",
   "CreateDate": "2024-11-14T19:09:05Z",
-  "DefaultVersionId": "v13",
+  "DefaultVersionId": "v14",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4OANYBNL3Z",
   "PolicyName": "AWSPartnerCentralOpportunityManagement",
   "PolicyVersion": {
-    "CreateDate": "2026-11-10T03:17:07Z",
+    "CreateDate": "2026-11-20T03:37:07Z",
     "Document": {
       "Statement": [
         {
@@ -37,6 +37,7 @@
             "partnercentral:DeleteResourceSnapshotJob",
             "partnercentral:DisassociateOpportunity",
             "partnercentral:GetAwsOpportunitySummary",
+            "partnercentral:GetCustomerAccountStatistics",
             "partnercentral:GetEngagement",
             "partnercentral:GetEngagementInvitation",
             "partnercentral:GetOpportunity",
@@ -44,8 +45,10 @@
             "partnercentral:GetProspectingFromEngagementTask",
             "partnercentral:GetResourceSnapshot",
             "partnercentral:GetResourceSnapshotJob",
+            "partnercentral:ListCustomerAccountBulkJobs",
             "partnercentral:ListEngagementByAcceptingInvitationTasks",
             "partnercentral:ListEngagementFromOpportunityTasks",
+            "partnercentral:ListEngagementGroups",
             "partnercentral:ListEngagementInvitations",
             "partnercentral:ListEngagementMembers",
             "partnercentral:ListEngagementResourceAssociations",
@@ -59,7 +62,10 @@
             "partnercentral:ListResourceSnapshots",
             "partnercentral:ListSolutions",
             "partnercentral:RejectEngagementInvitation",
+            "partnercentral:SearchCustomerAccounts",
+            "partnercentral:SearchEngagements",
             "partnercentral:SearchOpportunities",
+            "partnercentral:StartCustomerAccountBulkJob",
             "partnercentral:StartEngagementByAcceptingInvitationTask",
             "partnercentral:StartEngagementFromOpportunityTask",
             "partnercentral:StartOpportunityBulkJob",
@@ -82,6 +88,43 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "OpportunityManagement"
+        },
+        {
+          "Action": [
+            "partnercentral:CreateCustomerAccount",
+            "partnercentral:DeleteCustomerAccount",
+            "partnercentral:GetCustomerAccount",
+            "partnercentral:UpdateCustomerAccount"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:partnercentral:*:*:catalog/*/customer-account/*",
+          "Sid": "CustomerAccountManagement"
+        },
+        {
+          "Action": [
+            "partnercentral:GetCustomerAccountBulkJob",
+            "partnercentral:GetCustomerAccountBulkJobReportUrl",
+            "partnercentral:ListCustomerAccountBulkJobResults"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "partnercentral:Catalog": [
+                "AWS",
+                "Sandbox"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:partnercentral:*:*:catalog/*/customer-account-bulk-job/*",
+          "Sid": "CustomerAccountBulkJobAccess"
         },
         {
           "Action": [
@@ -135,6 +178,7 @@
           },
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:partnercentral:*:*:catalog/*/customer-account/*",
             "arn:aws:partnercentral:*:*:catalog/*/opportunity/*",
             "arn:aws:partnercentral:*:*:catalog/*/resource-snapshot-job/*"
           ],
@@ -158,6 +202,12 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "PartnerCentralAgentsSessionAccess"
+        },
+        {
+          "Action": "s3:PutObject",
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::aws-partner-central-marketplace-ephemeral-writeonly-files/${aws:PrincipalAccount}/*",
+          "Sid": "PartnerCentralBulkFileUpload"
         },
         {
           "Action": [
@@ -192,6 +242,22 @@
         },
         {
           "Action": [
+            "partnercentral:CreateDataSubscription",
+            "partnercentral:DeleteDataSubscription",
+            "partnercentral:GetDataSubscription",
+            "partnercentral:ListTagsForResource",
+            "partnercentral:TagResource",
+            "partnercentral:UntagResource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:partnercentral::*:catalog/AWS/ReportingData/Engagement_V1/DataSubscription/*",
+            "arn:aws:partnercentral::*:catalog/AWS/ReportingData/Opportunity_V1/DataSubscription/*"
+          ],
+          "Sid": "PartnerDataSubscriptionAccess"
+        },
+        {
+          "Action": [
             "partnercentral:GetPartnerDashboard"
           ],
           "Effect": "Allow",
@@ -200,6 +266,25 @@
             "arn:aws:partnercentral::*:catalog/AWS/ReportingData/Opportunity_V1/Dashboard/*"
           ],
           "Sid": "PartnerDashboardAccess"
+        },
+        {
+          "Action": [
+            "partnercentral:GetPartnerReportingData"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:partnercentral::*:catalog/AWS/ReportingData/Engagement_V1/Dataset/*",
+            "arn:aws:partnercentral::*:catalog/AWS/ReportingData/Opportunity_V1/Dataset/*"
+          ],
+          "Sid": "PartnerReportingDataAccess"
+        },
+        {
+          "Action": [
+            "partnercentral:ListDataSubscriptions"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:partnercentral::*:catalog/AWS",
+          "Sid": "PartnerDataSubscriptionList"
         },
         {
           "Action": [
@@ -212,12 +297,40 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "AmazonQPartnerAssistantAccess"
+        },
+        {
+          "Action": [
+            "support-console:CheckSubscription",
+            "support-console:GetAccountGovCloudEnabled",
+            "support-console:GetAccountState",
+            "support-console:GetBanner"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SupportConsole"
+        },
+        {
+          "Action": [
+            "support:AddAttachmentsToSet",
+            "support:AddCommunicationToCase",
+            "support:CreateCase",
+            "support:DescribeAttachment",
+            "support:DescribeCases",
+            "support:DescribeCommunications",
+            "support:DescribeCreateCaseOptions",
+            "support:DescribeServices",
+            "support:ResolveCase",
+            "support:SearchForCases"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Support"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v13"
+    "VersionId": "v14"
   },
-  "UpdateDate": "2026-11-10T03:17:07Z"
+  "UpdateDate": "2026-11-20T03:37:07Z"
 }

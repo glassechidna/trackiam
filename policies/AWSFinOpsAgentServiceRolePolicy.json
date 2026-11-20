@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSFinOpsAgentServiceRolePolicy",
   "CreateDate": "2026-10-20T16:07:08Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4IEPXQJW74",
   "PolicyName": "AWSFinOpsAgentServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-10-20T16:07:08Z",
+    "CreateDate": "2026-11-20T01:47:08Z",
     "Document": {
       "Statement": [
         {
@@ -33,7 +33,7 @@
             "organizations:ListDelegatedAdministrators"
           ],
           "Condition": {
-            "StringLikeIfExists": {
+            "StringEquals": {
               "organizations:ServicePrincipal": [
                 "finops-agent.amazonaws.com"
               ]
@@ -131,6 +131,21 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "CostAndUsageReportReadAccess"
+        },
+        {
+          "Action": [
+            "bcm-data-hub:CancelQueryExecution",
+            "bcm-data-hub:GetDataset",
+            "bcm-data-hub:GetDatasetSchema",
+            "bcm-data-hub:GetQueryExecution",
+            "bcm-data-hub:GetQueryExecutionResults",
+            "bcm-data-hub:ListDatasets",
+            "bcm-data-hub:ListQueryExecutions",
+            "bcm-data-hub:StartQueryExecution"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BCMDataHubQueryAccess"
         },
         {
           "Action": [
@@ -479,7 +494,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-10-20T16:07:08Z"
+  "UpdateDate": "2026-11-20T01:47:08Z"
 }

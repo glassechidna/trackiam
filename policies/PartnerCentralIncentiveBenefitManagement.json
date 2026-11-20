@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/PartnerCentralIncentiveBenefitManagement",
   "CreateDate": "2026-02-11T16:42:14Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4EOKHP6GLY",
   "PolicyName": "PartnerCentralIncentiveBenefitManagement",
   "PolicyVersion": {
-    "CreateDate": "2026-10-28T13:47:08Z",
+    "CreateDate": "2026-11-20T04:37:07Z",
     "Document": {
       "Statement": [
         {
@@ -180,12 +180,40 @@
           "Effect": "Allow",
           "Resource": "arn:aws:s3:::aws-partner-central-marketplace-ephemeral-writeonly-files/${aws:PrincipalAccount}/*",
           "Sid": "PartnerCentralEphemeralWriteS3Access"
+        },
+        {
+          "Action": [
+            "support-console:CheckSubscription",
+            "support-console:GetAccountGovCloudEnabled",
+            "support-console:GetAccountState",
+            "support-console:GetBanner"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SupportConsole"
+        },
+        {
+          "Action": [
+            "support:AddAttachmentsToSet",
+            "support:AddCommunicationToCase",
+            "support:CreateCase",
+            "support:DescribeAttachment",
+            "support:DescribeCases",
+            "support:DescribeCommunications",
+            "support:DescribeCreateCaseOptions",
+            "support:DescribeServices",
+            "support:ResolveCase",
+            "support:SearchForCases"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Support"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2026-10-28T13:47:08Z"
+  "UpdateDate": "2026-11-20T04:37:07Z"
 }

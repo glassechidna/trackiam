@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSMarketplaceSellerFullAccess",
   "CreateDate": "2019-07-02T20:40:09Z",
-  "DefaultVersionId": "v38",
+  "DefaultVersionId": "v39",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4JF7OFUANW",
   "PolicyName": "AWSMarketplaceSellerFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-11-19T20:47:09Z",
+    "CreateDate": "2026-11-20T05:27:06Z",
     "Document": {
       "Statement": [
         {
@@ -366,7 +366,27 @@
         },
         {
           "Action": [
-            "support:CreateCase"
+            "support-console:CheckSubscription",
+            "support-console:GetAccountGovCloudEnabled",
+            "support-console:GetAccountState",
+            "support-console:GetBanner"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "SupportConsole"
+        },
+        {
+          "Action": [
+            "support:AddAttachmentsToSet",
+            "support:AddCommunicationToCase",
+            "support:CreateCase",
+            "support:DescribeAttachment",
+            "support:DescribeCases",
+            "support:DescribeCommunications",
+            "support:DescribeCreateCaseOptions",
+            "support:DescribeServices",
+            "support:ResolveCase",
+            "support:SearchForCases"
           ],
           "Effect": "Allow",
           "Resource": "*",
@@ -389,7 +409,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v38"
+    "VersionId": "v39"
   },
-  "UpdateDate": "2026-11-19T20:47:09Z"
+  "UpdateDate": "2026-11-20T05:27:06Z"
 }
