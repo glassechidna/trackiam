@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 472
-* Unique actions: 23493
+* Unique actions: 23501
 * Managed policies: 1621
 
 Most common managed policy name prefixes:
@@ -160,7 +160,7 @@ The following table summarises the AWS APIs.
 | [`swf`](services/swf.yml) | 39 | 0 | 12 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
-| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 132 |
+| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 136 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 9 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 4 |
 | [`aoss`](services/aoss.yml) | 37 | 0 | 20 |
@@ -209,8 +209,8 @@ The following table summarises the AWS APIs.
 | [`discovery`](services/discovery.yml) | 28 | 0 | 1 |
 | [`amplifyuibuilder`](services/amplifyuibuilder.yml) | 28 | 0 | 1 |
 | [`machinelearning`](services/machinelearning.yml) | 28 | 0 | 0 |
+| [`codeconnections`](services/codeconnections.yml) | 27 | 0 | 12 |
 | [`codestar-connections`](services/codestar-connections.yml) | 27 | 0 | 11 |
-| [`codeconnections`](services/codeconnections.yml) | 27 | 0 | 11 |
 | [`managedblockchain`](services/managedblockchain.yml) | 27 | 0 | 7 |
 | [`servicediscovery`](services/servicediscovery.yml) | 27 | 0 | 6 |
 | [`b2bi`](services/b2bi.yml) | 27 | 0 | 3 |
@@ -318,7 +318,7 @@ The following table summarises the AWS APIs.
 | [`savingsplans`](services/savingsplans.yml) | 10 | 0 | 0 |
 | [`rbin`](services/rbin.yml) | 10 | 0 | 0 |
 | [`pipes`](services/pipes.yml) | 10 | 0 | 0 |
-| [`polly`](services/polly.yml) | 9 | 0 | 4 |
+| [`polly`](services/polly.yml) | 9 | 0 | 7 |
 | [`managedblockchain-query`](services/managedblockchain-query.yml) | 9 | 0 | 0 |
 | [`kendra-ranking`](services/kendra-ranking.yml) | 9 | 0 | 0 |
 | [`sts`](services/sts.yml) | 8 | 0 | 10 |
@@ -513,14 +513,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 3994 |
-| `Get` | 3605 |
-| `Delete` | 2672 |
-| `Create` | 2540 |
+| `List` | 3996 |
+| `Get` | 3608 |
+| `Delete` | 2673 |
+| `Create` | 2541 |
 | `Update` | 2222 |
 | `Describe` | 1981 |
 | `Put` | 636 |
-| `Start` | 585 |
+| `Start` | 586 |
 | `Batch` | 337 |
 | `Tag` | 331 |
 

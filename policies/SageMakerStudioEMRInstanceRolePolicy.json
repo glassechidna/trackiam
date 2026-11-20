@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/SageMakerStudioEMRInstanceRolePolicy",
   "CreateDate": "2025-02-27T00:22:06Z",
-  "DefaultVersionId": "v5",
+  "DefaultVersionId": "v6",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4D45YEDPXD",
   "PolicyName": "SageMakerStudioEMRInstanceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-11-13T21:17:07Z",
+    "CreateDate": "2026-11-20T17:47:07Z",
     "Document": {
       "Statement": [
         {
@@ -60,7 +60,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}/${aws:PrincipalTag/AmazonDataZoneDomain}/${aws:PrincipalTag/AmazonDataZoneProject}/${aws:PrincipalTag/AmazonDataZoneScopeName}/sys/emr/bootstrap-script/*",
+          "Resource": [
+            "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}/${aws:PrincipalTag/AmazonDataZoneDomain}/${aws:PrincipalTag/AmazonDataZoneProject}/${aws:PrincipalTag/AmazonDataZoneScopeName}/sys/emr/bootstrap-script/*",
+            "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}/shared/sys/emr/bootstrap-script/*"
+          ],
           "Sid": "AccessBootstrapActionScriptS3Permission"
         },
         {
@@ -98,7 +101,10 @@
             }
           },
           "Effect": "Allow",
-          "Resource": "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}/${aws:PrincipalTag/AmazonDataZoneDomain}/${aws:PrincipalTag/AmazonDataZoneProject}/${aws:PrincipalTag/AmazonDataZoneScopeName}/sys/emr/*",
+          "Resource": [
+            "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}/${aws:PrincipalTag/AmazonDataZoneDomain}/${aws:PrincipalTag/AmazonDataZoneProject}/${aws:PrincipalTag/AmazonDataZoneScopeName}/sys/emr/*",
+            "arn:aws:s3:::${aws:PrincipalTag/DomainBucketName}/shared/sys/emr/*"
+          ],
           "Sid": "EMRClusterLogUploadS3Permission"
         },
         {
@@ -170,7 +176,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v5"
+    "VersionId": "v6"
   },
-  "UpdateDate": "2026-11-13T21:17:07Z"
+  "UpdateDate": "2026-11-20T17:47:07Z"
 }
