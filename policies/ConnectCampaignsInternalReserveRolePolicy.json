@@ -1,0 +1,158 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/ConnectCampaignsInternalReserveRolePolicy",
+  "CreateDate": "2026-11-19T23:27:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4BYHQX6E5M",
+  "PolicyName": "ConnectCampaignsInternalReserveRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-19T23:27:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "connect:SendOutboundChatMessage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:connect:*:*:instance/*",
+            "arn:aws:connect:*:*:phone-number/*"
+          ],
+          "Sid": "ConnectChatAccess"
+        },
+        {
+          "Action": [
+            "events:DeleteRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "events:ManagedBy": "gardner.aws.internal"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/ConnectCampaignsRule*",
+          "Sid": "EventBridgeManagedResourceAccess"
+        },
+        {
+          "Action": [
+            "events:ListRules"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/*",
+          "Sid": "EventBridgeListRuleAccess"
+        },
+        {
+          "Action": [
+            "events:ListTargetsByRule"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/ConnectCampaignsRule*",
+          "Sid": "EventBridgeListTargetsByRuleAccess"
+        },
+        {
+          "Action": [
+            "sms-voice:SendTextMessage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sms-voice:*:*:phone-number/*",
+          "Sid": "AllowSMSVoiceOperationsForConnect"
+        },
+        {
+          "Action": [
+            "social-messaging:GetWhatsAppMessageTemplate"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:social-messaging:*:*:waba/*",
+          "Sid": "AllowSocialMessagingTemplateOperations"
+        },
+        {
+          "Action": [
+            "social-messaging:SendWhatsAppMessage"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/AmazonConnectEnabled": "True"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:social-messaging:*:*:phone-number-id/*",
+          "Sid": "AllowSocialMessagingSendMessageOperations"
+        },
+        {
+          "Action": [
+            "wisdom:GetMessageTemplate",
+            "wisdom:RenderMessageTemplate"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/AmazonConnectCampaignsEnabled": "True"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AllowWisdomForConnectCampaignsEnabledTaggedResources"
+        },
+        {
+          "Action": [
+            "connect:BatchPutContact",
+            "connect:DescribeContactFlow",
+            "connect:GetCurrentMetricData",
+            "connect:GetMetricData",
+            "connect:GetMetricDataV2",
+            "connect:SendOutboundEmail",
+            "connect:SendOutboundWebNotification",
+            "connect:StartOutboundVoiceContact",
+            "connect:StartTaskContact",
+            "connect:StopContact"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:connect:*:*:instance/*",
+          "Sid": "ConnectAccess"
+        },
+        {
+          "Action": [
+            "connect:GetMetricDataV2"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:connect-campaigns:*:*:campaign/*",
+          "Sid": "ConnectCampaignsMetricsAccess"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-19T23:27:08Z"
+}

@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSObservabilityAdminTelemetryEnablementServiceRolePolicy",
   "CreateDate": "2025-08-01T18:04:06Z",
-  "DefaultVersionId": "v17",
+  "DefaultVersionId": "v18",
   "IsAttachable": true,
   "Path": "/aws-service-role/",
   "PolicyId": "ANPAZKAPJZG4ABS5BMRXG",
   "PolicyName": "AWSObservabilityAdminTelemetryEnablementServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-11-13T21:27:08Z",
+    "CreateDate": "2026-11-19T22:07:08Z",
     "Document": {
       "Statement": [
         {
@@ -420,6 +420,25 @@
         },
         {
           "Action": [
+            "events:DeleteRule",
+            "events:DescribeRule",
+            "events:ListTargetsByRule",
+            "events:PutRule",
+            "events:PutTargets",
+            "events:RemoveTargets",
+            "events:TagResource"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:events:*:*:rule/aws-events-managed-omni-rule",
+          "Sid": "TelemetryOperationsForEventsManagement"
+        },
+        {
+          "Action": [
             "iam:CreateRole",
             "iam:TagRole"
           ],
@@ -565,6 +584,22 @@
         },
         {
           "Action": [
+            "logs:CreateLogDelivery",
+            "logs:GetLogDelivery",
+            "logs:ListLogDeliveries"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:CalledViaLast": "network-firewall.amazonaws.com",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "TelemetryOperationsForNetworkFirewallLogs"
+        },
+        {
+          "Action": [
             "logs:CreateLogGroup",
             "logs:PutResourcePolicy",
             "logs:PutRetentionPolicy"
@@ -611,6 +646,20 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "TagOperationForLogs"
+        },
+        {
+          "Action": [
+            "network-firewall:DescribeLoggingConfiguration",
+            "network-firewall:UpdateLoggingConfiguration"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:network-firewall:*:*:firewall/*",
+          "Sid": "TelemetryOperationsForNetworkFirewallLoggingConfigurations"
         },
         {
           "Action": [
@@ -824,7 +873,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v17"
+    "VersionId": "v18"
   },
-  "UpdateDate": "2026-11-13T21:27:08Z"
+  "UpdateDate": "2026-11-19T22:07:08Z"
 }

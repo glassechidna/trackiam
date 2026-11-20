@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchOmniSpaceAccessPolicy",
   "CreateDate": "2026-09-22T01:47:07Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4PASQMIJJI",
   "PolicyName": "CloudWatchOmniSpaceAccessPolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-11-17T16:37:08Z",
+    "CreateDate": "2026-11-19T23:37:09Z",
     "Document": {
       "Statement": [
         {
@@ -80,6 +80,43 @@
           "Sid": "AzureResourceContextEnablement"
         },
         {
+          "Action": "iam:AttachRolePolicy",
+          "Condition": {
+            "ArnEquals": {
+              "iam:PolicyARN": "arn:aws:iam::aws:policy/service-role/CloudWatchOmniDevOpsAgentInvestigationServiceRolePolicy"
+            },
+            "ArnLike": {
+              "iam:RoleTemplateARN": "arn:aws:iam::aws:role-template/cloudwatch.amazonaws.com/CloudWatchOmniDevOpsAgentInvestigationAccessRoleTemplate:*"
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "cloudwatch.amazonaws.com"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/service-role/CloudWatchOmniDevOpsAgentInvestigationRole-*",
+          "Sid": "DevOpsAgentInvestigationPolicyFromTemplate"
+        },
+        {
+          "Action": "iam:CreateRole",
+          "Condition": {
+            "ArnLike": {
+              "iam:RoleTemplateARN": "arn:aws:iam::aws:role-template/cloudwatch.amazonaws.com/CloudWatchOmniDevOpsAgentInvestigationAccessRoleTemplate:*"
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "cloudwatch.amazonaws.com"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/service-role/CloudWatchOmniDevOpsAgentInvestigationRole-*",
+          "Sid": "DevOpsAgentInvestigationRoleFromTemplate"
+        },
+        {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
             "StringEquals": {
@@ -102,6 +139,28 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/thirdparty.config.amazonaws.com/*",
           "Sid": "AzureResourceContextServiceLinkedRole"
+        },
+        {
+          "Action": "iam:GetRoleTemplateVersion",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "cloudwatch.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::aws:role-template/cloudwatch.amazonaws.com/CloudWatchExternalAgentIntegrationRoleTemplate:*",
+          "Sid": "PartnerIntegrationRoleTemplateRead"
+        },
+        {
+          "Action": "iam:GetRoleTemplateVersion",
+          "Condition": {
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "cloudwatch.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::aws:role-template/cloudwatch.amazonaws.com/CloudWatchOmniDevOpsAgentInvestigationAccessRoleTemplate:*",
+          "Sid": "DevOpsAgentInvestigationRoleTemplateRead"
         },
         {
           "Action": "iam:PassRole",
@@ -271,6 +330,7 @@
             "cloudwatch:CreateAccessProfile",
             "cloudwatch:CreateAlert",
             "cloudwatch:CreateIntegration",
+            "cloudwatch:CreateOmniAgentAsset",
             "cloudwatch:CreateOmniDashboard",
             "cloudwatch:CreateOmniThread",
             "cloudwatch:CreateView",
@@ -278,6 +338,7 @@
             "cloudwatch:DeleteAccessProfile",
             "cloudwatch:DeleteAlert",
             "cloudwatch:DeleteIntegration",
+            "cloudwatch:DeleteOmniAgentAsset",
             "cloudwatch:DeleteOmniDashboard",
             "cloudwatch:DeleteOmniThread",
             "cloudwatch:DeleteView",
@@ -289,9 +350,11 @@
             "cloudwatch:GetIntegration",
             "cloudwatch:GetIntelligenceConfiguration",
             "cloudwatch:GetMetricData",
+            "cloudwatch:GetOmniAgentAsset",
             "cloudwatch:GetOmniDashboard",
             "cloudwatch:GetOmniThread",
             "cloudwatch:GetPreferences",
+            "cloudwatch:GetProfileRecords",
             "cloudwatch:GetRecords",
             "cloudwatch:GetSpace",
             "cloudwatch:GetSpaceDataAccess",
@@ -303,6 +366,7 @@
             "cloudwatch:ListAlerts",
             "cloudwatch:ListIntegrations",
             "cloudwatch:ListMetrics",
+            "cloudwatch:ListOmniAgentAssets",
             "cloudwatch:ListOmniDashboards",
             "cloudwatch:ListOmniThreads",
             "cloudwatch:ListSpaces",
@@ -310,6 +374,7 @@
             "cloudwatch:ListTelemetryQuerySessions",
             "cloudwatch:ListViews",
             "cloudwatch:PutIntelligenceConfiguration",
+            "cloudwatch:PutRecords",
             "cloudwatch:SearchPrincipals",
             "cloudwatch:StartOmniThreadSession",
             "cloudwatch:StartTelemetryQuerySession",
@@ -321,6 +386,7 @@
             "cloudwatch:UpdateAccessProfile",
             "cloudwatch:UpdateAlert",
             "cloudwatch:UpdateIntegration",
+            "cloudwatch:UpdateOmniAgentAsset",
             "cloudwatch:UpdateOmniDashboard",
             "cloudwatch:UpdateOmniThread",
             "cloudwatch:UpdatePreferences",
@@ -365,6 +431,26 @@
           "Effect": "Allow",
           "Resource": "*",
           "Sid": "DescribeConfigurationRecorder"
+        },
+        {
+          "Action": [
+            "iam:CreateRole",
+            "iam:PutRolePolicy"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "iam:RoleTemplateARN": "arn:aws:iam::aws:role-template/cloudwatch.amazonaws.com/CloudWatchExternalAgentIntegrationRoleTemplate:*"
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:CalledVia": "cloudwatch.amazonaws.com"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/service-role/CloudWatchExternalAgentIntegration-*",
+          "Sid": "PartnerIntegrationRoleFromTemplate"
         },
         {
           "Action": [
@@ -709,6 +795,7 @@
             "arn:aws:cloudwatch:*:*:dataset/*",
             "arn:aws:cloudwatch:*:*:domain/*",
             "arn:aws:cloudwatch:*:*:integration/*",
+            "arn:aws:cloudwatch:*:*:omni-agent-asset/*",
             "arn:aws:cloudwatch:*:*:omni-dashboard/*",
             "arn:aws:cloudwatch:*:*:organization-access-grant/*",
             "arn:aws:cloudwatch:*:*:organization-domain/*",
@@ -785,7 +872,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-11-17T16:37:08Z"
+  "UpdateDate": "2026-11-19T23:37:09Z"
 }
