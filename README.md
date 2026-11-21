@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 474
-* Unique actions: 23598
+* Unique actions: 23618
 * Managed policies: 1622
 
 Most common managed policy name prefixes:
@@ -146,8 +146,8 @@ The following table summarises the AWS APIs.
 | [`elasticbeanstalk`](services/elasticbeanstalk.yml) | 47 | 0 | 3 |
 | [`codedeploy`](services/codedeploy.yml) | 47 | 0 | 1 |
 | [`transcribe`](services/transcribe.yml) | 46 | 0 | 7 |
+| [`fsx`](services/fsx.yml) | 45 | 0 | 31 |
 | [`appconfig`](services/appconfig.yml) | 45 | 0 | 13 |
-| [`fsx`](services/fsx.yml) | 45 | 0 | 11 |
 | [`workdocs`](services/workdocs.yml) | 44 | 0 | 17 |
 | [`mediatailor`](services/mediatailor.yml) | 44 | 0 | 0 |
 | [`databrew`](services/databrew.yml) | 44 | 0 | 0 |
@@ -517,10 +517,10 @@ Most common action prefixes:
 | ------ | ----- |
 | `List` | 4020 |
 | `Get` | 3623 |
-| `Delete` | 2683 |
-| `Create` | 2550 |
-| `Update` | 2231 |
-| `Describe` | 1986 |
+| `Delete` | 2688 |
+| `Create` | 2555 |
+| `Update` | 2236 |
+| `Describe` | 1991 |
 | `Put` | 639 |
 | `Start` | 589 |
 | `Batch` | 345 |
