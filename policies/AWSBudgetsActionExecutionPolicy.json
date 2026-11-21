@@ -1,0 +1,96 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSBudgetsActionExecutionPolicy",
+  "CreateDate": "2026-11-20T21:37:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4I7CA7SNBP",
+  "PolicyName": "AWSBudgetsActionExecutionPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-20T21:37:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "organizations:CreatePolicy",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "budgets:managed"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/budgets:managed": "true",
+              "organizations:PolicyType": "SERVICE_CONTROL_POLICY"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:policy/*/service_control_policy/*",
+          "Sid": "CreateTaggedScp"
+        },
+        {
+          "Action": "organizations:TagResource",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "budgets:managed"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/budgets:managed": "true",
+              "aws:ResourceTag/budgets:managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:policy/*/service_control_policy/*",
+          "Sid": "TagOnlyOwnScps"
+        },
+        {
+          "Action": [
+            "organizations:AttachPolicy",
+            "organizations:DeletePolicy",
+            "organizations:DescribePolicy",
+            "organizations:DetachPolicy",
+            "organizations:ListTargetsForPolicy",
+            "organizations:UpdatePolicy"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/budgets:managed": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:policy/*/service_control_policy/*",
+          "Sid": "ManageOwnScps"
+        },
+        {
+          "Action": [
+            "organizations:AttachPolicy",
+            "organizations:DetachPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:organizations::*:account/*",
+            "arn:aws:organizations::*:ou/*",
+            "arn:aws:organizations::*:root/*"
+          ],
+          "Sid": "AttachTargets"
+        },
+        {
+          "Action": [
+            "organizations:ListAccounts",
+            "organizations:ListPolicies",
+            "organizations:ListPoliciesForTarget",
+            "organizations:ListRoots"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Read"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-20T21:37:07Z"
+}

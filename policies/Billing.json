@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/job-function/Billing",
   "CreateDate": "2016-11-10T17:33:18Z",
-  "DefaultVersionId": "v31",
+  "DefaultVersionId": "v32",
   "IsAttachable": true,
   "Path": "/job-function/",
   "PolicyId": "ANPAIFTHXT6FFMIRT7ZEA",
   "PolicyName": "Billing",
   "PolicyVersion": {
-    "CreateDate": "2026-10-26T17:07:08Z",
+    "CreateDate": "2026-11-20T22:07:07Z",
     "Document": {
       "Statement": [
         {
@@ -115,6 +115,7 @@
             "mapcredits:ListAssociatedPrograms",
             "mapcredits:ListQuarterCredits",
             "mapcredits:ListQuarterSpend",
+            "payments:CreateConnectedAccount",
             "payments:CreateFinancingApplication",
             "payments:CreatePaymentInstrument",
             "payments:DeletePaymentInstrument",
@@ -124,6 +125,7 @@
             "payments:GetFinancingOption",
             "payments:GetPaymentInstrument",
             "payments:GetPaymentStatus",
+            "payments:ListConnectedAccounts",
             "payments:ListFinancingApplications",
             "payments:ListFinancingLineWithdrawals",
             "payments:ListFinancingLines",
@@ -184,12 +186,21 @@
           "Effect": "Allow",
           "Resource": "arn:aws:billing::*:contract/*",
           "Sid": "ContractAdministration"
+        },
+        {
+          "Action": [
+            "payments:DeleteConnectedAccount",
+            "payments:GetConnectedAccount"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:payments::*:connectedaccount/*",
+          "Sid": "ConnectedAccountAdministration"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v31"
+    "VersionId": "v32"
   },
-  "UpdateDate": "2026-10-26T17:07:08Z"
+  "UpdateDate": "2026-11-20T22:07:07Z"
 }

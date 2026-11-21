@@ -179,8 +179,10 @@ Actions:
   - Name: quicksight:AllowVendedLogDeliveryForResource
   - Name: quicksight:AuthorizeOAuthAccess
   - Name: quicksight:BatchDeleteKnowledgeBase
+  - Name: quicksight:BatchDeletePolicyAssignmentByPolicy
   - Name: quicksight:BatchDescribeUserLimits
   - Name: quicksight:BatchGetPreferences
+  - Name: quicksight:BatchPutPolicyAssignmentByPolicy
   - Name: quicksight:BatchUpdatePreferences
   - Name: quicksight:CreateAccessControlApplication
   - Name: quicksight:CreateAccessControlApplicationSecret
@@ -197,6 +199,7 @@ Actions:
   - Name: quicksight:CreateFlow
   - Name: quicksight:CreateInboundConnector
   - Name: quicksight:CreateKnowledgeBase
+  - Name: quicksight:CreateKnowledgeBaseRefreshSchedule
   - Name: quicksight:CreateLimitsProfile
   - Name: quicksight:CreateOAuthClientApplication
   - Name: quicksight:CreateOAuthToken
@@ -221,8 +224,10 @@ Actions:
   - Name: quicksight:DeleteFlow
   - Name: quicksight:DeleteInboundConnector
   - Name: quicksight:DeleteKnowledgeBase
+  - Name: quicksight:DeleteKnowledgeBaseRefreshSchedule
   - Name: quicksight:DeleteLimitsProfile
   - Name: quicksight:DeleteOAuthClientApplication
+  - Name: quicksight:DeletePolicyAssignment
   - Name: quicksight:DeleteSpace
   - Name: quicksight:DeleteUserCustomPermission
   - Name: quicksight:DescribeAccessControlApplication
@@ -252,6 +257,7 @@ Actions:
   - Name: quicksight:DescribeInboundConnector
   - Name: quicksight:DescribeKnowledgeBase
   - Name: quicksight:DescribeKnowledgeBasePermissions
+  - Name: quicksight:DescribeKnowledgeBaseRefreshSchedule
   - Name: quicksight:DescribeLimitsProfile
   - Name: quicksight:DescribeOAuthClientApplication
   - Name: quicksight:DescribeQPersonalizationConfiguration
@@ -265,10 +271,12 @@ Actions:
   - Name: quicksight:GetAnonymousUserEmbedUrl
   - Name: quicksight:GetAuthCode
   - Name: quicksight:GetCustomPermissionsSummary
+  - Name: quicksight:GetEffectiveCustomPermissions
   - Name: quicksight:GetFlowMetadata
   - Name: quicksight:GetFlowPermissions
   - Name: quicksight:GetGroupMapping
   - Name: quicksight:GetIdentityContext
+  - Name: quicksight:GetPolicyAssignment
   - Name: quicksight:ListAccessControlApplications
   - Name: quicksight:ListActionConnectors
   - Name: quicksight:ListAgents
@@ -287,9 +295,11 @@ Actions:
   - Name: quicksight:ListInboundConnectorApplicationAssociations
   - Name: quicksight:ListInboundConnectors
   - Name: quicksight:ListKMSKeysForUser
+  - Name: quicksight:ListKnowledgeBaseRefreshSchedules
   - Name: quicksight:ListKnowledgeBases
   - Name: quicksight:ListLimitsProfiles
   - Name: quicksight:ListOAuthClientApplications
+  - Name: quicksight:ListPrincipalsForPolicy
   - Name: quicksight:ListSelfUpgrades
   - Name: quicksight:ListSpaceResources
   - Name: quicksight:ListSpaces
@@ -298,6 +308,7 @@ Actions:
   - Name: quicksight:PassDataSource
   - Name: quicksight:PassTopic
   - Name: quicksight:PredictQAResults
+  - Name: quicksight:PutPolicyAssignment
   - Name: quicksight:QuickSuiteUsageMetrics
   - Name: quicksight:RegisterCustomerManagedKey
   - Name: quicksight:RemoveCustomerManagedKey
@@ -348,6 +359,7 @@ Actions:
   - Name: quicksight:UpdateInboundConnectorApplicationAssociations
   - Name: quicksight:UpdateKnowledgeBase
   - Name: quicksight:UpdateKnowledgeBasePermissions
+  - Name: quicksight:UpdateKnowledgeBaseRefreshSchedule
   - Name: quicksight:UpdateLimitsProfile
   - Name: quicksight:UpdateOAuthClientApplication
   - Name: quicksight:UpdateQPersonalizationConfiguration

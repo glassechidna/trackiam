@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralChannelManagement",
   "CreateDate": "2025-11-19T16:34:09Z",
-  "DefaultVersionId": "v9",
+  "DefaultVersionId": "v10",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4EKQNXSK5L",
   "PolicyName": "AWSPartnerCentralChannelManagement",
   "PolicyVersion": {
-    "CreateDate": "2026-11-20T01:37:07Z",
+    "CreateDate": "2026-11-20T21:17:07Z",
     "Document": {
       "Statement": [
         {
@@ -26,14 +26,18 @@
         {
           "Action": [
             "partnercentral:AcceptChannelHandshake",
+            "partnercentral:CancelChannelContract",
             "partnercentral:CancelChannelHandshake",
+            "partnercentral:CreateChannelContract",
             "partnercentral:CreateChannelHandshake",
             "partnercentral:CreateProgramManagementAccount",
             "partnercentral:CreateRelationship",
             "partnercentral:DeleteProgramManagementAccount",
             "partnercentral:DeleteRelationship",
+            "partnercentral:GetChannelContract",
             "partnercentral:GetProgramManagementAccount",
             "partnercentral:GetRelationship",
+            "partnercentral:ListChannelContracts",
             "partnercentral:ListChannelHandshakes",
             "partnercentral:ListProgramManagementAccounts",
             "partnercentral:ListRelationships",
@@ -105,6 +109,7 @@
           },
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:partnercentral:*:*:catalog/*/channel-contract/*",
             "arn:aws:partnercentral:*:*:catalog/*/channel-handshake/*",
             "arn:aws:partnercentral:*:*:catalog/*/program-management-account/*"
           ],
@@ -175,7 +180,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v9"
+    "VersionId": "v10"
   },
-  "UpdateDate": "2026-11-20T01:37:07Z"
+  "UpdateDate": "2026-11-20T21:17:07Z"
 }

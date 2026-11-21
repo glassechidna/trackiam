@@ -1,19 +1,24 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AIDevOpsAgentFullAccess",
   "CreateDate": "2026-03-26T03:42:16Z",
-  "DefaultVersionId": "v6",
+  "DefaultVersionId": "v7",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4G7KA3NAK3",
   "PolicyName": "AIDevOpsAgentFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-06-26T23:57:19Z",
+    "CreateDate": "2026-11-20T22:47:06Z",
     "Document": {
       "Statement": [
         {
           "Action": [
             "aidevops:AllowVendedLogDeliveryForResource",
             "aidevops:AssociateService",
+            "aidevops:BatchCreateAccessProfileAssignment",
+            "aidevops:BatchDeleteAccessProfileAssignment",
+            "aidevops:BatchDeleteAccessProfileEntitlement",
+            "aidevops:BatchPutAccessProfileEntitlement",
+            "aidevops:CreateAccessProfile",
             "aidevops:CreateAccessToken",
             "aidevops:CreateAgentSpace",
             "aidevops:CreateAsset",
@@ -24,6 +29,7 @@
             "aidevops:CreateOneTimeLoginSession",
             "aidevops:CreatePrivateConnection",
             "aidevops:CreateTrigger",
+            "aidevops:DeleteAccessProfile",
             "aidevops:DeleteAgentSpace",
             "aidevops:DeleteAsset",
             "aidevops:DeleteAssetFile",
@@ -39,6 +45,7 @@
             "aidevops:DiscoverTopology",
             "aidevops:EnableOperatorApp",
             "aidevops:EndChatForCase",
+            "aidevops:GetAccessProfile",
             "aidevops:GetAccessToken",
             "aidevops:GetAccountUsage",
             "aidevops:GetAgentSpace",
@@ -53,6 +60,9 @@
             "aidevops:GetService",
             "aidevops:GetTrigger",
             "aidevops:InitiateChatForCase",
+            "aidevops:ListAccessProfileAssignments",
+            "aidevops:ListAccessProfileEntitlements",
+            "aidevops:ListAccessProfiles",
             "aidevops:ListAccessTokens",
             "aidevops:ListAgentSpaces",
             "aidevops:ListAssetFiles",
@@ -81,6 +91,8 @@
             "aidevops:SendMessage",
             "aidevops:TagResource",
             "aidevops:UntagResource",
+            "aidevops:UpdateAccessProfile",
+            "aidevops:UpdateAccessProfilesOrder",
             "aidevops:UpdateAgentSpace",
             "aidevops:UpdateApprovalAction",
             "aidevops:UpdateAsset",
@@ -103,7 +115,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v6"
+    "VersionId": "v7"
   },
-  "UpdateDate": "2026-06-26T23:57:19Z"
+  "UpdateDate": "2026-11-20T22:47:06Z"
 }

@@ -1,36 +1,54 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AgentRegistryReadOnlyAccess",
   "CreateDate": "2026-08-06T18:12:29Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4C3CDXY7QJ",
   "PolicyName": "AgentRegistryReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-08-06T18:12:29Z",
+    "CreateDate": "2026-11-20T20:57:08Z",
     "Document": {
       "Statement": [
         {
           "Action": [
+            "agent-discovery:SearchPublicRecords"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AgentRegistryPublicDiscoveryAccess"
+        },
+        {
+          "Action": [
             "agent-registry:GetDiscoverableRegistryRecord",
+            "agent-registry:GetPublisher",
             "agent-registry:GetRegistry",
             "agent-registry:GetRegistryRecord",
             "agent-registry:InvokeRegistryMcp",
             "agent-registry:ListDiscoverableRegistryRecords",
-            "agent-registry:ListRegistries",
+            "agent-registry:ListPublisherAssociations",
             "agent-registry:ListRegistryRecords",
-            "agent-registry:ListTagsForResource",
             "agent-registry:SearchDiscoverableRegistryRecords"
           ],
           "Effect": "Allow",
           "Resource": "arn:aws:agent-registry:*:*:*",
           "Sid": "AgentRegistryReadOnlyAccess"
+        },
+        {
+          "Action": [
+            "agent-registry:ListPublishers",
+            "agent-registry:ListRegistries",
+            "agent-registry:ListTagsForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AgentRegistryReadOnlyAccessNoResource"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-08-06T18:12:29Z"
+  "UpdateDate": "2026-11-20T20:57:08Z"
 }
