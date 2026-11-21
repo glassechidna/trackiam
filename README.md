@@ -12,7 +12,7 @@ having this idea and being gracious about me shamelessly ripping it off.
 # Stats
 
 * Unique services: 474
-* Unique actions: 23571
+* Unique actions: 23598
 * Managed policies: 1622
 
 Most common managed policy name prefixes:
@@ -37,7 +37,7 @@ The following table summarises the AWS APIs.
 | Service | Action/API pairs | APIs without actions | Actions without APIs |
 | ------ | ----- | ----- | ----- |
 | [`ec2`](services/ec2.yml) | 625 | 0 | 209 |
-| [`sagemaker`](services/sagemaker.yml) | 351 | 0 | 119 |
+| [`sagemaker`](services/sagemaker.yml) | 351 | 0 | 139 |
 | [`iot`](services/iot.yml) | 262 | 3 | 31 |
 | [`chime`](services/chime.yml) | 259 | 0 | 57 |
 | [`connect`](services/connect.yml) | 256 | 0 | 138 |
@@ -404,6 +404,7 @@ The following table summarises the AWS APIs.
 | [`one`](services/one.yml) | 0 | 0 | 28 |
 | [`transform`](services/transform.yml) | 0 | 0 | 27 |
 | [`end-user-messaging`](services/end-user-messaging.yml) | 0 | 0 | 27 |
+| [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 27 |
 | [`s3-object-lambda`](services/s3-object-lambda.yml) | 0 | 0 | 26 |
 | [`invoicing`](services/invoicing.yml) | 0 | 0 | 26 |
 | [`user-subscriptions`](services/user-subscriptions.yml) | 0 | 0 | 25 |
@@ -415,15 +416,14 @@ The following table summarises the AWS APIs.
 | [`s3files`](services/s3files.yml) | 0 | 0 | 24 |
 | [`evs`](services/evs.yml) | 0 | 0 | 24 |
 | [`elemental-inference`](services/elemental-inference.yml) | 0 | 0 | 24 |
-| [`aco-automation`](services/aco-automation.yml) | 0 | 0 | 23 |
 | [`s3vectors`](services/s3vectors.yml) | 0 | 0 | 22 |
+| [`signin`](services/signin.yml) | 0 | 0 | 20 |
 | [`pcs`](services/pcs.yml) | 0 | 0 | 20 |
 | [`osm`](services/osm.yml) | 0 | 0 | 20 |
 | [`freertos`](services/freertos.yml) | 0 | 0 | 20 |
 | [`kafka-cluster`](services/kafka-cluster.yml) | 0 | 0 | 19 |
 | [`codewhisperer`](services/codewhisperer.yml) | 0 | 0 | 19 |
 | [`monitron`](services/monitron.yml) | 0 | 0 | 18 |
-| [`signin`](services/signin.yml) | 0 | 0 | 17 |
 | [`elemental-support-cases`](services/elemental-support-cases.yml) | 0 | 0 | 17 |
 | [`ds-data`](services/ds-data.yml) | 0 | 0 | 17 |
 | [`bugbust`](services/bugbust.yml) | 0 | 0 | 17 |
@@ -515,14 +515,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 4012 |
-| `Get` | 3621 |
-| `Delete` | 2680 |
-| `Create` | 2548 |
-| `Update` | 2229 |
-| `Describe` | 1982 |
-| `Put` | 638 |
+| `List` | 4020 |
+| `Get` | 3623 |
+| `Delete` | 2683 |
+| `Create` | 2550 |
+| `Update` | 2231 |
+| `Describe` | 1986 |
+| `Put` | 639 |
 | `Start` | 589 |
-| `Batch` | 344 |
+| `Batch` | 345 |
 | `Tag` | 331 |
 

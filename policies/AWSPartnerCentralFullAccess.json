@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AWSPartnerCentralFullAccess",
   "CreateDate": "2024-11-18T23:33:28Z",
-  "DefaultVersionId": "v18",
+  "DefaultVersionId": "v19",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4DRJMXIHNK",
   "PolicyName": "AWSPartnerCentralFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-11-20T06:17:06Z",
+    "CreateDate": "2026-11-21T02:57:08Z",
     "Document": {
       "Statement": [
         {
@@ -209,7 +209,10 @@
             "iam:GetRole"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/aws-service-role/partnercentral-account.amazonaws.com/AWSServiceRoleForPartnerCentralAccount",
+          "Resource": [
+            "arn:aws:iam::*:role/AWSServiceRoleForPartnerCentralAccount",
+            "arn:aws:iam::*:role/aws-service-role/partnercentral-account.amazonaws.com/AWSServiceRoleForPartnerCentralAccount"
+          ],
           "Sid": "IAMGetRole"
         },
         {
@@ -217,7 +220,10 @@
             "iam:GetRole"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/aws-service-role/partnercentral-marketing.amazonaws.com/AWSServiceRoleForPartnerCentralMarketing",
+          "Resource": [
+            "arn:aws:iam::*:role/AWSServiceRoleForPartnerCentralMarketing",
+            "arn:aws:iam::*:role/aws-service-role/partnercentral-marketing.amazonaws.com/AWSServiceRoleForPartnerCentralMarketing"
+          ],
           "Sid": "DemandCenterServiceLinkedRoleRead"
         },
         {
@@ -308,7 +314,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v18"
+    "VersionId": "v19"
   },
-  "UpdateDate": "2026-11-20T06:17:06Z"
+  "UpdateDate": "2026-11-21T02:57:08Z"
 }

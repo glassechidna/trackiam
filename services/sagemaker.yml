@@ -353,6 +353,7 @@ Actions:
 
   # actions with no corresponding API
   - Name: sagemaker:AccessModelPackage
+  - Name: sagemaker:AddInferenceGateway
   - Name: sagemaker:AttachClusterNodeNetworkInterface
   - Name: sagemaker:AttachClusterNodeVolume
   - Name: sagemaker:BatchAddClusterNodes
@@ -368,8 +369,10 @@ Actions:
   - Name: sagemaker:CreateAIBenchmarkJob
   - Name: sagemaker:CreateAIRecommendationJob
   - Name: sagemaker:CreateAIWorkloadConfig
+  - Name: sagemaker:CreateClusterExtension
   - Name: sagemaker:CreateClusterSchedulerConfig
   - Name: sagemaker:CreateComputeQuota
+  - Name: sagemaker:CreateGlobalInferenceGateway
   - Name: sagemaker:CreateHubContentPresignedUrls
   - Name: sagemaker:CreateInferenceRouter
   - Name: sagemaker:CreateJob
@@ -385,9 +388,11 @@ Actions:
   - Name: sagemaker:DeleteAIBenchmarkJob
   - Name: sagemaker:DeleteAIRecommendationJob
   - Name: sagemaker:DeleteAIWorkloadConfig
+  - Name: sagemaker:DeleteClusterExtension
   - Name: sagemaker:DeleteClusterSchedulerConfig
   - Name: sagemaker:DeleteComputeQuota
   - Name: sagemaker:DeleteEndpointPolicy
+  - Name: sagemaker:DeleteGlobalInferenceGateway
   - Name: sagemaker:DeleteInferenceRouter
   - Name: sagemaker:DeleteJob
   - Name: sagemaker:DeleteLineageGroupPolicy
@@ -401,16 +406,20 @@ Actions:
   - Name: sagemaker:DescribeAIBenchmarkJob
   - Name: sagemaker:DescribeAIRecommendationJob
   - Name: sagemaker:DescribeAIWorkloadConfig
+  - Name: sagemaker:DescribeCapacityReservation
   - Name: sagemaker:DescribeClusterEvent
+  - Name: sagemaker:DescribeClusterExtension
   - Name: sagemaker:DescribeClusterInference
   - Name: sagemaker:DescribeClusterSchedulerConfig
   - Name: sagemaker:DescribeComputeQuota
+  - Name: sagemaker:DescribeGlobalInferenceGateway
   - Name: sagemaker:DescribeInferenceRouter
   - Name: sagemaker:DescribeJob
   - Name: sagemaker:DescribeJobSchemaVersion
   - Name: sagemaker:DescribeMlflowApp
   - Name: sagemaker:DescribePartnerApp
   - Name: sagemaker:DescribeReservedCapacity
+  - Name: sagemaker:DescribeResourceAssociations
   - Name: sagemaker:DescribeSharedModel
   - Name: sagemaker:DescribeTrainingPlan
   - Name: sagemaker:DescribeTrainingPlanExtensionHistory
@@ -419,18 +428,26 @@ Actions:
   - Name: sagemaker:ExecuteSamplingOperation
   - Name: sagemaker:ExecuteTrainingOperation
   - Name: sagemaker:ExtendTrainingPlan
+  - Name: sagemaker:GetCapacityReservationUsage
   - Name: sagemaker:GetEndpointPolicy
   - Name: sagemaker:GetResourcePolicy
   - Name: sagemaker:GetSamplingOperationResult
   - Name: sagemaker:GetTrainingOperationResult
+  - Name: sagemaker:InvokeGlobalInferenceGateway
+  - Name: sagemaker:InvokeGlobalInferenceGatewayWithResponseStream
   - Name: sagemaker:InvokeInferenceRouter
   - Name: sagemaker:InvokeInferenceRouterAsync
   - Name: sagemaker:ListAIBenchmarkJobs
   - Name: sagemaker:ListAIRecommendationJobs
   - Name: sagemaker:ListAIWorkloadConfigs
+  - Name: sagemaker:ListCapacityReservations
   - Name: sagemaker:ListClusterEvents
+  - Name: sagemaker:ListClusterExtensionVersions
+  - Name: sagemaker:ListClusterExtensions
   - Name: sagemaker:ListClusterSchedulerConfigs
   - Name: sagemaker:ListComputeQuotas
+  - Name: sagemaker:ListGlobalInferenceGateways
+  - Name: sagemaker:ListInferenceGateways
   - Name: sagemaker:ListInferenceRouters
   - Name: sagemaker:ListJobSchemaVersions
   - Name: sagemaker:ListJobs
@@ -447,6 +464,7 @@ Actions:
   - Name: sagemaker:PutEndpointPolicy
   - Name: sagemaker:PutLineageGroupPolicy
   - Name: sagemaker:PutResourcePolicy
+  - Name: sagemaker:RemoveInferenceGateway
   - Name: sagemaker:Sample
   - Name: sagemaker:SampleTrainingSession
   - Name: sagemaker:SampleTrainingSessionWithResponseStream
@@ -460,9 +478,11 @@ Actions:
   - Name: sagemaker:StopJob
   - Name: sagemaker:StopTrainingSession
   - Name: sagemaker:TrainHubModel
+  - Name: sagemaker:UpdateClusterExtension
   - Name: sagemaker:UpdateClusterInference
   - Name: sagemaker:UpdateClusterSchedulerConfig
   - Name: sagemaker:UpdateComputeQuota
+  - Name: sagemaker:UpdateGlobalInferenceGateway
   - Name: sagemaker:UpdateHubContent
   - Name: sagemaker:UpdateHubContentReference
   - Name: sagemaker:UpdateInferenceRouter
