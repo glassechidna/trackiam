@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonLaunchWizardFullAccessV2",
   "CreateDate": "2023-09-01T17:14:56Z",
-  "DefaultVersionId": "v3",
+  "DefaultVersionId": "v4",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4BVNZXUELJ",
   "PolicyName": "AmazonLaunchWizardFullAccessV2",
   "PolicyVersion": {
-    "CreateDate": "2026-10-20T16:37:07Z",
+    "CreateDate": "2026-11-23T20:37:07Z",
     "Document": {
       "Statement": [
         {
@@ -19,6 +19,7 @@
           },
           "Effect": "Allow",
           "Resource": [
+            "arn:aws:ec2:*:*:capacity-reservation/*",
             "arn:aws:ec2:*:*:image/*",
             "arn:aws:ec2:*:*:instance/*",
             "arn:aws:ec2:*:*:key-pair/*",
@@ -27,7 +28,8 @@
             "arn:aws:ec2:*:*:placement-group/*",
             "arn:aws:ec2:*:*:security-group/*",
             "arn:aws:ec2:*:*:subnet/*",
-            "arn:aws:ec2:*:*:volume/*"
+            "arn:aws:ec2:*:*:volume/*",
+            "arn:aws:resource-groups:*:*:group/*"
           ],
           "Sid": "Ec2RunInstancesActions0"
         },
@@ -197,6 +199,7 @@
           "Resource": [
             "arn:aws:ec2:*:*:elastic-ip/*",
             "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:launch-template/*",
             "arn:aws:ec2:*:*:network-interface/*",
             "arn:aws:ec2:*:*:route-table/*",
             "arn:aws:ec2:*:*:security-group/*",
@@ -271,6 +274,8 @@
         },
         {
           "Action": [
+            "elasticfilesystem:DeleteReplicationConfiguration",
+            "elasticfilesystem:DescribeReplicationConfigurations",
             "elasticfilesystem:TagResource",
             "elasticfilesystem:UntagResource"
           ],
@@ -606,6 +611,7 @@
             "ec2:DescribeAccountAttributes",
             "ec2:DescribeAddresses",
             "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeCapacityReservations",
             "ec2:DescribeDhcpOptions",
             "ec2:DescribeFlowLogs",
             "ec2:DescribeHosts",
@@ -634,6 +640,7 @@
             "ec2:DescribeVolumes",
             "ec2:DescribeVpcAttribute",
             "ec2:DescribeVpcs",
+            "ec2:GetGroupsForCapacityReservation",
             "iam:GetPolicy",
             "iam:GetPolicyVersion",
             "iam:GetRole",
@@ -945,7 +952,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v3"
+    "VersionId": "v4"
   },
-  "UpdateDate": "2026-10-20T16:37:07Z"
+  "UpdateDate": "2026-11-23T20:37:07Z"
 }

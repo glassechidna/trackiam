@@ -1,0 +1,123 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/CloudWatchOmniProvisioningPolicy",
+  "CreateDate": "2026-11-23T22:27:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4JJHTLUV33",
+  "PolicyName": "CloudWatchOmniProvisioningPolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-23T22:27:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "cloudwatch:GetDataset",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch:*:*:dataset/*",
+          "Sid": "ReadDatasetEncryption"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "iam:PassedToService": "cloudwatch.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/service-role/AgentCoreEvaluationRole-Org*",
+            "arn:aws:iam::*:role/service-role/CloudWatchOmniSpaceDataAccessRole-Org*"
+          ],
+          "Sid": "PassSpaceRoles"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "iam:PassedToService": "logs.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/service-role/CloudWatchOmniDatasetIntegrationRole-Org*",
+          "Sid": "PassDatasetIntegrationRole"
+        },
+        {
+          "Action": "kms:Decrypt",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceOrgID": "${aws:PrincipalOrgID}"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:sso:instance-arn": "arn:aws:sso:::instance/*",
+              "kms:ViaService": "sso.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DecryptIdentityCenterCmkForRegionCheck"
+        },
+        {
+          "Action": [
+            "cloudwatch:DeleteSpace",
+            "cloudwatch:GetSpace"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch:*:*:space/*",
+          "Sid": "ReadAndDeleteSpaces"
+        },
+        {
+          "Action": [
+            "observabilityadmin:CreateDatasetIntegration",
+            "observabilityadmin:DeleteDatasetIntegration",
+            "observabilityadmin:GetDatasetIntegration"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:observabilityadmin:*:*:dataset-integration/*",
+          "Sid": "ManageDatasetIntegrations"
+        },
+        {
+          "Action": "observabilityadmin:ListDatasetIntegrations",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ListDatasetIntegrations"
+        },
+        {
+          "Action": "sso:ListRegions",
+          "Effect": "Allow",
+          "Resource": "arn:aws:sso:::instance/*",
+          "Sid": "ValidateIdentityCenterRegion"
+        },
+        {
+          "Action": [
+            "cloudwatch:CreateSpace",
+            "cloudwatch:ListSpaces"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CreateAndListSpaces"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-23T22:27:07Z"
+}

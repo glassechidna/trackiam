@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchFullAccessV2",
   "CreateDate": "2023-08-01T11:32:57Z",
-  "DefaultVersionId": "v20",
+  "DefaultVersionId": "v21",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAZKAPJZG4K5ELCXZSW",
   "PolicyName": "CloudWatchFullAccessV2",
   "PolicyVersion": {
-    "CreateDate": "2026-11-18T15:07:08Z",
+    "CreateDate": "2026-11-23T22:17:06Z",
     "Document": {
       "Statement": [
         {
@@ -174,6 +174,14 @@
         },
         {
           "Action": [
+            "aidevops:ListAgentSpaces"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchDevOpsAgentListPermissions"
+        },
+        {
+          "Action": [
             "application-autoscaling:DescribeScalingPolicies",
             "application-signals:*",
             "autoscaling:DescribeAutoScalingGroups",
@@ -274,7 +282,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v20"
+    "VersionId": "v21"
   },
-  "UpdateDate": "2026-11-18T15:07:08Z"
+  "UpdateDate": "2026-11-23T22:17:06Z"
 }
