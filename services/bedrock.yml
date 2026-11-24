@@ -100,6 +100,7 @@ Actions:
   # actions with no corresponding API
   - Name: bedrock:AgenticRetrieveStream
   - Name: bedrock:AllowVendedLogDeliveryForResource
+  - Name: bedrock:ArchiveProject
   - Name: bedrock:AssociateAgentCollaborator
   - Name: bedrock:AssociateThirdPartyKnowledgeBase
   - Name: bedrock:BatchDeleteAdvancedPromptOptimizationJob
@@ -129,10 +130,12 @@ Actions:
   - Name: bedrock:CreateModelEvaluationJob
   - Name: bedrock:CreateModelImportJob
   - Name: bedrock:CreateModelInvocationJob
+  - Name: bedrock:CreateProject
   - Name: bedrock:CreatePromptRouter
   - Name: bedrock:CreateRetrievalInstruction
   - Name: bedrock:CreateRetrievalInstructionVersion
   - Name: bedrock:CreateSession
+  - Name: bedrock:DeleteAccountDataRetentionStorage
   - Name: bedrock:DeleteAutomatedReasoningPolicy
   - Name: bedrock:DeleteAutomatedReasoningPolicyBuildWorkflow
   - Name: bedrock:DeleteAutomatedReasoningPolicyTestCase
@@ -148,6 +151,8 @@ Actions:
   - Name: bedrock:DeleteKnowledgeBaseDocuments
   - Name: bedrock:DeleteMarketplaceModelAgreement
   - Name: bedrock:DeleteMarketplaceModelEndpoint
+  - Name: bedrock:DeleteOrganizationDataRetentionStorage
+  - Name: bedrock:DeleteProjectDataRetentionStorage
   - Name: bedrock:DeletePromptRouter
   - Name: bedrock:DeleteResourcePolicy
   - Name: bedrock:DeleteRetrievalInstruction
@@ -159,6 +164,7 @@ Actions:
   - Name: bedrock:ExportAutomatedReasoningPolicyVersion
   - Name: bedrock:GenerateQuery
   - Name: bedrock:GetAccountDataRetention
+  - Name: bedrock:GetAccountDataRetentionStorage
   - Name: bedrock:GetAdvancedPromptOptimizationJob
   - Name: bedrock:GetAgentCollaborator
   - Name: bedrock:GetAsyncInvoke
@@ -194,10 +200,17 @@ Actions:
   - Name: bedrock:GetModelEvaluationJob
   - Name: bedrock:GetModelImportJob
   - Name: bedrock:GetModelInvocationJob
+  - Name: bedrock:GetOrganizationDataRetentionStorage
+  - Name: bedrock:GetProject
+  - Name: bedrock:GetProjectDataRetentionStorage
   - Name: bedrock:GetPromptRouter
   - Name: bedrock:GetResourcePolicy
   - Name: bedrock:GetRetrievalInstruction
   - Name: bedrock:GetSession
+  - Name: bedrock:GetTrustedAccessProgram
+  - Name: bedrock:GetTrustedAccessProgramAccountEnrollment
+  - Name: bedrock:GetTrustedAccessProgramOrganizationEnrollment
+  - Name: bedrock:GetTrustedAccessProgramProjectEnrollment
   - Name: bedrock:GetUseCaseForModelAccess
   - Name: bedrock:IngestKnowledgeBaseDocuments
   - Name: bedrock:InvokeAutomatedReasoningPolicy
@@ -237,16 +250,24 @@ Actions:
   - Name: bedrock:ListModelEvaluationJobs
   - Name: bedrock:ListModelImportJobs
   - Name: bedrock:ListModelInvocationJobs
+  - Name: bedrock:ListProjects
   - Name: bedrock:ListPromptRouters
   - Name: bedrock:ListRetrievalInstructionVersions
   - Name: bedrock:ListRetrievalInstructions
   - Name: bedrock:ListSessions
+  - Name: bedrock:ListTrustedAccessPrograms
   - Name: bedrock:OptimizePrompt
   - Name: bedrock:PutAccountDataRetention
+  - Name: bedrock:PutAccountDataRetentionStorage
   - Name: bedrock:PutEnforcedGuardrailConfiguration
   - Name: bedrock:PutFoundationModelEntitlement
   - Name: bedrock:PutInvocationStep
+  - Name: bedrock:PutOrganizationDataRetentionStorage
+  - Name: bedrock:PutProjectDataRetentionStorage
   - Name: bedrock:PutResourcePolicy
+  - Name: bedrock:PutTrustedAccessProgramAccountEnrollment
+  - Name: bedrock:PutTrustedAccessProgramOrganizationEnrollment
+  - Name: bedrock:PutTrustedAccessProgramProjectEnrollment
   - Name: bedrock:PutUseCaseForModelAccess
   - Name: bedrock:RegisterMarketplaceModelEndpoint
   - Name: bedrock:RenderPrompt
@@ -254,6 +275,9 @@ Actions:
   - Name: bedrock:StartAutomatedReasoningPolicyBuildWorkflow
   - Name: bedrock:StartAutomatedReasoningPolicyTestWorkflow
   - Name: bedrock:StartFlowExecution
+  - Name: bedrock:StartTrustedAccessProgramAccountApplication
+  - Name: bedrock:StartTrustedAccessProgramOrganizationApplication
+  - Name: bedrock:StartTrustedAccessProgramProjectApplication
   - Name: bedrock:StopAdvancedPromptOptimizationJob
   - Name: bedrock:StopFlowExecution
   - Name: bedrock:StopIngestionJob
@@ -267,6 +291,7 @@ Actions:
   - Name: bedrock:UpdateDataAutomationLibrary
   - Name: bedrock:UpdateDataAutomationProject
   - Name: bedrock:UpdateMarketplaceModelEndpoint
+  - Name: bedrock:UpdateProject
   - Name: bedrock:UpdateRetrievalInstruction
   - Name: bedrock:UpdateSession
   - Name: bedrock:ValidateFlowDefinition
