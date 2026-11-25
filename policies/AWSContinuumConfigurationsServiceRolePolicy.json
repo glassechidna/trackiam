@@ -1,0 +1,55 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSContinuumConfigurationsServiceRolePolicy",
+  "CreateDate": "2026-11-25T00:07:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4AQIC22IRS",
+  "PolicyName": "AWSContinuumConfigurationsServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-25T00:07:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "organizations:ListDelegatedAdministrators"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "organizations:ServicePrincipal": [
+                "continuum.amazonaws.com"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DelegatedAdminPermissions"
+        },
+        {
+          "Action": [
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganizationalUnit"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:organizations::*:*",
+          "Sid": "OrganizationsPermissionsOnResources"
+        },
+        {
+          "Action": [
+            "organizations:DescribeOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListChildren",
+            "organizations:ListParents"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "OrganizationsPermissionsWithoutResources"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-25T00:07:07Z"
+}

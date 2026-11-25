@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess",
   "CreateDate": "2015-02-06T18:40:01Z",
-  "DefaultVersionId": "v28",
+  "DefaultVersionId": "v29",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAJN23PDQP7SZQAE3QE",
   "PolicyName": "CloudWatchReadOnlyAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-11-23T11:47:06Z",
+    "CreateDate": "2026-11-24T23:47:07Z",
     "Document": {
       "Statement": [
         {
@@ -15,6 +15,14 @@
           "Effect": "Allow",
           "Resource": "arn:aws:iam::*:role/aws-service-role/application-signals.cloudwatch.amazonaws.com/AWSServiceRoleForCloudWatchApplicationSignals",
           "Sid": "CloudWatchReadOnlyGetRolePermissions"
+        },
+        {
+          "Action": [
+            "aidevops:ListAgentSpaces"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "CloudWatchDevOpsAgentListPermissions"
         },
         {
           "Action": [
@@ -114,7 +122,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v28"
+    "VersionId": "v29"
   },
-  "UpdateDate": "2026-11-23T11:47:06Z"
+  "UpdateDate": "2026-11-24T23:47:07Z"
 }
