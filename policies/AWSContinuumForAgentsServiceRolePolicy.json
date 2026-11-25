@@ -1,0 +1,369 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/aws-service-role/AWSContinuumForAgentsServiceRolePolicy",
+  "CreateDate": "2026-11-25T21:27:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/aws-service-role/",
+  "PolicyId": "ANPAZKAPJZG4LLWU3ZCBH",
+  "PolicyName": "AWSContinuumForAgentsServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-25T21:27:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "ec2:CreateSnapshots",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "ContinuumForAgentsPurpose"
+            },
+            "Null": {
+              "aws:TagKeys": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "CreateSnapshotsOnAnySnapshotOnlyWithTag"
+        },
+        {
+          "Action": "ec2:CreateSnapshots",
+          "Condition": {
+            "StringEquals": {
+              "ec2:ResourceTag/ContinuumForAgentsExcluded": "true"
+            }
+          },
+          "Effect": "Deny",
+          "Resource": "arn:aws:ec2:*:*:instance/*",
+          "Sid": "DenyCreateSnapshotsOnExcludedInstances"
+        },
+        {
+          "Action": "ec2:CreateTags",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": "ContinuumForAgentsPurpose"
+            },
+            "Null": {
+              "aws:TagKeys": "false"
+            },
+            "StringLike": {
+              "ec2:CreateAction": "CreateSnapshots"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "CreateOnlyScanTagOnlyUsingCreateSnapshots"
+        },
+        {
+          "Action": "ec2:DeleteSnapshot",
+          "Condition": {
+            "Null": {
+              "ec2:ResourceTag/ContinuumForAgentsPurpose": "false"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "DeleteOnlyOwnScanSnapshots"
+        },
+        {
+          "Action": "kms:Decrypt",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/ContinuumForAgentsExcluded": "true"
+            }
+          },
+          "Effect": "Deny",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DenyKmsDecryptForExcludedKeys"
+        },
+        {
+          "Action": "kms:Decrypt",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:ebs:id": "snap-*",
+              "kms:ViaService": "ec2.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DecryptEbsSnapshotContext"
+        },
+        {
+          "Action": "kms:Decrypt",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:ebs:id": "vol-*",
+              "kms:ViaService": "ec2.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DecryptEbsVolumeContext"
+        },
+        {
+          "Action": "kms:Decrypt",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceOrgID": "${aws:PrincipalOrgID}"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:ebs:id": "snap-*",
+              "kms:ViaService": "ec2.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DecryptEbsSnapshotContextSameOrg"
+        },
+        {
+          "Action": "kms:Decrypt",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceOrgID": "${aws:PrincipalOrgID}"
+            },
+            "StringLike": {
+              "kms:EncryptionContext:aws:ebs:id": "vol-*",
+              "kms:ViaService": "ec2.*.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DecryptEbsVolumeContextSameOrg"
+        },
+        {
+          "Action": "kms:DescribeKey",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DescribeVolumeKeysSameAccount"
+        },
+        {
+          "Action": "kms:DescribeKey",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceOrgID": "${aws:PrincipalOrgID}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "DescribeVolumeKeysSameOrg"
+        },
+        {
+          "Action": [
+            "ebs:GetSnapshotBlock",
+            "ebs:ListSnapshotBlocks"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceTag/ContinuumForAgentsExcluded": "true"
+            }
+          },
+          "Effect": "Deny",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "DenyReadBlocksOnExcludedSnapshots"
+        },
+        {
+          "Action": "apigateway:GET",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:apigateway:*::/apis",
+            "arn:aws:apigateway:*::/restapis"
+          ],
+          "Sid": "ApiGatewayRead"
+        },
+        {
+          "Action": "ec2:CreateSnapshots",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*",
+            "arn:aws:ec2:*:*:volume/*"
+          ],
+          "Sid": "CreateSnapshotsAnyInstanceOrVolume"
+        },
+        {
+          "Action": "kms:ListResourceTags",
+          "Effect": "Allow",
+          "Resource": "arn:aws:kms:*:*:key/*",
+          "Sid": "ListKeyResourceTags"
+        },
+        {
+          "Action": "lambda:GetLayerVersion",
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ReadLambdaLayerCode"
+        },
+        {
+          "Action": [
+            "autoscaling:DescribeAutoScalingGroups",
+            "batch:DescribeComputeEnvironments",
+            "batch:DescribeJobDefinitions",
+            "batch:DescribeJobQueues",
+            "ec2:DescribeImages",
+            "ec2:DescribeInstanceAttribute",
+            "ec2:DescribeInstances",
+            "ec2:DescribeLaunchTemplateVersions",
+            "ec2:DescribeLaunchTemplates",
+            "ec2:DescribeSnapshots",
+            "ec2:DescribeVolumes",
+            "ecs:DescribeServices",
+            "ecs:DescribeTaskDefinition",
+            "ecs:DescribeTasks",
+            "ecs:ListClusters",
+            "ecs:ListServices",
+            "ecs:ListTasks",
+            "eks:DescribeCluster",
+            "eks:DescribeNodegroup",
+            "eks:DescribePodIdentityAssociation",
+            "eks:ListClusters",
+            "eks:ListNodegroups",
+            "eks:ListPodIdentityAssociations",
+            "emr-serverless:ListApplications"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ComputeEnumeration"
+        },
+        {
+          "Action": [
+            "bedrock-agentcore:GetAgentRuntime",
+            "bedrock-agentcore:GetAgentRuntimeEndpoint",
+            "bedrock-agentcore:GetGateway",
+            "bedrock-agentcore:GetGatewayTarget",
+            "bedrock-agentcore:GetHarness",
+            "bedrock-agentcore:GetWorkloadIdentity",
+            "bedrock-agentcore:ListAgentRuntimeEndpoints",
+            "bedrock-agentcore:ListAgentRuntimes",
+            "bedrock-agentcore:ListApiKeyCredentialProviders",
+            "bedrock-agentcore:ListBrowsers",
+            "bedrock-agentcore:ListCodeInterpreters",
+            "bedrock-agentcore:ListEvaluators",
+            "bedrock-agentcore:ListGatewayTargets",
+            "bedrock-agentcore:ListGateways",
+            "bedrock-agentcore:ListHarnessEndpoints",
+            "bedrock-agentcore:ListHarnesses",
+            "bedrock-agentcore:ListMemories",
+            "bedrock-agentcore:ListOauth2CredentialProviders",
+            "bedrock-agentcore:ListPolicies",
+            "bedrock-agentcore:ListPolicyEngines",
+            "bedrock-agentcore:ListWorkloadIdentities",
+            "bedrock:GetAgent",
+            "bedrock:GetAgentActionGroup",
+            "bedrock:GetDataSource",
+            "bedrock:GetFlow",
+            "bedrock:GetFlowVersion",
+            "bedrock:GetGuardrail",
+            "bedrock:GetKnowledgeBase",
+            "bedrock:ListAgentActionGroups",
+            "bedrock:ListAgentAliases",
+            "bedrock:ListAgentCollaborators",
+            "bedrock:ListAgentKnowledgeBases",
+            "bedrock:ListAgents",
+            "bedrock:ListCustomModels",
+            "bedrock:ListDataSources",
+            "bedrock:ListFlowVersions",
+            "bedrock:ListFlows",
+            "bedrock:ListFoundationModels",
+            "bedrock:ListGuardrails",
+            "bedrock:ListImportedModels",
+            "bedrock:ListInferenceProfiles",
+            "bedrock:ListKnowledgeBases",
+            "bedrock:ListModelInvocationJobs",
+            "bedrock:ListPrompts",
+            "lex:ListBots",
+            "qbusiness:GetApplication",
+            "qbusiness:GetChatControlsConfiguration",
+            "qbusiness:GetPlugin",
+            "qbusiness:ListApplications",
+            "qbusiness:ListDataSources",
+            "qbusiness:ListIndices",
+            "qbusiness:ListPlugins",
+            "qbusiness:ListRetrievers",
+            "quicksight:DescribeActionConnector",
+            "quicksight:DescribeAgent",
+            "quicksight:DescribeSpace",
+            "quicksight:ListActionConnectors",
+            "quicksight:ListAgents",
+            "quicksight:ListKnowledgeBases",
+            "quicksight:ListSpaces",
+            "sagemaker:DescribeEndpoint",
+            "sagemaker:DescribeEndpointConfig",
+            "sagemaker:DescribeModel",
+            "sagemaker:DescribeNotebookInstance",
+            "sagemaker:DescribeProcessingJob",
+            "sagemaker:DescribeTrainingJob",
+            "sagemaker:ListEndpoints",
+            "sagemaker:ListModels",
+            "sagemaker:ListNotebookInstances",
+            "sagemaker:ListProcessingJobs",
+            "sagemaker:ListTrainingJobs"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "AiAgentEnumeration"
+        },
+        {
+          "Action": [
+            "ebs:GetSnapshotBlock",
+            "ebs:ListSnapshotBlocks"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:ec2:*:*:snapshot/*",
+          "Sid": "ReadSnapshotBlocks"
+        },
+        {
+          "Action": [
+            "ecr:BatchCheckLayerAvailability",
+            "ecr:BatchGetImage",
+            "ecr:GetAuthorizationToken",
+            "ecr:GetDownloadUrlForLayer"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ContainerImagePull"
+        },
+        {
+          "Action": [
+            "ecr:DescribeImages",
+            "ecr:DescribeRepositories",
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "lambda:GetFunction",
+            "lambda:GetFunctionUrlConfig",
+            "lambda:ListFunctions",
+            "lambda:ListTags"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "ServerlessAndEdge"
+        },
+        {
+          "Action": [
+            "iam:GetPolicy",
+            "iam:GetPolicyVersion",
+            "iam:GetRolePolicy",
+            "iam:ListAttachedRolePolicies",
+            "iam:ListInstanceProfiles",
+            "iam:ListRolePolicies",
+            "iam:ListRoles",
+            "resource-explorer-2:Search",
+            "tag:GetResources"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IdentityReads"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-25T21:27:08Z"
+}

@@ -1,0 +1,128 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerAIDataPreparationAccess",
+  "CreateDate": "2026-11-25T22:37:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4K4ZAPJH5U",
+  "PolicyName": "AmazonSageMakerAIDataPreparationAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-25T22:37:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "s3:AbortMultipartUpload",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*sagemaker*/*",
+          "Sid": "DataPrepMultipartUploadCleanup"
+        },
+        {
+          "Action": "s3:DeleteObject",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*sagemaker*/*.hil-write-check-*",
+          "Sid": "HumanReviewExportProbeCleanup"
+        },
+        {
+          "Action": "s3:GetBucketLocation",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*sagemaker*",
+          "Sid": "DataPrepBucketLocation"
+        },
+        {
+          "Action": [
+            "s3:GetBucketAcl",
+            "s3:GetBucketOwnershipControls",
+            "s3:GetBucketPolicyStatus",
+            "s3:GetBucketPublicAccessBlock",
+            "s3:GetEncryptionConfiguration"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*sagemaker*",
+          "Sid": "HumanReviewExportBucketSettings"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateApp",
+            "sagemaker:DeleteApp"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringEqualsIfExists": {
+              "sagemaker:SpaceSharingType": "Shared"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:app/${sagemaker:DomainId}/label-studio-*/*",
+          "Sid": "HumanReviewSpaceAppWrites"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateSpace",
+            "sagemaker:UpdateSpace"
+          ],
+          "Condition": {
+            "ArnLike": {
+              "sagemaker:OwnerUserProfileArn": "arn:aws:sagemaker:*:*:user-profile/${sagemaker:DomainId}/${sagemaker:UserProfileName}"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "sagemaker:SpaceSharingType": "Shared"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:space/${sagemaker:DomainId}/label-studio-*",
+          "Sid": "HumanReviewSpaceWrites"
+        },
+        {
+          "Action": [
+            "sagemaker:ListDomains",
+            "sagemaker:ListUserProfiles"
+          ],
+          "Condition": {
+            "StringEqualsIfExists": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "HumanReviewDomainDiscovery"
+        },
+        {
+          "Action": "sagemaker:DescribeHubContent",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:aws:hub-content/SageMakerPublicHub/Model/*",
+            "arn:aws:sagemaker:*:aws:hub/SageMakerPublicHub"
+          ],
+          "Sid": "DataPrepPublicHubModelLookup"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-25T22:37:08Z"
+}

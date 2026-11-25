@@ -11,18 +11,18 @@ having this idea and being gracious about me shamelessly ripping it off.
 	
 # Stats
 
-* Unique services: 474
-* Unique actions: 23651
-* Managed policies: 1624
+* Unique services: 475
+* Unique actions: 23784
+* Managed policies: 1631
 
 Most common managed policy name prefixes:
 
 | Policy ARN | Count |
 | ------ | ----- |
 | `arn:aws:iam::aws:policy/AWS*` | 435 |
-| `arn:aws:iam::aws:policy/Amazon*` | 384 |
-| `arn:aws:iam::aws:policy/aws-service-role/*` | 379 |
-| `arn:aws:iam::aws:policy/service-role/*` | 232 |
+| `arn:aws:iam::aws:policy/Amazon*` | 389 |
+| `arn:aws:iam::aws:policy/aws-service-role/*` | 380 |
+| `arn:aws:iam::aws:policy/service-role/*` | 233 |
 | `arn:aws:iam::aws:policy/job-function/*` | 15 |
 | Other | 179 |
 
@@ -99,7 +99,7 @@ The following table summarises the AWS APIs.
 | [`athena`](services/athena.yml) | 68 | 0 | 18 |
 | [`route53resolver`](services/route53resolver.yml) | 68 | 0 | 3 |
 | [`ds`](services/ds.yml) | 67 | 0 | 24 |
-| [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 66 | 0 | 11 |
+| [`elasticloadbalancing`](services/elasticloadbalancing.yml) | 66 | 0 | 35 |
 | [`kendra`](services/kendra.yml) | 66 | 0 | 0 |
 | [`clouddirectory`](services/clouddirectory.yml) | 66 | 0 | 0 |
 | [`forecast`](services/forecast.yml) | 65 | 0 | 5 |
@@ -160,7 +160,7 @@ The following table summarises the AWS APIs.
 | [`swf`](services/swf.yml) | 39 | 0 | 12 |
 | [`ssm-contacts`](services/ssm-contacts.yml) | 39 | 0 | 1 |
 | [`mechanicalturk`](services/mechanicalturk.yml) | 39 | 0 | 0 |
-| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 143 |
+| [`cloudwatch`](services/cloudwatch.yml) | 38 | 0 | 163 |
 | [`memorydb`](services/memorydb.yml) | 38 | 0 | 9 |
 | [`appmesh`](services/appmesh.yml) | 38 | 0 | 4 |
 | [`aoss`](services/aoss.yml) | 37 | 0 | 20 |
@@ -367,6 +367,7 @@ The following table summarises the AWS APIs.
 | [`odb`](services/odb.yml) | 0 | 0 | 96 |
 | [`assurance`](services/assurance.yml) | 0 | 0 | 96 |
 | [`a4b`](services/a4b.yml) | 0 | 0 | 96 |
+| [`amplifygen3`](services/amplifygen3.yml) | 0 | 0 | 89 |
 | [`iotmanagedintegrations`](services/iotmanagedintegrations.yml) | 0 | 0 | 83 |
 | [`aws-external-anthropic`](services/aws-external-anthropic.yml) | 0 | 0 | 83 |
 | [`sqlworkbench`](services/sqlworkbench.yml) | 0 | 0 | 79 |
@@ -515,14 +516,14 @@ Most common action prefixes:
 
 | Prefix | Count |
 | ------ | ----- |
-| `List` | 4024 |
-| `Get` | 3632 |
-| `Delete` | 2692 |
-| `Create` | 2557 |
-| `Update` | 2238 |
+| `List` | 4057 |
+| `Get` | 3659 |
+| `Delete` | 2711 |
+| `Create` | 2570 |
+| `Update` | 2251 |
 | `Describe` | 1991 |
-| `Put` | 645 |
-| `Start` | 592 |
+| `Put` | 648 |
+| `Start` | 595 |
 | `Batch` | 346 |
-| `Tag` | 331 |
+| `Tag` | 333 |
 

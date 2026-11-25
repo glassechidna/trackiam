@@ -1,0 +1,170 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/service-role/AmplifyGen3ServiceRolePolicy",
+  "CreateDate": "2026-11-25T18:57:07Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/service-role/",
+  "PolicyId": "ANPAZKAPJZG4AIQQQJC3J",
+  "PolicyName": "AmplifyGen3ServiceRolePolicy",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-25T18:57:07Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": [
+            "route53:ChangeResourceRecordSets"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "route53:ChangeResourceRecordSetsRecordTypes": [
+                "A",
+                "AAAA",
+                "CNAME",
+                "TXT"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:route53:::hostedzone/*",
+          "Sid": "Route53RecordManagement"
+        },
+        {
+          "Action": [
+            "s3:ListBucket"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::*",
+          "Sid": "S3BucketValidation"
+        },
+        {
+          "Action": [
+            "amplifygen3:AllowVendedLogDeliveryForResource"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "VendedLogDelivery"
+        },
+        {
+          "Action": [
+            "amplifygen3:CreateDeployment"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:amplifygen3:*:*:app/*/environment/*",
+          "Sid": "GitTriggeredDeployment"
+        },
+        {
+          "Action": [
+            "bedrock:GetInferenceProfile"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock:*:*:inference-profile/*",
+          "Sid": "BedrockInferenceProfileRead"
+        },
+        {
+          "Action": [
+            "bedrock:ListFoundationModels",
+            "bedrock:ListInferenceProfiles"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "BedrockModelDiscovery"
+        },
+        {
+          "Action": [
+            "dsql:GetCluster"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:dsql:*:*:cluster/*",
+          "Sid": "DsqlClusterValidation"
+        },
+        {
+          "Action": [
+            "identitystore:GetGroupId"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:identitystore::*:identitystore/*",
+          "Sid": "IdcAdminGroupResolution"
+        },
+        {
+          "Action": [
+            "logs:CreateDelivery",
+            "logs:DeleteDelivery",
+            "logs:DeleteDeliveryDestination",
+            "logs:DeleteDeliverySource",
+            "logs:PutDeliveryDestination",
+            "logs:PutDeliverySource"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:delivery-destination:*",
+            "arn:aws:logs:*:*:delivery-source:*",
+            "arn:aws:logs:*:*:delivery:*"
+          ],
+          "Sid": "LogDeliveryManagement"
+        },
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:PutRetentionPolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:logs:*:*:log-group:/aws/amplifygen3/*",
+          "Sid": "LogGroupProvisioning"
+        },
+        {
+          "Action": [
+            "logs:DescribeDeliveries"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LogDeliveryDescribe"
+        },
+        {
+          "Action": [
+            "logs:DescribeLogGroups",
+            "logs:DescribeResourcePolicies",
+            "logs:PutResourcePolicy"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "LogGroupResourcePolicyManagement"
+        },
+        {
+          "Action": [
+            "route53:CreateHostedZone",
+            "route53:ListHostedZonesByName"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "Route53HostedZoneDiscoveryAndCreation"
+        },
+        {
+          "Action": [
+            "route53:GetHostedZone",
+            "route53:ListResourceRecordSets"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:route53:::hostedzone/*",
+          "Sid": "Route53HostedZoneRead"
+        },
+        {
+          "Action": [
+            "sso:ListInstances"
+          ],
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "IdcInstanceDiscovery"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-25T18:57:07Z"
+}

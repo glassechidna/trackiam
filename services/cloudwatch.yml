@@ -44,19 +44,23 @@ Actions:
   - Name: cloudwatch:BatchGetServiceLevelIndicatorReport
   - Name: cloudwatch:BatchGetServiceLevelObjectiveBudgetReport
   - Name: cloudwatch:CallWithBearerToken
+  - Name: cloudwatch:CompleteExperimentRun
   - Name: cloudwatch:CreateAccessGrant
   - Name: cloudwatch:CreateAccessProfile
   - Name: cloudwatch:CreateAlert
   - Name: cloudwatch:CreateDomain
   - Name: cloudwatch:CreateDomainAccessGrantForOrganization
   - Name: cloudwatch:CreateDomainForOrganization
+  - Name: cloudwatch:CreateExperiment
   - Name: cloudwatch:CreateIngestionEndpoint
   - Name: cloudwatch:CreateIntegration
+  - Name: cloudwatch:CreateLookup
   - Name: cloudwatch:CreateOmniAgentAsset
   - Name: cloudwatch:CreateOmniDashboard
   - Name: cloudwatch:CreateOmniSlo
   - Name: cloudwatch:CreateOmniThread
   - Name: cloudwatch:CreateOneTimeDeepLinkCode
+  - Name: cloudwatch:CreateProvisioningRolesForOrganization
   - Name: cloudwatch:CreateResourceMetricsConfiguration
   - Name: cloudwatch:CreateServiceLevelObjective
   - Name: cloudwatch:CreateSpace
@@ -68,8 +72,11 @@ Actions:
   - Name: cloudwatch:DeleteDomain
   - Name: cloudwatch:DeleteDomainAccessGrantForOrganization
   - Name: cloudwatch:DeleteDomainForOrganization
+  - Name: cloudwatch:DeleteExperiment
+  - Name: cloudwatch:DeleteExperimentRun
   - Name: cloudwatch:DeleteIngestionEndpoint
   - Name: cloudwatch:DeleteIntegration
+  - Name: cloudwatch:DeleteLookup
   - Name: cloudwatch:DeleteMetricDataQueryDefinition
   - Name: cloudwatch:DeleteOmniAgentAsset
   - Name: cloudwatch:DeleteOmniDashboard
@@ -94,9 +101,12 @@ Actions:
   - Name: cloudwatch:GetDomain
   - Name: cloudwatch:GetDomainAccessGrantForOrganization
   - Name: cloudwatch:GetDomainForOrganization
+  - Name: cloudwatch:GetExperiment
+  - Name: cloudwatch:GetExperimentRun
   - Name: cloudwatch:GetIngestionEndpoint
   - Name: cloudwatch:GetIntegration
   - Name: cloudwatch:GetIntelligenceConfiguration
+  - Name: cloudwatch:GetLookup
   - Name: cloudwatch:GetMetricDataQueryDefinition
   - Name: cloudwatch:GetMonitoringAssessment
   - Name: cloudwatch:GetOTelEnrichment
@@ -126,15 +136,20 @@ Actions:
   - Name: cloudwatch:ListAlarmMuteRules
   - Name: cloudwatch:ListAlertContributors
   - Name: cloudwatch:ListAlerts
+  - Name: cloudwatch:ListAnomalies
   - Name: cloudwatch:ListDomainAccessGrantsForOrganization
   - Name: cloudwatch:ListDomains
   - Name: cloudwatch:ListEntitiesForMetric
+  - Name: cloudwatch:ListExperimentRuns
+  - Name: cloudwatch:ListExperiments
   - Name: cloudwatch:ListIngestionEndpoints
   - Name: cloudwatch:ListIntegrationTargets
   - Name: cloudwatch:ListIntegrations
+  - Name: cloudwatch:ListLookups
   - Name: cloudwatch:ListMetricDataQueryDefinitions
   - Name: cloudwatch:ListMonitoringAssessmentResults
   - Name: cloudwatch:ListMonitoringAssessments
+  - Name: cloudwatch:ListObservations
   - Name: cloudwatch:ListOmniAgentAssets
   - Name: cloudwatch:ListOmniDashboards
   - Name: cloudwatch:ListOmniSlos
@@ -148,6 +163,7 @@ Actions:
   - Name: cloudwatch:ListTelemetryQuerySessions
   - Name: cloudwatch:ListViews
   - Name: cloudwatch:PutAlarmMuteRule
+  - Name: cloudwatch:PutExperimentRunResults
   - Name: cloudwatch:PutIntelligenceConfiguration
   - Name: cloudwatch:PutLogAlarm
   - Name: cloudwatch:PutMetricDataQueryDefinition
@@ -156,11 +172,13 @@ Actions:
   - Name: cloudwatch:PutRecords
   - Name: cloudwatch:QueryTraces
   - Name: cloudwatch:SearchPrincipals
+  - Name: cloudwatch:StartExperimentRun
   - Name: cloudwatch:StartMonitoringAssessment
   - Name: cloudwatch:StartOTelEnrichment
   - Name: cloudwatch:StartOmniThreadSession
   - Name: cloudwatch:StartTelemetryQuery
   - Name: cloudwatch:StartTelemetryQuerySession
+  - Name: cloudwatch:StopExperimentRun
   - Name: cloudwatch:StopOTelEnrichment
   - Name: cloudwatch:StopTelemetryQuery
   - Name: cloudwatch:StopTelemetryQuerySession
@@ -170,8 +188,10 @@ Actions:
   - Name: cloudwatch:UpdateAlert
   - Name: cloudwatch:UpdateDomain
   - Name: cloudwatch:UpdateDomainForOrganization
+  - Name: cloudwatch:UpdateExperiment
   - Name: cloudwatch:UpdateIngestionEndpoint
   - Name: cloudwatch:UpdateIntegration
+  - Name: cloudwatch:UpdateLookup
   - Name: cloudwatch:UpdateOTelEnrichment
   - Name: cloudwatch:UpdateOmniAgentAsset
   - Name: cloudwatch:UpdateOmniDashboard

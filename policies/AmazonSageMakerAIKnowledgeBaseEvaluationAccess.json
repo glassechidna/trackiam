@@ -1,0 +1,176 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerAIKnowledgeBaseEvaluationAccess",
+  "CreateDate": "2026-11-25T22:37:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4CBWO5L4UQ",
+  "PolicyName": "AmazonSageMakerAIKnowledgeBaseEvaluationAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-25T22:37:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "bedrock:CreatePrompt",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "sagemaker:rag-evaluation"
+              ]
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": [
+                "sagemaker:rag-evaluation"
+              ]
+            },
+            "Null": {
+              "aws:RequestTag/sagemaker:rag-evaluation": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "aws:RequestTag/sagemaker:rag-evaluation": [
+                "p-*",
+                "true"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock:*:*:prompt/*",
+          "Sid": "RagPromptTemplateCreate"
+        },
+        {
+          "Action": "bedrock:CreatePromptVersion",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "sagemaker:rag-evaluation"
+              ]
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": [
+                "sagemaker:rag-evaluation"
+              ]
+            },
+            "Null": {
+              "aws:RequestTag/sagemaker:rag-evaluation": "false"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "aws:RequestTag/sagemaker:rag-evaluation": [
+                "p-*",
+                "true"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock:*:*:prompt/*",
+          "Sid": "RagPromptTemplateVersion"
+        },
+        {
+          "Action": "bedrock:GetPrompt",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock:*:*:prompt/*",
+          "Sid": "RagPromptTemplateRead"
+        },
+        {
+          "Action": "bedrock:ListKnowledgeBases",
+          "Condition": {
+            "StringEqualsIfExists": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "KnowledgeBaseList"
+        },
+        {
+          "Action": "bedrock:ListPrompts",
+          "Condition": {
+            "StringEqualsIfExists": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RagPromptTemplateList"
+        },
+        {
+          "Action": "bedrock:TagResource",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "sagemaker:rag-evaluation"
+              ]
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": [
+                "sagemaker:rag-evaluation"
+              ]
+            },
+            "Null": {
+              "aws:RequestTag/sagemaker:rag-evaluation": "false",
+              "aws:ResourceTag/sagemaker:rag-evaluation": "false"
+            },
+            "StringEquals": {
+              "aws:RequestTag/sagemaker:rag-evaluation": "${aws:ResourceTag/sagemaker:rag-evaluation}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "aws:RequestTag/sagemaker:rag-evaluation": [
+                "p-*",
+                "true"
+              ],
+              "aws:ResourceTag/sagemaker:rag-evaluation": [
+                "p-*",
+                "true"
+              ]
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock:*:*:prompt/*",
+          "Sid": "RagPromptTemplateTagging"
+        },
+        {
+          "Action": "sagemaker:ListTrialComponents",
+          "Condition": {
+            "StringEqualsIfExists": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "RagEvaluationLineageList"
+        },
+        {
+          "Action": [
+            "bedrock:GetKnowledgeBase",
+            "bedrock:ListDataSources",
+            "bedrock:ListIngestionJobs",
+            "bedrock:Retrieve"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:bedrock:*:*:knowledge-base/*",
+          "Sid": "KnowledgeBaseReadAndRetrieve"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-25T22:37:08Z"
+}

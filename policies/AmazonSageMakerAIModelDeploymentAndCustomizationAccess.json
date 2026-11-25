@@ -1,0 +1,416 @@
+{
+  "Arn": "arn:aws:iam::aws:policy/AmazonSageMakerAIModelDeploymentAndCustomizationAccess",
+  "CreateDate": "2026-11-25T22:37:08Z",
+  "DefaultVersionId": "v1",
+  "IsAttachable": true,
+  "Path": "/",
+  "PolicyId": "ANPAZKAPJZG4NRYPRYIRM",
+  "PolicyName": "AmazonSageMakerAIModelDeploymentAndCustomizationAccess",
+  "PolicyVersion": {
+    "CreateDate": "2026-11-25T22:37:08Z",
+    "Document": {
+      "Statement": [
+        {
+          "Action": "account:ListRegions",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:account::*:account",
+          "Sid": "AccountRegionList"
+        },
+        {
+          "Action": "application-autoscaling:DescribeScalingActivities",
+          "Condition": {
+            "StringEquals": {
+              "application-autoscaling:service-namespace": "sagemaker"
+            },
+            "StringEqualsIfExists": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "EndpointScalingActivityReads"
+        },
+        {
+          "Action": "application-autoscaling:ListTagsForResource",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:application-autoscaling:*:*:scalable-target/*",
+          "Sid": "EndpointScalableTargetTagReads"
+        },
+        {
+          "Action": "application-autoscaling:RegisterScalableTarget",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "created-by"
+              ]
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": [
+                "created-by"
+              ]
+            },
+            "StringEquals": {
+              "application-autoscaling:service-namespace": "sagemaker",
+              "aws:RequestTag/created-by": "sagemaker-agent-skill",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:application-autoscaling:*:*:scalable-target/*",
+          "Sid": "EndpointScalableTargetRegisterTagged"
+        },
+        {
+          "Action": "application-autoscaling:RegisterScalableTarget",
+          "Condition": {
+            "Null": {
+              "aws:TagKeys": "true"
+            },
+            "StringEquals": {
+              "application-autoscaling:service-namespace": "sagemaker",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:application-autoscaling:*:*:scalable-target/*",
+          "Sid": "EndpointScalableTargetRegister"
+        },
+        {
+          "Action": "application-autoscaling:TagResource",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "created-by"
+              ]
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": [
+                "created-by"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/created-by": "sagemaker-agent-skill",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/created-by": "sagemaker-agent-skill"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:application-autoscaling:*:*:scalable-target/*",
+          "Sid": "EndpointScalableTargetTagOnCreate"
+        },
+        {
+          "Action": "cloudwatch:DeleteAlarms",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/created-by": "sagemaker-agent-skill"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch:*:*:alarm:*-no-capacity-invocations",
+          "Sid": "ScaleToZeroAlarmDelete"
+        },
+        {
+          "Action": "cloudwatch:DescribeAlarms",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch:*:*:alarm:*",
+          "Sid": "AlarmReads"
+        },
+        {
+          "Action": "cloudwatch:PutMetricAlarm",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "created-by"
+              ]
+            },
+            "ForAllValues:StringLike": {
+              "cloudwatch:AlarmActions": [
+                "arn:aws:autoscaling:*:${aws:PrincipalAccount}:scalingPolicy:*:resource/sagemaker/inference-component/*"
+              ]
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": [
+                "created-by"
+              ]
+            },
+            "Null": {
+              "cloudwatch:AlarmActions": "false"
+            },
+            "StringEquals": {
+              "aws:RequestTag/created-by": "sagemaker-agent-skill",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch:*:*:alarm:*-no-capacity-invocations",
+          "Sid": "ScaleToZeroAlarmCreate"
+        },
+        {
+          "Action": "cloudwatch:TagResource",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "created-by"
+              ]
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": [
+                "created-by"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/created-by": "sagemaker-agent-skill",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/created-by": "sagemaker-agent-skill"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:cloudwatch:*:*:alarm:*-no-capacity-invocations",
+          "Sid": "ScaleToZeroAlarmTagOnCreate"
+        },
+        {
+          "Action": "iam:CreateServiceLinkedRole",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            },
+            "StringLike": {
+              "iam:AWSServiceName": "sagemaker.application-autoscaling.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/sagemaker.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_SageMakerEndpoint",
+          "Sid": "EndpointAutoScalingServiceLinkedRole"
+        },
+        {
+          "Action": "lambda:TagResource",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "sagemaker-studio-agent"
+              ]
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": [
+                "sagemaker-studio-agent"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/sagemaker-studio-agent": "true",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/sagemaker-studio-agent": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:function:SageMaker-evaluator-*",
+          "Sid": "RewardFunctionTagging"
+        },
+        {
+          "Action": "lambda:TagResource",
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "sagemaker-studio-agent",
+                "sagemaker:project-id"
+              ]
+            },
+            "ForAnyValue:StringEquals": {
+              "aws:TagKeys": [
+                "sagemaker-studio-agent"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/sagemaker-studio-agent": "true",
+              "aws:RequestTag/sagemaker:project-id": "${aws:ResourceTag/sagemaker:project-id}",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/sagemaker-studio-agent": "true"
+            },
+            "StringLike": {
+              "aws:RequestTag/sagemaker:project-id": "p-*"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:function:SageMaker-evaluator-*",
+          "Sid": "RewardFunctionProjectTagging"
+        },
+        {
+          "Action": "lambda:UpdateFunctionCode",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/sagemaker-studio-agent": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:lambda:*:*:function:SageMaker-evaluator-*",
+          "Sid": "RewardFunctionCodeUpdate"
+        },
+        {
+          "Action": "logs:DeleteLogGroup",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:logs:*:*:log-group:/aws/sagemaker/Endpoints/*",
+            "arn:aws:logs:*:*:log-group:/aws/sagemaker/InferenceComponents/*"
+          ],
+          "Sid": "EndpointLogGroupCleanup"
+        },
+        {
+          "Action": "s3:CreateBucket",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::sagemaker-*-${aws:PrincipalAccount}",
+          "Sid": "DefaultBucketCreate"
+        },
+        {
+          "Action": "sagemaker:CreateMlflowApp",
+          "Condition": {
+            "Null": {
+              "aws:TagKeys": "true"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sagemaker:*:*:mlflow-app/*",
+          "Sid": "MlflowAppCreate"
+        },
+        {
+          "Action": "servicequotas:RequestServiceQuotaIncrease",
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:servicequotas:*:*:sagemaker/*",
+          "Sid": "SageMakerQuotaIncreaseRequest"
+        },
+        {
+          "Action": [
+            "application-autoscaling:DeleteScalingPolicy",
+            "application-autoscaling:DeregisterScalableTarget",
+            "application-autoscaling:PutScalingPolicy"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "application-autoscaling:service-namespace": "sagemaker",
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:application-autoscaling:*:*:scalable-target/*",
+          "Sid": "EndpointScalableTargets"
+        },
+        {
+          "Action": [
+            "ec2:DescribeRegions",
+            "pricing:GetAttributeValues",
+            "s3:ListAllMyBuckets",
+            "sagemaker:ListAIBenchmarkJobs",
+            "sagemaker:ListAIRecommendationJobs",
+            "sagemaker:ListEndpointConfigs",
+            "sagemaker:ListPipelines"
+          ],
+          "Condition": {
+            "StringEqualsIfExists": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "*",
+          "Sid": "DeploymentResourcelessLookups"
+        },
+        {
+          "Action": [
+            "sagemaker:CreateAIBenchmarkJob",
+            "sagemaker:CreateAIRecommendationJob",
+            "sagemaker:CreateAIWorkloadConfig"
+          ],
+          "Condition": {
+            "Null": {
+              "aws:TagKeys": "true"
+            },
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:ai-benchmark-job/*",
+            "arn:aws:sagemaker:*:*:ai-recommendation-job/*",
+            "arn:aws:sagemaker:*:*:ai-workload-config/*"
+          ],
+          "Sid": "InferenceBenchmarkAndRecommendationCreate"
+        },
+        {
+          "Action": [
+            "sagemaker:DescribeAIBenchmarkJob",
+            "sagemaker:DescribeAIRecommendationJob",
+            "sagemaker:DescribeAIWorkloadConfig",
+            "sagemaker:StopAIRecommendationJob"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:ai-benchmark-job/*",
+            "arn:aws:sagemaker:*:*:ai-recommendation-job/*",
+            "arn:aws:sagemaker:*:*:ai-workload-config/*"
+          ],
+          "Sid": "InferenceBenchmarkAndRecommendationJobs"
+        },
+        {
+          "Action": [
+            "sagemaker:UpdateEndpoint",
+            "sagemaker:UpdateEndpointWeightsAndCapacities",
+            "sagemaker:UpdateInferenceComponent"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sagemaker:*:*:endpoint-config/*",
+            "arn:aws:sagemaker:*:*:endpoint/*",
+            "arn:aws:sagemaker:*:*:inference-component/*"
+          ],
+          "Sid": "EndpointTrafficUpdates"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "IsDefaultVersion": true,
+    "VersionId": "v1"
+  },
+  "UpdateDate": "2026-11-25T22:37:08Z"
+}
