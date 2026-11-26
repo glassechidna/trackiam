@@ -1,15 +1,30 @@
 {
   "Arn": "arn:aws:iam::aws:policy/AmazonAthenaFullAccess",
   "CreateDate": "2016-11-30T16:46:01Z",
-  "DefaultVersionId": "v15",
+  "DefaultVersionId": "v16",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIPJMLMD4C7RYZ6XCK",
   "PolicyName": "AmazonAthenaFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-02-12T18:03:09Z",
+    "CreateDate": "2026-11-26T00:07:07Z",
     "Document": {
       "Statement": [
+        {
+          "Action": [
+            "iam:CreateServiceLinkedRole"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "iam:AWSServiceName": "ops.athena.amazonaws.com"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:iam::*:role/aws-service-role/ops.athena.amazonaws.com/AWSServiceRoleForAmazonAthena"
+          ],
+          "Sid": "AthenaServiceLinkedRolePermissions"
+        },
         {
           "Action": [
             "athena:*"
@@ -155,7 +170,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v15"
+    "VersionId": "v16"
   },
-  "UpdateDate": "2026-02-12T18:03:09Z"
+  "UpdateDate": "2026-11-26T00:07:07Z"
 }
