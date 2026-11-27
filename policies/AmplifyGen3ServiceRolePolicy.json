@@ -1,13 +1,13 @@
 {
   "Arn": "arn:aws:iam::aws:policy/service-role/AmplifyGen3ServiceRolePolicy",
   "CreateDate": "2026-11-25T18:57:07Z",
-  "DefaultVersionId": "v1",
+  "DefaultVersionId": "v2",
   "IsAttachable": true,
   "Path": "/service-role/",
   "PolicyId": "ANPAZKAPJZG4AIQQQJC3J",
   "PolicyName": "AmplifyGen3ServiceRolePolicy",
   "PolicyVersion": {
-    "CreateDate": "2026-11-25T18:57:07Z",
+    "CreateDate": "2026-11-27T05:17:08Z",
     "Document": {
       "Statement": [
         {
@@ -40,6 +40,104 @@
           "Effect": "Allow",
           "Resource": "arn:aws:s3:::*",
           "Sid": "S3BucketValidation"
+        },
+        {
+          "Action": [
+            "sso:CreateApplication"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "ManagedByAmplifyGen3"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/ManagedByAmplifyGen3": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sso::*:application/*",
+            "arn:aws:sso:::instance/*",
+            "arn:aws:sso::aws:applicationProvider/amplifygen3"
+          ],
+          "Sid": "IdcApplicationProvisioning"
+        },
+        {
+          "Action": [
+            "sso:CreateApplicationAssignment",
+            "sso:DeleteApplication",
+            "sso:PutApplicationAssignmentConfiguration",
+            "sso:PutApplicationAuthenticationMethod",
+            "sso:PutApplicationGrant"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceAccount": "${aws:PrincipalAccount}",
+              "aws:ResourceTag/ManagedByAmplifyGen3": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sso::*:application/*",
+          "Sid": "IdcApplicationConfigurationSameAccount"
+        },
+        {
+          "Action": [
+            "sso:CreateApplicationAssignment",
+            "sso:DeleteApplication",
+            "sso:PutApplicationAssignmentConfiguration",
+            "sso:PutApplicationAuthenticationMethod",
+            "sso:PutApplicationGrant"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "aws:ResourceOrgID": "${aws:PrincipalOrgID}",
+              "aws:ResourceTag/ManagedByAmplifyGen3": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sso::*:application/*",
+          "Sid": "IdcApplicationConfigurationSameOrganization"
+        },
+        {
+          "Action": [
+            "sso:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "ManagedByAmplifyGen3"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/ManagedByAmplifyGen3": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": [
+            "arn:aws:sso:::instance/*",
+            "arn:aws:sso::aws:applicationProvider/amplifygen3"
+          ],
+          "Sid": "IdcApplicationTagOnCreate"
+        },
+        {
+          "Action": [
+            "sso:TagResource"
+          ],
+          "Condition": {
+            "ForAllValues:StringEquals": {
+              "aws:TagKeys": [
+                "ManagedByAmplifyGen3"
+              ]
+            },
+            "StringEquals": {
+              "aws:RequestTag/ManagedByAmplifyGen3": "true",
+              "aws:ResourceTag/ManagedByAmplifyGen3": "true"
+            }
+          },
+          "Effect": "Allow",
+          "Resource": "arn:aws:sso::*:application/*",
+          "Sid": "IdcApplicationTagManagement"
         },
         {
           "Action": [
@@ -87,7 +185,10 @@
             "identitystore:GetGroupId"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:identitystore::*:identitystore/*",
+          "Resource": [
+            "arn:aws:identitystore::*:identitystore/*",
+            "arn:aws:identitystore:::group/*"
+          ],
           "Sid": "IdcAdminGroupResolution"
         },
         {
@@ -154,17 +255,18 @@
         },
         {
           "Action": [
+            "sso:DescribeInstance",
             "sso:ListInstances"
           ],
           "Effect": "Allow",
           "Resource": "*",
-          "Sid": "IdcInstanceDiscovery"
+          "Sid": "IdcDiscovery"
         }
       ],
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v1"
+    "VersionId": "v2"
   },
-  "UpdateDate": "2026-11-25T18:57:07Z"
+  "UpdateDate": "2026-11-27T05:17:08Z"
 }
