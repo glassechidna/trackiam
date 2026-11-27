@@ -1,29 +1,15 @@
 {
   "Arn": "arn:aws:iam::aws:policy/WellArchitectedConsoleFullAccess",
   "CreateDate": "2018-11-29T18:19:23Z",
-  "DefaultVersionId": "v4",
+  "DefaultVersionId": "v5",
   "IsAttachable": true,
   "Path": "/",
   "PolicyId": "ANPAIH6HSBHM3VSYC5SKA",
   "PolicyName": "WellArchitectedConsoleFullAccess",
   "PolicyVersion": {
-    "CreateDate": "2026-11-13T19:37:08Z",
+    "CreateDate": "2026-11-26T17:37:07Z",
     "Document": {
       "Statement": [
-        {
-          "Action": "iam:AttachRolePolicy",
-          "Condition": {
-            "ArnLike": {
-              "iam:PolicyARN": [
-                "arn:aws:iam::*:policy/service-role/WAAgentExecutionPolicy*",
-                "arn:aws:iam::*:policy/service-role/WAAgentExecutionRolePolicy*",
-                "arn:aws:iam::aws:policy/WellArchitectedAgentResourceScanning"
-              ]
-            }
-          },
-          "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/service-role/*"
-        },
         {
           "Action": "iam:CreateServiceLinkedRole",
           "Condition": {
@@ -66,19 +52,6 @@
           },
           "Effect": "Allow",
           "Resource": "*"
-        },
-        {
-          "Action": "iam:CreatePolicy",
-          "Effect": "Allow",
-          "Resource": [
-            "arn:aws:iam::*:policy/service-role/WAAgentExecutionPolicy*",
-            "arn:aws:iam::*:policy/service-role/WAAgentExecutionRolePolicy*"
-          ]
-        },
-        {
-          "Action": "iam:CreateRole",
-          "Effect": "Allow",
-          "Resource": "arn:aws:iam::*:role/service-role/*"
         },
         {
           "Action": "iam:GetRole",
@@ -130,7 +103,7 @@
       "Version": "2012-10-17"
     },
     "IsDefaultVersion": true,
-    "VersionId": "v4"
+    "VersionId": "v5"
   },
-  "UpdateDate": "2026-11-13T19:37:08Z"
+  "UpdateDate": "2026-11-26T17:37:07Z"
 }
